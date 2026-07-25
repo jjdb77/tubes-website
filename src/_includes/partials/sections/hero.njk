@@ -1,0 +1,33 @@
+<section class="section section-hero theme-light">
+  <div class="container hero-grid{% if not section.image and not section.video %} hero-single{% endif %}">
+    <div class="hero-text">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h1>{{ section.title }}</h1>
+      <div class="rich-text lead">{{ section.text | md | safe }}</div>
+      {% if section.chips %}
+      <ul class="chip-row" aria-label="Production stages">
+        {% for chip in section.chips %}
+        <li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>
+        {% if not loop.last %}<li class="chip-sep" aria-hidden="true">→</li>{% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if section.buttons %}
+      <div class="button-row">
+        {% for btn in section.buttons %}
+        <a class="button {% if loop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ btn.url }}">{{ btn.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% if section.video %}
+    <div class="hero-media">
+      <video controls playsinline preload="metadata" {% if section.poster %}poster="{{ section.poster }}"{% endif %} src="{{ section.video }}"></video>
+    </div>
+    {% elif section.image %}
+    <div class="hero-media">
+      <img src="{{ section.image }}" alt="{{ section.image_alt or section.title }}" loading="eager" fetchpriority="high">
+    </div>
+    {% endif %}
+  </div>
+</section>

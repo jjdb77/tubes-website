@@ -1,0 +1,56 @@
+---
+layout: layout.njk
+title: Plans
+description: "Choose your Tubes plan. No hidden costs, cancel anytime. From freelance producers to broadcasters and international studios."
+permalink: /plans/
+sections:
+  - type: hero
+    kicker: Plans & pricing
+    title: Choose your plan
+    text: |
+      No hidden costs. Cancel anytime.
+
+      Tubes grows with your team, from freelancers to large studios. Choose the option that fits your goals and continue with confidence, wherever you're headed next.
+  - type: pricing
+    theme: light
+    plans:
+      - name: Producer Pro
+        badge: Most popular
+        text: |
+          For freelance producers, creative duos, micro teams, co-producers, project consultants and short-term collaborators.
+        price: "€ 49"
+        price_note: "per user/month"
+        price_detail: |
+          Or € 519 per year — save ~12% with annual billing.
+        features: |
+          - Budgeting & basic cost control
+          - Simple, intuitive workflows
+          - Self-service onboarding
+          - Standard support & SLA
+        button:
+          label: Choose Producer Pro
+          url: https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6
+      - name: Enterprise
+        text: |
+          Connect financial intent, planning, and execution across your entire organisation — with the control, security, and scalability enterprises require.
+        features: |
+          - Full budgeting, planning & cost control
+          - Real-time reporting & forecasting
+          - Multi-entity and multi-country setup
+          - Advanced permissions, roles, and approval flows
+          - Enterprise-level reporting & audit trails
+          - Deep system integrations + full API access
+          - Dedicated onboarding & Customer Success Manager
+        button:
+          label: Book a call
+          url: /contact/
+    footnote: |
+      Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies** — [get in touch](/contact/).
+  - type: cta
+    title: Take Control of Your Productions
+    text: |
+      Tubes grows with your team, from freelancers to large studios. Streamline workflows, collaborate seamlessly, and gain the visibility you need to manage every stage of production with confidence and control.
+    button:
+      label: Request a Demo
+      url: /contact/
+---

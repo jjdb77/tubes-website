@@ -1,0 +1,39 @@
+<section class="section theme-white" id="contact-form">
+  <div class="container contact-grid">
+    <div class="contact-form-col">
+      {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
+      {% if section.text %}<div class="rich-text">{{ section.text | md | safe }}</div>{% endif %}
+      <form class="contact-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
+        <div class="form-row">
+          <label>First name <span class="req">(required)</span>
+            <input type="text" name="first_name" autocomplete="given-name" required>
+          </label>
+          <label>Last name <span class="req">(required)</span>
+            <input type="text" name="last_name" autocomplete="family-name" required>
+          </label>
+        </div>
+        <label>Email <span class="req">(required)</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label>Message <span class="req">(required)</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button type="submit" class="button button-primary">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <aside class="contact-aside">
+      <h3>Or contact us directly</h3>
+      <p>
+        <a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a><br>
+        <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>
+      </p>
+      <p>
+        {% for line in settings.contact.address_lines %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </p>
+    </aside>
+  </div>
+</section>

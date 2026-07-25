@@ -1,0 +1,14 @@
+{
+  "name": "tubes-website",
+  "version": "1.0.0",
+  "description": "Website van Tubes (tubes.media) — statische site met Eleventy + Sveltia CMS",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "markdown-it": "^14.1.0"
+  }
+}

@@ -1,0 +1,11 @@
+<section class="section theme-{{ section.theme or 'white' }}">
+  <div class="container split-grid">
+    {% for col in section.columns %}
+    <div class="split-col">
+      {% if col.heading %}<h2>{{ col.heading }}</h2>{% endif %}
+      {% if col.lead %}<p class="col-lead">{{ col.lead }}</p>{% endif %}
+      <div class="rich-text">{{ col.text | md | safe }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,7 @@
+<section class="section theme-{{ section.theme or 'white' }}">
+  <div class="container textblock{% if section.narrow %} narrow{% endif %}">
+    {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
+    {% if section.lead %}<p class="col-lead">{{ section.lead }}</p>{% endif %}
+    <div class="rich-text{% if section.two_column %} two-column{% endif %}">{{ section.text | md | safe }}</div>
+  </div>
+</section>

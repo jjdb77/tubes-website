@@ -1,0 +1,10 @@
+<section class="section section-images theme-{{ section.theme or 'white' }}">
+  <div class="container images-row images-{{ section.images | length }}">
+    {% for img in section.images %}
+    <figure class="screenshot">
+      <img src="{{ img.image }}" alt="{{ img.alt }}" loading="lazy">
+      {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+</section>

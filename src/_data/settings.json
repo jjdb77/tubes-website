@@ -1,0 +1,37 @@
+{
+  "site_name": "Tubes",
+  "tagline": "Empowering productions",
+  "site_url": "https://www.tubes.media",
+  "logo": "/assets/images/tubes-logo.png",
+  "footer_text": "Tubes unifies budgeting, scheduling, approvals, and cost control in one workspace. Empowering production teams to collaborate seamlessly, move faster, and maintain complete control from concept to wrap.",
+  "cta_label": "Request a Demo",
+  "cta_url": "/contact/",
+  "app_url": "https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6",
+  "contact": {
+    "email": "contact@tubes.media",
+    "phone": "+31 20 820 4241",
+    "address_lines": ["Daalwijkdreef 47", "1103 AD Amsterdam", "The Netherlands"]
+  },
+  "legal": {
+    "company": "Appsolutions",
+    "country": "Netherlands",
+    "coc": "34371496",
+    "vat": "NL821706020B01",
+    "logo": "/assets/images/logo-appsolutions.png"
+  },
+  "socials": {
+    "linkedin": "https://www.linkedin.com/company/101096508",
+    "youtube": "https://www.youtube.com/@tubesmedia"
+  },
+  "form_endpoint": "",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Platform", "url": "/platform/" },
+    { "label": "Solutions", "url": "/solutions/" },
+    { "label": "Company", "url": "/company/" },
+    { "label": "Plans", "url": "/plans/" },
+    { "label": "Compliance", "url": "/compliance/" },
+    { "label": "Contact", "url": "/contact/" },
+    { "label": "Academy", "url": "/academy/" }
+  ]
+}

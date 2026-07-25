@@ -1,0 +1,14 @@
+<section class="section theme-{{ section.theme or 'white' }}">
+  <div class="container">
+    {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+    <div class="cards-grid cards-{{ section.columns or 3 }}">
+      {% for card in section.cards %}
+      <div class="card">
+        {% if card.heading %}<h3>{{ card.heading }}</h3>{% endif %}
+        <div class="rich-text">{{ card.text | md | safe }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<section class="section section-pricing theme-{{ section.theme or 'white' }}">
+  <div class="container">
+    {% if section.heading %}<h2 class="section-heading centered">{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro centered">{{ section.intro | md | safe }}</div>{% endif %}
+    <div class="pricing-grid pricing-{{ section.plans | length }}">
+      {% for plan in section.plans %}
+      <div class="plan-card{% if plan.badge %} is-featured{% endif %}">
+        {% if plan.badge %}<span class="plan-badge">{{ plan.badge }}</span>{% endif %}
+        <h3>{{ plan.name }}</h3>
+        <div class="rich-text plan-text">{{ plan.text | md | safe }}</div>
+        {% if plan.price %}
+        <p class="plan-price">{{ plan.price }}{% if plan.price_note %} <span class="plan-price-note">{{ plan.price_note }}</span>{% endif %}</p>
+        {% endif %}
+        {% if plan.price_detail %}<div class="rich-text plan-price-detail">{{ plan.price_detail | md | safe }}</div>{% endif %}
+        {% if plan.features %}
+        <div class="rich-text plan-features">{{ plan.features | md | safe }}</div>
+        {% endif %}
+        {% if plan.button %}
+        <a class="button {% if plan.badge %}button-primary{% else %}button-secondary{% endif %} plan-button" href="{{ plan.button.url }}">{{ plan.button.label }}</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% if section.footnote %}<div class="rich-text pricing-footnote centered">{{ section.footnote | md | safe }}</div>{% endif %}
+  </div>
+</section>

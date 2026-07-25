@@ -1,0 +1,9 @@
+<section class="section section-cta">
+  <div class="container cta-inner">
+    <h2>{{ section.title }}</h2>
+    <div class="rich-text">{{ section.text | md | safe }}</div>
+    {% if section.button %}
+    <div class="button-row centered"><a class="button button-inverse" href="{{ section.button.url }}">{{ section.button.label }}</a></div>
+    {% endif %}
+  </div>
+</section>

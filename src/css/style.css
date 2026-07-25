@@ -1,0 +1,499 @@
+/* ===================================================================
+   Tubes — tubes.media
+   Design language: het Tubes VMS design system (Claude Design project
+   "Tubes Design System") — crème canvas, witte kaarten, teal acties,
+   Mulish. Status-chips uit de app zijn het signatuurelement.
+   =================================================================== */
+
+:root {
+  /* Neutrals — tokens/colors.css */
+  --bg: #F2EEE6;
+  --surface: #FFFFFF;
+  --ink: #1A1A1A;
+  --ink-soft: #5C5750;
+  --muted: #9A8E7E;
+  --border: #E0D9CD;
+  --divider: #F0EBE2;
+
+  /* Action — teal */
+  --action: #0E9C88;
+  --action-hover: #0C8A78;
+  --action-soft: #DBF3EE;
+  --action-soft-ink: #0E8C77;
+
+  /* Status chips (pill = bg + ink) */
+  --status-blue-bg: #E2EEFC;   --status-blue-ink: #2D6CC4;
+  --status-teal-bg: #DBF3EE;   --status-teal-ink: #0E8C77;
+  --status-amber-bg: #FBF0CE;  --status-amber-ink: #977414;
+  --status-mint-bg: #DCF5E3;   --status-mint-ink: #1F8A4C;
+  --status-lavender-bg: #ECE9FD; --status-lavender-ink: #6D4ED6;
+
+  /* Shape & elevation — tokens/shape.css */
+  --radius-button: 10px;
+  --radius-chip: 8px;
+  --radius-wash: 12px;
+  --radius-card: 16px;
+  --shadow-card: 0px 1px 2px -1px rgba(0,0,0,0.1), 0px 1px 3px 0px rgba(0,0,0,0.1);
+  --shadow-nav: 0px 1px 2px 0px rgba(0,0,0,0.05);
+  --shadow-raise: 0px 10px 24px -8px rgba(26,26,26,0.14);
+
+  --font-sans: "Mulish", "Nunito", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --container: 1240px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  background: var(--bg);
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  line-height: 1.12;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.02em; }
+h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--action-soft-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--action); }
+
+:focus-visible { outline: 3px solid var(--action); outline-offset: 2px; border-radius: 4px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--ink); color: #fff; padding: 10px 18px;
+}
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* ---------- Micro-label (eyebrow, uit de app: .u-microlabel) ---------- */
+
+.kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* ---------- Status-chips (signatuur, uit de app) ---------- */
+
+.chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 26px 0 0; padding: 0; list-style: none; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; font-weight: 600; line-height: 1;
+  padding: 7px 12px;
+  border-radius: var(--radius-chip);
+  background: var(--status-teal-bg); color: var(--status-teal-ink);
+  white-space: nowrap;
+}
+.chip::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: currentColor;
+}
+.chip-blue { background: var(--status-blue-bg); color: var(--status-blue-ink); }
+.chip-amber { background: var(--status-amber-bg); color: var(--status-amber-ink); }
+.chip-mint { background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.chip-lavender { background: var(--status-lavender-bg); color: var(--status-lavender-ink); }
+
+.chip-sep { color: var(--muted); font-size: 0.9rem; user-select: none; }
+
+/* ---------- Knoppen (radius 10, teal) ---------- */
+
+.button {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 26px;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.button-primary { background: var(--action); color: #fff; }
+.button-primary:hover { background: var(--action-hover); color: #fff; box-shadow: var(--shadow-card); }
+
+.button-secondary { background: var(--surface); color: var(--action-soft-ink); border-color: var(--border); }
+.button-secondary:hover { border-color: var(--action); color: var(--action-hover); }
+
+.button-inverse { background: #fff; color: var(--ink); }
+.button-inverse:hover { background: var(--action-soft); color: var(--action-soft-ink); }
+
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.button-row.centered { justify-content: center; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(242, 238, 230, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; min-height: 74px;
+}
+
+.site-logo img { width: 142px; height: auto; }
+
+.site-nav ul {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  list-style: none; margin: 0; padding: 0;
+}
+
+.site-nav a {
+  display: inline-block;
+  font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
+  text-decoration: none;
+  padding: 8px 13px;
+  border-radius: var(--radius-chip);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.site-nav a:hover { color: var(--ink); background: var(--divider); }
+.site-nav a.is-active { background: var(--action-soft); color: var(--action-soft-ink); }
+
+.nav-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; }
+.nav-toggle-bar {
+  display: block; width: 24px; height: 2px; margin: 5px 0;
+  background: var(--ink); transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Secties ---------- */
+
+.section { padding: clamp(56px, 8vw, 108px) 0; }
+.theme-light { background: var(--bg); }
+.theme-white { background: var(--surface); border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
+.theme-white + .theme-white { border-top: 0; }
+
+.section-hero { padding-top: clamp(44px, 6vw, 80px); }
+
+.hero-grid, .feature-grid {
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(32px, 5vw, 72px); align-items: center;
+}
+.hero-single, .feature-single { grid-template-columns: 1fr; max-width: 780px; }
+
+.media-left .feature-text { order: 2; }
+.media-left .feature-media { order: 1; }
+
+.lead { font-size: 1.08rem; }
+
+/* Media altijd in een app-kaartlijst: wit vlak, radius 16, borderrand */
+.hero-media img, .feature-media img,
+.hero-media video, .feature-media video {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-raise);
+}
+
+.media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
+
+.col-lead {
+  font-weight: 700; color: var(--ink); font-size: 1.05rem;
+  margin-bottom: 0.9em;
+}
+
+.split-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px); align-items: start;
+}
+
+.section-heading { margin-bottom: 0.8em; }
+.section-heading.centered, .section-intro.centered, .pricing-footnote.centered { text-align: center; }
+.section-intro { max-width: 720px; margin-bottom: 2.2em; }
+.section-intro.centered { margin-left: auto; margin-right: auto; }
+
+.textblock.narrow { max-width: 860px; }
+
+/* ---------- Rich text ---------- */
+
+.rich-text ul { padding-left: 0; margin: 0 0 1em; list-style: none; }
+.rich-text li { margin-bottom: 0.55em; padding-left: 26px; position: relative; }
+.rich-text li::before {
+  content: ""; position: absolute; left: 2px; top: 0.6em;
+  width: 12px; height: 7px;
+  border-left: 2.5px solid var(--action);
+  border-bottom: 2.5px solid var(--action);
+  transform: rotate(-45deg);
+}
+.rich-text strong { color: var(--ink); font-weight: 700; }
+.rich-text h3 { margin-top: 1.5em; }
+.rich-text h3:first-child { margin-top: 0; }
+
+.rich-text.two-column { columns: 2; column-gap: 56px; }
+.rich-text.two-column li { break-inside: avoid; }
+
+/* ---------- Kaarten (radius 16, app-schaduw) ---------- */
+
+.cards-grid { display: grid; gap: 24px; }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 34px 32px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card:hover { box-shadow: var(--shadow-raise); border-color: var(--muted); }
+.card h3 { color: var(--ink); }
+
+.theme-white .card { background: var(--bg); border-color: var(--divider); box-shadow: none; }
+.theme-white .card:hover { border-color: var(--border); box-shadow: var(--shadow-card); }
+
+/* ---------- Afbeeldingenrij ---------- */
+
+.images-row { display: grid; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.images-2 { grid-template-columns: 1fr 1fr; }
+.images-3 { grid-template-columns: repeat(3, 1fr); }
+.images-1 { grid-template-columns: 1fr; max-width: 900px; }
+
+.screenshot { margin: 0; }
+.screenshot img {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.screenshot figcaption { font-size: 0.88rem; margin-top: 10px; text-align: center; color: var(--muted); }
+
+/* ---------- Pricing ---------- */
+
+.pricing-grid { display: grid; gap: 24px; margin-top: 44px; align-items: stretch; }
+.pricing-2 { grid-template-columns: repeat(2, minmax(0, 480px)); justify-content: center; }
+.pricing-3 { grid-template-columns: repeat(3, 1fr); }
+.pricing-4 { grid-template-columns: repeat(2, 1fr); }
+
+.plan-card {
+  position: relative;
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 42px 36px 36px;
+  box-shadow: var(--shadow-card);
+}
+.plan-card.is-featured {
+  border: 1.5px solid var(--action);
+  box-shadow: 0 12px 32px -10px rgba(14, 156, 136, 0.25);
+}
+
+.plan-badge {
+  position: absolute; top: -13px; left: 32px;
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--status-teal-bg); color: var(--status-teal-ink);
+  border: 1px solid rgba(14, 140, 119, 0.25);
+  font-size: 0.78rem; font-weight: 700; line-height: 1;
+  padding: 6px 12px; border-radius: var(--radius-chip); white-space: nowrap;
+}
+.plan-badge::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+}
+
+.plan-card h3 { font-size: 1.45rem; }
+
+.plan-price {
+  font-size: 2.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  margin: 20px 0 4px;
+}
+.plan-price-note { font-size: 0.95rem; font-weight: 500; letter-spacing: 0; color: var(--ink-soft); }
+.plan-price-detail { font-size: 0.9rem; color: var(--muted); }
+
+.plan-features { margin-top: 20px; font-size: 0.95rem; }
+
+.plan-button { margin-top: auto; text-align: center; }
+.plan-features + .plan-button, .rich-text + .plan-button { margin-top: 26px; }
+
+.pricing-footnote { margin-top: 36px; font-size: 0.95rem; color: var(--muted); }
+.pricing-footnote strong { color: var(--ink-soft); }
+
+/* ---------- CTA: donker inzetpaneel op crème ---------- */
+
+.section-cta { background: var(--bg); padding: clamp(40px, 6vw, 72px) 0; }
+.cta-inner {
+  text-align: center;
+  background: var(--ink);
+  border-radius: 24px;
+  padding: clamp(48px, 7vw, 88px) clamp(24px, 6vw, 96px);
+}
+.cta-inner h2 { color: #fff; }
+.cta-inner .rich-text { color: rgba(242, 238, 230, 0.75); max-width: 720px; margin: 0 auto; }
+.cta-inner .rich-text strong { color: #fff; }
+.cta-inner .rich-text a { color: var(--action-soft); }
+
+/* ---------- Contactformulier ---------- */
+
+.contact-grid {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 96px); align-items: start;
+}
+
+.contact-form { margin-top: 12px; }
+.contact-form label {
+  display: block; font-size: 0.92rem; font-weight: 600; color: var(--ink);
+  margin-bottom: 18px;
+}
+.contact-form .req { font-weight: 400; color: var(--muted); font-size: 0.85em; }
+.contact-form input, .contact-form textarea {
+  display: block; width: 100%; margin-top: 6px;
+  font-family: var(--font-sans); font-size: 1rem; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 12px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--action);
+  box-shadow: 0 0 0 3px var(--action-soft);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-status { margin-top: 14px; font-size: 0.95rem; font-weight: 600; min-height: 1.4em; }
+.form-status.is-error { color: #C23B4B; }
+.form-status.is-success { color: #1F8A4C; }
+
+.contact-aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 34px 32px;
+}
+.contact-aside h3 { color: var(--ink); }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 64px 0 28px;
+  background: var(--bg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 0.8fr;
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.footer-col h3 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.2em; }
+.footer-col p { font-size: 0.92rem; }
+.footer-col a { color: var(--ink-soft); }
+.footer-col a:hover { color: var(--action-soft-ink); }
+
+.footer-logo { width: 116px; margin-bottom: 18px; }
+.footer-about .button { margin-top: 12px; }
+.footer-legal-logo { width: 140px; margin-top: 14px; }
+
+.social-links { display: flex; gap: 10px; }
+.social-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px;
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  color: var(--ink-soft);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.social-links a:hover { background: var(--action-soft); color: var(--action-soft-ink); border-color: var(--action); }
+
+.footer-bottom {
+  margin-top: 48px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem; color: var(--muted);
+}
+
+/* ---------- Hero laad-animatie (één orkestmoment) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-hero .kicker,
+  .section-hero h1,
+  .section-hero .rich-text,
+  .section-hero .button-row,
+  .section-hero .chip-row,
+  .section-hero .hero-media {
+    animation: rise 0.5s ease both;
+  }
+  .section-hero h1 { animation-delay: 0.06s; }
+  .section-hero .rich-text { animation-delay: 0.12s; }
+  .section-hero .chip-row { animation-delay: 0.18s; }
+  .section-hero .button-row { animation-delay: 0.24s; }
+  .section-hero .hero-media { animation-delay: 0.2s; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 980px) {
+  .hero-grid, .feature-grid, .split-grid, .contact-grid { grid-template-columns: 1fr; }
+  .media-left .feature-text { order: 1; }
+  .media-left .feature-media { order: 2; }
+  .cards-3 { grid-template-columns: 1fr 1fr; }
+  .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .rich-text.two-column { columns: 1; }
+}
+
+@media (max-width: 700px) {
+  .cards-3, .cards-2, .images-2, .images-3,
+  .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+
+  .nav-toggle { display: block; }
+  .site-nav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    display: none; padding: 10px 20px 20px;
+    box-shadow: var(--shadow-raise);
+  }
+  .nav-open .site-nav { display: block; }
+  .site-nav ul { flex-direction: column; gap: 2px; }
+  .site-nav a { display: block; padding: 12px 13px; font-size: 1.02rem; }
+
+  .cta-inner { border-radius: var(--radius-card); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

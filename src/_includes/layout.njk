@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and page.url != "/" %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="canonical" href="{{ settings.site_url }}{{ page.url }}">
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ settings.site_name }}">
+  <meta property="og:title" content="{% if title %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}">
+  {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+  <meta property="og:url" content="{{ settings.site_url }}{{ page.url }}">
+  <meta property="og:image" content="{{ settings.site_url }}{{ og_image or settings.logo }}">
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ settings.site_name }}",
+    "description": "{{ settings.footer_text }}",
+    "url": "{{ settings.site_url }}",
+    "logo": "{{ settings.site_url }}{{ settings.logo }}",
+    "email": "{{ settings.contact.email }}",
+    "telephone": "{{ settings.contact.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ settings.contact.address_lines[0] }}",
+      "addressLocality": "Amsterdam",
+      "postalCode": "1103 AD",
+      "addressCountry": "NL"
+    },
+    "sameAs": ["{{ settings.socials.linkedin }}", "{{ settings.socials.youtube }}"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {% for section in sections %}
+      {% include "partials/sections/" + section.type + ".njk" %}
+    {% endfor %}
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+# Sveltia CMS-configuratie — beheerscherm op /admin/
+#
+# Voor online gebruik (na deploy): vul hieronder je GitHub-gebruikersnaam/repo in.
+# Voor lokaal gebruik: draai `npm run dev`, open http://localhost:8080/admin/
+# en kies "Work with Local Repository" (werkt in Chrome/Edge).
+
+backend:
+  name: github
+  repo: jjdb77/tubes-website
+  branch: main
+
+site_url: https://www.tubes.media
+media_folder: src/assets/images
+public_folder: /assets/images
+
+# Herbruikbare knop-velden
+_button_fields: &button_fields
+  - { label: Knoptekst, name: label, widget: string }
+  - { label: Link (URL), name: url, widget: string }
+
+collections:
+  - name: instellingen
+    label: Site-instellingen
+    icon: settings
+    files:
+      - name: algemeen
+        label: Algemeen (logo, contact, footer, menu)
+        file: src/_data/settings.json
+        fields:
+          - { label: Sitenaam, name: site_name, widget: string }
+          - { label: Slogan, name: tagline, widget: string }
+          - { label: Site-URL, name: site_url, widget: string, hint: "Zonder slash aan het einde, bijv. https://www.tubes.media" }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Footertekst, name: footer_text, widget: text }
+          - { label: Standaard knoptekst (CTA), name: cta_label, widget: string }
+          - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
+          - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
+          - label: Contactgegevens
+            name: contact
+            widget: object
+            fields:
+              - { label: E-mailadres, name: email, widget: string }
+              - { label: Telefoonnummer, name: phone, widget: string }
+              - { label: Adresregels, name: address_lines, widget: list, field: { label: Regel, name: line, widget: string } }
+          - label: Bedrijfsgegevens (footer "Legal")
+            name: legal
+            widget: object
+            fields:
+              - { label: Bedrijfsnaam, name: company, widget: string }
+              - { label: Land, name: country, widget: string }
+              - { label: KvK-nummer, name: coc, widget: string }
+              - { label: BTW-nummer, name: vat, widget: string }
+              - { label: Logo, name: logo, widget: image, required: false }
+          - label: Social media
+            name: socials
+            widget: object
+            fields:
+              - { label: LinkedIn-URL, name: linkedin, widget: string, required: false }
+              - { label: YouTube-URL, name: youtube, widget: string, required: false }
+          - { label: "Formulier-endpoint (Formspree/Web3Forms)", name: form_endpoint, widget: string, required: false, hint: "Leeg = formulier opent het e-mailprogramma van de bezoeker. Zie README voor uitleg." }
+          - label: Menu
+            name: nav
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Naam, name: label, widget: string }
+              - { label: Link, name: url, widget: string }
+
+  - name: paginas
+    label: Pagina's
+    icon: article
+    folder: src/content/pages
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [title]
+    fields:
+      - { label: Sjabloon, name: layout, widget: hidden, default: layout.njk }
+      - { label: Paginatitel, name: title, widget: string }
+      - { label: "SEO-omschrijving (voor Google)", name: description, widget: text, required: false }
+      - { label: "URL-pad", name: permalink, widget: string, hint: "Bijv. /platform/ — begin en eindig met een slash. Homepagina: /" }
+      - label: Secties
+        name: sections
+        widget: list
+        types:
+          - name: hero
+            label: "Hero (paginakop)"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false }
+              - { label: Titel, name: title, widget: string }
+              - { label: Tekst, name: text, widget: markdown }
+              - label: "Status-chips (pijplijn, optioneel)"
+                name: chips
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Tekst, name: label, widget: string }
+                  - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
+              - label: Knoppen
+                name: buttons
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields: *button_fields
+              - { label: Afbeelding, name: image, widget: image, required: false }
+              - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
+              - { label: "Video (mp4)", name: video, widget: file, required: false }
+              - { label: "Video: posterafbeelding", name: poster, widget: image, required: false }
+          - name: split
+            label: "Twee kolommen"
+            summary: "Twee kolommen"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - label: Kolommen
+                name: columns
+                widget: list
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: Kop, name: heading, widget: string, required: false }
+                  - { label: "Vette introzin", name: lead, widget: string, required: false }
+                  - { label: Tekst, name: text, widget: markdown }
+          - name: feature
+            label: "Tekst + beeld/video"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: "Vette introzin", name: lead, widget: string, required: false }
+              - { label: Tekst, name: text, widget: markdown }
+              - { label: Afbeelding, name: image, widget: image, required: false }
+              - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
+              - { label: "Video (mp4)", name: video, widget: file, required: false }
+              - { label: "Video: posterafbeelding", name: poster, widget: image, required: false }
+              - { label: "Beeld links (i.p.v. rechts)", name: media_position, widget: select, options: [{label: Rechts, value: right}, {label: Links, value: left}], default: right, required: false }
+              - { label: "Onderschrift bij beeld", name: media_caption, widget: string, required: false }
+              - { label: Knop, name: button, widget: object, required: false, collapsed: true, fields: *button_fields }
+          - name: cards
+            label: "Kaarten (2 of 3 naast elkaar)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Kop boven de kaarten, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - { label: Aantal kolommen, name: columns, widget: select, options: [{label: "2", value: 2}, {label: "3", value: 3}], default: 3 }
+              - label: Kaarten
+                name: cards
+                widget: list
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: Kop, name: heading, widget: string }
+                  - { label: Tekst, name: text, widget: markdown }
+          - name: textblock
+            label: Tekstblok
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: "Vette introzin", name: lead, widget: string, required: false }
+              - { label: Tekst, name: text, widget: markdown }
+              - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
+              - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
+          - name: images
+            label: Afbeeldingenrij
+            summary: "Afbeeldingenrij"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - label: Afbeeldingen
+                name: images
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: Afbeelding, name: image, widget: image }
+                  - { label: Alt-tekst, name: alt, widget: string }
+                  - { label: Onderschrift, name: caption, widget: string, required: false }
+          - name: pricing
+            label: Abonnementen
+            summary: "Abonnementen"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - label: Abonnementen
+                name: plans
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Naam, name: name, widget: string }
+                  - { label: "Badge (bijv. Most popular)", name: badge, widget: string, required: false }
+                  - { label: Omschrijving, name: text, widget: markdown }
+                  - { label: "Prijs (bijv. € 49)", name: price, widget: string, required: false }
+                  - { label: "Prijstoelichting (bijv. per user/month)", name: price_note, widget: string, required: false }
+                  - { label: "Extra prijsinfo", name: price_detail, widget: markdown, required: false }
+                  - { label: "Kenmerken (opsomming met -)", name: features, widget: markdown, required: false }
+                  - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+              - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
+          - name: cta
+            label: "Donkerblauwe call-to-action"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Tekst, name: text, widget: markdown }
+              - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+          - name: contactform
+            label: Contactformulier
+            summary: "Contactformulier"
+            fields:
+              - { label: Kop, name: heading, widget: string, default: Contact form }
+              - { label: Tekst boven het formulier, name: text, widget: markdown, required: false }
