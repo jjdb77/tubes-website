@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title and page.url != "/" %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}</title>
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  {% if isPreview %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <link rel="canonical" href="{{ settings.site_url }}{{ page.url }}">
   <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
   <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">

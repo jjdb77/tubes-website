@@ -1,6 +1,13 @@
 import markdownIt from "markdown-it";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+  // Zet alle interne links om als de site in een submap draait
+  // (GitHub Pages-testadres). Standaard "/" — voor het echte domein.
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
+  // Testversie (submap-deploy): niet laten indexeren door zoekmachines
+  eleventyConfig.addGlobalData("isPreview", Boolean(process.env.PATH_PREFIX));
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 
   // Markdown-filter voor tekstvelden uit het CMS
@@ -28,6 +35,7 @@ export default function (eleventyConfig) {
       data: "_data"
     },
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    pathPrefix: process.env.PATH_PREFIX || "/"
   };
 }
