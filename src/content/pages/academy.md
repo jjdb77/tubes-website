@@ -15,7 +15,7 @@ sections:
       - label: Request Academy access
         url: mailto:contact@tubes.media?subject=Request%20Academy%20access
   - type: feature
-    theme: light
+    theme: teal
     heading: "Example video"
     text: |
       **Sign in and choose your default start page**

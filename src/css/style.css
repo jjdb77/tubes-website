@@ -199,6 +199,11 @@ a:hover { color: var(--action); }
 .theme-white { background: var(--surface); border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
 .theme-white + .theme-white { border-top: 0; }
 
+/* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
+.theme-teal { background: #E3F3EE; border-top: 1px solid rgba(14, 140, 119, 0.10); border-bottom: 1px solid rgba(14, 140, 119, 0.10); }
+.theme-teal .card { background: var(--surface); border-color: rgba(14, 140, 119, 0.16); box-shadow: var(--shadow-card); }
+.theme-teal .kicker { color: var(--action-soft-ink); }
+
 .section-hero { padding-top: clamp(44px, 6vw, 80px); }
 
 .hero-grid, .feature-grid {
@@ -220,6 +225,14 @@ a:hover { color: var(--action); }
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-raise);
+}
+
+/* Foto's (jpeg) op vaste 3:2-verhouding, zoals op de oude Squarespace-site.
+   App-screenshots (png) houden hun eigen verhouding — die snij je niet af. */
+.hero-media img[src$=".jpeg"], .hero-media img[src$=".jpg"],
+.feature-media img[src$=".jpeg"], .feature-media img[src$=".jpg"] {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }

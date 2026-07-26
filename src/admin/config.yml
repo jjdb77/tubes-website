@@ -113,7 +113,7 @@ collections:
             label: "Twee kolommen"
             summary: "Twee kolommen"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
               - label: Kolommen
                 name: columns
                 widget: list
@@ -126,7 +126,7 @@ collections:
             label: "Tekst + beeld/video"
             summary: "{{fields.heading}}"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: light }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: "Vette introzin", name: lead, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
@@ -141,7 +141,7 @@ collections:
             label: "Kaarten (2 of 3 naast elkaar)"
             summary: "{{fields.heading}}"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
               - { label: Kop boven de kaarten, name: heading, widget: string, required: false }
               - { label: Introtekst, name: intro, widget: markdown, required: false }
               - { label: Aantal kolommen, name: columns, widget: select, options: [{label: "2", value: 2}, {label: "3", value: 3}], default: 3 }
@@ -156,7 +156,7 @@ collections:
             label: Tekstblok
             summary: "{{fields.heading}}"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: "Vette introzin", name: lead, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
@@ -166,7 +166,7 @@ collections:
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: white }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
               - label: Afbeeldingen
                 name: images
                 widget: list
@@ -179,7 +179,7 @@ collections:
             label: Abonnementen
             summary: "Abonnementen"
             fields:
-              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtblauw, value: light}], default: light }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: Introtekst, name: intro, widget: markdown, required: false }
               - label: Abonnementen

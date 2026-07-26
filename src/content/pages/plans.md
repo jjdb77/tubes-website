@@ -12,7 +12,7 @@ sections:
 
       Tubes grows with your team, from freelancers to large studios. Choose the option that fits your goals and continue with confidence, wherever you're headed next.
   - type: pricing
-    theme: light
+    theme: teal
     plans:
       - name: Producer Pro
         badge: Most popular

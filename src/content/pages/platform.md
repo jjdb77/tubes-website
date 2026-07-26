@@ -29,7 +29,7 @@ sections:
         text: |
           Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
   - type: feature
-    theme: light
+    theme: teal
     heading: Modular by Design
     lead: Start where it matters. Expand when ready.
     text: |

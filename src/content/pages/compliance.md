@@ -15,7 +15,7 @@ sections:
     image: /assets/images/compliance-hero.jpeg
     image_alt: Security and compliance
   - type: textblock
-    theme: white
+    theme: teal
     heading: Core platform principles
     two_column: true
     text: |

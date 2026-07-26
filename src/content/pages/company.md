@@ -30,7 +30,7 @@ sections:
         text: |
           To be the global benchmark for production management in film, television, live entertainment and creative media.
   - type: textblock
-    theme: light
+    theme: teal
     heading: Leadership that Challenges the Status Quo
     text: |
       Too much creative energy is wasted on administration, spreadsheets, and fragmented tools. We believe production teams should focus on storytelling, not process.

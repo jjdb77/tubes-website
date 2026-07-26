@@ -29,7 +29,7 @@ sections:
         text: |
           Access reliable reporting, early warning signals and transparent insight into production performance.
   - type: textblock
-    theme: light
+    theme: teal
     heading: By Production Type
     text: |
       Tubes supports a wide range of professional productions, including:

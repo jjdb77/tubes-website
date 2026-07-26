@@ -55,7 +55,7 @@ sections:
       - image: /assets/images/tubes-agenda.png
         alt: The Tubes scheduling calendar with activities per day
   - type: feature
-    theme: light
+    theme: teal
     heading: Who is Tubes for?
     lead: Built for professional productions of every scale
     text: |
