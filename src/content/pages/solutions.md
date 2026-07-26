@@ -6,7 +6,7 @@ permalink: /solutions/
 sections:
   - type: hero
     kicker: Solutions
-    title: Designed for every role in production
+    title: Designed for *every role* in production
     text: |
       Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability.
     buttons:

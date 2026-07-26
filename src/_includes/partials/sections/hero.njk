@@ -1,8 +1,8 @@
-<section class="section section-hero theme-light">
+<section class="section section-hero theme-{{ section.theme or 'light' }}">
   <div class="container hero-grid{% if not section.image and not section.video %} hero-single{% endif %}">
     <div class="hero-text">
       {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
-      <h1>{{ section.title }}</h1>
+      <h1>{{ section.title | mdInline | safe }}</h1>
       <div class="rich-text lead">{{ section.text | md | safe }}</div>
       {% if section.chips %}
       <ul class="chip-row" aria-label="Production stages">

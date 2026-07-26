@@ -6,7 +6,7 @@ permalink: /plans/
 sections:
   - type: hero
     kicker: Plans & pricing
-    title: Choose your plan
+    title: Choose your *plan*
     text: |
       No hidden costs. Cancel anytime.
 

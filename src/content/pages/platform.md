@@ -6,7 +6,7 @@ permalink: /platform/
 sections:
   - type: hero
     kicker: The platform
-    title: The Tubes platform
+    title: The Tubes *platform*
     text: |
       Tubes is a modular SaaS platform designed specifically for media production workflows. It replaces fragmented tools and spreadsheets with one integrated system.
     buttons:

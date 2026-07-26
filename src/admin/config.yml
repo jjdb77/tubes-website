@@ -89,8 +89,9 @@ collections:
             label: "Hero (paginakop)"
             summary: "{{fields.title}}"
             fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Licht, value: light}, {label: Donker, value: dark}], default: light }
               - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false }
-              - { label: Titel, name: title, widget: string }
+              - { label: Titel, name: title, widget: string, hint: "Zet *sterretjes* om een woord voor de accentkleur, bijv: in *one platform*" }
               - { label: Tekst, name: text, widget: markdown }
               - label: "Status-chips (pijplijn, optioneel)"
                 name: chips

@@ -69,9 +69,12 @@ h1, h2, h3, h4 {
   margin: 0 0 0.6em;
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; }
-h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.3rem, 4.6vw, 3.7rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.08; }
+h2 { font-size: clamp(1.7rem, 3.3vw, 2.7rem); font-weight: 800; letter-spacing: -0.025em; }
 h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+
+/* Accentwoord in paginatitels: *woord* in het CMS wordt teal */
+h1 em { font-style: normal; color: var(--action); }
 
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
@@ -137,6 +140,14 @@ a:hover { color: var(--action); }
 .chip-lavender { background: var(--status-lavender-bg); color: var(--status-lavender-ink); }
 
 .chip-sep { color: var(--muted); font-size: 0.9rem; user-select: none; }
+.theme-dark .chip-sep { color: rgba(231, 230, 227, 0.45); }
+
+/* Levende pipeline: de "actieve" fase licht op (JS wisselt door) */
+.chip { transition: transform 0.35s ease, box-shadow 0.35s ease; }
+.chip.is-current {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.45), 0 0 0 1.5px currentColor inset;
+}
 
 /* ---------- Knoppen (radius 10, teal) ---------- */
 
@@ -219,6 +230,27 @@ a:hover { color: var(--action); }
   box-shadow: 0 16px 30px -24px rgba(26, 26, 26, 0.28),
               0 -16px 30px -24px rgba(26, 26, 26, 0.28);
 }
+
+/* Donker thema (home-hero): ink met een zachte teal- en goudgloed */
+.theme-dark {
+  background:
+    radial-gradient(900px 520px at 82% 12%, rgba(14, 156, 136, 0.20), transparent 62%),
+    radial-gradient(640px 420px at 6% 95%, rgba(214, 163, 57, 0.09), transparent 60%),
+    #17191C;
+  color: rgba(231, 230, 227, 0.78);
+}
+.theme-dark h1, .theme-dark h2, .theme-dark h3 { color: #fff; }
+.theme-dark h1 em { color: #0FB6A2; }
+.theme-dark .col-lead { color: #fff; }
+.theme-dark .kicker { color: rgba(231, 230, 227, 0.55); }
+.theme-dark .rich-text strong { color: #fff; }
+.theme-dark .rich-text li::before { border-color: #0FB6A2; }
+.theme-dark a { color: #7BD9CC; }
+.theme-dark .button.button-secondary { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.theme-dark .button.button-secondary:hover { border-color: #fff; color: #fff; }
+.theme-dark .hero-media::before { background: rgba(14, 156, 136, 0.32); }
+.theme-dark .hero-media::after { background: rgba(14, 156, 136, 0.13); }
+.theme-dark .hero-media img, .theme-dark .hero-media video { border-color: rgba(255, 255, 255, 0.14); }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
 .theme-teal { background: #E3F3EE; border-top: 1px solid rgba(14, 140, 119, 0.10); border-bottom: 1px solid rgba(14, 140, 119, 0.10); }

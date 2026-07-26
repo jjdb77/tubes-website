@@ -14,7 +14,10 @@
   <meta property="og:title" content="{% if title %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}">
   {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
   <meta property="og:url" content="{{ settings.site_url }}{{ page.url }}">
-  <meta property="og:image" content="{{ settings.site_url }}{{ og_image or settings.logo }}">
+  <meta property="og:image" content="{{ settings.site_url }}{{ og_image or '/assets/images/og-image.png' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/assets/fonts/mulish.css">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">

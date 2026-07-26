@@ -7,6 +7,21 @@ if (toggle) {
   });
 }
 
+// Levende pipeline: chips lichten om de beurt op
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  for (const row of document.querySelectorAll(".chip-row")) {
+    const chips = row.querySelectorAll(".chip");
+    if (chips.length < 2) continue;
+    let i = 0;
+    chips[0].classList.add("is-current");
+    setInterval(() => {
+      chips[i].classList.remove("is-current");
+      i = (i + 1) % chips.length;
+      chips[i].classList.add("is-current");
+    }, 2200);
+  }
+}
+
 // Module-tour: tabs wisselen
 for (const tour of document.querySelectorAll("[data-tour]")) {
   const tabs = tour.querySelectorAll(".tour-tab");
