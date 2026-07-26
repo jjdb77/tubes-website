@@ -1,19 +1,20 @@
 /* ===================================================================
    Tubes — tubes.media
    Design language: het Tubes VMS design system (Claude Design project
-   "Tubes Design System") — crème canvas, witte kaarten, teal acties,
-   Mulish. Status-chips uit de app zijn het signatuurelement.
+   "Tubes Design System") — neutraal lichtgrijs canvas (op verzoek i.p.v.
+   het crème uit de app), witte kaarten, teal acties, Mulish.
+   Status-chips uit de app zijn het signatuurelement.
    =================================================================== */
 
 :root {
   /* Neutrals — tokens/colors.css */
-  --bg: #F2EEE6;
+  --bg: #F5F5F3;
   --surface: #FFFFFF;
   --ink: #1A1A1A;
   --ink-soft: #5C5750;
-  --muted: #9A8E7E;
-  --border: #E0D9CD;
-  --divider: #F0EBE2;
+  --muted: #8F8C85;
+  --border: #E3E1DD;
+  --divider: #ECEBE8;
 
   /* Action — teal */
   --action: #0E9C88;
@@ -155,9 +156,10 @@ a:hover { color: var(--action); }
 
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(242, 238, 230, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-nav);
 }
 
 .header-inner {
@@ -204,7 +206,22 @@ a:hover { color: var(--action); }
 .theme-teal .card { background: var(--surface); border-color: rgba(14, 140, 119, 0.16); box-shadow: var(--shadow-card); }
 .theme-teal .kicker { color: var(--action-soft-ink); }
 
-.section-hero { padding-top: clamp(44px, 6vw, 80px); }
+.section-hero { padding-top: clamp(44px, 6vw, 80px); overflow: hidden; }
+
+/* Hero-beeld: gestapelde "app-panelen" — teal plaat schuin achter het
+   beeld, en het beeld loopt op brede schermen door richting de rand */
+.section-hero .hero-media { position: relative; margin-right: -5vw; }
+.section-hero .hero-media::before {
+  content: "";
+  position: absolute; inset: 0;
+  transform: translate(22px, 22px) rotate(2deg);
+  background: var(--action-soft);
+  border-radius: var(--radius-card);
+}
+.section-hero .hero-media img,
+.section-hero .hero-media video { position: relative; }
+.section-hero .hero-media img[src$=".jpeg"],
+.section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
 
 .hero-grid, .feature-grid {
   display: grid; grid-template-columns: 1.05fr 0.95fr;
@@ -369,7 +386,7 @@ a:hover { color: var(--action); }
   padding: clamp(48px, 7vw, 88px) clamp(24px, 6vw, 96px);
 }
 .cta-inner h2 { color: #fff; }
-.cta-inner .rich-text { color: rgba(242, 238, 230, 0.75); max-width: 720px; margin: 0 auto; }
+.cta-inner .rich-text { color: rgba(231, 230, 227, 0.8); max-width: 720px; margin: 0 auto; }
 .cta-inner .rich-text strong { color: #fff; }
 .cta-inner .rich-text a { color: var(--action-soft); }
 
@@ -480,6 +497,8 @@ a:hover { color: var(--action); }
 
 @media (max-width: 980px) {
   .hero-grid, .feature-grid, .split-grid, .contact-grid { grid-template-columns: 1fr; }
+  .section-hero .hero-media { margin-right: 12px; }
+  .section-hero .hero-media::before { transform: translate(12px, 12px) rotate(1.5deg); }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
