@@ -7,6 +7,23 @@ if (toggle) {
   });
 }
 
+// Secties zachtjes laten opkomen bij het scrollen (niet bij reduced motion)
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+  const targets = document.querySelectorAll(".section:not(.section-hero) .container");
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        io.unobserve(entry.target);
+      }
+    }
+  }, { rootMargin: "0px 0px -60px 0px", threshold: 0.05 });
+  for (const el of targets) {
+    el.classList.add("reveal");
+    io.observe(el);
+  }
+}
+
 // Contactformulier: verstuurt naar form_endpoint (bijv. Formspree/Web3Forms).
 // Zonder endpoint valt het terug op een mailto-link.
 const form = document.querySelector(".contact-form");

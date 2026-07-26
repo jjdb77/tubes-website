@@ -38,9 +38,13 @@
   --shadow-nav: 0px 1px 2px 0px rgba(0,0,0,0.05);
   --shadow-raise: 0px 10px 24px -8px rgba(26,26,26,0.14);
 
+  --gold: #D6A339; /* uit het TUBES-logo */
+
   --font-sans: "Mulish", "Nunito", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
   --container: 1240px;
 }
+
+::selection { background: var(--action-soft); color: var(--action-soft-ink); }
 
 * { box-sizing: border-box; }
 
@@ -100,6 +104,15 @@ a:hover { color: var(--action); }
   letter-spacing: 0.09em;
   color: var(--muted);
   margin-bottom: 18px;
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 22px; height: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+  vertical-align: 2px;
+  margin-right: 10px;
 }
 
 /* ---------- Status-chips (signatuur, uit de app) ---------- */
@@ -198,8 +211,14 @@ a:hover { color: var(--action); }
 
 .section { padding: clamp(56px, 8vw, 108px) 0; }
 .theme-light { background: var(--bg); }
-.theme-white { background: var(--surface); border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
-.theme-white + .theme-white { border-top: 0; }
+/* Witte secties zijn "vellen" die zacht schaduw werpen op het canvas —
+   diepte in plaats van harde scheidingslijnen */
+.theme-white {
+  background: var(--surface);
+  position: relative; z-index: 1;
+  box-shadow: 0 16px 30px -24px rgba(26, 26, 26, 0.28),
+              0 -16px 30px -24px rgba(26, 26, 26, 0.28);
+}
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
 .theme-teal { background: #E3F3EE; border-top: 1px solid rgba(14, 140, 119, 0.10); border-bottom: 1px solid rgba(14, 140, 119, 0.10); }
@@ -213,15 +232,27 @@ a:hover { color: var(--action); }
 .section-hero .hero-media { position: relative; margin-right: -5vw; }
 .section-hero .hero-media::before {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 1;
   transform: translate(22px, 22px) rotate(2deg);
   background: var(--action-soft);
   border-radius: var(--radius-card);
 }
+/* Tweede, verder liggende laag: geeft het gestapelde-panelen-effect diepte */
+.section-hero .hero-media::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  transform: translate(46px, 42px) rotate(4deg);
+  background: rgba(14, 156, 136, 0.09);
+  border-radius: var(--radius-card);
+}
 .section-hero .hero-media img,
-.section-hero .hero-media video { position: relative; }
+.section-hero .hero-media video { position: relative; z-index: 2; }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
+
+/* Secties zachtjes laten opkomen bij het scrollen (klasse via JS) */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
 
 .hero-grid, .feature-grid {
   display: grid; grid-template-columns: 1.05fr 0.95fr;
