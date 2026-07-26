@@ -19,13 +19,16 @@ sections:
     heading: By Role
     columns: 3
     cards:
-      - heading: Producers
+      - icon: /assets/icons/video-camera.svg
+        heading: Producers
         text: |
           Maintain oversight without limiting creative flexibility. Respond quickly to changes and keep productions aligned.
-      - heading: Finance & Controllers
+      - icon: /assets/icons/currency-dollar.svg
+        heading: Finance & Controllers
         text: |
           Gain real-time visibility into costs, forecasts and risks with standardized workflows and audit-ready data.
-      - heading: Executives, Broadcasters & Partners
+      - icon: /assets/icons/station.svg
+        heading: Executives, Broadcasters & Partners
         text: |
           Access reliable reporting, early warning signals and transparent insight into production performance.
   - type: textblock

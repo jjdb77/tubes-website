@@ -150,6 +150,7 @@ collections:
                 widget: list
                 summary: "{{fields.heading}}"
                 fields:
+                  - { label: "Icoon (svg uit assets/icons)", name: icon, widget: image, required: false }
                   - { label: Kop, name: heading, widget: string }
                   - { label: Tekst, name: text, widget: markdown }
           - name: textblock

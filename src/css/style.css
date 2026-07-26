@@ -334,6 +334,30 @@ a:hover { color: var(--action); }
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
+
+/* Icoontegel, zoals in de Tubes-app (radius 8, zachte wash + teal icoon) */
+.icon-tile {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: var(--radius-icon, 8px);
+  background: var(--action-soft);
+  margin-bottom: 18px;
+}
+.icon-tile i {
+  display: block; width: 20px; height: 20px;
+  background: var(--action-soft-ink);
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+
+.contact-aside .icon-line { display: flex; gap: 12px; align-items: baseline; }
+.contact-aside .icon-line i {
+  flex: none; display: inline-block; width: 15px; height: 15px;
+  background: var(--action-soft-ink);
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  transform: translateY(2px);
+}
 .card:hover { box-shadow: var(--shadow-raise); border-color: var(--muted); }
 .card h3 { color: var(--ink); }
 

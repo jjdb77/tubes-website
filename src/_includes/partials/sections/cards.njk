@@ -5,6 +5,7 @@
     <div class="cards-grid cards-{{ section.columns or 3 }}">
       {% for card in section.cards %}
       <div class="card">
+        {% if card.icon %}<span class="icon-tile" aria-hidden="true"><i style="--icon: url('{{ card.icon | htmlBaseUrl }}')"></i></span>{% endif %}
         {% if card.heading %}<h3>{{ card.heading }}</h3>{% endif %}
         <div class="rich-text">{{ card.text | md | safe }}</div>
       </div>

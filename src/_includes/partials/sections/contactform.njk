@@ -27,13 +27,11 @@
     </div>
     <aside class="contact-aside">
       <h3>Or contact us directly</h3>
-      <p>
-        <a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a><br>
-        <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>
-      </p>
-      <p>
+      <p class="icon-line"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/envelope.svg' | htmlBaseUrl }}')"></i><a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a></p>
+      <p class="icon-line"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/phone.svg' | htmlBaseUrl }}')"></i><a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a></p>
+      <p class="icon-line"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/location.svg' | htmlBaseUrl }}')"></i><span>
         {% for line in settings.contact.address_lines %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
-      </p>
+      </span></p>
     </aside>
   </div>
 </section>

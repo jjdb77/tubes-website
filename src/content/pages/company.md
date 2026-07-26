@@ -18,15 +18,18 @@ sections:
     theme: white
     columns: 3
     cards:
-      - heading: Mission
+      - icon: /assets/icons/target.svg
+        heading: Mission
         text: |
           To help media production organizations operate more efficiently and profitably through an integrated SaaS platform that supports the full production cycle.
-      - heading: Experience
+      - icon: /assets/icons/badge.svg
+        heading: Experience
         text: |
           Tubes is developed by a team with over 20 years of experience building software for media, creative and production organizations, including work with companies such as RTL, Talpa and Tuvalu Media of the Netherlands.
 
           This experience shapes every part of the platform, from workflow design to security, compliance and scalability.
-      - heading: Vision
+      - icon: /assets/icons/light-bulb.svg
+        heading: Vision
         text: |
           To be the global benchmark for production management in film, television, live entertainment and creative media.
   - type: textblock
