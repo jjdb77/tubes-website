@@ -24,6 +24,7 @@
     "youtube": "https://www.youtube.com/@tubesmedia"
   },
   "form_endpoint": "",
+  "goatcounter": "",
   "nav": [
     { "label": "Home", "url": "/" },
     { "label": "Platform", "url": "/platform/" },

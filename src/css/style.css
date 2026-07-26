@@ -380,6 +380,91 @@ a:hover { color: var(--action); }
 }
 .screenshot figcaption { font-size: 0.88rem; margin-top: 10px; text-align: center; color: var(--muted); }
 
+/* ---------- Module-tour (tabs zoals in de app) ---------- */
+
+.tour-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+
+.tour-tab {
+  font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-button);
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.tour-tab:hover { border-color: var(--action); color: var(--action-soft-ink); }
+.tour-tab.is-active { background: var(--action); border-color: var(--action); color: #fff; }
+
+.tour-panel { display: none; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.tour-panel.is-active { display: grid; }
+
+.tour-media img {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-raise);
+}
+
+/* ---------- Zonder/Met Tubes ---------- */
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+
+.compare-card {
+  border-radius: var(--radius-card);
+  padding: 36px 34px;
+}
+.compare-card ul { list-style: none; margin: 0; padding: 0; }
+.compare-card li { position: relative; padding-left: 30px; margin-bottom: 0.7em; }
+.compare-card li::before { position: absolute; left: 0; top: 0; }
+
+.compare-without {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+}
+.compare-without li::before { content: "✕"; color: #C23B4B; font-weight: 700; }
+
+.compare-with {
+  background: var(--surface);
+  border: 1.5px solid var(--action);
+  box-shadow: 0 12px 32px -14px rgba(14, 156, 136, 0.28);
+}
+.compare-with li::before { content: "✓"; color: var(--action); font-weight: 800; }
+
+/* ---------- FAQ ---------- */
+
+.faq-wrap { max-width: 860px; }
+.faq-list { margin-top: 28px; }
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-wash);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700; color: var(--ink);
+  padding: 18px 52px 18px 22px;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: ""; position: absolute; right: 22px; top: 50%;
+  width: 10px; height: 10px;
+  border-right: 2.5px solid var(--action);
+  border-bottom: 2.5px solid var(--action);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: translateY(-30%) rotate(225deg); }
+.faq-item summary:hover { color: var(--action-soft-ink); }
+.faq-answer { padding: 0 22px 20px; }
+
 /* ---------- Pricing ---------- */
 
 .pricing-grid { display: grid; gap: 24px; margin-top: 44px; align-items: stretch; }

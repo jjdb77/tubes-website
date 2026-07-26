@@ -27,26 +27,26 @@ sections:
         url: /contact/
     image: /assets/images/example-tubes-01.png
     image_alt: The Tubes dashboard with projects, budgets and reporting
-  - type: split
+  - type: compare
     theme: white
-    columns:
-      - heading: The Problem
-        lead: When planning and execution are disconnected, control is lost
-        text: |
-          In many productions, budgeting, scheduling, and cost control are handled in separate tools. Changes require manual recalculations, information is copied across multiple versions, and teams end up working with outdated data.
-
-          This leads to inefficiency, errors, delays, and avoidable cost overruns, even in highly professional productions. Financial insight often comes too late to prevent overspending.
-      - heading: The Solution
-        lead: One platform for the entire production lifecycle
-        text: |
-          Tubes brings planning and execution together in a single, shared environment:
-
-          - Structured budgeting and planning
-          - Integrated production workflows
-          - Real-time cost control and forecasting
-          - Role-based access for all stakeholders
-          - Reliable reporting without manual consolidation
-          - Operational finance layer for processing and approving production costs
+    heading: When planning and execution are disconnected, control is lost
+    intro: |
+      In many productions, budgeting, scheduling, and cost control live in separate tools. Tubes brings planning and execution together in a single, shared environment — for the entire production lifecycle.
+    without_title: Without Tubes
+    without_items:
+      - Budgeting, scheduling and cost control in separate tools
+      - Manual recalculations after every change
+      - Information copied across multiple versions
+      - Teams working with outdated data
+      - Financial insight that arrives too late to prevent overspending
+    with_title: With Tubes
+    with_items:
+      - Structured budgeting and planning in one shared environment
+      - Integrated production workflows
+      - Real-time cost control and forecasting
+      - Role-based access for all stakeholders
+      - Reliable reporting without manual consolidation
+      - Operational finance layer for processing and approving production costs
   - type: images
     theme: white
     images:

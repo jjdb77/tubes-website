@@ -46,6 +46,28 @@ sections:
           url: /contact/
     footnote: |
       Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies** — [get in touch](/contact/).
+  - type: faq
+    theme: white
+    heading: Frequently asked questions
+    items:
+      - question: Can I cancel my subscription at any time?
+        answer: |
+          Yes. There are no hidden costs and you can cancel anytime.
+      - question: Can I start small and expand later?
+        answer: |
+          Yes. Tubes is modular by design — teams often begin with budgeting or planning and expand over time to scheduling, cost control and reporting.
+      - question: Is there a plan for a single production?
+        answer: |
+          Yes. Ask us about **Tubes Projects**: priced per production, includes 5 users, and you can add more users anytime in blocks of 5 — pro-rated for the remaining duration.
+      - question: Where is my data stored?
+        answer: |
+          On EU-based cloud services, with daily backups, GDPR-aligned data handling and clear data ownership per production environment. See [Security & Compliance](/compliance/) for details.
+      - question: Does Tubes integrate with finance or payroll systems?
+        answer: |
+          Yes. Tubes has an integration-ready architecture and connects with finance, payroll and planning tools (available on Tubes for Companies and Enterprise).
+      - question: How do I request a demo?
+        answer: |
+          [Get in touch](/contact/) and share a few details about your organization and productions — we'll get back to you to explore how Tubes fits your workflow.
   - type: cta
     title: Take Control of Your Productions
     text: |

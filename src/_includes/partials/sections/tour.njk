@@ -1,0 +1,24 @@
+<section class="section theme-{{ section.theme or 'white' }} section-tour">
+  <div class="container">
+    {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+    <div class="tour" data-tour>
+      <div class="tour-tabs" role="tablist" aria-label="{{ section.heading or 'Product tour' }}">
+        {% for tab in section.tabs %}
+        <button class="tour-tab{% if loop.first %} is-active{% endif %}" role="tab" type="button"
+                id="tour-tab-{{ loop.index }}" aria-controls="tour-panel-{{ loop.index }}"
+                aria-selected="{% if loop.first %}true{% else %}false{% endif %}">{{ tab.label }}</button>
+        {% endfor %}
+      </div>
+      {% for tab in section.tabs %}
+      <div class="tour-panel{% if loop.first %} is-active{% endif %}" role="tabpanel"
+           id="tour-panel-{{ loop.index }}" aria-labelledby="tour-tab-{{ loop.index }}" {% if not loop.first %}hidden{% endif %}>
+        <div class="tour-text rich-text">{{ tab.text | md | safe }}</div>
+        <div class="tour-media">
+          <img src="{{ tab.image }}" alt="{{ tab.image_alt or tab.label }}" loading="lazy">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

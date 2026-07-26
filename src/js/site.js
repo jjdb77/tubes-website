@@ -7,6 +7,24 @@ if (toggle) {
   });
 }
 
+// Module-tour: tabs wisselen
+for (const tour of document.querySelectorAll("[data-tour]")) {
+  const tabs = tour.querySelectorAll(".tour-tab");
+  const panels = tour.querySelectorAll(".tour-panel");
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t, j) => {
+        t.classList.toggle("is-active", i === j);
+        t.setAttribute("aria-selected", i === j ? "true" : "false");
+      });
+      panels.forEach((p, j) => {
+        p.classList.toggle("is-active", i === j);
+        if (i === j) { p.removeAttribute("hidden"); } else { p.setAttribute("hidden", ""); }
+      });
+    });
+  });
+}
+
 // Secties zachtjes laten opkomen bij het scrollen (niet bij reduced motion)
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
   const targets = document.querySelectorAll(".section:not(.section-hero) .container");

@@ -58,6 +58,7 @@ collections:
               - { label: LinkedIn-URL, name: linkedin, widget: string, required: false }
               - { label: YouTube-URL, name: youtube, widget: string, required: false }
           - { label: "Formulier-endpoint (Formspree/Web3Forms)", name: form_endpoint, widget: string, required: false, hint: "Leeg = formulier opent het e-mailprogramma van de bezoeker. Zie README voor uitleg." }
+          - { label: "GoatCounter-code (bezoekersstatistieken)", name: goatcounter, widget: string, required: false, hint: "Maak gratis een account op goatcounter.com en vul hier je code in (het deel vóór .goatcounter.com). Leeg = geen statistieken." }
           - label: Menu
             name: nav
             widget: list
@@ -210,3 +211,44 @@ collections:
             fields:
               - { label: Kop, name: heading, widget: string, default: Contact form }
               - { label: Tekst boven het formulier, name: text, widget: markdown, required: false }
+          - name: tour
+            label: "Module-tour (tabs met screenshots)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - label: Tabs
+                name: tabs
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Tabnaam, name: label, widget: string }
+                  - { label: Tekst, name: text, widget: markdown }
+                  - { label: Screenshot, name: image, widget: image }
+                  - { label: Alt-tekst, name: image_alt, widget: string, required: false }
+          - name: compare
+            label: "Zonder/Met Tubes (vergelijking)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - { label: "Titel linkerkolom (✕)", name: without_title, widget: string, default: Without Tubes }
+              - { label: "Punten linkerkolom (✕)", name: without_items, widget: list, field: { label: Punt, name: item, widget: string } }
+              - { label: "Titel rechterkolom (✓)", name: with_title, widget: string, default: With Tubes }
+              - { label: "Punten rechterkolom (✓)", name: with_items, widget: list, field: { label: Punt, name: item, widget: string } }
+          - name: faq
+            label: "FAQ (uitklapvragen)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Crème, value: light}, {label: Teal-tint, value: teal}], default: white }
+              - { label: Kop, name: heading, widget: string, default: Frequently asked questions }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - label: Vragen
+                name: items
+                widget: list
+                summary: "{{fields.question}}"
+                fields:
+                  - { label: Vraag, name: question, widget: string }
+                  - { label: Antwoord, name: answer, widget: markdown }

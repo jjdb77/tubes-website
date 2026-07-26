@@ -1,0 +1,29 @@
+<section class="section theme-{{ section.theme or 'white' }}">
+  <div class="container faq-wrap">
+    {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+    <div class="faq-list">
+      {% for item in section.items %}
+      <details class="faq-item"{% if loop.first %} open{% endif %}>
+        <summary>{{ item.question }}</summary>
+        <div class="rich-text faq-answer">{{ item.answer | md | safe }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for item in section.items %}
+      {
+        "@type": "Question",
+        "name": {{ item.question | dump | safe }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | md | striptags | trim | dump | safe }} }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+</section>

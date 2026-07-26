@@ -38,6 +38,37 @@ sections:
     text: |
       Tubes supports phased adoption. Teams can begin with budgeting or planning and expand over time to scheduling, cost control and reporting. Reducing risk and accelerating adoption.
     video: /assets/videos/platform-modular.mp4
+  - type: tour
+    theme: light
+    heading: See Tubes in action
+    intro: |
+      One workspace, five connected views. Click through the modules.
+    tabs:
+      - label: Budgeting
+        text: |
+          **Structured budgets per production.** Drafts, quotations and status side by side — with templates, dynamic formulas and multiple budgets per production.
+        image: /assets/images/tubes-budgeting.png
+        image_alt: Projects in budgeting with drafts and quotations
+      - label: Planning
+        text: |
+          **The smart scheduler.** Cast, crew and locations coordinated in one calendar, shared with everyone through schedules and call sheets.
+        image: /assets/images/tubes-agenda.png
+        image_alt: Weekly planning calendar with activities
+      - label: Cost control
+        text: |
+          **Every invoice in one pipeline.** Review, approve, export — with OCR and PO matching, and a live view of your open amounts.
+        image: /assets/images/app-finance.jpg
+        image_alt: Finance overview with invoice pipeline
+      - label: Reporting
+        text: |
+          **Real-time insight.** Budgets, work budgets, actuals and expected margins per production — without manual consolidation.
+        image: /assets/images/app-dashboard.jpg
+        image_alt: Dashboard with projects financial overview
+      - label: Compare
+        text: |
+          **Compare budgets side by side.** Spot differences between versions and scenarios instantly, before committing decisions.
+        image: /assets/images/app-compare.jpg
+        image_alt: Selecting budgets to compare
   - type: feature
     theme: white
     heading: Built for Scale
