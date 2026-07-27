@@ -6,8 +6,10 @@ export default function (eleventyConfig) {
   // (GitHub Pages-testadres). Standaard "/" — voor het echte domein.
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
-  // Testversie (submap-deploy): niet laten indexeren door zoekmachines
-  eleventyConfig.addGlobalData("isPreview", Boolean(process.env.PATH_PREFIX));
+  // Testversie: niet laten indexeren door zoekmachines.
+  // Actief bij submap-deploy (PATH_PREFIX) of expliciet via PREVIEW=true
+  // (zet die env-variabele op Railway uit zodra tubes.media live gaat).
+  eleventyConfig.addGlobalData("isPreview", Boolean(process.env.PATH_PREFIX || process.env.PREVIEW));
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 
   // Markdown-filter voor tekstvelden uit het CMS
