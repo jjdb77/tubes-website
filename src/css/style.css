@@ -8,13 +8,13 @@
 
 :root {
   /* Neutrals — tokens/colors.css */
-  --bg: #F5F5F3;
+  --bg: #F6F7F9;
   --surface: #FFFFFF;
   --ink: #1A1A1A;
   --ink-soft: #5C5750;
-  --muted: #8F8C85;
-  --border: #E3E1DD;
-  --divider: #ECEBE8;
+  --muted: #8B8E94;
+  --border: #E3E5E9;
+  --divider: #ECEEF1;
 
   /* Action — teal */
   --action: #0E9C88;
@@ -74,7 +74,13 @@ h2 { font-size: clamp(1.7rem, 3.3vw, 2.7rem); font-weight: 800; letter-spacing: 
 h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
 
 /* Accentwoord in paginatitels: *woord* in het CMS wordt teal */
-h1 em { font-style: normal; color: var(--action); }
+h1 em {
+  font-style: normal;
+  background: linear-gradient(100deg, #0EA893 20%, #2D6CC4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
@@ -165,7 +171,7 @@ a:hover { color: var(--action); }
 }
 
 .button.button-primary { background: var(--action); color: #fff; }
-.button.button-primary:hover { background: var(--action-hover); color: #fff; box-shadow: var(--shadow-card); }
+.button.button-primary:hover { background: #10AC97; color: #fff; box-shadow: 0 8px 18px -8px rgba(14, 156, 136, 0.55); transform: translateY(-2px); }
 
 .button.button-secondary { background: var(--surface); color: var(--action-soft-ink); border-color: var(--border); }
 .button.button-secondary:hover { border-color: var(--action); color: var(--action-hover); }
@@ -295,7 +301,7 @@ a:hover { color: var(--action); }
 }
 
 .theme-dark h1, .theme-dark h2, .theme-dark h3 { color: #fff; }
-.theme-dark h1 em { color: #0FB6A2; }
+.theme-dark h1 em { background-image: linear-gradient(100deg, #0FB6A2 25%, #6BAAF0); }
 .theme-dark .col-lead { color: #fff; }
 .theme-dark .kicker { color: rgba(231, 230, 227, 0.55); }
 .theme-dark .rich-text strong { color: #fff; }
@@ -333,12 +339,18 @@ a:hover { color: var(--action); }
   border-radius: var(--radius-card);
 }
 .section-hero .hero-media img,
-.section-hero .hero-media video { position: relative; z-index: 2; }
+.section-hero .hero-media video {
+  position: relative; z-index: 2;
+  transform: rotate(-1.2deg);
+  transition: transform 0.4s ease;
+}
+.section-hero .hero-media:hover img,
+.section-hero .hero-media:hover video { transform: rotate(0deg); }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
 
 /* Secties zachtjes laten opkomen bij het scrollen (klasse via JS) */
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 .hero-grid, .feature-grid {
@@ -776,4 +788,50 @@ a:hover { color: var(--action); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* ---------- Energie-details ---------- */
+
+/* Pipeline-chips: speels heel licht gekanteld */
+.chip-row li.chip:nth-child(4n+1) { transform: rotate(-1.5deg); }
+.chip-row li.chip:nth-child(4n+3) { transform: rotate(1.2deg); }
+
+/* Kaarten komen trapsgewijs binnen zodra de sectie in beeld schuift */
+.reveal .card, .reveal .plan-card {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible .card, .reveal.is-visible .plan-card { opacity: 1; transform: none; }
+.reveal.is-visible .card:nth-child(2), .reveal.is-visible .plan-card:nth-child(2) { transition-delay: 0.08s; }
+.reveal.is-visible .card:nth-child(3), .reveal.is-visible .plan-card:nth-child(3) { transition-delay: 0.16s; }
+.reveal.is-visible .card:nth-child(4) { transition-delay: 0.24s; }
+
+/* ---------- Marquee: doorlopende strip met modulewoorden ---------- */
+
+.section-marquee {
+  padding: 26px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  overflow: hidden;
+}
+.marquee { display: flex; overflow: hidden; user-select: none; }
+.marquee-track {
+  display: flex; align-items: center; gap: 44px;
+  flex-shrink: 0; min-width: 100%;
+  padding-right: 44px;
+  font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.marquee-track .word { color: var(--ink); }
+.marquee-track .word:nth-child(4n+3) {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--muted);
+}
+.marquee-track .dot { color: var(--gold); font-size: 1.2rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .marquee-track { animation: marquee 46s linear infinite; }
+  @keyframes marquee {
+    to { transform: translateX(-100%); }
+  }
 }

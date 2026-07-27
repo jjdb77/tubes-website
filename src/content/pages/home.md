@@ -28,6 +28,17 @@ sections:
         url: /contact/
     image: /assets/images/example-tubes-01.png
     image_alt: The Tubes dashboard with projects, budgets and reporting
+  - type: marquee
+    words:
+      - Budgeting
+      - Scheduling
+      - Cost control
+      - Approvals
+      - Call sheets
+      - Reporting
+      - Client portal
+      - Digital signing
+      - AI assistants
   - type: compare
     theme: white
     heading: When planning and execution are disconnected, control is lost

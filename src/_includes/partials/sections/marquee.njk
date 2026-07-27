@@ -1,0 +1,13 @@
+<section class="section-marquee" aria-hidden="true">
+  <div class="marquee">
+    {% for i in [1, 2] %}
+    <div class="marquee-track"{% if i == 2 %} aria-hidden="true"{% endif %}>
+      {% for word in section.words %}
+      <span class="word">{{ word }}</span>
+      {% if not loop.last %}<span class="dot">·</span>{% endif %}
+      {% endfor %}
+      <span class="dot">·</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
