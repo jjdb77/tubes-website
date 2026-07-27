@@ -203,7 +203,7 @@ a:hover { color: var(--action); }
 .logo-text {
   display: inline-flex; flex-direction: column;
   font-family: "Quicksand", var(--font-sans); /* ronde vormen, als het originele logo */
-  font-weight: 700; font-size: 1.75rem;
+  font-weight: 700; font-size: 1.9rem;
   line-height: 1;
   color: var(--ink);
 }
@@ -225,7 +225,7 @@ a:hover { color: var(--action); }
 }
 .logo-text small i { font-style: normal; }
 .footer-brand { margin-bottom: 16px; }
-.footer-brand .logo-text { font-size: 1.35rem; }
+.footer-brand .logo-text { font-size: 1.45rem; }
 
 .site-nav ul {
   display: flex; flex-wrap: wrap; gap: 2px;
