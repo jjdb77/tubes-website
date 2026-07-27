@@ -202,8 +202,8 @@ a:hover { color: var(--action); }
 .site-logo { display: inline-flex; align-items: center; text-decoration: none; }
 .logo-text {
   display: inline-flex; flex-direction: column;
-  font-family: "M PLUS Rounded 1c", var(--font-sans); /* rond maar strak */
-  font-weight: 800; font-size: 2.05rem;
+  font-family: "Poppins", var(--font-sans); /* geometrisch: ronde vormen, strakke uiteinden */
+  font-weight: 600; font-size: 2.05rem;
   line-height: 1;
   color: var(--ink);
 }
