@@ -208,17 +208,19 @@ a:hover { color: var(--action); }
 }
 .logo-letters { display: flex; gap: 0.14em; }
 .logo-letters b { font-weight: 800; }
-.logo-letters b:nth-child(5n+1) { color: #D9A63D; } /* goud */
-.logo-letters b:nth-child(5n+2) { color: #2E9C5B; } /* groen */
-.logo-letters b:nth-child(5n+3) { color: #0E9C88; } /* teal */
-.logo-letters b:nth-child(5n+4) { color: #2D6CC4; } /* blauw */
-.logo-letters b:nth-child(5n+5) { color: #6A40E0; } /* violet (AI) */
-/* Tagline exact even breed als het wordmark: letters uitgevuld over de volle breedte */
+.logo-letters b:nth-child(5n+1) { color: #E0B65F; } /* goud */
+.logo-letters b:nth-child(5n+2) { color: #57B07D; } /* groen */
+.logo-letters b:nth-child(5n+3) { color: #41AF9F; } /* teal */
+.logo-letters b:nth-child(5n+4) { color: #5C8BD4; } /* blauw */
+.logo-letters b:nth-child(5n+5) { color: #8A6AE8; } /* violet (AI) */
+/* Tagline exact even breed als het wordmark: de letters van TUBES bepalen
+   de breedte (width:0 + min-width:100%), de tagline vult die precies uit */
 .logo-text small {
   display: flex; justify-content: space-between;
-  font-size: 0.6rem; font-weight: 700;
+  width: 0; min-width: 100%;
+  font-size: 0.31em; font-weight: 700;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: 0.14em;
 }
 .logo-text small i { font-style: normal; }
 .footer-brand { margin-bottom: 16px; }
