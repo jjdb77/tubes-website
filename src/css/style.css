@@ -805,33 +805,3 @@ a:hover { color: var(--action); }
 .reveal.is-visible .card:nth-child(2), .reveal.is-visible .plan-card:nth-child(2) { transition-delay: 0.08s; }
 .reveal.is-visible .card:nth-child(3), .reveal.is-visible .plan-card:nth-child(3) { transition-delay: 0.16s; }
 .reveal.is-visible .card:nth-child(4) { transition-delay: 0.24s; }
-
-/* ---------- Marquee: doorlopende strip met modulewoorden ---------- */
-
-.section-marquee {
-  padding: 26px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
-  overflow: hidden;
-}
-.marquee { display: flex; overflow: hidden; user-select: none; }
-.marquee-track {
-  display: flex; align-items: center; gap: 44px;
-  flex-shrink: 0; min-width: 100%;
-  padding-right: 44px;
-  font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-.marquee-track .word { color: var(--ink); }
-.marquee-track .word:nth-child(4n+3) {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--muted);
-}
-.marquee-track .dot { color: var(--gold); font-size: 1.2rem; }
-@media (prefers-reduced-motion: no-preference) {
-  .marquee-track { animation: marquee 46s linear infinite; }
-  @keyframes marquee {
-    to { transform: translateX(-100%); }
-  }
-}

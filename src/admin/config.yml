@@ -213,11 +213,6 @@ collections:
             fields:
               - { label: Kop, name: heading, widget: string, default: Contact form }
               - { label: Tekst boven het formulier, name: text, widget: markdown, required: false }
-          - name: marquee
-            label: "Doorlopende woordenstrip"
-            summary: "Woordenstrip"
-            fields:
-              - { label: Woorden, name: words, widget: list, field: { label: Woord, name: word, widget: string } }
           - name: tour
             label: "Module-tour (tabs met screenshots)"
             summary: "{{fields.heading}}"
