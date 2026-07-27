@@ -207,7 +207,7 @@ a:hover { color: var(--action); }
   transition: background 0.15s ease, color 0.15s ease;
 }
 .site-nav a:hover { color: var(--ink); background: var(--divider); }
-.site-nav a.is-active { background: var(--action-soft); color: var(--action-soft-ink); }
+.site-nav a.is-active { background: #E2EEFC; color: var(--status-blue-ink); }
 
 .nav-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; }
 .nav-toggle-bar {
@@ -248,14 +248,14 @@ a:hover { color: var(--action); }
 .theme-dark a { color: #7BD9CC; }
 .theme-dark .button.button-secondary { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
 .theme-dark .button.button-secondary:hover { border-color: #fff; color: #fff; }
-.theme-dark .hero-media::before { background: rgba(14, 156, 136, 0.32); }
-.theme-dark .hero-media::after { background: rgba(14, 156, 136, 0.13); }
+.theme-dark .hero-media::before { background: rgba(64, 128, 210, 0.38); }
+.theme-dark .hero-media::after { background: rgba(64, 128, 210, 0.16); }
 .theme-dark .hero-media img, .theme-dark .hero-media video { border-color: rgba(255, 255, 255, 0.14); }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
-.theme-teal { background: #E3F3EE; border-top: 1px solid rgba(14, 140, 119, 0.10); border-bottom: 1px solid rgba(14, 140, 119, 0.10); }
-.theme-teal .card { background: var(--surface); border-color: rgba(14, 140, 119, 0.16); box-shadow: var(--shadow-card); }
-.theme-teal .kicker { color: var(--action-soft-ink); }
+.theme-teal { background: #E9F1FA; border-top: 1px solid rgba(45, 108, 196, 0.10); border-bottom: 1px solid rgba(45, 108, 196, 0.10); }
+.theme-teal .card { background: var(--surface); border-color: rgba(45, 108, 196, 0.16); box-shadow: var(--shadow-card); }
+.theme-teal .kicker { color: var(--status-blue-ink); }
 
 .section-hero { padding-top: clamp(44px, 6vw, 80px); overflow: hidden; }
 
@@ -266,7 +266,7 @@ a:hover { color: var(--action); }
   content: "";
   position: absolute; inset: 0; z-index: 1;
   transform: translate(22px, 22px) rotate(2deg);
-  background: var(--action-soft);
+  background: #D9E7F8;
   border-radius: var(--radius-card);
 }
 /* Tweede, verder liggende laag: geeft het gestapelde-panelen-effect diepte */
@@ -274,7 +274,7 @@ a:hover { color: var(--action); }
   content: "";
   position: absolute; inset: 0; z-index: 0;
   transform: translate(46px, 42px) rotate(4deg);
-  background: rgba(14, 156, 136, 0.09);
+  background: rgba(45, 108, 196, 0.09);
   border-radius: var(--radius-card);
 }
 .section-hero .hero-media img,
@@ -372,12 +372,12 @@ a:hover { color: var(--action); }
   display: flex; align-items: center; justify-content: center;
   width: 44px; height: 44px;
   border-radius: var(--radius-icon, 8px);
-  background: var(--action-soft);
+  background: #E2EEFC;
   margin-bottom: 18px;
 }
 .icon-tile i {
   display: block; width: 20px; height: 20px;
-  background: var(--action-soft-ink);
+  background: var(--status-blue-ink);
   mask: var(--icon) center / contain no-repeat;
   -webkit-mask: var(--icon) center / contain no-repeat;
 }
