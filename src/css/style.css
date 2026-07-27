@@ -207,7 +207,7 @@ a:hover { color: var(--action); }
   transition: background 0.15s ease, color 0.15s ease;
 }
 .site-nav a:hover { color: var(--ink); background: var(--divider); }
-.site-nav a.is-active { background: #E2EEFC; color: var(--status-blue-ink); }
+.site-nav a.is-active { background: #EAF2FB; color: var(--status-blue-ink); }
 
 .nav-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; }
 .nav-toggle-bar {
@@ -308,7 +308,7 @@ a:hover { color: var(--action); }
 .theme-dark .hero-media img, .theme-dark .hero-media video { border-color: rgba(255, 255, 255, 0.14); }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
-.theme-teal { background: #E9F1FA; border-top: 1px solid rgba(45, 108, 196, 0.10); border-bottom: 1px solid rgba(45, 108, 196, 0.10); }
+.theme-teal { background: #EEF4FA; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
 .theme-teal .card { background: var(--surface); border-color: rgba(45, 108, 196, 0.16); box-shadow: var(--shadow-card); }
 .theme-teal .kicker { color: var(--status-blue-ink); }
 
@@ -321,7 +321,7 @@ a:hover { color: var(--action); }
   content: "";
   position: absolute; inset: 0; z-index: 1;
   transform: translate(22px, 22px) rotate(2deg);
-  background: #D9E7F8;
+  background: #E4EDF9;
   border-radius: var(--radius-card);
 }
 /* Tweede, verder liggende laag: geeft het gestapelde-panelen-effect diepte */
@@ -329,7 +329,7 @@ a:hover { color: var(--action); }
   content: "";
   position: absolute; inset: 0; z-index: 0;
   transform: translate(46px, 42px) rotate(4deg);
-  background: rgba(45, 108, 196, 0.09);
+  background: rgba(45, 108, 196, 0.07);
   border-radius: var(--radius-card);
 }
 .section-hero .hero-media img,
@@ -427,7 +427,7 @@ a:hover { color: var(--action); }
   display: flex; align-items: center; justify-content: center;
   width: 44px; height: 44px;
   border-radius: var(--radius-icon, 8px);
-  background: #E2EEFC;
+  background: #EAF2FB;
   margin-bottom: 18px;
 }
 .icon-tile i {
