@@ -200,20 +200,24 @@ a:hover { color: var(--action); }
 .site-logo img { width: 142px; height: auto; }
 
 .site-nav ul {
-  display: flex; flex-wrap: wrap; gap: 4px;
-  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 2px;
+  list-style: none; margin: 0;
+  padding: 5px;
+  background: var(--bg);
+  border: 1px solid var(--divider);
+  border-radius: 999px;
 }
 
 .site-nav a {
   display: inline-block;
   font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
   text-decoration: none;
-  padding: 8px 13px;
-  border-radius: var(--radius-chip);
+  padding: 8px 15px;
+  border-radius: 999px;
   transition: background 0.15s ease, color 0.15s ease;
 }
 .site-nav a:hover { color: var(--ink); background: var(--divider); }
-.site-nav a.is-active { background: #EAF2FB; color: var(--status-blue-ink); }
+.site-nav a.is-active { background: #E6EEFC; color: var(--status-blue-ink); }
 
 .nav-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; }
 .nav-toggle-bar {
@@ -314,7 +318,7 @@ a:hover { color: var(--action); }
 .theme-dark .hero-media img, .theme-dark .hero-media video { border-color: rgba(255, 255, 255, 0.14); }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
-.theme-teal { background: #EEF4FA; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
+.theme-teal { background: #EAF1FC; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
 .theme-teal .card { background: var(--surface); border-color: rgba(45, 108, 196, 0.16); box-shadow: var(--shadow-card); }
 .theme-teal .kicker { color: var(--status-blue-ink); }
 
@@ -327,7 +331,7 @@ a:hover { color: var(--action); }
   content: "";
   position: absolute; inset: 0; z-index: 1;
   transform: translate(22px, 22px) rotate(2deg);
-  background: #E4EDF9;
+  background: #DFEAFB;
   border-radius: var(--radius-card);
 }
 /* Tweede, verder liggende laag: geeft het gestapelde-panelen-effect diepte */
@@ -439,7 +443,7 @@ a:hover { color: var(--action); }
   display: flex; align-items: center; justify-content: center;
   width: 44px; height: 44px;
   border-radius: var(--radius-icon, 8px);
-  background: #EAF2FB;
+  background: #E6EEFC;
   margin-bottom: 18px;
 }
 .icon-tile i {
@@ -780,7 +784,7 @@ a:hover { color: var(--action); }
     box-shadow: var(--shadow-raise);
   }
   .nav-open .site-nav { display: block; }
-  .site-nav ul { flex-direction: column; gap: 2px; }
+  .site-nav ul { flex-direction: column; gap: 2px; background: none; border: 0; padding: 0; border-radius: 0; }
   .site-nav a { display: block; padding: 12px 13px; font-size: 1.02rem; }
 
   .cta-inner { border-radius: var(--radius-card); }
@@ -805,3 +809,47 @@ a:hover { color: var(--action); }
 .reveal.is-visible .card:nth-child(2), .reveal.is-visible .plan-card:nth-child(2) { transition-delay: 0.08s; }
 .reveal.is-visible .card:nth-child(3), .reveal.is-visible .plan-card:nth-child(3) { transition-delay: 0.16s; }
 .reveal.is-visible .card:nth-child(4) { transition-delay: 0.24s; }
+
+/* ---------- Rakoo-aspecten: pastelkaarten, header-CTA, knop-pijltjes ---------- */
+
+/* Kaarten in zachte pastellen uit de app-statusfamilie */
+.cards-grid .card { border-radius: 20px; border-color: transparent; }
+.cards-grid .card:nth-child(4n+1) { background: #F0EDFC; }
+.cards-grid .card:nth-child(4n+2) { background: #F8F1DC; }
+.cards-grid .card:nth-child(4n+3) { background: #E6EEFC; }
+.cards-grid .card:nth-child(4n+4) { background: #E4F3EA; }
+.cards-grid .card:hover { border-color: transparent; }
+.cards-grid .card .icon-tile { background: rgba(255, 255, 255, 0.85); }
+.cards-grid .card .icon-tile i { background: var(--ink-soft); }
+
+/* Demo-knop in de header */
+.header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
+@media (max-width: 1180px) { .header-cta { display: none; } }
+
+/* Pijltje in primaire knoppen dat meeschuift bij hover */
+.button.button-primary::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+.button.button-primary:hover::after { transform: translateX(3px); }
+
+/* ---------- Film-knipoog: zoeker-hoekjes op het hero-beeld ---------- */
+
+.viewfinder {
+  position: absolute; inset: 12px; z-index: 3;
+  pointer-events: none;
+  transform: rotate(-1.2deg);
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+}
+.section-hero .hero-media:hover .viewfinder { transform: rotate(0deg); }
+.viewfinder::before,
+.viewfinder::after {
+  content: ""; position: absolute;
+  width: 26px; height: 26px;
+  border: 0 solid rgba(255, 255, 255, 0.85);
+}
+.viewfinder::before { top: 0; left: 0; border-top-width: 2.5px; border-left-width: 2.5px; border-top-left-radius: 6px; }
+.viewfinder::after { bottom: 0; right: 0; border-bottom-width: 2.5px; border-right-width: 2.5px; border-bottom-right-radius: 6px; }
