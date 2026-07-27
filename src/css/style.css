@@ -228,7 +228,7 @@ a:hover { color: var(--action); }
 .spot-layer {
   position: absolute; inset: -25%; z-index: 0;
   pointer-events: none;
-  background: radial-gradient(640px circle at 62% 38%, rgba(255, 255, 255, 0.9), transparent 68%);
+  background: radial-gradient(640px circle at 30% 36%, rgba(255, 255, 255, 0.9), transparent 68%);
 }
 
 /* Op donker: teal spot met witte kern, het sterkst */
@@ -236,9 +236,17 @@ a:hover { color: var(--action); }
   background: radial-gradient(720px circle at 64% 34%, rgba(255, 255, 255, 0.13) 0%, rgba(15, 182, 162, 0.40) 30%, transparent 70%);
 }
 
+/* Tweede spot op het donkere vlak: warm goud, linksonder, eigen tempo */
+.theme-dark > .spot-layer::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(620px circle at 20% 72%, rgba(255, 255, 255, 0.07) 0%, rgba(214, 163, 57, 0.24) 34%, transparent 74%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .spot-layer { animation: spot-wander 48s ease-in-out infinite alternate; }
   .theme-dark > .spot-layer { animation-duration: 38s; animation-direction: alternate-reverse; }
+  .theme-dark > .spot-layer::after { animation: spot-wander 54s ease-in-out infinite alternate; }
   @keyframes spot-wander {
     from { transform: translate(-5%, -3%); }
     to { transform: translate(6%, 4%); }
