@@ -1,7 +1,10 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-about">
-      <img class="footer-logo" src="{{ settings.logo }}" alt="{{ settings.site_name }} — {{ settings.tagline }}" width="120" height="40" loading="lazy">
+      <span class="site-logo footer-brand">
+        <img class="logo-mark" src="/assets/images/t-logo-small.png" alt="" width="26" height="24" loading="lazy">
+        <span class="logo-text">{{ settings.site_name | upper }}<small>{{ settings.tagline }}</small></span>
+      </span>
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
     </div>
