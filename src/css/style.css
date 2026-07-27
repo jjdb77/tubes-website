@@ -111,10 +111,10 @@ a:hover { color: var(--action); }
 .kicker::before {
   content: "";
   display: inline-block;
-  width: 22px; height: 3px;
+  width: 26px; height: 5px;
   border-radius: 2px;
-  background: var(--gold);
-  vertical-align: 2px;
+  background: repeating-linear-gradient(115deg, var(--gold) 0 4px, transparent 4px 8px);
+  vertical-align: 1px;
   margin-right: 10px;
 }
 
@@ -239,6 +239,30 @@ a:hover { color: var(--action); }
     #17191C;
   color: rgba(231, 230, 227, 0.78);
 }
+.theme-dark { position: relative; overflow: hidden; }
+.theme-dark .container { position: relative; z-index: 1; }
+
+/* Theaterlicht: twee zachte lichtbundels van boven, als podiumspots */
+.theme-dark::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(112deg, transparent 40%, rgba(255, 255, 255, 0.05) 47%, transparent 54%),
+    linear-gradient(96deg, transparent 58%, rgba(15, 182, 162, 0.07) 67%, transparent 76%);
+}
+
+/* Langzaam driftende gloed, als een spot die beweegt */
+.theme-dark::after {
+  content: ""; position: absolute; pointer-events: none;
+  width: 900px; height: 620px; right: -12%; top: -22%;
+  background: radial-gradient(closest-side, rgba(15, 182, 162, 0.13), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .theme-dark::after { animation: spotlight-drift 16s ease-in-out infinite alternate; }
+  @keyframes spotlight-drift {
+    to { transform: translate(-9%, 7%) scale(1.08); }
+  }
+}
+
 .theme-dark h1, .theme-dark h2, .theme-dark h3 { color: #fff; }
 .theme-dark h1 em { color: #0FB6A2; }
 .theme-dark .col-lead { color: #fff; }

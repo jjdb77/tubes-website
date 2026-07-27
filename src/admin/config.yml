@@ -136,6 +136,7 @@ collections:
               - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
               - { label: "Video (mp4)", name: video, widget: file, required: false }
               - { label: "Video: posterafbeelding", name: poster, widget: image, required: false }
+              - { label: "Video automatisch afspelen (zonder geluid, in een loop)", name: ambient, widget: boolean, default: false, required: false }
               - { label: "Beeld links (i.p.v. rechts)", name: media_position, widget: select, options: [{label: Rechts, value: right}, {label: Links, value: left}], default: right, required: false }
               - { label: "Onderschrift bij beeld", name: media_caption, widget: string, required: false }
               - { label: Knop, name: button, widget: object, required: false, collapsed: true, fields: *button_fields }

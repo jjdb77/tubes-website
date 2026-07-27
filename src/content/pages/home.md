@@ -81,4 +81,5 @@ sections:
       Cast · Crew · Department Heads
     video: /assets/videos/home-who-is-tubes-for.mp4
     poster: /assets/images/video-poster-home.jpg
+    ambient: true
 ---
