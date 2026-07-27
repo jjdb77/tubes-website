@@ -2,8 +2,7 @@
   <div class="container footer-grid">
     <div class="footer-col footer-about">
       <span class="site-logo footer-brand">
-        <img class="logo-mark" src="/assets/images/t-logo-small.png" alt="" width="26" height="24" loading="lazy">
-        <span class="logo-text">{{ settings.site_name | upper }}<small>{{ settings.tagline }}</small></span>
+        <span class="logo-text"><span class="logo-letters">{% for letter in settings.site_name | upper %}<b>{{ letter }}</b>{% endfor %}</span><small>{% for ch in settings.tagline %}<i>{% if ch == " " %} {% else %}{{ ch }}{% endif %}</i>{% endfor %}</small></span>
       </span>
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
