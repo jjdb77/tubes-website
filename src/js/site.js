@@ -7,6 +7,15 @@ if (toggle) {
   });
 }
 
+// Spotlight volgt de muis over donkere CTA-panelen
+for (const panel of document.querySelectorAll(".cta-inner")) {
+  panel.addEventListener("pointermove", (e) => {
+    const r = panel.getBoundingClientRect();
+    panel.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    panel.style.setProperty("--my", (e.clientY - r.top) + "px");
+  });
+}
+
 // Levende pipeline: chips lichten om de beurt op
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   for (const row of document.querySelectorAll(".chip-row")) {

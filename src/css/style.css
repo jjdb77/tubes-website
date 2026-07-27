@@ -576,11 +576,25 @@ a:hover { color: var(--action); }
 
 .section-cta { background: var(--bg); padding: clamp(40px, 6vw, 72px) 0; }
 .cta-inner {
+  position: relative;
+  overflow: hidden;
   text-align: center;
   background: var(--ink);
   border-radius: 24px;
   padding: clamp(48px, 7vw, 88px) clamp(24px, 6vw, 96px);
 }
+
+/* Spotlight die met de muis meebeweegt (JS zet --mx/--my) */
+.cta-inner::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 40%), rgba(15, 182, 162, 0.18), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.cta-inner:hover::after { opacity: 1; }
 .cta-inner h2 { color: #fff; }
 .cta-inner .rich-text { color: rgba(231, 230, 227, 0.8); max-width: 720px; margin: 0 auto; }
 .cta-inner .rich-text strong { color: #fff; }
