@@ -220,7 +220,25 @@ a:hover { color: var(--action); }
 
 /* ---------- Secties ---------- */
 
-.section { padding: clamp(56px, 8vw, 108px) 0; }
+.section { padding: clamp(56px, 8vw, 108px) 0; position: relative; }
+.section > .container { position: relative; z-index: 1; }
+
+/* Spotlaag: JS legt deze in donkere en blauwe secties, de spot volgt de muis */
+.spot-layer {
+  position: absolute; inset: 0; z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: radial-gradient(560px circle at var(--mx, 60%) var(--my, 35%), rgba(255, 255, 255, 0.6), transparent 70%);
+}
+.section:hover > .spot-layer { opacity: 1; }
+
+/* Op donker: teal spot met witte kern, het sterkst — en altijd zacht aan */
+.theme-dark > .spot-layer {
+  background: radial-gradient(680px circle at var(--mx, 68%) var(--my, 32%), rgba(255, 255, 255, 0.12) 0%, rgba(15, 182, 162, 0.36) 30%, transparent 72%);
+  opacity: 0.55;
+}
+.theme-dark:hover > .spot-layer { opacity: 1; }
 .theme-light { background: var(--bg); }
 /* Witte secties zijn "vellen" die zacht schaduw werpen op het canvas —
    diepte in plaats van harde scheidingslijnen */
@@ -584,16 +602,24 @@ a:hover { color: var(--action); }
   padding: clamp(48px, 7vw, 88px) clamp(24px, 6vw, 96px);
 }
 
-/* Spotlight die met de muis meebeweegt (JS zet --mx/--my) */
+/* Twee podiumspots: teal volgt de muis, goud beweegt gespiegeld mee
+   (JS zet --mx/--my). Zonder muis staan ze zacht aan. */
+.cta-inner::before,
 .cta-inner::after {
   content: "";
   position: absolute; inset: 0; z-index: -1;
   border-radius: inherit;
-  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 40%), rgba(15, 182, 162, 0.18), transparent 70%);
-  opacity: 0;
+  opacity: 0.6;
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
+.cta-inner::after {
+  background: radial-gradient(540px circle at var(--mx, 30%) var(--my, 30%), rgba(255, 255, 255, 0.15) 0%, rgba(15, 182, 162, 0.34) 32%, transparent 74%);
+}
+.cta-inner::before {
+  background: radial-gradient(580px circle at calc(100% - var(--mx, 28%)) var(--my, 34%), rgba(255, 255, 255, 0.10) 0%, rgba(214, 163, 57, 0.26) 34%, transparent 76%);
+}
+.cta-inner:hover::before,
 .cta-inner:hover::after { opacity: 1; }
 .cta-inner h2 { color: #fff; }
 .cta-inner .rich-text { color: rgba(231, 230, 227, 0.8); max-width: 720px; margin: 0 auto; }

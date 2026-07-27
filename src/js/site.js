@@ -7,13 +7,23 @@ if (toggle) {
   });
 }
 
-// Spotlight volgt de muis over donkere CTA-panelen
-for (const panel of document.querySelectorAll(".cta-inner")) {
-  panel.addEventListener("pointermove", (e) => {
-    const r = panel.getBoundingClientRect();
-    panel.style.setProperty("--mx", (e.clientX - r.left) + "px");
-    panel.style.setProperty("--my", (e.clientY - r.top) + "px");
+// Spotlight volgt de muis: over donkere CTA-panelen én gekleurde secties
+function volgSpot(el) {
+  el.addEventListener("pointermove", (e) => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    el.style.setProperty("--my", (e.clientY - r.top) + "px");
   });
+}
+for (const panel of document.querySelectorAll(".cta-inner")) {
+  volgSpot(panel);
+}
+for (const section of document.querySelectorAll(".section.theme-dark, .section.theme-teal")) {
+  const layer = document.createElement("span");
+  layer.className = "spot-layer";
+  layer.setAttribute("aria-hidden", "true");
+  section.prepend(layer);
+  volgSpot(section);
 }
 
 // Levende pipeline: chips lichten om de beurt op
