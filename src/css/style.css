@@ -202,12 +202,13 @@ a:hover { color: var(--action); }
 .site-logo { display: inline-flex; align-items: center; text-decoration: none; }
 .logo-text {
   display: inline-flex; flex-direction: column;
-  font-weight: 800; font-size: 1.75rem;
+  font-family: "Quicksand", var(--font-sans); /* ronde vormen, als het originele logo */
+  font-weight: 700; font-size: 1.75rem;
   line-height: 1;
   color: var(--ink);
 }
 .logo-letters { display: flex; gap: 0.14em; }
-.logo-letters b { font-weight: 800; }
+.logo-letters b { font-weight: 700; }
 .logo-letters b:nth-child(5n+1) { color: #E0B65F; } /* goud */
 .logo-letters b:nth-child(5n+2) { color: #57B07D; } /* groen */
 .logo-letters b:nth-child(5n+3) { color: #41AF9F; } /* teal */
