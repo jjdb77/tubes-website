@@ -214,7 +214,7 @@ a:hover { color: var(--action); }
 .logo-duo .logo-letters b { color: #41AF9F; }
 .logo-duo .logo-letters b:nth-child(1),
 .logo-duo .logo-letters b:nth-child(2) { color: #D9A63D; }
-.site-logo { gap: 24px; }
+.site-logo { gap: 24px; flex-shrink: 0; }
 .site-logo > img { width: 148px; height: auto; }
 .logo-duo { font-size: 1.55rem; }
 /* Tagline exact even breed als het wordmark: de letters van TUBES bepalen
@@ -852,7 +852,7 @@ a:hover { color: var(--action); }
 
 /* Demo-knop in de header */
 .header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
-@media (max-width: 1180px) { .header-cta { display: none; } }
+@media (max-width: 1500px) { .header-cta { display: none; } }
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */
 .button.button-primary::after {

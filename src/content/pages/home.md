@@ -82,4 +82,42 @@ sections:
     video: /assets/videos/home-who-is-tubes-for.mp4
     poster: /assets/images/video-poster-home.jpg
     ambient: true
+  - type: pricing
+    theme: light
+    heading: Choose your plan
+    intro: |
+      No hidden costs. Cancel anytime.
+    plans:
+      - name: Producer Pro
+        badge: Most popular
+        text: |
+          For freelance producers, creative duos, micro teams, co-producers, project consultants and short-term collaborators.
+        price: "€ 49"
+        price_note: "per user/month"
+        price_detail: |
+          Or € 519 per year — save ~12% with annual billing.
+        features: |
+          - Budgeting & basic cost control
+          - Simple, intuitive workflows
+          - Self-service onboarding
+          - Standard support & SLA
+        button:
+          label: Choose Producer Pro
+          url: https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6
+      - name: Enterprise
+        text: |
+          Connect financial intent, planning, and execution across your entire organisation — with the control, security, and scalability enterprises require.
+        features: |
+          - Full budgeting, planning & cost control
+          - Real-time reporting & forecasting
+          - Multi-entity and multi-country setup
+          - Advanced permissions, roles, and approval flows
+          - Enterprise-level reporting & audit trails
+          - Deep system integrations + full API access
+          - Dedicated onboarding & Customer Success Manager
+        button:
+          label: Book a call
+          url: /contact/
+    footnote: |
+      Questions, or curious about **Tubes Projects** and **Tubes for Companies**? See [all plans](/plans/) — or [get in touch](/contact/).
 ---
