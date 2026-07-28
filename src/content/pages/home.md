@@ -114,13 +114,6 @@ sections:
       AI can analyse this data to identify patterns in spending and workflows, support teams when creating budgets and proposals, translate proposal texts, and highlight unusual spending during production.
     image: /assets/images/tubes-ai.png
     image_alt: Tubes AI
-  - type: images
-    theme: white
-    images:
-      - image: /assets/images/tubes-budgeting.png
-        alt: Projects in budgeting — overview of productions with budget drafts and quotations
-      - image: /assets/images/tubes-agenda.png
-        alt: The Tubes scheduling calendar with activities per day
   - type: feature
     theme: teal
     heading: Who is Tubes for?
