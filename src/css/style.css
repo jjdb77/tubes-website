@@ -119,7 +119,7 @@ a:hover { color: var(--action); }
   display: inline-block;
   width: 26px; height: 3px;
   border-radius: 2px;
-  background: var(--gold);
+  background: #E6C263; /* iets lichter goud */
   vertical-align: 2px;
   margin-right: 10px;
 }
