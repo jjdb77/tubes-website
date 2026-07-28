@@ -19,9 +19,9 @@ sections:
         text: |
           For freelance producers, creative duos, micro teams, co-producers, project consultants and short-term collaborators.
         price: "€ 49"
-        price_note: "per user/month"
+        price_note: "per month, includes 2 users"
         price_detail: |
-          Or € 519 per year (save ~12% with annual billing).
+          € 25 per month for each additional user, up to 10 users.
         features: |
           - Budgeting & basic cost control
           - Simple, intuitive workflows
@@ -32,7 +32,7 @@ sections:
           url: https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6
       - name: Enterprise
         text: |
-          Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
+          For teams of more than 10 users. Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
         features: |
           - Full budgeting, planning & cost control
           - Real-time reporting & forecasting
