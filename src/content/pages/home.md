@@ -39,6 +39,7 @@ sections:
       - Manual recalculations after every change
       - Information copied across multiple versions
       - Teams working with outdated data
+      - Errors, delays and avoidable cost overruns
       - Financial insight that arrives too late to prevent overspending
     with_title: With Tubes
     with_items:
