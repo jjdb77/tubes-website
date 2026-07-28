@@ -30,7 +30,7 @@ sections:
     image_alt: The Tubes dashboard with projects, budgets and reporting
   - type: compare
     theme: white
-    heading: When planning and execution are disconnected, control is lost
+    heading: When planning, finance and execution are disconnected, control is lost
     intro: |
       In many productions, budgeting, scheduling, and cost control live in separate tools. Tubes brings planning and execution together in a single, shared environment — for the entire production lifecycle.
     without_title: Without Tubes
