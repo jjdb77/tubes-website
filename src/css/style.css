@@ -117,10 +117,10 @@ a:hover { color: var(--action); }
 .kicker::before {
   content: "";
   display: inline-block;
-  width: 26px; height: 5px;
+  width: 26px; height: 3px;
   border-radius: 2px;
-  background: repeating-linear-gradient(115deg, var(--gold) 0 4px, transparent 4px 8px);
-  vertical-align: 1px;
+  background: var(--gold);
+  vertical-align: 2px;
   margin-right: 10px;
 }
 
