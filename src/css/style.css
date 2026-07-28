@@ -197,39 +197,10 @@ a:hover { color: var(--action); }
   gap: 24px; min-height: 74px;
 }
 
-/* Wordmark in de stijl van het originele logo: verloop van goud naar
-   teal (i.p.v. het oude goud→navy), als scherpe tekst */
-.site-logo { display: inline-flex; align-items: center; text-decoration: none; }
-.logo-text {
-  display: inline-flex; flex-direction: column;
-  font-family: "Comfortaa", var(--font-sans); /* het lettertype van het originele logo */
-  font-weight: 700; font-size: 2.05rem;
-  -webkit-text-stroke: 0.026em currentColor; /* zelfde dikte als het origineel */
-  line-height: 1;
-  color: var(--ink);
-}
-.logo-letters { display: flex; gap: 0.07em; }
-.logo-letters b { font-weight: 700; }
-/* Tweekleurenversie: goud → teal */
-.logo-duo .logo-letters b { color: #41AF9F; }
-.logo-duo .logo-letters b:nth-child(1),
-.logo-duo .logo-letters b:nth-child(2) { color: #D9A63D; }
-.site-logo { gap: 24px; flex-shrink: 0; }
-.site-logo > img { width: 148px; height: auto; }
-.logo-duo { font-size: 1.55rem; }
-/* Tagline exact even breed als het wordmark: de letters van TUBES bepalen
-   de breedte (width:0 + min-width:100%), de tagline vult die precies uit */
-.logo-text small {
-  display: flex; justify-content: space-between;
-  width: 0; min-width: 100%;
-  font-size: 0.59rem; font-weight: 700;
-  color: var(--muted);
-  margin-top: 0.14em;
-}
-.logo-text small i { font-style: normal; }
-.footer-brand { margin-bottom: 16px; }
-.footer-brand .logo-text { font-size: 1.55rem; }
-.footer-brand .logo-text small { font-size: 0.45rem; }
+/* Logo: het originele wordmark (goud-navy) als beeldmerk */
+.site-logo { display: inline-flex; align-items: center; }
+.site-logo > img { width: 158px; height: auto; }
+.footer-brand { width: 126px; height: auto; margin-bottom: 16px; }
 
 .site-nav ul {
   display: flex; flex-wrap: wrap; gap: 2px;
@@ -852,7 +823,7 @@ a:hover { color: var(--action); }
 
 /* Demo-knop in de header */
 .header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
-@media (max-width: 1500px) { .header-cta { display: none; } }
+@media (max-width: 1180px) { .header-cta { display: none; } }
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */
 .button.button-primary::after {
