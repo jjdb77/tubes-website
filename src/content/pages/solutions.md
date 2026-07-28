@@ -56,13 +56,6 @@ sections:
     image: /assets/images/tubes-costcontrol.png
     image_alt: Real-time cost control in Tubes
     media_position: left
-  - type: images
-    theme: white
-    images:
-      - image: /assets/images/tubes-budgeting.png
-        alt: Projects in budgeting, an overview of productions with budget drafts and quotations
-      - image: /assets/images/tubes-agenda.png
-        alt: The Tubes scheduling calendar with activities per day
   - type: feature
     theme: light
     heading: AI Assistants
