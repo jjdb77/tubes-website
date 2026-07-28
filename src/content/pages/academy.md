@@ -10,8 +10,6 @@ sections:
     text: |
       On this Tubes Academy page, you'll find videos that explain how Tubes works. Below you see an example. To watch the training and tutorial videos, open the video link and log in.
     buttons:
-      - label: Access all videos (login required)
-        url: "#"
       - label: Request Academy access
         url: mailto:contact@tubes.media?subject=Request%20Academy%20access
   - type: feature
