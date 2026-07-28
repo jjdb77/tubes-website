@@ -318,7 +318,7 @@ a:hover { color: var(--action); }
 .theme-dark .button.button-secondary:hover { border-color: #fff; color: #fff; }
 .theme-dark .hero-media::before { background: rgba(64, 128, 210, 0.38); }
 .theme-dark .hero-media::after { background: rgba(64, 128, 210, 0.16); }
-.theme-dark .hero-media img, .theme-dark .hero-media video { border-color: rgba(255, 255, 255, 0.14); }
+.theme-dark .hero-media img, .theme-dark .hero-media video { border: 0; }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
 .theme-teal { background: #EAF1FC; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
