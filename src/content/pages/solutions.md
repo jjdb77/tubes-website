@@ -71,8 +71,6 @@ sections:
       Because Tubes structures production budgets, costs and approvals in a consistent way, the system builds a reliable dataset of productions over time.
 
       AI can analyse this data to identify patterns in spending and workflows, support teams when creating budgets and proposals, translate proposal texts, and highlight unusual spending during production.
-    image: /assets/images/tubes-ai.png
-    image_alt: Tubes AI
   - type: cta
     title: See Tubes in action
     text: |
