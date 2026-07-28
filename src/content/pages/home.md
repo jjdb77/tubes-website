@@ -22,7 +22,7 @@ sections:
     text: |
       Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
 
-      It connects budgets, actual costs, and forecasts in real time — with AI assistants that help draft budgets and proposals, spot spending patterns and flag unusual costs — helping teams maintain financial and operational control from development to wrap.
+      It connects budgets, actual costs, and forecasts in real time, helping teams maintain financial and operational control from development to wrap. AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs.
     buttons:
       - label: Request a Demo
         url: /contact/
@@ -41,7 +41,7 @@ sections:
         price: "€ 49"
         price_note: "per user/month"
         price_detail: |
-          Or € 519 per year — save ~12% with annual billing.
+          Or € 519 per year (save ~12% with annual billing).
         features: |
           - Budgeting & basic cost control
           - Simple, intuitive workflows
@@ -52,7 +52,7 @@ sections:
           url: https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6
       - name: Enterprise
         text: |
-          Connect financial intent, planning, and execution across your entire organisation — with the control, security, and scalability enterprises require.
+          Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
         features: |
           - Full budgeting, planning & cost control
           - Real-time reporting & forecasting
@@ -65,12 +65,12 @@ sections:
           label: Book a call
           url: /contact/
     footnote: |
-      Questions, or curious about **Tubes Projects** and **Tubes for Companies**? See [all plans](/plans/) — or [get in touch](/contact/).
+      Questions, or curious about **Tubes Projects** and **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
   - type: compare
     theme: white
     heading: When planning, finance and execution are disconnected, control is lost
     intro: |
-      In many productions, budgeting, scheduling, and cost control live in separate tools. Tubes brings planning and execution together in a single, shared environment — for the entire production lifecycle.
+      In many productions, budgeting, scheduling, and cost control live in separate tools. Tubes brings planning and execution together in a single, shared environment, for the entire production lifecycle.
     without_title: Without Tubes
     without_items:
       - Budgeting, scheduling and cost control in separate tools

@@ -27,7 +27,7 @@ sections:
         text: |
           Tubes is developed by a team with over 20 years of experience building software for media, creative and production organizations, including work with companies such as RTL, Talpa and Tuvalu Media of the Netherlands.
 
-          Our technical experience spans FileMaker, modern web development and AI-assisted development (vibe coding) — and it shapes every part of the platform, from workflow design to security, compliance and scalability.
+          This experience shapes every part of the platform, from workflow design to security, compliance and scalability.
       - icon: /assets/icons/light-bulb.svg
         heading: Vision
         text: |

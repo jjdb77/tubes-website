@@ -21,7 +21,7 @@ sections:
         price: "€ 49"
         price_note: "per user/month"
         price_detail: |
-          Or € 519 per year — save ~12% with annual billing.
+          Or € 519 per year (save ~12% with annual billing).
         features: |
           - Budgeting & basic cost control
           - Simple, intuitive workflows
@@ -32,7 +32,7 @@ sections:
           url: https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6
       - name: Enterprise
         text: |
-          Connect financial intent, planning, and execution across your entire organisation — with the control, security, and scalability enterprises require.
+          Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
         features: |
           - Full budgeting, planning & cost control
           - Real-time reporting & forecasting
@@ -45,7 +45,7 @@ sections:
           label: Book a call
           url: /contact/
     footnote: |
-      Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies** — [get in touch](/contact/).
+      Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies**? [Get in touch](/contact/).
   - type: cta
     title: Take Control of Your Productions
     text: |

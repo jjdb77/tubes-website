@@ -1,7 +1,7 @@
 ---
 layout: layout.njk
 title: Solutions
-description: "Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability — for every role and every production type."
+description: "Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability, for every role and every production type."
 permalink: /solutions/
 sections:
   - type: hero
@@ -60,7 +60,7 @@ sections:
     theme: white
     images:
       - image: /assets/images/tubes-budgeting.png
-        alt: Projects in budgeting — overview of productions with budget drafts and quotations
+        alt: Projects in budgeting, an overview of productions with budget drafts and quotations
       - image: /assets/images/tubes-agenda.png
         alt: The Tubes scheduling calendar with activities per day
   - type: feature
