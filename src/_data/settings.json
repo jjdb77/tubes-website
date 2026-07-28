@@ -10,7 +10,11 @@
   "contact": {
     "email": "contact@tubes.media",
     "phone": "+31 20 820 4241",
-    "address_lines": ["Daalwijkdreef 47", "1103 AD Amsterdam", "The Netherlands"]
+    "address_lines": [
+      "Daalwijkdreef 47",
+      "1103 AD Amsterdam",
+      "The Netherlands"
+    ]
   },
   "legal": {
     "company": "Appsolutions",
@@ -26,13 +30,29 @@
   "form_endpoint": "",
   "goatcounter": "",
   "nav": [
-    { "label": "Home", "url": "/" },
-    { "label": "Platform", "url": "/platform/" },
-    { "label": "Solutions", "url": "/solutions/" },
-    { "label": "Company", "url": "/company/" },
-    { "label": "Plans", "url": "/plans/" },
-    { "label": "Compliance", "url": "/compliance/" },
-    { "label": "Contact", "url": "/contact/" },
-    { "label": "Academy", "url": "/academy/" }
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Solutions",
+      "url": "/solutions/"
+    },
+    {
+      "label": "Company",
+      "url": "/company/"
+    },
+    {
+      "label": "Compliance",
+      "url": "/compliance/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    },
+    {
+      "label": "Academy",
+      "url": "/academy/"
+    }
   ]
 }
