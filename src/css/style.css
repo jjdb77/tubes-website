@@ -364,7 +364,8 @@ a:hover { color: var(--action); }
   display: grid; grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(32px, 5vw, 72px); align-items: center;
 }
-.hero-single, .feature-single { grid-template-columns: 1fr; max-width: 780px; }
+.hero-single, .feature-single { grid-template-columns: 1fr; }
+.hero-single .hero-text, .feature-single .feature-text { max-width: 780px; }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
