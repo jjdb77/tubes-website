@@ -1,9 +1,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-about">
-      <span class="site-logo footer-brand">
-        <span class="logo-text"><span class="logo-letters">{% for letter in settings.site_name | upper %}<b>{{ letter }}</b>{% endfor %}</span><small>{% for ch in settings.tagline %}<i>{% if ch == " " %} {% else %}{{ ch }}{% endif %}</i>{% endfor %}</small></span>
-      </span>
+      <img class="footer-brand" src="{{ settings.logo }}" alt="{{ settings.site_name }} — {{ settings.tagline }}" width="126" height="44" loading="lazy">
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
     </div>

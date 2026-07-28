@@ -210,11 +210,13 @@ a:hover { color: var(--action); }
 }
 .logo-letters { display: flex; gap: 0.07em; }
 .logo-letters b { font-weight: 700; }
-.logo-letters b:nth-child(5n+1) { color: #E0B65F; } /* goud */
-.logo-letters b:nth-child(5n+2) { color: #57B07D; } /* groen */
-.logo-letters b:nth-child(5n+3) { color: #41AF9F; } /* teal */
-.logo-letters b:nth-child(5n+4) { color: #5C8BD4; } /* blauw */
-.logo-letters b:nth-child(5n+5) { color: #8A6AE8; } /* violet (AI) */
+/* Tweekleurenversie: goud → teal */
+.logo-duo .logo-letters b { color: #41AF9F; }
+.logo-duo .logo-letters b:nth-child(1),
+.logo-duo .logo-letters b:nth-child(2) { color: #D9A63D; }
+.site-logo { gap: 24px; }
+.site-logo > img { width: 148px; height: auto; }
+.logo-duo { font-size: 1.55rem; }
 /* Tagline exact even breed als het wordmark: de letters van TUBES bepalen
    de breedte (width:0 + min-width:100%), de tagline vult die precies uit */
 .logo-text small {
@@ -825,10 +827,6 @@ a:hover { color: var(--action); }
 }
 
 /* ---------- Energie-details ---------- */
-
-/* Pipeline-chips: speels heel licht gekanteld */
-.chip-row li.chip:nth-child(4n+1) { transform: rotate(-1.5deg); }
-.chip-row li.chip:nth-child(4n+3) { transform: rotate(1.2deg); }
 
 /* Kaarten komen trapsgewijs binnen zodra de sectie in beeld schuift */
 .reveal .card, .reveal .plan-card {

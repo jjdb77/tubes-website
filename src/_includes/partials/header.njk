@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="site-logo" href="/" aria-label="{{ settings.site_name }} — home">
-      <span class="logo-text"><span class="logo-letters">{% for letter in settings.site_name | upper %}<b>{{ letter }}</b>{% endfor %}</span><small>{% for ch in settings.tagline %}<i>{% if ch == " " %} {% else %}{{ ch }}{% endif %}</i>{% endfor %}</small></span>
+      <img src="{{ settings.logo }}" alt="{{ settings.site_name }} — {{ settings.tagline }}" width="158" height="55">
+      <span class="logo-text logo-duo"><span class="logo-letters">{% for letter in settings.site_name | upper %}<b>{{ letter }}</b>{% endfor %}</span><small>{% for ch in settings.tagline %}<i>{% if ch == " " %} {% else %}{{ ch }}{% endif %}</i>{% endfor %}</small></span>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <ul>
