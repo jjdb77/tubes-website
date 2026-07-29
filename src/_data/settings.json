@@ -28,7 +28,7 @@
     "linkedin": "https://www.linkedin.com/company/101096508",
     "youtube": "https://www.youtube.com/@tubesmedia"
   },
-  "form_endpoint": "",
+  "form_endpoint": "/api/contact",
   "goatcounter": "",
   "nav": [
     {

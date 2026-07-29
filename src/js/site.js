@@ -88,10 +88,11 @@ for (const form of document.querySelectorAll(".contact-form")) {
 
     status.textContent = "Sending…";
     status.className = "form-status";
+    data.set("page", location.pathname);
     try {
       const res = await fetch(endpoint, {
         method: "POST",
-        body: data,
+        body: new URLSearchParams(data),
         headers: { Accept: "application/json" }
       });
       if (res.ok) {

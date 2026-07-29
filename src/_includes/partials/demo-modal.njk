@@ -3,7 +3,8 @@
   <h2>Request a Demo</h2>
   <p class="demo-modal-intro">Share a few details about your organization and productions, and we'll get in touch.</p>
   <form class="contact-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
-    <div class="form-row">
+    <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="form-row">
       <label>First name <span class="req">(required)</span>
         <input type="text" name="first_name" autocomplete="given-name" required>
       </label>
