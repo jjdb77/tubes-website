@@ -50,7 +50,10 @@
 
 html { scroll-behavior: smooth; }
 
+html { overflow-x: clip; }
+
 body {
+  overflow-x: clip;
   margin: 0;
   font-family: var(--font-sans);
   font-weight: 400;
@@ -321,7 +324,7 @@ a:hover { color: var(--action); }
 .theme-dark .hero-media img, .theme-dark .hero-media video { border: 0; }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
-.theme-teal { background: #EAF1FC; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
+.theme-teal { overflow: hidden; background: #EAF1FC; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
 .theme-teal .card { background: var(--surface); border-color: rgba(45, 108, 196, 0.16); box-shadow: var(--shadow-card); }
 .theme-teal .kicker { color: var(--status-blue-ink); }
 
