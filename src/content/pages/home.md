@@ -49,7 +49,7 @@ sections:
           - Standard support & SLA
         button:
           label: Book a call
-          url: /contact/
+          url: /book-a-call/
       - name: Enterprise
         text: |
           For teams of more than 10 users. Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
@@ -63,7 +63,7 @@ sections:
           - Dedicated onboarding & Customer Success Manager
         button:
           label: Book a call
-          url: /contact/
+          url: /book-a-call/
     footnote: |
       Questions, or curious about **Tubes Projects** and **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
   - type: compare

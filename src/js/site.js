@@ -67,8 +67,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
 
 // Contactformulier: verstuurt naar form_endpoint (bijv. Formspree/Web3Forms).
 // Zonder endpoint valt het terug op een mailto-link.
-const form = document.querySelector(".contact-form");
-if (form) {
+for (const form of document.querySelectorAll(".contact-form")) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = form.querySelector(".form-status");
@@ -106,5 +105,20 @@ if (form) {
       status.textContent = "Something went wrong. Please email us directly at " + form.dataset.email;
       status.className = "form-status is-error";
     }
+  });
+}
+
+// Demo-popup: knoppen naar /contact/ openen het formulier als popup
+const demoModal = document.getElementById("demo-modal");
+if (demoModal && typeof demoModal.showModal === "function") {
+  for (const link of document.querySelectorAll('a.button[href$="/contact/"]')) {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      demoModal.showModal();
+    });
+  }
+  demoModal.querySelector(".demo-modal-close").addEventListener("click", () => demoModal.close());
+  demoModal.addEventListener("click", (e) => {
+    if (e.target === demoModal) demoModal.close();
   });
 }

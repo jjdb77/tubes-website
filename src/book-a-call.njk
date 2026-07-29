@@ -1,0 +1,23 @@
+---
+permalink: /book-a-call/
+eleventyExcludeFromCollections: true
+---
+{#- Doorstuurpagina: alle "Book a call"-knoppen wijzen hierheen, de echte
+    boekingslink staat op één plek in settings.json (booking_url). Zo is
+    overstappen op afspraak.tubes.media later één CMS-wijziging. -#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a call — {{ settings.site_name }}</title>
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ settings.booking_url }}">
+<link rel="canonical" href="{{ settings.booking_url }}">
+<style>body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;color:#1c2b33}</style>
+</head>
+<body>
+<p>One moment&hellip; <a href="{{ settings.booking_url }}">continue to the booking page</a>.</p>
+<script>location.replace({{ settings.booking_url | dump | safe }});</script>
+</body>
+</html>
