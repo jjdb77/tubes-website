@@ -27,6 +27,8 @@ sections:
           - Simple, intuitive workflows
           - Self-service onboarding
           - Standard support & SLA
+
+          **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:
           label: Book a call
           url: /book-a-call/
