@@ -798,7 +798,8 @@ a:hover { color: var(--action); }
 /* ---------- Responsive ---------- */
 
 @media (max-width: 980px) {
-  .hero-grid, .feature-grid, .split-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-grid, .feature-grid, .split-grid, .contact-grid,
+  .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
   .section-hero .hero-media { margin-right: 12px; }
   .section-hero .hero-media::before { transform: translate(12px, 12px) rotate(1.5deg); }
   .media-left .feature-text { order: 1; }
