@@ -35,7 +35,7 @@ collections:
           - { label: Standaard knoptekst (CTA), name: cta_label, widget: string }
           - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
-          - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Afsprakenpagina van 4Relations. Nu nog de Railway-URL, straks https://afspraak.tubes.media" }
+          - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Afsprakenpagina van 4Relations (4relations.appconnected.nl); kan later naar afspraak.tubes.media" }
           - label: Contactgegevens
             name: contact
             widget: object
