@@ -35,7 +35,15 @@ collections:
           - { label: Standaard knoptekst (CTA), name: cta_label, widget: string }
           - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
-          - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Afsprakenpagina van 4Relations (4relations.appconnected.nl); kan later naar afspraak.tubes.media" }
+          - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Basisadres van de afsprakenpagina, zonder afspraaktype. Nu 4relations.appconnected.nl/boek/joachim" }
+          - label: "Boekingslinks per plan"
+            name: booking_plans
+            widget: list
+            hint: "Elke regel wordt een pagina /book-a-call/<pad>/ die doorstuurt naar het afspraaktype. Laat het pad leeg voor de algemene link /book-a-call/."
+            fields:
+              - { label: "Pad op de website (leeg = algemeen)", name: path, widget: string, required: false, hint: "Bijvoorbeeld: producer-pro/ (met schuine streep aan het eind)" }
+              - { label: "Afspraaktype in 4Relations", name: slug, widget: string, hint: "Het deel achter de laatste schuine streep van de boekingslink, bv. tubes-producer-pro" }
+              - { label: "Plannaam bij de boeking", name: plan, widget: string, required: false, hint: "Komt bovenaan de opmerkingen van de boeking te staan, bv. Producer Pro" }
           - label: Contactgegevens
             name: contact
             widget: object

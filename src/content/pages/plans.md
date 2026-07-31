@@ -31,7 +31,7 @@ sections:
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:
           label: Book a call
-          url: /book-a-call/
+          url: /book-a-call/producer-pro/
       - name: Enterprise
         text: |
           For teams of more than 10 users. Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
@@ -45,7 +45,7 @@ sections:
           - Dedicated onboarding & Customer Success Manager
         button:
           label: Book a call
-          url: /book-a-call/
+          url: /book-a-call/enterprise/
     footnote: |
       Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies**? [Get in touch](/contact/).
   - type: cta

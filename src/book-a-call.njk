@@ -1,10 +1,18 @@
 ---
-permalink: /book-a-call/
+pagination:
+  data: settings.booking_plans
+  size: 1
+  alias: boeking
+permalink: "/book-a-call/{{ boeking.path }}"
 eleventyExcludeFromCollections: true
 ---
-{#- Doorstuurpagina: alle "Book a call"-knoppen wijzen hierheen, de echte
-    boekingslink staat op één plek in settings.json (booking_url). Zo is
-    overstappen op afspraak.tubes.media later één CMS-wijziging. -#}
+{#- Doorstuurpagina's naar de agenda. Elke "Book a call"-knop wijst naar een
+    pad hieronder, zodat de echte boekingslink op één plek staat (settings:
+    booking_url + booking_plans). Per plan een eigen pagina, zodat de juiste
+    agenda ook zonder JavaScript wordt geopend; de plannaam gaat als ?plan=
+    mee en verschijnt bij de boeking. -#}
+{%- set doel = settings.booking_url + "/" + boeking.slug -%}
+{%- if boeking.plan -%}{%- set doel = doel + "?plan=" + (boeking.plan | urlencode) -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +20,12 @@ eleventyExcludeFromCollections: true
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book a call — {{ settings.site_name }}</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url={{ settings.booking_url }}">
-<link rel="canonical" href="{{ settings.booking_url }}">
+<meta http-equiv="refresh" content="0; url={{ doel }}">
+<link rel="canonical" href="{{ doel }}">
 <style>body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;color:#1c2b33}</style>
 </head>
 <body>
-<p>One moment&hellip; <a href="{{ settings.booking_url }}">continue to the booking page</a>.</p>
-<script>location.replace({{ settings.booking_url | dump | safe }});</script>
+<p>One moment&hellip; <a href="{{ doel }}">continue to the booking page</a>.</p>
+<script>location.replace({{ doel | dump | safe }});</script>
 </body>
 </html>
