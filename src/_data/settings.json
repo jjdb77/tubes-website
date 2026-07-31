@@ -11,7 +11,7 @@
   "booking_plans": [
     { "path": "", "slug": "tubes-producer-pro", "plan": "" },
     { "path": "producer-pro/", "slug": "tubes-producer-pro", "plan": "Producer Pro" },
-    { "path": "enterprise/", "slug": "tubes-enterprice", "plan": "Enterprise" }
+    { "path": "enterprise/", "slug": "tubes-enterprise", "plan": "Enterprise" }
   ],
   "contact": {
     "email": "contact@tubes.media",
