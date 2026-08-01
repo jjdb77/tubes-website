@@ -3,42 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title and page.url != "/" %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}</title>
-  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-  {% if isPreview %}<meta name="robots" content="noindex, nofollow">{% endif %}
-  <link rel="canonical" href="{{ settings.site_url }}{{ page.url }}">
+  {% include "partials/head-seo.njk" %}
   <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
   <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ settings.site_name }}">
-  <meta property="og:title" content="{% if title %}{{ title }} — {{ settings.site_name }}{% else %}{{ settings.site_name }} | {{ settings.tagline }}{% endif %}">
-  {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
-  <meta property="og:url" content="{{ settings.site_url }}{{ page.url }}">
-  <meta property="og:image" content="{{ settings.site_url }}{{ og_image or '/assets/images/og-image.png' }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0E9C88">
+  {#- Sneller laden = betere positie in Google. Het lettertype en de eerste
+      afbeelding zijn wat de bezoeker als eerste ziet, dus die halen we alvast op. -#}
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  {%- if sections and sections[0].type == "hero" and sections[0].image %}
+  <link rel="preload" href="{{ sections[0].image }}" as="image" fetchpriority="high">
+  {%- endif %}
   <link rel="stylesheet" href="/assets/fonts/mulish.css">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "{{ settings.site_name }}",
-    "description": "{{ settings.footer_text }}",
-    "url": "{{ settings.site_url }}",
-    "logo": "{{ settings.site_url }}{{ settings.logo }}",
-    "email": "{{ settings.contact.email }}",
-    "telephone": "{{ settings.contact.phone }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ settings.contact.address_lines[0] }}",
-      "addressLocality": "Amsterdam",
-      "postalCode": "1103 AD",
-      "addressCountry": "NL"
-    },
-    "sameAs": ["{{ settings.socials.linkedin }}", "{{ settings.socials.youtube }}"]
-  }
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: sections, schemaSoftware: schema_software } | jsonld | safe }}
   </script>
 </head>
 <body>

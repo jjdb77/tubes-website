@@ -75,6 +75,14 @@ collections:
             fields:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
+          - label: "Links in de footer"
+            name: footer_nav
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "Alle pagina's op een rij onderaan de site. Google gebruikt deze links om pagina's te vinden die niet in het menu staan (Platform en Plans)."
+            fields:
+              - { label: Naam, name: label, widget: string }
+              - { label: Link, name: url, widget: string }
 
   - name: paginas
     label: Pagina's
@@ -88,8 +96,13 @@ collections:
     fields:
       - { label: Sjabloon, name: layout, widget: hidden, default: layout.njk }
       - { label: Paginatitel, name: title, widget: string }
-      - { label: "SEO-omschrijving (voor Google)", name: description, widget: text, required: false }
       - { label: "URL-pad", name: permalink, widget: string, hint: "Bijv. /platform/ — begin en eindig met een slash. Homepagina: /" }
+      # --- Vindbaarheid in Google (SEO) ---
+      - { label: "SEO: titel in Google", name: seo_title, widget: string, required: false, hint: "Max ± 60 tekens, belangrijkste zoekwoorden vooraan. Leeg = 'Paginatitel | Tubes'." }
+      - { label: "SEO: omschrijving in Google", name: description, widget: text, required: false, hint: "Max ± 155 tekens. Het grijze tekstje onder de blauwe link in de zoekresultaten." }
+      - { label: "SEO: deelplaatje (LinkedIn, WhatsApp)", name: og_image, widget: image, required: false, hint: "1200 x 630 pixels. Leeg = het standaard Tubes-plaatje." }
+      - { label: "SEO: pagina uit Google houden", name: noindex, widget: boolean, default: false, required: false }
+      - { label: "SEO: productgegevens meesturen (prijzen, functies)", name: schema_software, widget: boolean, default: false, required: false, hint: "Aan op Home, Platform en Plans. Google toont dan prijs- en productinfo bij de zoekresultaten." }
       - label: Secties
         name: sections
         widget: list

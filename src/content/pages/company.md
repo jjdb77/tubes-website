@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: Company
-description: "Tubes is built on decades of hands-on experience in real-world productions. Our goal is to simplify production workflows, so teams can spend less time managing complexity and more time delivering great content."
+seo_title: "About Tubes | Production Software Built by Producers"
+description: "Tubes is built on decades of hands-on production experience. Meet the team modernizing production management for film, TV and live entertainment."
 permalink: /company/
 sections:
   - type: hero

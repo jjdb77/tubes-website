@@ -1,5 +1,11 @@
+# Zoekmachines mogen de hele site lezen, behalve het beheer en de API.
+# De doorstuurpagina's (/book-a-call/) blijven bewust wel crawlbaar: ze
+# dragen zelf een noindex, en die kan Google alleen zien als hij ze mag ophalen.
+
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /beheer
+Disallow: /api/
 
 Sitemap: https://www.tubes.media/sitemap.xml

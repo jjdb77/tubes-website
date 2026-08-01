@@ -6,6 +6,7 @@
 // met het wachtwoord uit de env-variabele ADMIN_PASSWORD.
 
 import express from "express";
+import compression from "compression";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -20,6 +21,9 @@ const DATA_FILE = path.join(DATA_DIR, "submissions.jsonl");
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
 app.disable("x-powered-by");
+// HTML en CSS gecomprimeerd versturen: scheelt ruwweg 70% aan laadtijd,
+// en laadsnelheid telt mee in de Google-ranking.
+app.use(compression());
 app.use(express.urlencoded({ extended: false, limit: "64kb" }));
 
 // ---------- Formulier ontvangen ----------
@@ -156,7 +160,28 @@ app.get("/beheer/export.csv", (req, res) => {
 // ---------- Statische site ----------
 
 const SITE = path.join(__dirname, "_site");
-app.use(express.static(SITE, { extensions: ["html"] }));
+
+// Cachebeleid: afbeeldingen, video's en lettertypes veranderen zelden en mogen
+// lang in de browser blijven staan. CSS/JS korter (die wijzigen per deploy) en
+// HTML helemaal niet, zodat tekstwijzigingen meteen zichtbaar zijn.
+const CACHE_LONG = 60 * 60 * 24 * 30; // 30 dagen
+const CACHE_SHORT = 60 * 60 * 24; // 1 dag
+
+app.use(
+  express.static(SITE, {
+    extensions: ["html"],
+    setHeaders(res, filePath) {
+      if (/\.(woff2?|png|jpe?g|gif|webp|avif|svg|mp4|ico)$/i.test(filePath)) {
+        res.setHeader("Cache-Control", `public, max-age=${CACHE_LONG}`);
+      } else if (/\.(css|js)$/i.test(filePath)) {
+        res.setHeader("Cache-Control", `public, max-age=${CACHE_SHORT}, must-revalidate`);
+      } else {
+        res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+      }
+    },
+  })
+);
+
 app.use((req, res) => {
   res.status(404).sendFile(path.join(SITE, "404.html"));
 });

@@ -1,7 +1,9 @@
 ---
 layout: layout.njk
 title: Home
-description: "Tubes brings production budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle."
+seo_title: "Production Management Software for Film & TV | Tubes"
+description: "Production management software for film, TV and live productions. Tubes unites budgeting, planning and real-time cost control in one platform."
+schema_software: true
 permalink: /
 eleventyNavigation:
   key: Home

@@ -1,7 +1,9 @@
 ---
 layout: layout.njk
 title: Platform
-description: "Tubes is a modular SaaS platform designed specifically for media production workflows. It replaces fragmented tools and spreadsheets with one integrated system."
+seo_title: "The Tubes Platform | Budgeting, Planning & Cost Control"
+description: "A modular production management platform: budgeting, scheduling, cost control, approvals and reporting in one integrated system for media production teams."
+schema_software: true
 permalink: /platform/
 sections:
   - type: hero

@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: Academy
-description: "The Tubes Academy: training and tutorial videos that explain how Tubes works."
+seo_title: "Tubes Academy | Training and Tutorial Videos"
+description: "The Tubes Academy: training and tutorial videos that show how to work with budgeting, planning and cost control in Tubes."
 permalink: /academy/
 sections:
   - type: hero

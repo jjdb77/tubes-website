@@ -33,6 +33,15 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Doel = `settings.booking_url` + slug. Slugs: `tubes-producer-pro` en `tubes-enterprice` (**met c** — zo heet de pagina in 4relations, niet "corrigeren").
 - booking_url = https://4relations.appconnected.nl/boek/joachim (wordt ooit afspraak.tubes.media).
 
+## SEO
+
+- Per pagina in de front matter (en in het CMS onder "SEO: ..."): `seo_title` (volledige `<title>`, leeg = "Paginatitel | Tubes"), `description`, `og_image`, `noindex`, `schema_software`.
+- Alle metatags staan in `src/_includes/partials/head-seo.njk`. **Scheidingsteken in titels is een `|`, geen em-dash.**
+- Structured data (schema.org) wordt in JS opgebouwd: filter `jsonld` in `eleventy.config.js`. Levert Organization, WebSite, WebPage, BreadcrumbList, plus SoftwareApplication met de prijzen uit de `pricing`-secties (bij `schema_software: true`) en FAQPage uit de `faq`-secties. Testen: search.google.com/test/rich-results.
+- `sitemap.xml` en `llms.txt` (samenvatting voor AI-zoekmachines) worden gegenereerd; pagina's met `noindex: true` vallen er automatisch buiten.
+- Platform en Plans staan niet in het menu maar wél in `settings.footer_nav`, anders vindt Google ze niet.
+- Snelheid telt mee: server.js comprimeert (gzip) en zet cacheheaders; `imgSize`-filter zet width/height op elke afbeelding (tegen layout shift). Afbeeldingen in `src/assets/images` zijn deels WebP met een .png/.jpeg-naam, daarom leest `lib/image-size.js` de afmetingen uit de bytes en niet uit de extensie.
+
 ## Domein & DNS (niet slopen)
 
 - tubes.media is geregistreerd bij **Squarespace**; DNS daar bevat: Google Workspace **MX-records (e-mail — NOOIT aanraken)**, TXT google-site-verification, _dmarc, en de www-CNAME naar Railway.
@@ -49,7 +58,9 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
-- [ ] Google Search Console: sitemap https://www.tubes.media/sitemap.xml indienen (domein is al TXT-geverifieerd)
+- [ ] Google Search Console: sitemap https://www.tubes.media/sitemap.xml indienen (domein is al TXT-geverifieerd) — nu de eerste stap die telt, de site zelf is SEO-klaar
+- [ ] Bing Webmaster Tools: site toevoegen (kan de Search Console-gegevens importeren)
+- [ ] LinkedIn-bedrijfspagina laten verwijzen naar www.tubes.media (externe links wegen zwaar voor een nieuw domein)
 - [ ] Etappe 2: Workspace-facturering checken → domein naar TransIP → Squarespace opzeggen (+ SPF/DKIM toevoegen bij TransIP)
 - [ ] Academy-video's: nieuwe plek kiezen ("Access all videos"-knop staat verborgen)
 - [ ] Optioneel: GoatCounter-code voor statistieken (veld bestaat in CMS)

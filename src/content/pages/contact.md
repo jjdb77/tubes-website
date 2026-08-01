@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: Contact
-description: "Interested in Tubes? Share a few details about your organization and productions, and we'll get in touch to explore how Tubes can support your workflow."
+seo_title: "Contact Tubes | Request a Demo"
+description: "Request a demo of Tubes or ask a question. Tell us about your organization and productions, and we'll show you how Tubes fits your workflow."
 permalink: /contact/
 sections:
   - type: hero

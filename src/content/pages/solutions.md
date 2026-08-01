@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: Solutions
-description: "Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability, for every role and every production type."
+seo_title: "Production Management for Every Role | Tubes"
+description: "From producers and production managers to CFOs, controllers and broadcasters: see how Tubes supports every role in a production with clarity and control."
 permalink: /solutions/
 sections:
   - type: hero

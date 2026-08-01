@@ -1,0 +1,27 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- Korte samenvatting van de site voor AI-zoekmachines (ChatGPT, Perplexity,
+    Claude). Wordt automatisch opgebouwd uit de pagina's, dus loopt vanzelf mee
+    als er iets verandert. Zie llmstxt.org. -#}
+# {{ settings.site_name }}
+
+> {{ settings.footer_text }}
+
+{{ settings.site_name }} is a production management platform by {{ settings.legal.company }} (Amsterdam, the Netherlands) for professional media production: film, television, commercials and live entertainment. It replaces spreadsheets and disconnected tools with one system for budgeting, planning, cost control, approvals and reporting.
+
+Pricing: Producer Pro is € 49 per month including 2 users, plus € 25 per month per additional user up to 10 users. Larger teams use the Enterprise plan. Data is hosted on EU-based cloud services with GDPR-aligned data handling.
+
+## Pages
+{% for item in collections.all -%}
+{%- if not item.data.noindex %}
+- [{{ item.data.title | safe }}]({{ settings.site_url }}{{ item.url }}): {{ item.data.description | safe }}
+{%- endif %}
+{%- endfor %}
+
+## Contact
+- Email: {{ settings.contact.email }}
+- Phone: {{ settings.contact.phone }}
+- Request a demo: {{ settings.site_url }}/contact/
+- Book a call: {{ settings.site_url }}/book-a-call/

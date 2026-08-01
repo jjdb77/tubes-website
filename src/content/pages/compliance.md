@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: Compliance
-description: "Tubes is designed with security, governance and compliance as core platform principles: role-based access, full audit trails, GDPR-aligned data handling and EU-based cloud infrastructure."
+seo_title: "Security & Compliance | GDPR and EU Hosting | Tubes"
+description: "Role-based access, full audit trails, GDPR-aligned data handling and EU-based cloud hosting: how Tubes keeps your production data secure."
 permalink: /compliance/
 sections:
   - type: hero

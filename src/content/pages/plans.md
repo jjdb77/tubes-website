@@ -1,7 +1,9 @@
 ---
 layout: layout.njk
 title: Plans
-description: "Choose your Tubes plan. No hidden costs, cancel anytime. From freelance producers to broadcasters and international studios."
+seo_title: "Tubes Pricing & Plans | From € 49 per Month"
+description: "Tubes pricing: Producer Pro from € 49 per month including 2 users, and Enterprise for larger teams. No hidden costs, cancel anytime."
+schema_software: true
 permalink: /plans/
 sections:
   - type: hero

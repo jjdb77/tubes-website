@@ -47,6 +47,40 @@
   },
   "form_endpoint": "/api/contact",
   "goatcounter": "",
+  "footer_nav": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Platform",
+      "url": "/platform/"
+    },
+    {
+      "label": "Solutions",
+      "url": "/solutions/"
+    },
+    {
+      "label": "Plans & pricing",
+      "url": "/plans/"
+    },
+    {
+      "label": "Company",
+      "url": "/company/"
+    },
+    {
+      "label": "Security & compliance",
+      "url": "/compliance/"
+    },
+    {
+      "label": "Academy",
+      "url": "/academy/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
   "nav": [
     {
       "label": "Home",

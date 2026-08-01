@@ -15,7 +15,7 @@
     </div>
     {% elif section.image %}
     <div class="feature-media">
-      <img src="{{ section.image }}" alt="{{ section.image_alt or section.heading }}" loading="lazy">
+      <img src="{{ section.image }}" alt="{{ section.image_alt or section.heading }}" {{ section.image | imgSize | safe }} loading="lazy" decoding="async">
       {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
     </div>
     {% endif %}

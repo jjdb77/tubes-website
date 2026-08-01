@@ -1,10 +1,24 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-about">
-      <img class="footer-brand" src="{{ settings.logo }}" alt="{{ settings.site_name }} — {{ settings.tagline }}" width="126" height="44" loading="lazy">
+      <img class="footer-brand" src="{{ settings.logo }}" alt="{{ settings.site_name }}, {{ settings.tagline | lower }}" width="126" height="44" loading="lazy">
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
     </div>
+    {#- Alle pagina's in de footer: zo vindt Google ook Platform en Plans,
+        die bewust niet in het hoofdmenu staan. -#}
+    {% if settings.footer_nav %}
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          {% for item in settings.footer_nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    {% endif %}
     <div class="footer-col">
       <h3>Contact</h3>
       <p>

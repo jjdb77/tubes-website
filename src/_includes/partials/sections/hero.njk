@@ -27,7 +27,7 @@
     </div>
     {% elif section.image %}
     <div class="hero-media">
-      <img src="{{ section.image }}" alt="{{ section.image_alt or section.title }}" loading="eager" fetchpriority="high">
+      <img src="{{ section.image }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
     {% endif %}
