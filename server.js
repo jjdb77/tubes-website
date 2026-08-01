@@ -42,6 +42,33 @@ app.use((req, res, next) => {
   next();
 });
 
+// Oude Squarespace-adressen. Google kent deze nog (19 stuks in Search Console,
+// allemaal 404) en op LinkedIn staat nog een link naar /news. Een 301 naar de
+// dichtstbijzijnde nieuwe pagina houdt bezoekers binnen en geeft de waarde van
+// die oude links door. Let op: het bestand src/_redirects doet op Railway
+// niets, dat is een Netlify/Cloudflare-formaat. Hier is de enige echte plek.
+const OLD_PATHS = new Map([
+  ["/waarom-tubes", "/platform/"],
+  ["/grip", "/platform/"],
+  ["/artificialintelligence", "/platform/"],
+  ["/oplossing", "/solutions/"],
+  ["/missie", "/company/"],
+  ["/home-2", "/company/"],
+  ["/handleiding", "/academy/"],
+  ["/product-videos", "/academy/"],
+  ["/news", "/insights/"],
+  ["/nieuws", "/insights/"],
+  ["/contact-us", "/contact/"],
+  ["/intro", "/"],
+]);
+
+app.use((req, res, next) => {
+  const clean = req.path.replace(/\/+$/, "").toLowerCase() || "/";
+  const target = OLD_PATHS.get(clean);
+  if (target) return res.redirect(301, target);
+  next();
+});
+
 app.use(express.urlencoded({ extended: false, limit: "64kb" }));
 
 // ---------- Formulier ontvangen ----------

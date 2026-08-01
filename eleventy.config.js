@@ -282,7 +282,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
-  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // /admin alleen als statische kopie meenemen (niet als pagina, niet in de sitemap)
   eleventyConfig.ignores.add("src/admin/**");

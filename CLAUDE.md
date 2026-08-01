@@ -51,6 +51,12 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Snelheid telt mee: server.js comprimeert (gzip) en zet cacheheaders; `imgSize`-filter zet width/height op elke afbeelding (tegen layout shift). Afbeeldingen in `src/assets/images` zijn deels WebP met een .png/.jpeg-naam, daarom leest `lib/image-size.js` de afmetingen uit de bytes en niet uit de extensie.
 - CSS en JS worden aangeroepen als `{{ assets.css }}` / `{{ assets.js }}`, met een `?v=<hash>` erachter. Daardoor mogen ze een jaar gecachet worden en zie je een wijziging tóch meteen. **Link nooit rechtstreeks naar /css/style.css in een template**, dan kan een bezoeker na een deploy oude opmaak krijgen.
 
+## Doorverwijzingen (301)
+
+- **Alle redirects staan in server.js**, in `OLD_PATHS` (oude Squarespace-paden zoals /waarom-tubes, /news, /oplossing) en `REDIRECT_HOSTS` (tubes.media en en.tubes.media naar www).
+- Een `_redirects`-bestand doet hier **niets**: dat is een Netlify/Cloudflare-formaat en Railway draait Express. Het oude bestand is daarom verwijderd.
+- De 19 oude 404's kwamen uit Search Console (Pagina's → Niet gevonden). Kijk daar opnieuw als er later paden bijkomen.
+
 ## Domein & DNS (niet slopen)
 
 - tubes.media is geregistreerd bij **Squarespace**; DNS daar bevat: Google Workspace **MX-records (e-mail — NOOIT aanraken)**, TXT google-site-verification, _dmarc, en de www-CNAME naar Railway.
@@ -67,7 +73,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
-- [ ] Google Search Console: sitemap https://www.tubes.media/sitemap.xml indienen (domein is al TXT-geverifieerd) — nu de eerste stap die telt, de site zelf is SEO-klaar
+- [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's
 - [ ] Bing Webmaster Tools: site toevoegen (kan de Search Console-gegevens importeren)
 - [ ] **en.tubes.media redden**: Product Hunt, LinkedIn en AlternativeTo linken nog naar die dode Weglot-proxy. DNS bij Squarespace van de Weglot-CNAME naar Railway zetten en het domein op de service tubes-website toevoegen; server.js stuurt hem dan met een 301 door naar www. Daarna alsnog de drie profielen aanpassen.
 - [ ] Capterra-profiel claimen; prijs op AlternativeTo corrigeren ($100-990 → € 49/mnd)
