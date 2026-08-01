@@ -60,7 +60,8 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
 - [ ] Google Search Console: sitemap https://www.tubes.media/sitemap.xml indienen (domein is al TXT-geverifieerd) — nu de eerste stap die telt, de site zelf is SEO-klaar
 - [ ] Bing Webmaster Tools: site toevoegen (kan de Search Console-gegevens importeren)
-- [ ] LinkedIn-bedrijfspagina laten verwijzen naar www.tubes.media (externe links wegen zwaar voor een nieuw domein)
+- [ ] **en.tubes.media redden**: Product Hunt, LinkedIn en AlternativeTo linken nog naar die dode Weglot-proxy. DNS bij Squarespace van de Weglot-CNAME naar Railway zetten en het domein op de service tubes-website toevoegen; server.js stuurt hem dan met een 301 door naar www. Daarna alsnog de drie profielen aanpassen.
+- [ ] Capterra-profiel claimen; prijs op AlternativeTo corrigeren ($100-990 → € 49/mnd)
 - [ ] Etappe 2: Workspace-facturering checken → domein naar TransIP → Squarespace opzeggen (+ SPF/DKIM toevoegen bij TransIP)
 - [ ] Academy-video's: nieuwe plek kiezen ("Access all videos"-knop staat verborgen)
 - [ ] Optioneel: GoatCounter-code voor statistieken (veld bestaat in CMS)

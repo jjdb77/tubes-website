@@ -24,6 +24,24 @@ app.disable("x-powered-by");
 // HTML en CSS gecomprimeerd versturen: scheelt ruwweg 70% aan laadtijd,
 // en laadsnelheid telt mee in de Google-ranking.
 app.use(compression());
+
+// Oude adressen doorsturen naar www.tubes.media met een 301.
+// en.tubes.media was de Weglot-vertaalproxy; Product Hunt, LinkedIn en
+// AlternativeTo linken daar nog naartoe en die links lopen nu dood. Een 301
+// geeft de waarde van zo'n link door aan de echte site.
+// Werkt pas zodra het domein in Railway op deze service staat en de DNS
+// erheen wijst. tubes.appconnected.nl blijft bewust het testadres.
+const CANONICAL_HOST = "www.tubes.media";
+const REDIRECT_HOSTS = new Set(["tubes.media", "en.tubes.media", "www.en.tubes.media"]);
+
+app.use((req, res, next) => {
+  const host = String(req.headers.host || "").split(":")[0].toLowerCase();
+  if (REDIRECT_HOSTS.has(host)) {
+    return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use(express.urlencoded({ extended: false, limit: "64kb" }));
 
 // ---------- Formulier ontvangen ----------
