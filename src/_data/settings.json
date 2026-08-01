@@ -9,9 +9,21 @@
   "app_url": "https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6",
   "booking_url": "https://4relations.appconnected.nl/boek/joachim",
   "booking_plans": [
-    { "path": "", "slug": "tubes-producer-pro", "plan": "" },
-    { "path": "producer-pro/", "slug": "tubes-producer-pro", "plan": "Producer Pro" },
-    { "path": "enterprise/", "slug": "tubes-enterprise", "plan": "Enterprise" }
+    {
+      "path": "",
+      "slug": "tubes-producer-pro",
+      "plan": ""
+    },
+    {
+      "path": "producer-pro/",
+      "slug": "tubes-producer-pro",
+      "plan": "Producer Pro"
+    },
+    {
+      "path": "enterprise/",
+      "slug": "tubes-enterprice",
+      "plan": "Enterprise"
+    }
   ],
   "contact": {
     "email": "contact@tubes.media",
