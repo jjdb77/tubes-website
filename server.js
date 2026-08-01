@@ -204,6 +204,22 @@ app.get("/beheer/export.csv", (req, res) => {
 
 // ---------- Statische site ----------
 
+// Alleen www.tubes.media hoort in de zoekresultaten. Het testadres
+// tubes.appconnected.nl serveert exact dezelfde pagina's; zonder deze header
+// biedt de site zich daar aan als tweede, concurrerende kopie. De canonical in
+// de HTML wijst wel naar www, maar dat is voor Google een hint en geen regel.
+//
+// Let op: robots.txt blijft hier bewust alles toestaan. Een crawler moet de
+// pagina kunnen ophalen om deze header te zien; zou robots.txt hem tegenhouden,
+// dan zag hij de noindex nooit.
+app.use((req, res, next) => {
+  const host = String(req.headers.host || "").split(":")[0].toLowerCase();
+  if (host !== CANONICAL_HOST) {
+    res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  }
+  next();
+});
+
 const SITE = path.join(__dirname, "_site");
 
 // Cachebeleid.
