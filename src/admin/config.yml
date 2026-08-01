@@ -84,6 +84,28 @@ collections:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
 
+  - name: artikelen
+    label: "Artikelen (Insights)"
+    icon: draft
+    folder: src/content/insights
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Sjabloon, name: layout, widget: hidden, default: article.njk }
+      - { label: Titel, name: title, widget: string, hint: "Dit wordt de kop op de pagina (H1)." }
+      - { label: Introzin, name: standfirst, widget: text, hint: "Dikgedrukte zin onder de titel, en de samenvatting in het overzicht." }
+      - { label: Publicatiedatum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "URL-pad", name: permalink, widget: string, hint: "Bijv. /insights/mijn-artikel/ — begin en eindig met een slash." }
+      - { label: Artikel, name: body, widget: markdown, hint: "Gebruik ## voor tussenkoppen. Geen em-dashes (—) gebruiken." }
+      # --- Vindbaarheid in Google (SEO) ---
+      - { label: "SEO: titel in Google", name: seo_title, widget: string, required: false, hint: "Max ± 60 tekens, zoekwoorden vooraan. Leeg = 'Titel | Tubes'." }
+      - { label: "SEO: omschrijving in Google", name: description, widget: text, required: false, hint: "Max ± 155 tekens." }
+      - { label: "SEO: deelplaatje (LinkedIn, WhatsApp)", name: og_image, widget: image, required: false }
+      - { label: "SEO: artikel uit Google houden", name: noindex, widget: boolean, default: false, required: false }
+
   - name: paginas
     label: Pagina's
     icon: article

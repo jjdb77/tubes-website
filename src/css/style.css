@@ -799,6 +799,81 @@ a:hover { color: var(--action); }
   }
 }
 
+/* ---------- Artikelen (Insights) ---------- */
+
+.article-inner { max-width: 760px; }
+
+.breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--action-soft-ink); }
+.breadcrumb span { margin: 0 6px; }
+.breadcrumb [aria-current="page"] { color: var(--ink-soft); margin: 0; }
+
+.article h1 { font-size: clamp(2rem, 3.8vw, 3rem); }
+.article-standfirst {
+  font-size: 1.2rem; line-height: 1.55; color: var(--ink-soft);
+  margin-top: 0.7em; max-width: 62ch;
+}
+.article-meta { font-size: 0.88rem; color: var(--muted); margin-top: 1.2em; }
+.article-meta span { margin: 0 4px; }
+
+.article-body { margin-top: 40px; }
+.article-body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem); letter-spacing: -0.02em;
+  margin-top: 1.9em; margin-bottom: 0.55em; color: var(--ink);
+}
+.article-body h3 { font-size: 1.12rem; margin-top: 1.7em; margin-bottom: 0.5em; }
+.article-body > *:first-child { margin-top: 0; }
+.article-body p, .article-body li { line-height: 1.72; }
+/* Lopende tekst krijgt gewone opsommingstekens. Het vinkje uit .rich-text is
+   bedoeld voor marketingblokken en botst met genummerde lijsten. */
+.article-body ul { margin: 1em 0; padding-left: 1.35em; list-style: disc; }
+.article-body ol { margin: 1em 0; padding-left: 1.35em; list-style: decimal; }
+.article-body li { margin-bottom: 0.5em; padding-left: 0; }
+.article-body li::before { content: none; }
+.article-body li::marker { color: var(--action); }
+.article-body a { color: var(--action-soft-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+.article-body blockquote {
+  margin: 1.8em 0; padding: 4px 0 4px 22px;
+  border-left: 3px solid var(--action);
+  color: var(--ink); font-size: 1.05rem;
+}
+.article-body blockquote p:last-child { margin-bottom: 0; }
+
+.article-body table {
+  width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.94rem;
+}
+.article-body th, .article-body td {
+  text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-body th { font-weight: 700; color: var(--ink); background: var(--bg); }
+
+.article-related-heading { font-size: 1.35rem; margin-bottom: 1em; }
+.article-related { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.article-related a { font-weight: 700; color: var(--ink); font-size: 1.06rem; }
+.article-related a:hover { color: var(--action-soft-ink); }
+.article-related span { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 0.94rem; }
+
+.insights-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.insight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 30px 32px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.insight-card:hover { border-color: var(--action); box-shadow: var(--shadow-raise); }
+.insight-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+.insight-meta span { margin: 0 4px; }
+.insight-card h2 { font-size: 1.35rem; letter-spacing: -0.015em; margin-bottom: 0.4em; }
+.insight-card h2 a { color: var(--ink); }
+.insight-card h2 a:hover { color: var(--action-soft-ink); }
+.insight-card p { color: var(--ink-soft); }
+.insight-link { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.92rem; color: var(--action-soft-ink); }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1180px) {
@@ -821,6 +896,9 @@ a:hover { color: var(--action); }
 @media (max-width: 700px) {
   .cards-3, .cards-2, .images-2, .images-3,
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr; }
+  /* Brede tabellen in artikelen apart laten scrollen, de pagina zelf niet */
+  .article-body table { display: block; overflow-x: auto; white-space: nowrap; }
+  .article-body td, .article-body th { white-space: normal; min-width: 130px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }

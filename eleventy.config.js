@@ -1,7 +1,20 @@
+import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import markdownIt from "markdown-it";
 import { HtmlBasePlugin } from "@11ty/eleventy";
 import { imageSize } from "./lib/image-size.js";
+
+// Korte hash per bestand, als ?v= achter de CSS- en JS-links. Daardoor kan de
+// browser die bestanden een jaar bewaren en ziet hij een wijziging tóch meteen:
+// na een deploy verandert de hash en dus de URL.
+function fileHash(file) {
+  try {
+    return crypto.createHash("sha1").update(fs.readFileSync(file)).digest("hex").slice(0, 8);
+  } catch {
+    return "0";
+  }
+}
 
 export default function (eleventyConfig) {
   // Zet alle interne links om als de site in een submap draait
@@ -12,6 +25,10 @@ export default function (eleventyConfig) {
   // Actief bij submap-deploy (PATH_PREFIX) of expliciet via PREVIEW=true
   // (zet die env-variabele op Railway uit zodra tubes.media live gaat).
   eleventyConfig.addGlobalData("isPreview", Boolean(process.env.PATH_PREFIX || process.env.PREVIEW));
+  eleventyConfig.addGlobalData("assets", {
+    css: "/css/style.css?v=" + fileHash("src/css/style.css"),
+    js: "/js/site.js?v=" + fileHash("src/js/site.js"),
+  });
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 
   // Markdown-filter voor tekstvelden uit het CMS
@@ -33,6 +50,25 @@ export default function (eleventyConfig) {
       .replace(/\s+/g, " ")
       .trim();
   eleventyConfig.addFilter("plain", toPlainText);
+
+  // ---------- Artikelen (Insights) ----------
+
+  const countWords = (html) => {
+    const text = String(html || "").replace(/<[^>]*>/g, " ").trim();
+    return text ? text.split(/\s+/).length : 0;
+  };
+  eleventyConfig.addFilter("wordCount", countWords);
+  eleventyConfig.addFilter("readingTime", (html) => Math.max(1, Math.round(countWords(html) / 220)));
+
+  eleventyConfig.addFilter("readableDate", (value) =>
+    new Date(value).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
+  );
+  eleventyConfig.addFilter("isoDate", (value) => new Date(value).toISOString().split("T")[0]);
+
+  // Nieuwste artikel bovenaan
+  eleventyConfig.addCollection("insights", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
+  );
 
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
@@ -119,19 +155,39 @@ export default function (eleventyConfig) {
       primaryImageOfPage: abs("/assets/images/og-image.png"),
     };
 
-    // Kruimelpad: Home > Deze pagina
+    // Kruimelpad: Home > (Insights >) Deze pagina
     if (!isHome && title) {
       const crumbId = abs(url) + "#breadcrumb";
+      const trail = [{ "@type": "ListItem", position: 1, name: "Home", item: base + "/" }];
+      if (data.article) {
+        trail.push({ "@type": "ListItem", position: 2, name: "Insights", item: base + "/insights/" });
+      }
+      trail.push({ "@type": "ListItem", position: trail.length + 1, name: title, item: abs(url) });
       webPage.breadcrumb = { "@id": crumbId };
+      graph.push({ "@type": "BreadcrumbList", "@id": crumbId, itemListElement: trail });
+    }
+
+    // Artikelen: Google en AI-zoekmachines willen weten wie het schreef en wanneer
+    if (data.article) {
+      webPage["@type"] = "WebPage";
       graph.push({
-        "@type": "BreadcrumbList",
-        "@id": crumbId,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: base + "/" },
-          { "@type": "ListItem", position: 2, name: title, item: abs(url) },
-        ],
+        "@type": "Article",
+        "@id": abs(url) + "#article",
+        headline: data.article.headline,
+        description: toPlainText(pageDescription),
+        datePublished: data.article.date ? new Date(data.article.date).toISOString() : undefined,
+        dateModified: new Date(data.article.updated || data.article.date || Date.now()).toISOString(),
+        wordCount: data.article.words,
+        inLanguage: "en",
+        isPartOf: { "@id": pageId },
+        mainEntityOfPage: { "@id": pageId },
+        author: { "@id": orgId },
+        publisher: { "@id": orgId },
+        image: abs("/assets/images/og-image.png"),
+        about: { "@id": softwareId },
       });
     }
+
     graph.push(webPage);
 
     // Het product zelf, met de prijzen van de abonnementskaarten
@@ -186,6 +242,20 @@ export default function (eleventyConfig) {
         publisher: { "@id": orgId },
         provider: { "@id": orgId },
         ...(offers.length ? { offers } : {}),
+      });
+    }
+
+    // Overzichtspagina met artikelen
+    if (Array.isArray(data.itemList) && data.itemList.length) {
+      graph.push({
+        "@type": "ItemList",
+        "@id": abs(url) + "#list",
+        itemListElement: data.itemList.map((item, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: abs(item.url),
+          name: item.data?.title,
+        })),
       });
     }
 

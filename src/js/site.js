@@ -50,7 +50,9 @@ for (const tour of document.querySelectorAll("[data-tour]")) {
 
 // Secties zachtjes laten opkomen bij het scrollen (niet bij reduced motion)
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-  const targets = document.querySelectorAll(".section:not(.section-hero) .container");
+  // Artikelen doen niet mee: hun tekst is één heel lang blok, en die mag niet
+  // van JavaScript afhangen om zichtbaar te worden.
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
