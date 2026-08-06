@@ -79,6 +79,16 @@ export default function (eleventyConfig) {
     return size ? `width="${size.width}" height="${size.height}"` : "";
   });
 
+  // Zelfde ?v=<hash>-truc als bij CSS/JS, maar dan voor afbeeldingen: een
+  // vervangen bestand (zelfde naam, nieuwe inhoud, bv. een nieuwe
+  // schermafbeelding) krijgt zo een nieuwe URL en is meteen zichtbaar, ook al
+  // hield de browser de oude 30 dagen vast.
+  eleventyConfig.addFilter("imgSrc", (src) => {
+    if (!src || String(src).startsWith("http")) return src;
+    const hash = fileHash(path.join("src", String(src).replace(/^\//, "")));
+    return hash === "0" ? src : `${src}?v=${hash}`;
+  });
+
   // ---------- Structured data (schema.org) ----------
   //
   // Google en AI-zoekmachines lezen dit blok om te begrijpen wat Tubes is,

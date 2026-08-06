@@ -224,12 +224,14 @@ const SITE = path.join(__dirname, "_site");
 
 // Cachebeleid.
 //
-// De CSS- en JS-links in de HTML dragen een ?v=<hash> die bij elke wijziging
-// verandert (zie eleventy.config.js). Zo'n URL mag een jaar bewaard blijven:
-// na een deploy is het simpelweg een ander adres. Zonder die hash blijft de
-// cache kort, anders zou een bezoeker na een deploy oude opmaak zien.
-// Afbeeldingen, video's en lettertypes veranderen zelden; HTML nooit cachen,
-// zodat tekstwijzigingen meteen zichtbaar zijn.
+// De CSS-, JS- en afbeeldingslinks in de HTML dragen een ?v=<hash> die bij
+// elke wijziging verandert (zie eleventy.config.js, filters "assets" en
+// "imgSrc"). Zo'n URL mag een jaar bewaard blijven: na een deploy is het
+// simpelweg een ander adres. Zonder die hash blijft de cache kort, anders
+// zou een bezoeker na een deploy oude opmaak of een oude schermafbeelding
+// blijven zien. Lettertypes en video's veranderen zelden en krijgen geen
+// hash, die cachen we gewoon lang. HTML nooit cachen, zodat tekstwijzigingen
+// meteen zichtbaar zijn.
 const CACHE_YEAR = 60 * 60 * 24 * 365;
 const CACHE_LONG = 60 * 60 * 24 * 30; // 30 dagen
 const CACHE_SHORT = 60 * 5; // 5 minuten
@@ -239,12 +241,12 @@ app.use(
     extensions: ["html"],
     setHeaders(res, filePath) {
       const hashed = Boolean(res.req?.query?.v);
-      if (/\.(css|js)$/i.test(filePath)) {
+      if (/\.(css|js|png|jpe?g|gif|webp|avif|svg|ico)$/i.test(filePath)) {
         res.setHeader(
           "Cache-Control",
           hashed ? `public, max-age=${CACHE_YEAR}, immutable` : `public, max-age=${CACHE_SHORT}, must-revalidate`
         );
-      } else if (/\.(woff2?|png|jpe?g|gif|webp|avif|svg|mp4|ico)$/i.test(filePath)) {
+      } else if (/\.(woff2?|mp4)$/i.test(filePath)) {
         res.setHeader("Cache-Control", `public, max-age=${CACHE_LONG}`);
       } else {
         res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");

@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-about">
-      <img class="footer-brand" src="{{ settings.logo }}" alt="{{ settings.site_name }}, {{ settings.tagline | lower }}" width="126" height="44" loading="lazy">
+      <img class="footer-brand" src="{{ settings.logo | imgSrc }}" alt="{{ settings.site_name }}, {{ settings.tagline | lower }}" width="126" height="44" loading="lazy">
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
     </div>
@@ -37,7 +37,7 @@
         Chamber of Commerce: {{ settings.legal.coc }}<br>
         VAT: {{ settings.legal.vat }}
       </p>
-      {% if settings.legal.logo %}<img class="footer-legal-logo" src="{{ settings.legal.logo }}" alt="{{ settings.legal.company }}" width="150" height="28" loading="lazy">{% endif %}
+      {% if settings.legal.logo %}<img class="footer-legal-logo" src="{{ settings.legal.logo | imgSrc }}" alt="{{ settings.legal.company }}" width="150" height="28" loading="lazy">{% endif %}
     </div>
     <div class="footer-col">
       <h3>Follow Us</h3>

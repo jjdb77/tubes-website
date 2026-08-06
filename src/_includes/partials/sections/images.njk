@@ -2,7 +2,7 @@
   <div class="container images-row images-{{ section.images | length }}">
     {% for img in section.images %}
     <figure class="screenshot">
-      <img src="{{ img.image }}" alt="{{ img.alt }}" {{ img.image | imgSize | safe }} loading="lazy" decoding="async">
+      <img src="{{ img.image | imgSrc }}" alt="{{ img.alt }}" {{ img.image | imgSize | safe }} loading="lazy" decoding="async">
       {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
     </figure>
     {% endfor %}

@@ -22,12 +22,12 @@
     </div>
     {% if section.video %}
     <div class="hero-media">
-      <video controls playsinline preload="metadata" {% if section.poster %}poster="{{ section.poster }}"{% endif %} src="{{ section.video }}"></video>
+      <video controls playsinline preload="metadata" {% if section.poster %}poster="{{ section.poster | imgSrc }}"{% endif %} src="{{ section.video }}"></video>
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
     {% elif section.image %}
     <div class="hero-media">
-      <img src="{{ section.image }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
+      <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
     {% endif %}

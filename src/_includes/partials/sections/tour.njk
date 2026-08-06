@@ -15,7 +15,7 @@
            id="tour-panel-{{ loop.index }}" aria-labelledby="tour-tab-{{ loop.index }}" {% if not loop.first %}hidden{% endif %}>
         <div class="tour-text rich-text">{{ tab.text | md | safe }}</div>
         <div class="tour-media">
-          <img src="{{ tab.image }}" alt="{{ tab.image_alt or tab.label }}" {{ tab.image | imgSize | safe }} loading="lazy" decoding="async">
+          <img src="{{ tab.image | imgSrc }}" alt="{{ tab.image_alt or tab.label }}" {{ tab.image | imgSize | safe }} loading="lazy" decoding="async">
         </div>
       </div>
       {% endfor %}
