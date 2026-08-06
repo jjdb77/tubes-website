@@ -238,6 +238,7 @@ collections:
                   - { label: Naam, name: name, widget: string }
                   - { label: "Badge (bijv. Most popular)", name: badge, widget: string, required: false }
                   - { label: Omschrijving, name: text, widget: markdown }
+                  - { label: "Voor de prijs (bijv. From)", name: price_prefix, widget: string, required: false }
                   - { label: "Prijs (bijv. € 49)", name: price, widget: string, required: false }
                   - { label: "Prijstoelichting (bijv. per user/month)", name: price_note, widget: string, required: false }
                   - { label: "Extra prijsinfo", name: price_detail, widget: markdown, required: false }

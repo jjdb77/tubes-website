@@ -9,7 +9,7 @@
         <h3>{{ plan.name }}</h3>
         <div class="rich-text plan-text">{{ plan.text | md | safe }}</div>
         {% if plan.price %}
-        <p class="plan-price">{{ plan.price }}{% if plan.price_note %} <span class="plan-price-note">{{ plan.price_note }}</span>{% endif %}</p>
+        <p class="plan-price">{% if plan.price_prefix %}<span class="plan-price-prefix">{{ plan.price_prefix }}</span>{% endif %}{{ plan.price }}{% if plan.price_note %} <span class="plan-price-note">{{ plan.price_note }}</span>{% endif %}</p>
         {% endif %}
         {% if plan.price_detail %}<div class="rich-text plan-price-detail">{{ plan.price_detail | md | safe }}</div>{% endif %}
         {% if plan.features %}

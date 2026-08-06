@@ -20,10 +20,11 @@ sections:
         badge: Most popular
         text: |
           For freelance producers, creative duos, micro teams, co-producers, project consultants and short-term collaborators.
+        price_prefix: "From"
         price: "€ 49"
         price_note: "per month, includes 2 users"
         price_detail: |
-          € 29.50 per month for each additional user, up to 10 users.
+          Includes up to 3 active projects. € 25 per month for each additional user, up to 10 users.
         features: |
           - Budgeting & basic cost control
           - Simple, intuitive workflows

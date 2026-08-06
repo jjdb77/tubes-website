@@ -615,6 +615,7 @@ a:hover { color: var(--action); }
   font-variant-numeric: tabular-nums;
   margin: 20px 0 4px;
 }
+.plan-price-prefix { font-size: 0.95rem; font-weight: 600; letter-spacing: 0; color: var(--ink-soft); margin-right: 6px; }
 .plan-price-note { font-size: 0.95rem; font-weight: 500; letter-spacing: 0; color: var(--ink-soft); }
 .plan-price-detail { font-size: 0.9rem; color: var(--muted); }
 
