@@ -6,6 +6,7 @@ description: "How a weekly production cost report works: actuals, commitments, e
 standfirst: "The budget says what you meant to spend. The cost report says what this is now going to finish at. Only one of those numbers can still be acted on."
 date: 2026-07-24
 permalink: /insights/what-is-a-production-cost-report/
+noindex: true
 ---
 
 Ask a producer mid-shoot how the production is doing financially and the honest answer is never the budget total. The budget was locked weeks ago and has been quietly wrong since roughly the second day of prep. What they actually need is a single number: **what will this cost when everything is invoiced and delivered?**

@@ -6,6 +6,7 @@ description: "How a production budget is actually built: the topsheet, the chart
 standfirst: "A budget is not a wish list with a total at the bottom. It is a model of how a production will be made, priced line by line, and it only works if it is built in the right order."
 date: 2026-08-01
 permalink: /insights/how-to-build-a-production-budget/
+noindex: true
 ---
 
 Most budgets that go wrong were wrong on day one. Not because someone typed the wrong rate, but because the budget was written before anyone knew what was actually being shot. The numbers were plausible, the topsheet added up, and none of it described the production that eventually turned up on set.
