@@ -26,7 +26,7 @@ sections:
         price_detail: |
           Includes up to 3 active projects. € 25 per month for each additional user, up to 10 users.
         features: |
-          - Budgeting & basic cost control
+          - Budgeting & cost control
           - Simple, intuitive workflows
           - Self-service onboarding
           - Standard support & SLA
