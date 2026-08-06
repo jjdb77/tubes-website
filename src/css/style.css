@@ -621,8 +621,11 @@ a:hover { color: var(--action); }
 
 .plan-features { margin-top: 20px; font-size: 0.95rem; }
 
+/* De knop zakt naar de onderkant van de kaart, zodat alle knoppen in een rij
+   op gelijke hoogte staan. Het element erboven levert de tussenruimte, want een
+   vaste margin-top hier zou de auto-uitlijning weer ongedaan maken. */
 .plan-button { margin-top: auto; text-align: center; }
-.plan-features + .plan-button, .rich-text + .plan-button { margin-top: 26px; }
+.plan-card > *:has(+ .plan-button) { margin-bottom: 26px; }
 
 .pricing-footnote { margin-top: 36px; font-size: 0.95rem; color: var(--muted); }
 .pricing-footnote strong { color: var(--ink-soft); }

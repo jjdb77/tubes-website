@@ -94,7 +94,7 @@ Role-based access and permissions, full audit trails and data traceability, EU-b
 ```
 Producer Pro: from EUR 49 per month, includes 2 users and up to 3 active projects. EUR 25 per month for each additional user, up to 10 users. Set up in 30 minutes, including a Xero integration if you wish.
 
-Enterprise: for teams of more than 10 users, price on request. Full budgeting, planning and cost control, real-time reporting and forecasting, multi-entity and multi-country setup, advanced permissions and approval flows, enterprise reporting and audit trails, deep integrations with full API access, dedicated onboarding and a Customer Success Manager.
+Enterprise: for teams of more than 10 users, price on request. Unlimited projects, full budgeting, planning and cost control, real-time reporting and forecasting, multi-entity and multi-country setup, advanced permissions and approval flows, enterprise reporting and audit trails, deep integrations with full API access, dedicated onboarding and a Customer Success Manager.
 
 Also available: Tubes Projects, priced per production and including 5 users, expandable in blocks of 5, and Tubes for Companies.
 
