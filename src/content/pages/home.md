@@ -43,7 +43,7 @@ sections:
         price: "€ 49"
         price_note: "per month, includes 2 users"
         price_detail: |
-          € 25 per month for each additional user, up to 10 users.
+          € 29.50 per month for each additional user, up to 10 users.
         features: |
           - Budgeting & basic cost control
           - Simple, intuitive workflows
