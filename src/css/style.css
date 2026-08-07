@@ -321,7 +321,6 @@ a:hover { color: var(--action); }
 .theme-dark .button.button-secondary:hover { border-color: #fff; color: #fff; }
 .theme-dark .hero-media::before { background: rgba(64, 128, 210, 0.38); }
 .theme-dark .hero-media::after { background: rgba(64, 128, 210, 0.16); }
-.theme-dark .hero-media img, .theme-dark .hero-media video { border: 0; }
 
 /* Derde achtergrondtint: zachte teal-wash, afgeleid van --action-soft */
 .theme-teal { overflow: hidden; background: #EAF1FC; border-top: 1px solid rgba(45, 108, 196, 0.08); border-bottom: 1px solid rgba(45, 108, 196, 0.08); }
@@ -332,7 +331,7 @@ a:hover { color: var(--action); }
 
 /* Hero-beeld: gestapelde "app-panelen" — teal plaat schuin achter het
    beeld, en het beeld loopt op brede schermen door richting de rand */
-.section-hero .hero-media { position: relative; margin-right: -5vw; }
+.section-hero .hero-media { position: relative; margin-right: -5vw; transform: scale(1.05); }
 .section-hero .hero-media::before {
   content: "";
   position: absolute; inset: 0; z-index: 1;
@@ -405,6 +404,9 @@ a:hover { color: var(--action); }
   background: var(--surface);
   box-shadow: var(--shadow-raise);
 }
+/* Op het donkere thema oogt die randlijn als een wit randje; deze regel moet
+   na de vorige staan om 'm (bij gelijke specificiteit) te overschrijven. */
+.theme-dark .hero-media img, .theme-dark .hero-media video { border: 0; }
 
 /* Foto's (jpeg) op vaste 3:2-verhouding, zoals op de oude Squarespace-site.
    App-screenshots (png) houden hun eigen verhouding — die snij je niet af. */
