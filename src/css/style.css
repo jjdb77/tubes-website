@@ -349,18 +349,20 @@ a:hover { color: var(--action); }
    specificiteit) te overschrijven. */
 .theme-dark .hero-media::before { background: rgba(64, 128, 210, 0.38); }
 .theme-dark .hero-media::after { background: rgba(64, 128, 210, 0.16); }
-/* De 5% vergroting staat hier op img/video (niet op .hero-media) omdat
+/* De voorste afbeelding staat recht (niet gedraaid): bij een rotatie gaf de
+   combinatie van border-radius + box-shadow op een scherpe screenshot een
+   sub-pixel randartefact tegen de donkere achtergrond. Alleen de kaartjes
+   erachter (::before/::after, effen kleur, geen scherpe randen) blijven
+   licht gedraaid voor het gestapelde effect.
+   De 5% vergroting staat hier op img/video (niet op .hero-media) omdat
    .hero-media zelf de laad-animatie (@keyframes rise) draagt, die transform
    bij het laden terugzet naar "none" en een losse transform daar dus
    tenietdoet. */
 .section-hero .hero-media img,
 .section-hero .hero-media video {
   position: relative; z-index: 2;
-  transform: scale(1.05) rotate(-1.2deg);
-  transition: transform 0.4s ease;
+  transform: scale(1.05);
 }
-.section-hero .hero-media:hover img,
-.section-hero .hero-media:hover video { transform: scale(1.05) rotate(0deg); }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
 
@@ -973,11 +975,9 @@ a:hover { color: var(--action); }
 .viewfinder {
   position: absolute; inset: 12px; z-index: 3;
   pointer-events: none;
-  transform: scale(1.05) rotate(-1.2deg);
-  transition: transform 0.4s ease;
+  transform: scale(1.05);
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
-.section-hero .hero-media:hover .viewfinder { transform: scale(1.05) rotate(0deg); }
 .viewfinder::before,
 .viewfinder::after {
   content: ""; position: absolute;
