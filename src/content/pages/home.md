@@ -67,7 +67,7 @@ sections:
           For teams of more than 10 users. Connect financial intent, planning, and execution across your entire organisation, with the control, security, and scalability enterprises require.
         features: |
           - Unlimited projects
-          - Full budgeting, planning & cost control
+          - Budgeting, planning & cost control across the organisation
           - Real-time reporting & forecasting
           - Multi-entity and multi-country setup
           - Advanced permissions, roles, and approval flows
