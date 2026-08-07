@@ -33,8 +33,6 @@ sections:
     images:
       - image: /assets/images/example-tubes-01.png
         image_alt: The Tubes dashboard with projects, budgets and reporting
-      - image: /assets/images/example-tubes-03.png
-        image_alt: Real-time invoice pipeline and cost control in Tubes
       - image: /assets/images/example-tubes-02.png
         image_alt: Projects overview and pipeline in Tubes
   - type: pricing
