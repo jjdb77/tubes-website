@@ -11,7 +11,7 @@ sections:
   - type: hero
     theme: dark
     kicker: Production management platform
-    title: Streamline production budgeting, planning, and cost control in *one platform*
+    title: Streamline&nbsp;production budgeting, planning, and cost control in *one platform*
     chips:
       - label: Development
         tone: blue
@@ -28,13 +28,8 @@ sections:
     buttons:
       - label: Request a Demo
         url: /contact/
-    image: /assets/images/example-tubes-01.png
-    image_alt: The Tubes dashboard with projects, budgets and reporting
-    images:
-      - image: /assets/images/example-tubes-01.png
-        image_alt: The Tubes dashboard with projects, budgets and reporting
-      - image: /assets/images/example-tubes-02.png
-        image_alt: Projects overview and pipeline in Tubes
+    image: /assets/images/example-tubes-02.png
+    image_alt: Projects overview and pipeline in Tubes
   - type: pricing
     theme: light
     heading: Choose your plan

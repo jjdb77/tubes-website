@@ -25,15 +25,6 @@
       <video controls playsinline preload="metadata" {% if section.poster %}poster="{{ section.poster | imgSrc }}"{% endif %} src="{{ section.video }}"></video>
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
-    {% elif section.images and section.images.length > 1 %}
-    <div class="hero-media" data-hero-rotator>
-      <div class="hero-slides" style="aspect-ratio: {{ section.images[0].image | imgAspect }}">
-        {% for slide in section.images %}
-        <img src="{{ slide.image | imgSrc }}" alt="{{ slide.image_alt or (section.title | plain) }}" {% if loop.first %}class="is-active" loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-        {% endfor %}
-      </div>
-      <span class="viewfinder" aria-hidden="true"></span>
-    </div>
     {% elif section.image %}
     <div class="hero-media">
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">

@@ -30,22 +30,6 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   }
 }
 
-// Hero-rotator: meerdere screenshots kruisvervagen om de beurt (decoratief,
-// geen bediening). Staat stil bij prefers-reduced-motion: dan blijft gewoon
-// de eerste afbeelding staan.
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  for (const rotator of document.querySelectorAll("[data-hero-rotator]")) {
-    const slides = rotator.querySelectorAll(".hero-slides img");
-    if (slides.length < 2) continue;
-    let i = 0;
-    setInterval(() => {
-      slides[i].classList.remove("is-active");
-      i = (i + 1) % slides.length;
-      slides[i].classList.add("is-active");
-    }, 6000);
-  }
-}
-
 // Module-tour: tabs wisselen
 for (const tour of document.querySelectorAll("[data-tour]")) {
   const tabs = tour.querySelectorAll(".tour-tab");
