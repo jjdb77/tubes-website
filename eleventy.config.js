@@ -79,6 +79,15 @@ export default function (eleventyConfig) {
     return size ? `width="${size.width}" height="${size.height}"` : "";
   });
 
+  // Breedte/hoogte-verhouding van een afbeelding, voor de hero-rotator: de
+  // slides staan los van de documentflow (position: absolute) en de wrapper
+  // heeft daarom zelf een aspect-ratio nodig om niet in te klappen.
+  eleventyConfig.addFilter("imgAspect", (src) => {
+    if (!src || String(src).startsWith("http")) return "1200 / 724";
+    const size = imageSize(path.join("src", String(src).replace(/^\//, "")));
+    return size ? `${size.width} / ${size.height}` : "1200 / 724";
+  });
+
   // Zelfde ?v=<hash>-truc als bij CSS/JS, maar dan voor afbeeldingen: een
   // vervangen bestand (zelfde naam, nieuwe inhoud, bv. een nieuwe
   // schermafbeelding) krijgt zo een nieuwe URL en is meteen zichtbaar, ook al

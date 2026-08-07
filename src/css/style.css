@@ -359,6 +359,27 @@ a:hover { color: var(--action); }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
 
+/* Hero-rotator: meerdere screenshots kruisvervagen boven elkaar. De wrapper
+   krijgt de rotatie/hover-tilt, de losse slides alleen de opacity-overgang. */
+.section-hero .hero-media .hero-slides {
+  position: relative; z-index: 2;
+  transform: rotate(-1.2deg);
+  transition: transform 0.4s ease;
+}
+.section-hero .hero-media:hover .hero-slides { transform: rotate(0deg); }
+.section-hero .hero-media .hero-slides img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: none;
+  transition: opacity 1.1s ease;
+}
+.section-hero .hero-media .hero-slides img.is-active { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .section-hero .hero-media .hero-slides img { transition: none; }
+}
+
 /* Secties zachtjes laten opkomen bij het scrollen (klasse via JS) */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
