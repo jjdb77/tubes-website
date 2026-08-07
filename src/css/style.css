@@ -326,29 +326,20 @@ a:hover { color: var(--action); }
 
 .section-hero { padding-top: clamp(44px, 6vw, 80px); overflow: hidden; }
 
-/* Hero-beeld: gestapelde "app-panelen" — teal plaat schuin achter het
-   beeld, en het beeld loopt op brede schermen door richting de rand */
+/* Hero-beeld: één plat vlak schuin ernaast (niet er gedraaid achter), en
+   het beeld loopt op brede schermen door richting de rand */
 .section-hero .hero-media { position: relative; margin-right: -5vw; }
 .section-hero .hero-media::before {
   content: "";
   position: absolute; inset: 0; z-index: 1;
-  transform: translate(14px, 14px) rotate(2deg);
+  transform: translate(30px, 8px) rotate(1.2deg);
   background: #DFEAFB;
   border-radius: var(--radius-card);
 }
-/* Tweede, verder liggende laag: geeft het gestapelde-panelen-effect diepte */
-.section-hero .hero-media::after {
-  content: "";
-  position: absolute; inset: 0; z-index: 0;
-  transform: translate(26px, 24px) rotate(4deg);
-  background: rgba(45, 108, 196, 0.07);
-  border-radius: var(--radius-card);
-}
-/* Op het donkere thema oogden deze plaatjes als een wit randje: de regels
-   moeten na de algemene versie hierboven staan om 'm (bij gelijke
-   specificiteit) te overschrijven. */
+/* Op het donkere thema oogde dit plaatje als een wit randje: de regel moet
+   na de algemene versie hierboven staan om 'm (bij gelijke specificiteit)
+   te overschrijven. */
 .theme-dark .hero-media::before { background: rgba(64, 128, 210, 0.38); }
-.theme-dark .hero-media::after { background: rgba(64, 128, 210, 0.16); }
 /* De voorste afbeelding staat recht (niet gedraaid): bij een rotatie gaf de
    combinatie van border-radius + box-shadow op een scherpe screenshot een
    sub-pixel randartefact tegen de donkere achtergrond. Alleen de kaartjes
@@ -361,7 +352,7 @@ a:hover { color: var(--action); }
 .section-hero .hero-media img,
 .section-hero .hero-media video {
   position: relative; z-index: 2;
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
@@ -898,7 +889,7 @@ a:hover { color: var(--action); }
   .hero-grid, .feature-grid, .split-grid, .contact-grid,
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
   .section-hero .hero-media { margin-right: 12px; }
-  .section-hero .hero-media::before { transform: translate(8px, 8px) rotate(1.5deg); }
+  .section-hero .hero-media::before { transform: translate(16px, 5px) rotate(1.2deg); }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
@@ -975,7 +966,7 @@ a:hover { color: var(--action); }
 .viewfinder {
   position: absolute; inset: 12px; z-index: 3;
   pointer-events: none;
-  transform: scale(1.1);
+  transform: scale(1.12);
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 .viewfinder::before,
