@@ -332,7 +332,7 @@ a:hover { color: var(--action); }
 .section-hero .hero-media::before {
   content: "";
   position: absolute; inset: 0; z-index: 1;
-  transform: translate(22px, 22px) rotate(2deg);
+  transform: translate(14px, 14px) rotate(2deg);
   background: #DFEAFB;
   border-radius: var(--radius-card);
 }
@@ -340,7 +340,7 @@ a:hover { color: var(--action); }
 .section-hero .hero-media::after {
   content: "";
   position: absolute; inset: 0; z-index: 0;
-  transform: translate(46px, 42px) rotate(4deg);
+  transform: translate(26px, 24px) rotate(4deg);
   background: rgba(45, 108, 196, 0.07);
   border-radius: var(--radius-card);
 }
@@ -361,7 +361,7 @@ a:hover { color: var(--action); }
 .section-hero .hero-media img,
 .section-hero .hero-media video {
   position: relative; z-index: 2;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .section-hero .hero-media img[src$=".jpeg"],
 .section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
@@ -898,7 +898,7 @@ a:hover { color: var(--action); }
   .hero-grid, .feature-grid, .split-grid, .contact-grid,
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
   .section-hero .hero-media { margin-right: 12px; }
-  .section-hero .hero-media::before { transform: translate(12px, 12px) rotate(1.5deg); }
+  .section-hero .hero-media::before { transform: translate(8px, 8px) rotate(1.5deg); }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
@@ -975,7 +975,7 @@ a:hover { color: var(--action); }
 .viewfinder {
   position: absolute; inset: 12px; z-index: 3;
   pointer-events: none;
-  transform: scale(1.05);
+  transform: scale(1.1);
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 .viewfinder::before,
