@@ -30,11 +30,9 @@ sections:
           - Simple, intuitive workflows
           - Self-service onboarding
           - Standard support & SLA
+          - <span class="feature-logo"><img src="/assets/icons/xero-mark.png" alt="" width="16" height="16">Xero connection (optional)</span>
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
-        integration:
-          logo: /assets/icons/xero-mark.png
-          label: Xero connection (optional)
         button:
           label: Book a call
           url: /book-a-call/producer-pro/

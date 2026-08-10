@@ -15,9 +15,6 @@
         {% if plan.features %}
         <div class="rich-text plan-features">{{ plan.features | md | safe }}</div>
         {% endif %}
-        {% if plan.integration %}
-        <p class="plan-integration"><img src="{{ plan.integration.logo | imgSrc }}" alt="" width="20" height="20" loading="lazy">{{ plan.integration.label }}</p>
-        {% endif %}
         {% if plan.button %}
         <a class="button {% if plan.badge %}button-primary{% else %}button-secondary{% endif %} plan-button" href="{{ plan.button.url }}">{{ plan.button.label }}</a>
         {% endif %}
