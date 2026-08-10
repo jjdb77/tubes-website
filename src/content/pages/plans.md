@@ -30,7 +30,7 @@ sections:
           - Simple, intuitive workflows
           - Self-service onboarding
           - Standard support & SLA
-          - <span class="feature-logo"><img src="/assets/icons/xero-mark.png" alt="" width="16" height="16">Xero connection (optional)</span>
+          - Xero connection <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> (optional)
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:

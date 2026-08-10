@@ -622,13 +622,16 @@ a:hover { color: var(--action); }
 
 .plan-features { margin-top: 20px; font-size: 0.95rem; }
 
-/* Eén regel in de featurelijst (bv. Xero) krijgt een eigen logo in plaats
-   van het teal-vinkje: de markdown zet er <span class="feature-logo"> omheen,
-   en :has() onderdrukt dan het ::before-vinkje op die ene <li>. */
-.plan-features li:has(.feature-logo) { padding-left: 0; }
-.plan-features li:has(.feature-logo)::before { display: none; }
-.feature-logo { display: inline-flex; align-items: center; gap: 7px; }
-.feature-logo img { width: 16px; height: 16px; flex-shrink: 0; border-radius: 50%; }
+/* Klein logo (bv. Xero) middenin featuretekst: gewoon vinkje ervoor zoals
+   alle andere items, het merkje zelf zit ingebed in de tekst en zweeft
+   iets omhoog. */
+.feature-logo {
+  display: inline-block;
+  width: 20px; height: 20px;
+  margin: 0 2px; vertical-align: middle;
+  transform: translateY(-5px);
+  border-radius: 50%;
+}
 
 /* De knop zakt naar de onderkant van de kaart, zodat alle knoppen in een rij
    op gelijke hoogte staan. Het element erboven levert de tussenruimte, want een
