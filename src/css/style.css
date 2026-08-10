@@ -622,6 +622,16 @@ a:hover { color: var(--action); }
 
 .plan-features { margin-top: 20px; font-size: 0.95rem; }
 
+/* Losse regel voor een optionele koppeling (bv. Xero): eigen logo in plaats
+   van het teal-vinkje van de featurelijst, en bewust ingetogen (muted). */
+.plan-integration {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 16px; padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem; color: var(--muted);
+}
+.plan-integration img { flex-shrink: 0; border-radius: 50%; }
+
 /* De knop zakt naar de onderkant van de kaart, zodat alle knoppen in een rij
    op gelijke hoogte staan. Het element erboven levert de tussenruimte, want een
    vaste margin-top hier zou de auto-uitlijning weer ongedaan maken. */

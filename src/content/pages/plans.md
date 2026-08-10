@@ -32,6 +32,9 @@ sections:
           - Standard support & SLA
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
+        integration:
+          logo: /assets/icons/xero-mark.png
+          label: Xero connection (optional)
         button:
           label: Book a call
           url: /book-a-call/producer-pro/
