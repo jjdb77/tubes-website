@@ -7,5 +7,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /beheer
 Disallow: /api/
+Disallow: /mmg/
 
 Sitemap: https://www.tubes.media/sitemap.xml
