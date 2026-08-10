@@ -118,6 +118,23 @@ app.post("/api/contact", (req, res) => {
   res.json({ ok: true });
 });
 
+// ---------- MMG-pitchpagina's (Basic Auth) ----------
+
+const MMG_PASSWORD = process.env.MMG_PASSWORD || "MMGTubes01!";
+
+app.use("/mmg", (req, res, next) => {
+  const header = req.headers.authorization || "";
+  const [scheme, encoded] = header.split(" ");
+  if (scheme === "Basic" && encoded) {
+    const [, pass] = Buffer.from(encoded, "base64").toString().split(":");
+    const a = Buffer.from(String(pass || ""));
+    const b = Buffer.from(MMG_PASSWORD);
+    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
+  }
+  res.set("WWW-Authenticate", 'Basic realm="Tubes for Motion Media Group"');
+  res.status(401).send("Password required.");
+});
+
 // ---------- Beheerpagina ----------
 
 function checkAuth(req, res) {
