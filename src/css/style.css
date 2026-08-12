@@ -340,8 +340,8 @@ a:hover { color: var(--action); }
   position: relative; z-index: 2;
   transform: scale(1.12);
 }
-.section-hero .hero-media img[src$=".jpeg"],
-.section-hero .hero-media img[src$=".jpg"] { aspect-ratio: 4 / 3; }
+.section-hero .hero-media img[src*=".jpeg"],
+.section-hero .hero-media img[src*=".jpg"] { aspect-ratio: 4 / 3; }
 
 /* Secties zachtjes laten opkomen bij het scrollen (klasse via JS) */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
@@ -373,9 +373,11 @@ a:hover { color: var(--action); }
 .theme-dark .hero-media img, .theme-dark .hero-media video { border: 0; }
 
 /* Foto's (jpeg) op vaste 3:2-verhouding, zoals op de oude Squarespace-site.
-   App-screenshots (png) houden hun eigen verhouding — die snij je niet af. */
-.hero-media img[src$=".jpeg"], .hero-media img[src$=".jpg"],
-.feature-media img[src$=".jpeg"], .feature-media img[src$=".jpg"] {
+   App-screenshots (png) houden hun eigen verhouding — die snij je niet af.
+   Substring-match (*=) en niet suffix-match ($=): imgSrc plakt ?v=hash achter
+   de URL, waardoor src nooit meer op .jpeg eindigt. */
+.hero-media img[src*=".jpeg"], .hero-media img[src*=".jpg"],
+.feature-media img[src*=".jpeg"], .feature-media img[src*=".jpg"] {
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
