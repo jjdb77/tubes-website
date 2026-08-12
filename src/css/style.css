@@ -901,6 +901,14 @@ a:hover { color: var(--action); }
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
   .section-hero .hero-media { margin-right: 12px; }
   .section-hero .hero-media::before { transform: translate(16px, 5px) rotate(1.2deg); }
+  /* De scale(1.12) is bedoeld voor de losse beeldkolom op breed scherm; in
+     één kolom is .hero-media net zo breed als de tekst erboven, en dan
+     duwt diezelfde scale de afbeelding voorbij de containerpadding tot aan
+     de randen van .section-hero (die overflow: hidden knipt daar, niet bij
+     de container). Op smal scherm dus geen scale, gewoon ruimte links/rechts. */
+  .section-hero .hero-media img,
+  .section-hero .hero-media video { transform: none; }
+  .section-hero .viewfinder { transform: none; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
