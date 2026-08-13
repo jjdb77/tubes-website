@@ -335,7 +335,7 @@ a:hover { color: var(--action); }
    Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
    automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
    ouder — geen risico dat ze los van elkaar raken. */
-.section-hero .hero-media { position: relative; width: 120%; margin-left: -10%; margin-right: -5vw; }
+.section-hero .hero-media { position: relative; width: 128%; margin-left: -14%; margin-right: -5vw; }
 .section-hero .hero-media img,
 .section-hero .hero-media video { position: relative; z-index: 2; }
 .section-hero .hero-media img[src*=".jpeg"],
