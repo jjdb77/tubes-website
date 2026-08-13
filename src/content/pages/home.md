@@ -30,6 +30,7 @@ sections:
         url: /contact/
     image: /assets/images/example-tubes-02.png
     image_alt: Projects overview and pipeline in Tubes
+    media_below: true
   - type: pricing
     theme: light
     heading: Choose your plan

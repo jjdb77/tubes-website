@@ -335,7 +335,7 @@ a:hover { color: var(--action); }
    Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
    automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
    ouder — geen risico dat ze los van elkaar raken. */
-.section-hero .hero-media { position: relative; width: 128%; margin-left: -14%; margin-right: -5vw; }
+.section-hero .hero-media { position: relative; width: 150%; margin-left: -8%; margin-right: -5vw; }
 .section-hero .hero-media img,
 .section-hero .hero-media video { position: relative; z-index: 2; }
 .section-hero .hero-media img[src*=".jpeg"],
@@ -351,6 +351,16 @@ a:hover { color: var(--action); }
 }
 .hero-single, .feature-single { grid-template-columns: 1fr; }
 .hero-single .hero-text, .feature-single .feature-text { max-width: 780px; }
+
+/* Hero met beeld ónder de tekst i.p.v. ernaast (section.media_below): volle
+   breedte i.p.v. een halve kolom, dus geen kunstgreep met width/margin nodig
+   om het beeld groter te laten ogen. Moet ná de losse .hero-media-regel
+   hierboven staan om 'm (bij gelijke specificiteit) te overschrijven. */
+.hero-grid.hero-stacked { grid-template-columns: 1fr; }
+.hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
+.hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
+.hero-stacked .hero-media { width: 85%; margin: clamp(32px, 5vw, 56px) auto 0; }
+.chip-row-below { margin-top: clamp(24px, 4vw, 40px); }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
