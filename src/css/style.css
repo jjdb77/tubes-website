@@ -356,11 +356,12 @@ a:hover { color: var(--action); }
    breedte i.p.v. een halve kolom, dus geen kunstgreep met width/margin nodig
    om het beeld groter te laten ogen. Moet ná de losse .hero-media-regel
    hierboven staan om 'm (bij gelijke specificiteit) te overschrijven. */
-.hero-grid.hero-stacked { grid-template-columns: 1fr; }
+/* gap (van .hero-grid) zorgt al voor de ruimte tussen de gestapelde rijen;
+   geen aparte margin-top hier nodig, dat zou 'm dubbel optellen. */
+.hero-grid.hero-stacked { grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px); }
 .hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
-.hero-stacked .hero-media { width: 85%; margin: clamp(32px, 5vw, 56px) auto 0; }
-.chip-row-below { margin-top: clamp(24px, 4vw, 40px); }
+.hero-stacked .hero-media { width: 85%; margin: 0 auto; }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
