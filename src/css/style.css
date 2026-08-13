@@ -326,20 +326,18 @@ a:hover { color: var(--action); }
 
 .section-hero { padding-top: clamp(44px, 6vw, 80px); overflow: hidden; }
 
-/* Hero-beeld: het beeld loopt op brede schermen door richting de rand */
-.section-hero .hero-media { position: relative; margin-right: -5vw; }
-/* De voorste afbeelding staat recht (niet gedraaid): bij een rotatie gaf de
-   combinatie van border-radius + box-shadow op een scherpe screenshot een
-   sub-pixel randartefact tegen de donkere achtergrond.
-   De 5% vergroting staat hier op img/video (niet op .hero-media) omdat
-   .hero-media zelf de laad-animatie (@keyframes rise) draagt, die transform
-   bij het laden terugzet naar "none" en een losse transform daar dus
-   tenietdoet. */
+/* Hero-beeld: het beeld loopt op brede schermen door richting de rand.
+   De 20% vergroting staat op .hero-media zelf via width (niet transform:
+   dat laat de browser de afbeelding scherp decoderen op de uiteindelijke
+   grootte i.p.v. een al gerenderde bitmap achteraf uitrekken, wat zichtbaar
+   zachter oogt). .hero-media draagt wel de laad-animatie (@keyframes rise),
+   maar die raakt alleen opacity/transform, niet width — dus geen conflict.
+   Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
+   automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
+   ouder — geen risico dat ze los van elkaar raken. */
+.section-hero .hero-media { position: relative; width: 120%; margin-left: -10%; margin-right: -5vw; }
 .section-hero .hero-media img,
-.section-hero .hero-media video {
-  position: relative; z-index: 2;
-  transform: scale(1.2);
-}
+.section-hero .hero-media video { position: relative; z-index: 2; }
 .section-hero .hero-media img[src*=".jpeg"],
 .section-hero .hero-media img[src*=".jpg"] { aspect-ratio: 4 / 3; }
 
@@ -887,15 +885,12 @@ a:hover { color: var(--action); }
 @media (max-width: 980px) {
   .hero-grid, .feature-grid, .split-grid, .contact-grid,
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
-  .section-hero .hero-media { margin-right: 12px; }
-  /* De scale(1.2) is bedoeld voor de losse beeldkolom op breed scherm; in
-     één kolom is .hero-media net zo breed als de tekst erboven, en dan
-     duwt diezelfde scale de afbeelding voorbij de containerpadding tot aan
-     de randen van .section-hero (die overflow: hidden knipt daar, niet bij
-     de container). Op smal scherm dus geen scale, gewoon ruimte links/rechts. */
-  .section-hero .hero-media img,
-  .section-hero .hero-media video { transform: none; }
-  .section-hero .viewfinder { transform: none; }
+  /* De 120%-breedte is bedoeld voor de losse beeldkolom op breed scherm; in
+     één kolom is .hero-media net zo breed als de tekst erboven, en dan zou
+     diezelfde breedte de afbeelding voorbij de containerpadding duwen tot
+     aan de randen van .section-hero (die overflow: hidden knipt daar, niet
+     bij de container). Op smal scherm dus gewoon 100%, met ruimte links/rechts. */
+  .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
@@ -972,7 +967,6 @@ a:hover { color: var(--action); }
 .viewfinder {
   position: absolute; inset: 12px; z-index: 3;
   pointer-events: none;
-  transform: scale(1.2);
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 .viewfinder::before,
