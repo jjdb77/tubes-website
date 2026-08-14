@@ -361,7 +361,7 @@ a:hover { color: var(--action); }
 .hero-grid.hero-stacked { grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px); }
 .hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
-.hero-stacked .hero-media { width: 85%; margin: 0 auto; }
+.hero-stacked .hero-media { width: 110%; margin: 0 auto; }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
