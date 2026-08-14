@@ -365,6 +365,11 @@ a:hover { color: var(--action); }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
+/* .feature-grid is 1.05fr/0.95fr (tekst iets breder dan beeld); .media-left
+   wisselt alleen de volgorde (order), niet welke kolom welke fractie krijgt.
+   Zonder deze regel belandt het beeld dus in de bredere kolom en de tekst in
+   de smallere, waardoor twee media_large-afbeeldingen niet even groot ogen. */
+.feature-grid.media-left { grid-template-columns: 0.95fr 1.05fr; }
 
 /* Featuresecties met een groter beeld (section.media_large): het beeld
    bleedt vooral naar de buitenkant (weinig naar de kant van de tekstkolom,
@@ -906,6 +911,7 @@ a:hover { color: var(--action); }
 @media (max-width: 980px) {
   .hero-grid, .feature-grid, .split-grid, .contact-grid,
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
+  .feature-grid.media-left { grid-template-columns: 1fr; }
   /* De 120%-breedte is bedoeld voor de losse beeldkolom op breed scherm; in
      één kolom is .hero-media net zo breed als de tekst erboven, en dan zou
      diezelfde breedte de afbeelding voorbij de containerpadding duwen tot
