@@ -931,6 +931,11 @@ a:hover { color: var(--action); }
      aan de randen van .section-hero (die overflow: hidden knipt daar, niet
      bij de container). Op smal scherm dus gewoon 100%, met ruimte links/rechts. */
   .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
+  /* Bovenstaande regel gaf bij de gestapelde hero (media_below: true) op
+     iPhone links géén marge en rechts wel (bevestigd op toestel): plaatje
+     raakte de schermrand. Losse, specifiekere regel die links/rechts
+     gelijktrekt aan de containerpadding, net als de tekst erboven. */
+  .hero-grid.hero-stacked .hero-media { width: 100%; margin-left: 0; margin-right: 0; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.

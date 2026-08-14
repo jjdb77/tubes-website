@@ -76,6 +76,7 @@ sections:
           - Self-service onboarding
           - Standard support & SLA
           - Xero connection <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> (optional)
+          - No long-term contract, cancel monthly
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:
