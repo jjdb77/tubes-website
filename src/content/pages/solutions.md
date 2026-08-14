@@ -59,6 +59,22 @@ sections:
       - Streaming and episodic content
       - Live entertainment and events
       - International co-productions
+  - type: textblock
+    theme: white
+    heading: Smarter Production, Full Control
+    text: |
+      Tubes gives you complete insight into every step of your production, revealing strengths, highlighting areas for improvement, and helping you work smarter without sacrificing creativity.
+
+      ### Plan. Budget. Collaborate.
+
+      - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
+      - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
+      - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
+      - **Organized Scheduling** – Keep activities flowing efficiently so your team stays on track.
+      - **Relationship & Funding Management** – Manage clients, funders, and suppliers while tracking funding allocations.
+      - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
+      - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
+      - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
   - type: feature
     theme: light
     heading: AI Assistants
