@@ -78,6 +78,16 @@ sections:
       - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
       - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
       - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
+  - type: textblock
+    theme: teal
+    heading: Got Xero? Supercharge it.
+    lead: Keep Xero. Add Tubes. Connect production and finance.
+    text: |
+      Tubes connects directly with <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> Xero, adding a powerful production layer to the accounting system you already use.
+
+      Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
+
+      Using another accounting system? [Contact us](/contact/) to discuss integration.
   - type: feature
     theme: light
     heading: AI Assistants
