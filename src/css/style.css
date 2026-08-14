@@ -361,10 +361,17 @@ a:hover { color: var(--action); }
 .hero-grid.hero-stacked { grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px); }
 .hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
-.hero-stacked .hero-media { width: 110%; margin: 0 auto; }
+.hero-stacked .hero-media { width: 85%; margin: 0 auto; }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
+
+/* Eén featuresectie met een groter beeld (section.media_large): het beeld
+   bleedt vooral naar rechts (weinig naar links, om de tekstkolom niet te
+   raken); de sectie zelf knipt de overloop af, want .theme-white heeft
+   normaal geen overflow:hidden. */
+.section-feature-large-media { overflow: hidden; }
+.feature-media-large { width: 125%; margin-left: -5%; }
 
 .lead { font-size: 1.08rem; }
 

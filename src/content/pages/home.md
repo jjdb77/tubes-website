@@ -35,6 +35,7 @@ sections:
       Keep your productions on track with powerful dashboards and pipelines. Track every stage of the production process, from preparation to delivery and analysis, while setting up budgets, managing documents, and staying fully in control.
     image: /assets/images/example-tubes-02.png
     image_alt: Project dashboards and pipelines in Tubes
+    media_large: true
   - type: pricing
     theme: light
     heading: Choose your plan
