@@ -25,7 +25,7 @@ sections:
       Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
 
       It connects budgets, actual costs, and forecasts in real time, helping teams maintain financial and operational control from development to wrap. AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs.
-    image: /assets/images/example-tubes-02.png
+    image: /assets/images/example-tubes-05.png
     image_alt: Projects overview and pipeline in Tubes
     media_below: true
   - type: feature
