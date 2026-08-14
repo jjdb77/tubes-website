@@ -21,8 +21,9 @@
     },
     {
       "path": "enterprise/",
-      "slug": "tubes-enterprice",
-      "plan": "Enterprise"
+      "slug": "tubes-enterprise",
+      "plan": "Enterprise",
+      "booking_url": "https://4relations.appconnected.nl/boek/joachim@appsolutions.nl"
     }
   ],
   "contact": {

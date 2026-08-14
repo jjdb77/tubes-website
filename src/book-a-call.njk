@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
     booking_url + booking_plans). Per plan een eigen pagina, zodat de juiste
     agenda ook zonder JavaScript wordt geopend; de plannaam gaat als ?plan=
     mee en verschijnt bij de boeking. -#}
-{%- set doel = settings.booking_url + "/" + boeking.slug -%}
+{%- set doel = (boeking.booking_url or settings.booking_url) + "/" + boeking.slug -%}
 {%- if boeking.plan -%}{%- set doel = doel + "?plan=" + (boeking.plan | urlencode) -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">

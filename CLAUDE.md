@@ -30,8 +30,8 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Boekingen (Book a call)
 
 - Knoppen op de abonnementskaarten → `/book-a-call/producer-pro/` en `/book-a-call/enterprise/` (doorstuurpagina's uit `src/book-a-call.njk`, gepagineerd over `settings.booking_plans`).
-- Doel = `settings.booking_url` + slug. Slugs: `tubes-producer-pro` en `tubes-enterprice` (**met c** — zo heet de pagina in 4relations, niet "corrigeren").
-- booking_url = https://4relations.appconnected.nl/boek/joachim (wordt ooit afspraak.tubes.media).
+- Doel = `settings.booking_url` + slug (per plan te overrulen via een eigen `booking_url`-veld in `booking_plans`, zie book-a-call.njk: `boeking.booking_url or settings.booking_url`). Producer Pro: `tubes-producer-pro` op `https://4relations.appconnected.nl/boek/joachim`. Enterprise: `tubes-enterprise` op de eigen basis `https://4relations.appconnected.nl/boek/joachim@appsolutions.nl` (15-8-2026 gecorrigeerd, was `tubes-enterprice` op de gedeelde basis).
+- booking_url (Producer Pro) = https://4relations.appconnected.nl/boek/joachim (wordt ooit afspraak.tubes.media).
 
 ## Artikelen (Insights)
 
