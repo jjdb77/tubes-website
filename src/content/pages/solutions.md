@@ -16,6 +16,23 @@ sections:
     image: /assets/images/solutions-roles.jpeg
     image_alt: Different roles collaborating on a production
   - type: cards
+    theme: teal
+    heading: What Tubes Covers
+    columns: 3
+    cards:
+      - icon: /assets/icons/calculator.svg
+        heading: Planning & Budgeting
+        text: |
+          Create structured budgets and schedules with full version control and scenario comparison. Explore alternatives and instantly see financial and operational impact before committing decisions.
+      - icon: /assets/icons/tuning.svg
+        heading: Execution & Cost Control
+        text: |
+          Track actuals, commitments and forecasts in real time. Changes are reflected instantly across budgets, schedules and reports. Production costs are captured, validated, approved and processed within the financial workflow before being transferred to your ledger accounting system.
+      - icon: /assets/icons/chart-pie.svg
+        heading: Reporting & Transparency
+        text: |
+          Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
+  - type: cards
     theme: white
     heading: By Role
     columns: 3
