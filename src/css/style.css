@@ -933,9 +933,12 @@ a:hover { color: var(--action); }
   .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
   /* Bovenstaande regel gaf bij de gestapelde hero (media_below: true) op
      iPhone links géén marge en rechts wel (bevestigd op toestel): plaatje
-     raakte de schermrand. Losse, specifiekere regel die links/rechts
-     gelijktrekt aan de containerpadding, net als de tekst erboven. */
-  .hero-grid.hero-stacked .hero-media { width: 100%; margin-left: 0; margin-right: 0; }
+     raakte de schermrand. Eerste losse regel (margin-left/right: 0) loste dat
+     niet volledig op: het beeld rendert op Safari iets smaller dan zijn
+     kolom, dus met beide marges vast op 0 bleef het links plakken en rechts
+     een restje ruimte over (niet gecentreerd, ook op toestel bevestigd).
+     margin: auto centreert ongeacht de exacte breedte die de browser kiest. */
+  .hero-grid.hero-stacked .hero-media { width: 100%; margin-left: auto; margin-right: auto; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.
