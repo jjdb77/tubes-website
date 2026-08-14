@@ -371,7 +371,7 @@ a:hover { color: var(--action); }
    raken); de sectie zelf knipt de overloop af, want .theme-white heeft
    normaal geen overflow:hidden. */
 .section-feature-large-media { overflow: hidden; }
-.feature-media-large { width: 125%; margin-left: -5%; }
+.feature-media-large { width: 150%; margin-left: -8%; }
 
 .lead { font-size: 1.08rem; }
 
