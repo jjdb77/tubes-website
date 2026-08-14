@@ -45,6 +45,16 @@ sections:
     image_alt: Real-time cost control in Tubes
     media_position: left
     media_large: true
+  - type: textblock
+    theme: white
+    heading: Got Xero? Supercharge it.
+    lead: Keep Xero. Add Tubes. Connect production and finance.
+    text: |
+      Tubes connects directly with <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> Xero, adding a powerful production layer to the accounting system you already use.
+
+      Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
+
+      Using another accounting system? [Contact us](/contact/) to discuss integration.
   - type: pricing
     theme: light
     heading: Choose your plan
@@ -126,31 +136,4 @@ sections:
         heading: Reporting & Transparency
         text: |
           Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
-  - type: feature
-    theme: teal
-    heading: Who is Tubes for?
-    lead: Built for professional productions of every scale
-    text: |
-      Tubes supports independent producers, broadcasters, studios and live entertainment teams. From early planning through final reporting, across single projects and complex international co-productions.
-
-      **Studio & Production Leadership**
-      C-Level Executives · CFOs · Heads of Production · Executive Producers
-
-      **Production Management**
-      Line Producers · Unit Production Managers · Production Managers · Producers · Co-Producers
-
-      **Finance & Business Affairs**
-      Business Managers · Business Controllers · Production Accountants · Finance Teams
-
-      **Operations & Commercial**
-      Operations Managers · Sales & Distribution
-
-      **Broadcasters & Partners**
-      Clients · Broadcasters · Commissioning Editors · Co-Production Partners
-
-      **Cast & Crew**
-      Cast · Crew · Department Heads
-    video: /assets/videos/home-who-is-tubes-for.mp4
-    poster: /assets/images/video-poster-home.jpg
-    ambient: true
 ---

@@ -49,6 +49,33 @@ sections:
         heading: Executives, Broadcasters & Partners
         text: |
           Access reliable reporting, early warning signals and transparent insight into production performance.
+  - type: feature
+    theme: light
+    heading: Who is Tubes for?
+    lead: Built for professional productions of every scale
+    text: |
+      Tubes supports independent producers, broadcasters, studios and live entertainment teams. From early planning through final reporting, across single projects and complex international co-productions.
+
+      **Studio & Production Leadership**
+      C-Level Executives · CFOs · Heads of Production · Executive Producers
+
+      **Production Management**
+      Line Producers · Unit Production Managers · Production Managers · Producers · Co-Producers
+
+      **Finance & Business Affairs**
+      Business Managers · Business Controllers · Production Accountants · Finance Teams
+
+      **Operations & Commercial**
+      Operations Managers · Sales & Distribution
+
+      **Broadcasters & Partners**
+      Clients · Broadcasters · Commissioning Editors · Co-Production Partners
+
+      **Cast & Crew**
+      Cast · Crew · Department Heads
+    video: /assets/videos/home-who-is-tubes-for.mp4
+    poster: /assets/images/video-poster-home.jpg
+    ambient: true
   - type: textblock
     theme: teal
     heading: By Production Type
@@ -78,16 +105,6 @@ sections:
       - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
       - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
       - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
-  - type: textblock
-    theme: teal
-    heading: Got Xero? Supercharge it.
-    lead: Keep Xero. Add Tubes. Connect production and finance.
-    text: |
-      Tubes connects directly with <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> Xero, adding a powerful production layer to the accounting system you already use.
-
-      Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
-
-      Using another accounting system? [Contact us](/contact/) to discuss integration.
   - type: feature
     theme: light
     heading: AI Assistants
