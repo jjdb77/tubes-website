@@ -44,14 +44,6 @@ sections:
       - International co-productions
   - type: feature
     theme: light
-    heading: Control your production and planning in real time
-    text: |
-      Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Real-time cost control in Tubes
-    media_position: left
-  - type: feature
-    theme: light
     heading: AI Assistants
     lead: Intelligence built on your production data
     text: |
