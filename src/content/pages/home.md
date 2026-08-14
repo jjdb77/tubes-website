@@ -37,7 +37,7 @@ sections:
     image_alt: Project dashboards and pipelines in Tubes
     media_large: true
   - type: feature
-    theme: light
+    theme: teal
     heading: Control your production and planning in real time
     text: |
       Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
@@ -109,7 +109,7 @@ sections:
       - Reliable reporting without manual consolidation
       - Operational finance layer for processing and approving production costs
   - type: cards
-    theme: white
+    theme: light
     heading: What Tubes Covers
     columns: 3
     cards:
