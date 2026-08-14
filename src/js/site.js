@@ -113,16 +113,16 @@ for (const form of document.querySelectorAll(".contact-form")) {
 
 // Prijzen in lokale valuta: land wordt via IP gedetecteerd (ipapi.co), koers
 // ligt vast (14-08-2026) i.p.v. live opgehaald. Bezoeker kan de detectie
-// overrulen via het valuta-veld boven de prijskaarten; keuze blijft staan
-// via localStorage. Werkt door steeds vanuit de originele (Engelse) HTML met
+// overrulen via het valuta-veld onder het bedrag; keuze blijft staan via
+// localStorage. Werkt door steeds vanuit de originele (Engelse) HTML met
 // €-bedragen te starten, dus wisselen van valuta kan geen rondingsfouten
-// opstapelen. Reset-bereik is .pricing-grid, niet de hele sectie: het
-// valutaveld staat er zelf ook in (.section-pricing) en zou anders bij elke
+// opstapelen. Reset-bereik is .plan-price/.plan-price-detail, niet de hele
+// kaart: het valutaveld staat zelf ook in de kaart en zou anders bij elke
 // omrekening zijn eigen DOM-node (en dus de event listener) vernietigen.
 (function () {
-  const pricingSections = document.querySelectorAll(".pricing-grid");
+  const priceElements = document.querySelectorAll(".plan-price, .plan-price-detail");
   const selects = document.querySelectorAll(".currency-select");
-  if (!pricingSections.length) return;
+  if (!priceElements.length) return;
 
   const CURRENCIES = {
     EUR: { rate: 1, format: (n) => `€ ${n}` },
@@ -142,7 +142,7 @@ for (const form of document.querySelectorAll(".contact-form")) {
   }
 
   const originalHTML = new Map();
-  for (const section of pricingSections) originalHTML.set(section, section.innerHTML);
+  for (const el of priceElements) originalHTML.set(el, el.innerHTML);
 
   function convertText(text, code) {
     const currency = CURRENCIES[code];
@@ -150,10 +150,10 @@ for (const form of document.querySelectorAll(".contact-form")) {
   }
 
   function applyCurrency(code) {
-    for (const section of pricingSections) {
-      section.innerHTML = originalHTML.get(section);
+    for (const el of priceElements) {
+      el.innerHTML = originalHTML.get(el);
       if (code === "EUR") continue;
-      const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT);
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       const textNodes = [];
       let node;
       while ((node = walker.nextNode())) textNodes.push(node);
