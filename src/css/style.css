@@ -909,6 +909,10 @@ a:hover { color: var(--action); }
      aan de randen van .section-hero (die overflow: hidden knipt daar, niet
      bij de container). Op smal scherm dus gewoon 100%, met ruimte links/rechts. */
   .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
+  /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
+     .feature-media net zo breed als de tekst, dus de 135%-breedte moet
+     terug naar normaal, anders loopt de afbeelding tot de randen door. */
+  .feature-media-large { width: 100%; margin-left: 0; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
