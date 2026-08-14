@@ -373,8 +373,8 @@ a:hover { color: var(--action); }
    Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
    de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
 .section-feature-large-media { overflow: hidden; }
-.feature-media-large { width: 135%; margin-left: -6%; }
-.media-left .feature-media-large { margin-left: -29%; }
+.feature-media-large { width: 120%; margin-left: -3%; }
+.media-left .feature-media-large { margin-left: -17%; }
 
 .lead { font-size: 1.08rem; }
 
