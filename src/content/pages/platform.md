@@ -108,7 +108,10 @@ sections:
       - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
       - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
       - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
-      - **Organized Scheduling** – Keep activities flowing efficiently so your team stays on track.
+      - **Organized Scheduling** – Coordinate cast, crew and locations, and share schedules and call sheets so your whole team stays on track.
+      - **Forecasting** – Estimate to complete and expected final cost update automatically as actuals and commitments come in, so you always know where a production is heading.
+      - **Cost Control** – Compare actuals and commitments to budget in real time, with instant variance and open-amount visibility per department.
+      - **Operational Finance** – Route invoices through validation and approval before they're transferred to your ledger accounting system, with a clean audit trail at every step.
       - **Relationship & Funding Management** – Manage clients, funders, and suppliers while tracking funding allocations.
       - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
       - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
