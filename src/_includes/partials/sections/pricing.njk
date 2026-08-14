@@ -2,6 +2,18 @@
   <div class="container">
     {% if section.heading %}<h2 class="section-heading centered">{{ section.heading }}</h2>{% endif %}
     {% if section.intro %}<div class="rich-text section-intro centered">{{ section.intro | md | safe }}</div>{% endif %}
+    <label class="pricing-currency">
+      Currency
+      <select class="currency-select" aria-label="Currency">
+        <option value="auto">Detect automatically</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="USD">USD ($)</option>
+        <option value="GBP">GBP (£)</option>
+        <option value="CAD">CAD (C$)</option>
+        <option value="AUD">AUD (A$)</option>
+        <option value="DKK">DKK (kr)</option>
+      </select>
+    </label>
     <div class="pricing-grid pricing-{{ section.plans | length }}">
       {% for plan in section.plans %}
       <div class="plan-card{% if plan.badge %} is-featured{% endif %}">

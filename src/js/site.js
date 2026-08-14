@@ -111,6 +111,92 @@ for (const form of document.querySelectorAll(".contact-form")) {
   });
 }
 
+// Prijzen in lokale valuta: land wordt via IP gedetecteerd (ipapi.co), koers
+// ligt vast (14-08-2026) i.p.v. live opgehaald. Bezoeker kan de detectie
+// overrulen via het valuta-veld boven de prijskaarten; keuze blijft staan
+// via localStorage. Werkt door steeds vanuit de originele (Engelse) HTML met
+// €-bedragen te starten, dus wisselen van valuta kan geen rondingsfouten
+// opstapelen. Reset-bereik is .pricing-grid, niet de hele sectie: het
+// valutaveld staat er zelf ook in (.section-pricing) en zou anders bij elke
+// omrekening zijn eigen DOM-node (en dus de event listener) vernietigen.
+(function () {
+  const pricingSections = document.querySelectorAll(".pricing-grid");
+  const selects = document.querySelectorAll(".currency-select");
+  if (!pricingSections.length) return;
+
+  const CURRENCIES = {
+    EUR: { rate: 1, format: (n) => `€ ${n}` },
+    USD: { rate: 1.1525, format: (n) => `$${n}` },
+    GBP: { rate: 0.8541, format: (n) => `£${n}` },
+    CAD: { rate: 1.6064, format: (n) => `C$${n}` },
+    AUD: { rate: 1.6335, format: (n) => `A$${n}` },
+    DKK: { rate: 7.4758, format: (n) => `kr ${n}` },
+  };
+  // Eurolanden houden € (geen omrekening nodig); GB/AU/CA/DK krijgen hun
+  // eigen valuta; alle overige landen vallen terug op dollars.
+  const EUROZONE = new Set(["AT", "BE", "HR", "CY", "EE", "FI", "FR", "DE", "GR", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES"]);
+  const COUNTRY_CURRENCY = { GB: "GBP", AU: "AUD", CA: "CAD", DK: "DKK" };
+  function currencyForCountry(code) {
+    if (EUROZONE.has(code)) return "EUR";
+    return COUNTRY_CURRENCY[code] || "USD";
+  }
+
+  const originalHTML = new Map();
+  for (const section of pricingSections) originalHTML.set(section, section.innerHTML);
+
+  function convertText(text, code) {
+    const currency = CURRENCIES[code];
+    return text.replace(/€\s?(\d+)/g, (match, amount) => currency.format(Math.round(parseInt(amount, 10) * currency.rate)));
+  }
+
+  function applyCurrency(code) {
+    for (const section of pricingSections) {
+      section.innerHTML = originalHTML.get(section);
+      if (code === "EUR") continue;
+      const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      let node;
+      while ((node = walker.nextNode())) textNodes.push(node);
+      for (const textNode of textNodes) {
+        if (textNode.nodeValue.includes("€")) textNode.nodeValue = convertText(textNode.nodeValue, code);
+      }
+    }
+  }
+
+  function detectAndApply() {
+    const cachedCode = localStorage.getItem("tubes_currency_auto");
+    const cachedAt = parseInt(localStorage.getItem("tubes_currency_auto_at") || "0", 10);
+    if (cachedCode && Date.now() - cachedAt < 24 * 60 * 60 * 1000) {
+      applyCurrency(cachedCode);
+      return;
+    }
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        const code = currencyForCountry(data.country_code);
+        localStorage.setItem("tubes_currency_auto", code);
+        localStorage.setItem("tubes_currency_auto_at", String(Date.now()));
+        applyCurrency(code);
+      })
+      .catch(() => {}); // geolocatie mislukt: gewoon € laten staan
+  }
+
+  for (const select of selects) {
+    select.addEventListener("change", () => {
+      const choice = select.value;
+      localStorage.setItem("tubes_currency_choice", choice);
+      for (const other of selects) other.value = choice;
+      if (choice === "auto") detectAndApply();
+      else applyCurrency(choice);
+    });
+  }
+
+  const savedChoice = localStorage.getItem("tubes_currency_choice") || "auto";
+  for (const select of selects) select.value = savedChoice;
+  if (savedChoice === "auto") detectAndApply();
+  else applyCurrency(savedChoice);
+})();
+
 // Demo-popup: knoppen naar /contact/ openen het formulier als popup
 const demoModal = document.getElementById("demo-modal");
 if (demoModal && typeof demoModal.showModal === "function") {
