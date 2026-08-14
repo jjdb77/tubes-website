@@ -44,6 +44,7 @@ sections:
     image: /assets/images/tubes-costcontrol.png
     image_alt: Real-time cost control in Tubes
     media_position: left
+    media_large: true
   - type: pricing
     theme: light
     heading: Choose your plan

@@ -366,12 +366,15 @@ a:hover { color: var(--action); }
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
 
-/* Eén featuresectie met een groter beeld (section.media_large): het beeld
-   bleedt vooral naar rechts (weinig naar links, om de tekstkolom niet te
-   raken); de sectie zelf knipt de overloop af, want .theme-white heeft
-   normaal geen overflow:hidden. */
+/* Featuresecties met een groter beeld (section.media_large): het beeld
+   bleedt vooral naar de buitenkant (weinig naar de kant van de tekstkolom,
+   om die niet te raken); de sectie zelf knipt de overloop af, want
+   .theme-white/.theme-teal hebben normaal geen overflow:hidden.
+   Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
+   de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
 .section-feature-large-media { overflow: hidden; }
 .feature-media-large { width: 135%; margin-left: -6%; }
+.media-left .feature-media-large { margin-left: -29%; }
 
 .lead { font-size: 1.08rem; }
 
@@ -911,8 +914,11 @@ a:hover { color: var(--action); }
   .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
-     terug naar normaal, anders loopt de afbeelding tot de randen door. */
-  .feature-media-large { width: 100%; margin-left: 0; }
+     terug naar normaal, anders loopt de afbeelding tot de randen door.
+     .media-left-variant apart genoemd: die heeft op breed scherm een eigen,
+     specifiekere regel (margin-left: -29%) die anders zou blijven winnen. */
+  .feature-media-large,
+  .media-left .feature-media-large { width: 100%; margin-left: 0; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
@@ -927,6 +933,17 @@ a:hover { color: var(--action); }
   /* Brede tabellen in artikelen apart laten scrollen, de pagina zelf niet */
   .article-body table { display: block; overflow-x: auto; white-space: nowrap; }
   .article-body td, .article-body th { white-space: normal; min-width: 130px; }
+  /* Chip-rij (Development -> Wrap): op smal scherm past dat niet meer op
+     één regel. flex-wrap zou de laatste chip los onder een pijltje laten
+     zweven; horizontaal laten scrollen houdt de pijl-keten intact. */
+  .chip-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chip-row::-webkit-scrollbar { display: none; }
+  .chip, .chip-sep { flex-shrink: 0; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
