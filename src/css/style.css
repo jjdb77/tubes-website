@@ -997,6 +997,12 @@ a:hover { color: var(--action); }
      bereikbaar. Op smal scherm terug naar links uitlijnen, zodat alles vanaf
      scrollpositie 0 bereikbaar is. */
   .hero-stacked .chip-row { justify-content: flex-start; }
+  /* Kleinere chips op smal scherm: past de hele rij (Development -> Wrap)
+     zonder scrollen, i.p.v. te leunen op de overflow-scroll hierboven. */
+  .chip-row { gap: 4px; }
+  .chip { font-size: 0.62rem; padding: 4px 7px; gap: 4px; }
+  .chip::before { width: 5px; height: 5px; }
+  .chip-sep { font-size: 0.7rem; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
