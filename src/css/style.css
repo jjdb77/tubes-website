@@ -956,7 +956,8 @@ a:hover { color: var(--action); }
      width: 100% dwingt de normale percentage-berekening af i.p.v. de
      kennelijk kapotte stretch-fit, en die geeft wél het juiste resultaat. */
   .hero-grid.hero-stacked .hero-media,
-  .hero-grid.hero-stacked .hero-text { width: 100%; }
+  .hero-grid.hero-stacked .hero-text,
+  .hero-grid.hero-stacked .chip-row-below { width: 100%; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.
@@ -989,6 +990,13 @@ a:hover { color: var(--action); }
   }
   .chip-row::-webkit-scrollbar { display: none; }
   .chip, .chip-sep { flex-shrink: 0; }
+  /* .hero-stacked .chip-row staat op breed scherm gecentreerd (justify-content:
+     center), maar zodra de rij breder is dan het scherm en dus moet scrollen,
+     duwt centreren het begin van de rij het beeld uit vóórdat er iets is
+     gescrold: scrollLeft kan niet negatief, dus "Development" werd nooit meer
+     bereikbaar. Op smal scherm terug naar links uitlijnen, zodat alles vanaf
+     scrollpositie 0 bereikbaar is. */
+  .hero-stacked .chip-row { justify-content: flex-start; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
