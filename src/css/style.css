@@ -932,20 +932,24 @@ a:hover { color: var(--action); }
      bij de container). Op smal scherm dus gewoon 100%, met ruimte links/rechts. */
   .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
   /* Bovenstaande regel gaf bij de gestapelde hero (media_below: true) op
-     iPhone links géén marge en rechts wel (bevestigd op toestel, met exacte
-     pixelmeting): plaatje raakte de schermrand. Zowel margin-left/right: 0
-     als margin: auto losten dit niet op: op Safari rendert width: 100% van
-     deze grid-kolom kennelijk breder dan de padded content-box toelaat, dus
-     het beeld bleef rechts tot de rand doorlopen. max-width koppelt de
-     breedte daarom direct aan de viewport in plaats van aan de (hier
-     onbetrouwbare) kolomberekening, met dezelfde formule als .container zijn
-     eigen padding gebruikt. */
-  .hero-grid.hero-stacked .hero-media {
-    width: 100%;
-    max-width: calc(100vw - 2 * clamp(20px, 4vw, 48px));
-    margin-left: auto;
-    margin-right: auto;
-  }
+     iPhone niet alleen het beeld maar ook de kop-tekst rechts afgekapt
+     (bevestigd met een screenshot: "Streamline production" liep door voorbij
+     de rand). Root cause: de 1fr-kolom van .hero-grid.hero-stacked rendert op
+     Safari kennelijk breder dan de padded content-box, voor ELK kind van die
+     kolom, niet specifiek voor het plaatje. Twee eerdere pogingen (margin:
+     auto, max-width: calc(100vw - ...)) pakten alleen .hero-media aan en
+     losten het onderliggende probleem dus niet op. In plaats van tegen de
+     grid-kolomberekening te blijven vechten: op smal scherm geen CSS Grid
+     meer voor de gestapelde hero, maar Flexbox (kolom) — heeft dit
+     sizing-probleem niet, en gap/max-width/margin-auto werken er hetzelfde. */
+  .hero-grid.hero-stacked { display: flex; flex-direction: column; align-items: stretch; }
+  /* align-items: stretch alléén is niet genoeg: zonder een expliciete width
+     rendert de standaard stretch-berekening op Safari ook nog te breed (zelfde
+     root cause als hierboven, nu bevestigd voor .hero-text/.h1). Expliciete
+     width: 100% dwingt de normale percentage-berekening af i.p.v. de
+     kennelijk kapotte stretch-fit, en die geeft wél het juiste resultaat. */
+  .hero-grid.hero-stacked .hero-media,
+  .hero-grid.hero-stacked .hero-text { width: 100%; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.
