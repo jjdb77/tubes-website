@@ -52,6 +52,13 @@ html { scroll-behavior: smooth; }
 
 html { overflow-x: clip; }
 
+/* Zonder dit blaast Safari op iPhone tekst soms automatisch op na de
+   regelafbrekingsberekening (auto text-size-adjust), waardoor een woord dat
+   volgens de layout nog net past er ná het renderen toch net overheen valt.
+   Bevestigd op toestel: "Streamline production" liep door voorbij de rand,
+   ondanks dat elke breedte-/margeberekening in devtools wél klopte. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 body {
   overflow-x: clip;
   margin: 0;
