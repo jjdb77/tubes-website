@@ -11,7 +11,7 @@ sections:
   - type: hero
     theme: dark
     kicker: Production management platform
-    title: Streamline&nbsp;production budgeting, planning, and cost control in *one platform*
+    title: Streamline production budgeting, planning, and cost control in *one platform*
     chips:
       - label: Development
         tone: blue
