@@ -95,7 +95,6 @@ sections:
       ### Plan. Budget. Collaborate.
 
       - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
-      - **Movie Magic Import** – Import existing budgets from Movie Magic Budgeting and continue working in Tubes without starting from scratch.
       - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
       - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
       - **Organized Scheduling** – Coordinate cast, crew and locations, and share schedules and call sheets so your whole team stays on track.
@@ -106,6 +105,7 @@ sections:
       - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
       - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
       - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
+      - **Movie Magic Import** – Import existing budgets from Movie Magic Budgeting and continue working in Tubes without starting from scratch.
   - type: feature
     theme: light
     heading: AI Assistants
