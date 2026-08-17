@@ -95,6 +95,7 @@ sections:
       ### Plan. Budget. Collaborate.
 
       - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
+      - **Movie Magic Import** – Import existing budgets from Movie Magic Budgeting and continue working in Tubes without starting from scratch.
       - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
       - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
       - **Organized Scheduling** – Coordinate cast, crew and locations, and share schedules and call sheets so your whole team stays on track.
