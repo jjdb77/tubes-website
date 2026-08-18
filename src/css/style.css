@@ -1449,7 +1449,28 @@ a:hover { color: var(--action); }
 
 /* ---------- Vragenlijst op de eigen pagina ---------- */
 
-.hc-assess-page-inner { max-width: 760px; }
+/* Links de vragen, rechts de uitleg: zelfde verdeling als de hero van de
+   landingspagina. */
+.hc-assess-grid {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 64px); align-items: start;
+}
+.hc-assess-main { min-width: 0; }
+.hc-assess-aside { min-width: 0; position: sticky; top: 100px; }
+
+.hc-label-list { list-style: none; margin: 0; padding: 0; }
+.hc-label-list li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px; align-items: start;
+  padding: 14px 0; border-top: 1px solid var(--divider);
+  font-size: 0.92rem;
+}
+.hc-label-list li:first-child { border-top: 0; padding-top: 0; }
+.hc-label-list .chip { margin-top: 1px; }
+
+.hc-next-list { margin: 10px 0 0; padding-left: 1.15em; font-size: 0.92rem; }
+.hc-next-list li { margin-bottom: 0.45em; }
+.hc-next-list li::marker { color: var(--action); font-weight: 700; }
 .hc-assess-page h1 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
 .hc-assess-page .hc-lead { margin-bottom: 30px; }
 .hc-assess-form .hc-form-card { padding: clamp(24px, 3.5vw, 40px); }
@@ -1457,8 +1478,91 @@ a:hover { color: var(--action); }
 .hc-assess-identify { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
 .hc-assess-identify[hidden] { display: none; }
 
-.hc-assess-list-page .hc-assess-row { padding: 18px 0; }
-.hc-assess-hint { display: block; font-size: 0.86rem; font-weight: 400; color: var(--muted); margin-top: 3px; }
+/* --- Voortgang: vier segmenten, gevuld wat achter je ligt --- */
+.hc-progress { display: flex; gap: 6px; margin-bottom: 26px; }
+.hc-progress-bar {
+  flex: 1; height: 4px; border-radius: 999px;
+  background: var(--divider);
+  transition: background 0.25s ease;
+}
+.hc-progress-bar.is-done { background: var(--action-soft); }
+.hc-progress-bar.is-current { background: var(--action); }
+
+/* --- Eén stap: twee vragen, ruim opgezet --- */
+.hc-stage-meta { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 14px; }
+.hc-stage-heading {
+  font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em;
+  line-height: 1.25; margin-bottom: 1.2em; max-width: 26ch;
+}
+.hc-stage-heading:focus-visible { outline: 3px solid var(--action); outline-offset: 4px; }
+
+.hc-question { border: 0; padding: 0; margin: 0 0 28px; }
+.hc-question-label {
+  font-size: 1.02rem; font-weight: 700; color: var(--ink);
+  padding: 0; line-height: 1.35;
+}
+.hc-question-hint { font-size: 0.9rem; color: var(--muted); margin: 5px 0 12px; }
+
+.hc-stage-actions { display: flex; align-items: center; gap: 8px; margin-top: 30px; }
+.hc-stage-actions .button { flex: 1; text-align: center; }
+.hc-back {
+  order: -1;
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600;
+  color: var(--muted); padding: 13px 14px;
+  border-radius: var(--radius-button);
+}
+.hc-back:hover { color: var(--ink); background: var(--bg); }
+
+/* --- Stap 4: hun eigen antwoorden terug --- */
+.hc-result-intro { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 22px; }
+.hc-result-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-result-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid var(--divider);
+}
+.hc-result-label { font-size: 0.94rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.hc-result-row .chip { flex: none; }
+.hc-result-skipped { flex: none; font-size: 0.8rem; color: var(--muted); }
+.hc-result-row.is-empty .hc-result-label { color: var(--muted); font-weight: 500; }
+
+.hc-result-focus {
+  margin-top: 24px; padding: 20px 22px;
+  background: var(--bg); border-left: 3px solid var(--gold);
+  border-radius: var(--radius-wash);
+  font-size: 0.96rem;
+}
+.hc-result-focus-title { font-weight: 700; color: var(--ink); margin-bottom: 0.35em; }
+
+/* --- Themakolom rechts --- */
+.hc-theme {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(22px, 2.6vw, 30px);
+}
+.hc-theme-kicker {
+  display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--muted); margin-bottom: 8px;
+}
+.hc-theme-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; margin-bottom: 0.7em; }
+.hc-theme-friction { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
+
+.hc-theme-reading { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
+.hc-theme-reading-title {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); margin-bottom: 10px;
+}
+.hc-theme-reading ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.hc-theme-reading a { font-size: 0.92rem; font-weight: 600; color: var(--action-soft-ink); }
+
+.hc-theme-key {
+  margin-top: 20px; padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-card);
+}
 
 .hc-assess-notes { margin-top: 22px; }
 .hc-field textarea {
@@ -1483,3 +1587,23 @@ a:hover { color: var(--action); }
 .hc-done-next-title { font-weight: 700; color: var(--ink); margin-bottom: 0.3em; }
 .hc-done-next p { font-size: 0.94rem; }
 .hc-done-next .button { margin-top: 14px; width: 100%; text-align: center; }
+
+/* ---------- Vragenlijst: smal scherm ----------
+   Staat bewust achteraan: de tweekolomsregel hierboven is even specifiek,
+   dus alleen wat later komt wint. */
+
+@media (max-width: 980px) {
+  .hc-assess-grid { grid-template-columns: 1fr; }
+  /* Eerst de vragen, daarna pas de uitleg. */
+  .hc-assess-aside { position: static; max-width: 620px; }
+  .hc-assess-main { max-width: 620px; }
+}
+
+@media (max-width: 700px) {
+  .hc-stage-heading { font-size: 1.2rem; max-width: none; }
+  .hc-stage-actions { flex-wrap: wrap; }
+  .hc-stage-actions .button { flex: 1 1 100%; }
+  .hc-back { order: 2; align-self: center; padding: 8px 12px; }
+  .hc-result-row { flex-direction: column; align-items: flex-start; gap: 7px; }
+  .hc-theme, .hc-theme-key { padding: 22px 20px; }
+}

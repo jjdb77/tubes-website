@@ -502,6 +502,11 @@ if (hcForms.length) {
 // ---------------------------------------------------------------------------
 // Vragenlijst op /production-finance-health-check/assessment/
 //
+// Drie stappen van twee vragen, elk met een eigen thema, en als vierde stap
+// de samenvatting van wat iemand zelf heeft ingevuld. De antwoorden gaan weg
+// bij de overgang van stap 3 naar 4, dus ze staan vast vóór de samenvatting
+// in beeld komt.
+//
 // Komt iemand van het bedankscherm, dan staat het id van de aanvraag in ?ref
 // en hoeft er geen e-mailadres gevraagd te worden. Wie de link los krijgt,
 // vult zijn zakelijke e-mailadres in zodat we de antwoorden kunnen koppelen.
@@ -510,21 +515,55 @@ if (hcForms.length) {
 const assessForm = document.querySelector("[data-hc-assess-form]");
 
 if (assessForm) {
-  const AREA_KEYS = [
-    "budget_structure",
-    "budget_handover",
-    "actuals",
-    "forecasting",
-    "approvals",
-    "reporting"
-  ];
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+  const LAST_QUESTION_STEP = 3;
 
   const ref = new URLSearchParams(location.search).get("ref") || "";
   const identify = assessForm.querySelector("[data-hc-identify]");
   const emailInput = assessForm.querySelector('input[name="email"]');
   const status = assessForm.querySelector(".hc-status");
-  const button = assessForm.querySelector(".hc-submit");
+
+  // De zes vragen staan in de opmaak; hier lezen we ze uit in plaats van ze
+  // nog een keer op te schrijven.
+  const questions = Array.from(assessForm.querySelectorAll(".hc-question")).map((block) => ({
+    key: block.querySelector("input[type=radio]").name,
+    label: block.querySelector(".hc-question-label").textContent.trim(),
+    // Korte naam voor de zin op stap 4: de volledige labels bevatten zelf al
+    // een "and" en dat leest niet in een opsomming.
+    short: block.dataset.short || block.querySelector(".hc-question-label").textContent.trim().toLowerCase(),
+    input: () => block.querySelector("input[type=radio]:checked")
+  }));
+
+  const setStatus = (text, kind) => {
+    status.textContent = text || "";
+    status.className = "form-status hc-status" + (kind ? " is-" + kind : "");
+  };
+
+  function showStage(n) {
+    for (const stage of assessForm.querySelectorAll("[data-hc-stage]")) {
+      stage.hidden = stage.dataset.hcStage !== String(n);
+    }
+    for (const theme of document.querySelectorAll("[data-hc-theme]")) {
+      theme.hidden = theme.dataset.hcTheme !== String(n);
+    }
+    for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {
+      const step = Number(bar.dataset.hcProgressBar);
+      bar.classList.toggle("is-current", step === n);
+      bar.classList.toggle("is-done", step < n);
+    }
+    if (identify) identify.hidden = Boolean(ref) || n !== 1;
+    setStatus("");
+
+    const heading = assessForm.querySelector(`[data-hc-stage="${n}"] .hc-stage-heading`);
+    if (heading) {
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+    }
+    const card = assessForm.querySelector(".hc-form-card");
+    if (card && card.getBoundingClientRect().top < 80) {
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
 
   if (ref && identify) {
     identify.hidden = true;
@@ -533,34 +572,100 @@ if (assessForm) {
 
   track("health-check-assessment-opened", { linked: Boolean(ref) });
 
+  for (const button of assessForm.querySelectorAll("[data-hc-next]")) {
+    button.addEventListener("click", () => {
+      const next = Number(button.dataset.hcNext);
+      // Het e-mailadres hoort bij stap 1: verder laten gaan zonder zou het
+      // pas op het eind laten stuklopen.
+      if (next === 2 && !ref) {
+        const email = String(emailInput.value || "").trim();
+        if (!EMAIL_RE.test(email)) {
+          emailInput.setAttribute("aria-invalid", "true");
+          setStatus("Please enter the business email address you used for your Health Check request.", "error");
+          emailInput.focus();
+          return;
+        }
+        emailInput.removeAttribute("aria-invalid");
+      }
+      showStage(next);
+      track("health-check-assessment-step-" + next);
+    });
+  }
+
+  for (const button of assessForm.querySelectorAll("[data-hc-back]")) {
+    button.addEventListener("click", () => showStage(Number(button.dataset.hcBack)));
+  }
+
+  // Stap 4 wordt opgebouwd uit de gegeven antwoorden. Geen cijfer, geen
+  // oordeel: alleen teruggeven wat iemand zelf heeft ingevuld.
+  const TONE = { Strong: "mint", "Could improve": "amber", Opportunity: "lavender" };
+
+  function renderResult(answers) {
+    const list = assessForm.querySelector("[data-hc-result-list]");
+    list.innerHTML = "";
+    for (const question of questions) {
+      const value = answers[question.key];
+      const row = document.createElement("li");
+      row.className = "hc-result-row" + (value ? "" : " is-empty");
+      const label = document.createElement("span");
+      label.className = "hc-result-label";
+      label.textContent = question.label;
+      const chip = document.createElement("span");
+      chip.className = value ? `chip chip-${TONE[value]}` : "hc-result-skipped";
+      chip.textContent = value || "Not answered";
+      row.append(label, chip);
+      list.append(row);
+    }
+
+    const flagged = questions.filter((q) => answers[q.key] === "Opportunity").map((q) => q.short);
+    const soft = questions.filter((q) => answers[q.key] === "Could improve").map((q) => q.short);
+    const focus = assessForm.querySelector("[data-hc-result-focus]");
+    const named = (items) =>
+      items.length === 1 ? items[0] : items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
+
+    let text;
+    if (flagged.length) {
+      text = `You marked ${flagged.length === 1 ? "one area" : flagged.length + " areas"} as an opportunity: ${named(flagged)}. That is where we will start.`;
+    } else if (soft.length) {
+      text = `Nothing stands out as a clear problem. We will start with ${named(soft)}, where you said things could be better.`;
+    } else {
+      text = "You rated everything as strong. We will spend the session looking for the smaller frictions, the ones that only show up when a production goes sideways.";
+    }
+    focus.innerHTML = "";
+    const title = document.createElement("p");
+    title.className = "hc-result-focus-title";
+    title.textContent = "Where we will start";
+    const body = document.createElement("p");
+    body.textContent = text;
+    focus.append(title, body);
+  }
+
   assessForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const answers = {};
-    for (const key of AREA_KEYS) {
-      const picked = assessForm.querySelector(`input[name="${key}"]:checked`);
-      if (picked) answers[key] = picked.value;
+    for (const question of questions) {
+      const picked = question.input();
+      if (picked) answers[question.key] = picked.value;
     }
 
     const email = String(emailInput.value || "").trim();
     if (!ref && !EMAIL_RE.test(email)) {
+      showStage(1);
       emailInput.setAttribute("aria-invalid", "true");
-      status.textContent = "Please enter the business email address you used for your Health Check request.";
-      status.className = "form-status hc-status is-error";
+      setStatus("Please enter the business email address you used for your Health Check request.", "error");
       emailInput.focus();
       return;
     }
-    emailInput.removeAttribute("aria-invalid");
 
     if (!Object.keys(answers).length) {
-      status.textContent = "Give at least one area a label, then we can use it.";
-      status.className = "form-status hc-status is-error";
+      setStatus("Give at least one area a label, then we can use it.", "error");
       return;
     }
 
+    const button = assessForm.querySelector(".hc-submit");
     button.disabled = true;
-    status.textContent = "Sending…";
-    status.className = "form-status hc-status";
+    setStatus("Sending…");
 
     const stop = new AbortController();
     const timer = setTimeout(() => stop.abort(), 12000);
@@ -584,18 +689,10 @@ if (assessForm) {
       if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
 
       track("health-check-assessment-completed", { answered: Object.keys(answers).length });
-      for (const el of assessForm.querySelectorAll(".hc-assess-list, .hc-assess-notes, .hc-submit, [data-hc-identify]")) {
-        el.hidden = true;
-      }
-      status.textContent = "";
-      const done = assessForm.querySelector("[data-hc-done]");
-      done.hidden = false;
-      done.querySelector(".hc-done-title").setAttribute("tabindex", "-1");
-      done.querySelector(".hc-done-title").focus({ preventScroll: true });
+      renderResult(answers);
+      showStage(4);
     } catch (err) {
-      status.textContent =
-        "That did not come through. Please try again, or email us at contact@tubes.media.";
-      status.className = "form-status hc-status is-error";
+      setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
       button.disabled = false;
     } finally {
       clearTimeout(timer);

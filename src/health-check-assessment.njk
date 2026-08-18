@@ -6,83 +6,231 @@ description: "Tell us how the six areas of your production finance process stand
 permalink: /production-finance-health-check/assessment/
 noindex: true
 ---
-{#- De vragenlijst van de Health Check op een eigen adres, zodat de link ook
+{#- De vragenlijst van de Health Check, op een eigen adres zodat de link ook
     los verstuurd kan worden aan iemand die al een sessie heeft staan.
 
-    Twee manieren om binnen te komen:
+    Opzet: drie stappen van twee vragen. Elke stap is een thema, en de kolom
+    rechts legt dat thema uit. Twee vragen per scherm in plaats van zes op
+    een rij: zo krijgt elke vraag de aandacht die hij verdient.
+
+    Binnenkomen kan op twee manieren:
       ?ref=<id>  vanaf het bedankscherm; dan weten we al wie het is en hoeft
                  het e-mailadres niet gevraagd te worden.
-      kaal       dan vragen we het zakelijke e-mailadres om het aan de
-                 aanvraag te kunnen koppelen.
+      kaal       dan vragen we het zakelijke e-mailadres om de antwoorden aan
+                 de aanvraag te kunnen koppelen.
 
-    Bewust noindex: dit is geen marketingpagina maar een vragenlijst voor
-    mensen die we zelf uitnodigen. Hij valt daarmee ook buiten de sitemap. -#}
+    Bewust noindex: een vragenlijst voor genodigden, geen marketingpagina. -#}
 
-{%- set assessAreas = [
-  { key: "budget_structure", num: "01", label: "Budget structure and version control", hint: "How budgets are built and changed, and how you know which version counts." },
-  { key: "budget_handover", num: "02", label: "Budget to production handover", hint: "What happens after approval, and how the people spending get a working budget." },
-  { key: "actuals", num: "03", label: "Actuals and reconciliation", hint: "How real costs come in and get matched back to the budget." },
-  { key: "forecasting", num: "04", label: "Forecasting", hint: "How you arrive at an expected final cost, and how often it is refreshed." },
-  { key: "approvals", num: "05", label: "Approvals and controls", hint: "Who may commit spend or change a budget, and how that is recorded." },
-  { key: "reporting", num: "06", label: "Reporting and visibility", hint: "Who gets reliable financial information, and how long it takes to produce." }
-] -%}
 {%- set assessOptions = [
   { value: "Strong", tone: "good" },
   { value: "Could improve", tone: "mid" },
   { value: "Opportunity", tone: "low" }
 ] -%}
 
+{%- set steps = [
+  {
+    num: 1,
+    theme: "Planning and budgeting",
+    heading: "How the budget is built, and what happens once it is approved",
+    areas: [
+      {
+        key: "budget_structure",
+        short: "budget structure",
+        label: "Budget structure and version control",
+        hint: "How budgets are built and changed, and how you know which version counts."
+      },
+      {
+        key: "budget_handover",
+        short: "the handover to production",
+        label: "Budget to production handover",
+        hint: "What happens after approval, and how the people spending the money get a working budget."
+      }
+    ],
+    friction: "Most budgets survive approval intact. What tends to break is everything after it: a version sitting in someone's inbox, a working budget rebuilt by hand, and two numbers that no longer agree.",
+    reading: [
+      { label: "How to Build a Production Budget", url: "/insights/how-to-build-a-production-budget/" },
+      { label: "Above the Line vs Below the Line", url: "/insights/above-the-line-vs-below-the-line/" }
+    ]
+  },
+  {
+    num: 2,
+    theme: "Spending and control",
+    heading: "What actually gets spent, and who is allowed to commit it",
+    areas: [
+      {
+        key: "actuals",
+        short: "actuals",
+        label: "Actuals and reconciliation",
+        hint: "How real costs come in, how they are coded, and how they get matched back to the budget."
+      },
+      {
+        key: "approvals",
+        short: "approvals",
+        label: "Approvals and controls",
+        hint: "Who may commit spend, who may change a budget, and how that is recorded."
+      }
+    ],
+    friction: "Costs rarely arrive in the shape the budget expects. The work of making them line up is usually invisible, usually manual, and usually done by one person under time pressure.",
+    reading: [
+      { label: "How Much Contingency Does a Production Need?", url: "/insights/how-much-contingency-does-a-production-need/" }
+    ]
+  },
+  {
+    num: 3,
+    theme: "Forecasting and reporting",
+    heading: "Knowing where this will land, and who gets told in time",
+    areas: [
+      {
+        key: "forecasting",
+        short: "forecasting",
+        label: "Forecasting",
+        hint: "How commitments, costs to date and remaining costs add up to an expected final cost."
+      },
+      {
+        key: "reporting",
+        short: "reporting",
+        label: "Reporting and visibility",
+        hint: "Who gets reliable financial information, in what form, and how long it takes to produce."
+      }
+    ],
+    friction: "A report that takes three days to build is a report about last week. The question is not only whether the numbers are right, but whether they arrive while you can still do something about them.",
+    reading: [
+      { label: "What Is a Production Cost Report?", url: "/insights/what-is-a-production-cost-report/" }
+    ]
+  }
+] -%}
+
 <section class="section section-hero theme-light hc-assess-page">
-  <div class="container hc-assess-page-inner">
-    <span class="kicker">Production Finance Health Check</span>
-    <h1>How do these six areas stand today?</h1>
-    <p class="hc-lead">This takes about a minute. Your own impression is all we need. We will go through each area properly during the session, so there are no wrong answers here.</p>
+  <div class="container hc-assess-grid">
 
-    <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
-      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
+    <div class="hc-assess-main">
+      <span class="kicker">Production Finance Health Check</span>
+      <h1>How does your process stand today?</h1>
+      <p class="hc-lead">Six questions in three short steps. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.</p>
 
-      <div class="hc-form-card">
-        <div class="hc-assess-identify" data-hc-identify>
-          <label class="hc-field" for="hc-assessment-email">Business email address
-            <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
-          </label>
-          <p class="hc-help">So we can match your answers to your Health Check request.</p>
-        </div>
+      <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
 
-        <ol class="hc-assess-list hc-assess-list-page">
-          {%- for area in assessAreas %}
-          <li class="hc-assess-row">
-            <span class="hc-assess-num" aria-hidden="true">{{ area.num }}</span>
-            <span class="hc-assess-label" id="hc-assessment-{{ area.key }}-label">{{ area.label }}
-              <span class="hc-assess-hint">{{ area.hint }}</span>
+        <div class="hc-form-card">
+          <div class="hc-progress" data-hc-progress>
+            {%- for step in steps %}
+            <span class="hc-progress-bar{% if loop.first %} is-current{% endif %}" data-hc-progress-bar="{{ step.num }}">
+              <span class="visually-hidden">Step {{ step.num }}: {{ step.theme }}</span>
             </span>
-            <span class="hc-assess-options" role="radiogroup" aria-labelledby="hc-assessment-{{ area.key }}-label">
-              {%- for option in assessOptions %}
-              <label class="hc-opt hc-opt-{{ option.tone }}">
-                <input type="radio" name="{{ area.key }}" value="{{ option.value }}">
-                <span>{{ option.value }}</span>
-              </label>
-              {%- endfor %}
-            </span>
-          </li>
+            {%- endfor %}
+            <span class="hc-progress-bar" data-hc-progress-bar="4"><span class="visually-hidden">Step 4: your summary</span></span>
+          </div>
+
+          <div class="hc-assess-identify" data-hc-identify>
+            <label class="hc-field" for="hc-assessment-email">Business email address
+              <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+            </label>
+            <p class="hc-help">So we can match your answers to your Health Check request.</p>
+          </div>
+
+          {%- for step in steps %}
+          <div class="hc-stage" data-hc-stage="{{ step.num }}"{% if not loop.first %} hidden{% endif %}>
+            <p class="hc-stage-meta"><span class="hc-step-count">Step {{ step.num }} of 4</span> {{ step.theme }}</p>
+            <h2 class="hc-stage-heading">{{ step.heading }}</h2>
+
+            {%- for area in step.areas %}
+            <fieldset class="hc-question" data-short="{{ area.short }}">
+              <legend class="hc-question-label">{{ area.label }}</legend>
+              <p class="hc-question-hint">{{ area.hint }}</p>
+              <div class="hc-assess-options">
+                {%- for option in assessOptions %}
+                <label class="hc-opt hc-opt-{{ option.tone }}">
+                  <input type="radio" name="{{ area.key }}" value="{{ option.value }}">
+                  <span>{{ option.value }}</span>
+                </label>
+                {%- endfor %}
+              </div>
+            </fieldset>
+            {%- endfor %}
+
+            {%- if loop.last %}
+            <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
+              <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
+            </label>
+            {%- endif %}
+
+            <div class="hc-stage-actions">
+              {%- if loop.last %}
+              <button type="submit" class="button button-primary hc-submit">See my summary</button>
+              {%- else %}
+              <button type="button" class="button button-primary hc-next" data-hc-next="{{ step.num + 1 }}">Continue</button>
+              {%- endif %}
+              {%- if not loop.first %}
+              <button type="button" class="hc-back" data-hc-back="{{ step.num - 1 }}">Back</button>
+              {%- endif %}
+            </div>
+          </div>
           {%- endfor %}
-        </ol>
 
-        <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
-          <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
-        </label>
+          <p class="form-status hc-status" role="status" aria-live="polite"></p>
 
-        <button type="submit" class="button button-primary hc-submit">Send my answers</button>
-        <p class="form-status hc-status" role="status" aria-live="polite"></p>
+          {#- Stap 4 is de uitkomst: hun eigen antwoorden op een rij, plus waar
+              we mee beginnen. Geen cijfer en geen oordeel; dat zou een uitslag
+              suggereren die pas uit het gesprek kan komen. -#}
+          <div class="hc-stage hc-result" data-hc-stage="4" hidden>
+            <p class="hc-stage-meta"><span class="hc-step-count">Step 4 of 4</span> Your summary</p>
+            <h2 class="hc-stage-heading">This is what you told us</h2>
+            <p class="hc-result-intro">Received, thank you. Nothing is scored here: this is your own reading of the six areas, and it sets the agenda for the session.</p>
 
-        <div class="hc-done" data-hc-done hidden>
-          <p class="hc-done-title">Thanks, that gives us a head start.</p>
-          <p>We will use your answers to prepare, and we will still go through each area with you during the session.</p>
-          <p class="hc-done-note">Nothing else to do for now. If you have not heard from us yet, we will be in touch shortly to arrange a time.</p>
+            <ol class="hc-result-list" data-hc-result-list></ol>
+
+            <div class="hc-result-focus" data-hc-result-focus></div>
+
+            <p class="hc-done-note">Nothing else to do for now. If you have not heard from us yet, we will be in touch shortly to arrange a time.</p>
+          </div>
+
+          <p class="hc-privacy">We use your answers only to prepare your Health Check. We do not add you to a mailing list and we do not pass your details on. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
         </div>
+      </form>
+    </div>
 
-        <p class="hc-privacy">We use your answers only to prepare your Health Check. We do not add you to a mailing list and we do not pass your details on. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
+    {#- Rechts loopt mee met de stap: wat dit thema inhoudt, waar het meestal
+        misgaat, en iets om te lezen terwijl je nadenkt. -#}
+    <aside class="hc-assess-aside">
+      {%- for step in steps %}
+      <div class="hc-theme" data-hc-theme="{{ step.num }}"{% if not loop.first %} hidden{% endif %}>
+        <span class="hc-theme-kicker">Step {{ step.num }} of 4</span>
+        <h2 class="hc-theme-title">{{ step.theme }}</h2>
+
+        <p class="hc-theme-friction">{{ step.friction }}</p>
+
+        <div class="hc-theme-reading">
+          <p class="hc-theme-reading-title">While you think it over</p>
+          <ul>
+            {%- for item in step.reading %}
+            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
       </div>
-    </form>
+      {%- endfor %}
+
+      <div class="hc-theme" data-hc-theme="4" hidden>
+        <span class="hc-theme-kicker">Step 4 of 4</span>
+        <h2 class="hc-theme-title">What happens next</h2>
+        <ol class="hc-next-list">
+          <li>We read your answers before we speak, so we do not spend the session on the basics.</li>
+          <li>45 minutes together, going through each area properly.</li>
+          <li>A short written summary: the three main opportunities, where the manual work sits, and what to improve first.</li>
+        </ol>
+        <p class="hc-scan-note">If Tubes can solve one of the things we find, we will show you that part. There is no obligation to continue.</p>
+      </div>
+
+      <div class="hc-theme-key">
+        <p class="hc-scan-key">The three labels</p>
+        <ul class="hc-label-list">
+          <li><span class="chip chip-mint">Strong</span><span>This works. Nobody loses time over it and you trust the numbers.</span></li>
+          <li><span class="chip chip-amber">Could improve</span><span>Workable, but it costs time, or it only works because one person knows how.</span></li>
+          <li><span class="chip chip-lavender">Opportunity</span><span>This is where things go wrong, get lost, or arrive too late to act on.</span></li>
+        </ul>
+        <p class="hc-scan-note">No score out of ten. Your answers set the agenda for the session, they are not the verdict.</p>
+      </div>
+    </aside>
+
   </div>
 </section>
