@@ -538,9 +538,6 @@ if (assessForm) {
 
   // De laatste stap is het rapport; het aantal vraagstappen komt uit de opmaak,
   // die op zijn beurt uit healthcheck.json komt.
-  const questionsView = assessForm.querySelector("[data-hc-questions]");
-  const resultView = assessForm.querySelector("[data-hc-result]");
-  const progressFill = assessForm.querySelector("[data-hc-progress-fill]");
   const answeredCount = assessForm.querySelector("[data-hc-answered]");
 
   const setStatus = (text, kind) => {
@@ -553,49 +550,67 @@ if (assessForm) {
     emailInput.required = false;
   }
 
-  // Voortgang: hoeveel vragen er beantwoord zijn. Geen stappen meer, dus dit
-  // is het enige houvast hoever iemand is.
+  // Teller naast de stapbalk: hoeveel van de vragen al beantwoord zijn.
   function updateProgress() {
-    const done = questions.filter((q) => q.input()).length;
-    answeredCount.textContent = String(done);
-    progressFill.style.width = Math.round((done / questions.length) * 100) + "%";
+    answeredCount.textContent = String(questions.filter((q) => q.input()).length);
   }
   assessForm.addEventListener("change", updateProgress);
   updateProgress();
 
-  // Rechterkolom loopt mee met het thema dat in beeld staat.
+  // Eén stap per thema, en het rapport als laatste stap. De stappen komen uit
+  // healthcheck.json, dus het aantal wordt hier geteld en niet vastgelegd.
   const blocks = Array.from(assessForm.querySelectorAll("[data-hc-block]"));
   const themePanels = Array.from(document.querySelectorAll("[data-hc-theme]"));
+  const RESULT_STEP = blocks.length;
 
-  function showTheme(name) {
-    for (const panel of themePanels) panel.hidden = panel.dataset.hcTheme !== String(name);
+  function showStep(n) {
+    for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
+    for (const panel of themePanels) panel.hidden = panel.dataset.hcTheme !== String(n);
+    for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {
+      const step = Number(bar.dataset.hcProgressBar);
+      bar.classList.toggle("is-current", step === n);
+      bar.classList.toggle("is-done", step < n);
+    }
+    if (identify) identify.hidden = Boolean(ref) || n !== 1;
+    setStatus("");
+
+    const heading = assessForm.querySelector(`[data-hc-block="${n}"] h2`);
+    if (heading) {
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+    }
+    const card = assessForm.querySelector(".hc-form-card");
+    if (card && card.getBoundingClientRect().top < 80) {
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
-  if (blocks.length) {
-    // Welk thema staat er in beeld? Het laatste blok waarvan de kop de
-    // leesregel is gepasseerd. Een IntersectionObserver werkt hier niet:
-    // meerdere blokken zijn tegelijk zichtbaar en dan blijft de eerste hangen.
-    let ticking = false;
-    const syncTheme = () => {
-      ticking = false;
-      if (resultView && !resultView.hidden) return;
-      const line = 200;
-      let current = blocks[0];
-      for (const block of blocks) {
-        if (block.getBoundingClientRect().top <= line) current = block;
-      }
-      showTheme(current.dataset.hcBlock);
-    };
-    addEventListener(
-      "scroll",
-      () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(syncTheme);
-      },
-      { passive: true }
-    );
-    syncTheme();
+  // Het e-mailadres hoort bij stap 1: verder laten gaan zonder zou het pas op
+  // het eind laten stuklopen.
+  function emailOk() {
+    if (ref) return true;
+    const email = String(emailInput.value || "").trim();
+    if (EMAIL_RE.test(email)) {
+      emailInput.removeAttribute("aria-invalid");
+      return true;
+    }
+    emailInput.setAttribute("aria-invalid", "true");
+    setStatus("Please enter the business email address you used for your Health Check request.", "error");
+    emailInput.focus();
+    return false;
+  }
+
+  for (const button of assessForm.querySelectorAll("[data-hc-next]")) {
+    button.addEventListener("click", () => {
+      const next = Number(button.dataset.hcNext);
+      if (next === 2 && !emailOk()) return;
+      showStep(next);
+      track("health-check-assessment-step-" + next);
+    });
+  }
+
+  for (const button of assessForm.querySelectorAll("[data-hc-back]")) {
+    button.addEventListener("click", () => showStep(Number(button.dataset.hcBack)));
   }
 
   // Het rapport wordt opgebouwd uit de gegeven antwoorden. Geen cijfer en geen
@@ -724,10 +739,8 @@ if (assessForm) {
     }
 
     const email = String(emailInput.value || "").trim();
-    if (!ref && !EMAIL_RE.test(email)) {
-      emailInput.setAttribute("aria-invalid", "true");
-      setStatus("Please enter the business email address you used for your Health Check request.", "error");
-      emailInput.focus();
+    if (!emailOk()) {
+      showStep(1);
       return;
     }
 
@@ -763,13 +776,7 @@ if (assessForm) {
 
       track("health-check-assessment-completed", { answered: Object.keys(answers).length });
       renderResult(answers);
-      questionsView.hidden = true;
-      resultView.hidden = false;
-      showTheme("result");
-      const heading = resultView.querySelector(".hc-result-heading");
-      heading.setAttribute("tabindex", "-1");
-      heading.focus({ preventScroll: true });
-      resultView.scrollIntoView({ behavior: "smooth", block: "start" });
+      showStep(RESULT_STEP);
     } catch (err) {
       setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
       button.disabled = false;

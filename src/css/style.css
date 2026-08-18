@@ -1479,17 +1479,16 @@ a:hover { color: var(--action); }
 .hc-assess-identify { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
 .hc-assess-identify[hidden] { display: none; }
 
-/* --- Voortgang: hoeveel vragen beantwoord --- */
+/* --- Voortgang: één segment per stap, plus de teller ernaast --- */
 .hc-progress-line { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
-.hc-progress {
+.hc-progress { flex: 1; display: flex; gap: 5px; }
+.hc-progress-bar {
   flex: 1; height: 4px; border-radius: 999px;
-  background: var(--divider); overflow: hidden;
+  background: var(--divider);
+  transition: background 0.25s ease;
 }
-.hc-progress-fill {
-  display: block; height: 100%; width: 0;
-  background: var(--action); border-radius: 999px;
-  transition: width 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
+.hc-progress-bar.is-done { background: var(--action-soft); }
+.hc-progress-bar.is-current { background: var(--action); }
 .hc-progress-count { flex: none; font-size: 0.82rem; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
 
 /* --- Eén thema: kop plus zijn vragen --- */
@@ -1520,7 +1519,19 @@ a:hover { color: var(--action); }
 }
 .hc-question-hint { font-size: 0.9rem; color: var(--muted); margin: 5px 0 12px; }
 
-.hc-assess-form .hc-submit { width: 100%; text-align: center; margin-top: 26px; }
+.hc-step-actions { display: flex; align-items: center; gap: 8px; margin-top: 30px; }
+.hc-step-actions .button { flex: 1; text-align: center; }
+.hc-back {
+  order: -1;
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600;
+  color: var(--muted); padding: 13px 14px;
+  border-radius: var(--radius-button);
+}
+.hc-back:hover { color: var(--ink); background: var(--bg); }
+
+/* Eén stap per scherm, dus geen scheidingslijn tussen de blokken meer. */
+.hc-block + .hc-block { margin-top: 0; padding-top: 8px; border-top: 0; }
 
 /* --- Stap 4: hun eigen antwoorden terug --- */
 .hc-result-intro { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 22px; }
@@ -1609,6 +1620,9 @@ a:hover { color: var(--action); }
 
 @media (max-width: 700px) {
   .hc-block-heading { font-size: 1.1rem; max-width: none; }
+  .hc-step-actions { flex-wrap: wrap; }
+  .hc-step-actions .button { flex: 1 1 100%; }
+  .hc-back { order: 2; align-self: center; padding: 8px 12px; }
   .hc-result-row { flex-direction: column; align-items: flex-start; gap: 7px; }
   .hc-theme, .hc-theme-key { padding: 22px 20px; }
 }
