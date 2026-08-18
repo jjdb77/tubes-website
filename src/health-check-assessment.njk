@@ -11,12 +11,13 @@ noindex: true
 
     De vragen zelf staan NIET in dit bestand maar in src/_data/healthcheck.json,
     te wijzigen via het CMS onder "Health Check-vragenlijst". Voeg je daar een
-    vraag of een hele stap toe, dan loopt de pagina, de samenvatting en de
-    opslag vanzelf mee. Let op: de `key` van een vraag is de veldnaam in de
-    opslag, dus die verander je niet meer nadat er antwoorden binnen zijn.
+    vraag of een heel thema toe, dan loopt de pagina, het rapport en de opslag
+    vanzelf mee. Let op: de `key` van een vraag is de veldnaam in de opslag,
+    dus die verander je niet meer nadat er antwoorden binnen zijn.
 
-    Opzet: per stap een thema met een paar vragen, en als laatste stap het
-    rapport. Rechts loopt de toelichting mee met de stap.
+    Opzet: alle vragen onder elkaar, gegroepeerd per thema. Rechts loopt de
+    toelichting mee met het thema dat in beeld staat. Na versturen komt het
+    rapport in de plaats van de vragen.
 
     Binnenkomen kan op twee manieren:
       ?ref=<id>  vanaf het bedankscherm; dan weten we al wie het is.
@@ -25,8 +26,8 @@ noindex: true
     Bewust noindex: een vragenlijst voor genodigden, geen marketingpagina. -#}
 
 {%- set steps = healthcheck.steps -%}
-{%- set resultStep = steps | length + 1 -%}
-{%- set totalSteps = resultStep -%}
+{%- set questionCount = 0 -%}
+{%- for step in steps %}{% set questionCount = questionCount + (step.questions | length) %}{% endfor -%}
 
 <section class="section section-hero theme-light hc-assess-page">
   <div class="container hc-assess-grid">
@@ -40,74 +41,63 @@ noindex: true
         <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
 
         <div class="hc-form-card">
-          <div class="hc-progress" data-hc-progress>
-            {%- for step in steps %}
-            <span class="hc-progress-bar{% if loop.first %} is-current{% endif %}" data-hc-progress-bar="{{ loop.index }}">
-              <span class="visually-hidden">Step {{ loop.index }}: {{ step.theme }}</span>
-            </span>
-            {%- endfor %}
-            <span class="hc-progress-bar" data-hc-progress-bar="{{ resultStep }}"><span class="visually-hidden">Step {{ resultStep }}: your summary</span></span>
-          </div>
 
-          <div class="hc-assess-identify" data-hc-identify>
-            <label class="hc-field" for="hc-assessment-email">Business email address
-              <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
-            </label>
-            <p class="hc-help">So we can match your answers to your Health Check request.</p>
-          </div>
-
-          {%- for step in steps %}
-          <div class="hc-stage" data-hc-stage="{{ loop.index }}" data-theme="{{ step.theme }}"{% if not loop.first %} hidden{% endif %}>
-            <p class="hc-stage-meta"><span class="hc-step-count">Step {{ loop.index }} of {{ totalSteps }}</span> {{ step.theme }}</p>
-            <h2 class="hc-stage-heading">{{ step.heading }}</h2>
-
-            {%- set stepIndex = loop.index -%}
-            {%- set reading = step.reading[0] -%}
-            {%- for question in step.questions %}
-            <fieldset class="hc-question"
-                      data-short="{{ question.short }}"
-                      data-theme="{{ step.theme }}"
-                      data-finding="{{ question.finding }}"
-                      {% if reading %}data-reading-label="{{ reading.label }}" data-reading-url="{{ reading.url }}"{% endif %}>
-              <legend class="hc-question-label">{{ question.label }}</legend>
-              <p class="hc-question-hint">{{ question.hint }}</p>
-              <div class="hc-assess-options">
-                {%- for option in healthcheck.labels %}
-                <label class="hc-opt hc-opt-{{ option.tone }}">
-                  <input type="radio" name="{{ question.key }}" value="{{ option.value }}">
-                  <span>{{ option.value }}</span>
-                </label>
-                {%- endfor %}
+          <div data-hc-questions>
+            <div class="hc-progress-line">
+              <div class="hc-progress" data-hc-progress>
+                <span class="hc-progress-fill" data-hc-progress-fill></span>
               </div>
-            </fieldset>
+              <p class="hc-progress-count"><span data-hc-answered>0</span> of {{ questionCount }} answered</p>
+            </div>
+
+            <div class="hc-assess-identify" data-hc-identify>
+              <label class="hc-field" for="hc-assessment-email">Business email address
+                <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+              </label>
+              <p class="hc-help">So we can match your answers to your Health Check request.</p>
+            </div>
+
+            {%- for step in steps %}
+            <section class="hc-block" data-hc-block="{{ loop.index }}">
+              <p class="hc-block-meta"><span class="hc-block-num">{{ loop.index }}</span> {{ step.theme }}</p>
+              <h2 class="hc-block-heading">{{ step.heading }}</h2>
+
+              {%- set reading = step.reading[0] -%}
+              {%- for question in step.questions %}
+              <fieldset class="hc-question"
+                        data-short="{{ question.short }}"
+                        data-theme="{{ step.theme }}"
+                        data-finding="{{ question.finding }}"
+                        {% if reading %}data-reading-label="{{ reading.label }}" data-reading-url="{{ reading.url }}"{% endif %}>
+                <legend class="hc-question-label">{{ question.label }}</legend>
+                <p class="hc-question-hint">{{ question.hint }}</p>
+                <div class="hc-assess-options">
+                  {%- for option in healthcheck.labels %}
+                  <label class="hc-opt hc-opt-{{ option.tone }}">
+                    <input type="radio" name="{{ question.key }}" value="{{ option.value }}">
+                    <span>{{ option.value }}</span>
+                  </label>
+                  {%- endfor %}
+                </div>
+              </fieldset>
+              {%- endfor %}
+            </section>
             {%- endfor %}
 
-            {%- if loop.last %}
             <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
               <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
             </label>
-            {%- endif %}
 
-            <div class="hc-stage-actions">
-              {%- if loop.last %}
-              <button type="submit" class="button button-primary hc-submit">See my summary</button>
-              {%- else %}
-              <button type="button" class="button button-primary hc-next" data-hc-next="{{ stepIndex + 1 }}">Continue</button>
-              {%- endif %}
-              {%- if not loop.first %}
-              <button type="button" class="hc-back" data-hc-back="{{ stepIndex - 1 }}">Back</button>
-              {%- endif %}
-            </div>
+            <button type="submit" class="button button-primary hc-submit">See my summary</button>
           </div>
-          {%- endfor %}
 
           <p class="form-status hc-status" role="status" aria-live="polite"></p>
 
-          {#- Laatste stap: het rapport, opgebouwd uit de gegeven antwoorden.
-              Geen cijfer en geen oordeel; dat kan pas uit het gesprek komen. -#}
-          <div class="hc-stage hc-result" data-hc-stage="{{ resultStep }}" hidden>
-            <p class="hc-stage-meta"><span class="hc-step-count">Step {{ resultStep }} of {{ totalSteps }}</span> Your summary</p>
-            <h2 class="hc-stage-heading">{{ healthcheck.result.heading }}</h2>
+          {#- Het rapport komt in de plaats van de vragen. Opgebouwd uit de
+              eigen antwoorden: geen cijfer en geen oordeel, dat kan pas uit
+              het gesprek komen. -#}
+          <div class="hc-result" data-hc-result hidden>
+            <h2 class="hc-result-heading">{{ healthcheck.result.heading }}</h2>
             <p class="hc-result-intro">{{ healthcheck.result.intro }}</p>
 
             <div class="hc-result-themes" data-hc-result-themes></div>
@@ -125,12 +115,12 @@ noindex: true
       </form>
     </div>
 
-    {#- Rechts loopt mee met de stap: waar dit thema meestal misgaat, en iets
-        om te lezen terwijl je nadenkt. -#}
+    {#- Rechts loopt mee met het thema dat in beeld staat: waar het daar
+        meestal misgaat, en iets om te lezen terwijl je nadenkt. -#}
     <aside class="hc-assess-aside">
       {%- for step in steps %}
       <div class="hc-theme" data-hc-theme="{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
-        <span class="hc-theme-kicker">Step {{ loop.index }} of {{ totalSteps }}</span>
+        <span class="hc-theme-kicker">{{ loop.index }} of {{ steps | length }}</span>
         <h2 class="hc-theme-title">{{ step.theme }}</h2>
         <p class="hc-theme-friction">{{ step.friction }}</p>
         {%- if step.reading %}
@@ -146,8 +136,8 @@ noindex: true
       </div>
       {%- endfor %}
 
-      <div class="hc-theme" data-hc-theme="{{ resultStep }}" hidden>
-        <span class="hc-theme-kicker">Step {{ resultStep }} of {{ totalSteps }}</span>
+      <div class="hc-theme" data-hc-theme="result" hidden>
+        <span class="hc-theme-kicker">Your summary</span>
         <h2 class="hc-theme-title">{{ healthcheck.result.next_title }}</h2>
         <ol class="hc-next-list">
           {%- for item in healthcheck.result.next %}

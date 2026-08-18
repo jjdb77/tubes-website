@@ -1,9 +1,21 @@
 {
-  "intro": "Nine questions in three short steps. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
+  "intro": "Nine questions, grouped into three themes. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
   "labels": [
-    { "value": "Strong", "tone": "good", "meaning": "This works. Nobody loses time over it and you trust the numbers." },
-    { "value": "Could improve", "tone": "mid", "meaning": "Workable, but it costs time, or it only works because one person knows how." },
-    { "value": "Opportunity", "tone": "low", "meaning": "This is where things go wrong, get lost, or arrive too late to act on." }
+    {
+      "value": "Strong",
+      "tone": "good",
+      "meaning": "This works. Nobody loses time over it and you trust the numbers."
+    },
+    {
+      "value": "Could improve",
+      "tone": "mid",
+      "meaning": "Workable, but it costs time, or it only works because one person knows how."
+    },
+    {
+      "value": "Opportunity",
+      "tone": "low",
+      "meaning": "This is where things go wrong, get lost, or arrive too late to act on."
+    }
   ],
   "steps": [
     {
@@ -11,8 +23,14 @@
       "heading": "How the budget is built, and what happens once it is approved",
       "friction": "Most budgets survive approval intact. What tends to break is everything after it: a version sitting in someone's inbox, a working budget rebuilt by hand, and two numbers that no longer agree.",
       "reading": [
-        { "label": "How to Build a Production Budget", "url": "/insights/how-to-build-a-production-budget/" },
-        { "label": "Above the Line vs Below the Line", "url": "/insights/above-the-line-vs-below-the-line/" }
+        {
+          "label": "How to Build a Production Budget",
+          "url": "/insights/how-to-build-a-production-budget/"
+        },
+        {
+          "label": "Above the Line vs Below the Line",
+          "url": "/insights/above-the-line-vs-below-the-line/"
+        }
       ],
       "questions": [
         {
@@ -43,7 +61,10 @@
       "heading": "What actually gets spent, and who is allowed to commit it",
       "friction": "Costs rarely arrive in the shape the budget expects. The work of making them line up is usually invisible, usually manual, and usually done by one person under time pressure.",
       "reading": [
-        { "label": "How Much Contingency Does a Production Need?", "url": "/insights/how-much-contingency-does-a-production-need/" }
+        {
+          "label": "How Much Contingency Does a Production Need?",
+          "url": "/insights/how-much-contingency-does-a-production-need/"
+        }
       ],
       "questions": [
         {
@@ -74,7 +95,10 @@
       "heading": "Knowing where this will land, and who gets told in time",
       "friction": "A report that takes three days to build is a report about last week. The question is not only whether the numbers are right, but whether they arrive while you can still do something about them.",
       "reading": [
-        { "label": "What Is a Production Cost Report?", "url": "/insights/what-is-a-production-cost-report/" }
+        {
+          "label": "What Is a Production Cost Report?",
+          "url": "/insights/what-is-a-production-cost-report/"
+        }
       ],
       "questions": [
         {
