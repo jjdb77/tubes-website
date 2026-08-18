@@ -316,11 +316,19 @@ if (hcForms.length) {
 
   async function post(payload) {
     const body = new URLSearchParams(payload);
-    const res = await fetch("/api/health-check", {
-      method: "POST",
-      body,
-      headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
-    });
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), 12000);
+    let res;
+    try {
+      res = await fetch("/api/health-check", {
+        method: "POST",
+        body,
+        signal: stop.signal,
+        headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
+      });
+    } finally {
+      clearTimeout(timer);
+    }
     let data = {};
     try { data = await res.json(); } catch { /* geen JSON terug */ }
     if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
@@ -350,9 +358,6 @@ if (hcForms.length) {
       const button = form.querySelector(".hc-step:not([hidden]) .hc-submit");
       const data = new FormData(form);
 
-      // Honeypot: alleen bots vullen dit onzichtbare veld in.
-      if (String(data.get("company_website") || "").trim()) return;
-
       // ---- Stap 1: alleen het e-mailadres ----
       if (state.step === 1) {
         const email = String(data.get("email") || "").trim();
@@ -366,10 +371,15 @@ if (hcForms.length) {
           track("health-check-email-entered");
         }
 
-        button.disabled = true;
+        if (button) button.disabled = true;
         setStatus(form, "One moment…");
         try {
-          const result = await post({ stage: "email", email, page: location.pathname });
+          const result = await post({
+            stage: "email",
+            email,
+            company_website: String(data.get("company_website") || ""),
+            page: location.pathname
+          });
           state.leadId = result.id || "";
           track("health-check-email-captured");
         } catch (err) {
@@ -378,7 +388,7 @@ if (hcForms.length) {
           // wat niet is aangekomen, want stap 2 is nog geen bevestiging.
           state.leadId = "";
         }
-        button.disabled = false;
+        if (button) button.disabled = false;
         showStep(2);
         track("health-check-assessment-started");
         const name = form.querySelector('input[name="name"]');
@@ -409,13 +419,14 @@ if (hcForms.length) {
       }
       companyInput.removeAttribute("aria-invalid");
 
-      button.disabled = true;
+      if (button) button.disabled = true;
       setStatus(form, "Sending your request…");
       try {
         await post({
           stage: "complete",
           lead_id: state.leadId,
           email: state.email,
+          company_website: String(data.get("company_website") || ""),
           name,
           company,
           role: String(data.get("role") || "").trim(),
@@ -431,7 +442,7 @@ if (hcForms.length) {
           "Something went wrong and your request was not sent. Please try again, or email us at contact@tubes.media.",
           "error"
         );
-        button.disabled = false;
+        if (button) button.disabled = false;
       }
     });
   }

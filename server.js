@@ -94,10 +94,11 @@ app.post("/api/contact", (req, res) => {
 
   const b = req.body || {};
 
-  // Honeypot: echte bezoekers vullen dit onzichtbare veld nooit in
-  if (b.company_website) {
-    return res.json({ ok: true });
-  }
+  // Honeypot: dit veld staat op display:none, dus alleen bots vullen het in.
+  // We gooien zo'n bericht niet weg maar merken het: een wachtwoordmanager die
+  // het tóch invult mag nooit een echte aanvraag laten verdwijnen. Op /beheer
+  // staan gemarkeerde berichten apart.
+  const flagged = Boolean(String(b.company_website || "").trim());
 
   const first = String(b.first_name || "").trim().slice(0, 100);
   const last = String(b.last_name || "").trim().slice(0, 100);
@@ -118,6 +119,7 @@ app.post("/api/contact", (req, res) => {
     phone,
     message,
     page: String(b.page || "").slice(0, 200),
+    ...(flagged ? { spam: true } : {}),
   };
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true });
@@ -153,10 +155,8 @@ app.post("/api/health-check", (req, res) => {
 
   const b = req.body || {};
 
-  // Honeypot: echte bezoekers vullen dit onzichtbare veld nooit in
-  if (b.company_website) {
-    return res.json({ ok: true, id: "" });
-  }
+  // Zie het contactformulier: markeren, niet weggooien.
+  const flagged = Boolean(String(b.company_website || "").trim());
 
   const email = String(b.email || "").trim().slice(0, 200);
   if (!EMAIL_RE.test(email)) {
@@ -172,6 +172,7 @@ app.post("/api/health-check", (req, res) => {
     email,
     free_email: FREE_EMAIL_DOMAINS.has(email.split("@")[1].toLowerCase()),
     page: String(b.page || "").slice(0, 200),
+    ...(flagged ? { spam: true } : {}),
   };
 
   if (stage === "complete") {
@@ -256,7 +257,7 @@ function contactCard(s) {
   return `<article class="msg">
         <header><strong>${esc(s.first_name)} ${esc(s.last_name)}</strong>
           <span>${stamp(s.at)}</span></header>
-        <p class="meta"><a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
+        <p class="meta">${s.spam ? '<span class="tag tag-warn">als spam gemarkeerd</span> ' : ""}<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
         <p class="body">${esc(s.message)}</p>
       </article>`;
 }
@@ -280,7 +281,7 @@ function healthCheckCard(s) {
           <span>${stamp(s.at)}</span></header>
         <p class="meta">
           <span class="tag${partial ? " tag-open" : ""}">${partial ? "Health Check &middot; alleen e-mail (stap 1)" : "Health Check-aanvraag"}</span>
-          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}
+          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}
         </p>
         ${details ? `<p class="body">${details}</p>` : ""}
       </article>`;
@@ -288,7 +289,10 @@ function healthCheckCard(s) {
 
 app.get("/beheer", (req, res) => {
   if (!checkAuth(req, res)) return;
-  const items = readSubmissions();
+  const all = readSubmissions();
+  const showSpam = req.query.spam === "1";
+  const spamCount = all.filter((s) => s.spam).length;
+  const items = showSpam ? all : all.filter((s) => !s.spam);
   const healthChecks = items.filter((s) => s.kind === "health_check" && s.stage === "complete").length;
   const rows = items
     .map((s) => (s.kind === "health_check" ? healthCheckCard(s) : contactCard(s)))
@@ -318,6 +322,7 @@ app.get("/beheer", (req, res) => {
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
+${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
 </div></body></html>`);
 });
 

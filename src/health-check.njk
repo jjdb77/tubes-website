@@ -34,7 +34,7 @@ permalink: /production-finance-health-check/
 
 {%- macro healthCheckForm(id, submitLabel) -%}
 <form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
-  <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+  <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
 
   <div class="hc-step hc-step-1" data-hc-step="1">
     <label class="hc-field" for="{{ id }}-email">Business email address

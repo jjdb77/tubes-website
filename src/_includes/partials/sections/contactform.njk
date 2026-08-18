@@ -4,7 +4,7 @@
       {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
       {% if section.text %}<div class="rich-text">{{ section.text | md | safe }}</div>{% endif %}
       <form class="contact-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
-        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
         <div class="form-row">
           <label>First name <span class="req">(required)</span>
             <input type="text" name="first_name" autocomplete="given-name" required>
