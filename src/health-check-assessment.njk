@@ -15,8 +15,11 @@ noindex: true
     vanzelf mee. Let op: de `key` van een vraag is de veldnaam in de opslag,
     dus die verander je niet meer nadat er antwoorden binnen zijn.
 
-    Opzet: één stap per thema, en het rapport als laatste stap. Rechts loopt
-    de toelichting mee met de stap waar je bent.
+    Opzet: alle vragen staan in beeld, gegroepeerd in drie genummerde thema's.
+    Het rapport is de vierde en laatste stap en komt in de plaats van de
+    vragen. De balk bovenaan heeft vier segmenten: eentje per thema, dat
+    invult zodra dat thema af is, en eentje voor het rapport. Rechts loopt de
+    toelichting mee met het thema waar je bent.
 
     Binnenkomen kan op twee manieren:
       ?ref=<id>  vanaf het bedankscherm; dan weten we al wie het is.
@@ -61,9 +64,10 @@ noindex: true
               <p class="hc-help">So we can match your answers to your Health Check request.</p>
             </div>
 
+            <div data-hc-questions>
             {%- for step in steps %}
-            <section class="hc-block" data-hc-block="{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
-              <p class="hc-block-meta"><span class="hc-block-num">{{ loop.index }}</span> Step {{ loop.index }} of {{ steps | length + 1 }} &middot; {{ step.theme }}</p>
+            <section class="hc-block" data-hc-block="{{ loop.index }}">
+              <p class="hc-block-meta"><span class="hc-block-num">{{ loop.index }}</span> {{ step.theme }}</p>
               <h2 class="hc-block-heading">{{ step.heading }}</h2>
 
               {%- set reading = step.reading[0] -%}
@@ -86,24 +90,15 @@ noindex: true
               </fieldset>
               {%- endfor %}
 
-              {%- if loop.last %}
-              <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
-                <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
-              </label>
-              {%- endif %}
-
-              <div class="hc-step-actions">
-                {%- if loop.last %}
-                <button type="submit" class="button button-primary hc-submit">See my summary</button>
-                {%- else %}
-                <button type="button" class="button button-primary hc-next" data-hc-next="{{ loop.index + 1 }}">Continue</button>
-                {%- endif %}
-                {%- if not loop.first %}
-                <button type="button" class="hc-back" data-hc-back="{{ loop.index - 1 }}">Back</button>
-                {%- endif %}
-              </div>
             </section>
             {%- endfor %}
+
+            <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
+              <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
+            </label>
+
+            <button type="submit" class="button button-primary hc-submit">See my summary</button>
+            </div>
           </div>
 
           <p class="form-status hc-status" role="status" aria-live="polite"></p>
