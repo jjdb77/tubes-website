@@ -1,0 +1,283 @@
+---
+layout: layout.njk
+title: Free Production Finance Health Check
+seo_title: "Free Production Finance Health Check | Tubes"
+description: "A free 45 minute review of how your production company handles budgets, actuals, forecasting, approvals and reporting. Practical findings, no sales pitch."
+permalink: /production-finance-health-check/
+---
+{#- Conversiepagina: lead magnet "Production Finance Health Check".
+    Bewust géén CMS-secties maar één eigen template: de tweestapsvorm en het
+    assessment-beeld zijn te specifiek om in het sectiesysteem te passen.
+    Alle opmaak komt uit style.css (blok "Health Check"), de logica uit
+    site.js. Formulieren posten naar /api/health-check in server.js.
+
+    Let op: dit is geen softwarepagina. Tubes wordt pas ná de uitleg over de
+    Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
+
+{%- set improveOptions = [
+  "Budgeting",
+  "Budget vs actuals",
+  "Forecasting",
+  "Approvals",
+  "Reporting",
+  "Managing multiple productions",
+  "All of the above",
+  "Other"
+] -%}
+{%- set systemOptions = [
+  "Excel or spreadsheets",
+  "Existing production software",
+  "Accounting software",
+  "Combination of systems",
+  "Other"
+] -%}
+
+{%- macro healthCheckForm(id, submitLabel) -%}
+<form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
+  <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+
+  <div class="hc-step hc-step-1" data-hc-step="1">
+    <label class="hc-field" for="{{ id }}-email">Business email address
+      <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+    </label>
+    <p class="hc-help" id="{{ id }}-email-help">Where should we send your Health Check details?</p>
+    <button type="submit" class="button button-primary hc-submit">Start My Free Health Check</button>
+  </div>
+
+  <div class="hc-step hc-step-2" data-hc-step="2" hidden>
+    <p class="hc-step-note"><span class="hc-step-count">Step 2 of 2</span> A few details so we can prepare, then we will arrange a time.</p>
+
+    <div class="hc-field-row">
+      <label class="hc-field" for="{{ id }}-name">Name
+        <input type="text" id="{{ id }}-name" name="name" autocomplete="name" required>
+      </label>
+      <label class="hc-field" for="{{ id }}-company">Company
+        <input type="text" id="{{ id }}-company" name="company" autocomplete="organization" required>
+      </label>
+    </div>
+
+    <label class="hc-field" for="{{ id }}-role">Role <span class="hc-optional">(optional)</span>
+      <input type="text" id="{{ id }}-role" name="role" autocomplete="organization-title" placeholder="Line Producer, Head of Production, Financial Controller">
+    </label>
+
+    <fieldset class="hc-choice">
+      <legend>What would you most like to improve? <span class="hc-optional">(optional)</span></legend>
+      <div class="hc-choice-row">
+        {%- for option in improveOptions %}
+        <label class="hc-pill">
+          <input type="radio" name="improve" value="{{ option }}">
+          <span>{{ option }}</span>
+        </label>
+        {%- endfor %}
+      </div>
+    </fieldset>
+
+    <fieldset class="hc-choice">
+      <legend>How do you currently manage production finance? <span class="hc-optional">(optional)</span></legend>
+      <div class="hc-choice-row">
+        {%- for option in systemOptions %}
+        <label class="hc-pill">
+          <input type="radio" name="current_system" value="{{ option }}">
+          <span>{{ option }}</span>
+        </label>
+        {%- endfor %}
+      </div>
+    </fieldset>
+
+    <button type="submit" class="button button-primary hc-submit">{{ submitLabel }}</button>
+  </div>
+
+  <p class="form-status hc-status" role="status" aria-live="polite"></p>
+
+  <div class="hc-done" data-hc-done hidden>
+    <p class="hc-done-title">Thanks. Your Health Check request has been received.</p>
+    <p>We will be in touch shortly to arrange the session, and we will send two or three possible times.</p>
+    <p class="hc-done-note">In the meantime, our <a href="/insights/">production finance articles</a> cover a few of the questions that come up most often.</p>
+  </div>
+
+  <p class="hc-privacy">We use your details only to arrange and prepare your Health Check. We do not add you to a mailing list and we do not pass your details on. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
+</form>
+{%- endmacro -%}
+
+<section class="section section-hero hc-hero theme-light">
+  <div class="container hc-hero-grid">
+    <div class="hc-hero-text">
+      <span class="kicker">For film, television and production companies</span>
+      <h1>How healthy is your production finance process?</h1>
+      <p class="hc-lead">Get a free 45 minute session with a production finance specialist. We will look at how you currently manage budgets, actuals, forecasting, approvals and reporting, and identify opportunities to save time, improve visibility and reduce financial risk.</p>
+
+      <div class="hc-form-card">
+        {{ healthCheckForm("hc-form-top", "Request My Health Check") }}
+      </div>
+
+      <p class="hc-reassure"><strong>No obligation. No generic sales pitch. Just 45 minutes focused on your production.</strong></p>
+    </div>
+
+    <div class="hc-hero-visual">
+      {#- Geen nagebootste Tubes-schermafbeelding: dit is het assessment zelf.
+          De zes gebieden staan leeg, want er is nog niets beoordeeld. -#}
+      <div class="hc-scan" aria-labelledby="hc-scan-title">
+        <div class="hc-scan-head">
+          <div>
+            <span class="hc-scan-kicker">Assessment</span>
+            <h2 class="hc-scan-title" id="hc-scan-title">Production Finance Health Check</h2>
+          </div>
+          <span class="chip chip-blue">45 minutes</span>
+        </div>
+
+        <ol class="hc-scan-list">
+          <li><span class="hc-scan-num">01</span><span class="hc-scan-label">Budget structure and version control</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          <li><span class="hc-scan-num">02</span><span class="hc-scan-label">Budget to production handover</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          <li><span class="hc-scan-num">03</span><span class="hc-scan-label">Actuals and reconciliation</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          <li><span class="hc-scan-num">04</span><span class="hc-scan-label">Forecasting</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          <li><span class="hc-scan-num">05</span><span class="hc-scan-label">Approvals and controls</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          <li><span class="hc-scan-num">06</span><span class="hc-scan-label">Reporting and visibility</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+        </ol>
+
+        <div class="hc-scan-foot">
+          <p class="hc-scan-key">Each area gets one of three labels</p>
+          <ul class="hc-scan-chips">
+            <li class="chip chip-mint">Strong</li>
+            <li class="chip chip-amber">Could improve</li>
+            <li class="chip chip-lavender">Opportunity</li>
+          </ul>
+          <p class="hc-scan-note">No score out of ten. We talk through each area with you and write down what we find.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-white">
+  <div class="container hc-narrow">
+    <h2>We look at how production finance actually works in your organisation</h2>
+    <p class="hc-lead">Every production company works differently. We start by understanding how budgets, costs, forecasts, approvals and reporting currently move through your organisation.</p>
+    <ul class="hc-topics">
+      <li>Budgeting</li>
+      <li>Actual spend</li>
+      <li>Budget versus actuals</li>
+      <li>Forecasting</li>
+      <li>Approvals</li>
+      <li>Reporting</li>
+      <li>Multiple productions</li>
+      <li>Financial visibility</li>
+      <li>Manual work and reconciliation</li>
+    </ul>
+    <p class="hc-aside-note">One question we always ask: how do you know today where a running production will end up financially? The answer usually says more about a process than any list of tools.</p>
+  </div>
+</section>
+
+<section class="section theme-light">
+  <div class="container">
+    <h2 class="section-heading">You leave with a clearer picture of what can be improved</h2>
+    <p class="section-intro hc-lead">During the session we note what we see. Afterwards you get a short written summary: the three main opportunities, where unnecessary manual work or financial risk sits, and which improvement is likely to have the most effect first.</p>
+    <div class="cards-grid cards-3">
+      <div class="card">
+        <h3>Reduce manual work</h3>
+        <p>Identify processes involving unnecessary spreadsheets, duplication or reconciliation.</p>
+      </div>
+      <div class="card">
+        <h3>Improve financial visibility</h3>
+        <p>See where budget, actual and forecast information could be easier to access and understand.</p>
+      </div>
+      <div class="card">
+        <h3>Improve control</h3>
+        <p>Identify opportunities to improve approvals, budget versions and financial processes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-white">
+  <div class="container">
+    <h2 class="section-heading">How it works</h2>
+    <ol class="hc-steps">
+      <li>
+        <span class="hc-steps-num">1</span>
+        <h3>Tell us a little about your process</h3>
+        <p>Complete the short form so we understand what you want to improve.</p>
+      </li>
+      <li>
+        <span class="hc-steps-num">2</span>
+        <h3>45 minute Health Check</h3>
+        <p>We talk through how production finance currently works within your organisation and identify areas of friction, manual work or risk.</p>
+      </li>
+      <li>
+        <span class="hc-steps-num">3</span>
+        <h3>Receive your findings</h3>
+        <p>We summarise the main opportunities and practical improvements we identified. If Tubes could help with any of these areas, we can show you how. There is no obligation to continue.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section theme-teal">
+  <div class="container">
+    <h2 class="section-heading">Areas we assess</h2>
+    <p class="section-intro hc-lead">Six areas, worked through in order. The point is not to grade you, but to see where financial control is currently held together by hand.</p>
+    <div class="hc-areas">
+      <article class="hc-area">
+        <span class="hc-area-num">01</span>
+        <h3>Budget structure and version control</h3>
+        <p>How budgets are built, how changes are made, and how you know which version is the current one.</p>
+      </article>
+      <article class="hc-area">
+        <span class="hc-area-num">02</span>
+        <h3>Budget to production handover</h3>
+        <p>What happens after a budget is approved, and how the people spending the money get a working budget they can use.</p>
+      </article>
+      <article class="hc-area">
+        <span class="hc-area-num">03</span>
+        <h3>Actuals and reconciliation</h3>
+        <p>How real costs come in, how they are coded, and how much manual work it takes to match them back to the budget.</p>
+      </article>
+      <article class="hc-area">
+        <span class="hc-area-num">04</span>
+        <h3>Forecasting</h3>
+        <p>How commitments, costs to date and remaining costs add up to an expected final cost, and how often that picture is refreshed.</p>
+      </article>
+      <article class="hc-area">
+        <span class="hc-area-num">05</span>
+        <h3>Approvals and controls</h3>
+        <p>Who may commit spend, who may change a budget, and how that is recorded.</p>
+      </article>
+      <article class="hc-area">
+        <span class="hc-area-num">06</span>
+        <h3>Reporting and visibility</h3>
+        <p>Who gets reliable financial information, in what form, and how long it takes to produce.</p>
+      </article>
+    </div>
+    <p class="hc-areas-legend">We label each area <span class="chip chip-mint">Strong</span> <span class="chip chip-amber">Could improve</span> <span class="chip chip-lavender">Opportunity</span> based on what you tell us. We never publish company names or findings.</p>
+  </div>
+</section>
+
+<section class="section theme-white">
+  <div class="container hc-narrow">
+    <h2>And if we see somewhere Tubes could help, we will show you</h2>
+    <p>Tubes is production finance software designed to bring budgets, actuals, forecasting, approvals and reporting together.</p>
+    <p>During the Health Check we do not give a standard software demonstration. We first understand your process. If Tubes can solve one of the problems we identify, we can show you the relevant part of the platform.</p>
+    <p class="hc-tubes-link"><a href="/platform/">Read about the platform</a> if you would rather look first.</p>
+  </div>
+</section>
+
+<section class="section section-cta hc-final" id="hc-final">
+  <div class="container">
+    <div class="cta-inner hc-final-inner">
+      <div class="hc-final-text">
+        <h2>How healthy is your production finance process?</h2>
+        <p class="hc-lead">Spend 45 minutes with us and get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
+        <p class="hc-reassure"><strong>Free. No obligation. No generic sales pitch.</strong></p>
+      </div>
+      <div class="hc-form-card">
+        {{ healthCheckForm("hc-form-end", "Request My Health Check") }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hc-sticky" id="hc-sticky" hidden>
+  <div class="hc-sticky-inner">
+    <p>Free 45 minute Health Check</p>
+    <a class="button button-primary" href="#hc-form-end" data-hc-sticky-cta>Start My Free Health Check</a>
+  </div>
+</div>

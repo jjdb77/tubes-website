@@ -75,17 +75,22 @@ app.use(express.urlencoded({ extended: false, limit: "64kb" }));
 
 const recent = new Map(); // simpele rate-limit per IP
 
-app.post("/api/contact", (req, res) => {
+// Max <max> inzendingen per 10 minuten per IP. De Health Check stuurt twee
+// keer (stap 1 en stap 2) en krijgt daarom een ruimere marge.
+function rateLimited(req, max) {
   const ip = req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.ip;
-
-  // Max 5 berichten per 10 minuten per IP
   const now = Date.now();
   const hits = (recent.get(ip) || []).filter((t) => now - t < 10 * 60 * 1000);
-  if (hits.length >= 5) {
-    return res.status(429).json({ ok: false, error: "Too many requests" });
-  }
+  if (hits.length >= max) return true;
   hits.push(now);
   recent.set(ip, hits);
+  return false;
+}
+
+app.post("/api/contact", (req, res) => {
+  if (rateLimited(req, 5)) {
+    return res.status(429).json({ ok: false, error: "Too many requests" });
+  }
 
   const b = req.body || {};
 
@@ -116,6 +121,75 @@ app.post("/api/contact", (req, res) => {
   };
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true });
+});
+
+// ---------- Health Check-aanvragen ----------
+//
+// De pagina /production-finance-health-check/ vraagt in twee stappen. Stap 1
+// stuurt alleen het e-mailadres (stage "email"), stap 2 de rest (stage
+// "complete") met lead_id erbij. Zo blijft een half ingevulde aanvraag toch
+// zichtbaar in de trechter, en telt hij niet dubbel: /beheer laat de regel van
+// stap 1 weg zodra de bijbehorende stap 2 binnen is.
+//
+// Opslag: hetzelfde JSONL-bestand op de volume als het contactformulier, geen
+// tweede systeem ernaast.
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+
+// Gratis e-maildomeinen blokkeren we niet: veel producenten werken zelfstandig
+// en gebruiken hun eigen adres. We markeren ze alleen, zodat op /beheer te zien
+// is welke aanvragen van een bedrijfsdomein komen.
+const FREE_EMAIL_DOMAINS = new Set([
+  "gmail.com", "googlemail.com", "hotmail.com", "hotmail.co.uk", "outlook.com",
+  "live.com", "live.nl", "yahoo.com", "yahoo.co.uk", "icloud.com", "me.com",
+  "aol.com", "proton.me", "protonmail.com", "gmx.com", "gmx.net", "msn.com",
+  "ziggo.nl", "kpnmail.nl", "telfort.nl", "home.nl", "planet.nl", "xs4all.nl",
+]);
+
+app.post("/api/health-check", (req, res) => {
+  if (rateLimited(req, 12)) {
+    return res.status(429).json({ ok: false, error: "Too many requests" });
+  }
+
+  const b = req.body || {};
+
+  // Honeypot: echte bezoekers vullen dit onzichtbare veld nooit in
+  if (b.company_website) {
+    return res.json({ ok: true, id: "" });
+  }
+
+  const email = String(b.email || "").trim().slice(0, 200);
+  if (!EMAIL_RE.test(email)) {
+    return res.status(400).json({ ok: false, error: "Invalid email" });
+  }
+
+  const stage = b.stage === "complete" ? "complete" : "email";
+  const entry = {
+    id: crypto.randomUUID(),
+    at: new Date().toISOString(),
+    kind: "health_check",
+    stage,
+    email,
+    free_email: FREE_EMAIL_DOMAINS.has(email.split("@")[1].toLowerCase()),
+    page: String(b.page || "").slice(0, 200),
+  };
+
+  if (stage === "complete") {
+    const name = String(b.name || "").trim().slice(0, 120);
+    const company = String(b.company || "").trim().slice(0, 160);
+    if (!name || !company) {
+      return res.status(400).json({ ok: false, error: "Missing fields" });
+    }
+    entry.lead_id = String(b.lead_id || "").slice(0, 64);
+    entry.name = name;
+    entry.company = company;
+    entry.role = String(b.role || "").trim().slice(0, 120);
+    entry.improve = String(b.improve || "").trim().slice(0, 120);
+    entry.current_system = String(b.current_system || "").trim().slice(0, 120);
+  }
+
+  fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
+  res.json({ ok: true, id: entry.id });
 });
 
 // ---------- MMG-pitchpagina's (Basic Auth) ----------
@@ -158,31 +232,66 @@ function checkAuth(req, res) {
 
 function readSubmissions() {
   if (!fs.existsSync(DATA_FILE)) return [];
-  return fs
+  const all = fs
     .readFileSync(DATA_FILE, "utf8")
     .split("\n")
     .filter(Boolean)
     .map((line) => {
       try { return JSON.parse(line); } catch { return null; }
     })
-    .filter(Boolean)
-    .reverse();
+    .filter(Boolean);
+
+  // Een afgeronde Health Check verwijst met lead_id naar de regel van stap 1.
+  // Die eerste regel laten we hier weg, anders staat dezelfde aanvraag er
+  // twee keer. In het bestand blijven allebei staan (trechterdata).
+  const superseded = new Set(all.map((s) => s.lead_id).filter(Boolean));
+  return all.filter((s) => !superseded.has(s.id)).reverse();
 }
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+const stamp = (at) => new Date(at).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" });
+
+function contactCard(s) {
+  return `<article class="msg">
+        <header><strong>${esc(s.first_name)} ${esc(s.last_name)}</strong>
+          <span>${stamp(s.at)}</span></header>
+        <p class="meta"><a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
+        <p class="body">${esc(s.message)}</p>
+      </article>`;
+}
+
+// Health Check-aanvraag. Stap 1 (alleen een e-mailadres) krijgt een eigen
+// label: dat is trechterdata, nog geen complete aanvraag.
+function healthCheckCard(s) {
+  const partial = s.stage !== "complete";
+  const details = [
+    ["Bedrijf", s.company],
+    ["Rol", s.role],
+    ["Wil verbeteren", s.improve],
+    ["Werkt nu met", s.current_system],
+  ]
+    .filter(([, value]) => value)
+    .map(([label, value]) => `<span><strong>${esc(label)}:</strong> ${esc(value)}</span>`)
+    .join("<br>");
+
+  return `<article class="msg${partial ? " msg-partial" : ""}">
+        <header><strong>${esc(s.name || s.email)}</strong>
+          <span>${stamp(s.at)}</span></header>
+        <p class="meta">
+          <span class="tag${partial ? " tag-open" : ""}">${partial ? "Health Check &middot; alleen e-mail (stap 1)" : "Health Check-aanvraag"}</span>
+          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}
+        </p>
+        ${details ? `<p class="body">${details}</p>` : ""}
+      </article>`;
+}
+
 app.get("/beheer", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
+  const healthChecks = items.filter((s) => s.kind === "health_check" && s.stage === "complete").length;
   const rows = items
-    .map(
-      (s) => `<article class="msg">
-        <header><strong>${esc(s.first_name)} ${esc(s.last_name)}</strong>
-          <span>${new Date(s.at).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" })}</span></header>
-        <p class="meta"><a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
-        <p class="body">${esc(s.message)}</p>
-      </article>`
-    )
+    .map((s) => (s.kind === "health_check" ? healthCheckCard(s) : contactCard(s)))
     .join("\n");
   res.send(`<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -200,9 +309,14 @@ app.get("/beheer", (req, res) => {
   .meta a{color:#0E8C77}
   .body{white-space:pre-wrap;margin:.6em 0 0;color:#1A1A1A}
   .empty{background:#fff;border:1px dashed #E3E5E9;border-radius:16px;padding:40px;text-align:center;color:#8B8E94}
+  .msg-partial{border-style:dashed;background:#FCFCFD}
+  .tag{display:inline-block;font-size:.78rem;font-weight:700;padding:3px 9px;border-radius:8px;background:#DBF3EE;color:#0E8C77;margin-right:8px}
+  .tag-open{background:#FBF0CE;color:#977414}
+  .tag-warn{background:#F6E7E9;color:#C23B4B;margin:0 0 0 6px}
+  .body span strong{color:#5C5750;font-weight:600}
 </style></head><body><div class="wrap">
 <h1>Berichten</h1>
-<p class="count">${items.length} bericht${items.length === 1 ? "" : "en"} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
+<p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
 </div></body></html>`);
 });
@@ -211,8 +325,19 @@ app.get("/beheer/export.csv", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
   const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
-  const csv = ["datum,voornaam,achternaam,email,telefoon,bericht,pagina"]
-    .concat(items.map((s) => [s.at, s.first_name, s.last_name, s.email, s.phone, s.message, s.page].map(q).join(",")))
+  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,wil verbeteren,werkt nu met,bericht,pagina"]
+    .concat(
+      items.map((s) => {
+        const isHc = s.kind === "health_check";
+        const soort = isHc ? (s.stage === "complete" ? "health check" : "health check (alleen e-mail)") : "contact";
+        const naam = isHc ? s.name || "" : `${s.first_name || ""} ${s.last_name || ""}`.trim();
+        return [
+          s.at, soort, naam, s.email, s.phone || "",
+          s.company || "", s.role || "", s.improve || "", s.current_system || "",
+          s.message || "", s.page || "",
+        ].map(q).join(",");
+      })
+    )
     .join("\r\n");
   res.set("Content-Type", "text/csv; charset=utf-8");
   res.set("Content-Disposition", "attachment; filename=tubes-berichten.csv");

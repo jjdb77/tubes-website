@@ -78,6 +78,10 @@
       "url": "/academy/"
     },
     {
+      "label": "Free Health Check",
+      "url": "/production-finance-health-check/"
+    },
+    {
       "label": "Contact",
       "url": "/contact/"
     }

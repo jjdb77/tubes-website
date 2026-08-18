@@ -33,6 +33,18 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Doel = `settings.booking_url` + slug (per plan te overrulen via een eigen `booking_url`-veld in `booking_plans`, zie book-a-call.njk: `boeking.booking_url or settings.booking_url`). Producer Pro: `tubes-producer-pro` op `https://4relations.appconnected.nl/boek/joachim`. Enterprise: `tubes-enterprise` op de eigen basis `https://4relations.appconnected.nl/boek/joachim@appsolutions.nl` (15-8-2026 gecorrigeerd, was `tubes-enterprice` op de gedeelde basis).
 - booking_url (Producer Pro) = https://4relations.appconnected.nl/boek/joachim (wordt ooit afspraak.tubes.media).
 
+## Health Check-landingspagina
+
+- `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een sessie van 45 minuten over budgetten, actuals, forecasting, approvals en reporting. Het doel van de pagina is één ding: het zakelijke e-mailadres.
+- Bewust **geen CMS-secties**. Het tweestapsformulier en het assessment-beeld passen niet in het sectiesysteem, dus tekst wijzig je in het bestand zelf en niet in Sveltia. Opmaak staat onderaan `style.css` (blok "Health Check", alle klassen beginnen met `hc-`), de logica onderaan `site.js`.
+- **Volgorde is de hele truc**: eerst de waarde van de Health Check, Tubes pas ná "Areas we assess". Niet omdraaien, en het Tubes-blok niet laten uitgroeien tot een productpitch.
+- De zes beoordeelde gebieden zijn: budgetstructuur en versiebeheer, budget naar productie (wat er ná goedkeuring gebeurt), actuals en reconciliatie, forecasting, approvals en controls, reporting en zichtbaarheid. Labels zijn Strong / Could improve / Opportunity; **geen cijfer of score**, dat zou een uitslag suggereren die er niet is.
+- Het formulier post twee keer naar **/api/health-check**: stap 1 alleen het e-mailadres, stap 2 de rest met `lead_id` erbij. Zelfde JSONL-opslag en dezelfde beheerpagina als het contactformulier. /beheer laat de regel van stap 1 weg zodra stap 2 binnen is, en zet er een label bij. Gratis e-maildomeinen (gmail e.d.) worden niet geweigerd maar gemarkeerd.
+- Mislukt stap 1 (server even weg), dan gaat de bezoeker gewoon door naar stap 2 en gaat het e-mailadres daar alsnog mee. Er wordt nooit een bevestiging getoond zonder dat de aanvraag echt is opgeslagen.
+- Gebeurtenissen voor de trechter: `health-check-page-viewed`, `-email-entered`, `-email-captured`, `-assessment-started`, `-requested`. Die gaan naar GoatCounter als dat aan staat en anders nergens heen; er is bewust geen nieuw analyticsplatform bijgekomen.
+- Links ernaartoe: de footer op elke pagina, plus een tweede heroknop op Home en Contact.
+- Er is **geen aparte privacyverklaring**; het formulier verwijst naar /compliance/. Komt er een echte privacy policy, dan moet die link mee.
+
 ## Artikelen (Insights)
 
 - `src/content/insights/*.md` met `layout: article.njk`, overzicht op `/insights/` (`src/insights.njk`). In het CMS: collectie "Artikelen (Insights)".
@@ -89,6 +101,8 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
+- [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
+- [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
 - [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's
 - [x] Bing Webmaster Tools: www.tubes.media stond er al (geverifieerd, naast www.appsolutions.nl); sitemap ingediend op 1-8-2026. Telt dubbel omdat de zoekfunctie van ChatGPT op de Bing-index draait.
 - [ ] Optioneel: IndexNow aanzetten (staat in Bing Webmaster Tools). Meldt nieuwe/gewijzigde URL's direct aan Bing in plaats van te wachten op een crawl; nuttig omdat er vaak gedeployd wordt. Vergt een sleutelbestand op de site plus een ping bij deploy.

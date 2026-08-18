@@ -1075,3 +1075,304 @@ a:hover { color: var(--action); }
 }
 .viewfinder::before { top: 0; left: 0; border-top-width: 2.5px; border-left-width: 2.5px; border-top-left-radius: 6px; }
 .viewfinder::after { bottom: 0; right: 0; border-bottom-width: 2.5px; border-right-width: 2.5px; border-bottom-right-radius: 6px; }
+
+/* ===================================================================
+   Health Check (/production-finance-health-check/)
+   Conversiepagina met tweestapsformulier. Zelfde tokens, kaarten en
+   knoppen als de rest van de site; alleen het assessment-beeld en het
+   formulier zijn nieuw. Alle klassen beginnen met hc- zodat ze nooit
+   met de sectie-opmaak botsen.
+   =================================================================== */
+
+.hc-hero { padding-bottom: clamp(48px, 7vw, 96px); }
+
+.hc-hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(32px, 5vw, 72px); align-items: start;
+}
+
+.hc-hero h1 { font-size: clamp(2.1rem, 3.9vw, 3.2rem); max-width: 15ch; }
+
+.hc-lead { font-size: 1.08rem; max-width: 60ch; }
+.hc-hero .hc-lead { margin-bottom: 28px; }
+
+.hc-reassure { margin-top: 16px; font-size: 0.95rem; color: var(--ink-soft); max-width: 46ch; }
+.hc-reassure strong { color: var(--ink); font-weight: 700; }
+
+/* ---------- Formulierkaart ---------- */
+
+.hc-form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(24px, 3vw, 32px);
+}
+
+.hc-field { display: block; font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.hc-optional { font-weight: 400; color: var(--muted); font-size: 0.85em; }
+
+.hc-field input {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 13px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field input::placeholder { color: var(--muted); font-size: 0.94rem; }
+.hc-field input:focus {
+  outline: none;
+  border-color: var(--action);
+  box-shadow: 0 0 0 3px var(--action-soft);
+}
+.hc-field input[aria-invalid="true"] { border-color: #C23B4B; }
+.hc-field input[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px rgba(194, 59, 75, 0.16); }
+
+.hc-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.hc-help { margin: -6px 0 18px; font-size: 0.9rem; color: var(--muted); }
+
+.hc-submit { width: 100%; text-align: center; padding: 15px 26px; font-size: 1rem; }
+
+.hc-step-note { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 20px; }
+.hc-step-count {
+  display: inline-block; margin-right: 8px;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--action-soft-ink); background: var(--action-soft);
+  border-radius: var(--radius-chip); padding: 4px 8px;
+}
+
+/* Keuzevelden als chips: één tik op mobiel, en het assessment-gevoel
+   van de statuschips uit de app. */
+.hc-choice { border: 0; padding: 0; margin: 0 0 22px; }
+.hc-choice legend { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; padding: 0; }
+.hc-choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.hc-pill { position: relative; }
+.hc-pill input {
+  position: absolute; opacity: 0;
+  width: 100%; height: 100%; left: 0; top: 0; margin: 0; cursor: pointer;
+}
+.hc-pill span {
+  display: inline-block;
+  font-size: 0.86rem; font-weight: 600; line-height: 1.2;
+  color: var(--ink-soft);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  padding: 9px 13px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.hc-pill:hover span { border-color: var(--action); color: var(--action-soft-ink); }
+.hc-pill input:checked + span {
+  background: var(--action-soft); color: var(--action-soft-ink);
+  border-color: var(--action); font-weight: 700;
+}
+.hc-pill input:focus-visible + span { outline: 3px solid var(--action); outline-offset: 2px; }
+
+.hc-status { margin-top: 14px; min-height: 0; }
+.hc-status:empty { margin-top: 0; }
+
+.hc-done-title { font-size: 1.15rem; font-weight: 800; color: var(--ink); line-height: 1.3; }
+.hc-done-note { font-size: 0.92rem; color: var(--muted); margin-top: 14px; }
+.hc-done-note a { color: var(--action-soft-ink); }
+
+.hc-privacy {
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--divider);
+  font-size: 0.82rem; line-height: 1.55; color: var(--muted);
+}
+.hc-privacy a { color: var(--muted); text-decoration: underline; }
+.hc-privacy a:hover { color: var(--action-soft-ink); }
+
+/* ---------- Assessment-beeld (geen nagemaakt product-scherm) ---------- */
+
+.hc-scan {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(22px, 2.6vw, 30px);
+}
+
+.hc-scan-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.hc-scan-kicker {
+  display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--muted); margin-bottom: 6px;
+}
+.hc-scan-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+.hc-scan-head .chip { flex: none; }
+
+.hc-scan-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-scan-list li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center; gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.hc-scan-num {
+  font-size: 0.72rem; font-weight: 700; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  background: var(--bg); border-radius: var(--radius-chip);
+  padding: 5px 7px;
+}
+.hc-scan-label { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+
+/* Lege meter: er is nog niets beoordeeld. Bewust geen ingevulde score,
+   dat zou een verzonnen uitslag suggereren. */
+.hc-scan-meter { display: inline-flex; gap: 5px; }
+.hc-scan-meter i {
+  display: block; width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: transparent;
+}
+
+.hc-scan-foot { margin-top: 20px; }
+.hc-scan-key { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 0; }
+.hc-scan-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 10px 0 0; padding: 0; }
+.hc-scan-note { margin-top: 14px; font-size: 0.86rem; color: var(--muted); }
+
+/* ---------- Wat we bekijken ---------- */
+
+/* Smalle tekstkolom, maar wel links uitgelijnd zoals de rest van de site:
+   de container blijft dus breed, alleen de inhoud is smal. */
+.hc-narrow > * { max-width: 780px; }
+.hc-narrow h2 { max-width: 20ch; }
+
+.hc-topics {
+  list-style: none; margin: 30px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 24px;
+}
+.hc-topics li { position: relative; padding-left: 24px; font-size: 0.97rem; color: var(--ink); font-weight: 600; }
+.hc-topics li::before {
+  content: ""; position: absolute; left: 0; top: 0.55em;
+  width: 11px; height: 6px;
+  border-left: 2.5px solid var(--action);
+  border-bottom: 2.5px solid var(--action);
+  transform: rotate(-45deg);
+}
+
+.hc-aside-note {
+  margin-top: 32px; padding: 20px 24px;
+  background: var(--bg); border-left: 3px solid var(--gold);
+  border-radius: var(--radius-wash);
+  font-size: 0.98rem; color: var(--ink-soft);
+}
+
+/* ---------- Hoe het werkt ---------- */
+
+.hc-steps {
+  list-style: none; margin: 40px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;
+}
+.hc-steps li { position: relative; padding-top: 4px; }
+.hc-steps h3 { font-size: 1.12rem; margin: 0 0 0.5em; }
+.hc-steps p { font-size: 0.97rem; }
+.hc-steps-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--action-soft); color: var(--action-soft-ink);
+  font-weight: 800; font-size: 1.05rem;
+}
+
+/* ---------- Gebieden ---------- */
+
+.hc-areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+.hc-area {
+  background: var(--surface);
+  border: 1px solid rgba(45, 108, 196, 0.16);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 26px 26px 28px;
+}
+.hc-area-num {
+  display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--status-blue-ink); margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.hc-area h3 { font-size: 1.05rem; margin-bottom: 0.5em; }
+.hc-area p { font-size: 0.94rem; margin: 0; }
+
+.hc-areas-legend {
+  margin-top: 28px; font-size: 0.92rem; color: var(--ink-soft);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.hc-areas-legend .chip { vertical-align: middle; }
+
+.hc-tubes-link { margin-top: 1.4em; font-size: 0.95rem; }
+
+/* ---------- Slot-CTA ---------- */
+
+/* Slot-CTA: het donkere inzetpaneel dat de site al gebruikt, met de witte
+   formulierkaart erin. Zo is de laatste kans om te starten niet te missen. */
+.hc-final-inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 64px); align-items: center; text-align: left;
+}
+.hc-final-text h2 { max-width: 16ch; }
+.hc-final-inner .hc-lead,
+.hc-final-inner .hc-reassure { color: rgba(231, 230, 227, 0.82); }
+.hc-final-inner .hc-reassure strong { color: #fff; }
+.hc-final-inner .hc-form-card { position: relative; z-index: 1; box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.5); }
+
+/* Bij de sprong naar stap 2 wordt het formulier hoger; JS scrollt het dan
+   terug in beeld en houdt de plakkende header vrij. */
+.hc-form { scroll-margin-top: 100px; }
+
+/* ---------- Vaste knop op mobiel ---------- */
+
+.hc-sticky {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 20px -12px rgba(26, 26, 26, 0.4);
+  padding: 10px clamp(16px, 4vw, 24px) calc(10px + env(safe-area-inset-bottom));
+  transform: translateY(105%);
+  transition: transform 0.25s ease;
+}
+.hc-sticky.is-visible { transform: none; }
+.hc-sticky[hidden] { display: none; }
+.hc-sticky-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; max-width: 620px; margin: 0 auto; }
+.hc-sticky p { margin: 0; font-size: 0.86rem; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.hc-sticky .button { padding: 11px 18px; font-size: 0.88rem; white-space: nowrap; }
+@media (min-width: 981px) { .hc-sticky { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hc-sticky { transition: none; } }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  .hc-areas, .hc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 980px) {
+  .hc-hero-grid, .hc-final-inner { grid-template-columns: 1fr; }
+  .hc-hero h1 { max-width: none; }
+  .hc-hero-visual { max-width: 560px; }
+  .hc-final-text h2 { max-width: none; }
+}
+
+@media (max-width: 700px) {
+  .hc-topics { grid-template-columns: 1fr 1fr; }
+  .hc-areas, .hc-steps { grid-template-columns: 1fr; }
+  .hc-steps { gap: 26px; }
+  .hc-field-row { grid-template-columns: 1fr; gap: 0; }
+  .hc-form-card { padding: 22px 18px; }
+  .hc-scan { padding: 20px 18px; }
+  .hc-scan-list li { gap: 10px; }
+  .hc-scan-label { font-size: 0.9rem; }
+  .hc-sticky p { font-size: 0.8rem; }
+}
+
+/* Op smalle telefoons past de regel niet naast de knop: dan onder elkaar,
+   met de knop over de volle breedte (grootste trefvlak). */
+@media (max-width: 460px) {
+  .hc-sticky-inner { flex-direction: column; align-items: stretch; gap: 6px; }
+  .hc-sticky p { text-align: center; font-size: 0.78rem; color: var(--muted); }
+  .hc-sticky .button { width: 100%; text-align: center; }
+}
+
+@media (max-width: 420px) {
+  .hc-topics { grid-template-columns: 1fr; }
+}

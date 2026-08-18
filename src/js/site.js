@@ -211,3 +211,271 @@ if (demoModal && typeof demoModal.showModal === "function") {
     if (e.target === demoModal) demoModal.close();
   });
 }
+
+// ---------------------------------------------------------------------------
+// Gebeurtenissen doorgeven aan de statistieken.
+//
+// De site heeft geen eigen analytics-platform: als er een GoatCounter-code in
+// de instellingen staat, laadt layout.njk dat script. We voegen dus niets
+// nieuws toe, we melden alleen gebeurtenissen aan wat er al is (GoatCounter en,
+// als iemand later een tagmanager toevoegt, dataLayer). Het CustomEvent maakt
+// het bovendien mogelijk om er van buitenaf op te luisteren.
+// ---------------------------------------------------------------------------
+
+const pendingEvents = [];
+
+function flushEvents() {
+  if (!window.goatcounter || typeof window.goatcounter.count !== "function") return;
+  while (pendingEvents.length) {
+    const name = pendingEvents.shift();
+    window.goatcounter.count({ path: name, title: name, event: true });
+  }
+}
+
+function track(name, meta) {
+  pendingEvents.push(name);
+  flushEvents();
+  if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: name, ...meta });
+  document.dispatchEvent(new CustomEvent("tubes:track", { detail: { name, ...meta } }));
+}
+
+// GoatCounter laadt async; wat daarvoor gebeurde sturen we alsnog na.
+addEventListener("load", () => {
+  flushEvents();
+  setTimeout(flushEvents, 1500);
+});
+
+// ---------------------------------------------------------------------------
+// Health Check: tweestapsformulier (/production-finance-health-check/)
+//
+// Stap 1 vraagt alleen het zakelijke e-mailadres en slaat dat meteen op, zodat
+// een half ingevuld formulier toch een spoor achterlaat. Stap 2 vult de rest
+// aan en verwijst met lead_id naar die eerste regel, zodat de beheerpagina er
+// één aanvraag van maakt. Beide formulieren op de pagina (hero en slot) lopen
+// gelijk op: wie boven begint, ziet onderaan dezelfde stap terug.
+// ---------------------------------------------------------------------------
+
+const hcForms = Array.from(document.querySelectorAll("[data-hc-form]"));
+
+if (hcForms.length) {
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+  const state = { leadId: "", email: "", step: 1, done: false, emailTracked: false };
+
+  // Wordt verderop gevuld door de vaste knop op mobiel: zodra iemand aan
+  // stap 2 begint of klaar is, hoeft die knop er niet meer te staan.
+  let refreshSticky = () => {};
+
+  const stepOf = (form, n) => form.querySelector(`[data-hc-step="${n}"]`);
+  const statusOf = (form) => form.querySelector(".hc-status");
+
+  function setStatus(form, text, kind) {
+    const el = statusOf(form);
+    if (!el) return;
+    el.textContent = text || "";
+    el.className = "form-status hc-status" + (kind ? " is-" + kind : "");
+  }
+
+  function showStep(n) {
+    state.step = n;
+    refreshSticky();
+    for (const form of hcForms) {
+      stepOf(form, 1).hidden = n !== 1;
+      stepOf(form, 2).hidden = n !== 2;
+      const email = form.querySelector('input[name="email"]');
+      if (email && state.email) email.value = state.email;
+      setStatus(form, "");
+    }
+  }
+
+  function showDone(activeForm) {
+    state.done = true;
+    document.body.classList.add("hc-submitted");
+    for (const form of hcForms) {
+      stepOf(form, 1).hidden = true;
+      stepOf(form, 2).hidden = true;
+      setStatus(form, "");
+      const done = form.querySelector("[data-hc-done]");
+      if (done) done.hidden = false;
+      const privacy = form.querySelector(".hc-privacy");
+      if (privacy) privacy.hidden = true;
+    }
+    refreshSticky();
+    const heading = activeForm.querySelector(".hc-done-title");
+    if (heading) {
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+      heading.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+  }
+
+  function invalid(input, message, form) {
+    input.setAttribute("aria-invalid", "true");
+    setStatus(form, message, "error");
+    input.focus();
+  }
+
+  async function post(payload) {
+    const body = new URLSearchParams(payload);
+    const res = await fetch("/api/health-check", {
+      method: "POST",
+      body,
+      headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
+    });
+    let data = {};
+    try { data = await res.json(); } catch { /* geen JSON terug */ }
+    if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
+    return data;
+  }
+
+  for (const form of hcForms) {
+    const emailInput = form.querySelector('input[name="email"]');
+
+    emailInput.addEventListener("input", () => {
+      emailInput.removeAttribute("aria-invalid");
+      state.email = emailInput.value.trim();
+    });
+
+    // "Email entered": één keer per bezoek, zodra er een bruikbaar adres staat.
+    emailInput.addEventListener("blur", () => {
+      if (state.emailTracked) return;
+      if (!EMAIL_RE.test(emailInput.value.trim())) return;
+      state.emailTracked = true;
+      track("health-check-email-entered");
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (state.done) return;
+
+      const button = form.querySelector(".hc-step:not([hidden]) .hc-submit");
+      const data = new FormData(form);
+
+      // Honeypot: alleen bots vullen dit onzichtbare veld in.
+      if (String(data.get("company_website") || "").trim()) return;
+
+      // ---- Stap 1: alleen het e-mailadres ----
+      if (state.step === 1) {
+        const email = String(data.get("email") || "").trim();
+        if (!EMAIL_RE.test(email)) {
+          invalid(emailInput, "Please enter a valid business email address so we can send your Health Check details.", form);
+          return;
+        }
+        state.email = email;
+        if (!state.emailTracked) {
+          state.emailTracked = true;
+          track("health-check-email-entered");
+        }
+
+        button.disabled = true;
+        setStatus(form, "One moment…");
+        try {
+          const result = await post({ stage: "email", email, page: location.pathname });
+          state.leadId = result.id || "";
+          track("health-check-email-captured");
+        } catch (err) {
+          // Opslaan lukte niet. We houden de bezoeker niet tegen: bij stap 2
+          // gaat het e-mailadres gewoon opnieuw mee. Er wordt niets bevestigd
+          // wat niet is aangekomen, want stap 2 is nog geen bevestiging.
+          state.leadId = "";
+        }
+        button.disabled = false;
+        showStep(2);
+        track("health-check-assessment-started");
+        const name = form.querySelector('input[name="name"]');
+        if (name) name.focus({ preventScroll: true });
+        // Stap 2 is hoger dan stap 1; als het formulier daardoor half uit
+        // beeld valt, halen we het terug.
+        const top = form.getBoundingClientRect().top;
+        if (top < 90 || top > window.innerHeight - 160) {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        return;
+      }
+
+      // ---- Stap 2: naam, bedrijf en de twee vragen ----
+      const name = String(data.get("name") || "").trim();
+      const company = String(data.get("company") || "").trim();
+      const nameInput = form.querySelector('input[name="name"]');
+      const companyInput = form.querySelector('input[name="company"]');
+
+      if (!name) {
+        invalid(nameInput, "Please add your name so we know who we are meeting.", form);
+        return;
+      }
+      nameInput.removeAttribute("aria-invalid");
+      if (!company) {
+        invalid(companyInput, "Please add your company so we can prepare for the session.", form);
+        return;
+      }
+      companyInput.removeAttribute("aria-invalid");
+
+      button.disabled = true;
+      setStatus(form, "Sending your request…");
+      try {
+        await post({
+          stage: "complete",
+          lead_id: state.leadId,
+          email: state.email,
+          name,
+          company,
+          role: String(data.get("role") || "").trim(),
+          improve: String(data.get("improve") || ""),
+          current_system: String(data.get("current_system") || ""),
+          page: location.pathname
+        });
+        track("health-check-requested", { company });
+        showDone(form);
+      } catch (err) {
+        setStatus(
+          form,
+          "Something went wrong and your request was not sent. Please try again, or email us at contact@tubes.media.",
+          "error"
+        );
+        button.disabled = false;
+      }
+    });
+  }
+
+  track("health-check-page-viewed");
+
+  // ---- Vaste knop op mobiel, zodra het eerste formulier uit beeld is ----
+  const sticky = document.getElementById("hc-sticky");
+  const topForm = document.getElementById("hc-form-top");
+  const finalSection = document.getElementById("hc-final");
+
+  if (sticky && topForm && finalSection && "IntersectionObserver" in window) {
+    let scrolledPast = false;
+    let nearBottomForm = false;
+
+    const update = () => {
+      const show = scrolledPast && !nearBottomForm && !state.done && state.step === 1;
+      if (show) sticky.hidden = false;
+      sticky.classList.toggle("is-visible", show);
+    };
+    refreshSticky = update;
+
+    new IntersectionObserver(
+      ([entry]) => {
+        scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        update();
+      },
+      { threshold: 0 }
+    ).observe(topForm);
+
+    new IntersectionObserver(
+      ([entry]) => {
+        nearBottomForm = entry.isIntersecting;
+        update();
+      },
+      { threshold: 0 }
+    ).observe(finalSection);
+
+    sticky.querySelector("[data-hc-sticky-cta]").addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById("hc-form-end");
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      const field = target.querySelector(".hc-step:not([hidden]) input");
+      if (field) setTimeout(() => field.focus({ preventScroll: true }), 450);
+    });
+  }
+}
