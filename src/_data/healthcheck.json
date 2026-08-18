@@ -1,5 +1,5 @@
 {
-  "intro": "Nine questions, grouped into three themes. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
+  "intro": "A short questionnaire, grouped into three themes. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
   "labels": [
     {
       "value": "Strong",
@@ -107,6 +107,13 @@
           "label": "Forecasting the final cost",
           "hint": "How commitments, costs to date and remaining costs add up to an expected final cost.",
           "finding": "A forecast that is refreshed once a month is a forecast you cannot steer on. The overspend is usually visible weeks before it is reported."
+        },
+        {
+          "key": "currency",
+          "short": "working in more than one currency",
+          "label": "Working in more than one currency",
+          "hint": "Whether budgets, costs and forecasts stay comparable when money moves in another currency.",
+          "finding": "Rates move between the day you commit and the day you pay. If conversion happens by hand at whatever rate was to hand, the final cost becomes a moving target that nobody can explain afterwards."
         },
         {
           "key": "reporting",
