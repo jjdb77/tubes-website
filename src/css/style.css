@@ -1446,3 +1446,40 @@ a:hover { color: var(--action); }
   .hc-assess-num { display: none; }
   .hc-assess-options { grid-column: 1; }
 }
+
+/* ---------- Vragenlijst op de eigen pagina ---------- */
+
+.hc-assess-page-inner { max-width: 760px; }
+.hc-assess-page h1 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
+.hc-assess-page .hc-lead { margin-bottom: 30px; }
+.hc-assess-form .hc-form-card { padding: clamp(24px, 3.5vw, 40px); }
+
+.hc-assess-identify { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
+.hc-assess-identify[hidden] { display: none; }
+
+.hc-assess-list-page .hc-assess-row { padding: 18px 0; }
+.hc-assess-hint { display: block; font-size: 0.86rem; font-weight: 400; color: var(--muted); margin-top: 3px; }
+
+.hc-assess-notes { margin-top: 22px; }
+.hc-field textarea {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 12px 14px; resize: vertical;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field textarea::placeholder { color: var(--muted); font-size: 0.94rem; }
+.hc-field textarea:focus {
+  outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft);
+}
+
+/* Doorverwijzing op het bedankscherm van de aanvraag */
+.hc-done-next {
+  margin-top: 22px; padding: 20px 22px;
+  background: var(--bg); border: 1px solid var(--divider);
+  border-radius: var(--radius-wash);
+}
+.hc-done-next-title { font-weight: 700; color: var(--ink); margin-bottom: 0.3em; }
+.hc-done-next p { font-size: 0.94rem; }
+.hc-done-next .button { margin-top: 14px; width: 100%; text-align: center; }

@@ -1,0 +1,88 @@
+---
+layout: layout.njk
+title: Health Check assessment
+seo_title: "Production Finance Health Check assessment | Tubes"
+description: "Tell us how the six areas of your production finance process stand today, so we can prepare for your Health Check session."
+permalink: /production-finance-health-check/assessment/
+noindex: true
+---
+{#- De vragenlijst van de Health Check op een eigen adres, zodat de link ook
+    los verstuurd kan worden aan iemand die al een sessie heeft staan.
+
+    Twee manieren om binnen te komen:
+      ?ref=<id>  vanaf het bedankscherm; dan weten we al wie het is en hoeft
+                 het e-mailadres niet gevraagd te worden.
+      kaal       dan vragen we het zakelijke e-mailadres om het aan de
+                 aanvraag te kunnen koppelen.
+
+    Bewust noindex: dit is geen marketingpagina maar een vragenlijst voor
+    mensen die we zelf uitnodigen. Hij valt daarmee ook buiten de sitemap. -#}
+
+{%- set assessAreas = [
+  { key: "budget_structure", num: "01", label: "Budget structure and version control", hint: "How budgets are built and changed, and how you know which version counts." },
+  { key: "budget_handover", num: "02", label: "Budget to production handover", hint: "What happens after approval, and how the people spending get a working budget." },
+  { key: "actuals", num: "03", label: "Actuals and reconciliation", hint: "How real costs come in and get matched back to the budget." },
+  { key: "forecasting", num: "04", label: "Forecasting", hint: "How you arrive at an expected final cost, and how often it is refreshed." },
+  { key: "approvals", num: "05", label: "Approvals and controls", hint: "Who may commit spend or change a budget, and how that is recorded." },
+  { key: "reporting", num: "06", label: "Reporting and visibility", hint: "Who gets reliable financial information, and how long it takes to produce." }
+] -%}
+{%- set assessOptions = [
+  { value: "Strong", tone: "good" },
+  { value: "Could improve", tone: "mid" },
+  { value: "Opportunity", tone: "low" }
+] -%}
+
+<section class="section section-hero theme-light hc-assess-page">
+  <div class="container hc-assess-page-inner">
+    <span class="kicker">Production Finance Health Check</span>
+    <h1>How do these six areas stand today?</h1>
+    <p class="hc-lead">This takes about a minute. Your own impression is all we need. We will go through each area properly during the session, so there are no wrong answers here.</p>
+
+    <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
+
+      <div class="hc-form-card">
+        <div class="hc-assess-identify" data-hc-identify>
+          <label class="hc-field" for="hc-assessment-email">Business email address
+            <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+          </label>
+          <p class="hc-help">So we can match your answers to your Health Check request.</p>
+        </div>
+
+        <ol class="hc-assess-list hc-assess-list-page">
+          {%- for area in assessAreas %}
+          <li class="hc-assess-row">
+            <span class="hc-assess-num" aria-hidden="true">{{ area.num }}</span>
+            <span class="hc-assess-label" id="hc-assessment-{{ area.key }}-label">{{ area.label }}
+              <span class="hc-assess-hint">{{ area.hint }}</span>
+            </span>
+            <span class="hc-assess-options" role="radiogroup" aria-labelledby="hc-assessment-{{ area.key }}-label">
+              {%- for option in assessOptions %}
+              <label class="hc-opt hc-opt-{{ option.tone }}">
+                <input type="radio" name="{{ area.key }}" value="{{ option.value }}">
+                <span>{{ option.value }}</span>
+              </label>
+              {%- endfor %}
+            </span>
+          </li>
+          {%- endfor %}
+        </ol>
+
+        <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
+          <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
+        </label>
+
+        <button type="submit" class="button button-primary hc-submit">Send my answers</button>
+        <p class="form-status hc-status" role="status" aria-live="polite"></p>
+
+        <div class="hc-done" data-hc-done hidden>
+          <p class="hc-done-title">Thanks, that gives us a head start.</p>
+          <p>We will use your answers to prepare, and we will still go through each area with you during the session.</p>
+          <p class="hc-done-note">Nothing else to do for now. If you have not heard from us yet, we will be in touch shortly to arrange a time.</p>
+        </div>
+
+        <p class="hc-privacy">We use your answers only to prepare your Health Check. We do not add you to a mailing list and we do not pass your details on. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>

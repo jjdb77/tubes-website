@@ -32,23 +32,6 @@ permalink: /production-finance-health-check/
   "Other"
 ] -%}
 
-{#- De zes gebieden van de Health Check. Dezelfde volgorde en dezelfde
-    labels als in het beeld rechts in de hero en in "Areas we assess", zodat
-    het zelfbeeld en het gesprek dezelfde taal spreken. -#}
-{%- set assessAreas = [
-  { key: "budget_structure", num: "01", label: "Budget structure and version control" },
-  { key: "budget_handover", num: "02", label: "Budget to production handover" },
-  { key: "actuals", num: "03", label: "Actuals and reconciliation" },
-  { key: "forecasting", num: "04", label: "Forecasting" },
-  { key: "approvals", num: "05", label: "Approvals and controls" },
-  { key: "reporting", num: "06", label: "Reporting and visibility" }
-] -%}
-{%- set assessOptions = [
-  { value: "Strong", tone: "good" },
-  { value: "Could improve", tone: "mid" },
-  { value: "Opportunity", tone: "low" }
-] -%}
-
 {%- macro healthCheckForm(id, submitLabel) -%}
 <form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
   <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
@@ -110,37 +93,13 @@ permalink: /production-finance-health-check/
     <p class="hc-done-title">Thanks. Your Health Check request has been received.</p>
     <p>We will be in touch shortly to arrange the session, and we will send two or three possible times.</p>
 
-    {#- Pas ná de bevestiging, dus de aanvraag is al binnen. Wie hier afhaakt
-        is geen verloren lead, en wie hem invult geeft ons een voorsprong. -#}
-    <div class="hc-assess" data-hc-assess>
-      <span class="hc-assess-kicker">Optional, about one minute</span>
-      <h3 class="hc-assess-title">Give us a head start</h3>
-      <p class="hc-assess-intro">Where do these six areas stand in your organisation today? Your own impression is enough. We will go through them properly during the session.</p>
-
-      <ol class="hc-assess-list">
-        {%- for area in assessAreas %}
-        <li class="hc-assess-row">
-          <span class="hc-assess-num" aria-hidden="true">{{ area.num }}</span>
-          <span class="hc-assess-label" id="{{ id }}-{{ area.key }}-label">{{ area.label }}</span>
-          <span class="hc-assess-options" role="radiogroup" aria-labelledby="{{ id }}-{{ area.key }}-label">
-            {%- for option in assessOptions %}
-            <label class="hc-opt hc-opt-{{ option.tone }}">
-              <input type="radio" name="{{ area.key }}" value="{{ option.value }}">
-              <span>{{ option.value }}</span>
-            </label>
-            {%- endfor %}
-          </span>
-        </li>
-        {%- endfor %}
-      </ol>
-
-      <button type="button" class="button button-primary hc-assess-submit" data-hc-assess-submit>Send this along</button>
-      <p class="form-status hc-assess-status" role="status" aria-live="polite"></p>
-    </div>
-
-    <div class="hc-assess-thanks" data-hc-assess-thanks hidden>
-      <p class="hc-assess-thanks-title">Thanks, that gives us a head start.</p>
-      <p>We will use it to prepare, and we will still go through each area with you.</p>
+    {#- De vragenlijst staat op een eigen pagina, zodat de link ook los
+        verstuurd kan worden. De aanvraag is hier al opgeslagen, dus wie
+        hem overslaat is geen verloren lead. -#}
+    <div class="hc-done-next">
+      <p class="hc-done-next-title">One more minute, if you have it</p>
+      <p>Tell us how the six areas stand today and we can prepare properly before we speak.</p>
+      <a class="button button-primary" href="/production-finance-health-check/assessment/" data-hc-assess-link>Start the assessment</a>
     </div>
 
     <p class="hc-done-note">In the meantime, our <a href="/insights/">production finance articles</a> cover a few of the questions that come up most often.</p>

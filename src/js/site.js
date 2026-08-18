@@ -296,9 +296,12 @@ if (hcForms.length) {
       setStatus(form, "");
       const done = form.querySelector("[data-hc-done]");
       if (done) done.hidden = false;
-      // Het zelfbeeld hoort bij één formulier: dat waar de bezoeker net was.
-      const assess = form.querySelector("[data-hc-assess]");
-      if (assess && form !== activeForm) assess.hidden = true;
+      // De vragenlijst staat op een eigen pagina; met ?ref weet die pagina
+      // bij welke aanvraag de antwoorden horen.
+      const link = form.querySelector("[data-hc-assess-link]");
+      if (link && state.requestId) {
+        link.href = "/production-finance-health-check/assessment/?ref=" + encodeURIComponent(state.requestId);
+      }
       const privacy = form.querySelector(".hc-privacy");
       if (privacy) privacy.hidden = true;
     }
@@ -451,58 +454,6 @@ if (hcForms.length) {
     });
   }
 
-  // ---- Zelfbeeld op de zes gebieden (optioneel, ná de bevestiging) ----
-  const AREA_KEYS = [
-    "budget_structure",
-    "budget_handover",
-    "actuals",
-    "forecasting",
-    "approvals",
-    "reporting"
-  ];
-
-  for (const form of hcForms) {
-    const block = form.querySelector("[data-hc-assess]");
-    const button = form.querySelector("[data-hc-assess-submit]");
-    if (!block || !button) continue;
-    const status = block.querySelector(".hc-assess-status");
-
-    button.addEventListener("click", async () => {
-      const answers = {};
-      for (const key of AREA_KEYS) {
-        const picked = block.querySelector(`input[name="${key}"]:checked`);
-        if (picked) answers[key] = picked.value;
-      }
-
-      if (!Object.keys(answers).length) {
-        status.textContent = "Pick at least one area, or skip this step.";
-        status.className = "form-status hc-assess-status is-error";
-        return;
-      }
-
-      button.disabled = true;
-      status.textContent = "Sending…";
-      status.className = "form-status hc-assess-status";
-      try {
-        await post({
-          stage: "assessment",
-          lead_id: state.requestId,
-          email: state.email,
-          ...answers,
-          page: location.pathname
-        });
-        track("health-check-self-assessment", { answered: Object.keys(answers).length });
-        block.hidden = true;
-        const thanks = form.querySelector("[data-hc-assess-thanks]");
-        if (thanks) thanks.hidden = false;
-      } catch (err) {
-        status.textContent = "That did not come through. Please try again.";
-        status.className = "form-status hc-assess-status is-error";
-        button.disabled = false;
-      }
-    });
-  }
-
   track("health-check-page-viewed");
 
   // ---- Vaste knop op mobiel, zodra het eerste formulier uit beeld is ----
@@ -545,4 +496,109 @@ if (hcForms.length) {
       if (field) setTimeout(() => field.focus({ preventScroll: true }), 450);
     });
   }
+}
+
+
+// ---------------------------------------------------------------------------
+// Vragenlijst op /production-finance-health-check/assessment/
+//
+// Komt iemand van het bedankscherm, dan staat het id van de aanvraag in ?ref
+// en hoeft er geen e-mailadres gevraagd te worden. Wie de link los krijgt,
+// vult zijn zakelijke e-mailadres in zodat we de antwoorden kunnen koppelen.
+// ---------------------------------------------------------------------------
+
+const assessForm = document.querySelector("[data-hc-assess-form]");
+
+if (assessForm) {
+  const AREA_KEYS = [
+    "budget_structure",
+    "budget_handover",
+    "actuals",
+    "forecasting",
+    "approvals",
+    "reporting"
+  ];
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+
+  const ref = new URLSearchParams(location.search).get("ref") || "";
+  const identify = assessForm.querySelector("[data-hc-identify]");
+  const emailInput = assessForm.querySelector('input[name="email"]');
+  const status = assessForm.querySelector(".hc-status");
+  const button = assessForm.querySelector(".hc-submit");
+
+  if (ref && identify) {
+    identify.hidden = true;
+    emailInput.required = false;
+  }
+
+  track("health-check-assessment-opened", { linked: Boolean(ref) });
+
+  assessForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const answers = {};
+    for (const key of AREA_KEYS) {
+      const picked = assessForm.querySelector(`input[name="${key}"]:checked`);
+      if (picked) answers[key] = picked.value;
+    }
+
+    const email = String(emailInput.value || "").trim();
+    if (!ref && !EMAIL_RE.test(email)) {
+      emailInput.setAttribute("aria-invalid", "true");
+      status.textContent = "Please enter the business email address you used for your Health Check request.";
+      status.className = "form-status hc-status is-error";
+      emailInput.focus();
+      return;
+    }
+    emailInput.removeAttribute("aria-invalid");
+
+    if (!Object.keys(answers).length) {
+      status.textContent = "Give at least one area a label, then we can use it.";
+      status.className = "form-status hc-status is-error";
+      return;
+    }
+
+    button.disabled = true;
+    status.textContent = "Sending…";
+    status.className = "form-status hc-status";
+
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), 12000);
+    try {
+      const res = await fetch("/api/health-check", {
+        method: "POST",
+        signal: stop.signal,
+        body: new URLSearchParams({
+          stage: "assessment",
+          lead_id: ref,
+          email,
+          notes: assessForm.querySelector('textarea[name="notes"]').value,
+          company_website: assessForm.querySelector('input[name="company_website"]').value,
+          ...answers,
+          page: location.pathname
+        }),
+        headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
+      });
+      let data = {};
+      try { data = await res.json(); } catch { /* geen JSON terug */ }
+      if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
+
+      track("health-check-assessment-completed", { answered: Object.keys(answers).length });
+      for (const el of assessForm.querySelectorAll(".hc-assess-list, .hc-assess-notes, .hc-submit, [data-hc-identify]")) {
+        el.hidden = true;
+      }
+      status.textContent = "";
+      const done = assessForm.querySelector("[data-hc-done]");
+      done.hidden = false;
+      done.querySelector(".hc-done-title").setAttribute("tabindex", "-1");
+      done.querySelector(".hc-done-title").focus({ preventScroll: true });
+    } catch (err) {
+      status.textContent =
+        "That did not come through. Please try again, or email us at contact@tubes.media.";
+      status.className = "form-status hc-status is-error";
+      button.disabled = false;
+    } finally {
+      clearTimeout(timer);
+    }
+  });
 }

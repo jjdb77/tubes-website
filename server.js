@@ -168,6 +168,20 @@ const HC_AREA_LABELS = {
 };
 const HC_LABELS = new Set(["Strong", "Could improve", "Opportunity"]);
 
+// Zoekt het e-mailadres dat bij een eerder opgeslagen aanvraag hoort. Zo hoeft
+// het niet mee in de link naar de vragenlijst.
+function emailForEntry(id) {
+  if (!id || !fs.existsSync(DATA_FILE)) return "";
+  for (const line of fs.readFileSync(DATA_FILE, "utf8").split("\n")) {
+    if (!line.includes(id)) continue;
+    try {
+      const entry = JSON.parse(line);
+      if (entry.id === id) return String(entry.email || "");
+    } catch { /* stukke regel overslaan */ }
+  }
+  return "";
+}
+
 app.post("/api/health-check", (req, res) => {
   if (rateLimited(req, 12)) {
     return res.status(429).json({ ok: false, error: "Too many requests" });
@@ -178,13 +192,17 @@ app.post("/api/health-check", (req, res) => {
   // Zie het contactformulier: markeren, niet weggooien.
   const flagged = Boolean(String(b.company_website || "").trim());
 
-  const email = String(b.email || "").trim().slice(0, 200);
+  const STAGES = new Set(["email", "complete", "assessment"]);
+  const stage = STAGES.has(b.stage) ? b.stage : "email";
+  const leadId = String(b.lead_id || "").slice(0, 64);
+
+  let email = String(b.email || "").trim().slice(0, 200);
+  if (stage === "assessment" && !EMAIL_RE.test(email) && leadId) {
+    email = emailForEntry(leadId);
+  }
   if (!EMAIL_RE.test(email)) {
     return res.status(400).json({ ok: false, error: "Invalid email" });
   }
-
-  const STAGES = new Set(["email", "complete", "assessment"]);
-  const stage = STAGES.has(b.stage) ? b.stage : "email";
   const entry = {
     id: crypto.randomUUID(),
     at: new Date().toISOString(),
@@ -207,8 +225,10 @@ app.post("/api/health-check", (req, res) => {
     if (!Object.keys(answers).length) {
       return res.status(400).json({ ok: false, error: "No answers" });
     }
-    entry.lead_id = String(b.lead_id || "").slice(0, 64);
+    entry.lead_id = leadId;
     entry.answers = answers;
+    const notes = String(b.notes || "").trim().slice(0, 2000);
+    if (notes) entry.notes = notes;
     fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
     return res.json({ ok: true, id: entry.id });
   }
@@ -219,7 +239,7 @@ app.post("/api/health-check", (req, res) => {
     if (!name || !company) {
       return res.status(400).json({ ok: false, error: "Missing fields" });
     }
-    entry.lead_id = String(b.lead_id || "").slice(0, 64);
+    entry.lead_id = leadId;
     entry.name = name;
     entry.company = company;
     entry.role = String(b.role || "").trim().slice(0, 120);
@@ -288,17 +308,32 @@ function readSubmissions() {
   );
 
   // Het zelfbeeld is geen apart bericht maar hoort bij de aanvraag.
-  const answersByRequest = new Map();
+  const byRequest = new Map();
+  const byEmail = new Map();
   for (const s of all) {
-    if (s.stage === "assessment" && s.lead_id) answersByRequest.set(s.lead_id, s.answers);
+    if (s.stage !== "assessment") continue;
+    if (s.lead_id) byRequest.set(s.lead_id, s);
+    if (s.email) byEmail.set(s.email.toLowerCase(), s);
   }
 
   const list = all.filter((s) => s.stage !== "assessment" && !superseded.has(s.id));
+  const merged = new Set();
   for (const s of list) {
-    const answers = answersByRequest.get(s.id);
-    if (answers) s.answers = answers;
+    // Vanaf het bedankscherm komt het id mee; via een losse link alleen het
+    // e-mailadres. Beide moeten bij de juiste aanvraag terechtkomen.
+    const found =
+      byRequest.get(s.id) || (s.stage === "complete" && s.email ? byEmail.get(s.email.toLowerCase()) : null);
+    if (!found) continue;
+    s.answers = found.answers;
+    if (found.notes) s.notes = found.notes;
+    merged.add(found.id);
   }
-  return list.reverse();
+
+  // Antwoorden waar geen aanvraag bij te vinden was (iemand vulde alleen de
+  // losse link in) tonen we apart, anders verdwijnen ze uit beeld.
+  const losseAntwoorden = all.filter((s) => s.stage === "assessment" && !merged.has(s.id));
+
+  return [...list, ...losseAntwoorden].sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
 }
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -318,6 +353,12 @@ function contactCard(s) {
 // label: dat is trechterdata, nog geen complete aanvraag.
 function healthCheckCard(s) {
   const partial = s.stage !== "complete";
+  const label =
+    s.stage === "complete"
+      ? "Health Check-aanvraag"
+      : s.stage === "assessment"
+        ? "Vragenlijst ingevuld, geen aanvraag gevonden"
+        : "Health Check &middot; alleen e-mail (stap 1)";
   const details = [
     ["Bedrijf", s.company],
     ["Rol", s.role],
@@ -331,14 +372,14 @@ function healthCheckCard(s) {
   const selfView = s.answers
     ? `<p class="body selfview"><strong>Zelfbeeld vooraf:</strong><br>${HC_AREAS.filter((k) => s.answers[k])
         .map((k) => `<span>${esc(HC_AREA_LABELS[k])}: <em>${esc(s.answers[k])}</em></span>`)
-        .join("<br>")}</p>`
+        .join("<br>")}${s.notes ? `<br><br><strong>Wil besproken hebben:</strong><br>${esc(s.notes)}` : ""}</p>`
     : "";
 
   return `<article class="msg${partial ? " msg-partial" : ""}">
         <header><strong>${esc(s.name || s.email)}</strong>
           <span>${stamp(s.at)}</span></header>
         <p class="meta">
-          <span class="tag${partial ? " tag-open" : ""}">${partial ? "Health Check &middot; alleen e-mail (stap 1)" : "Health Check-aanvraag"}</span>
+          <span class="tag${partial ? " tag-open" : ""}">${label}</span>
           <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}
         </p>
         ${details ? `<p class="body">${details}</p>` : ""}
@@ -405,7 +446,7 @@ app.get("/beheer/export.csv", (req, res) => {
         return [
           s.at, soort, naam, s.email, s.phone || "",
           s.company || "", s.role || "", s.improve || "", s.current_system || "",
-          zelfbeeld, s.message || "", s.page || "",
+          zelfbeeld, s.notes || s.message || "", s.page || "",
         ].map(q).join(",");
       })
     )
