@@ -82,6 +82,13 @@
           "finding": "Manual reconciliation is the most expensive habit in production finance, and the first thing to break when a production gets busy."
         },
         {
+          "key": "coproduction",
+          "short": "splitting costs across partners",
+          "label": "Splitting costs across co-producers and funders",
+          "hint": "Whether costs can be attributed per partner and reported per funder without rebuilding it by hand.",
+          "finding": "Every partner and funder wants the numbers cut their own way. When that split lives in a separate spreadsheet, it is correct on the day it is made and drifts from that moment on."
+        },
+        {
           "key": "approvals",
           "short": "approvals",
           "label": "Approvals and controls",
