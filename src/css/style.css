@@ -1430,6 +1430,30 @@ a:hover { color: var(--action); }
 .hc-opt-good input:checked + span { background: var(--status-mint-bg); color: var(--status-mint-ink); border-color: var(--status-mint-ink); font-weight: 700; }
 .hc-opt-mid input:checked + span { background: var(--status-amber-bg); color: var(--status-amber-ink); border-color: var(--status-amber-ink); font-weight: 700; }
 .hc-opt-low input:checked + span { background: var(--status-lavender-bg); color: var(--status-lavender-ink); border-color: var(--status-lavender-ink); font-weight: 700; }
+/* Niet van toepassing: bewust kleurloos, het is geen oordeel maar een
+   afbakening. Zo kan iedereen dezelfde vragen krijgen. */
+.hc-opt-na input:checked + span {
+  background: var(--divider); color: var(--ink-soft);
+  border-color: var(--muted); font-weight: 700;
+}
+/* Neutrale chip, voor "niet van toepassing" in de legenda. */
+.chip-neutral { background: var(--divider); color: var(--ink-soft); }
+
+.hc-role { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
+.hc-field select {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 13px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field select:focus {
+  outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft);
+}
+/* In het rapport staan de niet-van-toepassing-regels gedempt: ze horen erbij
+   maar zijn geen bevinding. */
+.hc-result-row.is-na .hc-result-label { color: var(--muted); font-weight: 500; }
 .hc-opt input:focus-visible + span { outline: 3px solid var(--action); outline-offset: 2px; }
 
 .hc-assess-submit { margin-top: 20px; width: 100%; text-align: center; }

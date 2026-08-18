@@ -242,6 +242,8 @@ app.post("/api/health-check", (req, res) => {
     }
     entry.lead_id = leadId;
     entry.answers = answers;
+    const role = String(b.role_group || "").trim().slice(0, 60);
+    if (role) entry.role_group = role;
     const notes = String(b.notes || "").trim().slice(0, 2000);
     if (notes) entry.notes = notes;
     fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
@@ -499,7 +501,7 @@ function healthCheckCard(s) {
         : "Health Check &middot; alleen e-mail (stap 1)";
   const details = [
     ["Bedrijf", s.company],
-    ["Rol", s.role],
+    ["Rol", s.role || s.role_group],
     ["Wil verbeteren", s.improve],
     ["Werkt nu met", s.current_system],
   ]

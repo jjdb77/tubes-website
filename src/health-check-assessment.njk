@@ -61,6 +61,21 @@ noindex: true
               <p class="hc-help">So we can match your answers to your Health Check request.</p>
             </div>
 
+            {#- De rol bepaalt niet welke vragen je krijgt: daar is de knop
+                "Not applicable" voor. Hij helpt ons het gesprek op de juiste
+                hoogte te voeren, en gaat mee naar 4Relations. -#}
+            <div class="hc-role">
+              <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_question.label }}
+                <select id="hc-assessment-role" name="role_group">
+                  <option value="">Choose one</option>
+                  {%- for option in healthcheck.role_question.options %}
+                  <option value="{{ option.key }}">{{ option.label }}</option>
+                  {%- endfor %}
+                </select>
+              </label>
+              <p class="hc-help">{{ healthcheck.role_question.hint }}</p>
+            </div>
+
             {%- for step in steps %}
             <section class="hc-block" data-hc-block="{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
               <p class="hc-block-meta"><span class="hc-block-num">{{ loop.index }}</span> Step {{ loop.index }} of {{ steps | length + 1 }} &middot; {{ step.theme }}</p>
@@ -163,10 +178,10 @@ noindex: true
       </div>
 
       <div class="hc-theme-key">
-        <p class="hc-scan-key">The three labels</p>
+        <p class="hc-scan-key">What the labels mean</p>
         <ul class="hc-label-list">
           {%- for option in healthcheck.labels %}
-          <li><span class="chip chip-{{ 'mint' if option.tone == 'good' else ('amber' if option.tone == 'mid' else 'lavender') }}">{{ option.value }}</span><span>{{ option.meaning }}</span></li>
+          <li><span class="chip chip-{{ 'mint' if option.tone == 'good' else ('amber' if option.tone == 'mid' else ('lavender' if option.tone == 'low' else 'neutral')) }}">{{ option.value }}</span><span>{{ option.meaning }}</span></li>
           {%- endfor %}
         </ul>
         <p class="hc-scan-note">No score out of ten. Your answers set the agenda for the session, they are not the verdict.</p>

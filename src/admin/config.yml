@@ -90,15 +90,29 @@ collections:
         description: "De vragen op /production-finance-health-check/assessment/. Let op: de sleutel van een vraag is de veldnaam in de opslag. Verander die niet meer zodra er antwoorden binnen zijn, dan raken oude en nieuwe antwoorden los van elkaar."
         fields:
           - { label: "Introzin boven de vragen", name: intro, widget: text }
-          - label: "De drie labels"
+          - label: "De keuzes bij elke vraag"
             name: labels
             widget: list
             summary: "{{fields.value}}"
-            hint: "De keuzes bij elke vraag. Wijzig je een waarde, dan sluiten oude antwoorden niet meer aan."
+            hint: "Wijzig je een waarde, dan sluiten oude antwoorden niet meer aan. 'Niet van toepassing' telt niet mee in het rapport."
             fields:
               - { label: Tekst, name: value, widget: string }
-              - { label: Kleur, name: tone, widget: select, options: [{ label: "Groen (goed)", value: good }, { label: "Amber (kan beter)", value: mid }, { label: "Paars (kans)", value: low }] }
+              - { label: Kleur, name: tone, widget: select, options: [{ label: "Groen (goed)", value: good }, { label: "Amber (kan beter)", value: mid }, { label: "Paars (kans)", value: low }, { label: "Grijs (niet van toepassing)", value: na }] }
               - { label: "Uitleg in de rechterkolom", name: meaning, widget: text }
+          - label: "Vraag naar de rol"
+            name: role_question
+            widget: object
+            hint: "Bepaalt niet welke vragen iemand krijgt; die keuze ligt bij 'Niet van toepassing'. De rol gaat wel mee naar 4Relations."
+            fields:
+              - { label: Vraag, name: label, widget: string }
+              - { label: Toelichting, name: hint, widget: text }
+              - label: Rollen
+                name: options
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Sleutel (wordt opgeslagen)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"] }
+                  - { label: Rol, name: label, widget: string }
           - label: "Stappen"
             name: steps
             widget: list

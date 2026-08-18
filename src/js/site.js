@@ -616,7 +616,12 @@ if (assessForm) {
   // Het rapport wordt opgebouwd uit de gegeven antwoorden. Geen cijfer en geen
   // oordeel: we geven terug wat iemand zelf invulde, geordend naar waar we
   // mee zouden beginnen.
-  const TONE = { Strong: "good", "Could improve": "mid", Opportunity: "low" };
+  const TONE = {};
+  for (const option of assessForm.querySelectorAll(".hc-opt")) {
+    const input = option.querySelector("input");
+    const tone = (option.className.match(/hc-opt-(\w+)/) || [])[1];
+    if (input && tone) TONE[input.value] = tone;
+  }
   const CHIP = { good: "mint", mid: "amber", low: "lavender" };
   const el = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -642,8 +647,11 @@ if (assessForm) {
     const themeWrap = assessForm.querySelector("[data-hc-result-themes]");
     themeWrap.innerHTML = "";
     for (const theme of themes) {
-      const given = theme.questions.filter((q) => answers[q.key]);
-      if (!given.length) continue;
+      // "Not applicable" hoort niet in het balkje: het is geen oordeel over
+      // het proces maar een afbakening van wat er speelt.
+      const given = theme.questions.filter((q) => answers[q.key] && TONE[answers[q.key]] !== "na");
+      const nvt = theme.questions.filter((q) => TONE[answers[q.key]] === "na").length;
+      if (!given.length && !nvt) continue;
 
       const row = el("div", "hc-theme-row");
       row.append(el("p", "hc-theme-row-name", theme.name));
@@ -661,10 +669,12 @@ if (assessForm) {
       if (counts.low) parts.push(counts.low + (counts.low === 1 ? " opportunity" : " opportunities"));
       if (counts.mid) parts.push(counts.mid + " could improve");
       if (counts.good) parts.push(counts.good + " strong");
+      if (nvt) parts.push(nvt + " not applicable");
       bar.setAttribute("role", "img");
       bar.setAttribute("aria-label", `${theme.name}: ${parts.join(", ")}`);
 
-      row.append(bar, el("p", "hc-theme-row-count", parts.join(" · ")));
+      if (given.length) row.append(bar);
+      row.append(el("p", "hc-theme-row-count", parts.join(" · ")));
       themeWrap.append(row);
     }
 
@@ -718,12 +728,13 @@ if (assessForm) {
     list.innerHTML = "";
     for (const question of questions) {
       const value = answers[question.key];
-      const row = el("li", "hc-result-row" + (value ? "" : " is-empty"));
+      const tone = TONE[value];
+      const row = el("li", "hc-result-row" + (value ? (tone === "na" ? " is-na" : "") : " is-empty"));
       row.append(el("span", "hc-result-label", question.label));
       row.append(
-        value
-          ? el("span", `chip chip-${CHIP[TONE[value]]}`, value)
-          : el("span", "hc-result-skipped", "Not answered")
+        value && CHIP[tone]
+          ? el("span", `chip chip-${CHIP[tone]}`, value)
+          : el("span", "hc-result-skipped", value || "Not answered")
       );
       list.append(row);
     }
@@ -763,6 +774,7 @@ if (assessForm) {
           stage: "assessment",
           lead_id: ref,
           email,
+          role_group: assessForm.querySelector('select[name="role_group"]')?.value || "",
           notes: assessForm.querySelector('textarea[name="notes"]').value,
           company_website: assessForm.querySelector('input[name="company_website"]').value,
           ...answers,
