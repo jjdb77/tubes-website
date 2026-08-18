@@ -27,6 +27,19 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Berichten: JSONL op de Railway-volume (`RAILWAY_VOLUME_MOUNT_PATH`), te lezen op **/beheer** (Basic Auth, wachtwoord = env `ADMIN_PASSWORD`, gebruikersnaam leeg). CSV-export op /beheer/export.csv.
 - ⚠️ Vereist op de Railway-service: een volume (bijv. mount /data) én `ADMIN_PASSWORD`. Zolang die missen: /beheer geeft 503 en berichten overleven een redeploy niet.
 
+## Health Check-aanvragen naar 4Relations
+
+- Aanvragen blijven **altijd** in de eigen opslag staan (JSONL op de Railway-volume, zichtbaar op /beheer). 4Relations is een kopie, geen vervanging: het versturen gebeurt ná het antwoord aan de bezoeker, dus een storing daar kan nooit een lead kosten.
+- Aanzetten met env-variabelen op de Railway-service:
+  - `CRM_URL` — het adres dat een client/lead aanmaakt. **Zolang die leeg is gebeurt er niets** en werkt de rest gewoon.
+  - `CRM_TOKEN` — de sleutel. Nooit in de repo, die is publiek.
+  - `CRM_AUTH_HEADER` — naam van de header, standaard `Authorization`.
+  - `CRM_AUTH_PREFIX` — wat vóór de sleutel komt, standaard `Bearer ` (leeg zetten als 4Relations een kale sleutel wil).
+  - `CRM_STATUS` — status van de client, standaard `prospect`.
+- Wat er verstuurd wordt: het **bedrijf als client** (met die status), de **persoon als contact** (naam, e-mail, rol), en daaronder de Health Check-gegevens (wat ze willen verbeteren, waar ze nu mee werken, de vrije opmerking en de antwoorden per vraag met de vraagtekst erbij). Twee momenten: bij de complete aanvraag (`kind: "request"`) en bij het ingevulde zelfbeeld (`kind: "assessment"`). Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt. Handig als 4Relations even plat lag of als de sleutel verkeerd stond.
+- Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
+
 ## Boekingen (Book a call)
 
 - Knoppen op de abonnementskaarten → `/book-a-call/producer-pro/` en `/book-a-call/enterprise/` (doorstuurpagina's uit `src/book-a-call.njk`, gepagineerd over `settings.booking_plans`).
@@ -116,7 +129,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
-- [ ] Health Check-aanvragen doorzetten naar **4Relations**. De website bewaart ze nu alleen zelf (JSONL + /beheer). Nodig van 4Relations: het adres van een endpoint om een contact/lead aan te maken, hoe de authenticatie werkt (sleutel komt als env-variabele op de Railway-service, niet in de repo) en welke velden het verwacht. Opzet aan deze kant: `server.js` doet ná het opslaan een POST, best-effort en met korte time-out, zodat een storing daar nooit een lead kost.
+- [ ] **4Relations aanzetten**: de koppeling is gebouwd en getest, maar staat uit tot `CRM_URL` en `CRM_TOKEN` op de Railway-service staan. Nodig van 4Relations: het adres van het endpoint dat een client aanmaakt, de manier van authenticeren, en of het veldschema past bij wat wij sturen (zie "Health Check-aanvragen naar 4Relations"). Wijkt het schema af, dan is alleen `crmPayload()` in server.js aan te passen.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
 - [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's

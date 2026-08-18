@@ -245,7 +245,9 @@ app.post("/api/health-check", (req, res) => {
     const notes = String(b.notes || "").trim().slice(0, 2000);
     if (notes) entry.notes = notes;
     fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
-    return res.json({ ok: true, id: entry.id });
+    res.json({ ok: true, id: entry.id });
+    pushToCrm(entry, answers);
+    return;
   }
 
   if (stage === "complete") {
@@ -264,7 +266,106 @@ app.post("/api/health-check", (req, res) => {
 
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true, id: entry.id });
+  // Alleen de complete aanvraag doorzetten; een los e-mailadres uit stap 1 is
+  // nog geen lead om in het CRM te zetten.
+  if (stage === "complete") pushToCrm(entry, null);
 });
+
+// ---------- Doorzetten naar 4Relations ----------
+//
+// Aanvragen blijven altijd hier staan (JSONL op de volume); 4Relations is een
+// kopie, geen vervanging. Daarom gebeurt het versturen ná het antwoord aan de
+// bezoeker en kan een storing daar nooit een aanvraag kosten. Mislukt het,
+// dan onthouden we dat en kun je het op /beheer opnieuw proberen.
+//
+// Aanzetten op Railway met env-variabelen:
+//   CRM_URL           het adres dat een client/lead aanmaakt (verplicht)
+//   CRM_TOKEN         de sleutel (optioneel, maar in de praktijk nodig)
+//   CRM_AUTH_HEADER   naam van de header, standaard "Authorization"
+//   CRM_AUTH_PREFIX   wat vóór de sleutel komt, standaard "Bearer "
+// Zonder CRM_URL gebeurt er niets en werkt de rest gewoon.
+
+const CRM_URL = process.env.CRM_URL || "";
+const CRM_TOKEN = process.env.CRM_TOKEN || "";
+const CRM_AUTH_HEADER = process.env.CRM_AUTH_HEADER || "Authorization";
+const CRM_AUTH_PREFIX = process.env.CRM_AUTH_PREFIX ?? "Bearer ";
+const CRM_STATUS = process.env.CRM_STATUS || "prospect";
+
+// Wat we naar 4Relations sturen. Het bedrijf is de client (status prospect),
+// de persoon het contact, en de Health Check-gegevens zitten eronder.
+function crmPayload(entry, answers) {
+  const domain = String(entry.email || "").split("@")[1] || "";
+  return {
+    source: "tubes.media",
+    form: "production finance health check",
+    kind: entry.stage === "assessment" ? "assessment" : "request",
+    received_at: entry.at,
+    reference: entry.id,
+    status: CRM_STATUS,
+    client: {
+      name: entry.company || "",
+      email_domain: domain,
+    },
+    contact: {
+      name: entry.name || "",
+      email: entry.email || "",
+      role: entry.role || "",
+    },
+    health_check: {
+      wants_to_improve: entry.improve || "",
+      current_system: entry.current_system || "",
+      notes: entry.notes || "",
+      answers: Object.entries(answers || {}).map(([key, answer]) => ({
+        key,
+        question: HC_AREA_LABELS[key] || key,
+        answer,
+      })),
+    },
+    page: entry.page || "",
+  };
+}
+
+function recordPush(entry, ok, error) {
+  fs.appendFileSync(
+    DATA_FILE,
+    JSON.stringify({
+      id: crypto.randomUUID(),
+      at: new Date().toISOString(),
+      kind: "crm_push",
+      lead_id: entry.id,
+      ok,
+      ...(error ? { error: String(error).slice(0, 300) } : {}),
+    }) + "\n"
+  );
+}
+
+async function pushToCrm(entry, answers) {
+  if (!CRM_URL || entry.spam) return;
+  if (typeof fetch !== "function") {
+    console.warn("Geen fetch beschikbaar in deze Node-versie, 4Relations overgeslagen");
+    return;
+  }
+
+  const stop = new AbortController();
+  const timer = setTimeout(() => stop.abort(), 8000);
+  try {
+    const res = await fetch(CRM_URL, {
+      method: "POST",
+      signal: stop.signal,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        ...(CRM_TOKEN ? { [CRM_AUTH_HEADER]: CRM_AUTH_PREFIX + CRM_TOKEN } : {}),
+      },
+      body: JSON.stringify(crmPayload(entry, answers)),
+    });
+    recordPush(entry, res.ok, res.ok ? "" : `HTTP ${res.status} ${await res.text().catch(() => "")}`.slice(0, 300));
+  } catch (err) {
+    recordPush(entry, false, err.name === "AbortError" ? "time-out na 8 seconden" : err.message);
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 // ---------- MMG-pitchpagina's (Basic Auth) ----------
 
@@ -323,6 +424,12 @@ function readSubmissions() {
   );
 
   // Het zelfbeeld is geen apart bericht maar hoort bij de aanvraag.
+  // Uitkomst van het doorzetten naar 4Relations, laatste poging telt.
+  const pushes = new Map();
+  for (const s of all) {
+    if (s.kind === "crm_push" && s.lead_id) pushes.set(s.lead_id, s);
+  }
+
   const byRequest = new Map();
   const byEmail = new Map();
   for (const s of all) {
@@ -331,7 +438,9 @@ function readSubmissions() {
     if (s.email) byEmail.set(s.email.toLowerCase(), s);
   }
 
-  const list = all.filter((s) => s.stage !== "assessment" && !superseded.has(s.id));
+  const list = all.filter(
+    (s) => s.kind !== "crm_push" && s.stage !== "assessment" && !superseded.has(s.id)
+  );
   const merged = new Set();
   for (const s of list) {
     // Vanaf het bedankscherm komt het id mee; via een losse link alleen het
@@ -348,12 +457,26 @@ function readSubmissions() {
   // losse link in) tonen we apart, anders verdwijnen ze uit beeld.
   const losseAntwoorden = all.filter((s) => s.stage === "assessment" && !merged.has(s.id));
 
+  for (const entry of [...list, ...losseAntwoorden]) {
+    const push = pushes.get(entry.id);
+    if (push) entry.crm = { ok: push.ok, error: push.error || "", at: push.at };
+  }
+
   return [...list, ...losseAntwoorden].sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
 }
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 const stamp = (at) => new Date(at).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" });
+
+// Merkje of deze aanvraag in 4Relations staat. Zonder CRM_URL laten we het
+// helemaal weg, anders zou elke aanvraag er als "niet doorgezet" bij staan.
+function crmTag(entry) {
+  if (!CRM_URL || entry.spam || entry.stage === "email") return "";
+  if (entry.crm?.ok) return ' <span class="tag">in 4Relations</span>';
+  if (entry.crm) return ` <span class="tag tag-warn" title="${esc(entry.crm.error)}">4Relations mislukt</span>`;
+  return ' <span class="tag tag-open">nog niet doorgezet</span>';
+}
 
 function contactCard(s) {
   return `<article class="msg">
@@ -395,11 +518,26 @@ function healthCheckCard(s) {
           <span>${stamp(s.at)}</span></header>
         <p class="meta">
           <span class="tag${partial ? " tag-open" : ""}">${label}</span>
-          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}
+          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}${crmTag(s)}
         </p>
         ${details ? `<p class="body">${details}</p>` : ""}
         ${selfView}
       </article>`;
+}
+
+// Stand van de koppeling onderaan de lijst, met een knop om te herstellen.
+function crmLine(items) {
+  if (!CRM_URL) {
+    return '<p class="count" style="margin-top:20px">4Relations-koppeling staat uit. Zet <code>CRM_URL</code> (en meestal <code>CRM_TOKEN</code>) op de Railway-service om aanvragen automatisch door te zetten.</p>';
+  }
+  const open = items.filter(
+    (s) => s.kind === "health_check" && s.stage !== "email" && !s.spam && !s.crm?.ok
+  ).length;
+  if (!open) return '<p class="count" style="margin-top:20px">Alle aanvragen staan in 4Relations.</p>';
+  return `<form method="POST" action="/beheer/crm-retry" style="margin-top:20px">
+    <p class="count">${open} aanvra${open === 1 ? "ag" : "gen"} nog niet in 4Relations.
+    <button type="submit" style="font:inherit;color:#0E8C77;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline">opnieuw proberen</button></p>
+  </form>`;
 }
 
 app.get("/beheer", (req, res) => {
@@ -439,8 +577,23 @@ app.get("/beheer", (req, res) => {
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
+${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
 </div></body></html>`);
+});
+
+// Alles wat nog niet (goed) is doorgezet alsnog naar 4Relations sturen.
+app.post("/beheer/crm-retry", async (req, res) => {
+  if (!checkAuth(req, res)) return;
+  if (!CRM_URL) return res.status(503).send("Stel eerst CRM_URL in op Railway.");
+
+  const wachtenden = readSubmissions().filter(
+    (s) => s.kind === "health_check" && s.stage !== "email" && !s.spam && !s.crm?.ok
+  );
+  for (const entry of wachtenden) {
+    await pushToCrm(entry, entry.answers || null);
+  }
+  res.redirect("/beheer");
 });
 
 app.get("/beheer/export.csv", (req, res) => {
