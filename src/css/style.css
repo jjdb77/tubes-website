@@ -1376,3 +1376,73 @@ a:hover { color: var(--action); }
 @media (max-width: 420px) {
   .hc-topics { grid-template-columns: 1fr; }
 }
+
+/* ---------- Zelfbeeld ná de bevestiging ---------- */
+
+/* De aanvraag is op dit punt al opgeslagen. Dit blok is dus puur winst:
+   wie hem invult geeft ons een voorsprong, wie hem overslaat is al lead. */
+.hc-assess {
+  margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid var(--divider);
+}
+.hc-assess-kicker {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--action-soft-ink); background: var(--action-soft);
+  border-radius: var(--radius-chip); padding: 4px 9px; margin-bottom: 12px;
+}
+.hc-assess-title { font-size: 1.1rem; margin-bottom: 0.4em; }
+.hc-assess-intro { font-size: 0.94rem; color: var(--ink-soft); margin-bottom: 20px; }
+
+.hc-assess-list { list-style: none; margin: 0; padding: 0; }
+.hc-assess-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 12px; align-items: center;
+  padding: 12px 0; border-top: 1px solid var(--divider);
+}
+.hc-assess-row:first-child { border-top: 0; padding-top: 0; }
+.hc-assess-num {
+  font-size: 0.7rem; font-weight: 700; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  background: var(--bg); border-radius: var(--radius-chip); padding: 4px 6px;
+  align-self: start; margin-top: 2px;
+}
+.hc-assess-label { font-size: 0.94rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.hc-assess-options { grid-column: 2; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+.hc-opt { position: relative; }
+.hc-opt input {
+  position: absolute; opacity: 0; left: 0; top: 0;
+  width: 100%; height: 100%; margin: 0; cursor: pointer;
+}
+.hc-opt span {
+  display: inline-block;
+  font-size: 0.8rem; font-weight: 600; line-height: 1;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  padding: 8px 11px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.hc-opt:hover span { border-color: var(--muted); color: var(--ink); }
+/* Aangevinkt krijgt de kleur van het bijbehorende label uit het assessment */
+.hc-opt-good input:checked + span { background: var(--status-mint-bg); color: var(--status-mint-ink); border-color: var(--status-mint-ink); font-weight: 700; }
+.hc-opt-mid input:checked + span { background: var(--status-amber-bg); color: var(--status-amber-ink); border-color: var(--status-amber-ink); font-weight: 700; }
+.hc-opt-low input:checked + span { background: var(--status-lavender-bg); color: var(--status-lavender-ink); border-color: var(--status-lavender-ink); font-weight: 700; }
+.hc-opt input:focus-visible + span { outline: 3px solid var(--action); outline-offset: 2px; }
+
+.hc-assess-submit { margin-top: 20px; width: 100%; text-align: center; }
+.hc-assess-status:empty { display: none; }
+
+.hc-assess-thanks {
+  margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid var(--divider);
+}
+.hc-assess-thanks-title { font-weight: 700; color: var(--ink); }
+
+@media (max-width: 520px) {
+  .hc-assess-row { grid-template-columns: 1fr; }
+  .hc-assess-num { display: none; }
+  .hc-assess-options { grid-column: 1; }
+}

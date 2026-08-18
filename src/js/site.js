@@ -259,7 +259,7 @@ const hcForms = Array.from(document.querySelectorAll("[data-hc-form]"));
 
 if (hcForms.length) {
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-  const state = { leadId: "", email: "", step: 1, done: false, emailTracked: false };
+  const state = { leadId: "", requestId: "", email: "", step: 1, done: false, emailTracked: false };
 
   // Wordt verderop gevuld door de vaste knop op mobiel: zodra iemand aan
   // stap 2 begint of klaar is, hoeft die knop er niet meer te staan.
@@ -296,6 +296,9 @@ if (hcForms.length) {
       setStatus(form, "");
       const done = form.querySelector("[data-hc-done]");
       if (done) done.hidden = false;
+      // Het zelfbeeld hoort bij één formulier: dat waar de bezoeker net was.
+      const assess = form.querySelector("[data-hc-assess]");
+      if (assess && form !== activeForm) assess.hidden = true;
       const privacy = form.querySelector(".hc-privacy");
       if (privacy) privacy.hidden = true;
     }
@@ -422,7 +425,7 @@ if (hcForms.length) {
       if (button) button.disabled = true;
       setStatus(form, "Sending your request…");
       try {
-        await post({
+        const done = await post({
           stage: "complete",
           lead_id: state.leadId,
           email: state.email,
@@ -434,6 +437,7 @@ if (hcForms.length) {
           current_system: String(data.get("current_system") || ""),
           page: location.pathname
         });
+        state.requestId = done.id || "";
         track("health-check-requested", { company });
         showDone(form);
       } catch (err) {
@@ -443,6 +447,58 @@ if (hcForms.length) {
           "error"
         );
         if (button) button.disabled = false;
+      }
+    });
+  }
+
+  // ---- Zelfbeeld op de zes gebieden (optioneel, ná de bevestiging) ----
+  const AREA_KEYS = [
+    "budget_structure",
+    "budget_handover",
+    "actuals",
+    "forecasting",
+    "approvals",
+    "reporting"
+  ];
+
+  for (const form of hcForms) {
+    const block = form.querySelector("[data-hc-assess]");
+    const button = form.querySelector("[data-hc-assess-submit]");
+    if (!block || !button) continue;
+    const status = block.querySelector(".hc-assess-status");
+
+    button.addEventListener("click", async () => {
+      const answers = {};
+      for (const key of AREA_KEYS) {
+        const picked = block.querySelector(`input[name="${key}"]:checked`);
+        if (picked) answers[key] = picked.value;
+      }
+
+      if (!Object.keys(answers).length) {
+        status.textContent = "Pick at least one area, or skip this step.";
+        status.className = "form-status hc-assess-status is-error";
+        return;
+      }
+
+      button.disabled = true;
+      status.textContent = "Sending…";
+      status.className = "form-status hc-assess-status";
+      try {
+        await post({
+          stage: "assessment",
+          lead_id: state.requestId,
+          email: state.email,
+          ...answers,
+          page: location.pathname
+        });
+        track("health-check-self-assessment", { answered: Object.keys(answers).length });
+        block.hidden = true;
+        const thanks = form.querySelector("[data-hc-assess-thanks]");
+        if (thanks) thanks.hidden = false;
+      } catch (err) {
+        status.textContent = "That did not come through. Please try again.";
+        status.className = "form-status hc-assess-status is-error";
+        button.disabled = false;
       }
     });
   }

@@ -148,6 +148,26 @@ const FREE_EMAIL_DOMAINS = new Set([
   "ziggo.nl", "kpnmail.nl", "telfort.nl", "home.nl", "planet.nl", "xs4all.nl",
 ]);
 
+// De zes gebieden en de drie labels, zoals ze op de pagina staan. Alleen deze
+// waarden worden bewaard, zodat er geen losse tekst in de opslag belandt.
+const HC_AREAS = [
+  "budget_structure",
+  "budget_handover",
+  "actuals",
+  "forecasting",
+  "approvals",
+  "reporting",
+];
+const HC_AREA_LABELS = {
+  budget_structure: "Budgetstructuur en versiebeheer",
+  budget_handover: "Budget naar productie",
+  actuals: "Actuals en reconciliatie",
+  forecasting: "Forecasting",
+  approvals: "Approvals en controls",
+  reporting: "Reporting en zichtbaarheid",
+};
+const HC_LABELS = new Set(["Strong", "Could improve", "Opportunity"]);
+
 app.post("/api/health-check", (req, res) => {
   if (rateLimited(req, 12)) {
     return res.status(429).json({ ok: false, error: "Too many requests" });
@@ -163,7 +183,8 @@ app.post("/api/health-check", (req, res) => {
     return res.status(400).json({ ok: false, error: "Invalid email" });
   }
 
-  const stage = b.stage === "complete" ? "complete" : "email";
+  const STAGES = new Set(["email", "complete", "assessment"]);
+  const stage = STAGES.has(b.stage) ? b.stage : "email";
   const entry = {
     id: crypto.randomUUID(),
     at: new Date().toISOString(),
@@ -174,6 +195,23 @@ app.post("/api/health-check", (req, res) => {
     page: String(b.page || "").slice(0, 200),
     ...(flagged ? { spam: true } : {}),
   };
+
+  // Het optionele zelfbeeld dat ná de bevestiging wordt ingevuld. Hoort bij de
+  // aanvraag waarvan het id in lead_id staat; /beheer vouwt het daarin.
+  if (stage === "assessment") {
+    const answers = {};
+    for (const key of HC_AREAS) {
+      const value = String(b[key] || "").trim();
+      if (HC_LABELS.has(value)) answers[key] = value;
+    }
+    if (!Object.keys(answers).length) {
+      return res.status(400).json({ ok: false, error: "No answers" });
+    }
+    entry.lead_id = String(b.lead_id || "").slice(0, 64);
+    entry.answers = answers;
+    fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
+    return res.json({ ok: true, id: entry.id });
+  }
 
   if (stage === "complete") {
     const name = String(b.name || "").trim().slice(0, 120);
@@ -245,8 +283,22 @@ function readSubmissions() {
   // Een afgeronde Health Check verwijst met lead_id naar de regel van stap 1.
   // Die eerste regel laten we hier weg, anders staat dezelfde aanvraag er
   // twee keer. In het bestand blijven allebei staan (trechterdata).
-  const superseded = new Set(all.map((s) => s.lead_id).filter(Boolean));
-  return all.filter((s) => !superseded.has(s.id)).reverse();
+  const superseded = new Set(
+    all.filter((s) => s.stage === "complete").map((s) => s.lead_id).filter(Boolean)
+  );
+
+  // Het zelfbeeld is geen apart bericht maar hoort bij de aanvraag.
+  const answersByRequest = new Map();
+  for (const s of all) {
+    if (s.stage === "assessment" && s.lead_id) answersByRequest.set(s.lead_id, s.answers);
+  }
+
+  const list = all.filter((s) => s.stage !== "assessment" && !superseded.has(s.id));
+  for (const s of list) {
+    const answers = answersByRequest.get(s.id);
+    if (answers) s.answers = answers;
+  }
+  return list.reverse();
 }
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -276,6 +328,12 @@ function healthCheckCard(s) {
     .map(([label, value]) => `<span><strong>${esc(label)}:</strong> ${esc(value)}</span>`)
     .join("<br>");
 
+  const selfView = s.answers
+    ? `<p class="body selfview"><strong>Zelfbeeld vooraf:</strong><br>${HC_AREAS.filter((k) => s.answers[k])
+        .map((k) => `<span>${esc(HC_AREA_LABELS[k])}: <em>${esc(s.answers[k])}</em></span>`)
+        .join("<br>")}</p>`
+    : "";
+
   return `<article class="msg${partial ? " msg-partial" : ""}">
         <header><strong>${esc(s.name || s.email)}</strong>
           <span>${stamp(s.at)}</span></header>
@@ -284,6 +342,7 @@ function healthCheckCard(s) {
           <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}
         </p>
         ${details ? `<p class="body">${details}</p>` : ""}
+        ${selfView}
       </article>`;
 }
 
@@ -318,6 +377,8 @@ app.get("/beheer", (req, res) => {
   .tag-open{background:#FBF0CE;color:#977414}
   .tag-warn{background:#F6E7E9;color:#C23B4B;margin:0 0 0 6px}
   .body span strong{color:#5C5750;font-weight:600}
+  .selfview{margin-top:10px;padding-top:10px;border-top:1px dashed #E3E5E9;font-size:.92rem}
+  .selfview em{font-style:normal;font-weight:700;color:#5C5750}
 </style></head><body><div class="wrap">
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
@@ -330,16 +391,21 @@ app.get("/beheer/export.csv", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
   const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
-  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,wil verbeteren,werkt nu met,bericht,pagina"]
+  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,wil verbeteren,werkt nu met,zelfbeeld,bericht,pagina"]
     .concat(
       items.map((s) => {
         const isHc = s.kind === "health_check";
         const soort = isHc ? (s.stage === "complete" ? "health check" : "health check (alleen e-mail)") : "contact";
         const naam = isHc ? s.name || "" : `${s.first_name || ""} ${s.last_name || ""}`.trim();
+        const zelfbeeld = s.answers
+          ? HC_AREAS.filter((k) => s.answers[k])
+              .map((k) => `${HC_AREA_LABELS[k]}: ${s.answers[k]}`)
+              .join("; ")
+          : "";
         return [
           s.at, soort, naam, s.email, s.phone || "",
           s.company || "", s.role || "", s.improve || "", s.current_system || "",
-          s.message || "", s.page || "",
+          zelfbeeld, s.message || "", s.page || "",
         ].map(q).join(",");
       })
     )

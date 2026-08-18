@@ -41,9 +41,11 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - De zes beoordeelde gebieden zijn: budgetstructuur en versiebeheer, budget naar productie (wat er ná goedkeuring gebeurt), actuals en reconciliatie, forecasting, approvals en controls, reporting en zichtbaarheid. Labels zijn Strong / Could improve / Opportunity; **geen cijfer of score**, dat zou een uitslag suggereren die er niet is.
 - Het formulier post twee keer naar **/api/health-check**: stap 1 alleen het e-mailadres, stap 2 de rest met `lead_id` erbij. Zelfde JSONL-opslag en dezelfde beheerpagina als het contactformulier. /beheer laat de regel van stap 1 weg zodra stap 2 binnen is, en zet er een label bij. Gratis e-maildomeinen (gmail e.d.) worden niet geweigerd maar gemarkeerd.
 - Mislukt stap 1 (server even weg), dan gaat de bezoeker gewoon door naar stap 2 en gaat het e-mailadres daar alsnog mee. Er wordt nooit een bevestiging getoond zonder dat de aanvraag echt is opgeslagen.
-- Gebeurtenissen voor de trechter: `health-check-page-viewed`, `-email-entered`, `-email-captured`, `-assessment-started`, `-requested`. Die gaan naar GoatCounter als dat aan staat en anders nergens heen; er is bewust geen nieuw analyticsplatform bijgekomen.
+- **Zelfbeeld ná de bevestiging**: op het bedankscherm staat een optionele vraag van een minuut, de zes gebieden met Strong / Could improve / Opportunity. Bewust pas dáár: de aanvraag is dan al opgeslagen, dus dit kan geen enkele lead kosten. Het komt als aparte regel binnen (`stage: "assessment"`, met `lead_id` naar de aanvraag) en /beheer vouwt het in de kaart van die aanvraag. Alleen die zes sleutels en die drie labels worden bewaard.
+- Gebeurtenissen voor de trechter: `health-check-page-viewed`, `-email-entered`, `-email-captured`, `-assessment-started`, `-requested`, `-self-assessment`. Die gaan naar GoatCounter als dat aan staat en anders nergens heen; er is bewust geen nieuw analyticsplatform bijgekomen.
 - Links ernaartoe: de footer op elke pagina, plus een tweede heroknop op Home en Contact.
 - Er is **geen aparte privacyverklaring**; het formulier verwijst naar /compliance/. Komt er een echte privacy policy, dan moet die link mee.
+- ⚠️ **Honeypot-les** (raakt ook het contactformulier en de demo-popup): een veld op `left:-9999px` is voor Chrome en wachtwoordmanagers gewoon zichtbaar en wordt meegevuld met autofill. Daarom staat het nu op `display:none` met de negeer-attributen van 1Password en LastPass, en gooit de server een verdacht bericht niet meer weg maar bewaart het met `spam: true` (verborgen op /beheer, zichtbaar via ?spam=1). Nooit meer zwijgend afbreken aan de kant van de browser: dan lijkt het formulier kapot.
 
 ## Artikelen (Insights)
 
@@ -101,6 +103,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
+- [ ] Health Check-aanvragen doorzetten naar **4Relations**. De website bewaart ze nu alleen zelf (JSONL + /beheer). Nodig van 4Relations: het adres van een endpoint om een contact/lead aan te maken, hoe de authenticatie werkt (sleutel komt als env-variabele op de Railway-service, niet in de repo) en welke velden het verwacht. Opzet aan deze kant: `server.js` doet ná het opslaan een POST, best-effort en met korte time-out, zodat een storing daar nooit een lead kost.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
 - [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's
