@@ -148,25 +148,40 @@ const FREE_EMAIL_DOMAINS = new Set([
   "ziggo.nl", "kpnmail.nl", "telfort.nl", "home.nl", "planet.nl", "xs4all.nl",
 ]);
 
-// De zes gebieden en de drie labels, zoals ze op de pagina staan. Alleen deze
-// waarden worden bewaard, zodat er geen losse tekst in de opslag belandt.
-const HC_AREAS = [
-  "budget_structure",
-  "budget_handover",
-  "actuals",
-  "forecasting",
-  "approvals",
-  "reporting",
-];
-const HC_AREA_LABELS = {
-  budget_structure: "Budgetstructuur en versiebeheer",
-  budget_handover: "Budget naar productie",
-  actuals: "Actuals en reconciliatie",
-  forecasting: "Forecasting",
-  approvals: "Approvals en controls",
-  reporting: "Reporting en zichtbaarheid",
-};
-const HC_LABELS = new Set(["Strong", "Could improve", "Opportunity"]);
+// De vragen staan in src/_data/healthcheck.json, te wijzigen via het CMS.
+// Die lezen we hier ook, zodat een vraag die daar wordt toegevoegd meteen
+// wordt opgeslagen en op /beheer verschijnt, zonder dat hier iets hoeft te
+// veranderen. Alleen bekende sleutels en bekende labels komen erin, dus er
+// belandt geen losse tekst in de opslag.
+const HC_CONFIG_FILE = path.join(__dirname, "src", "_data", "healthcheck.json");
+
+function readHealthCheckConfig() {
+  try {
+    const config = JSON.parse(fs.readFileSync(HC_CONFIG_FILE, "utf8"));
+    const areas = [];
+    const labels = {};
+    for (const step of config.steps || []) {
+      for (const question of step.questions || []) {
+        if (!question.key) continue;
+        areas.push(question.key);
+        labels[question.key] = question.label || question.key;
+      }
+    }
+    const values = new Set((config.labels || []).map((l) => l.value).filter(Boolean));
+    if (areas.length && values.size) return { areas, labels, values };
+  } catch {
+    console.warn("healthcheck.json niet te lezen, terugval op de vaste vragen");
+  }
+  // Terugval: de zes gebieden waarmee de Health Check begon.
+  const areas = ["budget_structure", "budget_handover", "actuals", "forecasting", "approvals", "reporting"];
+  return {
+    areas,
+    labels: Object.fromEntries(areas.map((key) => [key, key])),
+    values: new Set(["Strong", "Could improve", "Opportunity"]),
+  };
+}
+
+const { areas: HC_AREAS, labels: HC_AREA_LABELS, values: HC_LABELS } = readHealthCheckConfig();
 
 // Zoekt het e-mailadres dat bij een eerder opgeslagen aanvraag hoort. Zo hoeft
 // het niet mee in de link naar de vragenlijst.

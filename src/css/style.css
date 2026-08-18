@@ -1607,3 +1607,45 @@ a:hover { color: var(--action); }
   .hc-result-row { flex-direction: column; align-items: flex-start; gap: 7px; }
   .hc-theme, .hc-theme-key { padding: 22px 20px; }
 }
+
+/* ---------- Rapport: per thema, dan waar we beginnen ---------- */
+
+.hc-result-themes { margin-bottom: 26px; }
+.hc-theme-row { padding: 14px 0; border-bottom: 1px solid var(--divider); }
+.hc-theme-row:first-child { border-top: 1px solid var(--divider); }
+.hc-theme-row-name { font-size: 0.94rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
+
+/* Balkje per thema: één segment per beantwoorde vraag, in de kleur van het
+   gekozen label. Geen score, alleen de verdeling zichtbaar maken. */
+.hc-theme-bar { display: flex; gap: 3px; height: 8px; }
+.hc-theme-bar span { flex: 1; border-radius: 999px; }
+.hc-theme-bar .is-good { background: var(--status-mint-ink); }
+.hc-theme-bar .is-mid { background: var(--status-amber-ink); }
+.hc-theme-bar .is-low { background: var(--status-lavender-ink); }
+.hc-theme-row-count { font-size: 0.84rem; color: var(--muted); margin: 8px 0 0; }
+
+.hc-result-focus-lead { font-size: 0.96rem; margin-bottom: 1em; }
+
+.hc-finding-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.hc-finding-list li {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-wash);
+  padding: 16px 18px;
+}
+.hc-finding-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.hc-finding-head .chip { flex: none; }
+.hc-finding-label { font-size: 0.96rem; font-weight: 700; color: var(--ink); margin: 0; }
+.hc-finding-text { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.hc-finding-link {
+  display: inline-block; margin-top: 10px;
+  font-size: 0.88rem; font-weight: 700; color: var(--action-soft-ink);
+}
+
+.hc-result-all { margin-top: 24px; }
+.hc-result-all summary {
+  cursor: pointer; font-size: 0.92rem; font-weight: 700; color: var(--ink-soft);
+  padding: 10px 0;
+}
+.hc-result-all summary:hover { color: var(--action-soft-ink); }
+.hc-result-all[open] summary { margin-bottom: 6px; }

@@ -516,7 +516,6 @@ const assessForm = document.querySelector("[data-hc-assess-form]");
 
 if (assessForm) {
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-  const LAST_QUESTION_STEP = 3;
 
   const ref = new URLSearchParams(location.search).get("ref") || "";
   const identify = assessForm.querySelector("[data-hc-identify]");
@@ -528,11 +527,18 @@ if (assessForm) {
   const questions = Array.from(assessForm.querySelectorAll(".hc-question")).map((block) => ({
     key: block.querySelector("input[type=radio]").name,
     label: block.querySelector(".hc-question-label").textContent.trim(),
-    // Korte naam voor de zin op stap 4: de volledige labels bevatten zelf al
-    // een "and" en dat leest niet in een opsomming.
+    // Korte naam voor de zin in het rapport: de volledige labels bevatten zelf
+    // al een "and" en dat leest niet in een opsomming.
     short: block.dataset.short || block.querySelector(".hc-question-label").textContent.trim().toLowerCase(),
+    theme: block.dataset.theme || "",
+    finding: block.dataset.finding || "",
+    reading: block.dataset.readingUrl ? { url: block.dataset.readingUrl, label: block.dataset.readingLabel } : null,
     input: () => block.querySelector("input[type=radio]:checked")
   }));
+
+  // De laatste stap is het rapport; het aantal vraagstappen komt uit de opmaak,
+  // die op zijn beurt uit healthcheck.json komt.
+  const RESULT_STEP = assessForm.querySelectorAll("[data-hc-stage]").length;
 
   const setStatus = (text, kind) => {
     status.textContent = text || "";
@@ -596,48 +602,120 @@ if (assessForm) {
     button.addEventListener("click", () => showStage(Number(button.dataset.hcBack)));
   }
 
-  // Stap 4 wordt opgebouwd uit de gegeven antwoorden. Geen cijfer, geen
-  // oordeel: alleen teruggeven wat iemand zelf heeft ingevuld.
-  const TONE = { Strong: "mint", "Could improve": "amber", Opportunity: "lavender" };
+  // Het rapport wordt opgebouwd uit de gegeven antwoorden. Geen cijfer en geen
+  // oordeel: we geven terug wat iemand zelf invulde, geordend naar waar we
+  // mee zouden beginnen.
+  const TONE = { Strong: "good", "Could improve": "mid", Opportunity: "low" };
+  const CHIP = { good: "mint", mid: "amber", low: "lavender" };
+  const el = (tag, className, text) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  };
 
   function renderResult(answers) {
+    const answered = questions.filter((q) => answers[q.key]);
+
+    // 1. Per thema: hoe de antwoorden binnen dat thema liggen.
+    const themes = [];
+    for (const question of questions) {
+      let theme = themes.find((t) => t.name === question.theme);
+      if (!theme) {
+        theme = { name: question.theme, questions: [] };
+        themes.push(theme);
+      }
+      theme.questions.push(question);
+    }
+
+    const themeWrap = assessForm.querySelector("[data-hc-result-themes]");
+    themeWrap.innerHTML = "";
+    for (const theme of themes) {
+      const given = theme.questions.filter((q) => answers[q.key]);
+      if (!given.length) continue;
+
+      const row = el("div", "hc-theme-row");
+      row.append(el("p", "hc-theme-row-name", theme.name));
+
+      const bar = el("div", "hc-theme-bar");
+      const counts = { good: 0, mid: 0, low: 0 };
+      for (const question of given) {
+        const tone = TONE[answers[question.key]];
+        counts[tone] += 1;
+        const segment = el("span", "is-" + tone);
+        segment.title = `${question.label}: ${answers[question.key]}`;
+        bar.append(segment);
+      }
+      const parts = [];
+      if (counts.low) parts.push(counts.low + (counts.low === 1 ? " opportunity" : " opportunities"));
+      if (counts.mid) parts.push(counts.mid + " could improve");
+      if (counts.good) parts.push(counts.good + " strong");
+      bar.setAttribute("role", "img");
+      bar.setAttribute("aria-label", `${theme.name}: ${parts.join(", ")}`);
+
+      row.append(bar, el("p", "hc-theme-row-count", parts.join(" · ")));
+      themeWrap.append(row);
+    }
+
+    // 2. Waar we mee beginnen: eerst wat als kans is aangemerkt, daarna wat
+    //    beter kan. Hoogstens drie, met de bevinding en iets om te lezen.
+    const flagged = answered.filter((q) => answers[q.key] === "Opportunity");
+    const soft = answered.filter((q) => answers[q.key] === "Could improve");
+    const priority = [...flagged, ...soft].slice(0, 3);
+
+    const focus = assessForm.querySelector("[data-hc-result-focus]");
+    focus.innerHTML = "";
+    focus.append(el("p", "hc-result-focus-title", focus.dataset.title || "Where we will start"));
+
+    if (!priority.length) {
+      focus.append(el("p", null, focus.dataset.none || ""));
+    } else {
+      const named = (items) =>
+        items.length === 1
+          ? items[0]
+          : items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
+      const lead = flagged.length
+        ? `You marked ${flagged.length === 1 ? "one area" : flagged.length + " areas"} as an opportunity: ${named(flagged.map((q) => q.short))}.`
+        : "Nothing stands out as a clear problem, so we will start where you said things could be better.";
+      focus.append(el("p", "hc-result-focus-lead", lead));
+
+      const list = el("ol", "hc-finding-list");
+      // Vragen binnen één stap delen dezelfde leestip; die dan maar één keer.
+      const shown = new Set();
+      for (const question of priority) {
+        const item = document.createElement("li");
+        const head = el("div", "hc-finding-head");
+        head.append(el("span", `chip chip-${CHIP[TONE[answers[question.key]]]}`, answers[question.key]));
+        head.append(el("p", "hc-finding-label", question.label));
+        item.append(head);
+        if (question.finding) item.append(el("p", "hc-finding-text", question.finding));
+        if (question.reading && !shown.has(question.reading.url)) {
+          shown.add(question.reading.url);
+          const link = document.createElement("a");
+          link.className = "hc-finding-link";
+          link.href = question.reading.url;
+          link.textContent = question.reading.label;
+          item.append(link);
+        }
+        list.append(item);
+      }
+      focus.append(list);
+    }
+
+    // 3. Alles wat is ingevuld, uitklapbaar.
     const list = assessForm.querySelector("[data-hc-result-list]");
     list.innerHTML = "";
     for (const question of questions) {
       const value = answers[question.key];
-      const row = document.createElement("li");
-      row.className = "hc-result-row" + (value ? "" : " is-empty");
-      const label = document.createElement("span");
-      label.className = "hc-result-label";
-      label.textContent = question.label;
-      const chip = document.createElement("span");
-      chip.className = value ? `chip chip-${TONE[value]}` : "hc-result-skipped";
-      chip.textContent = value || "Not answered";
-      row.append(label, chip);
+      const row = el("li", "hc-result-row" + (value ? "" : " is-empty"));
+      row.append(el("span", "hc-result-label", question.label));
+      row.append(
+        value
+          ? el("span", `chip chip-${CHIP[TONE[value]]}`, value)
+          : el("span", "hc-result-skipped", "Not answered")
+      );
       list.append(row);
     }
-
-    const flagged = questions.filter((q) => answers[q.key] === "Opportunity").map((q) => q.short);
-    const soft = questions.filter((q) => answers[q.key] === "Could improve").map((q) => q.short);
-    const focus = assessForm.querySelector("[data-hc-result-focus]");
-    const named = (items) =>
-      items.length === 1 ? items[0] : items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
-
-    let text;
-    if (flagged.length) {
-      text = `You marked ${flagged.length === 1 ? "one area" : flagged.length + " areas"} as an opportunity: ${named(flagged)}. That is where we will start.`;
-    } else if (soft.length) {
-      text = `Nothing stands out as a clear problem. We will start with ${named(soft)}, where you said things could be better.`;
-    } else {
-      text = "You rated everything as strong. We will spend the session looking for the smaller frictions, the ones that only show up when a production goes sideways.";
-    }
-    focus.innerHTML = "";
-    const title = document.createElement("p");
-    title.className = "hc-result-focus-title";
-    title.textContent = "Where we will start";
-    const body = document.createElement("p");
-    body.textContent = text;
-    focus.append(title, body);
   }
 
   assessForm.addEventListener("submit", async (e) => {
@@ -690,7 +768,7 @@ if (assessForm) {
 
       track("health-check-assessment-completed", { answered: Object.keys(answers).length });
       renderResult(answers);
-      showStage(4);
+      showStage(RESULT_STEP);
     } catch (err) {
       setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
       button.disabled = false;

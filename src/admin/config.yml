@@ -84,6 +84,60 @@ collections:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
 
+      - name: healthcheck
+        label: "Health Check-vragenlijst"
+        file: src/_data/healthcheck.json
+        description: "De vragen op /production-finance-health-check/assessment/. Let op: de sleutel van een vraag is de veldnaam in de opslag. Verander die niet meer zodra er antwoorden binnen zijn, dan raken oude en nieuwe antwoorden los van elkaar."
+        fields:
+          - { label: "Introzin boven de vragen", name: intro, widget: text }
+          - label: "De drie labels"
+            name: labels
+            widget: list
+            summary: "{{fields.value}}"
+            hint: "De keuzes bij elke vraag. Wijzig je een waarde, dan sluiten oude antwoorden niet meer aan."
+            fields:
+              - { label: Tekst, name: value, widget: string }
+              - { label: Kleur, name: tone, widget: select, options: [{ label: "Groen (goed)", value: good }, { label: "Amber (kan beter)", value: mid }, { label: "Paars (kans)", value: low }] }
+              - { label: "Uitleg in de rechterkolom", name: meaning, widget: text }
+          - label: "Stappen"
+            name: steps
+            widget: list
+            summary: "{{fields.theme}}"
+            hint: "Elke stap is een scherm met een eigen thema. Een stap toevoegen kan gewoon; de voortgangsbalk en het rapport lopen mee."
+            fields:
+              - { label: "Thema (kort)", name: theme, widget: string }
+              - { label: "Kop boven de vragen", name: heading, widget: string }
+              - { label: "Toelichting rechts (waar het meestal misgaat)", name: friction, widget: text }
+              - label: "Leestips rechts"
+                name: reading
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Titel, name: label, widget: string }
+                  - { label: Link, name: url, widget: string, hint: "Bijvoorbeeld /insights/how-to-build-a-production-budget/" }
+              - label: "Vragen"
+                name: questions
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
+                  - { label: Vraag, name: label, widget: string }
+                  - { label: "Toelichting onder de vraag", name: hint, widget: text }
+                  - { label: "Korte naam (voor de zin in het rapport)", name: short, widget: string, hint: "Kleine letters, bv. 'the handover to production'. Komt in: 'You marked 2 areas as an opportunity: ...'" }
+                  - { label: "Bevinding in het rapport", name: finding, widget: text, hint: "Wat het meestal betekent als iemand dit als kans of verbeterpunt aanmerkt." }
+          - label: "Rapport (laatste stap)"
+            name: result
+            widget: object
+            fields:
+              - { label: Kop, name: heading, widget: string }
+              - { label: Introzin, name: intro, widget: text }
+              - { label: "Kop boven 'waar we beginnen'", name: focus_title, widget: string }
+              - { label: "Tekst als er niets is aangemerkt", name: none_flagged, widget: text }
+              - { label: "Kop rechts", name: next_title, widget: string }
+              - { label: "Stappen rechts", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
+              - { label: "Slotzin rechts", name: note, widget: text }
+
   - name: artikelen
     label: "Artikelen (Insights)"
     icon: draft

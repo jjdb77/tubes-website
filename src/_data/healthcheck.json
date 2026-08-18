@@ -1,0 +1,117 @@
+{
+  "intro": "Nine questions in three short steps. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
+  "labels": [
+    { "value": "Strong", "tone": "good", "meaning": "This works. Nobody loses time over it and you trust the numbers." },
+    { "value": "Could improve", "tone": "mid", "meaning": "Workable, but it costs time, or it only works because one person knows how." },
+    { "value": "Opportunity", "tone": "low", "meaning": "This is where things go wrong, get lost, or arrive too late to act on." }
+  ],
+  "steps": [
+    {
+      "theme": "Planning and budgeting",
+      "heading": "How the budget is built, and what happens once it is approved",
+      "friction": "Most budgets survive approval intact. What tends to break is everything after it: a version sitting in someone's inbox, a working budget rebuilt by hand, and two numbers that no longer agree.",
+      "reading": [
+        { "label": "How to Build a Production Budget", "url": "/insights/how-to-build-a-production-budget/" },
+        { "label": "Above the Line vs Below the Line", "url": "/insights/above-the-line-vs-below-the-line/" }
+      ],
+      "questions": [
+        {
+          "key": "budget_structure",
+          "short": "budget structure",
+          "label": "Budget structure and version control",
+          "hint": "How budgets are built and changed, and how you know which version counts.",
+          "finding": "When there is no single current version, two people can be right about different numbers at the same time. Every later discussion starts with reconciling the budget instead of the production."
+        },
+        {
+          "key": "budget_templates",
+          "short": "budget templates",
+          "label": "A shared structure across productions",
+          "hint": "Whether productions start from the same structure, or everyone builds their own.",
+          "finding": "Without a shared structure you cannot compare productions, and every new one costs a week of rebuilding what already existed."
+        },
+        {
+          "key": "budget_handover",
+          "short": "the handover to production",
+          "label": "Budget to production handover",
+          "hint": "What happens after approval, and how the people spending the money get a working budget.",
+          "finding": "This is the gap most tools leave open. If the working budget is rebuilt by hand after approval, it starts drifting from the approved one immediately."
+        }
+      ]
+    },
+    {
+      "theme": "Spending and control",
+      "heading": "What actually gets spent, and who is allowed to commit it",
+      "friction": "Costs rarely arrive in the shape the budget expects. The work of making them line up is usually invisible, usually manual, and usually done by one person under time pressure.",
+      "reading": [
+        { "label": "How Much Contingency Does a Production Need?", "url": "/insights/how-much-contingency-does-a-production-need/" }
+      ],
+      "questions": [
+        {
+          "key": "commitments",
+          "short": "committed spend",
+          "label": "Orders and committed spend",
+          "hint": "Whether money that is committed but not yet invoiced is visible anywhere.",
+          "finding": "If only invoices are visible, the budget looks healthier than it is. The overspend is already agreed, it just has not arrived yet."
+        },
+        {
+          "key": "actuals",
+          "short": "actuals",
+          "label": "Actuals and reconciliation",
+          "hint": "How real costs come in, how they are coded, and how they get matched back to the budget.",
+          "finding": "Manual reconciliation is the most expensive habit in production finance, and the first thing to break when a production gets busy."
+        },
+        {
+          "key": "approvals",
+          "short": "approvals",
+          "label": "Approvals and controls",
+          "hint": "Who may commit spend, who may change a budget, and how that is recorded.",
+          "finding": "When approval lives in email, nobody can answer who agreed to what, and the audit happens afterwards instead of at the moment of spending."
+        }
+      ]
+    },
+    {
+      "theme": "Forecasting and reporting",
+      "heading": "Knowing where this will land, and who gets told in time",
+      "friction": "A report that takes three days to build is a report about last week. The question is not only whether the numbers are right, but whether they arrive while you can still do something about them.",
+      "reading": [
+        { "label": "What Is a Production Cost Report?", "url": "/insights/what-is-a-production-cost-report/" }
+      ],
+      "questions": [
+        {
+          "key": "forecasting",
+          "short": "forecasting",
+          "label": "Forecasting the final cost",
+          "hint": "How commitments, costs to date and remaining costs add up to an expected final cost.",
+          "finding": "A forecast that is refreshed once a month is a forecast you cannot steer on. The overspend is usually visible weeks before it is reported."
+        },
+        {
+          "key": "reporting",
+          "short": "reporting",
+          "label": "Reporting and visibility",
+          "hint": "Who gets reliable financial information, in what form, and how long it takes to produce.",
+          "finding": "If a report takes days to assemble, it is describing a situation that has already changed. The effort goes into producing it rather than acting on it."
+        },
+        {
+          "key": "portfolio",
+          "short": "the view across productions",
+          "label": "Several productions at once",
+          "hint": "Whether you can see across productions, not only within one of them.",
+          "finding": "Each production can look fine on its own while the company position is not. That only shows up when someone consolidates by hand, usually too late."
+        }
+      ]
+    }
+  ],
+  "result": {
+    "heading": "This is what you told us",
+    "intro": "Received, thank you. Nothing is scored here: this is your own reading of your process, and it sets the agenda for the session.",
+    "focus_title": "Where we will start",
+    "none_flagged": "You rated everything as strong. We will spend the session looking for the smaller frictions, the ones that only show up when a production goes sideways.",
+    "next_title": "What happens next",
+    "next": [
+      "We read your answers before we speak, so we do not spend the session on the basics.",
+      "45 minutes together, going through each area properly.",
+      "A short written summary: the three main opportunities, where the manual work sits, and what to improve first."
+    ],
+    "note": "If Tubes can solve one of the things we find, we will show you that part. There is no obligation to continue."
+  }
+}
