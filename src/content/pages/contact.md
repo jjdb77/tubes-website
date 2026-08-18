@@ -10,13 +10,9 @@ sections:
     title: Contact Us
     text: |
       Interested in Tubes? Share a few details about your organization and productions, and we'll get in touch to explore how Tubes can support your workflow.
-
-      Not ready for a demo? Start with a free 45 minute Production Finance Health Check instead.
     buttons:
       - label: Request a Demo
         url: "#contact-form"
-      - label: Free Health Check
-        url: /production-finance-health-check/
     image: /assets/images/contact-hero.jpeg
     image_alt: Get in touch with Tubes
   - type: contactform
