@@ -22,7 +22,8 @@
         "Theatre",
         "Online or digital content",
         "Other"
-      ]
+      ],
+      "short": "What you produce"
     },
     {
       "key": "budget_band",
@@ -34,7 +35,8 @@
         "£5m to £10m",
         "£10m and above",
         "Varies significantly"
-      ]
+      ],
+      "short": "Typical budget size"
     },
     {
       "key": "volume",
@@ -45,7 +47,8 @@
         "6 to 10",
         "More than 10",
         "Varies"
-      ]
+      ],
+      "short": "Productions at one time"
     },
     {
       "key": "current_system",
@@ -56,7 +59,8 @@
         "Production finance software",
         "A combination of systems",
         "Other"
-      ]
+      ],
+      "short": "How you manage production finance"
     },
     {
       "key": "workload",
@@ -70,7 +74,8 @@
         "Producing reports",
         "Keeping everyone aligned",
         "Not sure, I would like to explore this"
-      ]
+      ],
+      "short": "Where the most work sits"
     }
   ],
   "notes": {

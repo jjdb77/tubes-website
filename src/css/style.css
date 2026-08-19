@@ -1726,10 +1726,10 @@ a:hover { color: var(--action); }
   border: 0;
   border-radius: var(--radius-card);
   padding: 0;
-  width: min(900px, calc(100vw - 32px));
-  /* Hoogte volgt de agenda zelf: die is compact tot iemand een dag kiest,
-     daarna scrollt de tijdenlijst binnen het frame. */
-  height: min(600px, calc(100vh - 48px));
+  width: min(1060px, calc(100vw - 32px));
+  /* Ruim genoeg voor het invulscherm dat verschijnt zodra iemand een tijd
+     kiest: daar staan naam, e-mail, telefoon en een tekstveld onder elkaar. */
+  height: min(820px, calc(100vh - 40px));
   max-width: none; max-height: none;
   box-shadow: 0 24px 60px -12px rgba(23, 25, 28, 0.35);
   background: var(--surface);

@@ -46,29 +46,26 @@ noindex: true
       <div class="hc-scan" aria-labelledby="hc-scan-title">
         <div class="hc-scan-head">
           <div>
-            <span class="hc-scan-kicker">Assessment</span>
-            <h2 class="hc-scan-title" id="hc-scan-title">Production Finance Health Check</h2>
+            <span class="hc-scan-kicker">Before the call</span>
+            <h2 class="hc-scan-title" id="hc-scan-title">Five quick questions</h2>
           </div>
-          <span class="chip chip-blue">45 minutes</span>
+          <span class="chip chip-blue">2 minutes</span>
         </div>
 
+        {#- Deze lijst volgt de vragen uit healthcheck.json, zodat het beeld
+            klopt met wat er achter de knop zit. Wijzig je een vraag in het
+            CMS, dan verandert dit mee. -#}
         <ol class="hc-scan-list">
-          <li><span class="hc-scan-num">01</span><span class="hc-scan-label">Budget structure and version control</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
-          <li><span class="hc-scan-num">02</span><span class="hc-scan-label">Budget to production handover</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
-          <li><span class="hc-scan-num">03</span><span class="hc-scan-label">Actuals and reconciliation</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
-          <li><span class="hc-scan-num">04</span><span class="hc-scan-label">Forecasting</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
-          <li><span class="hc-scan-num">05</span><span class="hc-scan-label">Approvals and controls</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
-          <li><span class="hc-scan-num">06</span><span class="hc-scan-label">Reporting and visibility</span><span class="hc-scan-meter" aria-hidden="true"><i></i><i></i><i></i></span></li>
+          {%- for question in healthcheck.questions %}
+          <li>
+            <span class="hc-scan-num">{{ "0" + loop.index | string }}</span>
+            <span class="hc-scan-label">{{ question.short }}</span>
+          </li>
+          {%- endfor %}
         </ol>
 
         <div class="hc-scan-foot">
-          <p class="hc-scan-key">Each area gets one of three labels</p>
-          <ul class="hc-scan-chips">
-            <li class="chip chip-mint">Strong</li>
-            <li class="chip chip-amber">Could improve</li>
-            <li class="chip chip-lavender">Opportunity</li>
-          </ul>
-          <p class="hc-scan-note">No score out of ten. We talk through each area with you and write down what we find.</p>
+          <p class="hc-scan-note">Then you pick a time. The Health Check itself is a video call of 45 minutes, in which we go through your production finance process with you.</p>
         </div>
       </div>
     </div>

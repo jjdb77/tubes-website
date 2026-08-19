@@ -29,6 +29,15 @@ eleventyExcludeFromCollections: true
 </head>
 <body>
 <p>One moment&hellip; <a href="{{ doel }}">continue to the booking page</a>.</p>
-<script>location.replace({{ doel | dump | safe }});</script>
+<script>
+// Komt er een eigen ?plan= mee (de Health Check stuurt daar de antwoorden in),
+// dan heeft die voorrang op de standaardwaarde hierboven.
+(function () {
+  var doel = {{ doel | dump | safe }};
+  var mee = new URLSearchParams(location.search).get('plan');
+  if (mee) doel = doel.split('?')[0] + '?plan=' + encodeURIComponent(mee);
+  location.replace(doel);
+})();
+</script>
 </body>
 </html>

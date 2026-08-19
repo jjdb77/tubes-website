@@ -465,6 +465,27 @@ if (assessForm) {
     }
   }
 
+  // De boekingspagina leest maar één veld uit de URL: ?plan. Daar zetten we
+  // de antwoorden in, zodat ze bij de boeking staan en niemand ze opnieuw
+  // hoeft te vertellen. Naam en e-mailadres vóórinvullen kan die pagina niet;
+  // daarvoor moet 4Relations parameters gaan accepteren.
+  function addContextToBooking(answers) {
+    const delen = [
+      `${nameInput.value.trim()} (${companyInput.value.trim()})`,
+      ...questions.map((q) => answers[q.key]).filter(Boolean)
+    ];
+    const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
+    if (notes) delen.push(`Wants to discuss: ${notes}`);
+    const plan = "Health Check · " + delen.join(" · ");
+
+    const query = "?plan=" + encodeURIComponent(plan.slice(0, 400));
+    const modal = document.getElementById("booking-modal");
+    if (modal) modal.dataset.extra = query;
+    for (const link of document.querySelectorAll('a[href^="/book-a-call/health-check/"]')) {
+      link.href = "/book-a-call/health-check/" + query;
+    }
+  }
+
   assessForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!detailsOk()) {
@@ -508,6 +529,7 @@ if (assessForm) {
 
       track("health-check-requested", { answered: Object.keys(answers).length });
       renderResult(answers);
+      addContextToBooking(answers);
       showStep(3);
     } catch (err) {
       setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
@@ -536,12 +558,12 @@ if (bookingModal && typeof bookingModal.showModal === "function") {
 
   const openBooking = () => {
     // Pas laden bij het openen: anders haalt elke bezoeker de agenda op.
-    if (!frame.src) frame.src = frame.dataset.src;
+    if (!frame.src) frame.src = frame.dataset.src + (bookingModal.dataset.extra || "");
     bookingModal.showModal();
     track("health-check-booking-opened");
   };
 
-  for (const link of document.querySelectorAll('a[href="/book-a-call/health-check/"]')) {
+  for (const link of document.querySelectorAll('a[href^="/book-a-call/health-check/"]')) {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       openBooking();

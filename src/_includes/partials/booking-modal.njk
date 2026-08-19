@@ -21,6 +21,6 @@
     <button class="booking-modal-close" type="button" aria-label="Close">&times;</button>
   </div>
   <iframe class="booking-modal-frame" title="Booking calendar" data-src="{{ settings.booking_embed_url }}" loading="lazy"></iframe>
-  <p class="booking-modal-fallback">Calendar not loading? <a href="{{ settings.booking_embed_url }}" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+  <p class="booking-modal-fallback">Calendar not loading? <a href="{{ settings.booking_embed_url }}" target="_blank" rel="noopener" data-hc-booking-fallback>Open it in a new tab</a>.</p>
 </dialog>
 {%- endif %}
