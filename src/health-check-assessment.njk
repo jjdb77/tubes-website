@@ -24,7 +24,12 @@ noindex: true
 
     Bewust noindex: een vragenlijst voor genodigden, geen marketingpagina. -#}
 
-{%- set steps = healthcheck.steps -%}
+{#- Vragen die in het CMS op inactief staan blijven in healthcheck.json
+    bewaard maar verschijnen hier niet; ze komen in het gesprek zelf aan bod
+    en staan daarom naast de agenda-knop op het rapport. Filters: zie
+    eleventy.config.js. -#}
+{%- set steps = healthcheck.steps | activeSteps -%}
+{%- set parked = healthcheck.steps | parkedQuestions -%}
 {%- set questionCount = 0 -%}
 {%- for step in steps %}{% set questionCount = questionCount + (step.questions | length) %}{% endfor -%}
 
@@ -141,6 +146,14 @@ noindex: true
               <p class="hc-done-next-title">{{ healthcheck.result.book_title }}</p>
               <p>{{ healthcheck.result.book_text }}</p>
               <a class="button button-primary hc-book" href="/book-a-call/health-check/">{{ healthcheck.result.book_label }}</a>
+
+              {#- Wat we hier niet vragen, komt in het gesprek aan bod. Dat
+                  laten we zien, anders lijken zes vragen het hele verhaal. -#}
+              {%- if parked | length %}
+              <p class="hc-also"><strong>{{ healthcheck.result.also_title }}.</strong> {{ healthcheck.result.also_text }}
+                {#- Alleen komma's: verschillende korte namen bevatten zelf al een "and". -#}
+                {%- for question in parked %} {{ question.short }}{% if not loop.last %},{% endif %}{% endfor -%}.</p>
+              {%- endif %}
             </div>
 
             <p class="hc-done-note">Already have a time in the diary? Then you are set, we will see you there.</p>

@@ -572,6 +572,9 @@ if (assessForm) {
       bar.classList.toggle("is-done", step < n);
     }
     if (identify) identify.hidden = Boolean(ref) || n !== 1;
+    // De rolvraag hoort bij de eerste stap, niet boven het rapport.
+    const role = assessForm.querySelector(".hc-role");
+    if (role) role.hidden = n !== 1;
     setStatus("");
 
     const heading = assessForm.querySelector(`[data-hc-block="${n}"] h2`);

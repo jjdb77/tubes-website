@@ -287,6 +287,25 @@ export default function (eleventyConfig) {
     return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
   });
 
+  // ---------- Health Check-vragenlijst ----------
+  //
+  // Vragen kunnen in het CMS op inactief gezet worden: ze blijven dan in
+  // healthcheck.json staan (tekst blijft bewaard) maar verschijnen niet op de
+  // pagina. Handig om de lijst kort te houden zonder werk weg te gooien; wat
+  // uitstaat komt in het gesprek zelf aan bod.
+  const isActive = (question) => question && question.active !== false;
+
+  eleventyConfig.addFilter("activeSteps", (steps) =>
+    (Array.isArray(steps) ? steps : [])
+      .map((step) => ({ ...step, questions: (step.questions || []).filter(isActive) }))
+      .filter((step) => step.questions.length)
+  );
+
+  // Wat niet gevraagd wordt, noemen we op het rapport als agenda voor de sessie.
+  eleventyConfig.addFilter("parkedQuestions", (steps) =>
+    (Array.isArray(steps) ? steps : []).flatMap((step) => (step.questions || []).filter((q) => !isActive(q)))
+  );
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });

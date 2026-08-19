@@ -1439,6 +1439,7 @@ a:hover { color: var(--action); }
 /* Neutrale chip, voor "niet van toepassing" in de legenda. */
 .chip-neutral { background: var(--divider); color: var(--ink-soft); }
 
+.hc-role[hidden] { display: none; }
 .hc-role { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
 .hc-field select {
   display: block; width: 100%; margin-top: 7px;
@@ -1622,6 +1623,15 @@ a:hover { color: var(--action); }
 }
 
 /* Doorverwijzing op het bedankscherm van de aanvraag */
+/* Wat er in het gesprek nog meer langskomt: rustig, geen opsomming in
+   blokjes, het staat naast de knop en mag die niet overstemmen. */
+.hc-also {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid var(--divider);
+  font-size: 0.88rem; color: var(--muted); line-height: 1.55;
+}
+.hc-also strong { color: var(--ink-soft); }
+
 .hc-book { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
 
 .hc-done-next {

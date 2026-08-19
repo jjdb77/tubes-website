@@ -135,6 +135,7 @@ collections:
                 widget: list
                 summary: "{{fields.label}}"
                 fields:
+                  - { label: "Stel deze vraag op de website", name: active, widget: boolean, default: true, required: false, hint: "Uit = de vraag blijft hier bewaard maar staat niet op de pagina. Wat uitstaat komt in het gesprek van 45 minuten aan bod en wordt onderaan het rapport genoemd." }
                   - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
                   - { label: Vraag, name: label, widget: string }
                   - { label: "Toelichting onder de vraag", name: hint, widget: text }
@@ -147,6 +148,11 @@ collections:
               - { label: Kop, name: heading, widget: string }
               - { label: Introzin, name: intro, widget: text }
               - { label: "Kop boven 'waar we beginnen'", name: focus_title, widget: string }
+              - { label: "Kop boven de agenda-knop", name: book_title, widget: string }
+              - { label: "Tekst bij de agenda-knop", name: book_text, widget: text }
+              - { label: "Tekst óp de agenda-knop", name: book_label, widget: string }
+              - { label: "Kop boven 'komt ook aan bod'", name: also_title, widget: string }
+              - { label: "Aanloop naar de onderwerpen die uitstaan", name: also_text, widget: text, hint: "Hierachter komen automatisch de korte namen van de vragen die op inactief staan." }
               - { label: "Tekst als er niets is aangemerkt", name: none_flagged, widget: text }
               - { label: "Kop rechts", name: next_title, widget: string }
               - { label: "Stappen rechts", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
