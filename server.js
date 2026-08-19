@@ -158,30 +158,23 @@ const HC_CONFIG_FILE = path.join(__dirname, "src", "_data", "healthcheck.json");
 function readHealthCheckConfig() {
   try {
     const config = JSON.parse(fs.readFileSync(HC_CONFIG_FILE, "utf8"));
-    const areas = [];
+    const keys = [];
     const labels = {};
-    for (const step of config.steps || []) {
-      for (const question of step.questions || []) {
-        if (!question.key) continue;
-        areas.push(question.key);
-        labels[question.key] = question.label || question.key;
-      }
+    const allowed = {};
+    for (const question of config.questions || []) {
+      if (!question.key) continue;
+      keys.push(question.key);
+      labels[question.key] = question.label || question.key;
+      allowed[question.key] = new Set(question.options || []);
     }
-    const values = new Set((config.labels || []).map((l) => l.value).filter(Boolean));
-    if (areas.length && values.size) return { areas, labels, values };
+    if (keys.length) return { keys, labels, allowed };
   } catch {
-    console.warn("healthcheck.json niet te lezen, terugval op de vaste vragen");
+    console.warn("healthcheck.json niet te lezen, vragen worden niet opgeslagen");
   }
-  // Terugval: de zes gebieden waarmee de Health Check begon.
-  const areas = ["budget_structure", "budget_handover", "actuals", "forecasting", "approvals", "reporting"];
-  return {
-    areas,
-    labels: Object.fromEntries(areas.map((key) => [key, key])),
-    values: new Set(["Strong", "Could improve", "Opportunity"]),
-  };
+  return { keys: [], labels: {}, allowed: {} };
 }
 
-const { areas: HC_AREAS, labels: HC_AREA_LABELS, values: HC_LABELS } = readHealthCheckConfig();
+const { keys: HC_KEYS, labels: HC_LABELS, allowed: HC_ALLOWED } = readHealthCheckConfig();
 
 // Zoekt het e-mailadres dat bij een eerder opgeslagen aanvraag hoort. Zo hoeft
 // het niet mee in de link naar de vragenlijst.
@@ -207,12 +200,12 @@ app.post("/api/health-check", (req, res) => {
   // Zie het contactformulier: markeren, niet weggooien.
   const flagged = Boolean(String(b.company_website || "").trim());
 
-  const STAGES = new Set(["email", "complete", "assessment"]);
+  const STAGES = new Set(["email", "details"]);
   const stage = STAGES.has(b.stage) ? b.stage : "email";
   const leadId = String(b.lead_id || "").slice(0, 64);
 
   let email = String(b.email || "").trim().slice(0, 200);
-  if (stage === "assessment" && !EMAIL_RE.test(email) && leadId) {
+  if (stage === "details" && !EMAIL_RE.test(email) && leadId) {
     email = emailForEntry(leadId);
   }
   if (!EMAIL_RE.test(email)) {
@@ -229,34 +222,10 @@ app.post("/api/health-check", (req, res) => {
     ...(flagged ? { spam: true } : {}),
   };
 
-  // Het optionele zelfbeeld dat ná de bevestiging wordt ingevuld. Hoort bij de
-  // aanvraag waarvan het id in lead_id staat; /beheer vouwt het daarin.
-  if (stage === "assessment") {
-    const answers = {};
-    for (const key of HC_AREAS) {
-      const value = String(b[key] || "").trim();
-      if (HC_LABELS.has(value)) answers[key] = value;
-    }
-    if (!Object.keys(answers).length) {
-      return res.status(400).json({ ok: false, error: "No answers" });
-    }
-    entry.lead_id = leadId;
-    entry.answers = answers;
-    // Wie ben je: stond eerst in het aanvraagformulier, komt nu hiermee mee.
-    entry.name = String(b.name || "").trim().slice(0, 120);
-    entry.company = String(b.company || "").trim().slice(0, 160);
-    entry.production_type = String(b.production_type || "").trim().slice(0, 120);
-    const role = String(b.role_group || "").trim().slice(0, 60);
-    if (role) entry.role_group = role;
-    const notes = String(b.notes || "").trim().slice(0, 2000);
-    if (notes) entry.notes = notes;
-    fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
-    res.json({ ok: true, id: entry.id });
-    pushToCrm(entry, answers);
-    return;
-  }
-
-  if (stage === "complete") {
+  // De ingevulde vragenlijst: wie je bent plus de antwoorden. Alleen bekende
+  // sleutels en bekende keuzes komen erin, dus er belandt geen losse tekst in
+  // de opslag.
+  if (stage === "details") {
     const name = String(b.name || "").trim().slice(0, 120);
     const company = String(b.company || "").trim().slice(0, 160);
     if (!name || !company) {
@@ -266,16 +235,27 @@ app.post("/api/health-check", (req, res) => {
     entry.name = name;
     entry.company = company;
     entry.role = String(b.role || "").trim().slice(0, 120);
-    entry.production_type = String(b.production_type || "").trim().slice(0, 120);
-    entry.improve = String(b.improve || "").trim().slice(0, 120);
-    entry.current_system = String(b.current_system || "").trim().slice(0, 120);
+
+    const answers = {};
+    for (const key of HC_KEYS) {
+      const value = String(b[key] || "").trim();
+      if (HC_ALLOWED[key]?.has(value)) answers[key] = value;
+    }
+    if (Object.keys(answers).length) entry.answers = answers;
+
+    const notes = String(b.notes || "").trim().slice(0, 2000);
+    if (notes) entry.notes = notes;
+
+    fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
+    res.json({ ok: true, id: entry.id });
+    pushToCrm(entry, answers);
+    return;
   }
 
+  // Blijft over: stage "email", het adres dat bij het doorklikken wordt
+  // vastgelegd. Dat is nog geen lead om in het CRM te zetten.
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true, id: entry.id });
-  // Alleen een ingevulde aanvraag doorzetten; een los e-mailadres is nog geen
-  // lead om in het CRM te zetten.
-  if (stage === "complete") pushToCrm(entry, null);
 });
 
 // ---------- Doorzetten naar 4Relations ----------
@@ -305,7 +285,7 @@ function crmPayload(entry, answers) {
   return {
     source: "tubes.media",
     form: "production finance health check",
-    kind: entry.stage === "assessment" ? "assessment" : "request",
+    kind: "request",
     received_at: entry.at,
     reference: entry.id,
     status: CRM_STATUS,
@@ -319,13 +299,10 @@ function crmPayload(entry, answers) {
       role: entry.role || "",
     },
     health_check: {
-      production_type: entry.production_type || "",
-      wants_to_improve: entry.improve || "",
-      current_system: entry.current_system || "",
       notes: entry.notes || "",
       answers: Object.entries(answers || {}).map(([key, answer]) => ({
         key,
-        question: HC_AREA_LABELS[key] || key,
+        question: HC_LABELS[key] || key,
         answer,
       })),
     },
@@ -428,7 +405,7 @@ function readSubmissions() {
   // Die eerste regel laten we hier weg, anders staat dezelfde aanvraag er
   // twee keer. In het bestand blijven allebei staan (trechterdata).
   const superseded = new Set(
-    all.filter((s) => s.stage === "complete").map((s) => s.lead_id).filter(Boolean)
+    all.filter((s) => s.stage === "details").map((s) => s.lead_id).filter(Boolean)
   );
 
   // Het zelfbeeld is geen apart bericht maar hoort bij de aanvraag.
@@ -441,26 +418,26 @@ function readSubmissions() {
   const byRequest = new Map();
   const byEmail = new Map();
   for (const s of all) {
-    if (s.stage !== "assessment") continue;
+    if (s.stage !== "details") continue;
     if (s.lead_id) byRequest.set(s.lead_id, s);
     if (s.email) byEmail.set(s.email.toLowerCase(), s);
   }
 
   const list = all.filter(
-    (s) => s.kind !== "crm_push" && s.stage !== "assessment" && !superseded.has(s.id)
+    (s) => s.kind !== "crm_push" && s.stage !== "details" && !superseded.has(s.id)
   );
   const merged = new Set();
   for (const s of list) {
     // Vanaf het bedankscherm komt het id mee; via een losse link alleen het
     // e-mailadres. Beide moeten bij de juiste aanvraag terechtkomen.
     const found =
-      byRequest.get(s.id) || (s.stage === "complete" && s.email ? byEmail.get(s.email.toLowerCase()) : null);
+      byRequest.get(s.id) || (s.email ? byEmail.get(s.email.toLowerCase()) : null);
     if (!found) continue;
     s.answers = found.answers;
     if (found.notes) s.notes = found.notes;
     // Naam, bedrijf, rol en productietype staan sinds het weghalen van stap 2
     // op de vragenlijst-regel; die horen op de kaart van de aanvraag.
-    for (const veld of ["name", "company", "role_group", "production_type"]) {
+    for (const veld of ["name", "company", "role", "notes"]) {
       if (!s[veld] && found[veld]) s[veld] = found[veld];
     }
     merged.add(found.id);
@@ -468,7 +445,7 @@ function readSubmissions() {
 
   // Antwoorden waar geen aanvraag bij te vinden was (iemand vulde alleen de
   // losse link in) tonen we apart, anders verdwijnen ze uit beeld.
-  const losseAntwoorden = all.filter((s) => s.stage === "assessment" && !merged.has(s.id));
+  const losseAntwoorden = all.filter((s) => s.stage === "details" && !merged.has(s.id));
 
   for (const entry of [...list, ...losseAntwoorden]) {
     const push = pushes.get(entry.id);
@@ -503,27 +480,24 @@ function contactCard(s) {
 // Health Check-aanvraag. Stap 1 (alleen een e-mailadres) krijgt een eigen
 // label: dat is trechterdata, nog geen complete aanvraag.
 function healthCheckCard(s) {
-  const partial = s.stage !== "complete";
+  const partial = s.stage !== "details";
   const label =
-    s.stage === "complete"
+    s.stage === "details"
       ? "Health Check-aanvraag"
-      : s.stage === "assessment"
+      : s.stage === "details"
         ? "Vragenlijst ingevuld, geen aanvraag gevonden"
         : "Health Check &middot; alleen e-mail (stap 1)";
   const details = [
     ["Bedrijf", s.company],
-    ["Rol", s.role || s.role_group],
-    ["Maakt vooral", s.production_type],
-    ["Wil verbeteren", s.improve],
-    ["Werkt nu met", s.current_system],
+    ["Rol", s.role],
   ]
     .filter(([, value]) => value)
     .map(([label, value]) => `<span><strong>${esc(label)}:</strong> ${esc(value)}</span>`)
     .join("<br>");
 
   const selfView = s.answers
-    ? `<p class="body selfview"><strong>Zelfbeeld vooraf:</strong><br>${HC_AREAS.filter((k) => s.answers[k])
-        .map((k) => `<span>${esc(HC_AREA_LABELS[k])}: <em>${esc(s.answers[k])}</em></span>`)
+    ? `<p class="body selfview"><strong>Antwoorden:</strong><br>${HC_KEYS.filter((k) => s.answers[k])
+        .map((k) => `<span>${esc(HC_LABELS[k])}: <em>${esc(s.answers[k])}</em></span>`)
         .join("<br>")}${s.notes ? `<br><br><strong>Wil besproken hebben:</strong><br>${esc(s.notes)}` : ""}</p>`
     : "";
 
@@ -560,7 +534,7 @@ app.get("/beheer", (req, res) => {
   const showSpam = req.query.spam === "1";
   const spamCount = all.filter((s) => s.spam).length;
   const items = showSpam ? all : all.filter((s) => !s.spam);
-  const healthChecks = items.filter((s) => s.kind === "health_check" && s.stage === "complete").length;
+  const healthChecks = items.filter((s) => s.kind === "health_check" && s.answers).length;
   const rows = items
     .map((s) => (s.kind === "health_check" ? healthCheckCard(s) : contactCard(s)))
     .join("\n");
@@ -614,20 +588,20 @@ app.get("/beheer/export.csv", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
   const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
-  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,maakt vooral,wil verbeteren,werkt nu met,zelfbeeld,bericht,pagina"]
+  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,antwoorden,bericht,pagina"]
     .concat(
       items.map((s) => {
         const isHc = s.kind === "health_check";
-        const soort = isHc ? (s.stage === "complete" ? "health check" : "health check (alleen e-mail)") : "contact";
+        const soort = isHc ? (s.answers ? "health check" : "health check (alleen e-mail)") : "contact";
         const naam = isHc ? s.name || "" : `${s.first_name || ""} ${s.last_name || ""}`.trim();
         const zelfbeeld = s.answers
-          ? HC_AREAS.filter((k) => s.answers[k])
-              .map((k) => `${HC_AREA_LABELS[k]}: ${s.answers[k]}`)
+          ? HC_KEYS.filter((k) => s.answers[k])
+              .map((k) => `${HC_LABELS[k]}: ${s.answers[k]}`)
               .join("; ")
           : "";
         return [
           s.at, soort, naam, s.email, s.phone || "",
-          s.company || "", s.role || "", s.production_type || "", s.improve || "", s.current_system || "",
+          s.company || "", s.role || "",
           zelfbeeld, s.notes || s.message || "", s.page || "",
         ].map(q).join(",");
       })

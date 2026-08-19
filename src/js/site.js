@@ -302,79 +302,57 @@ if (hcCta) {
 // ---------------------------------------------------------------------------
 // Vragenlijst op /production-finance-health-check/assessment/
 //
-// Drie stappen van twee vragen, elk met een eigen thema, en als vierde stap
-// de samenvatting van wat iemand zelf heeft ingevuld. De antwoorden gaan weg
-// bij de overgang van stap 3 naar 4, dus ze staan vast vóór de samenvatting
-// in beeld komt.
+// Twee stappen: wie je bent, en hoe je werkt. Daarna verschijnt de agenda met
+// daaronder een overzicht van wat er is ingevuld.
 //
-// Komt iemand van het bedankscherm, dan staat het id van de aanvraag in ?ref
-// en hoeft er geen e-mailadres gevraagd te worden. Wie de link los krijgt,
-// vult zijn zakelijke e-mailadres in zodat we de antwoorden kunnen koppelen.
+// Het e-mailadres wordt al vastgelegd bij het doorklikken naar stap 2, niet
+// pas bij het versturen: anders laat wie halverwege afhaakt geen spoor na.
+// Komt iemand met ?ref binnen, dan kennen we het adres al.
 // ---------------------------------------------------------------------------
 
 const assessForm = document.querySelector("[data-hc-assess-form]");
 
 if (assessForm) {
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-
   const ref = new URLSearchParams(location.search).get("ref") || "";
-  const identify = assessForm.querySelector("[data-hc-identify]");
-  const emailInput = assessForm.querySelector('input[name="email"]');
-  const status = assessForm.querySelector(".hc-status");
 
-  // De zes vragen staan in de opmaak; hier lezen we ze uit in plaats van ze
-  // nog een keer op te schrijven.
+  const emailInput = assessForm.querySelector('input[name="email"]');
+  const emailBlock = assessForm.querySelector("[data-hc-email]");
+  const nameInput = assessForm.querySelector('input[name="name"]');
+  const companyInput = assessForm.querySelector('input[name="company"]');
+  const roleInput = assessForm.querySelector('input[name="role"]');
+  const status = assessForm.querySelector(".hc-status");
+  const blocks = Array.from(assessForm.querySelectorAll("[data-hc-block]"));
+  const progressLabel = assessForm.querySelector("[data-hc-progress-label]");
+
+  // De vragen staan in de opmaak; hier lezen we ze uit in plaats van ze nog
+  // een keer op te schrijven.
   const questions = Array.from(assessForm.querySelectorAll(".hc-question")).map((block) => ({
-    key: block.querySelector("input[type=radio]").name,
-    label: block.querySelector(".hc-question-label").textContent.trim(),
-    // Korte naam voor de zin in het rapport: de volledige labels bevatten zelf
-    // al een "and" en dat leest niet in een opsomming.
-    short: block.dataset.short || block.querySelector(".hc-question-label").textContent.trim().toLowerCase(),
-    theme: block.dataset.theme || "",
-    finding: block.dataset.finding || "",
-    reading: block.dataset.readingUrl ? { url: block.dataset.readingUrl, label: block.dataset.readingLabel } : null,
-    input: () => block.querySelector("input[type=radio]:checked")
+    key: block.dataset.key,
+    label: block.dataset.label,
+    picked: () => block.querySelector("input[type=radio]:checked")
   }));
 
-  // De laatste stap is het rapport; het aantal vraagstappen komt uit de opmaak,
-  // die op zijn beurt uit healthcheck.json komt.
-  const answeredCount = assessForm.querySelector("[data-hc-answered]");
+  if (ref && emailBlock) {
+    emailBlock.hidden = true;
+    emailInput.required = false;
+  }
 
   const setStatus = (text, kind) => {
     status.textContent = text || "";
     status.className = "form-status hc-status" + (kind ? " is-" + kind : "");
   };
 
-  const emailBlock = assessForm.querySelector("[data-hc-email]");
-  if (ref) {
-    // Met ?ref weten we het adres al; naam en bedrijf vragen we nog wel.
-    if (emailBlock) emailBlock.hidden = true;
-    emailInput.required = false;
-  }
-
-  // Teller naast de stapbalk: hoeveel van de vragen al beantwoord zijn.
-  function updateProgress() {
-    answeredCount.textContent = String(questions.filter((q) => q.input()).length);
-  }
-  assessForm.addEventListener("change", updateProgress);
-  updateProgress();
-
-  // Eén stap per thema, en het rapport als laatste stap. De stappen komen uit
-  // healthcheck.json, dus het aantal wordt hier geteld en niet vastgelegd.
-  const blocks = Array.from(assessForm.querySelectorAll("[data-hc-block]"));
-  const themePanels = Array.from(document.querySelectorAll("[data-hc-theme]"));
-  const RESULT_STEP = blocks.length;
-
   function showStep(n) {
     for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
-    for (const panel of themePanels) panel.hidden = panel.dataset.hcTheme !== String(n);
+    // Het rapport hoort nog bij stap 2: de balk blijft daar staan.
+    const segment = n >= 2 ? 2 : 1;
     for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {
       const step = Number(bar.dataset.hcProgressBar);
-      bar.classList.toggle("is-current", step === n);
-      bar.classList.toggle("is-done", step < n);
+      bar.classList.toggle("is-current", step === segment);
+      bar.classList.toggle("is-done", step < segment);
     }
-    // "Wie ben je" hoort bij de eerste stap, niet boven het rapport.
-    if (identify) identify.hidden = n !== 1;
+    if (progressLabel) progressLabel.textContent = n === 3 ? "Almost there" : `Step ${segment} of 2`;
     setStatus("");
 
     const heading = assessForm.querySelector(`[data-hc-block="${n}"] h2`);
@@ -388,17 +366,12 @@ if (assessForm) {
     }
   }
 
-  // Het e-mailadres hoort bij stap 1: verder laten gaan zonder zou het pas op
-  // het eind laten stuklopen.
-  const nameInput = assessForm.querySelector('input[name="name"]');
-  const companyInput = assessForm.querySelector('input[name="company"]');
-
-  function aboutYouOk() {
+  function detailsOk() {
     if (!ref) {
       const email = String(emailInput.value || "").trim();
       if (!EMAIL_RE.test(email)) {
         emailInput.setAttribute("aria-invalid", "true");
-        setStatus("Please enter the business email address you used for your Health Check request.", "error");
+        setStatus("Please enter your business email address.", "error");
         emailInput.focus();
         return false;
       }
@@ -406,7 +379,8 @@ if (assessForm) {
     }
     for (const [input, melding] of [
       [nameInput, "Please add your name so we know who we are meeting."],
-      [companyInput, "Please add your company so we can prepare for the session."]
+      [companyInput, "Please add your company so we can prepare for the session."],
+      [roleInput, "Please add your role, so we can pitch the session at the right level."]
     ]) {
       if (input && !String(input.value || "").trim()) {
         input.setAttribute("aria-invalid", "true");
@@ -419,9 +393,8 @@ if (assessForm) {
     return true;
   }
 
-  // Zodra iemand voorbij stap 1 is, leggen we het e-mailadres alvast vast.
-  // Anders is wie halverwege afhaakt een verloren lead. Mislukt dat, dan gaat
-  // hij gewoon door: bij het versturen gaat alles alsnog mee.
+  // Zodra iemand voorbij stap 1 is, leggen we het adres alvast vast. Mislukt
+  // dat, dan gaat alles bij het versturen alsnog mee.
   let leadId = ref;
   async function captureEmail() {
     if (leadId) return;
@@ -450,11 +423,10 @@ if (assessForm) {
 
   for (const button of assessForm.querySelectorAll("[data-hc-next]")) {
     button.addEventListener("click", () => {
-      const next = Number(button.dataset.hcNext);
-      if (next === 2 && !aboutYouOk()) return;
-      if (next === 2) captureEmail();
-      showStep(next);
-      track("health-check-assessment-step-" + next);
+      if (!detailsOk()) return;
+      captureEmail();
+      showStep(Number(button.dataset.hcNext));
+      track("health-check-details-done");
     });
   }
 
@@ -462,156 +434,53 @@ if (assessForm) {
     button.addEventListener("click", () => showStep(Number(button.dataset.hcBack)));
   }
 
-  // Het rapport wordt opgebouwd uit de gegeven antwoorden. Geen cijfer en geen
-  // oordeel: we geven terug wat iemand zelf invulde, geordend naar waar we
-  // mee zouden beginnen.
-  const TONE = {};
-  for (const option of assessForm.querySelectorAll(".hc-opt")) {
-    const input = option.querySelector("input");
-    const tone = (option.className.match(/hc-opt-(\w+)/) || [])[1];
-    if (input && tone) TONE[input.value] = tone;
-  }
-  const CHIP = { good: "mint", mid: "amber", low: "lavender" };
-  const el = (tag, className, text) => {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text) node.textContent = text;
-    return node;
-  };
-
+  // Overzicht van wat er is ingevuld, plus waar we mee beginnen.
   function renderResult(answers) {
-    const answered = questions.filter((q) => answers[q.key]);
-
-    // 1. Per thema: hoe de antwoorden binnen dat thema liggen.
-    const themes = [];
-    for (const question of questions) {
-      let theme = themes.find((t) => t.name === question.theme);
-      if (!theme) {
-        theme = { name: question.theme, questions: [] };
-        themes.push(theme);
-      }
-      theme.questions.push(question);
-    }
-
-    const themeWrap = assessForm.querySelector("[data-hc-result-themes]");
-    themeWrap.innerHTML = "";
-    for (const theme of themes) {
-      // "Not applicable" hoort niet in het balkje: het is geen oordeel over
-      // het proces maar een afbakening van wat er speelt.
-      const given = theme.questions.filter((q) => answers[q.key] && TONE[answers[q.key]] !== "na");
-      const nvt = theme.questions.filter((q) => TONE[answers[q.key]] === "na").length;
-      if (!given.length && !nvt) continue;
-
-      const row = el("div", "hc-theme-row");
-      row.append(el("p", "hc-theme-row-name", theme.name));
-
-      const bar = el("div", "hc-theme-bar");
-      const counts = { good: 0, mid: 0, low: 0 };
-      for (const question of given) {
-        const tone = TONE[answers[question.key]];
-        counts[tone] += 1;
-        const segment = el("span", "is-" + tone);
-        segment.title = `${question.label}: ${answers[question.key]}`;
-        bar.append(segment);
-      }
-      const parts = [];
-      if (counts.low) parts.push(counts.low + (counts.low === 1 ? " opportunity" : " opportunities"));
-      if (counts.mid) parts.push(counts.mid + " could improve");
-      if (counts.good) parts.push(counts.good + " strong");
-      if (nvt) parts.push(nvt + " not applicable");
-      bar.setAttribute("role", "img");
-      bar.setAttribute("aria-label", `${theme.name}: ${parts.join(", ")}`);
-
-      if (given.length) row.append(bar);
-      row.append(el("p", "hc-theme-row-count", parts.join(" · ")));
-      themeWrap.append(row);
-    }
-
-    // 2. Waar we mee beginnen: eerst wat als kans is aangemerkt, daarna wat
-    //    beter kan. Hoogstens drie, met de bevinding en iets om te lezen.
-    const flagged = answered.filter((q) => answers[q.key] === "Opportunity");
-    const soft = answered.filter((q) => answers[q.key] === "Could improve");
-    const priority = [...flagged, ...soft].slice(0, 3);
-
     const focus = assessForm.querySelector("[data-hc-result-focus]");
     focus.innerHTML = "";
-    focus.append(el("p", "hc-result-focus-title", focus.dataset.title || "Where we will start"));
-
-    if (!priority.length) {
-      focus.append(el("p", null, focus.dataset.none || ""));
-    } else {
-      const named = (items) =>
-        items.length === 1
-          ? items[0]
-          : items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
-      const lead = flagged.length
-        ? `You marked ${flagged.length === 1 ? "one area" : flagged.length + " areas"} as an opportunity: ${named(flagged.map((q) => q.short))}.`
-        : "Nothing stands out as a clear problem, so we will start where you said things could be better.";
-      focus.append(el("p", "hc-result-focus-lead", lead));
-
-      const list = el("ol", "hc-finding-list");
-      // Vragen binnen één stap delen dezelfde leestip; die dan maar één keer.
-      const shown = new Set();
-      for (const question of priority) {
-        const item = document.createElement("li");
-        const head = el("div", "hc-finding-head");
-        head.append(el("span", `chip chip-${CHIP[TONE[answers[question.key]]]}`, answers[question.key]));
-        head.append(el("p", "hc-finding-label", question.label));
-        item.append(head);
-        if (question.finding) item.append(el("p", "hc-finding-text", question.finding));
-        if (question.reading && !shown.has(question.reading.url)) {
-          shown.add(question.reading.url);
-          const link = document.createElement("a");
-          link.className = "hc-finding-link";
-          link.href = question.reading.url;
-          link.textContent = question.reading.label;
-          item.append(link);
-        }
-        list.append(item);
-      }
-      focus.append(list);
+    if (answers.workload) {
+      const title = document.createElement("p");
+      title.className = "hc-result-focus-title";
+      title.textContent = focus.dataset.title || "Where we will start";
+      const body = document.createElement("p");
+      body.textContent = `You said the most work sits in ${answers.workload.toLowerCase()}. That is where we will start.`;
+      focus.append(title, body);
     }
 
-    // 3. Alles wat is ingevuld, uitklapbaar.
     const list = assessForm.querySelector("[data-hc-result-list]");
     list.innerHTML = "";
     for (const question of questions) {
       const value = answers[question.key];
-      const tone = TONE[value];
-      const row = el("li", "hc-result-row" + (value ? (tone === "na" ? " is-na" : "") : " is-empty"));
-      row.append(el("span", "hc-result-label", question.label));
-      row.append(
-        value && CHIP[tone]
-          ? el("span", `chip chip-${CHIP[tone]}`, value)
-          : el("span", "hc-result-skipped", value || "Not answered")
-      );
+      if (!value) continue;
+      const row = document.createElement("li");
+      row.className = "hc-result-row";
+      const label = document.createElement("span");
+      label.className = "hc-result-label";
+      label.textContent = question.label;
+      const answer = document.createElement("span");
+      answer.className = "hc-result-answer";
+      answer.textContent = value;
+      row.append(label, answer);
       list.append(row);
     }
   }
 
   assessForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    const answers = {};
-    for (const question of questions) {
-      const picked = question.input();
-      if (picked) answers[question.key] = picked.value;
-    }
-
-    const email = String(emailInput.value || "").trim();
-    if (!aboutYouOk()) {
+    if (!detailsOk()) {
       showStep(1);
       return;
     }
 
-    if (!Object.keys(answers).length) {
-      setStatus("Give at least one area a label, then we can use it.", "error");
-      return;
+    const answers = {};
+    for (const question of questions) {
+      const picked = question.picked();
+      if (picked) answers[question.key] = picked.value;
     }
 
     const button = assessForm.querySelector(".hc-submit");
     button.disabled = true;
-    setStatus("Sending…");
+    setStatus("One moment…");
 
     const stop = new AbortController();
     const timer = setTimeout(() => stop.abort(), 12000);
@@ -620,13 +489,12 @@ if (assessForm) {
         method: "POST",
         signal: stop.signal,
         body: new URLSearchParams({
-          stage: "assessment",
+          stage: "details",
           lead_id: leadId,
-          email,
-          role_group: assessForm.querySelector('select[name="role_group"]')?.value || "",
-          name: nameInput?.value.trim() || "",
-          company: companyInput?.value.trim() || "",
-          production_type: assessForm.querySelector('input[name="production_type"]:checked')?.value || "",
+          email: String(emailInput.value || "").trim(),
+          name: nameInput.value.trim(),
+          company: companyInput.value.trim(),
+          role: roleInput.value.trim(),
           notes: assessForm.querySelector('textarea[name="notes"]').value,
           company_website: assessForm.querySelector('input[name="company_website"]').value,
           ...answers,
@@ -638,9 +506,9 @@ if (assessForm) {
       try { data = await res.json(); } catch { /* geen JSON terug */ }
       if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
 
-      track("health-check-assessment-completed", { answered: Object.keys(answers).length });
+      track("health-check-requested", { answered: Object.keys(answers).length });
       renderResult(answers);
-      showStep(RESULT_STEP);
+      showStep(3);
     } catch (err) {
       setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
       button.disabled = false;
@@ -648,6 +516,8 @@ if (assessForm) {
       clearTimeout(timer);
     }
   });
+
+  track("health-check-assessment-opened", { linked: Boolean(ref) });
 }
 
 // ---------------------------------------------------------------------------

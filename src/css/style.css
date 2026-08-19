@@ -1789,3 +1789,13 @@ a:hover { color: var(--action); }
 .hc-cta-lead { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 18px; }
 .hc-cta-button { display: block; width: 100%; text-align: center; padding: 15px 26px; font-size: 1rem; }
 .hc-cta-card .hc-privacy { margin-top: 18px; }
+
+/* Overzicht van de gegeven antwoorden: vraag links, antwoord rechts, en het
+   antwoord breekt niet af halverwege. */
+.hc-result-answer { flex: none; font-size: 0.94rem; font-weight: 700; color: var(--ink); text-align: right; }
+.hc-result-list .hc-result-row { align-items: baseline; gap: 20px; }
+.hc-result-list .hc-result-label { font-weight: 500; color: var(--ink-soft); }
+@media (max-width: 520px) {
+  .hc-result-list .hc-result-row { flex-direction: column; gap: 4px; }
+  .hc-result-answer { text-align: left; }
+}

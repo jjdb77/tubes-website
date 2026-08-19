@@ -90,96 +90,46 @@ collections:
         file: src/_data/healthcheck.json
         description: "De vragen op /production-finance-health-check/assessment/. Let op: de sleutel van een vraag is de veldnaam in de opslag. Verander die niet meer zodra er antwoorden binnen zijn, dan raken oude en nieuwe antwoorden los van elkaar."
         fields:
-          - { label: "Introzin boven de vragen", name: intro, widget: text }
-          - label: "De keuzes bij elke vraag"
-            name: labels
-            widget: list
-            summary: "{{fields.value}}"
-            hint: "Wijzig je een waarde, dan sluiten oude antwoorden niet meer aan. 'Niet van toepassing' telt niet mee in het rapport."
-            fields:
-              - { label: Tekst, name: value, widget: string }
-              - { label: Kleur, name: tone, widget: select, options: [{ label: "Groen (goed)", value: good }, { label: "Amber (kan beter)", value: mid }, { label: "Paars (kans)", value: low }, { label: "Grijs (niet van toepassing)", value: na }] }
-              - { label: "Uitleg in de rechterkolom", name: meaning, widget: text }
-          - label: "Vraag naar de rol"
-            name: role_question
+          - { label: "Introzin boven het formulier", name: intro, widget: text }
+          - label: "Stap 1 (je gegevens)"
+            name: step1
             widget: object
-            hint: "Bepaalt niet welke vragen iemand krijgt; die keuze ligt bij 'Niet van toepassing'. De rol gaat wel mee naar 4Relations."
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - label: "Stap 2 (je werkwijze)"
+            name: step2
+            widget: object
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - { label: "Label bij het rolveld", name: role_label, widget: string }
+          - label: "Vragen"
+            name: questions
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "Elke vraag is één rij keuzeknoppen. Een vraag toevoegen kan gewoon; de pagina, de opslag, /beheer en de export lopen mee."
+            fields:
+              - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
+              - { label: Vraag, name: label, widget: string }
+              - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string }, hint: "Alleen deze waarden worden opgeslagen; iets anders wordt geweigerd." }
+          - label: "Vrij tekstveld onderaan"
+            name: notes
+            widget: object
             fields:
               - { label: Vraag, name: label, widget: string }
-              - { label: Toelichting, name: hint, widget: text }
-              - label: Rollen
-                name: options
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - { label: "Sleutel (wordt opgeslagen)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"] }
-                  - { label: Rol, name: label, widget: string }
-          - label: "Aanvraagformulier (landingspagina)"
-            name: lead_form
-            widget: object
-            hint: "De keuzeknoppen in stap 2 van het aanvraagformulier op /production-finance-health-check/."
-            fields:
-              - label: "Wat wil je verbeteren"
-                name: improve
-                widget: object
-                fields:
-                  - { label: Vraag, name: label, widget: string }
-                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
-              - label: "Waar werk je nu mee"
-                name: current_system
-                widget: object
-                fields:
-                  - { label: Vraag, name: label, widget: string }
-                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
-              - label: "Wat maak je vooral"
-                name: production_type
-                widget: object
-                fields:
-                  - { label: Vraag, name: label, widget: string }
-                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
-          - label: "Stappen"
-            name: steps
-            widget: list
-            summary: "{{fields.theme}}"
-            hint: "Elke stap is een scherm met een eigen thema. Een stap toevoegen kan gewoon; de voortgangsbalk en het rapport lopen mee."
-            fields:
-              - { label: "Thema (kort)", name: theme, widget: string }
-              - { label: "Kop boven de vragen", name: heading, widget: string }
-              - { label: "Toelichting rechts (waar het meestal misgaat)", name: friction, widget: text }
-              - label: "Leestips rechts"
-                name: reading
-                widget: list
-                required: false
-                summary: "{{fields.label}}"
-                fields:
-                  - { label: Titel, name: label, widget: string }
-                  - { label: Link, name: url, widget: string, hint: "Bijvoorbeeld /insights/how-to-build-a-production-budget/" }
-              - label: "Vragen"
-                name: questions
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - { label: "Stel deze vraag op de website", name: active, widget: boolean, default: true, required: false, hint: "Uit = de vraag blijft hier bewaard maar staat niet op de pagina. Wat uitstaat komt in het gesprek van 45 minuten aan bod en wordt onderaan het rapport genoemd." }
-                  - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
-                  - { label: Vraag, name: label, widget: string }
-                  - { label: "Toelichting onder de vraag", name: hint, widget: text }
-                  - { label: "Korte naam (voor de zin in het rapport)", name: short, widget: string, hint: "Kleine letters, bv. 'the handover to production'. Komt in: 'You marked 2 areas as an opportunity: ...'" }
-                  - { label: "Bevinding in het rapport", name: finding, widget: text, hint: "Wat het meestal betekent als iemand dit als kans of verbeterpunt aanmerkt." }
-          - label: "Rapport (laatste stap)"
+              - { label: "Voorbeeldtekst in het veld", name: placeholder, widget: text }
+          - label: "Na het versturen"
             name: result
             widget: object
             fields:
-              - { label: Kop, name: heading, widget: string }
-              - { label: Introzin, name: intro, widget: text }
+              - { label: "Kop boven de agenda", name: book_title, widget: string }
+              - { label: "Tekst bij de agenda", name: book_text, widget: text }
+              - { label: "Tekst op de knop", name: book_label, widget: string }
+              - { label: "Kop boven het overzicht", name: heading, widget: string }
               - { label: "Kop boven 'waar we beginnen'", name: focus_title, widget: string }
-              - { label: "Kop boven de agenda-knop", name: book_title, widget: string }
-              - { label: "Tekst bij de agenda-knop", name: book_text, widget: text }
-              - { label: "Tekst óp de agenda-knop", name: book_label, widget: string }
-              - { label: "Kop boven 'komt ook aan bod'", name: also_title, widget: string }
-              - { label: "Aanloop naar de onderwerpen die uitstaan", name: also_text, widget: text, hint: "Hierachter komen automatisch de korte namen van de vragen die op inactief staan." }
-              - { label: "Tekst als er niets is aangemerkt", name: none_flagged, widget: text }
-              - { label: "Kop rechts", name: next_title, widget: string }
-              - { label: "Stappen rechts", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
+              - { label: "Kop in de rechterkolom", name: next_title, widget: string }
+              - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
               - { label: "Slotzin rechts", name: note, widget: text }
 
   - name: artikelen

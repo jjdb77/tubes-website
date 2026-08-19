@@ -48,6 +48,46 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Health Check-landingspagina
 
+- `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een videogesprek van 45 minuten met een production finance-specialist.
+- ⚠️ **De Health Check is dat gesprek, niet de vragenlijst.** De vragenlijst is de voorbereiding erop. Hou dat onderscheid vast bij tekstwijzigingen.
+- ⚠️ **Volgorde: eerst de vragen, dan boeken.** De landingspagina heeft geen formulier, alleen een knop naar de vragenlijst. Die vraagt het e-mailadres, en aan het eind prik je een tijd.
+- Bewust **geen CMS-secties**: deze twee pagina's zijn eigen templates, geen sectiepagina's. Opmaak staat onderaan `style.css` (alle klassen beginnen met `hc-`), de logica onderaan `site.js`.
+- **De vragenlijst**: `/production-finance-health-check/assessment/` (`src/health-check-assessment.njk`), twee stappen.
+  - Stap 1: e-mailadres (alleen zonder `?ref`), naam, bedrijf, rol. Stap 2: vijf keuzevragen plus een vrij veld. Daarna verschijnt de agenda met daaronder een overzicht van wat er is ingevuld.
+  - ⚠️ **De vragen staan in `src/_data/healthcheck.json`**, te wijzigen via het CMS onder "Health Check-vragenlijst". Vraagteksten, keuzes en alle koppen. De `key` van een vraag is de veldnaam in de opslag: **niet meer wijzigen zodra er antwoorden binnen zijn**. Alleen bekende sleutels en bekende keuzes worden opgeslagen. Wijzigingen vergen een deploy, want server.js leest dat bestand bij het opstarten.
+  - De vragenset komt van Chris Arboit (e-mail 19-8-2026): productietype, budgetklasse, aantal producties tegelijk, huidige software, waar het meeste werk zit, plus een vrij veld. Een eerdere versie met zes Strong/Could improve/Opportunity-vragen is op zijn advies vervangen; die zit in de geschiedenis.
+  - ⚠️ Het e-mailadres wordt vastgelegd **bij het doorklikken naar stap 2** (`stage: "email"`), niet pas bij het versturen: anders laat wie halverwege afhaakt geen spoor na. Het id gaat als `lead_id` mee met de rest (`stage: "details"`), zodat /beheer er één aanvraag van maakt.
+  - De pagina heeft `noindex: true` en valt daarmee buiten sitemap en llms.txt.
+  - ⚠️ De tweekolomsopmaak en de responsieve regels staan **achteraan** in style.css: ze zijn even specifiek als de basisregel, dus alleen wat later staat wint. `.hc-assess-page` zet ook `overflow: visible` terug, want `.section-hero` heeft `overflow: hidden` en daarbinnen blijft `position: sticky` niet hangen.
+- **De agenda opent in een popover** (`src/_includes/partials/booking-modal.njk`), zodat de bezoeker de pagina niet verlaat. Adres staat in `settings.booking_embed_url`, de iframe laadt pas bij het openen, en de knop blijft een gewone link naar `/book-a-call/health-check/` als vangnet.
+  - ⚠️ **In `booking_embed_url` hoort de boekingspagina van het afspraaktype** (`/boek/<account>/<slug>`), **nooit een losse afspraaklink** (`/afspraak/<id>`): die hoort bij één geboekte afspraak en de bijbehorende API geeft onafgeschermd naam, e-mailadres en telefoonnummer terug.
+  - Doel: `https://4relationstubes.appconnected.nl/boek/joachim/tubes-assessment`. Let op de **eigen omgeving**: dit is `4relationstubes`, niet de `4relations` van de Producer Pro- en Enterprise-links. Die regel heeft daarom een eigen `booking_url` in settings.json.
+- Gebeurtenissen voor de trechter: `health-check-page-viewed`, `-assessment-opened`, `-email-captured`, `-details-done`, `-requested`, `-booking-opened`. Die gaan naar GoatCounter als dat aan staat en anders nergens heen.
+- Er is **geen aparte privacyverklaring**; het formulier verwijst naar /compliance/.
+- ⚠️ **De privacytekst moet kloppen met wat er echt gebeurt.** Er stond eerst "we use your details only to arrange your Health Check, we do not add you to a mailing list": dat was onwaar, want de pagina bestaat om zakelijke e-mailadressen te verzamelen en de gegevens gaan als prospect naar het CRM. Verandert de opvolging, dan verandert deze tekst mee.
+- ⚠️ **Honeypot-les** (raakt ook het contactformulier en de demo-popup): een veld op `left:-9999px` is voor Chrome en wachtwoordmanagers gewoon zichtbaar en wordt meegevuld met autofill. Daarom staat het nu op `display:none`, en gooit de server een gemarkeerd bericht niet weg maar bewaart het met `spam: true` (verborgen op /beheer, zichtbaar via ?spam=1).
+
+## Health Check-aanvragen naar 4Relations
+
+- Aanvragen blijven **altijd** in de eigen opslag staan (JSONL op de Railway-volume, zichtbaar op /beheer). 4Relations is een kopie, geen vervanging: het versturen gebeurt ná het antwoord aan de bezoeker, dus een storing daar kan nooit een lead kosten.
+- Aanzetten met env-variabelen op de Railway-service:
+  - `CRM_URL` — het adres dat een client/lead aanmaakt. **Zolang die leeg is gebeurt er niets** en werkt de rest gewoon.
+  - `CRM_TOKEN` — de sleutel. Nooit in de repo, die is publiek.
+  - `CRM_AUTH_HEADER` — naam van de header, standaard `Authorization`.
+  - `CRM_AUTH_PREFIX` — wat vóór de sleutel komt, standaard `Bearer ` (leeg zetten als 4Relations een kale sleutel wil).
+  - `CRM_STATUS` — status van de client, standaard `prospect`.
+- Wat er verstuurd wordt: het **bedrijf als client** (met die status), de **persoon als contact** (naam, e-mail, rol), en daaronder de Health Check-gegevens (wat ze willen verbeteren, waar ze nu mee werken, de vrije opmerking en de antwoorden per vraag met de vraagtekst erbij). Twee momenten: bij de complete aanvraag (`kind: "request"`) en bij het ingevulde zelfbeeld (`kind: "assessment"`). Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt. Handig als 4Relations even plat lag of als de sleutel verkeerd stond.
+- Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
+
+## Boekingen (Book a call)
+
+- Knoppen op de abonnementskaarten → `/book-a-call/producer-pro/` en `/book-a-call/enterprise/` (doorstuurpagina's uit `src/book-a-call.njk`, gepagineerd over `settings.booking_plans`).
+- Doel = `settings.booking_url` + slug (per plan te overrulen via een eigen `booking_url`-veld in `booking_plans`, zie book-a-call.njk: `boeking.booking_url or settings.booking_url`). Producer Pro: `tubes-producer-pro` op `https://4relations.appconnected.nl/boek/joachim`. Enterprise: `tubes-enterprise` op de eigen basis `https://4relations.appconnected.nl/boek/joachim@appsolutions.nl` (15-8-2026 gecorrigeerd, was `tubes-enterprice` op de gedeelde basis).
+- booking_url (Producer Pro) = https://4relations.appconnected.nl/boek/joachim (wordt ooit afspraak.tubes.media).
+
+## Health Check-landingspagina
+
 - `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een sessie van 45 minuten over budgetten, actuals, forecasting, approvals en reporting. Het doel van de pagina is één ding: het zakelijke e-mailadres.
 - De keuzeknoppen van het aanvraagformulier (wat maak je vooral, wat wil je verbeteren, waar werk je nu mee) staan ook in `healthcheck.json` onder `lead_form`, te wijzigen in het CMS. Productietype is de qualifier uit het advies van Chris Arboit; naam, bedrijf, rol en huidige software stonden er al.
 - Bewust **geen CMS-secties**. Het tweestapsformulier en het assessment-beeld passen niet in het sectiesysteem, dus tekst wijzig je in het bestand zelf en niet in Sveltia. Opmaak staat onderaan `style.css` (blok "Health Check", alle klassen beginnen met `hc-`), de logica onderaan `site.js`.

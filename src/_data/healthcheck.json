@@ -1,271 +1,94 @@
 {
-  "intro": "Six quick questions, about two minutes. It means the 45 minutes together can go to your process instead of the basics. Your own impression is all we need, and anything that does not apply to you can be marked as such.",
-  "labels": [
-    {
-      "value": "Strong",
-      "tone": "good",
-      "meaning": "This works. Nobody loses time over it and you trust the numbers."
-    },
-    {
-      "value": "Could improve",
-      "tone": "mid",
-      "meaning": "Workable, but it costs time, or it only works because one person knows how."
-    },
-    {
-      "value": "Opportunity",
-      "tone": "low",
-      "meaning": "This is where things go wrong, get lost, or arrive too late to act on."
-    },
-    {
-      "value": "Not applicable",
-      "tone": "na",
-      "meaning": "You do not do this, or it sits outside what you can see from where you work."
-    }
-  ],
-  "steps": [
-    {
-      "theme": "Planning and budgeting",
-      "heading": "How the budget is built, and what happens once it is approved",
-      "friction": "Most budgets survive approval intact. What tends to break is everything after it: a version sitting in someone's inbox, a working budget rebuilt by hand, and two numbers that no longer agree.",
-      "reading": [
-        {
-          "label": "How to Build a Production Budget",
-          "url": "/insights/how-to-build-a-production-budget/"
-        },
-        {
-          "label": "Above the Line vs Below the Line",
-          "url": "/insights/above-the-line-vs-below-the-line/"
-        }
-      ],
-      "questions": [
-        {
-          "key": "budget_structure",
-          "short": "budget structure",
-          "label": "Budget structure and version control",
-          "hint": "How budgets are built and changed, and how you know which version counts.",
-          "finding": "When there is no single current version, two people can be right about different numbers at the same time. Every later discussion starts with reconciling the budget instead of the production.",
-          "active": true
-        },
-        {
-          "key": "budget_templates",
-          "short": "budget templates",
-          "label": "A shared structure across productions",
-          "hint": "Whether productions start from the same structure, or everyone builds their own.",
-          "finding": "Without a shared structure you cannot compare productions, and every new one costs a week of rebuilding what already existed.",
-          "active": false
-        },
-        {
-          "key": "budget_handover",
-          "short": "the handover to production",
-          "label": "Budget to production handover",
-          "hint": "What happens after approval, and how the people spending the money get a working budget.",
-          "finding": "This is the gap most tools leave open. If the working budget is rebuilt by hand after approval, it starts drifting from the approved one immediately.",
-          "active": true
-        },
-        {
-          "key": "funding",
-          "short": "the funding schedule",
-          "label": "Cash flow and the funding schedule",
-          "hint": "Whether you can see when money actually has to be there, next to what it costs in total.",
-          "finding": "A production can be exactly on budget and still run out of cash in week six. Budget and funding schedule are different questions, and only one of them is usually maintained.",
-          "active": false
-        }
-      ]
-    },
-    {
-      "theme": "Spending and control",
-      "heading": "What actually gets spent, and who is allowed to commit it",
-      "friction": "Costs rarely arrive in the shape the budget expects. The work of making them line up is usually invisible, usually manual, and usually done by one person under time pressure.",
-      "reading": [
-        {
-          "label": "How Much Contingency Does a Production Need?",
-          "url": "/insights/how-much-contingency-does-a-production-need/"
-        }
-      ],
-      "questions": [
-        {
-          "key": "commitments",
-          "short": "committed spend",
-          "label": "Orders and committed spend",
-          "hint": "Whether money that is committed but not yet invoiced is visible anywhere.",
-          "finding": "If only invoices are visible, the budget looks healthier than it is. The overspend is already agreed, it just has not arrived yet.",
-          "active": false
-        },
-        {
-          "key": "actuals",
-          "short": "actuals",
-          "label": "Actuals and reconciliation",
-          "hint": "How real costs come in, how they are coded, and how they get matched back to the budget.",
-          "finding": "Manual reconciliation is the most expensive habit in production finance, and the first thing to break when a production gets busy.",
-          "active": true
-        },
-        {
-          "key": "coproduction",
-          "short": "splitting costs across partners",
-          "label": "Splitting costs across co-producers and funders",
-          "hint": "Whether costs can be attributed per partner and reported per funder without rebuilding it by hand.",
-          "finding": "Every partner and funder wants the numbers cut their own way. When that split lives in a separate spreadsheet, it is correct on the day it is made and drifts from that moment on.",
-          "active": false
-        },
-        {
-          "key": "approvals",
-          "short": "approvals",
-          "label": "Approvals and controls",
-          "hint": "Who may commit spend, who may change a budget, and how that is recorded.",
-          "finding": "When approval lives in email, nobody can answer who agreed to what, and the audit happens afterwards instead of at the moment of spending.",
-          "active": true
-        },
-        {
-          "key": "ledger",
-          "short": "the handover to the ledger",
-          "label": "Handover to accounting and payroll",
-          "hint": "How approved costs reach your ledger and payroll systems, and how much is retyped on the way.",
-          "finding": "Retyping between production and accounting is where the two sets of numbers start to differ, and the difference is usually found at the wrong moment.",
-          "active": false
-        }
-      ]
-    },
-    {
-      "theme": "Forecasting and reporting",
-      "heading": "Knowing where this will land, and who gets told in time",
-      "friction": "A report that takes three days to build is a report about last week. The question is not only whether the numbers are right, but whether they arrive while you can still do something about them.",
-      "reading": [
-        {
-          "label": "What Is a Production Cost Report?",
-          "url": "/insights/what-is-a-production-cost-report/"
-        }
-      ],
-      "questions": [
-        {
-          "key": "forecasting",
-          "short": "forecasting",
-          "label": "Forecasting the final cost",
-          "hint": "How commitments, costs to date and remaining costs add up to an expected final cost.",
-          "finding": "A forecast that is refreshed once a month is a forecast you cannot steer on. The overspend is usually visible weeks before it is reported.",
-          "active": true
-        },
-        {
-          "key": "currency",
-          "short": "working in more than one currency",
-          "label": "Working in more than one currency",
-          "hint": "Whether budgets, costs and forecasts stay comparable when money moves in another currency.",
-          "finding": "Rates move between the day you commit and the day you pay. If conversion happens by hand at whatever rate was to hand, the final cost becomes a moving target that nobody can explain afterwards.",
-          "active": false
-        },
-        {
-          "key": "incentives",
-          "short": "incentives and rebates",
-          "label": "Tax incentives, rebates and grants",
-          "hint": "Whether what you expect back is tracked against what you actually claim and receive.",
-          "finding": "Incentives are budgeted as certainties and arrive as approximations. If the expected amount is not tracked against the claim, the gap surfaces after wrap.",
-          "active": false
-        },
-        {
-          "key": "reporting",
-          "short": "reporting",
-          "label": "Reporting and visibility",
-          "hint": "Who gets reliable financial information, in what form, and how long it takes to produce.",
-          "finding": "If a report takes days to assemble, it is describing a situation that has already changed. The effort goes into producing it rather than acting on it.",
-          "active": true
-        },
-        {
-          "key": "portfolio",
-          "short": "the view across productions",
-          "label": "Several productions at once",
-          "hint": "Whether you can see across productions, not only within one of them.",
-          "finding": "Each production can look fine on its own while the company position is not. That only shows up when someone consolidates by hand, usually too late.",
-          "active": false
-        }
-      ]
-    }
-  ],
-  "result": {
-    "heading": "This is what you told us",
-    "intro": "Received, thank you. Nothing is scored here: this is your own reading of your process, and it sets the agenda for the session.",
-    "focus_title": "Where we will start",
-    "none_flagged": "You rated everything as strong. We will spend the session looking for the smaller frictions, the ones that only show up when a production goes sideways.",
-    "next_title": "What happens in the session",
-    "next": [
-      "We read your answers beforehand, so we can start with your process instead of the basics.",
-      "45 minutes together on a call: how production finance runs today, and where the friction sits.",
-      "Afterwards a short written summary: the three main opportunities and what to improve first."
-    ],
-    "note": "If Tubes can solve one of the things we find, we will show you that part. There is no obligation to continue.",
-    "book_title": "Now pick a time",
-    "book_text": "The Health Check itself is 45 minutes on a video call, with a production finance specialist. Choose a slot that suits you.",
-    "book_label": "Pick a time",
-    "also_title": "Also on the agenda",
-    "also_text": "The session goes wider than these six questions. Depending on how you work, we also look at"
+  "intro": "A few quick details so your 45 minute Health Check is as useful as possible. It takes less than two minutes.",
+  "step1": {
+    "title": "Your details",
+    "heading": "Let's get to know you"
   },
-  "role_question": {
-    "label": "What is your role?",
-    "hint": "It helps us pitch the session at the right level. Optional.",
-    "options": [
-      {
-        "key": "exec",
-        "label": "C-level or executive producer"
-      },
-      {
-        "key": "head_of_production",
-        "label": "Head of Production"
-      },
-      {
-        "key": "producer",
-        "label": "Producer, line producer or production manager"
-      },
-      {
-        "key": "accountant",
-        "label": "Production accountant"
-      },
-      {
-        "key": "controller",
-        "label": "Business controller"
-      },
-      {
-        "key": "finance",
-        "label": "Finance or business affairs"
-      },
-      {
-        "key": "other",
-        "label": "Something else"
-      }
-    ]
+  "step2": {
+    "title": "Your production",
+    "heading": "How you work today"
   },
-  "lead_form": {
-    "improve": {
-      "label": "What would you most like to improve?",
+  "role_label": "Job title or role",
+  "questions": [
+    {
+      "key": "production_type",
+      "label": "What type of production do you primarily work in?",
       "options": [
-        "Budgeting",
-        "Budget vs actuals",
-        "Forecasting",
-        "Approvals",
-        "Reporting",
-        "Managing multiple productions",
-        "All of the above",
+        "TV or broadcast",
+        "Film",
+        "Commercials or branded content",
+        "Corporate",
+        "Live events",
+        "Theatre",
+        "Online or digital content",
         "Other"
       ]
     },
-    "current_system": {
-      "label": "How do you currently manage production finance?",
+    {
+      "key": "budget_band",
+      "label": "What are your typical production budgets?",
+      "options": [
+        "Under £250k",
+        "£250k to £1m",
+        "£1m to £5m",
+        "£5m to £10m",
+        "£10m and above",
+        "Varies significantly"
+      ]
+    },
+    {
+      "key": "volume",
+      "label": "How many productions do you typically manage at one time?",
+      "options": [
+        "1",
+        "2 to 5",
+        "6 to 10",
+        "More than 10",
+        "Varies"
+      ]
+    },
+    {
+      "key": "current_system",
+      "label": "How do you currently manage your production finance?",
       "options": [
         "Excel or spreadsheets",
-        "Existing production software",
         "Accounting software",
-        "Combination of systems",
+        "Production finance software",
+        "A combination of systems",
         "Other"
       ]
     },
-    "production_type": {
-      "label": "What do you mostly produce?",
+    {
+      "key": "workload",
+      "label": "Where does your production finance process create the most work today?",
       "options": [
-        "Film",
-        "Drama or scripted series",
-        "Documentary",
-        "Commercials or branded content",
-        "Live and entertainment",
-        "A mix",
-        "Other"
+        "Building and updating budgets",
+        "Managing budget versions",
+        "Reconciling actuals",
+        "Forecasting",
+        "Getting approvals",
+        "Producing reports",
+        "Keeping everyone aligned",
+        "Not sure, I would like to explore this"
       ]
     }
+  ],
+  "notes": {
+    "label": "Is there anything specific you would like us to focus on?",
+    "placeholder": "A recurring problem, a production that went sideways, a report nobody trusts."
+  },
+  "result": {
+    "book_title": "Book your Health Check",
+    "book_text": "Choose a 45 minute slot that suits you. The session is a video call with a production finance specialist.",
+    "book_label": "Pick a time",
+    "heading": "This is what you told us",
+    "focus_title": "Where we will start",
+    "next_title": "What happens next",
+    "next": [
+      "We start by understanding your business and current setup.",
+      "We talk through your production finance workflow and identify opportunities.",
+      "We share what we found and discuss how Tubes could help."
+    ],
+    "note": "No obligation. No generic sales pitch. Just 45 minutes focused on your production finance process."
   }
 }

@@ -1,215 +1,131 @@
 ---
 layout: layout.njk
 title: Before your Health Check
-seo_title: "Preparing for your Production Finance Health Check | Tubes"
-description: "A few questions before your Health Check, so the 45 minutes can go to your process instead of the basics."
+seo_title: "Book your Production Finance Health Check | Tubes"
+description: "A few quick details, then pick a time for your free 45 minute Production Finance Health Check."
 permalink: /production-finance-health-check/assessment/
 noindex: true
 ---
 {#- De vragenlijst van de Health Check, op een eigen adres zodat de link ook
     los verstuurd kan worden aan iemand die al een sessie heeft staan.
 
-    De vragen zelf staan NIET in dit bestand maar in src/_data/healthcheck.json,
-    te wijzigen via het CMS onder "Health Check-vragenlijst". Voeg je daar een
-    vraag of een heel thema toe, dan loopt de pagina, het rapport en de opslag
-    vanzelf mee. Let op: de `key` van een vraag is de veldnaam in de opslag,
-    dus die verander je niet meer nadat er antwoorden binnen zijn.
+    Twee stappen: eerst wie je bent, dan hoe je werkt. Daarna verschijnt de
+    agenda plus een kort overzicht van wat je hebt ingevuld.
 
-    Opzet: één stap per thema, en het rapport als laatste stap. Rechts loopt
-    de toelichting mee met de stap waar je bent.
+    De vragen staan in src/_data/healthcheck.json, te wijzigen via het CMS
+    onder "Health Check-vragenlijst". De `key` van een vraag is de veldnaam in
+    de opslag; die verander je niet meer zodra er antwoorden binnen zijn.
 
     Binnenkomen kan op twee manieren:
-      ?ref=<id>  vanaf het bedankscherm; dan weten we al wie het is.
-      kaal       dan vragen we het zakelijke e-mailadres om te koppelen.
+      ?ref=<id>  vanaf de landingspagina; dan weten we het e-mailadres al.
+      kaal       dan vragen we het zakelijke e-mailadres.
 
     Bewust noindex: een vragenlijst voor genodigden, geen marketingpagina. -#}
-
-{#- Vragen die in het CMS op inactief staan blijven in healthcheck.json
-    bewaard maar verschijnen hier niet; ze komen in het gesprek zelf aan bod
-    en staan daarom naast de agenda-knop op het rapport. Filters: zie
-    eleventy.config.js. -#}
-{%- set steps = healthcheck.steps | activeSteps -%}
-{%- set parked = healthcheck.steps | parkedQuestions -%}
-{%- set questionCount = 0 -%}
-{%- for step in steps %}{% set questionCount = questionCount + (step.questions | length) %}{% endfor -%}
 
 <section class="section section-hero theme-light hc-assess-page">
   <div class="container hc-assess-grid">
 
     <div class="hc-assess-main">
-      <span class="kicker">Preparing for your Health Check</span>
-      <h1>How does your process stand today?</h1>
+      <span class="kicker">Production Finance Health Check</span>
+      <h1>Book your Health Check</h1>
       <p class="hc-lead">{{ healthcheck.intro }}</p>
 
       <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
         <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
 
         <div class="hc-form-card">
-
-          <div data-hc-questions>
-            <div class="hc-progress-line">
-              <div class="hc-progress" data-hc-progress>
-                {%- for step in steps %}
-                <span class="hc-progress-bar{% if loop.first %} is-current{% endif %}" data-hc-progress-bar="{{ loop.index }}">
-                  <span class="visually-hidden">Step {{ loop.index }}: {{ step.theme }}</span>
-                </span>
-                {%- endfor %}
-                <span class="hc-progress-bar" data-hc-progress-bar="{{ steps | length + 1 }}"><span class="visually-hidden">Step {{ steps | length + 1 }}: your summary</span></span>
-              </div>
-              <p class="hc-progress-count"><span data-hc-answered>0</span> of {{ questionCount }} answered</p>
+          <div class="hc-progress-line">
+            <div class="hc-progress" data-hc-progress>
+              <span class="hc-progress-bar is-current" data-hc-progress-bar="1"><span class="visually-hidden">Step 1: {{ healthcheck.step1.title }}</span></span>
+              <span class="hc-progress-bar" data-hc-progress-bar="2"><span class="visually-hidden">Step 2: {{ healthcheck.step2.title }}</span></span>
             </div>
-
-            {#- Wie ben je. Stond eerst in stap 2 van het aanvraagformulier,
-                maar dat voelde dubbel omdat deze vragenlijst er meteen achteraan
-                kwam. Nu op één plek. Het e-mailadres vragen we alleen als we het
-                nog niet weten (dus zonder ?ref). De rol bepaalt geen vragen,
-                daar is "Not applicable" voor. -#}
-            <div class="hc-assess-identify" data-hc-identify>
-              <div data-hc-email>
-                <label class="hc-field" for="hc-assessment-email">Business email address
-                  <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
-                </label>
-                <p class="hc-help">So we can match your answers to your Health Check request.</p>
-              </div>
-
-              <div class="hc-field-row">
-                <label class="hc-field" for="hc-assessment-name">Name
-                  <input type="text" id="hc-assessment-name" name="name" autocomplete="name" required>
-                </label>
-                <label class="hc-field" for="hc-assessment-company">Company
-                  <input type="text" id="hc-assessment-company" name="company" autocomplete="organization" required>
-                </label>
-              </div>
-
-              <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_question.label }} <span class="hc-optional">(optional)</span>
-                <select id="hc-assessment-role" name="role_group">
-                  <option value="">Choose one</option>
-                  {%- for option in healthcheck.role_question.options %}
-                  <option value="{{ option.key }}">{{ option.label }}</option>
-                  {%- endfor %}
-                </select>
-              </label>
-
-              <fieldset class="hc-choice">
-                <legend>{{ healthcheck.lead_form.production_type.label }} <span class="hc-optional">(optional)</span></legend>
-                <div class="hc-choice-row">
-                  {%- for option in healthcheck.lead_form.production_type.options %}
-                  <label class="hc-pill">
-                    <input type="radio" name="production_type" value="{{ option }}">
-                    <span>{{ option }}</span>
-                  </label>
-                  {%- endfor %}
-                </div>
-              </fieldset>
-            </div>
-
-            {%- for step in steps %}
-            <section class="hc-block" data-hc-block="{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
-              <p class="hc-block-meta"><span class="hc-block-num">{{ loop.index }}</span> Step {{ loop.index }} of {{ steps | length + 1 }} &middot; {{ step.theme }}</p>
-              <h2 class="hc-block-heading">{{ step.heading }}</h2>
-
-              {%- set reading = step.reading[0] -%}
-              {%- for question in step.questions %}
-              <fieldset class="hc-question"
-                        data-short="{{ question.short }}"
-                        data-theme="{{ step.theme }}"
-                        data-finding="{{ question.finding }}"
-                        {% if reading %}data-reading-label="{{ reading.label }}" data-reading-url="{{ reading.url }}"{% endif %}>
-                <legend class="hc-question-label">{{ question.label }}</legend>
-                <p class="hc-question-hint">{{ question.hint }}</p>
-                <div class="hc-assess-options">
-                  {%- for option in healthcheck.labels %}
-                  <label class="hc-opt hc-opt-{{ option.tone }}">
-                    <input type="radio" name="{{ question.key }}" value="{{ option.value }}">
-                    <span>{{ option.value }}</span>
-                  </label>
-                  {%- endfor %}
-                </div>
-              </fieldset>
-              {%- endfor %}
-
-              {%- if loop.last %}
-              <label class="hc-field hc-assess-notes" for="hc-assessment-notes">Anything you would like us to look at? <span class="hc-optional">(optional)</span>
-                <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="A recurring problem, a production that went sideways, a report nobody trusts."></textarea>
-              </label>
-              {%- endif %}
-
-              <div class="hc-step-actions">
-                {%- if loop.last %}
-                <button type="submit" class="button button-primary hc-submit">See my summary</button>
-                {%- else %}
-                <button type="button" class="button button-primary hc-next" data-hc-next="{{ loop.index + 1 }}">Continue</button>
-                {%- endif %}
-                {%- if not loop.first %}
-                <button type="button" class="hc-back" data-hc-back="{{ loop.index - 1 }}">Back</button>
-                {%- endif %}
-              </div>
-            </section>
-            {%- endfor %}
+            <p class="hc-progress-count" data-hc-progress-label>Step 1 of 2</p>
           </div>
+
+          {#- Stap 1: wie ben je. Het e-mailadres vragen we alleen als we het
+              nog niet weten (dus zonder ?ref). -#}
+          <section class="hc-block" data-hc-block="1">
+            <p class="hc-block-meta"><span class="hc-block-num">1</span> {{ healthcheck.step1.title }}</p>
+            <h2 class="hc-block-heading">{{ healthcheck.step1.heading }}</h2>
+
+            <div data-hc-email>
+              <label class="hc-field" for="hc-assessment-email">Business email address
+                <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+              </label>
+            </div>
+
+            <div class="hc-field-row">
+              <label class="hc-field" for="hc-assessment-name">Name
+                <input type="text" id="hc-assessment-name" name="name" autocomplete="name" required>
+              </label>
+              <label class="hc-field" for="hc-assessment-company">Company
+                <input type="text" id="hc-assessment-company" name="company" autocomplete="organization" required>
+              </label>
+            </div>
+
+            <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_label }}
+              <input type="text" id="hc-assessment-role" name="role" autocomplete="organization-title" placeholder="Line Producer, Head of Production, Financial Controller" required>
+            </label>
+
+            <div class="hc-step-actions">
+              <button type="button" class="button button-primary hc-next" data-hc-next="2">Continue</button>
+            </div>
+          </section>
+
+          {#- Stap 2: hoe werk je nu. Daarna verschijnt de agenda. -#}
+          <section class="hc-block" data-hc-block="2" hidden>
+            <p class="hc-block-meta"><span class="hc-block-num">2</span> {{ healthcheck.step2.title }}</p>
+            <h2 class="hc-block-heading">{{ healthcheck.step2.heading }}</h2>
+
+            {%- for question in healthcheck.questions %}
+            <fieldset class="hc-choice hc-question" data-key="{{ question.key }}" data-label="{{ question.label }}">
+              <legend>{{ question.label }}</legend>
+              <div class="hc-choice-row">
+                {%- for option in question.options %}
+                <label class="hc-pill">
+                  <input type="radio" name="{{ question.key }}" value="{{ option }}">
+                  <span>{{ option }}</span>
+                </label>
+                {%- endfor %}
+              </div>
+            </fieldset>
+            {%- endfor %}
+
+            <label class="hc-field hc-assess-notes" for="hc-assessment-notes">{{ healthcheck.notes.label }} <span class="hc-optional">(optional)</span>
+              <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="{{ healthcheck.notes.placeholder }}"></textarea>
+            </label>
+
+            <div class="hc-step-actions">
+              <button type="submit" class="button button-primary hc-submit">Continue to booking</button>
+              <button type="button" class="hc-back" data-hc-back="1">Back</button>
+            </div>
+          </section>
 
           <p class="form-status hc-status" role="status" aria-live="polite"></p>
 
-          {#- Het rapport komt in de plaats van de vragen. Opgebouwd uit de
-              eigen antwoorden: geen cijfer en geen oordeel, dat kan pas uit
-              het gesprek komen. -#}
-          <div class="hc-result" data-hc-result data-hc-block="{{ steps | length + 1 }}" hidden>
-            {#- Eerst plannen, dan pas lezen: wie nu een tijd prikt heeft de
-                afspraak staan, het verslag loopt niet weg. -#}
+          {#- Na het versturen: eerst de agenda, daaronder wat je invulde. -#}
+          <div class="hc-result" data-hc-result data-hc-block="3" hidden>
+            <p class="hc-block-meta"><span class="hc-block-num">2</span> Pick a time</p>
             <h2 class="hc-result-heading">{{ healthcheck.result.book_title }}</h2>
             <p class="hc-result-intro">{{ healthcheck.result.book_text }}</p>
             <a class="button button-primary hc-book" href="/book-a-call/health-check/">{{ healthcheck.result.book_label }}</a>
-            <p class="hc-done-note">Already have a time in the diary? Then you are set, we will see you there.</p>
-
-            {#- Wat we hier niet vragen, komt in het gesprek aan bod. Dat laten
-                we zien, anders lijken zes vragen het hele verhaal. -#}
-            {%- if parked | length %}
-            <p class="hc-also"><strong>{{ healthcheck.result.also_title }}.</strong> {{ healthcheck.result.also_text }}
-              {#- Alleen komma's: verschillende korte namen bevatten zelf al een "and". -#}
-              {%- for question in parked %} {{ question.short }}{% if not loop.last %},{% endif %}{% endfor -%}.</p>
-            {%- endif %}
+            <p class="hc-done-note">We will email your confirmation and the video link once you have picked a time.</p>
 
             <div class="hc-report">
               <h3 class="hc-report-heading">{{ healthcheck.result.heading }}</h3>
-              <p class="hc-result-intro">{{ healthcheck.result.intro }}</p>
-
-              <div class="hc-result-themes" data-hc-result-themes></div>
-              <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}" data-none="{{ healthcheck.result.none_flagged }}"></div>
-              <details class="hc-result-all">
-                <summary>All answers</summary>
-                <ol class="hc-result-list" data-hc-result-list></ol>
-              </details>
+              <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}"></div>
+              <ol class="hc-result-list" data-hc-result-list></ol>
             </div>
           </div>
 
-          <p class="hc-privacy">Your answers go to Tubes and stay with us. We use them to prepare for your session and to follow up on what we find, and we keep them with your company details in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
+          <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
         </div>
       </form>
     </div>
 
-    {#- Rechts loopt mee met het thema dat in beeld staat: waar het daar
-        meestal misgaat, en iets om te lezen terwijl je nadenkt. -#}
     <aside class="hc-assess-aside">
-      {%- for step in steps %}
-      <div class="hc-theme" data-hc-theme="{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
-        <span class="hc-theme-kicker">Step {{ loop.index }} of {{ steps | length + 1 }}</span>
-        <h2 class="hc-theme-title">{{ step.theme }}</h2>
-        <p class="hc-theme-friction">{{ step.friction }}</p>
-        {%- if step.reading %}
-        <div class="hc-theme-reading">
-          <p class="hc-theme-reading-title">While you think it over</p>
-          <ul>
-            {%- for item in step.reading %}
-            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
-            {%- endfor %}
-          </ul>
-        </div>
-        {%- endif %}
-      </div>
-      {%- endfor %}
-
-      <div class="hc-theme" data-hc-theme="{{ steps | length + 1 }}" hidden>
-        <span class="hc-theme-kicker">Step {{ steps | length + 1 }} of {{ steps | length + 1 }}</span>
+      <div class="hc-theme">
+        <span class="hc-theme-kicker">The session</span>
         <h2 class="hc-theme-title">{{ healthcheck.result.next_title }}</h2>
         <ol class="hc-next-list">
           {%- for item in healthcheck.result.next %}
@@ -217,16 +133,6 @@ noindex: true
           {%- endfor %}
         </ol>
         <p class="hc-scan-note">{{ healthcheck.result.note }}</p>
-      </div>
-
-      <div class="hc-theme-key">
-        <p class="hc-scan-key">What the labels mean</p>
-        <ul class="hc-label-list">
-          {%- for option in healthcheck.labels %}
-          <li><span class="chip chip-{{ 'mint' if option.tone == 'good' else ('amber' if option.tone == 'mid' else ('lavender' if option.tone == 'low' else 'neutral')) }}">{{ option.value }}</span><span>{{ option.meaning }}</span></li>
-          {%- endfor %}
-        </ul>
-        <p class="hc-scan-note">No score out of ten. Your answers set the agenda for the session, they are not the verdict.</p>
       </div>
     </aside>
 
