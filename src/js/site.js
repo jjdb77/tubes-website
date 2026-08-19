@@ -436,6 +436,7 @@ if (hcForms.length) {
           name,
           company,
           role: String(data.get("role") || "").trim(),
+          production_type: String(data.get("production_type") || ""),
           improve: String(data.get("improve") || ""),
           current_system: String(data.get("current_system") || ""),
           page: location.pathname

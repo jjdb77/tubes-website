@@ -230,5 +230,42 @@
         "label": "Something else"
       }
     ]
+  },
+  "lead_form": {
+    "improve": {
+      "label": "What would you most like to improve?",
+      "options": [
+        "Budgeting",
+        "Budget vs actuals",
+        "Forecasting",
+        "Approvals",
+        "Reporting",
+        "Managing multiple productions",
+        "All of the above",
+        "Other"
+      ]
+    },
+    "current_system": {
+      "label": "How do you currently manage production finance?",
+      "options": [
+        "Excel or spreadsheets",
+        "Existing production software",
+        "Accounting software",
+        "Combination of systems",
+        "Other"
+      ]
+    },
+    "production_type": {
+      "label": "What do you mostly produce?",
+      "options": [
+        "Film",
+        "Drama or scripted series",
+        "Documentary",
+        "Commercials or branded content",
+        "Live and entertainment",
+        "A mix",
+        "Other"
+      ]
+    }
   }
 }

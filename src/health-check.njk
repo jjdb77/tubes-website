@@ -18,23 +18,9 @@ noindex: true
     Let op: dit is geen softwarepagina. Tubes wordt pas ná de uitleg over de
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
-{%- set improveOptions = [
-  "Budgeting",
-  "Budget vs actuals",
-  "Forecasting",
-  "Approvals",
-  "Reporting",
-  "Managing multiple productions",
-  "All of the above",
-  "Other"
-] -%}
-{%- set systemOptions = [
-  "Excel or spreadsheets",
-  "Existing production software",
-  "Accounting software",
-  "Combination of systems",
-  "Other"
-] -%}
+{#- De keuzelijsten van dit formulier staan in src/_data/healthcheck.json,
+    te wijzigen via het CMS onder "Health Check-vragenlijst" > Aanvraagformulier. -#}
+{%- set leadForm = healthcheck.lead_form -%}
 
 {%- macro healthCheckForm(id, submitLabel) -%}
 <form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
@@ -65,9 +51,21 @@ noindex: true
     </label>
 
     <fieldset class="hc-choice">
-      <legend>What would you most like to improve? <span class="hc-optional">(optional)</span></legend>
+      <legend>{{ leadForm.production_type.label }} <span class="hc-optional">(optional)</span></legend>
       <div class="hc-choice-row">
-        {%- for option in improveOptions %}
+        {%- for option in leadForm.production_type.options %}
+        <label class="hc-pill">
+          <input type="radio" name="production_type" value="{{ option }}">
+          <span>{{ option }}</span>
+        </label>
+        {%- endfor %}
+      </div>
+    </fieldset>
+
+    <fieldset class="hc-choice">
+      <legend>{{ leadForm.improve.label }} <span class="hc-optional">(optional)</span></legend>
+      <div class="hc-choice-row">
+        {%- for option in leadForm.improve.options %}
         <label class="hc-pill">
           <input type="radio" name="improve" value="{{ option }}">
           <span>{{ option }}</span>
@@ -77,9 +75,9 @@ noindex: true
     </fieldset>
 
     <fieldset class="hc-choice">
-      <legend>How do you currently manage production finance? <span class="hc-optional">(optional)</span></legend>
+      <legend>{{ leadForm.current_system.label }} <span class="hc-optional">(optional)</span></legend>
       <div class="hc-choice-row">
-        {%- for option in systemOptions %}
+        {%- for option in leadForm.current_system.options %}
         <label class="hc-pill">
           <input type="radio" name="current_system" value="{{ option }}">
           <span>{{ option }}</span>

@@ -262,6 +262,7 @@ app.post("/api/health-check", (req, res) => {
     entry.name = name;
     entry.company = company;
     entry.role = String(b.role || "").trim().slice(0, 120);
+    entry.production_type = String(b.production_type || "").trim().slice(0, 120);
     entry.improve = String(b.improve || "").trim().slice(0, 120);
     entry.current_system = String(b.current_system || "").trim().slice(0, 120);
   }
@@ -314,6 +315,7 @@ function crmPayload(entry, answers) {
       role: entry.role || "",
     },
     health_check: {
+      production_type: entry.production_type || "",
       wants_to_improve: entry.improve || "",
       current_system: entry.current_system || "",
       notes: entry.notes || "",
@@ -502,6 +504,7 @@ function healthCheckCard(s) {
   const details = [
     ["Bedrijf", s.company],
     ["Rol", s.role || s.role_group],
+    ["Maakt vooral", s.production_type],
     ["Wil verbeteren", s.improve],
     ["Werkt nu met", s.current_system],
   ]
@@ -602,7 +605,7 @@ app.get("/beheer/export.csv", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
   const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
-  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,wil verbeteren,werkt nu met,zelfbeeld,bericht,pagina"]
+  const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,maakt vooral,wil verbeteren,werkt nu met,zelfbeeld,bericht,pagina"]
     .concat(
       items.map((s) => {
         const isHc = s.kind === "health_check";
@@ -615,7 +618,7 @@ app.get("/beheer/export.csv", (req, res) => {
           : "";
         return [
           s.at, soort, naam, s.email, s.phone || "",
-          s.company || "", s.role || "", s.improve || "", s.current_system || "",
+          s.company || "", s.role || "", s.production_type || "", s.improve || "", s.current_system || "",
           zelfbeeld, s.notes || s.message || "", s.page || "",
         ].map(q).join(",");
       })

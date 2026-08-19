@@ -49,6 +49,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Health Check-landingspagina
 
 - `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een sessie van 45 minuten over budgetten, actuals, forecasting, approvals en reporting. Het doel van de pagina is één ding: het zakelijke e-mailadres.
+- De keuzeknoppen van het aanvraagformulier (wat maak je vooral, wat wil je verbeteren, waar werk je nu mee) staan ook in `healthcheck.json` onder `lead_form`, te wijzigen in het CMS. Productietype is de qualifier uit het advies van Chris Arboit; naam, bedrijf, rol en huidige software stonden er al.
 - Bewust **geen CMS-secties**. Het tweestapsformulier en het assessment-beeld passen niet in het sectiesysteem, dus tekst wijzig je in het bestand zelf en niet in Sveltia. Opmaak staat onderaan `style.css` (blok "Health Check", alle klassen beginnen met `hc-`), de logica onderaan `site.js`.
 - **Volgorde is de hele truc**: eerst de waarde van de Health Check, Tubes pas ná "Areas we assess". Niet omdraaien, en het Tubes-blok niet laten uitgroeien tot een productpitch.
 - De zes beoordeelde gebieden zijn: budgetstructuur en versiebeheer, budget naar productie (wat er ná goedkeuring gebeurt), actuals en reconciliatie, forecasting, approvals en controls, reporting en zichtbaarheid. Labels zijn Strong / Could improve / Opportunity; **geen cijfer of score**, dat zou een uitslag suggereren die er niet is.

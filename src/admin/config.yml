@@ -113,6 +113,29 @@ collections:
                 fields:
                   - { label: "Sleutel (wordt opgeslagen)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"] }
                   - { label: Rol, name: label, widget: string }
+          - label: "Aanvraagformulier (landingspagina)"
+            name: lead_form
+            widget: object
+            hint: "De keuzeknoppen in stap 2 van het aanvraagformulier op /production-finance-health-check/."
+            fields:
+              - label: "Wat wil je verbeteren"
+                name: improve
+                widget: object
+                fields:
+                  - { label: Vraag, name: label, widget: string }
+                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
+              - label: "Waar werk je nu mee"
+                name: current_system
+                widget: object
+                fields:
+                  - { label: Vraag, name: label, widget: string }
+                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
+              - label: "Wat maak je vooral"
+                name: production_type
+                widget: object
+                fields:
+                  - { label: Vraag, name: label, widget: string }
+                  - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string } }
           - label: "Stappen"
             name: steps
             widget: list
