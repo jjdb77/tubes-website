@@ -801,3 +801,37 @@ if (assessForm) {
     }
   });
 }
+
+// ---------------------------------------------------------------------------
+// Agenda in een popover
+//
+// De knoppen naar /book-a-call/health-check/ openen de agenda in een dialog,
+// zodat de bezoeker de pagina niet verlaat. De link blijft een gewone link:
+// zonder JavaScript, en als de dialog niet ondersteund wordt, komt hij op de
+// doorstuurpagina uit en dus alsnog in de agenda.
+// ---------------------------------------------------------------------------
+
+const bookingModal = document.getElementById("booking-modal");
+
+if (bookingModal && typeof bookingModal.showModal === "function") {
+  const frame = bookingModal.querySelector(".booking-modal-frame");
+
+  const openBooking = () => {
+    // Pas laden bij het openen: anders haalt elke bezoeker de agenda op.
+    if (!frame.src) frame.src = frame.dataset.src;
+    bookingModal.showModal();
+    track("health-check-booking-opened");
+  };
+
+  for (const link of document.querySelectorAll('a[href="/book-a-call/health-check/"]')) {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      openBooking();
+    });
+  }
+
+  bookingModal.querySelector(".booking-modal-close").addEventListener("click", () => bookingModal.close());
+  bookingModal.addEventListener("click", (e) => {
+    if (e.target === bookingModal) bookingModal.close();
+  });
+}

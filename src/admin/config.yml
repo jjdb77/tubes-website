@@ -36,6 +36,7 @@ collections:
           - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
           - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Basisadres van de afsprakenpagina, zonder afspraaktype. Nu 4relations.appconnected.nl/boek/joachim" }
+          - { label: "Agenda in de popover (Health Check)", name: booking_embed_url, widget: string, required: false, hint: "De boekingspagina van het afspraaktype, die in het venstertje op de Health Check-pagina wordt getoond. LET OP: hier hoort .../boek/<account>/<slug>, nooit een losse afspraaklink .../afspraak/<id> — die toont de naam, het e-mailadres en het telefoonnummer van degene die geboekt heeft. Leeg = geen popover, de knop opent gewoon de boekingspagina." }
           - label: "Boekingslinks per plan"
             name: booking_plans
             widget: list
