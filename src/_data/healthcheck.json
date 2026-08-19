@@ -1,5 +1,5 @@
 {
-  "intro": "A short questionnaire, grouped into three themes. Your own impression is all we need. We go through each area properly during the session, so there are no wrong answers here.",
+  "intro": "A few questions about how your process runs today, so none of the 45 minutes goes on the basics. Your own impression is all we need, and anything that does not apply to you can be marked as such.",
   "labels": [
     {
       "value": "Strong",
@@ -170,13 +170,16 @@
     "intro": "Received, thank you. Nothing is scored here: this is your own reading of your process, and it sets the agenda for the session.",
     "focus_title": "Where we will start",
     "none_flagged": "You rated everything as strong. We will spend the session looking for the smaller frictions, the ones that only show up when a production goes sideways.",
-    "next_title": "What happens next",
+    "next_title": "What happens in the session",
     "next": [
-      "We read your answers before we speak, so we do not spend the session on the basics.",
-      "45 minutes together, going through each area properly.",
-      "A short written summary: the three main opportunities, where the manual work sits, and what to improve first."
+      "We read your answers beforehand, so we can start with your process instead of the basics.",
+      "45 minutes together on a call: how production finance runs today, and where the friction sits.",
+      "Afterwards a short written summary: the three main opportunities and what to improve first."
     ],
-    "note": "If Tubes can solve one of the things we find, we will show you that part. There is no obligation to continue."
+    "note": "If Tubes can solve one of the things we find, we will show you that part. There is no obligation to continue.",
+    "book_title": "Now pick a time",
+    "book_text": "The Health Check itself is 45 minutes on a video call, with a production finance specialist. Choose a slot that suits you.",
+    "book_label": "Pick a time"
   },
   "role_question": {
     "label": "What is your role?",

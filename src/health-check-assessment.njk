@@ -1,8 +1,8 @@
 ---
 layout: layout.njk
-title: Health Check assessment
-seo_title: "Production Finance Health Check assessment | Tubes"
-description: "Tell us how your production finance process stands today, so we can prepare for your Health Check session."
+title: Before your Health Check
+seo_title: "Preparing for your Production Finance Health Check | Tubes"
+description: "A few questions before your Health Check, so the 45 minutes can go to your process instead of the basics."
 permalink: /production-finance-health-check/assessment/
 noindex: true
 ---
@@ -32,7 +32,7 @@ noindex: true
   <div class="container hc-assess-grid">
 
     <div class="hc-assess-main">
-      <span class="kicker">Production Finance Health Check</span>
+      <span class="kicker">Preparing for your Health Check</span>
       <h1>How does your process stand today?</h1>
       <p class="hc-lead">{{ healthcheck.intro }}</p>
 
@@ -137,7 +137,13 @@ noindex: true
               <ol class="hc-result-list" data-hc-result-list></ol>
             </details>
 
-            <p class="hc-done-note">Nothing else to do for now. If you have not heard from us yet, we will be in touch shortly to arrange a time.</p>
+            <div class="hc-done-next">
+              <p class="hc-done-next-title">{{ healthcheck.result.book_title }}</p>
+              <p>{{ healthcheck.result.book_text }}</p>
+              <a class="button button-primary hc-book" href="/book-a-call/health-check/">{{ healthcheck.result.book_label }}</a>
+            </div>
+
+            <p class="hc-done-note">Already have a time in the diary? Then you are set, we will see you there.</p>
           </div>
 
           <p class="hc-privacy">Your answers go to Tubes and stay with us. We use them to prepare for your session and to follow up on what we find, and we keep them with your company details in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>

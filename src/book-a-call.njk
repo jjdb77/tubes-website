@@ -11,7 +11,10 @@ eleventyExcludeFromCollections: true
     booking_url + booking_plans). Per plan een eigen pagina, zodat de juiste
     agenda ook zonder JavaScript wordt geopend; de plannaam gaat als ?plan=
     mee en verschijnt bij de boeking. -#}
-{%- set doel = (boeking.booking_url or settings.booking_url) + "/" + boeking.slug -%}
+{#- Zonder slug sturen we door naar de agenda zelf, waar alle afspraaktypes
+    op staan. Handig voor een nieuw type dat nog gemaakt moet worden. -#}
+{%- set doel = (boeking.booking_url or settings.booking_url) -%}
+{%- if boeking.slug -%}{%- set doel = doel + "/" + boeking.slug -%}{%- endif -%}
 {%- if boeking.plan -%}{%- set doel = doel + "?plan=" + (boeking.plan | urlencode) -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">

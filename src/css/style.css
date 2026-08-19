@@ -1622,6 +1622,8 @@ a:hover { color: var(--action); }
 }
 
 /* Doorverwijzing op het bedankscherm van de aanvraag */
+.hc-book { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
+
 .hc-done-next {
   margin-top: 22px; padding: 20px 22px;
   background: var(--bg); border: 1px solid var(--divider);

@@ -24,6 +24,11 @@
       "slug": "tubes-enterprise",
       "plan": "Enterprise",
       "booking_url": "https://4relations.appconnected.nl/boek/joachim@appsolutions.nl"
+    },
+    {
+      "path": "health-check/",
+      "slug": "",
+      "plan": "Production Finance Health Check"
     }
   ],
   "contact": {
