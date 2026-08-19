@@ -28,7 +28,6 @@ noindex: true
     <div class="hc-assess-main">
       <span class="kicker">Production Finance Health Check</span>
       <h1>Book your Health Check</h1>
-      <p class="hc-lead">{{ healthcheck.intro }}</p>
 
       <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
         <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
@@ -47,6 +46,7 @@ noindex: true
           <section class="hc-block" data-hc-block="1">
             <p class="hc-block-meta"><span class="hc-block-num">1</span> {{ healthcheck.step1.title }}</p>
             <h2 class="hc-block-heading">{{ healthcheck.step1.heading }}</h2>
+            <p class="hc-block-intro">{{ healthcheck.intro }}</p>
 
             <div data-hc-email>
               <label class="hc-field" for="hc-assessment-email">Business email address

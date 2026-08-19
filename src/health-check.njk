@@ -19,13 +19,12 @@ noindex: true
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
 {%- macro healthCheckCta(id) -%}
-{#- Geen formulier meer op deze pagina: het e-mailadres wordt in de vragenlijst
-    gevraagd, en daar ook meteen vastgelegd zodra iemand doorklikt. Zo staat het
-    maar op één plek. -#}
-<div class="hc-cta-card" id="{{ id }}">
-  <p class="hc-cta-lead">Two minutes of questions, then you pick a time for the call.</p>
+{#- Geen formulier en geen kaart op deze pagina: alleen de knop naar de
+    vragenlijst. Daar wordt het e-mailadres gevraagd, en meteen vastgelegd
+    zodra iemand doorklikt. Zo staat alles op één plek en scheelt het een
+    tussenstap. -#}
+<div class="hc-cta" id="{{ id }}">
   <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/">Answer a few questions</a>
-  <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
 </div>
 {%- endmacro -%}
 

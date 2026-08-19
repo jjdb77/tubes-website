@@ -50,7 +50,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 - `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een videogesprek van 45 minuten met een production finance-specialist.
 - ⚠️ **De Health Check is dat gesprek, niet de vragenlijst.** De vragenlijst is de voorbereiding erop. Hou dat onderscheid vast bij tekstwijzigingen.
-- ⚠️ **Volgorde: eerst de vragen, dan boeken.** De landingspagina heeft geen formulier, alleen een knop naar de vragenlijst. Die vraagt het e-mailadres, en aan het eind prik je een tijd.
+- ⚠️ **Volgorde: eerst de vragen, dan boeken.** De landingspagina heeft geen formulier en geen kaart, alleen een knop naar de vragenlijst. Die vraagt het e-mailadres, en aan het eind prik je een tijd.
 - Bewust **geen CMS-secties**: deze twee pagina's zijn eigen templates, geen sectiepagina's. Opmaak staat onderaan `style.css` (alle klassen beginnen met `hc-`), de logica onderaan `site.js`.
 - **De vragenlijst**: `/production-finance-health-check/assessment/` (`src/health-check-assessment.njk`), twee stappen.
   - Stap 1: e-mailadres (alleen zonder `?ref`), naam, bedrijf, rol. Stap 2: vijf keuzevragen plus een vrij veld. Daarna verschijnt de agenda met daaronder een overzicht van wat er is ingevuld.
