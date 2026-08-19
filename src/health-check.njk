@@ -18,29 +18,15 @@ noindex: true
     Let op: dit is geen softwarepagina. Tubes wordt pas ná de uitleg over de
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
-{%- macro healthCheckForm(id, submitLabel) -%}
-<form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
-  <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
-
-  <div class="hc-step hc-step-1" data-hc-step="1">
-    <label class="hc-field" for="{{ id }}-email">Business email address
-      <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
-    </label>
-    <p class="hc-help" id="{{ id }}-email-help">We will email your confirmation and the video link once you have picked a time.</p>
-    <button type="submit" class="button button-primary hc-submit">Continue</button>
-  </div>
-
-  <p class="form-status hc-status" role="status" aria-live="polite"></p>
-
-  <div class="hc-done" data-hc-done hidden>
-    <p class="hc-done-title">Thanks. Two things left.</p>
-    <p>A few quick questions about your process, then you pick a time for the call.</p>
-    <a class="button button-primary hc-book-next" href="/production-finance-health-check/assessment/" data-hc-assess-link>Answer a few questions</a>
-    <p class="hc-done-note">You pick a time at the end, once we know what to prepare for.</p>
-  </div>
-
+{%- macro healthCheckCta(id) -%}
+{#- Geen formulier meer op deze pagina: het e-mailadres wordt in de vragenlijst
+    gevraagd, en daar ook meteen vastgelegd zodra iemand doorklikt. Zo staat het
+    maar op één plek. -#}
+<div class="hc-cta-card" id="{{ id }}">
+  <p class="hc-cta-lead">Two minutes of questions, then you pick a time for the call.</p>
+  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/">Answer a few questions</a>
   <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
-</form>
+</div>
 {%- endmacro -%}
 
 <section class="section section-hero hc-hero theme-light">
@@ -50,9 +36,7 @@ noindex: true
       <h1>How healthy is your production finance process?</h1>
       <p class="hc-lead">Answer a few questions and book your 45 minute session. The Health Check is a free video call with a production finance specialist, who goes through your production finance process with you.</p>
 
-      <div class="hc-form-card">
-        {{ healthCheckForm("hc-form-top", "Request My Health Check") }}
-      </div>
+      {{ healthCheckCta("hc-cta-top") }}
 
       <p class="hc-reassure"><strong>No obligation. No generic sales pitch. Just 45 minutes focused on your production.</strong></p>
     </div>
@@ -212,9 +196,7 @@ noindex: true
         <p class="hc-lead">Answer a few questions and book your 45 minute session. You get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
         <p class="hc-reassure"><strong>Free. No obligation. No generic sales pitch.</strong></p>
       </div>
-      <div class="hc-form-card">
-        {{ healthCheckForm("hc-form-end", "Request My Health Check") }}
-      </div>
+      {{ healthCheckCta("hc-cta-end") }}
     </div>
   </div>
 </section>
@@ -222,7 +204,7 @@ noindex: true
 <div class="hc-sticky" id="hc-sticky" hidden>
   <div class="hc-sticky-inner">
     <p>Free 45 minute Health Check</p>
-    <a class="button button-primary" href="#hc-form-end" data-hc-sticky-cta>Start My Free Health Check</a>
+    <a class="button button-primary" href="/production-finance-health-check/assessment/">Answer a few questions</a>
   </div>
 </div>
 

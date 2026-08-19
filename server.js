@@ -458,6 +458,11 @@ function readSubmissions() {
     if (!found) continue;
     s.answers = found.answers;
     if (found.notes) s.notes = found.notes;
+    // Naam, bedrijf, rol en productietype staan sinds het weghalen van stap 2
+    // op de vragenlijst-regel; die horen op de kaart van de aanvraag.
+    for (const veld of ["name", "company", "role_group", "production_type"]) {
+      if (!s[veld] && found[veld]) s[veld] = found[veld];
+    }
     merged.add(found.id);
   }
 
