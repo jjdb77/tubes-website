@@ -27,29 +27,16 @@ noindex: true
       <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
     </label>
     <p class="hc-help" id="{{ id }}-email-help">We will email your confirmation and the video link once you have picked a time.</p>
-    <button type="submit" class="button button-primary hc-submit">Start My Free Health Check</button>
+    <button type="submit" class="button button-primary hc-submit">Continue</button>
   </div>
 
   <p class="form-status hc-status" role="status" aria-live="polite"></p>
 
   <div class="hc-done" data-hc-done hidden>
-    <p class="hc-done-title">Thanks. Your Health Check request has been received.</p>
-    <p>The session itself is 45 minutes on a video call. Pick a time that suits you and we will take it from there.</p>
-
-    <a class="button button-primary hc-book" href="/book-a-call/health-check/">Pick a time</a>
-    <p class="hc-done-note">Rather have us suggest a few times? Leave it as it is, we will email you.</p>
-
-    {#- De vragenlijst is voorbereiding op het gesprek, niet de Health Check
-        zelf. Staat op een eigen pagina zodat de link ook los verstuurd kan
-        worden. De aanvraag is hier al opgeslagen, dus wie hem overslaat is
-        geen verloren lead. -#}
-    <div class="hc-done-next">
-      <p class="hc-done-next-title">Help us prepare</p>
-      <p>Who you are and how your process runs today. A couple of minutes, and it means none of the session goes on the basics.</p>
-      <a class="button button-secondary" href="/production-finance-health-check/assessment/" data-hc-assess-link>Answer a few questions</a>
-    </div>
-
-    <p class="hc-done-note">In the meantime, our <a href="/insights/">production finance articles</a> cover a few of the questions that come up most often.</p>
+    <p class="hc-done-title">Thanks. Two things left.</p>
+    <p>A few quick questions about your process, then you pick a time for the call.</p>
+    <a class="button button-primary hc-book-next" href="/production-finance-health-check/assessment/" data-hc-assess-link>Answer a few questions</a>
+    <p class="hc-done-note">You pick a time at the end, once we know what to prepare for.</p>
   </div>
 
   <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
@@ -61,7 +48,7 @@ noindex: true
     <div class="hc-hero-text">
       <span class="kicker">For film, television and production companies</span>
       <h1>How healthy is your production finance process?</h1>
-      <p class="hc-lead">First a few short questions, about two minutes. Then a free session of roughly 45 minutes with a production finance specialist, live on a video call.</p>
+      <p class="hc-lead">Answer a few questions and book your 45 minute session. The Health Check is a free video call with a production finance specialist, who goes through your production finance process with you.</p>
 
       <div class="hc-form-card">
         {{ healthCheckForm("hc-form-top", "Request My Health Check") }}
@@ -222,7 +209,7 @@ noindex: true
     <div class="cta-inner hc-final-inner">
       <div class="hc-final-text">
         <h2>How healthy is your production finance process?</h2>
-        <p class="hc-lead">A couple of minutes of questions now, then 45 minutes together on a video call. You get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
+        <p class="hc-lead">Answer a few questions and book your 45 minute session. You get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
         <p class="hc-reassure"><strong>Free. No obligation. No generic sales pitch.</strong></p>
       </div>
       <div class="hc-form-card">

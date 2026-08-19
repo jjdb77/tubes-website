@@ -1637,6 +1637,8 @@ a:hover { color: var(--action); }
 }
 .hc-also strong { color: var(--ink-soft); }
 
+.hc-book-next { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
+
 .hc-book { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
 
 .hc-done-next {
