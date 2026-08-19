@@ -59,18 +59,29 @@ noindex: true
               <p class="hc-progress-count"><span data-hc-answered>0</span> of {{ questionCount }} answered</p>
             </div>
 
+            {#- Wie ben je. Stond eerst in stap 2 van het aanvraagformulier,
+                maar dat voelde dubbel omdat deze vragenlijst er meteen achteraan
+                kwam. Nu op één plek. Het e-mailadres vragen we alleen als we het
+                nog niet weten (dus zonder ?ref). De rol bepaalt geen vragen,
+                daar is "Not applicable" voor. -#}
             <div class="hc-assess-identify" data-hc-identify>
-              <label class="hc-field" for="hc-assessment-email">Business email address
-                <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
-              </label>
-              <p class="hc-help">So we can match your answers to your Health Check request.</p>
-            </div>
+              <div data-hc-email>
+                <label class="hc-field" for="hc-assessment-email">Business email address
+                  <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+                </label>
+                <p class="hc-help">So we can match your answers to your Health Check request.</p>
+              </div>
 
-            {#- De rol bepaalt niet welke vragen je krijgt: daar is de knop
-                "Not applicable" voor. Hij helpt ons het gesprek op de juiste
-                hoogte te voeren, en gaat mee naar 4Relations. -#}
-            <div class="hc-role">
-              <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_question.label }}
+              <div class="hc-field-row">
+                <label class="hc-field" for="hc-assessment-name">Name
+                  <input type="text" id="hc-assessment-name" name="name" autocomplete="name" required>
+                </label>
+                <label class="hc-field" for="hc-assessment-company">Company
+                  <input type="text" id="hc-assessment-company" name="company" autocomplete="organization" required>
+                </label>
+              </div>
+
+              <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_question.label }} <span class="hc-optional">(optional)</span>
                 <select id="hc-assessment-role" name="role_group">
                   <option value="">Choose one</option>
                   {%- for option in healthcheck.role_question.options %}
@@ -78,7 +89,18 @@ noindex: true
                   {%- endfor %}
                 </select>
               </label>
-              <p class="hc-help">{{ healthcheck.role_question.hint }}</p>
+
+              <fieldset class="hc-choice">
+                <legend>{{ healthcheck.lead_form.production_type.label }} <span class="hc-optional">(optional)</span></legend>
+                <div class="hc-choice-row">
+                  {%- for option in healthcheck.lead_form.production_type.options %}
+                  <label class="hc-pill">
+                    <input type="radio" name="production_type" value="{{ option }}">
+                    <span>{{ option }}</span>
+                  </label>
+                  {%- endfor %}
+                </div>
+              </fieldset>
             </div>
 
             {%- for step in steps %}
@@ -132,31 +154,32 @@ noindex: true
               eigen antwoorden: geen cijfer en geen oordeel, dat kan pas uit
               het gesprek komen. -#}
           <div class="hc-result" data-hc-result data-hc-block="{{ steps | length + 1 }}" hidden>
-            <h2 class="hc-result-heading">{{ healthcheck.result.heading }}</h2>
-            <p class="hc-result-intro">{{ healthcheck.result.intro }}</p>
-
-            <div class="hc-result-themes" data-hc-result-themes></div>
-            <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}" data-none="{{ healthcheck.result.none_flagged }}"></div>
-            <details class="hc-result-all">
-              <summary>All answers</summary>
-              <ol class="hc-result-list" data-hc-result-list></ol>
-            </details>
-
-            <div class="hc-done-next">
-              <p class="hc-done-next-title">{{ healthcheck.result.book_title }}</p>
-              <p>{{ healthcheck.result.book_text }}</p>
-              <a class="button button-primary hc-book" href="/book-a-call/health-check/">{{ healthcheck.result.book_label }}</a>
-
-              {#- Wat we hier niet vragen, komt in het gesprek aan bod. Dat
-                  laten we zien, anders lijken zes vragen het hele verhaal. -#}
-              {%- if parked | length %}
-              <p class="hc-also"><strong>{{ healthcheck.result.also_title }}.</strong> {{ healthcheck.result.also_text }}
-                {#- Alleen komma's: verschillende korte namen bevatten zelf al een "and". -#}
-                {%- for question in parked %} {{ question.short }}{% if not loop.last %},{% endif %}{% endfor -%}.</p>
-              {%- endif %}
-            </div>
-
+            {#- Eerst plannen, dan pas lezen: wie nu een tijd prikt heeft de
+                afspraak staan, het verslag loopt niet weg. -#}
+            <h2 class="hc-result-heading">{{ healthcheck.result.book_title }}</h2>
+            <p class="hc-result-intro">{{ healthcheck.result.book_text }}</p>
+            <a class="button button-primary hc-book" href="/book-a-call/health-check/">{{ healthcheck.result.book_label }}</a>
             <p class="hc-done-note">Already have a time in the diary? Then you are set, we will see you there.</p>
+
+            {#- Wat we hier niet vragen, komt in het gesprek aan bod. Dat laten
+                we zien, anders lijken zes vragen het hele verhaal. -#}
+            {%- if parked | length %}
+            <p class="hc-also"><strong>{{ healthcheck.result.also_title }}.</strong> {{ healthcheck.result.also_text }}
+              {#- Alleen komma's: verschillende korte namen bevatten zelf al een "and". -#}
+              {%- for question in parked %} {{ question.short }}{% if not loop.last %},{% endif %}{% endfor -%}.</p>
+            {%- endif %}
+
+            <div class="hc-report">
+              <h3 class="hc-report-heading">{{ healthcheck.result.heading }}</h3>
+              <p class="hc-result-intro">{{ healthcheck.result.intro }}</p>
+
+              <div class="hc-result-themes" data-hc-result-themes></div>
+              <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}" data-none="{{ healthcheck.result.none_flagged }}"></div>
+              <details class="hc-result-all">
+                <summary>All answers</summary>
+                <ol class="hc-result-list" data-hc-result-list></ol>
+              </details>
+            </div>
           </div>
 
           <p class="hc-privacy">Your answers go to Tubes and stay with us. We use them to prepare for your session and to follow up on what we find, and we keep them with your company details in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>

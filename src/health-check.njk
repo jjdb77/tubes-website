@@ -18,10 +18,6 @@ noindex: true
     Let op: dit is geen softwarepagina. Tubes wordt pas ná de uitleg over de
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
-{#- De keuzelijsten van dit formulier staan in src/_data/healthcheck.json,
-    te wijzigen via het CMS onder "Health Check-vragenlijst" > Aanvraagformulier. -#}
-{%- set leadForm = healthcheck.lead_form -%}
-
 {%- macro healthCheckForm(id, submitLabel) -%}
 <form class="hc-form" id="{{ id }}" data-hc-form action="/api/health-check" data-endpoint="/api/health-check" novalidate>
   <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
@@ -32,61 +28,6 @@ noindex: true
     </label>
     <p class="hc-help" id="{{ id }}-email-help">We will email your confirmation and the video link once you have picked a time.</p>
     <button type="submit" class="button button-primary hc-submit">Start My Free Health Check</button>
-  </div>
-
-  <div class="hc-step hc-step-2" data-hc-step="2" hidden>
-    <p class="hc-step-note"><span class="hc-step-count">Step 2 of 2</span> A few details so we can prepare, then we will arrange a time.</p>
-
-    <div class="hc-field-row">
-      <label class="hc-field" for="{{ id }}-name">Name
-        <input type="text" id="{{ id }}-name" name="name" autocomplete="name" required>
-      </label>
-      <label class="hc-field" for="{{ id }}-company">Company
-        <input type="text" id="{{ id }}-company" name="company" autocomplete="organization" required>
-      </label>
-    </div>
-
-    <label class="hc-field" for="{{ id }}-role">Role <span class="hc-optional">(optional)</span>
-      <input type="text" id="{{ id }}-role" name="role" autocomplete="organization-title" placeholder="Line Producer, Head of Production, Financial Controller">
-    </label>
-
-    <fieldset class="hc-choice">
-      <legend>{{ leadForm.production_type.label }} <span class="hc-optional">(optional)</span></legend>
-      <div class="hc-choice-row">
-        {%- for option in leadForm.production_type.options %}
-        <label class="hc-pill">
-          <input type="radio" name="production_type" value="{{ option }}">
-          <span>{{ option }}</span>
-        </label>
-        {%- endfor %}
-      </div>
-    </fieldset>
-
-    <fieldset class="hc-choice">
-      <legend>{{ leadForm.improve.label }} <span class="hc-optional">(optional)</span></legend>
-      <div class="hc-choice-row">
-        {%- for option in leadForm.improve.options %}
-        <label class="hc-pill">
-          <input type="radio" name="improve" value="{{ option }}">
-          <span>{{ option }}</span>
-        </label>
-        {%- endfor %}
-      </div>
-    </fieldset>
-
-    <fieldset class="hc-choice">
-      <legend>{{ leadForm.current_system.label }} <span class="hc-optional">(optional)</span></legend>
-      <div class="hc-choice-row">
-        {%- for option in leadForm.current_system.options %}
-        <label class="hc-pill">
-          <input type="radio" name="current_system" value="{{ option }}">
-          <span>{{ option }}</span>
-        </label>
-        {%- endfor %}
-      </div>
-    </fieldset>
-
-    <button type="submit" class="button button-primary hc-submit">{{ submitLabel }}</button>
   </div>
 
   <p class="form-status hc-status" role="status" aria-live="polite"></p>
@@ -104,7 +45,7 @@ noindex: true
         geen verloren lead. -#}
     <div class="hc-done-next">
       <p class="hc-done-next-title">Help us prepare</p>
-      <p>A few questions about how your process runs today. It takes a couple of minutes and means we can skip the basics during the session.</p>
+      <p>Who you are and how your process runs today. A couple of minutes, and it means none of the session goes on the basics.</p>
       <a class="button button-secondary" href="/production-finance-health-check/assessment/" data-hc-assess-link>Answer a few questions</a>
     </div>
 

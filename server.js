@@ -242,6 +242,10 @@ app.post("/api/health-check", (req, res) => {
     }
     entry.lead_id = leadId;
     entry.answers = answers;
+    // Wie ben je: stond eerst in het aanvraagformulier, komt nu hiermee mee.
+    entry.name = String(b.name || "").trim().slice(0, 120);
+    entry.company = String(b.company || "").trim().slice(0, 160);
+    entry.production_type = String(b.production_type || "").trim().slice(0, 120);
     const role = String(b.role_group || "").trim().slice(0, 60);
     if (role) entry.role_group = role;
     const notes = String(b.notes || "").trim().slice(0, 2000);
@@ -269,8 +273,8 @@ app.post("/api/health-check", (req, res) => {
 
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true, id: entry.id });
-  // Alleen de complete aanvraag doorzetten; een los e-mailadres uit stap 1 is
-  // nog geen lead om in het CRM te zetten.
+  // Alleen een ingevulde aanvraag doorzetten; een los e-mailadres is nog geen
+  // lead om in het CRM te zetten.
   if (stage === "complete") pushToCrm(entry, null);
 });
 
