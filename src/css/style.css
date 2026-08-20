@@ -1146,6 +1146,16 @@ a:hover { color: var(--action); }
 /* Keuzevelden als chips: één tik op mobiel, en het assessment-gevoel
    van de statuschips uit de app. */
 .hc-choice { border: 0; padding: 0; margin: 0 0 22px; }
+/* Nummer voor elke vraag, zodat je ziet hoeveel er nog komen. */
+.hc-q-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; margin-right: 9px;
+  border-radius: 50%;
+  background: var(--action-soft); color: var(--action-soft-ink);
+  font-size: 0.78rem; font-weight: 700;
+  vertical-align: 1px;
+}
+
 .hc-choice legend { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; padding: 0; }
 .hc-choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -1836,11 +1846,10 @@ a:hover { color: var(--action); }
 
 .hc-modal-body { overflow-y: auto; padding: 4px 26px 26px; }
 
-/* De vragen blijven op leesbreedte; alleen de agenda gebruikt de volle
-   breedte van de popover. */
-.hc-modal [data-hc-block="1"],
-.hc-modal [data-hc-block="2"],
-.hc-modal .hc-progress-line { max-width: 620px; margin-left: auto; margin-right: auto; }
+/* Stap 1 zijn invulvelden, die blijven op leesbreedte. De vragen van stap 2
+   gebruiken de volle breedte: de keuzeknoppen passen dan op minder regels en
+   dat scheelt hoogte. */
+.hc-modal [data-hc-block="1"] { max-width: 620px; margin-left: auto; margin-right: auto; }
 
 /* De popover ís de kaart; het formulier hoeft er geen tweede omheen. */
 .hc-modal .hc-form-card {
@@ -1855,8 +1864,11 @@ a:hover { color: var(--action); }
 
 /* ---------- Agenda binnen de popover (stap 3) ---------- */
 
-.hc-calendar { margin: 18px 0 14px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
-.hc-calendar-frame { display: block; width: 100%; height: 620px; border: 0; background: var(--bg); }
+.hc-calendar { margin: 14px 0 12px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
+/* Krap om de agenda heen: hij is ongeveer 500 hoog. Kiest iemand een dag,
+   dan verschijnt het invulscherm en scrollt dat binnen het kader. Meer
+   hoogte zou hier alleen grijs vlak opleveren. */
+.hc-calendar-frame { display: block; width: 100%; height: 545px; border: 0; background: var(--bg); }
 
 /* De popover houdt altijd dezelfde breedte: hij mag langer worden, niet
    breder. Anders springt hij bij elke stap van formaat. */

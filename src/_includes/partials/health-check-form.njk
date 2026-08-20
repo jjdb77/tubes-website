@@ -48,7 +48,7 @@
 
           {%- for question in healthcheck.questions %}
           <fieldset class="hc-choice hc-question" data-key="{{ question.key }}" data-label="{{ question.label }}">
-            <legend>{{ question.label }}</legend>
+            <legend><span class="hc-q-num">{{ loop.index }}</span>{{ question.label }}</legend>
             <div class="hc-choice-row">
               {%- for option in question.options %}
               <label class="hc-pill">
