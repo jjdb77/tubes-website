@@ -435,7 +435,7 @@ if (assessForm) {
     ];
     const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
     if (notes) delen.push(`Wants to discuss: ${notes}`);
-    const query = "?plan=" + encodeURIComponent(("Health Check · " + delen.join(" · ")).slice(0, 400));
+    const query = "?plan=" + encodeURIComponent(("Production Health Check · " + delen.join(" · ")).slice(0, 400));
 
     const frame = assessForm.querySelector(".hc-calendar-frame");
     if (frame && !frame.src) frame.src = frame.dataset.src + query;

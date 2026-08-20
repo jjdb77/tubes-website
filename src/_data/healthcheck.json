@@ -1,5 +1,5 @@
 {
-  "intro": "A few quick details will help us make your 45 minute Health Check as useful as possible.",
+  "intro": "A few quick details will help us make your 45 minute Production Health Check as useful as possible.",
   "step1": {
     "title": "Your details",
     "heading": "Let's get to know you",
@@ -123,7 +123,7 @@
     "reassurance": "Free · 45 minutes · No obligation",
     "email_label": "Your business email",
     "email_placeholder": "Enter your work email",
-    "button": "Book your free assessment"
+    "button": "Book your free Production Health Check"
   },
-  "title": "Your Production Finance Health Check"
+  "title": "Your Production Health Check"
 }

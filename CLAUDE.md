@@ -48,6 +48,8 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Health Check-landingspagina
 
+- ⚠️ De sessie heet in alle teksten **Production Health Check**. Eerder stonden er drie namen door elkaar (Production Finance Health Check, Health Check, assessment); hou het bij die ene. De **URL blijft `/production-finance-health-check/`**, die is al gedeeld en staat in Google; alleen in de SEO-titel staat "production finance" nog als zoekwoord.
+
 - `/production-finance-health-check/` (`src/health-check.njk`) is de conversiepagina voor de gratis **Production Finance Health Check**: een videogesprek van 45 minuten met een production finance-specialist.
 - ⚠️ **De Health Check is dat gesprek, niet de vragenlijst.** De vragenlijst is de voorbereiding erop. Hou dat onderscheid vast bij tekstwijzigingen.
 - ⚠️ **Volgorde: eerst de vragen, dan boeken.** In de hero staat één e-mailveld met een knop. Dat veld verstuurt niets: het opent de popover en vult het adres daar alvast in, zodat niemand het twee keer typt. Alle teksten van de hero (kop, belofte, de vier blokken "In 45 minutes, we'll", de geruststelling en de veldlabels) staan in `healthcheck.json` onder `hero`, dus in het CMS te wijzigen. Die vraagt het e-mailadres, en aan het eind prik je een tijd.

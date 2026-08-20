@@ -28,7 +28,7 @@
     {
       "path": "health-check/",
       "slug": "tubes-assessment",
-      "plan": "Production Finance Health Check",
+      "plan": "Production Health Check",
       "booking_url": "https://4relationstubes.appconnected.nl/boek/joachim"
     }
   ],
