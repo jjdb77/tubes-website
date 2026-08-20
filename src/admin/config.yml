@@ -300,6 +300,12 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+          - name: healthcheck
+            label: "Health Check-blok"
+            summary: "Health Check"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [light, white, teal], default: white, required: false }
+            hint: "De teksten van dit blok staan onder Health Check-vragenlijst, niet hier."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"

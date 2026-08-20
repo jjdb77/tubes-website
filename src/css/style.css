@@ -1847,10 +1847,12 @@ a:hover { color: var(--action); }
 /* ---------- Agenda binnen de popover (stap 3) ---------- */
 
 .hc-calendar { margin: 18px 0 14px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
-.hc-calendar-frame { display: block; width: 100%; height: 620px; border: 0; background: var(--bg); }
+/* Op de breedte van de popover stapelt de agenda (gegevens boven, kalender
+   eronder), dus hij heeft hoogte nodig. De popover zelf scrollt. */
+.hc-calendar-frame { display: block; width: 100%; height: 940px; border: 0; background: var(--bg); }
 
-/* Zodra de agenda in beeld komt mag de popover breder. */
-.hc-modal.is-booking { width: min(1060px, calc(100vw - 32px)); }
+/* De popover houdt altijd dezelfde breedte: hij mag langer worden, niet
+   breder. Anders springt hij bij elke stap van formaat. */
 
 .hc-result .hc-report { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
 .hc-result .hc-report > summary {
@@ -1859,7 +1861,7 @@ a:hover { color: var(--action); }
 .hc-result .hc-report > summary:hover { color: var(--action-soft-ink); }
 
 @media (max-width: 700px) {
-  .hc-calendar-frame { height: 560px; }
+  .hc-calendar-frame { height: 900px; }
 }
 
 /* ---------- Hero van de Health Check ---------- */

@@ -55,6 +55,8 @@ sections:
       Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
 
       Using another accounting system? [Contact us](/contact/) to discuss integration.
+  - type: healthcheck
+    theme: white
   - type: pricing
     theme: light
     heading: Choose your plan

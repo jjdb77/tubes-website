@@ -345,9 +345,6 @@ if (assessForm) {
 
   function showStep(n) {
     for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
-    // De agenda heeft meer ruimte nodig dan de vragen.
-    const modal = document.getElementById("hc-modal");
-    if (modal) modal.classList.toggle("is-booking", n === 3);
     // Het rapport hoort nog bij stap 2: de balk blijft daar staan.
     const segment = n >= 2 ? 2 : 1;
     for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {

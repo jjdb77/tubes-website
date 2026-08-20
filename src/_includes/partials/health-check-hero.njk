@@ -1,0 +1,41 @@
+{% import "partials/health-check-cta.njk" as hcCta %}
+{#- De Health Check-blok: tekst met e-mailveld links, en rechts wat er in die
+    45 minuten gebeurt. Staat op de landingspagina én op de homepage, dus één
+    bron. Alle teksten komen uit healthcheck.json (CMS).
+
+    Het e-mailveld verstuurt niets: het opent de popover en vult het adres daar
+    in. Die popover staat in partials/health-check-modal.njk en moet op
+    dezelfde pagina staan. -#}
+    <div class="hc-hero-text">
+      <span class="kicker">{{ healthcheck.hero.kicker }}</span>
+      <h1>{{ healthcheck.hero.heading }}</h1>
+      <p class="hc-hero-promise">{{ healthcheck.hero.lead }}</p>
+      <p class="hc-lead">{{ healthcheck.hero.text }}</p>
+
+      {{ hcCta.veld("hc-cta-top", healthcheck) }}
+
+      <p class="hc-reassure">{{ healthcheck.hero.reassurance }}</p>
+    </div>
+
+    <div class="hc-hero-visual">
+      {#- Geen nagebootste Tubes-schermafbeelding: dit is het assessment zelf.
+          De zes gebieden staan leeg, want er is nog niets beoordeeld. -#}
+      <div class="hc-scan" aria-labelledby="hc-scan-title">
+        <div class="hc-scan-head">
+          <div>
+            <span class="hc-scan-kicker">The session</span>
+            <h2 class="hc-scan-title" id="hc-scan-title">{{ healthcheck.hero.session_title }}</h2>
+          </div>
+          <span class="chip chip-blue">45 minutes</span>
+        </div>
+
+        <ol class="hc-session-list">
+          {%- for step in healthcheck.hero.session_steps %}
+          <li>
+            <p class="hc-session-title">{{ step.title }}</p>
+            <p class="hc-session-text">{{ step.text }}</p>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </div>

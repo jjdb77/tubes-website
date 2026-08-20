@@ -18,54 +18,11 @@ noindex: true
     Let op: dit is geen softwarepagina. Tubes wordt pas ná de uitleg over de
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
-{%- macro healthCheckCta(id) -%}
-{#- Het e-mailveld hier is een opstapje: het opent de popover en vult het
-    adres daar alvast in. Zo staat het formulier nog steeds op één plek en
-    hoeft niemand het twee keer te typen. Zonder JavaScript is de knop een
-    gewone link naar de vragenlijst. -#}
-<form class="hc-cta" id="{{ id }}" data-hc-start action="/production-finance-health-check/assessment/" method="GET">
-  <label class="hc-field hc-cta-field" for="{{ id }}-email">{{ healthcheck.hero.email_label }}
-    <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="{{ healthcheck.hero.email_placeholder }}">
-  </label>
-  <button type="submit" class="button button-primary hc-cta-button">{{ healthcheck.hero.button }}</button>
-</form>
-{%- endmacro -%}
+{% import "partials/health-check-cta.njk" as hcCta %}
 
 <section class="section section-hero hc-hero theme-light">
   <div class="container hc-hero-grid">
-    <div class="hc-hero-text">
-      <span class="kicker">{{ healthcheck.hero.kicker }}</span>
-      <h1>{{ healthcheck.hero.heading }}</h1>
-      <p class="hc-hero-promise">{{ healthcheck.hero.lead }}</p>
-      <p class="hc-lead">{{ healthcheck.hero.text }}</p>
-
-      {{ healthCheckCta("hc-cta-top") }}
-
-      <p class="hc-reassure">{{ healthcheck.hero.reassurance }}</p>
-    </div>
-
-    <div class="hc-hero-visual">
-      {#- Geen nagebootste Tubes-schermafbeelding: dit is het assessment zelf.
-          De zes gebieden staan leeg, want er is nog niets beoordeeld. -#}
-      <div class="hc-scan" aria-labelledby="hc-scan-title">
-        <div class="hc-scan-head">
-          <div>
-            <span class="hc-scan-kicker">The session</span>
-            <h2 class="hc-scan-title" id="hc-scan-title">{{ healthcheck.hero.session_title }}</h2>
-          </div>
-          <span class="chip chip-blue">45 minutes</span>
-        </div>
-
-        <ol class="hc-session-list">
-          {%- for step in healthcheck.hero.session_steps %}
-          <li>
-            <p class="hc-session-title">{{ step.title }}</p>
-            <p class="hc-session-text">{{ step.text }}</p>
-          </li>
-          {%- endfor %}
-        </ol>
-      </div>
-    </div>
+    {% include "partials/health-check-hero.njk" %}
   </div>
 </section>
 
@@ -189,7 +146,7 @@ noindex: true
         <p class="hc-lead">Answer a few questions and book your 45 minute session. You get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
         <p class="hc-reassure"><strong>Free. No obligation. No generic sales pitch.</strong></p>
       </div>
-      {{ healthCheckCta("hc-cta-end") }}
+      {{ hcCta.veld("hc-cta-end", healthcheck) }}
     </div>
   </div>
 </section>
@@ -205,13 +162,5 @@ noindex: true
     verlaat. Zelfde partial als de losse pagina, dus één bron. De knoppen
     hierboven blijven gewone links: zonder JavaScript kom je op die pagina
     uit en werkt alles alsnog. -#}
-<dialog id="hc-modal" class="hc-modal" aria-labelledby="hc-modal-title">
-  <div class="hc-modal-head">
-    <h2 id="hc-modal-title">{{ healthcheck.title }}</h2>
-    <button class="hc-modal-close" type="button" aria-label="Close">&times;</button>
-  </div>
-  <div class="hc-modal-body">
-    {% include "partials/health-check-form.njk" %}
-  </div>
-</dialog>
+{% include "partials/health-check-modal.njk" %}
 

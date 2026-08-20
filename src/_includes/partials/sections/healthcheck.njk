@@ -1,0 +1,12 @@
+{#- Health Check-blok als sectie, zodat het ook op andere pagina's kan staan
+    (nu: de homepage, boven de abonnementen). Zelfde bron als de
+    landingspagina, dus de teksten lopen nooit uiteen.
+
+    In het CMS: sectietype "Health Check". -#}
+<section class="section theme-{{ section.theme or 'light' }} hc-hero">
+  <div class="container hc-hero-grid">
+    {% include "partials/health-check-hero.njk" %}
+  </div>
+</section>
+
+{% include "partials/health-check-modal.njk" %}
