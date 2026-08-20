@@ -19,25 +19,29 @@ noindex: true
     Health Check genoemd; hou dat zo bij tekstwijzigingen. -#}
 
 {%- macro healthCheckCta(id) -%}
-{#- Geen formulier en geen kaart op deze pagina: alleen de knop naar de
-    vragenlijst. Daar wordt het e-mailadres gevraagd, en meteen vastgelegd
-    zodra iemand doorklikt. Zo staat alles op één plek en scheelt het een
-    tussenstap. -#}
-<div class="hc-cta" id="{{ id }}">
-  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/" data-hc-open>Get My Free Health Check</a>
-</div>
+{#- Het e-mailveld hier is een opstapje: het opent de popover en vult het
+    adres daar alvast in. Zo staat het formulier nog steeds op één plek en
+    hoeft niemand het twee keer te typen. Zonder JavaScript is de knop een
+    gewone link naar de vragenlijst. -#}
+<form class="hc-cta" id="{{ id }}" data-hc-start action="/production-finance-health-check/assessment/" method="GET">
+  <label class="hc-field hc-cta-field" for="{{ id }}-email">{{ healthcheck.hero.email_label }}
+    <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="{{ healthcheck.hero.email_placeholder }}">
+  </label>
+  <button type="submit" class="button button-primary hc-cta-button">{{ healthcheck.hero.button }}</button>
+</form>
 {%- endmacro -%}
 
 <section class="section section-hero hc-hero theme-light">
   <div class="container hc-hero-grid">
     <div class="hc-hero-text">
-      <span class="kicker">For film, television and production companies</span>
-      <h1>How well is your production finance process working?</h1>
-      <p class="hc-lead">Answer a few questions and book your 45 minute session. The Health Check is a free video call with a production finance specialist, who goes through your production finance process with you.</p>
+      <span class="kicker">{{ healthcheck.hero.kicker }}</span>
+      <h1>{{ healthcheck.hero.heading }}</h1>
+      <p class="hc-hero-promise">{{ healthcheck.hero.lead }}</p>
+      <p class="hc-lead">{{ healthcheck.hero.text }}</p>
 
       {{ healthCheckCta("hc-cta-top") }}
 
-      <p class="hc-reassure"><strong>No obligation. No generic sales pitch. Just 45 minutes focused on your production.</strong></p>
+      <p class="hc-reassure">{{ healthcheck.hero.reassurance }}</p>
     </div>
 
     <div class="hc-hero-visual">
@@ -46,27 +50,20 @@ noindex: true
       <div class="hc-scan" aria-labelledby="hc-scan-title">
         <div class="hc-scan-head">
           <div>
-            <span class="hc-scan-kicker">Before the call</span>
-            <h2 class="hc-scan-title" id="hc-scan-title">Five quick questions</h2>
+            <span class="hc-scan-kicker">The session</span>
+            <h2 class="hc-scan-title" id="hc-scan-title">{{ healthcheck.hero.session_title }}</h2>
           </div>
-          <span class="chip chip-blue">2 minutes</span>
+          <span class="chip chip-blue">45 minutes</span>
         </div>
 
-        {#- Deze lijst volgt de vragen uit healthcheck.json, zodat het beeld
-            klopt met wat er achter de knop zit. Wijzig je een vraag in het
-            CMS, dan verandert dit mee. -#}
-        <ol class="hc-scan-list">
-          {%- for question in healthcheck.questions %}
+        <ol class="hc-session-list">
+          {%- for step in healthcheck.hero.session_steps %}
           <li>
-            <span class="hc-scan-num">{{ "0" + loop.index | string }}</span>
-            <span class="hc-scan-label">{{ question.short }}</span>
+            <p class="hc-session-title">{{ step.title }}</p>
+            <p class="hc-session-text">{{ step.text }}</p>
           </li>
           {%- endfor %}
         </ol>
-
-        <div class="hc-scan-foot">
-          <p class="hc-scan-note">Then you pick a time. The Health Check itself is a video call of 45 minutes, in which we go through your production finance process with you.</p>
-        </div>
       </div>
     </div>
   </div>

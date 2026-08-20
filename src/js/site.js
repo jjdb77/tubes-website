@@ -550,12 +550,25 @@ if (assessForm) {
     const open = () => {
       hcModal.showModal();
       track("health-check-assessment-opened", { linked: false });
-      const eerste = assessForm.querySelector('[data-hc-block="1"] input');
-      if (eerste) setTimeout(() => eerste.focus({ preventScroll: true }), 60);
+      const leeg = [...assessForm.querySelectorAll('[data-hc-block="1"] input')].find(
+        (veld) => !veld.value.trim()
+      );
+      if (leeg) setTimeout(() => leeg.focus({ preventScroll: true }), 60);
     };
     for (const link of document.querySelectorAll("[data-hc-open]")) {
       link.addEventListener("click", (e) => {
         e.preventDefault();
+        open();
+      });
+    }
+
+    // Het e-mailveld in de hero is een opstapje: het adres gaat mee de
+    // popover in, zodat niemand het twee keer typt.
+    for (const start of document.querySelectorAll("[data-hc-start]")) {
+      start.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const ingevuld = start.querySelector('input[name="email"]').value.trim();
+        if (ingevuld && emailInput) emailInput.value = ingevuld;
         open();
       });
     }

@@ -1859,3 +1859,21 @@ a:hover { color: var(--action); }
 @media (max-width: 700px) {
   .hc-calendar-frame { height: 560px; }
 }
+
+/* ---------- Hero van de Health Check ---------- */
+
+.hc-hero-promise { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.6em; }
+
+/* E-mailveld plus knop: het opstapje naar de popover. */
+.hc-cta { margin-top: 28px; max-width: 460px; }
+.hc-cta-field { margin-bottom: 14px; }
+.hc-cta-button { display: block; width: 100%; text-align: center; padding: 15px 26px; font-size: 1rem; }
+
+/* Wat er in die 45 minuten gebeurt, in het beeld rechts. */
+.hc-session-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-session-list li { padding: 16px 0; border-bottom: 1px solid var(--divider); }
+.hc-session-title {
+  font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--action-soft-ink); margin: 0 0 5px;
+}
+.hc-session-text { font-size: 0.96rem; color: var(--ink); margin: 0; line-height: 1.4; }

@@ -95,5 +95,34 @@
       "We share what we found and discuss how Tubes could help."
     ],
     "note": "No obligation. No generic sales pitch. Just 45 minutes focused on your production finance process."
+  },
+  "hero": {
+    "kicker": "Production Finance Health Check",
+    "heading": "How well is your production finance process working?",
+    "lead": "Find out in a free 45 minute video session with us.",
+    "text": "Your production finance process might be working perfectly. Or there may be opportunities to make it simpler, more efficient and more visible.",
+    "session_title": "In 45 minutes, we'll",
+    "session_steps": [
+      {
+        "title": "Understand",
+        "text": "Your business and current setup"
+      },
+      {
+        "title": "Identify",
+        "text": "Where there may be friction or opportunities to improve"
+      },
+      {
+        "title": "Explore",
+        "text": "How Tubes can support your production finance workflow"
+      },
+      {
+        "title": "Discuss",
+        "text": "Our findings and potential next steps"
+      }
+    ],
+    "reassurance": "Free · 45 minutes · No obligation",
+    "email_label": "Your business email",
+    "email_placeholder": "Enter your work email",
+    "button": "Get My Free Health Check"
   }
 }
