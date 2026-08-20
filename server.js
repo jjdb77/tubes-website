@@ -401,58 +401,43 @@ function readSubmissions() {
     })
     .filter(Boolean);
 
-  // Een afgeronde Health Check verwijst met lead_id naar de regel van stap 1.
-  // Die eerste regel laten we hier weg, anders staat dezelfde aanvraag er
-  // twee keer. In het bestand blijven allebei staan (trechterdata).
-  const superseded = new Set(
-    all.filter((s) => s.stage === "details").map((s) => s.lead_id).filter(Boolean)
-  );
-
-  // Het zelfbeeld is geen apart bericht maar hoort bij de aanvraag.
   // Uitkomst van het doorzetten naar 4Relations, laatste poging telt.
   const pushes = new Map();
   for (const s of all) {
     if (s.kind === "crm_push" && s.lead_id) pushes.set(s.lead_id, s);
   }
 
-  const byRequest = new Map();
-  const byEmail = new Map();
-  for (const s of all) {
-    if (s.stage !== "details") continue;
-    if (s.lead_id) byRequest.set(s.lead_id, s);
-    if (s.email) byEmail.set(s.email.toLowerCase(), s);
-  }
+  // Van één bezoeker kunnen meerdere regels komen: het e-mailadres dat bij het
+  // doorklikken wordt vastgelegd, en daarna de ingevulde vragenlijst. Wie
+  // terugloopt en opnieuw verstuurt, levert er nog een. Per persoon houden we
+  // de rijkste, meest recente regel over; de rest blijft wel in het bestand.
+  const berichten = all.filter((s) => s.kind !== "crm_push");
+  const groepen = new Map();
+  const los = [];
 
-  const list = all.filter(
-    (s) => s.kind !== "crm_push" && s.stage !== "details" && !superseded.has(s.id)
-  );
-  const merged = new Set();
-  for (const s of list) {
-    // Vanaf het bedankscherm komt het id mee; via een losse link alleen het
-    // e-mailadres. Beide moeten bij de juiste aanvraag terechtkomen.
-    const found =
-      byRequest.get(s.id) || (s.email ? byEmail.get(s.email.toLowerCase()) : null);
-    if (!found) continue;
-    s.answers = found.answers;
-    if (found.notes) s.notes = found.notes;
-    // Naam, bedrijf, rol en productietype staan sinds het weghalen van stap 2
-    // op de vragenlijst-regel; die horen op de kaart van de aanvraag.
-    for (const veld of ["name", "company", "role", "notes"]) {
-      if (!s[veld] && found[veld]) s[veld] = found[veld];
+  for (const s of berichten) {
+    if (s.kind !== "health_check") {
+      los.push(s);
+      continue;
     }
-    merged.add(found.id);
+    const sleutel = (s.email || s.id).toLowerCase();
+    const huidig = groepen.get(sleutel);
+    // Een ingevulde vragenlijst wint van een kaal e-mailadres; daarna telt de
+    // laatste inzending.
+    const beter =
+      !huidig ||
+      (Boolean(s.answers) && !huidig.answers) ||
+      (Boolean(s.answers) === Boolean(huidig.answers) && new Date(s.at) > new Date(huidig.at));
+    if (beter) groepen.set(sleutel, s);
   }
 
-  // Antwoorden waar geen aanvraag bij te vinden was (iemand vulde alleen de
-  // losse link in) tonen we apart, anders verdwijnen ze uit beeld.
-  const losseAntwoorden = all.filter((s) => s.stage === "details" && !merged.has(s.id));
-
-  for (const entry of [...list, ...losseAntwoorden]) {
+  const list = [...los, ...groepen.values()];
+  for (const entry of list) {
     const push = pushes.get(entry.id);
     if (push) entry.crm = { ok: push.ok, error: push.error || "", at: push.at };
   }
 
-  return [...list, ...losseAntwoorden].sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
+  return list.sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
 }
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

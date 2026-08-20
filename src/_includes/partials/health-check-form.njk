@@ -1,0 +1,110 @@
+{#- Het formulier van de Health Check: twee stappen en daarna de agenda.
+
+    Zit op twee plekken: als popover op de landingspagina en als losse pagina
+    op /production-finance-health-check/assessment/ (voor gemailde links met
+    ?ref). Eén bron, dus ze lopen nooit uiteen. Per pagina staat er maar één
+    exemplaar, dus de id's blijven uniek.
+
+    De vragen staan in src/_data/healthcheck.json, te wijzigen via het CMS. -#}
+    <form class="hc-form hc-assess-form" id="hc-assessment" data-hc-assess-form novalidate>
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
+
+      <div class="hc-form-card">
+        <div class="hc-progress-line">
+          <div class="hc-progress" data-hc-progress>
+            <span class="hc-progress-bar is-current" data-hc-progress-bar="1"><span class="visually-hidden">Step 1: {{ healthcheck.step1.title }}</span></span>
+            <span class="hc-progress-bar" data-hc-progress-bar="2"><span class="visually-hidden">Step 2: {{ healthcheck.step2.title }}</span></span>
+          </div>
+          <p class="hc-progress-count" data-hc-progress-label>Step 1 of 2</p>
+        </div>
+
+        {#- Stap 1: wie ben je. Het e-mailadres vragen we alleen als we het
+            nog niet weten (dus zonder ?ref). -#}
+        <section class="hc-block" data-hc-block="1">
+          <p class="hc-block-meta"><span class="hc-block-num">1</span> {{ healthcheck.step1.title }}</p>
+          <h2 class="hc-block-heading">{{ healthcheck.step1.heading }}</h2>
+          <p class="hc-block-intro">{{ healthcheck.intro }}</p>
+
+          <div data-hc-email>
+            <label class="hc-field" for="hc-assessment-email">Business email address
+              <input type="email" id="hc-assessment-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+            </label>
+          </div>
+
+          <div class="hc-field-row">
+            <label class="hc-field" for="hc-assessment-name">Name
+              <input type="text" id="hc-assessment-name" name="name" autocomplete="name" required>
+            </label>
+            <label class="hc-field" for="hc-assessment-company">Company
+              <input type="text" id="hc-assessment-company" name="company" autocomplete="organization" required>
+            </label>
+          </div>
+
+          <label class="hc-field" for="hc-assessment-role">{{ healthcheck.role_label }}
+            <input type="text" id="hc-assessment-role" name="role" autocomplete="organization-title" placeholder="Line Producer, Head of Production, Financial Controller" required>
+          </label>
+
+          <div class="hc-step-actions">
+            <button type="button" class="button button-primary hc-next" data-hc-next="2">Continue</button>
+          </div>
+        </section>
+
+        {#- Stap 2: hoe werk je nu. Daarna verschijnt de agenda. -#}
+        <section class="hc-block" data-hc-block="2" hidden>
+          <p class="hc-block-meta"><span class="hc-block-num">2</span> {{ healthcheck.step2.title }}</p>
+          <h2 class="hc-block-heading">{{ healthcheck.step2.heading }}</h2>
+
+          {%- for question in healthcheck.questions %}
+          <fieldset class="hc-choice hc-question" data-key="{{ question.key }}" data-label="{{ question.label }}">
+            <legend>{{ question.label }}</legend>
+            <div class="hc-choice-row">
+              {%- for option in question.options %}
+              <label class="hc-pill">
+                <input type="radio" name="{{ question.key }}" value="{{ option }}">
+                <span>{{ option }}</span>
+              </label>
+              {%- endfor %}
+            </div>
+          </fieldset>
+          {%- endfor %}
+
+          <label class="hc-field hc-assess-notes" for="hc-assessment-notes">{{ healthcheck.notes.label }} <span class="hc-optional">(optional)</span>
+            <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="{{ healthcheck.notes.placeholder }}"></textarea>
+          </label>
+
+          <div class="hc-step-actions">
+            <button type="submit" class="button button-primary hc-submit">Continue to booking</button>
+            <button type="button" class="hc-back" data-hc-back="1">Back</button>
+          </div>
+        </section>
+
+        <p class="form-status hc-status" role="status" aria-live="polite"></p>
+
+        {#- Na het versturen: eerst de agenda, daaronder wat je invulde. -#}
+        {#- Stap 3: de agenda zelf, in dezelfde popover. De iframe krijgt zijn
+            src pas na het versturen, met de antwoorden in ?plan. Daaronder
+            staat wat er is ingevuld, en je kunt terug naar de vragen. -#}
+        <div class="hc-result" data-hc-result data-hc-block="3" hidden>
+          <p class="hc-block-meta"><span class="hc-block-num">3</span> Pick a time</p>
+          <h2 class="hc-result-heading">{{ healthcheck.result.book_title }}</h2>
+          <p class="hc-result-intro">{{ healthcheck.result.book_text }}</p>
+
+          <div class="hc-calendar">
+            <iframe class="hc-calendar-frame" title="Booking calendar" data-src="{{ settings.booking_embed_url }}" loading="lazy"></iframe>
+          </div>
+          <p class="hc-done-note">Calendar not loading? <a href="/book-a-call/health-check/" target="_blank" rel="noopener" data-hc-booking-fallback>Open it in a new tab</a>. We will email your confirmation and the video link once you have picked a time.</p>
+
+          <div class="hc-step-actions">
+            <button type="button" class="hc-back" data-hc-back="2">Back to the questions</button>
+          </div>
+
+          <details class="hc-report">
+            <summary>{{ healthcheck.result.heading }}</summary>
+            <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}"></div>
+            <ol class="hc-result-list" data-hc-result-list></ol>
+          </details>
+        </div>
+
+        <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
+      </div>
+    </form>

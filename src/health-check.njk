@@ -24,7 +24,7 @@ noindex: true
     zodra iemand doorklikt. Zo staat alles op één plek en scheelt het een
     tussenstap. -#}
 <div class="hc-cta" id="{{ id }}">
-  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/">Get My Free Health Check</a>
+  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/" data-hc-open>Get My Free Health Check</a>
 </div>
 {%- endmacro -%}
 
@@ -32,7 +32,7 @@ noindex: true
   <div class="container hc-hero-grid">
     <div class="hc-hero-text">
       <span class="kicker">For film, television and production companies</span>
-      <h1>How healthy is your production finance process?</h1>
+      <h1>How well is your production finance process working?</h1>
       <p class="hc-lead">Answer a few questions and book your 45 minute session. The Health Check is a free video call with a production finance specialist, who goes through your production finance process with you.</p>
 
       {{ healthCheckCta("hc-cta-top") }}
@@ -188,7 +188,7 @@ noindex: true
   <div class="container">
     <div class="cta-inner hc-final-inner">
       <div class="hc-final-text">
-        <h2>How healthy is your production finance process?</h2>
+        <h2>How well is your production finance process working?</h2>
         <p class="hc-lead">Answer a few questions and book your 45 minute session. You get a fresh look at where your current process works well and where there may be opportunities to improve it.</p>
         <p class="hc-reassure"><strong>Free. No obligation. No generic sales pitch.</strong></p>
       </div>
@@ -200,8 +200,24 @@ noindex: true
 <div class="hc-sticky" id="hc-sticky" hidden>
   <div class="hc-sticky-inner">
     <p>Free 45 minute Health Check</p>
-    <a class="button button-primary" href="/production-finance-health-check/assessment/">Get My Free Health Check</a>
+    <a class="button button-primary" href="/production-finance-health-check/assessment/" data-hc-open>Get My Free Health Check</a>
   </div>
 </div>
 
-{% include "partials/booking-modal.njk" %}
+{#- De hele vragenlijst als popover, zodat de bezoeker de pagina niet
+    verlaat. Zelfde partial als de losse pagina, dus één bron. De knoppen
+    hierboven blijven gewone links: zonder JavaScript kom je op die pagina
+    uit en werkt alles alsnog. -#}
+<dialog id="hc-modal" class="hc-modal" aria-labelledby="hc-modal-title">
+  <div class="hc-modal-head">
+    <div>
+      <h2 id="hc-modal-title">Your Health Check</h2>
+      <p>A few quick questions, then you pick a time.</p>
+    </div>
+    <button class="hc-modal-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="hc-modal-body">
+    {% include "partials/health-check-form.njk" %}
+  </div>
+</dialog>
+

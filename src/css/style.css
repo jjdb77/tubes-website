@@ -1794,3 +1794,68 @@ a:hover { color: var(--action); }
   .hc-result-list .hc-result-row { flex-direction: column; gap: 4px; }
   .hc-result-answer { text-align: left; }
 }
+
+/* ---------- Vragenlijst als popover op de landingspagina ---------- */
+
+.hc-modal {
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 0;
+  width: min(760px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100vh - 40px);
+  box-shadow: 0 24px 60px -12px rgba(23, 25, 28, 0.35);
+  background: var(--surface);
+  color: var(--ink-soft);
+  overflow: hidden;
+  display: none;
+}
+.hc-modal[open] { display: flex; flex-direction: column; }
+.hc-modal::backdrop { background: rgba(23, 25, 28, 0.55); backdrop-filter: blur(3px); }
+
+.hc-modal-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: 22px 26px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.hc-modal-head h2 { font-size: 1.3rem; margin: 0 0 0.25em; }
+.hc-modal-head p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+.hc-modal-close {
+  flex: none;
+  background: none; border: 0; cursor: pointer;
+  font-size: 1.8rem; line-height: 1; color: var(--muted);
+  padding: 2px 6px; border-radius: var(--radius-button);
+}
+.hc-modal-close:hover { color: var(--ink); background: var(--bg); }
+
+.hc-modal-body { overflow-y: auto; padding: 4px 26px 26px; }
+
+/* De popover ís de kaart; het formulier hoeft er geen tweede omheen. */
+.hc-modal .hc-form-card {
+  background: none; border: 0; box-shadow: none; padding: 22px 0 0;
+}
+
+@media (max-width: 700px) {
+  .hc-modal { width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .hc-modal-head { padding: 16px 18px 12px; }
+  .hc-modal-body { padding: 4px 18px 20px; }
+}
+
+/* ---------- Agenda binnen de popover (stap 3) ---------- */
+
+.hc-calendar { margin: 18px 0 14px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
+.hc-calendar-frame { display: block; width: 100%; height: 620px; border: 0; background: var(--bg); }
+
+/* Zodra de agenda in beeld komt mag de popover breder. */
+.hc-modal.is-booking { width: min(1060px, calc(100vw - 32px)); }
+
+.hc-result .hc-report { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
+.hc-result .hc-report > summary {
+  cursor: pointer; font-size: 0.94rem; font-weight: 700; color: var(--ink-soft); padding: 6px 0;
+}
+.hc-result .hc-report > summary:hover { color: var(--action-soft-ink); }
+
+@media (max-width: 700px) {
+  .hc-calendar-frame { height: 560px; }
+}

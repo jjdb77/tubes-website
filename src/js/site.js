@@ -345,6 +345,9 @@ if (assessForm) {
 
   function showStep(n) {
     for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
+    // De agenda heeft meer ruimte nodig dan de vragen.
+    const modal = document.getElementById("hc-modal");
+    if (modal) modal.classList.toggle("is-booking", n === 3);
     // Het rapport hoort nog bij stap 2: de balk blijft daar staan.
     const segment = n >= 2 ? 2 : 1;
     for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {
@@ -469,21 +472,19 @@ if (assessForm) {
   // de antwoorden in, zodat ze bij de boeking staan en niemand ze opnieuw
   // hoeft te vertellen. Naam en e-mailadres vóórinvullen kan die pagina niet;
   // daarvoor moet 4Relations parameters gaan accepteren.
-  function addContextToBooking(answers) {
+  function loadCalendar(answers) {
     const delen = [
       `${nameInput.value.trim()} (${companyInput.value.trim()})`,
       ...questions.map((q) => answers[q.key]).filter(Boolean)
     ];
     const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
     if (notes) delen.push(`Wants to discuss: ${notes}`);
-    const plan = "Health Check · " + delen.join(" · ");
+    const query = "?plan=" + encodeURIComponent(("Health Check · " + delen.join(" · ")).slice(0, 400));
 
-    const query = "?plan=" + encodeURIComponent(plan.slice(0, 400));
-    const modal = document.getElementById("booking-modal");
-    if (modal) modal.dataset.extra = query;
-    for (const link of document.querySelectorAll('a[href^="/book-a-call/health-check/"]')) {
-      link.href = "/book-a-call/health-check/" + query;
-    }
+    const frame = assessForm.querySelector(".hc-calendar-frame");
+    if (frame && !frame.src) frame.src = frame.dataset.src + query;
+    const fallback = assessForm.querySelector("[data-hc-booking-fallback]");
+    if (fallback) fallback.href = "/book-a-call/health-check/" + query;
   }
 
   assessForm.addEventListener("submit", async (e) => {
@@ -529,49 +530,40 @@ if (assessForm) {
 
       track("health-check-requested", { answered: Object.keys(answers).length });
       renderResult(answers);
-      addContextToBooking(answers);
+      loadCalendar(answers);
       showStep(3);
     } catch (err) {
       setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
-      button.disabled = false;
     } finally {
       clearTimeout(timer);
+      // Altijd weer bruikbaar: je kunt terug naar de vragen en opnieuw
+      // doorklikken, en na een fout meteen opnieuw proberen.
+      button.disabled = false;
     }
   });
 
-  track("health-check-assessment-opened", { linked: Boolean(ref) });
-}
+  // Op de landingspagina zit dit formulier in een popover; daar telt het
+  // openen, niet het laden van de pagina.
+  const hcModal = document.getElementById("hc-modal");
 
-// ---------------------------------------------------------------------------
-// Agenda in een popover
-//
-// De knoppen naar /book-a-call/health-check/ openen de agenda in een dialog,
-// zodat de bezoeker de pagina niet verlaat. De link blijft een gewone link:
-// zonder JavaScript, en als de dialog niet ondersteund wordt, komt hij op de
-// doorstuurpagina uit en dus alsnog in de agenda.
-// ---------------------------------------------------------------------------
-
-const bookingModal = document.getElementById("booking-modal");
-
-if (bookingModal && typeof bookingModal.showModal === "function") {
-  const frame = bookingModal.querySelector(".booking-modal-frame");
-
-  const openBooking = () => {
-    // Pas laden bij het openen: anders haalt elke bezoeker de agenda op.
-    if (!frame.src) frame.src = frame.dataset.src + (bookingModal.dataset.extra || "");
-    bookingModal.showModal();
-    track("health-check-booking-opened");
-  };
-
-  for (const link of document.querySelectorAll('a[href^="/book-a-call/health-check/"]')) {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      openBooking();
+  if (hcModal && typeof hcModal.showModal === "function") {
+    const open = () => {
+      hcModal.showModal();
+      track("health-check-assessment-opened", { linked: false });
+      const eerste = assessForm.querySelector('[data-hc-block="1"] input');
+      if (eerste) setTimeout(() => eerste.focus({ preventScroll: true }), 60);
+    };
+    for (const link of document.querySelectorAll("[data-hc-open]")) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        open();
+      });
+    }
+    hcModal.querySelector(".hc-modal-close").addEventListener("click", () => hcModal.close());
+    hcModal.addEventListener("click", (e) => {
+      if (e.target === hcModal) hcModal.close();
     });
+  } else {
+    track("health-check-assessment-opened", { linked: Boolean(ref) });
   }
-
-  bookingModal.querySelector(".booking-modal-close").addEventListener("click", () => bookingModal.close());
-  bookingModal.addEventListener("click", (e) => {
-    if (e.target === bookingModal) bookingModal.close();
-  });
 }
