@@ -275,10 +275,11 @@ app.post("/api/health-check", (req, res) => {
 // dan onthouden we dat en kun je het op /beheer opnieuw proberen.
 //
 // Aanzetten op Railway met env-variabelen:
-//   CRM_URL           het adres dat een client/lead aanmaakt (verplicht)
-//   CRM_TOKEN         de sleutel (optioneel, maar in de praktijk nodig)
-//   CRM_AUTH_HEADER   naam van de header, standaard "Authorization"
-//   CRM_AUTH_PREFIX   wat vóór de sleutel komt, standaard "Bearer "
+//   CRM_URL           de intake van 4Relations (verplicht), in de praktijk
+//                     https://4relationstubes.appconnected.nl/api/assessments/intake
+//   CRM_TOKEN         de sleutel (env ASSESSMENT_TOKEN aan de 4Relations-kant)
+//   CRM_AUTH_HEADER   naam van de header; voor die intake "x-assessment-token"
+//   CRM_AUTH_PREFIX   wat vóór de sleutel komt; voor die intake leeg laten
 // Zonder CRM_URL gebeurt er niets en werkt de rest gewoon.
 
 const CRM_URL = process.env.CRM_URL || "";
@@ -287,35 +288,42 @@ const CRM_AUTH_HEADER = process.env.CRM_AUTH_HEADER || "Authorization";
 const CRM_AUTH_PREFIX = process.env.CRM_AUTH_PREFIX ?? "Bearer ";
 const CRM_STATUS = process.env.CRM_STATUS || "prospect";
 
-// Wat we naar 4Relations sturen. Het bedrijf is de client (status prospect),
-// de persoon het contact, en de Health Check-gegevens zitten eronder.
+// Wat we naar 4Relations sturen: de assessment-intake
+// (POST /api/assessments/intake). Die verwacht de velden plat, maakt van het
+// bedrijf een relatie en van de persoon een contactpersoon (beide find-or-create,
+// dus geen dubbelen), en bewaart de rest als JSON onder "answers".
 function crmPayload(entry, answers) {
-  const domain = String(entry.email || "").split("@")[1] || "";
+  const vragen = Object.entries(answers || {}).map(([key, answer]) => ({
+    key,
+    question: HC_LABELS[key] || key,
+    answer,
+  }));
+  // De samenvatting is wat er in de lijst te lezen valt zonder doorklikken.
+  const regels = [
+    entry.role ? `Role: ${entry.role}` : "",
+    ...vragen.map((v) => `${v.question} ${v.answer}`),
+    entry.notes ? `Wants to discuss: ${entry.notes}` : "",
+  ].filter(Boolean);
+
   return {
     source: "tubes.media",
-    form: "production finance health check",
-    kind: "request",
-    received_at: entry.at,
-    reference: entry.id,
-    status: CRM_STATUS,
-    client: {
-      name: entry.company || "",
-      email_domain: domain,
-    },
-    contact: {
-      name: entry.name || "",
-      email: entry.email || "",
+    name: entry.name || "",
+    email: entry.email || "",
+    telephone: "",
+    company: entry.company || "",
+    // "title" is het soort assessment; in de lijst staat die kolom als
+    // "Assessment". Bewust geen score: die kan pas uit het gesprek komen.
+    title: "Production Health Check",
+    summary: regels.join(" · ").slice(0, 1000),
+    answers: {
+      reference: entry.id,
+      received_at: entry.at,
+      page: entry.page || "",
       role: entry.role || "",
-    },
-    health_check: {
       notes: entry.notes || "",
-      answers: Object.entries(answers || {}).map(([key, answer]) => ({
-        key,
-        question: HC_LABELS[key] || key,
-        answer,
-      })),
+      status: CRM_STATUS,
+      questions: vragen,
     },
-    page: entry.page || "",
   };
 }
 

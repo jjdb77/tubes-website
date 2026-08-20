@@ -30,13 +30,16 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Health Check-aanvragen naar 4Relations
 
 - Aanvragen blijven **altijd** in de eigen opslag staan (JSONL op de Railway-volume, zichtbaar op /beheer). 4Relations is een kopie, geen vervanging: het versturen gebeurt ná het antwoord aan de bezoeker, dus een storing daar kan nooit een lead kosten.
-- Aanzetten met env-variabelen op de Railway-service:
-  - `CRM_URL` — het adres dat een client/lead aanmaakt. **Zolang die leeg is gebeurt er niets** en werkt de rest gewoon.
-  - `CRM_TOKEN` — de sleutel. Nooit in de repo, die is publiek.
-  - `CRM_AUTH_HEADER` — naam van de header, standaard `Authorization`.
-  - `CRM_AUTH_PREFIX` — wat vóór de sleutel komt, standaard `Bearer ` (leeg zetten als 4Relations een kale sleutel wil).
-  - `CRM_STATUS` — status van de client, standaard `prospect`.
-- Wat er verstuurd wordt: het **bedrijf als client** (met die status), de **persoon als contact** (naam, e-mail, rol), en daaronder de Health Check-gegevens (wat ze willen verbeteren, waar ze nu mee werken, de vrije opmerking en de antwoorden per vraag met de vraagtekst erbij). Twee momenten: bij de complete aanvraag (`kind: "request"`) en bij het ingevulde zelfbeeld (`kind: "assessment"`). Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- Aanzetten met env-variabelen op de Railway-service **tubes-website**. Zolang `CRM_URL` leeg is gebeurt er niets en werkt de rest gewoon. De vier waarden voor de intake van 4RelationTubes:
+  - `CRM_URL` = `https://4relationstubes.appconnected.nl/api/assessments/intake`
+  - `CRM_AUTH_HEADER` = `x-assessment-token`
+  - `CRM_AUTH_PREFIX` = leeg (die intake wil een kale sleutel, geen `Bearer `)
+  - `CRM_TOKEN` = de waarde van `ASSESSMENT_TOKEN` op de 4RelationTubes-service (Railway > Variables > oogje). Nooit in de repo, die is publiek.
+  - `CRM_STATUS` — gaat mee in de opslag maar bepaalt niets meer: de intake zet nieuwe relaties en contacten zelf op `Lead`.
+- **Het doel is `POST /api/assessments/intake`** in 4RelationTubes (code: `server.js`, `verwerkAssessment()` in de repo `jjdb77/4relations-tubes`). Die verwacht de velden **plat**: `name`, `email`, `telephone`, `company`, `title`, `summary`, `answers`, `source`. Daarom stuurt `crmPayload()` in server.js precies dat: `title` is "Production Health Check" (de kolom "Assessment" in de lijst), `summary` is de leesbare regel met rol, antwoorden en de vrije opmerking, en `answers` is de volledige inzending als JSON (vraagtekst per antwoord, plus rol, notes, pagina en het id van de aanvraag). Bewust **geen `score`**: die kan pas uit het gesprek komen.
+- 4Relations maakt er zelf een **relatie** (op bedrijfsnaam) en een **contactpersoon** (op e-mailadres) bij, allebei find-or-create met status `Lead`. Twee keer dezelfde persoon geeft dus geen dubbele relatie.
+- Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- ⚠️ Verandert die intake van veldnamen, dan is alleen `crmPayload()` in server.js aan te passen. Getest op een lokale kopie van 4Relations: goed pad (relatie + contact + assessment aangemaakt), fout token (401 wordt bewaard als "4Relations mislukt") en herstel via de knop opnieuw proberen.
 - Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt. Handig als 4Relations even plat lag of als de sleutel verkeerd stond.
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
@@ -81,13 +84,16 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Health Check-aanvragen naar 4Relations
 
 - Aanvragen blijven **altijd** in de eigen opslag staan (JSONL op de Railway-volume, zichtbaar op /beheer). 4Relations is een kopie, geen vervanging: het versturen gebeurt ná het antwoord aan de bezoeker, dus een storing daar kan nooit een lead kosten.
-- Aanzetten met env-variabelen op de Railway-service:
-  - `CRM_URL` — het adres dat een client/lead aanmaakt. **Zolang die leeg is gebeurt er niets** en werkt de rest gewoon.
-  - `CRM_TOKEN` — de sleutel. Nooit in de repo, die is publiek.
-  - `CRM_AUTH_HEADER` — naam van de header, standaard `Authorization`.
-  - `CRM_AUTH_PREFIX` — wat vóór de sleutel komt, standaard `Bearer ` (leeg zetten als 4Relations een kale sleutel wil).
-  - `CRM_STATUS` — status van de client, standaard `prospect`.
-- Wat er verstuurd wordt: het **bedrijf als client** (met die status), de **persoon als contact** (naam, e-mail, rol), en daaronder de Health Check-gegevens (wat ze willen verbeteren, waar ze nu mee werken, de vrije opmerking en de antwoorden per vraag met de vraagtekst erbij). Twee momenten: bij de complete aanvraag (`kind: "request"`) en bij het ingevulde zelfbeeld (`kind: "assessment"`). Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- Aanzetten met env-variabelen op de Railway-service **tubes-website**. Zolang `CRM_URL` leeg is gebeurt er niets en werkt de rest gewoon. De vier waarden voor de intake van 4RelationTubes:
+  - `CRM_URL` = `https://4relationstubes.appconnected.nl/api/assessments/intake`
+  - `CRM_AUTH_HEADER` = `x-assessment-token`
+  - `CRM_AUTH_PREFIX` = leeg (die intake wil een kale sleutel, geen `Bearer `)
+  - `CRM_TOKEN` = de waarde van `ASSESSMENT_TOKEN` op de 4RelationTubes-service (Railway > Variables > oogje). Nooit in de repo, die is publiek.
+  - `CRM_STATUS` — gaat mee in de opslag maar bepaalt niets meer: de intake zet nieuwe relaties en contacten zelf op `Lead`.
+- **Het doel is `POST /api/assessments/intake`** in 4RelationTubes (code: `server.js`, `verwerkAssessment()` in de repo `jjdb77/4relations-tubes`). Die verwacht de velden **plat**: `name`, `email`, `telephone`, `company`, `title`, `summary`, `answers`, `source`. Daarom stuurt `crmPayload()` in server.js precies dat: `title` is "Production Health Check" (de kolom "Assessment" in de lijst), `summary` is de leesbare regel met rol, antwoorden en de vrije opmerking, en `answers` is de volledige inzending als JSON (vraagtekst per antwoord, plus rol, notes, pagina en het id van de aanvraag). Bewust **geen `score`**: die kan pas uit het gesprek komen.
+- 4Relations maakt er zelf een **relatie** (op bedrijfsnaam) en een **contactpersoon** (op e-mailadres) bij, allebei find-or-create met status `Lead`. Twee keer dezelfde persoon geeft dus geen dubbele relatie.
+- Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
+- ⚠️ Verandert die intake van veldnamen, dan is alleen `crmPayload()` in server.js aan te passen. Getest op een lokale kopie van 4Relations: goed pad (relatie + contact + assessment aangemaakt), fout token (401 wordt bewaard als "4Relations mislukt") en herstel via de knop opnieuw proberen.
 - Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt. Handig als 4Relations even plat lag of als de sleutel verkeerd stond.
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
@@ -201,7 +207,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
-- [ ] **4Relations aanzetten**: de koppeling is gebouwd en getest, maar staat uit tot `CRM_URL` en `CRM_TOKEN` op de Railway-service staan. Nodig van 4Relations: het adres van het endpoint dat een client aanmaakt, de manier van authenticeren, en of het veldschema past bij wat wij sturen (zie "Health Check-aanvragen naar 4Relations"). Wijkt het schema af, dan is alleen `crmPayload()` in server.js aan te passen.
+- [ ] **4Relations aanzetten**: de koppeling is gebouwd, aangepast aan de intake van 4RelationTubes en end-to-end getest, maar staat uit tot de vier `CRM_*`-variabelen op de Railway-service **tubes-website** staan (zie "Health Check-aanvragen naar 4Relations"). Zolang die er niet zijn blijft `/#/assessments` in 4RelationTubes leeg, ook als er wel aanvragen binnenkomen: die staan dan alleen in de eigen opslag.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
 - [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's
