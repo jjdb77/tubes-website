@@ -361,12 +361,55 @@ async function pushToCrm(entry, answers) {
       },
       body: JSON.stringify(crmPayload(entry, answers)),
     });
-    recordPush(entry, res.ok, res.ok ? "" : `HTTP ${res.status} ${await res.text().catch(() => "")}`.slice(0, 300));
+    const fout = res.ok ? "" : `HTTP ${res.status} ${await res.text().catch(() => "")}`.slice(0, 300);
+    if (fout) console.error("4Relations: doorzetten mislukt:", fout);
+    recordPush(entry, res.ok, fout);
   } catch (err) {
-    recordPush(entry, false, err.name === "AbortError" ? "time-out na 8 seconden" : err.message);
+    const fout = err.name === "AbortError" ? "time-out na 8 seconden" : err.message;
+    console.error("4Relations: doorzetten mislukt:", fout);
+    recordPush(entry, false, fout);
   } finally {
     clearTimeout(timer);
   }
+}
+
+// Achtervang. Mislukt het doorzetten, dan blijft de aanvraag in de eigen
+// opslag staan, maar er is niemand die daar een seintje van krijgt. Daarom
+// biedt de server alles wat nog niet is aangekomen vanzelf opnieuw aan: elke
+// tien minuten, tot zeven dagen terug en hoogstens twaalf pogingen per
+// aanvraag. Een storing bij 4Relations herstelt zichzelf dus binnen een paar
+// minuten; is er iets structureels mis (verkeerde sleutel), dan houdt het na
+// twee uur op en blijft de aanvraag zichtbaar op /beheer met de foutmelding
+// erbij, plus de knop om het met de hand te proberen.
+const CRM_RETRY_MS = 10 * 60 * 1000;
+const CRM_RETRY_DAGEN = 7;
+const CRM_MAX_POGINGEN = 12;
+
+async function verstuurWachtenden({ alles = false } = {}) {
+  if (!CRM_URL) return 0;
+  const grens = Date.now() - CRM_RETRY_DAGEN * 24 * 60 * 60 * 1000;
+  const wachtenden = readSubmissions().filter(
+    (s) =>
+      s.kind === "health_check" &&
+      s.stage !== "email" &&
+      !s.spam &&
+      !s.crm?.ok &&
+      (alles || ((s.crm?.pogingen || 0) < CRM_MAX_POGINGEN && Date.parse(s.at) >= grens))
+  );
+  for (const entry of wachtenden) {
+    await pushToCrm(entry, entry.answers || null);
+  }
+  if (wachtenden.length) {
+    console.warn(`4Relations: ${wachtenden.length} aanvraag${wachtenden.length === 1 ? "" : "en"} opnieuw aangeboden`);
+  }
+  return wachtenden.length;
+}
+
+if (CRM_URL) {
+  // Kort na het opstarten (een deploy kan net in een storing gevallen zijn) en
+  // daarna op de klok. unref: dit mag het afsluiten nooit tegenhouden.
+  setTimeout(() => verstuurWachtenden(), 60 * 1000).unref?.();
+  setInterval(() => verstuurWachtenden(), CRM_RETRY_MS).unref?.();
 }
 
 // ---------- MMG-pitchpagina's (Basic Auth) ----------
@@ -420,8 +463,12 @@ function readSubmissions() {
 
   // Uitkomst van het doorzetten naar 4Relations, laatste poging telt.
   const pushes = new Map();
+  const pogingen = new Map();
   for (const s of all) {
-    if (s.kind === "crm_push" && s.lead_id) pushes.set(s.lead_id, s);
+    if (s.kind === "crm_push" && s.lead_id) {
+      pushes.set(s.lead_id, s);
+      pogingen.set(s.lead_id, (pogingen.get(s.lead_id) || 0) + 1);
+    }
   }
 
   // Van één bezoeker kunnen meerdere regels komen: het e-mailadres dat bij het
@@ -451,7 +498,7 @@ function readSubmissions() {
   const list = [...los, ...groepen.values()];
   for (const entry of list) {
     const push = pushes.get(entry.id);
-    if (push) entry.crm = { ok: push.ok, error: push.error || "", at: push.at };
+    if (push) entry.crm = { ok: push.ok, error: push.error || "", at: push.at, pogingen: pogingen.get(entry.id) || 1 };
   }
 
   return list.sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
@@ -525,7 +572,7 @@ function crmLine(items) {
   ).length;
   if (!open) return '<p class="count" style="margin-top:20px">Alle aanvragen staan in 4Relations.</p>';
   return `<form method="POST" action="/beheer/crm-retry" style="margin-top:20px">
-    <p class="count">${open} aanvra${open === 1 ? "ag" : "gen"} nog niet in 4Relations.
+    <p class="count">${open} aanvra${open === 1 ? "ag" : "gen"} nog niet in 4Relations. De server probeert het elke tien minuten vanzelf opnieuw.
     <button type="submit" style="font:inherit;color:#0E8C77;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline">opnieuw proberen</button></p>
   </form>`;
 }
@@ -577,12 +624,7 @@ app.post("/beheer/crm-retry", async (req, res) => {
   if (!checkAuth(req, res)) return;
   if (!CRM_URL) return res.status(503).send("Stel eerst CRM_URL in op Railway.");
 
-  const wachtenden = readSubmissions().filter(
-    (s) => s.kind === "health_check" && s.stage !== "email" && !s.spam && !s.crm?.ok
-  );
-  for (const entry of wachtenden) {
-    await pushToCrm(entry, entry.answers || null);
-  }
+  await verstuurWachtenden({ alles: true });
   res.redirect("/beheer");
 });
 
