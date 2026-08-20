@@ -450,7 +450,17 @@ if (assessForm) {
     ];
     const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
     if (notes) delen.push(`Wants to discuss: ${notes}`);
-    const query = "?plan=" + encodeURIComponent(("Production Health Check · " + delen.join(" · ")).slice(0, 400));
+
+    // plan is de regel die bij de boeking komt te staan. Daarnaast geven we
+    // naam, e-mailadres en het vrije veld apart mee: de boekingspagina vult
+    // die velden daarmee alvast in, zodat niemand ze twee keer typt. Wie met
+    // ?ref binnenkomt heeft geen e-mailveld, dan sturen we het niet mee.
+    const params = new URLSearchParams();
+    params.set("plan", ("Production Health Check · " + delen.join(" · ")).slice(0, 400));
+    if (nameInput.value.trim()) params.set("naam", nameInput.value.trim());
+    if (emailInput && emailInput.value.trim()) params.set("email", emailInput.value.trim());
+    if (notes) params.set("notities", notes.slice(0, 500));
+    const query = "?" + params.toString();
 
     const frame = assessForm.querySelector(".hc-calendar-frame");
     if (frame && !frame.src) frame.src = frame.dataset.src + query;

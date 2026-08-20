@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a call — {{ settings.site_name }}</title>
+<title>Book a call | {{ settings.site_name }}</title>
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="0; url={{ doel }}">
 <link rel="canonical" href="{{ doel }}">
@@ -31,12 +31,20 @@ eleventyExcludeFromCollections: true
 <p>One moment&hellip; <a href="{{ doel }}">continue to the booking page</a>.</p>
 <script>
 // Komt er een eigen ?plan= mee (de Health Check stuurt daar de antwoorden in),
-// dan heeft die voorrang op de standaardwaarde hierboven.
+// dan heeft die voorrang op de standaardwaarde hierboven. Naam, e-mailadres en
+// het onderwerp geven we door zoals ze binnenkomen: de boekingspagina vult daar
+// zijn velden mee.
 (function () {
   var doel = {{ doel | dump | safe }};
-  var mee = new URLSearchParams(location.search).get('plan');
-  if (mee) doel = doel.split('?')[0] + '?plan=' + encodeURIComponent(mee);
-  location.replace(doel);
+  var binnen = new URLSearchParams(location.search);
+  var basis = doel.split('?')[0];
+  var uit = new URLSearchParams(doel.split('?')[1] || '');
+  ['plan', 'naam', 'email', 'telefoon', 'notities'].forEach(function (sleutel) {
+    var waarde = binnen.get(sleutel);
+    if (waarde) uit.set(sleutel, waarde);
+  });
+  var query = uit.toString();
+  location.replace(query ? basis + '?' + query : basis);
 })();
 </script>
 </body>
