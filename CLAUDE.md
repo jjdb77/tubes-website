@@ -41,7 +41,16 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
 - ⚠️ Verandert die intake van veldnamen, dan is alleen `crmPayload()` in server.js aan te passen. Getest op een lokale kopie van 4Relations: goed pad (relatie + contact + assessment aangemaakt), fout token (401 wordt bewaard als "4Relations mislukt") en herstel via de knop opnieuw proberen.
 - Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt.
-- ⚠️ **Er gaat bij een mislukking geen melding uit naar iemand.** Daarom is er een achtervang: de server biedt alles wat niet is aangekomen **elke tien minuten vanzelf opnieuw** aan, plus een minuut na het opstarten (`verstuurWachtenden()` in server.js). Grenzen: tot zeven dagen terug en hoogstens twaalf pogingen per aanvraag, dus een storing herstelt zichzelf, en iets structureels (verkeerde sleutel) stopt na twee uur en blijft zichtbaar staan met de foutmelding. Elke mislukking komt ook in de Railway-log te staan. Wil je een mailtje bij een mislukking, dan kan dat via de `RESEND_API_KEY` van de appconnected-service; dat is nog niet gebouwd.
+- **Achtervang**: de server biedt alles wat niet is aangekomen **elke tien minuten vanzelf opnieuw** aan, plus een minuut na het opstarten (`verstuurWachtenden()` in server.js). Grenzen: tot zeven dagen terug en hoogstens twaalf pogingen per aanvraag, dus een storing herstelt zichzelf, en iets structureels (verkeerde sleutel) stopt na twee uur en blijft zichtbaar staan met de foutmelding. Elke mislukking komt ook in de Railway-log te staan.
+
+## Mail bij een aanvraag (en als het misgaat)
+
+- Twee soorten mail, allebei via **Resend** (`stuurMail()` in server.js), dezelfde dienst als 4Relations gebruikt:
+  - **Elke complete aanvraag** gaat naar `LEAD_EMAIL` (standaard joachim@tubes.media en chris.arboit@tubes.media): wie het is, alle antwoorden met de vraagtekst erbij, de vrije opmerking, en of hij in 4Relations staat.
+  - **Blijft een aanvraag hangen** (drie mislukte pogingen, dus zo'n half uur), dan gaat er één mail naar `ALERT_EMAIL` (standaard alleen joachim@tubes.media) met de foutmelding. Eén per aanvraag: dat wordt vastgelegd als `crm_alert`-regel, dus een herstart levert geen tweede mail op.
+- Env op de Railway-service: `RESEND_API_KEY` (als verwijzing `${{appconnected.RESEND_API_KEY}}`, de echte sleutel staat op de appconnected-service), eventueel `LEAD_EMAIL`, `ALERT_EMAIL` en `MAIL_FROM`. **Zonder sleutel gebeurt er niets** en werkt de rest gewoon.
+- ⚠️ Het afzenderadres moet een domein zijn dat **in Resend geverifieerd is**. Dat is `appsolutions.nl` (vandaar de standaard `Tubes site <info@appsolutions.nl>`); tubes.media is dat nog niet. Wil je vanaf tubes.media mailen, dan moet dat domein eerst in Resend erbij, inclusief DNS-records.
+- `MAIL_API_URL` bestaat om het te kunnen testen tegen een eigen endpoint; laat die in productie leeg.
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
 ## Boekingen (Book a call)
@@ -96,7 +105,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Een los e-mailadres uit stap 1 gaat er bewust **niet** heen, dat is nog geen lead. Spam-gemarkeerde regels ook niet.
 - ⚠️ Verandert die intake van veldnamen, dan is alleen `crmPayload()` in server.js aan te passen. Getest op een lokale kopie van 4Relations: goed pad (relatie + contact + assessment aangemaakt), fout token (401 wordt bewaard als "4Relations mislukt") en herstel via de knop opnieuw proberen.
 - Elke poging wordt bewaard. Op /beheer staat per aanvraag "in 4Relations", "4Relations mislukt" (met de foutmelding erin) of "nog niet doorgezet", plus onderaan een knop **opnieuw proberen** die alles wat nog openstaat alsnog verstuurt.
-- ⚠️ **Er gaat bij een mislukking geen melding uit naar iemand.** Daarom is er een achtervang: de server biedt alles wat niet is aangekomen **elke tien minuten vanzelf opnieuw** aan, plus een minuut na het opstarten (`verstuurWachtenden()` in server.js). Grenzen: tot zeven dagen terug en hoogstens twaalf pogingen per aanvraag, dus een storing herstelt zichzelf, en iets structureels (verkeerde sleutel) stopt na twee uur en blijft zichtbaar staan met de foutmelding. Elke mislukking komt ook in de Railway-log te staan. Wil je een mailtje bij een mislukking, dan kan dat via de `RESEND_API_KEY` van de appconnected-service; dat is nog niet gebouwd.
+- **Achtervang plus mail**: mislukte doorzendingen gaan elke tien minuten vanzelf opnieuw de deur uit, en elke aanvraag levert een mailtje op. Zie de sectie "Mail bij een aanvraag (en als het misgaat)".
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
 ## Boekingen (Book a call)

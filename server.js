@@ -257,7 +257,8 @@ app.post("/api/health-check", (req, res) => {
 
     fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
     res.json({ ok: true, id: entry.id });
-    pushToCrm(entry, answers);
+    // Eerst doorzetten, dan de mail: dan staat er meteen in of het gelukt is.
+    pushToCrm(entry, answers).then((ok) => meldNieuweAanvraag(entry, answers, ok));
     return;
   }
 
@@ -287,6 +288,23 @@ const CRM_TOKEN = process.env.CRM_TOKEN || "";
 const CRM_AUTH_HEADER = process.env.CRM_AUTH_HEADER || "Authorization";
 const CRM_AUTH_PREFIX = process.env.CRM_AUTH_PREFIX ?? "Bearer ";
 const CRM_STATUS = process.env.CRM_STATUS || "prospect";
+
+// Waarschuwing per e-mail als een aanvraag blijft vastzitten. Verstuurd via
+// Resend (dezelfde dienst als 4Relations gebruikt); zonder RESEND_API_KEY
+// gebeurt er niets en blijft het bij de regel in de serverlog. Het afzender-
+// adres moet een domein zijn dat in Resend geverifieerd is: appsolutions.nl is
+// dat, tubes.media (nog) niet.
+const MAIL_KEY = process.env.RESEND_API_KEY || "";
+const MAIL_API = process.env.MAIL_API_URL || "https://api.resend.com/emails";
+const MAIL_FROM = process.env.MAIL_FROM || "Tubes site <info@appsolutions.nl>";
+// Twee lijsten, want het zijn twee soorten bericht: een aanvraag is nieuws voor
+// wie het gesprek voert, een storing is iets om te repareren. Komma's ertussen.
+const LEAD_EMAIL = process.env.LEAD_EMAIL || "joachim@tubes.media, chris.arboit@tubes.media";
+const ALERT_EMAIL = process.env.ALERT_EMAIL || "joachim@tubes.media";
+const adressen = (lijst) => String(lijst).split(",").map((a) => a.trim()).filter(Boolean);
+// Pas na drie mislukte pogingen (een half uur proberen) is het meer dan een
+// hikje en is een mailtje op zijn plaats.
+const ALERT_NA_POGINGEN = 3;
 
 // Wat we naar 4Relations sturen: de assessment-intake
 // (POST /api/assessments/intake). Die verwacht de velden plat, maakt van het
@@ -341,11 +359,13 @@ function recordPush(entry, ok, error) {
   );
 }
 
+// Geeft true/false terug of het doorzetten lukte, en null als de koppeling
+// uitstaat: dan valt er ook niets te melden.
 async function pushToCrm(entry, answers) {
-  if (!CRM_URL || entry.spam) return;
+  if (!CRM_URL || entry.spam) return null;
   if (typeof fetch !== "function") {
     console.warn("Geen fetch beschikbaar in deze Node-versie, 4Relations overgeslagen");
-    return;
+    return null;
   }
 
   const stop = new AbortController();
@@ -364,10 +384,12 @@ async function pushToCrm(entry, answers) {
     const fout = res.ok ? "" : `HTTP ${res.status} ${await res.text().catch(() => "")}`.slice(0, 300);
     if (fout) console.error("4Relations: doorzetten mislukt:", fout);
     recordPush(entry, res.ok, fout);
+    return res.ok;
   } catch (err) {
     const fout = err.name === "AbortError" ? "time-out na 8 seconden" : err.message;
     console.error("4Relations: doorzetten mislukt:", fout);
     recordPush(entry, false, fout);
+    return false;
   } finally {
     clearTimeout(timer);
   }
@@ -405,11 +427,119 @@ async function verstuurWachtenden({ alles = false } = {}) {
   return wachtenden.length;
 }
 
+async function stuurMail(naar, onderwerp, html) {
+  const ontvangers = adressen(naar);
+  if (!MAIL_KEY || !ontvangers.length) {
+    console.warn("[mail] geen sleutel of geen ontvanger, mail niet verstuurd:", onderwerp);
+    return false;
+  }
+  const stop = new AbortController();
+  const timer = setTimeout(() => stop.abort(), 8000);
+  try {
+    const res = await fetch(MAIL_API, {
+      method: "POST",
+      signal: stop.signal,
+      headers: { Authorization: `Bearer ${MAIL_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: MAIL_FROM, to: ontvangers, subject: onderwerp, html }),
+    });
+    if (!res.ok) {
+      console.error("[mail] verzenden mislukt:", res.status, await res.text().catch(() => ""));
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error("[mail] fout:", err.message);
+    return false;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// Mail bij elke complete aanvraag: wie het is, wat er is ingevuld, en of hij
+// in 4Relations staat. Zo hoef je niet op /beheer te wachten om te weten dat
+// er iemand langs is geweest.
+async function meldNieuweAanvraag(entry, answers, crmOk) {
+  if (!MAIL_KEY || entry.spam) return;
+
+  const vragen = Object.entries(answers || {})
+    .map(([key, antwoord]) => `<tr><td style="padding:4px 12px 4px 0;color:#5C6B74;vertical-align:top">${esc(HC_LABELS[key] || key)}</td><td style="padding:4px 0"><strong>${esc(antwoord)}</strong></td></tr>`)
+    .join("");
+
+  const stand =
+    crmOk === null
+      ? "<p>De koppeling met 4Relations staat uit, dus deze aanvraag staat alleen in de eigen opslag.</p>"
+      : crmOk
+        ? "<p>Hij staat in 4Relations, met de relatie en de contactpersoon eraan gekoppeld.</p>"
+        : "<p><strong>Let op:</strong> doorzetten naar 4Relations lukte nog niet. De server probeert het elke tien minuten opnieuw.</p>";
+
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p><strong>${esc(entry.name || entry.email)}</strong>${entry.company ? ` van ${esc(entry.company)}` : ""}${entry.role ? `, ${esc(entry.role)},` : ""} vroeg een Production Health Check aan.</p>
+    <p><a href="mailto:${esc(entry.email)}">${esc(entry.email)}</a>${entry.free_email ? " (geen zakelijk domein)" : ""} &middot; ${esc(stamp(entry.at))}</p>
+    ${vragen ? `<table style="border-collapse:collapse;margin:16px 0">${vragen}</table>` : ""}
+    ${entry.notes ? `<p style="background:#F6F7F9;padding:12px;border-radius:8px"><em>Wil het hebben over:</em><br>${esc(entry.notes)}</p>` : ""}
+    ${stand}
+    <p><a href="https://www.tubes.media/beheer">Alle aanvragen op /beheer</a></p>
+  </div>`;
+
+  await stuurMail(
+    LEAD_EMAIL,
+    `Health Check-aanvraag: ${entry.name || entry.email}${entry.company ? ` (${entry.company})` : ""}`,
+    html
+  );
+}
+
+// Eén mail per aanvraag, en alleen als het na een paar pogingen nog steeds
+// misgaat. Zo blijft het stil bij een hikje van een paar minuten, en krijg je
+// wel bericht als er echt iets stuk is. Wat gemeld is, wordt vastgelegd, dus
+// een herstart levert geen tweede mail op.
+async function meldVastzitters() {
+  if (!CRM_URL || !MAIL_KEY) return;
+  const vast = readSubmissions().filter(
+    (s) =>
+      s.kind === "health_check" && s.stage !== "email" && !s.spam && !s.crm?.ok &&
+      !s.gemeld && (s.crm?.pogingen || 0) >= ALERT_NA_POGINGEN
+  );
+  if (!vast.length) return;
+
+  const regels = vast
+    .map(
+      (s) => `<li><strong>${esc(s.name || s.email)}</strong>${s.company ? ` (${esc(s.company)})` : ""}<br>
+        <a href="mailto:${esc(s.email)}">${esc(s.email)}</a> &middot; binnengekomen ${esc(stamp(s.at))}<br>
+        <span style="color:#8A2E3B">${esc(s.crm?.error || "onbekende fout")}</span></li>`
+    )
+    .join("");
+
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p>${vast.length === 1 ? "Een Health Check-aanvraag komt" : `${vast.length} Health Check-aanvragen komen`} niet in 4Relations aan.</p>
+    <ul>${regels}</ul>
+    <p>De aanvra${vast.length === 1 ? "ag staat" : "gen staan"} veilig in de eigen opslag van de site en de server blijft het elke tien minuten proberen, tot twaalf keer. Klopt de sleutel of het adres niet, dan lost vanzelf proberen het niet op.</p>
+    <p><a href="https://www.tubes.media/beheer">Bekijk de aanvragen op /beheer</a></p>
+  </div>`;
+
+  const verstuurd = await stuurMail(
+    ALERT_EMAIL,
+    vast.length === 1 ? "Health Check-aanvraag komt niet in 4Relations aan" : `${vast.length} Health Check-aanvragen komen niet in 4Relations aan`,
+    html
+  );
+  if (!verstuurd) return;
+  for (const entry of vast) {
+    fs.appendFileSync(
+      DATA_FILE,
+      JSON.stringify({ id: crypto.randomUUID(), at: new Date().toISOString(), kind: "crm_alert", lead_id: entry.id }) + "\n"
+    );
+  }
+  console.warn(`4Relations: ${vast.length} vastzittende aanvraag${vast.length === 1 ? "" : "en"} gemeld aan ${adressen(ALERT_EMAIL).join(", ")}`);
+}
+
 if (CRM_URL) {
   // Kort na het opstarten (een deploy kan net in een storing gevallen zijn) en
   // daarna op de klok. unref: dit mag het afsluiten nooit tegenhouden.
-  setTimeout(() => verstuurWachtenden(), 60 * 1000).unref?.();
-  setInterval(() => verstuurWachtenden(), CRM_RETRY_MS).unref?.();
+  const ronde = async () => {
+    await verstuurWachtenden();
+    await meldVastzitters();
+  };
+  setTimeout(ronde, 60 * 1000).unref?.();
+  setInterval(ronde, CRM_RETRY_MS).unref?.();
 }
 
 // ---------- MMG-pitchpagina's (Basic Auth) ----------
@@ -464,18 +594,20 @@ function readSubmissions() {
   // Uitkomst van het doorzetten naar 4Relations, laatste poging telt.
   const pushes = new Map();
   const pogingen = new Map();
+  const gemeld = new Set();
   for (const s of all) {
     if (s.kind === "crm_push" && s.lead_id) {
       pushes.set(s.lead_id, s);
       pogingen.set(s.lead_id, (pogingen.get(s.lead_id) || 0) + 1);
     }
+    if (s.kind === "crm_alert" && s.lead_id) gemeld.add(s.lead_id);
   }
 
   // Van één bezoeker kunnen meerdere regels komen: het e-mailadres dat bij het
   // doorklikken wordt vastgelegd, en daarna de ingevulde vragenlijst. Wie
   // terugloopt en opnieuw verstuurt, levert er nog een. Per persoon houden we
   // de rijkste, meest recente regel over; de rest blijft wel in het bestand.
-  const berichten = all.filter((s) => s.kind !== "crm_push");
+  const berichten = all.filter((s) => s.kind !== "crm_push" && s.kind !== "crm_alert");
   const groepen = new Map();
   const los = [];
 
@@ -499,6 +631,7 @@ function readSubmissions() {
   for (const entry of list) {
     const push = pushes.get(entry.id);
     if (push) entry.crm = { ok: push.ok, error: push.error || "", at: push.at, pogingen: pogingen.get(entry.id) || 1 };
+    if (gemeld.has(entry.id)) entry.gemeld = true;
   }
 
   return list.sort((a, b) => new Date(a.at) - new Date(b.at)).reverse();
