@@ -11,8 +11,8 @@ sections:
     text: |
       Tubes is built on decades of hands-on experience in real-world productions. Over the years, we've seen how fragmented tools, spreadsheets, and manual processes introduce unnecessary cost, risk, and stress, even in highly professional teams. Our goal is to simplify production workflows, so teams can spend less time managing complexity and more time delivering great content.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/company-hero.jpeg
     image_alt: The team behind Tubes
   - type: cards

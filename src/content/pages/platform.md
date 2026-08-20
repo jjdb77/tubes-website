@@ -12,8 +12,8 @@ sections:
     text: |
       Tubes is a modular SaaS platform designed specifically for media production workflows. It replaces fragmented tools and spreadsheets with one integrated system.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/platform-hero.jpeg
     image_alt: A production team at work
   - type: cards
@@ -140,10 +140,10 @@ sections:
         answer: |
           [Get in touch](/contact/) and share a few details about your organization and productions, and we'll get back to you to explore how Tubes fits your workflow.
   - type: cta
-    title: With Tubes, your production runs efficiently
+    title: See where a platform would help you first
     text: |
-      Your production stays financially transparent, and your team can focus on what they do best: creating.
+      Book a free Production Health Check: 45 minutes on how you work today, and where the biggest opportunities are.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---

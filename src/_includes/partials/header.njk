@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
     </nav>
-    <a class="button button-primary header-cta" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
+    <a class="button button-primary header-cta" href="{{ settings.header_cta_url or settings.cta_url }}" data-hc-open>{{ settings.header_cta_label or settings.cta_label }}</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle-bar"></span>
       <span class="nav-toggle-bar"></span>

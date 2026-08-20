@@ -11,8 +11,8 @@ sections:
     text: |
       Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/solutions-roles.jpeg
     image_alt: Different roles collaborating on a production
   - type: cards
@@ -115,10 +115,10 @@ sections:
 
       AI can analyse this data to identify patterns in spending and workflows, support teams when creating budgets and proposals, translate proposal texts, and highlight unusual spending during production.
   - type: cta
-    title: See Tubes in action
+    title: Start with your own process
     text: |
-      Discover how Tubes fits your role and your productions.
+      Book a free Production Health Check: 45 minutes on how budgets, actuals and reporting work in your team today.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---

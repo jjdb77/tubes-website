@@ -1047,9 +1047,11 @@ a:hover { color: var(--action); }
 .cards-grid .card .icon-tile { background: rgba(255, 255, 255, 0.85); }
 .cards-grid .card .icon-tile i { background: var(--ink-soft); }
 
-/* Demo-knop in de header */
+/* Knop in de header (nu de Health Check). Hij is breder dan de oude
+   demo-knop, dus hij verdwijnt iets eerder: onder 1220px past de rij
+   logo + menu + knop niet meer. */
 .header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
-@media (max-width: 1180px) { .header-cta { display: none; } }
+@media (max-width: 1220px) { .header-cta { display: none; } }
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */
 .button.button-primary::after {
