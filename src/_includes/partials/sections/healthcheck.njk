@@ -5,6 +5,7 @@
     In het CMS: sectietype "Health Check". -#}
 <section class="section theme-{{ section.theme or 'light' }} hc-hero">
   <div class="container hc-hero-grid">
+    {% set hcCtaId = "hc-cta-section" %}
     {% include "partials/health-check-hero.njk" %}
   </div>
 </section>

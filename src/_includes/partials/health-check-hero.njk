@@ -3,16 +3,16 @@
     45 minuten gebeurt. Staat op de landingspagina én op de homepage, dus één
     bron. Alle teksten komen uit healthcheck.json (CMS).
 
-    Het e-mailveld verstuurt niets: het opent de popover en vult het adres daar
-    in. Die popover staat in partials/health-check-modal.njk en moet op
-    dezelfde pagina staan. -#}
+    De knop opent de popover; die staat in partials/health-check-modal.njk en
+    moet op dezelfde pagina staan. Het e-mailadres wordt daarin gevraagd, niet
+    hier: twee keer vragen is één keer te veel. -#}
     <div class="hc-hero-text">
       <span class="kicker">{{ healthcheck.hero.kicker }}</span>
       <h1>{{ healthcheck.hero.heading }}</h1>
       <p class="hc-hero-promise">{{ healthcheck.hero.lead }}</p>
       <p class="hc-lead">{{ healthcheck.hero.text }}</p>
 
-      {{ hcCta.veld("hc-cta-top", healthcheck) }}
+      {{ hcCta.knop(hcCtaId or "hc-cta-top", healthcheck) }}
 
       <p class="hc-reassure">{{ healthcheck.hero.reassurance }}</p>
     </div>

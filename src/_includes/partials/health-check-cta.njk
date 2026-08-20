@@ -1,14 +1,12 @@
-{#- Het e-mailveld met de knop. Verstuurt niets: het opent de popover en vult
-    het adres daar alvast in, zodat niemand het twee keer typt. Zonder
-    JavaScript is het een gewoon formulier naar de vragenlijstpagina.
+{#- De knop die de popover opent. Bewust géén e-mailveld op de pagina zelf:
+    dat wordt in de popover gevraagd, en twee keer vragen is één keer te veel.
+
+    Zonder JavaScript is het een gewone link naar de vragenlijstpagina.
 
     Gebruik: {% import "partials/health-check-cta.njk" as hcCta %} en dan
-    {{ hcCta.veld("een-uniek-id", healthcheck) }} -#}
-{%- macro veld(id, healthcheck) -%}
-<form class="hc-cta" id="{{ id }}" data-hc-start action="/production-finance-health-check/assessment/" method="GET">
-  <label class="hc-field hc-cta-field" for="{{ id }}-email">{{ healthcheck.hero.email_label }}
-    <input type="email" id="{{ id }}-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="{{ healthcheck.hero.email_placeholder }}">
-  </label>
-  <button type="submit" class="button button-primary hc-cta-button">{{ healthcheck.hero.button }}</button>
-</form>
+    {{ hcCta.knop("een-uniek-id", healthcheck) }} -#}
+{%- macro knop(id, healthcheck) -%}
+<div class="hc-cta" id="{{ id }}">
+  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/" data-hc-open>{{ healthcheck.hero.button }}</a>
+</div>
 {%- endmacro -%}

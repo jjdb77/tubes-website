@@ -323,7 +323,6 @@ if (assessForm) {
   const roleInput = assessForm.querySelector('input[name="role"]');
   const status = assessForm.querySelector(".hc-status");
   const blocks = Array.from(assessForm.querySelectorAll("[data-hc-block]"));
-  const progressLabel = assessForm.querySelector("[data-hc-progress-label]");
 
   // De vragen staan in de opmaak; hier lezen we ze uit in plaats van ze nog
   // een keer op te schrijven.
@@ -345,14 +344,6 @@ if (assessForm) {
 
   function showStep(n) {
     for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
-    // Het rapport hoort nog bij stap 2: de balk blijft daar staan.
-    const segment = n >= 2 ? 2 : 1;
-    for (const bar of assessForm.querySelectorAll("[data-hc-progress-bar]")) {
-      const step = Number(bar.dataset.hcProgressBar);
-      bar.classList.toggle("is-current", step === segment);
-      bar.classList.toggle("is-done", step < segment);
-    }
-    if (progressLabel) progressLabel.textContent = n === 3 ? "Almost there" : `Step ${segment} of 2`;
     setStatus("");
 
     const heading = assessForm.querySelector(`[data-hc-block="${n}"] h2`);
@@ -434,41 +425,9 @@ if (assessForm) {
     button.addEventListener("click", () => showStep(Number(button.dataset.hcBack)));
   }
 
-  // Overzicht van wat er is ingevuld, plus waar we mee beginnen.
-  function renderResult(answers) {
-    const focus = assessForm.querySelector("[data-hc-result-focus]");
-    focus.innerHTML = "";
-    if (answers.workload) {
-      const title = document.createElement("p");
-      title.className = "hc-result-focus-title";
-      title.textContent = focus.dataset.title || "Where we will start";
-      const body = document.createElement("p");
-      body.textContent = `You said the most work sits in ${answers.workload.toLowerCase()}. That is where we will start.`;
-      focus.append(title, body);
-    }
-
-    const list = assessForm.querySelector("[data-hc-result-list]");
-    list.innerHTML = "";
-    for (const question of questions) {
-      const value = answers[question.key];
-      if (!value) continue;
-      const row = document.createElement("li");
-      row.className = "hc-result-row";
-      const label = document.createElement("span");
-      label.className = "hc-result-label";
-      label.textContent = question.label;
-      const answer = document.createElement("span");
-      answer.className = "hc-result-answer";
-      answer.textContent = value;
-      row.append(label, answer);
-      list.append(row);
-    }
-  }
-
-  // De boekingspagina leest maar één veld uit de URL: ?plan. Daar zetten we
-  // de antwoorden in, zodat ze bij de boeking staan en niemand ze opnieuw
-  // hoeft te vertellen. Naam en e-mailadres vóórinvullen kan die pagina niet;
-  // daarvoor moet 4Relations parameters gaan accepteren.
+  // De agenda leest maar één veld uit de URL: ?plan. Daar zetten we de
+  // antwoorden in, zodat ze bij de boeking staan en niemand ze opnieuw hoeft
+  // te vertellen. Naam en e-mailadres vóórinvullen kan die pagina niet.
   function loadCalendar(answers) {
     const delen = [
       `${nameInput.value.trim()} (${companyInput.value.trim()})`,
@@ -526,7 +485,6 @@ if (assessForm) {
       if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
 
       track("health-check-requested", { answered: Object.keys(answers).length });
-      renderResult(answers);
       loadCalendar(answers);
       showStep(3);
     } catch (err) {
@@ -559,16 +517,6 @@ if (assessForm) {
       });
     }
 
-    // Het e-mailveld in de hero is een opstapje: het adres gaat mee de
-    // popover in, zodat niemand het twee keer typt.
-    for (const start of document.querySelectorAll("[data-hc-start]")) {
-      start.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const ingevuld = start.querySelector('input[name="email"]').value.trim();
-        if (ingevuld && emailInput) emailInput.value = ingevuld;
-        open();
-      });
-    }
     hcModal.querySelector(".hc-modal-close").addEventListener("click", () => hcModal.close());
     hcModal.addEventListener("click", (e) => {
       if (e.target === hcModal) hcModal.close();

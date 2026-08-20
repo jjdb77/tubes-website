@@ -1803,7 +1803,10 @@ a:hover { color: var(--action); }
   border: 0;
   border-radius: var(--radius-card);
   padding: 0;
-  width: min(760px, calc(100vw - 32px));
+  /* Breed genoeg dat de agenda zijn driekolomsindeling toont (gegevens,
+     kalender, tijden naast elkaar) in plaats van gestapeld; dat scheelt
+     honderden pixels hoogte. De breedte blijft in elke stap gelijk. */
+  width: min(1000px, calc(100vw - 32px));
   max-width: none;
   max-height: calc(100vh - 40px);
   box-shadow: 0 24px 60px -12px rgba(23, 25, 28, 0.35);
@@ -1833,6 +1836,12 @@ a:hover { color: var(--action); }
 
 .hc-modal-body { overflow-y: auto; padding: 4px 26px 26px; }
 
+/* De vragen blijven op leesbreedte; alleen de agenda gebruikt de volle
+   breedte van de popover. */
+.hc-modal [data-hc-block="1"],
+.hc-modal [data-hc-block="2"],
+.hc-modal .hc-progress-line { max-width: 620px; margin-left: auto; margin-right: auto; }
+
 /* De popover ís de kaart; het formulier hoeft er geen tweede omheen. */
 .hc-modal .hc-form-card {
   background: none; border: 0; box-shadow: none; padding: 22px 0 0;
@@ -1847,9 +1856,7 @@ a:hover { color: var(--action); }
 /* ---------- Agenda binnen de popover (stap 3) ---------- */
 
 .hc-calendar { margin: 18px 0 14px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
-/* Op de breedte van de popover stapelt de agenda (gegevens boven, kalender
-   eronder), dus hij heeft hoogte nodig. De popover zelf scrollt. */
-.hc-calendar-frame { display: block; width: 100%; height: 940px; border: 0; background: var(--bg); }
+.hc-calendar-frame { display: block; width: 100%; height: 620px; border: 0; background: var(--bg); }
 
 /* De popover houdt altijd dezelfde breedte: hij mag langer worden, niet
    breder. Anders springt hij bij elke stap van formaat. */
@@ -1860,18 +1867,18 @@ a:hover { color: var(--action); }
 }
 .hc-result .hc-report > summary:hover { color: var(--action-soft-ink); }
 
-@media (max-width: 700px) {
-  .hc-calendar-frame { height: 900px; }
+/* Onder de omslagbreedte stapelt de agenda alsnog, en dan is hoogte nodig. */
+@media (max-width: 1000px) {
+  .hc-calendar-frame { height: 940px; }
 }
 
 /* ---------- Hero van de Health Check ---------- */
 
 .hc-hero-promise { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.6em; }
 
-/* E-mailveld plus knop: het opstapje naar de popover. */
-.hc-cta { margin-top: 28px; max-width: 460px; }
-.hc-cta-field { margin-bottom: 14px; }
-.hc-cta-button { display: block; width: 100%; text-align: center; padding: 15px 26px; font-size: 1rem; }
+/* Alleen de knop: het e-mailadres wordt in de popover gevraagd. */
+.hc-cta { margin-top: 28px; }
+.hc-cta-button { display: inline-block; padding: 15px 30px; font-size: 1rem; }
 
 /* Wat er in die 45 minuten gebeurt, in het beeld rechts. */
 .hc-session-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }

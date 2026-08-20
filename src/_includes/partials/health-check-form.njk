@@ -10,18 +10,10 @@
       <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
 
       <div class="hc-form-card">
-        <div class="hc-progress-line">
-          <div class="hc-progress" data-hc-progress>
-            <span class="hc-progress-bar is-current" data-hc-progress-bar="1"><span class="visually-hidden">Step 1: {{ healthcheck.step1.title }}</span></span>
-            <span class="hc-progress-bar" data-hc-progress-bar="2"><span class="visually-hidden">Step 2: {{ healthcheck.step2.title }}</span></span>
-          </div>
-          <p class="hc-progress-count" data-hc-progress-label>Step 1 of 2</p>
-        </div>
 
         {#- Stap 1: wie ben je. Het e-mailadres vragen we alleen als we het
             nog niet weten (dus zonder ?ref). -#}
         <section class="hc-block" data-hc-block="1">
-          <p class="hc-block-meta"><span class="hc-block-num">1</span> {{ healthcheck.step1.title }}</p>
           <h2 class="hc-block-heading">{{ healthcheck.step1.heading }}</h2>
           <p class="hc-block-intro">{{ healthcheck.intro }}</p>
           <p class="hc-block-note">{{ healthcheck.step1.note }}</p>
@@ -52,7 +44,6 @@
 
         {#- Stap 2: hoe werk je nu. Daarna verschijnt de agenda. -#}
         <section class="hc-block" data-hc-block="2" hidden>
-          <p class="hc-block-meta"><span class="hc-block-num">2</span> {{ healthcheck.step2.title }}</p>
           <h2 class="hc-block-heading">{{ healthcheck.step2.heading }}</h2>
 
           {%- for question in healthcheck.questions %}
@@ -70,7 +61,7 @@
           {%- endfor %}
 
           <label class="hc-field hc-assess-notes" for="hc-assessment-notes">{{ healthcheck.notes.label }} <span class="hc-optional">(optional)</span>
-            <textarea id="hc-assessment-notes" name="notes" rows="4" placeholder="{{ healthcheck.notes.placeholder }}"></textarea>
+            <textarea id="hc-assessment-notes" name="notes" rows="2" placeholder="{{ healthcheck.notes.placeholder }}"></textarea>
           </label>
 
           <div class="hc-step-actions">
@@ -86,7 +77,6 @@
             src pas na het versturen, met de antwoorden in ?plan. Daaronder
             staat wat er is ingevuld, en je kunt terug naar de vragen. -#}
         <div class="hc-result" data-hc-result data-hc-block="3" hidden>
-          <p class="hc-block-meta"><span class="hc-block-num">3</span> Pick a time</p>
           <h2 class="hc-result-heading">{{ healthcheck.result.book_title }}</h2>
           <p class="hc-result-intro">{{ healthcheck.result.book_text }}</p>
 
@@ -99,11 +89,6 @@
             <button type="button" class="hc-back" data-hc-back="2">Back to the questions</button>
           </div>
 
-          <details class="hc-report">
-            <summary>{{ healthcheck.result.heading }}</summary>
-            <div class="hc-result-focus" data-hc-result-focus data-title="{{ healthcheck.result.focus_title }}"></div>
-            <ol class="hc-result-list" data-hc-result-list></ol>
-          </details>
         </div>
 
         <p class="hc-privacy">Your details go to Tubes and stay with us. We use them to arrange your Health Check, to prepare for the session and to follow up on what we find, and we keep them in our own system. We do not sell them and we do not share them for anyone else's marketing. Ask us to delete them at any time. See how we handle data in <a href="/compliance/">security and compliance</a>.</p>
