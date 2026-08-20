@@ -113,6 +113,7 @@ collections:
               - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
               - { label: Vraag, name: label, widget: string }
               - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string }, hint: "Alleen deze waarden worden opgeslagen; iets anders wordt geweigerd." }
+              - { label: "Meer antwoorden mogelijk", name: multiple, widget: boolean, default: false, required: false, hint: "Aan = vinkjes in plaats van één keuze. De antwoorden komen als lijst binnen, gescheiden door komma's." }
           - label: "Vrij tekstveld onderaan"
             name: notes
             widget: object

@@ -1900,3 +1900,7 @@ a:hover { color: var(--action); }
   color: var(--action-soft-ink); margin: 0 0 5px;
 }
 .hc-session-text { font-size: 0.96rem; color: var(--ink); margin: 0; line-height: 1.4; }
+
+/* Keuze op slot als het maximum bereikt is. */
+.hc-pill.is-disabled span { opacity: 0.45; cursor: not-allowed; }
+.hc-pill.is-disabled:hover span { border-color: var(--border); color: var(--ink-soft); }

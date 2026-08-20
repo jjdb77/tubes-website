@@ -24,7 +24,8 @@
         "Online or digital content",
         "Other"
       ],
-      "short": "What you produce"
+      "short": "What you produce",
+      "multiple": true
     },
     {
       "key": "budget_band",
@@ -61,7 +62,8 @@
         "A combination of systems",
         "Other"
       ],
-      "short": "How you manage production finance"
+      "short": "How you manage production finance",
+      "multiple": true
     },
     {
       "key": "workload",
@@ -76,7 +78,9 @@
         "Keeping everyone aligned",
         "Not sure, I would like to explore this"
       ],
-      "short": "Where the most work sits"
+      "short": "Where the most work sits",
+      "multiple": true,
+      "max": 3
     }
   ],
   "notes": {

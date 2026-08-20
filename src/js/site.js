@@ -329,12 +329,27 @@ if (assessForm) {
   const questions = Array.from(assessForm.querySelectorAll(".hc-question")).map((block) => ({
     key: block.dataset.key,
     label: block.dataset.label,
-    picked: () => block.querySelector("input[type=radio]:checked")
+    // Bij een vraag waar meer antwoorden mogen, sturen we ze allemaal mee.
+    picked: () => Array.from(block.querySelectorAll("input:checked")).map((i) => i.value)
   }));
 
   if (ref && emailBlock) {
     emailBlock.hidden = true;
     emailInput.required = false;
+  }
+
+  // Vragen met een maximum: zodra er genoeg aangevinkt is, gaan de overige
+  // keuzes op slot. Dat leest prettiger dan een foutmelding achteraf.
+  for (const block of assessForm.querySelectorAll("[data-max]")) {
+    const max = Number(block.dataset.max);
+    const keuzes = Array.from(block.querySelectorAll("input"));
+    block.addEventListener("change", () => {
+      const aantal = keuzes.filter((k) => k.checked).length;
+      for (const keuze of keuzes) {
+        keuze.disabled = !keuze.checked && aantal >= max;
+        keuze.closest(".hc-pill").classList.toggle("is-disabled", keuze.disabled);
+      }
+    });
   }
 
   const setStatus = (text, kind) => {
@@ -431,7 +446,7 @@ if (assessForm) {
   function loadCalendar(answers) {
     const delen = [
       `${nameInput.value.trim()} (${companyInput.value.trim()})`,
-      ...questions.map((q) => answers[q.key]).filter(Boolean)
+      ...questions.map((q) => (answers[q.key] || []).join(", ")).filter(Boolean)
     ];
     const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
     if (notes) delen.push(`Wants to discuss: ${notes}`);
@@ -453,7 +468,7 @@ if (assessForm) {
     const answers = {};
     for (const question of questions) {
       const picked = question.picked();
-      if (picked) answers[question.key] = picked.value;
+      if (picked.length) answers[question.key] = picked;
     }
 
     const button = assessForm.querySelector(".hc-submit");
@@ -466,18 +481,23 @@ if (assessForm) {
       const res = await fetch("/api/health-check", {
         method: "POST",
         signal: stop.signal,
-        body: new URLSearchParams({
-          stage: "details",
-          lead_id: leadId,
-          email: String(emailInput.value || "").trim(),
-          name: nameInput.value.trim(),
-          company: companyInput.value.trim(),
-          role: roleInput.value.trim(),
-          notes: assessForm.querySelector('textarea[name="notes"]').value,
-          company_website: assessForm.querySelector('input[name="company_website"]').value,
-          ...answers,
-          page: location.pathname
-        }),
+        body: (() => {
+          const body = new URLSearchParams({
+            stage: "details",
+            lead_id: leadId,
+            email: String(emailInput.value || "").trim(),
+            name: nameInput.value.trim(),
+            company: companyInput.value.trim(),
+            role: roleInput.value.trim(),
+            notes: assessForm.querySelector('textarea[name="notes"]').value,
+            company_website: assessForm.querySelector('input[name="company_website"]').value,
+            page: location.pathname
+          });
+          for (const [key, waarden] of Object.entries(answers)) {
+            for (const waarde of waarden) body.append(key, waarde);
+          }
+          return body;
+        })(),
         headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
       });
       let data = {};

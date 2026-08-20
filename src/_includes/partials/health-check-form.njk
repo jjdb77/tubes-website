@@ -47,12 +47,12 @@
           <h2 class="hc-block-heading">{{ healthcheck.step2.heading }}</h2>
 
           {%- for question in healthcheck.questions %}
-          <fieldset class="hc-choice hc-question" data-key="{{ question.key }}" data-label="{{ question.label }}">
-            <legend><span class="hc-q-num">{{ loop.index }}</span>{{ question.label }}</legend>
+          <fieldset class="hc-choice hc-question" data-key="{{ question.key }}" data-label="{{ question.label }}"{% if question.multiple %} data-multiple{% endif %}{% if question.max %} data-max="{{ question.max }}"{% endif %}>
+            <legend><span class="hc-q-num">{{ loop.index }}</span>{{ question.label }}{% if question.max %} <span class="hc-optional">(up to {{ question.max }})</span>{% elif question.multiple %} <span class="hc-optional">(more than one possible)</span>{% endif %}</legend>
             <div class="hc-choice-row">
               {%- for option in question.options %}
               <label class="hc-pill">
-                <input type="radio" name="{{ question.key }}" value="{{ option }}">
+                <input type="{{ "checkbox" if question.multiple else "radio" }}" name="{{ question.key }}" value="{{ option }}">
                 <span>{{ option }}</span>
               </label>
               {%- endfor %}

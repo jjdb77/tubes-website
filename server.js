@@ -161,20 +161,22 @@ function readHealthCheckConfig() {
     const keys = [];
     const labels = {};
     const allowed = {};
+    const max = {};
     for (const question of config.questions || []) {
       if (!question.key) continue;
       keys.push(question.key);
       labels[question.key] = question.label || question.key;
       allowed[question.key] = new Set(question.options || []);
+      if (question.max) max[question.key] = question.max;
     }
-    if (keys.length) return { keys, labels, allowed };
+    if (keys.length) return { keys, labels, allowed, max };
   } catch {
     console.warn("healthcheck.json niet te lezen, vragen worden niet opgeslagen");
   }
-  return { keys: [], labels: {}, allowed: {} };
+  return { keys: [], labels: {}, allowed: {}, max: {} };
 }
 
-const { keys: HC_KEYS, labels: HC_LABELS, allowed: HC_ALLOWED } = readHealthCheckConfig();
+const { keys: HC_KEYS, labels: HC_LABELS, allowed: HC_ALLOWED, max: HC_MAX } = readHealthCheckConfig();
 
 // Zoekt het e-mailadres dat bij een eerder opgeslagen aanvraag hoort. Zo hoeft
 // het niet mee in de link naar de vragenlijst.
@@ -236,10 +238,17 @@ app.post("/api/health-check", (req, res) => {
     entry.company = company;
     entry.role = String(b.role || "").trim().slice(0, 120);
 
+    // Sommige vragen laten meer antwoorden toe; die komen als lijst binnen.
+    // Alleen bekende keuzes worden bewaard, één of meer.
     const answers = {};
     for (const key of HC_KEYS) {
-      const value = String(b[key] || "").trim();
-      if (HC_ALLOWED[key]?.has(value)) answers[key] = value;
+      const binnen = Array.isArray(b[key]) ? b[key] : [b[key]];
+      const geldig = binnen
+        .map((v) => String(v || "").trim())
+        .filter((v) => HC_ALLOWED[key]?.has(v));
+      // Een vraag kan een maximum hebben; meer dan dat bewaren we niet.
+      const max = HC_MAX[key] || geldig.length;
+      if (geldig.length) answers[key] = geldig.slice(0, max).join(", ");
     }
     if (Object.keys(answers).length) entry.answers = answers;
 
