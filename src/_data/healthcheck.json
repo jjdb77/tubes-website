@@ -1,8 +1,8 @@
 {
-  "intro": "A few quick details will help us make your 45 minute Production Health Check as useful as possible.",
+  "intro": "Tell us a little about you, your company and your production, so we can make the most of our 45 minutes together.",
   "step1": {
     "title": "Your details",
-    "heading": "Let's get to know you",
+    "heading": "Let’s get to know you",
     "note": "It takes less than 2 minutes."
   },
   "step2": {
@@ -89,7 +89,7 @@
   },
   "result": {
     "book_title": "Book your Production Health Check",
-    "book_text": "Choose a 45 minute slot that suits you. The session is a video call with a production finance specialist.",
+    "book_text": "Choose a 45-minute slot that suits you. The session is a video call with us, focused on your production finance process.",
     "book_label": "Pick a time",
     "heading": "This is what you told us",
     "focus_title": "Where we will start",
