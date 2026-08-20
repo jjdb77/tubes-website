@@ -1,8 +1,9 @@
 {
-  "intro": "A few quick details so your 45 minute Health Check is as useful as possible. It takes less than two minutes.",
+  "intro": "A few quick details will help us make your 45 minute Health Check as useful as possible.",
   "step1": {
     "title": "Your details",
-    "heading": "Let's get to know you"
+    "heading": "Let's get to know you",
+    "note": "It takes less than 2 minutes."
   },
   "step2": {
     "title": "Your production",
@@ -124,5 +125,6 @@
     "email_label": "Your business email",
     "email_placeholder": "Enter your work email",
     "button": "Get My Free Health Check"
-  }
+  },
+  "title": "Your Production Finance Health Check"
 }

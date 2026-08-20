@@ -1531,6 +1531,8 @@ a:hover { color: var(--action); }
   font-size: 0.78rem; letter-spacing: 0;
 }
 /* Introzin in de kaart, onder de kop van de stap. */
+.hc-block-note { font-size: 0.9rem; color: var(--muted); margin: -1.2em 0 1.6em; }
+
 .hc-block-intro { font-size: 0.95rem; color: var(--ink-soft); margin: -0.7em 0 1.6em; }
 
 .hc-block-heading {
