@@ -25,7 +25,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 - Formulieren (popup bij "Request a Demo" + contactpagina) posten urlencoded naar **/api/contact** (zie server.js). Spam: honeypot-veld `company_website` + rate-limit.
 - Berichten: JSONL op de Railway-volume (`RAILWAY_VOLUME_MOUNT_PATH`), te lezen op **/beheer** (Basic Auth, wachtwoord = env `ADMIN_PASSWORD`, gebruikersnaam leeg). CSV-export op /beheer/export.csv.
-- ⚠️ Vereist op de Railway-service: een volume (bijv. mount /data) én `ADMIN_PASSWORD`. Zolang die missen: /beheer geeft 503 en berichten overleven een redeploy niet.
+- Het **volume staat er** (20-8-2026): `tubes-website-volume` op mount /data, dus de berichten overleven een deploy (`data in /data/submissions.jsonl` in de opstartlog). ⚠️ Nog nodig: `ADMIN_PASSWORD` op diezelfde service, anders geeft /beheer 503. Inloggen doe je met een **lege gebruikersnaam** en dat wachtwoord.
 
 ## Health Check-aanvragen naar 4Relations
 
@@ -208,7 +208,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Openstaand
 
-- [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
+- [ ] Railway: `ADMIN_PASSWORD` op tubes-website zetten (het volume staat er sinds 20-8-2026); daarmee werkt /beheer. In Railway kun je Variables > New Variable gebruiken en als waarde `${{ secret(28) }}` invullen, dan genereert Railway er zelf een.
 - [x] **4Relations staat aan** (20-8-2026): de vier `CRM_*`-variabelen staan op de Railway-service tubes-website, `CRM_TOKEN` als verwijzing `${{authentic-nurturing.ASSESSMENT_TOKEN}}` zodat de sleutel maar op één plek staat. Getest met een echte aanvraag: die staat als assessment in 4RelationTubes, met relatie Appsolutions en contactpersoon eraan gekoppeld.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
