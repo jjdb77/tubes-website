@@ -207,7 +207,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 ## Openstaand
 
 - [ ] Railway: volume + ADMIN_PASSWORD op tubes-website (activeert /beheer)
-- [ ] **4Relations aanzetten**: de koppeling is gebouwd, aangepast aan de intake van 4RelationTubes en end-to-end getest, maar staat uit tot de vier `CRM_*`-variabelen op de Railway-service **tubes-website** staan (zie "Health Check-aanvragen naar 4Relations"). Zolang die er niet zijn blijft `/#/assessments` in 4RelationTubes leeg, ook als er wel aanvragen binnenkomen: die staan dan alleen in de eigen opslag.
+- [x] **4Relations staat aan** (20-8-2026): de vier `CRM_*`-variabelen staan op de Railway-service tubes-website, `CRM_TOKEN` als verwijzing `${{authentic-nurturing.ASSESSMENT_TOKEN}}` zodat de sleutel maar op één plek staat. Getest met een echte aanvraag: die staat als assessment in 4RelationTubes, met relatie Appsolutions en contactpersoon eraan gekoppeld.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
 - [x] Google Search Console: sitemap https://www.tubes.media/sitemap.xml ingediend op 1-8-2026, status "Succesvol", 13 pagina's
