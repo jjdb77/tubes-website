@@ -98,7 +98,6 @@
     "note": "No obligation. No generic sales pitch. Just 45 minutes focused on your production finance process."
   },
   "hero": {
-    "kicker": "Production Finance Health Check",
     "heading": "How well is your production finance process working?",
     "lead": "Find out in a free 45 minute video session with us.",
     "text": "Your production finance process might be working perfectly. Or there may be opportunities to make it simpler, more efficient and more visible.",
@@ -124,7 +123,7 @@
     "reassurance": "Free · 45 minutes · No obligation",
     "email_label": "Your business email",
     "email_placeholder": "Enter your work email",
-    "button": "Book your free Health Check"
+    "button": "Book your free assessment"
   },
   "title": "Your Production Finance Health Check"
 }
