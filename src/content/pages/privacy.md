@@ -84,7 +84,7 @@ sections:
 
       Your information is handled by the Tubes team. We also use service providers who process it on our behalf:
 
-      - **Railway** (United States): hosting for our website, for the storage of your request, and for the customer relationship system in which your request is recorded
+      - **Railway** (servers in Amsterdam, the Netherlands): hosting for our website, for the storage of your request, and for the customer relationship system in which your request is recorded
       - **Resend** (United States): sending the confirmation and notification emails
       - **Google Workspace**: the mailboxes we use to correspond with you
       - **4Relations**: our own customer relationship system, which we run ourselves on the hosting described above
@@ -95,9 +95,9 @@ sections:
 
       ### 6. International transfers
 
-      Our website and the systems that store your Health Check information run on Railway's infrastructure in the United States, and our transactional email is sent through Resend, also in the United States. Your information is therefore transferred outside the European Economic Area and the United Kingdom.
+      Our website and the systems that store your Health Check information run on servers in Amsterdam, the Netherlands, so your request itself stays inside the European Union.
 
-      For those transfers we rely on the safeguards these providers offer in their data processing agreements, including the European Commission's standard contractual clauses.
+      Two things do leave it. The emails we send about your Health Check go through Resend, which is based in the United States, and our mailboxes run on Google Workspace. For those transfers we rely on the safeguards those providers offer in their data processing agreements, including the European Commission's standard contractual clauses.
 
       ### 7. How long do we keep your information?
 
