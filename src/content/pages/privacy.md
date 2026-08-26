@@ -16,6 +16,7 @@ sections:
   - type: textblock
     theme: white
     narrow: true
+    plain_list: true
     text: |
       ### 1. Who we are
 

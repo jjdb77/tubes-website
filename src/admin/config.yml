@@ -261,6 +261,7 @@ collections:
               - { label: Tekst, name: text, widget: markdown }
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
+              - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
           - name: images
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"

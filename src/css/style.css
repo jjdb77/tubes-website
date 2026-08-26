@@ -448,6 +448,13 @@ a:hover { color: var(--action); }
 .rich-text h3:first-child { margin-top: 0; }
 
 .rich-text.two-column { columns: 2; column-gap: 56px; }
+
+/* Gewone opsommingstekens in plaats van het teal vinkje. In een juridische
+   tekst leest een vinkje als instemming ("dit is in orde"), en dat hoort niet
+   bij een rij als "vraag ons je gegevens te wissen". */
+.rich-text.plain-list ul { list-style: disc; padding-left: 20px; }
+.rich-text.plain-list li { padding-left: 0; }
+.rich-text.plain-list li::before { content: none; }
 .rich-text.two-column li { break-inside: avoid; }
 
 /* ---------- Kaarten (radius 16, app-schaduw) ---------- */
