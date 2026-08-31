@@ -366,7 +366,7 @@ collections:
               - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties en cijfers zelf staan onder 'Locaties (vergelijkingspagina)'." }
               - { label: "Kop boven de tabel", name: table_heading, widget: string, required: false, default: "All locations at a glance" }
               - { label: "Voetnoot onder de tabel", name: footnote, widget: markdown, required: false }
-              - { label: "Kop bij het aanvraagformulier", name: request_heading, widget: string, required: false, default: "Missing a location?" }
+              - { label: "Kop bij het aanvraagformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
               - { label: "Tekst bij het aanvraagformulier", name: request_text, widget: markdown, required: false }
 
   # Cijfers voor de vergelijkingspagina /compare-film-tv-locations/ (los van de Tubes-app)

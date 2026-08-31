@@ -15,7 +15,7 @@ sections:
     buttons:
       - label: Compare locations
         url: "#compare"
-      - label: Request a location
+      - label: Suggest a location
         url: "#request-location"
   - type: locations
     theme: light
@@ -25,9 +25,9 @@ sections:
     table_heading: All locations at a glance
     footnote: |
       Rates apply to eligible local spend, not to the total budget. "Entitlement" means every qualifying project gets the credit; "Budget-limited" and "Selective" mean the money can run out or your project can be turned down. Sources are the funds themselves or, where their pages were not reachable, trade press. Spotted a change? Use the form below.
-    request_heading: Missing a location?
+    request_heading: Is your location not listed? Suggest it
     request_text: |
-      Tell us which country or region you would like to see here and we will add it with verified figures. Corrections to existing entries are just as welcome: the schemes change every year and we would rather hear it from you than from a footnote.
+      Missing a country or region? Tell us which one and we will add it with verified figures. Film commissions and funds are welcome to submit their own scheme, and corrections to existing entries are just as welcome: the schemes change every year and we would rather hear it from you than from a footnote.
   - type: textblock
     theme: white
     heading: How to compare locations properly
@@ -99,9 +99,9 @@ sections:
       - question: How reliable are these figures?
         answer: |
           Every entry was checked against the fund's own pages or, where those were not reachable, trade press, in August 2026, with the source linked in the table. Schemes change every year (four European schemes changed in 2026 alone), so treat the table as a starting point and confirm the current rules with the fund or your local partner before you budget on them.
-      - question: Can I add a location or correct an entry?
+      - question: Can I suggest a location or correct an entry?
         answer: |
-          Yes. Use the "Missing a location?" form on this page. Tell us the country or region and, if you have it, the scheme name or a link, and we will add or correct it with verified figures.
+          Yes. Use the "Suggest it" form on this page. Tell us the country or region and, if you have it, the scheme name or a link, and we will add or correct it with verified figures.
       - question: Does Tubes apply for the incentive for me?
         answer: |
           No. Tubes is production management software: budgeting, planning, cost control and reporting. It lets you build a budget per location scenario, in the right currency, compare the scenarios side by side and then track the actual costs against the one you choose. The application itself goes through the fund and your local partner.

@@ -87,7 +87,7 @@
 
     <div class="loc-request" id="request-location">
       <div>
-        <h3>{{ section.request_heading or "Missing a location?" }}</h3>
+        <h3>{{ section.request_heading or "Is your location not listed? Suggest it" }}</h3>
         {% if section.request_text %}<div class="rich-text">{{ section.request_text | md | safe }}</div>{% endif %}
       </div>
       <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
@@ -103,14 +103,14 @@
         <label>Email <span class="req">(required)</span>
           <input type="email" name="email" autocomplete="email" required>
         </label>
-        <label>Location to add <span class="req">(required)</span>
-          <input type="text" name="location" required placeholder="Country or region, for example Greece or Georgia (US)">
+        <label>Country or region to add <span class="req">(required)</span>
+          <input type="text" name="location" required placeholder="For example Greece, Georgia (US) or your own region">
         </label>
         <label>Anything we should know?
-          <textarea name="notes" rows="3" placeholder="A scheme name, a link, or a correction to an existing entry"></textarea>
+          <textarea name="notes" rows="3" placeholder="The incentive scheme, a link to the fund, or a correction to an existing entry"></textarea>
         </label>
         <input type="hidden" name="message" value="">
-        <button type="submit" class="button button-primary">Request this location</button>
+        <button type="submit" class="button button-primary">Suggest this location</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
