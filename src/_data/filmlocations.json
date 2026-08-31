@@ -1,20 +1,1168 @@
 {
   "updated": "2026-08-31",
-  "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos from other location databases.",
+  "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos or data from other location databases; record only what a venue itself publishes, and keep source URLs.",
   "locations": [
     {
-      "id": "kasteel-de-haar",
-      "name": "Kasteel de Haar",
-      "country": "Netherlands",
-      "region": "Utrecht",
-      "lat": 52.1215,
-      "lng": 4.9856,
+      "id": "salzburg-old-town",
+      "name": "Salzburg Old Town",
+      "country": "Austria",
+      "region": "Salzburg",
+      "lat": 47.8,
+      "lng": 13.045,
+      "type": "Historic town & street",
+      "setting": "Baroque old town of church domes, squares and narrow lanes beneath the Hohensalzburg fortress on the Salzach river.",
+      "known_for": "The Sound of Music",
+      "official_url": "https://www.salzburg.info/en",
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Salzburg_%2848489551981%29.jpg/960px-Salzburg_%2848489551981%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Salzburg_(48489551981).jpg",
+        "author": "Jorge Franganillo",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "schoenbrunn-palace",
+      "name": "Schönbrunn Palace",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1845,
+      "lng": 16.3119,
+      "type": "Palace & landmark",
+      "setting": "Baroque imperial summer palace with more than 1,400 rooms, formal gardens, the Gloriette hilltop folly and a historic zoo.",
+      "known_for": "Sissi (1955)",
+      "official_url": "https://www.schoenbrunn.at/",
+      "commission_url": "https://www.viennafilmcommission.at/en/locations/schonbrunn-palace/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wien_-_Schloss_Sch%C3%B6nbrunn.JPG/960px-Wien_-_Schloss_Sch%C3%B6nbrunn.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Schloss_Sch%C3%B6nbrunn.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "soelden",
+      "name": "Sölden",
+      "country": "Austria",
+      "region": "Tyrol",
+      "lat": 46.9667,
+      "lng": 11.0,
+      "type": "Mountains & wilderness",
+      "setting": "High Alpine ski resort village in the Ötztal valley with glacier roads climbing to 2,800 metres and a summit restaurant at 3,048 metres.",
+      "known_for": "Spectre",
+      "official_url": "https://www.soelden.com/",
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Soelden.jpg/960px-Soelden.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Soelden.jpg",
+        "author": "Leo-setä",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "bruges-historic-centre",
+      "name": "Bruges Historic Centre",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 51.2089,
+      "lng": 3.2242,
+      "type": "Historic town & street",
+      "setting": "Intact medieval city centre of canals, cobbled streets, stepped-gable brick houses and the towering thirteenth-century Belfry.",
+      "known_for": "In Bruges, The White Queen",
+      "official_url": "https://www.visitbruges.be/en",
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Br%C3%BCgge_Blick_vom_Belfried_4.jpg/960px-Br%C3%BCgge_Blick_vom_Belfried_4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Br%C3%BCgge_Blick_vom_Belfried_4.jpg",
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "gravensteen",
+      "name": "Gravensteen",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 51.0572,
+      "lng": 3.7206,
       "type": "Castle & estate",
-      "setting": "The largest castle in the Netherlands, neo-Gothic towers, moat, formal gardens and a walled park.",
-      "known_for": "Placeholder entry, replaced by the verified seed set.",
-      "official_url": "https://www.kasteeldehaar.nl/",
-      "commission_url": "https://filmcommission.nl/",
+      "setting": "Moated twelfth-century stone castle with towers, battlements and a gatehouse standing in the middle of Ghent.",
+      "known_for": "The White Queen",
+      "official_url": "https://historischehuizen.stad.gent/nl/gravensteen",
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Gent_Gravensteen_R01.jpg/960px-Gent_Gravensteen_R01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gent_Gravensteen_R01.jpg",
+        "author": "Marc Ryckaert (MJJR)",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "lites-studios",
+      "name": "Lites Studios",
+      "country": "Belgium",
+      "region": "Flemish Brabant",
+      "lat": 50.9333,
+      "lng": 4.4167,
+      "type": "Studio & backlot",
+      "setting": "Modern studio complex near Brussels with five stages, including Europe's largest heated indoor water tank for underwater filming.",
+      "known_for": "The Swarm, Comandante",
+      "official_url": "https://www.litesstudios.com/",
+      "commission_url": "https://www.screenflanders.be/en",
       "photo": null
+    },
+    {
+      "id": "dubrovnik-old-town",
+      "name": "Dubrovnik Old Town",
+      "country": "Croatia",
+      "region": "Dubrovnik-Neretva County",
+      "lat": 42.640278,
+      "lng": 18.108333,
+      "type": "Historic town & street",
+      "setting": "Walled seaside old town with intact medieval ramparts, baroque stone streets and fortresses rising straight from the Adriatic.",
+      "known_for": "Game of Thrones (King's Landing, from season 2), Star Wars: The Last Jedi (2017), Robin Hood (2018)",
+      "official_url": "https://www.tzdubrovnik.hr/",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/960px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg",
+        "author": "Zysko serhii",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "jadran-film",
+      "name": "Jadran Film",
+      "country": "Croatia",
+      "region": "Zagreb",
+      "lat": 45.826111,
+      "lng": 16.051111,
+      "type": "Studio & backlot",
+      "setting": "Film studio founded in 1946 with stages and backlot grounds in Zagreb's Dubrava district, host to well over a hundred international co-productions.",
+      "known_for": "Winnetou series (1962-1968), The Tin Drum (1979), Sophie's Choice (1982)",
+      "official_url": "https://www.jadran-film.com/",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": null
+    },
+    {
+      "id": "plitvice-lakes",
+      "name": "Plitvice Lakes National Park",
+      "country": "Croatia",
+      "region": "Lika-Senj County",
+      "lat": 44.880556,
+      "lng": 15.616111,
+      "type": "Forest & lake",
+      "setting": "Chain of sixteen terraced turquoise lakes linked by waterfalls in a forested karst canyon.",
+      "known_for": "Treasure of the Silver Lake (1962), Karl May Winnetou westerns (1962-1968)",
+      "official_url": "https://np-plitvicka-jezera.hr/en/",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Plitvice_Lakes%2C_Galovac_Waterfall.JPG/960px-Plitvice_Lakes%2C_Galovac_Waterfall.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Plitvice_Lakes,_Galovac_Waterfall.JPG",
+        "author": "Minestrone",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "kromeriz-archbishops-palace",
+      "name": "Archbishop's Palace, Kroměříž",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.3,
+      "lng": 17.377222,
+      "type": "Palace & landmark",
+      "setting": "UNESCO-listed baroque archbishop's palace with opulent state rooms and formal gardens that have stood in for imperial Vienna.",
+      "known_for": "Amadeus (1984)",
+      "official_url": "https://www.zamek-kromeriz.cz/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Krom%C4%9B%C5%99%C3%AD%C5%BE%2C_Arcibiskupsk%C3%BD_z%C3%A1mek_%2824%29.jpg/960px-Krom%C4%9B%C5%99%C3%AD%C5%BE%2C_Arcibiskupsk%C3%BD_z%C3%A1mek_%2824%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Krom%C4%9B%C5%99%C3%AD%C5%BE,_Arcibiskupsk%C3%BD_z%C3%A1mek_(24).jpg",
+        "author": "Radim Holiš",
+        "license": "CC BY-SA 3.0 cz"
+      }
+    },
+    {
+      "id": "barrandov-studios",
+      "name": "Barrandov Studios",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.030683,
+      "lng": 14.39155,
+      "type": "Studio & backlot",
+      "setting": "Prague studio complex dating from the early 1930s with large sound stages, extensive costume and prop stocks and backlot space.",
+      "known_for": "Amadeus (1984), Mission: Impossible (1996), Casino Royale (2006)",
+      "official_url": "https://www.barrandov.cz/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Barrandov_Studios_Prag_Haupteinfahrt_%28M%C3%A4rz_2022%29_A.jpg/960px-Barrandov_Studios_Prag_Haupteinfahrt_%28M%C3%A4rz_2022%29_A.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Barrandov_Studios_Prag_Haupteinfahrt_(M%C3%A4rz_2022)_A.jpg",
+        "author": "IgorCalzone1",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cesky-krumlov",
+      "name": "Český Krumlov",
+      "country": "Czech Republic",
+      "region": "South Bohemian Region",
+      "lat": 48.811111,
+      "lng": 14.315278,
+      "type": "Historic town & street",
+      "setting": "Renaissance and baroque town wrapped in a tight bend of the Vltava river beneath a painted castle tower.",
+      "known_for": "The Adventures of Pinocchio (1996), Hostel (2005), The Illusionist (2006)",
+      "official_url": "https://www.ckrumlov.info/en/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Blick_auf_das_Stadtzentrum_von_Krumau_%282026%29.jpg/960px-Blick_auf_das_Stadtzentrum_von_Krumau_%282026%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Blick_auf_das_Stadtzentrum_von_Krumau_(2026).jpg",
+        "author": "DominikCK1999",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "christiansborg-palace",
+      "name": "Christiansborg Palace",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.67583,
+      "lng": 12.57889,
+      "type": "Palace & landmark",
+      "setting": "Government palace on the Slotsholmen islet housing the Danish Parliament, Prime Minister's Office and Supreme Court, with a riding ground complex and palace square.",
+      "known_for": "Borgen (2010-2022)",
+      "official_url": "https://christiansborg.dk/en/",
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Christiansborg_Slot_Copenhagen_2014_01.jpg/960px-Christiansborg_Slot_Copenhagen_2014_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Christiansborg_Slot_Copenhagen_2014_01.jpg",
+        "author": "Julian Herzog",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "kronborg-castle",
+      "name": "Kronborg Castle",
+      "country": "Denmark",
+      "region": "Zealand (Helsingør)",
+      "lat": 56.0386,
+      "lng": 12.6219,
+      "type": "Castle & estate",
+      "setting": "Renaissance fortress at the narrowest point of the Øresund strait, with ramparts, a large courtyard and vaulted casemates, known as the Elsinore of Shakespeare's Hamlet.",
+      "known_for": "Hamlet at Elsinore (1964)",
+      "official_url": "https://kronborg.dk/en/",
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kronborg_002.JPG/960px-Kronborg_002.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kronborg_002.JPG",
+        "author": "Artico2",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "nordisk-film-studios-valby",
+      "name": "Nordisk Film Studios",
+      "country": "Denmark",
+      "region": "Copenhagen (Valby)",
+      "lat": 55.66083,
+      "lng": 12.50361,
+      "type": "Studio & backlot",
+      "setting": "Working studio lot in Valby founded in 1906, the world's oldest continuously active film studio, with shooting stages, post-production facilities and a 360-degree LED stage.",
+      "known_for": "Matador (1978-1982), Olsen-banden",
+      "official_url": "https://nordiskfilm.com/",
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nordisk_Film_-_Scene_3.jpg/960px-Nordisk_Film_-_Scene_3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nordisk_Film_-_Scene_3.jpg",
+        "author": "Leif Jørgensen",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "ivalo-lapland",
+      "name": "Ivalo",
+      "country": "Finland",
+      "region": "Lapland (Inari)",
+      "lat": 68.65,
+      "lng": 27.55,
+      "type": "Village & countryside",
+      "setting": "Village on the Ivalo River about 250 kilometres north of the Arctic Circle, surrounded by boreal forest and fells, with deep snow and polar night for much of the year.",
+      "known_for": "Arctic Circle (2018-)",
+      "official_url": "https://www.inarisaariselka.fi/",
+      "commission_url": "https://www.lapland.fi/film/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ivalon_kirkko_ja_Ivalojoki.JPG/960px-Ivalon_kirkko_ja_Ivalojoki.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ivalon_kirkko_ja_Ivalojoki.JPG",
+        "author": "Birit Schenk",
+        "license": "CC BY 2.5"
+      }
+    },
+    {
+      "id": "mediapolis-tampere",
+      "name": "Mediapolis",
+      "country": "Finland",
+      "region": "Pirkanmaa (Tampere)",
+      "lat": 61.50607,
+      "lng": 23.64913,
+      "type": "Studio & backlot",
+      "setting": "Media campus at broadcaster Yle's Tohloppi site in Tampere, with fully equipped television studios and a 1,500 square metre factory hall stage available for hire.",
+      "known_for": "Uusi päivä (2010-2018)",
+      "official_url": "https://mediapolis.fi/en/",
+      "commission_url": "https://filmtampere.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mediapolis_Yle_20150410_b.jpg/960px-Mediapolis_Yle_20150410_b.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mediapolis_Yle_20150410_b.jpg",
+        "author": "Cryonic07",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "senate-square-helsinki",
+      "name": "Senate Square",
+      "country": "Finland",
+      "region": "Uusimaa (Helsinki)",
+      "lat": 60.16944,
+      "lng": 24.9525,
+      "type": "Historic town & street",
+      "setting": "Neoclassical square by Carl Ludvig Engel framed by Helsinki Cathedral, the Government Palace and the university, long used as a stand-in for imperial St Petersburg and Soviet-era Moscow.",
+      "known_for": "Reds (1981), Gorky Park (1983)",
+      "official_url": "https://www.myhelsinki.fi/places/senate-square/",
+      "commission_url": "https://www.filminfinland.com/en/frontpage/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Helsinki_Senate_Square%2C_2019_%2801%29.jpg/960px-Helsinki_Senate_Square%2C_2019_%2801%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Helsinki_Senate_Square,_2019_(01).jpg",
+        "author": "Bahnfrend",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cite-du-cinema",
+      "name": "Cité du Cinéma (Studios de Paris)",
+      "country": "France",
+      "region": "Seine-Saint-Denis, Île-de-France",
+      "lat": 48.9229,
+      "lng": 2.3368,
+      "type": "Studio & backlot",
+      "setting": "Studio campus in a converted riverside power station with sound stages, workshops and offices around a monumental glass-roofed nave.",
+      "known_for": "Lucy, Valerian and the City of a Thousand Planets",
+      "official_url": "https://lesstudiosdeparis.com/en/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg/960px-Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg",
+        "author": "Iunity",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "palace-of-versailles",
+      "name": "Palace of Versailles",
+      "country": "France",
+      "region": "Yvelines, Île-de-France",
+      "lat": 48.8047,
+      "lng": 2.1203,
+      "type": "Palace & landmark",
+      "setting": "Baroque royal palace with the Hall of Mirrors, state apartments, vast formal gardens and two smaller palaces in the park.",
+      "known_for": "Marie Antoinette (2006), Versailles (TV series)",
+      "official_url": "https://www.chateauversailles.fr/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg/960px-Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_(cropped).jpg",
+        "author": "ToucanWings",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "etretat-cliffs",
+      "name": "Étretat Cliffs",
+      "country": "France",
+      "region": "Seine-Maritime, Normandy",
+      "lat": 49.71,
+      "lng": 0.21,
+      "type": "Coast & beach",
+      "setting": "White chalk cliffs with natural arches and a freestanding needle rising above a pebble beach on the Alabaster Coast.",
+      "known_for": "Lupin",
+      "official_url": "https://www.lehavre-etretat-tourisme.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vue_d%27%C3%89tretat.jpg/960px-Vue_d%27%C3%89tretat.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vue_d%27%C3%89tretat.jpg",
+        "author": "Jörg Braukmann",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "goerlitz-old-town",
+      "name": "Görlitz Old Town",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.1528,
+      "lng": 14.9872,
+      "type": "Historic town & street",
+      "setting": "War-spared old town of around 4,000 listed buildings ranging from Gothic and Renaissance to Baroque and Wilhelminian styles.",
+      "known_for": "The Grand Budapest Hotel, Inglourious Basterds, The Reader",
+      "official_url": "https://www.goerlitz.de/Goerliwood-European-Film-Location.html",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/MKr361484_St._Peter_und_Paul_%28G%C3%B6rlitz%29.jpg/960px-MKr361484_St._Peter_und_Paul_%28G%C3%B6rlitz%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:MKr361484_St._Peter_und_Paul_(G%C3%B6rlitz).jpg",
+        "author": "Martin Kraft",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "neuschwanstein-castle",
+      "name": "Neuschwanstein Castle",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 47.5575,
+      "lng": 10.7494,
+      "type": "Castle & estate",
+      "setting": "Nineteenth-century Romanesque revival castle rising from a wooded Alpine crag above the village of Hohenschwangau.",
+      "known_for": "Chitty Chitty Bang Bang, The Great Escape, Ludwig (1973)",
+      "official_url": "https://www.neuschwanstein.de/",
+      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Schloss_Neuschwanstein_2013.jpg/960px-Schloss_Neuschwanstein_2013.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Schloss_Neuschwanstein_2013.jpg",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "license": "CC BY-SA 3.0 de"
+      }
+    },
+    {
+      "id": "studio-babelsberg",
+      "name": "Studio Babelsberg",
+      "country": "Germany",
+      "region": "Brandenburg",
+      "lat": 52.3869,
+      "lng": 13.1194,
+      "type": "Studio & backlot",
+      "setting": "The world's oldest large-scale film studio, in operation since 1912, with sound stages, workshops and permanent backlot sets.",
+      "known_for": "Metropolis, Inglourious Basterds, Bridge of Spies",
+      "official_url": "https://www.studiobabelsberg.com/",
+      "commission_url": "https://www.bbfc.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Filmstudio_Babelsberg_Eingang.jpg/960px-Filmstudio_Babelsberg_Eingang.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Filmstudio_Babelsberg_Eingang.jpg",
+        "author": "Unify",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "meteora",
+      "name": "Meteora",
+      "country": "Greece",
+      "region": "Kalambaka, Thessaly",
+      "lat": 39.714167,
+      "lng": 21.631111,
+      "type": "Church & monastery",
+      "setting": "Byzantine monasteries perched on sheer sandstone rock pillars rising above the Thessalian plain.",
+      "known_for": "For Your Eyes Only (1981)",
+      "official_url": "https://www.visitgreece.gr/mainland/thessaly/meteora/",
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg",
+        "author": "Stathis floros",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "nu-boyana-hellenic",
+      "name": "Nu Boyana Hellenic Film Studios",
+      "country": "Greece",
+      "region": "Thermi, Central Macedonia",
+      "lat": 40.55,
+      "lng": 23.016667,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built studio complex near Thessaloniki airport with eight sound stages totalling about 15,000 square metres and a 25,000 square metre backlot.",
+      "known_for": "Expend4bles (2023)",
+      "official_url": "https://nuboyana.com/",
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": null
+    },
+    {
+      "id": "skopelos",
+      "name": "Skopelos",
+      "country": "Greece",
+      "region": "Sporades, Thessaly",
+      "lat": 39.116667,
+      "lng": 23.716667,
+      "type": "Coast & beach",
+      "setting": "Pine-fringed Aegean island with pebble coves, a whitewashed harbour town and the clifftop chapel of Agios Ioannis.",
+      "known_for": "Mamma Mia! (2008)",
+      "official_url": "https://www.skopelos.gr/",
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Panoramic_view_of_Skopelos_city.jpg/960px-Panoramic_view_of_Skopelos_city.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Skopelos_city.jpg",
+        "author": "Chris Taklis",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hungarian-state-opera-house",
+      "name": "Hungarian State Opera House",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.50278,
+      "lng": 19.05806,
+      "type": "Palace & landmark",
+      "setting": "Miklós Ybl's neo-Renaissance opera house of 1884 on Andrássy Avenue, with a gilded horseshoe auditorium, marble staircases and an arcaded stone facade.",
+      "known_for": "Red Sparrow (2018), The Alienist (2018), Houdini (2014)",
+      "official_url": "https://www.opera.hu/en/",
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Hungarian_State_Opera_House_Budapest_2026.JPG/960px-Hungarian_State_Opera_House_Budapest_2026.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hungarian_State_Opera_House_Budapest_2026.JPG",
+        "author": "Mike is Michi",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "origo-studios-budapest",
+      "name": "Origo Studios",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4925,
+      "lng": 19.0514,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built studio complex in Budapest with eleven stages, including nine soundstages and around 19,000 square metres of filming space, plus backlot areas and underwater filming facilities.",
+      "known_for": "Dune: Part One (2021), Blade Runner 2049 (2017)",
+      "official_url": "https://origostudios.com/",
+      "commission_url": "https://nfi.hu/en",
+      "photo": null
+    },
+    {
+      "id": "vajdahunyad-castle",
+      "name": "Vajdahunyad Castle",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.51528,
+      "lng": 19.08194,
+      "type": "Castle & estate",
+      "setting": "Eclectic replica castle of 1896 on a lake island in Budapest's City Park, combining Romanesque, Gothic, Renaissance and Baroque wings within a few hundred metres.",
+      "known_for": "The Witcher (2019), Dracula (2013), Gemini Man (2019)",
+      "official_url": "https://www.mezogazdasagimuzeum.hu/",
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg/960px-Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg",
+        "author": "Felix König",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "rvk-studios-gufunes",
+      "name": "RVK Studios",
+      "country": "Iceland",
+      "region": "Capital Region (Reykjavík)",
+      "lat": 64.14694,
+      "lng": -21.8125,
+      "type": "Studio & backlot",
+      "setting": "Around 8,000 square metres of stages in a converted fertiliser plant at Gufunes, with three large studios a short drive from downtown Reykjavík.",
+      "known_for": "Katla (2021), Trapped, Against the Ice (2022)",
+      "official_url": "https://rvkstudios.is/",
+      "commission_url": "https://filminiceland.com/locations/",
+      "photo": null
+    },
+    {
+      "id": "reynisfjara-beach",
+      "name": "Reynisfjara",
+      "country": "Iceland",
+      "region": "South Iceland (Vík í Mýrdal)",
+      "lat": 63.4035,
+      "lng": -19.0474,
+      "type": "Coast & beach",
+      "setting": "Black volcanic sand beach near Vík with hexagonal basalt columns, the Reynisdrangar sea stacks offshore and powerful Atlantic surf.",
+      "known_for": "Noah (2014), Rogue One: A Star Wars Story (2016)",
+      "official_url": "https://www.south.is/en/travel-info/newsblog/black-beach-reynisfjara",
+      "commission_url": "https://filminiceland.com/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Reynisfjara_Beach_Looking_West_Towards_Dyrh%C3%B3laey.jpg/960px-Reynisfjara_Beach_Looking_West_Towards_Dyrh%C3%B3laey.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Reynisfjara_Beach_Looking_West_Towards_Dyrh%C3%B3laey.jpg",
+        "author": "Strwiki2017",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "svinafellsjokull-glacier",
+      "name": "Svínafellsjökull",
+      "country": "Iceland",
+      "region": "Southeast Iceland (Öræfi)",
+      "lat": 64.0199,
+      "lng": -16.8235,
+      "type": "Mountains & wilderness",
+      "setting": "Heavily crevassed outlet glacier of Vatnajökull ending in a small lagoon, reachable in minutes from the Ring Road inside Vatnajökull National Park.",
+      "known_for": "Interstellar (2014), Batman Begins (2005)",
+      "official_url": "https://www.vatnajokulsthjodgardur.is/en",
+      "commission_url": "https://filminiceland.com/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Sv%C3%ADnafellsj%C3%B6kull_glacier_at_sunset.jpg/960px-Sv%C3%ADnafellsj%C3%B6kull_glacier_at_sunset.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sv%C3%ADnafellsj%C3%B6kull_glacier_at_sunset.jpg",
+        "author": "Mikołaj Bańka",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "ardmore-studios",
+      "name": "Ardmore Studios",
+      "country": "Ireland",
+      "region": "County Wicklow",
+      "lat": 53.1967,
+      "lng": -6.125,
+      "type": "Studio & backlot",
+      "setting": "Ireland's longest-established film studios, offering sound stages, workshops and production offices on an 18-acre site in Bray.",
+      "known_for": "Braveheart, Excalibur, Penny Dreadful",
+      "official_url": "https://www.ardmore.ie/",
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": null
+    },
+    {
+      "id": "kilmainham-gaol",
+      "name": "Kilmainham Gaol",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3417,
+      "lng": -6.3094,
+      "type": "Palace & landmark",
+      "setting": "Preserved nineteenth-century prison with a galleried Victorian east wing, stone corridors and bare exercise yards, now a museum.",
+      "known_for": "The Italian Job (1969), In the Name of the Father, Paddington 2",
+      "official_url": "https://www.kilmainhamgaolmuseum.ie/",
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Kilmainham_Gaol_exterior.jpg/960px-Kilmainham_Gaol_exterior.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kilmainham_Gaol_exterior.jpg",
+        "author": "GrimsbyT",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "skellig-michael",
+      "name": "Skellig Michael",
+      "country": "Ireland",
+      "region": "County Kerry",
+      "lat": 51.7711,
+      "lng": -10.5406,
+      "type": "Coast & beach",
+      "setting": "Steep rocky island in the Atlantic off the Kerry coast, topped by a sixth-century monastic settlement of stone beehive huts.",
+      "known_for": "Star Wars: The Force Awakens, Star Wars: The Last Jedi",
+      "official_url": "https://heritageireland.ie/places-to-visit/sceilg-mhichil/",
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Skellig_Michael03%28js%29.jpg/960px-Skellig_Michael03%28js%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Skellig_Michael03(js).jpg",
+        "author": "Jerzy Strzelecki",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "cinecitta",
+      "name": "Cinecittà",
+      "country": "Italy",
+      "region": "Rome, Lazio",
+      "lat": 41.851944,
+      "lng": 12.577222,
+      "type": "Studio & backlot",
+      "setting": "Historic Rome studio complex founded in 1937, with sound stages including the vast Teatro 5 and permanent backlot sets such as ancient Rome.",
+      "known_for": "Ben-Hur (1959), La Dolce Vita (1960), Rome (2005-2007, HBO/BBC)",
+      "official_url": "https://www.cinecitta.com/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ingressostorico_cinecitta.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ingressostorico_cinecitta.jpg",
+        "author": "Andrea Martella",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "sassi-di-matera",
+      "name": "Sassi di Matera",
+      "country": "Italy",
+      "region": "Matera, Basilicata",
+      "lat": 40.6667,
+      "lng": 16.6083,
+      "type": "Historic town & street",
+      "setting": "Ancient cave-dwelling districts carved into a limestone ravine, frequently standing in for biblical-era Jerusalem.",
+      "known_for": "The Passion of the Christ (2004), Wonder Woman (2017), No Time to Die (2021)",
+      "official_url": "https://www.materawelcome.it/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matera_boenisch_nov_2005.jpg/960px-Matera_boenisch_nov_2005.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Matera_boenisch_nov_2005.jpg",
+        "author": "Bönisch",
+        "license": "CC BY-SA 2.0 de"
+      }
+    },
+    {
+      "id": "villa-del-balbianello",
+      "name": "Villa del Balbianello",
+      "country": "Italy",
+      "region": "Lake Como, Lombardy",
+      "lat": 45.965,
+      "lng": 9.2025,
+      "type": "Castle & estate",
+      "setting": "Eighteenth-century villa on a wooded promontory of Lake Como with terraced gardens and open lake panoramas, now a FAI heritage property.",
+      "known_for": "Star Wars: Episode II Attack of the Clones (2002), Casino Royale (2006)",
+      "official_url": "https://fondoambiente.it/luoghi/villa-del-balbianello",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tremezzina_-_Villa_del_Balbianello_-_2024-09-08_16-26-39_007.jpg/960px-Tremezzina_-_Villa_del_Balbianello_-_2024-09-08_16-26-39_007.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tremezzina_-_Villa_del_Balbianello_-_2024-09-08_16-26-39_007.jpg",
+        "author": "Emibuzz",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fort-ricasoli",
+      "name": "Fort Ricasoli",
+      "country": "Malta",
+      "region": "Kalkara",
+      "lat": 35.8975,
+      "lng": 14.525833,
+      "type": "Castle & estate",
+      "setting": "Vast 17th-century bastioned fort at the mouth of the Grand Harbour whose open parade grounds host large-scale open-air set builds.",
+      "known_for": "Gladiator (2000), Troy (2004), Assassin's Creed (2016)",
+      "official_url": "https://visitkalkara.com/fort-ricasoli/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Forst_Ricasoli.jpg/960px-Forst_Ricasoli.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Forst_Ricasoli.jpg",
+        "author": "Pichemist",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "malta-film-studios",
+      "name": "Malta Film Studios",
+      "country": "Malta",
+      "region": "Kalkara",
+      "lat": 35.889167,
+      "lng": 14.529444,
+      "type": "Studio & backlot",
+      "setting": "State-run studio facility whose two vast exterior water tanks sit on the shoreline so their surfaces blend into the natural sea horizon, complemented by an indoor insert tank.",
+      "known_for": "Raise the Titanic (1980), U-571 (2000), Captain Phillips (2013)",
+      "official_url": "https://screenmalta.com/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Malta_-_Kalkara_-_Triq_Santu_Rokku_-_Mediterranean_Film_Studios_04_ies.jpg/960px-Malta_-_Kalkara_-_Triq_Santu_Rokku_-_Mediterranean_Film_Studios_04_ies.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Malta_-_Kalkara_-_Triq_Santu_Rokku_-_Mediterranean_Film_Studios_04_ies.jpg",
+        "author": "Frank Vincentz",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "mdina",
+      "name": "Mdina",
+      "country": "Malta",
+      "region": "Northern Region",
+      "lat": 35.885833,
+      "lng": 14.403056,
+      "type": "Historic town & street",
+      "setting": "Walled medieval hilltop city of narrow honey-coloured limestone streets, baroque palaces and a monumental main gate.",
+      "known_for": "Game of Thrones (season 1, King's Landing)",
+      "official_url": "https://www.visitmalta.com/en/a/mdina/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Malta_-_Mdina_%28Triq_San_Oswald%29_02_ies.jpg/960px-Malta_-_Mdina_%28Triq_San_Oswald%29_02_ies.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Malta_-_Mdina_(Triq_San_Oswald)_02_ies.jpg",
+        "author": "Frank Vincentz",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "amsterdam-canal-ring",
+      "name": "Amsterdam Canal Ring",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.365,
+      "lng": 4.8878,
+      "type": "Historic town & street",
+      "setting": "Seventeenth-century ring of tree-lined canals with gabled townhouses, humpback bridges and houseboats.",
+      "known_for": "The Fault in Our Stars, Ocean's Twelve",
+      "official_url": "https://www.iamsterdam.com/en",
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg/960px-KeizersgrachtReguliersgrachtAmsterdam.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:KeizersgrachtReguliersgrachtAmsterdam.jpg",
+        "author": "Massimo Catarinella",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "erasmusbrug",
+      "name": "Erasmusbrug",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9092,
+      "lng": 4.4867,
+      "type": "Modern architecture",
+      "setting": "Asymmetric cable-stayed bridge with a 139-metre bent steel pylon spanning the Nieuwe Maas against the Rotterdam skyline.",
+      "known_for": "Who Am I? (1998)",
+      "official_url": "https://www.rotterdam.info/en/",
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Erasmusbrug%2C_September_2019.jpg/960px-Erasmusbrug%2C_September_2019.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Erasmusbrug,_September_2019.jpg",
+        "author": "Martin Falbisoner",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "media-park-hilversum",
+      "name": "Media Park Hilversum",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.2367,
+      "lng": 5.1719,
+      "type": "Studio & backlot",
+      "setting": "Television production campus in Hilversum with large audience studios such as Studio 21 and 22 and most national broadcasters on site.",
+      "known_for": "The Voice of Holland, The Voice Kids",
+      "official_url": "https://www.mediapark.nl/",
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Overzicht_Media_Park_te_Hilversum.jpg/960px-Overzicht_Media_Park_te_Hilversum.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Overzicht_Media_Park_te_Hilversum.jpg",
+        "author": "Dick van Aggelen",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "atlantic-ocean-road",
+      "name": "Atlantic Ocean Road",
+      "country": "Norway",
+      "region": "Møre og Romsdal",
+      "lat": 63.0167,
+      "lng": 7.3545,
+      "type": "Transport & infrastructure",
+      "setting": "Eight-kilometre stretch of County Road 64 hopping between skerries on a chain of bridges, including the curved Storseisundet Bridge, exposed to open sea on both sides.",
+      "known_for": "No Time to Die (2021)",
+      "official_url": "https://www.nasjonaleturistveger.no/en/routes/atlanterhavsvegen",
+      "commission_url": "https://www.norwegianfilm.com/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Storseisundet_Bridge_2.jpg/960px-Storseisundet_Bridge_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Storseisundet_Bridge_2.jpg",
+        "author": "Ernst Vikne",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "dagslys-studios-oslo",
+      "name": "Dagslys Studios",
+      "country": "Norway",
+      "region": "Oslo (Nydalen)",
+      "lat": 59.94861,
+      "lng": 10.76944,
+      "type": "Studio & backlot",
+      "setting": "Five purpose-built stages from 81 to 500 square metres in Nydalen, Oslo, with lighting and grip rental, workshops, props storage and costume and makeup rooms in the same building.",
+      "known_for": "Amundsen (2019)",
+      "official_url": "https://www.dagslys.no/en/",
+      "commission_url": "https://www.norwegianfilm.com/locations",
+      "photo": null
+    },
+    {
+      "id": "preikestolen",
+      "name": "Preikestolen (Pulpit Rock)",
+      "country": "Norway",
+      "region": "Rogaland",
+      "lat": 58.98666,
+      "lng": 6.18748,
+      "type": "Mountains & wilderness",
+      "setting": "Flat granite cliff ledge about 600 metres above Lysefjord, reached only by a four-kilometre mountain hiking trail.",
+      "known_for": "Mission: Impossible - Fallout (2018)",
+      "official_url": "https://preikestolen365.com/",
+      "commission_url": "https://www.norwegianfilm.com/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lyse_Fjord_et_Preikestolen.jpg/960px-Lyse_Fjord_et_Preikestolen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lyse_Fjord_et_Preikestolen.jpg",
+        "author": "Clementp.fr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "atm-studio-warsaw",
+      "name": "ATM Studio",
+      "country": "Poland",
+      "region": "Masovia (Warsaw)",
+      "lat": 52.19172,
+      "lng": 21.12497,
+      "type": "Studio & backlot",
+      "setting": "Film and television production centre of around 14,000 square metres in Warsaw's Wawer district, with multiple soundstages, TV studios, production offices and post-production facilities.",
+      "known_for": "The Voice of Poland, Dancing with the Stars: Taniec z gwiazdami",
+      "official_url": "https://www.atmstudio.eu/",
+      "commission_url": "https://pfc.pisf.pl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Studio_programu_Dancing_with_the_Stars._Taniec_z_gwiazdami.jpg/960px-Studio_programu_Dancing_with_the_Stars._Taniec_z_gwiazdami.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Studio_programu_Dancing_with_the_Stars._Taniec_z_gwiazdami.jpg",
+        "author": "Serecki",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "kazimierz-krakow",
+      "name": "Kazimierz, Kraków",
+      "country": "Poland",
+      "region": "Lesser Poland",
+      "lat": 50.05167,
+      "lng": 19.94472,
+      "type": "Historic town & street",
+      "setting": "Kraków's former Jewish quarter, where synagogues, cobbled lanes and tenement courtyards still follow the pre-war street layout.",
+      "known_for": "Schindler's List (1993)",
+      "official_url": "https://www.krakow.pl/",
+      "commission_url": "https://pfc.pisf.pl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Szeroka_street%2C_view_to_S%2C_.Kazimierz%2C_Krak%C3%B3w%2C_Poland.jpg/960px-Szeroka_street%2C_view_to_S%2C_.Kazimierz%2C_Krak%C3%B3w%2C_Poland.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Szeroka_street,_view_to_S,_.Kazimierz,_Krak%C3%B3w,_Poland.jpg",
+        "author": "Igor123121",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "ogrodzieniec-castle",
+      "name": "Ogrodzieniec Castle",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.45333,
+      "lng": 19.55333,
+      "type": "Castle & estate",
+      "setting": "Ruined 14th-century castle on the highest hill of the Kraków-Częstochowa Upland, its broken towers rising among limestone outcrops on the Trail of the Eagles' Nests.",
+      "known_for": "The Witcher (2019)",
+      "official_url": "https://www.zamek-ogrodzieniec.pl/",
+      "commission_url": "https://pfc.pisf.pl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ogrodzieniec_zamek_2.jpg/960px-Ogrodzieniec_zamek_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ogrodzieniec_zamek_2.jpg",
+        "author": "Łukasz Śmigasiewicz",
+        "license": "CC BY-SA 3.0 pl"
+      }
+    },
+    {
+      "id": "alfama-lisbon",
+      "name": "Alfama",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.712222,
+      "lng": -9.13,
+      "type": "Historic town & street",
+      "setting": "Lisbon's oldest quarter, a hillside maze of steep cobbled lanes, tiled facades and tram lines above the Tagus.",
+      "known_for": "Night Train to Lisbon (2013)",
+      "official_url": "https://www.visitlisboa.com/en/places/alfama",
+      "commission_url": "https://portugalfilmcommission.com/en/location/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Lisbon_alfalma.jpg/960px-Lisbon_alfalma.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lisbon_alfalma.jpg",
+        "author": "Arne Müseler",
+        "license": "CC BY-SA 3.0 de"
+      }
+    },
+    {
+      "id": "convento-de-cristo-tomar",
+      "name": "Convento de Cristo",
+      "country": "Portugal",
+      "region": "Tomar, Centro",
+      "lat": 39.604722,
+      "lng": -8.4175,
+      "type": "Church & monastery",
+      "setting": "Templar castle and convent complex crowned by the round Charola oratory, with Manueline cloisters and hilltop ramparts above Tomar.",
+      "known_for": "The Man Who Killed Don Quixote (2018)",
+      "official_url": "https://www.conventocristo.gov.pt/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo%2CTomar%2C_Portugal.jpg/960px-Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo%2CTomar%2C_Portugal.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo,Tomar,_Portugal.jpg",
+        "author": "Jose Manuel",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "praia-do-guincho",
+      "name": "Praia do Guincho",
+      "country": "Portugal",
+      "region": "Cascais, Lisbon region",
+      "lat": 38.733149,
+      "lng": -9.472696,
+      "type": "Coast & beach",
+      "setting": "Wide Atlantic surf beach backed by dunes and the Sintra hills, known for strong wind and heavy waves.",
+      "known_for": "On Her Majesty's Secret Service (1969)",
+      "official_url": "https://visitcascais.com/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Guincho_May_2012-2.jpg/960px-Guincho_May_2012-2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Guincho_May_2012-2.jpg",
+        "author": "Alvesgaspar",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "ciudad-de-la-luz",
+      "name": "Ciudad de la Luz",
+      "country": "Spain",
+      "region": "Alicante, Valencian Community",
+      "lat": 38.308943,
+      "lng": -0.529347,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built studio complex beside the Mediterranean on the edge of Alicante, with large sound stages, exterior water tanks and production support buildings, reopened to shoots in 2022.",
+      "known_for": "Asterix at the Olympic Games (2008), The Impossible (2012)",
+      "official_url": "https://ciudaddelaluz.com/",
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Platos_ciudadluz.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Platos_ciudadluz.jpg",
+        "author": "Kasiber (assumed)",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "real-alcazar-seville",
+      "name": "Real Alcázar of Seville",
+      "country": "Spain",
+      "region": "Seville, Andalusia",
+      "lat": 37.384426,
+      "lng": -5.991187,
+      "type": "Palace & landmark",
+      "setting": "Mudéjar royal palace complex in central Seville with tiled courtyards, arched ceremonial halls and lush formal gardens.",
+      "known_for": "Lawrence of Arabia (1962), Kingdom of Heaven (2005), Game of Thrones (season 5, Dorne)",
+      "official_url": "https://www.alcazarsevilla.org/",
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sevilla-2-2_%2848040287512%29-edit.jpg/960px-Sevilla-2-2_%2848040287512%29-edit.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sevilla-2-2_(48040287512)-edit.jpg",
+        "author": "Ajay Suresh from New York, NY, USA. Edited by MenkinAlRire",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "tabernas-desert",
+      "name": "Tabernas Desert",
+      "country": "Spain",
+      "region": "Almería, Andalusia",
+      "lat": 37.0,
+      "lng": -2.45,
+      "type": "Mountains & wilderness",
+      "setting": "Europe's only true desert, with eroded badlands, dry riverbeds and surviving western town sets from the spaghetti-western era.",
+      "known_for": "Lawrence of Arabia (1962), The Good, the Bad and the Ugly (1966), Indiana Jones and the Last Crusade (1989)",
+      "official_url": "https://www.andalucia.org/en/tabernas",
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Amanecer_en_el_desierto.jpg/960px-Amanecer_en_el_desierto.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Amanecer_en_el_desierto.jpg",
+        "author": "Dgalan",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "film-i-vast-trollhattan",
+      "name": "Film i Väst",
+      "country": "Sweden",
+      "region": "Västra Götaland (Trollhättan)",
+      "lat": 58.27389,
+      "lng": 12.27944,
+      "type": "Studio & backlot",
+      "setting": "Regional film fund and studio base in Trollhättan, nicknamed Trollywood, whose stages and industrial halls have held full-scale purpose-built sets.",
+      "known_for": "Dogville (2003), Melancholia (2011)",
+      "official_url": "https://www.filmivast.se/",
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+        "author": "User Tubaist on sv.wikipedia",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "faro-island",
+      "name": "Fårö",
+      "country": "Sweden",
+      "region": "Gotland",
+      "lat": 57.95,
+      "lng": 19.15,
+      "type": "Coast & beach",
+      "setting": "Small Baltic island north of Gotland with limestone rauk stacks, shingle shores and windswept heathland, where Ingmar Bergman lived and filmed for decades.",
+      "known_for": "Persona (1966), Through a Glass Darkly (1961), Scenes from a Marriage (1973)",
+      "official_url": "https://bergmancenter.se/",
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Rauks_%283881539849%29.jpg/960px-Rauks_%283881539849%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rauks_(3881539849).jpg",
+        "author": "allen watkin from London, UK",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "ystad",
+      "name": "Ystad",
+      "country": "Sweden",
+      "region": "Skåne",
+      "lat": 55.41667,
+      "lng": 13.83333,
+      "type": "Historic town & street",
+      "setting": "Medieval coastal town with half-timbered houses, cobbled streets and a sandy Baltic shoreline, home to the Ystad Studios film facility.",
+      "known_for": "Wallander (Swedish TV series, 2005-2013), Wallander (BBC, 2008-2016)",
+      "official_url": "https://visitystadosterlen.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ystad_stortorget.jpg/960px-Ystad_stortorget.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ystad_stortorget.jpg",
+        "author": "Mickaël Delcey (Silverkey)",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "freshwater-west",
+      "name": "Freshwater West",
+      "country": "United Kingdom",
+      "region": "Pembrokeshire, Wales",
+      "lat": 51.66,
+      "lng": -5.06,
+      "type": "Coast & beach",
+      "setting": "Wide Atlantic surf beach backed by dunes and low cliffs on the open Pembrokeshire coast.",
+      "known_for": "Harry Potter and the Deathly Hallows: Part 1, Robin Hood (2010), Their Finest",
+      "official_url": "https://www.nationaltrust.org.uk/visit/wales/freshwater-west-and-gupton-farm",
+      "commission_url": "https://www.creative.wales/filming-wales/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Freshwater_West_Beach%2C_Pembrokeshire_-_geograph.org.uk_-_6995561.jpg/960px-Freshwater_West_Beach%2C_Pembrokeshire_-_geograph.org.uk_-_6995561.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Freshwater_West_Beach,_Pembrokeshire_-_geograph.org.uk_-_6995561.jpg",
+        "author": "Ruth Sharville",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "glenfinnan-viaduct",
+      "name": "Glenfinnan Viaduct",
+      "country": "United Kingdom",
+      "region": "Highland, Scotland",
+      "lat": 56.8763,
+      "lng": -5.4319,
+      "type": "Transport & infrastructure",
+      "setting": "Curved 21-arch concrete railway viaduct of 1901 carrying the West Highland Line above the head of Loch Shiel.",
+      "known_for": "Harry Potter and the Chamber of Secrets, Harry Potter and the Prisoner of Azkaban",
+      "official_url": "https://www.nts.org.uk/visit/places/glenfinnan-monument",
+      "commission_url": "https://www.screen.scot/film-in-scotland/filming-locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Glenfinnan_Viaduct_-_Jacobite_Express.jpg/960px-Glenfinnan_Viaduct_-_Jacobite_Express.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Glenfinnan_Viaduct_-_Jacobite_Express.jpg",
+        "author": "Eric Kilby",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "pinewood-studios",
+      "name": "Pinewood Studios",
+      "country": "United Kingdom",
+      "region": "Buckinghamshire, England",
+      "lat": 51.5486,
+      "lng": -0.535,
+      "type": "Studio & backlot",
+      "setting": "Major studio complex west of London whose facilities include large sound stages, the vast 007 Stage, backlots and an underwater filming tank.",
+      "known_for": "No Time to Die, Star Wars: The Force Awakens",
+      "official_url": "https://pinewoodgroup.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Entrance_to_Pinewood_Studios_-_geograph.org.uk_-_8291917.jpg/960px-Entrance_to_Pinewood_Studios_-_geograph.org.uk_-_8291917.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Entrance_to_Pinewood_Studios_-_geograph.org.uk_-_8291917.jpg",
+        "author": "Ajay Tegala",
+        "license": "CC BY-SA 2.0"
+      }
     }
   ]
 }
