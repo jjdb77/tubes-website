@@ -1140,31 +1140,58 @@ a:hover { color: var(--action); }
 .loc-chip:has(input:disabled) input { cursor: not-allowed; }
 .loc-chip:has(input:focus-visible) { outline: 2px solid var(--action); outline-offset: 2px; }
 
-/* Uitkomsten naast elkaar */
-.loc-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 28px; }
-.loc-result {
-  position: relative;
-  background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-card);
-  padding: 26px 22px 20px;
+/* Zoekveld */
+.loc-search { margin-bottom: 16px; max-width: 460px; }
+.loc-search input {
+  display: block; width: 100%; margin-top: 6px;
+  font-family: var(--font-sans); font-size: 1rem; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 12px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.loc-result.is-top { background: var(--surface); border-color: var(--action); box-shadow: 0 12px 32px -14px rgba(14, 156, 136, 0.28); }
+.loc-search input::placeholder { color: var(--muted); font-weight: 400; }
+.loc-search input:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.loc-picker-count { font-weight: 500; color: var(--muted); }
+.loc-search-empty { margin-top: 12px; }
+
+/* De vergelijking: kolom per locatie, eigenschappen als rijen */
+.loc-results { margin-top: 28px; }
+.loc-compare-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); }
+.loc-compare-wrap:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+.loc-compare { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 0.9rem; min-width: 640px; }
+.loc-compare-1 { min-width: 0; }
+.loc-compare th, .loc-compare td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--divider); border-left: 1px solid var(--divider); }
+.loc-compare th:first-child, .loc-compare td:first-child { border-left: 0; }
+.loc-compare tbody tr:last-child th, .loc-compare tbody tr:last-child td { border-bottom: 0; }
+.loc-compare col:first-child, .loc-compare thead th:first-child { width: 190px; }
+.loc-compare thead th {
+  background: var(--bg); font-size: 1.05rem; font-weight: 800; color: var(--ink);
+  padding-top: 18px; padding-bottom: 16px;
+}
+.loc-compare thead th small { display: block; font-size: 0.78rem; font-weight: 500; color: var(--muted); margin-top: 3px; }
+.loc-compare thead th.is-top { background: var(--status-teal-bg); }
+.loc-compare thead .loc-result-top { display: block; width: fit-content; margin-bottom: 8px; }
+.loc-compare tbody th {
+  position: sticky; left: 0; z-index: 1;
+  background: var(--surface); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft);
+  box-shadow: 1px 0 0 var(--divider);
+}
+.loc-compare td { color: var(--ink-soft); }
+.loc-compare td.is-top { background: rgba(219, 243, 238, 0.35); }
+.loc-compare td strong { color: var(--ink); }
+.loc-compare td small { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+.loc-compare td ul { list-style: none; margin: 0; padding: 0; }
+.loc-compare td li { font-size: 0.84rem; line-height: 1.45; padding-left: 14px; position: relative; margin-bottom: 5px; }
+.loc-compare td li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.loc-compare-valuerow td { background: var(--bg); }
+.loc-compare-valuerow td.is-top { background: var(--status-teal-bg); }
+.loc-compare-value { display: block; font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); }
+.loc-compare td .loc-tag { margin: 0; }
+.loc-compare td .loc-tag + small { margin-top: 8px; }
 .loc-result-top {
-  position: absolute; top: -11px; left: 18px;
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
   background: var(--action); color: #fff; padding: 3px 10px; border-radius: 999px;
 }
-.loc-result h4 { font-size: 1.1rem; margin: 0; }
-.loc-result-scheme { display: block; font-size: 0.8rem; font-weight: 500; color: var(--muted); margin-top: 2px; }
-.loc-result-value {
-  font-size: clamp(1.6rem, 2.4vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
-  color: var(--ink); margin: 16px 0 2px;
-}
-.loc-result-value span { display: block; font-size: 0.76rem; font-weight: 600; letter-spacing: 0; color: var(--muted); margin-top: 5px; }
-.loc-result-sub { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 12px; }
-.loc-badges, .loc-result-notes { list-style: none; margin: 0; padding: 0; }
-.loc-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-.loc-result-notes li { font-size: 0.82rem; line-height: 1.45; color: var(--ink-soft); padding-left: 14px; position: relative; margin-bottom: 5px; }
-.loc-result-notes li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 .loc-empty { color: var(--muted); margin: 0; }
 .loc-disclaimer { margin: 22px 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--muted); }
 
@@ -1234,7 +1261,8 @@ a:hover { color: var(--action); }
 @media (max-width: 700px) {
   .loc-controls { grid-template-columns: 1fr; }
   .loc-tool { border-radius: var(--radius-card); }
-  .loc-results { grid-template-columns: 1fr; }
+  .loc-compare col:first-child, .loc-compare thead th:first-child { width: 130px; }
+  .loc-compare th, .loc-compare td { padding: 12px; }
 }
 /* ===================================================================
    Health Check (/production-finance-health-check/)

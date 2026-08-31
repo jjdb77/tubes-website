@@ -30,12 +30,16 @@
       </form>
 
       <div class="loc-picker">
-        <p class="loc-picker-label" id="loc-picker-label">Pick up to four locations</p>
+        <label class="loc-field loc-search" for="loc-search">Search a country or region
+          <input type="search" id="loc-search" placeholder="Type to search, for example Ireland, Portugal or cash rebate" autocomplete="off">
+        </label>
+        <p class="loc-picker-label" id="loc-picker-label">Select one to three locations to compare <span class="loc-picker-count" data-loc-count></span></p>
         <div class="loc-chips" role="group" aria-labelledby="loc-picker-label">
           {% for loc in locations.locations %}
-          <label class="loc-chip"><input type="checkbox" name="loc" value="{{ loc.id }}"{% if loop.index <= 3 %} checked{% endif %}> {{ loc.name }}</label>
+          <label class="loc-chip" data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.scheme + ' ' + loc.mechanism + ' ' + loc.currency) | lower }}"><input type="checkbox" name="loc" value="{{ loc.id }}"{% if loop.index <= 3 %} checked{% endif %}> {{ loc.name }}</label>
           {% endfor %}
         </div>
+        <p class="loc-empty loc-search-empty" hidden>No location matches your search. Missing one? <a href="#request-location">Suggest it below</a>.</p>
       </div>
 
       <div class="loc-results" data-loc-results aria-live="polite">
@@ -70,7 +74,7 @@
         </thead>
         <tbody>
           {% for loc in locations.locations %}
-          <tr data-region="{{ loc.region }}">
+          <tr data-region="{{ loc.region }}" data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.scheme + ' ' + loc.mechanism + ' ' + loc.currency + ' ' + loc.funding) | lower }}">
             <th scope="row">{{ loc.name }}<span class="loc-currency">{{ loc.currency }}</span></th>
             <td>{{ loc.scheme }}<br><span class="loc-tag loc-tag-{{ loc.mechanism | lower | replace(' ', '-') }}">{{ loc.mechanism }}</span></td>
             <td class="loc-rate">{{ loc.rate_label }}{% if loc.net_label %}<small>Net: {{ loc.net_label }}</small>{% endif %}</td>
@@ -104,7 +108,7 @@
           <input type="email" name="email" autocomplete="email" required>
         </label>
         <label>Country or region to add <span class="req">(required)</span>
-          <input type="text" name="location" required placeholder="For example Greece, Georgia (US) or your own region">
+          <input type="text" name="location" required placeholder="For example Greece, Croatia or your own region">
         </label>
         <label>Anything we should know?
           <textarea name="notes" rows="3" placeholder="The incentive scheme, a link to the fund, or a correction to an existing entry"></textarea>
@@ -123,17 +127,21 @@
     const data = JSON.parse(document.getElementById("loc-data").textContent);
     if (!tool || !data) return;
 
-    const MAX = 4;
+    const MAX = 3;
     const fx = data.fx || {};
     const byId = Object.fromEntries(data.locations.map((l) => [l.id, l]));
     const checks = [...tool.querySelectorAll('input[name="loc"]')];
     const budgetInput = tool.querySelector('input[name="budget"]');
     const spendInput = tool.querySelector('input[name="spend"]');
+    const searchInput = tool.querySelector("#loc-search");
+    const searchEmpty = tool.querySelector(".loc-search-empty");
+    const countLabel = tool.querySelector("[data-loc-count]");
     const results = tool.querySelector("[data-loc-results]");
     const money = { format: (n) => "€ " + Math.round(n).toLocaleString("en-GB") };
     const pct = (n) => (Math.round(n * 10) / 10).toLocaleString("en-GB") + "%";
     const slug = (s) => String(s).toLowerCase().replace(/\s+/g, "-");
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const tag = (label) => `<span class="loc-tag loc-tag-${slug(label)}">${esc(label)}</span>`;
 
     // Getrapte tarieven (bv. Spanje: 30% over de eerste € 1m, daarna 25%)
     const tiered = (tiers, amount) => {
@@ -189,53 +197,79 @@
       return { loc, headlineEur, netEur, netDiffers: netFactor !== 1, effective: spend > 0 ? (netEur / spend) * 100 : 0, notes };
     };
 
+    // De vergelijking: een kolom per locatie, de eigenschappen als rijen
     const render = () => {
       const type = tool.querySelector('input[name="loc-type"]:checked').value;
       const budget = Math.max(0, Number(budgetInput.value) || 0);
       const spend = Math.max(0, Number(spendInput.value) || 0);
       const chosen = checks.filter((c) => c.checked).map((c) => byId[c.value]).filter(Boolean);
       for (const c of checks) c.disabled = !c.checked && chosen.length >= MAX;
+      countLabel.textContent = chosen.length ? `(${chosen.length} of ${MAX} selected)` : "";
 
       if (!chosen.length) {
-        results.innerHTML = '<p class="loc-empty">Pick at least one location to see the comparison.</p>';
+        results.innerHTML = '<p class="loc-empty">Select at least one location to see the comparison.</p>';
         return;
       }
-      if (!spend) {
-        results.innerHTML = '<p class="loc-empty">Enter the spend you expect in the location to see the comparison.</p>';
-        return;
-      }
-      const rows = chosen.map((loc) => estimate(loc, type, budget, spend)).sort((a, b) => b.netEur - a.netEur);
-      results.innerHTML = rows.map((r, i) => `
-        <article class="loc-result${i === 0 && rows.length > 1 ? " is-top" : ""}">
-          ${i === 0 && rows.length > 1 ? '<span class="loc-result-top">Highest value</span>' : ""}
-          <h4>${esc(r.loc.name)}<span class="loc-result-scheme">${esc(r.loc.scheme)}</span></h4>
-          <p class="loc-result-value">${money.format(r.netEur)}<span>indicative net value</span></p>
-          <p class="loc-result-sub">${pct(r.effective)} of your local spend${r.netDiffers ? " (headline " + money.format(r.headlineEur) + ")" : ""}</p>
-          <ul class="loc-badges">
-            <li class="loc-tag loc-tag-${slug(r.loc.mechanism)}">${esc(r.loc.mechanism)}</li>
-            <li class="loc-tag loc-tag-${slug(r.loc.funding)}">${esc(r.loc.funding)}</li>
-          </ul>
-          <ul class="loc-result-notes">
-            <li>${esc(r.loc.paid)}</li>
-            ${r.notes.map((n) => "<li>" + esc(n) + "</li>").join("")}
-          </ul>
-        </article>`).join("");
+      const rows = chosen.map((loc) => estimate(loc, type, budget, spend));
+      const best = spend > 0 && rows.length > 1 ? rows.reduce((a, b) => (b.netEur > a.netEur ? b : a)) : null;
+      const cell = (fn) => rows.map((r) => `<td${r === best ? ' class="is-top"' : ""}>${fn(r)}</td>`).join("");
+      const row = (label, fn, cls) => `<tr${cls ? ` class="${cls}"` : ""}><th scope="row">${label}</th>${cell(fn)}</tr>`;
+
+      results.innerHTML = `
+        <div class="loc-compare-wrap" tabindex="0">
+        <table class="loc-compare loc-compare-${rows.length}">
+          <thead><tr><th scope="col"><span class="visually-hidden">Property</span></th>${rows.map((r) => `
+            <th scope="col"${r === best ? ' class="is-top"' : ""}>${r === best ? '<span class="loc-result-top">Highest value</span>' : ""}${esc(r.loc.name)}<small>${esc(r.loc.scheme)}</small></th>`).join("")}
+          </tr></thead>
+          <tbody>
+            ${row("Indicative net value", (r) => spend > 0
+              ? `<strong class="loc-compare-value">${money.format(r.netEur)}</strong><small>${pct(r.effective)} of your local spend${r.netDiffers ? ", headline " + money.format(r.headlineEur) : ""}</small>`
+              : '<small>Enter your expected spend above</small>', "loc-compare-valuerow")}
+            ${row("Applied in this estimate", (r) => r.notes.length ? `<ul>${r.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : "<small>Headline rate on your full local spend</small>")}
+            ${row("Type of incentive", (r) => tag(r.loc.mechanism))}
+            ${row("Headline rate", (r) => `<strong>${esc(r.loc.rate_label)}</strong>`)}
+            ${row("Net value", (r) => esc(r.loc.net_label || "Same as headline"))}
+            ${row("Minimum local spend", (r) => esc(r.loc.min_spend))}
+            ${row("Cap per project", (r) => esc(r.loc.cap ? r.loc.cap.label : r.loc.cap_label || "No cap"))}
+            ${row("Funding", (r) => tag(r.loc.funding) + (r.loc.funding_note ? `<small>${esc(r.loc.funding_note)}</small>` : ""))}
+            ${row("Paid", (r) => esc(r.loc.paid))}
+            ${row("Foreign spend qualifies", (r) => esc(r.loc.foreign_spend || "No"))}
+            ${row("Currency", (r) => esc(r.loc.currency))}
+            ${row("Good to know", (r) => esc(r.loc.notes))}
+            ${row("Source", (r) => r.loc.source ? `<a href="${esc(r.loc.source)}" target="_blank" rel="noopener">${esc(r.loc.source_label || "Source")}</a>` : "")}
+          </tbody>
+        </table>
+        </div>`;
     };
 
-    tool.addEventListener("input", render);
+    tool.addEventListener("input", (e) => { if (e.target !== searchInput) render(); });
     tool.addEventListener("change", render);
     render();
 
-    // Tabel filteren op regio
+    // Zoeken en filteren: chips en de grote tabel reageren allebei
     const filter = document.querySelector(".loc-filter");
+    let region = "all";
+    const applyFilters = () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let hits = 0;
+      for (const chip of tool.querySelectorAll(".loc-chip")) {
+        const match = !q || chip.dataset.search.includes(q) || chip.querySelector("input").checked;
+        chip.hidden = !match;
+        if (match) hits++;
+      }
+      searchEmpty.hidden = hits > 0;
+      for (const rowEl of document.querySelectorAll(".loc-table tbody tr")) {
+        rowEl.hidden = (region !== "all" && rowEl.dataset.region !== region) || (q && !rowEl.dataset.search.includes(q));
+      }
+    };
+    searchInput.addEventListener("input", applyFilters);
     if (filter) {
       filter.addEventListener("click", (e) => {
         const btn = e.target.closest(".loc-filter-btn");
         if (!btn) return;
+        region = btn.dataset.region;
         for (const b of filter.querySelectorAll(".loc-filter-btn")) b.classList.toggle("is-active", b === btn);
-        for (const row of document.querySelectorAll(".loc-table tbody tr")) {
-          row.hidden = btn.dataset.region !== "all" && row.dataset.region !== btn.dataset.region;
-        }
+        applyFilters();
       });
     }
 

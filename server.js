@@ -123,6 +123,12 @@ app.post("/api/contact", (req, res) => {
   };
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true });
+
+  // Suggesties van de locatievergelijking gaan meteen per mail door; de rest
+  // van de contactberichten staat (voorlopig) alleen op /beheer.
+  if (!flagged) {
+    meldLocatieSuggestie(entry).catch((err) => console.error("[mail] locatiesuggestie:", err.message));
+  }
 });
 
 // ---------- Health Check-aanvragen ----------
@@ -486,6 +492,31 @@ async function meldNieuweAanvraag(entry, answers, crmOk) {
     `Health Check-aanvraag: ${entry.name || entry.email}${entry.company ? ` (${entry.company})` : ""}`,
     html
   );
+}
+
+// Suggestie voor de locatievergelijking (/compare-film-tv-locations/). Het
+// formulier daar zet "Location request: <locatie>" vooraan in het bericht en
+// de toelichting eronder. Zo'n bericht gaat meteen naar LOCATION_EMAIL, zodat
+// het niet op /beheer blijft liggen tot iemand kijkt.
+const LOCATION_EMAIL = process.env.LOCATION_EMAIL || "joachim@tubes.media";
+const LOCATIE_PREFIX = "Location request:";
+
+async function meldLocatieSuggestie(entry) {
+  if (!MAIL_KEY || !String(entry.message || "").startsWith(LOCATIE_PREFIX)) return;
+  const [kop, ...rest] = entry.message.split("\n");
+  const locatie = kop.slice(LOCATIE_PREFIX.length).trim() || "(niet ingevuld)";
+  const toelichting = rest.join("\n").trim();
+  const naam = `${entry.first_name} ${entry.last_name}`.trim();
+
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p><strong>${esc(naam)}</strong> stelt een locatie voor op de vergelijkingspagina: <strong>${esc(locatie)}</strong>.</p>
+    <p><a href="mailto:${esc(entry.email)}">${esc(entry.email)}</a>${entry.phone ? ` &middot; ${esc(entry.phone)}` : ""} &middot; ${esc(stamp(entry.at))}</p>
+    ${toelichting ? `<p style="background:#F6F7F9;padding:12px;border-radius:8px;white-space:pre-line"><em>Toelichting:</em><br>${esc(toelichting)}</p>` : "<p>Geen toelichting meegegeven.</p>"}
+    <p>Toevoegen of corrigeren kan in het CMS onder "Locaties (vergelijkingspagina)".</p>
+    <p><a href="https://www.tubes.media/compare-film-tv-locations/">De vergelijkingspagina</a> &middot; <a href="https://www.tubes.media/beheer">Alle berichten op /beheer</a></p>
+  </div>`;
+
+  await stuurMail(LOCATION_EMAIL, `Location suggestion: ${locatie} (${naam})`, html);
 }
 
 // Eén mail per aanvraag, en alleen als het na een paar pogingen nog steeds
