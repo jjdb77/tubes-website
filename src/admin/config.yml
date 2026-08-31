@@ -34,8 +34,11 @@ collections:
           - { label: Footertekst, name: footer_text, widget: text }
           - { label: Standaard knoptekst (CTA), name: cta_label, widget: string }
           - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
+          - { label: Knoptekst in de kop, name: header_cta_label, widget: string, required: false, hint: "De knop rechtsboven op elke pagina. Leeg = de standaard knoptekst." }
+          - { label: Knoplink in de kop, name: header_cta_url, widget: string, required: false, hint: "Leeg = de standaard knoplink." }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
           - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Basisadres van de afsprakenpagina, zonder afspraaktype. Nu 4relations.appconnected.nl/boek/joachim" }
+          - { label: "Agenda in de popover (Health Check)", name: booking_embed_url, widget: string, required: false, hint: "De boekingspagina van het afspraaktype, die in het venstertje op de Health Check-pagina wordt getoond. LET OP: hier hoort .../boek/<account>/<slug>, nooit een losse afspraaklink .../afspraak/<id> — die toont de naam, het e-mailadres en het telefoonnummer van degene die geboekt heeft. Leeg = geen popover, de knop opent gewoon de boekingspagina." }
           - label: "Boekingslinks per plan"
             name: booking_plans
             widget: list
@@ -83,6 +86,54 @@ collections:
             fields:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
+
+      - name: healthcheck
+        label: "Health Check-vragenlijst"
+        file: src/_data/healthcheck.json
+        description: "De vragen op /production-finance-health-check/assessment/. Let op: de sleutel van een vraag is de veldnaam in de opslag. Verander die niet meer zodra er antwoorden binnen zijn, dan raken oude en nieuwe antwoorden los van elkaar."
+        fields:
+          - { label: "Introzin boven het formulier", name: intro, widget: text }
+          - label: "Stap 1 (je gegevens)"
+            name: step1
+            widget: object
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - label: "Stap 2 (je werkwijze)"
+            name: step2
+            widget: object
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - { label: "Label bij het rolveld", name: role_label, widget: string }
+          - label: "Vragen"
+            name: questions
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "Elke vraag is één rij keuzeknoppen. Een vraag toevoegen kan gewoon; de pagina, de opslag, /beheer en de export lopen mee."
+            fields:
+              - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
+              - { label: Vraag, name: label, widget: string }
+              - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string }, hint: "Alleen deze waarden worden opgeslagen; iets anders wordt geweigerd." }
+              - { label: "Meer antwoorden mogelijk", name: multiple, widget: boolean, default: false, required: false, hint: "Aan = vinkjes in plaats van één keuze. De antwoorden komen als lijst binnen, gescheiden door komma's." }
+          - label: "Vrij tekstveld onderaan"
+            name: notes
+            widget: object
+            fields:
+              - { label: Vraag, name: label, widget: string }
+              - { label: "Voorbeeldtekst in het veld", name: placeholder, widget: text }
+          - label: "Na het versturen"
+            name: result
+            widget: object
+            fields:
+              - { label: "Kop boven de agenda", name: book_title, widget: string }
+              - { label: "Tekst bij de agenda", name: book_text, widget: text }
+              - { label: "Tekst op de knop", name: book_label, widget: string }
+              - { label: "Kop boven het overzicht", name: heading, widget: string }
+              - { label: "Kop boven 'waar we beginnen'", name: focus_title, widget: string }
+              - { label: "Kop in de rechterkolom", name: next_title, widget: string }
+              - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
+              - { label: "Slotzin rechts", name: note, widget: text }
 
   - name: artikelen
     label: "Artikelen (Insights)"
@@ -210,6 +261,7 @@ collections:
               - { label: Tekst, name: text, widget: markdown }
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
+              - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
           - name: images
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"
@@ -252,6 +304,12 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+          - name: healthcheck
+            label: "Health Check-blok"
+            summary: "Health Check"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [light, white, teal], default: white, required: false }
+            hint: "De teksten van dit blok staan onder Health Check-vragenlijst, niet hier."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"

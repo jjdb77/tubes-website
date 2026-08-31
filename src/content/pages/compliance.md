@@ -11,8 +11,8 @@ sections:
     text: |
       Tubes is designed with security, governance and compliance as core platform principles.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/compliance-hero.jpeg
     image_alt: Security and compliance
   - type: textblock
@@ -29,10 +29,10 @@ sections:
       - GDPR-aligned data handling
       - Integration-ready architecture
   - type: cta
-    title: Secure. Compliant. Reliable. Ready to integrate.
+    title: Talk it through with us
     text: |
-      Tubes is built with security, governance, and compliance at its core. Role-based access, full audit trails, GDPR-aligned processes, EU-based cloud infrastructure, and daily backups ensure your data is always protected, traceable, and under your control.
+      Book a free Production Health Check: 45 minutes on your production finance process, including how your data is handled.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---

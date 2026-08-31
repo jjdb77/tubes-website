@@ -1,0 +1,133 @@
+{
+  "intro": "Tell us a little about you, your company and your production, so we can make the most of our 45 minutes together.",
+  "step1": {
+    "title": "Your details",
+    "heading": "Let’s get to know you",
+    "note": "It takes less than 2 minutes."
+  },
+  "step2": {
+    "title": "Your production",
+    "heading": "How you work today"
+  },
+  "role_label": "Job title or role",
+  "questions": [
+    {
+      "key": "production_type",
+      "label": "What type of production do you primarily work in?",
+      "options": [
+        "TV or broadcast",
+        "Film",
+        "Commercials or branded content",
+        "Corporate",
+        "Live events",
+        "Theatre",
+        "Online or digital content",
+        "Other"
+      ],
+      "short": "What you produce",
+      "multiple": true
+    },
+    {
+      "key": "budget_band",
+      "label": "What are your typical production budgets?",
+      "options": [
+        "Under £250k",
+        "£250k to £1m",
+        "£1m to £5m",
+        "£5m to £10m",
+        "£10m and above",
+        "Varies significantly"
+      ],
+      "short": "Typical budget size"
+    },
+    {
+      "key": "volume",
+      "label": "How many productions do you typically manage at one time?",
+      "options": [
+        "1",
+        "2 to 5",
+        "6 to 10",
+        "More than 10",
+        "Varies"
+      ],
+      "short": "Productions at one time"
+    },
+    {
+      "key": "current_system",
+      "label": "How do you currently manage your production finance?",
+      "options": [
+        "Excel or spreadsheets",
+        "Accounting software",
+        "Production finance software",
+        "A combination of systems",
+        "Other"
+      ],
+      "short": "How you manage production finance",
+      "multiple": true
+    },
+    {
+      "key": "workload",
+      "label": "Where does your production finance process create the most work today?",
+      "options": [
+        "Building and updating budgets",
+        "Managing budget versions",
+        "Reconciling actuals",
+        "Forecasting",
+        "Getting approvals",
+        "Producing reports",
+        "Keeping everyone aligned",
+        "Not sure, I would like to explore this"
+      ],
+      "short": "Where the most work sits",
+      "multiple": true,
+      "max": 3
+    }
+  ],
+  "notes": {
+    "label": "Is there anything specific you would like us to focus on?",
+    "placeholder": "A recurring problem, a production that went sideways, a report nobody trusts."
+  },
+  "result": {
+    "book_title": "Book your Production Health Check",
+    "book_text": "Choose a 45-minute slot that suits you. The session is a video call with us, focused on your production finance process.",
+    "book_label": "Pick a time",
+    "heading": "This is what you told us",
+    "focus_title": "Where we will start",
+    "next_title": "What happens next",
+    "next": [
+      "We start by understanding your business and current setup.",
+      "We talk through your production finance workflow and identify opportunities.",
+      "We share what we found and discuss how Tubes could help."
+    ],
+    "note": "No obligation. No generic sales pitch. Just 45 minutes focused on your production finance process."
+  },
+  "hero": {
+    "heading": "How well is your production finance process working?",
+    "lead": "Find out in a free 45-minute video session with us.",
+    "text": "We will take a fresh look at your production finance process, identify what is working well, uncover where you may be losing time or control, and explore opportunities to improve.",
+    "session_title": "In 45 minutes, we'll",
+    "session_steps": [
+      {
+        "title": "Understand",
+        "text": "Your business and current setup"
+      },
+      {
+        "title": "Identify",
+        "text": "Where there may be friction or opportunities to improve"
+      },
+      {
+        "title": "Explore",
+        "text": "How Tubes can support your production finance workflow"
+      },
+      {
+        "title": "Discuss",
+        "text": "Our findings and potential next steps"
+      }
+    ],
+    "reassurance": "Free · 45 minutes · No obligation",
+    "email_label": "Your business email",
+    "email_placeholder": "Enter your work email",
+    "button": "Book your free Production Health Check"
+  },
+  "title": "Your Production Health Check"
+}

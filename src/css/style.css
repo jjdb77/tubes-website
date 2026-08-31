@@ -52,6 +52,13 @@ html { scroll-behavior: smooth; }
 
 html { overflow-x: clip; }
 
+/* Zonder dit blaast Safari op iPhone tekst soms automatisch op na de
+   regelafbrekingsberekening (auto text-size-adjust), waardoor een woord dat
+   volgens de layout nog net past er ná het renderen toch net overheen valt.
+   Bevestigd op toestel: "Streamline production" liep door voorbij de rand,
+   ondanks dat elke breedte-/margeberekening in devtools wél klopte. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 body {
   overflow-x: clip;
   margin: 0;
@@ -326,20 +333,18 @@ a:hover { color: var(--action); }
 
 .section-hero { padding-top: clamp(44px, 6vw, 80px); overflow: hidden; }
 
-/* Hero-beeld: het beeld loopt op brede schermen door richting de rand */
-.section-hero .hero-media { position: relative; margin-right: -5vw; }
-/* De voorste afbeelding staat recht (niet gedraaid): bij een rotatie gaf de
-   combinatie van border-radius + box-shadow op een scherpe screenshot een
-   sub-pixel randartefact tegen de donkere achtergrond.
-   De 5% vergroting staat hier op img/video (niet op .hero-media) omdat
-   .hero-media zelf de laad-animatie (@keyframes rise) draagt, die transform
-   bij het laden terugzet naar "none" en een losse transform daar dus
-   tenietdoet. */
+/* Hero-beeld: het beeld loopt op brede schermen door richting de rand.
+   De 20% vergroting staat op .hero-media zelf via width (niet transform:
+   dat laat de browser de afbeelding scherp decoderen op de uiteindelijke
+   grootte i.p.v. een al gerenderde bitmap achteraf uitrekken, wat zichtbaar
+   zachter oogt). .hero-media draagt wel de laad-animatie (@keyframes rise),
+   maar die raakt alleen opacity/transform, niet width — dus geen conflict.
+   Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
+   automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
+   ouder — geen risico dat ze los van elkaar raken. */
+.section-hero .hero-media { position: relative; width: 150%; margin-left: -8%; margin-right: -5vw; }
 .section-hero .hero-media img,
-.section-hero .hero-media video {
-  position: relative; z-index: 2;
-  transform: scale(1.12);
-}
+.section-hero .hero-media video { position: relative; z-index: 2; }
 .section-hero .hero-media img[src*=".jpeg"],
 .section-hero .hero-media img[src*=".jpg"] { aspect-ratio: 4 / 3; }
 
@@ -354,8 +359,34 @@ a:hover { color: var(--action); }
 .hero-single, .feature-single { grid-template-columns: 1fr; }
 .hero-single .hero-text, .feature-single .feature-text { max-width: 780px; }
 
+/* Hero met beeld ónder de tekst i.p.v. ernaast (section.media_below): volle
+   breedte i.p.v. een halve kolom, dus geen kunstgreep met width/margin nodig
+   om het beeld groter te laten ogen. Moet ná de losse .hero-media-regel
+   hierboven staan om 'm (bij gelijke specificiteit) te overschrijven. */
+/* gap (van .hero-grid) zorgt al voor de ruimte tussen de gestapelde rijen;
+   geen aparte margin-top hier nodig, dat zou 'm dubbel optellen. */
+.hero-grid.hero-stacked { grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px); }
+.hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
+.hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
+.hero-stacked .hero-media { width: 85%; margin: 0 auto; }
+
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
+/* .feature-grid is 1.05fr/0.95fr (tekst iets breder dan beeld); .media-left
+   wisselt alleen de volgorde (order), niet welke kolom welke fractie krijgt.
+   Zonder deze regel belandt het beeld dus in de bredere kolom en de tekst in
+   de smallere, waardoor twee media_large-afbeeldingen niet even groot ogen. */
+.feature-grid.media-left { grid-template-columns: 0.95fr 1.05fr; }
+
+/* Featuresecties met een groter beeld (section.media_large): het beeld
+   bleedt vooral naar de buitenkant (weinig naar de kant van de tekstkolom,
+   om die niet te raken); de sectie zelf knipt de overloop af, want
+   .theme-white/.theme-teal hebben normaal geen overflow:hidden.
+   Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
+   de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
+.section-feature-large-media { overflow: hidden; }
+.feature-media-large { width: 120%; margin-left: -3%; }
+.media-left .feature-media-large { margin-left: -17%; }
 
 .lead { font-size: 1.08rem; }
 
@@ -417,6 +448,13 @@ a:hover { color: var(--action); }
 .rich-text h3:first-child { margin-top: 0; }
 
 .rich-text.two-column { columns: 2; column-gap: 56px; }
+
+/* Gewone opsommingstekens in plaats van het teal vinkje. In een juridische
+   tekst leest een vinkje als instemming ("dit is in orde"), en dat hoort niet
+   bij een rij als "vraag ons je gegevens te wissen". */
+.rich-text.plain-list ul { list-style: disc; padding-left: 20px; }
+.rich-text.plain-list li { padding-left: 0; }
+.rich-text.plain-list li::before { content: none; }
 .rich-text.two-column li { break-inside: avoid; }
 
 /* ---------- Kaarten (radius 16, app-schaduw) ---------- */
@@ -565,6 +603,19 @@ a:hover { color: var(--action); }
 .faq-answer { padding: 0 22px 20px; }
 
 /* ---------- Pricing ---------- */
+
+.pricing-currency {
+  display: flex; align-items: center; gap: 8px; margin-top: 14px;
+  font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+}
+.pricing-currency .currency-select {
+  font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 6px 10px; cursor: pointer; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.pricing-currency .currency-select:focus {
+  outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft);
+}
 
 .pricing-grid { display: grid; gap: 24px; margin-top: 44px; align-items: stretch; }
 .pricing-2 { grid-template-columns: repeat(2, minmax(0, 480px)); justify-content: center; }
@@ -887,15 +938,40 @@ a:hover { color: var(--action); }
 @media (max-width: 980px) {
   .hero-grid, .feature-grid, .split-grid, .contact-grid,
   .compare-grid, .tour-panel.is-active { grid-template-columns: 1fr; }
-  .section-hero .hero-media { margin-right: 12px; }
-  /* De scale(1.12) is bedoeld voor de losse beeldkolom op breed scherm; in
-     één kolom is .hero-media net zo breed als de tekst erboven, en dan
-     duwt diezelfde scale de afbeelding voorbij de containerpadding tot aan
-     de randen van .section-hero (die overflow: hidden knipt daar, niet bij
-     de container). Op smal scherm dus geen scale, gewoon ruimte links/rechts. */
-  .section-hero .hero-media img,
-  .section-hero .hero-media video { transform: none; }
-  .section-hero .viewfinder { transform: none; }
+  .feature-grid.media-left { grid-template-columns: 1fr; }
+  /* De 120%-breedte is bedoeld voor de losse beeldkolom op breed scherm; in
+     één kolom is .hero-media net zo breed als de tekst erboven, en dan zou
+     diezelfde breedte de afbeelding voorbij de containerpadding duwen tot
+     aan de randen van .section-hero (die overflow: hidden knipt daar, niet
+     bij de container). Op smal scherm dus gewoon 100%, met ruimte links/rechts. */
+  .section-hero .hero-media { width: 100%; margin-left: 0; margin-right: 12px; }
+  /* Bovenstaande regel gaf bij de gestapelde hero (media_below: true) op
+     iPhone niet alleen het beeld maar ook de kop-tekst rechts afgekapt
+     (bevestigd met een screenshot: "Streamline production" liep door voorbij
+     de rand). Root cause: de 1fr-kolom van .hero-grid.hero-stacked rendert op
+     Safari kennelijk breder dan de padded content-box, voor ELK kind van die
+     kolom, niet specifiek voor het plaatje. Twee eerdere pogingen (margin:
+     auto, max-width: calc(100vw - ...)) pakten alleen .hero-media aan en
+     losten het onderliggende probleem dus niet op. In plaats van tegen de
+     grid-kolomberekening te blijven vechten: op smal scherm geen CSS Grid
+     meer voor de gestapelde hero, maar Flexbox (kolom) — heeft dit
+     sizing-probleem niet, en gap/max-width/margin-auto werken er hetzelfde. */
+  .hero-grid.hero-stacked { display: flex; flex-direction: column; align-items: stretch; }
+  /* align-items: stretch alléén is niet genoeg: zonder een expliciete width
+     rendert de standaard stretch-berekening op Safari ook nog te breed (zelfde
+     root cause als hierboven, nu bevestigd voor .hero-text/.h1). Expliciete
+     width: 100% dwingt de normale percentage-berekening af i.p.v. de
+     kennelijk kapotte stretch-fit, en die geeft wél het juiste resultaat. */
+  .hero-grid.hero-stacked .hero-media,
+  .hero-grid.hero-stacked .hero-text,
+  .hero-grid.hero-stacked .chip-row-below { width: 100%; }
+  /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
+     .feature-media net zo breed als de tekst, dus de 135%-breedte moet
+     terug naar normaal, anders loopt de afbeelding tot de randen door.
+     .media-left-variant apart genoemd: die heeft op breed scherm een eigen,
+     specifiekere regel (margin-left: -29%) die anders zou blijven winnen. */
+  .feature-media-large,
+  .media-left .feature-media-large { width: 100%; margin-left: 0; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
@@ -910,6 +986,30 @@ a:hover { color: var(--action); }
   /* Brede tabellen in artikelen apart laten scrollen, de pagina zelf niet */
   .article-body table { display: block; overflow-x: auto; white-space: nowrap; }
   .article-body td, .article-body th { white-space: normal; min-width: 130px; }
+  /* Chip-rij (Development -> Wrap): op smal scherm past dat niet meer op
+     één regel. flex-wrap zou de laatste chip los onder een pijltje laten
+     zweven; horizontaal laten scrollen houdt de pijl-keten intact. */
+  .chip-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chip-row::-webkit-scrollbar { display: none; }
+  .chip, .chip-sep { flex-shrink: 0; }
+  /* .hero-stacked .chip-row staat op breed scherm gecentreerd (justify-content:
+     center), maar zodra de rij breder is dan het scherm en dus moet scrollen,
+     duwt centreren het begin van de rij het beeld uit vóórdat er iets is
+     gescrold: scrollLeft kan niet negatief, dus "Development" werd nooit meer
+     bereikbaar. Op smal scherm terug naar links uitlijnen, zodat alles vanaf
+     scrollpositie 0 bereikbaar is. */
+  .hero-stacked .chip-row { justify-content: flex-start; }
+  /* Kleinere chips op smal scherm: past de hele rij (Development -> Wrap)
+     zonder scrollen, i.p.v. te leunen op de overflow-scroll hierboven. */
+  .chip-row { gap: 4px; }
+  .chip { font-size: 0.62rem; padding: 4px 7px; gap: 4px; }
+  .chip::before { width: 5px; height: 5px; }
+  .chip-sep { font-size: 0.7rem; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
@@ -954,9 +1054,11 @@ a:hover { color: var(--action); }
 .cards-grid .card .icon-tile { background: rgba(255, 255, 255, 0.85); }
 .cards-grid .card .icon-tile i { background: var(--ink-soft); }
 
-/* Demo-knop in de header */
+/* Knop in de header (nu de Health Check). Hij is breder dan de oude
+   demo-knop, dus hij verdwijnt iets eerder: onder 1220px past de rij
+   logo + menu + knop niet meer. */
 .header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
-@media (max-width: 1180px) { .header-cta { display: none; } }
+@media (max-width: 1220px) { .header-cta { display: none; } }
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */
 .button.button-primary::after {
@@ -972,7 +1074,6 @@ a:hover { color: var(--action); }
 .viewfinder {
   position: absolute; inset: 12px; z-index: 3;
   pointer-events: none;
-  transform: scale(1.12);
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 .viewfinder::before,
@@ -1135,3 +1236,831 @@ a:hover { color: var(--action); }
   .loc-tool { border-radius: var(--radius-card); }
   .loc-results { grid-template-columns: 1fr; }
 }
+/* ===================================================================
+   Health Check (/production-finance-health-check/)
+   Conversiepagina met tweestapsformulier. Zelfde tokens, kaarten en
+   knoppen als de rest van de site; alleen het assessment-beeld en het
+   formulier zijn nieuw. Alle klassen beginnen met hc- zodat ze nooit
+   met de sectie-opmaak botsen.
+   =================================================================== */
+
+.hc-hero { padding-bottom: clamp(48px, 7vw, 96px); }
+
+.hc-hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(32px, 5vw, 72px); align-items: start;
+}
+
+.hc-hero h1 { font-size: clamp(2.1rem, 3.9vw, 3.2rem); max-width: 15ch; }
+
+.hc-lead { font-size: 1.08rem; max-width: 60ch; }
+.hc-hero .hc-lead { margin-bottom: 28px; }
+
+.hc-reassure { margin-top: 16px; font-size: 0.95rem; color: var(--ink-soft); max-width: 46ch; }
+.hc-reassure strong { color: var(--ink); font-weight: 700; }
+
+/* ---------- Formulierkaart ---------- */
+
+.hc-form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(24px, 3vw, 32px);
+}
+
+.hc-field { display: block; font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.hc-optional { font-weight: 400; color: var(--muted); font-size: 0.85em; }
+
+.hc-field input {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 13px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field input::placeholder { color: var(--muted); font-size: 0.94rem; }
+.hc-field input:focus {
+  outline: none;
+  border-color: var(--action);
+  box-shadow: 0 0 0 3px var(--action-soft);
+}
+.hc-field input[aria-invalid="true"] { border-color: #C23B4B; }
+.hc-field input[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px rgba(194, 59, 75, 0.16); }
+
+.hc-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.hc-help { margin: -6px 0 18px; font-size: 0.9rem; color: var(--muted); }
+
+.hc-submit { width: 100%; text-align: center; padding: 15px 26px; font-size: 1rem; }
+
+.hc-step-note { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 20px; }
+.hc-step-count {
+  display: inline-block; margin-right: 8px;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--action-soft-ink); background: var(--action-soft);
+  border-radius: var(--radius-chip); padding: 4px 8px;
+}
+
+/* Keuzevelden als chips: één tik op mobiel, en het assessment-gevoel
+   van de statuschips uit de app. */
+.hc-choice { border: 0; padding: 0; margin: 0 0 22px; }
+/* Nummer voor elke vraag, zodat je ziet hoeveel er nog komen. */
+.hc-q-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; margin-right: 9px;
+  border-radius: 50%;
+  background: var(--action-soft); color: var(--action-soft-ink);
+  font-size: 0.78rem; font-weight: 700;
+  vertical-align: 1px;
+}
+
+.hc-choice legend { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; padding: 0; }
+.hc-choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.hc-pill { position: relative; }
+.hc-pill input {
+  position: absolute; opacity: 0;
+  width: 100%; height: 100%; left: 0; top: 0; margin: 0; cursor: pointer;
+}
+.hc-pill span {
+  display: inline-block;
+  font-size: 0.86rem; font-weight: 600; line-height: 1.2;
+  color: var(--ink-soft);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  padding: 9px 13px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.hc-pill:hover span { border-color: var(--action); color: var(--action-soft-ink); }
+.hc-pill input:checked + span {
+  background: var(--action-soft); color: var(--action-soft-ink);
+  border-color: var(--action); font-weight: 700;
+}
+.hc-pill input:focus-visible + span { outline: 3px solid var(--action); outline-offset: 2px; }
+
+.hc-status { margin-top: 14px; min-height: 0; }
+.hc-status:empty { margin-top: 0; }
+
+.hc-done-title { font-size: 1.15rem; font-weight: 800; color: var(--ink); line-height: 1.3; }
+.hc-done-note { font-size: 0.92rem; color: var(--muted); margin-top: 14px; }
+.hc-done-note a { color: var(--action-soft-ink); }
+
+.hc-privacy {
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--divider);
+  font-size: 0.82rem; line-height: 1.55; color: var(--muted);
+}
+.hc-privacy a { color: var(--muted); text-decoration: underline; }
+.hc-privacy a:hover { color: var(--action-soft-ink); }
+
+/* ---------- Assessment-beeld (geen nagemaakt product-scherm) ---------- */
+
+.hc-scan {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(22px, 2.6vw, 30px);
+}
+
+.hc-scan-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.hc-scan-kicker {
+  display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--muted); margin-bottom: 6px;
+}
+.hc-scan-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+.hc-scan-head .chip { flex: none; }
+
+.hc-scan-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-scan-list li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center; gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.hc-scan-num {
+  font-size: 0.72rem; font-weight: 700; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  background: var(--bg); border-radius: var(--radius-chip);
+  padding: 5px 7px;
+}
+.hc-scan-label { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+
+/* Lege meter: er is nog niets beoordeeld. Bewust geen ingevulde score,
+   dat zou een verzonnen uitslag suggereren. */
+.hc-scan-meter { display: inline-flex; gap: 5px; }
+.hc-scan-meter i {
+  display: block; width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: transparent;
+}
+
+.hc-scan-foot { margin-top: 20px; }
+.hc-scan-key { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 0; }
+.hc-scan-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 10px 0 0; padding: 0; }
+.hc-scan-note { margin-top: 14px; font-size: 0.86rem; color: var(--muted); }
+
+/* ---------- Wat we bekijken ---------- */
+
+/* Smalle tekstkolom, maar wel links uitgelijnd zoals de rest van de site:
+   de container blijft dus breed, alleen de inhoud is smal. */
+.hc-narrow > * { max-width: 780px; }
+.hc-narrow h2 { max-width: 20ch; }
+
+.hc-topics {
+  list-style: none; margin: 30px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 24px;
+}
+.hc-topics li { position: relative; padding-left: 24px; font-size: 0.97rem; color: var(--ink); font-weight: 600; }
+.hc-topics li::before {
+  content: ""; position: absolute; left: 0; top: 0.55em;
+  width: 11px; height: 6px;
+  border-left: 2.5px solid var(--action);
+  border-bottom: 2.5px solid var(--action);
+  transform: rotate(-45deg);
+}
+
+.hc-aside-note {
+  margin-top: 32px; padding: 20px 24px;
+  background: var(--bg); border-left: 3px solid var(--gold);
+  border-radius: var(--radius-wash);
+  font-size: 0.98rem; color: var(--ink-soft);
+}
+
+/* ---------- Hoe het werkt ---------- */
+
+.hc-steps {
+  list-style: none; margin: 40px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;
+}
+.hc-steps li { position: relative; padding-top: 4px; }
+.hc-steps h3 { font-size: 1.12rem; margin: 0 0 0.5em; }
+.hc-steps p { font-size: 0.97rem; }
+.hc-steps-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--action-soft); color: var(--action-soft-ink);
+  font-weight: 800; font-size: 1.05rem;
+}
+
+/* ---------- Gebieden ---------- */
+
+.hc-areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+.hc-area {
+  background: var(--surface);
+  border: 1px solid rgba(45, 108, 196, 0.16);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 26px 26px 28px;
+}
+.hc-area-num {
+  display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--status-blue-ink); margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.hc-area h3 { font-size: 1.05rem; margin-bottom: 0.5em; }
+.hc-area p { font-size: 0.94rem; margin: 0; }
+
+.hc-areas-legend {
+  margin-top: 28px; font-size: 0.92rem; color: var(--ink-soft);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.hc-areas-legend .chip { vertical-align: middle; }
+
+.hc-tubes-link { margin-top: 1.4em; font-size: 0.95rem; }
+
+/* ---------- Slot-CTA ---------- */
+
+/* Slot-CTA: het donkere inzetpaneel dat de site al gebruikt, met de witte
+   formulierkaart erin. Zo is de laatste kans om te starten niet te missen. */
+.hc-final-inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 64px); align-items: center; text-align: left;
+}
+.hc-final-text h2 { max-width: 16ch; }
+.hc-final-inner .hc-lead,
+.hc-final-inner .hc-reassure { color: rgba(231, 230, 227, 0.82); }
+.hc-final-inner .hc-reassure strong { color: #fff; }
+.hc-final-inner .hc-form-card { position: relative; z-index: 1; box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.5); }
+
+/* Bij de sprong naar stap 2 wordt het formulier hoger; JS scrollt het dan
+   terug in beeld en houdt de plakkende header vrij. */
+.hc-form { scroll-margin-top: 100px; }
+
+/* ---------- Vaste knop op mobiel ---------- */
+
+.hc-sticky {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 20px -12px rgba(26, 26, 26, 0.4);
+  padding: 10px clamp(16px, 4vw, 24px) calc(10px + env(safe-area-inset-bottom));
+  transform: translateY(105%);
+  transition: transform 0.25s ease;
+}
+.hc-sticky.is-visible { transform: none; }
+.hc-sticky[hidden] { display: none; }
+.hc-sticky-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; max-width: 620px; margin: 0 auto; }
+.hc-sticky p { margin: 0; font-size: 0.86rem; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.hc-sticky .button { padding: 11px 18px; font-size: 0.88rem; white-space: nowrap; }
+@media (min-width: 981px) { .hc-sticky { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hc-sticky { transition: none; } }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  .hc-areas, .hc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 980px) {
+  .hc-hero-grid, .hc-final-inner { grid-template-columns: 1fr; }
+  .hc-hero h1 { max-width: none; }
+  .hc-hero-visual { max-width: 560px; }
+  .hc-final-text h2 { max-width: none; }
+}
+
+@media (max-width: 700px) {
+  .hc-topics { grid-template-columns: 1fr 1fr; }
+  .hc-areas, .hc-steps { grid-template-columns: 1fr; }
+  .hc-steps { gap: 26px; }
+  .hc-field-row { grid-template-columns: 1fr; gap: 0; }
+  .hc-form-card { padding: 22px 18px; }
+  .hc-scan { padding: 20px 18px; }
+  .hc-scan-list li { gap: 10px; }
+  .hc-scan-label { font-size: 0.9rem; }
+  .hc-sticky p { font-size: 0.8rem; }
+}
+
+/* Op smalle telefoons past de regel niet naast de knop: dan onder elkaar,
+   met de knop over de volle breedte (grootste trefvlak). */
+@media (max-width: 460px) {
+  .hc-sticky-inner { flex-direction: column; align-items: stretch; gap: 6px; }
+  .hc-sticky p { text-align: center; font-size: 0.78rem; color: var(--muted); }
+  .hc-sticky .button { width: 100%; text-align: center; }
+}
+
+@media (max-width: 420px) {
+  .hc-topics { grid-template-columns: 1fr; }
+}
+
+/* ---------- Zelfbeeld ná de bevestiging ---------- */
+
+/* De aanvraag is op dit punt al opgeslagen. Dit blok is dus puur winst:
+   wie hem invult geeft ons een voorsprong, wie hem overslaat is al lead. */
+.hc-assess {
+  margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid var(--divider);
+}
+.hc-assess-kicker {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--action-soft-ink); background: var(--action-soft);
+  border-radius: var(--radius-chip); padding: 4px 9px; margin-bottom: 12px;
+}
+.hc-assess-title { font-size: 1.1rem; margin-bottom: 0.4em; }
+.hc-assess-intro { font-size: 0.94rem; color: var(--ink-soft); margin-bottom: 20px; }
+
+.hc-assess-list { list-style: none; margin: 0; padding: 0; }
+.hc-assess-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 12px; align-items: center;
+  padding: 12px 0; border-top: 1px solid var(--divider);
+}
+.hc-assess-row:first-child { border-top: 0; padding-top: 0; }
+.hc-assess-num {
+  font-size: 0.7rem; font-weight: 700; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  background: var(--bg); border-radius: var(--radius-chip); padding: 4px 6px;
+  align-self: start; margin-top: 2px;
+}
+.hc-assess-label { font-size: 0.94rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.hc-assess-options { grid-column: 2; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+.hc-opt { position: relative; }
+.hc-opt input {
+  position: absolute; opacity: 0; left: 0; top: 0;
+  width: 100%; height: 100%; margin: 0; cursor: pointer;
+}
+.hc-opt span {
+  display: inline-block;
+  font-size: 0.8rem; font-weight: 600; line-height: 1;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  padding: 8px 11px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.hc-opt:hover span { border-color: var(--muted); color: var(--ink); }
+/* Aangevinkt krijgt de kleur van het bijbehorende label uit het assessment */
+.hc-opt-good input:checked + span { background: var(--status-mint-bg); color: var(--status-mint-ink); border-color: var(--status-mint-ink); font-weight: 700; }
+.hc-opt-mid input:checked + span { background: var(--status-amber-bg); color: var(--status-amber-ink); border-color: var(--status-amber-ink); font-weight: 700; }
+.hc-opt-low input:checked + span { background: var(--status-lavender-bg); color: var(--status-lavender-ink); border-color: var(--status-lavender-ink); font-weight: 700; }
+/* Niet van toepassing: bewust kleurloos, het is geen oordeel maar een
+   afbakening. Zo kan iedereen dezelfde vragen krijgen. */
+.hc-opt-na input:checked + span {
+  background: var(--divider); color: var(--ink-soft);
+  border-color: var(--muted); font-weight: 700;
+}
+/* Neutrale chip, voor "niet van toepassing" in de legenda. */
+.chip-neutral { background: var(--divider); color: var(--ink-soft); }
+
+.hc-role[hidden] { display: none; }
+.hc-role { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
+.hc-field select {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 13px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field select:focus {
+  outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft);
+}
+/* In het rapport staan de niet-van-toepassing-regels gedempt: ze horen erbij
+   maar zijn geen bevinding. */
+.hc-result-row.is-na .hc-result-label { color: var(--muted); font-weight: 500; }
+.hc-opt input:focus-visible + span { outline: 3px solid var(--action); outline-offset: 2px; }
+
+.hc-assess-submit { margin-top: 20px; width: 100%; text-align: center; }
+.hc-assess-status:empty { display: none; }
+
+.hc-assess-thanks {
+  margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid var(--divider);
+}
+.hc-assess-thanks-title { font-weight: 700; color: var(--ink); }
+
+@media (max-width: 520px) {
+  .hc-assess-row { grid-template-columns: 1fr; }
+  .hc-assess-num { display: none; }
+  .hc-assess-options { grid-column: 1; }
+}
+
+/* ---------- Vragenlijst op de eigen pagina ---------- */
+
+/* Links de vragen, rechts de uitleg: zelfde verdeling als de hero van de
+   landingspagina. */
+.hc-assess-grid {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 64px); align-items: start;
+}
+.hc-assess-main { min-width: 0; }
+.hc-assess-aside { min-width: 0; position: sticky; top: 100px; }
+.hc-assess-aside .hc-theme { transition: opacity 0.2s ease; }
+
+.hc-label-list { list-style: none; margin: 0; padding: 0; }
+.hc-label-list li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px; align-items: start;
+  padding: 14px 0; border-top: 1px solid var(--divider);
+  font-size: 0.92rem;
+}
+.hc-label-list li:first-child { border-top: 0; padding-top: 0; }
+.hc-label-list .chip { margin-top: 1px; }
+
+.hc-next-list { margin: 10px 0 0; padding-left: 1.15em; font-size: 0.92rem; }
+.hc-next-list li { margin-bottom: 0.45em; }
+.hc-next-list li::marker { color: var(--action); font-weight: 700; }
+.hc-assess-page h1 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
+.hc-assess-page .hc-lead { margin-bottom: 30px; }
+.hc-assess-form .hc-form-card { padding: clamp(24px, 3.5vw, 40px); }
+
+.hc-assess-identify { padding-bottom: 22px; margin-bottom: 6px; border-bottom: 1px solid var(--divider); }
+.hc-assess-identify[hidden] { display: none; }
+
+/* --- Voortgang: één segment per stap, plus de teller ernaast --- */
+.hc-progress-line { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.hc-progress { flex: 1; display: flex; gap: 5px; }
+.hc-progress-bar {
+  flex: 1; height: 4px; border-radius: 999px;
+  background: var(--divider);
+  transition: background 0.25s ease;
+}
+.hc-progress-bar.is-done { background: var(--action-soft); }
+.hc-progress-bar.is-current { background: var(--action); }
+.hc-progress-count { flex: none; font-size: 0.82rem; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
+
+/* --- Eén thema: kop plus zijn vragen --- */
+.hc-block { padding-top: 8px; scroll-margin-top: 100px; }
+.hc-block + .hc-block { margin-top: 12px; padding-top: 28px; border-top: 1px solid var(--divider); }
+.hc-block-meta {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--muted); margin-bottom: 10px;
+}
+.hc-block-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--action-soft); color: var(--action-soft-ink);
+  font-size: 0.78rem; letter-spacing: 0;
+}
+/* Introzin in de kaart, onder de kop van de stap. */
+.hc-block-note { font-size: 0.9rem; color: var(--muted); margin: -1.2em 0 1.6em; }
+
+.hc-block-intro { font-size: 0.95rem; color: var(--ink-soft); margin: -0.7em 0 1.6em; }
+
+.hc-block-heading {
+  font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em;
+  line-height: 1.3; margin-bottom: 1.1em; max-width: 30ch;
+}
+.hc-result-heading { font-size: 1.35rem; }
+.hc-result-heading:focus-visible { outline: 3px solid var(--action); outline-offset: 4px; }
+
+.hc-question { border: 0; padding: 0; margin: 0 0 28px; }
+.hc-question-label {
+  font-size: 1.02rem; font-weight: 700; color: var(--ink);
+  padding: 0; line-height: 1.35;
+}
+.hc-question-hint { font-size: 0.9rem; color: var(--muted); margin: 5px 0 12px; }
+
+.hc-step-actions { display: flex; align-items: center; gap: 8px; margin-top: 30px; }
+.hc-step-actions .button { flex: 1; text-align: center; }
+.hc-back {
+  order: -1;
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600;
+  color: var(--muted); padding: 13px 14px;
+  border-radius: var(--radius-button);
+}
+.hc-back:hover { color: var(--ink); background: var(--bg); }
+
+/* Eén stap per scherm, dus geen scheidingslijn tussen de blokken meer. */
+.hc-block + .hc-block { margin-top: 0; padding-top: 8px; border-top: 0; }
+
+/* --- Stap 4: hun eigen antwoorden terug --- */
+/* Het verslag staat onder de agenda-knop, met een duidelijke scheiding:
+   plannen eerst, lezen daarna. */
+.hc-report { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--divider); }
+.hc-report-heading { font-size: 1.15rem; margin-bottom: 0.5em; }
+
+.hc-result-intro { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 22px; }
+.hc-result-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-result-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid var(--divider);
+}
+.hc-result-label { font-size: 0.94rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.hc-result-row .chip { flex: none; }
+.hc-result-skipped { flex: none; font-size: 0.8rem; color: var(--muted); }
+.hc-result-row.is-empty .hc-result-label { color: var(--muted); font-weight: 500; }
+
+.hc-result-focus {
+  margin-top: 24px; padding: 20px 22px;
+  background: var(--bg); border-left: 3px solid var(--gold);
+  border-radius: var(--radius-wash);
+  font-size: 0.96rem;
+}
+.hc-result-focus-title { font-weight: 700; color: var(--ink); margin-bottom: 0.35em; }
+
+/* --- Themakolom rechts --- */
+.hc-theme {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+  padding: clamp(22px, 2.6vw, 30px);
+}
+.hc-theme-kicker {
+  display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--muted); margin-bottom: 8px;
+}
+.hc-theme-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; margin-bottom: 0.7em; }
+.hc-theme-friction { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
+
+.hc-theme-reading { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
+.hc-theme-reading-title {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); margin-bottom: 10px;
+}
+.hc-theme-reading ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.hc-theme-reading a { font-size: 0.92rem; font-weight: 600; color: var(--action-soft-ink); }
+
+.hc-theme-key {
+  margin-top: 20px; padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-card);
+}
+
+.hc-assess-notes { margin-top: 22px; }
+.hc-field textarea {
+  display: block; width: 100%; margin-top: 7px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 12px 14px; resize: vertical;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hc-field textarea::placeholder { color: var(--muted); font-size: 0.94rem; }
+.hc-field textarea:focus {
+  outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft);
+}
+
+/* Doorverwijzing op het bedankscherm van de aanvraag */
+/* Wat er in het gesprek nog meer langskomt: rustig, geen opsomming in
+   blokjes, het staat naast de knop en mag die niet overstemmen. */
+.hc-also {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid var(--divider);
+  font-size: 0.88rem; color: var(--muted); line-height: 1.55;
+}
+.hc-also strong { color: var(--ink-soft); }
+
+.hc-book-next { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
+
+.hc-book { display: block; width: 100%; text-align: center; margin: 18px 0 10px; }
+
+.hc-done-next {
+  margin-top: 22px; padding: 20px 22px;
+  background: var(--bg); border: 1px solid var(--divider);
+  border-radius: var(--radius-wash);
+}
+.hc-done-next-title { font-weight: 700; color: var(--ink); margin-bottom: 0.3em; }
+.hc-done-next p { font-size: 0.94rem; }
+.hc-done-next .button { margin-top: 14px; width: 100%; text-align: center; }
+
+/* ---------- Vragenlijst: smal scherm ----------
+   Staat bewust achteraan: de tweekolomsregel hierboven is even specifiek,
+   dus alleen wat later komt wint. */
+
+@media (max-width: 980px) {
+  .hc-assess-grid { grid-template-columns: 1fr; }
+  /* Eerst de vragen, daarna pas de uitleg. */
+  .hc-assess-aside { position: static; max-width: 620px; }
+  .hc-assess-main { max-width: 620px; }
+}
+
+@media (max-width: 700px) {
+  .hc-block-heading { font-size: 1.1rem; max-width: none; }
+  .hc-step-actions { flex-wrap: wrap; }
+  .hc-step-actions .button { flex: 1 1 100%; }
+  .hc-back { order: 2; align-self: center; padding: 8px 12px; }
+  .hc-result-row { flex-direction: column; align-items: flex-start; gap: 7px; }
+  .hc-theme, .hc-theme-key { padding: 22px 20px; }
+}
+
+/* ---------- Rapport: per thema, dan waar we beginnen ---------- */
+
+.hc-result-themes { margin-bottom: 26px; }
+.hc-theme-row { padding: 14px 0; border-bottom: 1px solid var(--divider); }
+.hc-theme-row:first-child { border-top: 1px solid var(--divider); }
+.hc-theme-row-name { font-size: 0.94rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
+
+/* Balkje per thema: één segment per beantwoorde vraag, in de kleur van het
+   gekozen label. Geen score, alleen de verdeling zichtbaar maken. */
+.hc-theme-bar { display: flex; gap: 3px; height: 8px; }
+.hc-theme-bar span { flex: 1; border-radius: 999px; }
+.hc-theme-bar .is-good { background: var(--status-mint-ink); }
+.hc-theme-bar .is-mid { background: var(--status-amber-ink); }
+.hc-theme-bar .is-low { background: var(--status-lavender-ink); }
+.hc-theme-row-count { font-size: 0.84rem; color: var(--muted); margin: 8px 0 0; }
+
+.hc-result-focus-lead { font-size: 0.96rem; margin-bottom: 1em; }
+
+.hc-finding-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.hc-finding-list li {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-wash);
+  padding: 16px 18px;
+}
+.hc-finding-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.hc-finding-head .chip { flex: none; }
+.hc-finding-label { font-size: 0.96rem; font-weight: 700; color: var(--ink); margin: 0; }
+.hc-finding-text { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.hc-finding-link {
+  display: inline-block; margin-top: 10px;
+  font-size: 0.88rem; font-weight: 700; color: var(--action-soft-ink);
+}
+
+.hc-result-all { margin-top: 24px; }
+.hc-result-all summary {
+  cursor: pointer; font-size: 0.92rem; font-weight: 700; color: var(--ink-soft);
+  padding: 10px 0;
+}
+.hc-result-all summary:hover { color: var(--action-soft-ink); }
+.hc-result-all[open] summary { margin-bottom: 6px; }
+
+/* De vragenlijst leent de hero-opmaak, maar niet de overflow: hidden daarvan.
+   Een sticky element binnen een overflow-hidden voorouder blijft niet aan de
+   bovenkant hangen maar schuift gewoon mee weg. */
+.hc-assess-page { overflow: visible; }
+
+/* ---------- Agenda in een popover ---------- */
+
+.booking-modal {
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 0;
+  width: min(1060px, calc(100vw - 32px));
+  /* Ruim genoeg voor het invulscherm dat verschijnt zodra iemand een tijd
+     kiest: daar staan naam, e-mail, telefoon en een tekstveld onder elkaar. */
+  height: min(820px, calc(100vh - 40px));
+  max-width: none; max-height: none;
+  box-shadow: 0 24px 60px -12px rgba(23, 25, 28, 0.35);
+  background: var(--surface);
+  color: var(--ink-soft);
+  overflow: hidden;
+}
+.booking-modal::backdrop { background: rgba(23, 25, 28, 0.55); backdrop-filter: blur(3px); }
+
+.booking-modal-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.booking-modal-head h2 { font-size: 1.3rem; margin: 0 0 0.25em; }
+.booking-modal-head p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+.booking-modal-close {
+  flex: none;
+  background: none; border: 0; cursor: pointer;
+  font-size: 1.8rem; line-height: 1; color: var(--muted);
+  padding: 2px 6px; border-radius: var(--radius-button);
+}
+.booking-modal-close:hover { color: var(--ink); background: var(--bg); }
+
+/* De agenda vult wat er overblijft; de hoogte staat op de dialog zelf. */
+.booking-modal-frame {
+  display: block; width: 100%;
+  height: calc(100% - 132px);
+  border: 0;
+  background: var(--bg);
+}
+
+.booking-modal-fallback {
+  margin: 0; padding: 12px 24px;
+  font-size: 0.85rem; color: var(--muted);
+  border-top: 1px solid var(--divider);
+  background: var(--surface);
+}
+
+@media (max-width: 700px) {
+  .booking-modal {
+    width: 100vw; height: 100dvh;
+    max-width: 100vw; border-radius: 0;
+  }
+  .booking-modal-head { padding: 16px 18px 12px; }
+  .booking-modal-fallback { padding: 10px 18px; }
+}
+
+/* ---------- Knop op de landingspagina ---------- */
+
+/* Geen kaart meer: de knop staat los onder de tekst, zonder tussenstap. */
+.hc-cta { margin-top: 30px; }
+.hc-cta-button { display: inline-block; padding: 15px 30px; font-size: 1rem; }
+.hc-final .hc-cta { margin-top: 26px; }
+
+/* Overzicht van de gegeven antwoorden: vraag links, antwoord rechts, en het
+   antwoord breekt niet af halverwege. */
+.hc-result-answer { flex: none; font-size: 0.94rem; font-weight: 700; color: var(--ink); text-align: right; }
+.hc-result-list .hc-result-row { align-items: baseline; gap: 20px; }
+.hc-result-list .hc-result-label { font-weight: 500; color: var(--ink-soft); }
+@media (max-width: 520px) {
+  .hc-result-list .hc-result-row { flex-direction: column; gap: 4px; }
+  .hc-result-answer { text-align: left; }
+}
+
+/* ---------- Vragenlijst als popover op de landingspagina ---------- */
+
+.hc-modal {
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 0;
+  /* Breed genoeg dat de agenda zijn driekolomsindeling toont (gegevens,
+     kalender, tijden naast elkaar) in plaats van gestapeld; dat scheelt
+     honderden pixels hoogte. De breedte blijft in elke stap gelijk. */
+  width: min(1000px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100vh - 40px);
+  box-shadow: 0 24px 60px -12px rgba(23, 25, 28, 0.35);
+  background: var(--surface);
+  color: var(--ink-soft);
+  overflow: hidden;
+  display: none;
+}
+.hc-modal[open] { display: flex; flex-direction: column; }
+.hc-modal::backdrop { background: rgba(23, 25, 28, 0.55); backdrop-filter: blur(3px); }
+
+.hc-modal-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: 22px 26px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.hc-modal-head h2 { font-size: 1.3rem; margin: 0 0 0.25em; }
+.hc-modal-head p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+.hc-modal-close {
+  flex: none;
+  background: none; border: 0; cursor: pointer;
+  font-size: 1.8rem; line-height: 1; color: var(--muted);
+  padding: 2px 6px; border-radius: var(--radius-button);
+}
+.hc-modal-close:hover { color: var(--ink); background: var(--bg); }
+
+.hc-modal-body { overflow-y: auto; padding: 4px 26px 26px; }
+
+/* Stap 1 zijn invulvelden, die blijven op leesbreedte. De vragen van stap 2
+   gebruiken de volle breedte: de keuzeknoppen passen dan op minder regels en
+   dat scheelt hoogte. */
+.hc-modal [data-hc-block="1"] { max-width: 620px; margin-left: auto; margin-right: auto; }
+
+/* De popover ís de kaart; het formulier hoeft er geen tweede omheen. */
+.hc-modal .hc-form-card {
+  background: none; border: 0; box-shadow: none; padding: 22px 0 0;
+}
+
+@media (max-width: 700px) {
+  .hc-modal { width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .hc-modal-head { padding: 16px 18px 12px; }
+  .hc-modal-body { padding: 4px 18px 20px; }
+}
+
+/* ---------- Agenda binnen de popover (stap 3) ---------- */
+
+.hc-calendar { margin: 14px 0 12px; border: 1px solid var(--divider); border-radius: var(--radius-wash); overflow: hidden; }
+/* Krap om de agenda heen: hij is ongeveer 500 hoog. Kiest iemand een dag,
+   dan verschijnt het invulscherm en scrollt dat binnen het kader. Meer
+   hoogte zou hier alleen grijs vlak opleveren. */
+.hc-calendar-frame { display: block; width: 100%; height: 545px; border: 0; background: var(--bg); }
+
+/* De popover houdt altijd dezelfde breedte: hij mag langer worden, niet
+   breder. Anders springt hij bij elke stap van formaat. */
+
+.hc-result .hc-report { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
+.hc-result .hc-report > summary {
+  cursor: pointer; font-size: 0.94rem; font-weight: 700; color: var(--ink-soft); padding: 6px 0;
+}
+.hc-result .hc-report > summary:hover { color: var(--action-soft-ink); }
+
+/* Onder de omslagbreedte stapelt de agenda alsnog, en dan is hoogte nodig. */
+@media (max-width: 1000px) {
+  .hc-calendar-frame { height: 940px; }
+}
+
+/* ---------- Hero van de Health Check ---------- */
+
+.hc-hero-promise { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.6em; }
+
+/* Alleen de knop: het e-mailadres wordt in de popover gevraagd. */
+.hc-cta { margin-top: 28px; }
+.hc-cta-button { display: inline-block; padding: 15px 30px; font-size: 1rem; }
+
+/* Wat er in die 45 minuten gebeurt, in het beeld rechts. */
+.hc-session-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--divider); }
+.hc-session-list li { padding: 16px 0; border-bottom: 1px solid var(--divider); }
+.hc-session-title {
+  font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--action-soft-ink); margin: 0 0 5px;
+}
+.hc-session-text { font-size: 0.96rem; color: var(--ink); margin: 0; line-height: 1.4; }
+
+/* Keuze op slot als het maximum bereikt is. */
+.hc-pill.is-disabled span { opacity: 0.45; cursor: not-allowed; }
+.hc-pill.is-disabled:hover span { border-color: var(--border); color: var(--ink-soft); }

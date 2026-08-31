@@ -11,14 +11,17 @@ eleventyExcludeFromCollections: true
     booking_url + booking_plans). Per plan een eigen pagina, zodat de juiste
     agenda ook zonder JavaScript wordt geopend; de plannaam gaat als ?plan=
     mee en verschijnt bij de boeking. -#}
-{%- set doel = settings.booking_url + "/" + boeking.slug -%}
+{#- Zonder slug sturen we door naar de agenda zelf, waar alle afspraaktypes
+    op staan. Handig voor een nieuw type dat nog gemaakt moet worden. -#}
+{%- set doel = (boeking.booking_url or settings.booking_url) -%}
+{%- if boeking.slug -%}{%- set doel = doel + "/" + boeking.slug -%}{%- endif -%}
 {%- if boeking.plan -%}{%- set doel = doel + "?plan=" + (boeking.plan | urlencode) -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a call — {{ settings.site_name }}</title>
+<title>Book a call | {{ settings.site_name }}</title>
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="0; url={{ doel }}">
 <link rel="canonical" href="{{ doel }}">
@@ -26,6 +29,23 @@ eleventyExcludeFromCollections: true
 </head>
 <body>
 <p>One moment&hellip; <a href="{{ doel }}">continue to the booking page</a>.</p>
-<script>location.replace({{ doel | dump | safe }});</script>
+<script>
+// Komt er een eigen ?plan= mee (de Health Check stuurt daar de antwoorden in),
+// dan heeft die voorrang op de standaardwaarde hierboven. Naam, e-mailadres en
+// het onderwerp geven we door zoals ze binnenkomen: de boekingspagina vult daar
+// zijn velden mee.
+(function () {
+  var doel = {{ doel | dump | safe }};
+  var binnen = new URLSearchParams(location.search);
+  var basis = doel.split('?')[0];
+  var uit = new URLSearchParams(doel.split('?')[1] || '');
+  ['plan', 'naam', 'email', 'telefoon', 'notities'].forEach(function (sleutel) {
+    var waarde = binnen.get(sleutel);
+    if (waarde) uit.set(sleutel, waarde);
+  });
+  var query = uit.toString();
+  location.replace(query ? basis + '?' + query : basis);
+})();
+</script>
 </body>
 </html>

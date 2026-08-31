@@ -111,6 +111,92 @@ for (const form of document.querySelectorAll(".contact-form")) {
   });
 }
 
+// Prijzen in lokale valuta: land wordt via IP gedetecteerd (ipapi.co), koers
+// ligt vast (14-08-2026) i.p.v. live opgehaald. Bezoeker kan de detectie
+// overrulen via het valuta-veld onder het bedrag; keuze blijft staan via
+// localStorage. Werkt door steeds vanuit de originele (Engelse) HTML met
+// €-bedragen te starten, dus wisselen van valuta kan geen rondingsfouten
+// opstapelen. Reset-bereik is .plan-price/.plan-price-detail, niet de hele
+// kaart: het valutaveld staat zelf ook in de kaart en zou anders bij elke
+// omrekening zijn eigen DOM-node (en dus de event listener) vernietigen.
+(function () {
+  const priceElements = document.querySelectorAll(".plan-price, .plan-price-detail");
+  const selects = document.querySelectorAll(".currency-select");
+  if (!priceElements.length) return;
+
+  const CURRENCIES = {
+    EUR: { rate: 1, format: (n) => `€ ${n}` },
+    USD: { rate: 1.1525, format: (n) => `$${n}` },
+    GBP: { rate: 0.8541, format: (n) => `£${n}` },
+    CAD: { rate: 1.6064, format: (n) => `C$${n}` },
+    AUD: { rate: 1.6335, format: (n) => `A$${n}` },
+    DKK: { rate: 7.4758, format: (n) => `kr ${n}` },
+  };
+  // Eurolanden houden € (geen omrekening nodig); GB/AU/CA/DK krijgen hun
+  // eigen valuta; alle overige landen vallen terug op dollars.
+  const EUROZONE = new Set(["AT", "BE", "HR", "CY", "EE", "FI", "FR", "DE", "GR", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES"]);
+  const COUNTRY_CURRENCY = { GB: "GBP", AU: "AUD", CA: "CAD", DK: "DKK" };
+  function currencyForCountry(code) {
+    if (EUROZONE.has(code)) return "EUR";
+    return COUNTRY_CURRENCY[code] || "USD";
+  }
+
+  const originalHTML = new Map();
+  for (const el of priceElements) originalHTML.set(el, el.innerHTML);
+
+  function convertText(text, code) {
+    const currency = CURRENCIES[code];
+    return text.replace(/€\s?(\d+)/g, (match, amount) => currency.format(Math.round(parseInt(amount, 10) * currency.rate)));
+  }
+
+  function applyCurrency(code) {
+    for (const el of priceElements) {
+      el.innerHTML = originalHTML.get(el);
+      if (code === "EUR") continue;
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      let node;
+      while ((node = walker.nextNode())) textNodes.push(node);
+      for (const textNode of textNodes) {
+        if (textNode.nodeValue.includes("€")) textNode.nodeValue = convertText(textNode.nodeValue, code);
+      }
+    }
+  }
+
+  function detectAndApply() {
+    const cachedCode = localStorage.getItem("tubes_currency_auto");
+    const cachedAt = parseInt(localStorage.getItem("tubes_currency_auto_at") || "0", 10);
+    if (cachedCode && Date.now() - cachedAt < 24 * 60 * 60 * 1000) {
+      applyCurrency(cachedCode);
+      return;
+    }
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        const code = currencyForCountry(data.country_code);
+        localStorage.setItem("tubes_currency_auto", code);
+        localStorage.setItem("tubes_currency_auto_at", String(Date.now()));
+        applyCurrency(code);
+      })
+      .catch(() => {}); // geolocatie mislukt: gewoon € laten staan
+  }
+
+  for (const select of selects) {
+    select.addEventListener("change", () => {
+      const choice = select.value;
+      localStorage.setItem("tubes_currency_choice", choice);
+      for (const other of selects) other.value = choice;
+      if (choice === "auto") detectAndApply();
+      else applyCurrency(choice);
+    });
+  }
+
+  const savedChoice = localStorage.getItem("tubes_currency_choice") || "auto";
+  for (const select of selects) select.value = savedChoice;
+  if (savedChoice === "auto") detectAndApply();
+  else applyCurrency(savedChoice);
+})();
+
 // Demo-popup: knoppen naar /contact/ openen het formulier als popup
 const demoModal = document.getElementById("demo-modal");
 if (demoModal && typeof demoModal.showModal === "function") {
@@ -124,4 +210,348 @@ if (demoModal && typeof demoModal.showModal === "function") {
   demoModal.addEventListener("click", (e) => {
     if (e.target === demoModal) demoModal.close();
   });
+}
+
+// ---------------------------------------------------------------------------
+// Gebeurtenissen doorgeven aan de statistieken.
+//
+// De site heeft geen eigen analytics-platform: als er een GoatCounter-code in
+// de instellingen staat, laadt layout.njk dat script. We voegen dus niets
+// nieuws toe, we melden alleen gebeurtenissen aan wat er al is (GoatCounter en,
+// als iemand later een tagmanager toevoegt, dataLayer). Het CustomEvent maakt
+// het bovendien mogelijk om er van buitenaf op te luisteren.
+// ---------------------------------------------------------------------------
+
+const pendingEvents = [];
+
+function flushEvents() {
+  if (!window.goatcounter || typeof window.goatcounter.count !== "function") return;
+  while (pendingEvents.length) {
+    const name = pendingEvents.shift();
+    window.goatcounter.count({ path: name, title: name, event: true });
+  }
+}
+
+function track(name, meta) {
+  pendingEvents.push(name);
+  flushEvents();
+  if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: name, ...meta });
+  document.dispatchEvent(new CustomEvent("tubes:track", { detail: { name, ...meta } }));
+}
+
+// GoatCounter laadt async; wat daarvoor gebeurde sturen we alsnog na.
+addEventListener("load", () => {
+  flushEvents();
+  setTimeout(flushEvents, 1500);
+});
+
+// ---------------------------------------------------------------------------
+// Health Check: tweestapsformulier (/production-finance-health-check/)
+//
+// Stap 1 vraagt alleen het zakelijke e-mailadres en slaat dat meteen op, zodat
+// een half ingevuld formulier toch een spoor achterlaat. Stap 2 vult de rest
+// aan en verwijst met lead_id naar die eerste regel, zodat de beheerpagina er
+// één aanvraag van maakt. Beide formulieren op de pagina (hero en slot) lopen
+// gelijk op: wie boven begint, ziet onderaan dezelfde stap terug.
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// Landingspagina van de Health Check
+//
+// Er staat geen formulier meer op deze pagina: de knop gaat rechtstreeks naar
+// de vragenlijst, die het e-mailadres vraagt. Wat hier overblijft is de
+// paginateller en de vaste knop op mobiel.
+// ---------------------------------------------------------------------------
+
+const hcCta = document.getElementById("hc-cta-top");
+
+if (hcCta) {
+  track("health-check-page-viewed");
+
+  const sticky = document.getElementById("hc-sticky");
+  const finalSection = document.getElementById("hc-final");
+
+  if (sticky && finalSection && "IntersectionObserver" in window) {
+    let scrolledPast = false;
+    let nearBottom = false;
+
+    const update = () => {
+      const show = scrolledPast && !nearBottom;
+      if (show) sticky.hidden = false;
+      sticky.classList.toggle("is-visible", show);
+    };
+
+    new IntersectionObserver(
+      ([entry]) => {
+        scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        update();
+      },
+      { threshold: 0 }
+    ).observe(hcCta);
+
+    new IntersectionObserver(
+      ([entry]) => {
+        nearBottom = entry.isIntersecting;
+        update();
+      },
+      { threshold: 0 }
+    ).observe(finalSection);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Vragenlijst op /production-finance-health-check/assessment/
+//
+// Twee stappen: wie je bent, en hoe je werkt. Daarna verschijnt de agenda met
+// daaronder een overzicht van wat er is ingevuld.
+//
+// Het e-mailadres wordt al vastgelegd bij het doorklikken naar stap 2, niet
+// pas bij het versturen: anders laat wie halverwege afhaakt geen spoor na.
+// Komt iemand met ?ref binnen, dan kennen we het adres al.
+// ---------------------------------------------------------------------------
+
+const assessForm = document.querySelector("[data-hc-assess-form]");
+
+if (assessForm) {
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+  const ref = new URLSearchParams(location.search).get("ref") || "";
+
+  const emailInput = assessForm.querySelector('input[name="email"]');
+  const emailBlock = assessForm.querySelector("[data-hc-email]");
+  const nameInput = assessForm.querySelector('input[name="name"]');
+  const companyInput = assessForm.querySelector('input[name="company"]');
+  const roleInput = assessForm.querySelector('input[name="role"]');
+  const status = assessForm.querySelector(".hc-status");
+  const blocks = Array.from(assessForm.querySelectorAll("[data-hc-block]"));
+
+  // De vragen staan in de opmaak; hier lezen we ze uit in plaats van ze nog
+  // een keer op te schrijven.
+  const questions = Array.from(assessForm.querySelectorAll(".hc-question")).map((block) => ({
+    key: block.dataset.key,
+    label: block.dataset.label,
+    // Bij een vraag waar meer antwoorden mogen, sturen we ze allemaal mee.
+    picked: () => Array.from(block.querySelectorAll("input:checked")).map((i) => i.value)
+  }));
+
+  if (ref && emailBlock) {
+    emailBlock.hidden = true;
+    emailInput.required = false;
+  }
+
+  // Vragen met een maximum: zodra er genoeg aangevinkt is, gaan de overige
+  // keuzes op slot. Dat leest prettiger dan een foutmelding achteraf.
+  for (const block of assessForm.querySelectorAll("[data-max]")) {
+    const max = Number(block.dataset.max);
+    const keuzes = Array.from(block.querySelectorAll("input"));
+    block.addEventListener("change", () => {
+      const aantal = keuzes.filter((k) => k.checked).length;
+      for (const keuze of keuzes) {
+        keuze.disabled = !keuze.checked && aantal >= max;
+        keuze.closest(".hc-pill").classList.toggle("is-disabled", keuze.disabled);
+      }
+    });
+  }
+
+  const setStatus = (text, kind) => {
+    status.textContent = text || "";
+    status.className = "form-status hc-status" + (kind ? " is-" + kind : "");
+  };
+
+  function showStep(n) {
+    for (const block of blocks) block.hidden = block.dataset.hcBlock !== String(n);
+    setStatus("");
+
+    const heading = assessForm.querySelector(`[data-hc-block="${n}"] h2`);
+    if (heading) {
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+    }
+    const card = assessForm.querySelector(".hc-form-card");
+    if (card && card.getBoundingClientRect().top < 80) {
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function detailsOk() {
+    if (!ref) {
+      const email = String(emailInput.value || "").trim();
+      if (!EMAIL_RE.test(email)) {
+        emailInput.setAttribute("aria-invalid", "true");
+        setStatus("Please enter your business email address.", "error");
+        emailInput.focus();
+        return false;
+      }
+      emailInput.removeAttribute("aria-invalid");
+    }
+    for (const [input, melding] of [
+      [nameInput, "Please add your name so we know who we are meeting."],
+      [companyInput, "Please add your company so we can prepare for the session."],
+      [roleInput, "Please add your role, so we can pitch the session at the right level."]
+    ]) {
+      if (input && !String(input.value || "").trim()) {
+        input.setAttribute("aria-invalid", "true");
+        setStatus(melding, "error");
+        input.focus();
+        return false;
+      }
+      if (input) input.removeAttribute("aria-invalid");
+    }
+    return true;
+  }
+
+  // Zodra iemand voorbij stap 1 is, leggen we het adres alvast vast. Mislukt
+  // dat, dan gaat alles bij het versturen alsnog mee.
+  let leadId = ref;
+  async function captureEmail() {
+    if (leadId) return;
+    const email = String(emailInput.value || "").trim();
+    if (!EMAIL_RE.test(email)) return;
+    try {
+      const res = await fetch("/api/health-check", {
+        method: "POST",
+        body: new URLSearchParams({
+          stage: "email",
+          email,
+          company_website: assessForm.querySelector('input[name="company_website"]').value,
+          page: location.pathname
+        }),
+        headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
+      });
+      const data = await res.json();
+      if (data.ok && data.id) {
+        leadId = data.id;
+        track("health-check-email-captured");
+      }
+    } catch (err) {
+      /* stil: het adres gaat bij het versturen alsnog mee */
+    }
+  }
+
+  for (const button of assessForm.querySelectorAll("[data-hc-next]")) {
+    button.addEventListener("click", () => {
+      if (!detailsOk()) return;
+      captureEmail();
+      showStep(Number(button.dataset.hcNext));
+      track("health-check-details-done");
+    });
+  }
+
+  for (const button of assessForm.querySelectorAll("[data-hc-back]")) {
+    button.addEventListener("click", () => showStep(Number(button.dataset.hcBack)));
+  }
+
+  // De agenda leest maar één veld uit de URL: ?plan. Daar zetten we de
+  // antwoorden in, zodat ze bij de boeking staan en niemand ze opnieuw hoeft
+  // te vertellen. Naam en e-mailadres vóórinvullen kan die pagina niet.
+  function loadCalendar(answers) {
+    const delen = [
+      `${nameInput.value.trim()} (${companyInput.value.trim()})`,
+      ...questions.map((q) => (answers[q.key] || []).join(", ")).filter(Boolean)
+    ];
+    const notes = assessForm.querySelector('textarea[name="notes"]').value.trim();
+    if (notes) delen.push(`Wants to discuss: ${notes}`);
+
+    // plan is de regel die bij de boeking komt te staan. Daarnaast geven we
+    // naam, e-mailadres en het vrije veld apart mee: de boekingspagina vult
+    // die velden daarmee alvast in, zodat niemand ze twee keer typt. Wie met
+    // ?ref binnenkomt heeft geen e-mailveld, dan sturen we het niet mee.
+    const params = new URLSearchParams();
+    params.set("plan", ("Production Health Check · " + delen.join(" · ")).slice(0, 400));
+    if (nameInput.value.trim()) params.set("naam", nameInput.value.trim());
+    if (emailInput && emailInput.value.trim()) params.set("email", emailInput.value.trim());
+    if (notes) params.set("notities", notes.slice(0, 500));
+    const query = "?" + params.toString();
+
+    const frame = assessForm.querySelector(".hc-calendar-frame");
+    if (frame && !frame.src) frame.src = frame.dataset.src + query;
+    const fallback = assessForm.querySelector("[data-hc-booking-fallback]");
+    if (fallback) fallback.href = "/book-a-call/health-check/" + query;
+  }
+
+  assessForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!detailsOk()) {
+      showStep(1);
+      return;
+    }
+
+    const answers = {};
+    for (const question of questions) {
+      const picked = question.picked();
+      if (picked.length) answers[question.key] = picked;
+    }
+
+    const button = assessForm.querySelector(".hc-submit");
+    button.disabled = true;
+    setStatus("One moment…");
+
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), 12000);
+    try {
+      const res = await fetch("/api/health-check", {
+        method: "POST",
+        signal: stop.signal,
+        body: (() => {
+          const body = new URLSearchParams({
+            stage: "details",
+            lead_id: leadId,
+            email: String(emailInput.value || "").trim(),
+            name: nameInput.value.trim(),
+            company: companyInput.value.trim(),
+            role: roleInput.value.trim(),
+            notes: assessForm.querySelector('textarea[name="notes"]').value,
+            company_website: assessForm.querySelector('input[name="company_website"]').value,
+            page: location.pathname
+          });
+          for (const [key, waarden] of Object.entries(answers)) {
+            for (const waarde of waarden) body.append(key, waarde);
+          }
+          return body;
+        })(),
+        headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }
+      });
+      let data = {};
+      try { data = await res.json(); } catch { /* geen JSON terug */ }
+      if (!res.ok || !data.ok) throw new Error(data.error || "request-failed");
+
+      track("health-check-requested", { answered: Object.keys(answers).length });
+      loadCalendar(answers);
+      showStep(3);
+    } catch (err) {
+      setStatus("That did not come through. Please try again, or email us at contact@tubes.media.", "error");
+    } finally {
+      clearTimeout(timer);
+      // Altijd weer bruikbaar: je kunt terug naar de vragen en opnieuw
+      // doorklikken, en na een fout meteen opnieuw proberen.
+      button.disabled = false;
+    }
+  });
+
+  // Op de landingspagina zit dit formulier in een popover; daar telt het
+  // openen, niet het laden van de pagina.
+  const hcModal = document.getElementById("hc-modal");
+
+  if (hcModal && typeof hcModal.showModal === "function") {
+    const open = () => {
+      hcModal.showModal();
+      track("health-check-assessment-opened", { linked: false });
+      const leeg = [...assessForm.querySelectorAll('[data-hc-block="1"] input')].find(
+        (veld) => !veld.value.trim()
+      );
+      if (leeg) setTimeout(() => leeg.focus({ preventScroll: true }), 60);
+    };
+    for (const link of document.querySelectorAll("[data-hc-open]")) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        open();
+      });
+    }
+
+    hcModal.querySelector(".hc-modal-close").addEventListener("click", () => hcModal.close());
+    hcModal.addEventListener("click", (e) => {
+      if (e.target === hcModal) hcModal.close();
+    });
+  } else {
+    track("health-check-assessment-opened", { linked: Boolean(ref) });
+  }
 }
