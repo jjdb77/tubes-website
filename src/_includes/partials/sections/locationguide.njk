@@ -16,9 +16,14 @@
     {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
 
     <div class="guide-controls">
-      <label class="loc-field guide-search-field" for="guide-search">What are you looking for?
-        <input type="search" id="guide-search" placeholder="Mountains, hotel, water tank, medieval street ..." autocomplete="off">
-      </label>
+      <div class="loc-field guide-search-field">
+        <label for="guide-search">What are you looking for?</label>
+        <input type="search" id="guide-search" placeholder="Try: industrial hall with high ceilings near Amsterdam" autocomplete="off">
+        <div class="guide-ai-row">
+          <button type="button" class="guide-ai-btn" data-ai-btn>Let AI turn this into filters</button>
+          <span class="guide-ai-status" data-ai-status role="status"></span>
+        </div>
+      </div>
       <label class="loc-field" for="guide-country">Country
         <select id="guide-country" class="guide-select">
           <option value="">All countries</option>
@@ -32,6 +37,8 @@
         </select>
       </label>
     </div>
+
+    <ul class="guide-chips" data-ai-chips hidden aria-label="Recognised filters"></ul>
 
     <div class="guide-toolbar">
       <div class="guide-pills" role="group" aria-label="Which list">
@@ -163,6 +170,7 @@
     const noneEl = root.querySelector(".guide-none");
     const grid = root.querySelector("[data-guide-grid]");
     let listMode = "all";
+    let aiTerms = [];
 
     const syncFavButtons = () => {
       for (const card of cards) {
@@ -182,7 +190,8 @@
         const ok = (listMode === "all" || favs.has(card.dataset.id)) &&
                    (!country.value || card.dataset.country === country.value) &&
                    (!type.value || card.dataset.type === type.value) &&
-                   (!needle || card.dataset.search.includes(needle));
+                   (!needle || card.dataset.search.includes(needle)) &&
+                   aiTerms.every((t) => card.dataset.search.includes(t));
         card.hidden = !ok;
         if (ok) shown++;
       }
@@ -193,6 +202,65 @@
     q.addEventListener("input", applyFilters);
     country.addEventListener("change", applyFilters);
     type.addEventListener("change", applyFilters);
+
+    // AI-zoeken: de zoekvraag gaat naar de eigen server, die er via OpenAI
+    // alleen filters van maakt (de database gaat nooit mee). De herkende
+    // filters staan als bewerkbare chips boven de resultaten. Faalt de call
+    // of is er geen sleutel, dan blijft het gewone tekstzoeken gewoon werken.
+    const aiBtn = root.querySelector("[data-ai-btn]");
+    const aiStatus = root.querySelector("[data-ai-status]");
+    const aiChips = root.querySelector("[data-ai-chips]");
+
+    const renderChips = () => {
+      const chips = [];
+      if (country.value) chips.push({ kind: "country", label: country.value });
+      if (type.value) chips.push({ kind: "type", label: type.value });
+      for (const t of aiTerms) chips.push({ kind: "term", label: t });
+      aiChips.hidden = chips.length === 0;
+      aiChips.innerHTML = chips.map((c) =>
+        `<li class="guide-chip"><span>${esc(c.label)}</span><button type="button" data-chip-kind="${c.kind}" data-chip-value="${esc(c.label)}" aria-label="Remove filter ${esc(c.label)}">&times;</button></li>`).join("");
+    };
+    aiChips.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-chip-kind]");
+      if (!btn) return;
+      if (btn.dataset.chipKind === "country") country.value = "";
+      else if (btn.dataset.chipKind === "type") type.value = "";
+      else aiTerms = aiTerms.filter((t) => t !== btn.dataset.chipValue);
+      renderChips(); applyFilters();
+    });
+    country.addEventListener("change", renderChips);
+    type.addEventListener("change", renderChips);
+
+    const askAI = async () => {
+      const query = q.value.trim();
+      if (!query) { aiStatus.textContent = "Type what you are looking for first."; return; }
+      aiBtn.disabled = true;
+      aiStatus.textContent = "Reading your search…";
+      try {
+        const r = await fetch("/api/location-search", {
+          method: "POST",
+          body: new URLSearchParams({ q: query }),
+          headers: { Accept: "application/json" },
+        });
+        const body = await r.json().catch(() => ({}));
+        if (r.ok && body.ok && body.filters) {
+          const f = body.filters;
+          if (f.country && [...country.options].some((o) => o.value === f.country)) country.value = f.country;
+          if (f.type && [...type.options].some((o) => o.value === f.type)) type.value = f.type;
+          aiTerms = f.terms || [];
+          q.value = "";
+          aiStatus.textContent = "These filters were recognised; remove a chip to widen the search.";
+        } else {
+          aiStatus.textContent = "AI search is not available right now; showing plain text matches instead.";
+        }
+      } catch {
+        aiStatus.textContent = "AI search is not available right now; showing plain text matches instead.";
+      }
+      aiBtn.disabled = false;
+      renderChips(); applyFilters();
+    };
+    aiBtn.addEventListener("click", askAI);
+    q.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); askAI(); } });
 
     // Pills: alle locaties / voorkeurslijst, en kaarten / lijst
     for (const pill of root.querySelectorAll("[data-list]")) {

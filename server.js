@@ -590,6 +590,141 @@ app.use("/mmg", (req, res, next) => {
   res.status(401).send("Password required.");
 });
 
+// ---------- AI-zoeken op de locatiegids ----------
+//
+// De bezoeker typt een zoekvraag in gewone taal; OpenAI maakt er alleen
+// FILTERS van (vaste sleutels: terms/country/type). De locatiedatabase gaat
+// NIET naar het model, dus het kan geen locaties verzinnen en er lekt geen
+// data. Sleutelbeheer op /beheer/ai: write-only, versleuteld op de volume
+// (AES-256-GCM, sleutel afgeleid van AI_SECRET of ADMIN_PASSWORD), calls
+// altijd server-side, rate-limit per IP en een harde maandlimiet in euro's.
+// Zonder sleutel of boven de limiet: 503, en de pagina zoekt gewoon in tekst.
+
+const AI_FILE = path.join(DATA_DIR, "ai-config.json");
+const AI_USAGE_FILE = path.join(DATA_DIR, "ai-usage.json");
+const AI_MODELS = ["gpt-4o-mini", "gpt-4.1-mini", "gpt-4.1-nano"];
+// Ruwe bovengrens in euro per miljoen tokens; alleen voor de maandteller,
+// dus liever te hoog geschat dan te laag.
+const AI_PRICES = {
+  "gpt-4o-mini": { in: 1, out: 4 },
+  "gpt-4.1-mini": { in: 1, out: 4 },
+  "gpt-4.1-nano": { in: 0.5, out: 2 },
+};
+const AI_DEFAULT_LIMIT = 10;
+// Alleen om lokaal te testen tegen een eigen endpoint; in productie leeg laten.
+const AI_API_URL = process.env.AI_API_URL || "https://api.openai.com/v1/chat/completions";
+
+// Landen en types voor de prompt komen uit de gids-data zelf (kleine lijsten,
+// niet de locaties).
+let AI_COUNTRIES = [], AI_TYPES = [];
+try {
+  const gids = JSON.parse(fs.readFileSync(path.join(__dirname, "src/_data/filmlocations.json"), "utf8"));
+  AI_COUNTRIES = [...new Set(gids.locations.map((l) => l.country))].sort();
+  AI_TYPES = [...new Set(gids.locations.map((l) => l.type))].sort();
+} catch (err) {
+  console.warn("[ai] filmlocations.json niet leesbaar:", err.message);
+}
+
+const aiSecret = () => process.env.AI_SECRET || process.env.ADMIN_PASSWORD || "";
+
+function aiEncrypt(plain) {
+  const salt = crypto.randomBytes(16);
+  const key = crypto.scryptSync(aiSecret(), salt, 32);
+  const iv = crypto.randomBytes(12);
+  const cipher = crypto.createCipheriv("aes-256-gcm", key, iv);
+  const data = Buffer.concat([cipher.update(plain, "utf8"), cipher.final()]);
+  return { salt: salt.toString("hex"), iv: iv.toString("hex"), tag: cipher.getAuthTag().toString("hex"), data: data.toString("hex") };
+}
+function aiDecrypt(obj) {
+  try {
+    const key = crypto.scryptSync(aiSecret(), Buffer.from(obj.salt, "hex"), 32);
+    const d = crypto.createDecipheriv("aes-256-gcm", key, Buffer.from(obj.iv, "hex"));
+    d.setAuthTag(Buffer.from(obj.tag, "hex"));
+    return Buffer.concat([d.update(Buffer.from(obj.data, "hex")), d.final()]).toString("utf8");
+  } catch { return ""; }
+}
+function readAiConfig() {
+  try { return JSON.parse(fs.readFileSync(AI_FILE, "utf8")); } catch { return {}; }
+}
+function writeAiConfig(cfg) { fs.writeFileSync(AI_FILE, JSON.stringify(cfg)); }
+function aiApiKey() {
+  const cfg = readAiConfig();
+  if (cfg.key) { const k = aiDecrypt(cfg.key); if (k) return k; }
+  return process.env.OPENAI_API_KEY || "";
+}
+function readAiUsage() {
+  const month = new Date().toISOString().slice(0, 7);
+  let u = {};
+  try { u = JSON.parse(fs.readFileSync(AI_USAGE_FILE, "utf8")); } catch {}
+  if (u.month !== month) u = { month, eur: 0, calls: 0 };
+  return u;
+}
+function addAiUsage(model, tokIn, tokOut) {
+  const u = readAiUsage();
+  const p = AI_PRICES[model] || { in: 1, out: 4 };
+  u.eur += (tokIn * p.in + tokOut * p.out) / 1e6;
+  u.calls += 1;
+  fs.writeFileSync(AI_USAGE_FILE, JSON.stringify(u));
+}
+const aiModel = (cfg) => (AI_MODELS.includes(cfg.model) ? cfg.model : AI_MODELS[0]);
+const aiLimit = (cfg) => { const n = Number(cfg.monthly_limit_eur); return isFinite(n) && n > 0 ? n : AI_DEFAULT_LIMIT; };
+
+app.post("/api/location-search", async (req, res) => {
+  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, fallback: true, reason: "rate" });
+  const q = String((req.body || {}).q || "").trim().slice(0, 300);
+  if (!q) return res.status(400).json({ ok: false, fallback: true, reason: "empty" });
+  const key = aiApiKey();
+  if (!key) return res.status(503).json({ ok: false, fallback: true, reason: "off" });
+  const cfg = readAiConfig();
+  if (readAiUsage().eur >= aiLimit(cfg)) {
+    console.warn("[ai] maandlimiet bereikt, terugval op gewoon zoeken");
+    return res.status(503).json({ ok: false, fallback: true, reason: "budget" });
+  }
+  const model = aiModel(cfg);
+  const system =
+    "You turn a location scout's search query into filters for a fixed catalogue of European filming locations and studios. " +
+    'Reply ONLY with a JSON object with exactly these keys: "terms" (array of 0-4 short lowercase English keywords likely to appear in a matching entry, translated to English; never invent place names that are not in the query), ' +
+    `"country" (exactly one of: ${AI_COUNTRIES.join("; ")}; or null), ` +
+    `"type" (exactly one of: ${AI_TYPES.join("; ")}; or null). ` +
+    "Ignore constraints the catalogue cannot filter on (price, crew size, dates) instead of guessing.";
+  try {
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), 9000);
+    const r = await fetch(AI_API_URL, {
+      method: "POST",
+      signal: stop.signal,
+      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model,
+        temperature: 0,
+        max_tokens: 150,
+        response_format: { type: "json_object" },
+        messages: [{ role: "system", content: system }, { role: "user", content: q }],
+      }),
+    }).finally(() => clearTimeout(timer));
+    if (!r.ok) {
+      console.error("[ai] OpenAI-fout:", r.status, await r.text().catch(() => ""));
+      return res.status(502).json({ ok: false, fallback: true, reason: "error" });
+    }
+    const body = await r.json();
+    addAiUsage(model, body.usage?.prompt_tokens || 0, body.usage?.completion_tokens || 0);
+    let f = {};
+    try { f = JSON.parse(body.choices?.[0]?.message?.content || "{}"); } catch {}
+    res.json({
+      ok: true,
+      source: "ai",
+      filters: {
+        terms: Array.isArray(f.terms) ? f.terms.slice(0, 4).map((t) => String(t).toLowerCase().slice(0, 40)).filter(Boolean) : [],
+        country: AI_COUNTRIES.includes(f.country) ? f.country : null,
+        type: AI_TYPES.includes(f.type) ? f.type : null,
+      },
+    });
+  } catch (err) {
+    console.error("[ai] fout:", err.message);
+    res.status(502).json({ ok: false, fallback: true, reason: "error" });
+  }
+});
+
 // ---------- Beheerpagina ----------
 
 function checkAuth(req, res) {
@@ -776,7 +911,7 @@ app.get("/beheer", (req, res) => {
   .selfview em{font-style:normal;font-weight:700;color:#5C5750}
 </style></head><body><div class="wrap">
 <h1>Berichten</h1>
-<p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a></p>
+<p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a> &middot; <a href="/beheer/ai" style="color:#0E8C77">AI-zoeken</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
 ${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
@@ -818,6 +953,97 @@ app.get("/beheer/export.csv", (req, res) => {
   res.set("Content-Type", "text/csv; charset=utf-8");
   res.set("Content-Disposition", "attachment; filename=tubes-berichten.csv");
   res.send("﻿" + csv);
+});
+
+// ---------- Beheer AI-zoeken (/beheer/ai) ----------
+
+app.get("/beheer/ai", (req, res) => {
+  if (!checkAuth(req, res)) return;
+  const cfg = readAiConfig();
+  const usage = readAiUsage();
+  const envKey = Boolean(process.env.OPENAI_API_KEY);
+  const hasKey = Boolean(cfg.key) || envKey;
+  const last4 = cfg.key_last4 || (envKey ? process.env.OPENAI_API_KEY.slice(-4) : "");
+  const limit = aiLimit(cfg);
+  const test = req.query.test;
+  res.send(`<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>AI-zoeken — Tubes beheer</title>
+<style>
+  body{font-family:"Mulish",system-ui,sans-serif;background:#F6F7F9;color:#5C5750;margin:0;padding:40px 20px}
+  .wrap{max-width:640px;margin:0 auto}
+  h1{color:#1A1A1A;font-size:1.6rem}
+  .card{background:#fff;border:1px solid #E3E5E9;border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  label{display:block;font-weight:700;color:#1A1A1A;margin:14px 0 4px;font-size:.95rem}
+  input,select{width:100%;box-sizing:border-box;font:inherit;padding:10px 12px;border:1px solid #E3E5E9;border-radius:10px}
+  button{font:inherit;font-weight:700;background:#0E9C88;color:#fff;border:0;border-radius:10px;padding:10px 18px;cursor:pointer;margin-top:16px}
+  button.secundair{background:#fff;color:#0E8C77;border:1px solid #E3E5E9}
+  .hint{font-size:.85rem;color:#8B8E94;margin-top:4px}
+  .ok{color:#1F8A4C;font-weight:700}.fout{color:#C23B4B;font-weight:700}
+  a{color:#0E8C77}
+  .teller{font-size:1.05rem;color:#1A1A1A}
+</style></head><body><div class="wrap">
+<h1>AI-zoeken op de locatiegids</h1>
+<p><a href="/beheer">&larr; terug naar de berichten</a></p>
+${test === "ok" ? '<p class="ok">Sleutel getest: OpenAI antwoordt.</p>' : ""}
+${test === "fail" ? '<p class="fout">Test mislukt: sleutel ongeldig of OpenAI niet bereikbaar (zie serverlog).</p>' : ""}
+${req.query.saved ? '<p class="ok">Opgeslagen.</p>' : ""}
+<div class="card">
+  <p class="teller">Deze maand (${usage.month}): <strong>&euro; ${usage.eur.toFixed(2)}</strong> van &euro; ${limit.toFixed(2)} &middot; ${usage.calls} zoekopdracht${usage.calls === 1 ? "" : "en"}</p>
+  <p class="hint">Ruwe bovengrens op basis van tokengebruik. Boven de limiet valt de pagina automatisch terug op gewoon zoeken tot de volgende maand.</p>
+</div>
+<div class="card">
+  <form method="POST" action="/beheer/ai">
+    <label>OpenAI API-sleutel ${hasKey ? `(ingesteld, eindigt op &hellip;${last4}${envKey && !cfg.key ? ", via env OPENAI_API_KEY" : ""})` : "(nog niet ingesteld)"}</label>
+    <input type="password" name="key" autocomplete="off" placeholder="${hasKey ? "Leeg laten = ongewijzigd" : "sk-..."}">
+    <p class="hint">Write-only: de sleutel wordt versleuteld op de volume bewaard en nooit naar de browser teruggestuurd; alleen de laatste 4 tekens zijn zichtbaar. Let op: de versleuteling is afgeleid van ${process.env.AI_SECRET ? "AI_SECRET" : "ADMIN_PASSWORD"}; verandert die, dan moet de sleutel opnieuw ingevoerd worden.</p>
+    <label>Model</label>
+    <select name="model">${AI_MODELS.map((m) => `<option${aiModel(cfg) === m ? " selected" : ""}>${m}</option>`).join("")}</select>
+    <label>Maandlimiet (euro)</label>
+    <input type="number" name="monthly_limit_eur" min="1" step="1" value="${limit}">
+    <button type="submit">Opslaan</button>
+  </form>
+  <form method="POST" action="/beheer/ai/test" style="display:inline"><button type="submit" class="secundair">Sleutel testen</button></form>
+  ${cfg.key ? '<form method="POST" action="/beheer/ai/delete" style="display:inline;margin-left:8px"><button type="submit" class="secundair">Sleutel verwijderen</button></form>' : ""}
+</div>
+<p class="hint">De zoekvraag van de bezoeker gaat naar OpenAI om er filters van te maken; de locatiedatabase zelf gaat nooit mee. Zonder sleutel werkt de pagina gewoon, met tekstzoeken.</p>
+</div></body></html>`);
+});
+
+app.post("/beheer/ai", (req, res) => {
+  if (!checkAuth(req, res)) return;
+  const b = req.body || {};
+  const cfg = readAiConfig();
+  const key = String(b.key || "").trim();
+  if (key) {
+    cfg.key = aiEncrypt(key);
+    cfg.key_last4 = key.slice(-4);
+  }
+  if (AI_MODELS.includes(b.model)) cfg.model = b.model;
+  const limit = Number(b.monthly_limit_eur);
+  if (isFinite(limit) && limit > 0) cfg.monthly_limit_eur = limit;
+  writeAiConfig(cfg);
+  res.redirect("/beheer/ai?saved=1");
+});
+
+app.post("/beheer/ai/test", async (req, res) => {
+  if (!checkAuth(req, res)) return;
+  const key = aiApiKey();
+  if (!key) return res.redirect("/beheer/ai?test=fail");
+  try {
+    const r = await fetch("https://api.openai.com/v1/models", { headers: { Authorization: `Bearer ${key}` } });
+    res.redirect("/beheer/ai?test=" + (r.ok ? "ok" : "fail"));
+  } catch {
+    res.redirect("/beheer/ai?test=fail");
+  }
+});
+
+app.post("/beheer/ai/delete", (req, res) => {
+  if (!checkAuth(req, res)) return;
+  const cfg = readAiConfig();
+  delete cfg.key; delete cfg.key_last4;
+  writeAiConfig(cfg);
+  res.redirect("/beheer/ai?saved=1");
 });
 
 // ---------- Statische site ----------

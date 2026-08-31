@@ -2271,3 +2271,29 @@ a:hover { color: var(--action); }
   .guide-aside .button + .button { margin: 0 0 0 8px; }
   .guide-grid.is-list .guide-photo { width: 150px; }
 }
+
+/* ---------- Locatiegids: AI-zoeken ---------- */
+
+.guide-search-field > label { display: block; }
+.guide-ai-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 8px; }
+.guide-ai-btn {
+  border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
+  font-family: var(--font-sans); font-size: 0.84rem; font-weight: 700; color: var(--action-soft-ink);
+  padding: 6px 13px; cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.guide-ai-btn:hover { border-color: var(--action); background: var(--action-soft); }
+.guide-ai-btn:disabled { opacity: 0.55; cursor: wait; }
+.guide-ai-status { font-size: 0.82rem; font-weight: 500; color: var(--muted); }
+.guide-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; }
+.guide-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--status-blue-bg); color: var(--status-blue-ink);
+  border-radius: 999px; padding: 6px 8px 6px 14px; font-size: 0.86rem; font-weight: 700;
+}
+.guide-chip button {
+  border: 0; background: rgba(255, 255, 255, 0.7); color: inherit; cursor: pointer;
+  width: 20px; height: 20px; border-radius: 50%; font-size: 0.9rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; padding: 0;
+}
+.guide-chip button:hover { background: #fff; }
