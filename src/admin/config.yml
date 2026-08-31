@@ -299,3 +299,110 @@ collections:
                 fields:
                   - { label: Vraag, name: question, widget: string }
                   - { label: Antwoord, name: answer, widget: markdown }
+          - name: locations
+            label: "Locatievergelijking (tool + tabel + aanvraagformulier)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties en cijfers zelf staan onder 'Locaties (vergelijkingspagina)'." }
+              - { label: "Kop boven de tabel", name: table_heading, widget: string, required: false, default: "All locations at a glance" }
+              - { label: "Voetnoot onder de tabel", name: footnote, widget: markdown, required: false }
+              - { label: "Kop bij het aanvraagformulier", name: request_heading, widget: string, required: false, default: "Missing a location?" }
+              - { label: "Tekst bij het aanvraagformulier", name: request_text, widget: markdown, required: false }
+
+  # Cijfers voor de vergelijkingspagina /compare-film-tv-locations/ (los van de Tubes-app)
+  - name: locaties
+    label: "Locaties (vergelijkingspagina)"
+    icon: public
+    files:
+      - name: locaties
+        label: "Locaties en incentives"
+        file: src/_data/locations.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string, hint: "Verschijnt op de pagina als 'Figures checked on ...'" }
+          - { label: "Aandeel lokale lonen in de uitgaven (0-1)", name: labour_share, widget: number, value_type: float, step: 0.05, min: 0, max: 1, hint: "Alleen voor regelingen die uitsluitend lonen vergoeden (Canada). 0.5 = de helft van de lokale uitgaven zijn lonen." }
+          - { label: "Toelichting aandeel lonen", name: labour_note, widget: string, required: false }
+          - { label: "Toelichting wisselkoersen", name: fx_note, widget: string, required: false }
+          - label: "Wisselkoersen (1 euro in lokale valuta)"
+            name: fx
+            widget: object
+            collapsed: true
+            hint: "Alleen gebruikt om plafonds en drempels in andere valuta om te rekenen; hoeft niet exact te zijn."
+            fields:
+              - { label: EUR, name: EUR, widget: number, value_type: float, default: 1 }
+              - { label: GBP, name: GBP, widget: number, value_type: float }
+              - { label: HUF, name: HUF, widget: number, value_type: float }
+              - { label: CZK, name: CZK, widget: number, value_type: float }
+              - { label: PLN, name: PLN, widget: number, value_type: float }
+              - { label: ISK, name: ISK, widget: number, value_type: float }
+              - { label: NOK, name: NOK, widget: number, value_type: float }
+              - { label: USD, name: USD, widget: number, value_type: float }
+              - { label: CAD, name: CAD, widget: number, value_type: float }
+              - { label: AUD, name: AUD, widget: number, value_type: float }
+              - { label: NZD, name: NZD, widget: number, value_type: float }
+              - { label: ZAR, name: ZAR, widget: number, value_type: float }
+          - label: Locaties
+            name: locations
+            widget: list
+            summary: "{{fields.name}} ({{fields.rate_label}})"
+            fields:
+              - { label: "ID (uniek, kleine letters en koppeltekens)", name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Regio, name: region, widget: select, options: [Europe, "Rest of world"], default: Europe }
+              - { label: Regeling, name: scheme, widget: string }
+              - { label: Soort, name: mechanism, widget: select, options: ["Cash rebate", "Tax credit", "Tax shelter", "Selective fund"], default: "Cash rebate" }
+              - { label: "Valuta (ISO-code)", name: currency, widget: string, default: EUR }
+              - { label: "Rekenpercentage (van de lokale uitgaven)", name: rate, widget: number, value_type: float, step: 0.5, hint: "Wat de tool gebruikt. Bij getrapte tarieven telt het veld 'Getrapte tarieven'." }
+              - { label: "Percentage zoals getoond in de tabel", name: rate_label, widget: string, hint: "Bijv. '30% / 25%' of 'Up to 35%'" }
+              - { label: "Nettofactor", name: net_factor, widget: number, value_type: float, required: false, hint: "Alleen als het krediet belast wordt, bijv. 0.75 voor het VK (25% vennootschapsbelasting). Leeg = 1." }
+              - { label: "Nettowaarde zoals getoond", name: net_label, widget: string, required: false, hint: "Bijv. '25.5% after tax'. Leeg = 'Same as headline'." }
+              - { label: "Aanname die de tool bij de uitkomst toont", name: assumption, widget: string, required: false, hint: "Bijv. 'Assumes the full 40%: ...'" }
+              - { label: "Max. aandeel van het totale budget dat meetelt (0-1)", name: base_share, widget: number, value_type: float, required: false, hint: "Bijv. 0.8 als hooguit 80% van het budget in aanmerking komt." }
+              - { label: "Alleen lokale lonen tellen mee", name: labour_only, widget: boolean, required: false, default: false }
+              - { label: "Extra percentage over lokale lonen", name: labour_bonus, widget: number, value_type: float, required: false, hint: "Bijv. 16 voor het federale Canadese krediet bovenop een provinciaal all-spend-krediet." }
+              - label: "Getrapte tarieven"
+                name: tiers
+                widget: list
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Tot en met bedrag (lokale valuta, leeg = de rest)", name: upto, widget: number, value_type: int, required: false }
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+              - label: "Hoger tarief voor films onder een budgetgrens"
+                name: film_uplift
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+                  - { label: Nettofactor, name: net_factor, widget: number, value_type: float, required: false }
+                  - { label: "Max. budget (lokale valuta)", name: max_budget, widget: number, value_type: int }
+                  - { label: Toelichting, name: label, widget: string }
+              - label: "Hoger tarief boven een uitgavengrens"
+                name: spend_uplift
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+                  - { label: "Min. lokale uitgaven (lokale valuta)", name: min_spend, widget: number, value_type: int }
+                  - { label: Toelichting, name: label, widget: string }
+              - { label: "Minimale lokale uitgaven (tekst)", name: min_spend, widget: string }
+              - label: "Plafond per project (bedrag)"
+                name: cap
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Bedrag (lokale valuta)", name: amount, widget: number, value_type: int }
+                  - { label: Omschrijving, name: label, widget: string }
+              - { label: "Plafond (tekst, als er geen bedrag is)", name: cap_label, widget: string, required: false }
+              - { label: Financiering, name: funding, widget: select, options: [Entitlement, "Budget-limited", Selective, "Investor-based"], default: Entitlement }
+              - { label: "Toelichting financiering", name: funding_note, widget: string, required: false }
+              - { label: "Buitenlandse uitgaven tellen mee", name: foreign_spend, widget: select, options: [No, Partly, Yes], default: No }
+              - { label: Uitbetaling, name: paid, widget: string }
+              - { label: Toelichting, name: notes, widget: text }
+              - { label: "Bron (URL)", name: source, widget: string, required: false }
+              - { label: Bronnaam, name: source_label, widget: string, required: false }

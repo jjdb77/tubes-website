@@ -67,6 +67,15 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - robots.txt heeft `Disallow: /mmg/`; de pagina's horen niet in menu, sitemap of zoekmachines.
 - Deze bestanden worden vanuit een Claude-sessie gegenereerd en hierheen gekopieerd; kleine tekstwijzigingen kunnen direct in deze bestanden, maar HTML en PDF moeten dan wel allebei aangepast worden (de PDF is een aparte render, geen automatische afgeleide).
 
+## Vergelijkingspagina locaties: /compare-film-tv-locations/
+
+- Openbare SEO-landingspagina (geen login, voor iedereen) die producers trekt die opnamelocaties/landen vergelijken. Staat volledig **los van de Tubes-app**; Tubes wordt alleen via tekst en CTA's gepromoot.
+- Content: `src/content/pages/compare-film-tv-locations.md` (gewone secties). Het sectietype `locations` (`src/_includes/partials/sections/locations.njk`) rendert de vergelijkingstool, de volledige tabel en het formulier "Missing a location?".
+- Cijfers: `src/_data/locations.json`, in het CMS onder "Locaties (vergelijkingspagina)". Per locatie: `rate` (rekenpercentage), `rate_label` (getoond), optioneel `tiers` (getrapt), `net_factor` (VK: krediet is belast), `film_uplift`, `spend_uplift`, `base_share` (max. aandeel van het budget), `cap` (bedrag in lokale valuta), `labour_only`/`labour_bonus` (Canada: alleen lonen), `assumption` (aanname die de tool toont), `funding`, `notes`, `source`. `updated` = datum in "Figures checked on ...". `fx` = ruwe wisselkoersen, alleen om plafonds om te rekenen.
+- De tool rekent in de browser (inline script in de sectie) en toont per locatie een **indicatieve nettowaarde**, gesorteerd op waarde, met de aannames erbij. Cijfers zijn in aug. 2026 geverifieerd met bronlinks; houd twijfel als twijfel in `notes` (zie [[eerlijke-claims-op-de-site]]).
+- Locatie aanvragen: post naar /api/contact met bericht "Location request: <locatie>" plus toelichting; te lezen op /beheer (kolom page = /compare-film-tv-locations/). server.js is niet aangepast.
+- Staat in `settings.footer_nav` (niet in het hoofdmenu) en loopt automatisch mee in sitemap en llms.txt.
+
 ## Domein & DNS (niet slopen)
 
 - tubes.media is geregistreerd bij **Squarespace**; DNS daar bevat: Google Workspace **MX-records (e-mail — NOOIT aanraken)**, TXT google-site-verification, _dmarc, en de www-CNAME naar Railway.

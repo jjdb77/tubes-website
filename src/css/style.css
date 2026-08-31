@@ -983,3 +983,155 @@ a:hover { color: var(--action); }
 }
 .viewfinder::before { top: 0; left: 0; border-top-width: 2.5px; border-left-width: 2.5px; border-top-left-radius: 6px; }
 .viewfinder::after { bottom: 0; right: 0; border-bottom-width: 2.5px; border-right-width: 2.5px; border-bottom-right-radius: 6px; }
+
+/* ---------- Locatievergelijking (/compare-film-tv-locations/, los van de app) ---------- */
+
+.loc-tool {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(22px, 3vw, 36px);
+  box-shadow: var(--shadow-card);
+}
+.loc-controls {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px 28px; align-items: end; margin: 0; padding: 0; border: 0;
+}
+.loc-field { display: block; margin: 0; padding: 0; border: 0; min-width: 0; font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+.loc-field legend { padding: 0; margin-bottom: 6px; }
+
+/* Keuzeknop film/serie */
+.seg { display: inline-flex; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-button); padding: 3px; }
+.seg-btn { position: relative; padding: 9px 16px; border-radius: 8px; font-weight: 600; color: var(--ink-soft); cursor: pointer; white-space: nowrap; }
+.seg-btn input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.seg-btn:has(input:checked) { background: var(--surface); color: var(--action-soft-ink); box-shadow: var(--shadow-card); }
+.seg-btn:has(input:focus-visible) { outline: 2px solid var(--action); outline-offset: 1px; }
+
+/* Bedragveld met €-teken */
+.money {
+  display: flex; align-items: center; margin-top: 6px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-button);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.money > span { padding-left: 14px; color: var(--muted); font-weight: 700; }
+.money input {
+  flex: 1; min-width: 0; border: 0; background: transparent;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--ink);
+  padding: 12px 14px 12px 8px;
+}
+.money input:focus { outline: none; }
+.money:focus-within { border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+
+/* Locatiechips */
+.loc-picker { margin-top: 26px; }
+.loc-picker-label { font-size: 0.92rem; font-weight: 600; color: var(--ink); margin: 0 0 10px; }
+.loc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.loc-chip {
+  position: relative; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface);
+  font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.loc-chip:hover { border-color: var(--action); color: var(--action-soft-ink); }
+.loc-chip input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.loc-chip:has(input:checked) { background: var(--action); border-color: var(--action); color: #fff; }
+.loc-chip:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+.loc-chip:has(input:disabled) input { cursor: not-allowed; }
+.loc-chip:has(input:focus-visible) { outline: 2px solid var(--action); outline-offset: 2px; }
+
+/* Uitkomsten naast elkaar */
+.loc-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 28px; }
+.loc-result {
+  position: relative;
+  background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-card);
+  padding: 26px 22px 20px;
+}
+.loc-result.is-top { background: var(--surface); border-color: var(--action); box-shadow: 0 12px 32px -14px rgba(14, 156, 136, 0.28); }
+.loc-result-top {
+  position: absolute; top: -11px; left: 18px;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--action); color: #fff; padding: 3px 10px; border-radius: 999px;
+}
+.loc-result h4 { font-size: 1.1rem; margin: 0; }
+.loc-result-scheme { display: block; font-size: 0.8rem; font-weight: 500; color: var(--muted); margin-top: 2px; }
+.loc-result-value {
+  font-size: clamp(1.6rem, 2.4vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
+  color: var(--ink); margin: 16px 0 2px;
+}
+.loc-result-value span { display: block; font-size: 0.76rem; font-weight: 600; letter-spacing: 0; color: var(--muted); margin-top: 5px; }
+.loc-result-sub { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 12px; }
+.loc-badges, .loc-result-notes { list-style: none; margin: 0; padding: 0; }
+.loc-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.loc-result-notes li { font-size: 0.82rem; line-height: 1.45; color: var(--ink-soft); padding-left: 14px; position: relative; margin-bottom: 5px; }
+.loc-result-notes li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.loc-empty { color: var(--muted); margin: 0; }
+.loc-disclaimer { margin: 22px 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--muted); }
+
+/* Labels in app-statuskleuren */
+.loc-tag {
+  display: inline-block; padding: 3px 9px; border-radius: var(--radius-chip);
+  font-size: 0.76rem; font-weight: 700; white-space: nowrap;
+  background: var(--divider); color: var(--ink-soft);
+}
+.loc-tag-cash-rebate { background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.loc-tag-tax-credit { background: var(--status-blue-bg); color: var(--status-blue-ink); }
+.loc-tag-tax-shelter, .loc-tag-investor-based { background: var(--status-lavender-bg); color: var(--status-lavender-ink); }
+.loc-tag-selective-fund, .loc-tag-selective, .loc-tag-budget-limited { background: var(--status-amber-bg); color: var(--status-amber-ink); }
+.loc-tag-entitlement { background: var(--status-teal-bg); color: var(--status-teal-ink); }
+
+/* De volledige tabel */
+.loc-table-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin: 56px 0 18px; }
+.loc-table-head h3 { margin: 0; }
+.loc-filter { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.loc-filter-btn {
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); cursor: pointer;
+}
+.loc-filter-btn:hover { border-color: var(--action); color: var(--action-soft-ink); }
+.loc-filter-btn.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
+.loc-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); }
+.loc-table-wrap:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+.loc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 1240px; }
+.loc-table th, .loc-table td { text-align: left; vertical-align: top; padding: 14px; border-bottom: 1px solid var(--divider); }
+.loc-table thead th {
+  background: var(--bg); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--ink-soft); white-space: nowrap;
+}
+.loc-table tbody th {
+  position: sticky; left: 0; z-index: 1;
+  background: var(--surface); font-weight: 700; color: var(--ink); min-width: 170px;
+  box-shadow: 1px 0 0 var(--divider);
+}
+.loc-table tbody tr:last-child th, .loc-table tbody tr:last-child td { border-bottom: 0; }
+.loc-table .loc-rate { font-weight: 800; color: var(--ink); min-width: 150px; }
+.loc-table .loc-rate small { font-weight: 600; }
+.loc-table td.loc-funding { min-width: 220px; }
+.loc-table td.loc-funding .loc-tag { margin-top: 0; }
+.loc-table td.loc-funding small strong { color: var(--ink-soft); font-weight: 700; }
+.loc-currency { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); margin-top: 2px; }
+.loc-table small { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 5px; }
+.loc-table td .loc-tag { margin-top: 6px; }
+.loc-table td.loc-notes { min-width: 360px; color: var(--ink-soft); }
+.loc-table td.loc-notes a { font-weight: 700; white-space: nowrap; }
+.loc-table-foot { font-size: 0.86rem; color: var(--muted); margin-top: 14px; }
+.loc-table-foot p { margin-bottom: 0.4em; }
+
+/* Locatie aanvragen */
+.loc-request {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: clamp(28px, 5vw, 72px); align-items: start;
+  margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--border);
+}
+.loc-request .contact-form { margin-top: 0; }
+.loc-request-form input::placeholder, .loc-request-form textarea::placeholder { color: var(--muted); font-weight: 400; }
+
+@media (max-width: 980px) {
+  .loc-controls { grid-template-columns: 1fr 1fr; }
+  .loc-controls .loc-field:first-child { grid-column: 1 / -1; }
+  .loc-request { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .loc-controls { grid-template-columns: 1fr; }
+  .loc-tool { border-radius: var(--radius-card); }
+  .loc-results { grid-template-columns: 1fr; }
+}
