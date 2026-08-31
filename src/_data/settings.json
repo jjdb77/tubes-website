@@ -90,8 +90,12 @@
       "url": "/academy/"
     },
     {
-      "label": "Compare film & TV locations",
+      "label": "Film & TV locations",
       "url": "/compare-film-tv-locations/"
+    },
+    {
+      "label": "Compare film incentives",
+      "url": "/compare-film-incentives/"
     },
     {
       "label": "Contact",

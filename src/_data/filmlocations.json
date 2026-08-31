@@ -1,0 +1,20 @@
+{
+  "updated": "2026-08-31",
+  "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos from other location databases.",
+  "locations": [
+    {
+      "id": "kasteel-de-haar",
+      "name": "Kasteel de Haar",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.1215,
+      "lng": 4.9856,
+      "type": "Castle & estate",
+      "setting": "The largest castle in the Netherlands, neo-Gothic towers, moat, formal gardens and a walled park.",
+      "known_for": "Placeholder entry, replaced by the verified seed set.",
+      "official_url": "https://www.kasteeldehaar.nl/",
+      "commission_url": "https://filmcommission.nl/",
+      "photo": null
+    }
+  ]
+}

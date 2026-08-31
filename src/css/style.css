@@ -2092,3 +2092,97 @@ a:hover { color: var(--action); }
 /* Keuze op slot als het maximum bereikt is. */
 .hc-pill.is-disabled span { opacity: 0.45; cursor: not-allowed; }
 .hc-pill.is-disabled:hover span { border-color: var(--border); color: var(--ink-soft); }
+
+/* ---------- Locatiegids (zoeken, kaart, kaarten, vergelijken) ---------- */
+
+.guide-controls { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px 20px; align-items: end; }
+.guide-select, .guide-search-field input {
+  display: block; width: 100%; margin-top: 6px;
+  font-family: var(--font-sans); font-size: 1rem; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-button);
+  padding: 12px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.guide-select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 38px; }
+.guide-search-field input::placeholder { color: var(--muted); font-weight: 400; }
+.guide-select:focus, .guide-search-field input:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.guide-count { margin: 14px 0 0; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
+
+.guide-map {
+  height: 430px; margin-top: 18px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  overflow: hidden; position: relative; z-index: 0;
+}
+.guide-map-note { color: var(--muted); font-size: 0.92rem; max-width: 420px; padding: 0 20px; }
+.guide-map .leaflet-container { width: 100%; height: 100%; font-family: var(--font-sans); }
+.guide-map .leaflet-popup-content { font-size: 0.9rem; line-height: 1.5; }
+.guide-map .leaflet-popup-content a { color: var(--action-soft-ink); font-weight: 700; }
+
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 26px; }
+.guide-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card);
+  overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.guide-card:hover { box-shadow: var(--shadow-raise); border-color: var(--muted); }
+.guide-card.is-highlight { border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft), var(--shadow-raise); }
+.guide-photo { margin: 0; position: relative; }
+.guide-photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.guide-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  font-size: 0.68rem; line-height: 1.3; color: #fff;
+  background: linear-gradient(transparent, rgba(20, 22, 25, 0.75));
+  padding: 18px 12px 6px;
+}
+.guide-photo figcaption a { color: #fff; text-decoration: underline; }
+.guide-photo-empty {
+  aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center;
+  background: var(--status-blue-bg); color: var(--status-blue-ink); font-weight: 700;
+}
+.guide-card-body { padding: 20px 22px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.guide-card-body h3 { font-size: 1.15rem; margin: 0; }
+.guide-meta { margin: 0; font-size: 0.86rem; font-weight: 600; color: var(--muted); }
+.guide-card-body > p { margin: 0; }
+.guide-setting { font-size: 0.92rem; color: var(--ink-soft); }
+.guide-known { font-size: 0.86rem; color: var(--ink-soft); }
+.guide-known strong { color: var(--ink); }
+.guide-links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.88rem; margin-top: auto !important; padding-top: 6px; }
+.guide-links a { font-weight: 700; color: var(--action-soft-ink); }
+.guide-links a[data-incentive-for] { color: var(--status-amber-ink); }
+.guide-pick {
+  margin-top: 10px; display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; font-weight: 700; color: var(--action-soft-ink); cursor: pointer;
+  border: 1.5px solid var(--border); border-radius: var(--radius-button);
+  padding: 8px 14px; justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.guide-pick:hover { border-color: var(--action); }
+.guide-pick input { accent-color: #fff; margin: 0; }
+.guide-pick:has(input:checked) { background: var(--action); border-color: var(--action); color: #fff; }
+.guide-pick:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+
+.guide-bar {
+  position: sticky; bottom: 16px; z-index: 20;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin-top: 22px; padding: 12px 18px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raise);
+}
+.guide-bar span { font-weight: 700; font-size: 0.92rem; color: var(--ink); flex: 1; min-width: 160px; }
+.guide-compare-out { margin-top: 30px; }
+.guide-compare-out h3 { margin-bottom: 14px; }
+.guide-compare-photo { display: block; width: 100%; max-width: 260px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-wash); }
+
+@media (max-width: 980px) {
+  .guide-controls { grid-template-columns: 1fr 1fr; }
+  .guide-controls .guide-search-field { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .guide-controls { grid-template-columns: 1fr; }
+  .guide-map { height: 320px; }
+}
+
+/* hidden-attribuut wint altijd, ook van display:flex/grid op dezelfde elementen */
+[hidden] { display: none !important; }

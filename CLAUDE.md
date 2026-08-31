@@ -134,16 +134,27 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - robots.txt heeft `Disallow: /mmg/`; de pagina's horen niet in menu, sitemap of zoekmachines.
 - Deze bestanden worden vanuit een Claude-sessie gegenereerd en hierheen gekopieerd; kleine tekstwijzigingen kunnen direct in deze bestanden, maar HTML en PDF moeten dan wel allebei aangepast worden (de PDF is een aparte render, geen automatische afgeleide).
 
-## Vergelijkingspagina locaties: /compare-film-tv-locations/
+## Locatiegids en incentive-vergelijking
 
-- Openbare SEO-landingspagina (geen login, voor iedereen) die producers trekt die opnamelocaties/landen vergelijken. Staat volledig **los van de Tubes-app**; Tubes wordt alleen via tekst en CTA's gepromoot.
-- Content: `src/content/pages/compare-film-tv-locations.md` (gewone secties). Het sectietype `locations` (`src/_includes/partials/sections/locations.njk`) rendert de vergelijkingstool, de volledige tabel en het formulier "Missing a location?".
+Twee vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tubes wordt alleen via tekst en CTA's gepromoot. **Primair** (wens Joachim): het zoeken en vergelijken van concrete locaties. Voor nu alleen Europa, zonder Rusland en Wit-Rusland.
+
+### Locatiegids: /compare-film-tv-locations/
+
+- Doel: een producer zoekt "een locatie in de bergen / een bergdorp / een hotel / een studio / een stad, noem maar op" en vindt plekken om te draaien én huurbare studio's. Zoeken binnen land/regio, kaart, foto's en links, en 1 tot 3 locaties naast elkaar.
+- Sectietype `locationguide` (`src/_includes/partials/sections/locationguide.njk`): zoekveld + land- en typefilter, kaart (Leaflet 1.9.4 van cdnjs + OpenStreetMap-tegels, pas geladen zodra de kaart in beeld komt; staat zo in de privacyverklaring), fotokaarten, plakbalk onderaan bij selectie, vergelijking als kolommen (hergebruikt `.loc-compare`), en het suggestieformulier.
+- Data: `src/_data/filmlocations.json` (CMS: "Filmlocaties (locatiegids)"). Per locatie: id, name, country, region, lat/lng, type (vaste lijst van 14), setting (1 zin), known_for, official_url, commission_url, photo {thumb, file_page, author, license}. De startset is met agents geverifieerd (aug. 2026); geen maximum, groeit via CMS en suggesties.
+- **Foto's: nooit uit andere locatiedatabases kopiëren.** Wikimedia Commons-thumbnails (hotlink met maker + licentie zichtbaar per foto) of eigen uploads met schriftelijke toestemming. Zie docs/location-directory-research.md voor het rechtenverhaal.
+- Incentive per land wordt op de kaartjes en in de vergelijking getoond uit locations.json (koppeling op landnaam).
+
+### Incentive-vergelijking: /compare-film-incentives/
+
+- Landen/regelingen vergelijken op geld; "opzich grappig, laat maar staan" (Joachim), maar secundair aan de gids.
+- Content: `src/content/pages/compare-film-incentives.md` (gewone secties). Het sectietype `locations` (`src/_includes/partials/sections/locations.njk`) rendert de vergelijkingstool, de volledige tabel en het formulier "Missing a location?".
 - Cijfers: `src/_data/locations.json`, in het CMS onder "Locaties (vergelijkingspagina)". Per locatie: `rate` (rekenpercentage), `rate_label` (getoond), optioneel `tiers` (getrapt), `net_factor` (VK: krediet is belast), `film_uplift`, `spend_uplift`, `base_share` (max. aandeel van het budget), `cap` (bedrag in lokale valuta), `labour_only`/`labour_bonus` (Canada: alleen lonen), `assumption` (aanname die de tool toont), `funding`, `notes`, `source`. `updated` = datum in "Figures checked on ...". `fx` = ruwe wisselkoersen, alleen om plafonds om te rekenen.
 - De tool: zoekveld, kies **1 tot 3 locaties**, en die komen **naast elkaar** te staan (kolom per locatie, eigenschappen als rijen, bovenaan de **indicatieve nettowaarde** op de ingevulde spend, met de aannames erbij; hoogste waarde gemarkeerd). Rekent in de browser (inline script in de sectie). Het zoekveld filtert ook de grote tabel eronder. Cijfers zijn in aug. 2026 geverifieerd met bronlinks; houd twijfel als twijfel in `notes` (zie [[eerlijke-claims-op-de-site]]).
 - Locatie voorstellen ("Suggest a location"): post naar /api/contact met bericht "Location request: <locatie>" plus toelichting. Staat op /beheer (kolom page = /compare-film-tv-locations/) én gaat meteen per mail naar `LOCATION_EMAIL` (standaard joachim@tubes.media) via `meldLocatieSuggestie()` in server.js, met dezelfde Resend-instellingen als de Health Check-mail. Gewone contact-/demoberichten mailen (nog) niet, die staan alleen op /beheer.
-- **Voor nu alleen Europa** (besluit Joachim 31-8-2026), zonder Rusland en Wit-Rusland. De geverifieerde entries voor Canada (Ontario/BC/Quebec), VS (Georgia/New Mexico/Californië/New York), Australië, Nieuw-Zeeland en Zuid-Afrika staan in git (commit e0dfd82, `src/_data/locations.json`) en kunnen terug zodra gewenst.
-- Staat in `settings.footer_nav` (niet in het hoofdmenu) en loopt automatisch mee in sitemap en llms.txt.
-- **Volgende stap (gewenst door Joachim, 31-8-2026)**: uitbouwen naar een Europese locatiegids: zoeken binnen land/regio, kaart met locaties, foto's en links, 1 tot 3 locaties naast elkaar. Onderzoek naar vergelijkbare sites (Film France, Italy for Movies, filmcommissies, LocationsHub, FilmMap, Wrapbook) met over te nemen patronen en fotorechten staat in `docs/location-directory-research.md`.
+- De geverifieerde niet-Europese entries voor Canada (Ontario/BC/Quebec), VS (Georgia/New Mexico/Californië/New York), Australië, Nieuw-Zeeland en Zuid-Afrika staan in git (commit e0dfd82, `src/_data/locations.json`) en kunnen terug zodra gewenst.
+- Beide pagina's staan in `settings.footer_nav` (niet in het hoofdmenu) en lopen automatisch mee in sitemap en llms.txt. Onderzoek naar vergelijkbare sites: `docs/location-directory-research.md`.
 
 ## Domein & DNS (niet slopen)
 

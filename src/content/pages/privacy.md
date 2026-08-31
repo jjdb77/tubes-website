@@ -91,6 +91,8 @@ sections:
 
       The video meeting link for your session is sent to you with your confirmation. The provider of that meeting is named in the invitation.
 
+      Separate from the Health Check: our film and TV locations guide shows a map and photos. The map tiles load from **OpenStreetMap** and most photos load from **Wikimedia Commons**, so when you open that page those services receive the technical request from your browser, including your IP address. We send them nothing else about you.
+
       Where these providers process personal information on our behalf, we require appropriate contractual and security arrangements.
 
       ### 6. International transfers

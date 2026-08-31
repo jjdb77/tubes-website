@@ -357,8 +357,17 @@ collections:
                 fields:
                   - { label: Vraag, name: question, widget: string }
                   - { label: Antwoord, name: answer, widget: markdown }
+          - name: locationguide
+            label: "Locatiegids (zoeken + kaart + vergelijken)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties zelf staan onder 'Filmlocaties (locatiegids)'." }
+              - { label: "Kop bij het suggestieformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
+              - { label: "Tekst bij het suggestieformulier", name: request_text, widget: markdown, required: false }
           - name: locations
-            label: "Locatievergelijking (tool + tabel + aanvraagformulier)"
+            label: "Incentive-vergelijking (tool + tabel + aanvraagformulier)"
             summary: "{{fields.heading}}"
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
@@ -369,9 +378,9 @@ collections:
               - { label: "Kop bij het aanvraagformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
               - { label: "Tekst bij het aanvraagformulier", name: request_text, widget: markdown, required: false }
 
-  # Cijfers voor de vergelijkingspagina /compare-film-tv-locations/ (los van de Tubes-app)
+  # Cijfers voor de incentivepagina /compare-film-incentives/ (los van de Tubes-app)
   - name: locaties
-    label: "Locaties (vergelijkingspagina)"
+    label: "Incentives per land (vergelijkingspagina)"
     icon: public
     files:
       - name: locaties
@@ -464,3 +473,42 @@ collections:
               - { label: Toelichting, name: notes, widget: text }
               - { label: "Bron (URL)", name: source, widget: string, required: false }
               - { label: Bronnaam, name: source_label, widget: string, required: false }
+
+  # De locatiegids zelf: plekken en studio's op /compare-film-tv-locations/
+  - name: filmlocaties
+    label: "Filmlocaties (locatiegids)"
+    icon: movie
+    files:
+      - name: filmlocaties
+        label: "Locaties en studio's"
+        file: src/_data/filmlocations.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string }
+          - { label: "Notitie over foto's en rechten", name: photo_note, widget: text, required: false }
+          - label: Locaties
+            name: locations
+            widget: list
+            summary: "{{fields.name}} ({{fields.country}})"
+            fields:
+              - { label: "ID (uniek, kleine letters en koppeltekens)", name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Land, name: country, widget: string }
+              - { label: "Regio (provincie/streek)", name: region, widget: string }
+              - { label: Breedtegraad, name: lat, widget: number, value_type: float, step: 0.0001 }
+              - { label: Lengtegraad, name: lng, widget: number, value_type: float, step: 0.0001 }
+              - { label: Type, name: type, widget: select, options: ["Castle & estate", "Palace & landmark", "Historic town & street", "Village & countryside", "City & skyline", "Coast & beach", "Mountains & wilderness", "Forest & lake", "Hotel & interiors", "Church & monastery", "Transport & infrastructure", "Industrial & derelict", "Modern architecture", "Studio & backlot"] }
+              - { label: "Wat biedt de plek (1 zin)", name: setting, widget: text }
+              - { label: "Bekend van (producties)", name: known_for, widget: string, required: false }
+              - { label: "Officiële website", name: official_url, widget: string, required: false }
+              - { label: "Filmcommissie (URL)", name: commission_url, widget: string, required: false }
+              - label: "Foto (Wikimedia Commons of eigen upload met toestemming)"
+                name: photo
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Foto-URL (thumbnail)", name: thumb, widget: string, hint: "Wikimedia Commons-thumbnail (800px) of een pad in /assets/images bij eigen materiaal" }
+                  - { label: "Fotopagina (bronvermelding-link)", name: file_page, widget: string, required: false }
+                  - { label: "Maker (credit)", name: author, widget: string }
+                  - { label: "Licentie", name: license, widget: string, hint: "Bijv. CC BY-SA 4.0, of 'met toestemming van de eigenaar'" }

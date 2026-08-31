@@ -33,13 +33,13 @@
         <label class="loc-field loc-search" for="loc-search">Search a country or region
           <input type="search" id="loc-search" placeholder="Type to search, for example Ireland, Portugal or cash rebate" autocomplete="off">
         </label>
-        <p class="loc-picker-label" id="loc-picker-label">Select one to three locations to compare <span class="loc-picker-count" data-loc-count></span></p>
+        <p class="loc-picker-label" id="loc-picker-label">Select one to three countries or regions to compare <span class="loc-picker-count" data-loc-count></span></p>
         <div class="loc-chips" role="group" aria-labelledby="loc-picker-label">
           {% for loc in locations.locations %}
           <label class="loc-chip" data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.scheme + ' ' + loc.mechanism + ' ' + loc.currency) | lower }}"><input type="checkbox" name="loc" value="{{ loc.id }}"{% if loop.index <= 3 %} checked{% endif %}> {{ loc.name }}</label>
           {% endfor %}
         </div>
-        <p class="loc-empty loc-search-empty" hidden>No location matches your search. Missing one? <a href="#request-location">Suggest it below</a>.</p>
+        <p class="loc-empty loc-search-empty" hidden>No country matches your search. Missing one? <a href="#request-location">Suggest it below</a>.</p>
       </div>
 
       <div class="loc-results" data-loc-results aria-live="polite">
@@ -49,7 +49,7 @@
     </div>
 
     <div class="loc-table-head">
-      <h3 id="all-locations">{{ section.table_heading or "All locations at a glance" }}</h3>
+      <h3 id="all-locations">{{ section.table_heading or "All schemes at a glance" }}</h3>
       {% if regions.length > 1 %}
       <div class="loc-filter" role="group" aria-label="Filter by region">
         <button type="button" class="loc-filter-btn is-active" data-region="all">All</button>
@@ -207,7 +207,7 @@
       countLabel.textContent = chosen.length ? `(${chosen.length} of ${MAX} selected)` : "";
 
       if (!chosen.length) {
-        results.innerHTML = '<p class="loc-empty">Select at least one location to see the comparison.</p>';
+        results.innerHTML = '<p class="loc-empty">Select at least one country to see the comparison.</p>';
         return;
       }
       const rows = chosen.map((loc) => estimate(loc, type, budget, spend));
