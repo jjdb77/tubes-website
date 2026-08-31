@@ -52,7 +52,10 @@ for (const tour of document.querySelectorAll("[data-tour]")) {
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
   // Artikelen doen niet mee: hun tekst is één heel lang blok, en die mag niet
   // van JavaScript afhangen om zichtbaar te worden.
-  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article) .container");
+  // De locatiegids en de incentivetabel zijn functionele, heel hoge secties:
+  // die doen niet mee met de fade (een sectie van 10.000+ px haalt een
+  // zichtbaarheidsdrempel nooit en bleef dan onzichtbaar na een ankerklik).
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -60,7 +63,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
         io.unobserve(entry.target);
       }
     }
-  }, { rootMargin: "0px 0px -60px 0px", threshold: 0.05 });
+  }, { rootMargin: "0px 0px -60px 0px", threshold: 0 });
   for (const el of targets) {
     el.classList.add("reveal");
     io.observe(el);
