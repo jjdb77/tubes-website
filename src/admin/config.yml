@@ -500,6 +500,14 @@ collections:
               - { label: Type, name: type, widget: select, options: ["Castle & estate", "Palace & landmark", "Historic town & street", "Village & countryside", "City & skyline", "Coast & beach", "Mountains & wilderness", "Forest & lake", "Hotel & interiors", "Church & monastery", "Transport & infrastructure", "Industrial & derelict", "Modern architecture", "Studio & backlot"] }
               - { label: "Wat biedt de plek (1 zin)", name: setting, widget: text }
               - { label: "Bekend van (producties)", name: known_for, widget: string, required: false }
+              - { label: "Gepubliceerde prijs (tekst, alleen wat de locatie zelf publiceert)", name: price_note, widget: string, required: false, hint: "Bijv. 'Day rate from € 2,500 (own site)'. Nooit schatten; leeg is beter dan een gok." }
+              - { label: "Prijs per dag in euro's (getal, voor de winnaarsmarkering)", name: price_eur_day, widget: number, value_type: int, required: false, hint: "Alleen invullen als de gepubliceerde prijs een dagtarief in euro's is." }
+              - { label: "Capaciteit (personen, alleen indien gepubliceerd)", name: capacity, widget: number, value_type: int, required: false }
+              - { label: "Voorzieningen (alleen indien gepubliceerd)", name: facilities, widget: text, required: false }
+              - { label: "Geschiktheid voor filmopnames (alleen indien gepubliceerd)", name: suitability, widget: text, required: false }
+              - { label: "Vergunning nodig", name: permit_needed, widget: select, options: ["", "Yes", "No"], required: false, hint: "Leeg = onbekend. In de vergelijking wint 'No'." }
+              - { label: "Logistiek (bereikbaarheid, parkeren, alleen indien gepubliceerd)", name: logistics, widget: text, required: false }
+              - { label: "Bron-URL's (waar deze gegevens vandaan komen)", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }
               - { label: "Officiële website", name: official_url, widget: string, required: false }
               - { label: "Filmcommissie (URL)", name: commission_url, widget: string, required: false }
               - label: "Foto (Wikimedia Commons of eigen upload met toestemming)"

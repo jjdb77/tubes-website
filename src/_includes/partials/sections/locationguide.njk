@@ -1,9 +1,11 @@
 {#- Locatiegids (/compare-film-tv-locations/): zoeken, kaart, fotokaarten en
-    1 tot 3 locaties naast elkaar. Data: src/_data/filmlocations.json (CMS:
-    "Filmlocaties (locatiegids)"). De incentive per land komt uit locations.json.
-    Kaart: Leaflet + OpenStreetMap, pas geladen zodra de kaart in beeld komt
-    (staat zo ook in de privacyverklaring). Foto's: Wikimedia Commons-thumbnails
-    met maker en licentie per foto, of eigen uploads met toestemming. -#}
+    2 tot 3 locaties naast elkaar, met voorkeurslijst (localStorage) en een
+    kaart/lijst-schakelaar. Data: src/_data/filmlocations.json (CMS:
+    "Filmlocaties (locatiegids)"). Incentive per land komt uit locations.json.
+    Kaart: Leaflet + OpenStreetMap, pas geladen zodra hij in beeld komt.
+    Foto's: Wikimedia Commons met maker en licentie, of uploads met toestemming.
+    Winnaarslogica in de vergelijking: alleen markeren bij verschil én minstens
+    twee ingevulde kolommen; bij "vergunning nodig" wint nee; lege rijen vallen weg. -#}
 {%- set countries = [] -%}
 {%- for loc in filmlocations.locations -%}{%- if loc.country not in countries -%}{%- set countries = (countries.push(loc.country), countries) -%}{%- endif -%}{%- endfor -%}
 {%- set types = [] -%}
@@ -30,7 +32,18 @@
         </select>
       </label>
     </div>
-    <p class="guide-count" data-guide-count aria-live="polite"></p>
+
+    <div class="guide-toolbar">
+      <div class="guide-pills" role="group" aria-label="Which list">
+        <button type="button" class="guide-pill is-active" data-list="all">All locations</button>
+        <button type="button" class="guide-pill" data-list="favs">My shortlist <span data-fav-count></span></button>
+      </div>
+      <p class="guide-count" data-guide-count aria-live="polite"></p>
+      <div class="guide-pills" role="group" aria-label="View">
+        <button type="button" class="guide-pill is-active" data-view="cards">Cards</button>
+        <button type="button" class="guide-pill" data-view="list">List</button>
+      </div>
+    </div>
 
     <div class="guide-map" data-guide-map>
       <p class="guide-map-note">The map appears here and loads its tiles from OpenStreetMap.</p>
@@ -38,46 +51,53 @@
 
     <div class="guide-compare-out" data-guide-compare hidden aria-live="polite"></div>
 
-    <div class="guide-grid" data-guide-grid>
-      {% for loc in filmlocations.locations %}
-      <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}"
-               data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.country + ' ' + loc.type + ' ' + loc.setting + ' ' + loc.known_for) | lower }}">
-        {% if loc.photo and loc.photo.thumb %}
-        <figure class="guide-photo">
-          <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <figcaption>Photo: {{ loc.photo.author }} ({{ loc.photo.license }}), <a href="{{ loc.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
-        </figure>
-        {% else %}
-        <div class="guide-photo guide-photo-empty"><span>{{ loc.type }}</span></div>
-        {% endif %}
-        <div class="guide-card-body">
-          <h3>{{ loc.name }}</h3>
-          <p class="guide-meta">{{ loc.region }}, {{ loc.country }}</p>
-          <p><span class="loc-tag guide-type-tag">{{ loc.type }}</span></p>
-          <p class="guide-setting">{{ loc.setting }}</p>
-          {% if loc.known_for %}<p class="guide-known"><strong>Seen in:</strong> {{ loc.known_for }}</p>{% endif %}
-          <p class="guide-links">
-            {% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}
-            {% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}
-            <a data-incentive-for="{{ loc.country }}" href="/compare-film-incentives/" hidden></a>
-          </p>
-          <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ loc.id }}"> <span>Compare</span></label>
+    <div class="guide-layout">
+      <div class="guide-main">
+        <div class="guide-grid" data-guide-grid>
+          {% for loc in filmlocations.locations %}
+          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}"
+                   data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.country + ' ' + loc.type + ' ' + loc.setting + ' ' + loc.known_for) | lower }}">
+            {% if loc.photo and loc.photo.thumb %}
+            <figure class="guide-photo">
+              <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption>Photo: {{ loc.photo.author }} ({{ loc.photo.license }}), <a href="{{ loc.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+            </figure>
+            {% else %}
+            <div class="guide-photo guide-photo-empty"><span>{{ loc.type }}</span></div>
+            {% endif %}
+            <button type="button" class="guide-fav" data-fav aria-pressed="false" aria-label="Add {{ loc.name }} to my shortlist"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.9-10-9.2C.4 8.9 2 5 5.6 5c2 0 3.4 1.1 4.4 2.5C11 6.1 12.4 5 14.4 5 18 5 19.6 8.9 22 11.8 19.5 16.1 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
+            <div class="guide-card-body">
+              <h3>{{ loc.name }}</h3>
+              <p class="guide-meta">{{ loc.region }}, {{ loc.country }}</p>
+              <p><span class="loc-tag guide-type-tag">{{ loc.type }}</span></p>
+              <p class="guide-setting">{{ loc.setting }}</p>
+              {% if loc.known_for %}<p class="guide-known"><strong>Seen in:</strong> {{ loc.known_for }}</p>{% endif %}
+              <p class="guide-links">
+                {% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}
+                {% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}
+                <a data-incentive-for="{{ loc.country }}" href="/compare-film-incentives/" hidden></a>
+              </p>
+              <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ loc.id }}"> <span>Compare</span></label>
+            </div>
+          </article>
+          {% endfor %}
         </div>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-location">suggest a location</a>.</p>
+        <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-location">suggest a location</a>.</p>
+      </div>
 
-    <div class="guide-bar" data-guide-bar hidden>
-      <span data-guide-bar-label></span>
-      <button type="button" class="button button-primary" data-guide-bar-btn>Compare side by side</button>
-      <button type="button" class="button button-secondary" data-guide-bar-clear>Clear</button>
+      <aside class="guide-aside" data-guide-aside aria-label="Your comparison">
+        <h3>Side by side</h3>
+        <ol class="guide-slots" data-guide-slots></ol>
+        <button type="button" class="button button-primary" data-guide-compare-btn disabled>Compare side by side</button>
+        <button type="button" class="button button-secondary" data-guide-clear hidden>Clear</button>
+        <p class="guide-aside-note">Pick two or three locations with the Compare button on a card.</p>
+      </aside>
     </div>
 
     <div class="loc-request" id="request-location">
       <div>
         <h3>{{ section.request_heading or "Is your location not listed? Suggest it" }}</h3>
-        <div class="rich-text">{{ (section.request_text or "Own or manage a location or studio, or missing a place you have shot at? Tell us what and where it is, add a link, and we list it for free with verified details. Photos must be yours or carry a licence we can honour, with the photographer credited.") | md | safe }}</div>
+        <div class="rich-text">{{ (section.request_text or "Own or manage a location or studio, or missing a place you have shot at? Tell us what and where it is, add a link, and we list it for free with verified details. We only publish what a venue itself publishes, with the source; photos must be yours or carry a licence we can honour, with the photographer credited.") | md | safe }}</div>
       </div>
       <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
         <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
@@ -128,26 +148,45 @@
       if (inc) { a.textContent = "Incentive: " + inc.rate_label; a.hidden = false; }
     }
 
-    // Zoeken en filteren
+    // Voorkeurslijst in de browser zelf (localStorage); werkt ook zonder
+    const favKey = "tubes-location-shortlist";
+    const loadFavs = () => { try { return new Set(JSON.parse(localStorage.getItem(favKey) || "[]")); } catch { return new Set(); } };
+    const saveFavs = () => { try { localStorage.setItem(favKey, JSON.stringify([...favs])); } catch {} };
+    const favs = loadFavs();
+
     const q = root.querySelector("#guide-search");
     const country = root.querySelector("#guide-country");
     const type = root.querySelector("#guide-type");
     const cards = [...root.querySelectorAll(".guide-card")];
     const countEl = root.querySelector("[data-guide-count]");
+    const favCountEl = root.querySelector("[data-fav-count]");
     const noneEl = root.querySelector(".guide-none");
-    const visibleIds = () => cards.filter((c) => !c.hidden).map((c) => c.dataset.id);
+    const grid = root.querySelector("[data-guide-grid]");
+    let listMode = "all";
 
+    const syncFavButtons = () => {
+      for (const card of cards) {
+        const on = favs.has(card.dataset.id);
+        const btn = card.querySelector("[data-fav]");
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        btn.classList.toggle("is-on", on);
+      }
+      favCountEl.textContent = favs.size ? "(" + favs.size + ")" : "";
+    };
+
+    const visibleIds = () => cards.filter((c) => !c.hidden).map((c) => c.dataset.id);
     const applyFilters = () => {
       const needle = q.value.trim().toLowerCase();
       let shown = 0;
       for (const card of cards) {
-        const ok = (!country.value || card.dataset.country === country.value) &&
+        const ok = (listMode === "all" || favs.has(card.dataset.id)) &&
+                   (!country.value || card.dataset.country === country.value) &&
                    (!type.value || card.dataset.type === type.value) &&
                    (!needle || card.dataset.search.includes(needle));
         card.hidden = !ok;
         if (ok) shown++;
       }
-      countEl.textContent = shown + " of " + cards.length + " locations shown";
+      countEl.textContent = shown + " of " + cards.length + " locations";
       noneEl.hidden = shown > 0;
       updateMap();
     };
@@ -155,7 +194,32 @@
     country.addEventListener("change", applyFilters);
     type.addEventListener("change", applyFilters);
 
-    // Kaart: Leaflet + OpenStreetMap, pas laden zodra de kaart in beeld komt
+    // Pills: alle locaties / voorkeurslijst, en kaarten / lijst
+    for (const pill of root.querySelectorAll("[data-list]")) {
+      pill.addEventListener("click", () => {
+        listMode = pill.dataset.list;
+        for (const p of root.querySelectorAll("[data-list]")) p.classList.toggle("is-active", p === pill);
+        applyFilters();
+      });
+    }
+    for (const pill of root.querySelectorAll("[data-view]")) {
+      pill.addEventListener("click", () => {
+        for (const p of root.querySelectorAll("[data-view]")) p.classList.toggle("is-active", p === pill);
+        grid.classList.toggle("is-list", pill.dataset.view === "list");
+      });
+    }
+
+    // Hartje op de kaarten
+    grid.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-fav]");
+      if (!btn) return;
+      const id = btn.closest(".guide-card").dataset.id;
+      favs.has(id) ? favs.delete(id) : favs.add(id);
+      saveFavs(); syncFavButtons();
+      if (listMode === "favs") applyFilters();
+    });
+
+    // Kaart: Leaflet + OpenStreetMap, pas laden zodra hij in beeld komt
     const mapEl = root.querySelector("[data-guide-map]");
     let map = null, markerLayer = null, leafletLoading = false;
     const updateMap = () => {
@@ -210,58 +274,110 @@
       }
     });
 
-    // Vergelijken: 1 tot 3 locaties naast elkaar
+    // Vergelijken: A/B/C-paneel; knop pas actief vanaf twee locaties
     const checks = [...root.querySelectorAll("[data-guide-check]")];
-    const bar = root.querySelector("[data-guide-bar]");
-    const barLabel = root.querySelector("[data-guide-bar-label]");
+    const aside = root.querySelector("[data-guide-aside]");
+    const slots = root.querySelector("[data-guide-slots]");
+    const compareBtn = root.querySelector("[data-guide-compare-btn]");
+    const clearBtn = root.querySelector("[data-guide-clear]");
     const out = root.querySelector("[data-guide-compare]");
     const chosen = () => checks.filter((c) => c.checked).map((c) => byId[c.value]).filter(Boolean);
 
-    const syncBar = () => {
+    const syncPanel = () => {
       const picks = chosen();
       for (const c of checks) c.disabled = !c.checked && picks.length >= MAX;
-      bar.hidden = picks.length === 0;
-      barLabel.textContent = picks.length === 1 ? picks[0].name : picks.map((p) => p.name).join("  ·  ");
-      if (picks.length === 0) { out.hidden = true; out.innerHTML = ""; }
+      const letters = ["A", "B", "C"];
+      slots.innerHTML = letters.map((letter, i) => {
+        const p = picks[i];
+        return `<li class="guide-slot${p ? " is-filled" : ""}"><span class="guide-slot-letter">${letter}</span>${p ? `<span class="guide-slot-name">${esc(p.name)}</span><button type="button" class="guide-slot-x" data-unpick="${esc(p.id)}" aria-label="Remove ${esc(p.name)}">&times;</button>` : '<span class="guide-slot-empty">Empty</span>'}</li>`;
+      }).join("");
+      compareBtn.disabled = picks.length < 2;
+      clearBtn.hidden = picks.length === 0;
+      aside.classList.toggle("has-picks", picks.length > 0);
+      if (picks.length < 2) { out.hidden = true; out.innerHTML = ""; }
     };
+    slots.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-unpick]");
+      if (!btn) return;
+      const check = checks.find((c) => c.value === btn.dataset.unpick);
+      if (check) check.checked = false;
+      syncPanel();
+      if (!out.hidden) renderCompare();
+    });
+
+    // Winnaarslogica: alleen markeren bij verschil en minstens twee ingevulde
+    // kolommen; bij "vergunning nodig" wint nee. Lege rijen vallen weg.
+    const filled = (v) => v !== undefined && v !== null && String(v).trim() !== "";
+    const winnerIndex = (vals, mode) => {
+      const present = vals.map((v, i) => [v, i]).filter(([v]) => filled(v));
+      if (present.length < 2) return -1;
+      let mapped;
+      if (mode === "lower" || mode === "higher") {
+        mapped = present.map(([v, i]) => [Number(String(v).replace(/[^\d.]/g, "")), i]).filter(([n]) => !isNaN(n));
+        if (mapped.length < 2) return -1;
+        if (new Set(mapped.map(([n]) => n)).size < 2) return -1;
+        mapped.sort((a, b) => (mode === "lower" ? a[0] - b[0] : b[0] - a[0]));
+        return mapped[0][1];
+      }
+      if (mode === "no-wins") {
+        const no = present.filter(([v]) => /^no/i.test(String(v)));
+        const yes = present.filter(([v]) => /^yes/i.test(String(v)));
+        if (!no.length || !yes.length) return -1;
+        return no[0][1];
+      }
+      return -1;
+    };
+
     const renderCompare = () => {
       const picks = chosen();
-      if (!picks.length) return;
-      const cell = (fn) => picks.map((p) => `<td>${fn(p)}</td>`).join("");
-      const row = (label, fn) => `<tr><th scope="row">${label}</th>${cell(fn)}</tr>`;
+      if (picks.length < 2) return;
+      const row = (label, fn, opts = {}) => {
+        const vals = picks.map(fn);
+        if (opts.optional && !vals.some((v) => filled(v && v.raw !== undefined ? v.raw : v))) return "";
+        const win = opts.winner ? winnerIndex(picks.map((p) => p[opts.key]), opts.winner) : -1;
+        const cells = vals.map((v, i) => `<td${i === win ? ' class="is-top"' : ""}>${(v && v.html !== undefined) ? v.html : (filled(v) ? esc(v) : '<span class="guide-dash">&ndash;</span>')}</td>`).join("");
+        return `<tr><th scope="row">${label}</th>${cells}</tr>`;
+      };
       out.innerHTML = `
         <h3>Side by side</h3>
         <div class="loc-compare-wrap" tabindex="0">
         <table class="loc-compare loc-compare-${picks.length}">
           <thead><tr><th scope="col"><span class="visually-hidden">Property</span></th>${picks.map((p) => `<th scope="col">${esc(p.name)}<small>${esc(p.region)}, ${esc(p.country)}</small></th>`).join("")}</tr></thead>
           <tbody>
-            ${row("Photo", (p) => p.photo && p.photo.thumb
+            ${row("Photo", (p) => ({ raw: p.photo, html: p.photo && p.photo.thumb
               ? `<img class="guide-compare-photo" src="${esc(p.photo.thumb)}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer"><small>Photo: ${esc(p.photo.author)} (${esc(p.photo.license)})</small>`
-              : "<small>No photo yet</small>")}
-            ${row("Type", (p) => `<span class="loc-tag">${esc(p.type)}</span>`)}
-            ${row("What it offers", (p) => esc(p.setting))}
-            ${row("Seen in", (p) => esc(p.known_for || ""))}
+              : "<small>No photo yet</small>" }))}
+            ${row("Type", (p) => ({ raw: p.type, html: `<span class="loc-tag">${esc(p.type)}</span>` }))}
+            ${row("What it offers", (p) => p.setting)}
+            ${row("Published price", (p) => p.price_note, { optional: true, key: "price_eur_day", winner: "lower" })}
+            ${row("Capacity", (p) => p.capacity, { optional: true, key: "capacity", winner: "higher" })}
+            ${row("Facilities", (p) => p.facilities, { optional: true })}
+            ${row("Suitability for filming", (p) => p.suitability, { optional: true })}
+            ${row("Permit needed", (p) => p.permit_needed, { optional: true, key: "permit_needed", winner: "no-wins" })}
+            ${row("Logistics", (p) => p.logistics, { optional: true })}
+            ${row("Seen in", (p) => p.known_for, { optional: true })}
             ${row("Incentive in this country", (p) => {
               const inc = incentiveByCountry[p.country];
-              return inc ? `<strong>${esc(inc.rate_label)}</strong><small>${esc(inc.scheme)}</small><small><a href="/compare-film-incentives/">Full incentive comparison</a></small>` : `<small>Not in our incentive table yet. <a href="/compare-film-incentives/">See the comparison</a></small>`;
+              return { raw: true, html: inc ? `<strong>${esc(inc.rate_label)}</strong><small>${esc(inc.scheme)}</small><small><a href="/compare-film-incentives/">Full incentive comparison</a></small>` : `<small>Not in our incentive table yet. <a href="/compare-film-incentives/">See the comparison</a></small>` };
             })}
-            ${row("Links", (p) => [
+            ${row("Links", (p) => ({ raw: true, html: [
               p.official_url ? `<a href="${esc(p.official_url)}" target="_blank" rel="noopener">Official site</a>` : "",
               p.commission_url ? `<a href="${esc(p.commission_url)}" target="_blank" rel="noopener">Film commission</a>` : "",
-            ].filter(Boolean).join("<br>"))}
+              ...(p.source_urls || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">Source ${i + 1}</a>`),
+            ].filter(Boolean).join("<br>") }))}
           </tbody>
         </table>
         </div>
-        <p class="loc-disclaimer">Details checked on ${esc(data.updated)}; always confirm access, permits and availability with the location or the film commission. Not affiliated with Tubes.</p>`;
+        <p class="loc-disclaimer">Only what a venue publishes itself is listed; a dash means not published, not zero. Details checked on ${esc(data.updated)}; always confirm access, permits and availability with the location or the film commission. Locations are not affiliated with Tubes.</p>`;
       out.hidden = false;
       out.scrollIntoView({ behavior: "smooth", block: "start" });
     };
-    root.addEventListener("change", (e) => { if (e.target.matches("[data-guide-check]")) { syncBar(); if (!out.hidden) renderCompare(); } });
-    root.querySelector("[data-guide-bar-btn]").addEventListener("click", renderCompare);
-    root.querySelector("[data-guide-bar-clear]").addEventListener("click", () => { for (const c of checks) c.checked = false; syncBar(); });
+    root.addEventListener("change", (e) => { if (e.target.matches("[data-guide-check]")) { syncPanel(); if (!out.hidden) renderCompare(); } });
+    compareBtn.addEventListener("click", renderCompare);
+    clearBtn.addEventListener("click", () => { for (const c of checks) c.checked = false; syncPanel(); });
 
-    // Aanvraagformulier: zelfde berichtprefix als op de incentivepagina, dus
-    // dezelfde mail naar LOCATION_EMAIL via server.js
+    // Suggestieformulier: zelfde berichtprefix als op de incentivepagina,
+    // dus dezelfde mail naar LOCATION_EMAIL via server.js
     const request = root.querySelector(".loc-request-form");
     if (request) {
       request.addEventListener("submit", () => {
@@ -271,8 +387,9 @@
       });
     }
 
+    syncFavButtons();
     applyFilters();
-    syncBar();
+    syncPanel();
   })();
   </script>
 </section>
