@@ -143,6 +143,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Locatie voorstellen ("Suggest a location"): post naar /api/contact met bericht "Location request: <locatie>" plus toelichting. Staat op /beheer (kolom page = /compare-film-tv-locations/) én gaat meteen per mail naar `LOCATION_EMAIL` (standaard joachim@tubes.media) via `meldLocatieSuggestie()` in server.js, met dezelfde Resend-instellingen als de Health Check-mail. Gewone contact-/demoberichten mailen (nog) niet, die staan alleen op /beheer.
 - **Voor nu alleen Europa** (besluit Joachim 31-8-2026), zonder Rusland en Wit-Rusland. De geverifieerde entries voor Canada (Ontario/BC/Quebec), VS (Georgia/New Mexico/Californië/New York), Australië, Nieuw-Zeeland en Zuid-Afrika staan in git (commit e0dfd82, `src/_data/locations.json`) en kunnen terug zodra gewenst.
 - Staat in `settings.footer_nav` (niet in het hoofdmenu) en loopt automatisch mee in sitemap en llms.txt.
+- **Volgende stap (gewenst door Joachim, 31-8-2026)**: uitbouwen naar een Europese locatiegids: zoeken binnen land/regio, kaart met locaties, foto's en links, 1 tot 3 locaties naast elkaar. Onderzoek naar vergelijkbare sites (Film France, Italy for Movies, filmcommissies, LocationsHub, FilmMap, Wrapbook) met over te nemen patronen en fotorechten staat in `docs/location-directory-research.md`.
 
 ## Domein & DNS (niet slopen)
 
