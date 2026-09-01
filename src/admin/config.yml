@@ -268,6 +268,10 @@ collections:
                   - { label: "Icoon (svg uit assets/icons)", name: icon, widget: image, required: false }
                   - { label: Kop, name: heading, widget: string }
                   - { label: Tekst, name: text, widget: markdown }
+                  - { label: "Afbeelding bovenin de kaart (i.p.v. icoon)", name: image, widget: image, required: false, hint: "Eigen upload, of een volledige https-URL (bijv. Wikimedia Commons-thumbnail)." }
+                  - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
+                  - { label: "Afbeelding: credit (maker, licentie)", name: image_credit, widget: string, required: false, hint: "Verplicht bij Commons-foto's, bijv. 'Photo: Naam (CC BY-SA 4.0)'. Markdown-links mogen." }
+                  - { label: "Afbeeldingsstijl", name: image_style, widget: select, options: [{label: "Foto", value: ""}, {label: "Contourkaart (lijntekening)", value: contour}], required: false }
                   - { label: "Link (maakt de hele kaart klikbaar, bijv. /resources/)", name: url, widget: string, required: false }
                   - { label: "Linktekst (bijv. Open the guide)", name: link_label, widget: string, required: false }
           - name: textblock

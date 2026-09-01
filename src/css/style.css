@@ -212,8 +212,9 @@ a:hover { color: var(--action); }
 .site-logo > img { width: 158px; height: auto; }
 .footer-brand { width: 126px; height: auto; margin-bottom: 16px; }
 
+.site-nav { min-width: 0; }
 .site-nav ul {
-  display: flex; flex-wrap: wrap; gap: 2px;
+  display: flex; flex-wrap: nowrap; gap: 2px;
   list-style: none; margin: 0;
   padding: 5px;
   background: var(--bg);
@@ -222,7 +223,7 @@ a:hover { color: var(--action); }
 }
 
 .site-nav a {
-  display: inline-block;
+  display: inline-block; white-space: nowrap;
   font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
   text-decoration: none;
   padding: 8px 15px;
@@ -1058,7 +1059,16 @@ a:hover { color: var(--action); }
    demo-knop, dus hij verdwijnt iets eerder: onder 1220px past de rij
    logo + menu + knop niet meer. */
 .header-cta { padding: 10px 20px; font-size: 0.9rem; white-space: nowrap; }
+/* Acht menu-items plus de knop: op middelgrote schermen compacter, nooit afbreken */
+@media (max-width: 1440px) {
+  .header-inner { gap: 16px; }
+  .site-nav a { padding: 8px 11px; font-size: 0.88rem; }
+  .header-cta { padding: 9px 14px; font-size: 0.86rem; }
+}
 @media (max-width: 1220px) { .header-cta { display: none; } }
+@media (max-width: 980px) and (min-width: 701px) {
+  .site-nav a { padding: 7px 8px; font-size: 0.82rem; }
+}
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */
 .button.button-primary::after {
@@ -2317,3 +2327,19 @@ a:hover { color: var(--action); }
 .news-item h2 { font-size: 1.3rem; letter-spacing: -0.015em; margin: 0 0 0.4em; }
 .news-item p { color: var(--ink-soft); margin: 0; }
 .news-item .news-link { display: inline-block; margin-top: 12px; font-weight: 700; color: var(--action-soft-ink); }
+
+/* Kaarten met beeld (tegels op /resources/) */
+.card-figure { margin: -34px -32px 20px; position: relative; overflow: hidden; border-radius: 20px 20px 0 0; background: rgba(255, 255, 255, 0.6); }
+.card-figure img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.card-figure figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  font-size: 0.66rem; line-height: 1.3; color: #fff;
+  background: linear-gradient(transparent, rgba(20, 22, 25, 0.7));
+  padding: 16px 14px 6px;
+}
+.card-figure figcaption a { color: #fff; text-decoration: underline; }
+/* Contourkaart: getekende lijnen in de kaartkleur, geen foto-look */
+.card-figure-contour { background: transparent; }
+.card-figure-contour img { object-fit: contain; padding: 14px 22px 6px; opacity: 0.9; }
+.card-figure-contour figcaption { color: var(--muted); background: none; position: static; padding: 0 16px 8px; text-align: right; }
+.card-figure-contour figcaption a { color: var(--muted); }
