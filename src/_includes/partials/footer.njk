@@ -88,6 +88,6 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© {{ "" | year }} {{ settings.site_name }} · A production of {{ settings.legal.company }}, Amsterdam</p>
+    <p>© {{ "" | year }} {{ settings.site_name }} · A production of {{ settings.legal.company }}, Amsterdam{% if settings.google_analytics %} · <a href="/privacy/" data-cookie-settings>Cookie settings</a>{% endif %}</p>
   </div>
 </footer>

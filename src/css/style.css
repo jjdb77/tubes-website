@@ -1040,6 +1040,36 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .feed-link-none { color: var(--muted); font-weight: 600; text-decoration: none; }
 .feed-link-none::after { content: none; }
 
+/* ---------- Cookiebanner ---------- */
+
+.cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 24px -12px rgba(26, 26, 26, 0.2);
+  padding: 18px 0;
+}
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 16px 32px;
+}
+
+.cookie-banner-text {
+  margin: 0; max-width: 760px;
+  font-size: 0.92rem; line-height: 1.55; color: var(--ink-soft);
+}
+
+/* Toestemmen en weigeren even groot en naast elkaar, één klik allebei */
+.cookie-banner-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.cookie-banner-buttons .button { padding: 11px 24px; font-size: 0.92rem; }
+
+@media (max-width: 700px) {
+  .cookie-banner-inner { align-items: stretch; }
+  .cookie-banner-buttons .button { flex: 1; text-align: center; }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1180px) {

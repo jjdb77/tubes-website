@@ -239,6 +239,7 @@ function track(name, meta) {
   pendingEvents.push(name);
   flushEvents();
   if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: name, ...meta });
+  if (typeof window.gtag === "function") window.gtag("event", name, meta || {});
   document.dispatchEvent(new CustomEvent("tubes:track", { detail: { name, ...meta } }));
 }
 
@@ -556,5 +557,80 @@ if (assessForm) {
     });
   } else {
     track("health-check-assessment-opened", { linked: Boolean(ref) });
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Cookiebanner en Google Analytics
+//
+// Google Analytics zet cookies, dus in de EU mag het pas na toestemming. We
+// blokkeren hard: zolang niemand op Accept heeft geklikt wordt gtag.js niet
+// eens opgehaald, dus gaat er ook geen enkel gegeven naar Google. De keuze
+// zelf staat in localStorage en niet in een cookie, want dan zou de banner
+// zelf al zetten waar hij toestemming voor vraagt.
+//
+// De balk staat alleen in de pagina als er een GA4-code is ingevuld; zie
+// partials/analytics.njk.
+// ---------------------------------------------------------------------------
+
+const CONSENT_KEY = "tubes-analytics-consent";
+const cookieBanner = document.getElementById("cookie-banner");
+
+function readConsent() {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function storeConsent(value) {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+  } catch {
+    /* privémodus: dan geldt de keuze alleen voor dit bezoek */
+  }
+}
+
+function loadAnalytics(id) {
+  if (!id || window.gtag) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", id);
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+  document.head.appendChild(tag);
+}
+
+if (cookieBanner) {
+  const gaId = cookieBanner.dataset.gaId;
+  const choice = readConsent();
+  if (choice === "granted") loadAnalytics(gaId);
+  else if (choice !== "denied") cookieBanner.hidden = false;
+
+  const accept = cookieBanner.querySelector("[data-cookie-accept]");
+  accept.addEventListener("click", () => {
+    storeConsent("granted");
+    cookieBanner.hidden = true;
+    loadAnalytics(gaId);
+  });
+  cookieBanner.querySelector("[data-cookie-decline]").addEventListener("click", () => {
+    storeConsent("denied");
+    cookieBanner.hidden = true;
+  });
+
+  // Van gedachten veranderen moet net zo makkelijk zijn als toestemmen: de
+  // link in de footer haalt de balk terug. Zonder JS is het gewoon een link
+  // naar de privacyverklaring.
+  for (const link of document.querySelectorAll("[data-cookie-settings]")) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      cookieBanner.hidden = false;
+      accept.focus();
+    });
   }
 }

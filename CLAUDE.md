@@ -153,7 +153,9 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 
 - Eén plek: `src/_includes/partials/analytics.njk`, ingevoegd door `layout.njk`, `article.njk`, `insights.njk` en `news.njk`. `book-a-call.njk` en `home-2.njk` bewust niet, dat zijn doorstuurpagina's die niemand ziet.
 - Twee velden in settings.json, allebei leeg = uit: `goatcounter` (cookieloos, geen toestemming nodig) en `google_analytics` (GA4 meet-ID, vorm `G-XXXXXXXXXX`).
-- ⚠️ **Google Analytics zet cookies.** In de EU mag dat pas na toestemming van de bezoeker, dus het veld hoort leeg te blijven zolang er geen cookiebanner staat. Er is nu geen banner op de site.
+- **Google Analytics zet cookies**, dus dat gaat via toestemming. `partials/cookie-banner.njk` verschijnt alleen als `google_analytics` is ingevuld, en het script van Google wordt **hard geblokkeerd**: `site.js` haalt gtag.js pas op nadat de bezoeker op Accept klikt. Zolang dat niet gebeurt gaat er geen enkel gegeven naar Google. De keuze staat in `localStorage` (`tubes-analytics-consent`), niet in een cookie.
+- Accepteren en weigeren zijn allebei één klik op hetzelfde niveau, zoals de Autoriteit Persoonsgegevens eist. Herzien kan via "Cookie settings" in de footer, die link staat er ook alleen als GA is ingesteld.
+- `track()` in site.js meldt gebeurtenissen aan GoatCounter, `dataLayer` en (na toestemming) `gtag`. De Health Check-trechter gebruikt dat al.
 - ⚠️ **Hoofdstuk 10 van `/privacy/`** zegt op dit moment dat er geen analytics draait. Zodra er wel iets draait, moet die tekst mee, anders staat er een onwaarheid in de privacyverklaring.
 - Wat statistieken je wél en niet vertellen: aantallen, pagina's, bronnen en tijdstippen. **Niet wie er langskwam.** Voor bedrijfsnamen bij bezoeken heb je een aparte dienst nodig (Leadfeeder, Albacross en dergelijke), die IP-adressen aan bedrijven koppelt en een eigen privacy- en toestemmingsverhaal heeft.
 
