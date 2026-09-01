@@ -647,6 +647,13 @@ function addAiUsage(tokIn, tokOut) {
   try { fs.writeFileSync(AI_USAGE_FILE, JSON.stringify(u)); } catch (err) { console.warn("[ai] teller niet opgeslagen:", err.message); }
 }
 
+// Alleen of het AI-zoeken aanstaat (sleutel gezet): de pagina toont de knop
+// pas als dit true is, dus zonder sleutel is er geen dode knop te zien.
+app.get("/api/location-search/status", (req, res) => {
+  res.set("Cache-Control", "no-store");
+  res.json({ enabled: Boolean(AI_KEY) });
+});
+
 app.post("/api/location-search", async (req, res) => {
   if (rateLimited(req, 10)) return res.status(429).json({ ok: false, fallback: true, reason: "rate" });
   const q = String((req.body || {}).q || "").trim().slice(0, 300);

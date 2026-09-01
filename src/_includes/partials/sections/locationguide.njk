@@ -20,7 +20,7 @@
         <label for="guide-search">What are you looking for?</label>
         <input type="search" id="guide-search" placeholder="Try: industrial hall with high ceilings near Amsterdam" autocomplete="off">
         <div class="guide-ai-row">
-          <button type="button" class="guide-ai-btn" data-ai-btn>Let AI turn this into filters</button>
+          <button type="button" class="guide-ai-btn" data-ai-btn hidden>Let AI turn this into filters</button>
           <span class="guide-ai-status" data-ai-status role="status"></span>
         </div>
       </div>
@@ -210,6 +210,13 @@
     const aiBtn = root.querySelector("[data-ai-btn]");
     const aiStatus = root.querySelector("[data-ai-status]");
     const aiChips = root.querySelector("[data-ai-chips]");
+    // Knop pas tonen als de server een sleutel heeft; verschijnt dus vanzelf
+    // zodra OPENAI_API_KEY op Railway staat.
+    let aiEnabled = false;
+    fetch("/api/location-search/status").then((r) => r.json()).then((s) => {
+      aiEnabled = Boolean(s.enabled);
+      aiBtn.hidden = !aiEnabled;
+    }).catch(() => {});
 
     const renderChips = () => {
       const chips = [];
@@ -260,7 +267,7 @@
       renderChips(); applyFilters();
     };
     aiBtn.addEventListener("click", askAI);
-    q.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); askAI(); } });
+    q.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); if (aiEnabled) askAI(); } });
 
     // Pills: alle locaties / voorkeurslijst, en kaarten / lijst
     for (const pill of root.querySelectorAll("[data-list]")) {
