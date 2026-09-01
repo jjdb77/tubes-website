@@ -933,7 +933,12 @@ a:hover { color: var(--action); }
 .insight-card p { color: var(--ink-soft); }
 .insight-link { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.92rem; color: var(--action-soft-ink); }
 
-/* ---------- Branchenieuws op /news/ (kaarten met LinkedIn-post) ---------- */
+/* ---------- Branchenieuws op /news/ (kaarten met LinkedIn-post) ----------
+   De auteur staat bovenaan en is het grootste element op de kaart: de post is
+   van hen, Tubes vat alleen samen. De samenvatting is bewust korter dan het
+   origineel, de knop leidt naar de schrijver. */
+
+.feed-heading { font-size: clamp(1.5rem, 2.6vw, 2.1rem); max-width: 900px; }
 
 .feed-month {
   display: flex; align-items: center; gap: 16px;
@@ -963,22 +968,34 @@ a:hover { color: var(--action); }
 .feed-card:hover { border-color: var(--action); box-shadow: var(--shadow-raise); transform: translateY(-2px); }
 .feed-card-nolink:hover { border-color: var(--border); box-shadow: var(--shadow-card); transform: none; }
 
-.feed-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 16px; }
-.feed-meta .chip { margin: 0; }
-.feed-source { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.feed-chip { align-self: flex-start; margin-bottom: 20px; }
 
-.feed-card h3 {
-  font-size: 1.18rem; font-weight: 700; letter-spacing: -0.015em;
-  line-height: 1.28; color: var(--ink);
-  margin: 0 0 0.55em;
+/* Naamblok: "From <naam> on LinkedIn", met de naam als grootste regel */
+.feed-from {
+  font-size: 0.86rem; font-weight: 600; line-height: 1.35;
+  color: var(--muted);
+  margin: 0;
+}
+.feed-name {
+  display: block;
+  font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;
+  color: var(--ink);
+  margin: 2px 0 1px;
+}
+.feed-role { font-size: 0.86rem; color: var(--ink-soft); margin: 6px 0 0; }
+
+.feed-topic {
+  font-size: 1.02rem; font-weight: 700; line-height: 1.35;
+  color: var(--ink);
+  margin: 20px 0 8px;
 }
 
-.feed-summary { color: var(--ink-soft); font-size: 0.99rem; }
+.feed-summary { color: var(--ink-soft); font-size: 0.97rem; }
 .feed-summary p { margin: 0; }
 
 .feed-link {
   display: inline-flex; align-items: center; gap: 7px;
-  margin-top: auto; padding-top: 18px;
+  margin-top: auto; padding-top: 20px;
   font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink);
   text-decoration: none;
 }

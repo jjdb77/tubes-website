@@ -1,9 +1,10 @@
 ---
-title: "Festival agenda: August in film and television"
+title: "The festivals and markets that shaped August"
 date: 2026-08-25
 topic: Festivals
 source: Percy & Warren
+role: ""
 link: https://www.linkedin.com/feed/update/urn:li:ugcPost:7499085575229210625/
 permalink: false
 ---
-Percy & Warren set out the festivals and markets that shaped the month, among them Locarno, Edinburgh International Film Festival, the Edinburgh TV Festival, Copenhagen TV Festival, Nordic Film Festival Haugesund and Sarajevo Film Festival. Useful if you are lining up co-production meetings or press around the autumn circuit.
+Percy & Warren pull the month together in one overview, among it Locarno, Sarajevo, the two Edinburgh festivals and Copenhagen TV Festival. Worth a look if you are planning co-production meetings or press around the autumn circuit.

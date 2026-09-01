@@ -70,8 +70,10 @@ description: "New tools, guides and product updates from Tubes, plus the film an
     {%- if collections.linkedin.length %}
     <section class="section">
       <div class="container">
-        <h2 class="section-heading">From the industry</h2>
-        <p class="section-intro">Posts we came across on LinkedIn, summarised in a line or two. The opinions are the writers&rsquo;, not ours.</p>
+        <h2 class="section-heading feed-heading">Ideas and insights from people across the film and television industry</h2>
+        <div class="rich-text section-intro">
+          <p>We highlight interesting public posts we come across on LinkedIn and give a short summary of what the author is saying. The ideas, opinions and insights belong to the original authors. Follow the link, read the full post and join the conversation on LinkedIn.</p>
+        </div>
         {%- for item in collections.linkedin %}
         {%- set month = item.date | monthYear %}
         {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | monthYear) != month %}
@@ -80,16 +82,18 @@ description: "New tools, guides and product updates from Tubes, plus the film an
         <ul class="feed-list">
         {%- endif %}
           <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">
-            <p class="feed-meta">
-              <span class="{{ topicChip[item.data.topic] or 'chip' }}">{{ item.data.topic }}</span>
-              <span class="feed-source">{{ item.data.source }}</span>
-            </p>
-            <h3>{{ item.data.title }}</h3>
+            <span class="{{ topicChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
+            <h3 class="feed-from">From <span class="feed-name">{{ item.data.source }}</span> on LinkedIn</h3>
+            {%- if item.data.role %}<p class="feed-role">{{ item.data.role }}</p>{% endif %}
+            <p class="feed-topic">{{ item.data.title }}</p>
             <div class="feed-summary">{{ item.templateContent | safe }}</div>
             {%- if item.data.link %}
             <a class="feed-link" href="{{ item.data.link }}" target="_blank" rel="noopener">
-              <span>View on LinkedIn</span> {{ linkedinIcon() }}
-              <span class="visually-hidden">: {{ item.data.title }}</span>
+              {%- if item.data.link | isLinkedInPost %}
+              <span>Read {{ item.data.source | possessive }} original post on LinkedIn</span>
+              {%- else %}
+              <span>See more from {{ item.data.source }} on LinkedIn</span>
+              {%- endif %} {{ linkedinIcon() }}
             </a>
             {%- else %}
             <p class="feed-link feed-link-none">Shared on LinkedIn by {{ item.data.source }}</p>

@@ -114,7 +114,18 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`permalink: false`):
 
 1. **Eigen nieuws** ("What's new at Tubes") uit `src/content/news/*.md`, collectie `news`. Velden: `title`, `date`, `summary`, `url`, `link_label`. CMS-collectie "Nieuws (/news/)".
-2. **Branchenieuws van LinkedIn** ("From the industry") uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `title`, `date`, `topic`, `source`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+2. **Branchenieuws van LinkedIn** uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `source`, `role`, `title`, `date`, `topic`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+
+### Spelregels voor het branchenieuws
+
+Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen uit de sector zichtbaarder te maken, niet om ze als eigen redactie te presenteren. Dat stuurt de hele opmaak:
+
+- **De auteur staat bovenaan en is het grootste element op de kaart** ("From <naam> on LinkedIn"), groter dan de kop en de samenvatting van Tubes.
+- **Schrijf toe**: "Katya Alexander argues that ..." en niet "Film financiers look at ...". Het is hun inzicht, niet dat van ons.
+- **Geef het inzicht niet helemaal weg.** Twee of drie zinnen die nieuwsgierig maken; de post zelf blijft de plek voor het volledige verhaal. Een samenvatting die het origineel overbodig maakt, is auteursrechtelijk een bewerking en moreel een diefstalletje.
+- **Nooit letterlijk overnemen**, ook geen alinea, en **geen afbeeldingen uit de post**. Eigen woorden, naam erbij, link erheen.
+- `role` (functie of organisatie) alleen invullen als het klopt. Leeg laten is beter dan gokken.
+- De knoptekst volgt automatisch de soort link (filter `isLinkedInPost`): bij een echte post-URL wordt het "Read <naam>'s original post on LinkedIn", bij een profiel- of bedrijfspagina "See more from <naam> on LinkedIn". Beloof geen post waar een profiel staat.
 
 - `topic` bepaalt de kleur van het chipje: Budgeting = teal, Financing = mint, AI in production = lavendel, Festivals = blauw.
 - Bij het branchenieuws bepaalt de **datum alleen de volgorde en de maandkop**; op de pagina staat alleen "August 2026". Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.

@@ -92,6 +92,20 @@ export default function (eleventyConfig) {
     new Date(value).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
   );
 
+  // "Katya Alexander's", maar "Glassriver Films'" bij een naam op een s
+  eleventyConfig.addFilter("possessive", (name) => {
+    const value = String(name || "").trim();
+    if (!value) return value;
+    return /s$/i.test(value) ? `${value}'` : `${value}'s`;
+  });
+
+  // Wijst de link naar de post zelf, of naar een profiel/bedrijfspagina?
+  // Bepaalt de knoptekst: "Read X's original post" mag alleen bij een echte
+  // post-URL, anders beloven we de bezoeker iets wat er niet staat.
+  eleventyConfig.addFilter("isLinkedInPost", (url) =>
+    /\/(feed\/update|posts|pulse)\//.test(String(url || ""))
+  );
+
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
   // pagina niet tijdens het laden (goed voor de Google-scores).

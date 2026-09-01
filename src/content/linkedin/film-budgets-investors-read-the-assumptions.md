@@ -1,9 +1,10 @@
 ---
-title: "Film budgets: investors read the assumptions, not the total"
+title: "Why the assumptions behind a budget matter"
 date: 2026-08-29
 topic: Budgeting
 source: Katya Alexander
+role: ""
 link: https://www.linkedin.com/in/katya-alexander/
 permalink: false
 ---
-A film budget is not a number, it is an argument. Katya Alexander points out that investors look straight past the total and into the assumptions underneath it: whether the shooting schedule is realistic, whether post is properly costed, whether the contingency is honest, and whether the budget reflects how complicated this production actually is. A budget that survives that reading is evidence that the producer can deliver the film.
+Katya Alexander argues that investors are not only interested in the final figure. What they really read is the set of assumptions underneath it, and whether those hold up.

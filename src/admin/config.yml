@@ -184,16 +184,17 @@ collections:
     summary: "{{title}}"
     sortable_fields: [date, title]
     fields:
-      - { label: Kop, name: title, widget: string, hint: "In het Engels, de sitetaal. Geen em-dashes (—)." }
+      - { label: "Auteur of organisatie", name: source, widget: string, hint: "Wie het schreef. Dit staat het grootst op de kaart, want de post is van hen." }
+      - { label: "Functie of organisatie", name: role, widget: string, required: false, hint: "Bijv. 'Producer and production consultant'. Alleen invullen als je het zeker weet; leeg laten is beter dan gokken." }
+      - { label: "Kop boven de samenvatting", name: title, widget: string, hint: "Waar de post over gaat, in het Engels. Geen em-dashes (—)." }
       - label: Onderwerp (het gekleurde labeltje)
         name: topic
         widget: select
         default: Budgeting
-        options: [Budgeting, "AI in production", Festivals, Financing]
-      - { label: Bron, name: source, widget: string, hint: "Wie het schreef, bijv. Screen International of Katya Alexander." }
-      - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Leeg mag: de kaart toont dan alleen de bron, zonder knop." }
+        options: [Budgeting, Financing, "AI in production", Festivals]
+      - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Liefst de post zelf; dan wordt de knop 'Read <naam>'s original post'. Bij een profiel- of bedrijfspagina wordt het 'See more from <naam>'. Leeg mag ook: dan geen knop." }
       - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Bepaalt de volgorde en de maandkop. Op de pagina staat alleen de maand." }
-      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels, met de bron erbij. Geen em-dashes (—)." }
+      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels. Schrijf toe aan de auteur ('Katya Alexander argues that ...') en geef niet het hele inzicht weg: de post zelf blijft de plek voor het volledige verhaal. Geen em-dashes (—)." }
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
   - name: paginas
