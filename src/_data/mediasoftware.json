@@ -45,6 +45,48 @@
       "photo": null
     },
     {
+      "id": "blender",
+      "name": "Blender",
+      "vendor": "Blender Foundation",
+      "vendor_country": "Netherlands",
+      "category": "Post-production & VFX",
+      "summary": "Free and open source 3D creation suite covering modelling, animation, simulation, rendering, compositing and video editing.",
+      "for_whom": "3D artists, VFX and animation studios",
+      "pricing_model": "Free, open source (GPL v3)",
+      "deployment": "Desktop",
+      "platforms": "Windows (x64, arm64), macOS (Intel, Apple Silicon), Linux (x86_64)",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.blender.org/",
+      "source_urls": [
+        "https://projects.blender.org/blender/blender/raw/branch/main/README.md",
+        "https://builder.blender.org/download/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cinema-4d",
+      "name": "Cinema 4D",
+      "vendor": "Maxon Computer GmbH",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "summary": "3D modelling, animation and motion graphics software with the Redshift renderer included in the subscription.",
+      "for_whom": "Motion designers, 3D generalists",
+      "pricing_model": "Subscription, monthly or annual (amounts published in the Maxon store)",
+      "deployment": "Desktop",
+      "platforms": "Windows (incl. Windows on Arm), macOS; iPad announced",
+      "integrations": "Adobe After Effects (Cineware), Unreal Engine (Cineware), Redshift, ZBrush",
+      "founded": null,
+      "official_url": "https://www.maxon.net/en/cinema-4d",
+      "source_urls": [
+        "https://www.maxon.net/en/cinema-4d",
+        "https://www.maxon.net/en/about-maxon/contact"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "davinci-resolve",
       "name": "DaVinci Resolve",
       "vendor": "Blackmagic Design",
@@ -61,6 +103,69 @@
       "source_urls": [
         "https://www.blackmagicdesign.com/products/davinciresolve",
         "https://www.blackmagicdesign.com/products/davinciresolve/techspecs"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "disguise-designer",
+      "name": "disguise Designer",
+      "vendor": "disguise",
+      "vendor_country": "United Kingdom",
+      "category": "Post-production & VFX",
+      "summary": "Real-time 3D visualisation and content control software for virtual production, live events and broadcast, used with disguise media servers and RenderStream.",
+      "for_whom": "Virtual production and live event teams",
+      "pricing_model": "Free Designer Starter edition; Designer Pro USD 159 per month or USD 1,500 per year (published)",
+      "deployment": "Desktop",
+      "platforms": null,
+      "integrations": "Unreal Engine, Notch, Unity, TouchDesigner, Mo-Sys, stYpe",
+      "founded": null,
+      "official_url": "https://www.disguise.one/en/products/designer/",
+      "source_urls": [
+        "https://www.disguise.one/en/products/designer/",
+        "https://www.disguise.one/en/products/designer/pricing"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "eztitles",
+      "name": "EZTitles",
+      "vendor": "EZTitles Development Studio Ltd.",
+      "vendor_country": "Bulgaria",
+      "category": "Post-production & VFX",
+      "summary": "Subtitling and closed captioning software for streaming, broadcast, digital cinema and home video formats, sold as subscription or lifetime licence.",
+      "for_whom": "Subtitlers, localisation vendors",
+      "pricing_model": "Subscription from EUR 30 per week (One) or EUR 80 per month (Essentials); lifetime licences from EUR 1,720 (published)",
+      "deployment": "Desktop",
+      "platforms": null,
+      "integrations": "Netflix, Final Cut Pro, Adobe Premiere, Avid Media Composer, DaVinci Resolve",
+      "founded": 2003,
+      "official_url": "https://www.eztitles.com/",
+      "source_urls": [
+        "https://www.eztitles.com/eztitles-subtitling-software/license-editions",
+        "https://www.eztitles.com/support/contact-us"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "final-cut-pro",
+      "name": "Final Cut Pro",
+      "vendor": "Apple",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Video editing application for Mac and iPad with companion apps for motion graphics, encoding and audio.",
+      "for_whom": "Editors on Mac and iPad",
+      "pricing_model": "One-time USD 299.99, or subscription USD 12.99 per month / USD 129 per year via Apple Creator Studio (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS 15.6 or later, iPadOS 18.6 or later",
+      "integrations": "Logic Pro, Motion, Compressor, iMovie",
+      "founded": null,
+      "official_url": "https://www.apple.com/final-cut-pro/",
+      "source_urls": [
+        "https://www.apple.com/final-cut-pro/",
+        "https://www.apple.com/final-cut-pro/specs/"
       ],
       "logo": null,
       "photo": null
@@ -108,6 +213,69 @@
       "photo": null
     },
     {
+      "id": "houdini",
+      "name": "Houdini",
+      "vendor": "SideFX",
+      "vendor_country": "Canada",
+      "category": "Post-production & VFX",
+      "summary": "Procedural 3D animation and visual effects software with FX, Core and Indie editions and a Houdini Engine plug-in for other applications.",
+      "for_whom": "FX and 3D artists, VFX studios",
+      "pricing_model": "Subscription from USD 299 per year for Houdini Indie (published); Core and FX prices via the SideFX store",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS (Apple Silicon), Linux",
+      "integrations": "Maya, 3ds Max, Unreal Engine, Unity, USD",
+      "founded": 1987,
+      "official_url": "https://www.sidefx.com/products/houdini/",
+      "source_urls": [
+        "https://www.sidefx.com/products/houdini-indie/",
+        "https://www.sidefx.com/company/about-sidefx/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "izotope-rx",
+      "name": "iZotope RX",
+      "vendor": "iZotope",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Audio repair and restoration software with more than 50 tools, available as a standalone editor and as plug-ins in Elements, Standard and Advanced editions.",
+      "for_whom": "Dialogue editors, audio post studios",
+      "pricing_model": "One-time USD 99 (RX 12 Elements), USD 399 (Standard), USD 1,399 (Advanced) (published)",
+      "deployment": "Desktop",
+      "platforms": null,
+      "integrations": "Pro Tools (AudioSuite)",
+      "founded": 2001,
+      "official_url": "https://www.izotope.com/en/products/rx.html",
+      "source_urls": [
+        "https://www.izotope.com/en/products/rx.html",
+        "https://www.izotope.com/en/company.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "kdenlive",
+      "name": "Kdenlive",
+      "vendor": "KDE community (KDE e.V.)",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "summary": "Free and open source video editor built on the MLT Framework and KDE Frameworks, with multi-track editing, effects, colour correction and subtitling tools.",
+      "for_whom": "Editors on a budget, Linux users",
+      "pricing_model": "Free, open source (GPL-3.0)",
+      "deployment": "Desktop",
+      "platforms": "Linux, Windows, macOS",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://kdenlive.org/",
+      "source_urls": [
+        "https://apps.kde.org/kdenlive/",
+        "https://invent.kde.org/multimedia/kdenlive"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "kitsu",
       "name": "Kitsu",
       "vendor": "CGWire",
@@ -124,6 +292,215 @@
       "source_urls": [
         "https://www.cg-wire.com/pricing",
         "https://www.cg-wire.com/self-hosted"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "lightworks",
+      "name": "Lightworks",
+      "vendor": "LWKS Software Ltd",
+      "vendor_country": "United Kingdom",
+      "category": "Post-production & VFX",
+      "summary": "Video editing software with Free, Create and Pro editions covering editing, audio, colour correction and effects.",
+      "for_whom": "Editors, small post teams",
+      "pricing_model": "Free edition; paid Create and Pro editions as monthly, yearly or perpetual licences (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "NewBlue TotalFX, Dropbox, Google Drive, IOGates, Pond5",
+      "founded": null,
+      "official_url": "https://lwks.com/",
+      "source_urls": [
+        "https://lwks.com/",
+        "https://lwks.com/pricing"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "nuke",
+      "name": "Nuke",
+      "vendor": "Foundry",
+      "vendor_country": "United Kingdom",
+      "category": "Post-production & VFX",
+      "summary": "Node-based compositing software for feature film, episodic and commercial VFX, available as Nuke, NukeX and Nuke Studio.",
+      "for_whom": "Compositors, VFX studios",
+      "pricing_model": "Subscription from EUR 3,139 per year for Nuke; NukeX EUR 4,759, Nuke Studio EUR 5,799 per year (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "ftrack, Flow Production Tracking (Shotgun), OpenColorIO, USD, Unreal Engine",
+      "founded": 1996,
+      "official_url": "https://www.foundry.com/products/nuke-family/nuke",
+      "source_urls": [
+        "https://www.foundry.com/products/nuke-family/nuke",
+        "https://www.foundry.com/products/nuke-family/nuke/features"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "reaper",
+      "name": "REAPER",
+      "vendor": "Cockos Incorporated",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Multi-track audio, MIDI and video production and recording environment sold as a single licence with a 60-day evaluation period.",
+      "for_whom": "Audio post engineers, sound designers",
+      "pricing_model": "One-time USD 60 (discounted licence) or USD 225 (commercial licence) (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows XP to 11, macOS 10.5 to 26, Linux (x86-64, ARM)",
+      "integrations": null,
+      "founded": 2004,
+      "official_url": "https://www.reaper.fm/",
+      "source_urls": [
+        "https://www.reaper.fm/purchase.php",
+        "https://www.reaper.fm/download.php"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "subtitle-edit",
+      "name": "Subtitle Edit",
+      "vendor": "Nikolaj Lynge Olsson (nikse.dk)",
+      "vendor_country": "Denmark",
+      "category": "Post-production & VFX",
+      "summary": "Open source offline subtitle editor for creating, converting and synchronising subtitles, with video playback via mpv.",
+      "for_whom": "Subtitlers, small post teams",
+      "pricing_model": "Free, open source (MIT)",
+      "deployment": "Desktop",
+      "platforms": "Windows 10 22H2 or newer, macOS 12 or newer, Linux",
+      "integrations": "mpv/libmpv, optional third-party speech-to-text, translation and OCR services",
+      "founded": null,
+      "official_url": "https://www.nikse.dk/subtitleedit",
+      "source_urls": [
+        "https://github.com/SubtitleEdit/subtitleedit",
+        "https://github.com/niksedk"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "ateliere-connect",
+      "name": "Ateliere Connect",
+      "vendor": "Ateliere Creative Technologies",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Cloud-native media supply chain platform for managing, packaging and delivering content to distribution platforms, running on AWS.",
+      "for_whom": "Distributors, studios, post houses",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": null,
+      "integrations": "AWS, Netflix Backlot, Apple Transporter, Adobe Premiere Pro panel, Aspera",
+      "founded": null,
+      "official_url": "https://ateliere.com/",
+      "source_urls": [
+        "https://ateliere.com/ateliere-connect/",
+        "https://ateliere.com/privacy-policy/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "autodesk-flow-capture",
+      "name": "Autodesk Flow Capture (formerly Moxion)",
+      "vendor": "Autodesk",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Cloud dailies and content review platform with HDR playback and secure screener delivery, part of the Autodesk Flow ecosystem.",
+      "for_whom": "Productions, DITs, post supervisors",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web app, iPad",
+      "integrations": "Flow Production Tracking",
+      "founded": 2015,
+      "official_url": "https://www.moxion.io/",
+      "source_urls": [
+        "https://www.moxion.io/",
+        "https://www.moxion.io/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "avid-mediacentral",
+      "name": "Avid MediaCentral",
+      "vendor": "Avid",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Production platform connecting scripts, rundowns, media, automation and collaboration for newsroom and post-production workflows.",
+      "for_whom": "Broadcasters, newsrooms",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web browser (MediaCentral | Cloud UX)",
+      "integrations": "Avid NEXIS, Media Composer, studio automation and graphics systems",
+      "founded": null,
+      "official_url": "https://www.avid.com/products/mediacentral",
+      "source_urls": [
+        "https://www.avid.com/products/mediacentral"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cantemo",
+      "name": "Cantemo",
+      "vendor": "Codemill AB",
+      "vendor_country": "Sweden",
+      "category": "Asset & media management",
+      "summary": "Hybrid-cloud media asset management system with search, playback and integrated post-production workflows, deployable in the customer's own cloud environment.",
+      "for_whom": "Broadcasters, media teams",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, Final Cut Pro, Accurate.Video",
+      "founded": null,
+      "official_url": "https://www.codemill.se/cantemo",
+      "source_urls": [
+        "https://www.codemill.se/cantemo",
+        "https://www.codemill.se/contact"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "catdv",
+      "name": "CatDV",
+      "vendor": "Quantum",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Asset management and workflow orchestration platform for organisations managing large volumes of digital media, with local and cloud repositories.",
+      "for_whom": "Broadcasters, post houses, corporate media teams",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, Avid, Quantum StorNext, AWS S3",
+      "founded": null,
+      "official_url": "https://www.quantum.com/en/products/software/catdv/",
+      "source_urls": [
+        "https://www.quantum.com/en/products/asset-management/",
+        "https://www.quantum.com/en/company/contact-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "dalet-flex",
+      "name": "Dalet Flex",
+      "vendor": "Dalet",
+      "vendor_country": "France",
+      "category": "Asset & media management",
+      "summary": "Media workflow and asset management platform to produce, manage, orchestrate, deliver and monetise content, offered as a hosted service or as a platform.",
+      "for_whom": "Broadcasters, media companies",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Veritone Digital Media Hub, Dalet AmberFin, Dalet Media Cortex",
+      "founded": null,
+      "official_url": "https://www.dalet.com/products/flex/",
+      "source_urls": [
+        "https://www.dalet.com/products/flex/",
+        "https://www.dalet.com/offices/"
       ],
       "logo": null,
       "photo": null
@@ -187,6 +564,90 @@
       "source_urls": [
         "https://www.mediasilo.com/pricing",
         "https://www.mediasilo.com/integrations"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "sohonet-clearview-flex",
+      "name": "Sohonet ClearView Flex",
+      "vendor": "Sohonet",
+      "vendor_country": "United Kingdom",
+      "category": "Asset & media management",
+      "summary": "Real-time streaming platform for remote creative review with instant feedback and annotation, delivered via cloud providers or on-premises hardware.",
+      "for_whom": "Post houses, remote review sessions",
+      "pricing_model": "Subscription from GBP 493 or USD 638 per month (Starter); Pro GBP 1,074 or USD 1,413 per month (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web browser, iOS, macOS, Apple TV",
+      "integrations": null,
+      "founded": 1995,
+      "official_url": "https://www.sohonet.com/clearview-flex/",
+      "source_urls": [
+        "https://www.sohonet.com/clearview-flex/",
+        "https://www.sohonet.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "telestream-vantage",
+      "name": "Telestream Vantage",
+      "vendor": "Telestream",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Media processing and workflow automation platform for transcoding, quality control and delivery, deployable on premises, in the cloud or hybrid.",
+      "for_whom": "Broadcasters, post houses, streaming operations",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, Adobe Media Encoder, Frame.io, iconik, SDVI",
+      "founded": null,
+      "official_url": "https://telestream.com/vantage/",
+      "source_urls": [
+        "https://telestream.com/vantage/",
+        "https://telestream.com/privacy-policy/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "vimeo-enterprise",
+      "name": "Vimeo Enterprise",
+      "vendor": "Vimeo",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Enterprise video hosting and management platform with centralised control, security and analytics for distributing video across an organisation.",
+      "for_whom": "Corporate video and marketing teams",
+      "pricing_model": "Quote on request",
+      "deployment": "Cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, Marketo",
+      "founded": 2004,
+      "official_url": "https://vimeo.com/enterprise",
+      "source_urls": [
+        "https://vimeo.com/enterprise",
+        "https://vimeo.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "wipster",
+      "name": "Wipster",
+      "vendor": "Wipster",
+      "vendor_country": "New Zealand",
+      "category": "Asset & media management",
+      "summary": "Video review and approval platform for commenting directly on video content, with plug-ins for editing applications.",
+      "for_whom": "Video producers, agencies",
+      "pricing_model": "Subscription from USD 9.95 per month billed annually (Light); Team USD 19.95 per user per month billed annually (published)",
+      "deployment": "Cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, After Effects, Final Cut Pro, Slack",
+      "founded": 2013,
+      "official_url": "https://wipster.io/",
+      "source_urls": [
+        "https://wipster.io/pricing",
+        "https://wipster.io/about"
       ],
       "logo": null,
       "photo": null
