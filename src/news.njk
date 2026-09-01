@@ -44,14 +44,20 @@ description: "New tools, guides and product updates from Tubes, plus the film an
           <div class="rich-text lead">
             <p>Two things in one place: new tools, guides and product updates from Tubes, and the film and television posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets.</p>
           </div>
-          <div class="button-row">
+          <div class="button-row jump-row">
+            {%- if collections.news.length %}
+            <a class="button button-secondary jump-link" href="#whats-new">What&rsquo;s new at Tubes <span aria-hidden="true">&darr;</span></a>
+            {%- endif %}
+            {%- if collections.linkedin.length %}
+            <a class="button button-secondary jump-link" href="#from-the-industry">From the industry <span aria-hidden="true">&darr;</span></a>
+            {%- endif %}
             <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section theme-white">
+    <section class="section theme-white" id="whats-new">
       <div class="container">
         <h2 class="section-heading">What&rsquo;s new at Tubes</h2>
         <ul class="news-list">
@@ -68,7 +74,7 @@ description: "New tools, guides and product updates from Tubes, plus the film an
     </section>
 
     {%- if collections.linkedin.length %}
-    <section class="section">
+    <section class="section" id="from-the-industry">
       <div class="container">
         <h2 class="section-heading feed-heading">Ideas and insights from people across the film and television industry</h2>
         <div class="rich-text section-intro">

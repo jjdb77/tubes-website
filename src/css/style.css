@@ -940,6 +940,11 @@ a:hover { color: var(--action); }
 
 .feed-heading { font-size: clamp(1.5rem, 2.6vw, 2.1rem); max-width: 900px; }
 
+/* Ankerknoppen in de hero. De header is plakkerig, dus zonder scroll-margin
+   valt de sectiekop er precies achter. */
+#whats-new, #from-the-industry { scroll-margin-top: 96px; }
+.jump-link span { font-weight: 700; margin-left: 4px; }
+
 .feed-month {
   display: flex; align-items: center; gap: 16px;
   font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
