@@ -12,6 +12,8 @@ sections:
       Production management, budgeting and cost control, scheduling, accounting and payroll, asset management, post-production, rights: search by need, filter by category, and put up to three products side by side.
 
       Free and open to everyone. We list only what a vendor publishes itself, pricing included, and Tubes is listed like any other product. Missing one? Suggest it below.
+    buttons_position: side
+    tight: true
     buttons:
       - label: Browse software
         url: "#directory"

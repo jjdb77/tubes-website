@@ -12,6 +12,8 @@ sections:
       The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 16 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing.
 
       Open to everyone, no sign-up. Figures checked against the funds in August 2026. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
+    buttons_position: side
+    tight: true
     buttons:
       - label: Compare incentives
         url: "#compare"

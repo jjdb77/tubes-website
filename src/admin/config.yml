@@ -237,6 +237,8 @@ collections:
                 fields:
                   - { label: Tekst, name: label, widget: string }
                   - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
+              - { label: "Knoppen rechts naast de tekst (alleen zonder beeld)", name: buttons_position, widget: select, options: [{label: "Onder de tekst", value: ""}, {label: "Rechts naast de tekst", value: side}], required: false }
+              - { label: "Minder witruimte onder de hero", name: tight, widget: boolean, required: false, default: false }
               - label: Knoppen
                 name: buttons
                 widget: list

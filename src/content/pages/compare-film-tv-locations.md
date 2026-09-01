@@ -12,6 +12,8 @@ sections:
       Places to shoot and studio space to hire, from castles and coastlines to sound stages with water tanks. Search within a country or region, see everything on the map, open the photos and links, and put up to three locations side by side.
 
       Free and open to everyone, no sign-up. Is your location missing? Suggest it below and we add it with verified details. Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
+    buttons_position: side
+    tight: true
     buttons:
       - label: Browse locations
         url: "#locations"
