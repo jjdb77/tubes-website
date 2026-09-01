@@ -1,0 +1,1330 @@
+{
+  "updated": "2026-09-01",
+  "note": "Only what an event publishes itself: dates, focus, industry programme, submissions. Never guess dates; null means not published.",
+  "items": [
+    {
+      "id": "viennale",
+      "name": "Viennale (Vienna International Film Festival)",
+      "city": "Vienna",
+      "country": "Austria",
+      "lat": 48.2082,
+      "lng": 16.3738,
+      "type": "Film festival",
+      "month": "October to November",
+      "next_dates": "22 October to 3 November 2026",
+      "focus": "Austria's major international festival, presenting a curated non-competitive programme of new cinema, documentaries and retrospectives.",
+      "industry": "Press and industry accreditation.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1960,
+      "official_url": "https://www.viennale.at/en",
+      "source_urls": [
+        "https://www.viennale.at/en",
+        "https://en.wikipedia.org/wiki/Vienna_International_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Gartenbaukino_Viennale_2016_opening.jpg/960px-Gartenbaukino_Viennale_2016_opening.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gartenbaukino_Viennale_2016_opening.jpg",
+        "author": "Manfred Werner (Tsui)",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "sarajevo",
+      "name": "Sarajevo Film Festival",
+      "city": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "lat": 43.8563,
+      "lng": 18.4131,
+      "type": "Film festival",
+      "month": "August",
+      "next_dates": null,
+      "focus": "The leading festival of Southeast Europe, presenting regional competition programmes and international premieres each August.",
+      "industry": "CineLink Industry Days with the CineLink co-production market, presenting about ten regional feature projects a year.",
+      "submissions": "Eventival (separate application per film, submission fee)",
+      "submission_deadline_note": null,
+      "founded": 1995,
+      "official_url": "https://www.sff.ba/en",
+      "source_urls": [
+        "https://www.sff.ba/en/page/film-submission-rules-and-regulations",
+        "https://en.wikipedia.org/wiki/Sarajevo_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sarajevo_Film_Festival_04.JPG/960px-Sarajevo_Film_Festival_04.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sarajevo_Film_Festival_04.JPG",
+        "author": "MirkoS18",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia International Film Festival and Sofia Meetings",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "lat": 42.6977,
+      "lng": 23.3219,
+      "type": "Film festival",
+      "month": "March",
+      "next_dates": null,
+      "focus": "Bulgaria's largest film festival, with international competitions for first and second features and a broad public programme (167 films from 60 countries in 2026).",
+      "industry": "Sofia Meetings co-production market for Balkan and European projects (23rd edition ran 18 to 30 March 2026).",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1997,
+      "official_url": "https://siff.bg/en",
+      "source_urls": [
+        "https://siff.bg/en",
+        "https://en.wikipedia.org/wiki/Sofia_International_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/National_Palace_of_Culture_Sofia.jpg/960px-National_Palace_of_Culture_Sofia.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture_Sofia.jpg",
+        "author": "SPARKY358",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "karlovy-vary",
+      "name": "Karlovy Vary International Film Festival (KVIFF)",
+      "city": "Karlovy Vary",
+      "country": "Czech Republic",
+      "lat": 50.2319,
+      "lng": 12.872,
+      "type": "Film festival",
+      "month": "July",
+      "next_dates": null,
+      "focus": "Central Europe's leading A-list festival, held in the West Bohemian spa town, with the Crystal Globe main competition (60th edition closed 11 July 2026).",
+      "industry": "Industry Days programme for accredited film professionals.",
+      "submissions": "Own online Film Entry form on kviff.com (submission fee, online screeners only)",
+      "submission_deadline_note": null,
+      "founded": 1946,
+      "official_url": "https://www.kviff.com/en/homepage",
+      "source_urls": [
+        "https://www.kviff.com/en/programme/film-entry",
+        "https://www.kviff.com/en/news"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/58th_Karlovy_Vary_International_Film_Festival%2C_Waves_28.jpg/960px-58th_Karlovy_Vary_International_Film_Festival%2C_Waves_28.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:58th_Karlovy_Vary_International_Film_Festival,_Waves_28.jpg",
+        "author": "Jan Beránek",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cphdox",
+      "name": "CPH:DOX",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "lat": 55.6761,
+      "lng": 12.5683,
+      "type": "Documentary festival",
+      "month": "March",
+      "next_dates": "10 to 21 March 2027",
+      "focus": "Copenhagen's international documentary festival, with competitions, a science strand (SCIENCE:CINEMA) and a large public programme.",
+      "industry": "CPH:INDUSTRY with the CPH:FORUM financing and co-production event, CPH:CONFERENCE and CPH:DOX SUMMIT; CPH:FORUM 2027 opens for submissions in early September 2026.",
+      "submissions": "Own CPH:DOX profile on cphdox.dk",
+      "submission_deadline_note": "2027 edition: 1 September 2026 for films completed before that date, 3 November 2026 for films completed after 1 September",
+      "founded": 2003,
+      "official_url": "https://cphdox.dk/",
+      "source_urls": [
+        "https://cphdox.dk/submit/",
+        "https://cphdox.dk/festival/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Kunsthal_Charlottenborg.jpg/960px-Kunsthal_Charlottenborg.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kunsthal_Charlottenborg.jpg",
+        "author": "Kevin Wallis",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "poff",
+      "name": "Tallinn Black Nights Film Festival (PÖFF)",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "lat": 59.437,
+      "lng": 24.7536,
+      "type": "Film festival",
+      "month": "November",
+      "next_dates": "6 to 20 November 2026 (30th edition)",
+      "focus": "Estonia's A-list festival for feature films, with Official Selection, First Feature and Rebels with a Cause competitions, plus the Just Film youth festival and PÖFF Shorts.",
+      "industry": "Industry@Tallinn & Baltic Event (25th edition, 9 to 20 November 2026), the region's co-production market and industry meeting.",
+      "submissions": "Own submission portal (My BNFF) on poff.ee",
+      "submission_deadline_note": "30th edition: regular deadline 29 June 2026 and extended deadline 17 August 2026 for feature programmes; documentaries until 24 August 2026",
+      "founded": 1997,
+      "official_url": "https://poff.ee/en/",
+      "source_urls": [
+        "https://poff.ee/en/news/submissions-for-poff-30-are-open-now/",
+        "https://en.wikipedia.org/wiki/Tallinn_Black_Nights_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/P%C3%96FFi_kuju.png/960px-P%C3%96FFi_kuju.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:P%C3%96FFi_kuju.png",
+        "author": "Freudianflip",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "annecy",
+      "name": "Annecy International Animation Film Festival and Mifa",
+      "city": "Annecy",
+      "country": "France",
+      "lat": 45.8992,
+      "lng": 6.1294,
+      "type": "Animation festival",
+      "month": "June",
+      "next_dates": "13 to 19 June 2027",
+      "focus": "The world's leading animation festival, with competitions for features, shorts, TV and commissioned films, graduation films and immersive works (over 4,000 entries in 2025).",
+      "industry": "Mifa market, 15 to 18 June 2027, with project pitches and accreditation for buyers and professionals.",
+      "submissions": "Own online account on annecyfestival.com for films and projects",
+      "submission_deadline_note": null,
+      "founded": 1960,
+      "official_url": "https://www.annecyfestival.com/",
+      "source_urls": [
+        "https://www.annecyfestival.com/",
+        "https://www.annecyfestival.com/participer/inscrire-un-film"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ecrangeant.jpg/960px-Ecrangeant.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ecrangeant.jpg",
+        "author": "DeborahForsans",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cartoon-movie",
+      "name": "Cartoon Movie",
+      "city": "Bordeaux",
+      "country": "France",
+      "lat": 44.8378,
+      "lng": -0.5792,
+      "type": "Market",
+      "month": "March",
+      "next_dates": "2 to 4 March 2027",
+      "focus": "Pitching and co-production forum for European animated feature projects, organised by CARTOON with support from Creative Europe MEDIA.",
+      "industry": "Producers pitch feature projects to buyers, distributors and financiers; accreditation for registered professionals.",
+      "submissions": "Own project application on cartoon-media.eu",
+      "submission_deadline_note": "Project submission deadline 12 November 2026; selection announced in the week of 1 December 2026",
+      "founded": null,
+      "official_url": "https://www.cartoon-media.eu/movie/",
+      "source_urls": [
+        "https://www.cartoon-media.eu/movie/",
+        "https://www.cartoon-media.eu/movie/submit-your-project/schedule-deadlines"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Place_de_la_Bourse_et_le_miroir_d%27eau_-_Bordeaux_02.jpg/960px-Place_de_la_Bourse_et_le_miroir_d%27eau_-_Bordeaux_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Place_de_la_Bourse_et_le_miroir_d%27eau_-_Bordeaux_02.jpg",
+        "author": "Javier Perez Montes",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cannes",
+      "name": "Festival de Cannes and Marché du Film",
+      "city": "Cannes",
+      "country": "France",
+      "lat": 43.5528,
+      "lng": 7.0174,
+      "type": "Film festival",
+      "month": "May",
+      "next_dates": "11 to 22 May 2027 (80th edition)",
+      "focus": "The most prominent A-list festival, with the Official Selection (Competition, Un Certain Regard, Cannes Classics, short films) alongside the parallel Directors' Fortnight and Critics' Week.",
+      "industry": "Marché du Film, 11 to 19 May 2027, described by its organisers as the largest film market in the world (16,000 professionals, 4,000 films and projects); Greece is Country of Honour in 2027.",
+      "submissions": "Own online entry form on festival-cannes.com (application and screening fee)",
+      "submission_deadline_note": "2027 deadlines not yet published; for 2026 the feature deadline was 13 March 2026 and short films 2 March 2026",
+      "founded": 1946,
+      "official_url": "https://www.festival-cannes.com/en/",
+      "source_urls": [
+        "https://www.festival-cannes.com/en/take-part/submit-a-film/",
+        "https://www.marchedufilm.com/"
+      ],
+      "photo": null
+    },
+    {
+      "id": "les-arcs",
+      "name": "Les Arcs Film Festival",
+      "city": "Les Arcs (Bourg-Saint-Maurice)",
+      "country": "France",
+      "lat": 45.5722,
+      "lng": 6.829,
+      "type": "Film festival",
+      "month": "December",
+      "next_dates": "12 to 19 December 2026 (18th edition)",
+      "focus": "Festival of European cinema in the Les Arcs ski resort, with a competition of European features and public screenings.",
+      "industry": "Industry programme for registered professionals alongside the festival.",
+      "submissions": "Own online film registration on lesarcs-filmfest.com (professionals only)",
+      "submission_deadline_note": null,
+      "founded": 2009,
+      "official_url": "https://lesarcs-filmfest.com/",
+      "source_urls": [
+        "https://lesarcs-filmfest.com/fr",
+        "https://lesarcs-filmfest.com/fr/accueil/inscription-film"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Arc_1950_with_Mont_Blanc_in_distance.jpg/960px-Arc_1950_with_Mont_Blanc_in_distance.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Arc_1950_with_Mont_Blanc_in_distance.jpg",
+        "author": "DimiTalen",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "mipcom",
+      "name": "MIPCOM Cannes",
+      "city": "Cannes",
+      "country": "France",
+      "lat": 43.5528,
+      "lng": 7.0174,
+      "type": "Market",
+      "month": "October",
+      "next_dates": "12 to 15 October 2026",
+      "focus": "The global content market for television and streaming at the Palais des Festivals, attended by studios, platforms, broadcasters, creators and brands.",
+      "industry": "Market with exhibition, screenings, conference sessions and a participants directory; MIPJUNIOR precedes it.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1985,
+      "official_url": "https://www.mipcom.com/en-gb.html",
+      "source_urls": [
+        "https://www.mipcom.com/en-gb.html",
+        "https://en.wikipedia.org/wiki/MIPCOM"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Mipcom_area.jpg/960px-Mipcom_area.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mipcom_area.jpg",
+        "author": "Jonas Forth",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "micro-salon-afc",
+      "name": "Micro Salon AFC",
+      "city": "Paris",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "type": "Trade show",
+      "month": "February",
+      "next_dates": null,
+      "focus": "The French cinematographers' association (AFC) equipment show with post-production days, held at the Parc Floral de Paris (26th edition ran 5 to 6 February 2026).",
+      "industry": "Manufacturers and rental houses present cameras, lighting and grip to cinematographers and crews.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://microsalon.fr/",
+      "source_urls": [
+        "https://microsalon.fr/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/AFC_Femis.jpg/960px-AFC_Femis.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:AFC_Femis.jpg",
+        "author": "PASCAL DUTHUIN",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "satis",
+      "name": "SATIS",
+      "city": "Paris (La Plaine Saint-Denis)",
+      "country": "France",
+      "lat": 48.9167,
+      "lng": 2.3667,
+      "type": "Trade show",
+      "month": "November",
+      "next_dates": "4 to 5 November 2026",
+      "focus": "French-language show for image and sound technologies, from production to content distribution, at the Docks de Paris.",
+      "industry": "Exhibition with conference sessions for media, entertainment and audiovisual communication professionals.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://www.satis-expo.com/",
+      "source_urls": [
+        "https://www.satis-expo.com/"
+      ],
+      "photo": null
+    },
+    {
+      "id": "series-mania",
+      "name": "Series Mania",
+      "city": "Lille",
+      "country": "France",
+      "lat": 50.6292,
+      "lng": 3.0573,
+      "type": "Series & TV event",
+      "month": "March",
+      "next_dates": "19 to 26 March 2027 (festival); Forum 23 to 25 March 2027",
+      "focus": "Europe's largest festival dedicated to series, with international competitions and public screenings in Lille.",
+      "industry": "Series Mania Forum (23 to 25 March 2027, in Lille and online) with co-pro pitching sessions, Lille Dialogues and panels, plus the Series Mania Institute for training.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2010,
+      "official_url": "https://seriesmania.com/en/",
+      "source_urls": [
+        "https://seriesmania.com/festival/en/",
+        "https://seriesmania.com/forum/en/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lille_nouveau_siecle.jpg/960px-Lille_nouveau_siecle.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lille_nouveau_siecle.jpg",
+        "author": "Velvet",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "sunny-side-of-the-doc",
+      "name": "Sunny Side of the Doc",
+      "city": "La Rochelle",
+      "country": "France",
+      "lat": 46.1603,
+      "lng": -1.1511,
+      "type": "Market",
+      "month": "June",
+      "next_dates": null,
+      "focus": "International marketplace for documentary and factual content, bringing producers together with commissioners, distributors and platforms (37th edition ran 22 to 24 June 2026).",
+      "industry": "Meet & Match call for projects, pitching sessions, Copro HUB and keynotes.",
+      "submissions": "Own registration platform (register.sunnysideofthedoc.com) with a Meet & Match call for projects",
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://www.sunnysideofthedoc.com/",
+      "source_urls": [
+        "https://www.sunnysideofthedoc.com/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Vieux-Port_de_La_Rochelle_001.jpg/960px-Vieux-Port_de_La_Rochelle_001.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vieux-Port_de_La_Rochelle_001.jpg",
+        "author": "Arnaud 25",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "berlinale",
+      "name": "Berlin International Film Festival (Berlinale) and European Film Market",
+      "city": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lng": 13.405,
+      "type": "Film festival",
+      "month": "February",
+      "next_dates": "10 to 21 February 2027 (77th edition)",
+      "focus": "A-list festival with Competition, Panorama, Forum, Generation and Berlinale Series, screening new international films for the public and the trade.",
+      "industry": "European Film Market (EFM) 10 to 16 February 2027, Berlinale Co-Production Market 13 to 16 February 2027 and Berlinale Talents 12 to 17 February 2027.",
+      "submissions": "Own online Film Entry portal on berlinale.de (processing fee)",
+      "submission_deadline_note": "77th edition: 21 October 2026 for feature-length films, 4 November 2026 for short films",
+      "founded": 1951,
+      "official_url": "https://www.berlinale.de/",
+      "source_urls": [
+        "https://www.berlinale.de/en/dates.html",
+        "https://www.berlinale.de/en/film-entry/submission/start.html"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/BerlinalePalast.jpg/960px-BerlinalePalast.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:BerlinalePalast.jpg",
+        "author": "Martin Kraft",
+        "license": "CC BY-SA 2.5"
+      }
+    },
+    {
+      "id": "berlinale-series-market",
+      "name": "Berlinale Series Market",
+      "city": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lng": 13.405,
+      "type": "Series & TV event",
+      "month": "February",
+      "next_dates": null,
+      "focus": "Three-day European Film Market initiative for TV drama professionals, with keynotes, showcases and the Berlinale Series Market Selects label for new series (2026 edition ran 15 to 18 February).",
+      "industry": "Organised with the Berlinale Co-Production Market (Co-Pro Series pitching) and Berlinale Talents; access through EFM accreditation.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://berlinaleseriesmarket.com/",
+      "source_urls": [
+        "https://berlinaleseriesmarket.com/",
+        "https://www.efm-berlinale.de/en/berlinale-series-market-conference/profile/about/about.html"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zoo_Palast_frontal_02-2014.jpg/960px-Zoo_Palast_frontal_02-2014.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zoo_Palast_frontal_02-2014.jpg",
+        "author": "A.Savin",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "fmx",
+      "name": "FMX",
+      "city": "Stuttgart",
+      "country": "Germany",
+      "lat": 48.7758,
+      "lng": 9.1829,
+      "type": "Industry conference",
+      "month": "April",
+      "next_dates": "27 to 30 April 2027 (31st edition)",
+      "focus": "Conference on animation, effects, games and immersive media, organised by Filmakademie Baden-Württemberg in Stuttgart.",
+      "industry": "Hosts the Animation Production Days (APD), a co-production and financing market run jointly with the Stuttgart International Festival of Animated Film.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1994,
+      "official_url": "https://fmx.de/",
+      "source_urls": [
+        "https://fmx.de/",
+        "https://en.wikipedia.org/wiki/FMX_(conference)"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/FMX_2012_Haus_der_Wirtschaft.jpg/960px-FMX_2012_Haus_der_Wirtschaft.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:FMX_2012_Haus_der_Wirtschaft.jpg",
+        "author": "Julian Herzog (Website)",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "thessaloniki",
+      "name": "Thessaloniki International Film Festival",
+      "city": "Thessaloniki",
+      "country": "Greece",
+      "lat": 40.6401,
+      "lng": 22.9444,
+      "type": "Film festival",
+      "month": "November (film festival); March (documentary festival)",
+      "next_dates": "5 to 15 November 2026 (67th TIFF); Thessaloniki International Documentary Festival 4 to 14 March 2027 (29th)",
+      "focus": "Greece's main festival for new international and Balkan cinema at the Olympion, with a separate Thessaloniki International Documentary Festival each March.",
+      "industry": "Agora industry section with the Crossroads Co-Production Forum, Agora Works in Progress and Doc Together (TiDF).",
+      "submissions": "Own open-calls portal on filmfestival.gr",
+      "submission_deadline_note": "TiDF29 (March 2027): submissions 19 September to 30 November 2026 (60 euro entry fee); immersive/XR projects until 8 January 2027",
+      "founded": 1960,
+      "official_url": "https://www.filmfestival.gr/en/",
+      "source_urls": [
+        "https://filmfestival.gr/en/",
+        "https://filmfestival.gr/en/newsroom/news/29tidfcallforentries/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/66/Olympion_Cinema_Thessaloniki.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Olympion_Cinema_Thessaloniki.jpg",
+        "author": "Zorba at English Wikinews",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "cork",
+      "name": "Cork International Film Festival",
+      "city": "Cork",
+      "country": "Ireland",
+      "lat": 51.8985,
+      "lng": -8.4756,
+      "type": "Film festival",
+      "month": "November",
+      "next_dates": "12 to 22 November 2026 (71st edition)",
+      "focus": "Ireland's oldest film festival, screening international features, documentaries and a large Irish and international shorts programme.",
+      "industry": "Industry programmes including First Take, Doc Day, IGNITE-Docs and the Lasair Irish short documentary development scheme.",
+      "submissions": "FilmFreeway (filmfreeway.com/CorkFilmFestival)",
+      "submission_deadline_note": "2026 late deadlines extended to 7 August 2026 (features and international shorts) and 14 August 2026 (Irish shorts)",
+      "founded": 1956,
+      "official_url": "https://corkfilmfest.org/",
+      "source_urls": [
+        "https://corkfilmfest.org/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/CorkOperaHouse2017.jpg/960px-CorkOperaHouse2017.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:CorkOperaHouse2017.jpg",
+        "author": "Charles Curling",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "galway",
+      "name": "Galway Film Fleadh",
+      "city": "Galway",
+      "country": "Ireland",
+      "lat": 53.2707,
+      "lng": -9.0568,
+      "type": "Film festival",
+      "month": "July",
+      "next_dates": null,
+      "focus": "Ireland's leading film festival, with premieres of Irish and international features, shorts and Irish-language work (38th edition ran 7 to 12 July 2026).",
+      "industry": "Galway Film Fair marketplace and pitching competition alongside the festival.",
+      "submissions": "Own submissions page on galwayfilmfleadh.com; film, XR, marketplace and pitching applications for 2027 open in the new year",
+      "submission_deadline_note": null,
+      "founded": 1989,
+      "official_url": "https://www.galwayfilmfleadh.com/",
+      "source_urls": [
+        "https://www.galwayfilmfleadh.com/",
+        "https://www.galwayfilmfleadh.com/submissions/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Fleadh_crowd.JPG/960px-Fleadh_crowd.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fleadh_crowd.JPG",
+        "author": "FilmFleadh",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "torino",
+      "name": "Torino Film Festival",
+      "city": "Turin",
+      "country": "Italy",
+      "lat": 45.0703,
+      "lng": 7.6869,
+      "type": "Film festival",
+      "month": "November to December",
+      "next_dates": "24 November to 2 December 2026 (44th edition)",
+      "focus": "Turin's international festival of new cinema, with international competitions and retrospectives.",
+      "industry": null,
+      "submissions": "FilmFreeway (filmfreeway.com/torinofilmfest)",
+      "submission_deadline_note": "44th edition: submissions 6 March to 6 September 2026",
+      "founded": 1982,
+      "official_url": "https://www.torinofilmfest.org/en/",
+      "source_urls": [
+        "https://www.torinofilmfest.org/en/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mole_Antonelliana_di_sera.jpg/960px-Mole_Antonelliana_di_sera.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mole_Antonelliana_di_sera.jpg",
+        "author": "Abbrey82",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "trieste",
+      "name": "Trieste Film Festival and When East Meets West",
+      "city": "Trieste",
+      "country": "Italy",
+      "lat": 45.6495,
+      "lng": 13.7768,
+      "type": "Film festival",
+      "month": "January",
+      "next_dates": "15 to 23 January 2027 (38th edition)",
+      "focus": "Italy's main festival for Central and Eastern European cinema, held on the Adriatic in January.",
+      "industry": "When East Meets West (WEMW) co-production forum runs during the festival: 17th edition 17 to 19 January 2027, a pitching forum for 20 projects from Europe, North and Latin America.",
+      "submissions": "Eventival (vp.eventival.com/trieste/2027)",
+      "submission_deadline_note": null,
+      "founded": 1989,
+      "official_url": "https://www.triestefilmfestival.it/en/",
+      "source_urls": [
+        "https://www.triestefilmfestival.it/en/",
+        "https://www.wemw.it/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Politeama_Rossetti_Trieste.jpg/960px-Politeama_Rossetti_Trieste.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Politeama_Rossetti_Trieste.jpg",
+        "author": "Triestino",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "view-conference",
+      "name": "VIEW Conference",
+      "city": "Turin",
+      "country": "Italy",
+      "lat": 45.0703,
+      "lng": 7.6869,
+      "type": "Industry conference",
+      "month": "October",
+      "next_dates": "12 to 16 October 2026 (27th edition)",
+      "focus": "International conference on VFX, computer graphics, animation, games, virtual production and immersive media.",
+      "industry": null,
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2000,
+      "official_url": "https://www.viewconference.it/",
+      "source_urls": [
+        "https://www.viewconference.it/",
+        "https://en.wikipedia.org/wiki/VIEW_Conference"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/OGR_-_Officine_Grandi_Riparazioni_%284618221719%29.jpg/960px-OGR_-_Officine_Grandi_Riparazioni_%284618221719%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:OGR_-_Officine_Grandi_Riparazioni_(4618221719).jpg",
+        "author": "Fulvio Spada from Torino, Italy",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "venice",
+      "name": "Venice International Film Festival (La Biennale di Venezia)",
+      "city": "Venice",
+      "country": "Italy",
+      "lat": 45.4064,
+      "lng": 12.3683,
+      "type": "Film festival",
+      "month": "August to September",
+      "next_dates": "2 to 12 September 2026 (83rd edition)",
+      "focus": "The world's oldest film festival, held on the Lido with the Competition, Orizzonti, Venice Immersive and Venice Classics sections.",
+      "industry": "Venice Production Bridge industry programme, including the Venice Immersive Market (3 to 9 September 2026) and Meet the Streamers sessions (6 to 7 September 2026).",
+      "submissions": "Own online pre-selection entry form on labiennale.org (registration fee)",
+      "submission_deadline_note": null,
+      "founded": 1932,
+      "official_url": "https://www.labiennale.org/en/cinema/2026",
+      "source_urls": [
+        "https://www.labiennale.org/en/cinema/2026",
+        "https://www.labiennale.org/en/cinema/2026/regulations"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Palazzo_del_Cinema_%28Lido_di_Venezia%29_02.jpg/960px-Palazzo_del_Cinema_%28Lido_di_Venezia%29_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palazzo_del_Cinema_(Lido_di_Venezia)_02.jpg",
+        "author": "Derbrauni",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "cinekid",
+      "name": "Cinekid Festival",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Film festival",
+      "month": "October",
+      "next_dates": "10 to 25 October 2026 (40th edition)",
+      "focus": "The largest children's media festival, with film, television and MediaLab programmes for young audiences in Amsterdam and across the Netherlands.",
+      "industry": "Cinekid for Professionals with the Junior Co-production Market (18 projects from 20 countries selected for 2026), an Industry Forum and accreditation.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1986,
+      "official_url": "https://www.cinekid.nl/en/",
+      "source_urls": [
+        "https://www.cinekid.nl/en/festival",
+        "https://cinekid.nl/en/professionals"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Overzicht_Westergasfabriek%2C_vanuit_het_Westerpark_-_Amsterdam_-_20536579_-_RCE.jpg/960px-Overzicht_Westergasfabriek%2C_vanuit_het_Westerpark_-_Amsterdam_-_20536579_-_RCE.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Overzicht_Westergasfabriek,_vanuit_het_Westerpark_-_Amsterdam_-_20536579_-_RCE.jpg",
+        "author": "Bert van As",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "ibc",
+      "name": "IBC",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Trade show",
+      "month": "September",
+      "next_dates": "11 to 14 September 2026",
+      "focus": "Europe's largest broadcast and media technology show at RAI Amsterdam, bringing together the creative, technology and business communities.",
+      "industry": "Exhibition plus conference programme; registration via show.ibc.org.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1967,
+      "official_url": "https://show.ibc.org/",
+      "source_urls": [
+        "https://show.ibc.org/",
+        "https://en.wikipedia.org/wiki/International_Broadcasting_Convention"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IBC_2009_at_RAI%2C_Amsterdam.jpg/960px-IBC_2009_at_RAI%2C_Amsterdam.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:IBC_2009_at_RAI,_Amsterdam.jpg",
+        "author": "Hens Zimmerman",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "idfa",
+      "name": "International Documentary Film Festival Amsterdam (IDFA)",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Documentary festival",
+      "month": "November",
+      "next_dates": "12 to 22 November 2026",
+      "focus": "The world's largest documentary festival, with international competitions and a broad public programme across Amsterdam.",
+      "industry": "Industry accreditation via professionals.idfa.nl, with markets including Docs for Sale plus training and funding programmes.",
+      "submissions": "Own portal (MyIDFA)",
+      "submission_deadline_note": null,
+      "founded": 1988,
+      "official_url": "https://www.idfa.nl/en/",
+      "source_urls": [
+        "https://professionals.idfa.nl/",
+        "https://en.wikipedia.org/wiki/International_Documentary_Film_Festival_Amsterdam"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Idfa-tuschinski-2021.jpg/960px-Idfa-tuschinski-2021.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Idfa-tuschinski-2021.jpg",
+        "author": "Paul2",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "iffr",
+      "name": "International Film Festival Rotterdam (IFFR) and CineMart",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "lat": 51.9244,
+      "lng": 4.4777,
+      "type": "Film festival",
+      "month": "January to February",
+      "next_dates": "28 January to 7 February 2027",
+      "focus": "Festival for independent and experimental cinema, with the Tiger Competition and the Art Directions programme for moving-image art.",
+      "industry": "IFFR Pro with the CineMart co-production market, Darkroom work-in-progress platform, Lightroom Market for immersive projects and the RTM Pitch for Rotterdam filmmakers.",
+      "submissions": "Own submission portal on iffr.com for completed films and Art Directions; separate entries for CineMart and Darkroom projects",
+      "submission_deadline_note": null,
+      "founded": 1972,
+      "official_url": "https://iffr.com/en",
+      "source_urls": [
+        "https://iffr.com/en",
+        "https://iffr.com/en/iffr-pro-submissions"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/IFFR_2015_01.jpg/960px-IFFR_2015_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:IFFR_2015_01.jpg",
+        "author": "Vera de Kok",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "nff",
+      "name": "Nederlands Film Festival (NFF)",
+      "city": "Utrecht",
+      "country": "Netherlands",
+      "lat": 52.0907,
+      "lng": 5.1214,
+      "type": "Film festival",
+      "month": "September to October",
+      "next_dates": "25 September to 2 October 2026 (46th edition)",
+      "focus": "The national showcase for Dutch film, series, documentaries and digital culture, with the national film competitions and awards.",
+      "industry": "NFF Professionals programme with professional passes, NFF Extended, expert sessions and the NFF Academy.",
+      "submissions": "Own Mijn NFF account (Dutch productions)",
+      "submission_deadline_note": "2026 edition closed; round 2 deadline was 1 April 2026 for productions completed between 1 April and 21 May 2026",
+      "founded": 1981,
+      "official_url": "https://www.filmfestival.nl/en/",
+      "source_urls": [
+        "https://www.filmfestival.nl/en/",
+        "https://www.filmfestival.nl/professionals/inschrijven"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nederlands_Film_Festival.jpg/960px-Nederlands_Film_Festival.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nederlands_Film_Festival.jpg",
+        "author": "Nederlandsfilmfestival Ramon Mangold",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "camerimage",
+      "name": "Camerimage (International Film Festival ToruńCAMERIMAGE)",
+      "city": "Toruń",
+      "country": "Poland",
+      "lat": 53.0138,
+      "lng": 18.5984,
+      "type": "Film festival",
+      "month": "November",
+      "next_dates": "7 to 14 November 2026 (34th edition)",
+      "focus": "International festival devoted to the art of cinematography, with competitions, seminars and equipment exhibitions at the CKK Jordanki centre.",
+      "industry": "Entry cards for cinematographers, students and industry representatives (pre-sale 24 August to 24 October 2026); press accreditation through the Camerimage Portal.",
+      "submissions": "Own Camerimage Portal (calls for student etudes, pilot episodes and music videos)",
+      "submission_deadline_note": "Student etudes, pilot episodes and music videos for 2026: 31 July 2026 (no fee)",
+      "founded": 1993,
+      "official_url": "https://camerimage.pl/en/",
+      "source_urls": [
+        "https://camerimage.pl/en/",
+        "https://camerimage.pl/en/entry-cards"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Energa_Camerimage_Toru%C5%84_2022.jpg/960px-Energa_Camerimage_Toru%C5%84_2022.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Energa_Camerimage_Toru%C5%84_2022.jpg",
+        "author": "Aawiosnaa",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "krakow",
+      "name": "Krakow Film Festival",
+      "city": "Kraków",
+      "country": "Poland",
+      "lat": 50.0647,
+      "lng": 19.945,
+      "type": "Documentary festival",
+      "month": "May to June",
+      "next_dates": null,
+      "focus": "One of Europe's oldest festivals for documentary, animated and short films, held in Kraków since 1961 in cinemas and online (66th edition ran 31 May to 7 June 2026).",
+      "industry": "KFF Industry with Doc Lab Poland and Animated in Poland presentations and awards.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1961,
+      "official_url": "https://www.krakowfilmfestival.pl/en/",
+      "source_urls": [
+        "https://www.krakowfilmfestival.pl/en/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Krakow_Film_Festival_2011%2C_banners%2C_Main_Market_Square%2C_Krakow%2C_Poland.jpg/960px-Krakow_Film_Festival_2011%2C_banners%2C_Main_Market_Square%2C_Krakow%2C_Poland.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Krakow_Film_Festival_2011,_banners,_Main_Market_Square,_Krakow,_Poland.jpg",
+        "author": "Zygmunt Put Zetpe0202",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "warsaw",
+      "name": "Warsaw Film Festival (WIFF)",
+      "city": "Warsaw",
+      "country": "Poland",
+      "lat": 52.2297,
+      "lng": 21.0122,
+      "type": "Film festival",
+      "month": "October",
+      "next_dates": null,
+      "focus": "International festival of new features, shorts and documentaries, held every October in Warsaw (41st edition ran 10 to 19 October 2025).",
+      "industry": null,
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1985,
+      "official_url": "https://wff.pl/en/",
+      "source_urls": [
+        "https://wff.pl/en/",
+        "https://en.wikipedia.org/wiki/Warsaw_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Warsaw_film_festival.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Warsaw_film_festival.jpg",
+        "author": "Jo0aanna",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "transilvania",
+      "name": "Transilvania International Film Festival (TIFF)",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "lat": 46.7712,
+      "lng": 23.6236,
+      "type": "Film festival",
+      "month": "June",
+      "next_dates": null,
+      "focus": "Romania's largest film festival, with an international competition for first and second features and open-air screenings in Cluj (130,000 attendees at the 25th edition in June 2026).",
+      "industry": "Industry events including Romanian Days (RO Days) and labs for professionals.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2002,
+      "official_url": "https://tiff.ro/en",
+      "source_urls": [
+        "https://tiff.ro/en",
+        "https://en.wikipedia.org/wiki/Transilvania_International_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/TIFF_Piata_Unirii_%2852987647028%29.jpg/960px-TIFF_Piata_Unirii_%2852987647028%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:TIFF_Piata_Unirii_(52987647028).jpg",
+        "author": "Nuță Lucian from Cluj-Napoca, Romania",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "ise",
+      "name": "Integrated Systems Europe (ISE)",
+      "city": "Barcelona",
+      "country": "Spain",
+      "lat": 41.3874,
+      "lng": 2.1686,
+      "type": "Trade show",
+      "month": "January to February",
+      "next_dates": "2 to 5 February 2027",
+      "focus": "The world's largest professional AV and systems integration show at Fira de Barcelona Gran Via, with a Broadcast Solutions area, a Broadcast AV Summit and the Spark creative production programme.",
+      "industry": "Exhibition (1,751 exhibitors in 2026) with conference tracks and a call for presenters.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2004,
+      "official_url": "https://www.iseurope.org/",
+      "source_urls": [
+        "https://www.iseurope.org/",
+        "https://www.iseurope.org/about-us"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Integrated_Systems_Europe_2024_%2853504233688%29.jpg/960px-Integrated_Systems_Europe_2024_%2853504233688%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Integrated_Systems_Europe_2024_(53504233688).jpg",
+        "author": "Jorge Franganillo",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "san-sebastian",
+      "name": "San Sebastián International Film Festival",
+      "city": "San Sebastián",
+      "country": "Spain",
+      "lat": 43.3183,
+      "lng": -1.9812,
+      "type": "Film festival",
+      "month": "September",
+      "next_dates": "18 to 26 September 2026 (74th edition)",
+      "focus": "Spain's A-list festival, with an Official Selection plus sections such as New Directors, Zabaltegi-Tabakalera, Culinary Zinema, Klasikoak and the Nest student showcase.",
+      "industry": "Europe-Latin America Co-Production Forum, WIP Latam and WIP Europa works-in-progress, Ikusmira Berriak residencies and the Zinemaldia Startup Challenge.",
+      "submissions": "Own entry forms through the My Festival account on sansebastianfestival.com",
+      "submission_deadline_note": "74th edition: general sections 16 January to 16 June 2026; WIP Latam and WIP Europa 1 June to 1 July 2026; Co-Production Forum 15 April to 15 June 2026",
+      "founded": 1953,
+      "official_url": "https://www.sansebastianfestival.com/",
+      "source_urls": [
+        "https://www.sansebastianfestival.com/2026/festival_information/1/1/in"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kursaal_zinemaldia_2014_01.JPG/960px-Kursaal_zinemaldia_2014_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kursaal_zinemaldia_2014_01.JPG",
+        "author": "Joxemai",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "sitges",
+      "name": "Sitges Film Festival (International Fantastic Film Festival of Catalonia)",
+      "city": "Sitges",
+      "country": "Spain",
+      "lat": 41.2372,
+      "lng": 1.8059,
+      "type": "Genre festival",
+      "month": "October",
+      "next_dates": "8 to 18 October 2026 (59th edition)",
+      "focus": "The leading festival for fantastic, horror and science-fiction cinema, held in the seaside town of Sitges near Barcelona.",
+      "industry": "Sitges Industry with submissions for projects in development, plus programmes such as WomanInFan.",
+      "submissions": "Festhome and FilmFreeway",
+      "submission_deadline_note": null,
+      "founded": 1968,
+      "official_url": "https://sitgesfilmfestival.com/en",
+      "source_urls": [
+        "https://sitgesfilmfestival.com/en",
+        "https://sitgesfilmfestival.com/en/edition/rules-regulations"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Festival_Sitges-2008.jpg/960px-Festival_Sitges-2008.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Festival_Sitges-2008.jpg",
+        "author": "Juan Pablo Olmo from málaga, spain",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "goteborg",
+      "name": "Göteborg Film Festival",
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "lat": 57.7089,
+      "lng": 11.9746,
+      "type": "Film festival",
+      "month": "January to February",
+      "next_dates": "29 January to 7 February 2027 (50th edition)",
+      "focus": "The largest film festival in the Nordic region, with Nordic and international competitions (266 films from 76 countries in 2026).",
+      "industry": "Nordic Film Market (3 to 5 February 2027) and TV Drama Vision (2 to 3 February 2027); 2,600 accredited delegates in 2026, accreditation opens October 2026.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1979,
+      "official_url": "https://www.goteborgfilmfestival.se/en/",
+      "source_urls": [
+        "https://www.goteborgfilmfestival.se/en/news/save-the-date-for-the-50th-gteborg-film-festival",
+        "https://en.wikipedia.org/wiki/G%C3%B6teborg_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Draken%2C_Cinema-04.JPG/960px-Draken%2C_Cinema-04.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Draken,_Cinema-04.JPG",
+        "author": "Ronny W (on sv wikipedia and commons).",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "locarno",
+      "name": "Locarno Film Festival",
+      "city": "Locarno",
+      "country": "Switzerland",
+      "lat": 46.1709,
+      "lng": 8.7995,
+      "type": "Film festival",
+      "month": "August",
+      "next_dates": null,
+      "focus": "Swiss festival of auteur and emerging cinema, known for its open-air Piazza Grande screenings for 8,000 spectators.",
+      "industry": null,
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1946,
+      "official_url": "https://www.locarnofestival.ch/",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Locarno_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg/960px-Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg",
+        "author": "Kalai Ramu",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "visions-du-reel",
+      "name": "Visions du Réel",
+      "city": "Nyon",
+      "country": "Switzerland",
+      "lat": 46.3833,
+      "lng": 6.2396,
+      "type": "Documentary festival",
+      "month": "April",
+      "next_dates": "9 to 18 April 2027",
+      "focus": "International festival for creative documentary in Nyon, with international competitions and a public programme.",
+      "industry": "VdR-Industry with VdR-Pitching, VdR-Work in Progress, VdR-Rough Cut Lab, VdR-Development Lab and VdR-Film Market.",
+      "submissions": "Own call for films and projects on visionsdureel.ch (opens 8 September 2026)",
+      "submission_deadline_note": "Early deadline 2 November 2026, final deadline 15 December 2026",
+      "founded": 1969,
+      "official_url": "https://www.visionsdureel.ch/en/",
+      "source_urls": [
+        "https://www.visionsdureel.ch/en/",
+        "https://www.visionsdureel.ch/en/call-for-entries/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Visions_du_reel_village.jpg/960px-Visions_du_reel_village.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Visions_du_reel_village.jpg",
+        "author": "Visions du Réel",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich Film Festival (ZFF)",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "lat": 47.3769,
+      "lng": 8.5417,
+      "type": "Film festival",
+      "month": "September to October",
+      "next_dates": "24 September to 4 October 2026 (22nd edition)",
+      "focus": "Switzerland's largest audience festival, with a Feature Film Competition, galas and the ZFF Genuss Film strand (programme released 9 September 2026).",
+      "industry": "Zurich Summit industry conference and ZFF accreditations.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2005,
+      "official_url": "https://zff.com/en/home/",
+      "source_urls": [
+        "https://zff.com/en/program-tickets/zff-in-a-nutshell",
+        "https://en.wikipedia.org/wiki/Zurich_Film_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Zurich_Film_Festival_%28Sihlcity%29_%28Ank_Kumar_Infosys%29_01.jpg/960px-Zurich_Film_Festival_%28Sihlcity%29_%28Ank_Kumar_Infosys%29_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zurich_Film_Festival_(Sihlcity)_(Ank_Kumar_Infosys)_01.jpg",
+        "author": "Ank Kumar",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "bfi-london",
+      "name": "BFI London Film Festival",
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Film festival",
+      "month": "October",
+      "next_dates": "7 to 18 October 2026 (70th edition)",
+      "focus": "The UK's largest public film festival, presenting new films, series and immersive storytelling across London.",
+      "industry": "LFF Industry programme with industry accreditation and an Industry Forum.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1957,
+      "official_url": "https://www.bfi.org.uk/london-film-festival",
+      "source_urls": [
+        "https://whatson.bfi.org.uk/lff/Online/default.asp",
+        "https://en.wikipedia.org/wiki/BFI_London_Film_Festival"
+      ],
+      "photo": null
+    },
+    {
+      "id": "bsc-expo",
+      "name": "BSC Expo",
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Trade show",
+      "month": "February",
+      "next_dates": "12 to 13 February 2027 (VIP preview 11 February)",
+      "focus": "The British Society of Cinematographers' exhibition of film and TV production equipment and technology at Battersea Evolution.",
+      "industry": "Free-to-register exhibition for cinematographers, camera crews and production professionals.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://www.bscexpo.com/",
+      "source_urls": [
+        "https://www.bscexpo.com/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/View_of_the_Battersea_Park_Evolution_from_the_path_in_the_park_-_geograph.org.uk_-_2854920.jpg/960px-View_of_the_Battersea_Park_Evolution_from_the_path_in_the_park_-_geograph.org.uk_-_2854920.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:View_of_the_Battersea_Park_Evolution_from_the_path_in_the_park_-_geograph.org.uk_-_2854920.jpg",
+        "author": "Robert Lamb",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "content-london",
+      "name": "Content London",
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Series & TV event",
+      "month": "November to December",
+      "next_dates": "30 November to 3 December 2026",
+      "focus": "C21Media's annual conference on the international scripted and unscripted content business, covering premium IP, studio production and distribution.",
+      "industry": "Registration-based delegate conference with speaker sessions and networking (2026 rate quoted at 1,199 pounds in September).",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://www.contentlondon.net/",
+      "source_urls": [
+        "https://www.contentlondon.net/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/London_Skyline_from_Waterloo_Bridge%2C_London%2C_UK_-_Diliff.jpg/960px-London_Skyline_from_Waterloo_Bridge%2C_London%2C_UK_-_Diliff.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:London_Skyline_from_Waterloo_Bridge,_London,_UK_-_Diliff.jpg",
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "docs-ireland",
+      "name": "Docs Ireland",
+      "city": "Belfast",
+      "country": "United Kingdom",
+      "lat": 54.5973,
+      "lng": -5.9301,
+      "type": "Documentary festival",
+      "month": "June",
+      "next_dates": null,
+      "focus": "Belfast's documentary festival, screening Irish and international non-fiction at Queen's Film Theatre and other venues.",
+      "industry": "Docs Ireland Marketplace with industry passes, talent development (IGNITE-Docs, Lasair) and the Northern Ireland Screen feature development pitch.",
+      "submissions": "FilmFreeway (filmfreeway.com/DocsIreland)",
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://docsireland.ie/",
+      "source_urls": [
+        "https://docsireland.ie/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Queen%27s_Film_Theatre_1.jpg/960px-Queen%27s_Film_Theatre_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Queen%27s_Film_Theatre_1.jpg",
+        "author": "Mx. Granger",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "edinburgh-film",
+      "name": "Edinburgh International Film Festival (EIFF)",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "type": "Film festival",
+      "month": "August",
+      "next_dates": null,
+      "focus": "Long-running festival for independent cinema, held each August alongside Edinburgh's other festivals (79th edition ran 13 to 19 August 2026).",
+      "industry": "EIFF Industry programme with accreditation; BAFTA and BIFA qualifying festival.",
+      "submissions": "FilmFreeway",
+      "submission_deadline_note": "2026 edition: submissions opened 6 January 2026 with a final deadline of 17 April 2026; 2027 not yet published",
+      "founded": 1947,
+      "official_url": "https://www.edfilmfest.org/",
+      "source_urls": [
+        "https://www.edfilmfest.org/",
+        "https://www.edfilmfest.org/submissions/"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Edinburgh_Film_House_-_geograph.org.uk_-_1321613.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Edinburgh_Film_House_-_geograph.org.uk_-_1321613.jpg",
+        "author": "kim traynor",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "edinburgh-tv",
+      "name": "Edinburgh TV Festival",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "type": "Industry conference",
+      "month": "August",
+      "next_dates": null,
+      "focus": "The UK television industry's annual conference, held each August at the Edinburgh International Conference Centre; organisers announced in June 2026 that it will relocate to Manchester in 2027 after 50 years in Edinburgh.",
+      "industry": "Delegate conference with sessions and debate on the television business, plus the TV Foundation's talent schemes.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1976,
+      "official_url": "https://www.thetvfestival.com/",
+      "source_urls": [
+        "https://www.thetvfestival.com/",
+        "https://en.wikipedia.org/wiki/Edinburgh_International_Television_Festival"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Edinburgh_International_Conference_Centre_-_geograph.org.uk_-_3729465.jpg/960px-Edinburgh_International_Conference_Centre_-_geograph.org.uk_-_3729465.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Edinburgh_International_Conference_Centre_-_geograph.org.uk_-_3729465.jpg",
+        "author": "Bill Boaden",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "mip-london",
+      "name": "MIP London",
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Market",
+      "month": "February",
+      "next_dates": null,
+      "focus": "Multi-genre international content market launched in February 2025 as the successor to MIPTV (whose 61st edition in 2024 was its last), held at IET London: Savoy Place and The Savoy Hotel; the 2026 edition ran 22 to 24 February.",
+      "industry": "Market with screenings, showcases and conference sessions ahead of MIPCOM Cannes.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 2025,
+      "official_url": "https://www.mip-london.com/",
+      "source_urls": [
+        "https://www.mip-london.com/en-gb.html",
+        "https://rxglobal.com/mip-london"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/IET_Savoy_Place.jpg/960px-IET_Savoy_Place.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:IET_Savoy_Place.jpg",
+        "author": "Shadowssettle",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "mpts",
+      "name": "Media Production & Technology Show (MPTS)",
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Trade show",
+      "month": "May",
+      "next_dates": "12 to 13 May 2027",
+      "focus": "Show for media, production and broadcast professionals at the Grand Hall, Olympia London, run by MBI (publisher of Broadcast, Screen International and KFTV).",
+      "industry": "Exhibition and seminar programme; register interest for 2027 on mpts.london.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": null,
+      "official_url": "https://www.mpts.london/",
+      "source_urls": [
+        "https://www.mpts.london/",
+        "https://www.mpts.london/about"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kensington_Olympia_exhibition_centre_from_station.jpg/960px-Kensington_Olympia_exhibition_centre_from_station.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kensington_Olympia_exhibition_centre_from_station.jpg",
+        "author": "Thryduulf",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "sheffield-docfest",
+      "name": "Sheffield DocFest",
+      "city": "Sheffield",
+      "country": "United Kingdom",
+      "lat": 53.3811,
+      "lng": -1.4701,
+      "type": "Documentary festival",
+      "month": "June",
+      "next_dates": "9 to 14 June 2027 (34th edition)",
+      "focus": "The UK's leading documentary festival, screening feature and short non-fiction plus immersive work.",
+      "industry": "Industry programme for documentary professionals with industry accounts and a separate 2027 industry information section.",
+      "submissions": null,
+      "submission_deadline_note": null,
+      "founded": 1994,
+      "official_url": "https://www.sheffdocfest.com/",
+      "source_urls": [
+        "https://www.sheffdocfest.com/",
+        "https://en.wikipedia.org/wiki/Sheffield_DocFest"
+      ],
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Showroom_Cinema%2C_Sheffield_-_geograph.org.uk_-_1918434.jpg/960px-Showroom_Cinema%2C_Sheffield_-_geograph.org.uk_-_1918434.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Showroom_Cinema,_Sheffield_-_geograph.org.uk_-_1918434.jpg",
+        "author": "Graham Hogg",
+        "license": "CC BY-SA 2.0"
+      }
+    }
+  ]
+}

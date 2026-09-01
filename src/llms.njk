@@ -15,7 +15,7 @@ Pricing: Producer Pro is from € 49 per month including 2 users and up to 3 act
 
 ## Pages
 {% for item in collections.all -%}
-{%- if not item.data.noindex %}
+{%- if item.url and not item.data.noindex %}
 - [{{ item.data.title | safe }}]({{ settings.site_url }}{{ item.url }}): {{ item.data.description | safe }}
 {%- endif %}
 {%- endfor %}

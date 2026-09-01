@@ -5,3 +5,6 @@ _site/
 # Lokale designbackups (niet nodig in de repo)
 _backup-navy-includes/
 *.bak
+
+# Lokale testdata van het formulier (op Railway staat dit op de volume)
+data/

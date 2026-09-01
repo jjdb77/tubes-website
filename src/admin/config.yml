@@ -34,8 +34,11 @@ collections:
           - { label: Footertekst, name: footer_text, widget: text }
           - { label: Standaard knoptekst (CTA), name: cta_label, widget: string }
           - { label: Standaard knoplink (CTA), name: cta_url, widget: string }
+          - { label: Knoptekst in de kop, name: header_cta_label, widget: string, required: false, hint: "De knop rechtsboven op elke pagina. Leeg = de standaard knoptekst." }
+          - { label: Knoplink in de kop, name: header_cta_url, widget: string, required: false, hint: "Leeg = de standaard knoplink." }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
           - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Basisadres van de afsprakenpagina, zonder afspraaktype. Nu 4relations.appconnected.nl/boek/joachim" }
+          - { label: "Agenda in de popover (Health Check)", name: booking_embed_url, widget: string, required: false, hint: "De boekingspagina van het afspraaktype, die in het venstertje op de Health Check-pagina wordt getoond. LET OP: hier hoort .../boek/<account>/<slug>, nooit een losse afspraaklink .../afspraak/<id> — die toont de naam, het e-mailadres en het telefoonnummer van degene die geboekt heeft. Leeg = geen popover, de knop opent gewoon de boekingspagina." }
           - label: "Boekingslinks per plan"
             name: booking_plans
             widget: list
@@ -84,6 +87,54 @@ collections:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
 
+      - name: healthcheck
+        label: "Health Check-vragenlijst"
+        file: src/_data/healthcheck.json
+        description: "De vragen op /production-finance-health-check/assessment/. Let op: de sleutel van een vraag is de veldnaam in de opslag. Verander die niet meer zodra er antwoorden binnen zijn, dan raken oude en nieuwe antwoorden los van elkaar."
+        fields:
+          - { label: "Introzin boven het formulier", name: intro, widget: text }
+          - label: "Stap 1 (je gegevens)"
+            name: step1
+            widget: object
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - label: "Stap 2 (je werkwijze)"
+            name: step2
+            widget: object
+            fields:
+              - { label: "Naam van de stap", name: title, widget: string }
+              - { label: Kop, name: heading, widget: string }
+          - { label: "Label bij het rolveld", name: role_label, widget: string }
+          - label: "Vragen"
+            name: questions
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "Elke vraag is één rij keuzeknoppen. Een vraag toevoegen kan gewoon; de pagina, de opslag, /beheer en de export lopen mee."
+            fields:
+              - { label: "Sleutel (veldnaam in de opslag)", name: key, widget: string, pattern: ['^[a-z][a-z0-9_]*$', "Alleen kleine letters, cijfers en liggende streepjes"], hint: "NIET meer wijzigen zodra er antwoorden binnen zijn." }
+              - { label: Vraag, name: label, widget: string }
+              - { label: Keuzes, name: options, widget: list, field: { label: Keuze, name: option, widget: string }, hint: "Alleen deze waarden worden opgeslagen; iets anders wordt geweigerd." }
+              - { label: "Meer antwoorden mogelijk", name: multiple, widget: boolean, default: false, required: false, hint: "Aan = vinkjes in plaats van één keuze. De antwoorden komen als lijst binnen, gescheiden door komma's." }
+          - label: "Vrij tekstveld onderaan"
+            name: notes
+            widget: object
+            fields:
+              - { label: Vraag, name: label, widget: string }
+              - { label: "Voorbeeldtekst in het veld", name: placeholder, widget: text }
+          - label: "Na het versturen"
+            name: result
+            widget: object
+            fields:
+              - { label: "Kop boven de agenda", name: book_title, widget: string }
+              - { label: "Tekst bij de agenda", name: book_text, widget: text }
+              - { label: "Tekst op de knop", name: book_label, widget: string }
+              - { label: "Kop boven het overzicht", name: heading, widget: string }
+              - { label: "Kop boven 'waar we beginnen'", name: focus_title, widget: string }
+              - { label: "Kop in de rechterkolom", name: next_title, widget: string }
+              - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
+              - { label: "Slotzin rechts", name: note, widget: text }
+
   - name: artikelen
     label: "Artikelen (Insights)"
     icon: draft
@@ -105,6 +156,46 @@ collections:
       - { label: "SEO: omschrijving in Google", name: description, widget: text, required: false, hint: "Max ± 155 tekens." }
       - { label: "SEO: deelplaatje (LinkedIn, WhatsApp)", name: og_image, widget: image, required: false }
       - { label: "SEO: artikel uit Google houden", name: noindex, widget: boolean, default: false, required: false }
+
+  - name: nieuws
+    label: "Nieuws (/news/)"
+    icon: newspaper
+    folder: src/content/news
+    format: yaml-frontmatter
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Titel, name: title, widget: string }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
+      - { label: Samenvatting, name: summary, widget: text, hint: "Twee of drie zinnen; dit is de hele tekst op de nieuwspagina." }
+      - { label: "Link (bijv. /compare-film-tv-locations/ of een externe URL)", name: url, widget: string, required: false }
+      - { label: Linktekst, name: link_label, widget: string, required: false, hint: "Leeg = 'Read more'" }
+
+  - name: linkedin
+    label: "Branchenieuws van LinkedIn"
+    icon: rss_feed
+    folder: src/content/linkedin
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: "Auteur of organisatie", name: source, widget: string, hint: "Wie het schreef. Dit staat het grootst op de kaart, want de post is van hen." }
+      - { label: "Functie of organisatie", name: role, widget: string, required: false, hint: "Bijv. 'Producer and production consultant'. Alleen invullen als je het zeker weet; leeg laten is beter dan gokken." }
+      - { label: "Kop boven de samenvatting", name: title, widget: string, hint: "Het onderwerp van de post, in het Engels, en geen stelling. Dus 'Film budgets and the assumptions behind them', niet 'Why assumptions matter'. Geen em-dashes (—)." }
+      - label: Onderwerp (het gekleurde labeltje)
+        name: topic
+        widget: select
+        default: Budgeting
+        options: [Budgeting, Financing, "AI in production", Festivals]
+      - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Liefst de post zelf (op LinkedIn: de drie puntjes bij de post > 'Copy link to post'); dan wordt de knop 'Read <naam>'s original post'. Een berichtenoverzicht (/recent-activity/all/ of /company/<naam>/posts/) geeft 'See <naam>'s posts', een kale profielpagina 'See more from <naam>'. Leeg mag ook: dan geen knop." }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Bepaalt de volgorde en de maandkop. Op de pagina staat alleen de maand." }
+      - { label: Samenvatting, name: body, widget: markdown, hint: "Een of twee zinnen in het Engels. Beschrijf waar de post over gaat ('Katya Alexander writes about ...'), niet wat de auteur vindt: geen 'argues', 'makes the case' of 'flags'. Zo blijft het standpunt van de auteur en blijft de post zelf de plek voor het volledige verhaal. Geen em-dashes (—)." }
+      - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
   - name: paginas
     label: Pagina's
@@ -200,6 +291,12 @@ collections:
                   - { label: "Icoon (svg uit assets/icons)", name: icon, widget: image, required: false }
                   - { label: Kop, name: heading, widget: string }
                   - { label: Tekst, name: text, widget: markdown }
+                  - { label: "Afbeelding bovenin de kaart (i.p.v. icoon)", name: image, widget: image, required: false, hint: "Eigen upload, of een volledige https-URL (bijv. Wikimedia Commons-thumbnail)." }
+                  - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
+                  - { label: "Afbeelding: credit (maker, licentie)", name: image_credit, widget: string, required: false, hint: "Verplicht bij Commons-foto's, bijv. 'Photo: Naam (CC BY-SA 4.0)'. Markdown-links mogen." }
+                  - { label: "Afbeeldingsstijl", name: image_style, widget: select, options: [{label: "Foto", value: ""}, {label: "Contourkaart (lijntekening)", value: contour}], required: false }
+                  - { label: "Link (maakt de hele kaart klikbaar, bijv. /resources/)", name: url, widget: string, required: false }
+                  - { label: "Linktekst (bijv. Open the guide)", name: link_label, widget: string, required: false }
           - name: textblock
             label: Tekstblok
             summary: "{{fields.heading}}"
@@ -210,6 +307,7 @@ collections:
               - { label: Tekst, name: text, widget: markdown }
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
+              - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
           - name: images
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"
@@ -252,6 +350,12 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+          - name: healthcheck
+            label: "Health Check-blok"
+            summary: "Health Check"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [light, white, teal], default: white, required: false }
+            hint: "De teksten van dit blok staan onder Health Check-vragenlijst, niet hier."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"
@@ -299,3 +403,296 @@ collections:
                 fields:
                   - { label: Vraag, name: question, widget: string }
                   - { label: Antwoord, name: answer, widget: markdown }
+          - name: directory
+            label: "Zoek-en-vergelijklijst (festivals, software, ...)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Dataset, name: dataset, widget: select, options: [{label: "Festivals & events", value: filmfestivals}, {label: "Software voor mediabedrijven", value: mediasoftware}] }
+              - { label: "Woord voor de teller (bijv. events, products)", name: noun, widget: string, default: entries }
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false }
+              - { label: "Zoekveld: placeholder", name: search_placeholder, widget: string, required: false }
+              - { label: "Kaart tonen (alleen als de items lat/lng hebben)", name: map, widget: boolean, default: false, required: false }
+              - label: "Filters (max. 3)"
+                name: filters
+                widget: list
+                required: false
+                fields:
+                  - { label: "Veldnaam in de data", name: key, widget: string }
+                  - { label: Label, name: label, widget: string }
+              - label: "Kaartje (welke velden)"
+                name: card
+                widget: object
+                fields:
+                  - { label: "Titelveld", name: title, widget: string, default: name }
+                  - { label: "Subtitel (bijv. {city}, {country})", name: subtitle, widget: string, required: false }
+                  - { label: "Labelveld (chip)", name: tag, widget: string, required: false }
+                  - { label: "Tekstveld", name: text, widget: string, required: false }
+                  - label: "Extra regels"
+                    name: meta
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Veldnaam, name: key, widget: string }
+                  - label: Links
+                    name: links
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Linktekst, name: label, widget: string }
+                      - { label: "Veldnaam met de URL", name: key, widget: string }
+              - label: "Rijen in de vergelijking"
+                name: compare_rows
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Veldnaam, name: key, widget: string }
+                  - { label: "Als chip tonen", name: tag, widget: boolean, required: false, default: false }
+                  - { label: "Is een link", name: link, widget: boolean, required: false, default: false }
+                  - { label: Linktekst, name: link_label, widget: string, required: false }
+                  - { label: "Winnaar", name: winner, widget: select, options: ["", lower, higher, no-wins], required: false, hint: "lower = laagste getal wint, higher = hoogste, no-wins = 'No' wint. Alleen gemarkeerd bij verschil en minstens twee ingevulde kolommen." }
+              - { label: "Kop bij het suggestieformulier", name: request_heading, widget: string, required: false }
+              - { label: "Tekst bij het suggestieformulier", name: request_text, widget: markdown, required: false }
+              - { label: "Label van het suggestieveld", name: request_field_label, widget: string, required: false }
+              - { label: "Placeholder van het suggestieveld", name: request_placeholder, widget: string, required: false }
+          - name: locationguide
+            label: "Locatiegids (zoeken + kaart + vergelijken)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties zelf staan onder 'Filmlocaties (locatiegids)'." }
+              - { label: "Kop bij het suggestieformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
+              - { label: "Tekst bij het suggestieformulier", name: request_text, widget: markdown, required: false }
+          - name: locations
+            label: "Incentive-vergelijking (tool + tabel + aanvraagformulier)"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties en cijfers zelf staan onder 'Locaties (vergelijkingspagina)'." }
+              - { label: "Kop boven de tabel", name: table_heading, widget: string, required: false, default: "All locations at a glance" }
+              - { label: "Voetnoot onder de tabel", name: footnote, widget: markdown, required: false }
+              - { label: "Kop bij het aanvraagformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
+              - { label: "Tekst bij het aanvraagformulier", name: request_text, widget: markdown, required: false }
+
+  # Cijfers voor de incentivepagina /compare-film-incentives/ (los van de Tubes-app)
+  - name: locaties
+    label: "Incentives per land (vergelijkingspagina)"
+    icon: public
+    files:
+      - name: locaties
+        label: "Locaties en incentives"
+        file: src/_data/locations.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string, hint: "Verschijnt op de pagina als 'Figures checked on ...'" }
+          - { label: "Aandeel lokale lonen in de uitgaven (0-1)", name: labour_share, widget: number, value_type: float, step: 0.05, min: 0, max: 1, hint: "Alleen voor regelingen die uitsluitend lonen vergoeden (Canada). 0.5 = de helft van de lokale uitgaven zijn lonen." }
+          - { label: "Toelichting aandeel lonen", name: labour_note, widget: string, required: false }
+          - { label: "Toelichting wisselkoersen", name: fx_note, widget: string, required: false }
+          - label: "Wisselkoersen (1 euro in lokale valuta)"
+            name: fx
+            widget: object
+            collapsed: true
+            hint: "Alleen gebruikt om plafonds en drempels in andere valuta om te rekenen; hoeft niet exact te zijn."
+            fields:
+              - { label: EUR, name: EUR, widget: number, value_type: float, default: 1 }
+              - { label: GBP, name: GBP, widget: number, value_type: float }
+              - { label: HUF, name: HUF, widget: number, value_type: float }
+              - { label: CZK, name: CZK, widget: number, value_type: float }
+              - { label: PLN, name: PLN, widget: number, value_type: float }
+              - { label: ISK, name: ISK, widget: number, value_type: float }
+              - { label: NOK, name: NOK, widget: number, value_type: float }
+              - { label: USD, name: USD, widget: number, value_type: float }
+              - { label: CAD, name: CAD, widget: number, value_type: float }
+              - { label: AUD, name: AUD, widget: number, value_type: float }
+              - { label: NZD, name: NZD, widget: number, value_type: float }
+              - { label: ZAR, name: ZAR, widget: number, value_type: float }
+          - label: Locaties
+            name: locations
+            widget: list
+            summary: "{{fields.name}} ({{fields.rate_label}})"
+            fields:
+              - { label: "ID (uniek, kleine letters en koppeltekens)", name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Regio, name: region, widget: select, options: [Europe, "Rest of world"], default: Europe }
+              - { label: Regeling, name: scheme, widget: string }
+              - { label: Soort, name: mechanism, widget: select, options: ["Cash rebate", "Tax credit", "Tax shelter", "Selective fund"], default: "Cash rebate" }
+              - { label: "Valuta (ISO-code)", name: currency, widget: string, default: EUR }
+              - { label: "Rekenpercentage (van de lokale uitgaven)", name: rate, widget: number, value_type: float, step: 0.5, hint: "Wat de tool gebruikt. Bij getrapte tarieven telt het veld 'Getrapte tarieven'." }
+              - { label: "Percentage zoals getoond in de tabel", name: rate_label, widget: string, hint: "Bijv. '30% / 25%' of 'Up to 35%'" }
+              - { label: "Nettofactor", name: net_factor, widget: number, value_type: float, required: false, hint: "Alleen als het krediet belast wordt, bijv. 0.75 voor het VK (25% vennootschapsbelasting). Leeg = 1." }
+              - { label: "Nettowaarde zoals getoond", name: net_label, widget: string, required: false, hint: "Bijv. '25.5% after tax'. Leeg = 'Same as headline'." }
+              - { label: "Aanname die de tool bij de uitkomst toont", name: assumption, widget: string, required: false, hint: "Bijv. 'Assumes the full 40%: ...'" }
+              - { label: "Max. aandeel van het totale budget dat meetelt (0-1)", name: base_share, widget: number, value_type: float, required: false, hint: "Bijv. 0.8 als hooguit 80% van het budget in aanmerking komt." }
+              - { label: "Alleen lokale lonen tellen mee", name: labour_only, widget: boolean, required: false, default: false }
+              - { label: "Extra percentage over lokale lonen", name: labour_bonus, widget: number, value_type: float, required: false, hint: "Bijv. 16 voor het federale Canadese krediet bovenop een provinciaal all-spend-krediet." }
+              - label: "Getrapte tarieven"
+                name: tiers
+                widget: list
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Tot en met bedrag (lokale valuta, leeg = de rest)", name: upto, widget: number, value_type: int, required: false }
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+              - label: "Hoger tarief voor films onder een budgetgrens"
+                name: film_uplift
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+                  - { label: Nettofactor, name: net_factor, widget: number, value_type: float, required: false }
+                  - { label: "Max. budget (lokale valuta)", name: max_budget, widget: number, value_type: int }
+                  - { label: Toelichting, name: label, widget: string }
+              - label: "Hoger tarief boven een uitgavengrens"
+                name: spend_uplift
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Percentage, name: rate, widget: number, value_type: float }
+                  - { label: "Min. lokale uitgaven (lokale valuta)", name: min_spend, widget: number, value_type: int }
+                  - { label: Toelichting, name: label, widget: string }
+              - { label: "Minimale lokale uitgaven (tekst)", name: min_spend, widget: string }
+              - label: "Plafond per project (bedrag)"
+                name: cap
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Bedrag (lokale valuta)", name: amount, widget: number, value_type: int }
+                  - { label: Omschrijving, name: label, widget: string }
+              - { label: "Plafond (tekst, als er geen bedrag is)", name: cap_label, widget: string, required: false }
+              - { label: Financiering, name: funding, widget: select, options: [Entitlement, "Budget-limited", Selective, "Investor-based"], default: Entitlement }
+              - { label: "Toelichting financiering", name: funding_note, widget: string, required: false }
+              - { label: "Buitenlandse uitgaven tellen mee", name: foreign_spend, widget: select, options: [No, Partly, Yes], default: No }
+              - { label: Uitbetaling, name: paid, widget: string }
+              - { label: Toelichting, name: notes, widget: text }
+              - { label: "Bron (URL)", name: source, widget: string, required: false }
+              - { label: Bronnaam, name: source_label, widget: string, required: false }
+
+  # De locatiegids zelf: plekken en studio's op /compare-film-tv-locations/
+  - name: filmlocaties
+    label: "Filmlocaties (locatiegids)"
+    icon: movie
+    files:
+      - name: filmlocaties
+        label: "Locaties en studio's"
+        file: src/_data/filmlocations.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string }
+          - { label: "Notitie over foto's en rechten", name: photo_note, widget: text, required: false }
+          - label: Locaties
+            name: locations
+            widget: list
+            summary: "{{fields.name}} ({{fields.country}})"
+            fields:
+              - { label: "ID (uniek, kleine letters en koppeltekens)", name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Land, name: country, widget: string }
+              - { label: "Regio (provincie/streek)", name: region, widget: string }
+              - { label: Breedtegraad, name: lat, widget: number, value_type: float, step: 0.0001 }
+              - { label: Lengtegraad, name: lng, widget: number, value_type: float, step: 0.0001 }
+              - { label: Type, name: type, widget: select, options: ["Castle & estate", "Palace & landmark", "Historic town & street", "Village & countryside", "City & skyline", "Coast & beach", "Mountains & wilderness", "Forest & lake", "Hotel & interiors", "Church & monastery", "Transport & infrastructure", "Industrial & derelict", "Modern architecture", "Studio & backlot"] }
+              - { label: "Wat biedt de plek (1 zin)", name: setting, widget: text }
+              - { label: "Bekend van (producties)", name: known_for, widget: string, required: false }
+              - { label: "Gepubliceerde prijs (tekst, alleen wat de locatie zelf publiceert)", name: price_note, widget: string, required: false, hint: "Bijv. 'Day rate from € 2,500 (own site)'. Nooit schatten; leeg is beter dan een gok." }
+              - { label: "Prijs per dag in euro's (getal, voor de winnaarsmarkering)", name: price_eur_day, widget: number, value_type: int, required: false, hint: "Alleen invullen als de gepubliceerde prijs een dagtarief in euro's is." }
+              - { label: "Capaciteit (personen, alleen indien gepubliceerd)", name: capacity, widget: number, value_type: int, required: false }
+              - { label: "Voorzieningen (alleen indien gepubliceerd)", name: facilities, widget: text, required: false }
+              - { label: "Geschiktheid voor filmopnames (alleen indien gepubliceerd)", name: suitability, widget: text, required: false }
+              - { label: "Vergunning nodig", name: permit_needed, widget: select, options: ["", "Yes", "No"], required: false, hint: "Leeg = onbekend. In de vergelijking wint 'No'." }
+              - { label: "Logistiek (bereikbaarheid, parkeren, alleen indien gepubliceerd)", name: logistics, widget: text, required: false }
+              - { label: "Bron-URL's (waar deze gegevens vandaan komen)", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }
+              - { label: "Officiële website", name: official_url, widget: string, required: false }
+              - { label: "Filmcommissie (URL)", name: commission_url, widget: string, required: false }
+              - label: "Foto (Wikimedia Commons of eigen upload met toestemming)"
+                name: photo
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Foto-URL (thumbnail)", name: thumb, widget: string, hint: "Wikimedia Commons-thumbnail (800px) of een pad in /assets/images bij eigen materiaal" }
+                  - { label: "Fotopagina (bronvermelding-link)", name: file_page, widget: string, required: false }
+                  - { label: "Maker (credit)", name: author, widget: string }
+                  - { label: "Licentie", name: license, widget: string, hint: "Bijv. CC BY-SA 4.0, of 'met toestemming van de eigenaar'" }
+
+  # Festivals, markten en beurzen (/compare-film-festivals/)
+  - name: filmfestivals
+    label: "Festivals & events (lijst)"
+    icon: festival
+    files:
+      - name: filmfestivals
+        label: "Festivals, markten en beurzen"
+        file: src/_data/filmfestivals.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string }
+          - { label: Notitie, name: note, widget: text, required: false }
+          - label: Events
+            name: items
+            widget: list
+            summary: "{{fields.name}} ({{fields.city}})"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Stad, name: city, widget: string }
+              - { label: Land, name: country, widget: string }
+              - { label: Breedtegraad, name: lat, widget: number, value_type: float, required: false }
+              - { label: Lengtegraad, name: lng, widget: number, value_type: float, required: false }
+              - { label: Type, name: type, widget: select, options: ["Film festival", "Documentary festival", "Animation festival", "Genre festival", "Market", "Series & TV event", "Industry conference", "Trade show"] }
+              - { label: "Maand (bijv. February)", name: month, widget: string }
+              - { label: "Volgende editie (alleen als gepubliceerd)", name: next_dates, widget: string, required: false }
+              - { label: "Focus (1 zin)", name: focus, widget: text }
+              - { label: "Industry-programma (1 zin)", name: industry, widget: text, required: false }
+              - { label: "Inzendingen via", name: submissions, widget: string, required: false }
+              - { label: "Deadline (alleen als gepubliceerd)", name: submission_deadline_note, widget: string, required: false }
+              - { label: "Opgericht (jaar)", name: founded, widget: number, value_type: int, required: false }
+              - { label: "Officiële website", name: official_url, widget: string }
+              - { label: "Bron-URL's", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }
+              - label: "Foto (Wikimedia Commons)"
+                name: photo
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Foto-URL (thumbnail)", name: thumb, widget: string }
+                  - { label: "Fotopagina", name: file_page, widget: string, required: false }
+                  - { label: Maker, name: author, widget: string }
+                  - { label: Licentie, name: license, widget: string }
+
+  # Software voor mediabedrijven (/compare-media-software/)
+  - name: mediasoftware
+    label: "Software voor mediabedrijven (lijst)"
+    icon: apps
+    files:
+      - name: mediasoftware
+        label: "Softwareproducten"
+        file: src/_data/mediasoftware.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string }
+          - { label: Notitie, name: note, widget: text, required: false }
+          - label: Producten
+            name: items
+            widget: list
+            summary: "{{fields.name}} ({{fields.vendor}})"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Naam, name: name, widget: string }
+              - { label: Leverancier, name: vendor, widget: string }
+              - { label: "Land leverancier", name: vendor_country, widget: string, required: false }
+              - { label: Categorie, name: category, widget: select, options: ["Production management", "Budgeting & cost control", "Scheduling & call sheets", "Production accounting & payroll", "Script & pre-production", "Location & crew sourcing", "Asset & media management", "Post-production & VFX", "Rights & distribution", "Business & CRM"] }
+              - { label: "Wat het doet (1 zin)", name: summary, widget: text }
+              - { label: "Voor wie", name: for_whom, widget: string, required: false }
+              - { label: "Prijsmodel (alleen zoals gepubliceerd, anders 'Not published')", name: pricing_model, widget: string }
+              - { label: Deployment, name: deployment, widget: select, options: ["Cloud", "Desktop", "Cloud + desktop", "On-premise + cloud"], required: false }
+              - { label: Platforms, name: platforms, widget: string, required: false }
+              - { label: Integraties, name: integrations, widget: string, required: false }
+              - { label: "Opgericht (jaar)", name: founded, widget: number, value_type: int, required: false }
+              - { label: "Website leverancier", name: official_url, widget: string }
+              - { label: "Bron-URL's", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }

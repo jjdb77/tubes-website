@@ -1,4 +1,4 @@
-<section class="section theme-{{ section.theme or 'light' }}">
+<section class="section theme-{{ section.theme or 'light' }}{% if section.media_large %} section-feature-large-media{% endif %}">
   <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.video %} feature-single{% endif %}">
     <div class="feature-text">
       {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
@@ -14,7 +14,7 @@
       {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
     </div>
     {% elif section.image %}
-    <div class="feature-media">
+    <div class="feature-media{% if section.media_large %} feature-media-large{% endif %}">
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or section.heading }}" {{ section.image | imgSize | safe }} loading="lazy" decoding="async">
       {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
     </div>
