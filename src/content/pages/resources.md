@@ -31,13 +31,17 @@ sections:
         link_label: Compare incentives
         text: |
           Production incentives of 16 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
-      - icon: /assets/icons/badge.svg
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG/960px-Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG
+        image_alt: "The red carpet stairs of the Palais des Festivals in Cannes"
+        image_credit: "Photo: Mike is Michi (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG)"
         heading: Festivals, markets & trade shows
         url: /compare-film-festivals/
         link_label: Browse events
         text: |
           Film festivals, markets, series events and film & TV technology shows across Europe: dates, focus, industry programme and submissions, on a map and side by side.
-      - icon: /assets/icons/tuning.svg
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Television_News_Control_Room.png/960px-Television_News_Control_Room.png
+        image_alt: "A television production control room full of monitors"
+        image_credit: "Photo: Asterzenback (CC0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Television_News_Control_Room.png)"
         heading: Software for media companies
         url: /compare-media-software/
         link_label: Compare software
