@@ -148,6 +148,12 @@ Twee vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tu
 - Incentive per land wordt op de kaartjes en in de vergelijking getoond uit locations.json (koppeling op landnaam).
 - **AI-zoeken**: knop "Let AI turn this into filters" (of Enter) stuurt alleen de zoekvraag naar `/api/location-search`; server.js laat OpenAI er vaste filters van maken (terms/country/type, JSON), de database gaat nooit mee. Herkende filters staan als bewerkbare chips; zonder sleutel, bij een fout of boven de maandlimiet valt alles terug op gewoon tekstzoeken. **Instellen uitsluitend via Railway-variabelen** (besluit Joachim 1-9-2026, geen beheerformulier en niets op de volume): `OPENAI_API_KEY`, optioneel `AI_MODEL` (whitelist in server.js) en `AI_MONTHLY_LIMIT_EUR` (standaard 10). `/beheer/ai` is alleen-lezen: sleutel gezet ja/nee (laatste 4 tekens), model, limiet, verbruik deze maand (ruwe bovengrens, teller in `ai-usage.json` op de volume) en een testknop. Rate-limit 10/10min/IP. **Nooit een sleutel in de repo of het CMS** (repo is publiek). Staat zo ook in de privacyverklaring (zoekvraag naar OpenAI).
 
+### Generieke lijsten: /compare-film-festivals/ en /compare-media-software/
+
+- Sectietype `directory` (`src/_includes/partials/sections/directory.njk`): zelfde mechaniek als de locatiegids (zoeken, tot 3 filters, voorkeurslijst, kaarten/lijst, optionele kaart, A/B/C, vergelijking met winnaarslogica en wegvallende lege rijen), maar volledig **data-gestuurd**: de pagina kiest `dataset` en beschrijft kaartvelden, filters en vergelijkingsrijen in de front matter (CMS: "Zoek-en-vergelijklijst"). Datasets gebundeld in `src/_data/directories.js`.
+- Data: `src/_data/filmfestivals.json` (festivals, markten, series-events, beurzen; CMS "Festivals & events") en `src/_data/mediasoftware.json` (software; CMS "Software voor mediabedrijven", Tubes staat er als gewoon product in). **Alleen wat een organisatie zelf publiceert**: data nooit raden (null), prijzen alleen zoals gepubliceerd of "Not published".
+- Suggesties uit alle lijsten gaan via /api/contact met bericht "<Noun> request: ..." per mail naar `LOCATION_EMAIL` (server.js `meldLocatieSuggestie`, onderwerp "<Noun> suggestion: ...").
+
 ### Incentive-vergelijking: /compare-film-incentives/
 
 - Landen/regelingen vergelijken op geld; "opzich grappig, laat maar staan" (Joachim), maar secundair aan de gids.

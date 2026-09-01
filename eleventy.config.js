@@ -35,6 +35,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("md", (value) => (value ? md.render(String(value)) : ""));
   eleventyConfig.addFilter("mdInline", (value) => (value ? md.renderInline(String(value)) : ""));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  // "{city}, {country}" invullen met velden van een item (generieke lijsten)
+  eleventyConfig.addFilter("tpl", (template, item) => String(template || "").replace(/\{(\w+)\}/g, (_, k) => (item && item[k] != null ? item[k] : "")));
 
   // Markdown → kale tekst (voor titels, omschrijvingen en structured data)
   const toPlainText = (value) =>

@@ -2343,3 +2343,10 @@ a:hover { color: var(--action); }
 .card-figure-contour img { object-fit: contain; padding: 14px 22px 6px; opacity: 0.9; }
 .card-figure-contour figcaption { color: var(--muted); background: none; position: static; padding: 0 16px 8px; text-align: right; }
 .card-figure-contour figcaption a { color: var(--muted); }
+
+/* Generieke lijsten: tot drie filters naast het zoekveld; compacte kop zonder foto */
+.guide-controls-4 { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); }
+.guide-controls-2 { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.guide-photo-compact { aspect-ratio: auto; min-height: 64px; padding: 18px 22px 12px; justify-content: flex-start; font-size: 0.82rem; }
+@media (max-width: 980px) { .guide-controls-4 { grid-template-columns: 1fr 1fr; } .guide-controls-2 { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .guide-controls-4 { grid-template-columns: 1fr; } }

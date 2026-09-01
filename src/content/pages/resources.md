@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Resources
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
-description: "Free tools for production teams: search and compare film and TV locations across Europe, and compare production incentives per country side by side."
+description: "Free tools for production teams: film and TV locations, production incentives per country, festivals and trade shows, and software for media companies, all searchable and comparable side by side."
 permalink: /resources/
 sections:
   - type: hero
@@ -31,6 +31,18 @@ sections:
         link_label: Compare incentives
         text: |
           Production incentives of 16 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
+      - icon: /assets/icons/badge.svg
+        heading: Festivals, markets & trade shows
+        url: /compare-film-festivals/
+        link_label: Browse events
+        text: |
+          Film festivals, markets, series events and film & TV technology shows across Europe: dates, focus, industry programme and submissions, on a map and side by side.
+      - icon: /assets/icons/tuning.svg
+        heading: Software for media companies
+        url: /compare-media-software/
+        link_label: Compare software
+        text: |
+          Production management, budgeting, scheduling, accounting, asset management and post-production tools, compared on published facts only. Tubes is in there like everyone else.
   - type: cta
     title: Plan the production behind the decision
     text: |
