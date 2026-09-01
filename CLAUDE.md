@@ -109,6 +109,21 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Elk artikel krijgt automatisch Article-structured data, een kruimelpad en onderaan links naar de andere artikelen.
 - Let op bij schrijven: **geen em-dashes**, en de lijstopmaak in `.article-body` is bewust anders dan die van `.rich-text` (gewone bullets in plaats van het teal vinkje).
 
+## Nieuws (/news/)
+
+De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`permalink: false`):
+
+1. **Eigen nieuws** ("What's new at Tubes") uit `src/content/news/*.md`, collectie `news`. Velden: `title`, `date`, `summary`, `url`, `link_label`. CMS-collectie "Nieuws (/news/)".
+2. **Branchenieuws van LinkedIn** ("From the industry") uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `title`, `date`, `topic`, `source`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+
+- `topic` bepaalt de kleur van het chipje: Budgeting = teal, Financing = mint, AI in production = lavendel, Festivals = blauw.
+- Bij het branchenieuws bepaalt de **datum alleen de volgorde en de maandkop**; op de pagina staat alleen "August 2026". Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.
+- `link` mag leeg blijven (LinkedIn geeft niet altijd een directe post-URL). De kaart toont dan "Shared on LinkedIn by ..." zonder knop en is niet klikbaar.
+- Samenvatten in twee of drie zinnen, in het Engels, met de bron erbij. De sectie-intro zegt expliciet dat de meningen van de schrijvers zijn, niet van Tubes.
+- CSS: de eigen berichten gebruiken `.news-list`/`.news-item`, de LinkedIn-kaarten `.feed-*`. Bewust twee naamruimtes, ze zijn los van elkaar ontstaan.
+- Omdat deze berichten geen eigen pagina hebben maar wél in `collections.all` zitten, checken `sitemap.njk` en `llms.njk` op `item.url`. Zonder die check zou de sitemap er lege URL's van maken.
+- `/nieuws` stuurt door naar `/news/` (was `/insights/`).
+
 ## SEO
 
 - Per pagina in de front matter (en in het CMS onder "SEO: ..."): `seo_title` (volledige `<title>`, leeg = "Paginatitel | Tubes"), `description`, `og_image`, `noindex`, `schema_software`.

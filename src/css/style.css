@@ -933,6 +933,66 @@ a:hover { color: var(--action); }
 .insight-card p { color: var(--ink-soft); }
 .insight-link { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.92rem; color: var(--action-soft-ink); }
 
+/* ---------- Branchenieuws op /news/ (kaarten met LinkedIn-post) ---------- */
+
+.feed-month {
+  display: flex; align-items: center; gap: 16px;
+  font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 44px 0 20px;
+}
+.feed-month:first-of-type { margin-top: 0; }
+.feed-month::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+.feed-list {
+  list-style: none; margin: 0 0 4px; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+  align-items: stretch;
+}
+
+.feed-card {
+  position: relative;
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 26px 28px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.feed-card:hover { border-color: var(--action); box-shadow: var(--shadow-raise); transform: translateY(-2px); }
+.feed-card-nolink:hover { border-color: var(--border); box-shadow: var(--shadow-card); transform: none; }
+
+.feed-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 16px; }
+.feed-meta .chip { margin: 0; }
+.feed-source { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+
+.feed-card h3 {
+  font-size: 1.18rem; font-weight: 700; letter-spacing: -0.015em;
+  line-height: 1.28; color: var(--ink);
+  margin: 0 0 0.55em;
+}
+
+.feed-summary { color: var(--ink-soft); font-size: 0.99rem; }
+.feed-summary p { margin: 0; }
+
+.feed-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: auto; padding-top: 18px;
+  font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink);
+  text-decoration: none;
+}
+.feed-link span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.feed-link svg { flex: none; }
+.feed-card:hover .feed-link { color: var(--action); }
+
+/* De hele kaart klikbaar, maar met één echte link voor schermlezers */
+a.feed-link::after { content: ""; position: absolute; inset: 0; }
+
+/* Geen directe post-URL: dan alleen de bron, en de kaart is niet klikbaar */
+.feed-link-none { color: var(--muted); font-weight: 600; text-decoration: none; }
+.feed-link-none::after { content: none; }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1180px) {
@@ -979,6 +1039,7 @@ a:hover { color: var(--action); }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
+  .feed-list { grid-template-columns: 1fr; }
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .rich-text.two-column { columns: 1; }

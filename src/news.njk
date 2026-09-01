@@ -2,8 +2,20 @@
 permalink: /news/
 title: News
 seo_title: "News | Tubes"
-description: "News from Tubes: new tools, guides and product updates for film and TV production teams."
+description: "New tools, guides and product updates from Tubes, plus the film and TV posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
+{#- Twee stromen op één pagina: collectie `news` (eigen aankondigingen uit
+    src/content/news) en collectie `linkedin` (posts uit de branche die we op
+    LinkedIn tegenkwamen, uit src/content/linkedin). Zie eleventy.config.js. -#}
+{%- set topicChip = {
+  "Budgeting": "chip",
+  "Financing": "chip chip-mint",
+  "AI in production": "chip chip-lavender",
+  "Festivals": "chip chip-blue"
+} -%}
+{%- macro linkedinIcon() -%}
+<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+{%- endmacro -%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,9 +40,12 @@ description: "News from Tubes: new tools, guides and product updates for film an
       <div class="container hero-grid hero-single">
         <div class="hero-text">
           <span class="kicker">News</span>
-          <h1>What is <em>new</em> at Tubes</h1>
+          <h1>News for <em>production</em> teams</h1>
           <div class="rich-text lead">
-            <p>New tools, guides and product updates for film and TV production teams.</p>
+            <p>Two things in one place: new tools, guides and product updates from Tubes, and the film and television posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets.</p>
+          </div>
+          <div class="button-row">
+            <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
           </div>
         </div>
       </div>
@@ -38,6 +53,7 @@ description: "News from Tubes: new tools, guides and product updates for film an
 
     <section class="section theme-white">
       <div class="container">
+        <h2 class="section-heading">What&rsquo;s new at Tubes</h2>
         <ul class="news-list">
           {%- for item in collections.news %}
           <li class="news-item">
@@ -50,6 +66,40 @@ description: "News from Tubes: new tools, guides and product updates for film an
         </ul>
       </div>
     </section>
+
+    {%- if collections.linkedin.length %}
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">From the industry</h2>
+        <p class="section-intro">Posts we came across on LinkedIn, summarised in a line or two. The opinions are the writers&rsquo;, not ours.</p>
+        {%- for item in collections.linkedin %}
+        {%- set month = item.date | monthYear %}
+        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | monthYear) != month %}
+        {%- if not loop.first %}</ul>{% endif %}
+        <h3 class="feed-month">{{ month }}</h3>
+        <ul class="feed-list">
+        {%- endif %}
+          <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">
+            <p class="feed-meta">
+              <span class="{{ topicChip[item.data.topic] or 'chip' }}">{{ item.data.topic }}</span>
+              <span class="feed-source">{{ item.data.source }}</span>
+            </p>
+            <h3>{{ item.data.title }}</h3>
+            <div class="feed-summary">{{ item.templateContent | safe }}</div>
+            {%- if item.data.link %}
+            <a class="feed-link" href="{{ item.data.link }}" target="_blank" rel="noopener">
+              <span>View on LinkedIn</span> {{ linkedinIcon() }}
+              <span class="visually-hidden">: {{ item.data.title }}</span>
+            </a>
+            {%- else %}
+            <p class="feed-link feed-link-none">Shared on LinkedIn by {{ item.data.source }}</p>
+            {%- endif %}
+          </li>
+        {%- if loop.last %}</ul>{% endif %}
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endif %}
 
     {% set section = {
       title: "See Tubes in action",

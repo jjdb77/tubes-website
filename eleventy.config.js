@@ -78,6 +78,20 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/news/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // Tweede stroom op /news/: posts uit de branche die we op LinkedIn
+  // tegenkwamen. Aparte map, want ze hebben andere velden (bron, onderwerp,
+  // link naar de post) en een eigen opmaak. Ook zonder eigen pagina.
+  // De datum bepaalt alleen de volgorde en de maandkop: van een gevonden post
+  // kennen we de exacte plaatsingsdatum meestal niet.
+  eleventyConfig.addCollection("linkedin", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/linkedin/*.md").sort((a, b) => b.date - a.date)
+  );
+
+  // "August 2026" — maand en jaar, zonder dag
+  eleventyConfig.addFilter("monthYear", (value) =>
+    new Date(value).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
+  );
+
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
   // pagina niet tijdens het laden (goed voor de Google-scores).
