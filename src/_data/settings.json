@@ -70,20 +70,16 @@
       "url": "/solutions/"
     },
     {
-      "label": "Resources",
-      "url": "/resources/"
-    },
-    {
-      "label": "News",
-      "url": "/news/"
-    },
-    {
       "label": "Plans & pricing",
       "url": "/plans/"
     },
     {
       "label": "Company",
       "url": "/company/"
+    },
+    {
+      "label": "Resources",
+      "url": "/resources/"
     },
     {
       "label": "Security & compliance",
@@ -116,6 +112,10 @@
     {
       "label": "Contact",
       "url": "/contact/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
     }
   ],
   "nav": [
@@ -128,16 +128,12 @@
       "url": "/solutions/"
     },
     {
-      "label": "Resources",
-      "url": "/resources/"
-    },
-    {
-      "label": "News",
-      "url": "/news/"
-    },
-    {
       "label": "Company",
       "url": "/company/"
+    },
+    {
+      "label": "Resources",
+      "url": "/resources/"
     },
     {
       "label": "Compliance",
@@ -150,6 +146,10 @@
     {
       "label": "Academy",
       "url": "/academy/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
     }
   ],
   "booking_embed_url": "https://4relationstubes.appconnected.nl/boek/joachim/tubes-assessment"
