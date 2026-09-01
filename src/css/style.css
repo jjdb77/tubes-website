@@ -878,6 +878,85 @@ a:hover { color: var(--action); }
 .insight-card p { color: var(--ink-soft); }
 .insight-link { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.92rem; color: var(--action-soft-ink); }
 
+/* ---------- Nieuws (/news/) ---------- */
+
+.news-month {
+  display: flex; align-items: center; gap: 16px;
+  font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 44px 0 20px;
+}
+.news-month:first-of-type { margin-top: 0; }
+.news-month::after {
+  content: ""; flex: 1; height: 1px; background: var(--border);
+}
+
+.news-list {
+  list-style: none; margin: 0 0 4px; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+  align-items: stretch;
+}
+
+.news-card {
+  position: relative;
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 26px 28px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.news-card:hover { border-color: var(--action); box-shadow: var(--shadow-raise); transform: translateY(-2px); }
+.news-card-nolink:hover { border-color: var(--border); box-shadow: var(--shadow-card); transform: none; }
+
+.news-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: 0 0 16px;
+}
+.news-meta .chip { margin: 0; }
+.news-source, .news-meta time {
+  font-size: 0.82rem; font-weight: 600; color: var(--muted);
+}
+
+.news-card h3, .news-card h4 {
+  font-size: 1.18rem; font-weight: 700; letter-spacing: -0.015em;
+  line-height: 1.28; color: var(--ink);
+  margin: 0 0 0.55em;
+}
+
+.news-summary { color: var(--ink-soft); font-size: 0.99rem; }
+.news-summary p { margin: 0; }
+
+.news-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: auto; padding-top: 18px;
+  font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink);
+  text-decoration: none;
+}
+.news-link span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.news-link svg { flex: none; }
+.news-card:hover .news-link { color: var(--action); }
+
+/* De hele kaart klikbaar, maar met één echte link voor schermlezers */
+a.news-link::after { content: ""; position: absolute; inset: 0; }
+
+.news-link-none {
+  color: var(--muted); font-weight: 600; font-style: normal;
+  text-decoration: none;
+}
+.news-link-none::after { content: none; }
+
+/* Eigen aankondigingen: goud accent uit het logo, over de volle breedte */
+.news-list-tubes { grid-template-columns: 1fr; }
+.news-card-tubes { border-left: 3px solid var(--gold); }
+.news-card-tubes:hover { border-left-color: var(--gold); }
+.theme-white .news-card {
+  background: var(--bg); border-color: var(--divider); box-shadow: none;
+}
+.theme-white .news-card:hover { border-color: var(--border); box-shadow: var(--shadow-card); }
+.theme-white .news-card-tubes { border-left-color: var(--gold); }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1180px) {
@@ -899,6 +978,7 @@ a:hover { color: var(--action); }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
+  .news-list { grid-template-columns: 1fr; }
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .rich-text.two-column { columns: 1; }

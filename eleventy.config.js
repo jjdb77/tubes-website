@@ -70,6 +70,28 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // ---------- Nieuws (/news/) ----------
+  //
+  // Losse berichtjes: eigen aankondigingen ("Tubes") en gevonden LinkedIn-posts
+  // uit de branche ("industry"). Ze staan als markdown in src/content/news maar
+  // krijgen bewust geen eigen pagina (permalink: false in de front matter), ze
+  // worden alleen op /news/ getoond. De datum bepaalt alleen de volgorde; op de
+  // pagina staat de maand, want van een gevonden post kennen we de exacte
+  // plaatsingsdatum meestal niet.
+  const newsItems = (collectionApi, kind) =>
+    collectionApi
+      .getFilteredByGlob("src/content/news/*.md")
+      .filter((item) => (item.data.kind || "industry") === kind)
+      .sort((a, b) => b.date - a.date);
+
+  eleventyConfig.addCollection("newsTubes", (api) => newsItems(api, "tubes"));
+  eleventyConfig.addCollection("newsIndustry", (api) => newsItems(api, "industry"));
+
+  // "August 2026" — maand en jaar, zonder dag
+  eleventyConfig.addFilter("monthYear", (value) =>
+    new Date(value).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
+  );
+
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
   // pagina niet tijdens het laden (goed voor de Google-scores).

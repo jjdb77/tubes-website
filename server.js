@@ -43,10 +43,12 @@ app.use((req, res, next) => {
 });
 
 // Oude Squarespace-adressen. Google kent deze nog (19 stuks in Search Console,
-// allemaal 404) en op LinkedIn staat nog een link naar /news. Een 301 naar de
-// dichtstbijzijnde nieuwe pagina houdt bezoekers binnen en geeft de waarde van
-// die oude links door. Let op: het bestand src/_redirects doet op Railway
-// niets, dat is een Netlify/Cloudflare-formaat. Hier is de enige echte plek.
+// allemaal 404). Een 301 naar de dichtstbijzijnde nieuwe pagina houdt bezoekers
+// binnen en geeft de waarde van die oude links door. /news staat hier bewust
+// niet meer bij: dat is sinds september 2026 weer een echte pagina, en de oude
+// LinkedIn-link erheen komt dus direct op het nieuwsoverzicht uit.
+// Let op: het bestand src/_redirects doet op Railway niets, dat is een
+// Netlify/Cloudflare-formaat. Hier is de enige echte plek.
 const OLD_PATHS = new Map([
   ["/waarom-tubes", "/platform/"],
   ["/grip", "/platform/"],
@@ -56,8 +58,7 @@ const OLD_PATHS = new Map([
   ["/home-2", "/company/"],
   ["/handleiding", "/academy/"],
   ["/product-videos", "/academy/"],
-  ["/news", "/insights/"],
-  ["/nieuws", "/insights/"],
+  ["/nieuws", "/news/"],
   ["/contact-us", "/contact/"],
   ["/intro", "/"],
 ]);

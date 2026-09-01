@@ -106,6 +106,36 @@ collections:
       - { label: "SEO: deelplaatje (LinkedIn, WhatsApp)", name: og_image, widget: image, required: false }
       - { label: "SEO: artikel uit Google houden", name: noindex, widget: boolean, default: false, required: false }
 
+  - name: nieuws
+    label: "Nieuws (/news/)"
+    icon: campaign
+    folder: src/content/news
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Kop, name: title, widget: string, hint: "In het Engels, de sitetaal. Geen em-dashes (—)." }
+      - label: Soort bericht
+        name: kind
+        widget: select
+        default: industry
+        options:
+          - { label: "Uit de branche (gevonden op LinkedIn)", value: industry }
+          - { label: "Nieuws van Tubes zelf", value: tubes }
+        hint: "Tubes-berichten staan bovenaan onder 'What's new at Tubes'."
+      - label: Onderwerp (het gekleurde labeltje)
+        name: topic
+        widget: select
+        default: Budgeting
+        options: [Budgeting, "AI in production", Festivals, Product]
+      - { label: Bron, name: source, widget: string, hint: "Wie het schreef, bijv. Screen International of Katya Alexander. Bij eigen nieuws: Tubes." }
+      - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Leeg mag: de kaart toont dan alleen de bron, zonder knop." }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Bepaalt de volgorde en de maandkop. Op de pagina staat alleen de maand." }
+      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels. Geen em-dashes (—)." }
+      - { label: "Geen eigen pagina (altijd aan laten staan)", name: permalink, widget: hidden, default: false }
+
   - name: paginas
     label: Pagina's
     icon: article

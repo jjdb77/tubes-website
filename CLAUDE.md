@@ -41,6 +41,17 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Elk artikel krijgt automatisch Article-structured data, een kruimelpad en onderaan links naar de andere artikelen.
 - Let op bij schrijven: **geen em-dashes**, en de lijstopmaak in `.article-body` is bewust anders dan die van `.rich-text` (gewone bullets in plaats van het teal vinkje).
 
+## Nieuws (/news/)
+
+- `src/content/news/*.md`, getoond op **/news/** (`src/news.njk`). In het CMS: collectie "Nieuws (/news/)".
+- Twee stromen uit dezelfde map, gescheiden door het veld `kind`: `tubes` (eigen aankondigingen, bovenaan onder "What's new at Tubes", goud accentrandje) en `industry` (op LinkedIn gevonden posts uit de branche, gegroepeerd per maand).
+- De berichten krijgen **geen eigen pagina**: `permalink: false` in de front matter. Ze staan alleen op het overzicht. Daarom hebben `sitemap.njk` en `llms.njk` een extra `item.url`-check, anders zou de sitemap er lege URL's van maken.
+- Velden: `title`, `date`, `topic`, `source`, `link`, `kind`. `topic` bepaalt de kleur van het chipje (Budgeting = teal, AI in production = lavendel, Festivals = blauw, Product = goud/amber).
+- De **datum bepaalt alleen de volgorde en de maandkop**; op de pagina staat alleen "August 2026". Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.
+- `link` mag leeg blijven (bijv. als LinkedIn geen directe post-URL geeft). De kaart toont dan "Shared on LinkedIn by ..." zonder knop, en is niet klikbaar.
+- Samenvatten in twee of drie zinnen, in het Engels, met de bron erbij. De sectie-intro zegt expliciet dat de meningen van de schrijvers zijn, niet van Tubes.
+- **/news bestond als 301 naar /insights/** (oude Squarespace-link vanaf LinkedIn). Die redirect is weg; /nieuws stuurt nu door naar /news/.
+
 ## SEO
 
 - Per pagina in de front matter (en in het CMS onder "SEO: ..."): `seo_title` (volledige `<title>`, leeg = "Paginatitel | Tubes"), `description`, `og_image`, `noindex`, `schema_software`.

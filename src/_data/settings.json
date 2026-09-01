@@ -69,6 +69,10 @@
       "url": "/company/"
     },
     {
+      "label": "News",
+      "url": "/news/"
+    },
+    {
       "label": "Security & compliance",
       "url": "/compliance/"
     },
@@ -93,6 +97,10 @@
     {
       "label": "Company",
       "url": "/company/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
     },
     {
       "label": "Compliance",
