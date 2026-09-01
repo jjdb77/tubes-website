@@ -31,9 +31,9 @@ sections:
         link_label: Compare incentives
         text: |
           Production incentives of 16 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
-      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG/960px-Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG
-        image_alt: "The red carpet stairs of the Palais des Festivals in Cannes"
-        image_credit: "Photo: Mike is Michi (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG)"
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/BerlinalePalast.jpg/960px-BerlinalePalast.jpg
+        image_alt: "The Berlinale Palast in Berlin during the festival"
+        image_credit: "Photo: Martin Kraft (CC BY-SA 2.5), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BerlinalePalast.jpg)"
         heading: Festivals, markets & trade shows
         url: /compare-film-festivals/
         link_label: Browse events

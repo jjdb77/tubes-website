@@ -238,12 +238,7 @@
         "https://www.festival-cannes.com/en/take-part/submit-a-film/",
         "https://www.marchedufilm.com/"
       ],
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG/960px-Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Palais_des_Festivals_Cannes_red_carpet_stairs_2026.JPG",
-        "author": "Mike is Michi",
-        "license": "CC BY-SA 4.0"
-      }
+      "photo": null
     },
     {
       "id": "les-arcs",
@@ -420,7 +415,7 @@
         "https://www.berlinale.de/en/film-entry/submission/start.html"
       ],
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b9/BerlinalePalast.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/BerlinalePalast.jpg/960px-BerlinalePalast.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:BerlinalePalast.jpg",
         "author": "Martin Kraft",
         "license": "CC BY-SA 2.5"
