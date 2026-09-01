@@ -18,10 +18,9 @@
     <div class="guide-controls">
       <div class="loc-field guide-search-field">
         <label for="guide-search">What are you looking for?</label>
-        <input type="search" id="guide-search" placeholder="Try: industrial hall with high ceilings near Amsterdam" autocomplete="off">
-        <div class="guide-ai-row">
-          <button type="button" class="guide-ai-btn" data-ai-btn hidden>Let AI turn this into filters</button>
-          <span class="guide-ai-status" data-ai-status role="status"></span>
+        <div class="guide-search-wrap">
+          <input type="search" id="guide-search" placeholder="Try: industrial hall with high ceilings near Amsterdam" autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list">
+          <div class="guide-suggest" data-suggest hidden></div>
         </div>
       </div>
       <label class="loc-field" for="guide-country">Country
@@ -36,6 +35,11 @@
           {% for t in types | sort %}<option>{{ t }}</option>{% endfor %}
         </select>
       </label>
+    </div>
+
+    <div class="guide-ai-row">
+      <button type="button" class="guide-ai-btn" data-ai-btn hidden>Let AI turn this into filters</button>
+      <span class="guide-ai-status" data-ai-status role="status"></span>
     </div>
 
     <ul class="guide-chips" data-ai-chips hidden aria-label="Recognised filters"></ul>
@@ -202,6 +206,44 @@
     q.addEventListener("input", applyFilters);
     country.addEventListener("change", applyFilters);
     type.addEventListener("change", applyFilters);
+
+    // Suggesties zodra je typt: types, landen, locatienamen en trefwoorden
+    // uit de data zelf. Klikken zet meteen het juiste filter.
+    const suggestEl = root.querySelector("[data-suggest]");
+    const KEYWORDS = ["mountains", "mountain village", "castle", "palace", "beach", "coast", "cliffs", "forest", "lake", "glacier", "desert", "hotel", "monastery", "old town", "medieval", "village", "city", "bridge", "railway", "harbour", "island", "studio", "sound stage", "water tank", "backlot"];
+    const haystack = cards.map((c) => c.dataset.search).join(" ");
+    const pool = [];
+    for (const t of [...root.querySelectorAll("#guide-type option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Type", value: t });
+    for (const c of [...root.querySelectorAll("#guide-country option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Country", value: c });
+    for (const l of data.locations) pool.push({ kind: "Location", value: l.name, extra: l.region + ", " + l.country });
+    for (const k of KEYWORDS) if (haystack.includes(k)) pool.push({ kind: "Keyword", value: k });
+
+    const hideSuggest = () => { suggestEl.hidden = true; suggestEl.innerHTML = ""; q.setAttribute("aria-expanded", "false"); };
+    const showSuggest = () => {
+      const needle = q.value.trim().toLowerCase();
+      if (needle.length < 2) { hideSuggest(); return; }
+      const starts = pool.filter((s) => s.value.toLowerCase().startsWith(needle));
+      const contains = pool.filter((s) => !s.value.toLowerCase().startsWith(needle) && s.value.toLowerCase().includes(needle));
+      const hits = [...starts, ...contains].slice(0, 8);
+      if (!hits.length) { hideSuggest(); return; }
+      suggestEl.innerHTML = hits.map((s, i) => `<button type="button" data-s-kind="${esc(s.kind)}" data-s-value="${esc(s.value)}"><span class="guide-suggest-kind">${esc(s.kind)}</span>${esc(s.value)}${s.extra ? `<small>${esc(s.extra)}</small>` : ""}</button>`).join("");
+      suggestEl.hidden = false;
+      q.setAttribute("aria-expanded", "true");
+    };
+    q.addEventListener("input", showSuggest);
+    q.addEventListener("focus", showSuggest);
+    q.addEventListener("keydown", (e) => { if (e.key === "Escape") hideSuggest(); });
+    document.addEventListener("click", (e) => { if (!e.target.closest(".guide-search-wrap")) hideSuggest(); });
+    suggestEl.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-s-kind]");
+      if (!btn) return;
+      const kind = btn.dataset.sKind, value = btn.dataset.sValue;
+      if (kind === "Type") { type.value = value; q.value = ""; }
+      else if (kind === "Country") { country.value = value; q.value = ""; }
+      else { q.value = value; }
+      hideSuggest(); renderChips(); applyFilters();
+      q.focus();
+    });
 
     // AI-zoeken: de zoekvraag gaat naar de eigen server, die er via OpenAI
     // alleen filters van maakt (de database gaat nooit mee). De herkende

@@ -2427,7 +2427,28 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 /* ---------- Locatiegids: AI-zoeken ---------- */
 
 .guide-search-field > label { display: block; }
-.guide-ai-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 8px; }
+.guide-search-wrap { position: relative; }
+.guide-ai-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; min-height: 0; }
+.guide-ai-row:not(:has(button:not([hidden]))):not(:has(.guide-ai-status:not(:empty))) { display: none; }
+
+/* Suggestiemenu onder het zoekveld */
+.guide-suggest {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 40;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-wash);
+  box-shadow: var(--shadow-raise); overflow: hidden; padding: 6px;
+}
+.guide-suggest button {
+  display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left;
+  border: 0; background: none; cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--ink);
+  padding: 9px 10px; border-radius: 8px;
+}
+.guide-suggest button:hover, .guide-suggest button:focus-visible { background: var(--action-soft); color: var(--action-soft-ink); outline: none; }
+.guide-suggest button small { font-weight: 500; color: var(--muted); }
+.guide-suggest-kind {
+  flex: none; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--status-blue-ink); background: var(--status-blue-bg); border-radius: 6px; padding: 2px 7px;
+}
 .guide-ai-btn {
   border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
   font-family: var(--font-sans); font-size: 0.84rem; font-weight: 700; color: var(--action-soft-ink);
