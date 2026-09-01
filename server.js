@@ -56,7 +56,6 @@ const OLD_PATHS = new Map([
   ["/home-2", "/company/"],
   ["/handleiding", "/academy/"],
   ["/product-videos", "/academy/"],
-  ["/news", "/insights/"],
   ["/nieuws", "/insights/"],
   ["/contact-us", "/contact/"],
   ["/intro", "/"],

@@ -1,0 +1,66 @@
+---
+permalink: /news/
+title: News
+seo_title: "News | Tubes"
+description: "News from Tubes: new tools, guides and product updates for film and TV production teams."
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section section-hero">
+      <div class="container hero-grid hero-single">
+        <div class="hero-text">
+          <span class="kicker">News</span>
+          <h1>What is <em>new</em> at Tubes</h1>
+          <div class="rich-text lead">
+            <p>New tools, guides and product updates for film and TV production teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section theme-white">
+      <div class="container">
+        <ul class="news-list">
+          {%- for item in collections.news %}
+          <li class="news-item">
+            <time datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time>
+            <h2>{{ item.data.title }}</h2>
+            <p>{{ item.data.summary }}</p>
+            {% if item.data.url %}<a class="news-link" href="{{ item.data.url }}">{{ item.data.link_label or "Read more" }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    {% set section = {
+      title: "See Tubes in action",
+      text: "Budgeting, planning and cost control in one platform, for productions of every size.",
+      button: { label: "Request a Demo", url: "/contact/" }
+    } %}
+    {% include "partials/sections/cta.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% if settings.goatcounter %}<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+</body>
+</html>

@@ -70,6 +70,12 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // Nieuwsberichten (/news/): korte items met datum, samenvatting en link,
+  // zonder eigen pagina (permalink: false in het bericht). Nieuwste bovenaan.
+  eleventyConfig.addCollection("news", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/news/*.md").sort((a, b) => b.date - a.date)
+  );
+
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
   // pagina niet tijdens het laden (goed voor de Google-scores).

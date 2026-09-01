@@ -157,6 +157,23 @@ collections:
       - { label: "SEO: deelplaatje (LinkedIn, WhatsApp)", name: og_image, widget: image, required: false }
       - { label: "SEO: artikel uit Google houden", name: noindex, widget: boolean, default: false, required: false }
 
+  - name: nieuws
+    label: "Nieuws (/news/)"
+    icon: newspaper
+    folder: src/content/news
+    format: yaml-frontmatter
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Titel, name: title, widget: string }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
+      - { label: Samenvatting, name: summary, widget: text, hint: "Twee of drie zinnen; dit is de hele tekst op de nieuwspagina." }
+      - { label: "Link (bijv. /compare-film-tv-locations/ of een externe URL)", name: url, widget: string, required: false }
+      - { label: Linktekst, name: link_label, widget: string, required: false, hint: "Leeg = 'Read more'" }
+
   - name: paginas
     label: Pagina's
     icon: article
@@ -251,6 +268,8 @@ collections:
                   - { label: "Icoon (svg uit assets/icons)", name: icon, widget: image, required: false }
                   - { label: Kop, name: heading, widget: string }
                   - { label: Tekst, name: text, widget: markdown }
+                  - { label: "Link (maakt de hele kaart klikbaar, bijv. /resources/)", name: url, widget: string, required: false }
+                  - { label: "Linktekst (bijv. Open the guide)", name: link_label, widget: string, required: false }
           - name: textblock
             label: Tekstblok
             summary: "{{fields.heading}}"

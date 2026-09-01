@@ -13,6 +13,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Content: `src/content/pages/*.md` — elke pagina is een lijst "sections" (hero, pricing, compare, cards, feature, textblock, tour, faq, cta, contactform, images, split). Site-instellingen: `src/_data/settings.json`.
 - CMS: Sveltia op `/admin/` (lokaal: "Work with Local Repository" in Chrome). Config: `src/admin/config.yml` (labels in het Nederlands).
 - Menu staat in settings.json → nav. Platform- en Plans-pagina's bestaan maar staan bewust NIET in het menu.
+- **Resources** (`/resources/`, pagina met twee klikbare tegels: locatiegids en incentives per land; kaarten met `url` zijn klikbaar via cards.njk) en **News** (`/news/`, `src/news.njk` + collectie `news` uit `src/content/news/*.md`; items zonder eigen pagina, CMS-collectie "Nieuws") staan sinds 1-9-2026 in het hoofdmenu op verzoek van Joachim.
 
 ## Hosting & deploy
 
@@ -122,7 +123,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Doorverwijzingen (301)
 
-- **Alle redirects staan in server.js**, in `OLD_PATHS` (oude Squarespace-paden zoals /waarom-tubes, /news, /oplossing) en `REDIRECT_HOSTS` (tubes.media en en.tubes.media naar www).
+- **Alle redirects staan in server.js**, in `OLD_PATHS` (oude Squarespace-paden zoals /waarom-tubes en /oplossing; de oude /news-redirect naar /insights/ is op 1-9-2026 verwijderd omdat /news/ nu een eigen pagina is) en `REDIRECT_HOSTS` (tubes.media en en.tubes.media naar www).
 - Een `_redirects`-bestand doet hier **niets**: dat is een Netlify/Cloudflare-formaat en Railway draait Express. Het oude bestand is daarom verwijderd.
 - De 19 oude 404's kwamen uit Search Console (Pagina's → Niet gevonden). Kijk daar opnieuw als er later paden bijkomen.
 

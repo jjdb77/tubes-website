@@ -70,6 +70,14 @@
       "url": "/solutions/"
     },
     {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
+    },
+    {
       "label": "Plans & pricing",
       "url": "/plans/"
     },
@@ -110,6 +118,14 @@
     {
       "label": "Solutions",
       "url": "/solutions/"
+    },
+    {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
     },
     {
       "label": "Company",

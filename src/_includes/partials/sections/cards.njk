@@ -4,10 +4,11 @@
     {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
     <div class="cards-grid cards-{{ section.columns or 3 }}">
       {% for card in section.cards %}
-      <div class="card">
+      <div class="card{% if card.url %} card-clickable{% endif %}">
         {% if card.icon %}<span class="icon-tile" aria-hidden="true"><i style="--icon: url('{{ card.icon | htmlBaseUrl }}')"></i></span>{% endif %}
-        {% if card.heading %}<h3>{{ card.heading }}</h3>{% endif %}
+        {% if card.heading %}<h3>{% if card.url %}<a class="card-title-link" href="{{ card.url }}">{{ card.heading }}</a>{% else %}{{ card.heading }}{% endif %}</h3>{% endif %}
         <div class="rich-text">{{ card.text | md | safe }}</div>
+        {% if card.url %}<a class="card-link" href="{{ card.url }}">{{ card.link_label or "Open" }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
       </div>
       {% endfor %}
     </div>
