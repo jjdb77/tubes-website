@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Film festivals, markets & trade shows
+title: Festival, tradeshows and events
 seo_title: "European Film Festivals, Markets & Trade Shows: Search & Compare | Tubes"
 description: "Search film festivals, markets, series events and film & TV trade shows across Europe, see them on a map, and compare up to three side by side: dates, focus, industry programme, submissions."
 permalink: /compare-film-festivals/

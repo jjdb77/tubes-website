@@ -34,7 +34,7 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg/960px-Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg
         image_alt: "The open-air Piazza Grande screen and seats at the Locarno Film Festival"
         image_credit: "Photo: Kalai Ramu (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg)"
-        heading: Festivals, markets & trade shows
+        heading: Festival, tradeshows and events
         url: /compare-film-festivals/
         link_label: Browse events
         text: |
