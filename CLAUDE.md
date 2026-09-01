@@ -125,7 +125,8 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - **Geef het inzicht niet helemaal weg.** Twee of drie zinnen die nieuwsgierig maken; de post zelf blijft de plek voor het volledige verhaal. Een samenvatting die het origineel overbodig maakt, is auteursrechtelijk een bewerking en moreel een diefstalletje.
 - **Nooit letterlijk overnemen**, ook geen alinea, en **geen afbeeldingen uit de post**. Eigen woorden, naam erbij, link erheen.
 - `role` (functie of organisatie) alleen invullen als het klopt. Leeg laten is beter dan gokken.
-- De knoptekst volgt automatisch de soort link (filter `isLinkedInPost`): bij een echte post-URL wordt het "Read <naam>'s original post on LinkedIn", bij een profiel- of bedrijfspagina "See more from <naam> on LinkedIn". Beloof geen post waar een profiel staat.
+- De knoptekst volgt automatisch de soort link (filter `linkedinLinkType`): een losse post of artikel geeft "Read <naam>'s original post on LinkedIn", een berichtenoverzicht (`/recent-activity/all/` of `/company/<naam>/posts/`) geeft "See <naam>'s posts on LinkedIn", een kale profielpagina "See more from <naam> on LinkedIn". Beloof geen post waar een profiel staat.
+- **Losse post-URL's zijn niet te googelen**: LinkedIn zet de feed achter een login. Ze komen alleen van Joachim zelf, via de drie puntjes bij de post en "Copy link to post". Zolang die er niet is, wijst de link naar het berichtenoverzicht van de auteur; nooit een post-URL gokken.
 
 - `topic` bepaalt de kleur van het chipje: Budgeting = teal, Financing = mint, AI in production = lavendel, Festivals = blauw.
 - Bij het branchenieuws bepaalt de **datum alleen de volgorde en de maandkop**; op de pagina staat alleen "August 2026". Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.

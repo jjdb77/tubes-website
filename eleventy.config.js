@@ -99,12 +99,18 @@ export default function (eleventyConfig) {
     return /s$/i.test(value) ? `${value}'` : `${value}'s`;
   });
 
-  // Wijst de link naar de post zelf, of naar een profiel/bedrijfspagina?
-  // Bepaalt de knoptekst: "Read X's original post" mag alleen bij een echte
-  // post-URL, anders beloven we de bezoeker iets wat er niet staat.
-  eleventyConfig.addFilter("isLinkedInPost", (url) =>
-    /\/(feed\/update|posts|pulse)\//.test(String(url || ""))
-  );
+  // Waar wijst de link heen? Bepaalt de knoptekst, want we beloven de bezoeker
+  // geen post waar een profiel staat.
+  //   post     losse post of artikel  -> "Read X's original post on LinkedIn"
+  //   activity berichtenoverzicht     -> "See X's posts on LinkedIn"
+  //   profile  profiel of bedrijfspagina -> "See more from X on LinkedIn"
+  eleventyConfig.addFilter("linkedinLinkType", (url) => {
+    const value = String(url || "");
+    if (!value) return "";
+    if (/\/feed\/update\/|\/posts\/[^/]+-activity-|\/pulse\//.test(value)) return "post";
+    if (/\/recent-activity\/|\/company\/[^/]+\/posts\/?$/.test(value)) return "activity";
+    return "profile";
+  });
 
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de

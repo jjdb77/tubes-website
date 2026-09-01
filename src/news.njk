@@ -1,7 +1,7 @@
 ---
 permalink: /news/
 title: News
-seo_title: "News | Tubes"
+seo_title: "Film and TV industry news | Tubes"
 description: "New tools, guides and product updates from Tubes, plus the film and TV posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
 {#- Twee stromen op één pagina: collectie `news` (eigen aankondigingen uit
@@ -94,9 +94,12 @@ description: "New tools, guides and product updates from Tubes, plus the film an
             <p class="feed-topic">{{ item.data.title }}</p>
             <div class="feed-summary">{{ item.templateContent | safe }}</div>
             {%- if item.data.link %}
+            {%- set linkType = item.data.link | linkedinLinkType %}
             <a class="feed-link" href="{{ item.data.link }}" target="_blank" rel="noopener">
-              {%- if item.data.link | isLinkedInPost %}
+              {%- if linkType == "post" %}
               <span>Read {{ item.data.source | possessive }} original post on LinkedIn</span>
+              {%- elif linkType == "activity" %}
+              <span>See {{ item.data.source | possessive }} posts on LinkedIn</span>
               {%- else %}
               <span>See more from {{ item.data.source }} on LinkedIn</span>
               {%- endif %} {{ linkedinIcon() }}
