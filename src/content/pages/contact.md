@@ -11,8 +11,8 @@ sections:
     text: |
       Interested in Tubes? Share a few details about your organization and productions, and we'll get in touch to explore how Tubes can support your workflow.
     buttons:
-      - label: Request a Demo
-        url: "#contact-form"
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/contact-hero.jpeg
     image_alt: Get in touch with Tubes
   - type: contactform

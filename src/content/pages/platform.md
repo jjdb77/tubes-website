@@ -12,8 +12,8 @@ sections:
     text: |
       Tubes is a modular SaaS platform designed specifically for media production workflows. It replaces fragmented tools and spreadsheets with one integrated system.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/platform-hero.jpeg
     image_alt: A production team at work
   - type: cards
@@ -108,11 +108,15 @@ sections:
       - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
       - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
       - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
-      - **Organized Scheduling** – Keep activities flowing efficiently so your team stays on track.
+      - **Organized Scheduling** – Coordinate cast, crew and locations, and share schedules and call sheets so your whole team stays on track.
+      - **Forecasting** – Estimate to complete and expected final cost update automatically as actuals and commitments come in, so you always know where a production is heading.
+      - **Cost Control** – Compare actuals and commitments to budget in real time, with instant variance and open-amount visibility per department.
+      - **Operational Finance** – Route invoices through validation and approval before they're transferred to your ledger accounting system, with a clean audit trail at every step.
       - **Relationship & Funding Management** – Manage clients, funders, and suppliers while tracking funding allocations.
       - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
       - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
       - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
+      - **Movie Magic Import** – Import existing budgets from Movie Magic Budgeting and continue working in Tubes without starting from scratch.
   - type: faq
     theme: white
     heading: Frequently asked questions
@@ -136,10 +140,10 @@ sections:
         answer: |
           [Get in touch](/contact/) and share a few details about your organization and productions, and we'll get back to you to explore how Tubes fits your workflow.
   - type: cta
-    title: With Tubes, your production runs efficiently
+    title: See where a platform would help you first
     text: |
-      Your production stays financially transparent, and your team can focus on what they do best: creating.
+      Book a free Production Health Check: 45 minutes on how you work today, and where the biggest opportunities are.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---

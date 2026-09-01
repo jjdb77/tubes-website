@@ -11,10 +11,27 @@ sections:
     text: |
       Tubes supports collaboration across creative, financial and executive teams while maintaining clarity, control and accountability.
     buttons:
-      - label: Request a Demo
-        url: /contact/
+      - label: Book your free Production Health Check
+        url: /production-finance-health-check/
     image: /assets/images/solutions-roles.jpeg
     image_alt: Different roles collaborating on a production
+  - type: cards
+    theme: teal
+    heading: What Tubes Covers
+    columns: 3
+    cards:
+      - icon: /assets/icons/calculator.svg
+        heading: Planning & Budgeting
+        text: |
+          Create structured budgets and schedules with full version control and scenario comparison. Explore alternatives and instantly see financial and operational impact before committing decisions.
+      - icon: /assets/icons/tuning.svg
+        heading: Execution & Cost Control
+        text: |
+          Track actuals, commitments and forecasts in real time. Changes are reflected instantly across budgets, schedules and reports. Production costs are captured, validated, approved and processed within the financial workflow before being transferred to your ledger accounting system.
+      - icon: /assets/icons/chart-pie.svg
+        heading: Reporting & Transparency
+        text: |
+          Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
   - type: cards
     theme: white
     heading: By Role
@@ -32,6 +49,33 @@ sections:
         heading: Executives, Broadcasters & Partners
         text: |
           Access reliable reporting, early warning signals and transparent insight into production performance.
+  - type: feature
+    theme: light
+    heading: Who is Tubes for?
+    lead: Built for professional productions of every scale
+    text: |
+      Tubes supports independent producers, broadcasters, studios and live entertainment teams. From early planning through final reporting, across single projects and complex international co-productions.
+
+      **Studio & Production Leadership**
+      C-Level Executives · CFOs · Heads of Production · Executive Producers
+
+      **Production Management**
+      Line Producers · Unit Production Managers · Production Managers · Producers · Co-Producers
+
+      **Finance & Business Affairs**
+      Business Managers · Business Controllers · Production Accountants · Finance Teams
+
+      **Operations & Commercial**
+      Operations Managers · Sales & Distribution
+
+      **Broadcasters & Partners**
+      Clients · Broadcasters · Commissioning Editors · Co-Production Partners
+
+      **Cast & Crew**
+      Cast · Crew · Department Heads
+    video: /assets/videos/home-who-is-tubes-for.mp4
+    poster: /assets/images/video-poster-home.jpg
+    ambient: true
   - type: textblock
     theme: teal
     heading: By Production Type
@@ -42,21 +86,26 @@ sections:
       - Streaming and episodic content
       - Live entertainment and events
       - International co-productions
-  - type: feature
+  - type: textblock
     theme: white
-    heading: Setting up and managing your productions
+    heading: Smarter Production, Full Control
     text: |
-      Keep your productions on track with powerful dashboards and pipelines. Track every stage of the production process, from preparation to delivery and analysis, while setting up budgets, managing documents, and staying fully in control.
-    image: /assets/images/example-tubes-02.png
-    image_alt: Project dashboards and pipelines in Tubes
-  - type: feature
-    theme: light
-    heading: Control your production and planning in real time
-    text: |
-      Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Real-time cost control in Tubes
-    media_position: left
+      Tubes gives you complete insight into every step of your production, revealing strengths, highlighting areas for improvement, and helping you work smarter without sacrificing creativity.
+
+      ### Plan. Budget. Collaborate.
+
+      - **Streamlined Budgeting** – Use templates, dynamic formulas, and multiple budgets per production to save time and maintain consistency.
+      - **Quick Analysis & Comparison** – Easily spot differences between budgets and apply flexible pricing models.
+      - **Professional Quotes & Approvals** – Prepare client-ready quotations and accelerate decision-making.
+      - **Organized Scheduling** – Coordinate cast, crew and locations, and share schedules and call sheets so your whole team stays on track.
+      - **Forecasting** – Estimate to complete and expected final cost update automatically as actuals and commitments come in, so you always know where a production is heading.
+      - **Cost Control** – Compare actuals and commitments to budget in real time, with instant variance and open-amount visibility per department.
+      - **Operational Finance** – Route invoices through validation and approval before they're transferred to your ledger accounting system, with a clean audit trail at every step.
+      - **Relationship & Funding Management** – Manage clients, funders, and suppliers while tracking funding allocations.
+      - **Reports & Exports** – Share clear, detailed insights with stakeholders anytime.
+      - **Client Portal** – Give clients, co-producers or financiers secure access to their own environment. Upload invoices, share documents and track project status. No more email back and forth.
+      - **Digital Signing** – Send quotes and contracts for signing directly from Tubes. Integrates with DocuSign and DocuSeal. Signed documents are automatically returned to the project file. *(Available as an option)*
+      - **Movie Magic Import** – Import existing budgets from Movie Magic Budgeting and continue working in Tubes without starting from scratch.
   - type: feature
     theme: light
     heading: AI Assistants
@@ -66,10 +115,10 @@ sections:
 
       AI can analyse this data to identify patterns in spending and workflows, support teams when creating budgets and proposals, translate proposal texts, and highlight unusual spending during production.
   - type: cta
-    title: See Tubes in action
+    title: Start with your own process
     text: |
-      Discover how Tubes fits your role and your productions.
+      Book a free Production Health Check: 45 minutes on how budgets, actuals and reporting work in your team today.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---

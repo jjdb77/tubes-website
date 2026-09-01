@@ -11,7 +11,7 @@ sections:
   - type: hero
     theme: dark
     kicker: Production management platform
-    title: Streamline&nbsp;production budgeting, planning, and cost control in *one platform*
+    title: Streamline production budgeting, planning, and cost control in *one platform*
     chips:
       - label: Development
         tone: blue
@@ -25,16 +25,41 @@ sections:
       Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
 
       It connects budgets, actual costs, and forecasts in real time, helping teams maintain financial and operational control from development to wrap. AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs.
-    buttons:
-      - label: Request a Demo
-        url: /contact/
-    image: /assets/images/example-tubes-02.png
+    image: /assets/images/example-tubes-05.png
     image_alt: Projects overview and pipeline in Tubes
+    media_below: true
+  - type: feature
+    theme: white
+    heading: Setting up and managing your productions
+    text: |
+      Keep your productions on track with powerful dashboards and pipelines. Track every stage of the production process, from preparation to delivery and analysis, while setting up budgets, managing documents, and staying fully in control.
+    image: /assets/images/example-tubes-02.png
+    image_alt: Project dashboards and pipelines in Tubes
+    media_large: true
+  - type: feature
+    theme: teal
+    heading: Control your production and planning in real time
+    text: |
+      Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
+    image: /assets/images/tubes-costcontrol.png
+    image_alt: Real-time cost control in Tubes
+    media_position: left
+    media_large: true
+  - type: textblock
+    theme: white
+    heading: Got Xero? Supercharge it.
+    lead: Keep Xero. Add Tubes. Connect production and finance.
+    text: |
+      Tubes connects directly with <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> Xero, adding a powerful production layer to the accounting system you already use.
+
+      Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
+
+      Using another accounting system? [Contact us](/contact/) to discuss integration.
+  - type: healthcheck
+    theme: white
   - type: pricing
     theme: light
     heading: Choose your plan
-    intro: |
-      No hidden costs. Cancel anytime.
     plans:
       - name: Producer Pro
         badge: Most popular
@@ -51,6 +76,8 @@ sections:
           - Self-service onboarding
           - Standard support & SLA
           - Xero connection <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> (optional)
+          - No hidden costs
+          - Cancel anytime
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:
@@ -95,7 +122,7 @@ sections:
       - Reliable reporting without manual consolidation
       - Operational finance layer for processing and approving production costs
   - type: cards
-    theme: white
+    theme: light
     heading: What Tubes Covers
     columns: 3
     cards:
@@ -111,31 +138,4 @@ sections:
         heading: Reporting & Transparency
         text: |
           Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
-  - type: feature
-    theme: teal
-    heading: Who is Tubes for?
-    lead: Built for professional productions of every scale
-    text: |
-      Tubes supports independent producers, broadcasters, studios and live entertainment teams. From early planning through final reporting, across single projects and complex international co-productions.
-
-      **Studio & Production Leadership**
-      C-Level Executives · CFOs · Heads of Production · Executive Producers
-
-      **Production Management**
-      Line Producers · Unit Production Managers · Production Managers · Producers · Co-Producers
-
-      **Finance & Business Affairs**
-      Business Managers · Business Controllers · Production Accountants · Finance Teams
-
-      **Operations & Commercial**
-      Operations Managers · Sales & Distribution
-
-      **Broadcasters & Partners**
-      Clients · Broadcasters · Commissioning Editors · Co-Production Partners
-
-      **Cast & Crew**
-      Cast · Crew · Department Heads
-    video: /assets/videos/home-who-is-tubes-for.mp4
-    poster: /assets/images/video-poster-home.jpg
-    ambient: true
 ---

@@ -35,6 +35,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("md", (value) => (value ? md.render(String(value)) : ""));
   eleventyConfig.addFilter("mdInline", (value) => (value ? md.renderInline(String(value)) : ""));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  // "{city}, {country}" invullen met velden van een item (generieke lijsten)
+  eleventyConfig.addFilter("tpl", (template, item) => String(template || "").replace(/\{(\w+)\}/g, (_, k) => (item && item[k] != null ? item[k] : "")));
 
   // Markdown → kale tekst (voor titels, omschrijvingen en structured data)
   const toPlainText = (value) =>
@@ -70,22 +72,20 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
   );
 
-  // ---------- Nieuws (/news/) ----------
-  //
-  // Losse berichtjes: eigen aankondigingen ("Tubes") en gevonden LinkedIn-posts
-  // uit de branche ("industry"). Ze staan als markdown in src/content/news maar
-  // krijgen bewust geen eigen pagina (permalink: false in de front matter), ze
-  // worden alleen op /news/ getoond. De datum bepaalt alleen de volgorde; op de
-  // pagina staat de maand, want van een gevonden post kennen we de exacte
-  // plaatsingsdatum meestal niet.
-  const newsItems = (collectionApi, kind) =>
-    collectionApi
-      .getFilteredByGlob("src/content/news/*.md")
-      .filter((item) => (item.data.kind || "industry") === kind)
-      .sort((a, b) => b.date - a.date);
+  // Nieuwsberichten (/news/): korte items met datum, samenvatting en link,
+  // zonder eigen pagina (permalink: false in het bericht). Nieuwste bovenaan.
+  eleventyConfig.addCollection("news", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/news/*.md").sort((a, b) => b.date - a.date)
+  );
 
-  eleventyConfig.addCollection("newsTubes", (api) => newsItems(api, "tubes"));
-  eleventyConfig.addCollection("newsIndustry", (api) => newsItems(api, "industry"));
+  // Tweede stroom op /news/: posts uit de branche die we op LinkedIn
+  // tegenkwamen. Aparte map, want ze hebben andere velden (bron, onderwerp,
+  // link naar de post) en een eigen opmaak. Ook zonder eigen pagina.
+  // De datum bepaalt alleen de volgorde en de maandkop: van een gevonden post
+  // kennen we de exacte plaatsingsdatum meestal niet.
+  eleventyConfig.addCollection("linkedin", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/linkedin/*.md").sort((a, b) => b.date - a.date)
+  );
 
   // "August 2026" — maand en jaar, zonder dag
   eleventyConfig.addFilter("monthYear", (value) =>
@@ -308,6 +308,25 @@ export default function (eleventyConfig) {
 
     return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
   });
+
+  // ---------- Health Check-vragenlijst ----------
+  //
+  // Vragen kunnen in het CMS op inactief gezet worden: ze blijven dan in
+  // healthcheck.json staan (tekst blijft bewaard) maar verschijnen niet op de
+  // pagina. Handig om de lijst kort te houden zonder werk weg te gooien; wat
+  // uitstaat komt in het gesprek zelf aan bod.
+  const isActive = (question) => question && question.active !== false;
+
+  eleventyConfig.addFilter("activeSteps", (steps) =>
+    (Array.isArray(steps) ? steps : [])
+      .map((step) => ({ ...step, questions: (step.questions || []).filter(isActive) }))
+      .filter((step) => step.questions.length)
+  );
+
+  // Wat niet gevraagd wordt, noemen we op het rapport als agenda voor de sessie.
+  eleventyConfig.addFilter("parkedQuestions", (steps) =>
+    (Array.isArray(steps) ? steps : []).flatMap((step) => (step.questions || []).filter((q) => !isActive(q)))
+  );
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });

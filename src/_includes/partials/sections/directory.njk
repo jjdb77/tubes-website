@@ -1,0 +1,321 @@
+{#- Generiek "zoek en vergelijk"-sectietype (festivals/beurzen, software, ...).
+    De pagina kiest de dataset (src/_data/directories.js) en beschrijft in de
+    sectie welke velden op de kaarten, in de filters en in de vergelijking
+    komen. Zelfde mechaniek en CSS-klassen als de locatiegids: zoeken, tot 3
+    filters, voorkeurslijst (localStorage), kaarten/lijst, optionele kaart
+    (Leaflet + OSM, pas geladen als hij in beeld komt), A/B/C-paneel en de
+    vergelijking naast elkaar met winnaarslogica (alleen bij verschil en
+    minstens twee ingevulde kolommen; lege rijen vallen weg). -#}
+{%- set data = directories[section.dataset] -%}
+{%- set items = data.items -%}
+{%- set filters = section.filters or [] -%}
+<section class="section theme-{{ section.theme or 'light' }} section-locationguide section-directory" id="{{ section.anchor or 'directory' }}" data-dataset="{{ section.dataset }}">
+  <div class="container">
+    {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+
+    <div class="guide-controls guide-controls-{{ filters.length + 1 }}">
+      <div class="loc-field guide-search-field">
+        <label for="dir-search">{{ section.search_label or "What are you looking for?" }}</label>
+        <input type="search" id="dir-search" placeholder="{{ section.search_placeholder or 'Type to search' }}" autocomplete="off">
+      </div>
+      {% for f in filters %}
+      {%- set values = [] -%}
+      {%- for it in items -%}{%- if it[f.key] and (it[f.key] not in values) -%}{%- set values = (values.push(it[f.key]), values) -%}{%- endif -%}{%- endfor -%}
+      <label class="loc-field" for="dir-filter-{{ f.key }}">{{ f.label }}
+        <select id="dir-filter-{{ f.key }}" class="guide-select" data-dir-filter="{{ f.key }}">
+          <option value="">All</option>
+          {% for v in values | sort %}<option>{{ v }}</option>{% endfor %}
+        </select>
+      </label>
+      {% endfor %}
+    </div>
+
+    <div class="guide-toolbar">
+      <div class="guide-pills" role="group" aria-label="Which list">
+        <button type="button" class="guide-pill is-active" data-list="all">All</button>
+        <button type="button" class="guide-pill" data-list="favs">My shortlist <span data-fav-count></span></button>
+      </div>
+      <p class="guide-count" data-guide-count aria-live="polite"></p>
+      <div class="guide-pills" role="group" aria-label="View">
+        <button type="button" class="guide-pill is-active" data-view="cards">Cards</button>
+        <button type="button" class="guide-pill" data-view="list">List</button>
+      </div>
+    </div>
+
+    {% if section.map %}
+    <div class="guide-map" data-guide-map>
+      <p class="guide-map-note">The map appears here and loads its tiles from OpenStreetMap.</p>
+    </div>
+    {% endif %}
+
+    <div class="guide-compare-out" data-guide-compare hidden aria-live="polite"></div>
+
+    <div class="guide-layout">
+      <div class="guide-main">
+        <div class="guide-grid" data-guide-grid>
+          {% for it in items %}
+          {%- set card = section.card -%}
+          <article class="guide-card" id="dir-{{ it.id }}" data-id="{{ it.id }}"
+                   {% for f in filters %}data-f-{{ f.key }}="{{ it[f.key] }}" {% endfor %}
+                   data-search="{{ (it | dump) | lower | replace('"', '') }}">
+            {% if it.photo and it.photo.thumb %}
+            <figure class="guide-photo">
+              <img src="{{ it.photo.thumb }}" alt="{{ it[card.title] }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption>Photo: {{ it.photo.author }} ({{ it.photo.license }}), <a href="{{ it.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+            </figure>
+            {% elif card.tag and it[card.tag] %}
+            <div class="guide-photo guide-photo-empty guide-photo-compact"><span>{{ it[card.tag] }}</span></div>
+            {% endif %}
+            <button type="button" class="guide-fav" data-fav aria-pressed="false" aria-label="Add {{ it[card.title] }} to my shortlist"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.9-10-9.2C.4 8.9 2 5 5.6 5c2 0 3.4 1.1 4.4 2.5C11 6.1 12.4 5 14.4 5 18 5 19.6 8.9 22 11.8 19.5 16.1 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
+            <div class="guide-card-body">
+              <h3>{{ it[card.title] }}</h3>
+              {% if card.subtitle %}<p class="guide-meta">{{ card.subtitle | tpl(it) }}</p>{% endif %}
+              {% if card.tag and it[card.tag] %}<p><span class="loc-tag guide-type-tag">{{ it[card.tag] }}</span></p>{% endif %}
+              {% if card.text and it[card.text] %}<p class="guide-setting">{{ it[card.text] }}</p>{% endif %}
+              {% for m in card.meta or [] %}{% if it[m.key] %}<p class="guide-known"><strong>{{ m.label }}:</strong> {{ it[m.key] }}</p>{% endif %}{% endfor %}
+              <p class="guide-links">
+                {% for l in card.links or [] %}{% if it[l.key] %}<a href="{{ it[l.key] }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endif %}{% endfor %}
+              </p>
+              <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ it.id }}"> <span>Compare</span></label>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-entry">suggest one</a>.</p>
+      </div>
+
+      <aside class="guide-aside" data-guide-aside aria-label="Your comparison">
+        <h3>Side by side</h3>
+        <ol class="guide-slots" data-guide-slots></ol>
+        <button type="button" class="button button-primary" data-guide-compare-btn disabled>Compare side by side</button>
+        <button type="button" class="button button-secondary" data-guide-clear hidden>Clear</button>
+        <p class="guide-aside-note">Pick two or three with the Compare button on a card.</p>
+      </aside>
+    </div>
+
+    <div class="loc-request" id="request-entry">
+      <div>
+        <h3>{{ section.request_heading or "Missing something? Suggest it" }}</h3>
+        <div class="rich-text">{{ (section.request_text or "Tell us what is missing or wrong, add a link, and we add or correct it with verified details. We only publish what an organisation itself publishes, with the source.") | md | safe }}</div>
+      </div>
+      <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}" data-noun="{{ section.noun or 'Entry' }}">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="form-row">
+          <label>First name <span class="req">(required)</span><input type="text" name="first_name" autocomplete="given-name" required></label>
+          <label>Last name <span class="req">(required)</span><input type="text" name="last_name" autocomplete="family-name" required></label>
+        </div>
+        <label>Email <span class="req">(required)</span><input type="email" name="email" autocomplete="email" required></label>
+        <label>{{ section.request_field_label or "What should we add or correct?" }} <span class="req">(required)</span><input type="text" name="location" required placeholder="{{ section.request_placeholder or 'Name, place, link' }}"></label>
+        <label>Anything we should know?<textarea name="notes" rows="3"></textarea></label>
+        <input type="hidden" name="message" value="">
+        <button type="submit" class="button button-primary">Send suggestion</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="application/json" id="dir-data">{{ { updated: data.updated, items: items, rows: section.compare_rows or [], title: section.card.title, subtitle: section.card.subtitle or "", map: section.map or false, noun: section.noun or "entries" } | dump | safe }}</script>
+  <script>
+  (() => {
+    const root = document.querySelector(".section-directory");
+    if (!root) return;
+    const cfg = JSON.parse(document.getElementById("dir-data").textContent);
+    const MAX = 3;
+    const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const tpl = (t, it) => String(t).replace(/\{(\w+)\}/g, (_, k) => it[k] ?? "");
+    const byId = Object.fromEntries(cfg.items.map((i) => [i.id, i]));
+    const favKey = "tubes-shortlist-" + root.dataset.dataset;
+    const loadFavs = () => { try { return new Set(JSON.parse(localStorage.getItem(favKey) || "[]")); } catch { return new Set(); } };
+    const saveFavs = () => { try { localStorage.setItem(favKey, JSON.stringify([...favs])); } catch {} };
+    const favs = loadFavs();
+
+    const q = root.querySelector("#dir-search");
+    const selects = [...root.querySelectorAll("[data-dir-filter]")];
+    const cards = [...root.querySelectorAll(".guide-card")];
+    const countEl = root.querySelector("[data-guide-count]");
+    const favCountEl = root.querySelector("[data-fav-count]");
+    const noneEl = root.querySelector(".guide-none");
+    const grid = root.querySelector("[data-guide-grid]");
+    let listMode = "all";
+
+    const syncFavButtons = () => {
+      for (const card of cards) {
+        const on = favs.has(card.dataset.id);
+        const btn = card.querySelector("[data-fav]");
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        btn.classList.toggle("is-on", on);
+      }
+      favCountEl.textContent = favs.size ? "(" + favs.size + ")" : "";
+    };
+    const visibleIds = () => cards.filter((c) => !c.hidden).map((c) => c.dataset.id);
+    const applyFilters = () => {
+      const needle = q.value.trim().toLowerCase();
+      let shown = 0;
+      for (const card of cards) {
+        let ok = (listMode === "all" || favs.has(card.dataset.id)) && (!needle || card.dataset.search.includes(needle));
+        for (const s of selects) if (ok && s.value && card.dataset["f" + s.dataset.dirFilter.charAt(0).toUpperCase() + s.dataset.dirFilter.slice(1)] !== s.value) ok = false;
+        card.hidden = !ok;
+        if (ok) shown++;
+      }
+      countEl.textContent = shown + " of " + cards.length + " " + cfg.noun;
+      noneEl.hidden = shown > 0;
+      updateMap();
+    };
+    q.addEventListener("input", applyFilters);
+    for (const s of selects) s.addEventListener("change", applyFilters);
+    for (const pill of root.querySelectorAll("[data-list]")) pill.addEventListener("click", () => {
+      listMode = pill.dataset.list;
+      for (const p of root.querySelectorAll("[data-list]")) p.classList.toggle("is-active", p === pill);
+      applyFilters();
+    });
+    for (const pill of root.querySelectorAll("[data-view]")) pill.addEventListener("click", () => {
+      for (const p of root.querySelectorAll("[data-view]")) p.classList.toggle("is-active", p === pill);
+      grid.classList.toggle("is-list", pill.dataset.view === "list");
+    });
+    grid.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-fav]");
+      if (!btn) return;
+      const id = btn.closest(".guide-card").dataset.id;
+      favs.has(id) ? favs.delete(id) : favs.add(id);
+      saveFavs(); syncFavButtons();
+      if (listMode === "favs") applyFilters();
+    });
+
+    // Kaart (alleen als de sectie er een heeft en de items lat/lng hebben)
+    const mapEl = root.querySelector("[data-guide-map]");
+    let map = null, markerLayer = null, leafletLoading = false;
+    const updateMap = () => {
+      if (!map || !markerLayer) return;
+      markerLayer.clearLayers();
+      const ids = new Set(visibleIds());
+      for (const it of cfg.items) {
+        if (!ids.has(it.id) || it.lat == null || it.lng == null) continue;
+        const m = L.circleMarker([it.lat, it.lng], { radius: 7, color: "#0E9C88", weight: 2, fillColor: "#0E9C88", fillOpacity: 0.55 });
+        m.bindPopup(`<strong>${esc(it[cfg.title])}</strong><br>${esc(tpl(cfg.subtitle, it))}<br><a href="#dir-${esc(it.id)}" data-goto="${esc(it.id)}">Show details</a>`);
+        markerLayer.addLayer(m);
+      }
+    };
+    const initMap = () => {
+      if (!mapEl || map || leafletLoading) return;
+      leafletLoading = true;
+      const css = document.createElement("link"); css.rel = "stylesheet";
+      css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(css);
+      const js = document.createElement("script"); js.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+      js.onload = () => {
+        mapEl.innerHTML = "";
+        map = L.map(mapEl, { scrollWheelZoom: false }).setView([52, 12], 4);
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(map);
+        markerLayer = L.layerGroup().addTo(map);
+        updateMap();
+      };
+      document.head.appendChild(js);
+    };
+    if (mapEl) {
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((entries) => { if (entries.some((e) => e.isIntersecting)) { initMap(); io.disconnect(); } }, { rootMargin: "200px" });
+        io.observe(mapEl);
+      } else initMap();
+      mapEl.addEventListener("click", (e) => {
+        const link = e.target.closest("[data-goto]");
+        if (!link) return;
+        e.preventDefault();
+        const card = document.getElementById("dir-" + link.dataset.goto);
+        if (card) { card.scrollIntoView({ behavior: "smooth", block: "center" }); card.classList.add("is-highlight"); setTimeout(() => card.classList.remove("is-highlight"), 2400); }
+      });
+    }
+
+    // A/B/C-paneel en vergelijking
+    const checks = [...root.querySelectorAll("[data-guide-check]")];
+    const aside = root.querySelector("[data-guide-aside]");
+    const slots = root.querySelector("[data-guide-slots]");
+    const compareBtn = root.querySelector("[data-guide-compare-btn]");
+    const clearBtn = root.querySelector("[data-guide-clear]");
+    const out = root.querySelector("[data-guide-compare]");
+    const chosen = () => checks.filter((c) => c.checked).map((c) => byId[c.value]).filter(Boolean);
+    const filled = (v) => v !== undefined && v !== null && String(v).trim() !== "";
+
+    const syncPanel = () => {
+      const picks = chosen();
+      for (const c of checks) c.disabled = !c.checked && picks.length >= MAX;
+      slots.innerHTML = ["A", "B", "C"].map((letter, i) => {
+        const p = picks[i];
+        return `<li class="guide-slot${p ? " is-filled" : ""}"><span class="guide-slot-letter">${letter}</span>${p ? `<span class="guide-slot-name">${esc(p[cfg.title])}</span><button type="button" class="guide-slot-x" data-unpick="${esc(p.id)}" aria-label="Remove">&times;</button>` : '<span class="guide-slot-empty">Empty</span>'}</li>`;
+      }).join("");
+      compareBtn.disabled = picks.length < 2;
+      clearBtn.hidden = picks.length === 0;
+      aside.classList.toggle("has-picks", picks.length > 0);
+      if (picks.length < 2) { out.hidden = true; out.innerHTML = ""; }
+    };
+    slots.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-unpick]");
+      if (!btn) return;
+      const check = checks.find((c) => c.value === btn.dataset.unpick);
+      if (check) check.checked = false;
+      syncPanel(); if (!out.hidden) renderCompare();
+    });
+    const winnerIndex = (vals, mode) => {
+      const present = vals.map((v, i) => [v, i]).filter(([v]) => filled(v));
+      if (present.length < 2) return -1;
+      if (mode === "lower" || mode === "higher") {
+        const nums = present.map(([v, i]) => [Number(String(v).replace(/[^\d.]/g, "")), i]).filter(([n]) => !isNaN(n));
+        if (nums.length < 2 || new Set(nums.map(([n]) => n)).size < 2) return -1;
+        nums.sort((a, b) => (mode === "lower" ? a[0] - b[0] : b[0] - a[0]));
+        return nums[0][1];
+      }
+      if (mode === "no-wins") {
+        const no = present.filter(([v]) => /^no/i.test(String(v))), yes = present.filter(([v]) => /^yes/i.test(String(v)));
+        return no.length && yes.length ? no[0][1] : -1;
+      }
+      return -1;
+    };
+    const renderCompare = () => {
+      const picks = chosen();
+      if (picks.length < 2) return;
+      const rowsHtml = [];
+      if (picks.some((p) => p.photo && p.photo.thumb)) {
+        rowsHtml.push(`<tr><th scope="row">Photo</th>${picks.map((p) => `<td>${p.photo && p.photo.thumb ? `<img class="guide-compare-photo" src="${esc(p.photo.thumb)}" alt="${esc(p[cfg.title])}" loading="lazy" referrerpolicy="no-referrer"><small>Photo: ${esc(p.photo.author)} (${esc(p.photo.license)})</small>` : "<small>No photo</small>"}</td>`).join("")}</tr>`);
+      }
+      for (const r of cfg.rows) {
+        const vals = picks.map((p) => p[r.key]);
+        if (!vals.some(filled)) continue;
+        const win = r.winner ? winnerIndex(vals, r.winner) : -1;
+        const cells = vals.map((v, i) => {
+          let html;
+          if (!filled(v)) html = '<span class="guide-dash">&ndash;</span>';
+          else if (r.link) html = `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(r.link_label || "Open")}</a>`;
+          else if (r.tag) html = `<span class="loc-tag">${esc(v)}</span>`;
+          else if (Array.isArray(v)) html = v.map((x) => esc(x)).join("<br>");
+          else html = esc(v);
+          return `<td${i === win ? ' class="is-top"' : ""}>${html}</td>`;
+        }).join("");
+        rowsHtml.push(`<tr><th scope="row">${esc(r.label)}</th>${cells}</tr>`);
+      }
+      out.innerHTML = `
+        <h3>Side by side</h3>
+        <div class="loc-compare-wrap" tabindex="0">
+        <table class="loc-compare loc-compare-${picks.length}">
+          <thead><tr><th scope="col"><span class="visually-hidden">Property</span></th>${picks.map((p) => `<th scope="col">${esc(p[cfg.title])}<small>${esc(tpl(cfg.subtitle, p))}</small></th>`).join("")}</tr></thead>
+          <tbody>${rowsHtml.join("")}</tbody>
+        </table>
+        </div>
+        <p class="loc-disclaimer">Only what an organisation publishes itself is listed; a dash means not published. Details checked on ${esc(cfg.updated)}; always confirm with the organisation. Listings are not affiliated with Tubes unless stated.</p>`;
+      out.hidden = false;
+      out.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    root.addEventListener("change", (e) => { if (e.target.matches("[data-guide-check]")) { syncPanel(); if (!out.hidden) renderCompare(); } });
+    compareBtn.addEventListener("click", renderCompare);
+    clearBtn.addEventListener("click", () => { for (const c of checks) c.checked = false; syncPanel(); });
+
+    // Suggestieformulier: "<Noun> request: ..." gaat via /api/contact per mail door
+    const request = root.querySelector(".loc-request-form");
+    if (request) request.addEventListener("submit", () => {
+      const what = request.querySelector('[name="location"]').value.trim();
+      const notes = request.querySelector('[name="notes"]').value.trim();
+      request.querySelector('[name="message"]').value = request.dataset.noun + " request: " + what + (notes ? "\n\n" + notes : "");
+    });
+
+    syncFavButtons(); applyFilters(); syncPanel();
+  })();
+  </script>
+</section>

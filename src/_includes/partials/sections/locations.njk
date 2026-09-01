@@ -1,0 +1,288 @@
+{#- Vergelijkingstool + tabel voor film- en tv-locaties (pagina /compare-film-tv-locations/).
+    De cijfers komen uit src/_data/locations.json (in het CMS: "Locaties (vergelijkingspagina)").
+    Staat helemaal los van de Tubes-app: alles rekent in de browser met de ingebedde data,
+    zonder login. Het aanvraagformulier post naar hetzelfde /api/contact als de andere
+    formulieren, met "Location request: ..." vooraan in het bericht (zichtbaar op /beheer). -#}
+{%- set regions = [] -%}
+{%- for loc in locations.locations -%}
+  {%- if loc.region not in regions -%}{%- set regions = (regions.push(loc.region), regions) -%}{%- endif -%}
+{%- endfor -%}
+<section class="section theme-{{ section.theme or 'light' }} section-locations" id="compare">
+  <div class="container">
+    {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
+    {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+
+    <div class="loc-tool" data-loc-tool>
+      <form class="loc-controls" onsubmit="return false">
+        <fieldset class="loc-field">
+          <legend>Project type</legend>
+          <div class="seg">
+            <label class="seg-btn"><input type="radio" name="loc-type" value="film" checked> Feature film</label>
+            <label class="seg-btn"><input type="radio" name="loc-type" value="series"> Series</label>
+          </div>
+        </fieldset>
+        <label class="loc-field">Total production budget
+          <span class="money"><span aria-hidden="true">€</span><input type="number" name="budget" min="0" step="100000" value="5000000" inputmode="numeric" aria-label="Total production budget in euros"></span>
+        </label>
+        <label class="loc-field">Expected spend in the location
+          <span class="money"><span aria-hidden="true">€</span><input type="number" name="spend" min="0" step="100000" value="2000000" inputmode="numeric" aria-label="Expected spend in the location in euros"></span>
+        </label>
+      </form>
+
+      <div class="loc-picker">
+        <label class="loc-field loc-search" for="loc-search">Search a country or region
+          <input type="search" id="loc-search" placeholder="Type to search, for example Ireland, Portugal or cash rebate" autocomplete="off">
+        </label>
+        <p class="loc-picker-label" id="loc-picker-label">Select one to three countries or regions to compare <span class="loc-picker-count" data-loc-count></span></p>
+        <div class="loc-chips" role="group" aria-labelledby="loc-picker-label">
+          {% for loc in locations.locations %}
+          <label class="loc-chip" data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.scheme + ' ' + loc.mechanism + ' ' + loc.currency) | lower }}"><input type="checkbox" name="loc" value="{{ loc.id }}"{% if loop.index <= 3 %} checked{% endif %}> {{ loc.name }}</label>
+          {% endfor %}
+        </div>
+        <p class="loc-empty loc-search-empty" hidden>No country matches your search. Missing one? <a href="#request-location">Suggest it below</a>.</p>
+      </div>
+
+      <div class="loc-results" data-loc-results aria-live="polite">
+        <noscript><p class="loc-empty">The comparison tool needs JavaScript. The full table below works without it.</p></noscript>
+      </div>
+      <p class="loc-disclaimer">Indicative only. The tool assumes that all of your local spend qualifies and that the scheme's conditions (cultural test, local company, application timing) are met. Caps in other currencies are converted at approximate rates. Always confirm with the fund or your local partner before you budget on it. Figures checked on {{ locations.updated | readableDate }}.</p>
+    </div>
+
+    <div class="loc-table-head">
+      <h3 id="all-locations">{{ section.table_heading or "All schemes at a glance" }}</h3>
+      {% if regions.length > 1 %}
+      <div class="loc-filter" role="group" aria-label="Filter by region">
+        <button type="button" class="loc-filter-btn is-active" data-region="all">All</button>
+        {% for region in regions %}
+        <button type="button" class="loc-filter-btn" data-region="{{ region }}">{{ region }}</button>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="loc-table-wrap" tabindex="0">
+      <table class="loc-table">
+        <thead>
+          <tr>
+            <th scope="col">Location</th>
+            <th scope="col">Scheme</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Minimum local spend</th>
+            <th scope="col">Cap per project</th>
+            <th scope="col">Funding and payment</th>
+            <th scope="col">Notes and source</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for loc in locations.locations %}
+          <tr data-region="{{ loc.region }}" data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.scheme + ' ' + loc.mechanism + ' ' + loc.currency + ' ' + loc.funding) | lower }}">
+            <th scope="row">{{ loc.name }}<span class="loc-currency">{{ loc.currency }}</span></th>
+            <td>{{ loc.scheme }}<br><span class="loc-tag loc-tag-{{ loc.mechanism | lower | replace(' ', '-') }}">{{ loc.mechanism }}</span></td>
+            <td class="loc-rate">{{ loc.rate_label }}{% if loc.net_label %}<small>Net: {{ loc.net_label }}</small>{% endif %}</td>
+            <td>{{ loc.min_spend }}</td>
+            <td>{{ loc.cap.label if loc.cap else loc.cap_label }}</td>
+            <td class="loc-funding"><span class="loc-tag loc-tag-{{ loc.funding | lower | replace(' ', '-') }}">{{ loc.funding }}</span>{% if loc.funding_note %}<small>{{ loc.funding_note }}</small>{% endif %}<small><strong>Paid:</strong> {{ loc.paid }}</small>{% if loc.foreign_spend and loc.foreign_spend != "No" %}<small><strong>Foreign spend qualifies:</strong> {{ loc.foreign_spend | lower }}</small>{% endif %}</td>
+            <td class="loc-notes">{{ loc.notes }}{% if loc.source %} <a href="{{ loc.source }}" target="_blank" rel="noopener">{{ loc.source_label or "Source" }}</a>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if section.footnote %}<div class="rich-text loc-table-foot">{{ section.footnote | md | safe }}</div>{% endif %}
+
+    <div class="loc-request" id="request-location">
+      <div>
+        <h3>{{ section.request_heading or "Is your location not listed? Suggest it" }}</h3>
+        {% if section.request_text %}<div class="rich-text">{{ section.request_text | md | safe }}</div>{% endif %}
+      </div>
+      <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="form-row">
+          <label>First name <span class="req">(required)</span>
+            <input type="text" name="first_name" autocomplete="given-name" required>
+          </label>
+          <label>Last name <span class="req">(required)</span>
+            <input type="text" name="last_name" autocomplete="family-name" required>
+          </label>
+        </div>
+        <label>Email <span class="req">(required)</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>Country or region to add <span class="req">(required)</span>
+          <input type="text" name="location" required placeholder="For example Greece, Croatia or your own region">
+        </label>
+        <label>Anything we should know?
+          <textarea name="notes" rows="3" placeholder="The incentive scheme, a link to the fund, or a correction to an existing entry"></textarea>
+        </label>
+        <input type="hidden" name="message" value="">
+        <button type="submit" class="button button-primary">Suggest this location</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="application/json" id="loc-data">{{ locations | dump | safe }}</script>
+  <script>
+  (() => {
+    const tool = document.querySelector("[data-loc-tool]");
+    const data = JSON.parse(document.getElementById("loc-data").textContent);
+    if (!tool || !data) return;
+
+    const MAX = 3;
+    const fx = data.fx || {};
+    const byId = Object.fromEntries(data.locations.map((l) => [l.id, l]));
+    const checks = [...tool.querySelectorAll('input[name="loc"]')];
+    const budgetInput = tool.querySelector('input[name="budget"]');
+    const spendInput = tool.querySelector('input[name="spend"]');
+    const searchInput = tool.querySelector("#loc-search");
+    const searchEmpty = tool.querySelector(".loc-search-empty");
+    const countLabel = tool.querySelector("[data-loc-count]");
+    const results = tool.querySelector("[data-loc-results]");
+    const money = { format: (n) => "€ " + Math.round(n).toLocaleString("en-GB") };
+    const pct = (n) => (Math.round(n * 10) / 10).toLocaleString("en-GB") + "%";
+    const slug = (s) => String(s).toLowerCase().replace(/\s+/g, "-");
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const tag = (label) => `<span class="loc-tag loc-tag-${slug(label)}">${esc(label)}</span>`;
+
+    // Getrapte tarieven (bv. Spanje: 30% over de eerste € 1m, daarna 25%)
+    const tiered = (tiers, amount) => {
+      let total = 0, from = 0;
+      for (const t of tiers) {
+        const upto = t.upto == null ? Infinity : t.upto;
+        total += Math.max(0, Math.min(amount, upto) - from) * t.rate / 100;
+        from = upto;
+        if (amount <= upto) break;
+      }
+      return total;
+    };
+
+    const estimate = (loc, type, budget, spend) => {
+      const rate = fx[loc.currency] || 1;
+      const notes = [];
+      let qualifying = spend;
+      if (budget > 0 && loc.base_share && qualifying > budget * loc.base_share) {
+        qualifying = budget * loc.base_share;
+        notes.push("Qualifying spend limited to " + Math.round(loc.base_share * 100) + "% of the budget");
+      }
+      const local = qualifying * rate;
+      // Sommige regelingen (Canada) vergoeden alleen lokale lonen, niet alle uitgaven
+      const labourShare = data.labour_share || 0.5;
+      const base = loc.labour_only ? local * labourShare : local;
+      let netFactor = loc.net_factor || 1;
+      let headline;
+      if (type === "film" && loc.film_uplift && budget > 0 && budget * rate <= loc.film_uplift.max_budget) {
+        headline = base * loc.film_uplift.rate / 100;
+        netFactor = loc.film_uplift.net_factor || 1;
+        notes.push(loc.film_uplift.label);
+      } else if (loc.spend_uplift && local >= loc.spend_uplift.min_spend) {
+        headline = base * loc.spend_uplift.rate / 100;
+        notes.push(loc.spend_uplift.label);
+      } else if (loc.tiers) {
+        headline = tiered(loc.tiers, base);
+      } else {
+        headline = base * loc.rate / 100;
+      }
+      if (loc.labour_bonus) headline += local * labourShare * loc.labour_bonus / 100;
+      if (loc.labour_only || loc.labour_bonus) {
+        notes.push("Assumes " + Math.round(labourShare * 100) + "% of your local spend is local labour (the labour-only part of the credit applies to that share)");
+      }
+      if (loc.cap && headline > loc.cap.amount) {
+        headline = loc.cap.amount;
+        notes.push("Capped at " + loc.cap.label);
+      }
+      const headlineEur = headline / rate;
+      const netEur = headlineEur * netFactor;
+      if (netFactor !== 1) notes.push(loc.net_label ? "Credit is taxed: " + loc.net_label : "Credit is taxed");
+      if (loc.assumption) notes.push(loc.assumption);
+      if (loc.currency !== "EUR") notes.push("Paid in " + loc.currency + ", so budget the exchange-rate risk");
+      return { loc, headlineEur, netEur, netDiffers: netFactor !== 1, effective: spend > 0 ? (netEur / spend) * 100 : 0, notes };
+    };
+
+    // De vergelijking: een kolom per locatie, de eigenschappen als rijen
+    const render = () => {
+      const type = tool.querySelector('input[name="loc-type"]:checked').value;
+      const budget = Math.max(0, Number(budgetInput.value) || 0);
+      const spend = Math.max(0, Number(spendInput.value) || 0);
+      const chosen = checks.filter((c) => c.checked).map((c) => byId[c.value]).filter(Boolean);
+      for (const c of checks) c.disabled = !c.checked && chosen.length >= MAX;
+      countLabel.textContent = chosen.length ? `(${chosen.length} of ${MAX} selected)` : "";
+
+      if (!chosen.length) {
+        results.innerHTML = '<p class="loc-empty">Select at least one country to see the comparison.</p>';
+        return;
+      }
+      const rows = chosen.map((loc) => estimate(loc, type, budget, spend));
+      const best = spend > 0 && rows.length > 1 ? rows.reduce((a, b) => (b.netEur > a.netEur ? b : a)) : null;
+      const cell = (fn) => rows.map((r) => `<td${r === best ? ' class="is-top"' : ""}>${fn(r)}</td>`).join("");
+      const row = (label, fn, cls) => `<tr${cls ? ` class="${cls}"` : ""}><th scope="row">${label}</th>${cell(fn)}</tr>`;
+
+      results.innerHTML = `
+        <div class="loc-compare-wrap" tabindex="0">
+        <table class="loc-compare loc-compare-${rows.length}">
+          <thead><tr><th scope="col"><span class="visually-hidden">Property</span></th>${rows.map((r) => `
+            <th scope="col"${r === best ? ' class="is-top"' : ""}>${r === best ? '<span class="loc-result-top">Highest value</span>' : ""}${esc(r.loc.name)}<small>${esc(r.loc.scheme)}</small></th>`).join("")}
+          </tr></thead>
+          <tbody>
+            ${row("Indicative net value", (r) => spend > 0
+              ? `<strong class="loc-compare-value">${money.format(r.netEur)}</strong><small>${pct(r.effective)} of your local spend${r.netDiffers ? ", headline " + money.format(r.headlineEur) : ""}</small>`
+              : '<small>Enter your expected spend above</small>', "loc-compare-valuerow")}
+            ${row("Applied in this estimate", (r) => r.notes.length ? `<ul>${r.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : "<small>Headline rate on your full local spend</small>")}
+            ${row("Type of incentive", (r) => tag(r.loc.mechanism))}
+            ${row("Headline rate", (r) => `<strong>${esc(r.loc.rate_label)}</strong>`)}
+            ${row("Net value", (r) => esc(r.loc.net_label || "Same as headline"))}
+            ${row("Minimum local spend", (r) => esc(r.loc.min_spend))}
+            ${row("Cap per project", (r) => esc(r.loc.cap ? r.loc.cap.label : r.loc.cap_label || "No cap"))}
+            ${row("Funding", (r) => tag(r.loc.funding) + (r.loc.funding_note ? `<small>${esc(r.loc.funding_note)}</small>` : ""))}
+            ${row("Paid", (r) => esc(r.loc.paid))}
+            ${row("Foreign spend qualifies", (r) => esc(r.loc.foreign_spend || "No"))}
+            ${row("Currency", (r) => esc(r.loc.currency))}
+            ${row("Good to know", (r) => esc(r.loc.notes))}
+            ${row("Source", (r) => r.loc.source ? `<a href="${esc(r.loc.source)}" target="_blank" rel="noopener">${esc(r.loc.source_label || "Source")}</a>` : "")}
+          </tbody>
+        </table>
+        </div>`;
+    };
+
+    tool.addEventListener("input", (e) => { if (e.target !== searchInput) render(); });
+    tool.addEventListener("change", render);
+    render();
+
+    // Zoeken en filteren: chips en de grote tabel reageren allebei
+    const filter = document.querySelector(".loc-filter");
+    let region = "all";
+    const applyFilters = () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let hits = 0;
+      for (const chip of tool.querySelectorAll(".loc-chip")) {
+        const match = !q || chip.dataset.search.includes(q) || chip.querySelector("input").checked;
+        chip.hidden = !match;
+        if (match) hits++;
+      }
+      searchEmpty.hidden = hits > 0;
+      for (const rowEl of document.querySelectorAll(".loc-table tbody tr")) {
+        rowEl.hidden = (region !== "all" && rowEl.dataset.region !== region) || (q && !rowEl.dataset.search.includes(q));
+      }
+    };
+    searchInput.addEventListener("input", applyFilters);
+    if (filter) {
+      filter.addEventListener("click", (e) => {
+        const btn = e.target.closest(".loc-filter-btn");
+        if (!btn) return;
+        region = btn.dataset.region;
+        for (const b of filter.querySelectorAll(".loc-filter-btn")) b.classList.toggle("is-active", b === btn);
+        applyFilters();
+      });
+    }
+
+    // Aanvraagformulier: locatie + toelichting samenvoegen tot het berichtveld dat
+    // /api/contact verwacht (deze listener staat vóór die van site.js, dus loopt eerst).
+    const request = document.querySelector(".loc-request-form");
+    if (request) {
+      request.addEventListener("submit", () => {
+        const location = request.querySelector('[name="location"]').value.trim();
+        const notes = request.querySelector('[name="notes"]').value.trim();
+        request.querySelector('[name="message"]').value = "Location request: " + location + (notes ? "\n\n" + notes : "");
+      });
+    }
+  })();
+  </script>
+</section>

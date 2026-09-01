@@ -12,6 +12,20 @@
         <p class="plan-price">{% if plan.price_prefix %}<span class="plan-price-prefix">{{ plan.price_prefix }}</span>{% endif %}{{ plan.price }}{% if plan.price_note %} <span class="plan-price-note">{{ plan.price_note }}</span>{% endif %}</p>
         {% endif %}
         {% if plan.price_detail %}<div class="rich-text plan-price-detail">{{ plan.price_detail | md | safe }}</div>{% endif %}
+        {% if plan.price %}
+        <label class="pricing-currency">
+          Currency
+          <select class="currency-select" aria-label="Currency">
+            <option value="auto">Detect automatically</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="CAD">CAD (C$)</option>
+            <option value="AUD">AUD (A$)</option>
+            <option value="DKK">DKK (kr)</option>
+          </select>
+        </label>
+        {% endif %}
         {% if plan.features %}
         <div class="rich-text plan-features">{{ plan.features | md | safe }}</div>
         {% endif %}

@@ -31,6 +31,8 @@ sections:
           - Self-service onboarding
           - Standard support & SLA
           - Xero connection <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> (optional)
+          - No hidden costs
+          - Cancel anytime
 
           **Set up in 30 minutes**, including a Xero integration if you wish. We help you get started.
         button:
@@ -54,10 +56,10 @@ sections:
     footnote: |
       Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies**? [Get in touch](/contact/).
   - type: cta
-    title: Take Control of Your Productions
+    title: Not sure which plan fits?
     text: |
-      Tubes grows with your team, from freelancers to large studios. Streamline workflows, collaborate seamlessly, and gain the visibility you need to manage every stage of production with confidence and control.
+      Book a free Production Health Check: 45 minutes on how you work today and where Tubes would help most, before you decide anything.
     button:
-      label: Request a Demo
-      url: /contact/
+      label: Book your free Production Health Check
+      url: /production-finance-health-check/
 ---
