@@ -186,7 +186,7 @@ collections:
     fields:
       - { label: "Auteur of organisatie", name: source, widget: string, hint: "Wie het schreef. Dit staat het grootst op de kaart, want de post is van hen." }
       - { label: "Functie of organisatie", name: role, widget: string, required: false, hint: "Bijv. 'Producer and production consultant'. Alleen invullen als je het zeker weet; leeg laten is beter dan gokken." }
-      - { label: "Kop boven de samenvatting", name: title, widget: string, hint: "Waar de post over gaat, in het Engels. Geen em-dashes (—)." }
+      - { label: "Kop boven de samenvatting", name: title, widget: string, hint: "Het onderwerp van de post, in het Engels, en geen stelling. Dus 'Film budgets and the assumptions behind them', niet 'Why assumptions matter'. Geen em-dashes (—)." }
       - label: Onderwerp (het gekleurde labeltje)
         name: topic
         widget: select
@@ -194,7 +194,7 @@ collections:
         options: [Budgeting, Financing, "AI in production", Festivals]
       - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Liefst de post zelf (op LinkedIn: de drie puntjes bij de post > 'Copy link to post'); dan wordt de knop 'Read <naam>'s original post'. Een berichtenoverzicht (/recent-activity/all/ of /company/<naam>/posts/) geeft 'See <naam>'s posts', een kale profielpagina 'See more from <naam>'. Leeg mag ook: dan geen knop." }
       - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Bepaalt de volgorde en de maandkop. Op de pagina staat alleen de maand." }
-      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels. Schrijf toe aan de auteur ('Katya Alexander argues that ...') en geef niet het hele inzicht weg: de post zelf blijft de plek voor het volledige verhaal. Geen em-dashes (—)." }
+      - { label: Samenvatting, name: body, widget: markdown, hint: "Een of twee zinnen in het Engels. Beschrijf waar de post over gaat ('Katya Alexander writes about ...'), niet wat de auteur vindt: geen 'argues', 'makes the case' of 'flags'. Zo blijft het standpunt van de auteur en blijft de post zelf de plek voor het volledige verhaal. Geen em-dashes (—)." }
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
   - name: paginas

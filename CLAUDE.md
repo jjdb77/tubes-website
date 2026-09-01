@@ -121,7 +121,7 @@ De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`
 Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen uit de sector zichtbaarder te maken, niet om ze als eigen redactie te presenteren. Dat stuurt de hele opmaak:
 
 - **De auteur staat bovenaan en is het grootste element op de kaart** ("From <naam> on LinkedIn"), groter dan de kop en de samenvatting van Tubes.
-- **Schrijf toe**: "Katya Alexander argues that ..." en niet "Film financiers look at ...". Het is hun inzicht, niet dat van ons.
+- **Beschrijf, interpreteer niet.** "Katya Alexander writes about film budgets and the assumptions investors look at" en niet "Katya Alexander argues that ...". Werkwoorden als *argues*, *makes the case*, *flags* of *points to* leggen de auteur een standpunt in de mond dat wij eruit gelezen hebben. Noem het onderwerp, noem de naam, en laat het standpunt in hun eigen post staan. Dat geldt ook voor de kop boven de samenvatting: die is een onderwerp, geen stelling.
 - **Geef het inzicht niet helemaal weg.** Twee of drie zinnen die nieuwsgierig maken; de post zelf blijft de plek voor het volledige verhaal. Een samenvatting die het origineel overbodig maakt, is auteursrechtelijk een bewerking en moreel een diefstalletje.
 - **Nooit letterlijk overnemen**, ook geen alinea, en **geen afbeeldingen uit de post**. Eigen woorden, naam erbij, link erheen.
 - `role` (functie of organisatie) alleen invullen als het klopt. Leeg laten is beter dan gokken.
