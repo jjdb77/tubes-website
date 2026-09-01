@@ -6,10 +6,10 @@ description: "Search film festivals, markets, series events and film & TV trade 
 permalink: /compare-film-festivals/
 sections:
   - type: hero
-    kicker: Festivals & events
-    title: Find and compare film *festivals*, markets and trade shows
+    kicker: Festival, tradeshows and events
+    title: Find and compare *festivals*, tradeshows and events
     text: |
-      From Berlinale and the Marché du Film to series markets and broadcast technology shows: search by type, country or month, see the calendar on a map, and put up to three events side by side to decide where to premiere, sell, pitch or shop for kit.
+      From Berlinale and the Marché du Film to series markets, industry conferences and broadcast technology shows: search by type, country or month, see the calendar on a map, and put up to three events side by side to decide where to premiere, sell, pitch or shop for kit.
 
       Free and open to everyone. Only what an event publishes itself is listed; missing one? Suggest it below. Looking for places to shoot? See the [locations guide](/compare-film-tv-locations/).
     buttons:
@@ -21,7 +21,7 @@ sections:
     dataset: filmfestivals
     noun: events
     theme: light
-    heading: Search festivals, markets and trade shows
+    heading: Search festivals, tradeshows and events
     intro: |
       Type what you are after ("documentary", "co-production forum", "broadcast technology"), filter by type, country or month, and select up to three events to compare their dates, focus, industry side and submission route.
     search_placeholder: "Documentary, co-production market, broadcast technology ..."
