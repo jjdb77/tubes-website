@@ -7,4 +7,4 @@ role: ""
 link: https://www.linkedin.com/in/katya-alexander/recent-activity/all/
 permalink: false
 ---
-Katya Alexander argues that investors are not only interested in the final figure. What they really read is the set of assumptions underneath it, and whether those hold up.
+Katya Alexander argues that investors look straight past the final figure and read the assumptions underneath it.

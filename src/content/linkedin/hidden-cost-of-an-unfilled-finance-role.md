@@ -7,4 +7,4 @@ role: ""
 link: https://www.linkedin.com/in/david-harris-84401513/recent-activity/all/
 permalink: false
 ---
-David Harris makes the case that a vacancy in production finance costs a production far more than the recruitment fee, and he sets out where the damage actually turns up.
+David Harris makes the case that an open role in production finance costs a production far more than the recruitment fee.

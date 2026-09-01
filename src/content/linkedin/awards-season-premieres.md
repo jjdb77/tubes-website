@@ -7,4 +7,4 @@ role: Film and TV trade publication
 link: https://www.linkedin.com/company/screen-international/posts/
 permalink: false
 ---
-Screen International looks ahead at the awards season and at why several contenders are skipping a festival premiere altogether. Their piece sets out what is driving that choice.
+Screen International looks ahead at the awards season and at why several contenders are skipping a festival premiere.

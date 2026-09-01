@@ -7,4 +7,4 @@ role: ""
 link: https://www.linkedin.com/in/alexjmoss/recent-activity/all/
 permalink: false
 ---
-Alex Moss describes a way of working that keeps the performances, the camera, the lighting and the human direction intact, and uses AI driven tools for the work around them. His argument is about what that opens up for independent productions.
+Alex Moss describes a hybrid way of working that keeps the human craft intact and puts AI driven tools around it, and what that opens up for independent productions.
