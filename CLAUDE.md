@@ -13,6 +13,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Content: `src/content/pages/*.md` — elke pagina is een lijst "sections" (hero, pricing, compare, cards, feature, textblock, tour, faq, cta, contactform, images, split). Site-instellingen: `src/_data/settings.json`.
 - CMS: Sveltia op `/admin/` (lokaal: "Work with Local Repository" in Chrome). Config: `src/admin/config.yml` (labels in het Nederlands).
 - Menu staat in settings.json → nav. Platform- en Plans-pagina's bestaan maar staan bewust NIET in het menu.
+- **Footer bestaat sinds 1-9-2026 uit twee delen** (`src/_includes/partials/footer.njk`): een donkere sitemap-band ("Explore", 4 kolommen: Platform/Company/Resources/Get Started) boven de lichte info-footer (logo, contact, legal, social). De 4 kolommen zijn **handmatig** in de template ingedeeld, niet gekoppeld aan `settings.footer_nav` — dat CMS-veld ("Footer-navigatie") wordt dus nergens meer weergegeven en aanpassen daar heeft geen zichtbaar effect. Een nieuwe pagina die in Google gevonden moet worden, moet je in de Explore-footer zelf toevoegen.
 - **Resources** (`/resources/`, pagina met twee klikbare tegels: locatiegids en incentives per land; kaarten met `url` zijn klikbaar via cards.njk) en **News** (`/news/`, `src/news.njk` + collectie `news` uit `src/content/news/*.md`; items zonder eigen pagina, CMS-collectie "Nieuws") staan sinds 1-9-2026 in het hoofdmenu op verzoek van Joachim.
 
 ## Hosting & deploy
