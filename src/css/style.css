@@ -202,6 +202,9 @@ a:hover { color: var(--action); }
   box-shadow: var(--shadow-nav);
 }
 
+/* Header over de volle breedte: logo helemaal links, knop helemaal rechts,
+   zodat acht menu-items en de volledige knoptekst naast elkaar passen */
+.site-header .container { max-width: none; }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; min-height: 74px;
