@@ -31,6 +31,6 @@
   {% include "partials/footer.njk" %}
   {% include "partials/demo-modal.njk" %}
   <script src="{{ assets.js }}" defer></script>
-  {% if settings.goatcounter %}<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+  {% include "partials/analytics.njk" %}
 </body>
 </html>

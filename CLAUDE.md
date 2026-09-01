@@ -149,6 +149,14 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - CSS en JS worden aangeroepen als `{{ assets.css }}` / `{{ assets.js }}`, met een `?v=<hash>` erachter. Daardoor mogen ze een jaar gecachet worden en zie je een wijziging tóch meteen. **Link nooit rechtstreeks naar /css/style.css in een template**, dan kan een bezoeker na een deploy oude opmaak krijgen.
 - Afbeeldingen krijgen dezelfde behandeling via het `imgSrc`-filter: **elke `<img src="...">` in een template moet `{{ pad | imgSrc }}` gebruiken**, niet het kale pad. Zo krijgt een vervangen screenshot (zelfde bestandsnaam, nieuwe inhoud) meteen een nieuwe URL in plaats van 30 dagen uit de browsercache van een bezoeker te komen.
 
+## Bezoekersstatistieken
+
+- Eén plek: `src/_includes/partials/analytics.njk`, ingevoegd door `layout.njk`, `article.njk`, `insights.njk` en `news.njk`. `book-a-call.njk` en `home-2.njk` bewust niet, dat zijn doorstuurpagina's die niemand ziet.
+- Twee velden in settings.json, allebei leeg = uit: `goatcounter` (cookieloos, geen toestemming nodig) en `google_analytics` (GA4 meet-ID, vorm `G-XXXXXXXXXX`).
+- ⚠️ **Google Analytics zet cookies.** In de EU mag dat pas na toestemming van de bezoeker, dus het veld hoort leeg te blijven zolang er geen cookiebanner staat. Er is nu geen banner op de site.
+- ⚠️ **Hoofdstuk 10 van `/privacy/`** zegt op dit moment dat er geen analytics draait. Zodra er wel iets draait, moet die tekst mee, anders staat er een onwaarheid in de privacyverklaring.
+- Wat statistieken je wél en niet vertellen: aantallen, pagina's, bronnen en tijdstippen. **Niet wie er langskwam.** Voor bedrijfsnamen bij bezoeken heb je een aparte dienst nodig (Leadfeeder, Albacross en dergelijke), die IP-adressen aan bedrijven koppelt en een eigen privacy- en toestemmingsverhaal heeft.
+
 ## Doorverwijzingen (301)
 
 - **Alle redirects staan in server.js**, in `OLD_PATHS` (oude Squarespace-paden zoals /waarom-tubes en /oplossing; de oude /news-redirect naar /insights/ is op 1-9-2026 verwijderd omdat /news/ nu een eigen pagina is) en `REDIRECT_HOSTS` (tubes.media en en.tubes.media naar www).

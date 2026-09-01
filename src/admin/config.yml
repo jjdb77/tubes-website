@@ -70,7 +70,8 @@ collections:
               - { label: LinkedIn-URL, name: linkedin, widget: string, required: false }
               - { label: YouTube-URL, name: youtube, widget: string, required: false }
           - { label: "Formulier-endpoint (Formspree/Web3Forms)", name: form_endpoint, widget: string, required: false, hint: "Leeg = formulier opent het e-mailprogramma van de bezoeker. Zie README voor uitleg." }
-          - { label: "GoatCounter-code (bezoekersstatistieken)", name: goatcounter, widget: string, required: false, hint: "Maak gratis een account op goatcounter.com en vul hier je code in (het deel vóór .goatcounter.com). Leeg = geen statistieken." }
+          - { label: "GoatCounter-code (bezoekersstatistieken)", name: goatcounter, widget: string, required: false, hint: "Maak gratis een account op goatcounter.com en vul hier je code in (het deel vóór .goatcounter.com). Cookieloos, dus geen cookiebanner nodig. Leeg = uit." }
+          - { label: "Google Analytics 4 meet-ID", name: google_analytics, widget: string, required: false, pattern: ["^$|^G-[A-Z0-9]{6,}$", "Leeg laten of een ID in de vorm G-XXXXXXXXXX"], hint: "De code uit je GA4-property, in de vorm G-XXXXXXXXXX. LET OP: Google Analytics zet cookies, dus dit veld pas invullen als er een cookiebanner op de site staat en hoofdstuk 10 van /privacy/ is bijgewerkt. Leeg = uit." }
           - label: Menu
             name: nav
             widget: list
