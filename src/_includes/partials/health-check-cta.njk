@@ -1,0 +1,12 @@
+{#- De knop die de popover opent. Bewust géén e-mailveld op de pagina zelf:
+    dat wordt in de popover gevraagd, en twee keer vragen is één keer te veel.
+
+    Zonder JavaScript is het een gewone link naar de vragenlijstpagina.
+
+    Gebruik: {% import "partials/health-check-cta.njk" as hcCta %} en dan
+    {{ hcCta.knop("een-uniek-id", healthcheck) }} -#}
+{%- macro knop(id, healthcheck) -%}
+<div class="hc-cta" id="{{ id }}">
+  <a class="button button-primary hc-cta-button" href="/production-finance-health-check/assessment/" data-hc-open>{{ healthcheck.hero.button }}</a>
+</div>
+{%- endmacro -%}

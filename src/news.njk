@@ -1,0 +1,129 @@
+---
+permalink: /news/
+title: News
+seo_title: "Film and TV industry news | Tubes"
+description: "New tools, guides and product updates from Tubes, plus the film and TV posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
+---
+{#- Twee stromen op één pagina: collectie `news` (eigen aankondigingen uit
+    src/content/news) en collectie `linkedin` (posts uit de branche die we op
+    LinkedIn tegenkwamen, uit src/content/linkedin). Zie eleventy.config.js. -#}
+{%- set topicChip = {
+  "Budgeting": "chip",
+  "Financing": "chip chip-mint",
+  "AI in production": "chip chip-lavender",
+  "Festivals": "chip chip-blue"
+} -%}
+{%- macro linkedinIcon() -%}
+<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+{%- endmacro -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section section-hero">
+      <div class="container hero-grid hero-single">
+        <div class="hero-text">
+          <span class="kicker">News</span>
+          <h1>News for <em>production</em> teams</h1>
+          <div class="rich-text lead">
+            <p>Two things in one place: new tools, guides and product updates from Tubes, and the film and television posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets.</p>
+          </div>
+          <div class="button-row jump-row">
+            {%- if collections.news.length %}
+            <a class="button button-secondary jump-link" href="#whats-new">What&rsquo;s new at Tubes <span aria-hidden="true">&darr;</span></a>
+            {%- endif %}
+            {%- if collections.linkedin.length %}
+            <a class="button button-secondary jump-link" href="#from-the-industry">From the industry <span aria-hidden="true">&darr;</span></a>
+            {%- endif %}
+            <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section theme-white" id="whats-new">
+      <div class="container">
+        <h2 class="section-heading">What&rsquo;s new at Tubes</h2>
+        <ul class="news-list">
+          {%- for item in collections.news %}
+          <li class="news-item">
+            <time datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time>
+            <h2>{{ item.data.title }}</h2>
+            <p>{{ item.data.summary }}</p>
+            {% if item.data.url %}<a class="news-link" href="{{ item.data.url }}">{{ item.data.link_label or "Read more" }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    {%- if collections.linkedin.length %}
+    <section class="section" id="from-the-industry">
+      <div class="container">
+        <h2 class="section-heading feed-heading">Ideas and insights from people across the film and television industry</h2>
+        <div class="rich-text section-intro">
+          <p>Interesting public posts we come across on LinkedIn, briefly summarised in our own words. The views and ideas belong to the original authors. Read the original post on LinkedIn for the full picture.</p>
+        </div>
+        {%- for item in collections.linkedin %}
+        {%- set month = item.date | monthYear %}
+        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | monthYear) != month %}
+        {%- if not loop.first %}</ul>{% endif %}
+        <h3 class="feed-month">{{ month }}</h3>
+        <ul class="feed-list">
+        {%- endif %}
+          <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">
+            <span class="{{ topicChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
+            <h3 class="feed-from">From <span class="feed-name">{{ item.data.source }}</span> on LinkedIn</h3>
+            {%- if item.data.role %}<p class="feed-role">{{ item.data.role }}</p>{% endif %}
+            <p class="feed-topic">{{ item.data.title }}</p>
+            <div class="feed-summary">{{ item.templateContent | safe }}</div>
+            {%- if item.data.link %}
+            {%- set linkType = item.data.link | linkedinLinkType %}
+            <a class="feed-link" href="{{ item.data.link }}" target="_blank" rel="noopener">
+              {%- if linkType == "post" %}
+              <span>Read {{ item.data.source | possessive }} original post on LinkedIn</span>
+              {%- elif linkType == "activity" %}
+              <span>See {{ item.data.source | possessive }} posts on LinkedIn</span>
+              {%- else %}
+              <span>See more from {{ item.data.source }} on LinkedIn</span>
+              {%- endif %} {{ linkedinIcon() }}
+            </a>
+            {%- else %}
+            <p class="feed-link feed-link-none">Shared on LinkedIn by {{ item.data.source }}</p>
+            {%- endif %}
+          </li>
+        {%- if loop.last %}</ul>{% endif %}
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endif %}
+
+    {% set section = {
+      title: "See Tubes in action",
+      text: "Budgeting, planning and cost control in one platform, for productions of every size.",
+      button: { label: "Request a Demo", url: "/contact/" }
+    } %}
+    {% include "partials/sections/cta.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

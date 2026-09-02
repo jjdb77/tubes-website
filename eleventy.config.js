@@ -37,6 +37,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("md", (value) => (value ? md.render(String(value)) : ""));
   eleventyConfig.addFilter("mdInline", (value) => (value ? md.renderInline(String(value)) : ""));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  // "{city}, {country}" invullen met velden van een item (generieke lijsten)
+  eleventyConfig.addFilter("tpl", (template, item) => String(template || "").replace(/\{(\w+)\}/g, (_, k) => (item && item[k] != null ? item[k] : "")));
 
   // Markdown → kale tekst (voor titels, omschrijvingen en structured data)
   const toPlainText = (value) =>
@@ -71,6 +73,46 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("insights", (collectionApi) =>
     collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
   );
+
+  // Nieuwsberichten (/news/): korte items met datum, samenvatting en link,
+  // zonder eigen pagina (permalink: false in het bericht). Nieuwste bovenaan.
+  eleventyConfig.addCollection("news", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/news/*.md").sort((a, b) => b.date - a.date)
+  );
+
+  // Tweede stroom op /news/: posts uit de branche die we op LinkedIn
+  // tegenkwamen. Aparte map, want ze hebben andere velden (bron, onderwerp,
+  // link naar de post) en een eigen opmaak. Ook zonder eigen pagina.
+  // De datum bepaalt alleen de volgorde en de maandkop: van een gevonden post
+  // kennen we de exacte plaatsingsdatum meestal niet.
+  eleventyConfig.addCollection("linkedin", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/linkedin/*.md").sort((a, b) => b.date - a.date)
+  );
+
+  // "August 2026" — maand en jaar, zonder dag
+  eleventyConfig.addFilter("monthYear", (value) =>
+    new Date(value).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
+  );
+
+  // "Katya Alexander's", maar "Glassriver Films'" bij een naam op een s
+  eleventyConfig.addFilter("possessive", (name) => {
+    const value = String(name || "").trim();
+    if (!value) return value;
+    return /s$/i.test(value) ? `${value}'` : `${value}'s`;
+  });
+
+  // Waar wijst de link heen? Bepaalt de knoptekst, want we beloven de bezoeker
+  // geen post waar een profiel staat.
+  //   post     losse post of artikel  -> "Read X's original post on LinkedIn"
+  //   activity berichtenoverzicht     -> "See X's posts on LinkedIn"
+  //   profile  profiel of bedrijfspagina -> "See more from X on LinkedIn"
+  eleventyConfig.addFilter("linkedinLinkType", (url) => {
+    const value = String(url || "");
+    if (!value) return "";
+    if (/\/feed\/update\/|\/posts\/[^/]+-activity-|\/pulse\//.test(value)) return "post";
+    if (/\/recent-activity\/|\/company\/[^/]+\/posts\/?$/.test(value)) return "activity";
+    return "profile";
+  });
 
   // Geeft width="..." height="..." terug voor een afbeelding uit src/assets.
   // Daarmee reserveert de browser meteen de juiste ruimte en springt de
@@ -288,6 +330,25 @@ export default function (eleventyConfig) {
 
     return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
   });
+
+  // ---------- Health Check-vragenlijst ----------
+  //
+  // Vragen kunnen in het CMS op inactief gezet worden: ze blijven dan in
+  // healthcheck.json staan (tekst blijft bewaard) maar verschijnen niet op de
+  // pagina. Handig om de lijst kort te houden zonder werk weg te gooien; wat
+  // uitstaat komt in het gesprek zelf aan bod.
+  const isActive = (question) => question && question.active !== false;
+
+  eleventyConfig.addFilter("activeSteps", (steps) =>
+    (Array.isArray(steps) ? steps : [])
+      .map((step) => ({ ...step, questions: (step.questions || []).filter(isActive) }))
+      .filter((step) => step.questions.length)
+  );
+
+  // Wat niet gevraagd wordt, noemen we op het rapport als agenda voor de sessie.
+  eleventyConfig.addFilter("parkedQuestions", (steps) =>
+    (Array.isArray(steps) ? steps : []).flatMap((step) => (step.questions || []).filter((q) => !isActive(q)))
+  );
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });

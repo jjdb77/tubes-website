@@ -1,10 +1,10 @@
-<section class="section section-hero theme-{{ section.theme or 'light' }}">
-  <div class="container hero-grid{% if not section.image and not section.video %} hero-single{% endif %}">
+<section class="section section-hero theme-{{ section.theme or 'light' }}{% if section.tight %} hero-tight{% endif %}">
+  <div class="container hero-grid{% if not section.image and not section.video and not (section.buttons and section.buttons_position == 'side') %} hero-single{% endif %}{% if section.media_below %} hero-stacked{% endif %}">
     <div class="hero-text">
       {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
       <h1>{{ section.title | mdInline | safe }}</h1>
       <div class="rich-text lead">{{ section.text | md | safe }}</div>
-      {% if section.chips %}
+      {% if section.chips and not section.media_below %}
       <ul class="chip-row" aria-label="Production stages">
         {% for chip in section.chips %}
         <li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>
@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
       {% endif %}
-      {% if section.buttons %}
+      {% if section.buttons and section.buttons_position != 'side' %}
       <div class="button-row">
         {% for btn in section.buttons %}
         <a class="button {% if loop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ btn.url }}">{{ btn.label }}</a>
@@ -30,6 +30,20 @@
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
+    {% elif section.buttons and section.buttons_position == 'side' %}
+    <div class="hero-actions-side">
+      {% for btn in section.buttons %}
+      <a class="button {% if loop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ btn.url }}">{{ btn.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if section.chips and section.media_below %}
+    <ul class="chip-row chip-row-below" aria-label="Production stages">
+      {% for chip in section.chips %}
+      <li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>
+      {% if not loop.last %}<li class="chip-sep" aria-hidden="true">→</li>{% endif %}
+      {% endfor %}
+    </ul>
     {% endif %}
   </div>
 </section>

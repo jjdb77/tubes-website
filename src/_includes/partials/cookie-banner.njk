@@ -1,0 +1,15 @@
+{#- Toestemmingsbalk voor Google Analytics. Staat er alleen als er ook echt
+    een GA4-code is ingevuld: een cookiebanner tonen terwijl er niets wordt
+    gezet, is een lege plichtpleging. Accepteren en weigeren zijn allebei één
+    klik op hetzelfde niveau; dat eist de Nederlandse toezichthouder. -#}
+<div class="cookie-banner" id="cookie-banner" data-ga-id="{{ settings.google_analytics }}" role="region" aria-label="Cookies" hidden>
+  <div class="container cookie-banner-inner">
+    <p class="cookie-banner-text">
+      We would like to use Google Analytics to see which pages people read, so we can make this site more useful. It stores cookies in your browser. Nothing is sent to Google until you agree, and you can change your mind at any time in the footer. <a href="/privacy/">Read our privacy notice</a>.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button type="button" class="button button-primary" data-cookie-accept>Accept</button>
+      <button type="button" class="button button-secondary" data-cookie-decline>Decline</button>
+    </div>
+  </div>
+</div>

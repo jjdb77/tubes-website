@@ -1,0 +1,18 @@
+{#- Bezoekersstatistieken. Allebei optioneel: zolang het veld in
+    settings.json leeg is, staat er niets in de pagina en wordt er niets
+    geladen. Instelbaar in het CMS onder Site-instellingen.
+
+    - GoatCounter is cookieloos en slaat geen persoonsgegevens op. Daarvoor is
+      geen toestemming nodig, dus dat script staat gewoon in de pagina.
+    - Google Analytics 4 zet cookies. In de EU mag dat pas na toestemming, dus
+      het script van Google wordt hier NIET geladen. Alleen de toestemmingsbalk
+      staat in de pagina; site.js haalt gtag.js pas op nadat de bezoeker op
+      Accept heeft geklikt. Zolang dat niet gebeurt, gaat er niets naar Google.
+      Let bij het invullen ook op hoofdstuk 10 van /privacy/.
+-#}
+{%- if settings.goatcounter %}
+<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{%- endif %}
+{%- if settings.google_analytics %}
+{% include "partials/cookie-banner.njk" %}
+{%- endif %}

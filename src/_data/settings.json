@@ -6,6 +6,8 @@
   "footer_text": "Tubes unifies budgeting, scheduling, approvals, and cost control in one workspace. Empowering production teams to collaborate seamlessly, move faster, and maintain complete control from concept to wrap.",
   "cta_label": "Request a Demo",
   "cta_url": "/contact/",
+  "header_cta_label": "Book your free Production Health Check",
+  "header_cta_url": "/production-finance-health-check/",
   "app_url": "https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6",
   "booking_url": "https://4relations.appconnected.nl/boek/joachim",
   "booking_plans": [
@@ -21,8 +23,15 @@
     },
     {
       "path": "enterprise/",
-      "slug": "tubes-enterprice",
-      "plan": "Enterprise"
+      "slug": "tubes-enterprise",
+      "plan": "Enterprise",
+      "booking_url": "https://4relations.appconnected.nl/boek/joachim@appsolutions.nl"
+    },
+    {
+      "path": "health-check/",
+      "slug": "tubes-assessment",
+      "plan": "Production Health Check",
+      "booking_url": "https://4relationstubes.appconnected.nl/boek/joachim"
     }
   ],
   "contact": {
@@ -69,12 +78,36 @@
       "url": "/company/"
     },
     {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
       "label": "Security & compliance",
       "url": "/compliance/"
     },
     {
+      "label": "Privacy",
+      "url": "/privacy/"
+    },
+    {
       "label": "Academy",
       "url": "/academy/"
+    },
+    {
+      "label": "Film & TV locations",
+      "url": "/compare-film-tv-locations/"
+    },
+    {
+      "label": "Compare film incentives",
+      "url": "/compare-film-incentives/"
+    },
+    {
+      "label": "Festival, tradeshows and events",
+      "url": "/compare-film-festivals/"
+    },
+    {
+      "label": "Software for media companies",
+      "url": "/compare-media-software/"
     },
     {
       "label": "Free tool: budget compare",
@@ -83,6 +116,10 @@
     {
       "label": "Contact",
       "url": "/contact/"
+    },
+    {
+      "label": "Industry news",
+      "url": "/news/"
     }
   ],
   "nav": [
@@ -99,6 +136,10 @@
       "url": "/company/"
     },
     {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
       "label": "Compliance",
       "url": "/compliance/"
     },
@@ -109,6 +150,11 @@
     {
       "label": "Academy",
       "url": "/academy/"
+    },
+    {
+      "label": "Industry news",
+      "url": "/news/"
     }
-  ]
+  ],
+  "booking_embed_url": "https://4relationstubes.appconnected.nl/boek/joachim/tubes-assessment"
 }

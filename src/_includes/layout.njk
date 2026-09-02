@@ -35,6 +35,6 @@
       /contact/) en geen statistiek-script. -#}
   {% if not browser_only %}{% include "partials/demo-modal.njk" %}{% endif %}
   <script src="{{ assets.js }}" defer></script>
-  {% if settings.goatcounter and not browser_only %}<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+  {% if not browser_only %}{% include "partials/analytics.njk" %}{% endif %}
 </body>
 </html>

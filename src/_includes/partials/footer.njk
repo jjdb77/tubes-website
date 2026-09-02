@@ -1,3 +1,50 @@
+<section class="explore-footer">
+  <div class="container explore-footer-grid">
+    {#- Handmatig gecategoriseerd (niet settings.footer_nav): dekt dezelfde
+        pagina's zodat Google Platform, Plans en de vergelijkingspagina's
+        hier blijft vinden, ook al staan ze niet allemaal in het hoofdmenu. -#}
+    <div class="explore-footer-col">
+      <h3>Platform</h3>
+      <ul class="footer-links">
+        <li><a href="/platform/"{% if page.url == "/platform/" %} aria-current="page"{% endif %}>Overview</a></li>
+        <li><a href="/solutions/"{% if page.url == "/solutions/" %} aria-current="page"{% endif %}>Solutions</a></li>
+        <li><a href="/plans/"{% if page.url == "/plans/" %} aria-current="page"{% endif %}>Plans & Pricing</a></li>
+        <li><a href="/compliance/"{% if page.url == "/compliance/" %} aria-current="page"{% endif %}>Security & Compliance</a></li>
+      </ul>
+    </div>
+    <div class="explore-footer-col">
+      <h3>Company</h3>
+      <ul class="footer-links">
+        <li><a href="/company/"{% if page.url == "/company/" %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="/academy/"{% if page.url == "/academy/" %} aria-current="page"{% endif %}>Academy</a></li>
+        <li><a href="/privacy/"{% if page.url == "/privacy/" %} aria-current="page"{% endif %}>Privacy</a></li>
+        <li><a href="/contact/"{% if page.url == "/contact/" %} aria-current="page"{% endif %}>Contact</a></li>
+      </ul>
+    </div>
+    <div class="explore-footer-col">
+      <h3>Resources</h3>
+      <ul class="footer-links">
+        <li><a href="/resources/"{% if page.url == "/resources/" %} aria-current="page"{% endif %}>Resources Hub</a></li>
+        <li><a href="/compare-film-tv-locations/"{% if page.url == "/compare-film-tv-locations/" %} aria-current="page"{% endif %}>Film & TV Locations</a></li>
+        <li><a href="/compare-film-incentives/"{% if page.url == "/compare-film-incentives/" %} aria-current="page"{% endif %}>Film & TV Incentives</a></li>
+        <li><a href="/compare-film-festivals/"{% if page.url == "/compare-film-festivals/" %} aria-current="page"{% endif %}>Festivals & Events</a></li>
+        <li><a href="/compare-media-software/"{% if page.url == "/compare-media-software/" %} aria-current="page"{% endif %}>Media Software</a></li>
+        <li><a href="/news/"{% if page.url == "/news/" %} aria-current="page"{% endif %}>Industry News</a></li>
+        <li><a href="/insights/"{% if page.url == "/insights/" %} aria-current="page"{% endif %}>Insights</a></li>
+      </ul>
+    </div>
+    <div class="explore-footer-col">
+      <h3>Get Started</h3>
+      <ul class="footer-links">
+        <li><a href="/production-finance-health-check/"{% if page.url == "/production-finance-health-check/" %} aria-current="page"{% endif %}>Free Health Check</a></li>
+        <li><a href="/tools/budget-compare/"{% if page.url == "/tools/budget-compare/" %} aria-current="page"{% endif %}>Free Tool: Budget Compare</a></li>
+        <li><a href="/contact/"{% if page.url == "/contact/" %} aria-current="page"{% endif %}>Request a Demo</a></li>
+        <li><a href="/book-a-call/producer-pro/">Book a Call: Producer Pro</a></li>
+        <li><a href="/book-a-call/enterprise/">Book a Call: Enterprise</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-about">
@@ -5,20 +52,6 @@
       <p>{{ settings.footer_text }}</p>
       <a class="button button-primary" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a>
     </div>
-    {#- Alle pagina's in de footer: zo vindt Google ook Platform en Plans,
-        die bewust niet in het hoofdmenu staan. -#}
-    {% if settings.footer_nav %}
-    <div class="footer-col">
-      <h3>Explore</h3>
-      <nav aria-label="Footer navigation">
-        <ul class="footer-links">
-          {% for item in settings.footer_nav %}
-          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-    {% endif %}
     <div class="footer-col">
       <h3>Contact</h3>
       <p>
@@ -56,6 +89,6 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© {{ "" | year }} {{ settings.site_name }} · A production of {{ settings.legal.company }}, Amsterdam</p>
+    <p>© {{ "" | year }} {{ settings.site_name }} · A production of {{ settings.legal.company }}, Amsterdam{% if settings.google_analytics %} · <a href="/privacy/" data-cookie-settings>Cookie settings</a>{% endif %}</p>
   </div>
 </footer>
