@@ -495,12 +495,20 @@
     }
   });
 
+  // Volgende vrije code: na de regel waarachter je invoegt, anders na de hoogste
   function nextCode(s, afterLine) {
+    const used = new Set(s.lines.map((l) => String(l.code).trim()));
     const codes = s.lines.map((l) => parseInt(l.code, 10)).filter(Number.isFinite);
-    if (afterLine && Number.isFinite(parseInt(afterLine.code, 10))) return String(parseInt(afterLine.code, 10) + 1);
-    if (codes.length) return String(Math.max(...codes) + 1);
-    const base = parseInt(s.number, 10);
-    return Number.isFinite(base) ? String(base + 1) : "";
+    let candidate;
+    if (afterLine && Number.isFinite(parseInt(afterLine.code, 10))) candidate = parseInt(afterLine.code, 10) + 1;
+    else if (codes.length) candidate = Math.max(...codes) + 1;
+    else {
+      const base = parseInt(s.number, 10);
+      if (!Number.isFinite(base)) return "";
+      candidate = base + 1;
+    }
+    while (used.has(String(candidate))) candidate++;
+    return String(candidate);
   }
 
   function addLine(sectionId, afterLineId) {
