@@ -1220,6 +1220,40 @@ app.delete("/api/tools/versions/:id", (req, res) => {
   res.json({ ok: true, versions: toolVersionSummaries(user.id) });
 });
 
+// Feedback op de Budget Builder: komt als bericht op /beheer (zelfde JSONL als
+// het contactformulier) en gaat per mail door zodra RESEND_API_KEY staat.
+const TOOL_FEEDBACK_EMAIL = process.env.TOOL_FEEDBACK_EMAIL || LOCATION_EMAIL;
+app.post("/api/tools/feedback", (req, res) => {
+  if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "Too many messages. Try again in a few minutes." });
+  const message = String(req.body?.message || "").trim().slice(0, 5000);
+  const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
+  if (message.length < 3) return res.status(400).json({ ok: false, error: "Write a few words first." });
+  if (email && !EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "That email address does not look right." });
+  const user = currentToolUser(req);
+  const entry = {
+    id: crypto.randomUUID(),
+    at: new Date().toISOString(),
+    kind: "tool_feedback",
+    first_name: "Budget Builder",
+    last_name: "feedback",
+    email: email || (user ? user.email : "no email given"),
+    phone: "",
+    message,
+    page: String(req.body?.page || "/tools/budget-builder/").slice(0, 200),
+    ...(user ? { account: user.email } : {}),
+  };
+  fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
+  res.json({ ok: true });
+  if (MAIL_KEY) {
+    const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+      <p>Feedback op de <strong>Budget Builder</strong> (${escapeToolHtml(entry.page)}), ${escapeToolHtml(stamp(entry.at))}.</p>
+      <p>Van: ${escapeToolHtml(entry.email)}${user ? ` (account ${escapeToolHtml(user.email)})` : ""}</p>
+      <p style="background:#F6F7F9;padding:12px;border-radius:8px;white-space:pre-line">${escapeToolHtml(message)}</p>
+      <p><a href="https://www.tubes.media/beheer">Alle berichten op /beheer</a></p></div>`;
+    stuurMail(TOOL_FEEDBACK_EMAIL, `Budget Builder feedback (${entry.email})`, html).catch((err) => console.error("[mail] tool feedback:", err.message));
+  }
+});
+
 // Voor /beheer: wie heeft een account en hoeveel versies staan er
 const escapeToolHtml = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 function toolAccountsBlock() {

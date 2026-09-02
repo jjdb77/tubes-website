@@ -913,7 +913,29 @@
   }
   $("[data-bb-templates]").addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
 
+  // ---------- Feedback ----------
+
+  const feedbackForm = $("[data-bb-feedback-form]");
+  feedbackForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const error = $("[data-bb-feedback-error]");
+    const submit = $("[data-bb-feedback-submit]");
+    error.textContent = "";
+    submit.disabled = true;
+    try {
+      await api("/api/tools/feedback", { method: "POST", body: { message: feedbackForm.message.value.trim(), email: feedbackForm.email.value.trim(), page: location.pathname } });
+      feedbackForm.reset();
+      dialogs.feedback.close();
+      notice("Thank you, your feedback has been sent.", "ok");
+    } catch (err) {
+      error.textContent = err.message;
+    } finally {
+      submit.disabled = false;
+    }
+  });
+
   function prepareDialog(name) {
+    if (name === "feedback" && account.user && !feedbackForm.email.value) feedbackForm.email.value = account.user.email;
     if (name === "templates") renderTemplates();
     if (name === "versions") renderVersions();
     if (name === "import") { importStatus.textContent = ""; $("[data-bb-import-preview]").hidden = true; }

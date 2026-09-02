@@ -33,6 +33,7 @@ sections:
       </div>
       <div class="bb-actions">
         <span class="bb-account" data-bb-account>Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button></span>
+        <button type="button" class="button button-secondary bb-feedback-button" data-bb-open="feedback">Feedback</button>
         <button type="button" class="button button-secondary" data-bb-open="import">Import</button>
         <button type="button" class="button button-secondary" data-bb-open="templates">Templates</button>
         <button type="button" class="button button-secondary" data-bb-open="export">Export</button>
@@ -141,6 +142,19 @@ sections:
     <h3>Formats and templates</h3>
     <p class="bb-dialog-intro">Choose the account structure you work with. More formats can be added; ask us if yours is missing.</p>
     <div class="bb-templates" data-bb-templates></div>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="feedback">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Feedback on the Budget Builder</h3>
+    <p class="bb-dialog-intro">Something missing, wrong or confusing? Tell us. It goes straight to the people who build this tool.</p>
+    <form class="bb-form" data-bb-feedback-form novalidate>
+      <label>Your feedback <textarea name="message" rows="5" required placeholder="What would make this tool more useful for you?"></textarea></label>
+      <label>Email <span class="bb-help">(optional, if you would like a reply)</span> <input type="email" name="email" autocomplete="email" inputmode="email"></label>
+      <p class="bb-form-error" data-bb-feedback-error role="alert"></p>
+      <button type="submit" class="button button-primary" data-bb-feedback-submit>Send feedback</button>
+    </form>
+    <p class="bb-dialog-note">Your message and email address are stored with our contact messages and used only to follow up on your feedback.</p>
   </dialog>
 
   <dialog class="bb-dialog" data-bb-dialog="export">
