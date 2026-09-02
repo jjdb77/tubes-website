@@ -895,6 +895,7 @@ app.get("/beheer", (req, res) => {
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a> &middot; <a href="/beheer/ai" style="color:#0E8C77">AI-zoeken</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
+${toolAccountsBlock()}
 ${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
 </div></body></html>`);
@@ -1004,6 +1005,237 @@ app.use((req, res, next) => {
 
 const SITE = path.join(__dirname, "_site");
 
+// ---------- Gratis tool: Budget Builder, accounts en versies ----------
+//
+// De Budget Builder (/tools/budget-builder/) werkt zonder account; alles staat
+// in de browser. Wie wil opslaan maakt een account met e-mailadres en
+// wachtwoord. Per account: één budget, hoogstens TOOL_MAX_VERSIONS versies,
+// hoogstens TOOL_MAX_LINES regels per versie.
+//
+// Opslag op de volume: tool-users.json (e-mail → account, wachtwoord als
+// scrypt-hash) en tool-budgets/<accountId>.json (versie-id → budget). Sessie =
+// cookie met accountId, vervaldatum en HMAC; de sleutel komt uit
+// TOOLS_SESSION_SECRET of wordt eenmalig aangemaakt op de volume, zodat
+// sessies een redeploy overleven. De accounts staan op /beheer.
+
+const TOOL_USERS_FILE = path.join(DATA_DIR, "tool-users.json");
+const TOOL_BUDGETS_DIR = path.join(DATA_DIR, "tool-budgets");
+const TOOL_SECRET_FILE = path.join(DATA_DIR, "tool-session-secret");
+const TOOL_MAX_VERSIONS = 10;
+const TOOL_MAX_LINES = 2000;
+const TOOL_SESSION_DAYS = 30;
+const TOOL_COOKIE = "tubes_tools";
+
+function toolSessionSecret() {
+  if (process.env.TOOLS_SESSION_SECRET) return process.env.TOOLS_SESSION_SECRET;
+  try {
+    return fs.readFileSync(TOOL_SECRET_FILE, "utf8").trim();
+  } catch {
+    const secret = crypto.randomBytes(32).toString("hex");
+    fs.writeFileSync(TOOL_SECRET_FILE, secret, { mode: 0o600 });
+    return secret;
+  }
+}
+const TOOL_SECRET = toolSessionSecret();
+
+function readJsonFile(file, fallback) {
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+function writeJsonFile(file, data) {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const tmp = file + ".tmp";
+  fs.writeFileSync(tmp, JSON.stringify(data));
+  fs.renameSync(tmp, file);
+}
+const readToolUsers = () => readJsonFile(TOOL_USERS_FILE, {});
+const toolBudgetsFile = (userId) => path.join(TOOL_BUDGETS_DIR, `${userId}.json`);
+const readToolBudgets = (userId) => readJsonFile(toolBudgetsFile(userId), {});
+
+function hashPassword(password, salt) {
+  return crypto.scryptSync(String(password), salt, 64, { N: 16384, r: 8, p: 1 }).toString("hex");
+}
+function makeToolSession(userId) {
+  const payload = `${userId}.${Date.now() + TOOL_SESSION_DAYS * 24 * 60 * 60 * 1000}`;
+  const sig = crypto.createHmac("sha256", TOOL_SECRET).update(payload).digest("hex");
+  return `${payload}.${sig}`;
+}
+function verifyToolSession(token) {
+  const parts = String(token || "").split(".");
+  if (parts.length !== 3) return null;
+  const [userId, expires, sig] = parts;
+  const expected = crypto.createHmac("sha256", TOOL_SECRET).update(`${userId}.${expires}`).digest("hex");
+  const a = Buffer.from(sig);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return null;
+  if (Number(expires) < Date.now()) return null;
+  return userId;
+}
+function parseCookies(req) {
+  const out = {};
+  for (const part of String(req.headers.cookie || "").split(";")) {
+    const i = part.indexOf("=");
+    if (i > 0) out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+  }
+  return out;
+}
+function setToolSession(req, res, token) {
+  const secure = req.secure || String(req.headers["x-forwarded-proto"] || "").includes("https");
+  const maxAge = token ? TOOL_SESSION_DAYS * 24 * 60 * 60 : 0;
+  res.setHeader("Set-Cookie", `${TOOL_COOKIE}=${token || ""}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${secure ? "; Secure" : ""}`);
+}
+function currentToolUser(req) {
+  const userId = verifyToolSession(parseCookies(req)[TOOL_COOKIE]);
+  if (!userId) return null;
+  const users = readToolUsers();
+  return Object.values(users).find((u) => u.id === userId) || null;
+}
+const publicToolUser = (user) => ({ email: user.email, createdAt: user.createdAt });
+
+// Samenvatting van de versies van een account, zonder de regels zelf
+function toolVersionSummaries(userId) {
+  const budgets = readToolBudgets(userId);
+  return Object.values(budgets)
+    .map((entry) => ({
+      id: entry.id,
+      name: entry.name,
+      production: entry.production,
+      updatedAt: entry.updatedAt,
+      lines: entry.lines,
+      total: entry.total,
+    }))
+    .sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
+}
+
+// Hoeveel regels en wat is het totaal? Ook de plek om vreemde inhoud te weren.
+function inspectToolBudget(budget) {
+  if (!budget || typeof budget !== "object" || !Array.isArray(budget.sections)) return null;
+  let lines = 0;
+  let total = 0;
+  for (const section of budget.sections) {
+    if (!section || !Array.isArray(section.lines)) return null;
+    for (const line of section.lines) {
+      lines++;
+      const qty = Number(line.qty) || 0;
+      const rate = Number(line.rate) || 0;
+      total += Math.round(qty * rate * 100) / 100;
+    }
+  }
+  return { lines, total: Math.round(total * 100) / 100 };
+}
+
+app.use("/api/tools", express.json({ limit: "1mb" }));
+app.use("/api/tools", (req, res, next) => {
+  res.setHeader("Cache-Control", "no-store");
+  next();
+});
+
+app.post("/api/tools/register", (req, res) => {
+  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
+  const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
+  const password = String(req.body?.password || "");
+  if (!EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "Enter a valid email address." });
+  if (password.length < 8) return res.status(400).json({ ok: false, error: "Use a password of at least 8 characters." });
+  if (!req.body?.consent) return res.status(400).json({ ok: false, error: "Please agree to the storage of your budget and email address." });
+  const users = readToolUsers();
+  if (users[email]) return res.status(409).json({ ok: false, error: "There is already an account with this email address. Log in instead." });
+  const salt = crypto.randomBytes(16).toString("hex");
+  const user = { id: crypto.randomUUID(), email, salt, hash: hashPassword(password, salt), createdAt: new Date().toISOString() };
+  users[email] = user;
+  writeJsonFile(TOOL_USERS_FILE, users);
+  setToolSession(req, res, makeToolSession(user.id));
+  res.json({ ok: true, user: publicToolUser(user), versions: [] });
+});
+
+app.post("/api/tools/login", (req, res) => {
+  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
+  const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
+  const password = String(req.body?.password || "");
+  const user = readToolUsers()[email];
+  const ok = user && (() => {
+    const a = Buffer.from(hashPassword(password, user.salt));
+    const b = Buffer.from(user.hash);
+    return a.length === b.length && crypto.timingSafeEqual(a, b);
+  })();
+  if (!ok) return res.status(401).json({ ok: false, error: "Email address or password is not right." });
+  setToolSession(req, res, makeToolSession(user.id));
+  res.json({ ok: true, user: publicToolUser(user), versions: toolVersionSummaries(user.id) });
+});
+
+app.post("/api/tools/logout", (req, res) => {
+  setToolSession(req, res, "");
+  res.json({ ok: true });
+});
+
+app.get("/api/tools/me", (req, res) => {
+  const user = currentToolUser(req);
+  if (!user) return res.json({ ok: true, user: null, versions: [] });
+  res.json({ ok: true, user: publicToolUser(user), versions: toolVersionSummaries(user.id), limits: { versions: TOOL_MAX_VERSIONS, lines: TOOL_MAX_LINES } });
+});
+
+app.get("/api/tools/versions/:id", (req, res) => {
+  const user = currentToolUser(req);
+  if (!user) return res.status(401).json({ ok: false, error: "Log in first." });
+  const entry = readToolBudgets(user.id)[req.params.id];
+  if (!entry) return res.status(404).json({ ok: false, error: "This version no longer exists." });
+  res.json({ ok: true, budget: entry.budget, updatedAt: entry.updatedAt });
+});
+
+app.put("/api/tools/versions/:id", (req, res) => {
+  const user = currentToolUser(req);
+  if (!user) return res.status(401).json({ ok: false, error: "Log in first." });
+  const id = String(req.params.id);
+  if (!/^[A-Za-z0-9_-]{4,64}$/.test(id)) return res.status(400).json({ ok: false, error: "Invalid version id." });
+  const budget = req.body?.budget;
+  const info = inspectToolBudget(budget);
+  if (!info) return res.status(400).json({ ok: false, error: "This does not look like a budget." });
+  if (info.lines > TOOL_MAX_LINES) return res.status(400).json({ ok: false, error: `A version can hold up to ${TOOL_MAX_LINES} lines; this one has ${info.lines}.` });
+  const budgets = readToolBudgets(user.id);
+  if (!budgets[id] && Object.keys(budgets).length >= TOOL_MAX_VERSIONS) {
+    return res.status(409).json({ ok: false, error: `You can keep up to ${TOOL_MAX_VERSIONS} versions. Delete one to save a new one.`, limit: true });
+  }
+  budget.id = id;
+  budgets[id] = {
+    id,
+    name: String(budget.name || "Untitled").slice(0, 120),
+    production: String(budget.production || "").slice(0, 120),
+    updatedAt: new Date().toISOString(),
+    lines: info.lines,
+    total: info.total,
+    budget,
+  };
+  writeJsonFile(toolBudgetsFile(user.id), budgets);
+  res.json({ ok: true, versions: toolVersionSummaries(user.id), updatedAt: budgets[id].updatedAt });
+});
+
+app.delete("/api/tools/versions/:id", (req, res) => {
+  const user = currentToolUser(req);
+  if (!user) return res.status(401).json({ ok: false, error: "Log in first." });
+  const budgets = readToolBudgets(user.id);
+  delete budgets[String(req.params.id)];
+  writeJsonFile(toolBudgetsFile(user.id), budgets);
+  res.json({ ok: true, versions: toolVersionSummaries(user.id) });
+});
+
+// Voor /beheer: wie heeft een account en hoeveel versies staan er
+const escapeToolHtml = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function toolAccountsBlock() {
+  const users = Object.values(readToolUsers()).sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+  if (!users.length) return "";
+  const rows = users
+    .map((u) => {
+      const versions = toolVersionSummaries(u.id);
+      const latest = versions[0];
+      return `<div class="msg"><header><strong>${escapeToolHtml(u.email)}</strong><span>${new Date(u.createdAt).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" })}</span></header>` +
+        `<p class="meta">${versions.length} versie${versions.length === 1 ? "" : "s"}${latest ? ` &middot; laatste: ${escapeToolHtml(latest.name || "")}${latest.production ? ` (${escapeToolHtml(latest.production)})` : ""}, ${latest.lines} regels, totaal ${Number(latest.total).toLocaleString("nl-NL")}` : ""}</p></div>`;
+    })
+    .join("\n");
+  return `<h2 style="color:#1A1A1A;font-size:1.25rem;margin-top:40px">Budget Builder-accounts</h2><p class="count">${users.length} account${users.length === 1 ? "" : "s"}, aangemaakt via de gratis Budget Builder</p>${rows}`;
+}
+
 // Gratis tools op /tools/* beloven dat er niets de browser verlaat. Die belofte
 // wordt hier afgedwongen, niet alleen beloofd: connect-src 'none' blokkeert
 // elke fetch/XHR/beacon, form-action 'none' elke formulierpost, en scripts
@@ -1024,8 +1256,11 @@ const TOOLS_CSP = [
   "frame-ancestors 'self'",
   "base-uri 'self'",
 ].join("; ");
+// De Budget Builder mag wél met de eigen server praten (account en versies),
+// maar nog steeds met niemand anders. Dus daar connect-src en form-action 'self'.
+const TOOLS_CSP_ACCOUNT = TOOLS_CSP.replace("connect-src 'none'", "connect-src 'self'").replace("form-action 'none'", "form-action 'self'");
 app.use("/tools", (req, res, next) => {
-  res.setHeader("Content-Security-Policy", TOOLS_CSP);
+  res.setHeader("Content-Security-Policy", req.path.startsWith("/budget-builder") ? TOOLS_CSP_ACCOUNT : TOOLS_CSP);
   next();
 });
 

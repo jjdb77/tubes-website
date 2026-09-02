@@ -14,6 +14,18 @@ sections:
     theme: white
     columns: 2
     cards:
+      - icon: /assets/icons/calculator.svg
+        heading: Budget Builder
+        url: /tools/budget-builder/
+        link_label: Build a budget
+        text: |
+          Build a production budget in your browser: sections, lines, quantities and rates, with contingency and fees on top. Start from the Movie Magic structure or import an export, download an Excel file in the Tubes layout, and save up to ten versions.
+      - icon: /assets/icons/chart-pie.svg
+        heading: Budget Compare
+        url: /tools/budget-compare/
+        link_label: Compare two versions
+        text: |
+          Load two versions of a budget and see what changed per line, per section and in total, with charts and filters. Nothing is uploaded: the page runs entirely in your browser.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
         image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
         image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"

@@ -1,0 +1,185 @@
+---
+layout: layout.njk
+title: Budget Builder
+seo_title: "Free Production Budget Builder with Excel Export | Tubes"
+description: "Build a film or TV production budget in your browser: sections, lines, quantities, rates and percentages on top. Import a Movie Magic export, export to Excel, save up to ten versions."
+permalink: /tools/budget-builder/
+# Geen demo-popup en geen statistiek-script (zie "Gratis tools" in CLAUDE.md).
+# Deze tool praat wél met de eigen server voor accounts en versies; server.js
+# geeft /tools/budget-builder/ daarom een CSP met connect-src 'self'.
+browser_only: true
+sections:
+  - type: hero
+    kicker: Free tool
+    title: Build a production *budget* and export it to Excel
+    text: |
+      Sections, lines, quantities and rates, with percentages such as contingency on top. Totals follow as you type. Start from the Movie Magic account structure, import an existing export, and download an Excel file in the layout Tubes uses.
+
+      Everything happens in your browser. Nothing is sent until you choose to save a version to an account.
+---
+{#- Gratis tool "Budget Builder". Bewust géén CMS-secties: het bewerkdeel is te
+    specifiek. Tekst wijzig je hier, opmaak staat in style.css (blok "Gratis
+    tools: Budget builder", klassen bb-*), logica in js/budget-builder.js. De
+    lezer voor xlsx/CSV (import) is js/budget-compare.js, dat als bibliotheek
+    meelaadt (window.BudgetCompare). Formaten staan in js/budget-templates.js. -#}
+
+<section class="section theme-white bb-section" id="tool" data-budget-builder data-max-lines="2000" data-max-versions="10">
+  <div class="container">
+
+    <div class="bb-top">
+      <div class="bb-top-text">
+        <h2>Build your budget</h2>
+        <p>Add sections and lines, or pick a format under Templates. The budget is kept in this browser as you type; saving a version to an account asks for an email address and password.</p>
+      </div>
+      <div class="bb-actions">
+        <span class="bb-account" data-bb-account>Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button></span>
+        <button type="button" class="button button-secondary" data-bb-open="import">Import</button>
+        <button type="button" class="button button-secondary" data-bb-open="templates">Templates</button>
+        <button type="button" class="button button-secondary" data-bb-open="export">Export</button>
+        <button type="button" class="button button-primary" data-bb-save>Save</button>
+      </div>
+    </div>
+
+    <div class="bb-meta">
+      <label class="bb-field bb-field-wide">Budget name <input type="text" data-bb-meta="name" placeholder="Draft 1" autocomplete="off"></label>
+      <label class="bb-field bb-field-wide">Production <input type="text" data-bb-meta="production" placeholder="Working title" autocomplete="off"></label>
+      <label class="bb-field bb-field-small">Currency <input type="text" data-bb-meta="currency" placeholder="EUR" maxlength="3" autocomplete="off" spellcheck="false"></label>
+      <label class="bb-field bb-field-small">VAT % <input type="number" data-bb-meta="vat" min="0" max="100" step="0.5" inputmode="decimal"></label>
+      <label class="bb-field bb-field-date">Date <input type="date" data-bb-meta="date"></label>
+    </div>
+
+    <p class="bb-notice" data-bb-notice role="status" aria-live="polite" hidden></p>
+
+    <div class="bb-layout">
+      <div class="bb-sections" data-bb-sections></div>
+
+      <aside class="bb-summary" data-bb-summary>
+        <div class="bb-summary-card">
+          <span class="bb-label">Total excl. VAT</span>
+          <div class="bb-total" data-bb-total>0</div>
+          <div class="bb-sum-row"><span>Lines subtotal</span><span class="bb-num" data-bb-subtotal>0</span></div>
+          <div class="bb-additionals" data-bb-additionals></div>
+          <div class="bb-sum-row bb-sum-add"><button type="button" class="bc-link-button" data-bb-add-additional>+ Add a percentage</button></div>
+          <div class="bb-sum-row bb-sum-total"><span>Total excl. VAT</span><span class="bb-num" data-bb-total-excl>0</span></div>
+          <div class="bb-sum-row"><span>VAT <span data-bb-vat-label>21%</span></span><span class="bb-num" data-bb-vat>0</span></div>
+          <div class="bb-sum-row bb-sum-last"><span>Total incl. VAT</span><span class="bb-num" data-bb-total-incl>0</span></div>
+        </div>
+        <div class="bb-share" data-bb-share hidden>
+          <span class="bb-label">Share per section</span>
+          <div class="bb-share-list" data-bb-share-list></div>
+        </div>
+        <div class="bb-privacy">
+          <strong>Kept in this browser.</strong> Your budget is saved on this device as you type. Save a version to an account to keep it safe and open it on another computer.
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  {#- Dialogen: account, versies, import, formaten, export -#}
+  <dialog class="bb-dialog" data-bb-dialog="account">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3 data-bb-account-title>Save your budget</h3>
+    <p class="bb-dialog-intro">An account keeps up to ten versions of your budget and lets you open them on any device.</p>
+    <div class="bb-tabs" role="tablist">
+      <button type="button" class="bb-tab is-active" role="tab" data-bb-mode="register" aria-selected="true">Create an account</button>
+      <button type="button" class="bb-tab" role="tab" data-bb-mode="login" aria-selected="false">I already have one</button>
+    </div>
+    <form class="bb-form" data-bb-account-form novalidate>
+      <label>Work email <input type="email" name="email" autocomplete="email" required inputmode="email"></label>
+      <label>Password <input type="password" name="password" autocomplete="current-password" required minlength="8"><span class="bb-help" data-bb-password-help>At least 8 characters</span></label>
+      <label class="bb-consent" data-bb-consent-row><input type="checkbox" name="consent"> <span>Store my budget on the Tubes server (EU) and use my email address to reach me about this tool. No newsletter, no sharing with others. <a href="/privacy/" target="_blank" rel="noopener">Privacy notice</a></span></label>
+      <p class="bb-form-error" data-bb-account-error role="alert"></p>
+      <button type="submit" class="button button-primary" data-bb-account-submit>Create account and save</button>
+    </form>
+    <p class="bb-dialog-note">Until you save, the budget only lives in this browser. Saving sends it to your account; you can delete it there at any time.</p>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="versions">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Your versions</h3>
+    <p class="bb-dialog-intro" data-bb-versions-intro>Up to ten versions of one budget.</p>
+    <div class="bb-versions" data-bb-versions></div>
+    <div class="bb-dialog-actions">
+      <button type="button" class="button button-primary" data-bb-save-new>Save current as a new version</button>
+      <button type="button" class="button button-secondary" data-bb-logout>Log out</button>
+    </div>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="import">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Import a budget</h3>
+    <p class="bb-dialog-intro">A Movie Magic export (.xlsx), or any budget as Excel or CSV. Sections and lines are recognised the same way as in the <a href="/tools/budget-compare/">compare tool</a>; quantities become 1 and the amount becomes the rate.</p>
+    <label class="button button-secondary bc-file">Choose a file <input class="visually-hidden" type="file" accept=".csv,.tsv,.txt,.xlsx" data-bb-import-file></label>
+    <p class="bb-form-error" data-bb-import-status role="status" aria-live="polite"></p>
+    <div class="bb-import-preview" data-bb-import-preview hidden>
+      <p class="bb-help" data-bb-import-summary></p>
+      <div class="bb-dialog-actions">
+        <button type="button" class="button button-primary" data-bb-import-apply="replace">Replace the current budget</button>
+        <button type="button" class="button button-secondary" data-bb-import-apply="append">Add as extra sections</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="templates">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Formats and templates</h3>
+    <p class="bb-dialog-intro">Choose the account structure you work with. More formats can be added; ask us if yours is missing.</p>
+    <div class="bb-templates" data-bb-templates></div>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="export">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Export</h3>
+    <p class="bb-dialog-intro">Files are generated in your browser; nothing is uploaded.</p>
+    <div class="bb-export-list">
+      <button type="button" class="bb-export-item" data-bb-export="xlsx"><strong>Excel (.xlsx)</strong><span>The layout Tubes exports: summary, lines with formulas, section rows, and a second sheet with totals per section.</span></button>
+      <button type="button" class="bb-export-item" data-bb-export="csv"><strong>CSV</strong><span>One row per line, for any spreadsheet or the compare tool.</span></button>
+      <button type="button" class="bb-export-item" data-bb-export="print"><strong>Print or save as PDF</strong><span>A clean print of sections, lines and totals.</span></button>
+    </div>
+  </dialog>
+</section>
+
+{%- set featureText %}
+Every budget in Tubes is built the same way, section by section, and then keeps working after approval: purchase orders, invoices and actuals land on the same lines, so the cost report compares against the budget you actually approved.
+
+This free builder covers the first step. When you want the rest, the Excel it exports opens in Tubes as is.
+{% endset -%}
+{%- set section = {
+  theme: "teal",
+  heading: "In Tubes the budget keeps going",
+  lead: "From budget to cost control on the same lines",
+  text: featureText,
+  image: "/assets/images/tubes-budgeting.png",
+  image_alt: "Budgeting in Tubes",
+  button: { label: "See the Budgeting module", url: "/platform/" }
+} -%}
+{% include "partials/sections/feature.njk" %}
+
+{%- set section = {
+  theme: "white",
+  heading: "Questions about this tool",
+  items: [
+    { question: "Do I need an account?",
+      answer: "No. You can build, import and export a budget without one; it stays in this browser. An account is only needed to save versions and open them elsewhere. You can log in before you start, halfway or at the end." },
+    { question: "What does an account store?",
+      answer: "Your email address, a password (stored as a hash, never readable) and the versions you save: up to ten versions of one budget, each up to 2,000 lines. The data sits on the Tubes server in the EU. Delete a version or ask us to remove the account at any time." },
+    { question: "Which formats can I import?",
+      answer: "A Movie Magic Budgeting export (.xlsx, with its Topsheet, Categories and Account Details sheets), and any budget as Excel or CSV with a code, description and amount per line. Sections come from headings, a section column or the topsheet." },
+    { question: "How does the Excel export look?",
+      answer: "Like the export from Tubes: a title and summary, a table with Type, Description, Remarks, Qty, Unit, Price per unit and Budget Total, a row per section, formulas for the totals and a second sheet with totals per section." },
+    { question: "Are prices or sales included?",
+      answer: "No. This tool covers the cost side only. Quotations, sales prices and margins are part of Tubes itself." }
+  ]
+} -%}
+{% include "partials/sections/faq.njk" %}
+
+{%- set section = {
+  title: "Ready to take the budget past the first step?",
+  text: "Tubes carries the same lines through purchase orders, invoices and the cost report.",
+  button: { label: "Request a Demo", url: "/contact/" }
+} -%}
+{% include "partials/sections/cta.njk" %}
+
+<script src="{{ assets.budgetCompare }}" defer></script>
+<script src="{{ assets.budgetTemplates }}" defer></script>
+<script src="{{ assets.budgetBuilder }}" defer></script>

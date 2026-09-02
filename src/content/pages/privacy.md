@@ -12,7 +12,7 @@ sections:
     text: |
       How we collect, use and store your personal information when you request a Production Health Check.
 
-      Last updated: 26 August 2026
+      Last updated: 2 September 2026
   - type: textblock
     theme: white
     narrow: true
@@ -159,7 +159,15 @@ sections:
 
       You also have the right to complain to a data protection supervisory authority. Because we are based in the Netherlands, that is the Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl). If you are in the United Kingdom you may complain to the Information Commissioner's Office (ico.org.uk), and if you are elsewhere in the European Union you may complain to the authority in the country where you live or work.
 
-      ### 14. Changes to this notice
+      ### 14. Accounts for the free Budget Builder
+
+      The [Budget Builder](/tools/budget-builder/) works without an account: the budget you build stays in your own browser. If you choose to save a version, we ask for an email address and a password and create an account for you.
+
+      For such an account we store your email address, your password as a hash (we cannot read it back), the moment the account was created, and the budget versions you save (at most ten, each at most 2,000 lines). We use the email address to keep your budgets together, to let you log in, and to contact you about this tool. We do not add it to a newsletter and we do not share it with others. The data is stored on our server in the European Union and is visible to the people at Tubes who maintain the tool.
+
+      You can delete a version yourself in the tool. To remove the account and everything in it, email [contact@tubes.media](mailto:contact@tubes.media); we do that within 30 days. The [Budget Compare](/tools/budget-compare/) tool stores nothing at all: it has no upload endpoint and runs entirely in your browser.
+
+      ### 15. Changes to this notice
 
       We may update this notice to reflect changes to our services, our suppliers, the law, or the way we handle personal information. The current version is always on this page, with the date of the most recent update at the top.
 ---
