@@ -43,7 +43,23 @@ sections:
     <div class="bb-meta">
       <label class="bb-field bb-field-wide">Budget name <input type="text" data-bb-meta="name" placeholder="Draft 1" autocomplete="off"></label>
       <label class="bb-field bb-field-wide">Production <input type="text" data-bb-meta="production" placeholder="Working title" autocomplete="off"></label>
-      <label class="bb-field bb-field-small">Currency <input type="text" data-bb-meta="currency" placeholder="EUR" maxlength="3" autocomplete="off" spellcheck="false"></label>
+      <label class="bb-field bb-field-small">Currency <select data-bb-meta="currency">
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="USD">USD</option>
+        <option value="CHF">CHF</option>
+        <option value="SEK">SEK</option>
+        <option value="NOK">NOK</option>
+        <option value="DKK">DKK</option>
+        <option value="ISK">ISK</option>
+        <option value="PLN">PLN</option>
+        <option value="CZK">CZK</option>
+        <option value="HUF">HUF</option>
+        <option value="RON">RON</option>
+        <option value="BGN">BGN</option>
+        <option value="CAD">CAD</option>
+        <option value="AUD">AUD</option>
+      </select></label>
       <label class="bb-field bb-field-small">VAT % <input type="number" data-bb-meta="vat" min="0" max="100" step="0.5" inputmode="decimal"></label>
       <label class="bb-field bb-field-date">Date <input type="date" data-bb-meta="date"></label>
     </div>

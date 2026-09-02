@@ -2851,7 +2851,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   font: inherit; font-size: 0.95rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--ink);
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 11px; min-width: 0;
 }
-.bb-field input:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.bb-field select { font: inherit; font-size: 0.95rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 8px; }
+.bb-field input:focus, .bb-field select:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
 .bb-field-wide { flex: 2 1 240px; }
 .bb-field-small { width: 100px; }
 .bb-field-date { width: 170px; }

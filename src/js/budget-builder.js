@@ -337,7 +337,12 @@
   const metaInputs = $$("[data-bb-meta]");
 
   function renderMeta() {
-    for (const input of metaInputs) input.value = budget[input.dataset.bbMeta] ?? "";
+    for (const input of metaInputs) {
+      const value = budget[input.dataset.bbMeta] ?? "";
+      input.value = value;
+      // Valuta uit een oudere versie die niet in de lijst staat: terug naar EUR
+      if (input.tagName === "SELECT" && input.value !== String(value)) { input.value = "EUR"; budget[input.dataset.bbMeta] = "EUR"; }
+    }
   }
 
   function lineRow(s, l) {
