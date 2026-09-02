@@ -21,14 +21,6 @@ sections:
         link_label: Book your free Health Check
         text: |
           A free 45 minute review of how your production company handles budgets, actuals, forecasting, approvals and reporting. Practical findings and three concrete improvements, no sales pitch.
-      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ARRI_%2826629292689%29.jpg/960px-ARRI_%2826629292689%29.jpg
-        image_alt: "Two ARRI film lights on stands in front of equipment rental trucks in a New York street"
-        image_credit: "Photo: Billie Grace Ward (CC BY 2.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ARRI_(26629292689).jpg)"
-        heading: Free Production Budget Comparison Tool
-        url: /tools/budget-compare/
-        link_label: Compare two versions
-        text: |
-          Load two versions of a budget and see what changed per line, per section and in total, with charts and filters. Nothing is uploaded: the page runs entirely in your browser.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Clapboard_%28191836749%29.jpeg/960px-Clapboard_%28191836749%29.jpeg
         image_alt: "A blank clapperboard under studio lights"
         image_credit: "Image: Thomas Marlowe (CC0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Clapboard_(191836749).jpeg)"
@@ -37,6 +29,14 @@ sections:
         link_label: Build a budget
         text: |
           Build a production budget in your browser: sections, lines, quantities and rates, with contingency and fees on top. Start from the Movie Magic structure or import an export, download an Excel file in the Tubes layout, and save up to ten versions.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ARRI_%2826629292689%29.jpg/960px-ARRI_%2826629292689%29.jpg
+        image_alt: "Two ARRI film lights on stands in front of equipment rental trucks in a New York street"
+        image_credit: "Photo: Billie Grace Ward (CC BY 2.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ARRI_(26629292689).jpg)"
+        heading: Free Production Budget Comparison Tool
+        url: /tools/budget-compare/
+        link_label: Compare two versions
+        text: |
+          Load two versions of a budget and see what changed per line, per section and in total, with charts and filters. Nothing is uploaded: the page runs entirely in your browser.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
         image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
         image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"
