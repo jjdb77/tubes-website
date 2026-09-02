@@ -16,6 +16,15 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - **Footer bestaat sinds 1-9-2026 uit twee delen** (`src/_includes/partials/footer.njk`): een donkere sitemap-band ("Explore", 4 kolommen: Platform/Company/Resources/Get Started) boven de lichte info-footer (logo, contact, legal, social). De 4 kolommen zijn **handmatig** in de template ingedeeld, niet gekoppeld aan `settings.footer_nav` — dat CMS-veld ("Footer-navigatie") wordt dus nergens meer weergegeven en aanpassen daar heeft geen zichtbaar effect. Een nieuwe pagina die in Google gevonden moet worden, moet je in de Explore-footer zelf toevoegen.
 - **Resources** (`/resources/`, pagina met twee klikbare tegels: locatiegids en incentives per land; kaarten met `url` zijn klikbaar via cards.njk) en **News** (`/news/`, `src/news.njk` + collectie `news` uit `src/content/news/*.md`; items zonder eigen pagina, CMS-collectie "Nieuws") staan sinds 1-9-2026 in het hoofdmenu op verzoek van Joachim.
 
+## Hoofdmenu
+
+- Zes groepen in `settings.nav`: Platform, Solutions, Pricing, **Free tools**, **News** en **Company**. De laatste drie hebben een `children`-lijst en worden een uitklapmenu (`partials/header.njk`).
+- Bij een groep is de knop een `<button>`, geen link: de pagina van de groep zelf staat als eerste regel in het uitklapmenu ("All free tools", "Industry news", "About Tubes"). Zo werkt het ook met toetsenbord en aanraakscherm.
+- Gedrag in `site.js`: op breed scherm opent hoveren het menu en **opent** een klik hem alleen (anders klapte hij meteen weer dicht). Op smal scherm wisselt de klik en schuift het menu uit in het mobiele paneel. Escape en een klik ernaast sluiten.
+- Let op de specificiteit: `.site-nav ul` is specifieker dan `.submenu`, dus alle uitklapregels in de CSS staan als `.site-nav .submenu`.
+- Home zit in het logo, niet in het menu. Compliance, Contact en Academy staan onder Company; Insights onder News.
+- Laatste item is **Application**, naar `settings.app_login_url` (nu de inlogpagina van de app). Leeg veld = geen knop. Niet te verwarren met `app_url`, dat is de gepersonaliseerde plan-kieslink met token en staat nergens op de site.
+
 ## Hosting & deploy
 
 - **Railway**, workspace "jjdb77's Projects", project **innovative-healing** (production), service **tubes-website** — naast appsolutions-cloud (de Tubes-app), 4relations en appconnected.

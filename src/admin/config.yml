@@ -37,6 +37,7 @@ collections:
           - { label: Knoptekst in de kop, name: header_cta_label, widget: string, required: false, hint: "De knop rechtsboven op elke pagina. Leeg = de standaard knoptekst." }
           - { label: Knoplink in de kop, name: header_cta_url, widget: string, required: false, hint: "Leeg = de standaard knoplink." }
           - { label: "Tubes app-URL (plan kiezen)", name: app_url, widget: string, hint: "Nu nog demo.tubesmedia.online, straks app.tubesmedia.online" }
+          - { label: "Inloglink van de app (menu-item Application)", name: app_login_url, widget: string, required: false, hint: "Waar de knop Application in het menu heen gaat. Leeg = die knop verdwijnt." }
           - { label: "Boekingslink (Book a call)", name: booking_url, widget: string, hint: "Basisadres van de afsprakenpagina, zonder afspraaktype. Nu 4relations.appconnected.nl/boek/joachim" }
           - { label: "Agenda in de popover (Health Check)", name: booking_embed_url, widget: string, required: false, hint: "De boekingspagina van het afspraaktype, die in het venstertje op de Health Check-pagina wordt getoond. LET OP: hier hoort .../boek/<account>/<slug>, nooit een losse afspraaklink .../afspraak/<id> — die toont de naam, het e-mailadres en het telefoonnummer van degene die geboekt heeft. Leeg = geen popover, de knop opent gewoon de boekingspagina." }
           - label: "Boekingslinks per plan"
@@ -76,9 +77,18 @@ collections:
             name: nav
             widget: list
             summary: "{{fields.label}}"
+            hint: "Laat je 'Onderliggende items' leeg, dan wordt het een gewone link. Vul je ze wel in, dan wordt het een uitklapmenu en is de link van het item zelf alleen nog bereikbaar als eerste regel in dat uitklapmenu."
             fields:
               - { label: Naam, name: label, widget: string }
               - { label: Link, name: url, widget: string }
+              - label: "Onderliggende items (uitklapmenu)"
+                name: children
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Naam, name: label, widget: string }
+                  - { label: Link, name: url, widget: string }
           - label: "Links in de footer"
             name: footer_nav
             widget: list
