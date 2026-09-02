@@ -618,11 +618,11 @@
       const n = account.versions.length;
       accountEl.innerHTML = `${esc(account.user.email)} · <button type="button" class="bc-link-button" data-bb-versions-open>${n} of ${MAX_VERSIONS} version${n === 1 ? "" : "s"}</button>`;
       $("[data-bb-versions-open]", accountEl).addEventListener("click", () => { prepareDialog("versions"); openDialog("versions"); });
-      saveButton.textContent = dirty ? "Save version" : "Saved";
+      saveButton.textContent = "Save version";
     } else {
       accountEl.innerHTML = `Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button>`;
       $("[data-bb-login]", accountEl).addEventListener("click", () => openAccount("login", false));
-      saveButton.textContent = "Save";
+      saveButton.textContent = "Save version";
     }
   }
 
