@@ -136,6 +136,10 @@
       "url": "/company/"
     },
     {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
       "label": "Compliance",
       "url": "/compliance/"
     },
@@ -148,8 +152,8 @@
       "url": "/academy/"
     },
     {
-      "label": "Free tools",
-      "url": "/resources/"
+      "label": "Industry news",
+      "url": "/news/"
     }
   ],
   "booking_embed_url": "https://4relationstubes.appconnected.nl/boek/joachim/tubes-assessment"
