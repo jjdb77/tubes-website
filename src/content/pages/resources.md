@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Resources
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
-description: "Free tools for production teams: film and TV locations, production incentives per country, festivals and trade shows, and software for media companies, all searchable and comparable side by side."
+description: "Free tools for production teams: film and TV locations, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
 permalink: /resources/
 sections:
   - type: hero
@@ -47,6 +47,14 @@ sections:
         link_label: Compare software
         text: |
           Production management, budgeting, scheduling, accounting, asset management and post-production tools, compared on published facts only. Tubes is in there like everyone else.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/European_Film_Market_Berlinale_2017_01.jpg/960px-European_Film_Market_Berlinale_2017_01.jpg
+        image_alt: "Stands and meeting tables in the hall of the European Film Market at the Berlinale"
+        image_credit: "Photo: Maximilian Bühn (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:European_Film_Market_Berlinale_2017_01.jpg)"
+        heading: Industry news
+        url: /news/
+        link_label: Read the news
+        text: |
+          Interesting public posts from across film and television that we come across on LinkedIn, briefly summarised: budgets and financing, AI in production, festivals and markets. The views belong to the original authors.
   - type: cta
     title: Plan the production behind the decision
     text: |
