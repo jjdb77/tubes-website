@@ -2865,12 +2865,12 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .bb-sections { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 
 .bb-section { background: var(--surface); border: 1px solid var(--divider); border-radius: var(--radius-card); padding: 0 18px 12px; box-shadow: var(--shadow-card); }
-/* Pastelblauwe kopbalk (zelfde wash als de privacystrook en de app-vlakken) */
-.bb-section-head { display: flex; align-items: center; gap: 10px; margin: 0 -18px 8px; padding: 10px 14px; background: #EAF1FC; border-bottom: 1px solid rgba(45, 108, 196, 0.12); border-radius: var(--radius-card) var(--radius-card) 0 0; }
+/* Pastelkopbalk: de kleur van de categorie uit het formaat (Movie Magic), anders pastelblauw */
+.bb-section-head { display: flex; align-items: center; gap: 10px; margin: 0 -18px 8px; padding: 10px 14px; background: #EAF1FC; background: color-mix(in srgb, var(--section-color, #C6DAF8) 55%, #FFFFFF); border-bottom: 1px solid rgba(26, 26, 26, 0.06); border-radius: var(--radius-card) var(--radius-card) 0 0; }
 .bb-section-number, .bb-section-name {
   font: inherit; color: var(--ink); background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 6px 9px; min-width: 0;
 }
-.bb-section-number { width: 84px; font-size: 0.86rem; font-weight: 700; color: var(--status-blue-ink); font-variant-numeric: tabular-nums; }
+.bb-section-number { width: 84px; font-size: 0.86rem; font-weight: 700; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .bb-section-name { flex: 1; font-size: 1.02rem; font-weight: 800; letter-spacing: -0.01em; }
 .bb-section-number:hover, .bb-section-name:hover { border-color: rgba(45, 108, 196, 0.25); background: rgba(255, 255, 255, 0.7); }
 .bb-section-number:focus, .bb-section-name:focus { outline: none; border-color: var(--action); background: var(--surface); box-shadow: 0 0 0 3px var(--action-soft); }
@@ -2909,7 +2909,23 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .bb-col-actions { width: 80px; white-space: nowrap; padding-left: 0; }
 .bb-col-actions .bb-icon { opacity: 0.35; }
 .bb-line:hover .bb-icon, .bb-line:focus-within .bb-icon { opacity: 1; }
-.bb-section-foot { display: flex; gap: 12px; margin-top: 6px; }
+.bb-section-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 8px; }
+.bb-pick { max-width: 100%; font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--ink); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; }
+.bb-pick:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+
+/* Sjabloontegels (Templates-venster en de lege pagina) */
+.bb-start { padding: 26px 24px; background: var(--bg); border: 1px dashed var(--border); border-radius: var(--radius-card); }
+.bb-start h3 { margin-bottom: 4px; }
+.bb-start > .bb-help { display: block; margin-bottom: 16px; max-width: 640px; }
+.bb-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.bb-tile { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px; background: var(--surface); border: 1px solid var(--divider); border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
+.bb-tile strong { color: var(--ink); font-size: 1rem; }
+.bb-tile .bb-help { flex: 1; }
+.bb-tile-meta { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.bb-tile-colors { display: flex; gap: 3px; height: 8px; margin-bottom: 6px; }
+.bb-tile-colors span { flex: 1; border-radius: 3px; }
+.bb-tile-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.bb-tile-actions .button { padding: 7px 12px; font-size: 0.85rem; }
 .bb-add-section { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 
 /* Samenvatting, blijft in beeld */

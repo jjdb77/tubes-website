@@ -35,9 +35,9 @@
   // ---------- Model ----------
 
   const newLine = (p = {}) => ({ id: uid(), code: String(p.code ?? ""), description: String(p.description ?? ""), remarks: String(p.remarks ?? ""), qty: p.qty ?? "", unit: String(p.unit ?? ""), rate: p.rate ?? "" });
-  const newSection = (p = {}) => ({ id: uid(), number: String(p.number ?? ""), name: String(p.name ?? ""), lines: (p.lines || []).map(newLine) });
+  const newSection = (p = {}) => ({ id: uid(), number: String(p.number ?? ""), name: String(p.name ?? ""), color: String(p.color ?? ""), lines: (p.lines || []).map(newLine) });
   const newAdditional = (p = {}) => ({ id: uid(), name: String(p.name ?? "Contingency"), percent: p.percent ?? 10 });
-  const emptyBudget = () => ({ id: uid(), name: "Draft 1", production: "", currency: "EUR", vat: 21, date: today(), sections: [], additionals: [] });
+  const emptyBudget = () => ({ id: uid(), name: "Draft 1", production: "", currency: "EUR", vat: 21, date: today(), template: "", sections: [], additionals: [] });
 
   // Getypte getallen, zelfde regels als de vergelijkingstool: bij twee soorten
   // scheidingstekens is het laatste het decimaalteken ("1.234,56"); één
@@ -359,7 +359,12 @@
   }
 
   function sectionCard(s) {
-    return `<section class="bb-section" data-section="${s.id}">
+    const catalog = catalogFor(s);
+    const used = new Set(s.lines.map((l) => String(l.code).trim()));
+    const available = catalog ? catalog.filter((c) => !used.has(String(c.code))) : [];
+    const picker = catalog ? `<select class="bb-pick" data-act="pick-line" aria-label="Add a cost type from the template"><option value="">${available.length ? `Add a cost type… (${available.length})` : "All cost types added"}</option>${available.map((c) => `<option value="${esc(c.code)}">${esc(c.code)} ${esc(c.description)}</option>`).join("")}</select>` +
+      (available.length > 1 ? `<button type="button" class="bc-link-button" data-act="add-all">Add all ${available.length}</button>` : "") : "";
+    return `<section class="bb-section" data-section="${s.id}"${s.color ? ` style="--section-color: ${esc(s.color)}"` : ""}>
       <div class="bb-section-head">
         <input type="text" class="bb-section-number" data-sfield="number" value="${esc(s.number)}" placeholder="1000" aria-label="Section number" autocomplete="off">
         <input type="text" class="bb-section-name" data-sfield="name" value="${esc(s.name)}" placeholder="Section name" aria-label="Section name" autocomplete="off">
@@ -370,15 +375,15 @@
         <thead><tr><th class="bb-col-code">Code</th><th class="bb-col-desc">Description</th><th class="bb-col-remarks">Remarks</th><th class="bb-col-qty bb-num">Qty</th><th class="bb-col-unit">Unit</th><th class="bb-col-rate bb-num">Rate</th><th class="bb-col-total bb-num">Total</th><th class="bb-col-actions"><span class="visually-hidden">Actions</span></th></tr></thead>
         <tbody>${s.lines.map((l) => lineRow(s, l)).join("")}</tbody>
       </table></div>
-      <div class="bb-section-foot"><button type="button" class="bc-link-button" data-act="add-line">+ Add line</button></div>
+      <div class="bb-section-foot">${picker}<button type="button" class="bc-link-button" data-act="add-line">+ ${catalog ? "Blank line" : "Add line"}</button></div>
     </section>`;
   }
 
   function renderSections() {
     sectionsEl.innerHTML = budget.sections.map(sectionCard).join("") +
-      `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add section</button>` +
-      (budget.sections.length ? "" : `<button type="button" class="bc-link-button" data-bb-open="templates">Start from a format</button>`) + `</div>`;
-    for (const b of $$("[data-bb-open]", sectionsEl)) b.addEventListener("click", () => { prepareDialog(b.dataset.bbOpen); openDialog(b.dataset.bbOpen); });
+      (budget.sections.length
+        ? `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add section</button></div>`
+        : `<div class="bb-start"><h3>Start from a template</h3><p class="bb-help">Pick a format and all its categories appear as sections; add the budget lines per category from the list. Or start blank.</p>${templateTiles()}</div>`);
   }
 
   const summary = {
@@ -463,7 +468,17 @@
     addLine(sectionEl.dataset.section, row.dataset.line);
   });
 
+  sectionsEl.addEventListener("change", (e) => {
+    const select = e.target.closest('[data-act="pick-line"]');
+    if (!select || !select.value) return;
+    const sectionEl = select.closest("[data-section]");
+    const s0 = budget.sections.find((x) => x.id === sectionEl.dataset.section);
+    const c = (catalogFor(s0) || []).find((x) => String(x.code) === select.value);
+    if (c) addLine(s0.id, null, { code: c.code, description: c.description });
+  });
   sectionsEl.addEventListener("click", (e) => {
+    const tile = e.target.closest("[data-tact]");
+    if (tile) { applyTemplate(tile); return; }
     const button = e.target.closest("[data-act]");
     if (!button) return;
     const act = button.dataset.act;
@@ -472,6 +487,17 @@
     const row = button.closest("[data-line]");
     if (act === "add-section") { addSection(); return; }
     if (act === "add-line") { addLine(sectionId); return; }
+    if (act === "add-all") {
+      const s0 = budget.sections.find((x) => x.id === sectionId);
+      const catalog = s0 ? catalogFor(s0) : null;
+      if (!catalog) return;
+      const used = new Set(s0.lines.map((l) => String(l.code).trim()));
+      const missing = catalog.filter((c) => !used.has(String(c.code)));
+      if (lineCount() + missing.length > MAX_LINES) { notice(`That would exceed ${MAX_LINES} lines.`, "error"); return; }
+      for (const c of missing) s0.lines.push(newLine({ code: c.code, description: c.description }));
+      touch(); renderSections(); renderSummary();
+      return;
+    }
     const si = budget.sections.findIndex((x) => x.id === sectionId);
     if (si < 0) return;
     const s = budget.sections[si];
@@ -516,13 +542,13 @@
     return String(candidate);
   }
 
-  function addLine(sectionId, afterLineId) {
+  function addLine(sectionId, afterLineId, preset) {
     if (lineCount() >= MAX_LINES) { notice(`A budget can hold up to ${MAX_LINES} lines.`, "error"); return; }
     const s = budget.sections.find((x) => x.id === sectionId);
     if (!s) return;
     const at = afterLineId ? s.lines.findIndex((x) => x.id === afterLineId) + 1 : s.lines.length;
     const after = afterLineId ? s.lines[at - 1] : s.lines[s.lines.length - 1];
-    const l = newLine({ code: nextCode(s, after) });
+    const l = newLine(preset ? { ...preset } : { code: nextCode(s, after) });
     s.lines.splice(at, 0, l);
     touch();
     const sectionEl = $(`[data-section="${s.id}"]`, sectionsEl);
@@ -532,7 +558,15 @@
     const rowEl = tmp.firstElementChild;
     const before = afterLineId ? $(`[data-line="${afterLineId}"]`, tbody).nextElementSibling : null;
     tbody.insertBefore(rowEl, before);
-    $('[data-field="description"]', rowEl).focus();
+    if (preset) {
+      // Keuzelijst zonder deze kostensoort opnieuw opbouwen
+      const fresh = document.createElement("div");
+      fresh.innerHTML = sectionCard(s);
+      $(".bb-section-foot", sectionEl).replaceWith($(".bb-section-foot", fresh));
+      $('[data-field="qty"]', rowEl).focus();
+    } else {
+      $('[data-field="description"]', rowEl).focus();
+    }
   }
 
   function addSection(preset) {
@@ -829,36 +863,55 @@
     ],
   };
 
-  function renderTemplates() {
-    const list = [...(window.BudgetTemplates || []), SAMPLE];
-    $("[data-bb-templates]").innerHTML = list.map((t) => {
-      const count = (t.sections || []).reduce((n, s) => n + (s.lines || []).length, 0);
-      return `<div class="bb-template" data-template="${esc(t.id)}">
-        <div class="bb-template-text"><strong>${esc(t.name)}</strong><span class="bb-help">${esc(t.description || "")}${count ? ` ${(t.sections || []).length} sections, ${count} lines.` : ""}</span></div>
-        <div class="bb-template-actions"><button type="button" class="button button-primary" data-tact="use">Use</button>${t.sections && t.sections.length ? `<button type="button" class="button button-secondary" data-tact="append">Add sections</button>` : ""}</div>
-      </div>`;
-    }).join("");
+  const allTemplates = () => [...(window.BudgetTemplates || []), SAMPLE];
+
+  // Kostensoorten van het gekozen formaat voor deze sectie (op sectienummer)
+  function catalogFor(section) {
+    const t = budget.template && allTemplates().find((x) => x.id === budget.template);
+    const ts = t && (t.sections || []).find((x) => String(x.number) === String(section.number).trim());
+    return ts && ts.lines && ts.lines.length ? ts.lines : null;
   }
-  $("[data-bb-templates]").addEventListener("click", (e) => {
-    const button = e.target.closest("[data-tact]");
-    if (!button) return;
+
+  // Tegels om een formaat te kiezen; in het Templates-venster en op de lege pagina
+  function templateTiles() {
+    return `<div class="bb-tiles">${allTemplates().map((t) => {
+      const sections = t.sections || [];
+      const count = sections.reduce((n, s) => n + (s.lines || []).length, 0);
+      const colors = sections.map((s) => s.color).filter(Boolean).slice(0, 14);
+      const meta = t.id === "sample" ? `${sections.length} sections, ${count} lines with figures` : sections.length ? `${sections.length} categories, ${count} cost types to pick from` : "No sections";
+      return `<div class="bb-tile" data-template="${esc(t.id)}">
+        <div class="bb-tile-colors" aria-hidden="true">${(colors.length ? colors : ["#EAF1FC"]).map((c) => `<span style="background:${esc(c)}"></span>`).join("")}</div>
+        <strong>${esc(t.name)}</strong>
+        <span class="bb-help">${esc(t.description || "")}</span>
+        <span class="bb-tile-meta">${esc(meta)}</span>
+        <div class="bb-tile-actions"><button type="button" class="button button-primary" data-tact="use">Use</button>${sections.length ? `<button type="button" class="button button-secondary" data-tact="append">Add sections</button>` : ""}</div>
+      </div>`;
+    }).join("")}</div>`;
+  }
+  function renderTemplates() { $("[data-bb-templates]").innerHTML = templateTiles(); }
+
+  function applyTemplate(button) {
     const id = button.closest("[data-template]").dataset.template;
-    const t = [...(window.BudgetTemplates || []), SAMPLE].find((x) => x.id === id);
+    const t = allTemplates().find((x) => x.id === id);
     if (!t) return;
     const sections = t.sections || [];
-    const count = sections.reduce((n, s) => n + (s.lines || []).length, 0);
+    // Een formaat geeft de categorieën; de regels kies je daarna per sectie.
+    // Alleen het voorbeeldbudget komt met ingevulde regels.
+    const withLines = id === "sample";
+    const asSection = (s) => newSection({ number: s.number, name: s.name, color: s.color, lines: withLines ? s.lines : [] });
     if (button.dataset.tact === "use") {
       if (lineCount() && button.dataset.armed !== "1") { button.dataset.armed = "1"; button.textContent = "Replace current budget?"; setTimeout(() => { button.dataset.armed = ""; button.textContent = "Use"; }, 5000); return; }
-      budget = { ...emptyBudget(), name: budget.name || "Draft 1", production: budget.production, currency: budget.currency || "EUR", vat: budget.vat ?? 21, sections: sections.map(newSection), additionals: (t.additionals || []).map(newAdditional) };
+      budget = { ...emptyBudget(), name: budget.name || "Draft 1", production: budget.production, currency: budget.currency || "EUR", vat: budget.vat ?? 21, template: id === "sample" ? "" : id, sections: sections.map(asSection), additionals: (t.additionals || []).map(newAdditional) };
     } else {
-      if (lineCount() + count > MAX_LINES) { notice(`That would exceed ${MAX_LINES} lines.`, "error"); return; }
-      for (const s of sections) budget.sections.push(newSection(s));
+      for (const s of sections) budget.sections.push(asSection(s));
+      if (!budget.template && id !== "sample") budget.template = id;
     }
     touch();
     renderAll();
     dialogs.templates.close();
-    notice(`${t.name}: ${sections.length} sections${count ? `, ${count} lines` : ""}.`, "ok");
-  });
+    notice(withLines ? `${t.name}: ${sections.length} sections, ${sections.reduce((n, s) => n + s.lines.length, 0)} lines.` : `${t.name}: ${sections.length} categories added. Pick the cost types per section, or add blank lines.`, "ok");
+  }
+  $("[data-bb-templates]").addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
 
   function prepareDialog(name) {
     if (name === "templates") renderTemplates();
