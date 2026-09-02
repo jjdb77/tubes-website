@@ -1,12 +1,12 @@
 ---
 layout: layout.njk
-title: Resources
+title: Free tools
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
 description: "Free tools for production teams: film and TV locations, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
 permalink: /resources/
 sections:
   - type: hero
-    kicker: Resources
+    kicker: Free tools
     title: Free tools for *production teams*
     text: |
       Open to everyone, no sign-up. Built by Tubes because the decisions behind a production deserve better data than a spreadsheet and a hunch.
