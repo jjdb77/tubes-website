@@ -381,10 +381,23 @@
 
   function renderSections() {
     sectionsEl.innerHTML = budget.sections.map(sectionCard).join("") +
-      (budget.sections.length
-        ? `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add section</button></div>`
-        : `<div class="bb-start"><h3>Start from a template</h3><p class="bb-help">Pick a format and all its categories appear as sections; add the budget lines per category from the list. Or start blank.</p>${templateTiles()}</div>`);
+      `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add section</button></div>`;
+    renderFormats();
   }
+
+  // Stap 1 bovenaan: formaat kiezen. Tegels zolang er nog geen secties zijn,
+  // daarna een smalle balk met het gekozen formaat.
+  const formatsEl = $("[data-bb-formats]");
+  function renderFormats() {
+    if (!budget.sections.length) {
+      formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Choose a format</h3><p class="bb-help">All categories of the format appear as sections; add the budget lines per category from the list. Or start blank.</p></div></div>${templateTiles()}</div>`;
+      return;
+    }
+    const t = budget.template && allTemplates().find((x) => x.id === budget.template);
+    formatsEl.innerHTML = `<div class="bb-format-bar"><span class="bb-step">1</span><span>Format: <strong>${t ? esc(t.name) : "none"}</strong>${t ? ` <span class="bb-help">${(t.sections || []).length} categories</span>` : ""}</span><button type="button" class="bc-link-button" data-bb-open="templates">${t ? "Change format" : "Choose a format"}</button></div>`;
+    for (const b of $$("[data-bb-open]", formatsEl)) b.addEventListener("click", () => { prepareDialog(b.dataset.bbOpen); openDialog(b.dataset.bbOpen); });
+  }
+  formatsEl.addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
 
   const summary = {
     total: $("[data-bb-total]"), subtotal: $("[data-bb-subtotal]"), additionals: $("[data-bb-additionals]"),
@@ -878,7 +891,7 @@
       const sections = t.sections || [];
       const count = sections.reduce((n, s) => n + (s.lines || []).length, 0);
       const colors = sections.map((s) => s.color).filter(Boolean).slice(0, 14);
-      const meta = t.id === "sample" ? `${sections.length} sections, ${count} lines with figures` : sections.length ? `${sections.length} categories, ${count} cost types to pick from` : "No sections";
+      const meta = t.id === "sample" ? `${sections.length} sections, ${count} lines with figures` : sections.length ? `${sections.length} categories, ${count} cost types to pick from` : "Your own sections and lines";
       return `<div class="bb-tile" data-template="${esc(t.id)}">
         <div class="bb-tile-colors" aria-hidden="true">${(colors.length ? colors : ["#EAF1FC"]).map((c) => `<span style="background:${esc(c)}"></span>`).join("")}</div>
         <strong>${esc(t.name)}</strong>

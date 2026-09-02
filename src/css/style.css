@@ -2914,9 +2914,15 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .bb-pick:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
 
 /* Sjabloontegels (Templates-venster en de lege pagina) */
-.bb-start { padding: 26px 24px; background: var(--bg); border: 1px dashed var(--border); border-radius: var(--radius-card); }
-.bb-start h3 { margin-bottom: 4px; }
-.bb-start > .bb-help { display: block; margin-bottom: 16px; max-width: 640px; }
+.bb-formats { margin-bottom: 20px; }
+.bb-start { padding: 22px 24px 24px; background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-card); }
+.bb-start-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+.bb-start h3 { margin-bottom: 2px; }
+.bb-start .bb-help { display: block; max-width: 640px; }
+.bb-step { flex: none; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--action); color: #fff; font-size: 0.82rem; font-weight: 800; }
+.bb-format-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 12px 18px; background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-wash); font-size: 0.95rem; }
+.bb-format-bar strong { color: var(--ink); }
+.bb-format-bar .bc-link-button { margin-left: auto; }
 .bb-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
 .bb-tile { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px; background: var(--surface); border: 1px solid var(--divider); border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
 .bb-tile strong { color: var(--ink); font-size: 1rem; }
