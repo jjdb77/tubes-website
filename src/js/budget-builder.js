@@ -641,7 +641,8 @@
 
   const account = { user: null, versions: [], offline: false };
   const accountEl = $("[data-bb-account]");
-  const saveButton = $("[data-bb-save]");
+  const saveButtons = $$("[data-bb-save]");
+  const setSaveButtons = (fn) => saveButtons.forEach(fn);
   let pendingSave = false;
 
   async function api(path, options = {}) {
@@ -667,11 +668,11 @@
       const n = account.versions.length;
       accountEl.innerHTML = `${esc(account.user.email)} · <button type="button" class="bc-link-button" data-bb-versions-open>${n} of ${MAX_VERSIONS} version${n === 1 ? "" : "s"}</button>`;
       $("[data-bb-versions-open]", accountEl).addEventListener("click", () => { prepareDialog("versions"); openDialog("versions"); });
-      saveButton.textContent = "Save version";
+      setSaveButtons((b) => { b.textContent = "Save version"; });
     } else {
       accountEl.innerHTML = `Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button>`;
       $("[data-bb-login]", accountEl).addEventListener("click", () => openAccount("login", false));
-      saveButton.textContent = "Save version";
+      setSaveButtons((b) => { b.textContent = "Save version"; });
     }
   }
 
@@ -742,7 +743,7 @@
       renderMeta();
       saveLocal();
     }
-    saveButton.disabled = true;
+    setSaveButtons((b) => { b.disabled = true; });
     try {
       const data = await api(`/api/tools/versions/${encodeURIComponent(budget.id)}`, { method: "PUT", body: { budget } });
       account.versions = data.versions || [];
@@ -755,10 +756,10 @@
       else if (err.limit) { notice(err.message, "error"); prepareDialog("versions"); openDialog("versions"); }
       else notice(err.message, "error");
     } finally {
-      saveButton.disabled = false;
+      setSaveButtons((b) => { b.disabled = false; });
     }
   }
-  saveButton.addEventListener("click", () => saveVersion(false));
+  for (const b of saveButtons) b.addEventListener("click", () => saveVersion(false));
   $("[data-bb-save-new]").addEventListener("click", () => saveVersion(true));
   $("[data-bb-logout]").addEventListener("click", async () => {
     try { await api("/api/tools/logout", { method: "POST" }); } catch { /* sessie weg is sessie weg */ }

@@ -2952,6 +2952,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .bb-sum-total { border-bottom: 0; border-top: 2px solid var(--border); margin-top: 4px; padding-top: 10px; font-size: 1.05rem; font-weight: 800; color: var(--ink); }
 .bb-sum-total .bb-num { font-weight: 800; }
 .bb-sum-last { border-bottom: 0; }
+.bb-summary-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--divider); }
+.bb-summary-actions .button { flex: 1 1 auto; text-align: center; padding: 10px 14px; font-size: 0.9rem; }
 .bb-additional { gap: 8px; }
 .bb-additional-fields { display: flex; align-items: center; gap: 4px; min-width: 0; flex: 1; }
 .bb-additional-fields input { font: inherit; font-size: 0.88rem; color: var(--ink); background: transparent; border: 1px solid transparent; border-radius: 6px; padding: 4px 6px; min-width: 0; }
