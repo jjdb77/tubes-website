@@ -47,6 +47,8 @@ t("delimiter en quotes", () => {
   assert.equal(BC.detectDelimiter("a,b,c\n1,2,3"), ",");
   const rows = BC.parseText('Code,Line,Total\r\n1100,"Story, rights & ""more""",45000\r\n\r\n');
   assert.deepEqual(rows, [["Code", "Line", "Total"], ["1100", 'Story, rights & "more"', "45000"]]);
+  // Een aanhalingsteken middenin een veld is gewoon tekst (komt voor in exports)
+  assert.deepEqual(BC.parseText('2700;Catering & "craft" <services>;24.500,00'), [["2700", 'Catering & "craft" <services>', "24.500,00"]]);
 });
 t("kopregel na titelregels + mapping", () => {
   const rows = [["Production: X"], ["Acct", "Description", "Qty", "Rate", "Total"], ["1100", "Story", "1", "100", "100"]];

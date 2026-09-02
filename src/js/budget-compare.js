@@ -116,7 +116,9 @@
         if (ch === '"') {
           if (text[i + 1] === '"') { field += '"'; i++; } else inQuotes = false;
         } else field += ch;
-      } else if (ch === '"') {
+      } else if (ch === '"' && field === "") {
+        // Alleen een aanhalingsteken aan het begin van een veld opent een
+        // quote; eentje middenin ("craft" services) is gewoon tekst.
         inQuotes = true;
       } else if (ch === delimiter) {
         row.push(field); field = "";
