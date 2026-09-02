@@ -32,7 +32,7 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
         image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
         image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"
-        heading: Film & TV locations
+        heading: Film & TV locations in Europe
         url: /compare-film-tv-locations/
         link_label: Search locations
         text: |
