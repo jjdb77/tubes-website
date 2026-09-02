@@ -33,15 +33,35 @@ sections:
     </label>
   </div>
   <p class="bc-hint">{{ hint }}</p>
-  <div class="bc-input">
+  {#- Leeg: een dropzone. Slepen, plakken (overal op het paneel) of een bestand kiezen. -#}
+  <div class="bc-drop" data-bc-drop tabindex="0" aria-label="Drop a file or paste cells for {{ name }}">
+    <svg class="bc-drop-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 21V7m0 0-5 5m5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 20v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+    <p class="bc-drop-title">Drop a file here or paste cells</p>
+    <p class="bc-drop-sub">CSV, TSV or Excel (.xlsx). Or copy the cells in Excel or Sheets and paste them on this panel.</p>
     <label class="button button-secondary bc-file">
       Choose a file
       <input class="visually-hidden" type="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/tab-separated-values,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-bc-file>
     </label>
-    <span class="bc-or">or</span>
-    <textarea data-bc-paste rows="2" placeholder="paste the cells here" aria-label="Paste cells for {{ name }}" spellcheck="false"></textarea>
+    <textarea data-bc-paste rows="1" placeholder="or paste the cells here" aria-label="Paste cells for {{ name }}" spellcheck="false"></textarea>
   </div>
-  <p class="bc-status" data-bc-status role="status" aria-live="polite"></p>
+  {#- Geladen: bestandskaart met de herkende kolommen als tags; het volledige
+      instelpaneel (selects en voorbeeldtabel) staat achter "Adjust". -#}
+  <div class="bc-loaded" data-bc-loaded hidden>
+    <div class="bc-loaded-file">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="4" y="2" width="20" height="24" rx="3" stroke="currentColor" stroke-width="1.8"></rect><path d="M9 10h10M9 14h10M9 18h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+      <div class="bc-loaded-text">
+        <span class="bc-loaded-name" data-bc-source></span>
+        <span class="bc-loaded-lines" data-bc-lines role="status" aria-live="polite"></span>
+      </div>
+      <button type="button" class="bc-link-button" data-bc-replace>Replace</button>
+    </div>
+    <div class="bc-detected">
+      <span class="bc-detected-label">Detected columns</span>
+      <button type="button" class="bc-link-button" data-bc-adjust aria-expanded="false">Adjust</button>
+    </div>
+    <div class="bc-tags" data-bc-tags></div>
+  </div>
+  <p class="bc-status" data-bc-status role="status" aria-live="polite" hidden></p>
   <div class="bc-setup" data-bc-setup hidden>
     <div class="bc-setup-row">
       <label data-bc-sheet-wrap hidden>Sheet <select data-bc-sheet></select></label>
@@ -73,7 +93,7 @@ sections:
 
     <div class="bc-intro">
       <h2>Load your two versions</h2>
-      <p>Any layout works as long as each budget line has a description and an amount. Section headings and subtotal rows are recognised automatically. <button type="button" class="bc-link-button" data-bc-sample>Try it with a sample budget</button></p>
+      <p>Any layout works as long as each budget line has a description and an amount. Section headings, subtotal rows and Movie Magic exports are recognised automatically. <button type="button" class="bc-link-button" data-bc-sample>Try it with a sample budget</button></p>
     </div>
 
     <div class="bc-versions">

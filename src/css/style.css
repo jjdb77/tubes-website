@@ -1043,20 +1043,56 @@ a:hover { color: var(--action); }
 .bc-name input:focus { outline: none; border-color: var(--action); background: var(--surface); box-shadow: 0 0 0 3px var(--action-soft); }
 .bc-hint { font-size: 0.92rem; color: var(--muted); margin-bottom: 18px; }
 
-.bc-input { display: flex; align-items: stretch; gap: 12px; flex-wrap: wrap; }
-.bc-file { align-self: flex-start; white-space: nowrap; }
+/* Dropzone (lege versie): slepen, plakken of kiezen */
+.bc-drop {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 26px 20px 22px; text-align: center;
+  background: var(--surface); border: 1.5px dashed var(--border); border-radius: var(--radius-wash);
+  color: var(--action-soft-ink);
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.bc-drop:focus { outline: none; border-style: solid; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.bc-version.is-dragover .bc-drop { border-style: solid; border-color: var(--action); background: var(--action-soft); }
+.bc-drop-icon { color: var(--action); }
+.bc-drop-title { margin: 0; font-weight: 700; color: var(--ink); }
+.bc-drop-sub { margin: 0 0 4px; font-size: 0.9rem; color: var(--muted); max-width: 380px; }
+.bc-file { white-space: nowrap; }
 .bc-file:focus-within { outline: 3px solid var(--action); outline-offset: 2px; }
-.bc-or { align-self: center; font-size: 0.85rem; color: var(--muted); }
-.bc-input textarea {
-  flex: 1; min-width: 160px; min-height: 48px; resize: vertical;
-  font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink);
-  background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius-button);
-  padding: 11px 14px;
+.bc-drop textarea {
+  width: 100%; max-width: 380px; min-height: 40px; resize: none;
+  font-family: var(--font-sans); font-size: 0.9rem; text-align: center; color: var(--ink);
+  background: var(--bg); border: 1px solid transparent; border-radius: var(--radius-button);
+  padding: 9px 12px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.bc-input textarea:focus { outline: none; border-style: solid; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.bc-drop textarea:focus { outline: none; background: var(--surface); border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
 
-.bc-status { margin: 12px 0 0; font-size: 0.92rem; font-weight: 600; min-height: 1.4em; color: var(--ink-soft); }
+/* Geladen versie: bestandskaart en de herkende kolommen als tags */
+.bc-loaded-file {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-button);
+  color: var(--action);
+}
+.bc-loaded-file > svg { flex: none; }
+.bc-loaded-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.bc-loaded-name { font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bc-loaded-lines { font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); }
+.bc-loaded-lines.is-ok { color: var(--status-mint-ink); }
+.bc-loaded-lines.is-error { color: #B93A3A; }
+.bc-detected { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.bc-detected-label { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.bc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.bc-detected-tag {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px;
+  border-radius: 8px; background: var(--surface); border: 1px solid var(--border);
+  font-size: 0.84rem; font-weight: 600; color: var(--ink);
+}
+.bc-detected-tag > span { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+/* Eigen display-regels mogen het hidden-attribuut niet overstemmen */
+.bc-drop[hidden], .bc-loaded[hidden], .bc-setup[hidden], .bc-status[hidden], .bc-results[hidden] { display: none; }
+.bc-sub { display: none; }
+
+.bc-status { margin: 12px 0 0; font-size: 0.92rem; font-weight: 600; color: var(--ink-soft); }
 .bc-status.is-ok { color: var(--status-mint-ink); }
 .bc-status.is-error { color: #B93A3A; }
 
@@ -1127,7 +1163,7 @@ a:hover { color: var(--action); }
 .bc-group-row th { font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.05em; }
 .bc-table tfoot th, .bc-table tfoot td { border-bottom: 0; border-top: 2px solid var(--border); font-weight: 800; color: var(--ink); background: var(--surface); }
 .bc-row-added .bc-col-desc, .bc-row-removed .bc-col-desc { color: var(--ink); }
-.bc-row-removed .bc-col-desc { text-decoration: line-through; text-decoration-color: rgba(185, 58, 58, 0.5); }
+.bc-row-removed .bc-desc-text { text-decoration: line-through; text-decoration-color: rgba(185, 58, 58, 0.5); }
 .bc-table .chip { padding: 4px 9px; font-size: 0.7rem; }
 .bc-chip-changed { background: var(--status-amber-bg); color: var(--status-amber-ink); }
 .bc-chip-added { background: var(--status-mint-bg); color: var(--status-mint-ink); }
@@ -1141,10 +1177,34 @@ a:hover { color: var(--action); }
 }
 @media (max-width: 700px) {
   .bc-version { padding: 20px 18px; }
-  .bc-tiles { grid-template-columns: 1fr; }
+  .bc-tiles { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bc-tile { padding: 14px 16px; }
+  .bc-tile-value { font-size: 1.25rem; }
+  .bc-filters { gap: 10px 14px; padding: 12px 14px; }
+  .bc-filters select, .bc-filters input[type="search"] { min-width: 0; width: 100%; }
+  .bc-filters > label { flex: 1 1 140px; }
+  .bc-filters fieldset { flex: 1 1 100%; }
+  /* Statusfilters als pills */
+  .bc-filter-row .bc-check {
+    padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+    font-size: 0.86rem; color: var(--ink-soft);
+  }
+  .bc-filter-row .bc-check:has(input:checked) { background: var(--action); border-color: var(--action); color: #fff; }
+  .bc-filter-row .bc-check input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .bc-filters .bc-toolbar-buttons { margin-left: 0; width: 100%; }
+  .bc-filters .bc-toolbar-buttons .button { flex: 1; text-align: center; }
+  /* Tabel als lijst: A → B onder de omschrijving, geen aparte kolommen */
   .bc-table { font-size: 0.88rem; }
   .bc-table th, .bc-table td { padding: 8px 10px; }
-  .bc-table .bc-col-pct { display: none; }
+  .bc-table .bc-col-pct, .bc-table .bc-col-a, .bc-table .bc-col-b { display: none; }
+  .bc-table thead .bc-col-a, .bc-table thead .bc-col-b { display: none; }
+  .bc-table .bc-col-desc { color: var(--ink); font-weight: 600; }
+  .bc-sub { display: block; font-size: 0.8rem; font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
+  /* Code blijft staan, anders spant de sectieregel (colspan 3) meer kolommen dan de regels eronder */
+  .bc-table .bc-col-code { font-size: 0.78rem; padding-right: 4px; }
+  .bc-table .chip { padding: 3px 6px; font-size: 0.62rem; gap: 4px; }
+  .bc-table .bc-col-status { padding-right: 4px; }
+  .bc-drop { padding: 20px 14px 18px; }
 }
 
 /* Afdrukken: alleen het resultaat, zonder invoer, menu en voettekst */

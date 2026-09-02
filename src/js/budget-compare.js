@@ -594,8 +594,15 @@
       id,
       panel,
       label: panel.querySelector("[data-bc-label]"),
+      drop: panel.querySelector("[data-bc-drop]"),
       file: panel.querySelector("[data-bc-file]"),
       paste: panel.querySelector("[data-bc-paste]"),
+      loaded: panel.querySelector("[data-bc-loaded]"),
+      source: panel.querySelector("[data-bc-source]"),
+      linesEl: panel.querySelector("[data-bc-lines]"),
+      replace: panel.querySelector("[data-bc-replace]"),
+      adjust: panel.querySelector("[data-bc-adjust]"),
+      tags: panel.querySelector("[data-bc-tags]"),
       status: panel.querySelector("[data-bc-status]"),
       setup: panel.querySelector("[data-bc-setup]"),
       sheetWrap: panel.querySelector("[data-bc-sheet-wrap]"),
@@ -611,49 +618,57 @@
       headerRow: true,
       numberFormat: "auto",
       ignoreTotals: true,
+      sectionLookup: null,
       lines: [],
       skippedTotals: 0,
       sourceName: "",
+      adjusting: false,
     };
     versions[id] = v;
 
-    v.file.addEventListener("change", async () => {
+    v.file.addEventListener("change", () => {
       const file = v.file.files && v.file.files[0];
-      if (!file) return;
-      v.status.textContent = "Reading " + file.name + "…";
-      v.status.className = "bc-status";
-      try {
-        const buffer = await file.arrayBuffer();
-        const bytes = new Uint8Array(buffer);
-        const isZip = bytes.length > 4 && bytes[0] === 0x50 && bytes[1] === 0x4b;
-        if (isZip) {
-          setSheets(v, await parseXlsx(buffer), file.name);
-        } else {
-          setSheets(v, [{ name: file.name, rows: parseText(decodeText(buffer)) }], file.name);
-        }
-        v.paste.value = "";
-      } catch (err) {
-        const why = err && err.message === "no-inflate"
-          ? "This browser cannot read Excel files directly. Paste the cells instead, or save the sheet as CSV."
-          : "Could not read this file. Paste the cells instead, or save the sheet as CSV.";
-        fail(v, why);
-      }
+      if (file) loadFile(v, file);
       v.file.value = "";
     });
 
+    // Slepen op het hele paneel
+    for (const type of ["dragenter", "dragover"]) {
+      panel.addEventListener(type, (e) => {
+        if (!e.dataTransfer || ![...e.dataTransfer.types].includes("Files")) return;
+        e.preventDefault();
+        panel.classList.add("is-dragover");
+      });
+    }
+    panel.addEventListener("dragleave", (e) => { if (!panel.contains(e.relatedTarget)) panel.classList.remove("is-dragover"); });
+    panel.addEventListener("drop", (e) => {
+      panel.classList.remove("is-dragover");
+      const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+      if (!file) return;
+      e.preventDefault();
+      loadFile(v, file);
+    });
+
+    // Plakken: in het tekstvak, of gewoon ergens op het paneel
     let pasteTimer = null;
     v.paste.addEventListener("input", () => {
       clearTimeout(pasteTimer);
       pasteTimer = setTimeout(() => {
         const text = v.paste.value;
-        if (!text.trim()) return;
-        try {
-          setSheets(v, [{ name: "Pasted cells", rows: parseText(text) }], "pasted cells");
-        } catch {
-          fail(v, "Could not read the pasted cells.");
-        }
+        if (text.trim()) loadText(v, text, "pasted cells");
       }, 250);
     });
+    panel.addEventListener("paste", (e) => {
+      if (e.target === v.paste || e.target === v.label) return;
+      const text = e.clipboardData && e.clipboardData.getData("text/plain");
+      if (!text || !text.trim()) return;
+      e.preventDefault();
+      loadText(v, text, "pasted cells");
+    });
+    v.drop.addEventListener("click", (e) => { if (e.target === v.drop || e.target.closest(".bc-drop-title, .bc-drop-sub, .bc-drop-icon")) v.drop.focus(); });
+
+    v.replace.addEventListener("click", () => { v.drop.hidden = false; v.drop.focus(); });
+    v.adjust.addEventListener("click", () => setAdjusting(v, !v.adjusting));
 
     v.sheet.addEventListener("change", () => useSheet(v, Number(v.sheet.value)));
     for (const [name, select] of Object.entries(v.cols)) {
@@ -669,18 +684,85 @@
     v.label.addEventListener("input", () => { if (current) render(); });
   }
 
+  function setAdjusting(v, on) {
+    v.adjusting = on;
+    v.setup.hidden = !on;
+    v.adjust.textContent = on ? "Done" : "Adjust";
+    v.adjust.setAttribute("aria-expanded", on ? "true" : "false");
+  }
+
+  async function loadFile(v, file) {
+    showStatus(v, "Reading " + file.name + "…", false);
+    try {
+      const buffer = await file.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      const isZip = bytes.length > 4 && bytes[0] === 0x50 && bytes[1] === 0x4b;
+      if (isZip) {
+        setSheets(v, await parseXlsx(buffer), file.name);
+      } else {
+        setSheets(v, [{ name: file.name, rows: parseText(decodeText(buffer)) }], file.name);
+      }
+      v.paste.value = "";
+    } catch (err) {
+      fail(v, err && err.message === "no-inflate"
+        ? "This browser cannot read Excel files directly. Paste the cells instead, or save the sheet as CSV."
+        : "Could not read this file. Paste the cells instead, or save the sheet as CSV.");
+    }
+  }
+
+  function loadText(v, text, sourceName) {
+    try {
+      const rows = parseText(text);
+      if (!rows.length) throw new Error("empty");
+      setSheets(v, [{ name: sourceName, rows }], sourceName);
+    } catch {
+      fail(v, "Could not read the pasted cells.");
+    }
+  }
+
+  function showStatus(v, message, isError) {
+    v.status.textContent = message;
+    v.status.hidden = !message;
+    v.status.className = "bc-status" + (isError ? " is-error" : "");
+  }
+
   function fail(v, message) {
     v.rows = null;
     v.lines = [];
-    v.setup.hidden = true;
-    v.status.textContent = message;
-    v.status.className = "bc-status is-error";
+    v.loaded.hidden = true;
+    v.drop.hidden = false;
+    setAdjusting(v, false);
+    showStatus(v, message, true);
     recompute();
+  }
+
+  // Wat er herkend is, als tags onder de bestandskaart
+  function fillTags(v) {
+    const name = (c, none) => {
+      if (c < 0) return none;
+      const headerText = v.headerRow ? norm(v.rows[0][c]) : "";
+      return headerText || `Column ${c + 1}`;
+    };
+    let section = name(v.mapping.group, "");
+    if (!section) {
+      if (v.sectionLookup) section = "from the topsheet";
+      else if (v.lines.some((l) => l.group)) section = "from headings";
+      else section = "None";
+    }
+    const numbers = { auto: "Auto", eu: "1.234,56", us: "1,234.56" }[v.numberFormat] || "Auto";
+    const tags = [];
+    if (v.sheets && v.sheets.length > 1) tags.push(["Sheet", v.sheets[Number(v.sheet.value)].name]);
+    tags.push(["Code", name(v.mapping.code, "None")], ["Line", name(v.mapping.desc, "None")], ["Amount", name(v.mapping.amount, "Choose")], ["Section", section], ["Numbers", numbers]);
+    v.tags.innerHTML = tags.map(([k, val]) => `<span class="bc-detected-tag"><span>${esc(k)}</span>${esc(val)}</span>`).join("");
   }
 
   function setSheets(v, sheets, sourceName) {
     v.sheets = sheets;
     v.sourceName = sourceName;
+    v.source.textContent = sourceName;
+    v.drop.hidden = true;
+    v.loaded.hidden = false;
+    showStatus(v, "", false);
     v.sheet.innerHTML = sheets.map((s, i) => `<option value="${i}">${esc(s.name)}</option>`).join("");
     v.sheetWrap.hidden = sheets.length < 2;
     const best = sheets.length > 1 ? chooseSheet(sheets) : 0;
@@ -750,7 +832,7 @@
     v.format.value = v.numberFormat;
     v.header.checked = v.headerRow;
     v.totals.checked = v.ignoreTotals;
-    v.setup.hidden = false;
+    v.setup.hidden = !v.adjusting;
   }
 
   function applySettings(v) {
@@ -760,22 +842,26 @@
     renderPreview(v);
     if (v.mapping.amount < 0) {
       v.lines = [];
-      v.status.textContent = "Which column holds the amounts? Choose it below.";
-      v.status.className = "bc-status is-error";
+      v.linesEl.textContent = "Which column holds the amounts? Choose it under Adjust.";
+      v.linesEl.className = "bc-loaded-lines is-error";
+      setAdjusting(v, true);
     } else {
       const { lines, skippedTotals } = extractLines(v);
       v.lines = lines;
       v.skippedTotals = skippedTotals;
       if (!lines.length) {
-        v.status.textContent = `No budget lines found in ${v.sourceName}. Check the Code, Line and Amount columns below.`;
-        v.status.className = "bc-status is-error";
+        v.linesEl.textContent = "No budget lines found. Check the Code, Line and Amount columns under Adjust.";
+        v.linesEl.className = "bc-loaded-lines is-error";
+        setAdjusting(v, true);
       } else {
-        const bits = [`${lines.length} budget line${lines.length === 1 ? "" : "s"} from ${esc(v.sourceName)}`];
+        const bits = [`${lines.length} budget line${lines.length === 1 ? "" : "s"}`];
+        if (v.sheets && v.sheets.length > 1) bits.push(`sheet ${v.sheets[Number(v.sheet.value)].name}`);
         if (skippedTotals) bits.push(`${skippedTotals} total row${skippedTotals === 1 ? "" : "s"} skipped`);
-        v.status.innerHTML = bits.join(", ") + ".";
-        v.status.className = "bc-status is-ok";
+        v.linesEl.textContent = bits.join(", ");
+        v.linesEl.className = "bc-loaded-lines is-ok";
       }
     }
+    fillTags(v);
     recompute();
   }
 
@@ -1013,23 +1099,23 @@
     chartMovers.innerHTML = moversChart(visibleRows, money, signed);
 
     // Tabel
-    const head = `<thead><tr><th class="bc-col-status"><span class="visually-hidden">Status</span></th><th class="bc-col-code">Code</th><th>Line</th><th class="bc-num">${esc(labelA)}</th><th class="bc-num">${esc(labelB)}</th><th class="bc-num">Change</th><th class="bc-num bc-col-pct">%</th></tr></thead>`;
+    const head = `<thead><tr><th class="bc-col-status"><span class="visually-hidden">Status</span></th><th class="bc-col-code">Code</th><th>Line</th><th class="bc-num bc-col-a">${esc(labelA)}</th><th class="bc-num bc-col-b">${esc(labelB)}</th><th class="bc-num">Change</th><th class="bc-num bc-col-pct">%</th></tr></thead>`;
     const body = visibleGroups.map(({ g, rows }) => {
       const rowsHtml = rows.map((row) => `<tr class="bc-row bc-row-${row.status}">
           <td class="bc-col-status">${row.status === "same" ? "" : `<span class="chip bc-chip-${row.status}">${STATUS_LABEL[row.status]}</span>`}</td>
           <td class="bc-col-code">${esc(row.code)}</td>
-          <td class="bc-col-desc">${esc(row.desc) || "<span class=\"bc-muted\">(no description)</span>"}</td>
-          <td class="bc-num">${row.a === null ? "<span class=\"bc-muted\">–</span>" : money.format(row.a)}</td>
-          <td class="bc-num">${row.b === null ? "<span class=\"bc-muted\">–</span>" : money.format(row.b)}</td>
+          <td class="bc-col-desc"><span class="bc-desc-text">${esc(row.desc) || "<span class=\"bc-muted\">(no description)</span>"}</span><span class="bc-sub">${row.a === null ? "new" : money.format(row.a)} → ${row.b === null ? "removed" : money.format(row.b)}</span></td>
+          <td class="bc-num bc-col-a">${row.a === null ? "<span class=\"bc-muted\">–</span>" : money.format(row.a)}</td>
+          <td class="bc-num bc-col-b">${row.b === null ? "<span class=\"bc-muted\">–</span>" : money.format(row.b)}</td>
           <td class="bc-num bc-delta">${Math.abs(row.delta) < 0.005 ? "" : signed.format(row.delta)}</td>
           <td class="bc-num bc-col-pct">${row.status === "changed" ? pct(row.pct) : ""}</td>
         </tr>`).join("");
       return `<tbody class="bc-group">
-        <tr class="bc-group-row"><th scope="rowgroup" colspan="3">${esc(groupName(g))}</th><td class="bc-num">${money.format(g.a)}</td><td class="bc-num">${money.format(g.b)}</td><td class="bc-num bc-delta">${Math.abs(g.delta) < 0.005 ? "" : signed.format(g.delta)}</td><td class="bc-col-pct"></td></tr>
+        <tr class="bc-group-row"><th scope="rowgroup" colspan="3">${esc(groupName(g))}</th><td class="bc-num bc-col-a">${money.format(g.a)}</td><td class="bc-num bc-col-b">${money.format(g.b)}</td><td class="bc-num bc-delta">${Math.abs(g.delta) < 0.005 ? "" : signed.format(g.delta)}</td><td class="bc-col-pct"></td></tr>
         ${rowsHtml}
       </tbody>`;
     }).join("");
-    const foot = `<tfoot><tr><th scope="row" colspan="3">Total</th><td class="bc-num">${money.format(r.totalA)}</td><td class="bc-num">${money.format(r.totalB)}</td><td class="bc-num bc-delta">${Math.abs(r.delta) < 0.005 ? "" : signed.format(r.delta)}</td><td class="bc-num bc-col-pct">${pct(r.pct)}</td></tr></tfoot>`;
+    const foot = `<tfoot><tr><th scope="row" colspan="3">Total</th><td class="bc-num bc-col-a">${money.format(r.totalA)}</td><td class="bc-num bc-col-b">${money.format(r.totalB)}</td><td class="bc-num bc-delta">${Math.abs(r.delta) < 0.005 ? "" : signed.format(r.delta)}</td><td class="bc-num bc-col-pct">${pct(r.pct)}</td></tr></tfoot>`;
     if (!visibleRows.length) {
       const nothingChanged = changes === 0 && !filters.show.same && !filters.section && !filters.search;
       tableWrap.innerHTML = `<p class="bc-empty">${nothingChanged
@@ -1162,8 +1248,8 @@
       versions.b.label.value = "Working budget v3";
       versions.a.paste.value = "";
       versions.b.paste.value = "";
-      setSheets(versions.a, [{ name: "Sample", rows: SAMPLE_A.map((r) => [...r]) }], "the sample budget");
-      setSheets(versions.b, [{ name: "Sample", rows: SAMPLE_B.map((r) => [...r]) }], "the sample budget");
+      setSheets(versions.a, [{ name: "Sample", rows: SAMPLE_A.map((r) => [...r]) }], "Sample budget");
+      setSheets(versions.b, [{ name: "Sample", rows: SAMPLE_B.map((r) => [...r]) }], "Sample budget");
     });
   }
 })();
