@@ -156,6 +156,30 @@ await (async () => {
       assert.equal(lines[0].code, "1102");
     });
   });
+  t("Movie Magic xlsx-export: juiste werkblad, Subtotal boven Amount, secties uit het Topsheet", () => {
+    const b = fs.readFileSync(path.join(fixtures, "magic-movie-export.xlsx"));
+    return BC.parseXlsx(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength)).then((sheets) => {
+      assert.deepEqual(sheets.map((s) => s.name), ["Budget Metadata", "Topsheet", "Categories", "Account Details"]);
+      const best = BC.chooseSheet(sheets);
+      assert.equal(sheets[best].name, "Categories", "één regel per account wint van het detailblad");
+      const a = BC.analyseSheet(sheets[best].rows);
+      assert.deepEqual(a.mapping, { code: 0, desc: 1, amount: 4, group: -1 });
+      const lookup = BC.sectionLookupFromSheets(sheets, best);
+      assert.equal(lookup.get("1100"), "DEVELOPMENT, STORY, RIGHTS, CONTINUITY");
+      assert.equal(BC.lookupSection(lookup, "1206"), "PRODUCERS");
+      assert.equal(BC.lookupSection(lookup, "2002"), "PRODUCTION STAFF");
+      const { lines } = BC.extractLines({ ...a, numberFormat: "auto", ignoreTotals: true, sectionLookup: lookup });
+      assert.equal(lines.length, 6);
+      assert.deepEqual([...new Set(lines.map((l) => l.group))], ["DEVELOPMENT, STORY, RIGHTS, CONTINUITY", "PRODUCERS", "PRODUCTION STAFF"]);
+      assert.equal(lines.reduce((n, l) => n + l.amount, 0), 694092);
+      // Detailblad: "Subtotal" is het geld, "Amount" het aantal; "Groups" is geen sectie
+      const det = BC.analyseSheet(sheets[3].rows);
+      assert.deepEqual(det.mapping, { code: 0, desc: 7, amount: 17, group: -1 });
+      // Topsheet: "Category Description" is de omschrijving, geen sectie
+      const top = BC.analyseSheet(sheets[1].rows);
+      assert.deepEqual(top.mapping, { code: 0, desc: 1, amount: 4, group: -1 });
+    });
+  });
 })();
 await Promise.all(pending);
 console.log(`${n} tests, exit ${process.exitCode || 0}`);

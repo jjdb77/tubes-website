@@ -306,13 +306,19 @@
     };
     const m = { code: -1, desc: -1, amount: -1, group: -1 };
     if (hasHeader) {
-      m.group = find(/^(group|section|department|dept|categor|afdeling|rubriek|phase|fase|kostengroep|cost group)/);
+      // Sectie alleen bij een eenduidige kopnaam. "Group(s)" hoort daar niet bij:
+      // in Movie Magic zijn dat fringe-groepen; de inhoudscheck hieronder vangt
+      // echte sectiekolommen alsnog.
+      m.group = find(/^(section|department|dept|category|categorie|afdeling|rubriek|phase|fase|kostengroep|cost group|cost category)( name| code)?$/);
       m.code = find(/^(acc(ount)?( ?(no|nr|number|code|#))?|acct|code|nr|no|number|rekening|post|line ?(no|nr|number)|budget ?code|id|#)$/, [m.group]);
       if (m.code < 0) m.code = find(/\b(code|account|acct)\b/, [m.group]);
       m.desc = find(/^(description|desc|omschrijving|name|naam|item|title|label|detail|budget line|line item|line|post)$/, [m.group, m.code]);
       if (m.desc < 0) m.desc = find(/desc|omschrijving|name|item|line/, [m.group, m.code]);
-      // Eerst een kolom die precies "Total"/"Amount" heet, dan pas "Subtotal" e.d.
-      m.amount = find(/^(total|totaal|amount|bedrag|budget|totaal bedrag|total amount|line total)$/, [m.group, m.code, m.desc]);
+      // Bedrag: eerst precies "Total", dan "Subtotal" (Movie Magic: "Amount"
+      // is daar het aantal en "Subtotal" het geld), dan "Amount"/"Bedrag".
+      m.amount = find(/^(total|totaal|line total|total amount|totaal bedrag)$/, [m.group, m.code, m.desc]);
+      if (m.amount < 0) m.amount = find(/^(sub-?total|subtotaal)$/, [m.group, m.code, m.desc]);
+      if (m.amount < 0) m.amount = find(/^(amount|bedrag|budget)$/, [m.group, m.code, m.desc]);
       if (m.amount < 0) m.amount = find(/^(total|totaal|amount|bedrag|budget|subtotal|sum|cost|value|estimate|approved|current|revised)/, [m.group, m.code, m.desc]);
       if (m.amount < 0) m.amount = find(/total|amount|bedrag|budget|€|eur|usd|gbp|\$|cost|kosten/, [m.group, m.code, m.desc]);
     }
@@ -347,11 +353,77 @@
         const values = filled(c);
         if (!values.length || values.length > sample.length * 0.6) continue;
         if (values.filter((r) => !looksNumeric(r[c])).length < values.length * 0.8) continue;
-        const descEmpty = m.desc < 0 ? values.length : values.filter((r) => !String(r[m.desc] ?? "").trim()).length;
-        if (descEmpty >= values.length * 0.8) { m.group = c; break; }
+        // Kopregels van een sectie hebben geen omschrijving en geen bedrag in de detailkolommen
+        const empty = (col) => (col < 0 ? values.length : values.filter((r) => !String(r[col] ?? "").trim()).length);
+        if (empty(m.desc) >= values.length * 0.8 && empty(m.amount) >= values.length * 0.8) { m.group = c; break; }
       }
     }
     return m;
+  }
+
+  // Kopregel, kolommen en de bruikbare regels van één werkblad
+  function analyseSheet(rows) {
+    const hi = findHeaderIndex(rows);
+    const data = hi > 0 ? rows.slice(hi) : rows;
+    let headerRow = hi >= 0;
+    let mapping = detectMapping(data, headerRow);
+    if (!headerRow && data.length > 1 && looksLikeHeader(data[0])) {
+      // Kopregel zonder bekende woorden (bijv. "A;B;C"): toch als kop nemen
+      headerRow = true;
+      mapping = detectMapping(data, true);
+    }
+    return { rows: data, headerRow, mapping };
+  }
+
+  // Welk werkblad is het budget? Het blad met de meeste bruikbare regels,
+  // zolang elke regel een eigen code heeft en een omschrijving. Een
+  // detailblad met tien regels per account (Movie Magic "Account Details")
+  // verliest zo van het accountoverzicht ("Categories") in hetzelfde bestand.
+  function scoreSheet(sheet) {
+    if (!sheet.rows || sheet.rows.length < 2) return 0;
+    const a = analyseSheet(sheet.rows);
+    if (a.mapping.amount < 0) return 0;
+    const { lines } = extractLines({ rows: a.rows, mapping: a.mapping, headerRow: a.headerRow, numberFormat: "auto", ignoreTotals: true });
+    if (!lines.length) return 0;
+    const keys = new Set(lines.map((l) => (l.code ? "c:" + normCode(l.code) : "d:" + normKey(l.desc))));
+    const uniq = keys.size / lines.length;
+    const descFill = lines.filter((l) => l.desc).length / lines.length;
+    return lines.length * uniq * uniq * Math.max(descFill, 0.1);
+  }
+  function chooseSheet(sheets) {
+    let best = 0;
+    let bestScore = -1;
+    sheets.forEach((s, i) => {
+      const score = scoreSheet(s);
+      if (score > bestScore) { bestScore = score; best = i; }
+    });
+    return best;
+  }
+
+  // Secties uit een ander werkblad in hetzelfde bestand: een topsheet met
+  // ronde codes (1100, 2000) en namen. Regel 1102 hoort dan bij 1100.
+  function sectionLookupFromSheets(sheets, skipIndex) {
+    const lookup = new Map();
+    sheets.forEach((sheet, i) => {
+      if (i === skipIndex || !sheet.rows || sheet.rows.length < 3) return;
+      const a = analyseSheet(sheet.rows);
+      if (a.mapping.code < 0 || a.mapping.desc < 0) return;
+      for (const r of a.rows.slice(a.headerRow ? 1 : 0)) {
+        const code = normCode(r[a.mapping.code]);
+        const name = norm(r[a.mapping.desc]);
+        if (/^\d{2,}00$/.test(code) && name && !TOTAL_RE.test(name)) lookup.set(code, name);
+      }
+    });
+    return lookup.size >= 3 ? lookup : null;
+  }
+  function lookupSection(lookup, code) {
+    if (!lookup || !/^\d+$/.test(code)) return "";
+    if (lookup.has(code)) return lookup.get(code);
+    for (let k = 1; k < code.length; k++) {
+      const candidate = code.slice(0, code.length - k) + "0".repeat(k);
+      if (lookup.has(candidate)) return lookup.get(candidate);
+    }
+    return "";
   }
 
   // Een kopregel heeft minstens twee tekstcellen en geen getallen. Een
@@ -365,7 +437,7 @@
   // ---------- Regels eruit halen en vergelijken ----------
 
   function extractLines(version) {
-    const { rows, mapping, headerRow, numberFormat, ignoreTotals } = version;
+    const { rows, mapping, headerRow, numberFormat, ignoreTotals, sectionLookup } = version;
     const lines = [];
     let group = "";
     let skippedTotals = 0;
@@ -386,7 +458,9 @@
         if (ignoreTotals) { skippedTotals++; continue; }
       }
       if (!code && !desc) continue;
-      lines.push({ code, desc, amount, group });
+      // Sectie: eigen kolom, anders het topsheet van hetzelfde bestand, anders het laatste kopje
+      const fromLookup = mapping.group < 0 && sectionLookup ? lookupSection(sectionLookup, normCode(code)) : "";
+      lines.push({ code, desc, amount, group: explicitGroup || fromLookup || group });
     }
     return { lines, skippedTotals };
   }
@@ -485,7 +559,7 @@
   }
 
   // Voor tests (Node) en voor de pagina
-  const api = { parseAmount, detectNumberFormat, detectDelimiter, parseDelimited, parseText, parseXlsx, findHeaderIndex, detectMapping, extractLines, compareLines, looksNumeric };
+  const api = { parseAmount, detectNumberFormat, detectDelimiter, parseDelimited, parseText, parseXlsx, findHeaderIndex, detectMapping, analyseSheet, chooseSheet, sectionLookupFromSheets, lookupSection, extractLines, compareLines, looksNumeric };
   if (typeof globalThis !== "undefined") globalThis.BudgetCompare = api;
   if (typeof document === "undefined") return;
 
@@ -609,24 +683,18 @@
     v.sourceName = sourceName;
     v.sheet.innerHTML = sheets.map((s, i) => `<option value="${i}">${esc(s.name)}</option>`).join("");
     v.sheetWrap.hidden = sheets.length < 2;
-    // Bij meer werkbladen: het eerste blad met de meeste regels
-    let best = 0;
-    sheets.forEach((s, i) => { if (s.rows.length > sheets[best].rows.length * 1.5) best = i; });
+    const best = sheets.length > 1 ? chooseSheet(sheets) : 0;
     v.sheet.value = String(best);
     useSheet(v, best);
   }
 
   function useSheet(v, index) {
     const sheet = v.sheets[index];
-    const headerIndex = findHeaderIndex(sheet.rows);
-    v.rows = headerIndex > 0 ? sheet.rows.slice(headerIndex) : sheet.rows;
-    v.headerRow = headerIndex >= 0;
-    v.mapping = detectMapping(v.rows, v.headerRow);
-    if (!v.headerRow && v.rows.length > 1 && looksLikeHeader(v.rows[0])) {
-      // Kopregel zonder bekende woorden (bijv. "A;B;C"): toch als kop nemen
-      v.headerRow = true;
-      v.mapping = detectMapping(v.rows, true);
-    }
+    const analysed = analyseSheet(sheet.rows);
+    v.rows = analysed.rows;
+    v.headerRow = analysed.headerRow;
+    v.mapping = analysed.mapping;
+    v.sectionLookup = v.sheets.length > 1 ? sectionLookupFromSheets(v.sheets, index) : null;
     v.numberFormat = "auto";
     v.ignoreTotals = true;
     autoFormat(v);
