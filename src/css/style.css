@@ -153,6 +153,7 @@ a:hover { color: var(--action); }
 .chip-amber { background: var(--status-amber-bg); color: var(--status-amber-ink); }
 .chip-mint { background: var(--status-mint-bg); color: var(--status-mint-ink); }
 .chip-lavender { background: var(--status-lavender-bg); color: var(--status-lavender-ink); }
+.chip-slate { background: #E8EAEE; color: #55606E; }
 
 .chip-sep { color: var(--muted); font-size: 0.9rem; user-select: none; }
 .theme-dark .chip-sep { color: rgba(231, 230, 227, 0.45); }

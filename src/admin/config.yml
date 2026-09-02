@@ -192,7 +192,7 @@ collections:
         name: topic
         widget: select
         default: Budgeting
-        options: [Budgeting, Financing, "AI in production", Festivals]
+        options: [Budgeting, Financing, "AI in production", Festivals, Filmmaking, Television]
       - { label: "Link naar de LinkedIn-post", name: link, widget: string, required: false, hint: "Liefst de post zelf (op LinkedIn: de drie puntjes bij de post > 'Copy link to post'); dan wordt de knop 'Read <naam>'s original post'. Een berichtenoverzicht (/recent-activity/all/ of /company/<naam>/posts/) geeft 'See <naam>'s posts', een kale profielpagina 'See more from <naam>'. Leeg mag ook: dan geen knop." }
       - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Bepaalt de volgorde en de maandkop. Op de pagina staat alleen de maand." }
       - { label: Samenvatting, name: body, widget: markdown, hint: "Een of twee zinnen in het Engels. Beschrijf waar de post over gaat ('Katya Alexander writes about ...'), niet wat de auteur vindt: geen 'argues', 'makes the case' of 'flags'. Zo blijft het standpunt van de auteur en blijft de post zelf de plek voor het volledige verhaal. Geen em-dashes (—)." }
