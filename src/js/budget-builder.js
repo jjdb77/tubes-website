@@ -389,7 +389,9 @@
   // daarna een smalle balk met het gekozen formaat.
   const formatsEl = $("[data-bb-formats]");
   function renderFormats() {
-    if (!budget.sections.length) {
+    // Eerst een formaat kiezen (of importeren), dan pas de rest van de stappen
+    root.classList.toggle("is-choosing", !(budget.template || budget.sections.length));
+    if (!budget.template && !budget.sections.length) {
       formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Choose your format</h3><p class="bb-help">All categories of the format appear as sections; add the budget lines per category from the list. Or start blank.</p></div></div>${templateTiles()}</div>`;
       return;
     }
