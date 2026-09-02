@@ -9,7 +9,6 @@
   "header_cta_label": "Book your free Production Health Check",
   "header_cta_url": "/production-finance-health-check/",
   "app_url": "https://demo.tubesmedia.online/plans?t=ImZiMTc5ODc4YmIyYzY3OTA0M2ViOTllZGU5NTM3ZWM5MWRjNjZiZWUi--0c4c9cae264dee7c96e3ee87f0fc1148c11165b6",
-  "app_login_url": "https://demo.tubesmedia.online/login",
   "booking_url": "https://4relations.appconnected.nl/boek/joachim",
   "booking_plans": [
     {
@@ -125,90 +124,36 @@
   ],
   "nav": [
     {
-      "label": "Platform",
-      "url": "/platform/"
+      "label": "Home",
+      "url": "/"
     },
     {
       "label": "Solutions",
       "url": "/solutions/"
     },
     {
-      "label": "Pricing",
-      "url": "/plans/"
-    },
-    {
-      "label": "Free tools",
-      "url": "/resources/",
-      "children": [
-        {
-          "label": "All free tools",
-          "url": "/resources/"
-        },
-        {
-          "label": "Budget Builder",
-          "url": "/tools/budget-builder/"
-        },
-        {
-          "label": "Budget comparison",
-          "url": "/tools/budget-compare/"
-        },
-        {
-          "label": "Film & TV locations",
-          "url": "/compare-film-tv-locations/"
-        },
-        {
-          "label": "Film & TV incentives",
-          "url": "/compare-film-incentives/"
-        },
-        {
-          "label": "Festivals & events",
-          "url": "/compare-film-festivals/"
-        },
-        {
-          "label": "Media software",
-          "url": "/compare-media-software/"
-        },
-        {
-          "label": "Production Health Check",
-          "url": "/production-finance-health-check/"
-        }
-      ]
-    },
-    {
-      "label": "News",
-      "url": "/news/",
-      "children": [
-        {
-          "label": "Industry news",
-          "url": "/news/"
-        },
-        {
-          "label": "Insights",
-          "url": "/insights/"
-        }
-      ]
-    },
-    {
       "label": "Company",
-      "url": "/company/",
-      "children": [
-        {
-          "label": "About Tubes",
-          "url": "/company/"
-        },
-        {
-          "label": "Academy",
-          "url": "/academy/"
-        },
-        {
-          "label": "Security & compliance",
-          "url": "/compliance/"
-        },
-        {
-          "label": "Contact",
-          "url": "/contact/"
-        }
-      ]
+      "url": "/company/"
+    },
+    {
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "label": "Compliance",
+      "url": "/compliance/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    },
+    {
+      "label": "Academy",
+      "url": "/academy/"
+    },
+    {
+      "label": "Industry news",
+      "url": "/news/"
     }
   ],
   "booking_embed_url": "https://4relationstubes.appconnected.nl/boek/joachim/tubes-assessment"

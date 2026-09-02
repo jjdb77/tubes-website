@@ -7,57 +7,6 @@ if (toggle) {
   });
 }
 
-// Uitklapmenu's in de header.
-//
-// Op een breed scherm openen ze bij hoveren, maar klikken en het toetsenbord
-// moeten het net zo goed doen: de groepsknop is daarom een echte <button> met
-// aria-expanded. Op smal scherm valt hoveren weg en klapt het menu open in het
-// uitschuifpaneel.
-const submenuBreed = () => matchMedia("(min-width: 701px)").matches;
-
-for (const group of document.querySelectorAll(".has-submenu")) {
-  const button = group.querySelector(".nav-parent");
-  if (!button) continue;
-
-  const zet = (open) => {
-    group.classList.toggle("is-open", open);
-    button.setAttribute("aria-expanded", open ? "true" : "false");
-  };
-
-  // Op breed scherm opent hoveren het menu al; een klik moet hem dan niet
-  // meteen weer dichtklappen. Op smal scherm is klikken de enige manier, dus
-  // daar wisselt hij wel.
-  button.addEventListener("click", () => {
-    if (submenuBreed()) zet(true);
-    else zet(!group.classList.contains("is-open"));
-  });
-  group.addEventListener("mouseenter", () => submenuBreed() && zet(true));
-  group.addEventListener("mouseleave", () => submenuBreed() && zet(false));
-  group.addEventListener("focusout", (event) => {
-    if (submenuBreed() && !group.contains(event.relatedTarget)) zet(false);
-  });
-}
-
-function sluitSubmenus(behalve) {
-  for (const group of document.querySelectorAll(".has-submenu.is-open")) {
-    if (group === behalve) continue;
-    group.classList.remove("is-open");
-    group.querySelector(".nav-parent")?.setAttribute("aria-expanded", "false");
-  }
-}
-
-document.addEventListener("click", (event) => {
-  sluitSubmenus(event.target.closest?.(".has-submenu"));
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
-  const open = document.querySelector(".has-submenu.is-open");
-  if (!open) return;
-  open.querySelector(".nav-parent")?.focus();
-  sluitSubmenus();
-});
-
 // Spotlaag in donkere en blauwe secties (de spots dwalen zelf, via CSS)
 for (const section of document.querySelectorAll(".section.theme-dark, .section.theme-teal")) {
   const layer = document.createElement("span");

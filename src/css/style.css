@@ -235,67 +235,6 @@ a:hover { color: var(--action); }
 .site-nav a:hover { color: var(--ink); background: var(--divider); }
 .site-nav a.is-active { background: #E6EEFC; color: var(--status-blue-ink); }
 
-/* ---------- Uitklapmenu's in de header ---------- */
-
-.has-submenu { position: relative; }
-
-.nav-parent {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
-  background: none; border: 0; cursor: pointer;
-  padding: 8px 15px;
-  border-radius: 999px;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-.nav-parent:hover { color: var(--ink); background: var(--divider); }
-.nav-parent.is-active { background: #E6EEFC; color: var(--status-blue-ink); }
-
-.nav-caret {
-  width: 0; height: 0;
-  border-style: solid; border-width: 5px 4px 0 4px;
-  border-color: currentColor transparent transparent transparent;
-  transition: transform 0.15s ease;
-}
-.has-submenu.is-open .nav-caret { transform: rotate(180deg); }
-
-.site-nav .submenu {
-  position: absolute; top: calc(100% + 8px); left: 0; z-index: 120;
-  display: none;
-  min-width: 244px;
-  margin: 0; padding: 8px;
-  list-style: none;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-raise);
-}
-.site-nav .has-submenu.is-open .submenu { display: block; }
-
-/* Onzichtbaar bruggetje over de tussenruimte, anders valt het menu dicht
-   zodra de muis van de knop naar de lijst beweegt. */
-.has-submenu.is-open::after {
-  content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 10px;
-}
-
-.site-nav .submenu { flex-direction: column; gap: 0; }
-
-.site-nav .submenu a {
-  display: block; white-space: nowrap;
-  padding: 9px 12px; border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-/* Laatste item: door naar de applicatie */
-.nav-app-item { margin-left: 4px; }
-.site-nav a.nav-app {
-  border: 1.5px solid var(--border);
-  color: var(--action-soft-ink);
-  font-weight: 700;
-}
-.site-nav a.nav-app:hover { border-color: var(--action); background: none; color: var(--action); }
-
-
 .nav-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; }
 .nav-toggle-bar {
   display: block; width: 24px; height: 2px; margin: 5px 0;
@@ -1226,18 +1165,6 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .site-nav ul { flex-direction: column; gap: 2px; background: none; border: 0; padding: 0; border-radius: 0; }
   .site-nav a { display: block; padding: 12px 13px; font-size: 1.02rem; }
 
-  .nav-parent { width: 100%; justify-content: space-between; padding: 12px 13px; font-size: 1.02rem; border-radius: 0; }
-  .has-submenu.is-open::after { content: none; }
-  .site-nav .submenu {
-    position: static; min-width: 0; margin: 0 0 6px;
-    padding: 0 0 0 13px;
-    background: none; border: 0; border-left: 2px solid var(--divider); border-radius: 0;
-    box-shadow: none;
-  }
-  .site-nav .submenu a { padding: 10px 13px; font-size: 0.96rem; white-space: normal; }
-  .nav-app-item { margin: 8px 0 0; }
-  .site-nav a.nav-app { text-align: center; }
-
   .cta-inner { border-radius: var(--radius-card); }
 }
 
@@ -1276,12 +1203,12 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 /* Acht menu-items plus de knop: op middelgrote schermen compacter, nooit afbreken */
 @media (max-width: 1440px) {
   .header-inner { gap: 16px; }
-  .site-nav a, .nav-parent { padding: 8px 11px; font-size: 0.88rem; }
+  .site-nav a { padding: 8px 11px; font-size: 0.88rem; }
   .header-cta { padding: 9px 14px; font-size: 0.86rem; }
 }
 @media (max-width: 1220px) { .header-cta { display: none; } }
 @media (max-width: 980px) and (min-width: 701px) {
-  .site-nav a, .nav-parent { padding: 7px 8px; font-size: 0.82rem; }
+  .site-nav a { padding: 7px 8px; font-size: 0.82rem; }
 }
 
 /* Pijltje in primaire knoppen dat meeschuift bij hover */

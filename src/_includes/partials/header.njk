@@ -5,34 +5,11 @@
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <ul>
-        {%- for item in settings.nav %}
-        {%- if item.children %}
-        {#- Groep met uitklapmenu. De groepsknop is een <button>, niet een link:
-            de pagina zelf staat als eerste regel in het uitklapmenu. Zo werkt
-            hij ook met het toetsenbord en op een aanraakscherm. -#}
-        {%- set groupActive = false %}
-        {%- for child in item.children %}{% if page.url == child.url %}{% set groupActive = true %}{% endif %}{% endfor %}
-        <li class="has-submenu">
-          <button type="button" class="nav-parent{% if groupActive %} is-active{% endif %}" aria-expanded="false">
-            {{ item.label }}<span class="nav-caret" aria-hidden="true"></span>
-          </button>
-          <ul class="submenu">
-            {%- for child in item.children %}
-            <li><a href="{{ child.url }}"{% if page.url == child.url %} class="is-active" aria-current="page"{% endif %}>{{ child.label }}</a></li>
-            {%- endfor %}
-          </ul>
-        </li>
-        {%- else %}
+        {% for item in settings.nav %}
         <li>
-          <a href="{{ item.url }}"{% if page.url == item.url %} class="is-active" aria-current="page"{% endif %}>{{ item.label }}</a>
+          <a href="{{ item.url }}" {% if page.url == item.url %}class="is-active" aria-current="page"{% endif %}>{{ item.label }}</a>
         </li>
-        {%- endif %}
-        {%- endfor %}
-        {%- if settings.app_login_url %}
-        <li class="nav-app-item">
-          <a class="nav-app" href="{{ settings.app_login_url }}">Application</a>
-        </li>
-        {%- endif %}
+        {% endfor %}
       </ul>
     </nav>
     {%- if page.url == "/" -%}
