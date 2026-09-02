@@ -1161,3 +1161,73 @@ a:hover { color: var(--action); }
   .bc-group { break-inside: avoid; }
   body { background: #fff; color: #000; }
 }
+
+/* Budget compare: raster mag niet oprekken door een brede voorbeeldtabel
+   (grid-items hebben standaard min-width:auto, dan schuift de rechterkolom
+   de container uit) */
+.bc-versions, .bc-version, .bc-charts, .bc-chart { min-width: 0; }
+.bc-preview-scroll { max-width: 100%; }
+
+/* Filters: één rij boven grafieken en tabel */
+.bc-filters {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 22px;
+  margin-bottom: 20px; padding: 14px 18px;
+  background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-wash);
+}
+.bc-filters > label, .bc-filters legend {
+  font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+}
+.bc-filters fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.bc-filters legend { padding: 0; margin-bottom: 2px; }
+.bc-filter-row { display: flex; flex-wrap: wrap; gap: 6px 16px; min-height: 36px; align-items: center; }
+.bc-filters select, .bc-filters input[type="search"] {
+  display: block; margin-top: 4px; min-width: 170px;
+  font: inherit; font-size: 0.92rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px;
+}
+.bc-filters select:focus, .bc-filters input[type="search"]:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.bc-filters .bc-toolbar-buttons { margin-left: auto; }
+.bc-filters .button { padding: 9px 16px; font-size: 0.88rem; }
+
+/* Grafieken: dunne staven, hairline-raster, tekst in tekstkleuren. Kleuren
+   gevalideerd (dataviz-validator, licht vlak): A blauw / B teal, toename goud /
+   afname violet, allemaal >= 3:1 en CVD-veilig als paar. */
+.bc-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.bc-chart {
+  margin: 0; background: var(--surface); border: 1px solid var(--divider);
+  border-radius: var(--radius-wash); padding: 18px 20px 10px;
+}
+.bc-chart h3 { font-size: 1rem; margin: 0 0 2px; }
+.bc-chart-sub { font-size: 0.86rem; color: var(--muted); margin: 0 0 10px; }
+.bc-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 10px; font-size: 0.82rem; font-weight: 600; color: var(--ink-soft); }
+.bc-legend span::before {
+  content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+  margin-right: 7px; vertical-align: -1px; background: var(--swatch, var(--muted));
+}
+.bc-swatch-a { --swatch: #2D6CC4; }
+.bc-swatch-b { --swatch: #0E9C88; }
+.bc-swatch-up { --swatch: #B07A14; }
+.bc-swatch-down { --swatch: #6D4ED6; }
+.bc-chart-plot { min-width: 0; }
+.bc-chart svg { display: block; max-width: 100%; height: auto; font-family: var(--font-sans); overflow: visible; }
+.bc-chart .bc-grid { stroke: var(--divider); stroke-width: 1; }
+.bc-chart .bc-axis { stroke: var(--border); stroke-width: 1; }
+.bc-chart .bc-tick { font-size: 11px; fill: var(--muted); }
+.bc-chart .bc-label { font-size: 12.5px; fill: var(--ink-soft); }
+.bc-chart .bc-value { font-size: 12px; font-weight: 700; fill: var(--ink); font-variant-numeric: tabular-nums; }
+.bc-chart .bc-bar-a { fill: #2D6CC4; }
+.bc-chart .bc-bar-b { fill: #0E9C88; }
+.bc-chart .bc-bar-up { fill: #B07A14; }
+.bc-chart .bc-bar-down { fill: #6D4ED6; }
+.bc-chart .bc-mark:hover .bc-bar { filter: brightness(1.15); }
+.bc-chart .bc-mark:hover .bc-label { fill: var(--ink); }
+.bc-chart-empty { margin: 0; padding: 18px 0 24px; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 980px) {
+  .bc-charts { grid-template-columns: 1fr; }
+}
+@media print {
+  .bc-filters { display: none !important; }
+  .bc-charts { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .bc-chart { border-color: #ccc; break-inside: avoid; }
+}

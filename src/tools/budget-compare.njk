@@ -87,13 +87,40 @@ sections:
         <p class="bc-summary" data-bc-summary-text></p>
       </div>
       <div class="bc-tiles" data-bc-tiles></div>
-      <div class="bc-toolbar">
-        <label class="bc-check"><input type="checkbox" data-bc-changes-only checked> Only show changes</label>
+      {#- Filters: één rij, boven de grafieken en de tabel; ze gelden voor alles eronder. -#}
+      <div class="bc-filters" role="group" aria-label="Filters">
+        <label>Section <select data-bc-filter-section><option value="">All sections</option></select></label>
+        <fieldset>
+          <legend>Show</legend>
+          <div class="bc-filter-row">
+            <label class="bc-check"><input type="checkbox" data-bc-show="changed" checked> Changed</label>
+            <label class="bc-check"><input type="checkbox" data-bc-show="added" checked> New</label>
+            <label class="bc-check"><input type="checkbox" data-bc-show="removed" checked> Removed</label>
+            <label class="bc-check"><input type="checkbox" data-bc-show="same"> Unchanged</label>
+          </div>
+        </fieldset>
+        <label>Search <input type="search" data-bc-search placeholder="code or line" autocomplete="off" spellcheck="false"></label>
         <div class="bc-toolbar-buttons">
           <button type="button" class="button button-secondary" data-bc-csv>Download CSV</button>
           <button type="button" class="button button-secondary" data-bc-print>Print or save as PDF</button>
         </div>
       </div>
+
+      <div class="bc-charts">
+        <figure class="bc-chart">
+          <h3>Totals per section</h3>
+          <p class="bc-chart-sub" data-bc-chart-sections-note>Both versions side by side, with the change at the end of each pair.</p>
+          <p class="bc-legend"><span class="bc-swatch-a" data-bc-legend-a>Version A</span><span class="bc-swatch-b" data-bc-legend-b>Version B</span></p>
+          <div class="bc-chart-plot" data-bc-chart-sections></div>
+        </figure>
+        <figure class="bc-chart">
+          <h3>Biggest movers</h3>
+          <p class="bc-chart-sub">The ten lines with the largest change, within the current filters.</p>
+          <p class="bc-legend"><span class="bc-swatch-up">Increase</span><span class="bc-swatch-down">Decrease</span></p>
+          <div class="bc-chart-plot" data-bc-chart-movers></div>
+        </figure>
+      </div>
+
       <div class="bc-table-wrap" data-bc-table></div>
       <p class="bc-notes" data-bc-notes></p>
     </div>

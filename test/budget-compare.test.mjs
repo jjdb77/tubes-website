@@ -15,7 +15,16 @@ const src = fs.readFileSync(path.join(here, "..", "src", "js", "budget-compare.j
 vm.runInThisContext(src);
 const BC = globalThis.BudgetCompare;
 let n = 0;
-const t = (name, fn) => { n++; try { fn(); console.log("ok  ", name); } catch (e) { console.log("FAIL", name, "\n     ", e.message); process.exitCode = 1; } };
+const pending = [];
+const t = (name, fn) => {
+  n++;
+  const fail = (e) => { console.log("FAIL", name, "\n     ", e.message); process.exitCode = 1; };
+  try {
+    const r = fn();
+    if (r && typeof r.then === "function") pending.push(r.then(() => console.log("ok  ", name), fail));
+    else console.log("ok  ", name);
+  } catch (e) { fail(e); }
+};
 
 t("parseAmount notaties", () => {
   const p = BC.parseAmount;
@@ -131,5 +140,22 @@ await (async () => {
     assert.equal(r.rows.find((x) => x.code === "2100").delta, 8400);
     assert.equal(r.hasCents, true);
   });
+  t("Movie Magic-export: titelregels, twee niveaus, sectiekolom zonder kop", () => {
+    const mbuf = fs.readFileSync(path.join(fixtures, "magic-movie-template.xlsx"));
+    return BC.parseXlsx(mbuf.buffer.slice(mbuf.byteOffset, mbuf.byteOffset + mbuf.byteLength)).then((mm) => {
+      const rows = mm[0].rows;
+      assert.equal(rows.length, 380);
+      assert.equal(BC.findHeaderIndex(rows), -1, "titelregels zijn geen kopregel");
+      const m = BC.detectMapping(rows, false);
+      assert.deepEqual(m, { code: 2, desc: 3, amount: 4, group: 1 });
+      const { lines, skippedTotals } = BC.extractLines({ rows, mapping: m, headerRow: false, numberFormat: "auto", ignoreTotals: true });
+      assert.equal(skippedTotals, 0);
+      assert.equal(lines.length, 337, "alleen detailregels, geen categorieregels");
+      assert.equal(new Set(lines.map((l) => l.group)).size, 41);
+      assert.equal(lines[0].group, "DEVELOPMENT, STORY, RIGHTS, CONTINUITY");
+      assert.equal(lines[0].code, "1102");
+    });
+  });
 })();
+await Promise.all(pending);
 console.log(`${n} tests, exit ${process.exitCode || 0}`);
