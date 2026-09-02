@@ -45,6 +45,7 @@ sections:
         smalle balk met het gekozen formaat en een knop om te wisselen. -#}
     <div class="bb-formats" data-bb-formats></div>
 
+    <div class="bb-step-head"><span class="bb-step">2</span><h3>Budget details</h3><span class="bb-help">Name, production, currency, VAT and date. All optional, they appear on the Excel export.</span></div>
     <div class="bb-meta">
       <label class="bb-field bb-field-wide">Budget name <input type="text" data-bb-meta="name" placeholder="Draft 1" autocomplete="off"></label>
       <label class="bb-field bb-field-wide">Production <input type="text" data-bb-meta="production" placeholder="Working title" autocomplete="off"></label>
@@ -72,9 +73,13 @@ sections:
     <p class="bb-notice" data-bb-notice role="status" aria-live="polite" hidden></p>
 
     <div class="bb-layout">
-      <div class="bb-sections" data-bb-sections></div>
+      <div class="bb-main">
+        <div class="bb-step-head"><span class="bb-step">3</span><h3>Sections and budget lines</h3><span class="bb-help">Pick cost types per section from the list, or add your own lines. Totals follow as you type.</span></div>
+        <div class="bb-sections" data-bb-sections></div>
+      </div>
 
       <aside class="bb-summary" data-bb-summary>
+        <div class="bb-step-head"><span class="bb-step">4</span><h3>Totals, save and export</h3></div>
         <div class="bb-summary-card">
           <span class="bb-label">Total excl. VAT</span>
           <div class="bb-total" data-bb-total>0</div>
