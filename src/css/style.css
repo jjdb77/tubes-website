@@ -1542,6 +1542,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .bc-filters { display: none !important; }
   .bc-charts { grid-template-columns: 1fr 1fr; gap: 12px; }
   .bc-chart { border-color: #ccc; break-inside: avoid; }
+}
+
 /* ---------- Locatievergelijking (/compare-film-tv-locations/, los van de app) ---------- */
 
 .loc-tool {
