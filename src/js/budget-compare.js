@@ -310,7 +310,7 @@
       // in Movie Magic zijn dat fringe-groepen; de inhoudscheck hieronder vangt
       // echte sectiekolommen alsnog.
       m.group = find(/^(section|department|dept|category|categorie|afdeling|rubriek|phase|fase|kostengroep|cost group|cost category)( name| code)?$/);
-      m.code = find(/^(acc(ount)?( ?(no|nr|number|code|#))?|acct|code|nr|no|number|rekening|post|line ?(no|nr|number)|budget ?code|id|#)$/, [m.group]);
+      m.code = find(/^(acc(ount)?( ?(no|nr|number|code|#))?|acct|code|type|nr|no|number|rekening|post|line ?(no|nr|number)|budget ?code|id|#)$/, [m.group]); // "Type" = kostensoortnummer in de Tubes-export
       if (m.code < 0) m.code = find(/\b(code|account|acct)\b/, [m.group]);
       m.desc = find(/^(description|desc|omschrijving|name|naam|item|title|label|detail|budget line|line item|line|post)$/, [m.group, m.code]);
       if (m.desc < 0) m.desc = find(/desc|omschrijving|name|item|line/, [m.group, m.code]);
