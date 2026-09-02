@@ -21,7 +21,7 @@ sections:
         text: |
           Build a production budget in your browser: sections, lines, quantities and rates, with contingency and fees on top. Start from the Movie Magic structure or import an export, download an Excel file in the Tubes layout, and save up to ten versions.
       - icon: /assets/icons/chart-pie.svg
-        heading: Budget Compare
+        heading: Free Production Budget Comparison Tool
         url: /tools/budget-compare/
         link_label: Compare two versions
         text: |
