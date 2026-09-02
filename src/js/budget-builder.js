@@ -390,11 +390,11 @@
   const formatsEl = $("[data-bb-formats]");
   function renderFormats() {
     if (!budget.sections.length) {
-      formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Choose a format</h3><p class="bb-help">All categories of the format appear as sections; add the budget lines per category from the list. Or start blank.</p></div></div>${templateTiles()}</div>`;
+      formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Choose your format</h3><p class="bb-help">All categories of the format appear as sections; add the budget lines per category from the list. Or start blank.</p></div></div>${templateTiles()}</div>`;
       return;
     }
     const t = budget.template && allTemplates().find((x) => x.id === budget.template);
-    formatsEl.innerHTML = `<div class="bb-format-bar"><span class="bb-step">1</span><span>Format: <strong>${t ? esc(t.name) : "none"}</strong>${t ? ` <span class="bb-help">${(t.sections || []).length} categories</span>` : ""}</span><button type="button" class="bc-link-button" data-bb-open="templates">${t ? "Change format" : "Choose a format"}</button></div>`;
+    formatsEl.innerHTML = `<div class="bb-format-bar"><span class="bb-step">1</span><span>Format: <strong>${t ? esc(t.name) : "none"}</strong>${t ? ` <span class="bb-help">${(t.sections || []).length} categories</span>` : ""}</span><button type="button" class="bc-link-button" data-bb-open="templates">Choose your format</button></div>`;
     for (const b of $$("[data-bb-open]", formatsEl)) b.addEventListener("click", () => { prepareDialog(b.dataset.bbOpen); openDialog(b.dataset.bbOpen); });
   }
   formatsEl.addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
