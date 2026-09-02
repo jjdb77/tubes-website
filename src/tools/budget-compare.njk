@@ -1,0 +1,144 @@
+---
+layout: layout.njk
+title: Budget Version Compare
+seo_title: "Compare Two Budget Versions, Free and Private | Tubes"
+description: "Free tool that shows what changed between two versions of a production budget: per line, per section and in total. Runs in your browser, nothing is uploaded."
+permalink: /tools/budget-compare/
+# Alles gebeurt in de browser: geen demo-popup en geen statistiek-script op
+# deze pagina, want server.js zet hier een Content-Security-Policy die elke
+# uitgaande verbinding blokkeert (zie "Gratis tools" in CLAUDE.md).
+browser_only: true
+sections:
+  - type: hero
+    kicker: Free tool
+    title: See what changed between two *budget versions*
+    text: |
+      Load two versions of a production budget and get the differences per line, per section and in total. Choose a file or paste the cells straight from Excel or Google Sheets.
+
+      Everything runs in your browser. This page has no upload endpoint and the browser is instructed to block outgoing connections, so your figures cannot leave your device.
+---
+{#- Gratis tool "Budget version compare". Bewust géén CMS-secties: het
+    invoerdeel is te specifiek voor het sectiesysteem. Tekst wijzig je hier,
+    opmaak staat in style.css (blok "Gratis tools: Budget compare", klassen
+    bc-*), logica in js/budget-compare.js. Het script doet geen netwerkverkeer;
+    houd dat zo, de privacybelofte hieronder steunt erop. -#}
+
+{%- macro versionPanel(id, name, tone, hint, defaultLabel) -%}
+<div class="bc-version" data-version="{{ id }}">
+  <div class="bc-version-head">
+    <span class="chip chip-{{ tone }}">{{ name }}</span>
+    <label class="bc-name">
+      <span class="visually-hidden">Name for {{ name }}</span>
+      <input type="text" data-bc-label value="{{ defaultLabel }}" autocomplete="off" spellcheck="false">
+    </label>
+  </div>
+  <p class="bc-hint">{{ hint }}</p>
+  <div class="bc-input">
+    <label class="button button-secondary bc-file">
+      Choose a file
+      <input class="visually-hidden" type="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/tab-separated-values,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-bc-file>
+    </label>
+    <span class="bc-or">or</span>
+    <textarea data-bc-paste rows="2" placeholder="paste the cells here" aria-label="Paste cells for {{ name }}" spellcheck="false"></textarea>
+  </div>
+  <p class="bc-status" data-bc-status role="status" aria-live="polite"></p>
+  <div class="bc-setup" data-bc-setup hidden>
+    <div class="bc-setup-row">
+      <label data-bc-sheet-wrap hidden>Sheet <select data-bc-sheet></select></label>
+      <label>Code <select data-bc-col="code"></select></label>
+      <label>Line <select data-bc-col="desc"></select></label>
+      <label>Amount <select data-bc-col="amount"></select></label>
+      <label>Section <select data-bc-col="group"></select></label>
+      <label>Numbers <select data-bc-format>
+        <option value="auto">Auto</option>
+        <option value="eu">1.234,56</option>
+        <option value="us">1,234.56</option>
+      </select></label>
+    </div>
+    <div class="bc-setup-row bc-checks">
+      <label class="bc-check"><input type="checkbox" data-bc-header checked> First row is a header</label>
+      <label class="bc-check"><input type="checkbox" data-bc-totals checked> Skip subtotal and total rows</label>
+    </div>
+    <div class="bc-preview" data-bc-preview></div>
+  </div>
+</div>
+{%- endmacro -%}
+
+<section class="section theme-white bc-section" id="tool" data-budget-compare>
+  <div class="container">
+    <div class="bc-privacy">
+      <span class="bc-privacy-icon" aria-hidden="true"></span>
+      <p><strong>Stays in your browser.</strong> Nothing is uploaded, nothing is sent, nothing is stored on our side. Only your column choices are remembered on this device. Want proof? Open your browser's developer tools, watch the Network tab while you use the tool: it stays empty.</p>
+    </div>
+
+    <div class="bc-intro">
+      <h2>Load your two versions</h2>
+      <p>Any layout works as long as each budget line has a description and an amount. Section headings and subtotal rows are recognised automatically. <button type="button" class="bc-link-button" data-bc-sample>Try it with a sample budget</button></p>
+    </div>
+
+    <div class="bc-versions">
+      {{ versionPanel("a", "Version A", "blue", "The earlier version, for example the approved budget.", "Approved budget") }}
+      {{ versionPanel("b", "Version B", "teal", "The later version, for example the current working budget.", "Working budget") }}
+    </div>
+
+    <div class="bc-results" data-bc-results hidden>
+      <div class="bc-results-head">
+        <h2>What changed</h2>
+        <p class="bc-summary" data-bc-summary-text></p>
+      </div>
+      <div class="bc-tiles" data-bc-tiles></div>
+      <div class="bc-toolbar">
+        <label class="bc-check"><input type="checkbox" data-bc-changes-only checked> Only show changes</label>
+        <div class="bc-toolbar-buttons">
+          <button type="button" class="button button-secondary" data-bc-csv>Download CSV</button>
+          <button type="button" class="button button-secondary" data-bc-print>Print or save as PDF</button>
+        </div>
+      </div>
+      <div class="bc-table-wrap" data-bc-table></div>
+      <p class="bc-notes" data-bc-notes></p>
+    </div>
+  </div>
+</section>
+
+{%- set featureText %}
+Every budget in Tubes is versioned. Drafts, quotations and the approved baseline sit side by side, and the Compare view shows the differences between any two versions or scenarios before you commit a decision.
+
+No exports, no column mapping, no wondering which file is the latest. The same account structure carries through to cost control and the cost report, so the comparison you make in development is still valid in week seven of the shoot.
+{% endset -%}
+{%- set section = {
+  theme: "teal",
+  heading: "In Tubes this happens by itself",
+  lead: "Versions and scenarios, compared in one click",
+  text: featureText,
+  image: "/assets/images/app-compare.jpg",
+  image_alt: "Selecting two budgets to compare in Tubes",
+  button: { label: "See the Compare module", url: "/platform/" }
+} -%}
+{% include "partials/sections/feature.njk" %}
+
+{%- set section = {
+  theme: "white",
+  heading: "Questions about this tool",
+  items: [
+    { question: "Is my budget uploaded anywhere?",
+      answer: "No. The file is read by your browser and never leaves your device. The page has no upload endpoint, and the server sends a Content-Security-Policy that instructs the browser to block every outgoing connection from this page. You can verify that in the Network tab of your browser's developer tools." },
+    { question: "Which files can I use?",
+      answer: "CSV, TSV and Excel (.xlsx) files, or cells pasted directly from Excel, Numbers or Google Sheets. Older .xls files are not supported: save them as .xlsx or CSV first, or simply copy and paste the cells." },
+    { question: "How are the lines matched?",
+      answer: "On the account code when both versions have one. Without codes, lines are matched on their description. If a code is used more than once in a sheet, code and description are combined. Lines that only appear in one version are shown as new or removed." },
+    { question: "What happens with subtotal and total rows?",
+      answer: "Rows whose description starts with total, subtotal or grand total are skipped so nothing counts twice. Rows with text but no amount are treated as section headings. Both behaviours can be switched off per version." },
+    { question: "Can I keep the comparison?",
+      answer: "Download it as CSV, or print the page and save it as PDF. Both are generated in your browser. Nothing is kept on this page after you close it." }
+  ]
+} -%}
+{% include "partials/sections/faq.njk" %}
+
+{%- set section = {
+  title: "Tired of comparing spreadsheets by hand?",
+  text: "Tubes keeps every budget version, and the cost report shows what actually happened against the one that was approved.",
+  button: { label: "Request a Demo", url: "/contact/" }
+} -%}
+{% include "partials/sections/cta.njk" %}
+
+<script src="{{ assets.budgetCompare }}" defer></script>

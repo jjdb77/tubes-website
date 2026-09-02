@@ -59,6 +59,15 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Een `_redirects`-bestand doet hier **niets**: dat is een Netlify/Cloudflare-formaat en Railway draait Express. Het oude bestand is daarom verwijderd.
 - De 19 oude 404's kwamen uit Search Console (Pagina's → Niet gevonden). Kijk daar opnieuw als er later paden bijkomen.
 
+## Gratis tools: /tools/
+
+- Losse, gratis hulpmiddelen die uit Tubes zijn losgeknipt, als ingang voor spoor B (line producers, freelancers) en als vindbare content. Eerste tool: **Budget version compare** op `/tools/budget-compare/` (`src/tools/budget-compare.njk`; logica in `src/js/budget-compare.js`; opmaak onderaan `style.css`, blok "Gratis tools: Budget compare", alle klassen `bc-`). Alleen de hero komt uit `sections`, de rest is eigen HTML in het bestand; tekst wijzig je dus daar en niet in Sveltia. Staat in `settings.footer_nav` (niet in het menu) en daarmee in sitemap en llms.txt.
+- **Alles gebeurt in de browser, en dat wordt afgedwongen.** Bestanden worden lokaal gelezen (CSV/TSV, geplakte cellen, en .xlsx via een eigen minimale zip- en XML-lezer, dus zonder bibliotheek); er is geen endpoint. server.js zet op `/tools/*` een Content-Security-Policy met `connect-src 'none'` en `form-action 'none'`, zodat ook een latere vergissing in de JavaScript niets kan versturen (getest: een fetch vanaf de pagina wordt door de browser geweigerd). De privacytekst op de pagina steunt hierop: **nooit een fetch, beacon, extern script of formulierpost toevoegen aan een tool-pagina.** Alleen de kolomkeuze staat in localStorage.
+- Front matter `browser_only: true` laat layout.njk de demo-popup en het GoatCounter-script weglaten (die zouden onder die CSP kapot gaan); "Request a Demo" gaat op zo'n pagina gewoon naar /contact/.
+- Het script hangt zijn pure functies aan `window.BudgetCompare`; `npm test` draait `test/budget-compare.test.mjs` in Node zonder browser, met de fixtures in `test/fixtures/` (xlsx met titelregels en twee werkbladen, CSV in Windows-1252 met Europese getallen). Let op bij nieuwe xlsx-fixtures: openpyxl slaat formules op zonder gecachete waarde, echte Excel-bestanden wel; gebruik dus gewone getallen.
+- Elk tool-script krijgt een eigen `?v=`-hash via `assets` in eleventy.config.js (`assets.budgetCompare`), net als style.css en site.js.
+- Kandidaten voor volgende tools (allemaal browser-only te bouwen): estimated-final-cost-calculator, contingency-calculator, production-fee/markup-calculator, financieringsplan met cashflow en tranches, Movie Magic Budgeting-converter.
+
 ## Besloten klantpagina's: /mmg/ (Motion Media Group)
 
 - `src/mmg/` bevat een sales-pitch voor Motion Media Group (Canadees media-investeringsbedrijf, contact Martin Waterman): `onepager.html`, `proposal.html` en de bijbehorende PDF's `Tubes-MMG-Onepager.pdf` / `Tubes-MMG-Proposal.pdf`. Live op https://www.tubes.media/mmg/onepager.html en /mmg/proposal.html.

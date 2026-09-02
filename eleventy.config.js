@@ -28,6 +28,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("assets", {
     css: "/css/style.css?v=" + fileHash("src/css/style.css"),
     js: "/js/site.js?v=" + fileHash("src/js/site.js"),
+    // Alleen geladen op /tools/budget-compare/ (zie src/tools/budget-compare.njk)
+    budgetCompare: "/js/budget-compare.js?v=" + fileHash("src/js/budget-compare.js"),
   });
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 

@@ -239,6 +239,31 @@ app.use((req, res, next) => {
 
 const SITE = path.join(__dirname, "_site");
 
+// Gratis tools op /tools/* beloven dat er niets de browser verlaat. Die belofte
+// wordt hier afgedwongen, niet alleen beloofd: connect-src 'none' blokkeert
+// elke fetch/XHR/beacon, form-action 'none' elke formulierpost, en scripts
+// komen alleen van de eigen host. Ook een latere vergissing in de JavaScript
+// kan dus geen gegevens versturen. Te controleren in de Network-tab van de
+// browser: die blijft leeg. Inline stijlen blijven toegestaan (de site
+// gebruikt style-attributen); dat verstuurt niets.
+const TOOLS_CSP = [
+  "default-src 'self'",
+  "script-src 'self'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "media-src 'self'",
+  "connect-src 'none'",
+  "form-action 'none'",
+  "object-src 'none'",
+  "frame-ancestors 'self'",
+  "base-uri 'self'",
+].join("; ");
+app.use("/tools", (req, res, next) => {
+  res.setHeader("Content-Security-Policy", TOOLS_CSP);
+  next();
+});
+
 // Cachebeleid.
 //
 // De CSS-, JS- en afbeeldingslinks in de HTML dragen een ?v=<hash> die bij

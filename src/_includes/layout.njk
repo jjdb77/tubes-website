@@ -29,8 +29,12 @@
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
-  {% include "partials/demo-modal.njk" %}
+  {#- Gratis tools (browser_only in de front matter) draaien onder een
+      Content-Security-Policy zonder uitgaande verbindingen. Daar geen
+      demo-popup (die post naar /api/contact; de knoppen gaan dan gewoon naar
+      /contact/) en geen statistiek-script. -#}
+  {% if not browser_only %}{% include "partials/demo-modal.njk" %}{% endif %}
   <script src="{{ assets.js }}" defer></script>
-  {% if settings.goatcounter %}<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+  {% if settings.goatcounter and not browser_only %}<script data-goatcounter="https://{{ settings.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
 </body>
 </html>
