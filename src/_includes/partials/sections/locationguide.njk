@@ -70,7 +70,7 @@
           {#- De zoektekst staat bewust NIET als attribuut in de kaart: met honderden
               locaties zou dat de hele beschrijving verdubbelen (kaart plus JSON) en de
               pagina fors zwaarder maken. De browser bouwt hem hieronder uit guide-data. -#}
-          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}">
+          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-region="{{ loc.region }}" data-type="{{ loc.type }}">
             {% if loc.photo and loc.photo.thumb %}
             <figure class="guide-photo">
               <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -142,7 +142,25 @@
     </div>
   </div>
 
-  <script type="application/json" id="guide-data">{{ filmlocations | dump | safe }}</script>
+  {#- Alleen de gegevens die niet al in de kaarten hierboven staan: coordinaten voor
+      de kaart en de praktische velden voor de vergelijking. Naam, regio, type,
+      omschrijving, foto en links leest het script uit de kaart zelf. Met honderden
+      locaties scheelde dat ruim 100 kB gzip, zonder iets aan de pagina te veranderen. -#}
+  <script type="application/json" id="guide-data">{"updated":{{ filmlocations.updated | dump | safe }},"locations":[
+  {%- for loc in filmlocations.locations -%}
+  {%- if not loop.first %},{% endif -%}
+  {"id":{{ loc.id | dump | safe }},"lat":{{ loc.lat }},"lng":{{ loc.lng }}
+  {%- if loc.price_note %},"price_note":{{ loc.price_note | dump | safe }}{% endif -%}
+  {%- if loc.price_eur_day %},"price_eur_day":{{ loc.price_eur_day }}{% endif -%}
+  {%- if loc.capacity %},"capacity":{{ loc.capacity }}{% endif -%}
+  {%- if loc.facilities %},"facilities":{{ loc.facilities | dump | safe }}{% endif -%}
+  {%- if loc.suitability %},"suitability":{{ loc.suitability | dump | safe }}{% endif -%}
+  {%- if loc.permit_needed %},"permit_needed":{{ loc.permit_needed | dump | safe }}{% endif -%}
+  {%- if loc.logistics %},"logistics":{{ loc.logistics | dump | safe }}{% endif -%}
+  {%- if loc.source_urls %},"source_urls":{{ loc.source_urls | dump | safe }}{% endif -%}
+  }
+  {%- endfor -%}
+  ]}</script>
   <script type="application/json" id="guide-incentives">{{ locations | dump | safe }}</script>
   <script>
   (() => {
@@ -152,11 +170,40 @@
     const incentives = JSON.parse(document.getElementById("guide-incentives").textContent);
     const MAX = 3;
     const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    const byId = Object.fromEntries(data.locations.map((l) => [l.id, l]));
-    // Zoektekst per locatie, uit de gegevens zelf (zie de opmerking bij de kaart).
-    const searchText = new Map(data.locations.map((l) => [l.id,
-      [l.name, l.region, l.country, l.type, l.setting, l.known_for, l.facilities, l.suitability, l.logistics]
-        .filter(Boolean).join(" ").toLowerCase()]));
+    // Elke locatie bestaat uit twee helften: wat zichtbaar op de kaart staat
+    // (naam, regio, type, omschrijving, foto, links) en de praktische velden uit
+    // het JSON-blok hierboven. Hier worden ze samengevoegd tot een object.
+    const extra = Object.fromEntries(data.locations.map((l) => [l.id, l]));
+    const text = (el, strip) => {
+      if (!el) return "";
+      const t = el.textContent.trim();
+      return strip ? t.replace(strip, "").trim() : t;
+    };
+    const readCard = (card) => {
+      const photo = card.querySelector(".guide-photo");
+      const links = [...card.querySelectorAll(".guide-links a:not([data-incentive-for])")]
+        .map((a) => `<a href="${a.getAttribute("href")}" target="_blank" rel="noopener">${esc(a.textContent)}</a>`);
+      return {
+        id: card.dataset.id,
+        name: text(card.querySelector("h3")),
+        region: card.dataset.region,
+        country: card.dataset.country,
+        type: card.dataset.type,
+        setting: text(card.querySelector(".guide-setting")),
+        known_for: text(card.querySelector(".guide-known"), /^Seen in:\s*/),
+        photoHTML: photo ? photo.innerHTML : "",
+        linksHTML: links.join("<br>"),
+        ...(extra[card.dataset.id] || {}),
+      };
+    };
+    const byId = {};
+    const searchText = new Map();
+    for (const card of document.querySelectorAll(".guide-card")) {
+      const l = readCard(card);
+      byId[l.id] = l;
+      searchText.set(l.id, [l.name, l.region, l.country, l.type, l.setting, l.known_for, l.facilities, l.suitability, l.logistics]
+        .filter(Boolean).join(" ").toLowerCase());
+    }
     const textOf = (card) => searchText.get(card.dataset.id) || "";
 
     // Incentive per land, uit de incentivetabel ("Spain (mainland)" -> "Spain")
@@ -262,7 +309,7 @@
     const pool = [];
     for (const t of [...root.querySelectorAll("#guide-type option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Type", value: t });
     for (const c of [...root.querySelectorAll("#guide-country option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Country", value: c });
-    for (const l of data.locations) pool.push({ kind: "Location", value: l.name, extra: l.region + ", " + l.country });
+    for (const l of Object.values(byId)) pool.push({ kind: "Location", value: l.name, extra: l.region + ", " + l.country });
     for (const k of KEYWORDS) if (haystack.includes(k)) pool.push({ kind: "Keyword", value: k });
 
     const hideSuggest = () => { suggestEl.hidden = true; suggestEl.innerHTML = ""; q.setAttribute("aria-expanded", "false"); };
@@ -390,8 +437,10 @@
       if (!map || !markerLayer) return;
       markerLayer.clearLayers();
       const ids = new Set(visibleIds());
-      for (const loc of data.locations) {
-        if (!ids.has(loc.id) || loc.lat == null || loc.lng == null) continue;
+      for (const item of data.locations) {
+        const loc = byId[item.id];
+        if (!loc || !ids.has(item.id) || item.lat == null || item.lng == null) continue;
+        loc.lat = item.lat; loc.lng = item.lng;
         const m = L.circleMarker([loc.lat, loc.lng], { radius: 7, color: "#0E9C88", weight: 2, fillColor: "#0E9C88", fillOpacity: 0.55 });
         m.bindPopup(`<strong>${esc(loc.name)}</strong><br>${esc(loc.region)}, ${esc(loc.country)}<br><a href="#loc-${esc(loc.id)}" data-goto="${esc(loc.id)}">Show details</a>`);
         markerLayer.addLayer(m);
@@ -509,9 +558,7 @@
         <table class="loc-compare loc-compare-${picks.length}">
           <thead><tr><th scope="col"><span class="visually-hidden">Property</span></th>${picks.map((p) => `<th scope="col">${esc(p.name)}<small>${esc(p.region)}, ${esc(p.country)}</small></th>`).join("")}</tr></thead>
           <tbody>
-            ${row("Photo", (p) => ({ raw: p.photo, html: p.photo && p.photo.thumb
-              ? `<img class="guide-compare-photo" src="${esc(p.photo.thumb)}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer"><small>Photo: ${esc(p.photo.author)} (${esc(p.photo.license)})</small>`
-              : "<small>No photo yet</small>" }))}
+            ${row("Photo", (p) => ({ raw: true, html: p.photoHTML || "<small>No photo yet</small>" }))}
             ${row("Type", (p) => ({ raw: p.type, html: `<span class="loc-tag">${esc(p.type)}</span>` }))}
             ${row("What it offers", (p) => p.setting)}
             ${row("Published price", (p) => p.price_note, { optional: true, key: "price_eur_day", winner: "lower" })}
@@ -526,9 +573,7 @@
               return { raw: true, html: inc ? `<strong>${esc(inc.rate_label)}</strong><small>${esc(inc.scheme)}</small><small><a href="/compare-film-incentives/">Full incentive comparison</a></small>` : `<small>Not in our incentive table yet. <a href="/compare-film-incentives/">See the comparison</a></small>` };
             })}
             ${row("Links", (p) => ({ raw: true, html: [
-              p.official_url ? `<a href="${esc(p.official_url)}" target="_blank" rel="noopener">Official site</a>` : "",
-              p.commission_url ? `<a href="${esc(p.commission_url)}" target="_blank" rel="noopener">Film commission</a>` : "",
-              p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Commission listing</a>` : "",
+              p.linksHTML,
               ...(p.source_urls || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">Source ${i + 1}</a>`),
             ].filter(Boolean).join("<br>") }))}
           </tbody>
