@@ -3,6 +3,30 @@
   "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos or data from other location databases; record only what a venue itself publishes, and keep source URLs.",
   "locations": [
     {
+      "id": "at-amalienbad",
+      "name": "Amalienbad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1742,
+      "lng": 16.3791,
+      "type": "Theatre, arena & venue",
+      "setting": "Art Deco public indoor swimming pool built in the 1920s in Favoriten, with a 33.3 by 12.5 metre sports pool, a historic diving platform up to 10 metres, a children's pool and separate men's and women's sauna areas.",
+      "facilities": "Indoor sports pool, diving platform, children's pool, men's and women's sauna areas, showers and changing rooms",
+      "suitability": "Interior filming, permit applied for through the Vienna Film Commission's application tool",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/amalienbad"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/amalienbad",
+      "commission_url": "https://www.viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Amalienbad_Schwimmhalle.jpg/960px-Amalienbad_Schwimmhalle.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Amalienbad_Schwimmhalle.jpg",
+        "author": "Peter Gluchi",
+        "license": "CC0"
+      }
+    },
+    {
       "id": "at-bergisel-ski-jump",
       "name": "Bergisel Ski Jump",
       "country": "Austria",
@@ -11,8 +35,11 @@
       "lng": 11.4001,
       "type": "Theatre, arena & venue",
       "setting": "Zaha Hadid's 2002 ski jump tower on Innsbruck's Bergisel hill, combining a competition in-run and judging tower with a public viewing platform and cafe over the city.",
+      "capacity": 120,
+      "facilities": "Bergisel Sky restaurant/bar has 360-degree glazing and holds a maximum of 120 people. The SeminarRaum seats up to 80 people and has a 10 m2 whiteboard wall. The SeminarLounge holds groups of up to 16, about 40 people total with additional elements.",
       "source_urls": [
-        "https://www.bergisel.info/"
+        "https://www.bergisel.info/",
+        "https://www.bergisel.info/at/planen/event-location/eventlocation-bergisel.php"
       ],
       "official_url": "https://www.bergisel.info/",
       "commission_url": "https://www.cinetirol.com/en/",
@@ -20,6 +47,28 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bergiselschanze04.jpg/960px-Bergiselschanze04.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Bergiselschanze04.jpg",
         "author": "Daniel Wagner at de.wikipedia",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "at-boersensaele",
+      "name": "Börsensäle, Vienna Stock Exchange",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2156,
+      "lng": 16.3649,
+      "type": "Office, school & public building",
+      "setting": "Three bookable 19th century ballrooms on the upper floor of the former Vienna Stock Exchange building, fitted with a passenger lift and a freight lift, not normally open to the public.",
+      "facilities": "Three ballrooms, passenger and freight lift, lighting control, kitchen access, office and conference rooms",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/borsensale"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/borsensale",
+      "commission_url": "https://www.viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/B%C3%B6rse_Wien_01.jpg/960px-B%C3%B6rse_Wien_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:B%C3%B6rse_Wien_01.jpg",
+        "author": "Peter Gugerell",
         "license": "Public domain"
       }
     },
@@ -98,6 +147,22 @@
       "commission_url": "https://www.filmfonds-wien.at/"
     },
     {
+      "id": "at-fondation-gaensehaeufel",
+      "name": "Foundation Gänsehäufel",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2295,
+      "lng": 16.4304,
+      "type": "Theatre, arena & venue",
+      "setting": "Former tennis clubhouse on a wooded island in the Old Danube, now run as an independent art, production and event space with its own artist residency.",
+      "facilities": "65 sqm interior, 50 sqm outdoor area, electricity and water connections, WC",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/foundation-gansehaufel-former-tennisclub"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/foundation-gansehaufel-former-tennisclub",
+      "commission_url": "https://www.viennafilmcommission.at"
+    },
+    {
       "id": "at-gasometer-wien",
       "name": "Gasometer Vienna",
       "country": "Austria",
@@ -122,6 +187,22 @@
         "author": "C.Stadler/Bwag",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "at-halle-e-plus-g",
+      "name": "Halle E+G, MuseumsQuartier",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2032,
+      "lng": 16.3593,
+      "type": "Theatre, arena & venue",
+      "setting": "Two multipurpose halls in the former imperial stables at Vienna's MuseumsQuartier, with a foyer, colonnaded entrance and backstage production offices, used for concerts, exhibitions and events.",
+      "facilities": "Ground-level access, backstage dressing rooms and production offices, freight and passenger lift, high-voltage power",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/halle-eg-more-than-just-a-location"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/halle-eg-more-than-just-a-location",
+      "commission_url": "https://www.viennafilmcommission.at"
     },
     {
       "id": "at-hallstatt",
@@ -174,11 +255,32 @@
       "lng": 16.3695,
       "type": "Hotel & interiors",
       "setting": "Grand 1876 hotel opposite the State Opera, with red-panelled parlours, a chandeliered dining room and the original Sachertorte kitchen.",
+      "capacity": 150,
+      "facilities": "The Marble Hall has a marble floor, marble-clad walls and chandeliers, and can be divided into two rooms with a mirrored wall. Capacity: cocktail 150, theatre 110, banquet 80, classroom 54, block table 50, U-table 50.",
       "source_urls": [
-        "https://www.sacher.com/en/vienna"
+        "https://www.sacher.com/en/vienna",
+        "https://www.sacher.com/en/vienna/events/marble-hall/"
       ],
       "official_url": "https://www.sacher.com/en/vienna",
       "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-hotel-schani-hauptbahnhof",
+      "name": "Hotel Schani Wien Hauptbahnhof",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1824,
+      "lng": 16.3808,
+      "type": "Hotel & interiors",
+      "setting": "Independent 135-room hotel opened in 2015 next to Vienna's main railway station, with a courtyard garden, rooftop space, co-working area and seminar rooms across six floors.",
+      "facilities": "Courtyard garden, rooftop space, co-working area, seminar and conference rooms, loading elevator, parking",
+      "source_urls": [
+        "https://www.hotelschani.com/en/vienna-hauptbahnhof/",
+        "https://www.viennafilmcommission.at/en/locations/-hotel-schani-wien-hauptbahnhof"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/-hotel-schani-wien-hauptbahnhof",
+      "official_url": "https://www.hotelschani.com/en/vienna-hauptbahnhof/",
+      "commission_url": "https://www.viennafilmcommission.at"
     },
     {
       "id": "at-justizpalast-wien",
@@ -220,6 +322,28 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Karl-Marx-Hof_2009.jpg",
         "author": "Dreizung",
         "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "at-karmelitermarkt",
+      "name": "Karmelitermarkt",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2175,
+      "lng": 16.377,
+      "type": "Bar, restaurant & shop",
+      "setting": "Working food market in Leopoldstadt dating to 1910, with daily stalls and about 60 farmers' market stands on Fridays and Saturdays, offering both indoor and outdoor filming space.",
+      "suitability": "Interior and exterior filming (Innen- und Aussenbereich)",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/karmelitermarkt"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/karmelitermarkt",
+      "commission_url": "https://www.viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Karmelitermarkt_07.jpg/960px-Karmelitermarkt_07.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Karmelitermarkt_07.jpg",
+        "author": "Peter Gugerell",
+        "license": "Public domain"
       }
     },
     {
@@ -446,8 +570,10 @@
       "lng": 14.299,
       "type": "Industrial & derelict",
       "setting": "A converted 1935 Bauhaus-style tobacco factory in Linz, now a creative and start-up quarter with exhibition halls, event spaces and a rooftop terrace across the Danube from the old town.",
+      "facilities": "About 2,500 m2 of event space across multiple halls and outdoor areas, wheelchair accessible. Technical equipment can be customised and an on-site fire safety officer is mandatory; a preferred caterer is required only for the Hoersaal 0 hall.",
       "source_urls": [
-        "https://www.tabakfabrik-linz.at/"
+        "https://www.tabakfabrik-linz.at/",
+        "https://tabakfabrik-linz.at/veranstaltungsinfos/"
       ],
       "official_url": "https://www.tabakfabrik-linz.at/",
       "commission_url": "https://www.filminaustria.com/",
@@ -457,6 +583,21 @@
         "author": "Stadt Linz / Screenshot: Christoph Waghubinger (Lewenstein)",
         "license": "CC BY 3.0"
       }
+    },
+    {
+      "id": "at-thuryhof",
+      "name": "Thuryhof",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2258,
+      "lng": 16.3578,
+      "type": "House & apartment",
+      "setting": "1920s municipal housing block in Alsergrund built over a former brickyard, with fortress-like courtyards, arcades and round-arched loggias, listed as a protected historic building.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/social-housing-thuryhof"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/social-housing-thuryhof",
+      "commission_url": "https://www.viennafilmcommission.at"
     },
     {
       "id": "at-universitat-wien",
@@ -488,9 +629,12 @@
       "lng": 16.3572,
       "type": "Office, school & public building",
       "setting": "Neo-Gothic seat of Vienna's city government from 1883, with a vaulted arcaded courtyard, ceremonial halls and a square in front used for open-air events and markets.",
+      "suitability": "The City of Vienna's Film Commission is the central point of contact for film shoots in Vienna and supports national and international productions. Separate permits apply for filming on bridges and on public traffic areas.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.wien.gv.at/verwaltung/rathaus/",
-        "https://en.wikipedia.org/wiki/Vienna_City_Hall"
+        "https://en.wikipedia.org/wiki/Vienna_City_Hall",
+        "https://www.wien.gv.at/kultur/film"
       ],
       "official_url": "https://www.wien.gv.at/verwaltung/rathaus/",
       "commission_url": "https://www.viennafilmcommission.at/en/",
@@ -575,6 +719,28 @@
       }
     },
     {
+      "id": "at-wolke19-ares-tower",
+      "name": "wolke19 at Ares Tower",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2334,
+      "lng": 16.4114,
+      "type": "Office, school & public building",
+      "setting": "Event and conference venue on the 19th to 21st floors of the Ares Tower office high-rise in Donau City, with a 220 square metre Sky Hall and a rooftop Sky Lobby with terrace and bar.",
+      "facilities": "Two meeting rooms, Sky Hall (220 sqm), Sky Lobby with terrace and bar, freight and passenger lift, high-voltage power",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/wolke19-at-ares-tower"
+      ],
+      "official_url": "https://www.viennafilmcommission.at/en/locations/wolke19-at-ares-tower",
+      "commission_url": "https://www.viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ares_Tower_Vienna_from_SW_on_2015-07-10.jpg/960px-Ares_Tower_Vienna_from_SW_on_2015-07-10.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ares_Tower_Vienna_from_SW_on_2015-07-10.jpg",
+        "author": "Robert F. Tobler",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "at-worthersee",
       "name": "Wörthersee",
       "country": "Austria",
@@ -619,6 +785,7 @@
       "lng": 4.3175,
       "type": "Bar, restaurant & shop",
       "setting": "Historic livestock market and food-hall complex in Anderlecht, Brussels, with weekend markets, the FOODMET food hall and renovated buildings used for events.",
+      "logistics": "350 parking spaces across two levels in the MANUFAKTURE building, including 24 EV charging stations; site accessible via Nijverheidskaai 168.",
       "source_urls": [
         "https://www.abattoir.be/"
       ],
@@ -771,8 +938,10 @@
       "lng": 4.3597,
       "type": "Theatre, arena & venue",
       "setting": "Centre for Fine Arts in central Brussels hosting concerts, exhibitions and film screenings across several halls, with a dedicated team for private and corporate venue hire.",
+      "facilities": "Seven hireable spaces: Henry Le Boeuf Hall, Hall M, Studio, Horta Hall, Terarken Hall, Suzanne Bertouille Rotunda and Royal Salon.",
       "source_urls": [
-        "https://www.bozar.be/en"
+        "https://www.bozar.be/en",
+        "https://www.bozar.be/en/your-event-bozar"
       ],
       "official_url": "https://www.bozar.be/en",
       "commission_url": "https://screen.brussels/"
@@ -805,8 +974,10 @@
       "lng": 5.4934,
       "type": "Industrial & derelict",
       "setting": "Former Winterslag coalmine in Genk with preserved headframes and a compressor hall, now a creative cluster of more than 30 spaces that are rented out for events.",
+      "facilities": "Seven renovated former mine buildings around C-mine square with more than 30 rental spaces, indoor and outdoor, ranging from small to large; includes theatre halls, meeting rooms, and open spaces for catering and exhibitions.",
       "source_urls": [
-        "http://c-mine.be/en"
+        "http://c-mine.be/en",
+        "https://c-mine.be/en/venue-rental"
       ],
       "official_url": "http://c-mine.be/en",
       "commission_url": "https://www.screenflanders.be/en"
@@ -820,6 +991,8 @@
       "lng": 4.8814,
       "type": "Castle & estate",
       "setting": "Renaissance chateau on a bend of the Meuse near Hastière with terraced 18th-century gardens, whose barn and orangeries can be booked for events.",
+      "suitability": "Drones are prohibited on site.",
+      "logistics": "On-site parking for coach buses, cars and bikes; a boat jetty is available.",
       "source_urls": [
         "https://freyr.be/en"
       ],
@@ -835,8 +1008,10 @@
       "lng": 5.9714,
       "type": "Transport & infrastructure",
       "setting": "Seven-kilometre motor racing circuit through the Ardennes hills near Francorchamps, host of the Formula 1 Belgian Grand Prix, with the track and facilities available to hire for private and business events.",
+      "facilities": "Multiple hireable event spaces: Raidillon Loges (170 sqm, up to 160 people, with a 120 sqm private terrace); Endurance Loges (300 sqm, or two 150 sqm sections, up to 140 people); Formula 1 Loges (2x300 sqm / 2x600 sqm, 180 to 380 seats); Eau Rouge (700 sqm total: winter garden for 350, rotunda for 100, upper rooms for 150); meeting rooms for 5 to 180 people; a press conference room for 150. Wifi, screens, projectors, heating and air conditioning are available.",
       "source_urls": [
-        "https://www.spa-francorchamps.be/en/"
+        "https://www.spa-francorchamps.be/en/",
+        "https://www.spa-francorchamps.be/en/evenement-locationdesalles"
       ],
       "official_url": "https://www.spa-francorchamps.be/en/",
       "commission_url": "https://www.wallimage.be/",
@@ -1029,8 +1204,10 @@
       "lng": 3.7222,
       "type": "Theatre, arena & venue",
       "setting": "19th-century former merchants' exchange on the Kouter in Ghent, now a concert hall with a brasserie, offering its hall for private hire.",
+      "facilities": "Concert hall with foyer, conference rooms, a mixing studio and dressing rooms (loges); modern theatre-technical infrastructure with climate control.",
       "source_urls": [
-        "https://www.haconcerts.be/en"
+        "https://www.haconcerts.be/en",
+        "https://www.haconcerts.be/en/hall-rental"
       ],
       "official_url": "https://www.haconcerts.be/en",
       "commission_url": "https://www.screenflanders.be/en"
@@ -1112,8 +1289,10 @@
       "lng": 2.9198,
       "type": "Theatre, arena & venue",
       "setting": "Seafront concert and congress hall in Ostend with a large auditorium and casino, offering dedicated business and corporate event spaces.",
+      "facilities": "Multiple event spaces: Lounge, Concert Hall, Entrance Hall, Foyer, Delvaux Hall, Main Studio and Studios; a new multifunctional hall is due to open from 2027, the renovated Lounge is currently available.",
       "source_urls": [
-        "https://www.kursaaloostende.be/en/"
+        "https://www.kursaaloostende.be/en/",
+        "https://www.kursaaloostende.be/en/business"
       ],
       "official_url": "https://www.kursaaloostende.be/en/",
       "commission_url": "https://www.screenflanders.be/en",
@@ -2098,6 +2277,7 @@
       "lng": 17.4664,
       "type": "Transport & infrastructure",
       "setting": "Aircraft collection and hangars at Kunovice airfield near Uherské Hradiště, on the site of the former Let Kunovice aircraft works, with propeller planes and gliders on display.",
+      "facilities": "Nearly three dozen historic aircraft from the local aviation museum on site, in a production hall that has been in continuous operation since the 1950s (Czech Film Commission listing).",
       "source_urls": [
         "https://filmcommission.gov.cz/en/location/the-aviation-museum-in-kunovice/"
       ],
@@ -2277,6 +2457,7 @@
       "lng": 15.0937,
       "type": "Industrial & derelict",
       "setting": "Early 20th century coaling station and water tower on the edge of Liberec, with a 75 metre boiler chimney and a steam power house linked by a two arch bridge, largely unaltered.",
+      "facilities": "Boiler room with a 75 metre chimney and a steam power plant connected to a tower bridge with two arches (Czech Film Commission listing).",
       "source_urls": [
         "https://filmcommission.gov.cz/en/location/coal-and-water-storage-tower-vratislavice/"
       ],
@@ -2511,8 +2692,11 @@
       "lng": 14.0338,
       "type": "Bar, restaurant & shop",
       "setting": "Former border crossing customs house on the Elbe riverbank, converted into a community arts centre with a cinema, gallery, bar and courtyard used for events.",
+      "capacity": 330,
+      "facilities": "Main hall seats up to 305 people (330 with extra seating), with a 10 by 8 metre stage, a lighting rig and wifi. Foyer with cafe/bar holds 45 to 150 people depending on the event (own site).",
       "source_urls": [
-        "https://www.hranicar-usti.cz/"
+        "https://www.hranicar-usti.cz/",
+        "https://hranicar-usti.cz/pronajem/"
       ],
       "official_url": "https://www.hranicar-usti.cz/",
       "commission_url": "https://filmcommission.gov.cz/en/"
@@ -2556,8 +2740,11 @@
       "lng": 17.2658,
       "type": "Hospital, prison & institution",
       "setting": "Former Premonstratensian monastery on the edge of Olomouc, now a working military hospital, with baroque courtyards and church interiors alongside functioning medical wards.",
+      "price_note": "Ceremonial hall from CZK 5,000 per hour, library from CZK 2,100 per hour, convent gardens from CZK 1,000 per hour, AV equipment CZK 5,000 per event, audio-only CZK 2,500 per event, excl. VAT, prices marked indicative, valid from 1 April 2024 (own site).",
+      "facilities": "Ceremonial hall, library, lecture hall and convent gardens available to hire, with AV or audio-only equipment (own site).",
       "source_urls": [
-        "https://www.vnol.cz/"
+        "https://www.vnol.cz/",
+        "https://www.vnol.cz/index.php/cs/ceniky/ostatni/pronajem-slavnostniho-salu-a-knihovny"
       ],
       "official_url": "https://www.vnol.cz/",
       "commission_url": "https://filmcommission.gov.cz/en/"
@@ -2841,6 +3028,7 @@
       "lng": 15.0335,
       "type": "Office, school & public building",
       "setting": "Working textile college on Textilni street with period spinning and weaving machinery still in place alongside plain classroom interiors and a gated parking yard.",
+      "logistics": "Spacious parking lot on the premises with a lockable gate (Czech Film Commission listing).",
       "source_urls": [
         "https://filmcommission.gov.cz/en/location/school-of-textile-engineering-liberec/"
       ],
@@ -2917,6 +3105,8 @@
       "lng": 13.3841,
       "type": "Industrial & derelict",
       "setting": "Renovated paper mill building of about 4,000 square metres by the Radbuza river near central Plzen, holding a large industrial hall, an art studio, cafe and exhibition rooms.",
+      "facilities": "Renovated 4,000 m2 industrial space including an art studio, a cafe, exhibition spaces, a large industrial hall, rehearsal rooms, dance halls and an accessible roof, with high-quality technical facilities (Czech Film Commission listing).",
+      "logistics": "Near the Radbuza River, a short distance from the Pilsen city centre, and connected to the motorway (Czech Film Commission listing).",
       "source_urls": [
         "https://filmcommission.gov.cz/en/location/the-papirna-multifunctional-center-in-pilsen/"
       ],
@@ -3671,6 +3861,7 @@
       "lng": 23.767,
       "type": "Transport & infrastructure",
       "setting": "A network of multi storey car parks operated by Finnpark in and around central Tampere, listed by Film Tampere as available filming locations.",
+      "logistics": "Filming enquiries for the parking garages are directed to Finnpark's Marketing Chief (contact published on the Film Tampere location page).",
       "source_urls": [
         "https://www.filmtampere.com/locations/parking-garages-by-finnpark/"
       ],
@@ -3849,6 +4040,8 @@
       "lng": 23.7587,
       "type": "Bar, restaurant & shop",
       "setting": "Largest market hall in the Nordic countries when it opened in 1901, a protected two-story brick building in central Tampere with roughly 30 food stalls, cafes and restaurants.",
+      "facilities": "174 retail outlets, opened 1901; about 40 percent of outlets are cafes and restaurants (Film Tampere).",
+      "logistics": "Address Hameenkatu 19, 33200 Tampere; 0 km from the Central Square (Film Tampere).",
       "source_urls": [
         "https://kauppahalli.tampere.fi/",
         "https://www.filmtampere.com/locations/tampere-indoor-market-kauppahalli/",
@@ -3911,9 +4104,12 @@
       "lng": 0.0517,
       "type": "Church & monastery",
       "setting": "Former royal abbey near Chinon founded in 1101, with a Romanesque church, medieval kitchens and cloisters plus an on-site hotel, its own site publishing information for film and TV shoots.",
+      "suitability": "The abbey has hosted film, documentary and music video shoots since the 1940s; interior and exterior spaces (cloisters, churches, gardens) are described as suited to crews of any size (own site).",
+      "logistics": "Truck access to on-site parking, dressing rooms, on-site accommodation and catering, and electrical connections (own site).",
       "source_urls": [
         "https://www.fontevraud.fr",
-        "https://en.wikipedia.org/wiki/Fontevraud_Abbey"
+        "https://en.wikipedia.org/wiki/Fontevraud_Abbey",
+        "https://www.fontevraud.fr/tournage-et-prises-de-vues/"
       ],
       "official_url": "https://www.fontevraud.fr",
       "commission_url": "https://www.filmfrance.net"
@@ -4110,8 +4306,10 @@
       "lng": -0.5542,
       "type": "Office, school & public building",
       "setting": "Science centre inside Hangar 20, a former dockside cargo warehouse on the Garonne in Bordeaux, keeping the hangar's steel roof trusses over its exhibition floor, with halls listed to hire.",
+      "facilities": "6 work spaces plus a terrace; kitchen equipment includes a service lift, large-capacity refrigerator, oven and washroom (own site).",
       "source_urls": [
-        "https://www.cap-sciences.net"
+        "https://www.cap-sciences.net",
+        "https://www.cap-sciences.net/vous-etes/professionnels/louer-nos-espaces-et-teambuilding/"
       ],
       "official_url": "https://www.cap-sciences.net",
       "commission_url": "https://www.alca-nouvelle-aquitaine.fr"
@@ -4251,9 +4449,12 @@
       "lng": 7.3286,
       "type": "Office, school & public building",
       "setting": "Mulhouse car museum built around the Schlumpf brothers' collection, with several hundred vehicles under one roof lit by rows of replica cast-iron lamp posts, its site publishing venue-hire terms.",
+      "capacity": 1500,
+      "facilities": "Multiple hire spaces published: Espace Chefs-d'oeuvre 3,500 sqm; Salon Monaco 370 sqm (screen, speakers, wifi, video projector); Espace Course automobile 1,500 sqm; L'Espace Aventure automobile 9,500 sqm; L'Autodrome 270 sqm plus parking for up to 30 vehicles; Le Garage 425 sqm (own site).",
       "source_urls": [
         "https://www.citedelautomobile.com",
-        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_l%27Automobile"
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_l%27Automobile",
+        "https://www.citedelautomobile.com/fr/privatisation-despaces/"
       ],
       "official_url": "https://www.citedelautomobile.com",
       "commission_url": "https://www.filmfrance.net"
@@ -4283,9 +4484,11 @@
       "lng": -1.6173,
       "type": "Transport & infrastructure",
       "setting": "Maritime museum inside Cherbourg's 1933 Art Deco former transatlantic liner terminal, keeping the original departure hall, with a decommissioned submarine on display and dockside harbour views.",
+      "suitability": "The venue's events page lists tournage (filming) among the event types it hosts, alongside congress, seminar, exhibition, dinner, cocktail, show, private visit and ceremony (own site).",
       "source_urls": [
         "https://www.citedelamer.com",
-        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_la_Mer"
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_la_Mer",
+        "https://www.citedelamer.com/congres-evenements/"
       ],
       "official_url": "https://www.citedelamer.com",
       "commission_url": "https://www.normandieimages.fr"
@@ -4334,8 +4537,11 @@
       "lng": 2.3881,
       "type": "Office, school & public building",
       "setting": "Large science museum in the Parc de la Villette built inside a converted 1960s abattoir hall, with the geodesic dome cinema La Géode standing alongside it.",
+      "suitability": "The site's commercial filming page groups available locations into interior exhibitions (Planetarium, Aquarium, Argonaute submarine), architecture (including the congress centre), behind-the-scenes areas (car parks, escalators, corridors, lifts) and exterior areas (moat, park), described as available by day and night. Past clients cited include TPS, Canal+, Yves Rocher and France Telecom (own site).",
       "source_urls": [
-        "https://www.cite-sciences.fr/"
+        "https://www.cite-sciences.fr/",
+        "https://www.cite-sciences.fr/fr/vous-etes/professionnels/films-commerciaux",
+        "https://www.universcience.fr/fr/professionnels/location-despaces/"
       ],
       "official_url": "https://www.cite-sciences.fr/",
       "commission_url": "https://www.filmfrance.net/"
@@ -4392,9 +4598,12 @@
       "lng": 7.2939,
       "type": "Transport & infrastructure",
       "setting": "One of the world's largest railway museums, in Mulhouse, with locomotives and carriages under a long-span roof and a reconstructed period station platform, published as available for hire and filming.",
+      "facilities": "Two covered halls of 6,000 sqm and 13,000 sqm plus 16,000 sqm of outdoor space; named filming locations include station platforms, a turntable and a signal box (own site).",
+      "suitability": "Site publishes a filming/shooting page offering a technical site survey, a custom quote, on-site assistance during filming, and support with procedures via the Mulhouse Alsace Agglomeration film office. Past productions cited include Arte, France Televisions and SWR/ARD (own site).",
       "source_urls": [
         "https://www.citedutrain.com",
-        "https://en.wikipedia.org/wiki/Cit%C3%A9_du_Train"
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_du_Train",
+        "https://www.citedutrain.com/tournage-shooting"
       ],
       "official_url": "https://www.citedutrain.com",
       "commission_url": "https://www.filmfrance.net"
@@ -4555,6 +4764,9 @@
       "lng": 5.3539,
       "type": "Transport & infrastructure",
       "setting": "France's largest port, with the working container terminals and warehouses of Marseille-Fos and the historic Joliette basin, with its own published filming-permit process for productions.",
+      "suitability": "Filming within the port (Marseille or Fos-sur-Mer basins) requires an authorization convention; drone footage needs a separate authorization from the Harbormaster; filming at facilities occupied by port-based companies needs that company's written permission (own site).",
+      "permit_needed": "Yes",
+      "logistics": "Applications should allow about 3 weeks after the file is processed; required documents include a KBIS (less than 3 months old), bank details, authorised signatory details, an on-site contact name, an insurance certificate covering the filming dates and a VAT number (own site).",
       "source_urls": [
         "https://www.marseille-port.fr/autorisation-de-tournage"
       ],
@@ -4794,6 +5006,8 @@
       "lng": 5.39,
       "type": "Industrial & derelict",
       "setting": "Former SEITA tobacco factory in Marseille converted into a multi-storey arts complex, with raw concrete floors, a rooftop garden and a skatepark, hired out through its own privatisation service.",
+      "capacity": 4000,
+      "facilities": "Accommodates 10 to 4,000 people; La Cartonnerie is a 2,500 sqm modular space; the roof terrace is 8,000 sqm with views over Marseille; meeting rooms hold 10 to 150 people; Place des Horizons is a modular covered plaza (own site).",
       "source_urls": [
         "https://www.lafriche.org/professionnels/entreprises/privatisations/",
         "https://fr.wikipedia.org/wiki/La_Friche_la_Belle_de_Mai"
@@ -4825,6 +5039,9 @@
       "lng": 4.8151,
       "type": "Industrial & derelict",
       "setting": "Former sugar warehouse on the Confluence docks in Lyon, a long brick and concrete shed on the Saone quayside, now an exhibition and events venue run by a professional events operator.",
+      "capacity": 4000,
+      "facilities": "5,100 sqm covered in total, including 3,800 sqm of event space and 1,700 sqm of exhibition space; 5 balcony terraces overlooking the Saone; capacity up to 1,500 seated, 4,000 for a cocktail reception or 1,000 for a conference; riverside privatisation is also possible (own site).",
+      "logistics": "Accessible by tram T1/T2 to Hotel de Region Montrochet and by bus S1; parking available at the nearby Confluence shopping centre and surrounding paid spaces (own site).",
       "source_urls": [
         "https://www.gl-lyonevents.com/fr/la-sucriere"
       ],
@@ -4874,9 +5091,13 @@
       "lng": 2.3478,
       "type": "Theatre, arena & venue",
       "setting": "1932 Art Deco single-screen cinema and concert hall on Boulevard Poissonniere, with a domed starlit auditorium seating over 2,700, hired out for premieres, shows and filming.",
+      "capacity": 2700,
+      "facilities": "Grande Salle seats 800 to 2,700; other spaces include Les Halls (800), Le Club (350), Rex Infinite (285), Rex 3 (238), Rex 5 (163), Rex 4 (122), Rex 7 (109) and Rex 6 (78); technical equipment includes projection, sound, microphones and internet access (own site).",
+      "logistics": "Address 1 Boulevard Poissonniere, 75002 Paris; nearest metro Bonne Nouvelle (own site).",
       "source_urls": [
         "https://www.legrandrex.com",
-        "https://en.wikipedia.org/wiki/Grand_Rex"
+        "https://en.wikipedia.org/wiki/Grand_Rex",
+        "https://locations.legrandrex.com/"
       ],
       "official_url": "https://www.legrandrex.com",
       "commission_url": "https://www.filmparisregion.com",
@@ -4950,9 +5171,14 @@
       "lng": 1.4295,
       "type": "Industrial & derelict",
       "setting": "Former municipal slaughterhouse on the Garonne in Toulouse, converted into a contemporary art museum that keeps the original brick halls, steel roof trusses and a loading yard.",
+      "price_note": "Room hire published per space: Salle du Conseil EUR 1,000 (20 people); Auditorium EUR 3,000 (up to 199 seated); Hall d'Accueil EUR 3,000 (150 people, 180 sqm); Salle Picasso EUR 8,000 (150 people); La Nef EUR 8,000 to 32,000 depending on headcount; outdoor spaces (up to 2,000 people) on custom quote (own site).",
+      "capacity": 2000,
+      "facilities": "La Nef is 38 m long and 10 m wide with brick walls and high ceilings; Salle Picasso is 15 m by 12 m; the Auditorium stage is 10.8 m long and 3.8 m deep with 4 m under the ceiling; Hall d'Accueil is 180 sqm (own site).",
+      "logistics": "Security staffing is mandatory outside operating hours, at extra cost; all interior spaces are accessible to mobility-impaired visitors; no catering exclusivity and no corkage fee (own site).",
       "source_urls": [
         "https://www.lesabattoirs.org",
-        "https://fr.wikipedia.org/wiki/Les_Abattoirs"
+        "https://fr.wikipedia.org/wiki/Les_Abattoirs",
+        "https://www.lesabattoirs.org/privatiser/"
       ],
       "official_url": "https://www.lesabattoirs.org",
       "commission_url": "https://occitanie-films.fr"
@@ -5021,7 +5247,7 @@
         "https://www.lesfrigos.com",
         "https://fr.wikipedia.org/wiki/Les_Frigos"
       ],
-      "official_url": "https://www.lesfrigos.com",
+      "official_url": "https://www.les-frigos.com/",
       "commission_url": "https://www.filmparisregion.com",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Les_Frigos%2C_Paris_31_December_2012.jpg/960px-Les_Frigos%2C_Paris_31_December_2012.jpg",
@@ -5058,8 +5284,11 @@
       "lng": 4.8169,
       "type": "Industrial & derelict",
       "setting": "Former military supply depot on the Saone quays in Lyon, now a centre for performing-arts creation with rehearsal halls, a courtyard and studios, published as available to hire.",
+      "capacity": 2000,
+      "facilities": "La Verriere and La Boulangerie each take up to 2,000 people for a cocktail reception or 800 for a seated dinner (La Verriere available April to October only; the two can be combined); Le Hangar has 610 sqm total with a 300 sqm stage and fixed seating for 220 (up to 400 with extra chairs); La Terrasse holds 20 to 200 people; Les Plateaux is 130 sqm, seating 126 for a conference/show or about 20 for workshops; L'Accueil holds 30 for meetings or 50 for a cocktail (own site).",
       "source_urls": [
-        "https://www.les-subs.com"
+        "https://www.les-subs.com",
+        "https://www.les-subs.com/privatisation/"
       ],
       "official_url": "https://www.les-subs.com",
       "commission_url": "https://www.auvergnerhonealpes-cinema.fr",
@@ -5079,9 +5308,13 @@
       "lng": 2.3536,
       "type": "Bar, restaurant & shop",
       "setting": "The world's largest wholesale food market, south of Paris, with vast refrigerated halls, loading docks and pre-dawn trading floors, offering event space and press filming through its own services team.",
+      "suitability": "Every filming request must go through a formal authorization process with the SEMMARIS communications department (own site).",
+      "permit_needed": "Yes",
+      "logistics": "Requests must be submitted at least 3 days in advance, described as non-negotiable because market operators work staggered schedules; applicants must specify subject, format, needs, synopsis, broadcast date and equipment used (own site).",
       "source_urls": [
         "https://www.rungisinternational.com",
-        "https://en.wikipedia.org/wiki/Rungis_International_Market"
+        "https://en.wikipedia.org/wiki/Rungis_International_Market",
+        "https://www.rungisinternational.com/reportage-rungis"
       ],
       "official_url": "https://www.rungisinternational.com",
       "commission_url": "https://www.filmparisregion.com"
@@ -5113,9 +5346,11 @@
       "lng": 2.4349,
       "type": "Transport & infrastructure",
       "setting": "Aerospace museum built around historic hangars at the edge of Paris-Le Bourget airport, with aircraft, open apron and runway views bookable through its own filming and photography service.",
+      "suitability": "Filming takes place only on Mondays, the museum's weekly closing day. Available spaces include the Boeing 747, the Concorde, WWII, Inter-War, Space and Helicopter halls, the control tower, the tarmac, the planetarium and terraces. Extra staffing, aircraft relocation, special technical work and copyright royalties are billed separately from the standard tariff (own site).",
       "source_urls": [
         "https://www.museeairespace.fr",
-        "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27air_et_de_l%27espace"
+        "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27air_et_de_l%27espace",
+        "https://www.museeairespace.fr/professionnels/tournages-et-photos/"
       ],
       "official_url": "https://www.museeairespace.fr",
       "commission_url": "https://www.filmparisregion.com"
@@ -5151,6 +5386,10 @@
       "type": "Palace & landmark",
       "setting": "Baroque royal palace with the Hall of Mirrors, state apartments, vast formal gardens and two smaller palaces in the park.",
       "known_for": "Marie Antoinette (2006), Versailles (TV series)",
+      "suitability": "The estate publishes a dedicated page for organising filming (tournage) on the Domaine de Versailles, alongside gala dinners, cocktails, concerts and private prestige visits; capacity and presentation of each space are said to be listed on a page per space (own site).",
+      "source_urls": [
+        "https://www.chateauversailles.fr/professionnels-tourisme/vos-evenements-versailles"
+      ],
       "official_url": "https://www.chateauversailles.fr/",
       "commission_url": "https://www.filmfrance.net/",
       "photo": {
@@ -5867,8 +6106,11 @@
       "lng": 7.1364,
       "type": "Hotel & interiors",
       "setting": "A former hunting palace above Cologne converted into a hotel, with baroque state rooms, a park and a modern spa wing.",
+      "capacity": 300,
+      "facilities": "Ballsaal: meeting up to 180, banquet 240, reception 300. Eventhalle: meeting up to 250, reception 300. Bel Etage: reception up to 200. Salon Medici & Goethe: meeting/reception up to 100, banquet 80. Salon Alberti: meeting/reception up to 60. Salon Zanetti: meeting/reception up to 40. Gewoelbekeller (vaulted cellar): banquet up to 30, reception up to 50. Smaller boardrooms (Business Lounge, Library, Salon Habsburg) seat up to 12 to 20.",
       "source_urls": [
-        "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/"
+        "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/",
+        "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/meetings-business-events/function-space"
       ],
       "official_url": "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/",
       "commission_url": "https://www.filmstiftung.de/"
@@ -5973,8 +6215,11 @@
       "lng": 13.3799,
       "type": "Hotel & interiors",
       "setting": "A rebuilt grand hotel beside the Brandenburg Gate, with a marble lobby, ballroom and period-style suites used for period and contemporary interiors.",
+      "capacity": 500,
+      "facilities": "Two ballrooms and 16 function rooms. Ballroom 500 m2 (500 reception, 340 banquet, 300 classroom); Palais Room 450 m2 (400 reception, 300 banquet, 240 classroom); Event Location 1907, 330 m2 (200 reception, 120 banquet); Large Wintergarten 147 m2 (100 reception, 90 banquet); Academy Rooms 1-2, 120 m2 each (90 reception, 80 banquet, 60 classroom); Bundeszimmer 74 m2 (60 reception, 50 banquet, 42 classroom); smaller rooms range 40 to 84 m2. Most function rooms have natural daylight.",
       "source_urls": [
-        "https://www.kempinski.com/en/berlin/hotel-adlon/"
+        "https://www.kempinski.com/en/berlin/hotel-adlon/",
+        "https://www.kempinski.com/en/hotel-adlon/meetings-events"
       ],
       "official_url": "https://www.kempinski.com/en/berlin/hotel-adlon/",
       "commission_url": "https://www.medienboard.de/en/"
@@ -6132,9 +6377,12 @@
       "lng": 7.475,
       "type": "Industrial & derelict",
       "setting": "Former coking plant in Dortmund with intact coke oven batteries, coal towers, pump houses and machine halls preserved as an industrial heritage site.",
+      "suitability": "Casual visitor photography or filming needs no permit. Editorial photo and video work and drone flights require a free permit; commercial use requires a paid permit; wedding shoots are paid unless part of a rental event. Applicants should allow up to five working days for processing. Rules ban nudity, weapons or replicas, fire, pyrotechnics, artificial fog and glitter, and entry to cordoned-off areas; visitor safety and flow must be respected and private drone flights are not allowed. This applies across all Stiftung Industriedenkmalpflege sites (13 mines plus Kokerei Hansa, Koepchenwerk and Ahe-Hammer).",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.lwl-industriemuseum.de/de/standorte/kokerei-hansa/",
-        "https://de.wikipedia.org/wiki/Kokerei_Hansa"
+        "https://de.wikipedia.org/wiki/Kokerei_Hansa",
+        "https://www.industriedenkmal-stiftung.de/besuch/film-und-foto"
       ],
       "official_url": "https://www.industriedenkmal-stiftung.de/",
       "commission_url": "https://www.filmstiftung.de/en/"
@@ -8302,6 +8550,23 @@
       "commission_url": "https://filminiceland.com/locations/"
     },
     {
+      "id": "is-kringlan",
+      "name": "Kringlan",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1306,
+      "lng": -21.8936,
+      "type": "Bar, restaurant & shop",
+      "setting": "Iceland's second-largest shopping centre in Reykjavik, with more than 180 shops and restaurants plus a library, theatre and cinema under one roof, featured in a 2010 Icelandic feature film.",
+      "known_for": "Dreamland (2010)",
+      "source_urls": [
+        "https://www.kringlan.is",
+        "https://en.wikipedia.org/wiki/Kringlan"
+      ],
+      "official_url": "https://www.kringlan.is",
+      "commission_url": "https://www.icelandicfilmcentre.is"
+    },
+    {
       "id": "is-lake-myvatn",
       "name": "Lake Myvatn",
       "country": "Iceland",
@@ -8329,6 +8594,7 @@
       "type": "Office, school & public building",
       "setting": "A domed observation building on Oskjuhlid hill in Reykjavik, built over old geothermal water storage tanks, combining a museum, planetarium and viewing deck.",
       "known_for": "The Christmas Quest",
+      "facilities": "On-site restaurant, bar, cafe, ice cream parlour, gift shop and observation deck alongside the exhibitions (own site).",
       "source_urls": [
         "https://perlan.is/",
         "https://filminiceland.com/made-in-iceland/the-christmas-quest",
@@ -8844,8 +9110,10 @@
       "lng": -7.5541,
       "type": "Castle & estate",
       "setting": "A coastal artillery fort on the Inishowen peninsula overlooking Lough Swilly, with gun emplacements, tunnels and a military museum spread across several linked batteries.",
+      "facilities": "The Saldanha Suite is available for exhibitions and conferences; the venue also hosts civil ceremonies and receptions (own site).",
       "source_urls": [
-        "https://www.fortdunree.com"
+        "https://www.fortdunree.com",
+        "https://www.fortdunree.com/whats-on/venue-hire/"
       ],
       "official_url": "https://www.fortdunree.com",
       "commission_url": "https://www.screenireland.ie",
@@ -8934,6 +9202,13 @@
       "type": "Palace & landmark",
       "setting": "Preserved nineteenth-century prison with a galleried Victorian east wing, stone corridors and bare exercise yards, now a museum.",
       "known_for": "The Italian Job (1969), In the Name of the Father, Paddington 2",
+      "price_note": "OPW heritage sites: filming fees charged per the OPW Fees Schedule depending on nature and location of filming; a nominal EUR 50 administrative fee applies for student projects needing extra staffing; cancellation costs 50 percent of the agreed fee, or the full fee if cancelled within 48 hours (OPW policy, applies to this OPW-managed site).",
+      "suitability": "Drones/UAVs are prohibited at all OPW heritage sites; at least two weeks' notice is requested for filming and photography requests; political, paranormal, inappropriate and product-promotion filming is not permitted (OPW policy).",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.heritageireland.ie/filming-and-photography/",
+        "https://www.kilmainhamgaolmuseum.ie/"
+      ],
       "official_url": "https://www.kilmainhamgaolmuseum.ie/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
@@ -8994,8 +9269,12 @@
       "lng": -9.504,
       "type": "House & apartment",
       "setting": "A Victorian mansion within Killarney National Park, with furnished period rooms, walled gardens and a working farm, run as a visitor attraction with corporate hire.",
+      "price_note": "OPW heritage sites: filming fees charged per the OPW Fees Schedule depending on nature and location of filming; a nominal EUR 50 administrative fee applies for student projects needing extra staffing; cancellation costs 50 percent of the agreed fee, or the full fee if cancelled within 48 hours (OPW policy, applies to this OPW-managed site).",
+      "suitability": "Drones/UAVs are prohibited at all OPW heritage sites; at least two weeks' notice is requested for filming and photography requests; political, paranormal, inappropriate and product-promotion filming is not permitted (OPW policy).",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://muckross-house.ie"
+        "https://muckross-house.ie",
+        "https://www.heritageireland.ie/filming-and-photography/"
       ],
       "official_url": "https://muckross-house.ie",
       "commission_url": "https://www.screenireland.ie",
@@ -9058,7 +9337,7 @@
       "source_urls": [
         "https://www.powerscourt.ie"
       ],
-      "official_url": "https://www.powerscourt.ie",
+      "official_url": "https://powerscourt.com/",
       "commission_url": "https://www.screenireland.ie",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Powerscourt_Fountain.JPG/960px-Powerscourt_Fountain.JPG",
@@ -9076,8 +9355,10 @@
       "lng": -6.3162,
       "type": "Hospital, prison & institution",
       "setting": "A former British Army barracks in Inchicore built from 1810, now a heritage centre with a restored gymnasium hall, library and gardens, and a published venue hire service.",
+      "facilities": "Five hireable spaces that can be taken separately or combined, including three sizeable rooms for meetings or workshops, a large garden space, and a tent in the garden suitable for performances; chairs, tables, projector and screen, lectern, microphones and a PA system available on request (own site).",
       "source_urls": [
-        "https://www.richmondbarracks.ie"
+        "https://www.richmondbarracks.ie",
+        "https://www.richmondbarracks.ie/about/venue-hire/"
       ],
       "official_url": "https://www.richmondbarracks.ie",
       "commission_url": "https://www.screenireland.ie",
@@ -9205,6 +9486,8 @@
       "lng": -8.474,
       "type": "Bar, restaurant & shop",
       "setting": "Covered Victorian food market in the centre of Cork, trading since 1788, with cast-iron arcades, fishmongers, butchers and a fountain courtyard; filming is arranged through Cork City Council.",
+      "suitability": "Filming applications are handled jointly by Aramark Management (market operator) and Cork City Council; enquiries go through englishmarket@corkcity.ie with a separate contact for detailed queries and an application form (Cork City Council).",
+      "permit_needed": "Yes",
       "source_urls": [
         "http://www.englishmarket.ie/",
         "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/filming-in-the-english-market/"
@@ -9276,7 +9559,7 @@
         "https://www.wicklowshistoricgaol.com/",
         "https://en.wikipedia.org/wiki/Wicklow_Gaol"
       ],
-      "official_url": "https://www.wicklowshistoricgaol.com/",
+      "official_url": "https://www.wicklowgaol.ie/",
       "commission_url": "https://www.screenireland.ie/locations"
     },
     {
@@ -9372,6 +9655,7 @@
       "lng": 12.3405,
       "type": "Hotel & interiors",
       "setting": "Hotel on Giudecca island in Venice with gardens, an outdoor pool and lagoon-facing rooms in a converted 16th-century building, reached from Saint Mark's Square by private launch.",
+      "facilities": "Event venues accommodate 10 to 300 people. The hotel has 55 rooms, 20 suites and 4 signature suites available for guests during events.",
       "source_urls": [
         "https://www.belmond.com/hotels/europe/italy/venice/belmond-hotel-cipriani/"
       ],
@@ -9979,6 +10263,8 @@
       "lng": 16.9067,
       "type": "Theatre, arena & venue",
       "setting": "An indoor arena in Bari used for basketball, concerts and trade events, with tiered seating around a large flat floor.",
+      "facilities": "The venue has 3 meeting/conference rooms (up to 50 people each) plus exhibition areas, 4 bar stations and a control booth. On-site services include audio system rental, chair rental, ticket office management, catering and dressing room management, security and transfers.",
+      "suitability": "Hosts sporting events, concerts, congresses, galas, shows, conventions, trade fairs and banquets, with in-house logistics and technical support for organisers.",
       "source_urls": [
         "https://www.palaflorio.it"
       ],
@@ -10547,8 +10833,11 @@
       "lng": 14.4953,
       "type": "Transport & infrastructure",
       "setting": "Malta's only commercial airport, at Luqa, with a single passenger terminal, aircraft apron and a public viewing area, serving as the island's main air gateway.",
+      "suitability": "Filming and photography require submitting an application at least 5 days in advance; permission is not guaranteed given the airport's operational and security constraints. Fees for using the airport as a filming or photography location may apply in some cases.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.maltairport.com"
+        "https://www.maltairport.com",
+        "https://maltairport.com/corporate/news-media/filming-photo-permit/"
       ],
       "official_url": "https://www.maltairport.com",
       "commission_url": "https://screenmalta.com"
@@ -10689,8 +10978,10 @@
       "lng": 14.5225,
       "type": "Hospital, prison & institution",
       "setting": "The former seat and prison of the Roman Inquisition in Birgu, a medieval and baroque building with courtrooms, cells and a walled courtyard, managed by Heritage Malta.",
+      "suitability": "Listed by Heritage Malta's Exclusive Venues subsidiary as available for hire for location shoots, alongside product launches, fashion shows, corporate meetings, conferences and weddings.",
       "source_urls": [
-        "https://heritagemalta.mt/explore/the-inquisitors-palace/"
+        "https://heritagemalta.mt/explore/the-inquisitors-palace/",
+        "https://heritagemalta.mt/subsidiaries/exclusive-venues-and-fields/"
       ],
       "official_url": "https://heritagemalta.mt/explore/the-inquisitors-palace/",
       "commission_url": "https://screenmalta.com",
@@ -10764,7 +11055,7 @@
       "source_urls": [
         "https://valletta2018.org/"
       ],
-      "official_url": "https://valletta2018.org/",
+      "official_url": "https://www.vca.gov.mt/",
       "commission_url": "https://screenmalta.com/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Valletta_Design_Cluster_facade.jpg/960px-Valletta_Design_Cluster_facade.jpg",
@@ -10837,8 +11128,11 @@
       "type": "Theatre, arena & venue",
       "setting": "Multi-hall arena and convention complex in Rotterdam-Zuid with a 16,000-capacity main arena, used for sport, concerts and the 2021 Eurovision Song Contest.",
       "known_for": "Eurovision Song Contest 2021",
+      "capacity": 16426,
+      "facilities": "Multiple hireable spaces: Ahoy Arena (up to 16,426), RTM Stage (up to 7,842), Hal 1 (10,000 sqm), Hal 2 t/m 6 (18,500 sqm), De Rotterdam (2,500 sqm, up to 2,500 people), Port 1 (1,050 sqm, up to 1,000 people), Port 2 t/m 8 (up to 148 sqm, up to 130 people), Docks 1 t/m 17 (up to 562 sqm, up to 500 people), Foyers (up to 1,170 sqm).",
       "source_urls": [
-        "https://www.ahoy.nl/"
+        "https://www.ahoy.nl/",
+        "https://www.ahoy.nl/zakelijk"
       ],
       "official_url": "https://www.ahoy.nl/",
       "commission_url": "https://www.filmcommission.nl/",
@@ -11002,10 +11296,13 @@
       "lng": 6.5917,
       "type": "Theatre, arena & venue",
       "setting": "A multifunctional stadium in the city of Groningen, home ground of football club FC Groningen, with business suites and function rooms hired out for events and weddings.",
+      "capacity": 22550,
+      "facilities": "Two-ring stadium, maximum height 70 metres; complex includes a fitness centre, offices, a training centre, a cinema, shops, a restaurant, a hotel and education facilities.",
       "source_urls": [
         "https://nl.wikipedia.org/wiki/Euroborg",
         "https://www.euroborg.nl/",
-        "https://www.euroborg.nl/zakelijk"
+        "https://www.euroborg.nl/zakelijk",
+        "https://www.fcgroningen.nl/club-info/over-ons/euroborg/"
       ],
       "official_url": "https://www.euroborg.nl/",
       "commission_url": "https://www.filmcommission.nl/",
@@ -11046,6 +11343,7 @@
       "lng": 5.1675,
       "type": "Industrial & derelict",
       "setting": "Nineteenth-century fortress of the New Dutch Waterline near Bunnik, with brick casemates, powder magazines and grass-covered ramparts around a moat.",
+      "logistics": "Large parking lot on site (own site: \"groot parkeerterrein\").",
       "source_urls": [
         "https://www.fortvechten.nl/"
       ],
@@ -11281,6 +11579,9 @@
       "lng": 5.1041,
       "type": "Theatre, arena & venue",
       "setting": "A large convention, trade fair and event complex next to Utrecht Centraal station, with multiple exhibition halls hired out for congresses, fairs and productions.",
+      "capacity": 10000,
+      "facilities": "Beurslocatie: 10 flexible halls, 10,000+ attendees. Congrescentrum Media Plaza: 3 congress areas, 20 to 1,000 participants. Beatrix Theater: 350 to 2,000 participants. Vergadercentrum MeetUp: 30 meeting rooms, 1 to 240 participants. Restaurant Speys: flexible spaces up to 1,100 participants.",
+      "logistics": "Directly next to Utrecht Centraal railway station.",
       "source_urls": [
         "https://www.jaarbeurs.nl/"
       ],
@@ -11745,6 +12046,8 @@
       "lng": 4.8947,
       "type": "Theatre, arena & venue",
       "setting": "1921 Art Deco and Amsterdam School cinema on the Reguliersbreestraat, with an ornate auditorium, stained glass, mosaics and a sweeping foyer staircase.",
+      "facilities": "6 screening rooms (zalen), all wheelchair accessible via a ground-floor lift.",
+      "logistics": "Parking at APCOA Prins en Keizer (EUR 13 voucher for 3 hours) and Q-Park Waterlooplein (EUR 13.50 for 4 hours after 18:00); nearest transit is tram/bus at Rembrandtplein or metro at Rokin, about 5 minutes' walk.",
       "source_urls": [
         "https://www.pathe.nl/bioscoop/tuschinski"
       ],
@@ -12387,6 +12690,9 @@
       "lng": 5.3175,
       "type": "Palace & landmark",
       "setting": "Stone royal reception hall built in the 1250s inside Bergenhus fortress, rebuilt after a 1944 harbour explosion, with a vaulted timber-roofed great hall used for concerts and ceremonies.",
+      "facilities": "Used both as a museum and as a venue for royal dinners, official events and concerts; has a museum shop and no food service on site; about a 3-minute walk from Bryggen (own site).",
+      "suitability": "Open flames and grilling are prohibited across the whole site; bookings outside ordinary opening hours are handled by the museum's booking department and may carry an additional fee (own site).",
+      "logistics": "About a 3-minute walk from Bryggen, Bergen.",
       "source_urls": [
         "https://www.norwegianfilm.com/locations/hakonshallen",
         "https://no.wikipedia.org/wiki/H%C3%A5konshallen",
@@ -12461,6 +12767,22 @@
       }
     },
     {
+      "id": "no-hjeltefjorden-arena",
+      "name": "Hjeltefjorden Arena",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.5177,
+      "lng": 4.909,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor swimming pool at Rong near Bergen with a timber-lined vaulted ceiling and large windows, listed in the national film commission's location catalogue.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/hjeltefjorden-arena"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/hjeltefjorden-arena",
+      "official_url": "https://www.norwegianfilm.com/locations/hjeltefjorden-arena",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
       "id": "no-lyse-abbey",
       "name": "Lyse Abbey",
       "country": "Norway",
@@ -12494,6 +12816,22 @@
       "url": "https://www.norwegianfilm.com/locations/viking-valley-njardarheimr-gudvangen",
       "official_url": "http://www.vikingvalley.no/",
       "commission_url": "https://www.norwegianfilm.com/locations/viking-valley-njardarheimr-gudvangen"
+    },
+    {
+      "id": "no-nordnes-sjobad",
+      "name": "Nordnes Sjobad",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.399,
+      "lng": 5.3025,
+      "type": "Theatre, arena & venue",
+      "setting": "A heated outdoor seawater pool beside Bergen's harbour at Nordnes, listed in the national film commission's location catalogue for a region that has hosted Mission: Impossible - Fallout and Succession.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/nordnes-seawater-pool"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/nordnes-seawater-pool",
+      "official_url": "https://www.norwegianfilm.com/locations/nordnes-seawater-pool",
+      "commission_url": "https://www.norwegianfilm.com"
     },
     {
       "id": "no-odda-swimming-pool",
@@ -12532,6 +12870,22 @@
       }
     },
     {
+      "id": "no-rjukan-station",
+      "name": "Rjukan Station",
+      "country": "Norway",
+      "region": "Telemark",
+      "lat": 59.8787,
+      "lng": 8.5942,
+      "type": "Transport & infrastructure",
+      "setting": "A yellow wooden railway station with vintage carriages in the Rjukan industrial heritage town, listed in the national film commission's location catalogue as a period Scandinavian station setting.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/rjukan-station"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/rjukan-station",
+      "official_url": "https://www.norwegianfilm.com/locations/rjukan-station",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
       "id": "no-sagene-folkebad",
       "name": "Sagene Folkebad",
       "country": "Norway",
@@ -12548,6 +12902,22 @@
       "url": "https://www.norwegianfilm.com/locations/sagene-folkebad",
       "official_url": "https://sagenefolkebad.no",
       "commission_url": "https://www.norwegianfilm.com/locations/sagene-folkebad"
+    },
+    {
+      "id": "no-saheim-power-station",
+      "name": "Saheim Power Station",
+      "country": "Norway",
+      "region": "Telemark",
+      "lat": 59.8767,
+      "lng": 8.593,
+      "type": "Industrial & derelict",
+      "setting": "A monumental early 20th-century hydroelectric power station in Rjukan with tall arched windows set against the mountainside, part of the Rjukan-Notodden industrial heritage area and listed in the national film commission's location catalogue.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/saheim-power-station-rjukan"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/saheim-power-station-rjukan",
+      "official_url": "https://www.norwegianfilm.com/locations/saheim-power-station-rjukan",
+      "commission_url": "https://www.norwegianfilm.com"
     },
     {
       "id": "no-sentralen",
@@ -14291,8 +14661,10 @@
       "lng": -9.1467,
       "type": "Bar, restaurant & shop",
       "setting": "The restored 1892 Mercado da Ribeira market hall by Cais do Sodré in Lisbon, now a large food hall with dozens of kitchens and counters under Time Out's management.",
+      "facilities": "Includes a dedicated events room (Estudio Time Out) of 400 square metres on the first floor of the market; full exclusive venue hire covers over 3,000 square metres in total (own site).",
       "source_urls": [
-        "https://www.timeout.pt/time-out-market-lisboa/pt"
+        "https://www.timeout.pt/time-out-market-lisboa/pt",
+        "https://www.timeout.pt/time-out-market-lisboa/pt/eventos-privados-e-corporativos"
       ],
       "official_url": "https://www.timeout.pt/time-out-market-lisboa/pt",
       "commission_url": "https://portugalfilmcommission.com",
@@ -14329,9 +14701,13 @@
       "lng": -3.5734,
       "type": "Transport & infrastructure",
       "setting": "Madrid's main international airport, operated by Aena, with passenger terminals and airside areas listed under transport locations in the Madrid Film Office catalogue.",
+      "facilities": "Four operational terminals (T4 opened February 2006); electrical hookup and a loading dock with restricted loading hours; production offices, dressing rooms, a catering area, storage and restrooms available, subject to availability (own site).",
+      "suitability": "Filming is possible at various locations within the airport, subject to airport security and operational constraints; a filming request form and defined filming rates exist (own site).",
+      "logistics": "Located 12 km northwest of Madrid; vehicle access is permitted and a dedicated parking area is available (own site).",
       "source_urls": [
         "https://www.aena.es/en/adolfo-suarez-madrid-barajas.html",
-        "https://madridfilmoffice.com/localizaciones/"
+        "https://madridfilmoffice.com/localizaciones/",
+        "https://madridfilmoffice.com/localizacion/aeropuerto-adolfo-suarez-madrid-barajas/"
       ],
       "url": "https://madridfilmoffice.com/localizaciones/",
       "official_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas.html",
@@ -14575,6 +14951,9 @@
       "lng": -5.0238,
       "type": "Castle & estate",
       "setting": "A restored medieval hilltop castle above the Guadalquivir in Almodóvar del Río, listed in Andalucía Film Commission's network of singular private venues.",
+      "facilities": "Industrial-grade power supply and production offices available on site (own site).",
+      "suitability": "Open to the public since 2001 (own site).",
+      "logistics": "Vehicle access described as easy, with parking available for technical vehicles (own site).",
       "source_urls": [
         "https://andaluciafilm.com/localizacionsingular/castillo-de-almodovar/"
       ],
@@ -14885,6 +15264,7 @@
       "lng": 2.1503,
       "type": "Theatre, arena & venue",
       "setting": "Barcelona's historic trade fair complex on Montjuïc by Plaça d'Espanya, with several exhibition halls and a central avenue used for conventions, launches and large events.",
+      "facilities": "The Montjuic venue covers 150,000 square metres of exhibition space (own site).",
       "source_urls": [
         "https://www.firabarcelona.com"
       ],
@@ -14997,8 +15377,10 @@
       "lng": -4.4458,
       "type": "Office, school & public building",
       "setting": "A provincial council cultural centre in Málaga with halls, a courtyard and exhibition spaces used for screenings and events, available for external space bookings.",
+      "suitability": "Space requests must be submitted at least three months in advance, via a downloadable request form (own site).",
       "source_urls": [
-        "https://latermicamalaga.com"
+        "https://latermicamalaga.com",
+        "https://latermicamalaga.com/solicitud-de-espacios-en-la-termica/"
       ],
       "official_url": "https://latermicamalaga.com",
       "commission_url": "https://andaluciafilm.com",
@@ -15084,6 +15466,7 @@
       "lng": -0.3682,
       "type": "Bar, restaurant & shop",
       "setting": "A 1916 modernist market hall in Valencia's Eixample designed by Francisco Mora, its original iron and glass structure now housing cafes and restaurants.",
+      "facilities": "Total surface area of 3,500 square metres across 8 available spaces; the venue hosts more than 500 events a year (own site).",
       "source_urls": [
         "https://www.mercadocolon.es"
       ],
@@ -15182,8 +15565,12 @@
       "lng": -3.6921,
       "type": "Transport & infrastructure",
       "setting": "Spain's railway museum, housed in the former Delicias terminus with its 19th-century iron and glass trainshed, displaying historic locomotives and carriages.",
+      "capacity": 2800,
+      "facilities": "Multiple hireable spaces: Nave Central 5,640 sqm (or a 3,240 sqm configuration, cocktail capacity 2,800), Nave de Fomento 422 sqm (cocktail 380), Sala Arganzuela 275 sqm (cocktail 240), Sala Javier Aranguren/Juan B. Cabrera 155 sqm, Sala Maria Cristina 177 sqm (cocktail 150), and the outdoor Playa de Vias 1,265 sqm (cocktail 750). Wifi is available in most spaces, audiovisual equipment in some rooms, and climate control in Sala Javier Aranguren (own site).",
+      "suitability": "Listed as suitable for film shoots (rodajes cinematograficos), though no specific filming conditions are published (own site).",
       "source_urls": [
-        "https://www.museodelferrocarril.org/"
+        "https://www.museodelferrocarril.org/",
+        "https://www.museodelferrocarril.org/EventosPrivados/espacios/"
       ],
       "official_url": "https://www.museodelferrocarril.org/",
       "commission_url": "https://www.shootinginspain.info/",
@@ -15224,6 +15611,8 @@
       "lng": -6.1367,
       "type": "Palace & landmark",
       "setting": "A historic sherry house palace in Jerez de la Frontera, listed in Andalucía Film Commission's network of singular private venues.",
+      "facilities": "Standard electrical network on site; production offices not available (own site).",
+      "logistics": "Vehicle access and technical vehicle parking are both described as limited (own site).",
       "source_urls": [
         "https://andaluciafilm.com/localizacionsingular/palacio-domecq/"
       ],
@@ -15606,9 +15995,12 @@
       "lng": -5.6667,
       "type": "Office, school & public building",
       "setting": "Spain's oldest university, with a 16th-century plateresque facade, cloisters and historic lecture halls set around Salamanca's old town.",
+      "price_note": "Weekend and holiday use of university spaces is charged at a 25 percent surcharge over standard rates, VAT excluded (own site)",
+      "suitability": "Space use requires at least 30 days advance notice and prior written authorisation from the General Secretariat; institutional needs take priority over external requests, and payment must be made in advance (own site).",
       "source_urls": [
         "https://www.usal.es/",
-        "https://en.wikipedia.org/wiki/University_of_Salamanca"
+        "https://en.wikipedia.org/wiki/University_of_Salamanca",
+        "https://usal.es/uso-de-los-espacios-y-bienes-patrimoniales-de-la-universidad-de-salamanca"
       ],
       "official_url": "https://www.usal.es/",
       "commission_url": "https://www.shootinginspain.info/",
@@ -15815,6 +16207,23 @@
       }
     },
     {
+      "id": "se-kaggeholms-gard",
+      "name": "Kaggeholms Gård",
+      "country": "Sweden",
+      "region": "Stockholm County",
+      "lat": 59.2818,
+      "lng": 17.6673,
+      "type": "House & apartment",
+      "setting": "A lakeside manor building on Ekero outside Stockholm that houses a folk high school with media production courses, used as the boarding school interiors and exteriors in a Netflix teen drama.",
+      "known_for": "Young Royals",
+      "source_urls": [
+        "https://kaggeholm.se",
+        "https://en.wikipedia.org/wiki/Young_Royals"
+      ],
+      "official_url": "https://kaggeholm.se",
+      "commission_url": "https://filmstockholm.se"
+    },
+    {
       "id": "se-kulturhuset-stadsteatern",
       "name": "Kulturhuset Stadsteatern",
       "country": "Sweden",
@@ -15920,6 +16329,23 @@
       }
     },
     {
+      "id": "se-naas-slott",
+      "name": "Naas Slott",
+      "country": "Sweden",
+      "region": "Vastra Gotaland",
+      "lat": 57.8163,
+      "lng": 12.4012,
+      "type": "Castle & estate",
+      "setting": "A lakeside castle and former handicraft teacher-training seminary near Gothenburg with function rooms, guest wings and parkland, publishing its own photography and filming service and used in a Swedish period TV drama.",
+      "known_for": "Var tid ar nu (The Restaurant)",
+      "source_urls": [
+        "https://naas.se",
+        "https://sv.wikipedia.org/wiki/V%C3%A5r_tid_%C3%A4r_nu"
+      ],
+      "official_url": "https://naas.se",
+      "commission_url": "https://filmivast.com"
+    },
+    {
       "id": "se-royal-swedish-opera",
       "name": "Royal Swedish Opera",
       "country": "Sweden",
@@ -15974,6 +16400,8 @@
       "lng": 13.0019,
       "type": "Theatre, arena & venue",
       "setting": "A former municipal abattoir in Malmo's harbour district converted into an event venue, keeping its industrial brick halls for concerts, conferences and large private functions.",
+      "capacity": 1500,
+      "facilities": "Multiple named halls of different sizes: Saluhallen up to 1500, Restauranggatan up to 1020, Teatern up to 921, Hantverksgangen up to about 350, Sodra Hallen up to 350, Norra Hallen up to 250 (own site, standing/event capacities).",
       "source_urls": [
         "https://slagthuset.se"
       ],
@@ -15985,6 +16413,23 @@
         "author": "Jorchr",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "se-stora-sundby-slott",
+      "name": "Stora Sundby Slott",
+      "country": "Sweden",
+      "region": "Sodermanland",
+      "lat": 59.2703,
+      "lng": 16.1268,
+      "type": "Castle & estate",
+      "setting": "A 19th-century turreted castle near Eskilstuna with 52 rooms and a hunting estate, open for tours and events, used for the royal palace scenes in a Netflix teen drama.",
+      "known_for": "Young Royals",
+      "source_urls": [
+        "https://storasundby.com/",
+        "https://en.wikipedia.org/wiki/Young_Royals"
+      ],
+      "official_url": "https://storasundby.com/",
+      "commission_url": "https://filmcommissionsweden.se"
     },
     {
       "id": "se-universeum",
@@ -16082,8 +16527,11 @@
       "lng": -2.581,
       "type": "Industrial & derelict",
       "setting": "Aviation museum on the former Filton airfield site with a hangar housing a preserved Concorde alongside earlier Bristol-built aircraft.",
+      "capacity": 500,
+      "facilities": "Spaces for hire include the Concorde Gallery and Balcony, the John James Theatre (raked seating), the Studio Space, and the Miami, Washington and New York rooms; the Heritage Hangar is used for drinks receptions. The Concorde Gallery seats up to 500 guests for a three-course dinner, and the Concorde Hangar can be turned around for a 300-guest event in under 2.5 hours.",
       "source_urls": [
-        "https://aerospacebristol.org/"
+        "https://aerospacebristol.org/",
+        "https://aerospacebristol.org/venue-hire"
       ],
       "official_url": "https://aerospacebristol.org/",
       "commission_url": "https://britishfilmcommission.org.uk/",
@@ -16331,8 +16779,13 @@
       "type": "Office, school & public building",
       "setting": "Historic university library in central Oxford with the vaulted Divinity School and Duke Humfrey's medieval reading room, hired for filming by arrangement.",
       "known_for": "Harry Potter and the Philosopher's Stone, Harry Potter and the Chamber of Secrets",
+      "price_note": "Filming from GBP 500 per hour plus VAT for crews of up to 10 people, GBP 1,000 per hour plus VAT for crews of 10 or more; rate varies with crew size and equipment (own site)",
+      "suitability": "Filming is generally restricted to before 8:30am or after closing hours; daytime filming in Duke Humfrey's Library is limited to 7:30-8:30am on weekday mornings. All lighting must be LED and no smoke, atmosphere haze or hot works are permitted. Large-scale filming requires at least 3 months' notice; filming involving collection items requires at least 28 days' notice, with risk assessment paperwork due 1 month ahead. Public liability insurance is required and filming must be under the Bodleian's own contract terms.",
+      "permit_needed": "Yes",
+      "logistics": "No water or electricity supply on site, so crews must bring their own generators. Public parking is arranged separately via Location Oxfordshire. The Bodleian has no jurisdiction over Radcliffe Square; filming there needs separate permission from Brasenose College.",
       "source_urls": [
-        "https://www.bodleian.ox.ac.uk/whats-on/filming"
+        "https://www.bodleian.ox.ac.uk/whats-on/filming",
+        "https://visit.bodleian.ox.ac.uk/venue-hire/filming-photography"
       ],
       "official_url": "https://www.bodleian.ox.ac.uk/whats-on/filming",
       "commission_url": "https://britishfilmcommission.org.uk/",
@@ -16545,8 +16998,11 @@
       "lng": 0.598,
       "type": "Transport & infrastructure",
       "setting": "Heritage standard-gauge railway on the Essex-Suffolk border with a rebuilt country station, signal box and steam and diesel locomotives.",
+      "suitability": "The railway can be used as a period setting for filming, using steam trains and staff in period costumes, or as a modern railway environment using contemporary rolling stock (steam and diesel locomotives, DMUs and InterCity 125 trains), avoiding the need to film on the national network.",
+      "logistics": "Large on-site car park; good access for lorries and vans.",
       "source_urls": [
-        "https://www.colnevalleyrailway.co.uk/"
+        "https://www.colnevalleyrailway.co.uk/",
+        "https://www.colnevalleyrailway.co.uk/filming/"
       ],
       "official_url": "https://www.colnevalleyrailway.co.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
@@ -16581,8 +17037,11 @@
       "lng": -0.0201,
       "type": "Theatre, arena & venue",
       "setting": "A copper clad multi sport arena built for the 2012 Olympics in Queen Elizabeth Olympic Park, with a sprung floor hall hired for filming, sport and events.",
+      "capacity": 7500,
+      "facilities": "Multi-purpose arena (capacity 7,500) with hospitality suites, VIP lounges, private bars, meeting rooms for breakout spaces, and an open-air plaza (Eastcross Square). Located in Queen Elizabeth Olympic Park, Stratford, East London.",
       "source_urls": [
-        "https://www.copperboxarena.org.uk"
+        "https://www.copperboxarena.org.uk",
+        "https://www.copperboxarena.org.uk/facilities/venue-hire"
       ],
       "official_url": "https://www.copperboxarena.org.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
@@ -16618,8 +17077,12 @@
       "lng": -1.5108,
       "type": "Transport & infrastructure",
       "setting": "Museum in central Coventry holding one of the largest collections of British-made cars, motorcycles and bicycles, with large open display halls.",
+      "price_note": "Midweek day delegate rate from GBP 45.00 per person excluding VAT, including conference room hire, three tea/coffee services, buffet lunch and museum entry (own site)",
+      "facilities": "Hire spaces: Bettmann Suite (60 people), Starley Suite (150), Swift Centre (30) and Mezzanine Gallery (200). Onsite Baxter Cafe seats 120. Equipment includes wifi, projectors, video equipment, PA and sound systems, flipcharts and whiteboards.",
+      "logistics": "3 onsite parking spaces plus 300 offsite spaces; city centre location around a 15-minute walk from the train station; served by buses 17, 27 and 49.",
       "source_urls": [
-        "https://www.transport-museum.com/"
+        "https://www.transport-museum.com/",
+        "https://www.transport-museum.com/join-and-support/corporate-hire.aspx"
       ],
       "official_url": "https://www.transport-museum.com/",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/",
@@ -16755,8 +17218,12 @@
       "lng": 1.3772,
       "type": "Theatre, arena & venue",
       "setting": "A restored 1920s seaside amusement park on the Kent coast with a wooden scenic railway and vintage rides, used as a period seaside backdrop.",
+      "facilities": "Spaces include a Grade II* listed Art Deco Ballroom with Boardroom/Foyer, a Vintage Arcade, Retro Roller Rink and Roller Diner with retro-fitted booths, plus vintage rides. Green room facilities, an onsite technical/production team and security on site are provided.",
+      "suitability": "Pitched for traditional seaside and period scenes; beach filming nearby is possible, with contacts provided for the permits needed to shoot outside the venue.",
+      "logistics": "5 minutes from the train station; shops and hotels nearby.",
       "source_urls": [
-        "https://www.dreamland.co.uk"
+        "https://www.dreamland.co.uk",
+        "https://www.dreamland.co.uk/hire/filming-photography/"
       ],
       "official_url": "https://www.dreamland.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
@@ -16965,6 +17432,7 @@
       "lng": -0.0226,
       "type": "Modern architecture",
       "setting": "A converted Olympic press and broadcast centre beside the canal in Hackney Wick, now offices, television studios and workshop space.",
+      "facilities": "Campus totals 1.2 million sq ft of flexible space; around 6,500 people work and study on site.",
       "source_urls": [
         "https://www.hereeast.com"
       ],
@@ -17223,6 +17691,8 @@
       "lng": -4.2695,
       "type": "Office, school & public building",
       "setting": "Edwardian domed public reference library in Glasgow, one of Europe's largest, with a grand entrance hall, reading rooms and function spaces.",
+      "suitability": "Glasgow Life states that on occasion staff will be on the premises to film and take photos.",
+      "logistics": "On-street metered parking (8am-6pm Monday to Friday); NCP car park on India Street about 2 minutes' walk away.",
       "source_urls": [
         "https://www.glasgowlife.org.uk/libraries/venues/the-mitchell-library"
       ],
@@ -17378,6 +17848,9 @@
       "lng": -0.084,
       "type": "Industrial & derelict",
       "setting": "The former Victorian fish market hall on the Thames in the City of London, a column free riverside space hired for productions and functions.",
+      "facilities": "Three hire spaces: the Grand Hall (47,000 sq ft / 4,300 sqm, sit-down dinner 1,800 / reception 2,500 / conference 1,200), the Gallery (10,000 sq ft / 1,000 sqm, sit-down dinner 250 / reception 500 / conference 300) and the Vault (21,000 sq ft / 2,000 sqm, sit-down dinner 500 / reception 900 / conference 270), each with in-house lighting, sound and production infrastructure.",
+      "suitability": "Described by the venue as suitable as a filming location; the terrace is presented as a backdrop for brand activations, photoshoots and filming.",
+      "logistics": "Address 1 Old Billingsgate Walk, London EC3R 6DX; Monument Station about a 4-minute walk away.",
       "source_urls": [
         "https://oldbillingsgate.co.uk"
       ],
@@ -18135,6 +18608,7 @@
       "lng": -2.1959,
       "type": "Studio & backlot",
       "setting": "A converted industrial estate in north Manchester built as television and digital production studios, with offices, a yard and outdoor space for crews and vehicles.",
+      "facilities": "200,000 sq ft refurbished warehouse, home to more than 60 companies; the site is promoted for space, power and connectivity for digital content, media and TV/film production.",
       "source_urls": [
         "https://thesharpproject.co.uk",
         "https://screenmanchester.com/"
@@ -18193,6 +18667,7 @@
       "lng": -5.9098,
       "type": "Modern architecture",
       "setting": "A six floor angular aluminium clad museum on the Belfast slipway where the Titanic was built, with galleries and function spaces hired for events.",
+      "logistics": "Easy access to public transport and car parking; walking distance from Belfast city centre and around 5-10 minutes by car from George Best Belfast City Airport.",
       "source_urls": [
         "https://www.titanicbelfast.com"
       ],
@@ -18214,6 +18689,8 @@
       "lng": -0.0595,
       "type": "Industrial & derelict",
       "setting": "A Grade I listed early nineteenth century dock warehouse in Wapping, with exposed brick vaults and cast iron columns hired as an events space.",
+      "facilities": "13 event spaces including the Great Gallery, Little Gallery, Dock Gallery, Quayside areas, Vaults and meeting suites, in a Grade I listed building dating from 1812. The venue reports around 2,000,000 visitors and 1,500 events a year across the site.",
+      "logistics": "Between Wapping and Shadwell; Shadwell station about 5 minutes' walk, Wapping station about 6 minutes' walk; served by London Overground, DLR and bus routes 100 and D3.",
       "source_urls": [
         "https://www.tobaccodocklondon.com"
       ],
@@ -18298,8 +18775,12 @@
       "lng": -0.044,
       "type": "Theatre, arena & venue",
       "setting": "A former 1930s cinema in Limehouse converted into an events venue, its art deco auditorium and foyers hired for filming, television and live shows.",
+      "capacity": 3600,
+      "facilities": "State-of-the-art AV facilities; the art deco building opened in 1933 and underwent a GBP 1.5 million refurbishment.",
+      "logistics": "About 15 minutes from London Waterloo station, in east London.",
       "source_urls": [
-        "https://www.troxy.co.uk"
+        "https://www.troxy.co.uk",
+        "https://troxy.co.uk/venue-hire/"
       ],
       "official_url": "https://www.troxy.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
@@ -18561,6 +19042,7 @@
       "lng": -3.051,
       "type": "Theatre, arena & venue",
       "setting": "A Victorian entertainment complex in Blackpool covering almost five acres, with the domed Spanish Hall, an opera house and function rooms hired for events.",
+      "facilities": "4.9 acres of connected space across multiple linked venues including the Opera House and Spanish Hall, with on-site cafes, bars and restaurants.",
       "source_urls": [
         "https://www.wintergardensblackpool.co.uk"
       ],

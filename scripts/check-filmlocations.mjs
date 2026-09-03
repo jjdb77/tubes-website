@@ -115,7 +115,7 @@ if (net) {
   // Sommige sites (Cloudflare e.d.) geven elk geautomatiseerd verzoek een 403,
   // ook met een browser-User-Agent, terwijl ze in een browser gewoon werken.
   // Die melden we apart, zodat een echte dode link opvalt.
-  const BOT_BLOCKED = ["northernirelandscreen.co.uk", "hants.gov.uk", "iwm.org.uk", "nationaltrust.org.uk", "english-heritage.org.uk", "marriott.com", "maltafilmstudios.com.mt", "screenmalta.com", "nts.org.uk", "screenyorkshire.co.uk", "venetofilmcommission.com"];
+  const BOT_BLOCKED = ["northernirelandscreen.co.uk", "hants.gov.uk", "iwm.org.uk", "nationaltrust.org.uk", "english-heritage.org.uk", "marriott.com", "maltafilmstudios.com.mt", "screenmalta.com", "nts.org.uk", "screenyorkshire.co.uk", "venetofilmcommission.com", "powerscourt.com", "royalalberthall.com", "liceubarcelona.cat", "cite-espace.com", "villaempain.com", "vca.gov.mt"];
   const blocked = (u) => BOT_BLOCKED.some((h) => u.includes(h));
   console.log(`checking ${urls.size} URLs...`);
   const list = [...urls.entries()];
