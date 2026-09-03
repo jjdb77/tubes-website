@@ -21,9 +21,8 @@ sections:
         link_label: Book your free Health Check
         text: |
           A free 45 minute review of how your production company handles budgets, actuals, forecasting, approvals and reporting. Practical findings and three concrete improvements, no sales pitch.
-      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
-        image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
-        image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"
+      - image: /assets/images/locations-toledo.jpg
+        image_alt: "Toledo, Spain: the old town with the cathedral and the Alcázar above the Tagus valley"
         heading: Film & TV locations in Europe
         url: /compare-film-tv-locations/
         link_label: Search locations
@@ -37,9 +36,8 @@ sections:
         link_label: Compare two versions
         text: |
           Load two versions of a budget and see what changed per line, per section and in total, with charts and filters. Nothing is uploaded: the page runs entirely in your browser.
-      - image: /assets/images/europe-contour.png
-        image_alt: "Outline map of Europe"
-        image_credit: "Map: public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Europe_blank_map.png)"
+      - image: /assets/images/europe-map.png
+        image_alt: "Map of Europe with the country borders"
         image_style: contour
         heading: Incentives per country
         url: /compare-film-incentives/
