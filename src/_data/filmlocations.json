@@ -706,8 +706,14 @@
       "lng": 16.3339,
       "type": "Theatre, arena & venue",
       "setting": "Vienna's largest multi-purpose arena, opened in 1958, with several halls used for concerts, sport and exhibitions under a distinctive folded roof.",
+      "capacity": 16000,
+      "facilities": "Halle D: up to 16,000 capacity (10,741 seated), interior space 4,968 m2, foyer 2,120 m2, interior height 15.4 m, stage up to 476 m2 (adjustable height 1.20 to 2.00 m, 750 kg/m2 load capacity), 35 chain hoists (1,000 kg each) and 650 linear metres of trusses, rigging points 17 to 20 m high, roof load capacity 100 t evenly distributed. Halle F: up to 2,000 capacity (including 8 wheelchair spaces, reducible to 750 seated), usable area 5,081 m2, main foyer 1,300 m2, stage 27.2 x 15.3 m, 264 dimmer circuits, line-array sound system, multiple dressing rooms.",
+      "suitability": "Halle F is listed by the venue as suitable for concerts, music shows, touring productions, children's events, dance, cabaret, circus, product presentations, fashion shows, films, lectures and conferences.",
+      "logistics": "Halle D backstage loading has 3.70 m clearance and takes 25-tonne trucks; the foyer loading area has 4.30 m clearance; three 3-tonne electric forklifts are available on site. Electrical supply reaches up to 2,450A across distribution points, including Powerlock connections up to 1,250A.",
       "source_urls": [
-        "https://www.stadthalle.com/"
+        "https://www.stadthalle.com/",
+        "https://www.stadthalle.com/de/vermietung/halle-d",
+        "https://www.stadthalle.com/de/vermietung/halle-f"
       ],
       "official_url": "https://www.stadthalle.com/",
       "commission_url": "https://www.filmfonds-wien.at/",
@@ -5757,9 +5763,12 @@
       "lng": 8.6707,
       "type": "Theatre, arena & venue",
       "setting": "Rebuilt 1880s opera house in Frankfurt, now a concert and congress venue with a restored historicist facade and a modern auditorium behind it.",
+      "capacity": 2434,
+      "facilities": "Grosser Saal (Grand Hall): 2,064 m2, 17.5 m high, up to 2,434 in row seating, 1,150 to 1,228 banquet, 644 parliamentary. Mozart Saal: 817 m2, 6.2 m high, up to 718 row seating, 362 to 376 banquet, 220 parliamentary. Salons (Schumann, Liszt, Mendelssohn, Telemann): 75 to 83 m2, 2.5 to 5.5 m high, 30 to 72 people depending on layout. Foyers (Paul Hindemith, Clara Schumann, Hertie, Albert Mangelsdorff): 260 to 880 m2, capacity 136 to 265.",
       "source_urls": [
         "https://www.alteoper.de/en/",
-        "https://en.wikipedia.org/wiki/Alte_Oper"
+        "https://en.wikipedia.org/wiki/Alte_Oper",
+        "https://www.alteoper.de/de/kongress"
       ],
       "official_url": "https://www.alteoper.de/en/",
       "commission_url": "https://www.hessenfilm.de/en/",
@@ -5961,9 +5970,13 @@
       "lng": 9.9836,
       "type": "Theatre, arena & venue",
       "setting": "Concert hall on the Elbe in Hamburg's HafenCity, built above a former cocoa warehouse with a glass wave-shaped upper structure, a public plaza and two auditoriums.",
+      "capacity": 2091,
+      "facilities": "Grand Hall: standard capacity 2,091, reducible to about 1,555 in some configurations; stage about 260 m2, playable area about 18 x 15 m; 31 electrically operated height-adjustable platforms; organ; foyers with cloakrooms and bars on multiple floors. Recital Hall: 532 in standard configuration (14.5 x 6.3 m stage), 388 with a larger 14.5 x 11.8 m stage, 210 seated for banquets; base area 435 m2 (14.5 x 30 m) with seating removed; mobile auditorium and stage elements.",
+      "logistics": "Two loading zones with service lifts on the south side require advance arrangement; artists access via the Artists' Entrance on the south/port side. Visitor access to the concert area is only via the Elbphilharmonie Plaza, so every visitor needs a ticket.",
       "source_urls": [
         "https://www.elbphilharmonie.de/en/",
-        "https://en.wikipedia.org/wiki/Elbphilharmonie"
+        "https://en.wikipedia.org/wiki/Elbphilharmonie",
+        "https://www.elbphilharmonie.de/en/elbphilharmonie-hire"
       ],
       "official_url": "https://www.elbphilharmonie.de/en/",
       "commission_url": "https://www.moin-filmfoerderung.de/en/",
@@ -5983,9 +5996,12 @@
       "lng": 12.2814,
       "type": "Industrial & derelict",
       "setting": "Open-air museum on a peninsula in a former lignite mining lake near Gräfenhainichen, displaying five giant excavators and dredgers on a bare industrial ground used for festivals and events.",
+      "capacity": 25000,
+      "facilities": "Arena covers 14,000 m2 with a maximum of 25,000 visitors; seated configurations include 3,250 seated/6,500 standing, 4,820 standing steps, or up to 13,500 to 14,000 in the arena. Buildings include the Orangerie (560 m2), a mechanical workshop, an auxiliary workshop and admin areas (80 m2). On-site parking for 400 cars (7,000 more at the nearby federal highway), 10 bus spaces, 1,000 bike spaces and a heliport. Power supply: 782 kW for stage lighting and other uses, 248 kW for audio, with six distribution points around the arena. Water supply up to 13.32 m3/h, wastewater capacity 47.34 m3/h. Fixed sanitation for about 10,000 visitors, partly wheelchair accessible, plus a medical care room.",
       "source_urls": [
         "https://www.ferropolis.de/en/",
-        "https://en.wikipedia.org/wiki/Ferropolis"
+        "https://en.wikipedia.org/wiki/Ferropolis",
+        "https://www.ferropolis.de/veranstaltungsinfos"
       ],
       "official_url": "https://www.ferropolis.de/",
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
@@ -6600,9 +6616,11 @@
       "lng": 11.5504,
       "type": "Theatre, arena & venue",
       "setting": "1972 Olympic park in Munich with a tent-roofed stadium, hall and swimming venue around an artificial hill and lake, still used for concerts and sporting events.",
+      "facilities": "The venue offers halls and spaces for 100 to 10,000 or more people, including the Olympiastadion (Olympic Stadium), Olympiahalle, Kleine Olympiahalle (Small Olympic Hall), a Business Area, the Coubertin/Club restaurant, and outdoor grounds under the park's tent roof.",
       "source_urls": [
         "https://www.olympiapark.de/en/",
-        "https://en.wikipedia.org/wiki/Olympiapark_(Munich)"
+        "https://en.wikipedia.org/wiki/Olympiapark_(Munich)",
+        "https://b2b.olympiapark.de/"
       ],
       "official_url": "https://www.olympiapark.de/en/",
       "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
@@ -6754,8 +6772,11 @@
       "lng": 9.9926,
       "type": "Industrial & derelict",
       "setting": "The world's largest historic warehouse district, red-brick blocks on timber piles crossed by canals and iron bridges, part now a museum quarter.",
+      "capacity": 100,
+      "facilities": "The Speicherstadtmuseum can be rented as an event location after closing (17:00 on weekdays, 18:00 at weekends) for a party, reception or presentation. Seated dining fits up to 60 people; standing receptions fit up to 100. Dancing events are not possible.",
       "source_urls": [
-        "https://www.speicherstadtmuseum.de/"
+        "https://www.speicherstadtmuseum.de/",
+        "https://www.speicherstadtmuseum.de/events-location.html"
       ],
       "official_url": "https://www.speicherstadtmuseum.de/",
       "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
@@ -6791,8 +6812,10 @@
       "lng": 9.9769,
       "type": "Church & monastery",
       "setting": "Hamburg's principal baroque church, known locally as the Michel, with a copper-clad tower, a light-filled nave and a crypt, available for hire outside services.",
+      "facilities": "The church, the crypt (described by the venue as the largest in Northern Europe) and rooms in the 1950s community house can be booked for corporate concerts, readings, workshops, lectures and seminars.",
       "source_urls": [
-        "https://www.st-michaelis.de/"
+        "https://www.st-michaelis.de/",
+        "https://www.st-michaelis.de/michel-besuch/ihre-veranstaltung-am-michel"
       ],
       "official_url": "https://www.st-michaelis.de/",
       "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
@@ -6884,9 +6907,13 @@
       "type": "Transport & infrastructure",
       "setting": "Former Berlin city airport with a terminal building over a kilometre long, vast disused hangars and a 300-hectare former airfield now a public park, hired for filming, events and trade fairs.",
       "known_for": "Bridge of Spies (2015), The Hunger Games: Mockingjay Part 2 (2015)",
+      "facilities": "The open apron area covers about 25 hectares, described on the site as the largest open-air space within a city in the world. Halls have ceiling heights up to 18 metres. The main building is over 1.2 kilometres long. Spaces (Haupthalle, hangars, the Vorfeld apron) can be booked separately or combined; hangar doors can be opened as needed and there is overhead cover for outdoor events.",
+      "suitability": "The site says it has hosted more than 50 film productions, including Billy Wilder's Eins, Zwei, Drei, Operation Walkuere, The Bourne Ultimatum and The Hunger Games. It receives more than 1,000 enquiries a year for events, filming and photography, and offers on-site location management and crew support.",
       "source_urls": [
         "https://gruen-berlin.de/tempelhofer-feld",
-        "https://en.wikipedia.org/wiki/Tempelhof_Airport"
+        "https://en.wikipedia.org/wiki/Tempelhof_Airport",
+        "https://www.thf-berlin.de/vermietung/motive",
+        "https://www.thf-berlin.de/vermietung/eventlocation"
       ],
       "official_url": "https://www.thf-berlin.de/",
       "commission_url": "https://www.bbfc.de/en/",
@@ -6930,8 +6957,10 @@
       "lng": 8.7154,
       "type": "Office, school & public building",
       "setting": "A former harbour district of quays, warehouses and cranes redeveloped into offices, studios and event spaces, keeping much of its industrial waterfront look.",
+      "facilities": "The district's event locations page lists venues including Alte Werft Dock 1 (2,500 m2, max 850 guests), BOLZEREI (3,500 m2), Alte Kranhalle (2,000 m2) with Generatorenhalle (200 m2), KABA-Eventhalle (880 m2 over two levels, about 199 seated), Schuppen Eins (100 to 2,000 m2, 10 to 1,200 people), GOP Variete-Theater (400 seated, restaurant about 200, ADIAMO up to 350), and smaller venues such as Aromatico Coffee Hub (115 m2, up to 60), Deck 20 (up to 60), Hafenrummel (15 to 60) and Lloyd Caffee (30 to 50).",
       "source_urls": [
-        "https://www.ueberseestadt-bremen.de/"
+        "https://www.ueberseestadt-bremen.de/",
+        "https://www.ueberseestadt-bremen.de/de/page/freizeit-tourismus/eventlocations"
       ],
       "official_url": "https://www.ueberseestadt-bremen.de/",
       "commission_url": "https://www.nordmedia.de/"
@@ -7084,9 +7113,13 @@
       "lng": 7.4547,
       "type": "Industrial & derelict",
       "setting": "Former colliery in Dortmund with an Art Nouveau machine hall, ornate portal building and preserved pit head machinery, run as part of the Westphalian Industrial Museum.",
+      "price_note": "Room hire from EUR 200 to EUR 2,200 per day plus VAT depending on space (own site): Magazin/conference hall EUR 1,300, Maschinenhalle EUR 2,200, Lohnhalle EUR 800, Seminar Rooms 1-4 EUR 200 each. Cleaning fees range EUR 80 to 800 depending on space.",
+      "capacity": 689,
+      "facilities": "Magazin/conference hall about 350 m2 total (280 m2 usable), row seating for up to 300, parliamentary seating for 140, with a built-in stage of about 40 m2, sound system, video/presentation technology and an interpreter booth. Maschinenhalle about 2,138 m2 total with 750 m2 usable, seated capacity up to 689. Lohnhalle 255 m2, used for evening events after 6pm. Seminar Rooms 1-4 are 50 to 54 m2 each, for up to 20 people, with projectors. All spaces have climate control/heating.",
       "source_urls": [
         "https://www.lwl-industriemuseum.de/de/standorte/zeche-zollern/",
-        "https://en.wikipedia.org/wiki/Zollern_Colliery"
+        "https://en.wikipedia.org/wiki/Zollern_Colliery",
+        "https://zeche-zollern.lwl.org/de/besuch/raumvermietung/"
       ],
       "official_url": "https://zeche-zollern.lwl.org/de/",
       "commission_url": "https://www.filmstiftung.de/en/"
@@ -7100,9 +7133,12 @@
       "lng": 7.0454,
       "type": "Industrial & derelict",
       "setting": "Former coal mine and coking plant in Essen, a UNESCO World Heritage site with Bauhaus-style winding towers, coking ovens, conveyor bridges and vast industrial halls now used for exhibitions and events.",
+      "facilities": "About 18,000 m2 of event space across more than 50 rooms, halls and buildings from 10 location providers on site (including Grand Hall Zollverein, Casino Zollverein, PACT Zollverein, SANAA, Erich Brost-Pavillon, Bistro Schacht XII, Oktogon, The Mine and ZukunftsZentrum Zollverein), plus 100 hectares of outdoor grounds.",
+      "suitability": "The site describes the UNESCO World Heritage Site as long established as a location for photo shoots and film productions, with sound, lighting and film studio technology available in some spaces.",
       "source_urls": [
         "https://www.zollverein.de/en/",
-        "https://en.wikipedia.org/wiki/Zollverein_Coal_Mine_Industrial_Complex"
+        "https://en.wikipedia.org/wiki/Zollverein_Coal_Mine_Industrial_Complex",
+        "https://www.zollverein.de/eventlocations/eventlocations-auf-zollverein/"
       ],
       "official_url": "https://www.zollverein.de/en/",
       "commission_url": "https://www.filmstiftung.de/en/",
@@ -12304,28 +12340,6 @@
       }
     },
     {
-      "id": "nl-van-nelle-fabriek",
-      "name": "Van Nelle Factory",
-      "country": "Netherlands",
-      "region": "South Holland",
-      "lat": 51.9228,
-      "lng": 4.4336,
-      "type": "Industrial & derelict",
-      "setting": "UNESCO-listed 1931 factory in Rotterdam built for processing coffee, tea and tobacco, with steel-framed glass curtain walls and an elevated conveyor bridge.",
-      "source_urls": [
-        "http://www.van-nelle-fabriek.com",
-        "https://en.wikipedia.org/wiki/Van_Nelle_Factory"
-      ],
-      "official_url": "http://www.van-nelle-fabriek.com",
-      "commission_url": "https://www.filmcommission.nl/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rotterdam_van_nelle_fabriek.jpg/960px-Rotterdam_van_nelle_fabriek.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Rotterdam_van_nelle_fabriek.jpg",
-        "author": "F.Eveleens",
-        "license": "CC BY 3.0"
-      }
-    },
-    {
       "id": "nl-gevangenismuseum-veenhuizen",
       "name": "Veenhuizen Prison Museum",
       "country": "Netherlands",
@@ -12481,6 +12495,7 @@
       "lng": 5.7728,
       "type": "Theatre, arena & venue",
       "setting": "A convention and exhibition centre in Leeuwarden with several halls hired out for congresses, fairs and business events.",
+      "facilities": "Over 40,000 sqm of exhibition space across multiple halls: Friezenhal (Hall 5) 10,260 sqm, Saksenhal (Hall 3) 8,925 sqm, Frankenhal (Hall 4) 5,700 sqm, and Keltenhal (size not stated). On-site catering (WTC Hospitality) and a four-star hotel are part of the complex.",
       "source_urls": [
         "https://nl.wikipedia.org/wiki/WTC_Leeuwarden",
         "https://www.wtcexpo.nl/"
@@ -12519,8 +12534,11 @@
       "lng": 5.1543,
       "type": "Hospital, prison & institution",
       "setting": "Modernist 1928 former tuberculosis sanatorium near Hilversum by architect Jan Duiker, with steel-framed pavilions, large glass walls and a wooded park setting.",
+      "suitability": "The site lists \"photo and film requests\" as a reason to contact it, indicating it accommodates filming enquiries, though no further conditions are published.",
+      "logistics": "Ample on-site parking (\"ruime parkeergelegenheid\").",
       "source_urls": [
-        "https://www.zonnestraal.org/"
+        "https://www.zonnestraal.org/",
+        "https://zonnestraal.nl/"
       ],
       "official_url": "https://www.zonnestraal.org/",
       "commission_url": "https://www.filmcommission.nl/",
