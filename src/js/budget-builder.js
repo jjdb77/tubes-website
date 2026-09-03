@@ -348,8 +348,8 @@
   function lineRow(s, l) {
     return `<tr class="bb-line" data-line="${l.id}">
       <td class="bb-col-code"><input type="text" data-field="code" value="${esc(l.code)}" aria-label="Code" autocomplete="off"></td>
-      <td class="bb-col-desc"><input type="text" data-field="description" value="${esc(l.description)}" placeholder="Description" aria-label="Description" autocomplete="off"></td>
-      <td class="bb-col-remarks"><input type="text" data-field="remarks" value="${esc(l.remarks)}" placeholder="Remarks" aria-label="Remarks" autocomplete="off"></td>
+      <td class="bb-col-desc"><input type="text" data-field="description" value="${esc(l.description)}" placeholder="Cost, e.g. Camera rental" aria-label="Cost description" autocomplete="off"></td>
+      <td class="bb-col-remarks"><input type="text" data-field="remarks" value="${esc(l.remarks)}" placeholder="Note" aria-label="Note" autocomplete="off"></td>
       <td class="bb-col-qty"><input type="text" inputmode="decimal" data-field="qty" value="${esc(l.qty)}" placeholder="0" aria-label="Quantity" autocomplete="off"></td>
       <td class="bb-col-unit"><input type="text" data-field="unit" value="${esc(l.unit)}" placeholder="unit" aria-label="Unit" autocomplete="off"></td>
       <td class="bb-col-rate"><input type="text" inputmode="decimal" data-field="rate" value="${esc(l.rate)}" placeholder="0" aria-label="Rate" autocomplete="off"></td>
@@ -362,26 +362,26 @@
     const catalog = catalogFor(s);
     const used = new Set(s.lines.map((l) => String(l.code).trim()));
     const available = catalog ? catalog.filter((c) => !used.has(String(c.code))) : [];
-    const picker = catalog ? `<select class="bb-pick" data-act="pick-line" aria-label="Add a cost type from the template"><option value="">${available.length ? `Add a cost type… (${available.length})` : "All cost types added"}</option>${available.map((c) => `<option value="${esc(c.code)}">${esc(c.code)} ${esc(c.description)}</option>`).join("")}</select>` +
+    const picker = catalog ? `<select class="bb-pick" data-act="pick-line" aria-label="Add a cost from the template"><option value="">${available.length ? `Add a cost from the template… (${available.length})` : "All template costs added"}</option>${available.map((c) => `<option value="${esc(c.code)}">${esc(c.code)} ${esc(c.description)}</option>`).join("")}</select>` +
       (available.length > 1 ? `<button type="button" class="bc-link-button" data-act="add-all">Add all ${available.length}</button>` : "") : "";
     return `<section class="bb-section" data-section="${s.id}"${s.color ? ` style="--section-color: ${esc(s.color)}"` : ""}>
       <div class="bb-section-head">
         <input type="text" class="bb-section-number" data-sfield="number" value="${esc(s.number)}" placeholder="1000" aria-label="Section number" autocomplete="off">
-        <input type="text" class="bb-section-name" data-sfield="name" value="${esc(s.name)}" placeholder="Section name" aria-label="Section name" autocomplete="off">
+        <input type="text" class="bb-section-name" data-sfield="name" value="${esc(s.name)}" placeholder="Area, e.g. Crew" aria-label="Area name" autocomplete="off">
         <span class="bb-section-total bb-num" data-section-total>${money(sectionTotal(s))}</span>
         <span class="bb-section-actions"><button type="button" class="bb-icon" data-act="up-section" title="Move section up" aria-label="Move section up">&#8593;</button><button type="button" class="bb-icon" data-act="down-section" title="Move section down" aria-label="Move section down">&#8595;</button><button type="button" class="bb-icon bb-icon-danger" data-act="del-section" title="Delete section" aria-label="Delete section">&times;</button></span>
       </div>
       <div class="bb-table-wrap"><table class="bb-table">
-        <thead><tr><th class="bb-col-code">Code</th><th class="bb-col-desc">Description</th><th class="bb-col-remarks">Remarks</th><th class="bb-col-qty bb-num">Qty</th><th class="bb-col-unit">Unit</th><th class="bb-col-rate bb-num">Rate</th><th class="bb-col-total bb-num">Total</th><th class="bb-col-actions"><span class="visually-hidden">Actions</span></th></tr></thead>
+        <thead><tr><th class="bb-col-code">Code</th><th class="bb-col-desc">Cost</th><th class="bb-col-remarks">Note</th><th class="bb-col-qty bb-num">Qty</th><th class="bb-col-unit">Unit</th><th class="bb-col-rate bb-num">Rate</th><th class="bb-col-total bb-num">Total</th><th class="bb-col-actions"><span class="visually-hidden">Actions</span></th></tr></thead>
         <tbody>${s.lines.map((l) => lineRow(s, l)).join("")}</tbody>
       </table></div>
-      <div class="bb-section-foot">${picker}<button type="button" class="bc-link-button" data-act="add-line">+ ${catalog ? "Blank line" : "Add line"}</button></div>
+      <div class="bb-section-foot">${picker}<button type="button" class="bc-link-button" data-act="add-line">+ ${catalog ? "Add your own cost" : "Add cost"}</button></div>
     </section>`;
   }
 
   function renderSections() {
     sectionsEl.innerHTML = budget.sections.map(sectionCard).join("") +
-      `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add section</button></div>`;
+      `<div class="bb-add-section"><button type="button" class="button button-secondary" data-act="add-section">+ Add an area (e.g. Crew, Equipment, Locations)</button></div>`;
     renderFormats();
   }
 
@@ -392,11 +392,11 @@
     // Eerst een formaat kiezen (of importeren), dan pas de rest van de stappen
     root.classList.toggle("is-choosing", !(budget.template || budget.sections.length));
     if (!budget.template && !budget.sections.length) {
-      formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Choose your format</h3><p class="bb-help">All categories of the format appear as sections; add the budget lines per category from the list. Or start blank.</p></div></div>${templateTiles()}</div>`;
+      formatsEl.innerHTML = `<div class="bb-start"><div class="bb-start-head"><span class="bb-step">1</span><div><h3>Start with a template</h3><p class="bb-help">A ready made budget structure you adjust to your production, an example to look at, or start from scratch.</p></div></div>${templateTiles()}</div>`;
       return;
     }
     const t = budget.template && allTemplates().find((x) => x.id === budget.template);
-    formatsEl.innerHTML = `<div class="bb-format-bar"><span class="bb-step">1</span><span>Format: <strong>${t ? esc(t.name) : "none"}</strong>${t ? ` <span class="bb-help">${(t.sections || []).length} categories</span>` : ""}</span><button type="button" class="bc-link-button" data-bb-open="templates">Choose your format</button></div>`;
+    formatsEl.innerHTML = `<div class="bb-format-bar"><span class="bb-step">1</span><span>Template: <strong>${t ? esc(t.name) : "none"}</strong>${t && (t.sections || []).length ? ` <span class="bb-help">${(t.sections || []).length} areas</span>` : ""}</span><button type="button" class="bc-link-button" data-bb-open="templates">Choose another template</button></div>`;
     for (const b of $$("[data-bb-open]", formatsEl)) b.addEventListener("click", () => { prepareDialog(b.dataset.bbOpen); openDialog(b.dataset.bbOpen); });
   }
   formatsEl.addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
@@ -421,7 +421,7 @@
     summary.vat.textContent = money(t.vat);
     summary.totalIncl.textContent = money(t.totalIncl);
 
-    const shares = budget.sections.map((s) => ({ name: s.name || s.number || "Untitled section", amount: sectionTotal(s) })).filter((x) => x.amount > 0).sort((a, b) => b.amount - a.amount);
+    const shares = budget.sections.map((s) => ({ name: s.name || s.number || "Untitled area", amount: sectionTotal(s) })).filter((x) => x.amount > 0).sort((a, b) => b.amount - a.amount);
     summary.share.hidden = shares.length < 2;
     if (shares.length >= 2) {
       const top = shares.slice(0, 8);
@@ -675,9 +675,9 @@
   function renderAccount() {
     if (STORAGE_MODE === "local") {
       const n = account.versions.length;
-      accountEl.innerHTML = `Saved in this browser · <button type="button" class="bc-link-button" data-bb-versions-open>${n} of ${MAX_VERSIONS} version${n === 1 ? "" : "s"}</button>`;
+      accountEl.innerHTML = `<button type="button" class="bc-link-button" data-bb-versions-open>Saved versions (${n})</button>`;
       $("[data-bb-versions-open]", accountEl).addEventListener("click", () => { prepareDialog("versions"); openDialog("versions"); });
-      setSaveButtons((b) => { b.textContent = "Save version"; });
+      setSaveButtons((b) => { b.textContent = "Save"; });
       return;
     }
     if (account.user) {
@@ -777,7 +777,7 @@
     account.versions = localSummaries();
     dirty = false;
     renderAccount();
-    notice(`Saved "${budget.name || "Untitled"}" in this browser (${account.versions.length} of ${MAX_VERSIONS} versions).`, "ok");
+    notice(`Saved "${budget.name || "Untitled"}" (${account.versions.length} of ${MAX_VERSIONS} versions in this browser).`, "ok");
     if (dialogs.versions.open) prepareDialog("versions");
   }
 
@@ -892,12 +892,12 @@
       if (lines.length > MAX_LINES) throw new Error("too-many");
       importResult = { sections: linesToSections(lines, lookup), file: file.name, sheet: sheets[index].name, count: lines.length };
       const total = importResult.sections.reduce((n, s) => n + s.lines.reduce((m, l) => m + parseNum(l.qty) * parseNum(l.rate), 0), 0);
-      $("[data-bb-import-summary]").textContent = `${file.name}${sheets.length > 1 ? ` (sheet ${sheets[index].name})` : ""}: ${importResult.sections.length} section${importResult.sections.length === 1 ? "" : "s"}, ${lines.length} lines, total ${money(total)}.`;
+      $("[data-bb-import-summary]").textContent = `${file.name}${sheets.length > 1 ? ` (sheet ${sheets[index].name})` : ""}: ${importResult.sections.length} area${importResult.sections.length === 1 ? "" : "s"}, ${lines.length} costs, total ${money(total)}.`;
       $("[data-bb-import-preview]").hidden = false;
       importStatus.textContent = "";
     } catch (err) {
       const why = { "no-inflate": "This browser cannot read Excel files directly. Save the sheet as CSV and try again.", "no-amount": "No amount column found in this file.", "no-lines": "No budget lines found in this file.", "too-many": `This file has more than ${MAX_LINES} lines.` }[err && err.message];
-      importStatus.textContent = why || "Could not read this file. Try an .xlsx or CSV export.";
+      importStatus.textContent = why || "Could not read this file. Try an Excel (.xlsx) or CSV file.";
     }
   });
 
@@ -912,7 +912,7 @@
     touch();
     renderAll();
     dialogs.import.close();
-    notice(`Imported ${importResult.count} lines from ${importResult.file}.`, "ok");
+    notice(`Imported ${importResult.count} costs from ${importResult.file}.`, "ok");
     importResult = null;
     $("[data-bb-import-preview]").hidden = true;
   });
@@ -920,7 +920,7 @@
   // ---------- Formaten en voorbeeld ----------
 
   const SAMPLE = {
-    id: "sample", name: "Sample budget", description: "A small drama budget with numbers filled in, to see how the builder and the exports behave.",
+    id: "sample", name: "Example budget", description: "A small drama budget with figures filled in, to see how it works.",
     additionals: [{ name: "Contingency", percent: 10 }],
     sections: [
       { number: "1100", name: "Development, story, rights", lines: [{ code: "1102", description: "Development", remarks: "Scouting, prep", qty: 1, unit: "allow", rate: 60000 }, { code: "1104", description: "Script & development", qty: 1, unit: "allow", rate: 85000 }] },
@@ -947,13 +947,13 @@
       const sections = t.sections || [];
       const count = sections.reduce((n, s) => n + (s.lines || []).length, 0);
       const colors = sections.map((s) => s.color).filter(Boolean).slice(0, 14);
-      const meta = t.id === "sample" ? `${sections.length} sections, ${count} lines with figures` : sections.length ? `${sections.length} categories, ${count} cost types to pick from` : "Your own sections and lines";
+      const meta = t.id === "sample" ? `${sections.length} areas, ${count} costs filled in` : sections.length ? `${sections.length} areas, ${count} costs to choose from` : "Your own areas and costs";
       return `<div class="bb-tile" data-template="${esc(t.id)}">
         <div class="bb-tile-colors" aria-hidden="true">${(colors.length ? colors : ["#EAF1FC"]).map((c) => `<span style="background:${esc(c)}"></span>`).join("")}</div>
         <strong>${esc(t.name)}</strong>
         <span class="bb-help">${esc(t.description || "")}</span>
         <span class="bb-tile-meta">${esc(meta)}</span>
-        <div class="bb-tile-actions"><button type="button" class="button button-primary" data-tact="use">Use</button>${sections.length ? `<button type="button" class="button button-secondary" data-tact="append">Add sections</button>` : ""}</div>
+        <div class="bb-tile-actions"><button type="button" class="button button-primary" data-tact="use">Start</button>${sections.length ? `<button type="button" class="button button-secondary" data-tact="append">Add to my budget</button>` : ""}</div>
       </div>`;
     }).join("")}</div>`;
   }
@@ -969,7 +969,7 @@
     const withLines = id === "sample";
     const asSection = (s) => newSection({ number: s.number, name: s.name, color: s.color, lines: withLines ? s.lines : [] });
     if (button.dataset.tact === "use") {
-      if (lineCount() && button.dataset.armed !== "1") { button.dataset.armed = "1"; button.textContent = "Replace current budget?"; setTimeout(() => { button.dataset.armed = ""; button.textContent = "Use"; }, 5000); return; }
+      if (lineCount() && button.dataset.armed !== "1") { button.dataset.armed = "1"; button.textContent = "Replace current budget?"; setTimeout(() => { button.dataset.armed = ""; button.textContent = "Start"; }, 5000); return; }
       budget = { ...emptyBudget(), name: budget.name || "Draft 1", production: budget.production, currency: budget.currency || "EUR", vat: budget.vat ?? 21, template: id === "sample" ? "" : id, sections: sections.map(asSection), additionals: (t.additionals || []).map(newAdditional) };
     } else {
       for (const s of sections) budget.sections.push(asSection(s));
@@ -978,7 +978,7 @@
     touch();
     renderAll();
     dialogs.templates.close();
-    notice(withLines ? `${t.name}: ${sections.length} sections, ${sections.reduce((n, s) => n + s.lines.length, 0)} lines.` : `${t.name}: ${sections.length} categories added. Pick the cost types per section, or add blank lines.`, "ok");
+    notice(withLines ? `${t.name}: ${sections.length} areas, ${sections.reduce((n, s) => n + s.lines.length, 0)} costs.` : sections.length ? `${t.name}: ${sections.length} areas added. Add costs per area from the list, or type your own.` : "Starting from scratch. Add an area, then your costs.", "ok");
   }
   $("[data-bb-templates]").addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
 
@@ -987,9 +987,9 @@
   $("[data-bb-file-save]").addEventListener("click", () => {
     const data = { format: "tubes-budget-builder", version: 1, savedAt: new Date().toISOString(), budget };
     download(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }), fileStem() + ".json");
-    notice("Downloaded the budget as a file. Open it here with Open a file.", "ok");
+    notice("Downloaded your Tubes budget file. Open it here or on another computer with Open budget file.", "ok");
   });
-  $("[data-bb-file-open]").addEventListener("change", async (e) => {
+  for (const opener of $$("[data-bb-file-open]")) opener.addEventListener("change", async (e) => {
     const file = e.target.files && e.target.files[0];
     e.target.value = "";
     if (!file) return;
@@ -1002,9 +1002,10 @@
       saveLocal();
       renderAll();
       dialogs.versions.close();
-      notice(`Opened ${file.name}. Use Save version to keep it in this browser.`, "ok");
+      dialogs.import.close();
+      notice(`Opened ${file.name}. Use Save to keep it in this browser.`, "ok");
     } catch {
-      notice("This is not a budget file from the Budget Builder.", "error");
+      notice("This is not a Tubes budget file.", "error");
     }
   });
 

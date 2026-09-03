@@ -44,8 +44,8 @@ const lineCount = sections.reduce((n, s) => n + s.lines.length, 0);
 const missingNames = sections.filter((s) => !names.has(s.number)).map((s) => s.number);
 
 const templates = [
-  { id: "blank", name: "Blank", description: "Start from nothing and add your own sections and lines." },
-  { id: "movie-magic", name: "Movie Magic (film and TV standard)", description: `The category and account numbering of Movie Magic Budgeting: ${sections.length} sections and ${lineCount} accounts, from 1100 Development to 7100 Rebates, each section in its own colour. Quantities and rates start empty.`, sections },
+  { id: "blank", name: "Start from scratch", description: "Add your own areas and costs." },
+  { id: "movie-magic", name: "Movie Magic Budgeting", description: `The standard Movie Magic budget layout with all its areas and costs, from development to contingency, in the numbering production accountants know. Amounts start empty.`, sections },
 ];
 const out = `// Budgetformaten (rekeningschema's) voor de gratis Budget Builder.
 // GEGENEREERD door scripts/gen-budget-templates.mjs uit de lijsten in

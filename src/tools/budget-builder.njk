@@ -1,52 +1,68 @@
 ---
 layout: layout.njk
 title: Budget Builder
-seo_title: "Free Production Budget Builder with Excel Export | Tubes"
-description: "Build a film or TV production budget in your browser: sections, lines, quantities, rates and percentages on top. Import a Movie Magic export, export to Excel, save up to ten versions."
+seo_title: "Free Film & TV Production Budget Builder | Tubes"
+description: "Build a film or TV production budget online: start with a template, import an existing budget or start from scratch. Totals update automatically. Download as Excel, CSV or PDF. No account needed."
 permalink: /tools/budget-builder/
 # Geen demo-popup en geen statistiek-script (zie "Gratis tools" in CLAUDE.md).
-# Deze tool praat wél met de eigen server voor accounts en versies; server.js
-# geeft /tools/budget-builder/ daarom een CSP met connect-src 'self'.
+# Deze tool praat met de eigen server voor de feedbackknop (en, als de
+# account-variant aanstaat, voor accounts en versies); server.js geeft
+# /tools/budget-builder/ daarom een CSP met connect-src 'self'.
 browser_only: true
 sections:
   - type: hero
     kicker: Free tool
-    title: Build a production *budget* and export it to Excel
+    title: Build your film or TV *production budget* online
     text: |
-      Build your production budget quickly and keep a clear view of every cost. Totals update automatically, and you can easily import an existing budget or export it to Excel.
+      Start with a template, import an existing budget or build one from scratch. Add your expected costs and Tubes keeps the totals up to date automatically.
 
-      Your information stays private and is stored only on your device. Save different versions of your budget and download a copy whenever you need it.
+      When you are ready, download your budget as Excel, CSV or PDF.
+
+      No account needed. Your budget is stored only in this browser and nothing is uploaded to Tubes.
 ---
 {#- Gratis tool "Budget Builder". Bewust géén CMS-secties: het bewerkdeel is te
     specifiek. Tekst wijzig je hier, opmaak staat in style.css (blok "Gratis
     tools: Budget builder", klassen bb-*), logica in js/budget-builder.js. De
     lezer voor xlsx/CSV (import) is js/budget-compare.js, dat als bibliotheek
-    meelaadt (window.BudgetCompare). Formaten staan in js/budget-templates.js. -#}
+    meelaadt (window.BudgetCompare). Sjablonen staan in js/budget-templates.js.
 
-{#- data-storage: "local" = versies in de browser (actief); "account" = versies op de server met e-mail en wachtwoord (code blijft aanwezig). -#}
+    Teksten zijn geschreven vanuit de gebruiker (producent), niet vanuit de
+    software: geen JSON, formules of datastructuren in de hoofdteksten; dat
+    soort details staat achter "details"-uitklappers of in de FAQ. Movie Magic
+    wordt alleen genoemd als naam van het sjabloon, in de importdetails en in
+    de FAQ, niet in intro- of begeleidende teksten (wens Joachim).
+
+    data-storage: "local" = versies in de browser (actief); "account" = versies
+    op de server met e-mail en wachtwoord (code blijft aanwezig; bij
+    terugschakelen ook alle teksten over opslaan aanpassen). -#}
+
 <section class="section theme-white bb-section" id="tool" data-budget-builder data-storage="local" data-max-lines="2000" data-max-versions="10">
   <div class="container">
 
     <div class="bb-top">
       <div class="bb-top-text">
-        <h2>Build your budget</h2>
-        <p>Add sections and lines, or pick a format under Templates. The budget is kept in this browser as you type. Save version keeps a named copy on this device, and a file download takes it anywhere.</p>
+        <h2>Create your budget</h2>
+        <p>Start with a template, import an existing budget or simply add your production costs below.</p>
       </div>
       <div class="bb-actions">
-        <span class="bb-account" data-bb-account>Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button></span>
-        <button type="button" class="button button-secondary bb-feedback-button" data-bb-open="feedback">Feedback</button>
-        <button type="button" class="button button-secondary" data-bb-open="import">Import</button>
-        <button type="button" class="button button-secondary" data-bb-open="templates">Templates</button>
-        <button type="button" class="button button-secondary" data-bb-open="export">Export</button>
-        <button type="button" class="button button-primary" data-bb-save>Save version</button>
+        <div class="bb-actions-main">
+          <button type="button" class="button button-secondary" data-bb-open="templates">Start with a template</button>
+          <button type="button" class="button button-secondary" data-bb-open="import">Import budget</button>
+          <button type="button" class="button button-secondary" data-bb-open="export">Download</button>
+          <button type="button" class="button button-primary" data-bb-save>Save</button>
+        </div>
+        <div class="bb-actions-side">
+          <span class="bb-account" data-bb-account></span>
+          <button type="button" class="bc-link-button" data-bb-open="feedback">Feedback</button>
+        </div>
       </div>
     </div>
 
-    {#- Stap 1: formaat kiezen. Tegels zolang het budget leeg is; daarna een
-        smalle balk met het gekozen formaat en een knop om te wisselen. -#}
+    {#- Stap 1: sjabloon kiezen. Tegels zolang het budget leeg is; daarna een
+        smalle balk met het gekozen sjabloon en een knop om te wisselen. -#}
     <div class="bb-formats" data-bb-formats></div>
 
-    <div class="bb-step-head"><span class="bb-step">2</span><h3>Budget details</h3><span class="bb-help">Name, production, currency, VAT and date. All optional, they appear on the Excel export.</span></div>
+    <div class="bb-step-head"><span class="bb-step">2</span><h3>About this budget</h3><span class="bb-help">Give your budget a name and choose the currency, tax rate and date. You can change these later.</span></div>
     <div class="bb-meta">
       <label class="bb-field bb-field-wide">Budget name <input type="text" data-bb-meta="name" placeholder="Draft 1" autocomplete="off"></label>
       <label class="bb-field bb-field-wide">Production <input type="text" data-bb-meta="production" placeholder="Working title" autocomplete="off"></label>
@@ -75,45 +91,44 @@ sections:
 
     <div class="bb-layout">
       <div class="bb-main">
-        <div class="bb-step-head"><span class="bb-step">3</span><h3>Sections and budget lines</h3><span class="bb-help">Pick cost types per section from the list, or add your own lines. Totals follow as you type.</span></div>
+        <div class="bb-step-head"><span class="bb-step">3</span><h3>Add your production costs</h3><span class="bb-help">Organise your budget into areas such as crew, equipment, locations, travel and post production. Add as much or as little detail as you need. Tubes calculates the totals automatically.</span></div>
         <div class="bb-sections" data-bb-sections></div>
       </div>
 
       <aside class="bb-summary" data-bb-summary>
-        <div class="bb-step-head"><span class="bb-step">4</span><h3>Totals, save and export</h3></div>
+        <div class="bb-step-head"><span class="bb-step">4</span><h3>Review your budget</h3><span class="bb-help">See your current production total and add percentages such as contingency when needed.</span></div>
         <div class="bb-summary-card">
           <span class="bb-label">Total excl. VAT</span>
           <div class="bb-total" data-bb-total>0</div>
-          <div class="bb-sum-row"><span>Lines subtotal</span><span class="bb-num" data-bb-subtotal>0</span></div>
+          <div class="bb-sum-row"><span>Costs subtotal</span><span class="bb-num" data-bb-subtotal>0</span></div>
           <div class="bb-additionals" data-bb-additionals></div>
-          <div class="bb-sum-row bb-sum-add"><button type="button" class="bc-link-button" data-bb-add-additional>+ Add a percentage</button></div>
+          <div class="bb-sum-row bb-sum-add"><button type="button" class="bc-link-button" data-bb-add-additional>+ Add contingency or another percentage</button></div>
           <div class="bb-sum-row bb-sum-total"><span>Total excl. VAT</span><span class="bb-num" data-bb-total-excl>0</span></div>
           <div class="bb-sum-row"><span>VAT <span data-bb-vat-label>21%</span></span><span class="bb-num" data-bb-vat>0</span></div>
           <div class="bb-sum-row bb-sum-last"><span>Total incl. VAT</span><span class="bb-num" data-bb-total-incl>0</span></div>
           <div class="bb-summary-actions">
-            <button type="button" class="button button-primary" data-bb-save>Save version</button>
-            <button type="button" class="button button-secondary" data-bb-open="export">Export</button>
+            <button type="button" class="button button-primary" data-bb-save>Save</button>
+            <button type="button" class="button button-secondary" data-bb-open="export">Download</button>
           </div>
         </div>
         <div class="bb-share" data-bb-share hidden>
-          <span class="bb-label">Share per section</span>
+          <span class="bb-label">Share per area</span>
           <div class="bb-share-list" data-bb-share-list></div>
         </div>
         <div class="bb-privacy" data-bb-how>
-          <strong>How saving works</strong>
+          <strong>Saving your work</strong>
           <ul>
-            <li><strong>As you type</strong>, the budget is stored in this browser. Close the tab and come back: it is still here.</li>
-            <li><strong>Save version</strong> keeps a named copy on this device, up to ten. Open, rename or delete them under "versions" above.</li>
-            <li><strong>This device only.</strong> Another computer, another browser or a cleared browser history does not have them.</li>
-            <li><strong>Download as file</strong> for a copy you can keep, email or open elsewhere with "Open a file". Excel and CSV are under Export.</li>
-            <li>Nothing is sent to us. Only the Feedback button sends what you type there.</li>
+            <li>Your budget is stored in this browser as you work. Close the page and come back later: it is still here.</li>
+            <li><strong>Save</strong> keeps a named version on this device, up to ten. Open, rename or delete them under "Saved versions".</li>
+            <li>To keep a copy or continue on another computer, download a Tubes budget file and open it there.</li>
+            <li>Nothing is uploaded to Tubes. Only the Feedback button sends what you type there.</li>
           </ul>
         </div>
       </aside>
     </div>
   </div>
 
-  {#- Dialogen: account, versies, import, formaten, export -#}
+  {#- Dialogen: account (alleen in de account-variant), versies, import, sjablonen, download, feedback -#}
   <dialog class="bb-dialog" data-bb-dialog="account">
     <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
     <h3 data-bb-account-title>Save your budget</h3>
@@ -134,38 +149,58 @@ sections:
 
   <dialog class="bb-dialog" data-bb-dialog="versions">
     <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
-    <h3>Your versions</h3>
-    <p class="bb-dialog-intro" data-bb-versions-intro>Up to ten versions of one budget, saved in this browser.</p>
+    <h3>Saved versions</h3>
+    <p class="bb-dialog-intro" data-bb-versions-intro>Up to ten versions, saved in this browser.</p>
     <div class="bb-versions" data-bb-versions></div>
     <div class="bb-dialog-actions">
-      <button type="button" class="button button-primary" data-bb-save-new>Save current as a new version</button>
-      <button type="button" class="button button-secondary" data-bb-file-save>Download as file</button>
-      <label class="button button-secondary bc-file">Open a file <input class="visually-hidden" type="file" accept=".json,application/json" data-bb-file-open></label>
+      <button type="button" class="button button-primary" data-bb-save-new>Save as new version</button>
+      <button type="button" class="button button-secondary" data-bb-file-save>Download budget file</button>
+      <label class="button button-secondary bc-file">Open budget file <input class="visually-hidden" type="file" accept=".json,application/json" data-bb-file-open></label>
       <button type="button" class="button button-secondary" data-bb-logout>Log out</button>
     </div>
-    <p class="bb-dialog-note" data-bb-versions-note>Versions stay on this device. A downloaded file (.json) is the way to keep a copy or to move a budget to another computer.</p>
+    <p class="bb-dialog-note" data-bb-versions-note>Versions stay on this device. To keep a copy or continue on another computer, download the Tubes budget file and open it there.</p>
   </dialog>
 
   <dialog class="bb-dialog" data-bb-dialog="import">
     <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
-    <h3>Import a budget</h3>
-    <p class="bb-dialog-intro">A Movie Magic export (.xlsx), or any budget as Excel or CSV. Sections and lines are recognised the same way as in the <a href="/tools/budget-compare/">Free Production Budget Comparison Tool</a>; quantities become 1 and the amount becomes the rate.</p>
+    <h3>Import an existing budget</h3>
+    <p class="bb-dialog-intro">Import an Excel or CSV file with your costs, or an export from your budgeting software. You can replace your current budget or add the imported costs to it.</p>
     <label class="button button-secondary bc-file">Choose a file <input class="visually-hidden" type="file" accept=".csv,.tsv,.txt,.xlsx" data-bb-import-file></label>
     <p class="bb-form-error" data-bb-import-status role="status" aria-live="polite"></p>
     <div class="bb-import-preview" data-bb-import-preview hidden>
       <p class="bb-help" data-bb-import-summary></p>
       <div class="bb-dialog-actions">
-        <button type="button" class="button button-primary" data-bb-import-apply="replace">Replace the current budget</button>
-        <button type="button" class="button button-secondary" data-bb-import-apply="append">Add as extra sections</button>
+        <button type="button" class="button button-primary" data-bb-import-apply="replace">Replace current budget</button>
+        <button type="button" class="button button-secondary" data-bb-import-apply="append">Add to current budget</button>
       </div>
     </div>
+    <p class="bb-dialog-note">Have a Tubes budget file from an earlier download? <label class="bc-link-button bb-inline-file">Open it here<input class="visually-hidden" type="file" accept=".json,application/json" data-bb-file-open></label>.</p>
+    <details class="bb-details">
+      <summary>Import details</summary>
+      <p>Excel and CSV files need a description and an amount per cost; a code column and headings or a section column are used when present. Movie Magic Budgeting exports (.xlsx) are recognised, including the topsheet structure. Each imported cost keeps its amount, shown as quantity 1 at that rate, so your totals stay the same; adjust quantities and rates afterwards if you like.</p>
+    </details>
   </dialog>
 
-  <dialog class="bb-dialog" data-bb-dialog="templates">
+  <dialog class="bb-dialog bb-dialog-wide" data-bb-dialog="templates">
     <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
-    <h3>Formats and templates</h3>
-    <p class="bb-dialog-intro">Choose the account structure you work with. More formats can be added; ask us if yours is missing.</p>
+    <h3>Start with a template</h3>
+    <p class="bb-dialog-intro">Choose a ready made budget structure and adjust it to your production. If the format you normally use is missing, <button type="button" class="bc-link-button" data-bb-open="feedback">let us know</button>.</p>
     <div class="bb-templates" data-bb-templates></div>
+  </dialog>
+
+  <dialog class="bb-dialog" data-bb-dialog="export">
+    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
+    <h3>Download your budget</h3>
+    <p class="bb-dialog-intro">Choose the format that works best for you.</p>
+    <div class="bb-export-list">
+      <button type="button" class="bb-export-item" data-bb-export="xlsx"><strong>Excel</strong><span>An editable spreadsheet with your complete budget and totals.</span></button>
+      <button type="button" class="bb-export-item" data-bb-export="csv"><strong>CSV</strong><span>A simple file you can open in spreadsheet software or other tools.</span></button>
+      <button type="button" class="bb-export-item" data-bb-export="print"><strong>PDF</strong><span>A clean version of your budget for printing or sharing. Choose "Save as PDF" in the print window.</span></button>
+    </div>
+    <details class="bb-details">
+      <summary>Excel details</summary>
+      <p>The Excel file uses the same layout as a budget exported from Tubes: a summary at the top, one row per cost with working formulas, a row per area, and a second sheet with the totals per area. It opens in Tubes as is.</p>
+    </details>
   </dialog>
 
   <dialog class="bb-dialog" data-bb-dialog="feedback">
@@ -180,56 +215,50 @@ sections:
     </form>
     <p class="bb-dialog-note">Your message and email address are stored with our contact messages and used only to follow up on your feedback.</p>
   </dialog>
-
-  <dialog class="bb-dialog" data-bb-dialog="export">
-    <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
-    <h3>Export</h3>
-    <p class="bb-dialog-intro">Files are generated in your browser; nothing is uploaded.</p>
-    <div class="bb-export-list">
-      <button type="button" class="bb-export-item" data-bb-export="xlsx"><strong>Excel (.xlsx)</strong><span>The layout Tubes exports: summary, lines with formulas, section rows, and a second sheet with totals per section.</span></button>
-      <button type="button" class="bb-export-item" data-bb-export="csv"><strong>CSV</strong><span>One row per line, for any spreadsheet or the compare tool.</span></button>
-      <button type="button" class="bb-export-item" data-bb-export="print"><strong>Print or save as PDF</strong><span>A clean print of sections, lines and totals.</span></button>
-    </div>
-  </dialog>
 </section>
 
 {%- set featureText %}
-Every budget in Tubes is built the same way, section by section, and then keeps working after approval: purchase orders, invoices and actuals land on the same lines, so the cost report compares against the budget you actually approved.
+Your budget is only the starting point. In Tubes, you can use the same approved budget to follow purchase orders, invoices and actual costs throughout the production.
 
-This free builder covers the first step. When you want the rest, the Excel it exports opens in Tubes as is.
+This gives you a clear view of what has been spent, what is still expected and how the production is tracking against budget.
 {% endset -%}
 {%- set section = {
   theme: "teal",
-  heading: "In Tubes the budget keeps going",
-  lead: "From budget to cost control on the same lines",
+  heading: "Take your budget into production",
   text: featureText,
   image: "/assets/images/tubes-budgeting.png",
   image_alt: "Budgeting in Tubes",
-  button: { label: "See the Budgeting module", url: "/platform/" }
+  button: { label: "See how Tubes works", url: "/platform/" }
 } -%}
 {% include "partials/sections/feature.njk" %}
 
 {%- set section = {
   theme: "white",
-  heading: "Questions about this tool",
+  heading: "Questions about the Budget Builder",
   items: [
+    { question: "Do I need an account?",
+      answer: "No. You can build, save, import and download budgets without an account. Everything happens in your browser." },
+    { question: "Can I import an existing budget?",
+      answer: "Yes. Import an Excel or CSV file with your costs, or an export from your budgeting software. You can replace your current budget or add the imported costs to it." },
+    { question: "Can I import a Movie Magic budget?",
+      answer: "Yes. Export your budget from Movie Magic Budgeting as an Excel file and import it here; the categories and accounts come through, including the topsheet structure. You can also start from the Movie Magic template without importing anything." },
+    { question: "What can I download?",
+      answer: "Excel (an editable spreadsheet in the layout Tubes uses, which also opens in Tubes), CSV, or a PDF via the print window. For a full backup of your work, download a Tubes budget file under Saved versions." },
     { question: "Where is my budget saved?",
-      answer: "In your own browser, on this device. The budget you are working on is stored as you type, and Save version keeps up to ten named copies next to it. Nothing is sent to Tubes. Another computer or browser does not see these budgets, and clearing your browser data removes them." },
-    { question: "How do I keep a copy or move it to another computer?",
-      answer: "Under versions, choose Download as file: you get a small .json file with the whole budget. Keep it, email it, and load it anywhere with Open a file. For a spreadsheet, use Export for Excel or CSV." },
-    { question: "Which formats can I import?",
-      answer: "A Movie Magic Budgeting export (.xlsx, with its Topsheet, Categories and Account Details sheets), and any budget as Excel or CSV with a code, description and amount per line. Sections come from headings, a section column or the topsheet." },
-    { question: "How does the Excel export look?",
-      answer: "Like the export from Tubes: a title and summary, a table with Type, Description, Remarks, Qty, Unit, Price per unit and Budget Total, a row per section, formulas for the totals and a second sheet with totals per section." },
-    { question: "Are prices or sales included?",
-      answer: "No. This tool covers the cost side only. Quotations, sales prices and margins are part of Tubes itself." }
+      answer: "In your own browser, on this device. The budget you are working on is stored as you type, and Save keeps up to ten named versions next to it. Nothing is uploaded to Tubes. Clearing your browser data removes these budgets, so download a budget file if you want to keep one." },
+    { question: "Can I continue working on another computer?",
+      answer: "Yes, by taking a file with you. Under Saved versions, choose Download budget file, then open that file on the other computer with Open budget file. Budgets do not move between computers by themselves." },
+    { question: "Is the Budget Builder free?",
+      answer: "Yes, completely, with no account and no trial period. It is one of the free tools Tubes offers to production teams." },
+    { question: "Can I also track actual production costs?",
+      answer: "Not in this free tool: the Budget Builder is for preparing a budget. The full Tubes platform adds production finance: cost control, purchase orders, invoices, actuals and forecasting on the same budget. Request a demo to see how that works." }
   ]
 } -%}
 {% include "partials/sections/faq.njk" %}
 
 {%- set section = {
   title: "Ready to take the budget past the first step?",
-  text: "Tubes carries the same lines through purchase orders, invoices and the cost report.",
+  text: "Tubes follows purchase orders, invoices and actual costs against the budget you approved.",
   button: { label: "Request a Demo", url: "/contact/" }
 } -%}
 {% include "partials/sections/cta.njk" %}

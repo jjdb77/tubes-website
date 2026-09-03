@@ -28,7 +28,7 @@ sections:
         url: /tools/budget-builder/
         link_label: Build a budget
         text: |
-          Build a production budget in your browser: sections, lines, quantities and rates, with contingency and fees on top. Start from the Movie Magic structure or import an export, download an Excel file in the Tubes layout, and save up to ten versions.
+          Build a production budget online: start with a template, import an existing budget or start from scratch. Add your costs and the totals stay up to date. Download as Excel, CSV or PDF. No account needed.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
         image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
         image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"

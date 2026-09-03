@@ -192,7 +192,8 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - Pure functies staan op `window.BudgetBuilderCore`; `npm test` draait ook `test/budget-builder.test.mjs` (getallen, totalen, import naar secties, Excel-roundtrip).
 - Getypte getallen volgen dezelfde regel als de vergelijkingstool: "1.234,56" en "1,234.56" werken allebei, één scheidingsteken met precies drie cijfers erachter is een duizendtal ("60.000"), anders een decimaalteken ("1,5").
 - **Feedbackknop** (in de actierij): venster met tekst en optioneel e-mailadres (vooringevuld bij een ingelogd account), POST `/api/tools/feedback`. Komt als bericht "Budget Builder feedback" op /beheer (zelfde JSONL als het contactformulier) en gaat per mail naar `TOOL_FEEDBACK_EMAIL` (standaard `LOCATION_EMAIL`, joachim@tubes.media) zodra `RESEND_API_KEY` staat. Rate-limit 5 per 10 minuten.
-- De privacyverklaring (/privacy/, hoofdstuk 14) beschrijft wat een account opslaat; hou die tekst gelijk aan wat de server echt doet.
+- **Schrijfregels voor deze pagina** (brief Joachim 3-9-2026): schrijf vanuit de producent, niet vanuit de software. Geen JSON, formules, kolomstructuren of "secties/regels" in hoofdteksten; op de pagina heten die "areas" en "costs". Technische details alleen achter `<details>`-uitklappers (Import details, Excel details) of in de FAQ. Movie Magic alleen als sjabloonnaam, in de importdetails en in de FAQ, nooit in intro- of begeleidende teksten of op de tegel. Een .json-back-up heet "Tubes budget file". Knoppen: Start with a template · Import budget · Download · Save; Feedback en versies zijn nevenacties.
+- De privacyverklaring (/privacy/, hoofdstuk 14) beschrijft de opslag; hou die tekst gelijk aan wat de tool echt doet.
 
 ## Besloten klantpagina's: /mmg/ (Motion Media Group)
 
