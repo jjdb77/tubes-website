@@ -3255,6 +3255,23 @@
       "commission_url": "https://www.filmcommission.cz/"
     },
     {
+      "id": "dk-bella-center",
+      "name": "Bella Center",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.6381,
+      "lng": 12.5829,
+      "type": "Theatre, arena & venue",
+      "setting": "Scandinavia's second-largest exhibition and conference centre in Copenhagen's Orestad district, with a congress hall for up to 4,200 people, four auditoriums and an adjoining hotel tower.",
+      "known_for": "Olsen-banden ser rodt (The Olsen Gang Outta Sight)",
+      "source_urls": [
+        "https://www.bellacenter.dk/en",
+        "https://en.wikipedia.org/wiki/Bella_Center"
+      ],
+      "official_url": "https://www.bellacenter.dk/en",
+      "commission_url": "https://www.dfi.dk"
+    },
+    {
       "id": "dk-bornholms-lufthavn",
       "name": "Bornholm Airport",
       "country": "Denmark",
@@ -3306,6 +3323,40 @@
         "author": "Julian Herzog",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "dk-copenhagen-city-hall",
+      "name": "Copenhagen City Hall",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.6753,
+      "lng": 12.5698,
+      "type": "Office, school & public building",
+      "setting": "The seat of Copenhagen's municipal government on Radhuspladsen, a National Romantic building from 1905 with a public atrium and clock tower, used for a tower scene in a 1978 comedy and for hospital-atrium scenes in a 2015 drama.",
+      "known_for": "The Olsen Gang Goes to War, The Danish Girl",
+      "source_urls": [
+        "https://www.kk.dk",
+        "https://en.wikipedia.org/wiki/Copenhagen_City_Hall"
+      ],
+      "official_url": "https://www.kk.dk",
+      "commission_url": "https://www.dfi.dk"
+    },
+    {
+      "id": "dk-politigarden",
+      "name": "Copenhagen Police Headquarters (Politigarden)",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.6698,
+      "lng": 12.5707,
+      "type": "Hospital, prison & institution",
+      "setting": "A 1924 neoclassical police headquarters in central Copenhagen built around a 45-metre circular courtyard with 44 Doric columns, still an active police building, that has repeatedly played itself on screen.",
+      "known_for": "Broen/Bron (The Bridge), Forbrydelsen (The Killing), Olsen-banden films",
+      "source_urls": [
+        "https://politi.dk",
+        "https://en.wikipedia.org/wiki/Copenhagen_Police_Headquarters"
+      ],
+      "official_url": "https://politi.dk",
+      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "dk-copenhill",
@@ -3399,6 +3450,23 @@
       ],
       "official_url": "https://filmbyaarhus.dk/",
       "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-filmbyen-avedore",
+      "name": "Filmbyen",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.633,
+      "lng": 12.444,
+      "type": "Studio & backlot",
+      "setting": "A production complex of offices, sound stages, edit suites and filmmaker pavilions built inside a former military barracks in Avedore, headquarters of Zentropa and home to several other Danish production companies.",
+      "known_for": "Klovn, Dear Wendy, Dommeren",
+      "source_urls": [
+        "https://zentropa.dk",
+        "https://da.wikipedia.org/wiki/Filmbyen"
+      ],
+      "official_url": "https://zentropa.dk",
+      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "dk-gammel-estrup",
@@ -3547,6 +3615,23 @@
         "author": "Veng",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "dk-nyboder",
+      "name": "Nyboder",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.6892,
+      "lng": 12.5868,
+      "type": "House & apartment",
+      "setting": "A historic grid of yellow single-storey row houses in central Copenhagen built from 1631 as Royal Danish Navy housing and still partly used as service housing, with a street used for a home-visit scene in a 2015 drama.",
+      "known_for": "The Danish Girl",
+      "source_urls": [
+        "https://www.ejendomsstyrelsen.dk",
+        "https://en.wikipedia.org/wiki/Nyboder"
+      ],
+      "official_url": "https://www.ejendomsstyrelsen.dk",
+      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "dk-odense-havn",
@@ -7788,9 +7873,12 @@
       "lng": 18.1042,
       "type": "Castle & estate",
       "setting": "A 19th-century brick fortress complex on the edge of Komarom, with casemates, tunnels and a separate star-shaped outer fort, now a heritage site with its own wedding and conference venues.",
+      "facilities": "Star Fort conference room is about 240 m2 with capacity for 140 people, with a projector, wifi, a podium and sound and projection equipment; the adjoining restaurant area seats 65. The site has two large open courtyards, 64,000 m2 at Monostori Fort and 35,000 m2 at Igmandi Fort, plus indoor exhibition and event rooms. Power supply is 3x200 amp at the Danube bastion and 3x160 amp elsewhere at Monostori Fort, and mains power in the museum and air-raid shelter at Igmandi Fort (own site).",
+      "logistics": "Visitor parking at Monostori Fort for 68 cars and 7 buses, VIP parking for 12 cars, plus 600 further car spaces on the eastern counterslope; parking at Igmandi Fort is arranged in the outdoor areas. All three forts are accessible from Budapest, Gyor and northern Komarom, Slovakia (own site).",
       "source_urls": [
         "https://erod.hu/",
-        "https://erod.hu/rendezvenyhelyszin/"
+        "https://erod.hu/rendezvenyhelyszin/",
+        "https://erod.hu/konferenciaterem-berles/"
       ],
       "official_url": "https://erod.hu/",
       "commission_url": "https://nfi.hu/en",
@@ -7898,7 +7986,7 @@
       "lng": 17.6291,
       "type": "Theatre, arena & venue",
       "setting": "A renovated riverside boathouse on Kaloczy square in Gyor, on the bank of the Mosoni-Duna, run as an event venue for weddings and corporate and family gatherings.",
-      "capacity": "80 people",
+      "capacity": 80,
       "source_urls": [
         "https://gyorprojekt.hu/kaloczy-teri-rendezvenykozpont"
       ],
@@ -8020,8 +8108,11 @@
       "lng": 18.4841,
       "type": "Theatre, arena & venue",
       "setting": "A modern indoor arena in an industrial zone of Szekesfehervar, built for a top-division handball club, marketed on its own site as a venue for sport, concerts and conferences.",
+      "capacity": 5900,
+      "facilities": "Seating for up to 5,900 (1,542 on a mobile stand); the arena floor holds 2,000 for concerts. Includes a 100-person and a 50-person meeting room, 3 rentable conference rooms, a VIP Lounge for up to 150, a VIP restaurant for 130, 14 VIP boxes, 800 lockers, broadband optical internet and public wifi, electrical connections at all four corners of the arena floor, and technical facilities for TV broadcasts. Outdoor paved and grass event spaces with power connections are also available. Fully wheelchair accessible (own site).",
       "source_urls": [
-        "https://albaarena.hu/"
+        "https://albaarena.hu/",
+        "https://albaarena.hu/rendezvenyszervezoknek"
       ],
       "official_url": "https://albaarena.hu/",
       "commission_url": "https://nfi.hu/en"
@@ -8215,8 +8306,11 @@
       "lng": 17.7635,
       "type": "Church & monastery",
       "setting": "A working Benedictine monastery on a hilltop above the town of Pannonhalma, with a basilica, cloister, library and vineyard, part of it open to visitors and hired out for weddings and corporate events.",
+      "capacity": 268,
+      "facilities": "Six rentable rooms: the Ceremonial Hall (250 m2, theatre-style up to 268, with microphone, projector, screen and wifi), the Viator centre (120 m2, up to 120 theatre-style, wifi), the Habsburg room (129 m2, up to 80 theatre-style, wifi), the Gyongyossy room (70 m2, up to 82 theatre-style, wifi), the Prelatura (63 m2, up to 20, TV, wifi), and the Teleki room (58 m2, up to 60, TV, projector, screen, wifi). Overall the venue can host up to 268 people with catering and full service (own site).",
       "source_urls": [
-        "https://pannonhalmifoapatsag.hu/"
+        "https://pannonhalmifoapatsag.hu/",
+        "https://foapatsagiturizmus.hu/ceges-rendezvenyek/"
       ],
       "official_url": "https://pannonhalmifoapatsag.hu/",
       "commission_url": "https://nfi.hu/en",
@@ -8343,9 +8437,13 @@
       "type": "Hotel & interiors",
       "setting": "One of Europe's largest bath complexes in City Park, with a fresco-decorated dome hall, indoor and outdoor thermal pools and elegant colonnaded corridors.",
       "known_for": "Mata Hari, Evita, The Luzhin Defence, Gemini Man",
+      "capacity": 150,
+      "facilities": "Marble Hall holds up to 150 people (130 with a dance floor, 120 theatre-style); Small Cupola Room up to 70; Palm House 50 to 80 for evening events; Private Spa rooms for 2 each, 26 in total (own site).",
+      "logistics": "Accessible by public transport; parking at the 24-hour Zooparking or nearby streets. City Park, Vajdahunyad Castle and Heroes' Square are nearby (own site).",
       "source_urls": [
         "https://www.szechenyifurdo.hu/en/",
-        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://www.szechenyifurdo.hu/rendezvenyhelyszin"
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.szechenyifurdo.hu/en/",
@@ -8436,8 +8534,11 @@
       "lng": 17.9341,
       "type": "Theatre, arena & venue",
       "setting": "A modern indoor sports and event hall on the edge of Veszprem, home to a top-division handball club, with a rentable arena floor and function rooms used for concerts and corporate events.",
+      "capacity": 5300,
+      "facilities": "Arena floor, lobby (up to 500), conference room (up to 50) and VIP room (up to 100) available to hire, with optional staging, sound, lighting, LED wall/cube and screen equipment. Concerts have been held for up to 5,300 spectators (own site).",
       "source_urls": [
-        "https://veszpremarena.hu/"
+        "https://veszpremarena.hu/",
+        "https://oneveszpremarena.hu/rendezvenyek"
       ],
       "official_url": "https://veszpremarena.hu/",
       "commission_url": "https://nfi.hu/en"
@@ -8467,8 +8568,11 @@
       "lng": 18.2482,
       "type": "Industrial & derelict",
       "setting": "A former 19th-century Zsolnay ceramics factory in Pecs with preserved kilns, chimneys and workshop halls, now a cultural quarter of museums and function spaces hired out for weddings and corporate events.",
+      "capacity": 2000,
+      "facilities": "Multiple rentable venues: E78 Concert Hall (460 m2, up to 400 seated theatre-style or 1,000 standing), E78 Panorama Room (223 m2, up to 110 seated), E78 Music Room (83 m2, up to 50 seated), E78 Classroom (73 m2, up to 35 seated), the Pirogranit Courtyard (1,877 m2, up to 660 seated or 2,000 standing), the Apostolos Room (143 m2, up to 95 seated), the Julia Room (80 m2, up to 40 seated), the M21 Gallery (over 1,000 m2, ceiling height 6 to 8 metres, up to 400 seated or 685 standing), and the Bobita Puppet Theatre (main hall 185, chamber hall 70) (own site).",
       "source_urls": [
-        "https://zsolnaynegyed.hu/"
+        "https://zsolnaynegyed.hu/",
+        "https://zsolnaynegyed.hu/szolgaltatasok/helyszinertekesites/rendezvenyek--konferencia"
       ],
       "official_url": "https://zsolnaynegyed.hu/",
       "commission_url": "https://nfi.hu/en"
@@ -12607,6 +12711,22 @@
       "commission_url": "https://www.norwegianfilm.com/locations/akershus-fortress"
     },
     {
+      "id": "no-alesund-harbour",
+      "name": "Alesund Harbour",
+      "country": "Norway",
+      "region": "More og Romsdal",
+      "lat": 62.4802,
+      "lng": 6.1852,
+      "type": "Transport & infrastructure",
+      "setting": "The working harbour of a Norwegian coastal town rebuilt in Art Nouveau style after an 1904 fire, listed in the national film commission's location catalogue for its mix of historic architecture and modern port infrastructure.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/harbour-alesund"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/harbour-alesund",
+      "official_url": "https://www.norwegianfilm.com/locations/harbour-alesund",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
       "id": "atlantic-ocean-road",
       "name": "Atlantic Ocean Road",
       "country": "Norway",
@@ -12624,6 +12744,23 @@
         "author": "Ernst Vikne",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "no-ballstad-harbour",
+      "name": "Ballstad Harbour",
+      "country": "Norway",
+      "region": "Nordland",
+      "lat": 68.0747,
+      "lng": 13.5492,
+      "type": "Transport & infrastructure",
+      "setting": "A working fishing harbour on the Lofoten islands with steep mountains rising straight from the sea, listed in the national film commission's location catalogue and used for part of a 2016 Hollywood feature.",
+      "known_for": "Downsizing (2016)",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/harbour-ballstad"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/harbour-ballstad",
+      "official_url": "https://www.norwegianfilm.com/locations/harbour-ballstad",
+      "commission_url": "https://www.norwegianfilm.com"
     },
     {
       "id": "no-bastoy-prison",
@@ -12929,7 +13066,7 @@
       "lat": 59.8767,
       "lng": 8.593,
       "type": "Industrial & derelict",
-      "setting": "A monumental early 20th-century hydroelectric power station in Rjukan with tall arched windows set against the mountainside, part of the Rjukan-Notodden industrial heritage area and listed in the national film commission's location catalogue.",
+      "setting": "A monumental early 20th-century hydroelectric power station in Rjukan with tall arched windows set against the mountainside.",
       "source_urls": [
         "https://www.norwegianfilm.com/locations/saheim-power-station-rjukan"
       ],

@@ -48,7 +48,9 @@ const BBOX = {
   Sweden: [[55.3, 69.1, 10.9, 24.2]],
   "United Kingdom": [[49.9, 60.9, -8.2, 1.8]],
 };
-const LICENSE_OK = /^(CC0|CC[- ]BY(-SA)?|Public domain|PD|with permission|met toestemming)/i;
+// "No restrictions" is de Commons-aanduiding voor beeld zonder bekende rechten
+// (meestal archiefmateriaal); dat mag, net als de CC-licenties en publiek domein.
+const LICENSE_OK = /^(CC0|CC[- ]BY(-SA)?|Public domain|PD|No restrictions|with permission|met toestemming)/i;
 const URL_OK = (u) => typeof u === "string" && /^https?:\/\/\S+$/.test(u);
 
 const problems = [];
