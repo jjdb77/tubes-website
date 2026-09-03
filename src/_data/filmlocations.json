@@ -1930,11 +1930,15 @@
       "name": "Christiansborg Palace",
       "country": "Denmark",
       "region": "Copenhagen",
-      "lat": 55.67583,
-      "lng": 12.57889,
+      "lat": 55.6758,
+      "lng": 12.5789,
       "type": "Palace & landmark",
       "setting": "Government palace on the Slotsholmen islet housing the Danish Parliament, Prime Minister's Office and Supreme Court, with a riding ground complex and palace square.",
       "known_for": "Borgen (2010-2022)",
+      "suitability": "The palace's manager, the Royal Danish Collection, states it welcomes press inquiries, including for TV shows, and that holders of valid press credentials get free admission to any of its palaces without advance booking (contact via the Head of Communications).",
+      "source_urls": [
+        "https://denkongeligesamling.dk/en/about-us/press/"
+      ],
       "official_url": "https://christiansborg.dk/en/",
       "commission_url": "https://www.dfi.dk/en",
       "photo": {
@@ -2163,9 +2167,11 @@
       "type": "Theatre, arena & venue",
       "setting": "Amusement park and pleasure garden in central Copenhagen dating from 1843, with rides, concert stages, themed architecture and landscaped gardens.",
       "known_for": "Reptilicus (1961)",
+      "facilities": "Event and meeting spaces named on the business site include Nimb, Axelborgsalen and Kilden i Haven.",
       "source_urls": [
         "https://www.tivoli.dk/en",
-        "https://en.wikipedia.org/wiki/Tivoli_Gardens"
+        "https://en.wikipedia.org/wiki/Tivoli_Gardens",
+        "https://www.tivoli.dk/en/business/meetings-and-events"
       ],
       "official_url": "https://www.tivoli.dk/en",
       "commission_url": "https://www.dfi.dk/en"
@@ -2213,11 +2219,13 @@
       "lng": 23.7574,
       "type": "Industrial & derelict",
       "setting": "Former cotton mill founded in 1820 beside the Tammerkoski rapids in Tampere, a complex of red-brick factory buildings including the 1877 Plevna weaving hall, now holding restaurants, a cinema, shops and offices.",
+      "facilities": "About 80,000 sq m of rentable space across the former factory buildings; individual premises range from about 10 sq m to several thousand sq m. The buildings hold the BREEAM In-Use environmental certificate.",
       "source_urls": [
         "https://finlaysoninalue.fi/en/homepage/",
         "https://www.filmtampere.com/locations/finlayson-area/",
         "https://en.wikipedia.org/wiki/Finlayson_(company)",
-        "https://en.wikipedia.org/wiki/Finlayson,_Tampere"
+        "https://en.wikipedia.org/wiki/Finlayson,_Tampere",
+        "https://finlaysoninalue.fi/en/rentable-premises/"
       ],
       "url": "https://www.filmtampere.com/locations/finlayson-area/",
       "official_url": "https://finlaysoninalue.fi/en/homepage/",
@@ -2269,6 +2277,8 @@
       "lng": 23.7633,
       "type": "Industrial & derelict",
       "setting": "Former needle factory and wool mill on a small island in central Tampere, its 1897 red-brick U-shaped building now a shopping and business centre linked by footbridge to the riverside Koskikeskus district.",
+      "facilities": "Former needle factory and spinning mill, now used as a commercial and business centre between Laukontori marketplace and Koskikeskus shopping centre.",
+      "logistics": "0.5 km from Tampere Central Square.",
       "source_urls": [
         "https://www.filmtampere.com/locations/kehrasaari/",
         "https://fi.wikipedia.org/wiki/Kehr%C3%A4saari"
@@ -2331,6 +2341,8 @@
       "lng": 23.579,
       "type": "Hospital, prison & institution",
       "setting": "Former psychiatric hospital on a lakeshore park in Nokia near Tampere, with stone buildings from the 1890s including an Italianate villa, in clinical use from 1900 until closure in 2024 and now largely vacant.",
+      "facilities": "Historical stone hospital buildings completed in 1894-1895 in parkland on the shore of Lake Pyhäjärvi, part of Tampere University Hospital. The former chief's residence ('the Castle') has Italian Renaissance-style columned terraces and now houses the Pitkäniemi Hospital Museum.",
+      "logistics": "12.5 km from Tampere Central Square.",
       "source_urls": [
         "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
         "https://fi.wikipedia.org/wiki/Pitk%C3%A4niemen_sairaala"
@@ -2440,9 +2452,12 @@
       "type": "Castle & estate",
       "setting": "Medieval keep begun around 1280 at the mouth of the Aura river, expanded into a Renaissance bailey under Gustav Vasa in the 16th century, now a city museum with period rooms, banqueting halls and rentable event spaces.",
       "known_for": "Sadan miekan mies (1951), The Girl King (2015)",
+      "capacity": 250,
+      "facilities": "Rooms published for hire: Kuninkaan sali (King's Hall, up to 250), Linnan kirkko (Castle Church, up to 240), Kuningattaren sali (Queen's Hall, up to 180), Bryggman-sali (up to 120 for lectures, 80 for banquets), Eteläinen sali (Southern Hall, up to 100), Kuningattaren kamari (Queen's Chamber, up to 50), Herrainkellari (Gentlemen's Cellar, up to 30), plus courtyard areas.",
       "source_urls": [
         "https://turunlinna.fi/",
-        "https://en.wikipedia.org/wiki/Turku_Castle"
+        "https://en.wikipedia.org/wiki/Turku_Castle",
+        "https://turunlinna.fi/vuokrattavat-tilat/"
       ],
       "official_url": "https://turunlinna.fi/",
       "commission_url": "https://wffc.fi/"
@@ -4171,6 +4186,231 @@
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
+      "id": "hu-andrassy-avenue",
+      "name": "Andrassy Avenue",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5083,
+      "lng": 19.0678,
+      "type": "Historic town & street",
+      "setting": "Tree-lined boulevard of ornate 19th-century palaces and villas running from the city centre to City Park, with the Metro's first continental underground line beneath it.",
+      "known_for": "Munich, Bel Ami, Houdini, Genius: Picasso",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-balna-budapest",
+      "name": "Balna Budapest",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4836,
+      "lng": 19.0608,
+      "type": "Industrial & derelict",
+      "setting": "Row of 1880s Danube-side public warehouses extended in 2013 with a glass and steel shell, turning the brick halls into an exhibition and events building on the riverbank.",
+      "known_for": "The Martian, Berlin Station, Six Underground, Black Widow",
+      "source_urls": [
+        "https://balnabudapest.hu/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://balnabudapest.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-keleti-station",
+      "name": "Budapest Keleti Railway Station",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5005,
+      "lng": 19.0839,
+      "type": "Transport & infrastructure",
+      "setting": "Budapest's largest main-line terminus, built in the 1880s with a glazed central hall, monumental facade and ornate waiting rooms that remain in daily use for rail traffic.",
+      "known_for": "Mission: Impossible - Ghost Protocol, Inferno, The Luzhin Defence, Einstein and Eddington",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://en.wikipedia.org/wiki/Budapest_Keleti_station"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-nyugati-station",
+      "name": "Budapest Nyugati Railway Station",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5105,
+      "lng": 19.0572,
+      "type": "Transport & infrastructure",
+      "setting": "Iron-framed terminus completed in 1877 by the Eiffel company's Paris workshops, with a glass and steel train shed and a Baroque Revival facade on the Grand Boulevard.",
+      "known_for": "Terminal",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Budapest_Nyugati_station",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-deli-station",
+      "name": "Budapest-Deli Railway Station",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4995,
+      "lng": 19.0249,
+      "type": "Transport & infrastructure",
+      "setting": "Socialist-era terminus on the southern slope of Castle Hill, rebuilt in the 1970s as two linked concrete and glass halls with copper railing details and marbled concourses.",
+      "known_for": "Spy/Master",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-csepel-works",
+      "name": "Csepel Works",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4305,
+      "lng": 19.0654,
+      "type": "Industrial & derelict",
+      "setting": "Former state ironworks on Csepel Island with factory halls, chimneys, a free port and a disused water treatment plant, still partly in industrial use.",
+      "known_for": "The Brutalist",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-diosgyor-castle",
+      "name": "Diosgyor Castle",
+      "country": "Hungary",
+      "region": "Borsod-Abauj-Zemplen County",
+      "lat": 48.0975,
+      "lng": 20.6894,
+      "type": "Castle & estate",
+      "setting": "Restored fourteenth-century royal castle in Miskolc with four corner towers around a rectangular courtyard, offering both a walled interior yard and open battlements.",
+      "suitability": "Publishes a dedicated filming and photography information page",
+      "source_urls": [
+        "https://diosgyorivar.hu/",
+        "https://en.wikipedia.org/wiki/Castle_of_Di%C3%B3sgy%C5%91r"
+      ],
+      "official_url": "https://diosgyorivar.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-eszterhaza-fertod",
+      "name": "Eszterhaza (Esterhazy Palace)",
+      "country": "Hungary",
+      "region": "Gyor-Moson-Sopron County",
+      "lat": 47.621,
+      "lng": 16.8707,
+      "type": "Palace & landmark",
+      "setting": "Rococo palace of the Esterhazy princes near Sopron, known as Hungary's Versailles, with a mirrored ballroom, a puppet theatre and a Chinese-style music pavilion once staffed by Joseph Haydn.",
+      "suitability": "Publishes filming information on its own site",
+      "source_urls": [
+        "https://eszterhaza.hu/"
+      ],
+      "official_url": "https://eszterhaza.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-fishermans-bastion",
+      "name": "Fisherman's Bastion",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5023,
+      "lng": 19.0347,
+      "type": "Palace & landmark",
+      "setting": "Neo-Romanesque viewing terrace of 1902 on Castle Hill, with white limestone turrets and staircases overlooking the Danube and the Parliament building.",
+      "known_for": "I Spy, The Borgias, Tinker Tailor Soldier Spy, Maigret",
+      "source_urls": [
+        "https://www.varnegyed.hu/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.varnegyed.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-gellert-baths",
+      "name": "Gellert Baths",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4837,
+      "lng": 19.051,
+      "type": "Hotel & interiors",
+      "setting": "Art Nouveau thermal bathhouse of 1911 at the Buda end of Liberty Bridge, with turquoise Zsolnay tiling, majolica columns and a glass-roofed wave pool.",
+      "known_for": "Accumulator 1, Royce",
+      "source_urls": [
+        "https://www.gellertfurdo.hu/en/",
+        "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "official_url": "https://www.gellertfurdo.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-gerbeaud-cafe",
+      "name": "Gerbeaud Cafe",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.497,
+      "lng": 19.0503,
+      "type": "Bar, restaurant & shop",
+      "setting": "Confectionery and cafe on Vorosmarty Square dating to 1858, with wood-panelled salons, chandeliers and a period patisserie counter, named among Budapest's historic cafes by the national film commission.",
+      "source_urls": [
+        "https://www.gerbeaud.hu/en/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.gerbeaud.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-godollo-palace",
+      "name": "Godollo Royal Palace",
+      "country": "Hungary",
+      "region": "Pest County",
+      "lat": 47.5961,
+      "lng": 19.3478,
+      "type": "Palace & landmark",
+      "setting": "Baroque palace east of Budapest, the favourite residence of Empress Elisabeth of Austria-Hungary, with gilded state rooms, a riding hall and formal gardens.",
+      "suitability": "Publishes filming information on its own site",
+      "source_urls": [
+        "https://www.kiralyikastely.hu/en/",
+        "https://en.wikipedia.org/wiki/G%C3%B6d%C3%B6ll%C5%91_Palace"
+      ],
+      "official_url": "https://www.kiralyikastely.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-hortobagy-np",
+      "name": "Hortobagy National Park",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar County",
+      "lat": 47.5824,
+      "lng": 21.1519,
+      "type": "Village & countryside",
+      "setting": "UNESCO-listed alkaline grassland on the Great Hungarian Plain near Debrecen, with an unbroken horizon, traditional shadoof wells and grazing herds of Hungarian grey cattle.",
+      "source_urls": [
+        "https://www.hnp.hu/en",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.hnp.hu/en",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hungarian-state-opera-house",
       "name": "Hungarian State Opera House",
       "country": "Hungary",
@@ -4188,6 +4428,227 @@
         "author": "Mike is Michi",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hu-kelenfold-power-plant",
+      "name": "Kelenfold Power Plant",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4621,
+      "lng": 19.056,
+      "type": "Industrial & derelict",
+      "setting": "Art Deco power station built on the Buda bank in the late 1930s, with glass-block floors, spiral staircases and a control hall named a filming location by the national film commission.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-korda-studios",
+      "name": "Korda Studios",
+      "country": "Hungary",
+      "region": "Fejer County",
+      "lat": 47.4398,
+      "lng": 18.7288,
+      "type": "Studio & backlot",
+      "setting": "Studio complex in Etyek west of Budapest with seven sound stages, a 400 cubic metre water tank and three backlots built as a medieval street, a Renaissance square and a New York street.",
+      "known_for": "Poor Things, Halo, Blade Runner 2049, The Martian",
+      "facilities": "16,500 sqm of soundstages, 5,500 sqm workshops and storage, 15 hectares of secured exterior construction area",
+      "source_urls": [
+        "https://kordastudio.hu/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://kordastudio.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-lake-balaton",
+      "name": "Lake Balaton (Balatonfured)",
+      "country": "Hungary",
+      "region": "Veszprem County",
+      "lat": 46.9567,
+      "lng": 17.8889,
+      "type": "Forest & lake",
+      "setting": "Resort town on the north shore of Central Europe's largest lake, with a yacht harbour, a lakeside promenade and hills of vineyards rising behind the waterfront.",
+      "source_urls": [
+        "https://www.bfnp.hu/en",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.bfnp.hu/en",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-lipotmezo-sanatorium",
+      "name": "Lipotmezo Sanatorium",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5314,
+      "lng": 18.9758,
+      "type": "Hospital, prison & institution",
+      "setting": "Abandoned former psychiatric hospital in the Buda hills, with high-ceilinged corridors, exposed pipework and a decayed operating theatre listed as a filming site by the national film commission.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-liszt-ferenc-terminal1",
+      "name": "Liszt Ferenc Airport Terminal 1",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4415,
+      "lng": 19.2368,
+      "type": "Transport & infrastructure",
+      "setting": "Mid-twentieth-century former main terminal of Budapest's international airport, now used for general aviation and charter traffic, with its original modernist facade and interiors intact.",
+      "known_for": "Inferno, Atomic Blonde, Spy, Terminator: Dark Fate",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-millenaris-park",
+      "name": "Millenaris Park",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5114,
+      "lng": 19.0249,
+      "type": "Industrial & derelict",
+      "setting": "Former Ganz electrical works converted into a public cultural and exhibition park, keeping several industrial hall structures alongside gardens and event spaces.",
+      "suitability": "Publishes a filming-permits page for productions",
+      "source_urls": [
+        "https://www.millenaris.hu/en/"
+      ],
+      "official_url": "https://www.millenaris.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-mome-zugliget",
+      "name": "MOME Zugliget Campus",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5172,
+      "lng": 18.9901,
+      "type": "Office, school & public building",
+      "setting": "Hillside campus of the Moholy-Nagy University of Art and Design, with white-walled contemporary buildings, exposed concrete and large glazed studio spaces.",
+      "source_urls": [
+        "https://mome.hu/en",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://mome.hu/en",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-mupa",
+      "name": "Mupa Budapest",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4696,
+      "lng": 19.0716,
+      "type": "Theatre, arena & venue",
+      "setting": "Riverside performing arts complex opened in 2005 on the Pest embankment, combining a concert hall, a multipurpose festival theatre and exhibition galleries under one roof.",
+      "source_urls": [
+        "https://www.mupa.hu/en",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.mupa.hu/en",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-new-york-cafe",
+      "name": "New York Cafe",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4986,
+      "lng": 19.0705,
+      "type": "Bar, restaurant & shop",
+      "setting": "Ornate fin-de-siecle grand cafe on the ground floor of the New York Palace, with gilded columns, frescoed ceilings and marble tables, listed by the national film commission among Budapest's historic coffee houses.",
+      "source_urls": [
+        "https://newyorkcafe.hu/en/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://newyorkcafe.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-nfi-studios",
+      "name": "NFI Studios",
+      "country": "Hungary",
+      "region": "Pest County",
+      "lat": 47.6163,
+      "lng": 19.1707,
+      "type": "Studio & backlot",
+      "setting": "State-run 31-hectare studio complex near Fot, visited by filmmakers since the 1970s, with eight soundstages, over 20,000 square metres of buildable backlot and the largest outdoor filming tank in continental Europe.",
+      "known_for": "Dune: Part Three, Shadow and Bone, The Witcher, Terminator: Dark Fate",
+      "facilities": "12,670 sqm of soundstage space, 24,700 sqm assigned for set construction, outdoor water tank of 4,700 cubic metres",
+      "logistics": "20 minutes from central Budapest, about 30 minutes from Liszt Ferenc Airport by car",
+      "source_urls": [
+        "https://nfi.hu/en/nfi-studios",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/nfi-studios",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-north-pest-hospital",
+      "name": "North Pest Hospital",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5273,
+      "lng": 19.0803,
+      "type": "Hospital, prison & institution",
+      "setting": "Part-disused Art Nouveau and Modernist hospital complex in North Pest, with broken-windowed wards and a glazed dome over the main building, catalogued as a filming site by the national film commission.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-obuda-gas-factory",
+      "name": "Obuda Gas Factory",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5615,
+      "lng": 19.0552,
+      "type": "Industrial & derelict",
+      "setting": "Former municipal gasworks on the Danube in Obuda, its striped brick gasholders and domed towers now enclosed within a riverside office and technology park.",
+      "source_urls": [
+        "https://graphisoftpark.com/en/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://graphisoftpark.com/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-okisz-headquarters",
+      "name": "OKISZ Headquarters",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5064,
+      "lng": 19.0912,
+      "type": "Office, school & public building",
+      "setting": "Reinforced-concrete office headquarters in the Zuglo villa district, an example of Late Modern architecture with a retracted facade and a working paternoster lift.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "origo-studios-budapest",
@@ -4209,6 +4670,141 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-piarist-centre",
+      "name": "Piarist Centre",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4928,
+      "lng": 19.0526,
+      "type": "Office, school & public building",
+      "setting": "Central Pest school and monastery building on Marcius 15 Square, mixing a neo-Baroque shell with a 21st-century glazed extension and an internal theatre hall.",
+      "source_urls": [
+        "https://www.piarista.hu/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.piarista.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-rudas-baths",
+      "name": "Rudas Baths",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4891,
+      "lng": 19.0469,
+      "type": "Hotel & interiors",
+      "setting": "Sixteenth-century Ottoman-era bathhouse on the Buda riverbank, with an octagonal domed central pool lit by star-shaped skylights.",
+      "known_for": "Vienna Game",
+      "source_urls": [
+        "https://rudasfurdo.hu/en/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "official_url": "https://rudasfurdo.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-sopron",
+      "name": "Sopron Old Town",
+      "country": "Hungary",
+      "region": "Gyor-Moson-Sopron County",
+      "lat": 47.6803,
+      "lng": 16.5983,
+      "type": "Historic town & street",
+      "setting": "Medieval old town near the Austrian border with an almost intact street plan, a firewatch tower and Castle District monuments, named a strong option for historical productions by the national film commission.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-szazados-art-colony",
+      "name": "Szazados Road Art Colony",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4985,
+      "lng": 19.1054,
+      "type": "House & apartment",
+      "setting": "Early-twentieth-century artists' colony of studio houses set among trees in Zuglo, still used as working studios and listed as a location by the national film commission.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-chain-bridge",
+      "name": "Szechenyi Chain Bridge",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.499,
+      "lng": 19.0436,
+      "type": "Transport & infrastructure",
+      "setting": "Suspension bridge opened in 1849 linking Buda and Pest across the Danube, with cast-iron chain cables and stone lion sculptures at each bridgehead.",
+      "known_for": "I Spy, In Secret, 12 Monkeys, Gemini Man",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-szechenyi-thermal-bath",
+      "name": "Szechenyi Thermal Bath",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5186,
+      "lng": 19.0819,
+      "type": "Hotel & interiors",
+      "setting": "One of Europe's largest bath complexes in City Park, with a fresco-decorated dome hall, indoor and outdoor thermal pools and elegant colonnaded corridors.",
+      "known_for": "Mata Hari, Evita, The Luzhin Defence, Gemini Man",
+      "source_urls": [
+        "https://www.szechenyifurdo.hu/en/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://www.szechenyifurdo.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-tokaj",
+      "name": "Tokaj",
+      "country": "Hungary",
+      "region": "Borsod-Abauj-Zemplen County",
+      "lat": 48.1236,
+      "lng": 21.4114,
+      "type": "Village & countryside",
+      "setting": "Small wine town at the meeting of the Tisza and Bodrog rivers, surrounded by centuries-old volcanic-soil vineyards and deep cellar systems used for ageing sweet Tokaji Aszu wine.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-urania-national-film-theatre",
+      "name": "Urania National Film Theatre",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4953,
+      "lng": 19.0651,
+      "type": "Theatre, arena & venue",
+      "setting": "Art Nouveau cinema and event hall of 1896 on the Grand Boulevard, with a Moorish-influenced facade and a decorated auditorium ceiling, named by the national film commission among Budapest's classic movie theatres.",
+      "source_urls": [
+        "https://urania-nf.hu/",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://urania-nf.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "vajdahunyad-castle",
       "name": "Vajdahunyad Castle",
       "country": "Hungary",
@@ -4226,6 +4822,22 @@
         "author": "Felix König",
         "license": "CC BY 3.0"
       }
+    },
+    {
+      "id": "hu-wekerle-estate",
+      "name": "Wekerle Estate",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4558,
+      "lng": 19.1259,
+      "type": "House & apartment",
+      "setting": "Early-twentieth-century garden suburb of low Art Nouveau terraced houses laid out around a central square, built as a model workers' estate on the edge of Pest.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "is-blue-lagoon",
@@ -4306,9 +4918,12 @@
       "type": "Theatre, arena & venue",
       "setting": "Glass-clad concert and conference hall on the Reykjavik waterfront, its honeycomb facade covering several auditoriums and a large public lobby used for performances and events.",
       "known_for": "Sense8, Black Mirror (Crocodile), The Bachelor, Heart of Stone",
+      "capacity": 1734,
+      "facilities": "Eldborg concert hall: up to 1,734 seats, 1,008 sq m, 4 floors. Silfurberg: 735 sq m, 7.7 m ceiling. Nordurljos: 540 sq m, 9 m ceiling. Kaldalon: 165-195 seats, 198 sq m, 8 m ceiling. Rima: 130 seats, 144 sq m, 3.8 m ceiling. Horpuhorn: 500 sq m, 26 m ceiling. Bjortuloft: 407 sq m over 2 floors. Haaloft: 200 sq m. Floi: 1,000 sq m. Eyri: up to 400 guests, 365 sq m.",
       "source_urls": [
         "https://www.harpa.is/en",
-        "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
+        "https://en.wikipedia.org/wiki/Harpa_(concert_hall)",
+        "https://www.harpa.is/en/halls-and-spaces"
       ],
       "official_url": "https://www.harpa.is/en",
       "commission_url": "https://filminiceland.com/locations/"
@@ -8396,8 +9011,10 @@
       "lng": 18.0649,
       "type": "Theatre, arena & venue",
       "setting": "Culture house and municipal theatre on Sergels torg in central Stockholm, with several stages, exhibition halls, a library and rooms available for hire.",
+      "facilities": "Spaces listed for hire: Foajé 3, Hörsalen, Klarabiografen (cinema), Lilla studion, Studion and the galleries.",
       "source_urls": [
-        "https://kulturhusetstadsteatern.se/"
+        "https://kulturhusetstadsteatern.se/",
+        "https://kulturhusetstadsteatern.se/uthyrning"
       ],
       "official_url": "https://kulturhusetstadsteatern.se/",
       "commission_url": "https://filmcommissionsweden.se/"
@@ -8458,8 +9075,10 @@
       "lng": 12.9976,
       "type": "Theatre, arena & venue",
       "setting": "Concert hall and congress centre in Malmo, home to the Malmo Symphony Orchestra, with a main concert hall and several smaller performance spaces.",
+      "logistics": "Stage entry at Beringsgatan 5; loading access at Beringsgatan 1-3; visiting address Dag Hammarskjölds torg 4, Malmo.",
       "source_urls": [
-        "https://www.malmolive.se/en/"
+        "https://www.malmolive.se/en/",
+        "https://www.malmolive.se/en/about-the-comapny/for-organizers-and-production-companies"
       ],
       "official_url": "https://www.malmolive.se/en/",
       "commission_url": "https://filmcommissionsweden.se/"
@@ -8473,8 +9092,11 @@
       "lng": 18.07,
       "type": "Theatre, arena & venue",
       "setting": "National opera and ballet house on Gustav Adolfs torg in Stockholm, founded in 1773, with a 19th-century auditorium due for renovation from 2027.",
+      "capacity": 200,
+      "facilities": "The Golden Foyer, the space published for hire, seats up to 120 or holds up to 200 standing, and includes a terrace overlooking Gustav Adolfs torg, weather permitting.",
       "source_urls": [
-        "https://www.operan.se/en/"
+        "https://www.operan.se/en/",
+        "https://www.operan.se/en/groups/rent-premises"
       ],
       "official_url": "https://www.operan.se/en/",
       "commission_url": "https://filmcommissionsweden.se/"
@@ -8504,8 +9126,10 @@
       "lng": 11.9836,
       "type": "Office, school & public building",
       "setting": "Sweden's national science centre in Gothenburg, a ten-floor building with rainforest and ocean exhibits, a visualisation dome and dedicated event and conference spaces.",
+      "facilities": "Published event packages: dinner and drinks in the Ocean zone (max 250), dinner with Wisdome show (max 250), conference (max 30), and hire of the entire venue (over 500).",
       "source_urls": [
-        "https://www.universeum.se/en/"
+        "https://www.universeum.se/en/",
+        "https://www.universeum.se/en/corporate/events"
       ],
       "official_url": "https://www.universeum.se/en/",
       "commission_url": "https://filmcommissionsweden.se/"
@@ -8519,8 +9143,11 @@
       "lng": 18.0913,
       "type": "Office, school & public building",
       "setting": "Maritime museum on Djurgarden in Stockholm built around the salvaged 17th-century warship Vasa, which sank on its maiden voyage in 1628.",
+      "capacity": 2000,
+      "facilities": "Ship Hall, the main event space next to the ship Vasa: up to 800 guests seated for dinner or up to 2,000 for a standing reception. Adjoining restaurant: up to 150 guests seated or standing.",
       "source_urls": [
-        "https://www.vasamuseet.se/en"
+        "https://www.vasamuseet.se/en",
+        "https://www.vasamuseet.se/en/about-the-vasa-museum/events/"
       ],
       "official_url": "https://www.vasamuseet.se/en",
       "commission_url": "https://filmcommissionsweden.se/"
