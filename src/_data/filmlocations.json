@@ -24,6 +24,37 @@
       }
     },
     {
+      "id": "at-bregenz-festspielhaus",
+      "name": "Bregenz Festival House",
+      "country": "Austria",
+      "region": "Vorarlberg",
+      "lat": 47.5058,
+      "lng": 9.7477,
+      "type": "Theatre, arena & venue",
+      "setting": "A lakeside festival hall on Lake Constance, home of the Bregenz Festival's floating stage and indoor auditorium, backed by mountain views.",
+      "known_for": "James Bond: Quantum of Solace",
+      "source_urls": [
+        "https://www.bregenzerfestspiele.com/en"
+      ],
+      "official_url": "https://www.bregenzerfestspiele.com/en",
+      "commission_url": "https://www.austrianfilms.com/"
+    },
+    {
+      "id": "at-burgtheater-wien",
+      "name": "Burgtheater",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2103,
+      "lng": 16.3617,
+      "type": "Theatre, arena & venue",
+      "setting": "Austria's national theatre on the Ringstrasse, a grand 19th-century building with ceremonial staircases, foyers and a horseshoe-shaped auditorium.",
+      "source_urls": [
+        "https://www.burgtheater.at/"
+      ],
+      "official_url": "https://www.burgtheater.at/",
+      "commission_url": "https://www.filmfonds-wien.at/"
+    },
+    {
       "id": "at-erzberg",
       "name": "Erzberg",
       "country": "Austria",
@@ -44,6 +75,21 @@
         "author": "Gerald Senarclens de Grancy",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "at-flughafen-aspern",
+      "name": "Flughafen Wien Aspern (Seestadt)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.227,
+      "lng": 16.5024,
+      "type": "Transport & infrastructure",
+      "setting": "The site of Vienna's historic Aspern airfield, now redeveloped as the Seestadt district, retaining some early aviation-era structures amid new urban blocks.",
+      "source_urls": [
+        "https://www.aspern-seestadt.at/"
+      ],
+      "official_url": "https://www.aspern-seestadt.at/",
+      "commission_url": "https://www.filmfonds-wien.at/"
     },
     {
       "id": "at-gasometer-wien",
@@ -127,6 +173,36 @@
       ],
       "official_url": "https://www.sacher.com/en/vienna",
       "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-justizpalast-wien",
+      "name": "Justizpalast Wien",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2075,
+      "lng": 16.3574,
+      "type": "Hospital, prison & institution",
+      "setting": "Vienna's historicist Palace of Justice, seat of the supreme and administrative courts, with a monumental stone facade and galleried central hall.",
+      "source_urls": [
+        "https://www.justiz.gv.at/"
+      ],
+      "official_url": "https://www.justiz.gv.at/",
+      "commission_url": "https://www.filmfonds-wien.at/"
+    },
+    {
+      "id": "at-karl-marx-hof",
+      "name": "Karl-Marx-Hof",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2454,
+      "lng": 16.3625,
+      "type": "House & apartment",
+      "setting": "A monumental 1920s municipal housing block from Vienna's Red Vienna period, stretching over a kilometre with arched gateways, courtyards and a reddish facade.",
+      "source_urls": [
+        "https://www.dasrotewien.at/seite/karl-marx-hof"
+      ],
+      "official_url": "https://www.dasrotewien.at/seite/karl-marx-hof",
+      "commission_url": "https://www.filmfonds-wien.at/"
     },
     {
       "id": "at-kirche-am-steinhof",
@@ -252,6 +328,21 @@
         "author": "Jorge Franganillo",
         "license": "CC BY 2.0"
       }
+    },
+    {
+      "id": "at-sanatorium-purkersdorf",
+      "name": "Sanatorium Purkersdorf",
+      "country": "Austria",
+      "region": "Lower Austria",
+      "lat": 48.2038,
+      "lng": 16.1737,
+      "type": "Hospital, prison & institution",
+      "setting": "An early modernist sanatorium building from 1905 on the edge of the Vienna Woods, with a clean white geometric facade, now used for events.",
+      "source_urls": [
+        "https://www.purkersdorf.at/sanatorium"
+      ],
+      "official_url": "https://www.purkersdorf.at/sanatorium",
+      "commission_url": "https://www.filmfonds-wien.at/"
     },
     {
       "id": "schoenbrunn-palace",
@@ -402,6 +493,21 @@
       "commission_url": "https://www.viennafilmcommission.at/en/"
     },
     {
+      "id": "at-volksoper-wien",
+      "name": "Volksoper Wien",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2225,
+      "lng": 16.3466,
+      "type": "Theatre, arena & venue",
+      "setting": "Vienna's second opera house, a late-19th-century theatre staging opera, operetta and musicals, with a traditional gilded auditorium and backstage areas.",
+      "source_urls": [
+        "https://www.volksoper.at/"
+      ],
+      "official_url": "https://www.volksoper.at/",
+      "commission_url": "https://www.filmfonds-wien.at/"
+    },
+    {
       "id": "at-wiener-riesenrad",
       "name": "Wiener Riesenrad (Prater)",
       "country": "Austria",
@@ -416,6 +522,21 @@
       ],
       "official_url": "https://www.wienerriesenrad.com/",
       "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-stadthalle-wien",
+      "name": "Wiener Stadthalle",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1972,
+      "lng": 16.3339,
+      "type": "Theatre, arena & venue",
+      "setting": "Vienna's largest multi-purpose arena, opened in 1958, with several halls used for concerts, sport and exhibitions under a distinctive folded roof.",
+      "source_urls": [
+        "https://www.stadthalle.com/"
+      ],
+      "official_url": "https://www.stadthalle.com/",
+      "commission_url": "https://www.filmfonds-wien.at/"
     },
     {
       "id": "at-worthersee",
@@ -439,6 +560,21 @@
       }
     },
     {
+      "id": "at-wu-wien",
+      "name": "WU Vienna Library and Learning Center",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2136,
+      "lng": 16.4092,
+      "type": "Office, school & public building",
+      "setting": "The library building of Vienna's business university campus, a deconstructivist design by Zaha Hadid with sweeping concrete forms and glass atria.",
+      "source_urls": [
+        "https://www.wu.ac.at/en/"
+      ],
+      "official_url": "https://www.wu.ac.at/en/",
+      "commission_url": "https://www.filmfonds-wien.at/"
+    },
+    {
       "id": "be-abattoir-anderlecht",
       "name": "Abattoir, Anderlecht",
       "country": "Belgium",
@@ -458,6 +594,21 @@
         "author": "User:Ben2",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "be-abdij-herkenrode",
+      "name": "Abdij van Herkenrode",
+      "country": "Belgium",
+      "region": "Limburg",
+      "lat": 50.9562,
+      "lng": 5.2778,
+      "type": "Church & monastery",
+      "setting": "A former Cistercian abbey site on the edge of Hasselt with a walled herb garden, monastic outbuildings and a restored gatehouse.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/abdij-van-herkenrode"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/abdij-van-herkenrode",
+      "commission_url": "https://screenflanders.be/"
     },
     {
       "id": "be-alden-biesen",
@@ -506,6 +657,23 @@
         "author": "Nenea hartia",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "be-aquatopia-aalst",
+      "name": "Aquatopia",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 50.9385,
+      "lng": 4.0571,
+      "type": "Theatre, arena & venue",
+      "setting": "A municipal indoor swimming pool complex in Aalst with a sports basin, recreational pools and slides used by local clubs and schools.",
+      "source_urls": [
+        "https://www.aquatopia.be",
+        "https://www.screenflanders.be/nl/locaties/database/stedelijk-zwembad-aquatopia"
+      ],
+      "url": "https://www.screenflanders.be/nl/locaties/database/stedelijk-zwembad-aquatopia",
+      "official_url": "https://www.aquatopia.be",
+      "commission_url": "https://screenflanders.be/"
     },
     {
       "id": "be-autoworld",
@@ -663,6 +831,21 @@
       }
     },
     {
+      "id": "be-de-grote-post-oostende",
+      "name": "De Grote Post",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 51.23,
+      "lng": 2.9161,
+      "type": "Theatre, arena & venue",
+      "setting": "A former central post office in Oostende converted into a cultural centre with a concert hall, library and cafe behind its restored mid-century facade.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/de-grote-post"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/de-grote-post",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
       "id": "be-doel",
       "name": "Doel",
       "country": "Belgium",
@@ -704,6 +887,23 @@
         "author": "Busoni",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "be-grand-hospice-brussels",
+      "name": "Grand Hospice",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8541,
+      "lng": 4.3502,
+      "type": "Hospital, prison & institution",
+      "setting": "A large nineteenth-century former almshouse in central Brussels with a neoclassical facade, an arcaded courtyard and long institutional corridors, now partly used for housing.",
+      "facilities": "Entrance hall, corridors, interior courtyard, garden, carriage entrance",
+      "source_urls": [
+        "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A75"
+      ],
+      "url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A75",
+      "official_url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A75",
+      "commission_url": "https://screen.brussels/"
     },
     {
       "id": "be-grand-hornu",
@@ -792,6 +992,52 @@
       ],
       "official_url": "https://www.haconcerts.be/en",
       "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-hof-van-liere",
+      "name": "Hof van Liere (University of Antwerp city campus)",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.2229,
+      "lng": 4.4097,
+      "type": "Office, school & public building",
+      "setting": "A restored Renaissance courtyard building on the University of Antwerp's city campus, with arcaded galleries and a walled garden used for lectures and events.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/universiteit-antwerpen-stadscampus",
+        "https://www.uantwerpen.be"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/universiteit-antwerpen-stadscampus",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-janseniustoren-leuven",
+      "name": "Janseniustoren",
+      "country": "Belgium",
+      "region": "Flemish Brabant",
+      "lat": 50.8765,
+      "lng": 4.6948,
+      "type": "Historic town & street",
+      "setting": "A squat medieval defence tower on the banks of the Dijle in central Leuven, standing among old mill buildings and narrow riverside streets.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/janseniustoren-dijle"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/janseniustoren-dijle",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-k-tower-kortrijk",
+      "name": "K-Tower",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 50.8333,
+      "lng": 3.2651,
+      "type": "Modern architecture",
+      "setting": "A slender, diagonally tilted residential and office tower beside the Leie river in Kortrijk, built in the early 2010s as a landmark of the city's redevelopment.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/k-tower"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/k-tower",
+      "commission_url": "https://screenflanders.be/"
     },
     {
       "id": "be-kortrijk-xpo",
@@ -889,6 +1135,23 @@
       "commission_url": "https://www.screenflanders.be/en"
     },
     {
+      "id": "be-lycee-emile-max",
+      "name": "Lycee Emile Max",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8557,
+      "lng": 4.3852,
+      "type": "Office, school & public building",
+      "setting": "An Art Nouveau public secondary school in Schaerbeek with an ornate wrought-iron staircase and entrance hall behind an understated brick facade.",
+      "facilities": "Wrought-iron staircase, exterior facade",
+      "source_urls": [
+        "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79"
+      ],
+      "url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79",
+      "official_url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
       "id": "be-paleis-op-de-meir",
       "name": "Paleis op de Meir",
       "country": "Belgium",
@@ -931,6 +1194,100 @@
         "author": "Demeester",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "be-sport-vlaanderen-gent",
+      "name": "Sport Vlaanderen Gent (Wielercentrum)",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 51.0482,
+      "lng": 3.7018,
+      "type": "Theatre, arena & venue",
+      "setting": "An outdoor cycling centre in Ghent's Blaarmeersen sports park with a velodrome track, clubhouse and surrounding playing fields.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/velodroom-gent"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/velodroom-gent",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-sport-vlaanderen-heusden-zolder",
+      "name": "Sport Vlaanderen Heusden-Zolder",
+      "country": "Belgium",
+      "region": "Limburg",
+      "lat": 50.9952,
+      "lng": 5.2595,
+      "type": "Theatre, arena & venue",
+      "setting": "A regional sports centre in Heusden-Zolder next to the Circuit Zolder racetrack, with an athletics track and multi-purpose sports halls.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-heusden-zolder"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-heusden-zolder",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-sport-vlaanderen-hofstade",
+      "name": "Sport Vlaanderen Hofstade",
+      "country": "Belgium",
+      "region": "Flemish Brabant",
+      "lat": 50.9867,
+      "lng": 4.51,
+      "type": "Theatre, arena & venue",
+      "setting": "A public sports and recreation domain in Zemst with a swimming lake, athletics track and sports halls set among woodland.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-hofstade"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-hofstade",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-sport-vlaanderen-waregem",
+      "name": "Sport Vlaanderen Waregem",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 50.8849,
+      "lng": 3.4477,
+      "type": "Theatre, arena & venue",
+      "setting": "A regional sports centre in Waregem with an athletics track, sports halls and outdoor pitches used for training and competitions.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-waregem"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-waregem",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-sport-vlaanderen-willebroek",
+      "name": "Sport Vlaanderen Willebroek",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.0614,
+      "lng": 4.4054,
+      "type": "Theatre, arena & venue",
+      "setting": "A national watersports centre on a canal in Willebroek with a straight regatta course, grandstands and boathouses used for rowing and canoe racing.",
+      "source_urls": [
+        "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-willebroek"
+      ],
+      "official_url": "https://www.screenflanders.be/nl/locaties/database/sport-vlaanderen-willebroek",
+      "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-station-mechelen",
+      "name": "Station Mechelen",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.0177,
+      "lng": 4.4837,
+      "type": "Transport & infrastructure",
+      "setting": "A working railway station in central Mechelen with platforms, an overhead concourse and surrounding public squares, listed by Screen Flanders with filming requests handled by national rail operator NMBS.",
+      "permit_needed": "Yes",
+      "logistics": "Filming requests are arranged directly with NMBS (national rail operator), not the station itself.",
+      "source_urls": [
+        "https://www.belgiantrain.be/nl/about-sncb/contact/shootings",
+        "https://www.screenflanders.be/nl/locaties/database/station-mechelen"
+      ],
+      "url": "https://www.screenflanders.be/nl/locaties/database/station-mechelen",
+      "official_url": "https://www.belgiantrain.be/nl/about-sncb/contact/shootings",
+      "commission_url": "https://screenflanders.be/"
     },
     {
       "id": "be-stoomcentrum-maldegem",
@@ -986,6 +1343,23 @@
       }
     },
     {
+      "id": "be-tour-a-plomb",
+      "name": "Tour a Plomb",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8479,
+      "lng": 4.3395,
+      "type": "Industrial & derelict",
+      "setting": "A former lead-shot factory tower near Brussels' old abattoir district, now a community and sports centre that keeps its raw industrial brickwork and stairwells.",
+      "facilities": "Stairwells, exposed industrial interior",
+      "source_urls": [
+        "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79"
+      ],
+      "url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79",
+      "official_url": "http://screen.brussels/fr/trouvez-un-decor?f%5B0%5D=type_venue%3A79",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
       "id": "be-villa-empain",
       "name": "Villa Empain",
       "country": "Belgium",
@@ -1010,6 +1384,38 @@
       }
     },
     {
+      "id": "be-villers-abbey",
+      "name": "Villers Abbey ruins",
+      "country": "Belgium",
+      "region": "Walloon Brabant",
+      "lat": 50.5907,
+      "lng": 4.5298,
+      "type": "Church & monastery",
+      "setting": "The roofless ruins of a Cistercian abbey near Villers-la-Ville, with vaulted cellars, a ruined church nave and monastic gardens open for shoots by arrangement.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.villers.be/fr/tournages",
+        "https://www.villers.be/"
+      ],
+      "official_url": "https://www.villers.be/fr/tournages",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "hr-brijuni-national-park",
+      "name": "Brijuni National Park",
+      "country": "Croatia",
+      "region": "Istria County",
+      "lat": 44.9134,
+      "lng": 13.752,
+      "type": "Palace & landmark",
+      "setting": "An archipelago of fourteen islands off Fažana, the former summer residence of Josip Broz Tito, with parkland, a safari zone, Roman and Byzantine ruins and a residence complex.",
+      "source_urls": [
+        "https://www.np-brijuni.hr"
+      ],
+      "official_url": "https://www.np-brijuni.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
       "id": "hr-church-st-donatus-zadar",
       "name": "Church of St. Donatus",
       "country": "Croatia",
@@ -1032,6 +1438,21 @@
         "author": "Martin Falbisoner",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-hnk-split",
+      "name": "Croatian National Theatre in Split",
+      "country": "Croatia",
+      "region": "Split-Dalmatia County",
+      "lat": 43.511,
+      "lng": 16.4372,
+      "type": "Theatre, arena & venue",
+      "setting": "A neo-Renaissance national theatre building from 1893 in central Split, with a main stage, tiered auditorium and rehearsal rooms used for opera, drama and ballet.",
+      "source_urls": [
+        "https://www.hnk-split.hr"
+      ],
+      "official_url": "https://www.hnk-split.hr",
+      "commission_url": "https://havc.hr"
     },
     {
       "id": "hr-hnk-zajc-rijeka",
@@ -1078,6 +1499,21 @@
         "author": "Matti Blume",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-dolac-market",
+      "name": "Dolac Market",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8143,
+      "lng": 15.9772,
+      "type": "Bar, restaurant & shop",
+      "setting": "Zagreb's main open-air produce market on a raised square above the central square, with rows of red umbrellas, fruit and vegetable stalls and an indoor hall, run by the city market company.",
+      "source_urls": [
+        "https://www.trznice-zg.hr"
+      ],
+      "official_url": "https://www.trznice-zg.hr",
+      "commission_url": "https://havc.hr"
     },
     {
       "id": "hr-drazen-petrovic-hall",
@@ -1146,6 +1582,51 @@
       }
     },
     {
+      "id": "hr-zagreb-airport",
+      "name": "Franjo Tuđman Airport",
+      "country": "Croatia",
+      "region": "Zagreb County",
+      "lat": 45.7403,
+      "lng": 16.0722,
+      "type": "Transport & infrastructure",
+      "setting": "Croatia's main international airport south of Zagreb, with a passenger terminal built in 2017, an aircraft apron, control tower and cargo facilities.",
+      "source_urls": [
+        "https://www.zagreb-airport.hr"
+      ],
+      "official_url": "https://www.zagreb-airport.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-governors-palace-rijeka",
+      "name": "Governor's Palace, Rijeka",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3296,
+      "lng": 14.4427,
+      "type": "Office, school & public building",
+      "setting": "A late 19th-century palace on Rijeka's waterfront built for the Hungarian-appointed governor, now housing the Maritime and History Museum of the Croatian Littoral.",
+      "source_urls": [
+        "https://ppmhp.hr"
+      ],
+      "official_url": "https://ppmhp.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-hotel-kvarner-opatija",
+      "name": "Hotel Kvarner (Grand Hotel Kvarner)",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3347,
+      "lng": 14.3077,
+      "type": "Hotel & interiors",
+      "setting": "The first purpose-built hotel on the eastern Adriatic coast, opened in 1884 on Opatija's seafront, with a Belle Epoque facade, period function rooms and a sea-facing terrace.",
+      "source_urls": [
+        "https://www.liburnia.hr"
+      ],
+      "official_url": "https://www.liburnia.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
       "id": "jadran-film",
       "name": "Jadran Film",
       "country": "Croatia",
@@ -1168,6 +1649,36 @@
       ],
       "official_url": "https://www.jadran-film.com/",
       "commission_url": "https://filmingincroatia.hr/"
+    },
+    {
+      "id": "hr-komedija-zagreb",
+      "name": "Kazalište Komedija",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8161,
+      "lng": 15.9781,
+      "type": "Theatre, arena & venue",
+      "setting": "A musical theatre on Kaptol in Zagreb's old town, staging operettas, musicals and cabaret in a roughly 500-seat auditorium, operating since 1950.",
+      "source_urls": [
+        "https://www.komedija.hr"
+      ],
+      "official_url": "https://www.komedija.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-kopacki-rit",
+      "name": "Kopački Rit Nature Park",
+      "country": "Croatia",
+      "region": "Osijek-Baranja County",
+      "lat": 45.6554,
+      "lng": 18.8943,
+      "type": "Forest & lake",
+      "setting": "A wetland nature park at the confluence of the Drava and Danube rivers, with flooded forest, reed beds, an observation tower and boat routes through the marshland.",
+      "source_urls": [
+        "https://www.pp-kopacki-rit.hr"
+      ],
+      "official_url": "https://www.pp-kopacki-rit.hr",
+      "commission_url": "https://havc.hr"
     },
     {
       "id": "hr-krka-national-park",
@@ -1216,6 +1727,36 @@
         "author": "Vanja Jugovac",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-medvednica-nature-park",
+      "name": "Medvednica Nature Park",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.9037,
+      "lng": 15.9574,
+      "type": "Mountains & wilderness",
+      "setting": "The forested mountain range above Zagreb, with the ruined medieval Medvedgrad fortress, a former ore mine open to visitors, hiking trails and the Sljeme peak and ski area.",
+      "source_urls": [
+        "https://www.pp-medvednica.hr"
+      ],
+      "official_url": "https://www.pp-medvednica.hr",
+      "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-nsk-zagreb",
+      "name": "National and University Library in Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7966,
+      "lng": 15.9775,
+      "type": "Office, school & public building",
+      "setting": "Croatia's national library, a large modernist building from 1995 with reading rooms, book stacks and a central atrium, serving as the country's main research library.",
+      "source_urls": [
+        "https://www.nsk.hr"
+      ],
+      "official_url": "https://www.nsk.hr",
+      "commission_url": "https://havc.hr"
     },
     {
       "id": "hr-opatija",
@@ -1434,6 +1975,21 @@
       "url": "https://filmzagreb.hr/?product_cat=arhitecture",
       "official_url": "https://www.zv.hr/en",
       "commission_url": "https://filmzagreb.hr/"
+    },
+    {
+      "id": "hr-zagreb-glavni-kolodvor",
+      "name": "Zagreb Main Railway Station",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8044,
+      "lng": 15.9788,
+      "type": "Transport & infrastructure",
+      "setting": "Zagreb's principal railway station, an 1892 Austro-Hungarian building on Tomislav Square with a domed main hall and platforms facing the city's museum quarter.",
+      "source_urls": [
+        "https://www.hzpp.hr"
+      ],
+      "official_url": "https://www.hzpp.hr",
+      "commission_url": "https://havc.hr"
     },
     {
       "id": "kromeriz-archbishops-palace",
@@ -2489,6 +3045,21 @@
       "commission_url": "https://www.dfi.dk/en"
     },
     {
+      "id": "dk-dokk1",
+      "name": "Dokk1",
+      "country": "Denmark",
+      "region": "Central Jutland",
+      "lat": 56.1534,
+      "lng": 10.2142,
+      "type": "Office, school & public building",
+      "setting": "A large glass and concrete public library and citizen service building on Aarhus harbourfront, with open multi-storey interiors and a public square outside.",
+      "source_urls": [
+        "https://dokk1.dk"
+      ],
+      "official_url": "https://dokk1.dk",
+      "commission_url": "https://www.dfi.dk"
+    },
+    {
       "id": "dk-dr-koncerthuset",
       "name": "DR Koncerthuset",
       "country": "Denmark",
@@ -2563,6 +3134,36 @@
         "author": "Ajepbah",
         "license": "CC BY-SA 3.0 de"
       }
+    },
+    {
+      "id": "dk-hc-andersens-hus",
+      "name": "H.C. Andersens Hus",
+      "country": "Denmark",
+      "region": "Funen",
+      "lat": 55.3987,
+      "lng": 10.3908,
+      "type": "Office, school & public building",
+      "setting": "A museum in Odense's old town dedicated to Hans Christian Andersen, combining a modern underground exhibition building with the historic house and courtyard where he was born.",
+      "source_urls": [
+        "https://hcandersenshus.dk"
+      ],
+      "official_url": "https://hcandersenshus.dk",
+      "commission_url": "https://www.dfi.dk"
+    },
+    {
+      "id": "dk-hotel-koldingfjord",
+      "name": "Hotel Koldingfjord",
+      "country": "Denmark",
+      "region": "Southern Denmark",
+      "lat": 55.4984,
+      "lng": 9.5553,
+      "type": "Hotel & interiors",
+      "setting": "A former sanatorium turned hotel and conference centre on the shore of Kolding Fjord, with period interiors, function rooms and parkland running down to the water.",
+      "source_urls": [
+        "https://www.koldingfjord.dk"
+      ],
+      "official_url": "https://www.koldingfjord.dk",
+      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "kronborg-castle",
@@ -2740,6 +3341,21 @@
         "author": "European Commission",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "dk-torvehallerne",
+      "name": "Torvehallerne",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.6839,
+      "lng": 12.5696,
+      "type": "Bar, restaurant & shop",
+      "setting": "Two glass-roofed market halls in central Copenhagen with food and drink stalls under one enclosed roof, plus an adjoining public square outside for exterior coverage.",
+      "source_urls": [
+        "https://torvehallernekbh.dk"
+      ],
+      "official_url": "https://torvehallernekbh.dk",
+      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "dk-utzon-center",
@@ -3993,6 +4609,21 @@
       }
     },
     {
+      "id": "de-alte-feuerwache-mannheim",
+      "name": "Alte Feuerwache Mannheim",
+      "country": "Germany",
+      "region": "Baden-Wurttemberg",
+      "lat": 49.4914,
+      "lng": 8.4736,
+      "type": "Hospital, prison & institution",
+      "setting": "A disused early-20th-century fire station converted into a cultural centre, keeping its engine hall, brick facade and yard, now hired for concerts and events.",
+      "source_urls": [
+        "https://www.altefeuerwache.com/"
+      ],
+      "official_url": "https://www.altefeuerwache.com/",
+      "commission_url": "https://www.film.mfg.de/"
+    },
+    {
       "id": "de-alte-oper-frankfurt",
       "name": "Alte Oper Frankfurt",
       "country": "Germany",
@@ -4047,6 +4678,21 @@
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
     },
     {
+      "id": "de-bauhaus-uni-weimar",
+      "name": "Bauhaus-Universitat Weimar",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.9787,
+      "lng": 11.3311,
+      "type": "Office, school & public building",
+      "setting": "The founding site of the Bauhaus school, with Henry van de Velde's Art Nouveau studio building and later modernist extensions still used as a working university.",
+      "source_urls": [
+        "https://www.uni-weimar.de/en/university/start/"
+      ],
+      "official_url": "https://www.uni-weimar.de/en/university/start/",
+      "commission_url": "https://www.mdm-online.de/"
+    },
+    {
       "id": "de-bavaria-filmstadt",
       "name": "Bavaria Filmstadt",
       "country": "Germany",
@@ -4068,6 +4714,21 @@
         "author": "Unbekannte Autoren und Grafiker; Scan von Auktionshaus Vladimir Gutowski",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "de-eisenbahnmuseum-noerdlingen",
+      "name": "Bayerisches Eisenbahnmuseum",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.8478,
+      "lng": 10.4959,
+      "type": "Transport & infrastructure",
+      "setting": "A former steam locomotive depot at Nordlingen with a working roundhouse, turntable and yard of preserved steam and diesel engines.",
+      "source_urls": [
+        "https://www.bayerisches-eisenbahnmuseum.de/"
+      ],
+      "official_url": "https://www.bayerisches-eisenbahnmuseum.de/",
+      "commission_url": "https://www.fff-bayern.de/"
     },
     {
       "id": "de-beelitz-heilstaetten",
@@ -4125,6 +4786,36 @@
       "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
     },
     {
+      "id": "de-duisburg-innenhafen",
+      "name": "Duisburg Innenhafen",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4325,
+      "lng": 6.7576,
+      "type": "Office, school & public building",
+      "setting": "A former inland harbour of grain silos and warehouses redeveloped into offices, restaurants and waterside promenades, keeping its industrial brick shells.",
+      "source_urls": [
+        "https://www.duisburgkontor.de/"
+      ],
+      "official_url": "https://www.duisburgkontor.de/",
+      "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
+      "id": "de-eisenbahnmuseum-bochum",
+      "name": "Eisenbahnmuseum Bochum-Dahlhausen",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4127,
+      "lng": 7.1417,
+      "type": "Transport & infrastructure",
+      "setting": "A preserved steam-era railway depot with a roundhouse, turntable, workshops and sidings of historic locomotives and carriages.",
+      "source_urls": [
+        "https://www.eisenbahnmuseum-bochum.de/"
+      ],
+      "official_url": "https://www.eisenbahnmuseum-bochum.de/",
+      "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
       "id": "de-elbphilharmonie",
       "name": "Elbphilharmonie",
       "country": "Germany",
@@ -4163,6 +4854,21 @@
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
     },
     {
+      "id": "de-flughafen-gatow",
+      "name": "Flughafen Berlin-Gatow",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.4839,
+      "lng": 13.1994,
+      "type": "Transport & infrastructure",
+      "setting": "A former military airfield on the western edge of Berlin, now the Bundeswehr's air force museum, with a control tower, runway and hangars holding historic aircraft.",
+      "source_urls": [
+        "https://www.mhm-gatow.de/"
+      ],
+      "official_url": "https://www.mhm-gatow.de/",
+      "commission_url": "https://www.medienboard.de/en/"
+    },
+    {
       "id": "de-frankfurt-bankenviertel",
       "name": "Frankfurt Bankenviertel",
       "country": "Germany",
@@ -4176,6 +4882,36 @@
       ],
       "official_url": "https://www.frankfurt-tourismus.de/en/",
       "commission_url": "https://www.hessenfilm.de/en/"
+    },
+    {
+      "id": "de-frauenkirche-dresden",
+      "name": "Frauenkirche Dresden",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.0509,
+      "lng": 13.7416,
+      "type": "Church & monastery",
+      "setting": "A baroque domed church rebuilt after wartime destruction, on Dresden's Neumarkt square, with a large sandstone dome and an ornate galleried interior.",
+      "source_urls": [
+        "https://www.frauenkirche-dresden.de/"
+      ],
+      "official_url": "https://www.frauenkirche-dresden.de/",
+      "commission_url": "https://www.mdm-online.de/"
+    },
+    {
+      "id": "de-funkhaus-berlin",
+      "name": "Funkhaus Berlin",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.4534,
+      "lng": 13.5188,
+      "type": "Office, school & public building",
+      "setting": "A former East German state radio headquarters on the river Spree, with wood-panelled studios, offices and a large concert hall, run today as an event and production venue.",
+      "source_urls": [
+        "https://www.funkhaus-berlin.net/"
+      ],
+      "official_url": "https://www.funkhaus-berlin.net/",
+      "commission_url": "https://www.medienboard.de/en/"
     },
     {
       "id": "de-gasometer-oberhausen",
@@ -4219,6 +4955,21 @@
       }
     },
     {
+      "id": "de-grandhotel-bensberg",
+      "name": "Grandhotel Schloss Bensberg",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 50.9739,
+      "lng": 7.1364,
+      "type": "Hotel & interiors",
+      "setting": "A former hunting palace above Cologne converted into a hotel, with baroque state rooms, a park and a modern spa wing.",
+      "source_urls": [
+        "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/"
+      ],
+      "official_url": "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/",
+      "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
       "id": "de-hamburg-rathaus",
       "name": "Hamburg Rathaus",
       "country": "Germany",
@@ -4239,6 +4990,21 @@
         "author": "NordNordWest",
         "license": "CC BY-SA 3.0 de"
       }
+    },
+    {
+      "id": "de-hansaviertel-berlin",
+      "name": "Hansaviertel Berlin",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5188,
+      "lng": 13.3467,
+      "type": "House & apartment",
+      "setting": "A postwar modernist housing estate built for the 1957 Interbau exhibition, with apartment towers and low-rise blocks by international architects set in parkland near the Tiergarten.",
+      "source_urls": [
+        "https://www.hansaviertel.berlin/"
+      ],
+      "official_url": "https://www.hansaviertel.berlin/",
+      "commission_url": "https://www.medienboard.de/en/"
     },
     {
       "id": "de-heidelberg-university",
@@ -4289,6 +5055,21 @@
       }
     },
     {
+      "id": "de-adlon-berlin",
+      "name": "Hotel Adlon Kempinski Berlin",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5163,
+      "lng": 13.3799,
+      "type": "Hotel & interiors",
+      "setting": "A rebuilt grand hotel beside the Brandenburg Gate, with a marble lobby, ballroom and period-style suites used for period and contemporary interiors.",
+      "source_urls": [
+        "https://www.kempinski.com/en/berlin/hotel-adlon/"
+      ],
+      "official_url": "https://www.kempinski.com/en/berlin/hotel-adlon/",
+      "commission_url": "https://www.medienboard.de/en/"
+    },
+    {
       "id": "de-humboldt-university-berlin",
       "name": "Humboldt University of Berlin",
       "country": "Germany",
@@ -4303,6 +5084,51 @@
       ],
       "official_url": "https://www.hu-berlin.de/en/",
       "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-justizpalast-muenchen",
+      "name": "Justizpalast Munich",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.1409,
+      "lng": 11.5619,
+      "type": "Hospital, prison & institution",
+      "setting": "A neo-baroque courthouse from 1897 housing Munich's higher regional court, with a domed atrium, marble stairways and panelled courtrooms.",
+      "source_urls": [
+        "https://www.justiz.bayern.de/gericht/olg/m/"
+      ],
+      "official_url": "https://www.justiz.bayern.de/gericht/olg/m/",
+      "commission_url": "https://www.fff-bayern.de/"
+    },
+    {
+      "id": "de-kadewe",
+      "name": "KaDeWe",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5019,
+      "lng": 13.3389,
+      "type": "Bar, restaurant & shop",
+      "setting": "One of continental Europe's largest department stores, with Art Deco and postwar interiors, a glass-domed food hall and escalator halls suited to retail and crowd scenes.",
+      "source_urls": [
+        "https://www.kadewe.de/"
+      ],
+      "official_url": "https://www.kadewe.de/",
+      "commission_url": "https://www.medienboard.de/en/"
+    },
+    {
+      "id": "de-kammergericht-berlin",
+      "name": "Kammergericht Berlin",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.4903,
+      "lng": 13.3489,
+      "type": "Hospital, prison & institution",
+      "setting": "Berlin's highest court, a Wilhelmine-era courthouse with a domed entrance hall, marble staircases and panelled courtrooms.",
+      "source_urls": [
+        "https://www.berlin.de/gerichte/kammergericht/"
+      ],
+      "official_url": "https://www.berlin.de/gerichte/kammergericht/",
+      "commission_url": "https://www.medienboard.de/en/"
     },
     {
       "id": "de-kampnagel",
@@ -4408,6 +5234,36 @@
       "commission_url": "http://www.germanfilms.de"
     },
     {
+      "id": "de-bethanien-berlin",
+      "name": "Kunstquartier Bethanien",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5013,
+      "lng": 13.4223,
+      "type": "Hospital, prison & institution",
+      "setting": "A former 19th-century deaconess hospital in Kreuzberg, converted into studios and exhibition halls, keeping its brick wards, corridors and courtyard.",
+      "source_urls": [
+        "https://www.kunstquartier-bethanien.de/"
+      ],
+      "official_url": "https://www.kunstquartier-bethanien.de/",
+      "commission_url": "https://www.medienboard.de/en/"
+    },
+    {
+      "id": "de-kurhaus-wiesbaden",
+      "name": "Kurhaus Wiesbaden",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.0851,
+      "lng": 8.2434,
+      "type": "Theatre, arena & venue",
+      "setting": "A neoclassical spa and casino building from 1907, with a colonnaded facade, a domed festival hall and formal grounds, still run as an event and casino venue.",
+      "source_urls": [
+        "https://www.wiesbaden.de/kurhaus"
+      ],
+      "official_url": "https://www.wiesbaden.de/kurhaus",
+      "commission_url": "https://www.hessenfilm.de/"
+    },
+    {
       "id": "de-landschaftspark-duisburg-nord",
       "name": "Landschaftspark Duisburg-Nord",
       "country": "Germany",
@@ -4458,6 +5314,23 @@
       }
     },
     {
+      "id": "de-memorium-nuernberg",
+      "name": "Memorium Nuremberg Trials",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 49.4519,
+      "lng": 11.0644,
+      "type": "Hospital, prison & institution",
+      "setting": "The Nuremberg Palace of Justice, still a working courthouse, whose historic Courtroom 600 hosted the postwar Nuremberg trials and is now also a memorial museum.",
+      "known_for": "Nuremberg trials (historical)",
+      "suitability": "Filming permits are handled by the museum; access to the working courthouse is limited by ongoing court use.",
+      "source_urls": [
+        "https://museums.nuernberg.de/memorium-nuremberg-trials/"
+      ],
+      "official_url": "https://museums.nuernberg.de/memorium-nuremberg-trials/",
+      "commission_url": "https://www.fff-bayern.de/"
+    },
+    {
       "id": "de-ruedersdorf-museum-park",
       "name": "Museum Park Rüdersdorf",
       "country": "Germany",
@@ -4472,6 +5345,21 @@
       ],
       "official_url": "https://www.museumspark.de/",
       "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-laboe-marine-ehrenmal",
+      "name": "Naval Memorial Laboe",
+      "country": "Germany",
+      "region": "Schleswig-Holstein",
+      "lat": 54.4008,
+      "lng": 10.2242,
+      "type": "Transport & infrastructure",
+      "setting": "A tall brick naval memorial tower overlooking the Kiel fjord, with a preserved World War Two submarine open to visitors alongside it.",
+      "source_urls": [
+        "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/"
+      ],
+      "official_url": "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/",
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
     },
     {
       "id": "neuschwanstein-castle",
@@ -4575,6 +5463,21 @@
       }
     },
     {
+      "id": "de-ruhr-uni-bochum",
+      "name": "Ruhr University Bochum",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4436,
+      "lng": 7.2607,
+      "type": "Office, school & public building",
+      "setting": "A large 1960s brutalist university campus on a hillside above Bochum, with concrete tower blocks, lecture halls and connecting terraces.",
+      "source_urls": [
+        "https://www.ruhr-uni-bochum.de/en"
+      ],
+      "official_url": "https://www.ruhr-uni-bochum.de/en",
+      "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
       "id": "de-schauspielhaus-bochum",
       "name": "Schauspielhaus Bochum",
       "country": "Germany",
@@ -4597,6 +5500,36 @@
       }
     },
     {
+      "id": "de-schlosshotel-kronberg",
+      "name": "Schlosshotel Kronberg",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1859,
+      "lng": 8.5241,
+      "type": "Hotel & interiors",
+      "setting": "A former Prussian imperial residence in the Taunus hills, run as a hotel, with wood-panelled halls, a library and formal gardens.",
+      "source_urls": [
+        "https://www.schlosshotel-kronberg.com/"
+      ],
+      "official_url": "https://www.schlosshotel-kronberg.com/",
+      "commission_url": "https://www.hessenfilm.de/"
+    },
+    {
+      "id": "de-schwimmoper-wuppertal",
+      "name": "Schwimmoper Wuppertal",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.2528,
+      "lng": 7.1508,
+      "type": "Theatre, arena & venue",
+      "setting": "A landmark 1950s indoor swimming hall with a sweeping shell roof, built for the 1957 German swimming championships and still in public use.",
+      "source_urls": [
+        "https://www.wsw-online.de/"
+      ],
+      "official_url": "https://www.wsw-online.de/",
+      "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
       "id": "de-seebruecke-sellin",
       "name": "Seebrücke Sellin",
       "country": "Germany",
@@ -4613,6 +5546,21 @@
       "commission_url": "http://www.germanfilms.de"
     },
     {
+      "id": "de-speicherstadt-hamburg",
+      "name": "Speicherstadt",
+      "country": "Germany",
+      "region": "Hamburg",
+      "lat": 53.5445,
+      "lng": 9.9926,
+      "type": "Industrial & derelict",
+      "setting": "The world's largest historic warehouse district, red-brick blocks on timber piles crossed by canals and iron bridges, part now a museum quarter.",
+      "source_urls": [
+        "https://www.speicherstadtmuseum.de/"
+      ],
+      "official_url": "https://www.speicherstadtmuseum.de/",
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
+    },
+    {
       "id": "de-spinnerei-leipzig",
       "name": "Spinnerei Leipzig",
       "country": "Germany",
@@ -4627,6 +5575,36 @@
       ],
       "official_url": "https://www.spinnerei.de/en/",
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
+    },
+    {
+      "id": "de-st-michaelis-hamburg",
+      "name": "St Michaelis Hamburg",
+      "country": "Germany",
+      "region": "Hamburg",
+      "lat": 53.5457,
+      "lng": 9.9769,
+      "type": "Church & monastery",
+      "setting": "Hamburg's principal baroque church, known locally as the Michel, with a copper-clad tower, a light-filled nave and a crypt, available for hire outside services.",
+      "source_urls": [
+        "https://www.st-michaelis.de/"
+      ],
+      "official_url": "https://www.st-michaelis.de/",
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
+    },
+    {
+      "id": "de-staatstheater-stuttgart",
+      "name": "Staatstheater Stuttgart",
+      "country": "Germany",
+      "region": "Baden-Wurttemberg",
+      "lat": 48.7791,
+      "lng": 9.1858,
+      "type": "Theatre, arena & venue",
+      "setting": "A large state theatre complex by the palace gardens, housing opera, ballet and drama stages behind an early-20th-century facade.",
+      "source_urls": [
+        "https://www.staatstheater-stuttgart.de/"
+      ],
+      "official_url": "https://www.staatstheater-stuttgart.de/",
+      "commission_url": "https://www.film.mfg.de/"
     },
     {
       "id": "studio-babelsberg",
@@ -4724,6 +5702,66 @@
         "author": "A.Savin",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "de-ueberseestadt-bremen",
+      "name": "Uberseestadt Bremen",
+      "country": "Germany",
+      "region": "Bremen",
+      "lat": 53.1214,
+      "lng": 8.7154,
+      "type": "Office, school & public building",
+      "setting": "A former harbour district of quays, warehouses and cranes redeveloped into offices, studios and event spaces, keeping much of its industrial waterfront look.",
+      "source_urls": [
+        "https://www.ueberseestadt-bremen.de/"
+      ],
+      "official_url": "https://www.ueberseestadt-bremen.de/",
+      "commission_url": "https://www.nordmedia.de/"
+    },
+    {
+      "id": "de-uni-goettingen",
+      "name": "University of Gottingen",
+      "country": "Germany",
+      "region": "Lower Saxony",
+      "lat": 51.5344,
+      "lng": 9.9355,
+      "type": "Office, school & public building",
+      "setting": "A long-established university with a historic auditorium, library and mixed 19th and 20th century institute buildings across the old town of Gottingen.",
+      "source_urls": [
+        "https://www.uni-goettingen.de/en/1.html"
+      ],
+      "official_url": "https://www.uni-goettingen.de/en/1.html",
+      "commission_url": "https://www.nordmedia.de/"
+    },
+    {
+      "id": "de-uni-tuebingen",
+      "name": "University of Tubingen",
+      "country": "Germany",
+      "region": "Baden-Wurttemberg",
+      "lat": 48.5216,
+      "lng": 9.0576,
+      "type": "Office, school & public building",
+      "setting": "A historic university town campus on the Neckar river, mixing a medieval old town core with 19th and 20th century faculty buildings.",
+      "source_urls": [
+        "https://uni-tuebingen.de/en/"
+      ],
+      "official_url": "https://uni-tuebingen.de/en/",
+      "commission_url": "https://www.film.mfg.de/"
+    },
+    {
+      "id": "de-viktualienmarkt",
+      "name": "Viktualienmarkt",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.1351,
+      "lng": 11.5765,
+      "type": "Bar, restaurant & shop",
+      "setting": "Munich's permanent daily food market next to the old town, with stalls, a beer garden and a maypole, run by the city as a public market square.",
+      "source_urls": [
+        "https://www.muenchen.de/en/sights/viktualienmarkt"
+      ],
+      "official_url": "https://www.muenchen.de/en/sights/viktualienmarkt",
+      "commission_url": "https://www.fff-bayern.de/"
     },
     {
       "id": "de-voelklinger-huette",
@@ -5184,6 +6222,23 @@
         "author": "Chris Taklis",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "gr-spinalonga",
+      "name": "Spinalonga",
+      "country": "Greece",
+      "region": "Crete (Lasithi)",
+      "lat": 35.2975,
+      "lng": 25.7381,
+      "type": "Hospital, prison & institution",
+      "setting": "A fortified islet off Elounda that served as a leper colony from 1904 to 1957 after centuries as a Venetian and Ottoman stronghold, now an uninhabited archaeological site reached by boat.",
+      "known_for": "To Nisi (2010 TV series based on Victoria Hislop's The Island)",
+      "source_urls": [
+        "https://www.visitgreece.gr/islands/crete/spinalonga-island/",
+        "https://en.wikipedia.org/wiki/Spinalonga"
+      ],
+      "official_url": "https://www.visitgreece.gr/islands/crete/spinalonga-island/",
+      "commission_url": "https://www.ekome.media"
     },
     {
       "id": "gr-vikos-gorge",
@@ -6327,6 +7382,36 @@
       }
     },
     {
+      "id": "ie-cork-opera-house",
+      "name": "Cork Opera House",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.9003,
+      "lng": -8.4731,
+      "type": "Theatre, arena & venue",
+      "setting": "A roughly 1,000-seat theatre on Cork's Emmet Place, rebuilt in 1965 after fire destroyed the original 1855 building, hosting drama, opera, music and comedy.",
+      "source_urls": [
+        "https://www.corkoperahouse.ie"
+      ],
+      "official_url": "https://www.corkoperahouse.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
+      "id": "ie-curragh-camp",
+      "name": "Curragh Camp",
+      "country": "Ireland",
+      "region": "County Kildare",
+      "lat": 53.1472,
+      "lng": -6.8364,
+      "type": "Hospital, prison & institution",
+      "setting": "The Irish Defence Forces' main training base on the Curragh plain, with parade grounds, barrack blocks and a military college, home to around 2,000 personnel.",
+      "source_urls": [
+        "https://www.military.ie"
+      ],
+      "official_url": "https://www.military.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
       "id": "ie-derrynane-house",
       "name": "Derrynane House",
       "country": "Ireland",
@@ -6428,6 +7513,21 @@
       }
     },
     {
+      "id": "ie-dublin-port",
+      "name": "Dublin Port",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3528,
+      "lng": -6.2245,
+      "type": "Transport & infrastructure",
+      "setting": "Ireland's largest port, on the north bank of the River Liffey, with container terminals, ferry berths, cranes and working quaysides close to the city centre.",
+      "source_urls": [
+        "https://www.dublinport.ie"
+      ],
+      "official_url": "https://www.dublinport.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
       "id": "ie-dun-aonghasa",
       "name": "Dún Aonghasa",
       "country": "Ireland",
@@ -6472,6 +7572,21 @@
         "author": "National Library of Ireland on The Commons",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "ie-fort-dunree",
+      "name": "Fort Dunree",
+      "country": "Ireland",
+      "region": "County Donegal",
+      "lat": 55.1963,
+      "lng": -7.5541,
+      "type": "Castle & estate",
+      "setting": "A coastal artillery fort on the Inishowen peninsula overlooking Lough Swilly, with gun emplacements, tunnels and a military museum spread across several linked batteries.",
+      "source_urls": [
+        "https://www.fortdunree.com"
+      ],
+      "official_url": "https://www.fortdunree.com",
+      "commission_url": "https://www.screenireland.ie"
     },
     {
       "id": "ie-glendalough",
@@ -6582,6 +7697,36 @@
       }
     },
     {
+      "id": "ie-milk-market-limerick",
+      "name": "Milk Market",
+      "country": "Ireland",
+      "region": "County Limerick",
+      "lat": 52.6636,
+      "lng": -8.6221,
+      "type": "Bar, restaurant & shop",
+      "setting": "Limerick's covered market square dating to the Georgian era, with a glazed roof over stalls, a weekend food and craft market, and a permanent cafe and bar.",
+      "source_urls": [
+        "https://www.milkmarketlimerick.ie"
+      ],
+      "official_url": "https://www.milkmarketlimerick.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
+      "id": "ie-muckross-house",
+      "name": "Muckross House",
+      "country": "Ireland",
+      "region": "County Kerry",
+      "lat": 52.0183,
+      "lng": -9.504,
+      "type": "House & apartment",
+      "setting": "A Victorian mansion within Killarney National Park, with furnished period rooms, walled gardens and a working farm, run as a visitor attraction with corporate hire.",
+      "source_urls": [
+        "https://muckross-house.ie"
+      ],
+      "official_url": "https://muckross-house.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
       "id": "ie-pearse-museum",
       "name": "Pearse Museum & St Enda's Park",
       "country": "Ireland",
@@ -6620,6 +7765,36 @@
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/",
       "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-powerscourt-estate",
+      "name": "Powerscourt Estate",
+      "country": "Ireland",
+      "region": "County Wicklow",
+      "lat": 53.1847,
+      "lng": -6.1869,
+      "type": "House & apartment",
+      "setting": "A Palladian mansion and formal gardens in the Wicklow hills, with terraces, a walled garden, a waterfall and outbuildings converted into shops and a restaurant.",
+      "source_urls": [
+        "https://www.powerscourt.ie"
+      ],
+      "official_url": "https://www.powerscourt.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
+      "id": "ie-richmond-barracks",
+      "name": "Richmond Barracks",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3385,
+      "lng": -6.3162,
+      "type": "Hospital, prison & institution",
+      "setting": "A former British Army barracks in Inchicore built from 1810, now a heritage centre with a restored gymnasium hall, library and gardens, and a published venue hire service.",
+      "source_urls": [
+        "https://www.richmondbarracks.ie"
+      ],
+      "official_url": "https://www.richmondbarracks.ie",
+      "commission_url": "https://www.screenireland.ie"
     },
     {
       "id": "skellig-michael",
@@ -6663,6 +7838,21 @@
         "author": "National Library of Ireland on The Commons",
         "license": "No restrictions"
       }
+    },
+    {
+      "id": "ie-spike-island",
+      "name": "Spike Island",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.8342,
+      "lng": -8.2857,
+      "type": "Hospital, prison & institution",
+      "setting": "A fortified island in Cork Harbour with a star-shaped fort and a Victorian-era prison, now open to visitors with cell blocks, tunnels and gun batteries.",
+      "source_urls": [
+        "https://spikeislandcork.ie"
+      ],
+      "official_url": "https://spikeislandcork.ie",
+      "commission_url": "https://www.screenireland.ie"
     },
     {
       "id": "ie-strokestown-park",
@@ -6754,6 +7944,21 @@
       }
     },
     {
+      "id": "ie-university-of-galway",
+      "name": "University of Galway",
+      "country": "Ireland",
+      "region": "County Galway",
+      "lat": 53.2936,
+      "lng": -9.0751,
+      "type": "Office, school & public building",
+      "setting": "A university on the River Corrib with a 19th-century Tudor-Gothic quadrangle building alongside later teaching blocks, laboratories and student residences.",
+      "source_urls": [
+        "https://www.universityofgalway.ie"
+      ],
+      "official_url": "https://www.universityofgalway.ie",
+      "commission_url": "https://www.screenireland.ie"
+    },
+    {
       "id": "ie-wicklows-historic-gaol",
       "name": "Wicklow's Historic Gaol",
       "country": "Ireland",
@@ -6812,6 +8017,21 @@
         "author": "Didier Descouens",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-arsenale-di-venezia",
+      "name": "Arsenale di Venezia",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.4354,
+      "lng": 12.3533,
+      "type": "Industrial & derelict",
+      "setting": "The historic Venetian state shipyard, a walled complex of docks, cranes and covered building halls dating back to the twelfth century, partly used today for exhibitions.",
+      "source_urls": [
+        "https://www.arsenale.it"
+      ],
+      "official_url": "https://www.arsenale.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-base-milano",
@@ -6901,6 +8121,21 @@
       }
     },
     {
+      "id": "it-caffe-meletti",
+      "name": "Caffe Meletti",
+      "country": "Italy",
+      "region": "Marche",
+      "lat": 42.8543,
+      "lng": 13.5753,
+      "type": "Bar, restaurant & shop",
+      "setting": "A Liberty-style historic cafe on the main square of Ascoli Piceno, with marble tables, mirrored walls and an upstairs anisette museum, open to the public since 1907.",
+      "source_urls": [
+        "https://www.caffemeletti.it"
+      ],
+      "official_url": "https://www.caffemeletti.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-campo-imperatore-gran-sasso",
       "name": "Campo Imperatore, Gran Sasso",
       "country": "Italy",
@@ -6914,6 +8149,23 @@
       ],
       "official_url": "https://www.gransassolagapark.it/",
       "commission_url": "https://www.abruzzofilmcommission.com/"
+    },
+    {
+      "id": "it-carcere-di-volturara-appula",
+      "name": "Carcere di Volturara Appula",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.4958,
+      "lng": 15.052,
+      "type": "Hospital, prison & institution",
+      "setting": "A former small-town prison building in the hill village of Volturara Appula, in the Daunian Mountains, listed in Italy's national locations database as a disused institutional building.",
+      "source_urls": [
+        "https://www.comune.volturaraappula.fg.it",
+        "https://www.italyformovies.it/location?pagina=3"
+      ],
+      "url": "https://www.italyformovies.it/location?pagina=3",
+      "official_url": "https://www.comune.volturaraappula.fg.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "cinecitta",
@@ -6943,6 +8195,21 @@
       }
     },
     {
+      "id": "it-cineteca-di-bologna",
+      "name": "Cineteca di Bologna (Cinema Lumiere)",
+      "country": "Italy",
+      "region": "Emilia-Romagna",
+      "lat": 44.5024,
+      "lng": 11.3342,
+      "type": "Theatre, arena & venue",
+      "setting": "A film archive and cinema complex in Bologna's former Manifattura delle Arti tobacco factory, with two screening theatres and a laboratory that restores classic films.",
+      "source_urls": [
+        "https://www.cinetecadibologna.it"
+      ],
+      "official_url": "https://www.cinetecadibologna.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-citta-della-scienza",
       "name": "Città della Scienza",
       "country": "Italy",
@@ -6962,6 +8229,21 @@
         "author": "Pinotto992",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "it-aeroporto-di-comiso",
+      "name": "Comiso Airport",
+      "country": "Italy",
+      "region": "Sicily",
+      "lat": 36.9943,
+      "lng": 14.6072,
+      "type": "Transport & infrastructure",
+      "setting": "A regional airport in south-eastern Sicily built on a former NATO air base, with 1980s military hangars and runway infrastructure alongside its current civilian terminal.",
+      "source_urls": [
+        "https://www.aeroportodicomiso.eu"
+      ],
+      "official_url": "https://www.aeroportodicomiso.eu",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-craco",
@@ -7012,6 +8294,21 @@
       }
     },
     {
+      "id": "it-forte-di-bard",
+      "name": "Forte di Bard",
+      "country": "Italy",
+      "region": "Aosta Valley",
+      "lat": 45.6081,
+      "lng": 7.745,
+      "type": "Castle & estate",
+      "setting": "A nineteenth-century Savoy fortress rebuilt on a rock outcrop above the village of Bard, now housing museum galleries and event spaces within its stone ramparts over the Dora Baltea valley.",
+      "source_urls": [
+        "https://www.fortedibard.it"
+      ],
+      "official_url": "https://www.fortedibard.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-grand-hotel-et-de-milan",
       "name": "Grand Hotel et de Milan",
       "country": "Italy",
@@ -7031,6 +8328,21 @@
         "author": "Geobia",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-grand-hotel-rimini",
+      "name": "Grand Hotel Rimini",
+      "country": "Italy",
+      "region": "Emilia-Romagna",
+      "lat": 44.0727,
+      "lng": 12.5766,
+      "type": "Hotel & interiors",
+      "setting": "A Belle Epoque seafront hotel from 1908 with formal gardens, a domed reception hall and period guest rooms facing the Adriatic, long associated with Rimini's own Federico Fellini.",
+      "source_urls": [
+        "https://www.grandhotelrimini.com"
+      ],
+      "official_url": "https://www.grandhotelrimini.com",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-grand-hotel-villa-serbelloni",
@@ -7067,6 +8379,21 @@
       ],
       "official_url": "https://www.museodelcarbone.it/",
       "commission_url": "https://www.sardegnafilmcommission.it/"
+    },
+    {
+      "id": "it-interporto-di-padova",
+      "name": "Interporto di Padova",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.3849,
+      "lng": 11.9306,
+      "type": "Industrial & derelict",
+      "setting": "A large freight and logistics hub south-east of Padua, with warehouses, container yards, rail sidings and road access built for intermodal cargo handling.",
+      "source_urls": [
+        "https://www.interportopd.it"
+      ],
+      "official_url": "https://www.interportopd.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-ivrea-industrial-city",
@@ -7131,6 +8458,38 @@
         "author": "sailko",
         "license": "CC BY 2.5"
       }
+    },
+    {
+      "id": "it-masseria-marinella",
+      "name": "Masseria Marinella",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 40.7629,
+      "lng": 16.5568,
+      "type": "House & apartment",
+      "setting": "A working fortified farmhouse estate on the plateau outside Altamura, with whitewashed courtyard buildings, olive groves and grazing land typical of the Murgia countryside.",
+      "source_urls": [
+        "https://www.masseriamarinella.it",
+        "https://www.italyformovies.it/location?pagina=7"
+      ],
+      "url": "https://www.italyformovies.it/location?pagina=7",
+      "official_url": "https://www.masseriamarinella.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
+      "id": "it-maxxi",
+      "name": "MAXXI - National Museum of 21st Century Arts",
+      "country": "Italy",
+      "region": "Lazio",
+      "lat": 41.9288,
+      "lng": 12.4667,
+      "type": "Modern architecture",
+      "setting": "Zaha Hadid's 2010 museum building in Rome, built on the site of a former army barracks, with curving concrete galleries, a black steel staircase and large open exhibition halls.",
+      "source_urls": [
+        "https://www.fondazionemaxxi.it"
+      ],
+      "official_url": "https://www.fondazionemaxxi.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-mercato-centrale-firenze",
@@ -7202,6 +8561,36 @@
       }
     },
     {
+      "id": "it-muse-trento",
+      "name": "MUSE - Science Museum of Trento",
+      "country": "Italy",
+      "region": "Trentino-Alto Adige",
+      "lat": 46.0626,
+      "lng": 11.1147,
+      "type": "Modern architecture",
+      "setting": "Renzo Piano's 2013 science museum in Trento, a stepped glass and steel structure across several floors of exhibition space, part of the redeveloped Le Albere riverside district.",
+      "source_urls": [
+        "https://www.muse.it"
+      ],
+      "official_url": "https://www.muse.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
+      "id": "it-museo-del-vetro-piegaro",
+      "name": "Museo del Vetro di Piegaro",
+      "country": "Italy",
+      "region": "Umbria",
+      "lat": 42.9699,
+      "lng": 12.0866,
+      "type": "Industrial & derelict",
+      "setting": "A former nineteenth-century glass furnace in the hill town of Piegaro, converted into a museum that preserves the kilns and displays glassware made on site until the factory closed in 1968.",
+      "source_urls": [
+        "https://www.museodelvetro.it"
+      ],
+      "official_url": "https://www.museodelvetro.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-ogr-torino",
       "name": "OGR Torino",
       "country": "Italy",
@@ -7248,6 +8637,21 @@
       }
     },
     {
+      "id": "it-palaflorio",
+      "name": "PalaFlorio",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.1016,
+      "lng": 16.9067,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor arena in Bari used for basketball, concerts and trade events, with tiered seating around a large flat floor.",
+      "source_urls": [
+        "https://www.palaflorio.it"
+      ],
+      "official_url": "https://www.palaflorio.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-eur-palazzo-congressi",
       "name": "Palazzo dei Congressi, EUR",
       "country": "Italy",
@@ -7267,6 +8671,21 @@
       ],
       "official_url": "https://www.eurspa.it/",
       "commission_url": "https://www.romalaziofilmcommission.it/"
+    },
+    {
+      "id": "it-piscina-delle-rose",
+      "name": "Piscina delle Rose",
+      "country": "Italy",
+      "region": "Lazio",
+      "lat": 41.8308,
+      "lng": 12.4625,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1950s open-air lido in Rome's EUR district, with a large rectangular pool, sunbathing terraces and Rationalist-style changing pavilions.",
+      "source_urls": [
+        "https://www.piscinadellerose.net"
+      ],
+      "official_url": "https://www.piscinadellerose.net",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-bologna-porticoes",
@@ -7315,6 +8734,21 @@
       }
     },
     {
+      "id": "it-porto-di-gioia-tauro",
+      "name": "Porto di Gioia Tauro",
+      "country": "Italy",
+      "region": "Calabria",
+      "lat": 38.4591,
+      "lng": 15.9108,
+      "type": "Transport & infrastructure",
+      "setting": "Italy's largest container transshipment port on the Calabrian coast, with long quays, gantry cranes and stacked container yards handling international freight.",
+      "source_urls": [
+        "https://www.portodigioiatauro.it"
+      ],
+      "official_url": "https://www.portodigioiatauro.it",
+      "commission_url": "https://www.italyformovies.it"
+    },
+    {
       "id": "it-porto-vecchio-trieste",
       "name": "Porto Vecchio di Trieste",
       "country": "Italy",
@@ -7328,6 +8762,21 @@
       ],
       "official_url": "https://www.adspmao.it/",
       "commission_url": "https://www.fvgfilmcommission.com/"
+    },
+    {
+      "id": "it-san-leucio",
+      "name": "Real Fabbrica di San Leucio",
+      "country": "Italy",
+      "region": "Campania",
+      "lat": 41.0991,
+      "lng": 14.3158,
+      "type": "Industrial & derelict",
+      "setting": "A royal silk-manufacturing complex built by the Bourbon court above Caserta, with weaving halls, workers' housing and machinery from its eighteenth-century silk mill, part of the Caserta Palace UNESCO site.",
+      "source_urls": [
+        "https://reggiadicaserta.cultura.gov.it"
+      ],
+      "official_url": "https://reggiadicaserta.cultura.gov.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-san-siro-stadium",
@@ -7435,6 +8884,21 @@
         "author": "Vinpao",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-teatro-petruzzelli",
+      "name": "Teatro Petruzzelli",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.1236,
+      "lng": 16.8732,
+      "type": "Theatre, arena & venue",
+      "setting": "Bari's late nineteenth-century opera house, one of Italy's largest theatres, rebuilt after a 1991 fire with its horseshoe auditorium and gilded boxes restored.",
+      "source_urls": [
+        "https://www.fondazionepetruzzelli.it"
+      ],
+      "official_url": "https://www.fondazionepetruzzelli.it",
+      "commission_url": "https://www.italyformovies.it"
     },
     {
       "id": "it-napoli-metro-toledo",
@@ -7545,6 +9009,21 @@
       }
     },
     {
+      "id": "mt-domvs-romana",
+      "name": "Domvs Romana",
+      "country": "Malta",
+      "region": "Northern Region",
+      "lat": 35.8852,
+      "lng": 14.4003,
+      "type": "Office, school & public building",
+      "setting": "A Roman-era townhouse excavated at Rabat next to Mdina, with in-situ mosaic floors under a purpose-built museum pavilion managed by Heritage Malta.",
+      "source_urls": [
+        "https://heritagemalta.mt/explore/domvs-romana/"
+      ],
+      "official_url": "https://heritagemalta.mt/explore/domvs-romana/",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
       "id": "mt-dwejra",
       "name": "Dwejra",
       "country": "Malta",
@@ -7635,6 +9114,36 @@
       }
     },
     {
+      "id": "mt-is-suq-tal-belt",
+      "name": "Is-Suq tal-Belt",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8978,
+      "lng": 14.5145,
+      "type": "Bar, restaurant & shop",
+      "setting": "Valletta's restored Victorian-era iron market hall on Merchant Street, now a food court and market with its original cast-iron structure kept intact.",
+      "source_urls": [
+        "https://www.issuqtalbelt.com"
+      ],
+      "official_url": "https://www.issuqtalbelt.com",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
+      "id": "mt-malta-aviation-museum",
+      "name": "Malta Aviation Museum",
+      "country": "Malta",
+      "region": "Northern Region",
+      "lat": 35.8934,
+      "lng": 14.4161,
+      "type": "Industrial & derelict",
+      "setting": "An aircraft collection on the former RAF Ta' Qali airfield, with hangars, several WWII-era aircraft under restoration and open apron space.",
+      "source_urls": [
+        "https://maltaaviationmuseum.com"
+      ],
+      "official_url": "https://maltaaviationmuseum.com",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
       "id": "malta-film-studios",
       "name": "Malta Film Studios",
       "country": "Malta",
@@ -7652,6 +9161,21 @@
         "author": "Frank Vincentz",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "mt-malta-airport",
+      "name": "Malta International Airport",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8492,
+      "lng": 14.4953,
+      "type": "Transport & infrastructure",
+      "setting": "Malta's only commercial airport, at Luqa, with a single passenger terminal, aircraft apron and a public viewing area, serving as the island's main air gateway.",
+      "source_urls": [
+        "https://www.maltairport.com"
+      ],
+      "official_url": "https://www.maltairport.com",
+      "commission_url": "https://screenmalta.com"
     },
     {
       "id": "mt-malta-maritime-museum",
@@ -7766,6 +9290,51 @@
       }
     },
     {
+      "id": "mt-spazju-kreattiv",
+      "name": "Spazju Kreattiv (St James Cavalier)",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8958,
+      "lng": 14.5103,
+      "type": "Theatre, arena & venue",
+      "setting": "A 16th-century artillery cavalier beside Valletta's city gate, converted into a cultural centre with a cinema, a theatre space and gallery rooms.",
+      "source_urls": [
+        "https://www.spazjukreattiv.org"
+      ],
+      "official_url": "https://www.spazjukreattiv.org",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
+      "id": "mt-inquisitors-palace",
+      "name": "The Inquisitor's Palace",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8872,
+      "lng": 14.5225,
+      "type": "Hospital, prison & institution",
+      "setting": "The former seat and prison of the Roman Inquisition in Birgu, a medieval and baroque building with courtrooms, cells and a walled courtyard, managed by Heritage Malta.",
+      "source_urls": [
+        "https://heritagemalta.mt/explore/the-inquisitors-palace/"
+      ],
+      "official_url": "https://heritagemalta.mt/explore/the-inquisitors-palace/",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
+      "id": "mt-xara-palace-mdina",
+      "name": "The Xara Palace",
+      "country": "Malta",
+      "region": "Northern Region",
+      "lat": 35.8852,
+      "lng": 14.4042,
+      "type": "Hotel & interiors",
+      "setting": "A 17th-century palazzo built into Mdina's bastion walls, converted into a small hotel with period rooms, a rooftop restaurant and views over the surrounding countryside.",
+      "source_urls": [
+        "https://www.xarapalace.com.mt"
+      ],
+      "official_url": "https://www.xarapalace.com.mt",
+      "commission_url": "https://screenmalta.com"
+    },
+    {
       "id": "mt-university-of-malta",
       "name": "University of Malta",
       "country": "Malta",
@@ -7785,6 +9354,21 @@
         "author": "Chell Hill",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "mt-valletta-cruise-port",
+      "name": "Valletta Cruise Port",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8919,
+      "lng": 14.5101,
+      "type": "Transport & infrastructure",
+      "setting": "The cruise and ferry terminal on Valletta's Grand Harbour waterfront, with quaysides below the bastions, former warehouses converted into shops, and views across to the Three Cities.",
+      "source_urls": [
+        "https://www.vallettacruiseport.com"
+      ],
+      "official_url": "https://www.vallettacruiseport.com",
+      "commission_url": "https://screenmalta.com"
     },
     {
       "id": "mt-valletta-design-cluster",
@@ -11038,6 +12622,21 @@
         "author": "No machine-readable author provided. Basilivh assumed (based on copyright claims).",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "se-slagthuset",
+      "name": "Slagthuset",
+      "country": "Sweden",
+      "region": "Skåne",
+      "lat": 55.6112,
+      "lng": 13.0019,
+      "type": "Theatre, arena & venue",
+      "setting": "A former municipal abattoir in Malmo's harbour district converted into an event venue, keeping its industrial brick halls for concerts, conferences and large private functions.",
+      "source_urls": [
+        "https://slagthuset.se"
+      ],
+      "official_url": "https://slagthuset.se",
+      "commission_url": "https://filmiskane.se"
     },
     {
       "id": "se-universeum",
