@@ -3,6 +3,8 @@
   "ids": {
     "uk-cains-brewery-village": "eigen domein toont een lege 'Welcome to your new website'-pagina",
     "uk-titan-crane": "titanclydebank.com stuurt door naar een restaurant, geen werkende pagina van de locatie",
-    "es-carcel-de-segovia": "lacarceldesegovia.com is overgenomen en stuurt door naar een goksite"
+    "es-carcel-de-segovia": "lacarceldesegovia.com is overgenomen en stuurt door naar een goksite",
+    "hr-vis-military-tunnels": "tz-vis.hr is een verlopen domein met spam erop, geen pagina van de locatie",
+    "pt-lx-factory": "lxfactory.com toont alleen een afbeelding zonder inhoud; terug zodra hun site weer werkt"
   }
 }

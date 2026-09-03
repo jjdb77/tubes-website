@@ -1064,6 +1064,7 @@
       "lng": 15.9634,
       "type": "Theatre, arena & venue",
       "setting": "Indoor arena at Zagreb's Cibona sports complex with seating for around 5,400, home court of KK Cibona and a regular venue for concerts and other events.",
+      "capacity": 4640,
       "source_urls": [
         "https://www.cibona.com/",
         "https://filmzagreb.hr/?product_cat=sport"
@@ -1175,9 +1176,12 @@
       "lng": 15.9404,
       "type": "Industrial & derelict",
       "setting": "Former Zagreb textile and later arms factory converted into an open art house, with a large column-free exhibition hall, glass additions and a sculpture garden.",
+      "capacity": 2000,
+      "facilities": "1,350 sq m of exhibition space; the venue states it can host groups of 20 to 2,000 guests, for dinners, concerts, conferences, weddings, workshops, film screenings and theatre performances.",
       "source_urls": [
         "https://lauba.hr/en/",
-        "https://filmzagreb.hr/?product_cat=other"
+        "https://filmzagreb.hr/?product_cat=other",
+        "https://www.lauba.hr/en/your-event-in-lauba/"
       ],
       "url": "https://filmzagreb.hr/?product_cat=other",
       "official_url": "https://lauba.hr/en/",
@@ -1282,10 +1286,15 @@
       "type": "Theatre, arena & venue",
       "setting": "Roman stone amphitheatre in central Pula whose surviving outer wall and tiered seating host summer concerts, the Pula Film Festival and other large outdoor events.",
       "known_for": "Pula Film Festival (host venue)",
+      "price_note": "Filming or event use for up to 30 minutes while the site stays open to the public: EUR 5,000 plus VAT; longer use that closes the amphitheatre to visitors is priced separately, per a document not published on the page (own site).",
+      "suitability": "Site states that using the amphitheatre for filming or events requires consent from the City of Pula, in addition to approval from the Conservation Department in Pula and the Archaeological Museum of Istria, which manages the venue.",
+      "permit_needed": "Yes",
+      "logistics": "Requests for use up to 30 minutes must be submitted at least 15 days in advance to the Archaeological Museum of Istria (uprava.ami@gmail.com); use of over 30 minutes that closes the site to the public depends on the city's official annual event calendar, so approval cannot be guaranteed until that programme is announced.",
       "source_urls": [
         "https://www.arenapula.hr/",
         "https://www.istriafilmcommission.com/",
-        "https://en.wikipedia.org/wiki/Pula_Arena"
+        "https://en.wikipedia.org/wiki/Pula_Arena",
+        "https://www.arenapula.hr/hr/o-amfiteatru/informacije-za-najam/"
       ],
       "official_url": "https://www.arenapula.hr/",
       "commission_url": "https://www.istriafilmcommission.com/",
@@ -1327,7 +1336,7 @@
         "https://tvrdjava-kulture.hr/en/",
         "https://en.wikipedia.org/wiki/Fortress_of_St._Nicholas,_%C5%A0ibenik"
       ],
-      "official_url": "https://tvrdjava-kulture.hr/en/",
+      "official_url": "https://www.sibenik-tourism.hr/",
       "commission_url": "https://filmingincroatia.hr/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Aerial_image_of_St._Nicholas_Fortress_%28view_from_the_southeast%29.jpg/960px-Aerial_image_of_St._Nicholas_Fortress_%28view_from_the_southeast%29.jpg",
@@ -1384,24 +1393,6 @@
       }
     },
     {
-      "id": "hr-vis-military-tunnels",
-      "name": "Vis Military Tunnels",
-      "country": "Croatia",
-      "region": "Split-Dalmatia County",
-      "lat": 43.0434,
-      "lng": 16.1655,
-      "type": "Industrial & derelict",
-      "setting": "Concrete tunnels cut into the hillsides of Vis by the Yugoslav army when the island was a closed military zone, now partly open to visitors and used as wine cellars.",
-      "known_for": "Mamma Mia! Here We Go Again (2018)",
-      "source_urls": [
-        "https://tz-vis.hr/en/",
-        "https://en.wikipedia.org/wiki/Vis_(town)",
-        "https://filmingincroatia.hr/"
-      ],
-      "official_url": "https://tz-vis.hr/en/",
-      "commission_url": "https://filmingincroatia.hr/"
-    },
-    {
       "id": "hr-zagreb-fair",
       "name": "Zagreb Fair",
       "country": "Croatia",
@@ -1410,9 +1401,11 @@
       "lng": 15.9722,
       "type": "Office, school & public building",
       "setting": "Mid-twentieth-century trade fair ground south of the Sava with modernist exhibition pavilions, large halls and an open showground used for trade events year round.",
+      "facilities": "132,000 sq m of pavilion space and 6,000 sq m of open-air space; the Technology Park occupies pavilion 12, at 5,000 sq m.",
       "source_urls": [
         "https://www.zv.hr/en",
-        "https://filmzagreb.hr/?product_cat=arhitecture"
+        "https://filmzagreb.hr/?product_cat=arhitecture",
+        "https://www.zv.hr/space-rental-3216/3216"
       ],
       "url": "https://filmzagreb.hr/?product_cat=arhitecture",
       "official_url": "https://www.zv.hr/en",
@@ -4653,7 +4646,7 @@
       "source_urls": [
         "https://www.grandebretagne.com/"
       ],
-      "official_url": "https://www.grandebretagne.com/",
+      "official_url": "https://www.marriott.com/en-us/hotels/athlc-hotel-grande-bretagne-a-luxury-collection-hotel-athens/overview/",
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
@@ -4668,7 +4661,7 @@
       "source_urls": [
         "https://www.lavrio.gr/"
       ],
-      "official_url": "https://www.lavrio.gr/",
+      "official_url": "http://www.ltp.ntua.gr/",
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
@@ -4680,8 +4673,12 @@
       "lng": 23.7488,
       "type": "Theatre, arena & venue",
       "setting": "Marble-clad concert hall complex in central Athens with several auditoriums, the largest seating around two thousand, plus rehearsal and conference spaces.",
+      "capacity": 1960,
+      "facilities": "Christos Lambrakis Hall: fixed theatre-style seating for 1,960 (1,100 stalls, 860 circle) with 2,500 m2 of foyer space and 24 stage fly bars. Alexandra Trianti Hall: fixed seating for 1,500, 1,200 m2 of foyer space, 4 stage platforms of 4m x 16m each, a central stage revolve, and loading-bay access to stage level for one 18m truck (45 tonnes) plus one 10m truck.",
       "source_urls": [
-        "https://www.megaron.gr/en/"
+        "https://www.megaron.gr/en/",
+        "https://www.megaron.gr/en/halls-and-meeting-spaces-of-megaron/christos-lambrakis-hall/",
+        "https://www.megaron.gr/en/halls-and-meeting-spaces-of-megaron/alexandra-trianti-hall/"
       ],
       "official_url": "https://www.megaron.gr/en/",
       "commission_url": "https://filmcommission.gr/locations/"
@@ -4747,13 +4744,16 @@
       "country": "Greece",
       "region": "Thermi, Central Macedonia",
       "lat": 40.55,
-      "lng": 23.016667,
+      "lng": 23.0167,
       "type": "Studio & backlot",
       "setting": "Purpose-built studio complex near Thessaloniki airport with eight sound stages totalling about 15,000 square metres and a 25,000 square metre backlot.",
       "known_for": "Expend4bles (2023)",
+      "facilities": "10 sound stages from 290 m2 to 1,764 m2. Largest are Stage 6 at 1,764 m2 (49m x 36m, 12m height), Stage 5 at 1,500 m2 (60m x 25m, 11.95m height) and Stage 7 at 1,470 m2 (49m x 30m, 12m height). Also includes a dedicated underwater tank stage (Stage 9, 1,180 m2, 13m height) and a motion capture stage (Stage 4, 290 m2).",
+      "source_urls": [
+        "https://nuboyana.com/sound-stages/"
+      ],
       "official_url": "https://nuboyana.com/",
-      "commission_url": "https://filmcommission.gr/locations/",
-      "photo": null
+      "commission_url": "https://filmcommission.gr/locations/"
     },
     {
       "id": "gr-oaka-athens-olympic-complex",
@@ -4764,8 +4764,12 @@
       "lng": 23.7853,
       "type": "Theatre, arena & venue",
       "setting": "Olympic athletics stadium and sports complex in Athens with a Santiago Calatrava glass and steel roof, an indoor arena, velodrome and swimming pools on the same grounds.",
+      "capacity": 69618,
+      "facilities": "Central Olympic Stadium seats 69,618, with a football pitch of 105m x 68m and a 400m athletics track with 9 lanes. Includes 14 official suites, 480 press seats and 2 TV broadcast suites. The roof, added for the 2004 Olympics, was designed by Santiago Calatrava.",
+      "logistics": "3 parking facilities at the stadium.",
       "source_urls": [
-        "https://www.oaka.com.gr/en/"
+        "https://www.oaka.com.gr/en/",
+        "https://oaka.com.gr/egkatastaseis/kentriko-olympiako-stadio/"
       ],
       "official_url": "https://www.oaka.com.gr/en/",
       "commission_url": "https://filmcommission.gr/locations/"
@@ -6466,8 +6470,13 @@
       "lng": 9.1645,
       "type": "Industrial & derelict",
       "setting": "Former Ansaldo machine works in Milan's Tortona district, converted into a co-working and cultural hub whose large industrial halls host exhibitions, fashion events and shoots.",
+      "capacity": 1000,
+      "facilities": "The venue's own venue fact sheet (2025) lists: Ground Hall 400 sqm, ceiling height 8.3 m, capacity 200 seated or 1,000 standing; Bistro 120 sqm, 80 seated or 150 standing; Room 1400 1,200 sqm, 350 seated or 1,000 standing; Room 2100 2,000 sqm, divisible into Room 2100/2 at 800 sqm; YesRoom 185 sqm, capacity 80; rooftop Terrazza, capacity up to 70. Rigging points rated 100 kg per point, freight lift shared between rooms, heating and air conditioning, wifi on request, blackout curtains in the Ground Hall.",
+      "suitability": "The fact sheet lists photo and video shoots among permitted uses for Room 1400, Room 2100, CasaBASE and the rooftop terrace, and offers a permits and security-protocol management service as an extra.",
+      "logistics": "Entrances at Via Bergognone 34 and Via Tortona 54, Milan; extra services listed include guest accreditation, security and permit management.",
       "source_urls": [
-        "https://base.milano.it/"
+        "https://base.milano.it/",
+        "https://base.milano.it/wp-content/uploads/schedavenue2025_ita.pdf"
       ],
       "official_url": "https://base.milano.it/",
       "commission_url": "https://italianfilmcommissions.it/"
@@ -6524,9 +6533,11 @@
       "type": "Bar, restaurant & shop",
       "setting": "Coffee house on Saint Mark's Square in Venice open since 1720, with a sequence of small decorated rooms, mirrors and painted panels largely unchanged since the 19th century.",
       "known_for": "Casino Royale (2006), The Tourist (2010)",
+      "suitability": "The venue states it has been a filming location for films, citing The Talented Mr. Ripley, and says it is frequently requested for advertisements, photo shoots and fashion productions.",
       "source_urls": [
         "https://www.caffeflorian.com/",
-        "https://en.wikipedia.org/wiki/Caff%C3%A8_Florian"
+        "https://en.wikipedia.org/wiki/Caff%C3%A8_Florian",
+        "https://caffeflorian.com/servizi/organizza-un-evento/"
       ],
       "official_url": "https://www.caffeflorian.com/",
       "commission_url": "https://www.venetofilmcommission.com/",
@@ -6632,8 +6643,12 @@
       "lng": 9.172,
       "type": "Industrial & derelict",
       "setting": "Former 19th-century tram and rail-carriage factory in Milan, now a municipal cultural centre with industrial brick halls and an outdoor yard used for exhibitions and events.",
+      "facilities": "The spaces page lists: Spazio Cattedrale (three naves plus atrium), Sala Colonne (four internal pillars), Spazio Messina (two levels with lift access), Spazio Cisterne (two levels with roof terrace), Atelier Cisterne, Sala Conferenze (chairs, table, projector) and an outdoor Piazzale. No square meters or capacities are published.",
+      "suitability": "The site states that photographic, cinematographic and television filming is allowed, subject to checking space availability by email and downloading an authorisation request form.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.fabbricadelvapore.org/"
+        "https://www.fabbricadelvapore.org/",
+        "https://www.fabbricadelvapore.org/chi-siamo/spazi/"
       ],
       "official_url": "https://www.fabbricadelvapore.org/",
       "commission_url": "https://italianfilmcommissions.it/"
@@ -6744,8 +6759,11 @@
       "lng": 11.2295,
       "type": "Industrial & derelict",
       "setting": "Former state tobacco factory in Florence, redeveloped into a mixed district with courtyards, industrial-style halls and a dedicated events venue called Motel.",
+      "facilities": "The Motel event space (Building B3, available from March 2026) has 3,000 sqm of usable area, offered in configurations of 500, 1,000 or 1,500 sqm.",
+      "suitability": "The venue's own page lists fashion shows, photo shoots and conventions among permitted uses, and describes the space as a film and television location.",
       "source_urls": [
-        "https://www.manifatturatabacchi.com/"
+        "https://www.manifatturatabacchi.com/",
+        "https://www.manifatturatabacchi.com/motel/"
       ],
       "official_url": "https://www.manifatturatabacchi.com/",
       "commission_url": "https://www.toscanafilmcommission.it/"
@@ -6774,8 +6792,12 @@
       "lng": 9.2044,
       "type": "Transport & infrastructure",
       "setting": "Monumental 1931 railway terminus in Milan with a vast steel-and-glass train shed, marble ticket halls and Art Deco and Assyrian-influenced decoration across several levels.",
+      "suitability": "The national rail operator's site states that its stations can host film and TV sets, photo shoots, commercials and music videos, subject to advance email notice to reorganise station flows. Note: the page covers the station network generally (it names Napoli Centrale and Torino Porta Susa as examples) and does not name Milano Centrale specifically.",
+      "permit_needed": "Yes",
+      "logistics": "Filming requests go through productplacement@fsitaliane.it (own site).",
       "source_urls": [
-        "https://www.rfi.it/"
+        "https://www.rfi.it/",
+        "https://www.rfi.it/it/stazioni/pagine-stazioni/spazi-per/Shooting-set-e-Product-Placement.html"
       ],
       "official_url": "https://www.rfi.it/",
       "commission_url": "https://italianfilmcommissions.it/",
@@ -6795,8 +6817,10 @@
       "lng": 7.6936,
       "type": "Office, school & public building",
       "setting": "Nineteenth-century domed landmark in Turin housing the National Cinema Museum, with a spiral ramp, a central exhibition hall beneath the dome and a glass panoramic lift to the top.",
+      "suitability": "The museum's own event page states its spaces lend themselves to photo shoots and film/TV productions, with a separate contact for filming and photography requests (comunicazione@museocinema.it) distinct from press enquiries (ufficiostampa@museocinema.it).",
       "source_urls": [
-        "https://www.museocinema.it/"
+        "https://www.museocinema.it/",
+        "https://www.museocinema.it/it/organizza-un-evento"
       ],
       "official_url": "https://www.museocinema.it/",
       "commission_url": "https://www.fctp.it/",
@@ -6816,8 +6840,12 @@
       "lng": 7.6614,
       "type": "Industrial & derelict",
       "setting": "Former 19th-century railway repair workshop in Turin, restored into a steel-and-glass exhibition and event hall with an attached production and rehearsal wing.",
+      "capacity": 2750,
+      "facilities": "The corporate events page lists two main halls: one of 4,000 sqm (including stage and backstage) holding up to 2,750 people standing in an empty configuration, and a second hall of 300 sqm with a maximum of 150 seated theatre-style, rented empty with no in-house technical equipment. A staffed cloakroom holds up to 900 items.",
+      "logistics": "Loading access for large vehicles is about 30 m from the stage for the main hall and about 20 m from the second hall, with level access throughout (own site).",
       "source_urls": [
-        "https://ogrtorino.it/"
+        "https://ogrtorino.it/",
+        "https://ogrtorino.it/corporate-events"
       ],
       "official_url": "https://ogrtorino.it/",
       "commission_url": "https://www.fctp.it/",
@@ -6853,9 +6881,13 @@
       "type": "Office, school & public building",
       "setting": "Rationalist congress hall in Rome's EUR district, built for a cancelled 1942 world's fair, with a marble facade, a colonnaded portico and a large domed hall, managed by EUR SpA.",
       "known_for": "L'Eclisse (1962), La Grande Bellezza (2013)",
+      "capacity": 5000,
+      "facilities": "The venue's own page states: 30,000 sqm total surface, Salone della Cultura 1,450 sqm with 27 m ceiling height, Auditorium Capitalis 792 seats, Terrazza posteriore amphitheatre for 500, Foyer Kennedy and Foyer Arte 800 sqm each, Terrazza frontale 1,085 sqm, a rear stage area of 774 sqm, and up to 26 meeting rooms ranging from 20 to 250 person capacity.",
+      "logistics": "The site states 1,600 hotel rooms lie within a 2.5 km radius.",
       "source_urls": [
         "https://www.eurspa.it/",
-        "https://en.wikipedia.org/wiki/EUR"
+        "https://en.wikipedia.org/wiki/EUR",
+        "https://www.eurspa.it/polo-congressuale/palazzo-dei-congressi/"
       ],
       "official_url": "https://www.eurspa.it/",
       "commission_url": "https://www.romalaziofilmcommission.it/"
@@ -6890,8 +6922,12 @@
       "lng": 8.928,
       "type": "Transport & infrastructure",
       "setting": "Nineteenth-century harbour warehouses and docks in Genoa, redeveloped for Expo 1992 into a waterfront of piazzas, a marina, an aquarium and event spaces along the old quays.",
+      "capacity": 1480,
+      "facilities": "The site lists 13 halls of varying capacity across the complex, 8,500 sqm gross of exhibition space in the Magazzini del Cotone modules, and a total complex area of 130,000 sqm, stating it hosts over 250 events a year.",
+      "suitability": "The venue's own page describes the complex as a setting for photo and video shoots.",
       "source_urls": [
-        "https://www.portoantico.it/"
+        "https://www.portoantico.it/",
+        "https://portoantico.it/spazi/"
       ],
       "official_url": "https://www.portoantico.it/",
       "commission_url": "https://italianfilmcommissions.it/",
@@ -6926,8 +6962,10 @@
       "lng": 9.124,
       "type": "Theatre, arena & venue",
       "setting": "Multi-tiered football stadium in Milan shared by AC Milan and Inter, with a distinctive spiral-ramp exterior and seating for over 75,000.",
+      "facilities": "The stadium's event page states it has 40 hospitality rooms totalling 3,160 sqm, with a combined event capacity of 2,154 people (1,264 for seated dinners), across Sala Executive 1-3, Sala Arancio, Sky Lounge, Sky Box and Sala Interviste. This is hospitality/event capacity, not match-day stadium capacity.",
       "source_urls": [
-        "https://www.sansirostadium.com/"
+        "https://www.sansirostadium.com/",
+        "https://sansirostadium.com/organizza-un-evento/"
       ],
       "official_url": "https://www.sansirostadium.com/",
       "commission_url": "https://italianfilmcommissions.it/",
@@ -7068,6 +7106,12 @@
       "type": "Castle & estate",
       "setting": "Eighteenth-century villa on a wooded promontory of Lake Como with terraced gardens and open lake panoramas, now a FAI heritage property.",
       "known_for": "Star Wars: Episode II Attack of the Clones (2002), Casino Royale (2006)",
+      "capacity": 130,
+      "facilities": "The venue's own page gives room-by-room figures: La Loggia Durini 60 sqm (ceremony 80-100 people, max 60 seated), Terrazzo a Lago 240 sqm (dinners up to 130), Loggia 90 sqm indoor (dinners up to 75) or 170 sqm indoor plus outdoor (up to 100), Terrazzo Canfora 80 sqm (standing buffet up to 100).",
+      "suitability": "The site states the villa hosts ceremonies, receptions, corporate meetings and 'set cinematografici e pubblicitari' (film and advertising shoots), and says it has served as the backdrop for numerous film and advertising productions. Photo services such as weddings are paid and require advance booking via a named contact.",
+      "source_urls": [
+        "https://fondoambiente.it/luoghi/villa-del-balbianello"
+      ],
       "official_url": "https://fondoambiente.it/luoghi/villa-del-balbianello",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
@@ -7087,6 +7131,8 @@
       "type": "House & apartment",
       "setting": "1930s rationalist villa in central Milan designed by Piero Portaluppi, with period interiors, a garden, swimming pool and tennis court, run as a house museum by FAI.",
       "known_for": "I Am Love (2009)",
+      "facilities": "The venue's own page lists: Sale Pomara Scibetta (basement), 3 adjoining multipurpose rooms totalling 200 sqm; Sala da Pranzo, 43 sqm on the piano nobile; a multipurpose hall of 380 sqm plus a service block (4 toilets, cloakroom, technical room) in the former tennis-court building, with heating and air conditioning; and a garden of 2,000 sqm, partly walkable, with a historic non-swimmable pool.",
+      "suitability": "The site states the villa is used for photo and film shoots ('set fotografici e cinematografici') and names 'Io sono l'amore' (I Am Love, Luca Guadagnino) and 'House of Gucci' (Ridley Scott) as productions filmed there.",
       "source_urls": [
         "https://fondoambiente.it/luoghi/villa-necchi-campiglio"
       ],
@@ -7197,9 +7243,11 @@
       "type": "Castle & estate",
       "setting": "Star-shaped sixteenth-century fort at the tip of the Valletta peninsula, now home to the National War Museum, with bastions, a parade ground and sea-facing ramparts.",
       "known_for": "Assassin's Creed (2016), Da Vinci's Demons (2013-2015)",
+      "suitability": "Listed under Heritage Malta's Exclusive Venues programme as available for product launches, fashion shows, location shoots, corporate meetings, conferences, fine dining events, seminars, weddings and exhibitions. No price or capacity is published; enquiries go through the Exclusive Venues contact form.",
       "source_urls": [
         "https://www.heritagemalta.mt/museums-sites/fort-st-elmo-and-national-war-museum/",
-        "https://en.wikipedia.org/wiki/Fort_Saint_Elmo"
+        "https://en.wikipedia.org/wiki/Fort_Saint_Elmo",
+        "https://heritagemalta.mt/subsidiaries/exclusive-venues-and-fields/"
       ],
       "official_url": "https://www.heritagemalta.mt/museums-sites/fort-st-elmo-and-national-war-museum/",
       "commission_url": "https://screenmalta.com/",
@@ -7220,7 +7268,7 @@
       "type": "Studio & backlot",
       "setting": "State-run studio facility whose two vast exterior water tanks sit on the shoreline so their surfaces blend into the natural sea horizon, complemented by an indoor insert tank.",
       "known_for": "Raise the Titanic (1980), U-571 (2000), Captain Phillips (2013)",
-      "official_url": "https://screenmalta.com/",
+      "official_url": "https://maltafilmstudios.com.mt/",
       "commission_url": "https://screenmalta.com/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Malta_-_Kalkara_-_Triq_Santu_Rokku_-_Mediterranean_Film_Studios_04_ies.jpg/960px-Malta_-_Kalkara_-_Triq_Santu_Rokku_-_Mediterranean_Film_Studios_04_ies.jpg",
@@ -7239,9 +7287,11 @@
       "type": "Industrial & derelict",
       "setting": "Former Royal Naval bakery on the Vittoriosa waterfront, now a museum of Malta's dockyards and Grand Harbour shipping history from the Knights to the twentieth century.",
       "known_for": "Malta Story (1953, depicting the wartime dockyards)",
+      "suitability": "Listed under Heritage Malta's Exclusive Venues programme as available for product launches, fashion shows, location shoots, corporate meetings, conferences, fine dining events, seminars, weddings and exhibitions. No price or capacity is published; enquiries go through the Exclusive Venues contact form.",
       "source_urls": [
         "https://www.heritagemalta.mt/museums-sites/malta-maritime-museum/",
-        "https://en.wikipedia.org/wiki/Malta_Story"
+        "https://en.wikipedia.org/wiki/Malta_Story",
+        "https://heritagemalta.mt/subsidiaries/exclusive-venues-and-fields/"
       ],
       "official_url": "https://www.heritagemalta.mt/museums-sites/malta-maritime-museum/",
       "commission_url": "https://screenmalta.com/",
@@ -7414,9 +7464,17 @@
       "type": "Bar, restaurant & shop",
       "setting": "Row of restored eighteenth-century baroque warehouses along the Grand Harbour quayside, now a strip of restaurants, bars and shops beside the cruise terminal.",
       "known_for": "World War Z (2013)",
+      "capacity": 400,
+      "facilities": "Magazino Hall (built 1727) holds up to 400 guests standing, and has an arched limestone ceiling, an adjoining 130 sq m outdoor courtyard, air conditioning, wifi, on-site parking and drive-in access for staging. The Promenade is a 275 m waterfront walkway lined with food and beverage outlets. Sagrestia Vault & the Chapel is a 16th-century vault with an attached chapel, a separate back-of-house entrance, air conditioning and an outdoor patio.",
+      "suitability": "Under the Stars, an open-air venue on the promenade, is described on the site as having been filmed and photographed by many productions. No filming-specific rules or permit requirements are published for any of the four venue spaces.",
+      "logistics": "On-site discounted parking, plus coach, minibus and private car parking, is available; Magazino Hall and Under the Stars both offer drive-in access for staging and equipment, and Under the Stars has no height restriction for staging.",
       "source_urls": [
         "https://www.vallettawaterfront.com/",
-        "https://en.wikipedia.org/wiki/Valletta_Waterfront"
+        "https://en.wikipedia.org/wiki/Valletta_Waterfront",
+        "https://vallettawaterfront.com/venue-rental/magazino-hall/",
+        "https://vallettawaterfront.com/venue-rental/the-promenade/",
+        "https://vallettawaterfront.com/venue-rental/under-the-stars/",
+        "https://vallettawaterfront.com/venue-rental/sagrestia-vault-the-chapel/"
       ],
       "official_url": "https://www.vallettawaterfront.com/",
       "commission_url": "https://screenmalta.com/",
@@ -9154,21 +9212,6 @@
       ],
       "url": "https://portugalfilmcommission.com/en/location/lousal-mining-museum/",
       "official_url": "https://portugalfilmcommission.com/en/location/lousal-mining-museum/",
-      "commission_url": "https://portugalfilmcommission.com/en/location/"
-    },
-    {
-      "id": "pt-lx-factory",
-      "name": "LX Factory",
-      "country": "Portugal",
-      "region": "Lisbon",
-      "lat": 38.7036,
-      "lng": -9.1774,
-      "type": "Industrial & derelict",
-      "setting": "Former nineteenth-century textile and printing factory complex in Alcantara, now industrial halls, courtyards and a rooftop rented out as creative studios and event and shoot space.",
-      "source_urls": [
-        "https://lxfactory.com/en/"
-      ],
-      "official_url": "https://lxfactory.com/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
