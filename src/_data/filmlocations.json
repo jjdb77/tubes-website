@@ -15,7 +15,13 @@
         "https://www.bergisel.info/"
       ],
       "official_url": "https://www.bergisel.info/",
-      "commission_url": "https://www.cinetirol.com/en/"
+      "commission_url": "https://www.cinetirol.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bergiselschanze04.jpg/960px-Bergiselschanze04.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bergiselschanze04.jpg",
+        "author": "Daniel Wagner at de.wikipedia",
+        "license": "Public domain"
+      }
     },
     {
       "id": "at-erzberg",
@@ -26,11 +32,18 @@
       "lng": 14.9118,
       "type": "Industrial & derelict",
       "setting": "Open-pit iron ore mine near Eisenerz with terraced orange slopes over 700 metres high, a tourist park offering truck and cable tours through the workings, and host to the annual Erzbergrodeo enduro race.",
+      "facilities": "The Bohrerschmiede event space accommodates up to 100 people (own site).",
       "source_urls": [
         "https://www.abenteuer-erzberg.at/"
       ],
       "official_url": "https://www.abenteuer-erzberg.at/",
-      "commission_url": "https://www.cinestyria.com"
+      "commission_url": "https://www.cinestyria.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Erzberg3.jpg/960px-Erzberg3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Erzberg3.jpg",
+        "author": "Gerald Senarclens de Grancy",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "at-gasometer-wien",
@@ -42,9 +55,12 @@
       "type": "Industrial & derelict",
       "setting": "Four former 19th-century gasholders in Vienna's Simmering district, rebuilt with glass domes into apartments, offices, a shopping mall, cinema and event hall around their original brick shells.",
       "known_for": "The Living Daylights (1987)",
+      "facilities": "Tower A commercial space available from 30 sqm, from EUR 16 per sqm net; concert hall capacity up to 4,200 visitors with more than 100 events a year; over 22,000 sqm of shopping area on site (own site).",
+      "logistics": "U3 subway station Gasometer on site; on-site parking garage with 1,100 spaces, first 1.5 hours free (own site).",
       "source_urls": [
         "https://www.gasometer.at/",
-        "https://en.wikipedia.org/wiki/Gasometer_(Vienna)"
+        "https://en.wikipedia.org/wiki/Gasometer_(Vienna)",
+        "https://gasometer.at/verfuegbare-flaechen/"
       ],
       "official_url": "https://www.gasometer.at/",
       "commission_url": "https://www.viennafilmcommission.at/en/",
@@ -68,7 +84,13 @@
         "https://www.hallstatt.net/"
       ],
       "official_url": "https://www.hallstatt.net/",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Hallstatt_-_Zentrum_.JPG/960px-Hallstatt_-_Zentrum_.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hallstatt_-_Zentrum_.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-hangar-7-salzburg",
@@ -83,7 +105,13 @@
         "https://www.hangar-7.com/"
       ],
       "official_url": "https://www.hangar-7.com/",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Aussenansicht_red_bull_hangar-7_nacht.jpg/960px-Aussenansicht_red_bull_hangar-7_nacht.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aussenansicht_red_bull_hangar-7_nacht.jpg",
+        "author": "Herbert Ruhdorfer",
+        "license": "CC BY 3.0 at"
+      }
     },
     {
       "id": "at-hotel-sacher-wien",
@@ -129,7 +157,13 @@
         "https://www.kitzbuehel.com/"
       ],
       "official_url": "https://www.kitzbuehel.com/",
-      "commission_url": "https://www.cinetirol.com/en/"
+      "commission_url": "https://www.cinetirol.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kitzbuehel03.JPG/960px-Kitzbuehel03.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kitzbuehel03.JPG",
+        "author": "Wolfgang Glock",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "at-kunsthaus-graz",
@@ -140,11 +174,19 @@
       "lng": 15.4344,
       "type": "Modern architecture",
       "setting": "Biomorphic blue-panelled contemporary art museum of 2003 on the Mur riverbank, its bulging acrylic shell fitted with roof-top nozzle skylights beside Graz's baroque old town.",
+      "facilities": "Rentable spaces named on site are Space04 (meeting/presentation room) and Needle (elevated glass observation platform) (own site).",
       "source_urls": [
-        "https://www.museum-joanneum.at/kunsthaus-graz"
+        "https://www.museum-joanneum.at/kunsthaus-graz",
+        "https://www.museum-joanneum.at/ueber-uns/joanneum-to-rent/kunsthaus-graz"
       ],
       "official_url": "https://www.museum-joanneum.at/kunsthaus-graz",
-      "commission_url": "https://www.cinestyria.com"
+      "commission_url": "https://www.cinestyria.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Graz_Kunsthaus_vom_Schlossberg_20061126.jpg/960px-Graz_Kunsthaus_vom_Schlossberg_20061126.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Graz_Kunsthaus_vom_Schlossberg_20061126.jpg",
+        "author": "Marion Schneider &amp; Christoph Aistleitner",
+        "license": "CC BY-SA 2.5"
+      }
     },
     {
       "id": "at-museum-arbeitswelt-steyr",
@@ -155,8 +197,11 @@
       "lng": 14.4165,
       "type": "Industrial & derelict",
       "setting": "Museum of industrial and labour history housed in a former weapons and bicycle factory hall in Steyr's Wehrgraben quarter, with original machine-hall interiors.",
+      "price_note": "Venue hire from EUR 190 for a half day (up to 6 hours, Seminar Room 2) up to EUR 1,460 for a full day (Large Hall), prices exclude 20% VAT, valid through 31 December 2026 (own site).",
+      "facilities": "Rooms: Large Hall 380 sqm, Small Hall 140 sqm, Seminar Room 1 80 sqm, Seminar Room 2 60 sqm, Gallery 270 sqm; evening surcharge after 20:00 of EUR 65 per hour; setup on the day before costs 30% of the room rate (own site).",
       "source_urls": [
-        "https://www.museumarbeitswelt.at"
+        "https://www.museumarbeitswelt.at",
+        "https://museumarbeitswelt.at/location/"
       ],
       "official_url": "https://www.museumarbeitswelt.at",
       "commission_url": "https://www.filminaustria.com/"
@@ -175,7 +220,13 @@
         "https://en.wikipedia.org/wiki/Naschmarkt"
       ],
       "official_url": "https://www.naschmarkt-vienna.com",
-      "commission_url": "https://www.viennafilmcommission.at/en/"
+      "commission_url": "https://www.viennafilmcommission.at/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Wien_-_Naschmarkt.JPG/960px-Wien_-_Naschmarkt.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Naschmarkt.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "salzburg-old-town",
@@ -206,6 +257,15 @@
       "type": "Palace & landmark",
       "setting": "Baroque imperial summer palace with more than 1,400 rooms, formal gardens, the Gloriette hilltop folly and a historic zoo.",
       "known_for": "Sissi (1955)",
+      "price_note": "Outdoor motion pictures or commercial projects from EUR 6,600 per day (incl. 20% VAT), minimum fee. Smaller outdoor documentaries and travel reports: EUR 333 per hour (incl. 13% VAT). Indoor filming beyond private use: EUR 333 per hour for smaller productions; large-scale indoor productions on request. Prices valid from 27 March 2026 (own site).",
+      "price_eur_day": 6600,
+      "suitability": "Filming beyond private use requires prior written approval from the Schonbrunn Group, requested at least 3 weeks ahead. Indoor filming beyond private use is only allowed outside regular opening hours: battery-powered lighting only (max 12V per head, 100V total), flash photography is prohibited, and furniture may not be moved. Outdoor filming for private purposes needs no approval, but drones, barriers and climbing on structures are not allowed in the park (own site).",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.schoenbrunn-group.com/en/film-photo",
+        "https://www.schoenbrunn-group.com/fileadmin/content_group/Film_und_Foto/Schoenbrunn-Preisliste_2026__aussen__en.pdf",
+        "https://www.schoenbrunn-group.com/fileadmin/content_group/Film_und_Foto/Schoenbrunn-Preisliste_2026__innen__en.pdf"
+      ],
       "official_url": "https://www.schoenbrunn.at/",
       "commission_url": "https://www.viennafilmcommission.at/en/locations/schonbrunn-palace/",
       "photo": {
@@ -229,7 +289,13 @@
         "https://en.wikipedia.org/wiki/Semmering_railway"
       ],
       "official_url": "https://www.oebb.at/en",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Semmering_-_Semmeringbahn%2C_20-Schilling-Blick.JPG/960px-Semmering_-_Semmeringbahn%2C_20-Schilling-Blick.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Semmering_-_Semmeringbahn,_20-Schilling-Blick.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "soelden",
@@ -278,7 +344,13 @@
         "https://www.univie.ac.at/en/"
       ],
       "official_url": "https://www.univie.ac.at/en/",
-      "commission_url": "https://www.viennafilmcommission.at/en/"
+      "commission_url": "https://www.viennafilmcommission.at/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Wien_-_Universit%C3%A4t_%283%29.JPG/960px-Wien_-_Universit%C3%A4t_%283%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Universit%C3%A4t_(3).JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-rathaus-wien",
@@ -294,7 +366,13 @@
         "https://en.wikipedia.org/wiki/Vienna_City_Hall"
       ],
       "official_url": "https://www.wien.gv.at/verwaltung/rathaus/",
-      "commission_url": "https://www.viennafilmcommission.at/en/"
+      "commission_url": "https://www.viennafilmcommission.at/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wien_01_Rathausplatz_b.jpg/960px-Wien_01_Rathausplatz_b.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_01_Rathausplatz_b.jpg",
+        "author": "Gugerell",
+        "license": "CC0"
+      }
     },
     {
       "id": "at-wiener-staatsoper",
@@ -340,7 +418,13 @@
         "https://www.woerthersee.com/"
       ],
       "official_url": "https://www.woerthersee.com/",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aerial_image_of_W%C3%B6rthersee_%28view_from_the_southeast%29.jpg/960px-Aerial_image_of_W%C3%B6rthersee_%28view_from_the_southeast%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_W%C3%B6rthersee_(view_from_the_southeast).jpg",
+        "author": "Carsten Steger",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-abattoir-anderlecht",
@@ -355,7 +439,13 @@
         "https://www.abattoir.be/"
       ],
       "official_url": "https://www.abattoir.be/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Abattoirs_de_Cureghem.JPG/960px-Abattoirs_de_Cureghem.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Abattoirs_de_Cureghem.JPG",
+        "author": "User:Ben2",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-alden-biesen",
@@ -371,7 +461,13 @@
         "https://www.alden-biesen.be/en"
       ],
       "official_url": "https://www.alden-biesen.be/en",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Aldenbiezen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aldenbiezen.jpg",
+        "author": "Paul Hermans",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-ancienne-belgique",
@@ -382,12 +478,22 @@
       "lng": 4.3496,
       "type": "Theatre, arena & venue",
       "setting": "Concert hall on Boulevard Anspach in central Brussels with two stages, offering the venue for private hire and running its own in-house production and photography team.",
+      "capacity": 2000,
+      "facilities": "Six rentable spaces: AB Connect 126 sqm (20-60 guests), AB Salon 63 sqm (54-110 guests), AB Antenna 145 sqm (50-120 guests), AB Rooftop 84 sqm (50-80 guests), AB Club 170 sqm (100-280 guests), AB Main Hall 442 sqm (500-2000 guests standing). Basic furniture (tables, chairs, reception tables) is included; technical support available for lighting, sound, projection and stage setup; wheelchair accessible.",
+      "suitability": "Recording and livestreaming is possible in the Main Hall, AB Club and AB Salon using a fixed camera setup (separate technical specifications document available on request).",
+      "logistics": "About 10 minutes' walk from Brussels Central Station; accessible by public transport or car.",
       "source_urls": [
         "https://www.abconcerts.be/en/",
         "https://www.abconcerts.be/en/your-event-at-ab"
       ],
       "official_url": "https://www.abconcerts.be/en/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ancienne_Belgique_1.jpg/960px-Ancienne_Belgique_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ancienne_Belgique_1.jpg",
+        "author": "Nenea hartia",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-autoworld",
@@ -403,7 +509,13 @@
         "https://www.autoworld.be/en/"
       ],
       "official_url": "https://www.autoworld.be/en/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blue_Boulevard_2.jpg/960px-Blue_Boulevard_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Blue_Boulevard_2.jpg",
+        "author": "Autoworld",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-bois-du-cazier",
@@ -420,7 +532,13 @@
         "https://en.wikipedia.org/wiki/Bois_du_Cazier"
       ],
       "official_url": "https://www.leboisducazier.be/en",
-      "commission_url": "https://www.wallimage.be/"
+      "commission_url": "https://www.wallimage.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Charbonnage_du_Bois_du_Cazier_01.JPG/960px-Charbonnage_du_Bois_du_Cazier_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Charbonnage_du_Bois_du_Cazier_01.JPG",
+        "author": "Bourgeois.A",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-bozar",
@@ -499,7 +617,13 @@
         "https://www.spa-francorchamps.be/en/"
       ],
       "official_url": "https://www.spa-francorchamps.be/en/",
-      "commission_url": "https://www.wallimage.be/"
+      "commission_url": "https://www.wallimage.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Spa-Francorchamps_of_Belgium.svg/960px-Spa-Francorchamps_of_Belgium.svg.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Spa-Francorchamps_of_Belgium.svg",
+        "author": "Will Pittenger",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-citadelle-de-namur",
@@ -510,11 +634,21 @@
       "lng": 4.8551,
       "type": "Castle & estate",
       "setting": "Hilltop fortress complex above Namur spanning two thousand years of military building, with underground passages, a park and rooms offered for professional and private hire.",
+      "capacity": 120,
+      "facilities": "Four rentable spaces in the former Terra Nova barracks (Salle Blanche, Salle Don Juan, Salle Vauban, and a bar), each accommodating up to 120 people, plus a professional kitchen with cold rooms, freezer, hood, gas hobs, fryers, ovens, dishwasher and sinks. Furniture, screen, WiFi, cleaning (except kitchen and bar) and electricity/water/heating are included. Equipment rental: standing tables EUR 15 each, flipchart with paper EUR 30, sound equipment EUR 60, video projector EUR 75.",
+      "logistics": "EUR 200 deposit required per room; site visits by appointment Monday-Thursday, 9am-5pm.",
       "source_urls": [
-        "https://citadelle.namur.be/en"
+        "https://citadelle.namur.be/en",
+        "https://citadelle.namur.be/en/rent-venue"
       ],
       "official_url": "https://citadelle.namur.be/en",
-      "commission_url": "https://www.wallimage.be/"
+      "commission_url": "https://www.wallimage.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Namur_JPG07.jpg/960px-Namur_JPG07.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Namur_JPG07.jpg",
+        "author": "Jean-Pol GRANDMONT",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-doel",
@@ -530,7 +664,13 @@
         "https://www.doel2020.org/"
       ],
       "official_url": "https://www.doel2020.org/",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/De_Molen_%28windmill%29_and_the_nuclear_power_plant_cooling_tower_in_Doel%2C_Belgium_%28DSCF3859%29.jpg/960px-De_Molen_%28windmill%29_and_the_nuclear_power_plant_cooling_tower_in_Doel%2C_Belgium_%28DSCF3859%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:De_Molen_(windmill)_and_the_nuclear_power_plant_cooling_tower_in_Doel,_Belgium_(DSCF3859).jpg",
+        "author": "Trougnouf",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "be-flagey",
@@ -545,7 +685,13 @@
         "https://www.flagey.be/en"
       ],
       "official_url": "https://www.flagey.be/en",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ancien_Institut_national_de_Radiodiffusion_-_vue_d%27ensemble.JPG/960px-Ancien_Institut_national_de_Radiodiffusion_-_vue_d%27ensemble.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ancien_Institut_national_de_Radiodiffusion_-_vue_d%27ensemble.JPG",
+        "author": "Busoni",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-grand-hornu",
@@ -561,7 +707,13 @@
         "https://en.wikipedia.org/wiki/Grand-Hornu"
       ],
       "official_url": "https://www.grand-hornu.be/en",
-      "commission_url": "https://www.wallimage.be/"
+      "commission_url": "https://www.wallimage.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/B%C3%A2timents_du_Grands_Hornu.jpg/960px-B%C3%A2timents_du_Grands_Hornu.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:B%C3%A2timents_du_Grands_Hornu.jpg",
+        "author": "Schwickerath",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "gravensteen",
@@ -573,6 +725,12 @@
       "type": "Castle & estate",
       "setting": "Moated twelfth-century stone castle with towers, battlements and a gatehouse standing in the middle of Ghent.",
       "known_for": "The White Queen",
+      "capacity": 99,
+      "facilities": "Knights' Hall (Ridderzaal) seats up to 99 people; the Suikerlade room is also bookable. Used for meetings, performances, lectures, presentations and receptions.",
+      "suitability": "Available for hire outside the castle's normal opening hours.",
+      "source_urls": [
+        "https://historischehuizen.stad.gent/nl/zaalhuur"
+      ],
       "official_url": "https://historischehuizen.stad.gent/nl/gravensteen",
       "commission_url": "https://www.screenflanders.be/en",
       "photo": {
@@ -591,11 +749,22 @@
       "lng": 4.3774,
       "type": "Theatre, arena & venue",
       "setting": "Former covered market hall in Schaerbeek, Brussels, converted into a performing arts venue for dance and theatre, with its hall offered for hire.",
+      "price_note": "Great Hall EUR 10,000/day (EUR 5,000/day for community organisations); Small Hall EUR 2,000/day (EUR 1,000/day community); Cellar/former swimming pool EUR 1,000/day (EUR 500/day community) (own site).",
+      "capacity": 2000,
+      "facilities": "Three rentable spaces: Great Hall 1200 sqm (up to 2000 people standing, sit-down or buffet dining possible); Small Hall 215 sqm (400 standing / 120 seated, includes stage and bar); Cellar/former swimming pool 400 sqm including a 100 sqm room 6m deep (up to 300 people, foyer with bar).",
+      "suitability": "Venue hosts concerts, markets and conferences; explicitly does not accommodate private parties such as birthdays or weddings.",
       "source_urls": [
-        "https://www.halles.be/en/"
+        "https://www.halles.be/en/",
+        "https://www.halles.be/en/sp/54-hire-les-halles"
       ],
       "official_url": "https://www.halles.be/en/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Halles_de_Schaerbeek_01.JPG/960px-Halles_de_Schaerbeek_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Halles_de_Schaerbeek_01.JPG",
+        "author": "User:Ben2",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-handelsbeurs-gent",
@@ -626,7 +795,13 @@
         "https://kortrijkxpo.com/en"
       ],
       "official_url": "https://kortrijkxpo.com/en",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kortrijk_Xpo%2C_2022.jpg/960px-Kortrijk_Xpo%2C_2022.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kortrijk_Xpo,_2022.jpg",
+        "author": "Marcel Douwe Dekker",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-kursaal-oostende",
@@ -725,7 +900,13 @@
         "https://historischehuizen.stad.gent/en/hire"
       ],
       "official_url": "https://historischehuizen.stad.gent/en",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Gent_Blandijn_005.JPG/960px-Gent_Blandijn_005.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gent_Blandijn_005.JPG",
+        "author": "Demeester",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-stoomcentrum-maldegem",
@@ -772,7 +953,13 @@
         "https://en.wikipedia.org/wiki/Tour_%26_Taxis"
       ],
       "official_url": "https://www.tour-taxis.com/en/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Bruxelles_Tour_et_Taxis1.psd.jpg/960px-Bruxelles_Tour_et_Taxis1.psd.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bruxelles_Tour_et_Taxis1.psd.jpg",
+        "author": "Torsade de Pointes",
+        "license": "CC0"
+      }
     },
     {
       "id": "be-villa-empain",
@@ -783,11 +970,20 @@
       "lng": 4.3891,
       "type": "House & apartment",
       "setting": "1930s Art Deco mansion on Avenue Franklin Roosevelt in Brussels, home to the Boghossian Foundation, with salons, gardens and a bar that can be privatised for events.",
+      "price_note": "Filming from EUR 7,500; commercial shoots from EUR 5,000; wedding photography from EUR 1,500 (own site).",
+      "suitability": "Villa is offered for film shoots, promotional or commercial clips, and wedding photo shoots; filming is restricted to outside the venue's normal operating hours.",
       "source_urls": [
-        "https://villaempain.com/en/"
+        "https://villaempain.com/en/",
+        "https://villaempain.com/en/your-event/"
       ],
       "official_url": "https://villaempain.com/en/",
-      "commission_url": "https://screen.brussels/"
+      "commission_url": "https://screen.brussels/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bruxelles_-_Fondation_Boghossian-Empain.jpg/960px-Bruxelles_-_Fondation_Boghossian-Empain.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bruxelles_-_Fondation_Boghossian-Empain.jpg",
+        "author": "Fred Romero from Paris, France",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "hr-church-st-donatus-zadar",
@@ -828,7 +1024,13 @@
       ],
       "url": "https://www.kvarner-film.org/en/location",
       "official_url": "https://hnk-zajc.hr/en",
-      "commission_url": "https://www.kvarner-film.org/en/"
+      "commission_url": "https://www.kvarner-film.org/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Theatre_of_Ivan_pl._Zajc%2C_Rijeka.jpg/960px-Theatre_of_Ivan_pl._Zajc%2C_Rijeka.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Theatre_of_Ivan_pl._Zajc,_Rijeka.jpg",
+        "author": "Djoko",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hr-diocletians-palace-split",
@@ -868,7 +1070,13 @@
       ],
       "url": "https://filmzagreb.hr/?product_cat=sport",
       "official_url": "https://www.cibona.com/",
-      "commission_url": "https://filmzagreb.hr/"
+      "commission_url": "https://filmzagreb.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Dra%C5%BEen_Petrovi%C4%87_statue.jpg/960px-Dra%C5%BEen_Petrovi%C4%87_statue.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dra%C5%BEen_Petrovi%C4%87_statue.jpg",
+        "author": "Andrea Cislaghi from Robbio Lomellina, Italia",
+        "license": "CC0"
+      }
     },
     {
       "id": "dubrovnik-old-town",
@@ -973,7 +1181,13 @@
       ],
       "url": "https://filmzagreb.hr/?product_cat=other",
       "official_url": "https://lauba.hr/en/",
-      "commission_url": "https://filmzagreb.hr/"
+      "commission_url": "https://filmzagreb.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Lauba%2C_Zagreb.jpg/960px-Lauba%2C_Zagreb.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lauba,_Zagreb.jpg",
+        "author": "Vanja Jugovac",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-opatija",
@@ -1050,7 +1264,13 @@
       ],
       "url": "https://www.kvarner-film.org/en/location",
       "official_url": "https://www.lukarijeka.hr/en/",
-      "commission_url": "https://www.kvarner-film.org/en/"
+      "commission_url": "https://www.kvarner-film.org/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Rijeka_D81_4190_%2837775290185%29.jpg/960px-Rijeka_D81_4190_%2837775290185%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rijeka_D81_4190_(37775290185).jpg",
+        "author": "Bengt Nyman from Vaxholm, Sweden",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "hr-pula-arena",
@@ -1155,7 +1375,13 @@
       ],
       "url": "https://www.zadarfilmcommission.com/en",
       "official_url": "https://zadar.travel/en/",
-      "commission_url": "https://www.zadarfilmcommission.com/en"
+      "commission_url": "https://www.zadarfilmcommission.com/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Veli_Rat_lighthouse_2.JPG/960px-Veli_Rat_lighthouse_2.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Veli_Rat_lighthouse_2.JPG",
+        "author": "Dominik Matus",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hr-vis-military-tunnels",
@@ -1298,7 +1524,13 @@
       ],
       "url": "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/",
       "official_url": "https://www.bvv.cz/en/",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Brno-Pis%C3%A1rky_-_%C4%8Cerven%C3%BD_kopec%2C_vyhl%C3%ADdka_na_Pis%C3%A1rky%2C_2023-10%2C_obr01.jpg/960px-Brno-Pis%C3%A1rky_-_%C4%8Cerven%C3%BD_kopec%2C_vyhl%C3%ADdka_na_Pis%C3%A1rky%2C_2023-10%2C_obr01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Brno-Pis%C3%A1rky_-_%C4%8Cerven%C3%BD_kopec,_vyhl%C3%ADdka_na_Pis%C3%A1rky,_2023-10,_obr01.jpg",
+        "author": "RomanM82",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-cafe-louvre",
@@ -1353,7 +1585,13 @@
         "https://filmcommission.gov.cz/en/location/cheb-train-station/"
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/cheb-train-station/",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Cheb_vlakov%C3%A9_n%C3%A1dra%C5%BE%C3%AD_1.jpg/960px-Cheb_vlakov%C3%A9_n%C3%A1dra%C5%BE%C3%AD_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cheb_vlakov%C3%A9_n%C3%A1dra%C5%BE%C3%AD_1.jpg",
+        "author": "VitVit",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-depo2015",
@@ -1517,7 +1755,13 @@
         "https://en.wikipedia.org/wiki/Invalidovna"
       ],
       "official_url": "https://www.invalidovna.cz/",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Praha%2C_Invalidovna.JPG/960px-Praha%2C_Invalidovna.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Praha,_Invalidovna.JPG",
+        "author": "Aktron",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "cz-klementinum",
@@ -1609,7 +1853,13 @@
       ],
       "url": "https://filmcommission.gov.cz/en/location/mahen-theatre/",
       "official_url": "https://www.ndbrno.cz/en",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Mahenovo_divadlo_2.jpg/960px-Mahenovo_divadlo_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mahenovo_divadlo_2.jpg",
+        "author": "Avfedorenko at Czech Wikipedia",
+        "license": "Public domain"
+      }
     },
     {
       "id": "cz-masaryk-university",
@@ -1625,7 +1875,13 @@
         "https://filmcommission.gov.cz/en/atypical-architecture/"
       ],
       "official_url": "https://www.muni.cz/en",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kounics_palace_in_Brno_2010_%282%29.jpg/960px-Kounics_palace_in_Brno_2010_%282%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kounics_palace_in_Brno_2010_(2).jpg",
+        "author": "Kounics_palace_in_Brno_2010.jpg: User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outside WMF",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "cz-michal-mine",
@@ -1737,7 +1993,13 @@
       ],
       "url": "https://filmcommission.gov.cz/en/location/subway/",
       "official_url": "https://www.dpp.cz/en",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nm-westbound.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nm-westbound.jpg",
+        "author": "Matěj Čadil=en:User:Neral as confirmed here 2007-01-25 (in Czech)",
+        "license": "CC BY 1.0"
+      }
     },
     {
       "id": "cz-sokol-hradec-kralove",
@@ -1807,7 +2069,13 @@
         "https://en.wikipedia.org/wiki/Tomas_Bata_University_in_Zl%C3%ADn"
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/tbu-zlin/",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Budova_Univerzitn%C3%ADho_centra_%28s%C3%ADdlo_rektor%C3%A1tu_a_univerzitn%C3%AD_knihovny%29.jpg/960px-Budova_Univerzitn%C3%ADho_centra_%28s%C3%ADdlo_rektor%C3%A1tu_a_univerzitn%C3%AD_knihovny%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Budova_Univerzitn%C3%ADho_centra_(s%C3%ADdlo_rektor%C3%A1tu_a_univerzitn%C3%AD_knihovny).jpg",
+        "author": "Jan Salač",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-underground-water-reservoir-brno",
@@ -1979,7 +2247,13 @@
         "http://www.drkoncerthuset.dk/"
       ],
       "official_url": "http://www.drkoncerthuset.dk/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/K%C3%B8benhavn_-_DR_Koncerthuset_%2830964385486%29.jpg/960px-K%C3%B8benhavn_-_DR_Koncerthuset_%2830964385486%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:K%C3%B8benhavn_-_DR_Koncerthuset_(30964385486).jpg",
+        "author": "Fred Romero from Paris, France",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "dk-faengslet-horsens",
@@ -2027,7 +2301,13 @@
         "https://www.gammelestrup.dk/en/"
       ],
       "official_url": "https://www.gammelestrup.dk/en/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Gammel_Estrup_%28Norddjurs_Kommune%29.Hovedbygning.06.707-112730-1.ajb.jpg/960px-Gammel_Estrup_%28Norddjurs_Kommune%29.Hovedbygning.06.707-112730-1.ajb.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gammel_Estrup_(Norddjurs_Kommune).Hovedbygning.06.707-112730-1.ajb.jpg",
+        "author": "Ajepbah",
+        "license": "CC BY-SA 3.0 de"
+      }
     },
     {
       "id": "kronborg-castle",
@@ -2106,7 +2386,13 @@
         "https://www.nordkraft.dk/"
       ],
       "official_url": "https://www.nordkraft.dk/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Nordkraft.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nordkraft.jpg",
+        "author": "Veng",
+        "license": "Public domain"
+      }
     },
     {
       "id": "dk-odense-havn",
@@ -2140,7 +2426,13 @@
         "https://en.wikipedia.org/wiki/Refshale%C3%B8en"
       ],
       "official_url": "https://www.refshaleoen.dk/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Refshaleoen_Copenhagen_20130420_002_%289664289959%29.jpg/960px-Refshaleoen_Copenhagen_20130420_002_%289664289959%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Refshaleoen_Copenhagen_20130420_002_(9664289959).jpg",
+        "author": "Johan Wessman / News Oresund",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "dk-roskilde-cathedral",
@@ -2155,7 +2447,13 @@
         "https://www.roskildedomkirke.dk/"
       ],
       "official_url": "https://www.roskildedomkirke.dk/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Roskilde_Cathedral_aerial_crop.jpg/960px-Roskilde_Cathedral_aerial_crop.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Roskilde_Cathedral_aerial_crop.jpg",
+        "author": "CucombreLibre from New York, NY, USA",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "dk-tivoli-gardens",
@@ -2174,7 +2472,13 @@
         "https://www.tivoli.dk/en/business/meetings-and-events"
       ],
       "official_url": "https://www.tivoli.dk/en",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Tivoli_Gardens_4.jpg/960px-Tivoli_Gardens_4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_4.jpg",
+        "author": "European Commission",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "dk-utzon-center",
@@ -2190,7 +2494,13 @@
         "https://www.utzoncenter.dk/en"
       ],
       "official_url": "https://www.utzoncenter.dk/en",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Utzon_Center%2C_west_side%2C_Aalborg.jpg/960px-Utzon_Center%2C_west_side%2C_Aalborg.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Utzon_Center,_west_side,_Aalborg.jpg",
+        "author": "Liberaler Humanist",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fi-kaapelitehdas",
@@ -2229,7 +2539,13 @@
       ],
       "url": "https://www.filmtampere.com/locations/finlayson-area/",
       "official_url": "https://finlaysoninalue.fi/en/homepage/",
-      "commission_url": "https://www.filmtampere.com/"
+      "commission_url": "https://www.filmtampere.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tampere_-_Finlayson.jpg/960px-Tampere_-_Finlayson.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tampere_-_Finlayson.jpg",
+        "author": "Tiia Monto",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fi-helsinki-olympic-stadium",
@@ -2247,7 +2563,13 @@
         "https://en.wikipedia.org/wiki/Helsinki_Olympic_Stadium"
       ],
       "official_url": "https://www.stadion.fi/en",
-      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+      "commission_url": "https://www.filminfinland.com/en/frontpage/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Olympiastadion_2_2020-08-12.jpg/960px-Olympiastadion_2_2020-08-12.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Olympiastadion_2_2020-08-12.jpg",
+        "author": "Joneikifi",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ivalo-lapland",
@@ -2385,7 +2707,13 @@
         "https://en.wikipedia.org/wiki/Suomenlinna"
       ],
       "official_url": "https://suomenlinna.fi/en/",
-      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+      "commission_url": "https://www.filminfinland.com/en/frontpage/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Suomenlinna_-_Eglise_de_la_forteresse.JPG/960px-Suomenlinna_-_Eglise_de_la_forteresse.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Suomenlinna_-_Eglise_de_la_forteresse.JPG",
+        "author": "Gunthar Tiflett",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fi-suvilahti",
@@ -2403,7 +2731,13 @@
         "https://fi.wikipedia.org/wiki/Suvilahti_(Helsinki)"
       ],
       "official_url": "https://www.suvilahti.fi/en",
-      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+      "commission_url": "https://www.filminfinland.com/en/frontpage/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Suvilahti_plant_from_air.jpg/960px-Suvilahti_plant_from_air.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Suvilahti_plant_from_air.jpg",
+        "author": "Timo Noko from Helsinki, Finland",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fi-tampere-hall",
@@ -2422,7 +2756,13 @@
       ],
       "url": "https://www.filmtampere.com/locations/tampere-hall/",
       "official_url": "https://www.tampere-talo.fi",
-      "commission_url": "https://www.filmtampere.com/"
+      "commission_url": "https://www.filmtampere.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tampere_destroyed_in_Civil_War.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tampere_destroyed_in_Civil_War.jpg",
+        "author": "Unknown authorUnknown author",
+        "license": "Public domain"
+      }
     },
     {
       "id": "fi-tampere-market-hall",
@@ -2460,7 +2800,13 @@
         "https://turunlinna.fi/vuokrattavat-tilat/"
       ],
       "official_url": "https://turunlinna.fi/",
-      "commission_url": "https://wffc.fi/"
+      "commission_url": "https://wffc.fi/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/View_from_Turku_Cathedral_tower.jpg/960px-View_from_Turku_Cathedral_tower.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:View_from_Turku_Cathedral_tower.jpg",
+        "author": "Markus Koljonen (Dilaudid) with thanks to Jontts and Turku Cathedral",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-accor-arena",
@@ -2475,7 +2821,13 @@
         "https://www.accorarena.com/"
       ],
       "official_url": "https://www.accorarena.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Palais_Omnisports_de_Paris-Bercy_02.jpg/960px-Palais_Omnisports_de_Paris-Bercy_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palais_Omnisports_de_Paris-Bercy_02.jpg",
+        "author": "Vilacor",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "fr-allianz-riviera",
@@ -2490,7 +2842,13 @@
         "https://www.allianz-riviera.fr/"
       ],
       "official_url": "https://www.allianz-riviera.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Allianzcoupdenvoi.jpg/960px-Allianzcoupdenvoi.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Allianzcoupdenvoi.jpg",
+        "author": "Mirasol",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-base-sous-marine-saint-nazaire",
@@ -2516,8 +2874,12 @@
       "lng": -0.5539,
       "type": "Industrial & derelict",
       "setting": "Former WWII submarine pens on the Bordeaux docks converted into a digital art centre, with four raw concrete basins used for large-scale wall and floor projections.",
+      "capacity": 900,
+      "facilities": "Two indoor spaces: the Citerne (155 sqm, 360-degree projection) and the Cube (220 sqm, soundproofed), plus elevated walkways and tiered seating. Overall capacity ranges from 50 to 900 for a cocktail reception or 50 to 700 for a seated dinner.",
+      "suitability": "The venue lists professional events as one of five event categories it hosts, alongside cocktails, seated dinners, and private visits.",
       "source_urls": [
-        "https://www.bassins-lumieres.com/"
+        "https://www.bassins-lumieres.com/",
+        "https://privatisation.bassins-lumieres.com/"
       ],
       "official_url": "https://www.bassins-lumieres.com/",
       "commission_url": "https://www.filmfrance.net/",
@@ -2537,8 +2899,16 @@
       "lng": 2.3389,
       "type": "Office, school & public building",
       "setting": "Historic national library building in central Paris with a 19th-century domed reading room and ornate galleries, reopened after a long restoration.",
+      "capacity": 300,
+      "facilities": "At the Richelieu site, the Salle Ovale seats up to 220 for a dinner or holds up to 300 for a cocktail reception. Other hireable spaces are the Hall Vivienne, the Vivienne garden, and the Salon d'Honneur.",
+      "suitability": "Filming and photography require prior written authorization from BnF, covering the Richelieu, François-Mitterrand, Arsenal, Opéra and CTBnF sites; an exception applies only to images made for strictly private, non-commercial use.",
+      "permit_needed": "Yes",
+      "logistics": "Richelieu site spaces can be hired from 6pm Wednesday to Sunday, and all day on Monday when the site is closed to the public.",
       "source_urls": [
-        "https://www.bnf.fr/"
+        "https://www.bnf.fr/",
+        "https://www.bnf.fr/fr/location-despaces-et-tournages",
+        "https://www.bnf.fr/fr/location-despaces",
+        "https://www.bnf.fr/fr/tournages-et-prises-de-vues-photographiques"
       ],
       "official_url": "https://www.bnf.fr/",
       "commission_url": "https://www.filmfrance.net/"
@@ -2552,8 +2922,12 @@
       "lng": 2.3439,
       "type": "Modern architecture",
       "setting": "Former 19th-century grain exchange with a circular rotunda and glass dome, renovated by Tadao Ando with an internal concrete cylinder as a contemporary art museum.",
+      "capacity": 800,
+      "facilities": "Ground-floor Salon and Passage (up to 800 for a cocktail reception or 220 for a seated dinner), Foyer on floor -1 (up to 300 for a cocktail reception), a semi-circular Auditorium (284 seats), the Petit Salon (up to 70 people), and the restaurant La Halle aux Grains (125 for a cocktail reception or 100 for a dinner).",
+      "logistics": "Private events run Monday to Thursday from 8:30-10:30am and from 7:30pm, and from 7pm on Tuesdays when the museum is closed to the public.",
       "source_urls": [
-        "https://www.pinaultcollection.com/en/boursedecommerce"
+        "https://www.pinaultcollection.com/en/boursedecommerce",
+        "https://www.pinaultcollection.com/en/boursedecommerce/publics/host-event"
       ],
       "official_url": "https://www.pinaultcollection.com/en/boursedecommerce",
       "commission_url": "https://www.filmfrance.net/"
@@ -2567,8 +2941,12 @@
       "lng": 3.1719,
       "type": "Industrial & derelict",
       "setting": "Preserved coal mine museum in the former Delloye colliery, with pithead buildings, a headframe, underground galleries and workshops from the Nord-Pas-de-Calais coalfield.",
+      "price_note": "Meeting room hire from EUR 145 per half day (34-36 sqm rooms) up to EUR 1,000 per full day for the Auditorium Georges Delerue; technical support is a mandatory extra at EUR 35 per hour (own site, 2026 rates)",
+      "capacity": 200,
+      "facilities": "Salle Jules Mousseron (70 sqm), Salle Lucien Jonas (36 sqm) and Salle Albert Bouquillon (34 sqm) meeting rooms, plus the Auditorium Georges Delerue (200 seats: 175 armchairs with a writing tablet, 22 folding seats and 3 wheelchair spaces, with a 45 sqm stage, a 4x3m screen and an audio system). Wheelchair accessible by lift.",
       "source_urls": [
-        "https://www.chm-lewarde.com/"
+        "https://www.chm-lewarde.com/",
+        "https://www.chm-lewarde.com/services/seminaires/"
       ],
       "official_url": "https://www.chm-lewarde.com/",
       "commission_url": "https://www.filmfrance.net/",
@@ -2592,7 +2970,13 @@
         "https://www.chamonix.com/"
       ],
       "official_url": "https://www.chamonix.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Gare_de_Chamonix_-_Mont-Blanc.JPG/960px-Gare_de_Chamonix_-_Mont-Blanc.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gare_de_Chamonix_-_Mont-Blanc.JPG",
+        "author": "Florian Pépellin",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-chateau-if",
@@ -2604,9 +2988,14 @@
       "type": "Hospital, prison & institution",
       "setting": "16th-century island fortress off Marseille used as a state prison into the 19th century, the setting of The Count of Monte Cristo and a location in The French Connection.",
       "known_for": "The French Connection (1971)",
+      "capacity": 500,
+      "facilities": "1,547 sqm of castle interior with several small rooms, 600 sqm of terraces, and a 1,700 sqm parade ground. The castle interior and terraces each hold up to 100 people standing; the parade ground holds up to 500 standing.",
+      "suitability": "Both interior and exterior filming are offered year-round, for films, series, documentaries and advertisements.",
       "source_urls": [
         "https://www.chateau-if.fr/",
-        "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+        "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If",
+        "https://www.chateau-if.fr/tournages-et-prises-de-vues",
+        "https://www.chateau-if.fr/privatisation"
       ],
       "official_url": "https://www.chateau-if.fr/",
       "commission_url": "https://www.filmfrance.net/",
@@ -2626,10 +3015,16 @@
       "lng": 1.6376,
       "type": "Transport & infrastructure",
       "setting": "Heritage steam and diesel railway running along the Somme bay between Le Crotoy, Saint-Valery-sur-Somme and Cayeux, with period stations and rolling stock.",
+      "price_note": "Private train charter from EUR 2,200 including tax for the Belle Époque steam train (March to September) or EUR 2,500 including tax for the 4 Saisons diesel train (October to February), plus meals at EUR 43 per adult and EUR 20 per child under 12 (own site, 2026 rates)",
+      "capacity": 115,
+      "facilities": "Two heritage trains available for private charter: Belle Époque (steam, seats up to 115) and 4 Saisons (diesel, seats up to 96). Neither train is wheelchair accessible or pet-friendly.",
+      "logistics": "Lunch charter departs Saint-Valery at 12:00 with a meal stop on the sea wall from 12:10 to 14:15, returning at 15:20. Dinner charter departs the Saint-Valery Canal depot at 19:00, returning around 23:00-23:20. Booking requires a signed quote and a EUR 1,000 deposit, with the balance due 15 days before by bank cheque; no refund for late arrival or no-show.",
       "source_urls": [
-        "https://www.cfbs-baiedesomme.fr/"
+        "https://www.cfbs-baiedesomme.fr/",
+        "https://www.chemindefer-baiedesomme.fr/fr/chemin-de-fer-de-la-baie-de-somme",
+        "https://www.chemindefer-baiedesomme.fr/fr/groupes-ce-privatisation/privatisation-train"
       ],
-      "official_url": "https://www.cfbs-baiedesomme.fr/",
+      "official_url": "https://www.chemindefer-baiedesomme.fr/",
       "commission_url": "https://www.filmfrance.net/"
     },
     {
@@ -2656,9 +3051,13 @@
       "lng": -3.3703,
       "type": "Industrial & derelict",
       "setting": "WWII U-boat pens on the Keroman peninsula in Lorient with roofs up to 7.5 metres thick, now holding a sailing museum, boatyards and a marina business park.",
+      "capacity": 380,
+      "facilities": "Named spaces include the Auditorium, Karré Affaires (modular cocktail/reception space), two equipped meeting rooms, a permanent exhibition space, and Hall Pen Duick (modular for conferences, cocktails and exhibitions). Overall capacity ranges from 20 to 380 people. Equipped with tables, chairs, flipcharts, video projectors, UHD screens, sound systems, microphones and wifi.",
+      "logistics": "In Lorient, Brittany; about 3 hours from Paris by train, with Lorient station 10 minutes away. Pricing is by quotation only.",
       "source_urls": [
         "https://www.citevoile-tabarly.com/",
-        "https://fr.wikipedia.org/wiki/Base_sous-marine_de_Lorient"
+        "https://fr.wikipedia.org/wiki/Base_sous-marine_de_Lorient",
+        "https://www.citevoile-tabarly.com/fr/location-despaces"
       ],
       "official_url": "https://www.citevoile-tabarly.com/",
       "commission_url": "https://www.filmfrance.net/"
@@ -2731,11 +3130,23 @@
       "lng": 2.3378,
       "type": "Office, school & public building",
       "setting": "Campus of more than 40 national residence halls in varied architectural styles on the southern edge of Paris, housing international students since the 1920s.",
+      "capacity": 380,
+      "facilities": "34-hectare campus with 47 architecturally varied buildings dating from 1925 onward, offered for professional events as well as filming; parking for trucks and production equipment is positioned close to the sets, with a dedicated on-site team supporting productions.",
+      "suitability": "Described by CIUP as France's first multi-set filming location, with both interior settings (art deco lounges, halls, corridors, staircases, offices) and exterior settings (building facades, landscaped grounds). States that no prefectural authorization is required to film there; more than 500 productions have shot there in 10 years.",
+      "permit_needed": "No",
       "source_urls": [
-        "https://www.ciup.fr/"
+        "https://www.ciup.fr/",
+        "https://www.ciup.fr/tourner-a-la-cite-internationale/",
+        "https://www.ciup.fr/organiser-votre-evenement/"
       ],
       "official_url": "https://www.ciup.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/France_Paris_Cite_Universitaire_Maison_internationale.jpg/960px-France_Paris_Cite_Universitaire_Maison_internationale.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:France_Paris_Cite_Universitaire_Maison_internationale.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "fr-cite-radieuse-marseille",
@@ -2801,11 +3212,19 @@
       "lng": 2.3563,
       "type": "Hospital, prison & institution",
       "setting": "Large hospital complex south of Paris with historic pavilions and a tall water reservoir building, listed by AP-HP among the sites it regularly opens to film crews.",
+      "suitability": "All filming at AP-HP hospitals is subject to prior authorization; arrangements must respect the image rights of patients, staff and visitors as well as hospital regulations. Filming gives rise to a fee for occupying public domain space, based on an internal AP-HP tariff scale that is not published online.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
       "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2024-06-26_-_10.jpg/960px-Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2024-06-26_-_10.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_(FR94)_-_2024-06-26_-_10.jpg",
+        "author": "Chabe01",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-hopital-maritime-berck",
@@ -2816,6 +3235,8 @@
       "lng": 1.59,
       "type": "Hospital, prison & institution",
       "setting": "Seafront AP-HP hospital in Berck-sur-Mer built as a 19th-century marine sanatorium, named on the AP-HP's list of hospitals that regularly welcome film shoots.",
+      "suitability": "All filming at AP-HP hospitals is subject to prior authorization; arrangements must respect the image rights of patients, staff and visitors as well as hospital regulations. Filming gives rise to a fee for occupying public domain space, based on an internal AP-HP tariff scale that is not published online.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
@@ -2831,6 +3252,8 @@
       "lng": 2.1889,
       "type": "Hospital, prison & institution",
       "setting": "Rehabilitation hospital in Garches with early 20th-century pavilion wards and gardens, one of the AP-HP sites named as regularly opened for commercial filming.",
+      "suitability": "All filming at AP-HP hospitals is subject to prior authorization; arrangements must respect the image rights of patients, staff and visitors as well as hospital regulations. Filming gives rise to a fee for occupying public domain space, based on an internal AP-HP tariff scale that is not published online.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
@@ -2846,11 +3269,19 @@
       "lng": 2.3702,
       "type": "Hospital, prison & institution",
       "setting": "Working Paris hospital built around an early 17th-century brick and stone quadrilateral courtyard, one of the AP-HP sites named as regularly hosting commercial filming.",
+      "suitability": "All filming at AP-HP hospitals is subject to prior authorization; arrangements must respect the image rights of patients, staff and visitors as well as hospital regulations. Filming gives rise to a fee for occupying public domain space, based on an internal AP-HP tariff scale that is not published online.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
       "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/P1040720_Paris_X_h%C3%B4pital_Saint-Louis_rwk.jpg/960px-P1040720_Paris_X_h%C3%B4pital_Saint-Louis_rwk.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:P1040720_Paris_X_h%C3%B4pital_Saint-Louis_rwk.jpg",
+        "author": "Mbzt",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-institut-lumiere",
@@ -2861,12 +3292,22 @@
       "lng": 4.8704,
       "type": "Office, school & public building",
       "setting": "Museum in the former Lumière family home in Lyon, dedicated to Auguste and Louis Lumière and the birth of cinema, close to the site of their original factory.",
+      "capacity": 300,
+      "facilities": "Hangar du Premier-Film: 300 sqm, seats 220 for a dinner or 300 for a cocktail reception, plus an adjoining cinema seating 269 (with 8 wheelchair spaces), 3 plasma screens, 2 x 35mm projectors and 1 digital projector. Jardin d'Hiver at Villa Lumière: 60 sqm, 35 seated or 70 for a cocktail reception. Villa Lumière also has two screening rooms in the basement.",
+      "logistics": "25 rue du Premier-Film, Lyon 8e; 6 minutes from Bellecour, 15 minutes from Part-Dieu station, and next to the Monplaisir-Lumière stop on metro line D. Free public parking with 54 spaces beside the Hangar.",
       "source_urls": [
         "https://www.institut-lumiere.org/",
-        "https://en.wikipedia.org/wiki/Institut_Lumi%C3%A8re"
+        "https://en.wikipedia.org/wiki/Institut_Lumi%C3%A8re",
+        "https://www.institut-lumiere.org/locations-privees"
       ],
       "official_url": "https://www.institut-lumiere.org/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Institut_Lumi%C3%A8re_Lyon.jpg/960px-Institut_Lumi%C3%A8re_Lyon.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Institut_Lumi%C3%A8re_Lyon.jpg",
+        "author": "Matt Neale from UK",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-condition-publique",
@@ -2877,8 +3318,12 @@
       "lng": 3.1815,
       "type": "Industrial & derelict",
       "setting": "Former municipal wool-conditioning warehouse in Roubaix, a long glass-roofed 19th-century industrial hall now run as a cultural and event venue.",
+      "capacity": 5000,
+      "facilities": "More than 10,000 sqm across named spaces: Rue couverte, Verrière, Halle A, B and C, Plateau Coucke et Labos, Le Club, L'Alim, and Les Toits Terrasses. Overall capacity ranges from 10 to 5,000 people.",
+      "suitability": "Filming (\"tournages\") is listed among the event types the venue hosts, alongside meetings, conferences, evening events, corporate seminars, fashion shows and team-building.",
       "source_urls": [
-        "https://www.laconditionpublique.com/"
+        "https://www.laconditionpublique.com/",
+        "https://www.laconditionpublique.com/lieux/privatisations"
       ],
       "official_url": "https://www.laconditionpublique.com/",
       "commission_url": "https://www.filmfrance.net/"
@@ -2896,7 +3341,13 @@
         "https://www.parisladefense.com/"
       ],
       "official_url": "https://www.parisladefense.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/La_D%C3%A9fense_Juin_2025.jpg/960px-La_D%C3%A9fense_Juin_2025.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:La_D%C3%A9fense_Juin_2025.jpg",
+        "author": "Vincevinss",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "fr-le-104-centquatre",
@@ -2907,8 +3358,12 @@
       "lng": 2.3765,
       "type": "Theatre, arena & venue",
       "setting": "Former municipal funeral parlour in northern Paris with two vast glass-roofed halls, now an arts centre with studios and space hired for events and shoots.",
+      "capacity": 1780,
+      "facilities": "Nef Curial: 1,026 sqm plus 1,000 sqm of circulation space, seats 1,000 or holds 1,780 standing. Jardin: 420 sqm, 250 seated or 600 standing. Salle 400: 400 sqm, 395 seated or 740 standing. Salle 200: 300 sqm, 190 seated or 580 standing. Écuries: 2,000 sqm across one main hall and 8 sections, 180-800 seated depending on configuration or 1,500+ standing. Also two meeting rooms (20-40 seated), a workshop space (70 seated/95 standing) and a catering area (80 seated/150 standing). Loading dock and on-site parking available.",
+      "suitability": "Described as suitable for fashion shows, cocktails, trade fairs, dinners, sports events, conferences, seminars and performances.",
       "source_urls": [
-        "https://www.104.fr/"
+        "https://www.104.fr/",
+        "https://www.104.fr/location-d-espaces"
       ],
       "official_url": "https://www.104.fr/",
       "commission_url": "https://www.filmfrance.net/"
@@ -2943,7 +3398,13 @@
         "https://en.wikipedia.org/wiki/Le_Train_Bleu_(restaurant)"
       ],
       "official_url": "https://www.le-train-bleu.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Le_Train_Bleu.jpg/960px-Le_Train_Bleu.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Le_Train_Bleu.jpg",
+        "author": "Gryffindor",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-les-deux-magots",
@@ -2958,7 +3419,13 @@
         "https://www.lesdeuxmagots.fr/"
       ],
       "official_url": "https://www.lesdeuxmagots.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Les_Deux_Magots%2C_25_September_2019.jpg/960px-Les_Deux_Magots%2C_25_September_2019.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Les_Deux_Magots,_25_September_2019.jpg",
+        "author": "Cheng-en Cheng from Taichung City, Taiwan",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "fr-les-docks-marseille",
@@ -2999,8 +3466,12 @@
       "lng": 4.8508,
       "type": "Bar, restaurant & shop",
       "setting": "Covered food market in Lyon with about fifty stalls of butchers, cheesemongers, bakers and small restaurants, named after chef Paul Bocuse.",
+      "capacity": 3500,
+      "facilities": "8,000 sqm total, with two indoor terraces and one outdoor terrace. La Verrière (mezzanine) holds 50 to 300 for cocktails or seated dining; L'Espace Convivial (partial closure) holds 500 to 1,000; La Balade Gourmande (full privatisation of the market) holds 1,000 to 3,500. Wheelchair accessible, with nearby parking and EV charging.",
       "source_urls": [
-        "https://halles-de-lyon-paulbocuse.com/"
+        "https://halles-de-lyon-paulbocuse.com/",
+        "https://www.halles-de-lyon-paulbocuse.com/",
+        "https://www.halles-de-lyon-paulbocuse.com/privatiser/"
       ],
       "official_url": "https://halles-de-lyon-paulbocuse.com/",
       "commission_url": "https://www.filmfrance.net/"
@@ -3014,8 +3485,11 @@
       "lng": 5.3543,
       "type": "Modern architecture",
       "setting": "Marseille museum in a concrete cube wrapped in a black lattice screen, linked by a footbridge to the 13th-century Fort Saint-Jean at the harbour entrance.",
+      "suitability": "Accepts filming for documentaries, adverts, feature and short films, series, music videos and trailers, in Building J4 and Fort Saint-Jean (parade ground, courtyard, officers' gallery). Filming is possible on Tuesdays all day, other days by request; images of the J4 building are subject to copyright restrictions. MuCEM also hosts more than 100 corporate events a year, including filming, among seminars, conferences, team building and galas.",
       "source_urls": [
-        "https://www.mucem.org/"
+        "https://www.mucem.org/",
+        "https://www.mucem.org/tournage",
+        "https://www.mucem.org/privatisation"
       ],
       "official_url": "https://www.mucem.org/",
       "commission_url": "https://www.filmfrance.net/"
@@ -3033,7 +3507,13 @@
         "https://www.overlordmuseum.com/"
       ],
       "official_url": "https://www.overlordmuseum.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/960px-Into_the_Jaws_of_Death_23-0455M_edit.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_23-0455M_edit.jpg",
+        "author": "Chief Photographer's Mate (CPHoM) Robert F. Sargent",
+        "license": "Public domain"
+      }
     },
     {
       "id": "palace-of-versailles",
@@ -3063,11 +3543,20 @@
       "lng": 2.3316,
       "type": "Theatre, arena & venue",
       "setting": "19th-century opera house with a grand marble staircase, a gilded foyer and a ceiling painted by Chagall, home to the Paris Opera Ballet.",
+      "capacity": 2000,
+      "facilities": "Public areas hold up to 2,000 people for a cocktail reception; the Grand Foyer seats up to 700 for a gala dinner. Other hireable spaces include the Avant-Foyer, Rotonde des abonnés, Rotonde du glacier and Galerie Aline Foriel-Destezet.",
       "source_urls": [
-        "https://www.operadeparis.fr/"
+        "https://www.operadeparis.fr/",
+        "https://www.operadeparis.fr/entreprises/locations-despace-et-tournages"
       ],
       "official_url": "https://www.operadeparis.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg/960px-Paris_Opera_full_frontal_architecture%2C_May_2009.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Paris_Opera_full_frontal_architecture,_May_2009.jpg",
+        "author": "Peter Rivera",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-camargue-parc-naturel",
@@ -3108,11 +3597,20 @@
       "lng": 2.2534,
       "type": "Theatre, arena & venue",
       "setting": "Art Deco outdoor and indoor swimming pool complex from 1929 in western Paris, restored as part of a hotel with the original tiled pools kept in use.",
+      "capacity": 150,
+      "facilities": "Salons Longchamp & Auteuil and Salon Murat each hold up to 130 (theatre style); Salon Murat is 135 sqm and doubles as an urban art gallery. Le Solarium rooftop is 160 sqm, holds up to 130, and is open May to September only. Restaurant Molitor is 200 sqm for up to 150. Bar Bikini is 75 sqm for up to 50. Configurations offered: theatre, cabaret, U-shape, classroom, cocktail. Indoor and outdoor pools on site.",
       "source_urls": [
-        "https://www.molitorparis.com/"
+        "https://www.molitorparis.com/",
+        "https://www.molitorparis.com/fr/events/"
       ],
       "official_url": "https://www.molitorparis.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Summer_pool_at_the_Molitor_in_Paris_01.jpg/960px-Summer_pool_at_the_Molitor_in_Paris_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Summer_pool_at_the_Molitor_in_Paris_01.jpg",
+        "author": "BikerNormand from Morsan, Eure, France",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "fr-stade-de-france",
@@ -3127,7 +3625,13 @@
         "https://www.stadefrance.com/"
       ],
       "official_url": "https://www.stadefrance.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/France-Islande_Stade_de_France_03.jpg/960px-France-Islande_Stade_de_France_03.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:France-Islande_Stade_de_France_03.jpg",
+        "author": "Zakarie Faibis",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-station-f",
@@ -3174,8 +3678,13 @@
       "lng": 2.0289,
       "type": "House & apartment",
       "setting": "Le Corbusier's white 1931 villa in Poissy raised on thin pilotis, with ribbon windows, a roof garden and a spiral ramp, managed as a national monument.",
+      "capacity": 450,
+      "facilities": "Interior capacity up to 70 people; garden/exterior capacity up to 450.",
+      "suitability": "Available for filming and photography year-round except during exhibitions. Images made at Villa Savoye are subject to image rights managed by the Fondation Le Corbusier and ADAGP.",
       "source_urls": [
-        "https://www.villa-savoye.fr/"
+        "https://www.villa-savoye.fr/",
+        "https://www.villa-savoye.fr/tournages-et-prises-de-vues",
+        "https://www.villa-savoye.fr/privatisation2"
       ],
       "official_url": "https://www.villa-savoye.fr/",
       "commission_url": "https://www.filmfrance.net/",
@@ -3200,7 +3709,13 @@
         "https://en.wikipedia.org/wiki/Alte_Oper"
       ],
       "official_url": "https://www.alteoper.de/en/",
-      "commission_url": "https://www.hessenfilm.de/en/"
+      "commission_url": "https://www.hessenfilm.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Frankfurt_am_Main-_U-Bahnhof_Alte_Oper-_auf_Bahnsteig-_Richtung_Enkheim_21.11.2009.jpg/960px-Frankfurt_am_Main-_U-Bahnhof_Alte_Oper-_auf_Bahnsteig-_Richtung_Enkheim_21.11.2009.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main-_U-Bahnhof_Alte_Oper-_auf_Bahnsteig-_Richtung_Enkheim_21.11.2009.jpg",
+        "author": "Wikimedia-User Jivee Blau",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-autostadt-wolfsburg",
@@ -3248,7 +3763,7 @@
         "https://www.bavaria-filmstadt.de/en/",
         "https://en.wikipedia.org/wiki/Bavaria_Film"
       ],
-      "official_url": "https://www.bavaria-filmstadt.de/en/",
+      "official_url": "https://www.filmstadt.de/",
       "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
     },
     {
@@ -3265,7 +3780,7 @@
         "https://beelitz-heilstaetten.de/",
         "https://en.wikipedia.org/wiki/Beelitz-Heilst%C3%A4tten"
       ],
-      "official_url": "https://beelitz-heilstaetten.de/",
+      "official_url": "https://www.baumundzeit.de/",
       "commission_url": "https://www.bbfc.de/en/"
     },
     {
@@ -3282,7 +3797,13 @@
         "https://en.wikipedia.org/wiki/Berlin-Hohensch%C3%B6nhausen_Memorial"
       ],
       "official_url": "https://www.stiftung-hsh.de/en/",
-      "commission_url": "https://www.bbfc.de/en/"
+      "commission_url": "https://www.bbfc.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/HSH_Fence-Stannik.JPG/960px-HSH_Fence-Stannik.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:HSH_Fence-Stannik.JPG",
+        "author": "Nstannik",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-deutsches-museum",
@@ -3314,7 +3835,13 @@
         "https://en.wikipedia.org/wiki/Elbphilharmonie"
       ],
       "official_url": "https://www.elbphilharmonie.de/en/",
-      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+      "commission_url": "https://www.moin-filmfoerderung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Elbphilharmonie_2025.jpg/960px-Elbphilharmonie_2025.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Elbphilharmonie_2025.jpg",
+        "author": "Evgenii Salganik",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "de-ferropolis",
@@ -3329,7 +3856,7 @@
         "https://www.ferropolis.de/en/",
         "https://en.wikipedia.org/wiki/Ferropolis"
       ],
-      "official_url": "https://www.ferropolis.de/en/",
+      "official_url": "https://www.ferropolis.de/",
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
     },
     {
@@ -3361,7 +3888,13 @@
         "https://en.wikipedia.org/wiki/Gasometer_Oberhausen"
       ],
       "official_url": "https://www.gasometer.de/en/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Germany_gasometer_oberhausen_neue_mitte.jpg/960px-Germany_gasometer_oberhausen_neue_mitte.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Germany_gasometer_oberhausen_neue_mitte.jpg",
+        "author": "Arne Müseler",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "goerlitz-old-town",
@@ -3396,7 +3929,13 @@
         "https://en.wikipedia.org/wiki/Hamburg_Rathaus"
       ],
       "official_url": "https://www.hamburg.de/rathaus/",
-      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+      "commission_url": "https://www.moin-filmfoerderung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/U-Bahnhof_Rathaus_2022-04.Bahnsteig.1.nnw.jpg/960px-U-Bahnhof_Rathaus_2022-04.Bahnsteig.1.nnw.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Rathaus_2022-04.Bahnsteig.1.nnw.jpg",
+        "author": "NordNordWest",
+        "license": "CC BY-SA 3.0 de"
+      }
     },
     {
       "id": "de-heidelberg-university",
@@ -3423,9 +3962,13 @@
       "lng": 13.7639,
       "type": "House & apartment",
       "setting": "Early twentieth-century garden city on the edge of Dresden built around the Hellerau Festival Theatre, with modernist workshop housing and a rhythmic-gymnastics hall used for performance and film.",
+      "capacity": 400,
+      "facilities": "On-site Lago-Bar for catering; qualified in-house technical staff manage events due to the stage setup and specialised equipment (own site).",
+      "logistics": "Reachable by tram line 8, highway accessible, large on-site parking lot (own site).",
       "source_urls": [
         "https://www.hellerau.org/",
-        "https://en.wikipedia.org/wiki/Hellerau"
+        "https://en.wikipedia.org/wiki/Hellerau",
+        "https://www.hellerau.org/vermietung"
       ],
       "official_url": "https://www.hellerau.org/",
       "commission_url": "https://www.mdm-online.de/en/film-commission/"
@@ -3455,9 +3998,11 @@
       "lng": 10.0284,
       "type": "Industrial & derelict",
       "setting": "Former crane factory in Hamburg's Winterhude district converted into a production house for theatre, dance and performance, with large industrial halls and a forecourt.",
+      "facilities": "During the 2026-2028 renovation, spaces available for hire are Hall k6, Foyer k6, 'Links vorbei', KX (80 seats) and 6a (80 seats); housed in a former factory building (own site).",
       "source_urls": [
         "https://www.kampnagel.de/en/",
-        "https://en.wikipedia.org/wiki/Kampnagel"
+        "https://en.wikipedia.org/wiki/Kampnagel",
+        "https://kampnagel.de/en/service/corporate-hire"
       ],
       "official_url": "https://www.kampnagel.de/en/",
       "commission_url": "https://www.moin-filmfoerderung.de/en/"
@@ -3488,9 +4033,11 @@
       "type": "Church & monastery",
       "setting": "Former Cistercian monastery in the Rheingau with a Romanesque basilica, a vaulted dormitory, wine cellars and surrounding vineyards, now run as an events and wine estate.",
       "known_for": "The Name of the Rose (1986)",
+      "suitability": "The monastery is described as offering interior and exterior filming, suitable for photo shoots, advertising, image videos and TV productions. Spaces named for use include the cloisters, lay refectory, monks' dormitory, baroque floor rooms, basilica, hospital cellar and treasury (own site).",
       "source_urls": [
         "https://www.kloster-eberbach.de/en/",
-        "https://en.wikipedia.org/wiki/Eberbach_Abbey"
+        "https://en.wikipedia.org/wiki/Eberbach_Abbey",
+        "https://kloster-eberbach.de/en/das-kloster/kloster-eberbach-als-drehort"
       ],
       "official_url": "https://www.kloster-eberbach.de/en/",
       "commission_url": "https://www.hessenfilm.de/en/"
@@ -3508,7 +4055,7 @@
         "https://www.lwl-industriemuseum.de/de/standorte/kokerei-hansa/",
         "https://de.wikipedia.org/wiki/Kokerei_Hansa"
       ],
-      "official_url": "https://www.lwl-industriemuseum.de/de/standorte/kokerei-hansa/",
+      "official_url": "https://www.industriedenkmal-stiftung.de/",
       "commission_url": "https://www.filmstiftung.de/en/"
     },
     {
@@ -3536,9 +4083,13 @@
       "lng": 6.7644,
       "type": "Industrial & derelict",
       "setting": "Disused early twentieth-century ironworks in Duisburg with blast furnaces, gasometers, bunkers and pipe bridges left standing in a public park, floodlit at night and open for climbing and diving.",
+      "suitability": "Private, non-commercial filming and photography (weddings, family photos, TFP, cosplay) generally needs no permit. Commercial filming, including for agencies, TV companies, professional photographers and commercial YouTube makers, always requires a paid permit, processed within up to 5 working days and charged at a daily rate. Drones are prohibited unless a special application is approved; nude photography, high-speed powder photography for commercial use, weapons, paintball, artificial fog and fireworks are restricted or need separate permits. A permit covers the parkland and public areas only; the event halls (Power Plant, Blower House Complex, Casthouse) are separately leased (own site).",
+      "permit_needed": "Yes",
+      "logistics": "1,600 free parking spaces directly across from the main entrance (own site).",
       "source_urls": [
         "https://www.landschaftspark.de/en/",
-        "https://en.wikipedia.org/wiki/Landschaftspark"
+        "https://en.wikipedia.org/wiki/Landschaftspark",
+        "https://www.landschaftspark.de/en/frequently-asked-questions/photographers-and-film-makers/"
       ],
       "official_url": "https://www.landschaftspark.de/en/",
       "commission_url": "https://www.filmstiftung.de/en/"
@@ -3552,6 +4103,8 @@
       "lng": 6.9829,
       "type": "Theatre, arena & venue",
       "setting": "Indoor arena in Cologne's Deutz district with a bowl seating around 20,000, used for concerts, ice hockey, basketball and television productions.",
+      "facilities": "Theatre seating configuration up to 5,300 seats; multiple restaurants (Backstage, Henkelmaennchen) and bar/catering areas on site (own site).",
+      "logistics": "Multiple car parks on site: P1, P3 (VIP), P4, P5 and KoelnArcaden (own site).",
       "source_urls": [
         "https://www.lanxess-arena.de/",
         "https://en.wikipedia.org/wiki/Lanxess_Arena"
@@ -3568,6 +4121,7 @@
       "lng": 13.8017,
       "type": "Industrial & derelict",
       "setting": "Former limestone quarry and cement works east of Berlin preserved as an open-air museum, with quarry faces, kilns, a narrow-gauge railway and industrial machinery halls.",
+      "facilities": "Named event spaces at the former limestone quarry site are KulturDach, Bohlenbinderdach and Cafe Magazin (own site).",
       "source_urls": [
         "https://www.museumspark.de/"
       ],
@@ -3666,6 +4220,7 @@
       "lng": 7.2175,
       "type": "Theatre, arena & venue",
       "setting": "Repertory theatre in Bochum with a 1950s auditorium, stage house and rehearsal spaces, one of Germany's leading state theatres.",
+      "facilities": "Four venues: Schauspielhaus (up to 800 seats), Kammerspiele (400 seats), Oval Office (100 seats) and Theaterrevier (own site).",
       "source_urls": [
         "https://www.schauspielhausbochum.de/en/"
       ],
@@ -3762,7 +4317,7 @@
         "https://gruen-berlin.de/tempelhofer-feld",
         "https://en.wikipedia.org/wiki/Tempelhof_Airport"
       ],
-      "official_url": "https://gruen-berlin.de/tempelhofer-feld",
+      "official_url": "https://www.thf-berlin.de/",
       "commission_url": "https://www.bbfc.de/en/"
     },
     {
@@ -3774,9 +4329,11 @@
       "lng": 13.2361,
       "type": "Industrial & derelict",
       "setting": "Cold War listening station of geodesic radomes and control buildings on an artificial hill of wartime rubble in the Grunewald forest, with derelict interiors and open roof terraces.",
+      "facilities": "Exclusive event hire requires a minimum of 50 people; venue includes flexible multi-purpose rooms and one of Berlin's highest roof terraces (own site).",
       "source_urls": [
         "https://www.teufelsberg-berlin.de/",
-        "https://en.wikipedia.org/wiki/Teufelsberg"
+        "https://en.wikipedia.org/wiki/Teufelsberg",
+        "https://www.teufelsberg-berlin.de/events/eventlocation-mieten/"
       ],
       "official_url": "https://www.teufelsberg-berlin.de/",
       "commission_url": "https://www.bbfc.de/en/"
@@ -3790,9 +4347,13 @@
       "lng": 6.8494,
       "type": "Industrial & derelict",
       "setting": "Disused nineteenth-century ironworks in Völklingen, a UNESCO World Heritage site with blast furnaces, ore bunkers, a power hall and elevated walkways through the plant.",
+      "price_note": "A usage fee for commercial filming and photography is set in a prior written agreement; the cost depends on subject prominence, technical and personnel effort and intended use, quoted only after the application is reviewed (own site).",
+      "suitability": "Standard filming/photo permit requests must be submitted at least 10 working days ahead, drone permits at least 25 working days ahead. No filming on weekends or public holidays. Drones are not allowed without separate state-level authorisation. Interior wedding shoots are not permitted; exterior wedding shoots are allowed with advance notice. Equipment may not be placed on the heritage structures, and access is limited to the visitor pathways. Private, non-commercial photography is allowed without a permit (a declaration form at the ticket office is requested) (own site).",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.voelklinger-huette.org/en/",
-        "https://en.wikipedia.org/wiki/V%C3%B6lklingen_Ironworks"
+        "https://en.wikipedia.org/wiki/V%C3%B6lklingen_Ironworks",
+        "https://www.voelklinger-huette.org/en/hinweise-zum-fotografieren/"
       ],
       "official_url": "https://www.voelklinger-huette.org/en/",
       "commission_url": "http://www.germanfilms.de"
@@ -3822,11 +4383,13 @@
       "lng": 7.4596,
       "type": "Theatre, arena & venue",
       "setting": "Exhibition and event complex in Dortmund with several linked halls, including a large arena hall, built from the 1920s onward and still used for trade fairs, sport and concerts.",
+      "facilities": "Westfalenhalle arena seats up to 16,140; Messe Dortmund exhibition space totals 60,000 sqm, divisible from 1,000 to 10,000 sqm; Kongress Dortmund congress rooms hold 10 to 10,000 guests; the building is heritage-protected (own site).",
       "source_urls": [
         "https://www.westfalenhallen.de/",
-        "https://en.wikipedia.org/wiki/Westfalenhallen"
+        "https://en.wikipedia.org/wiki/Westfalenhallen",
+        "https://www.westfalenhallen-gruppe.de/"
       ],
-      "official_url": "https://www.westfalenhallen.de/",
+      "official_url": "https://www.westfalenhallen-gruppe.de/",
       "commission_url": "https://www.filmstiftung.de/en/"
     },
     {
@@ -3858,7 +4421,7 @@
         "https://www.lwl-industriemuseum.de/de/standorte/zeche-zollern/",
         "https://en.wikipedia.org/wiki/Zollern_Colliery"
       ],
-      "official_url": "https://www.lwl-industriemuseum.de/de/standorte/zeche-zollern/",
+      "official_url": "https://zeche-zollern.lwl.org/de/",
       "commission_url": "https://www.filmstiftung.de/en/"
     },
     {
@@ -5140,8 +5703,12 @@
       "lng": -9.2711,
       "type": "Castle & estate",
       "setting": "Six-storey tower house of the O'Flaherty clan on a rocky outcrop above Lough Corrib near Oughterard in County Galway, with a banqueting hall and watchtower.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/"
+        "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5155,8 +5722,12 @@
       "lng": -8.4931,
       "type": "Castle & estate",
       "setting": "Star-shaped 17th-century coastal fortification above Kinsale harbour in west Cork, with bastions, gun batteries and barrack ruins overlooking the Atlantic approach.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park and coach parking on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/charles-fort/"
+        "https://www.heritageireland.ie/visit/places-to-visit/charles-fort/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/charles-fort/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5202,8 +5773,10 @@
       "lng": -8.499,
       "type": "Hospital, prison & institution",
       "setting": "Restored 19th-century prison on a hillside above Cork city, with galleried cell blocks and warders' quarters, hired out for corporate events and filming or photo shoots.",
+      "suitability": "The West Wing is offered for corporate events, product launches and filming or photo shoots, described as a space that can be adapted to a production's requirements.",
       "source_urls": [
-        "https://www.corkcitygaol.com/"
+        "https://www.corkcitygaol.com/",
+        "https://corkcitygaol.com/venue-hire/"
       ],
       "official_url": "https://www.corkcitygaol.com/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5232,8 +5805,13 @@
       "lng": -10.1289,
       "type": "House & apartment",
       "setting": "Coastal home of nineteenth-century political leader Daniel O'Connell on the Ring of Kerry, with period rooms, a walled garden and dunes running down to the Atlantic.",
+      "facilities": "Lift access and WiFi available on site.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park and bicycle parking on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/"
+        "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5247,8 +5825,11 @@
       "lng": -8.1106,
       "type": "Castle & estate",
       "setting": "Restored 15th-century tower house and Jacobean wing in the centre of Donegal town, once the stronghold of the O'Donnell clan, on the banks of the River Eske.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/"
+        "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5262,8 +5843,13 @@
       "lng": -8.5824,
       "type": "House & apartment",
       "setting": "Georgian house and deer park in north Cork, with a walled garden, follies and grazing red deer, cared for by the Office of Public Works.",
+      "facilities": "Lift access on site.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park and coach parking on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/"
+        "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5277,8 +5863,12 @@
       "lng": -6.2675,
       "type": "Palace & landmark",
       "setting": "Former seat of British administration in Ireland in central Dublin, with state apartments, a medieval tower, Georgian interiors and a courtyard used for state events.",
+      "capacity": 4000,
+      "facilities": "Nine event spaces: Printworks 726 sq m (up to 600 theatre-style), Conference Centre 323 sq m (up to 330), St Patrick's Hall 335 sq m (up to 300 theatre-style), George's Hall 230 sq m (up to 240), Portrait Gallery 213 sq m (up to 200), Throne Room 147 sq m (up to 100), Gothic Room 90 sq m (up to 60), Bedford Hall 108 sq m (up to 80), and Castle Gardens 1,885 sq m (up to 4,000 theatre-style).",
+      "suitability": "The Dublin Castle campus is closed to the public until January 2027 while it hosts events for Ireland's Presidency of the Council of the EU; bookings for 2027 are being taken through the Events team.",
       "source_urls": [
-        "https://www.dublincastle.ie/"
+        "https://www.dublincastle.ie/",
+        "https://dublincastle.ie/capacity/"
       ],
       "official_url": "https://www.dublincastle.ie/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5307,8 +5897,12 @@
       "lng": -7.1969,
       "type": "House & apartment",
       "setting": "Neoclassical domed mansion designed by James Gandon in County Laois, with formal lawns, a lake and an avenue of Wellingtonia trees, managed by the OPW.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/emo-court/"
+        "https://www.heritageireland.ie/visit/places-to-visit/emo-court/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/emo-court/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5322,8 +5916,12 @@
       "lng": -6.3275,
       "type": "Church & monastery",
       "setting": "Early medieval monastic site in a glaciated Wicklow valley, with a round tower, ruined stone churches and two lakes, managed by the Office of Public Works.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/"
+        "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5354,9 +5952,13 @@
       "type": "House & apartment",
       "setting": "Elizabethan-revival mansion on the edge of Bray with a domed Victorian conservatory, formal gardens with twin canals, woodland walks and a working farmyard on the wider estate.",
       "known_for": "Excalibur, My Left Foot, The Tudors, Fate: The Winx Saga",
+      "capacity": 500,
+      "facilities": "Four hireable spaces: the Grain Store, a 19th-century barn with a full bar and kitchen (500 standing, 300 seated, 180 dining); Killruddery Yard for full estate hire (up to 500 guests); the Long Room, a former dairy with integrated AV (100 standing, 40 seated); and the Pizza Shed with a wood-fired oven (100 standing indoors, 60 seated).",
+      "suitability": "The estate is available for private hire, including corporate away days, gala receptions and private screenings.",
       "source_urls": [
         "https://killruddery.com/",
-        "https://en.wikipedia.org/wiki/Killruddery_House"
+        "https://en.wikipedia.org/wiki/Killruddery_House",
+        "https://killruddery.com/pages/events-and-gatherings"
       ],
       "official_url": "https://killruddery.com/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5404,8 +6006,13 @@
       "lng": -6.2816,
       "type": "House & apartment",
       "setting": "Former school run by Patrick Pearse in a Georgian house in Rathfarnham, south Dublin, set in a public park with woodland, a walled garden and a stream.",
+      "facilities": "Lift access on site.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Coach parking on site; the site is about 8 km from Dublin city centre.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/pearse-museum-st-endas-park/"
+        "https://www.heritageireland.ie/visit/places-to-visit/pearse-museum-st-endas-park/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/pearse-museum-st-endas-park/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5419,8 +6026,13 @@
       "lng": -8.2189,
       "type": "Castle & estate",
       "setting": "Early 17th-century semi-fortified house on Lough Derg in east Galway, with restored formal gardens, a kitchen garden and a woodland park managed by the OPW.",
+      "facilities": "WiFi available on site.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
+      "logistics": "Car park and coach parking on site.",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/"
+        "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5453,8 +6065,11 @@
       "lng": -8.47,
       "type": "Church & monastery",
       "setting": "Ruined 13th-century Dominican friary in Sligo town, with a carved altar, cloister arcade and medieval tomb sculptures, open seasonally under the OPW.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/"
+        "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5468,8 +6083,12 @@
       "lng": -8.0978,
       "type": "House & apartment",
       "setting": "Palladian-style Georgian house in County Roscommon set on about 300 acres, with a walled garden, the National Famine Museum and its own listed film location page.",
+      "suitability": "Filming permission must be sought and secured in advance and is agreed on a project-by-project basis.",
+      "permit_needed": "Yes",
+      "logistics": "Under about 2 hours' drive from Dublin Airport.",
       "source_urls": [
-        "https://strokestownpark.ie/"
+        "https://strokestownpark.ie/",
+        "https://strokestownpark.ie/film-location/"
       ],
       "official_url": "https://strokestownpark.ie/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -5483,8 +6102,12 @@
       "lng": -6.2531,
       "type": "Office, school & public building",
       "setting": "Neoclassical 18th-century government building on the Liffey quays in Dublin, with a visitor centre in the vaulted basement telling the story of its construction and 1921 fire.",
+      "facilities": "Lift access and WiFi available on site.",
+      "suitability": "Filming and photography require prior written permission from the site's OPW contact; drones/UAVs are prohibited at all OPW heritage sites, and promotional filming is normally capped at 10 cast and crew for up to 2 hours with minimal equipment. At least two weeks' notice is requested; cancelling after confirmation costs 50 percent of the agreed fee, and cancelling with less than 48 hours' notice costs the full fee.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.heritageireland.ie/visit/places-to-visit/custom-house-visitor-centre/"
+        "https://www.heritageireland.ie/visit/places-to-visit/custom-house-visitor-centre/",
+        "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/custom-house-visitor-centre/",
       "commission_url": "https://www.screenireland.ie/locations"
@@ -6693,6 +7316,7 @@
       "lng": 5.6838,
       "type": "Hotel & interiors",
       "setting": "Fifteenth-century Gothic monastery church and cloister in Maastricht converted into a design hotel, keeping vaulted ceilings, stained glass and a choir loft.",
+      "logistics": "Hotel closed for renovation; scheduled to reopen October 2026.",
       "source_urls": [
         "https://www.oostwegelcollection.nl/kruisherenhotel-maastricht/"
       ],
@@ -6708,10 +7332,13 @@
       "lng": 4.2816,
       "type": "Hotel & interiors",
       "setting": "Grand 1885 beachfront hotel at Scheveningen with a domed Kurzaal ballroom of murals and chandeliers, and terraces facing the North Sea promenade.",
+      "capacity": 1500,
+      "facilities": "10 meeting/event halls accommodating up to 1,500 people in total; 270 guest rooms including 8 suites; historic domed Kurzaal hall. Site now operates as Grand Hotel Amrath Kurhaus (amrathkurhaus.com); the kurhaus.nl domain redirects there.",
       "source_urls": [
-        "https://www.kurhaus.nl/"
+        "https://www.kurhaus.nl/",
+        "http://www.amrathkurhaus.com/"
       ],
-      "official_url": "https://www.kurhaus.nl/",
+      "official_url": "https://www.amrathkurhaus.com/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -6723,10 +7350,13 @@
       "lng": 4.9347,
       "type": "Hotel & interiors",
       "setting": "Former 1921 emigrant hotel on Amsterdam's eastern docklands, rebuilt with room categories from one to five stars mixing Art Deco and contemporary interiors.",
+      "facilities": "136 bedrooms; on-site cocktail bar, brasserie, meeting spaces and private dining. Site now operates as The Hoxton, Amsterdam (thehoxton.com/amsterdam/lloyd/); the lloydhotel.com domain redirects there.",
+      "logistics": "50 on-site parking spaces at EUR 3.50/hour or EUR 35/day.",
       "source_urls": [
-        "http://www.lloydhotel.com/"
+        "http://www.lloydhotel.com/",
+        "https://thehoxton.com/amsterdam/lloyd/"
       ],
-      "official_url": "http://www.lloydhotel.com/",
+      "official_url": "https://thehoxton.com/amsterdam/lloyd/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -6756,7 +7386,7 @@
       "source_urls": [
         "https://www.louishartloopercomplex.nl/"
       ],
-      "official_url": "https://www.louishartloopercomplex.nl/",
+      "official_url": "https://www.hartlooper.nl/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -6870,8 +7500,11 @@
       "lng": 4.893,
       "type": "Industrial & derelict",
       "setting": "Former shipyard on the IJ in Amsterdam-Noord with a vast former assembly hall, dry docks and cranes, now used for events and creative work.",
+      "suitability": "Commercial shoots require permission and a location contract; a free notification to the municipality (gemeente) is mandatory for commercial use. Small-scale personal shoots (up to 3 people, non-commercial) are permitted under conditions. Public artworks on site cannot be occupied for longer than 15 minutes.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.ndsm.nl/"
+        "https://www.ndsm.nl/",
+        "https://www.ndsm.nl/over/verhuur-buitenterrein"
       ],
       "official_url": "https://www.ndsm.nl/",
       "commission_url": "https://www.filmcommission.nl/"
@@ -7022,8 +7655,11 @@
       "lng": 4.4881,
       "type": "Transport & infrastructure",
       "setting": "1959 ocean liner of the Holland America Line permanently moored in Rotterdam, kept with original Art Deco and mid-century interiors, now a hotel and museum ship.",
+      "capacity": 999,
+      "facilities": "Multiple event rooms aboard ship: Smoking Room (150 people), Grand Ballroom (450), Glass Enclosed Promenade (250), Atlantic Promenade (500), Odyssee Room (350), La Fontaine Room (350), Upper Promenade Deck (10), Promenade Deck (999).",
       "source_urls": [
-        "https://www.ssrotterdam.nl/"
+        "https://www.ssrotterdam.nl/",
+        "https://ssrotterdam.nl/zalen/"
       ],
       "official_url": "https://www.ssrotterdam.nl/",
       "commission_url": "https://www.filmcommission.nl/"
@@ -7101,7 +7737,7 @@
       "source_urls": [
         "https://www.vsm.nl/"
       ],
-      "official_url": "https://www.vsm.nl/",
+      "official_url": "https://www.stoomtrein.org/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -7430,6 +8066,7 @@
       "type": "Studio & backlot",
       "setting": "A domed studio complex near Krakow with multiple sound stages and a large blue-screen hall, built on a former limestone quarry site 18 kilometres from Krakow Airport.",
       "known_for": "Arbitrage (2012), Vamps (2012), Essential Killing (2010)",
+      "facilities": "Facilities include a recording studio, photography studios (K-03, K-04, K-05), colour correction suites including a 4K colour correction room, a motion capture and rehearsal space, sound and image post-production suites, and production offices.",
       "source_urls": [
         "http://www.alvernia.com/en/",
         "https://en.wikipedia.org/wiki/Alvernia_Studios"
@@ -7503,8 +8140,11 @@
       "type": "Industrial & derelict",
       "setting": "The historic Lenin Shipyard gate and slipways where the Solidarity movement began in 1980, bordered by the European Solidarity Centre's rusted-steel museum building and surviving shipyard halls.",
       "known_for": "Man of Iron (1981)",
+      "capacity": 417,
+      "facilities": "Auditorium: 483 sq m, up to 417 people, with a 7x11 m stage, a 12x7 m movie screen, 4 simultaneous interpretation booths (8 language channels) and 2 dressing rooms, plus an adjoining 125 sq m mezzanine. Other spaces: Winter Garden 400 sq m, Foyer 500 sq m, Observation Deck 600 sq m (over 25 m high, up to 50 people, seasonal access), Multifunctional Hall 220 sq m (up to 200 people), Library 180 sq m (up to 100 people), Media Library 85 sq m (up to 70 people), Archive Reading Room 72 sq m (up to 30 people), and workshop rooms of 92 sq m (up to 70 people) and 52 sq m (up to 50 people).",
       "source_urls": [
-        "https://ecs.gda.pl/en"
+        "https://ecs.gda.pl/en",
+        "https://ecs.gda.pl/en/ecs/venue-hire/"
       ],
       "official_url": "https://ecs.gda.pl/en",
       "commission_url": "https://filmcommission.pomorskie.eu"
@@ -7679,8 +8319,11 @@
       "lng": 18.5512,
       "type": "Transport & infrastructure",
       "setting": "A Grom-class destroyer launched in 1936 and preserved as a museum ship on Gdynia's waterfront, with its bridge, gun turrets and below-deck compartments open to visitors.",
+      "capacity": 121,
+      "facilities": "The museum building (not the ship itself) rents an audiovisual hall for up to 121 people, with daylight and ceiling lighting, a screen and projector, lectern, WiFi, cloakroom and ground-floor toilets, plus a small classroom for up to 15 people. Space in front of the building is not available for hire.",
       "source_urls": [
-        "https://muzeummw.pl"
+        "https://muzeummw.pl",
+        "https://muzeummw.pl/wynajem-powierzchni/"
       ],
       "official_url": "https://muzeummw.pl",
       "commission_url": "https://filmcommission.pomorskie.eu"
@@ -7694,6 +8337,7 @@
       "lng": 21.0058,
       "type": "Palace & landmark",
       "setting": "A 237-metre socialist-classicist tower built in 1955 as a gift from the Soviet Union, holding theatres, cinemas, a congress hall, museums and an observation deck over central Warsaw.",
+      "facilities": "237 m tall building with 46 floors and 3,288 rooms; the viewing terrace is at 114 m.",
       "source_urls": [
         "https://www.pkin.pl/en"
       ],
@@ -7739,8 +8383,11 @@
       "lng": 19.0253,
       "type": "Theatre, arena & venue",
       "setting": "A saucer-shaped 1971 sports and concert arena in central Katowice, its suspended roof spanning a hall seating up to about 11,500 for events.",
+      "suitability": "A standard filming day covers 12 hours of shooting plus 2 hours for equipment setup and teardown, and includes an electrical connection, a dedicated event manager, a break room and parking; an extra setup/teardown day costs 50 percent of the daily filming rate. Interior photo sessions are allowed subject to the event schedule, roof photography is not permitted, and drone shots must comply with Polish aviation regulations.",
       "source_urls": [
-        "https://www.spodekkatowice.pl/en"
+        "https://www.spodekkatowice.pl/en",
+        "https://www.spodekkatowice.pl/pl/plany-filmowe/267/",
+        "https://www.spodekkatowice.pl/pl/sesje-fotograficzne/266/"
       ],
       "official_url": "https://www.spodekkatowice.pl/en",
       "commission_url": "https://silesiafilm.com/"
@@ -7754,8 +8401,11 @@
       "lng": 18.9735,
       "type": "Theatre, arena & venue",
       "setting": "A bowl stadium built in 1956 on a reclaimed slag heap in Chorzow, rebuilt with a membrane roof and seating around 54,000 for football, speedway and concerts.",
+      "capacity": 54378,
+      "facilities": "Maximum stand capacity 54,378 (about 30,000 for concerts on the pitch), 2,092 business seats, 384 VIP box seats (22 boxes for 16 people, 1 box for 32), and 106 spaces for visitors with disabilities. Outdoor: an artificial-turf athletics pitch 105x68 m with floodlighting at 500 lx, a natural-turf pitch 94x64 m at 250 lx, 3 tennis courts, a western perimeter area of about 23,000 sq m (asphalt, concrete, grass) and a technical backup area of about 5,000 sq m. Indoor: a conference centre of 1,785 sq m (divisible into 3), a 700 sq m conference hall with 2 retractable stands of 180 seats each, 2 multifunctional halls of 310 sq m each, a 940 sq m main hall, 2 reception/foyer areas of 364 sq m each, a large VIP box of 80 sq m and small VIP boxes of 34 sq m each.",
       "source_urls": [
-        "https://www.stadionslaski.pl"
+        "https://www.stadionslaski.pl",
+        "https://superautostadionslaski.pl/wynajem-stadionu-i-organizacja-imprez"
       ],
       "official_url": "https://www.stadionslaski.pl",
       "commission_url": "https://silesiafilm.com/"
@@ -9256,9 +9906,11 @@
       "type": "Industrial & derelict",
       "setting": "Decommissioned Thames-side coal power station with four white chimneys, its turbine halls and boiler house now restored inside a mixed-use redevelopment.",
       "known_for": "The King's Speech, Children of Men",
+      "facilities": "Event spaces include Control Room A (max 220 people), the Arcade Food Hall (max 600) and The Cinema in The Power Station (max 350).",
       "source_urls": [
         "https://batterseapowerstation.co.uk/",
-        "https://en.wikipedia.org/wiki/Battersea_Power_Station"
+        "https://en.wikipedia.org/wiki/Battersea_Power_Station",
+        "https://batterseapowerstation.co.uk/events/private-hire/"
       ],
       "official_url": "https://batterseapowerstation.co.uk/",
       "commission_url": "https://filmlondon.org.uk/"
@@ -9287,8 +9939,12 @@
       "lng": -5.9295,
       "type": "Office, school & public building",
       "setting": "Baroque Revival city hall of 1906 in central Belfast, with a domed rotunda, marble entrance hall, council chamber and banqueting hall.",
+      "capacity": 500,
+      "facilities": "Great Hall: theatre 500, round dinner 400 (40 tables), standing reception 500. Banqueting Hall: theatre 225, round dinner 150 (15 tables), standing reception 250. Reception Room: theatre 100, round dinner 80 (8 tables), standing reception 120. Event spaces are on the first floor and accessible to visitors with disabilities.",
+      "logistics": "Booking requires a completed booking form at least eight weeks before the proposed event; applications are reviewed monthly by the Strategic Policy and Resources Committee.",
       "source_urls": [
-        "https://www.belfastcity.gov.uk/cityhall"
+        "https://www.belfastcity.gov.uk/cityhall",
+        "https://www.belfastcity.gov.uk/things-to-do/city-hall/use-of-city-hall"
       ],
       "official_url": "https://www.belfastcity.gov.uk/cityhall",
       "commission_url": "https://northernirelandscreen.co.uk/"
@@ -9318,8 +9974,11 @@
       "lng": -3.0813,
       "type": "Industrial & derelict",
       "setting": "Former working coal mine at Blaenavon in the South Wales valleys, part of a World Heritage industrial landscape, with pithead buildings and an underground tour.",
+      "suitability": "Written permission is required before using images or film in any commercial capacity; commercial shoots must be arranged in advance with the in-house team (venuehire@museumwales.ac.uk). Flash, camera supports and selfie sticks are not permitted without prior permission, and areas marked 'no photography or filming' are off-limits.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://museum.wales/bigpit/"
+        "https://museum.wales/bigpit/",
+        "https://museum.wales/about/policy/photography-and-filming-policy/"
       ],
       "official_url": "https://museum.wales/bigpit/",
       "commission_url": "https://www.creative.wales/filming-wales/locations"
@@ -9365,6 +10024,9 @@
       "type": "Bar, restaurant & shop",
       "setting": "Covered Victorian food market south of London Bridge with wrought-iron arcades, market stalls and surrounding cobbled streets.",
       "known_for": "Harry Potter and the Prisoner of Azkaban, Bridget Jones's Diary",
+      "suitability": "Personal photography and small content-creator crews (handheld, max 2 people) do not need permission. Professional crews or commercial filming need written permission from the Market with at least 14 days notice, via a request form covering purpose, crew size, equipment and dates/times. Long-lensed cameras and tripods are not permitted for personal photography.",
+      "permit_needed": "Yes",
+      "logistics": "Address: 8 Southwark Street, London SE1 1TL.",
       "source_urls": [
         "https://boroughmarket.org.uk/filming-and-photography/"
       ],
@@ -9410,8 +10072,14 @@
       "lng": -0.4606,
       "type": "Transport & infrastructure",
       "setting": "Site of the world's first purpose-built motor racing circuit near Weybridge, with a surviving banked track section, aircraft hangars and early aviation and motoring exhibits.",
+      "price_note": "Charge applies for filming and photography on site; rates are discussed once an enquiry is made (own site)",
+      "facilities": "Edwardian Grade II listed Clubhouse (1907); Aircraft Factory hangar with a Wellington Bomber; Flight Shed with a Hawker Harrier and Sopwith Camel; Barnes Wallis-designed Stratosphere Chamber (1946); Aircraft Park including Concorde; Jackson Shed with historic F1 cars; Racing Sheds; the original 1907 motor racing circuit.",
+      "suitability": "Filming welcomed outside opening hours where possible; daytime filming possible on weekdays but no filming inside the Museum at weekends. Crews must hold public liability insurance of at least GBP 10m and provide risk assessments, method statements and a signed contract. Requests should be made at least two weeks in advance.",
+      "permit_needed": "Yes",
+      "logistics": "Located between Weybridge and Byfleet, Surrey, a few minutes from Junction 10 of the M25 and the A3, about 30 minutes by train from London Waterloo. Free on-site parking, a cafe, and areas usable as dressing rooms, green rooms and production offices; catering can be arranged for out-of-hours filming.",
       "source_urls": [
-        "https://www.brooklandsmuseum.com/"
+        "https://www.brooklandsmuseum.com/",
+        "https://www.brooklandsmuseum.com/venue-hire/filming-location-hire/"
       ],
       "official_url": "https://www.brooklandsmuseum.com/",
       "commission_url": "https://britishfilmcommission.org.uk/"
@@ -9432,21 +10100,6 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
-      "id": "uk-cains-brewery-village",
-      "name": "Cains Brewery Village",
-      "country": "United Kingdom",
-      "region": "Merseyside, North of England",
-      "lat": 53.391,
-      "lng": -2.978,
-      "type": "Industrial & derelict",
-      "setting": "Former Robert Cain brewery complex south of Liverpool city centre, its red brick industrial buildings and courtyards now let as event, retail and filming space.",
-      "source_urls": [
-        "https://www.cainsbreweryvillage.co.uk"
-      ],
-      "official_url": "https://www.cainsbreweryvillage.co.uk",
-      "commission_url": "https://www.liverpoolfilmoffice.tv/"
-    },
-    {
       "id": "uk-charlestown-harbour",
       "name": "Charlestown Harbour",
       "country": "United Kingdom",
@@ -9456,8 +10109,12 @@
       "type": "Transport & infrastructure",
       "setting": "Small Georgian-era dry-dock harbour near St Austell, still used by tall ships, with quayside cottages and period pilchard cellars around the basin.",
       "known_for": "Poldark",
+      "facilities": "Inner Harbour is 151m long, 33m wide and 5m deep, holding over 5,400 sq m of water; vessels up to 75m length and 4m draught can sail in directly from the open sea; described as one of the largest marine filming tanks in the world with access to open sea.",
+      "suitability": "Unspoilt South Cornish coastline location providing shelter from adverse marine conditions, enabling 'at sea' footage to be shot in rough weather; marine coordination, rigging services and prop hire available on site.",
+      "logistics": "Address: Charlestown Harbour, St Austell, Cornwall PL25 3NT.",
       "source_urls": [
-        "https://www.charlestownharbour.com/"
+        "https://www.charlestownharbour.com/",
+        "https://charlestownharbour.com/historic-harbour-filming-location/"
       ],
       "official_url": "https://www.charlestownharbour.com/",
       "commission_url": "https://britishfilmcommission.org.uk/"
@@ -9580,7 +10237,7 @@
       "source_urls": [
         "https://digbethlocstudios.co.uk"
       ],
-      "official_url": "https://digbethlocstudios.co.uk",
+      "official_url": "https://www.digbethloc.com/",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
     },
     {
@@ -9677,6 +10334,9 @@
       "lng": -0.2136,
       "type": "House & apartment",
       "setting": "Moated former residence of the Bishop of London beside the Thames at Putney, combining Tudor courtyards, Georgian rooms and walled gardens available for filming.",
+      "facilities": "Tudor courtyard, Georgian rooms and 13 acres of garden.",
+      "suitability": "Welcomes large filming projects as well as smaller photoshoots. Interior locations include the Great Hall, Chapel, Bishop Porteus's Library and drawing rooms.",
+      "logistics": "Described as easily accessible by London public transport.",
       "source_urls": [
         "https://www.fulhampalace.org/venue-hire/filming/"
       ],
@@ -9742,8 +10402,11 @@
       "lng": -1.9107,
       "type": "Office, school & public building",
       "setting": "Contemporary art gallery in a restored Victorian board school building in Birmingham's Brindleyplace, with galleries, a tower and a public square outside.",
+      "capacity": 500,
+      "facilities": "Victorian building with versatile spaces accommodating 10 to 500 guests (own site).",
       "source_urls": [
-        "https://www.ikon-gallery.org"
+        "https://www.ikon-gallery.org",
+        "https://www.ikon-gallery.org/about/venue-hire"
       ],
       "official_url": "https://www.ikon-gallery.org",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
@@ -9757,8 +10420,11 @@
       "lng": -4.2907,
       "type": "Office, school & public building",
       "setting": "Red sandstone Edwardian museum and art gallery in Glasgow's West End, with an organ-fitted central hall, galleries and a park setting beside the River Kelvin.",
+      "suitability": "Commercial filming and sound recording requires permission from Glasgow Life (contact glasgowmuseumshire@glasgowlife.org.uk); personal filming/photography equipment such as selfie sticks, tripods, monopods, gimbals and lighting is not allowed.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum"
+        "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum",
+        "https://www.glasgowlife.org.uk/museums/photography-filming-and-sketching"
       ],
       "official_url": "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum",
       "commission_url": "https://www.screen.scot/"
@@ -9805,6 +10471,8 @@
       "type": "House & apartment",
       "setting": "Elizabethan mansion near Guildford with panelled state rooms, a walled garden and surrounding parkland, hired for filming.",
       "known_for": "Bridget Jones's Diary, The Wedding Date",
+      "facilities": "The Great Hall has oak panelling and an imposing fireplace; the Tithe Barn is a restored 17th-century barn with high beams; outdoor grounds and gardens are also available.",
+      "suitability": "Used as a filming location for period dramas, television series and feature films, citing its architectural heritage and landscapes.",
       "source_urls": [
         "https://loseleypark.co.uk/filming/"
       ],
@@ -9880,8 +10548,12 @@
       "lng": -1.0961,
       "type": "Transport & infrastructure",
       "setting": "National collection of historic locomotives and rolling stock in York, housed in former railway engine sheds with large open halls and turntables.",
+      "capacity": 1000,
+      "facilities": "Great Hall (up to 1,000 guests) displays locomotives including Mallard, Flying Scotsman and a Bullet Train; Station Hall (up to 450 guests) features Royal Carriages; two conference rooms with breakout areas accommodate up to 100 delegates. MIA Accredited Venue.",
+      "logistics": "Address: Leeman Road, York YO26 4XJ.",
       "source_urls": [
-        "https://www.railwaymuseum.org.uk/"
+        "https://www.railwaymuseum.org.uk/",
+        "https://www.hiretherailwaymuseum.com/"
       ],
       "official_url": "https://www.railwaymuseum.org.uk/",
       "commission_url": "https://screenyorkshire.co.uk/"
@@ -9896,8 +10568,11 @@
       "type": "House & apartment",
       "setting": "End-of-terrace Georgian townhouse on Bath's Royal Crescent, restored and furnished as a museum showing how it looked in the 1700s.",
       "known_for": "Bridgerton",
+      "facilities": "Grand Georgian townhouse with interior rooms furnished in period style, including the Kitchen, Servants' Hall, Withdrawing Room, Dining Room, Lady's Bedroom, Housekeeper's Room and Gentleman's Bedroom.",
+      "suitability": "Interior rooms and the exterior can both be filmed; green room spaces and facilities are available; the museum can be hired in its entirety so filming is not interrupted by visitors. For filming along the wider Royal Crescent, the site directs enquiries to the Bath Film Office.",
       "source_urls": [
-        "https://no1royalcrescent.org.uk/"
+        "https://no1royalcrescent.org.uk/",
+        "https://no1royalcrescent.org.uk/about/photography-and-filming/"
       ],
       "official_url": "https://no1royalcrescent.org.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
@@ -9912,6 +10587,7 @@
       "type": "Palace & landmark",
       "setting": "Baroque waterfront complex of colonnaded courts and a domed Painted Hall at Greenwich, hired as a stand-in for period Paris, Victorian London and other settings.",
       "known_for": "Bridgerton, The Crown, Les Misérables, Thor",
+      "suitability": "Site accommodates documentary and commercial filming, personal and commercial photography, wedding photography, and news and media; featured in more than 300 productions including Bridgerton, The Crown, Les Miserables and Thor. Location fees charged go towards preserving the site.",
       "source_urls": [
         "https://ornc.org/explore-whats-here/filming-location/"
       ],
@@ -9957,8 +10633,11 @@
       "lng": -1.7857,
       "type": "Hospital, prison & institution",
       "setting": "Former Scottish state prison at Peterhead, closed in 2013, with its original cell blocks, exercise yard and perimeter wall open as a museum.",
+      "facilities": "Spaces include A Hall, the Segregation Block, the Booking In Office, the hospital wing, laundry and a woodwork area; over 125 years of prison history as backdrop.",
+      "suitability": "Used for crime dramas, documentaries and period productions; TV, film and photography productions are accommodated with flexible hire options and on-site support.",
       "source_urls": [
-        "https://www.peterheadprisonmuseum.com"
+        "https://www.peterheadprisonmuseum.com",
+        "https://www.peterheadprison.com/venue-hire/production-film-location/"
       ],
       "official_url": "https://www.peterheadprisonmuseum.com",
       "commission_url": "https://www.screen.scot/"
@@ -10080,8 +10759,10 @@
       "lng": -0.5622,
       "type": "Office, school & public building",
       "setting": "Victorian university campus at Egham centred on the ornate French Renaissance-style Founder's Building, with quadrangles, a chapel and a picture gallery.",
+      "suitability": "Filming location services are offered alongside event spaces, catering and accommodation (own site).",
       "source_urls": [
-        "https://www.royalholloway.ac.uk/"
+        "https://www.royalholloway.ac.uk/",
+        "https://venue.royalholloway.ac.uk/"
       ],
       "official_url": "https://www.royalholloway.ac.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
@@ -10110,6 +10791,7 @@
       "lng": -4.2887,
       "type": "Theatre, arena & venue",
       "setting": "Exhibition and conference centre on the Clyde in Glasgow, alongside the SSE Hydro concert arena, with large column-free halls used for events and filming.",
+      "facilities": "Five interconnected exhibition and event halls with a combined area of over 22,000 sq m.",
       "source_urls": [
         "https://www.sec.co.uk/"
       ],
@@ -10156,6 +10838,8 @@
       "type": "Palace & landmark",
       "setting": "Neoclassical courtyard building on the Strand with a fountain court and river terrace, hired for events and productions in central London.",
       "known_for": "The Duchess, Sherlock Holmes",
+      "capacity": 3000,
+      "facilities": "Multiple spaces for hire: the Edmond J. Safra Fountain Court (3,000 capacity), Embankment Galleries (800), River Terrace (500), West Wing (500), Portico Rooms/Seamen's Hall/Lightwells & Deadhouse (200 each), Navy Board Rooms (100) and Screening Room (70).",
       "source_urls": [
         "https://www.somersethouse.org.uk/venue-hire",
         "https://en.wikipedia.org/wiki/Somerset_House"
@@ -10248,6 +10932,7 @@
       "type": "Transport & infrastructure",
       "setting": "80-acre former Royal Navy dockyard on the Medway with Georgian ropewalks, covered slips, dry docks and historic ships used as period maritime backdrops.",
       "known_for": "Call the Midwife, Sherlock Holmes",
+      "suitability": "Both interior and exterior locations are offered, including No. 3 Slip, the Tarred Yarn Store, the Ropery exterior, Anchor Wharf, and cobbled Victorian streets, suited to period productions.",
       "source_urls": [
         "https://thedockyard.co.uk/filming/"
       ],
@@ -10300,21 +10985,6 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
-      "id": "uk-titan-crane",
-      "name": "Titan Crane",
-      "country": "United Kingdom",
-      "region": "West Dunbartonshire, Scotland",
-      "lat": 55.9013,
-      "lng": -4.4009,
-      "type": "Industrial & derelict",
-      "setting": "Cantilever giant crane of 1907 on the Clyde at Clydebank, the last structure standing from the former John Brown shipyard, with a visitor centre inside its base.",
-      "source_urls": [
-        "https://www.titanclydebank.com"
-      ],
-      "official_url": "https://www.titanclydebank.com",
-      "commission_url": "https://www.screen.scot/"
-    },
-    {
       "id": "uk-tower-bridge",
       "name": "Tower Bridge",
       "country": "United Kingdom",
@@ -10324,9 +10994,13 @@
       "type": "Transport & infrastructure",
       "setting": "Bascule and suspension bridge over the Thames with twin Victorian Gothic towers and a glass-floored high-level walkway overlooking the city.",
       "known_for": "The Mummy Returns, Spider-Man: Far From Home",
+      "facilities": "Interior filming spaces include the High-Level Walkways (level 5), the North and South Towers and the Engine Rooms; a Film Liaison team, on-site security and on-site catering are available.",
+      "suitability": "Filming and photography applications (inside the attraction, on the bridge pavements, on Tower Bridge Road, or in the airspace around the bridge) are made through the FilmApp portal and need at least 5 working days to process. Drones are strictly prohibited within a 50m perimeter for the general public; commercial drone requests are considered case by case with safety protocols. Post-production additions implying the Bridge endorses a brand are not supported. Photography of the Bridge from public space is allowed without permission under Freedom of Panorama.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.towerbridge.org.uk/",
-        "https://en.wikipedia.org/wiki/Tower_Bridge"
+        "https://en.wikipedia.org/wiki/Tower_Bridge",
+        "https://www.towerbridge.org.uk/filming-and-photography"
       ],
       "official_url": "https://www.towerbridge.org.uk/",
       "commission_url": "https://filmlondon.org.uk/"
@@ -10370,6 +11044,7 @@
       "lng": -0.1113,
       "type": "House & apartment",
       "setting": "Neo-Gothic mansion built for William Waldorf Astor beside the Thames, with a galleried great hall and carved wood interiors offered for filming.",
+      "suitability": "Offers 'Filming & Photoshoots' as part of its venue hire service; pricing, capacities and floorplans are provided by the venue hire team on request.",
       "source_urls": [
         "https://twotempleplace.org/hire/filming/"
       ],
@@ -10445,6 +11120,7 @@
       "lng": -0.0654,
       "type": "Theatre, arena & venue",
       "setting": "Surviving Victorian music hall in Wapping with a barley-twist column auditorium and worn brick backstage areas, hired for filming and photography.",
+      "facilities": "Victorian rooms and spaces including the main stairway, the Cocktail Bar and the main Hall, plus the auditorium, Mahogany Bar and The Study. On-site production offices, dressing rooms and wardrobe facilities can be hired, with technical staff able to advise on power and setup; additional crew is available for an extra charge.",
       "source_urls": [
         "https://wiltons.org.uk/hire/filming/"
       ],
