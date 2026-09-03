@@ -1634,6 +1634,21 @@
       "commission_url": "https://www.wallimage.be/"
     },
     {
+      "id": "hr-arena-zagreb",
+      "name": "Arena Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7711,
+      "lng": 15.9437,
+      "type": "Theatre, arena & venue",
+      "setting": "Large modern indoor arena in Zagreb's Lanište district, built for the 2009 World Men's Handball Championship, listed by the Zagreb Film Office as a sports hall filming location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/arena-zagreb/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/arena-zagreb/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-brijuni-national-park",
       "name": "Brijuni National Park",
       "country": "Croatia",
@@ -1647,6 +1662,21 @@
       ],
       "official_url": "https://www.np-brijuni.hr",
       "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-britanski-square-market",
+      "name": "Britanski Square Market",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8136,
+      "lng": 15.9642,
+      "type": "Bar, restaurant & shop",
+      "setting": "Small neighbourhood square and daily market in Zagreb's Britanski trg area, with market stalls and street-level cafes catalogued by the Zagreb Film Office as a shooting location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/britanski-square-market/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/britanski-square-market/",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-church-st-donatus-zadar",
@@ -1761,6 +1791,21 @@
       }
     },
     {
+      "id": "hr-dom-sportova",
+      "name": "Dom Sportova",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8078,
+      "lng": 15.9518,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-hall indoor sports and events complex in Zagreb with three separate arenas, listed by the Zagreb Film Office as a sports hall filming location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/dom-sportova/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/dom-sportova/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-drazen-petrovic-hall",
       "name": "Dražen Petrović Basketball Hall",
       "country": "Croatia",
@@ -1855,6 +1900,23 @@
       ],
       "official_url": "https://ppmhp.hr",
       "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-hotel-international-zagreb",
+      "name": "Hotel International Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7989,
+      "lng": 15.9742,
+      "type": "Hotel & interiors",
+      "setting": "Business hotel in Zagreb with 207 rooms, six multifunctional meeting rooms, a casino and a lobby bar with terrace, listed by the Zagreb Film Office as a filming location.",
+      "capacity": 207,
+      "facilities": "207 rooms, restaurant, lobby bar with terrace, fitness room, casino, six meeting rooms",
+      "source_urls": [
+        "https://filmzagreb.hr/product/hotel-international/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/hotel-international/",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-hotel-kvarner-opatija",
@@ -2039,6 +2101,21 @@
       }
     },
     {
+      "id": "hr-opatovina",
+      "name": "Opatovina",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8159,
+      "lng": 15.9773,
+      "type": "Bar, restaurant & shop",
+      "setting": "Pedestrian street and square in Zagreb's Upper Town lined with restaurants and bars, listed by the Zagreb Film Office as a filming location for street scenes.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/opatovina/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/opatovina/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-pag-salt-pans",
       "name": "Pag Salt Pans",
       "country": "Croatia",
@@ -2145,6 +2222,21 @@
       "commission_url": "https://www.kvarner-film.org/en/"
     },
     {
+      "id": "hr-sd-tresnjevka",
+      "name": "SD Trešnjevka",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7887,
+      "lng": 15.9249,
+      "type": "Theatre, arena & venue",
+      "setting": "Municipal sports hall in Zagreb's Trešnjevka district, listed by the Zagreb Film Office among the city's sports halls available for filming.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/sd-tresnjavka-2/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/sd-tresnjavka-2/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-st-nicholas-fortress-sibenik",
       "name": "St. Nicholas Fortress",
       "country": "Croatia",
@@ -2192,6 +2284,22 @@
       }
     },
     {
+      "id": "hr-tvornica-kulture",
+      "name": "Tvornica Kulture",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8085,
+      "lng": 15.9921,
+      "type": "Industrial & derelict",
+      "setting": "Former factory building in Zagreb converted into a concert and events venue, with a large and a small performance hall and an on-site bar, hired out for concerts, conferences and corporate events.",
+      "facilities": "Veliki pogon (large hall) and Mali pogon (small hall) performance spaces, on-site bar",
+      "source_urls": [
+        "https://tvornicakulture.com"
+      ],
+      "official_url": "https://tvornicakulture.com",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-veli-rat-lighthouse",
       "name": "Veli Rat Lighthouse",
       "country": "Croatia",
@@ -2213,6 +2321,21 @@
         "author": "Dominik Matus",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "hr-zagreb-faculty-of-law",
+      "name": "Zagreb Faculty of Law",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8106,
+      "lng": 15.9699,
+      "type": "Office, school & public building",
+      "setting": "Main building of the University of Zagreb's Faculty of Law, listed by the Zagreb Film Office among the city's school and university buildings available for filming.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/zagreb-faculty-of-law/"
+      ],
+      "official_url": "https://filmzagreb.hr/product/zagreb-faculty-of-law/",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-zagreb-fair",
@@ -13265,9 +13388,12 @@
       "lng": 19.0495,
       "type": "Theatre, arena & venue",
       "setting": "A large glass-fronted concert and conference hall in Bielsko-Biala, opened in 2023, shortlisted as a finalist in the regional Silesian Film Location 2024 competition.",
+      "facilities": "Rentable spaces include the main hall, chamber hall, patio, foyer and dressing rooms (own site).",
+      "suitability": "The venue states that photo and video shoots and recordings can be arranged in its interiors, alongside space rental for external events (own site).",
       "source_urls": [
         "https://cavatinahall.pl",
-        "https://www.silesiafilmcommission.pl/location/bielsko-biala"
+        "https://www.silesiafilmcommission.pl/location/bielsko-biala",
+        "https://cavatinahall.pl/wspolpraca/wynajem/"
       ],
       "official_url": "https://cavatinahall.pl",
       "commission_url": "https://www.silesiafilmcommission.pl"
@@ -13281,8 +13407,10 @@
       "lng": 17.0773,
       "type": "Theatre, arena & venue",
       "setting": "A UNESCO-listed 1913 reinforced-concrete domed hall in Wroclaw, seating up to 6,000 beneath a 42-metre ribbed concrete dome, set in surrounding park and garden grounds.",
+      "facilities": "Total floor area of about 14,000 m2, used for congresses, conferences, trainings and business and promotional meetings, with room for a main event plus parallel meetings and exhibitions (own site).",
       "source_urls": [
-        "https://halastulecia.pl/en"
+        "https://halastulecia.pl/en",
+        "https://halastulecia.pl/en/about-the-hall/faces-of-fhe-centennial-hall/congresses-and-conferences/"
       ],
       "official_url": "https://halastulecia.pl/en",
       "commission_url": "https://pfc.pisf.pl/",
@@ -13665,8 +13793,10 @@
       "lng": 18.5484,
       "type": "Transport & infrastructure",
       "setting": "A restored 1930s ocean liner terminal on the Gdynia waterfront, now the Emigration Museum, with its original passenger halls open to visitors and offered as rentable event space.",
+      "facilities": "Rentable spaces at the Maritime Station building: an audiovisual room, a cinema room, the main hall and the exhibition corridor, used for conferences, training, screenings, concerts, performances, film screenings, workshops, presentations and symposia (own site).",
       "source_urls": [
-        "https://polska1.pl"
+        "https://polska1.pl",
+        "https://polska1.pl/wspolpraca/wynajmij-przestrzen/"
       ],
       "official_url": "https://polska1.pl",
       "commission_url": "https://pisf.pl"
@@ -13713,8 +13843,12 @@
       "lng": 17.0264,
       "type": "Theatre, arena & venue",
       "setting": "A 2015 concert hall complex on plac Wolnosci in Wroclaw, run jointly by the city, the region and the ministry of culture, with a main hall plus red, black and chamber halls available to hire.",
+      "facilities": "Four halls (Main Hall plus three chamber halls) plus a foyer and a VIP room available to hire, within about 50,000 m2 of event space. Includes top-standard artist dressing rooms, a spacious backstage, a buffet and restaurant, restrooms on every floor, three cloakrooms, accessibility facilities and an adjoining underground car park with over 600 spaces (own site).",
+      "suitability": "Non-music events such as conventions, symposia and conferences can be held in the concert halls, but the venue states each event must include an artistic component (own site).",
+      "logistics": "Underground parking for over 600 cars adjoining the building (own site).",
       "source_urls": [
-        "https://nfm.wroclaw.pl"
+        "https://nfm.wroclaw.pl",
+        "https://www.nfm.wroclaw.pl/o-nas/wynajem-sal"
       ],
       "official_url": "https://nfm.wroclaw.pl",
       "commission_url": "https://pisf.pl"
@@ -13842,6 +13976,9 @@
       "lng": 18.9686,
       "type": "Modern architecture",
       "setting": "The first planned housing estate of postwar Tychy, built from the 1950s with low modernist blocks around courtyards and green space, named winner of the Silesian Film Location 2024 award.",
+      "suitability": "Listed with medium light intensity and medium noise intensity, and road access marked as possible (Silesia Film Commission listing).",
+      "permit_needed": "Yes",
+      "logistics": "Parking available on site; distance from the production base is listed as on site (Silesia Film Commission listing).",
       "source_urls": [
         "https://www.silesiafilmcommission.pl/location/tychy"
       ],
@@ -13897,6 +14034,7 @@
       "lng": 21.0454,
       "type": "Theatre, arena & venue",
       "setting": "Warsaw's national stadium of 2011, built on the site of the former Tenth-Anniversary Stadium, with a retractable roof and a facade patterned on the Polish flag.",
+      "facilities": "Over 50,000 m2 of business space, including what the venue describes as the largest conference and congress centre in Warsaw (own site).",
       "source_urls": [
         "https://www.pgenarodowy.pl"
       ],
@@ -14459,6 +14597,43 @@
       }
     },
     {
+      "id": "pt-central-tejo-maat",
+      "name": "Central Tejo, MAAT",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.6959,
+      "lng": -9.1936,
+      "type": "Industrial & derelict",
+      "setting": "Former early 20th century thermoelectric power station on the Lisbon riverfront in Belem, now part of the MAAT museum complex, with its former turbine halls hired out for corporate events.",
+      "suitability": "Corporate events, bookings via the museum's venue hire contact",
+      "source_urls": [
+        "https://www.maat.pt"
+      ],
+      "official_url": "https://www.maat.pt",
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tejo_Power_Station%2C_Lisbon%2C_20250604_1936_9548.jpg/960px-Tejo_Power_Station%2C_Lisbon%2C_20250604_1936_9548.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tejo_Power_Station,_Lisbon,_20250604_1936_9548.jpg",
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "pt-centro-artes-espetaculo-portalegre",
+      "name": "Centro de Artes do Espetáculo de Portalegre",
+      "country": "Portugal",
+      "region": "Alentejo",
+      "lat": 39.289,
+      "lng": -7.4296,
+      "type": "Theatre, arena & venue",
+      "setting": "Municipal performing arts centre in Portalegre's historic centre, built on the site of a former religious retreat house, with a large auditorium, a smaller auditorium and a multipurpose cafe-concert hall.",
+      "source_urls": [
+        "https://www.cm-portalegre.pt/visitantes/cultura/centro-de-artes-do-espetaculo-de-portalegre/"
+      ],
+      "official_url": "https://www.cm-portalegre.pt/visitantes/cultura/centro-de-artes-do-espetaculo-de-portalegre/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-cpf-porto",
       "name": "Centro Português de Fotografia",
       "country": "Portugal",
@@ -14472,6 +14647,28 @@
       ],
       "official_url": "https://cpf.pt",
       "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-cinema-sao-jorge",
+      "name": "Cinema São Jorge",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7203,
+      "lng": -9.1463,
+      "type": "Theatre, arena & venue",
+      "setting": "Art Deco cinema opened in 1950 on Lisbon's Avenida da Liberdade, run by the city's culture agency EGEAC and host to the city's main film festivals, with its screening rooms available for space rental.",
+      "suitability": "Cedencia de espacos (space rental) for private events",
+      "source_urls": [
+        "https://www.cinemasaojorge.pt"
+      ],
+      "official_url": "https://www.cinemasaojorge.pt",
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/S.Jorge2014-3.JPG/960px-S.Jorge2014-3.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:S.Jorge2014-3.JPG",
+        "author": "69joehawkins",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "convento-de-cristo-tomar",
@@ -14489,6 +14686,28 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo%2CTomar%2C_Portugal.jpg/960px-Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo%2CTomar%2C_Portugal.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Castelo_dos_Templ%C3%A1rios_e_Convento_de_Cristo,Tomar,_Portugal.jpg",
         "author": "Jose Manuel",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-culturgest",
+      "name": "Culturgest",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7409,
+      "lng": -9.1426,
+      "type": "Theatre, arena & venue",
+      "setting": "Arts centre run by a bank foundation inside its Lisbon headquarters, with galleries and auditoriums used for theatre, music, cinema and conferences, and its own space-rental service.",
+      "suitability": "Aluguer de espacos (space rental) for private hire",
+      "source_urls": [
+        "https://www.culturgest.pt"
+      ],
+      "official_url": "https://www.culturgest.pt",
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Culturgest%2C_Lisboa_01.jpg/960px-Culturgest%2C_Lisboa_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Culturgest,_Lisboa_01.jpg",
+        "author": "GualdimG",
         "license": "CC BY-SA 4.0"
       }
     },
@@ -14670,6 +14889,21 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-mercado-municipal-loule",
+      "name": "Mercado Municipal de Loulé",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.1382,
+      "lng": -8.0224,
+      "type": "Bar, restaurant & shop",
+      "setting": "Historic municipal market hall in the centre of Loulé, described by the town council as the building that most defines the town, with stalls for local produce, fish and crafts.",
+      "source_urls": [
+        "https://www.cm-loule.pt"
+      ],
+      "official_url": "https://www.cm-loule.pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-mosteiro-tibaes",
       "name": "Mosteiro de São Martinho de Tibães",
       "country": "Portugal",
@@ -14701,6 +14935,43 @@
       "url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
       "official_url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-paco-de-calheiros",
+      "name": "Paço de Calheiros",
+      "country": "Portugal",
+      "region": "Minho",
+      "lat": 41.8062,
+      "lng": -8.5665,
+      "type": "Castle & estate",
+      "setting": "Manor house and wine estate above the Lima valley near Ponte de Lima, run by the same family for seven centuries, with historic gardens, vineyards, a pool and dining rooms, hosting weddings, corporate events and filming.",
+      "suitability": "Welcomes photo sessions and filming on the estate grounds",
+      "source_urls": [
+        "https://www.pacodecalheiros.com"
+      ],
+      "official_url": "https://www.pacodecalheiros.com",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-palacio-da-bolsa",
+      "name": "Palácio da Bolsa",
+      "country": "Portugal",
+      "region": "Porto",
+      "lat": 41.1414,
+      "lng": -8.6157,
+      "type": "Office, school & public building",
+      "setting": "Former 19th century stock exchange building in Porto, now the headquarters of the Porto Commercial Association, with a conference centre, restaurant and ornate historic rooms open for guided tours and events.",
+      "source_urls": [
+        "https://www.palaciodabolsa.com"
+      ],
+      "official_url": "https://www.palaciodabolsa.com",
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Palacio_da_Bolsa_%28Porto%29.JPG/960px-Palacio_da_Bolsa_%28Porto%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palacio_da_Bolsa_(Porto).JPG",
+        "author": "Manuel de Sousa",
+        "license": "Public domain"
+      }
     },
     {
       "id": "pt-piscina-mares",
