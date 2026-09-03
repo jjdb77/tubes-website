@@ -3646,6 +3646,39 @@
       }
     },
     {
+      "id": "fi-melo-power-plant",
+      "name": "Melo Power Plant",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4657,
+      "lng": 23.4304,
+      "type": "Industrial & derelict",
+      "setting": "A hydroelectric power plant in Nokia near Tampere offering both industrial interiors and surrounding nature for productions, listed by Film Tampere as a filming location.",
+      "logistics": "Located at Melontie 59, 37140 Nokia, about 20 km from Tampere's central square",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/melo-power-plant/"
+      ],
+      "url": "https://www.filmtampere.com/locations/melo-power-plant/",
+      "official_url": "https://www.filmtampere.com/locations/melo-power-plant/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-finnpark-garages",
+      "name": "Parking Garages by Finnpark",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4958,
+      "lng": 23.767,
+      "type": "Transport & infrastructure",
+      "setting": "A network of multi storey car parks operated by Finnpark in and around central Tampere, listed by Film Tampere as available filming locations.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/parking-garages-by-finnpark/"
+      ],
+      "url": "https://www.filmtampere.com/locations/parking-garages-by-finnpark/",
+      "official_url": "https://www.filmtampere.com/locations/parking-garages-by-finnpark/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
       "id": "fi-pitkaniemi-hospital",
       "name": "Pitkäniemi Hospital Area",
       "country": "Finland",
@@ -3682,6 +3715,41 @@
         "author": "Bahnfrend",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fi-sibelius-hall",
+      "name": "Sibelius Hall",
+      "country": "Finland",
+      "region": "Paijat-Hame",
+      "lat": 60.995,
+      "lng": 25.6516,
+      "type": "Theatre, arena & venue",
+      "setting": "A wooden concert hall on the shore of Lake Vesijarvi in Lahti, with a main hall, several conference rooms and a live music club, offering full event production and streaming services.",
+      "facilities": "Main hall (Paasali), Metsahalli, Puusepan Sali, conference rooms, restaurants and the Finlandia-klubi live music venue",
+      "logistics": "Located at Ankkurikatu 7, Lahti",
+      "source_urls": [
+        "https://www.sibeliustalo.fi/en/",
+        "https://en.wikipedia.org/wiki/Sibelius_Hall"
+      ],
+      "official_url": "https://www.sibeliustalo.fi/en/",
+      "commission_url": "https://www.businessfinland.fi"
+    },
+    {
+      "id": "fi-stable-yards-tallipiha",
+      "name": "Stable Yards (Tallipiha)",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5035,
+      "lng": 23.7541,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 19th century stable courtyard from the Finlayson factory community in Tampere, restored with Russian style cottages that now house craft shops and a cafe, listed by Film Tampere as a filming location.",
+      "logistics": "Located at Kuninkaankatu 4, about 0.7 km from Tampere's central square",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/stable-yards-tallipiha/"
+      ],
+      "url": "https://www.filmtampere.com/locations/stable-yards-tallipiha/",
+      "official_url": "https://www.filmtampere.com/locations/stable-yards-tallipiha/",
+      "commission_url": "https://www.filmtampere.com"
     },
     {
       "id": "fi-suomenlinna",
@@ -3731,6 +3799,23 @@
       }
     },
     {
+      "id": "fi-tampere-city-hall",
+      "name": "Tampere City Hall",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.498,
+      "lng": 23.7608,
+      "type": "Office, school & public building",
+      "setting": "A neo renaissance city hall from 1890 on Tampere's central square, with several period halls, listed by Film Tampere as a filming location.",
+      "logistics": "Located at Keskustori 10, at the edge of Tampere's central square",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/tampere-city-hall/"
+      ],
+      "url": "https://www.filmtampere.com/locations/tampere-city-hall/",
+      "official_url": "https://www.filmtampere.com/locations/tampere-city-hall/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
       "id": "fi-tampere-hall",
       "name": "Tampere Hall",
       "country": "Finland",
@@ -3772,6 +3857,24 @@
       "url": "https://www.filmtampere.com/locations/tampere-indoor-market-kauppahalli/",
       "official_url": "https://kauppahalli.tampere.fi/",
       "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-tullikamari",
+      "name": "Tullikamari",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4986,
+      "lng": 23.7766,
+      "type": "Theatre, arena & venue",
+      "setting": "A former customs warehouse in Tampere converted into a cultural venue with a large main hall and a smaller club space, used for concerts, theatre and festivals, listed by Film Tampere as a filming location.",
+      "capacity": 1200,
+      "logistics": "Located at Tullikamarin aukio 2, about 1 km from Tampere's central square",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/tullikamari-cultural-center/"
+      ],
+      "url": "https://www.filmtampere.com/locations/tullikamari-cultural-center/",
+      "official_url": "https://www.filmtampere.com/locations/tullikamari-cultural-center/",
+      "commission_url": "https://www.filmtampere.com"
     },
     {
       "id": "fi-turku-castle",
@@ -3886,7 +3989,13 @@
         "https://www.aquaboulevard.fr"
       ],
       "official_url": "https://www.aquaboulevard.fr",
-      "commission_url": "https://www.filmparisregion.com"
+      "commission_url": "https://www.filmparisregion.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Aquaboulevard%2C_Paris_2_January_2016.jpg/960px-Aquaboulevard%2C_Paris_2_January_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aquaboulevard,_Paris_2_January_2016.jpg",
+        "author": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-arenes-nimes",
@@ -4408,7 +4517,13 @@
         "https://en.wikipedia.org/wiki/Futuroscope"
       ],
       "official_url": "https://www.futuroscope.com",
-      "commission_url": "https://www.alca-nouvelle-aquitaine.fr"
+      "commission_url": "https://www.alca-nouvelle-aquitaine.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Futuroscope_%28France_2014%29_06_View_from_the_Gyrotour.JPG/960px-Futuroscope_%28France_2014%29_06_View_from_the_Gyrotour.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Futuroscope_(France_2014)_06_View_from_the_Gyrotour.JPG",
+        "author": "Jordiferrer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-gare-saint-sauveur",
@@ -4423,7 +4538,13 @@
         "https://lillegrandpalais.com/gare-saint-sauveur"
       ],
       "official_url": "https://lillegrandpalais.com/gare-saint-sauveur",
-      "commission_url": "https://www.pictanovo.com"
+      "commission_url": "https://www.pictanovo.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Lille_gare_st_sauveur.JPG/960px-Lille_gare_st_sauveur.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lille_gare_st_sauveur.JPG",
+        "author": "Velvet",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-marseille-port",
@@ -4438,7 +4559,13 @@
         "https://www.marseille-port.fr/autorisation-de-tournage"
       ],
       "official_url": "https://www.marseille-port.fr",
-      "commission_url": "https://www.filmfrance.net"
+      "commission_url": "https://www.filmfrance.net",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Marseille_harbour_mg_6383.jpg/960px-Marseille_harbour_mg_6383.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Marseille_harbour_mg_6383.jpg",
+        "author": "Rama",
+        "license": "CC BY-SA 2.0 fr"
+      }
     },
     {
       "id": "fr-haras-lamballe",
@@ -4454,7 +4581,13 @@
         "https://fr.wikipedia.org/wiki/Haras_national_de_Lamballe"
       ],
       "official_url": "https://www.haras-lamballe.com",
-      "commission_url": "https://www.filmfrance.net"
+      "commission_url": "https://www.filmfrance.net",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lamballe_Gest%C3%BCt.jpg/960px-Lamballe_Gest%C3%BCt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lamballe_Gest%C3%BCt.jpg",
+        "author": "Clemensfranz",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-haras-du-pin",
@@ -4470,7 +4603,13 @@
         "https://en.wikipedia.org/wiki/Haras_national_du_Pin"
       ],
       "official_url": "https://www.haras-national-du-pin.com",
-      "commission_url": "https://www.normandieimages.fr"
+      "commission_url": "https://www.normandieimages.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/FranceNormandieLePinAuHarasChateauHaras.jpg/960px-FranceNormandieLePinAuHarasChateauHaras.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:FranceNormandieLePinAuHarasChateauHaras.jpg",
+        "author": "Ikmo-ned",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-hopital-bicetre",
@@ -4740,7 +4879,13 @@
         "https://en.wikipedia.org/wiki/Grand_Rex"
       ],
       "official_url": "https://www.legrandrex.com",
-      "commission_url": "https://www.filmparisregion.com"
+      "commission_url": "https://www.filmparisregion.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/GrandRexFacade_90ans.jpg/960px-GrandRexFacade_90ans.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:GrandRexFacade_90ans.jpg",
+        "author": "Thomas Laconis",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-le-silo",
@@ -4877,7 +5022,13 @@
         "https://fr.wikipedia.org/wiki/Les_Frigos"
       ],
       "official_url": "https://www.lesfrigos.com",
-      "commission_url": "https://www.filmparisregion.com"
+      "commission_url": "https://www.filmparisregion.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Les_Frigos%2C_Paris_31_December_2012.jpg/960px-Les_Frigos%2C_Paris_31_December_2012.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Les_Frigos,_Paris_31_December_2012.jpg",
+        "author": "Guillaume Baviere from Helsingborg, Sweden",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-halles-de-lyon-paul-bocuse",
@@ -4911,7 +5062,13 @@
         "https://www.les-subs.com"
       ],
       "official_url": "https://www.les-subs.com",
-      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/df/France-lyon-conservatoire-musique-cour1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:France-lyon-conservatoire-musique-cour1.jpg",
+        "author": "Aurelie Chaumat",
+        "license": "Public domain"
+      }
     },
     {
       "id": "fr-rungis-marche",
@@ -5017,7 +5174,13 @@
         "https://fr.wikipedia.org/wiki/Palais_de_justice_historique_de_Lyon"
       ],
       "official_url": "https://www.cours-appel.justice.fr/lyon/",
-      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/20151107_lyon005.jpg/960px-20151107_lyon005.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20151107_lyon005.jpg",
+        "author": "Jean Housen",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-palais-festivals-cannes",
@@ -11918,6 +12081,43 @@
       "commission_url": "https://www.norwegianfilm.com/locations"
     },
     {
+      "id": "no-filmcamp",
+      "name": "FilmCamp",
+      "country": "Norway",
+      "region": "Troms",
+      "lat": 69.0272,
+      "lng": 19.3076,
+      "type": "Studio & backlot",
+      "setting": "A production hub in a former military base at Overbygd in Malselv, with sound stages, offices, accommodation and catering used as a base for shoots across the Arctic landscape of Troms.",
+      "known_for": "The River (2017), Outlier (2020)",
+      "facilities": "Three main studios plus one smaller studio with wooden floors, two soundproofed studios, offices, meeting rooms, accommodation, catering and a pub",
+      "logistics": "Located at Tomas Tomassens vei 41, 9334 Overbygd, reachable by plane and bus",
+      "source_urls": [
+        "https://filmcamp.no",
+        "https://en.wikipedia.org/wiki/M%C3%A5lselv_Municipality"
+      ],
+      "official_url": "https://filmcamp.no",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
+      "id": "no-filmparken",
+      "name": "Filmparken",
+      "country": "Norway",
+      "region": "Akershus",
+      "lat": 59.9188,
+      "lng": 10.6115,
+      "type": "Studio & backlot",
+      "setting": "A film and TV production site in Jar outside Oslo that has hosted continuous film production since 1935, with three sound stages, a smaller studio and a costume rental department.",
+      "facilities": "Three main studios plus one smaller studio with wooden floors, two soundproofed studios, costume rental with wardrobe staff",
+      "logistics": "Located at Wedel Jarlsbergs vei 36, 1358 Jar, about 15 minutes from central Oslo",
+      "source_urls": [
+        "https://www.filmparken.no/filmparken",
+        "https://www.filmparken.no/kontakt"
+      ],
+      "official_url": "https://www.filmparken.no/filmparken",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
       "id": "no-hakonshallen",
       "name": "Håkonshallen",
       "country": "Norway",
@@ -11960,6 +12160,22 @@
       "commission_url": "https://www.norwegianfilm.com/locations/hamar-dome-domkirkeodden"
     },
     {
+      "id": "no-hardangerbadet",
+      "name": "Hardangerbadet",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.3863,
+      "lng": 6.2021,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor swimming pool in Oystese with floor to ceiling windows over the Hardangerfjord, listed as a filming location by the Norwegian Film Commission.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/hardangerbadet"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/hardangerbadet",
+      "official_url": "https://www.norwegianfilm.com/locations/hardangerbadet",
+      "commission_url": "https://www.wnfc.no"
+    },
+    {
       "id": "no-hartvig-nissen-school",
       "name": "Hartvig Nissen School",
       "country": "Norway",
@@ -11982,6 +12198,23 @@
         "author": "Harald Groven",
         "license": "CC BY 3.0"
       }
+    },
+    {
+      "id": "no-lyse-abbey",
+      "name": "Lyse Abbey",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.2275,
+      "lng": 5.4054,
+      "type": "Church & monastery",
+      "setting": "The moss covered ruins of a medieval monastery near Bergen, with stone arches and columns around a grass courtyard, listed as a historic filming location by the Western Norway Film Commission.",
+      "known_for": "Mission: Impossible - Fallout, Black Widow, Succession (productions cited for Western Norway generally)",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/lyse-abbey"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/lyse-abbey",
+      "official_url": "https://www.norwegianfilm.com/locations/lyse-abbey",
+      "commission_url": "https://www.wnfc.no"
     },
     {
       "id": "no-njardarheimr-gudvangen",
@@ -12056,6 +12289,24 @@
       "commission_url": "https://www.norwegianfilm.com/locations/sagene-folkebad"
     },
     {
+      "id": "no-sentralen",
+      "name": "Sentralen",
+      "country": "Norway",
+      "region": "Oslo",
+      "lat": 59.911,
+      "lng": 10.7402,
+      "type": "Theatre, arena & venue",
+      "setting": "A former bank building in central Oslo converted into a cultural and event house with about 30 rentable rooms, including a grand hall that was once the bank's customer hall.",
+      "capacity": 1000,
+      "facilities": "About 30 venues from small meeting rooms to Marmorsalen for up to 1,000 people, former bank vaults, event recording and streaming services",
+      "logistics": "Located at Ovre Slottsgate 3, central Oslo, close to public transport",
+      "source_urls": [
+        "https://www.sentralen.no/en"
+      ],
+      "official_url": "https://www.sentralen.no/en",
+      "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
       "id": "no-stavanger-svommehall",
       "name": "Stavanger Swimming Hall",
       "country": "Norway",
@@ -12096,6 +12347,22 @@
         "author": "MiSi at German Wikipedia",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "no-vestkantbadet-sommerro",
+      "name": "Vestkantbadet Sommerro",
+      "country": "Norway",
+      "region": "Oslo",
+      "lat": 59.915,
+      "lng": 10.7188,
+      "type": "Theatre, arena & venue",
+      "setting": "An Art Deco indoor swimming pool with mosaic murals inside the redeveloped Sommerro complex in central Oslo, listed as an interior filming location by the Norwegian Film Commission.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/vestkantbadet-sommerro"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/vestkantbadet-sommerro",
+      "official_url": "https://www.norwegianfilm.com/locations/vestkantbadet-sommerro",
+      "commission_url": "https://www.norwegianfilm.com"
     },
     {
       "id": "no-vinje-church",
@@ -12146,6 +12413,23 @@
       }
     },
     {
+      "id": "pl-areszt-sledczy-zabrze",
+      "name": "Areszt Śledczy w Zabrzu (Zabrze Remand Prison)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Zabrze)",
+      "lat": 50.3013,
+      "lng": 18.8313,
+      "type": "Hospital, prison & institution",
+      "setting": "A closed remand prison in Zabrze built in 1888 in the style of German 19th-century prison architecture, with around 290 cells across four wings, shut down in 2018.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/areszt-sledczy-w-zabrzu"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/areszt-sledczy-w-zabrzu",
+      "official_url": "https://www.silesiafilmcommission.pl/location/areszt-sledczy-w-zabrzu",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
       "id": "atm-studio-warsaw",
       "name": "ATM Studio",
       "country": "Poland",
@@ -12172,6 +12456,22 @@
       }
     },
     {
+      "id": "pl-cavatina-hall",
+      "name": "Cavatina Hall",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Bielsko-Biała)",
+      "lat": 49.8173,
+      "lng": 19.0495,
+      "type": "Theatre, arena & venue",
+      "setting": "A large glass-fronted concert and conference hall in Bielsko-Biala, opened in 2023, shortlisted as a finalist in the regional Silesian Film Location 2024 competition.",
+      "source_urls": [
+        "https://cavatinahall.pl",
+        "https://www.silesiafilmcommission.pl/location/bielsko-biala"
+      ],
+      "official_url": "https://cavatinahall.pl",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
       "id": "pl-centennial-hall-wroclaw",
       "name": "Centennial Hall",
       "country": "Poland",
@@ -12193,6 +12493,40 @@
       }
     },
     {
+      "id": "pl-cmwl-lodz",
+      "name": "Central Museum of Textiles (Biala Fabryka)",
+      "country": "Poland",
+      "region": "Lodzkie",
+      "lat": 51.7455,
+      "lng": 19.4621,
+      "type": "Industrial & derelict",
+      "setting": "A 19th-century cotton mill on Piotrkowska street in Lodz, the White Factory built by Ludwik Geyer, now a textile museum with large weaving halls, a chimney and a steam engine room, with space to hire.",
+      "facilities": "Wynajem przestrzeni (venue rental) available for events",
+      "source_urls": [
+        "https://cmwl.pl",
+        "https://pl.wikipedia.org/wiki/Centralne_Muzeum_W%C5%82%C3%B3kiennictwa_w_%C5%81odzi"
+      ],
+      "official_url": "https://cmwl.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-dworzec-pkp-sosnowiec",
+      "name": "Dworzec PKP Sosnowiec Główny (Sosnowiec Główny Railway Station)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Sosnowiec)",
+      "lat": 50.2785,
+      "lng": 19.1261,
+      "type": "Transport & infrastructure",
+      "setting": "A working railway station in Sosnowiec opened in 1859 on the Warsaw to Katowice line, with a 24-hour main hall, ticket counters and waiting benches.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/dworzec-pkp-sosnowiec"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/dworzec-pkp-sosnowiec",
+      "official_url": "https://www.silesiafilmcommission.pl/location/dworzec-pkp-sosnowiec",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
       "id": "pl-ec1-lodz",
       "name": "EC1 Lodz",
       "country": "Poland",
@@ -12212,6 +12546,60 @@
         "author": "Marta Malina Moraczewska",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-elektrownia-powisle-warsaw",
+      "name": "Elektrownia Powisle",
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "lat": 52.2398,
+      "lng": 21.0291,
+      "type": "Industrial & derelict",
+      "setting": "A former Warsaw power station on the Vistula riverside, its turn of the century turbine and boiler halls converted into a retail, dining and event complex while keeping the original brick and steelwork.",
+      "facilities": "Industrial-style halls for events and exhibitions, food hall, day spa",
+      "logistics": "ul. Dobra 42, Warsaw, Powisle district",
+      "source_urls": [
+        "https://elektrowniapowisle.com"
+      ],
+      "official_url": "https://elektrowniapowisle.com",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-halemba-wirek-ruda-slaska",
+      "name": "Former Halemba-Wirek Mine Demolition Yard",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2717,
+      "lng": 18.9086,
+      "type": "Industrial & derelict",
+      "setting": "A post-mining industrial complex at the former Halemba-Wirek colliery in Ruda Slaska, with abandoned halls, cranes, storage buildings and a derelict-styled house used for industrial and post-apocalyptic scenes.",
+      "facilities": "Power and water, parking, briefing room, office space",
+      "suitability": "Industrial, war, thriller, horror and post-apocalyptic productions, commercials and music videos",
+      "permit_needed": "No",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-halemba-wirek-mine",
+      "name": "Former Halemba-Wirek Mine Dismantling Centre",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Ruda Śląska)",
+      "lat": 50.2698,
+      "lng": 18.9083,
+      "type": "Industrial & derelict",
+      "setting": "A former coal mine site in Ruda Śląska with intact workshop halls, overhead cranes, technological tracks, warehouses and an abandoned residential building, used mainly for exteriors.",
+      "suitability": "crime, action, war, historical, thriller, horror and post-apocalyptic productions, automotive commercials, music videos",
+      "permit_needed": "No",
+      "logistics": "on-site office space, briefing room and shower facilities",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
+      "official_url": "https://www.silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
+      "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
       "id": "pl-gdansk-shipyard",
@@ -12284,6 +12672,23 @@
       "commission_url": "https://silesiafilm.com/"
     },
     {
+      "id": "pl-huta-batory-chorzow",
+      "name": "Huta Batory director's building",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2726,
+      "lng": 18.9431,
+      "type": "Office, school & public building",
+      "setting": "A 1915 modernist administration building at the Huta Batory steelworks in Chorzow, still in office use, with a roof turret, three bas-reliefs over the entrance and an interior courtyard.",
+      "facilities": "Power and water, parking, meeting rooms, original period interiors",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/budynek-dyrekcji-huty-batory"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/budynek-dyrekcji-huty-batory",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-kasprowy-wierch-cable-car",
       "name": "Kasprowy Wierch Cable Car",
       "country": "Poland",
@@ -12318,6 +12723,89 @@
       }
     },
     {
+      "id": "pl-koneser-warsaw",
+      "name": "Koneser (former Warsaw Vodka Factory)",
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "lat": 52.2554,
+      "lng": 21.046,
+      "type": "Industrial & derelict",
+      "setting": "A former vodka distillery in the Praga district of Warsaw, its 19th-century factory buildings and central plaza now hosting restaurants, shops, galleries and a vodka museum, hired for markets, concerts and exhibitions.",
+      "logistics": "Plac Konesera 1, Warsaw, Praga-Polnoc district",
+      "source_urls": [
+        "https://koneser.eu"
+      ],
+      "official_url": "https://koneser.eu",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-kopalnia-cwiczebna-dabrowa",
+      "name": "Kopalnia Cwiczebna training mine",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.3184,
+      "lng": 19.1837,
+      "type": "Industrial & derelict",
+      "setting": "An underground mining school in Dabrowa Gornicza with three levels of tunnels, original mechanical and electrical training equipment and brick-lined corridors, part of the Sztygarka municipal museum since 2010.",
+      "facilities": "Vehicle access, parking, power supply, low light and low noise underground",
+      "permit_needed": "No",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/kopalnia-cwiczebna"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/kopalnia-cwiczebna",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-kosciol-mikolow",
+      "name": "Kościół Św. Wawrzyńca w Mikołowie (Church of St Lawrence, Mikołów)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Mikołów)",
+      "lat": 50.1771,
+      "lng": 18.8564,
+      "type": "Church & monastery",
+      "setting": "A brick parish church in the Mokre district of Mikołów, built in the mid-16th century and rebuilt several times, with stained glass windows in its interior.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/kosciol-sw-wawrzynca-w-mikolowie"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/kosciol-sw-wawrzynca-w-mikolowie",
+      "official_url": "https://www.silesiafilmcommission.pl/location/kosciol-sw-wawrzynca-w-mikolowie",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-kwk-centrum-bytom",
+      "name": "KWK Centrum Coal Mine",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.3546,
+      "lng": 18.933,
+      "type": "Industrial & derelict",
+      "setting": "A Bytom coal mine, working from 1881 and in liquidation since 2015, with a mining shaft, an escape-apparatus store and a security building still standing among the halls being demolished.",
+      "facilities": "Vehicle access, on-site production base, parking",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/kopalnia-kwk-centrum"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/kopalnia-kwk-centrum",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-lodz-film-school",
+      "name": "Lodz Film School (PWSFTviT)",
+      "country": "Poland",
+      "region": "Lodzkie",
+      "lat": 51.7577,
+      "lng": 19.4722,
+      "type": "Office, school & public building",
+      "setting": "The national film, television and theatre school in Lodz, with shooting halls, screening rooms and post-production labs used by students, and a production history running through Polish cinema since the 1940s.",
+      "known_for": "Alumni include Andrzej Wajda, Roman Polanski, Krzysztof Kieslowski",
+      "source_urls": [
+        "http://www.filmschool.lodz.pl"
+      ],
+      "official_url": "http://www.filmschool.lodz.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-manufaktura-lodz",
       "name": "Manufaktura",
       "country": "Poland",
@@ -12337,6 +12825,54 @@
         "author": "Michał Węzowski",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-muzeum-emigracji-gdynia",
+      "name": "Muzeum Emigracji (Emigration Museum)",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship (Gdynia)",
+      "lat": 54.5331,
+      "lng": 18.5484,
+      "type": "Transport & infrastructure",
+      "setting": "A restored 1930s ocean liner terminal on the Gdynia waterfront, now the Emigration Museum, with its original passenger halls open to visitors and offered as rentable event space.",
+      "source_urls": [
+        "https://polska1.pl"
+      ],
+      "official_url": "https://polska1.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-walcownia-katowice",
+      "name": "Muzeum Hutnictwa Cynku Walcownia (Zinc Metallurgy Museum)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2599,
+      "lng": 19.0918,
+      "type": "Industrial & derelict",
+      "setting": "A zinc-processing museum in the Szopienice district of Katowice covering over 5,000 square metres of former rolling-mill halls, with an intact production line of furnaces and rollers.",
+      "permit_needed": "No",
+      "source_urls": [
+        "https://walcownia.muzeatechniki.pl",
+        "https://www.silesiafilmcommission.pl/location/muzeum-hutnictwa-cynku-walcownia"
+      ],
+      "official_url": "https://walcownia.muzeatechniki.pl",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-muzeum-kinematografii-lodz",
+      "name": "Muzeum Kinematografii w Łodzi (Museum of Cinematography)",
+      "country": "Poland",
+      "region": "Łódź Voivodeship (Łódź)",
+      "lat": 51.7596,
+      "lng": 19.4746,
+      "type": "Palace & landmark",
+      "setting": "A house museum since 1986 in the former Scheibler family palace on Plac Zwycięstwa in Łódź, whose historic interiors have served as scenography for dozens of Polish films and TV series.",
+      "known_for": "Promised Land (Ziemia obiecana)",
+      "source_urls": [
+        "https://muzeumkinematografii.pl"
+      ],
+      "official_url": "https://muzeumkinematografii.pl",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
     },
     {
       "id": "pl-nikiszowiec",
@@ -12359,6 +12895,23 @@
         "author": "Krzysztof Popławski",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-fabryka-norblina-warsaw",
+      "name": "Norblin Factory",
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "lat": 52.2288,
+      "lng": 20.9908,
+      "type": "Industrial & derelict",
+      "setting": "A 19th-century metalware factory in the Wola district of Warsaw, its brick production halls preserved as an open-air industrial museum alongside offices, shops and restaurants across a 2 hectare site.",
+      "facilities": "Atmospheric post-industrial halls used for conferences, premieres, concerts and fashion shows",
+      "logistics": "ul. Zelazna 51/53, Warsaw, Wola district",
+      "source_urls": [
+        "https://fabrykanorblina.pl"
+      ],
+      "official_url": "https://fabrykanorblina.pl",
+      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-nowa-huta",
@@ -12436,6 +12989,39 @@
       "commission_url": "https://filmcommission.pomorskie.eu"
     },
     {
+      "id": "pl-osiedle-a-tychy",
+      "name": "Osiedle A",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Tychy)",
+      "lat": 50.1336,
+      "lng": 18.9686,
+      "type": "Modern architecture",
+      "setting": "The first planned housing estate of postwar Tychy, built from the 1950s with low modernist blocks around courtyards and green space, named winner of the Silesian Film Location 2024 award.",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/tychy"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/tychy",
+      "official_url": "https://www.silesiafilmcommission.pl/location/tychy",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-palac-kultury-zaglebia",
+      "name": "Pałac Kultury Zagłębia (Palace of Culture of Zagłębie)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Dąbrowa Górnicza)",
+      "lat": 50.3263,
+      "lng": 19.1886,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1950s culture centre in Dąbrowa Górnicza designed by Zbigniew Rzepecki, with a cinema hall, theatre stage, wedding hall and gallery still in public use.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.palac.art.pl",
+        "https://www.silesiafilmcommission.pl/location/palac-kultury-zaglebia"
+      ],
+      "official_url": "https://www.palac.art.pl",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
       "id": "pl-palace-of-culture-warsaw",
       "name": "Palace of Culture and Science",
       "country": "Poland",
@@ -12494,6 +13080,23 @@
       }
     },
     {
+      "id": "pl-sad-rejonowy-sosnowiec",
+      "name": "Sąd Rejonowy w Sosnowcu (Sosnowiec District Court)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Sosnowiec)",
+      "lat": 50.2731,
+      "lng": 19.1391,
+      "type": "Office, school & public building",
+      "setting": "A district court operating since 1945 inside one of the Schön family's eclectic 1903 palaces in Sosnowiec, with courtrooms set in the original ballroom, dining room and library.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/sad-rejonowy-w-sosnowcu"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/sad-rejonowy-w-sosnowcu",
+      "official_url": "https://www.silesiafilmcommission.pl/location/sad-rejonowy-w-sosnowcu",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
       "id": "pl-spodek-katowice",
       "name": "Spodek",
       "country": "Poland",
@@ -12534,6 +13137,141 @@
       ],
       "official_url": "https://www.stadionslaski.pl",
       "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-stary-szpital-zywiec",
+      "name": "Stary Szpital w Żywcu (Old Hospital, Żywiec)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Żywiec)",
+      "lat": 49.6929,
+      "lng": 19.2035,
+      "type": "Hospital, prison & institution",
+      "setting": "A disused hospital building on Sienkiewicza street in Żywiec, listed by the regional film commission as a filming site with on-site parking and mains utilities.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/stary-szpital-w-zywcu"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/stary-szpital-w-zywcu",
+      "official_url": "https://www.silesiafilmcommission.pl/location/stary-szpital-w-zywcu",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-superjednostka",
+      "name": "Superjednostka",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2635,
+      "lng": 19.0211,
+      "type": "House & apartment",
+      "setting": "A 15-storey slab apartment block in central Katowice built 1967 to 1972 from prefabricated concrete panels raised on stilts, holding 762 flats for about 3,000 residents.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/superjednostka"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/superjednostka",
+      "official_url": "https://www.silesiafilmcommission.pl/location/superjednostka",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-szkola-bierun",
+      "name": "Szkoła Podstawowa w Bieruniu (Bieruń Primary School)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Bieruń)",
+      "lat": 50.0903,
+      "lng": 19.0918,
+      "type": "Office, school & public building",
+      "setting": "A municipal primary school in Bieruń with an original wing from 1848 extended in later decades, now spread across two buildings with 42 classes and a gym hall.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/szkola-w-bieruniu"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/szkola-w-bieruniu",
+      "official_url": "https://www.silesiafilmcommission.pl/location/szkola-w-bieruniu",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-sztygarka-training-mine",
+      "name": "Sztygarka Training Mine (Kopalnia Ćwiczebna)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Dąbrowa Górnicza)",
+      "lat": 50.3184,
+      "lng": 19.1837,
+      "type": "Industrial & derelict",
+      "setting": "An underground training mine built in 1927 for mining school students, with three levels of tunnels and period equipment, now a branch of the Sztygarka municipal museum.",
+      "permit_needed": "No",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/kopalnia-cwiczebna"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/kopalnia-cwiczebna",
+      "official_url": "https://www.silesiafilmcommission.pl/location/kopalnia-cwiczebna",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-tyskie-brewery",
+      "name": "Tyskie Brewery (Tyskie Browary Książęce)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Tychy)",
+      "lat": 50.1306,
+      "lng": 18.9877,
+      "type": "Industrial & derelict",
+      "setting": "A working brewery in Tychy dating to 1629, with a visitor centre inside its historic industrial buildings, noted by the regional film commission for its industrial character.",
+      "source_urls": [
+        "https://muzeumbrowaru.pl",
+        "https://www.silesiafilmcommission.pl/location/tychy"
+      ],
+      "official_url": "https://muzeumbrowaru.pl",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-buw-warsaw",
+      "name": "University of Warsaw Library (BUW)",
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "lat": 52.242,
+      "lng": 21.0248,
+      "type": "Office, school & public building",
+      "setting": "The main library of the University of Warsaw on the Vistula riverside, combining large glazed reading rooms with a landscaped roof garden above the building, and space available to hire for events.",
+      "logistics": "ul. Dobra 56/66, Warsaw, Powisle district",
+      "source_urls": [
+        "https://www.buw.uw.edu.pl",
+        "https://en.wikipedia.org/wiki/University_of_Warsaw_Library"
+      ],
+      "official_url": "https://www.buw.uw.edu.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-vienna-house-katowice",
+      "name": "Vienna House Easy Katowice",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2645,
+      "lng": 19.0168,
+      "type": "Hotel & interiors",
+      "setting": "A hotel on Sokolska street in central Katowice with a fully glazed ground floor holding the reception, lobby, restaurant and breakfast room in daylight-filled open space.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/hotel-vienna-house-easy-katowice-sp-z-o-o",
+        "https://www.viennahouse.com/en/easy-katowice/the-hotel/overview.html"
+      ],
+      "official_url": "https://www.viennahouse.com/en/easy-katowice/the-hotel/overview.html",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-walcownia-cynku-katowice",
+      "name": "Walcownia Cynku zinc rolling mill",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2635,
+      "lng": 19.082,
+      "type": "Industrial & derelict",
+      "setting": "A preserved zinc rolling mill in the Szopienice district of Katowice, built 1903 to 1917, spanning 5,000 square metres with furnaces, casting carousels, rolling mills and four original steam engines.",
+      "facilities": "Heating and air conditioning, parking, WiFi, power 230/460V 16A-64A, changing rooms",
+      "permit_needed": "No",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/muzeum-hutnictwa-cynku-walcownia"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/muzeum-hutnictwa-cynku-walcownia",
+      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-warsaw-uprising-museum",
@@ -12578,6 +13316,40 @@
         "author": "C messier",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-wieza-cisnien-borki",
+      "name": "Wieża Ciśnień Katowice-Borki (Borki Water Tower)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2734,
+      "lng": 19.0878,
+      "type": "Industrial & derelict",
+      "setting": "A 66-metre brick water tower in the Borki district of Katowice, built 1911 to 1912 to a design by the Zillmann architecture studio and topped with a helmet-shaped dome.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki"
+      ],
+      "url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
+      "official_url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
+      "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-swiebodzki-station",
+      "name": "Wrocław Świebodzki Railway Station",
+      "country": "Poland",
+      "region": "Lower Silesian Voivodeship (Wrocław)",
+      "lat": 51.1076,
+      "lng": 17.0189,
+      "type": "Transport & infrastructure",
+      "setting": "A disused 1843 railway terminus in Wrocław, closed to regular trains in 1991, now home to a stage of the Polish Theatre and a large Sunday flea market inside its restored hall.",
+      "known_for": "The Doll, The Teacher, Bodo",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Wroc%C5%82aw_%C5%9Awiebodzki_railway_station",
+        "https://teatrpolski.wroc.pl"
+      ],
+      "official_url": "https://teatrpolski.wroc.pl",
+      "commission_url": "https://wroclawfilmcommission.pl"
     },
     {
       "id": "pt-adega-mayor",
