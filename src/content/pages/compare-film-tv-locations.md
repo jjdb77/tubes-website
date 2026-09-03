@@ -2,16 +2,16 @@
 layout: layout.njk
 title: Film & TV locations in Europe
 seo_title: "Film & TV Locations in Europe: Search, Map & Compare | Tubes"
-description: "Search film and TV locations and studio space across Europe, see them on a map with photos and links, and compare up to three side by side. Free, no sign-up."
+description: "Search film and TV locations and studios across Europe: factories, hospitals, hotels, houses, streets, landscapes and sound stages. Map, photos, official links, and up to three side by side. Free, no sign-up."
 permalink: /compare-film-tv-locations/
 sections:
   - type: hero
     kicker: Film & TV locations
-    title: Find and compare film & TV *locations* across Europe
+    title: Explore and compare film & TV *locations* across Europe
     text: |
-      Places to shoot and studio space to hire, from castles and coastlines to sound stages with water tanks. Search within a country or region, see everything on the map, open the photos and links, and put up to three locations side by side.
+      Places to shoot and studios to hire: factories and hospitals, hotels and houses, streets and villages, coastlines and mountains, sound stages and backlots. Search within a country or region, see everything on the map, open the official links, and put up to three locations side by side on practical facts.
 
-      Free and open to everyone, no sign-up. Is your location missing? Suggest it below and we add it with verified details. Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
+      Free and open to everyone, no sign-up. Every entry links to the venue's own page and to the film commission, and we list only what a venue publishes itself. Is your location missing? Suggest it below and we add it with verified details. Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
     buttons_position: side
     tight: true
     buttons:
@@ -23,7 +23,7 @@ sections:
     theme: light
     heading: Search locations and studios
     intro: |
-      A location in the mountains, a mountain village, a hotel, a city street, a sound stage with a water tank: type what you need, filter by country or type, and select up to three locations to compare them side by side. Every entry links to the official site and the film commission, and each country card shows the production incentive that applies there.
+      A disused hospital, a factory floor, a hotel lobby, a 1970s housing estate, a mountain village, a sound stage with a water tank: type what you need, filter by country or type, and select up to three locations to compare them side by side on what each venue publishes (facilities, capacity, permits, published rates). Every entry links to the official site and the film commission, and each card shows the production incentive that applies in that country.
   - type: feature
     theme: teal
     heading: From location shortlist to production plan
@@ -53,7 +53,10 @@ sections:
           From Wikimedia Commons under a free licence, with the photographer and licence named on every photo, or from owners who gave permission. We never copy photos from other location databases.
       - question: How were these locations selected?
         answer: |
-          The starting set is hand-picked and verified: places with a documented production history and studios that productions can actually hire, a few per country, checked in August 2026. The guide grows through suggestions, so the selection is a starting point, not a ranking.
+          Every entry is checked against the venue's own website, the page of the public body that manages it, or a film commission's public catalogue: the place exists, the page loads, and it either publishes filming information, has a documented production history, or is listed by the commission. We record only what the venue itself publishes (facilities, capacity, permits, published rates) and keep the source links with each entry. The first set, in August 2026, held a few landmarks and studios per country; in September 2026 the guide was extended with everyday production locations: factories, hospitals, offices, houses, hotels, streets, transport sites and studios. It keeps growing through suggestions, so it is a starting point, not a ranking.
+      - question: How complete is the guide?
+        answer: |
+          Not complete, and we do not pretend it is: the count above the list is the real number. Location databases with tens of thousands of entries exist, mostly for one country and often behind a login. This guide is smaller and open, spread across 21 countries, and every entry carries its source. If a search returns nothing, the location may well exist: suggest it and we add it.
       - question: What about the production incentive in each country?
         answer: |
           Each location card names the incentive of its country, and the full schemes are side by side on the [incentive comparison](/compare-film-incentives/) page: headline and net rates, minimum spend, caps and funding risk for 16 European countries and regions.

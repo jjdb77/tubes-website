@@ -14,12 +14,13 @@
   <div class="container">
     {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
     {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+    <p class="guide-total"><strong>{{ filmlocations.locations | length }} locations and studios in {{ countries | length }} countries</strong>, each checked against the venue's own page or the film commission, last checked {{ filmlocations.updated }}. Growing through your suggestions.</p>
 
     <div class="guide-controls">
       <div class="loc-field guide-search-field">
         <label for="guide-search">What are you looking for?</label>
         <div class="guide-search-wrap">
-          <input type="search" id="guide-search" placeholder="Try: industrial hall with high ceilings near Amsterdam" autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list">
+          <input type="search" id="guide-search" placeholder="Try: disused hospital, warehouse near Prague, hotel lobby" autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list">
           <div class="guide-suggest" data-suggest hidden></div>
         </div>
       </div>
@@ -86,6 +87,7 @@
               <p class="guide-links">
                 {% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}
                 {% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}
+                {% if loc.url %}<a href="{{ loc.url }}" target="_blank" rel="noopener">Commission listing</a>{% endif %}
                 <a data-incentive-for="{{ loc.country }}" href="/compare-film-incentives/" hidden></a>
               </p>
               <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ loc.id }}"> <span>Compare</span></label>
@@ -93,6 +95,7 @@
           </article>
           {% endfor %}
         </div>
+        <button type="button" class="button button-secondary guide-more" data-guide-more hidden></button>
         <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-location">suggest a location</a>.</p>
       </div>
 
@@ -186,9 +189,17 @@
       favCountEl.textContent = favs.size ? "(" + favs.size + ")" : "";
     };
 
-    const visibleIds = () => cards.filter((c) => !c.hidden).map((c) => c.dataset.id);
-    const applyFilters = () => {
+    // Paginering: bij honderden locaties tonen we per keer PAGE kaarten en een
+    // knop "Show more"; de kaart en de telling gaan wel over ALLE treffers.
+    const PAGE = 48;
+    const moreBtn = root.querySelector("[data-guide-more]");
+    let limit = PAGE;
+    let matched = new Set();
+    const visibleIds = () => [...matched];
+    const applyFilters = (keepLimit) => {
+      if (keepLimit !== true) limit = PAGE;
       const needle = q.value.trim().toLowerCase();
+      matched = new Set();
       let shown = 0;
       for (const card of cards) {
         const ok = (listMode === "all" || favs.has(card.dataset.id)) &&
@@ -196,13 +207,19 @@
                    (!type.value || card.dataset.type === type.value) &&
                    (!needle || card.dataset.search.includes(needle)) &&
                    aiTerms.every((t) => card.dataset.search.includes(t));
-        card.hidden = !ok;
-        if (ok) shown++;
+        if (ok) matched.add(card.dataset.id);
+        const show = ok && shown < limit;
+        card.hidden = !show;
+        if (show) shown++;
       }
-      countEl.textContent = shown + " of " + cards.length + " locations";
-      noneEl.hidden = shown > 0;
+      const left = matched.size - shown;
+      countEl.textContent = matched.size + " of " + cards.length + " locations";
+      noneEl.hidden = matched.size > 0;
+      moreBtn.hidden = left <= 0;
+      moreBtn.textContent = "Show " + Math.min(PAGE, left) + " more (" + left + " left)";
       updateMap();
     };
+    moreBtn.addEventListener("click", () => { limit += PAGE; applyFilters(true); });
     q.addEventListener("input", applyFilters);
     country.addEventListener("change", applyFilters);
     type.addEventListener("change", applyFilters);
@@ -210,7 +227,7 @@
     // Suggesties zodra je typt: types, landen, locatienamen en trefwoorden
     // uit de data zelf. Klikken zet meteen het juiste filter.
     const suggestEl = root.querySelector("[data-suggest]");
-    const KEYWORDS = ["mountains", "mountain village", "castle", "palace", "beach", "coast", "cliffs", "forest", "lake", "glacier", "desert", "hotel", "monastery", "old town", "medieval", "village", "city", "bridge", "railway", "harbour", "island", "studio", "sound stage", "water tank", "backlot"];
+    const KEYWORDS = ["mountains", "mountain village", "castle", "palace", "beach", "coast", "cliffs", "forest", "lake", "glacier", "desert", "hotel", "monastery", "old town", "medieval", "village", "city", "bridge", "railway", "harbour", "island", "studio", "sound stage", "water tank", "backlot", "hospital", "prison", "factory", "warehouse", "office", "school", "university", "restaurant", "bar", "theatre", "stadium", "airport", "station", "housing estate", "apartment", "villa", "manor", "farm", "docks", "mine", "power station", "brutalist", "modernist", "1960s", "1970s", "1980s"];
     const haystack = cards.map((c) => c.dataset.search).join(" ");
     const pool = [];
     for (const t of [...root.querySelectorAll("#guide-type option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Type", value: t });
@@ -384,6 +401,7 @@
       if (!link) return;
       e.preventDefault();
       const card = document.getElementById("loc-" + link.dataset.goto);
+      if (card && card.hidden && matched.has(link.dataset.goto)) { limit = cards.length; applyFilters(true); }
       if (card) {
         card.scrollIntoView({ behavior: "smooth", block: "center" });
         card.classList.add("is-highlight");
@@ -480,6 +498,7 @@
             ${row("Links", (p) => ({ raw: true, html: [
               p.official_url ? `<a href="${esc(p.official_url)}" target="_blank" rel="noopener">Official site</a>` : "",
               p.commission_url ? `<a href="${esc(p.commission_url)}" target="_blank" rel="noopener">Film commission</a>` : "",
+              p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Commission listing</a>` : "",
               ...(p.source_urls || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">Source ${i + 1}</a>`),
             ].filter(Boolean).join("<br>") }))}
           </tbody>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-03",
   "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos or data from other location databases; record only what a venue itself publishes, and keep source URLs.",
   "locations": [
     {
@@ -46,7 +46,7 @@
       "country": "Austria",
       "region": "Tyrol",
       "lat": 46.9667,
-      "lng": 11.0,
+      "lng": 11,
       "type": "Mountains & wilderness",
       "setting": "High Alpine ski resort village in the Ötztal valley with glacier roads climbing to 2,800 metres and a summit restaurant at 3,048 metres.",
       "known_for": "Spectre",
@@ -107,9 +107,16 @@
       "type": "Studio & backlot",
       "setting": "Modern studio complex near Brussels with five stages, including Europe's largest heated indoor water tank for underwater filming.",
       "known_for": "The Swarm, Comandante",
+      "facilities": "Five sound stages from 170 to 1,700 m2 (Stage 1: 1,250 m2, Stage 2: 1,700 m2) and a 1,450 m2 water stage with a 24 x 21 m deep section, up to 10.8 m depth with the floor flooded, 7 million litres kept at 30 to 32 C, a moveable pool floor rated for 20 tonnes of set and a 14.3 m grid height. Dressing rooms and an in-house camera rental department.",
+      "suitability": "Sound stages with high acoustic performance; the water stage is used for underwater and surface filming with a tilting, submersible platform and dual gantry cranes. The studio points to Belgium's 45 percent tax incentive.",
+      "logistics": "Fabrieksstraat 81, 1800 Vilvoorde (Brussels)",
+      "source_urls": [
+        "https://www.litesstudios.com/",
+        "https://www.litesstudios.com/stage-4-water-stage-1450m-15-600ft",
+        "https://www.litesstudios.com/contact"
+      ],
       "official_url": "https://www.litesstudios.com/",
-      "commission_url": "https://www.screenflanders.be/en",
-      "photo": null
+      "commission_url": "https://www.screenflanders.be/en"
     },
     {
       "id": "dubrovnik-old-town",
@@ -135,14 +142,24 @@
       "name": "Jadran Film",
       "country": "Croatia",
       "region": "Zagreb",
-      "lat": 45.826111,
-      "lng": 16.051111,
+      "lat": 45.8261,
+      "lng": 16.0511,
       "type": "Studio & backlot",
       "setting": "Film studio founded in 1946 with stages and backlot grounds in Zagreb's Dubrava district, host to well over a hundred international co-productions.",
       "known_for": "Winnetou series (1962-1968), The Tin Drum (1979), Sophie's Choice (1982)",
+      "facilities": "Nine stages totalling 8,000 m2; the largest are Studio 2 (1,200 m2, 47 x 23 m, over 10 m high) and Studio 4 (1,200 m2, 60 x 20 m, 8 m working height), with Studio 6-7 a divisible 950 m2 complex and Studio 9 a 440 m2 TV studio. A 1,000 m2 production hub with offices and its own transformer station, plus carpentry, paint, plaster and model workshops.",
+      "suitability": "Presented as a full-service production base with base camp infrastructure and dressing, makeup and wardrobe rooms around each stage; Studios 4 and 9 are on long-term lease to a television company and a 2,500 to 3,200 m2 Studio 10 is planned. Stage pages are marked under construction pending a summer 2026 relaunch.",
+      "logistics": "Ulica Rudolfa Kolaka 12, Zagreb; parking for production vehicles at Studio 2 and gated access with RF cards at the production hub.",
+      "source_urls": [
+        "https://jadran-film.eu/",
+        "https://jadran-film.eu/studio-2/",
+        "https://jadran-film.eu/studio-4/",
+        "https://jadran-film.eu/studio-6-7/",
+        "https://jadran-film.eu/studio-9/",
+        "https://jadran-film.eu/production-hub/"
+      ],
       "official_url": "https://www.jadran-film.com/",
-      "commission_url": "https://filmingincroatia.hr/",
-      "photo": null
+      "commission_url": "https://filmingincroatia.hr/"
     },
     {
       "id": "plitvice-lakes",
@@ -187,11 +204,18 @@
       "name": "Barrandov Studios",
       "country": "Czech Republic",
       "region": "Prague",
-      "lat": 50.030683,
-      "lng": 14.39155,
+      "lat": 50.0307,
+      "lng": 14.3916,
       "type": "Studio & backlot",
       "setting": "Prague studio complex dating from the early 1930s with large sound stages, extensive costume and prop stocks and backlot space.",
       "known_for": "Amadeus (1984), Mission: Impossible (1996), Casino Royale (2006)",
+      "facilities": "14 soundproof stages totalling 10,900 m2 at Barrandov plus four at the Hostivar site, most with rigging pulley systems; permanent exterior sets include a 15,000 m2 medieval town with buildings up to 10 m and a 39 x 60 m Paris street with twenty facades and ten interiors. Production rooms, makeup and dressing rooms, wardrobe, camera and prop storage, catering spaces and a large costume and prop stock.",
+      "suitability": "Offers stage rental, set construction, costume and prop rental, dubbing and production support, with on-site firefighting services for pyrotechnics and high-risk scenes; the studio cites the Czech cash rebate of up to 35 percent.",
+      "logistics": "Barrandov site 10 minutes from Prague city centre and 15 minutes from Vaclav Havel Airport, Hostivar site 18 minutes from both; parking for cars and trucks on site. Website in Czech only.",
+      "source_urls": [
+        "https://www.barrandov.cz/",
+        "https://www.barrandov.cz/ateliery-a-zazemi"
+      ],
       "official_url": "https://www.barrandov.cz/",
       "commission_url": "https://www.filmcommission.cz/",
       "photo": {
@@ -263,11 +287,19 @@
       "name": "Nordisk Film Studios",
       "country": "Denmark",
       "region": "Copenhagen (Valby)",
-      "lat": 55.66083,
-      "lng": 12.50361,
+      "lat": 55.6608,
+      "lng": 12.5036,
       "type": "Studio & backlot",
       "setting": "Working studio lot in Valby founded in 1906, the world's oldest continuously active film studio, with shooting stages, post-production facilities and a 360-degree LED stage.",
       "known_for": "Matador (1978-1982), Olsen-banden",
+      "facilities": "360-degree LED stage of 16 m diameter and 5.5 m height with LED walls and ceiling and an optional LED floor (ROE panels, up to 6,000 nits), run by Nordisk Film Shortcut; dressing rooms, makeup facilities and large parking for crew and grip trucks.",
+      "suitability": "The LED stage is offered for films, series, commercials, music videos and live events with virtual production supervision, Unreal Engine content, previs and driving plates; it takes vehicles, boats and planes up to 15 m. The stage runs on solar power from 2023.",
+      "logistics": "Mosedalvej 14, 2500 Valby, on the Nordisk Film lot; large parking for crew and grip trucks.",
+      "source_urls": [
+        "https://shortcut.dk/ledstage/",
+        "https://shortcut.dk/ledstage/about-stage/",
+        "https://nordiskfilm.com/news/nordisk-film-opens-shortcut-led-stage-copenhagen-pushing-virtual-production-next-level"
+      ],
       "official_url": "https://nordiskfilm.com/",
       "commission_url": "https://www.dfi.dk/en",
       "photo": {
@@ -301,11 +333,18 @@
       "name": "Mediapolis",
       "country": "Finland",
       "region": "Pirkanmaa (Tampere)",
-      "lat": 61.50607,
-      "lng": 23.64913,
+      "lat": 61.5061,
+      "lng": 23.6491,
       "type": "Studio & backlot",
       "setting": "Media campus at broadcaster Yle's Tohloppi site in Tampere, with fully equipped television studios and a 1,500 square metre factory hall stage available for hire.",
       "known_for": "Uusi päivä (2010-2018)",
+      "facilities": "Two Yle broadcast studios of 432 m2 (24 x 18 m) and 342 m2 (19 x 18 m) with tungsten lighting, hoists and 360-degree curtains; a 1,200 m2 Factory Hall (26 x 54.5 m, 10 m clear height); smaller TAMK and United studios of 133 and 198 m2; wardrobe and makeup rooms, six sound studios and edit stations.",
+      "suitability": "Studios are booked through a named contact per facility; the campus also offers production services, catering, event spaces and office facilities.",
+      "logistics": "32,000 m2 campus in the Tohloppi district of Tampere where 1,000 to 1,100 people work and study daily",
+      "source_urls": [
+        "https://mediapolis.fi/en/",
+        "https://mediapolis.fi/en/studios/"
+      ],
       "official_url": "https://mediapolis.fi/en/",
       "commission_url": "https://filmtampere.com/",
       "photo": {
@@ -344,12 +383,40 @@
       "type": "Studio & backlot",
       "setting": "Studio campus in a converted riverside power station with sound stages, workshops and offices around a monumental glass-roofed nave.",
       "known_for": "Lucy, Valerian and the City of a Thousand Planets",
+      "facilities": "Nine sound stages from 6,506 to 22,271 sq ft (largest Stage 5, 201 x 111 ft, about 2,070 m2) with 47 to 52.5 ft to the grid; offices, artist green rooms with hair and makeup, VIP green rooms, workshops and storage.",
+      "suitability": "Stages offered with adjoining offices, green rooms, workshops and storage inside the Cite du Cinema campus; the site keeps a list of productions shot there.",
+      "logistics": "20 rue Ampere, Saint-Denis: 30 minutes from Charles de Gaulle airport, 20 minutes from Le Bourget, 30 to 40 minutes from central Paris; served by RER D and metro lines 13 and 14 (direct to Orly), A86 and A1 motorway access, two four-star hotels a five-minute walk away.",
+      "source_urls": [
+        "https://lesstudiosdeparis.com/en/",
+        "https://lesstudiosdeparis.com/en/plateaux/",
+        "https://lesstudiosdeparis.com/en/ou-sommes-nous/",
+        "https://lesstudiosdeparis.com/en/annexes/"
+      ],
       "official_url": "https://lesstudiosdeparis.com/en/",
       "commission_url": "https://www.filmfrance.net/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg/960px-Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg",
         "author": "Iunity",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "etretat-cliffs",
+      "name": "Étretat Cliffs",
+      "country": "France",
+      "region": "Seine-Maritime, Normandy",
+      "lat": 49.71,
+      "lng": 0.21,
+      "type": "Coast & beach",
+      "setting": "White chalk cliffs with natural arches and a freestanding needle rising above a pebble beach on the Alabaster Coast.",
+      "known_for": "Lupin",
+      "official_url": "https://www.lehavre-etretat-tourisme.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vue_d%27%C3%89tretat.jpg/960px-Vue_d%27%C3%89tretat.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vue_d%27%C3%89tretat.jpg",
+        "author": "Jörg Braukmann",
         "license": "CC BY-SA 4.0"
       }
     },
@@ -370,25 +437,6 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_(cropped).jpg",
         "author": "ToucanWings",
         "license": "CC BY-SA 3.0"
-      }
-    },
-    {
-      "id": "etretat-cliffs",
-      "name": "Étretat Cliffs",
-      "country": "France",
-      "region": "Seine-Maritime, Normandy",
-      "lat": 49.71,
-      "lng": 0.21,
-      "type": "Coast & beach",
-      "setting": "White chalk cliffs with natural arches and a freestanding needle rising above a pebble beach on the Alabaster Coast.",
-      "known_for": "Lupin",
-      "official_url": "https://www.lehavre-etretat-tourisme.com/",
-      "commission_url": "https://www.filmfrance.net/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vue_d%27%C3%89tretat.jpg/960px-Vue_d%27%C3%89tretat.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Vue_d%27%C3%89tretat.jpg",
-        "author": "Jörg Braukmann",
-        "license": "CC BY-SA 4.0"
       }
     },
     {
@@ -439,6 +487,15 @@
       "type": "Studio & backlot",
       "setting": "The world's oldest large-scale film studio, in operation since 1912, with sound stages, workshops and permanent backlot sets.",
       "known_for": "Metropolis, Inglourious Basterds, Bridge of Spies",
+      "facilities": "21 sound stages totalling 300,000 sq ft on a 42-acre lot, largest Stage 20 at 75,826 sq ft (7,041 m2) and Stage 19 at 59,998 sq ft; indoor water tank of 500,000 litres and 4 m depth; 15,000 m2 Metropolitan Backlot with 54 facades of 12 to 15 m and 5,500 m2 of streets; exterior green screen wall, 9-acre open lot, set construction and a prop department with over a million items.",
+      "suitability": "Offers production services with internationally experienced crews, set construction, props and co-production and financing options; the backlot's four street sets can be dressed as Berlin, New York, London or Paris and carry vehicles up to 20 tonnes. Premises are not open to the public.",
+      "logistics": "August-Bebel-Strasse 26-53, Potsdam: from Berlin via the A115 to exit Potsdam-Babelsberg; S7 to Potsdam Hauptbahnhof or RE7 to Medienstadt Babelsberg (7-minute walk); from BER airport by RB22 to Griebnitzsee and bus 696.",
+      "source_urls": [
+        "https://www.studiobabelsberg.com/",
+        "https://www.studiobabelsberg.com/en/stages-and-backlots/",
+        "https://www.studiobabelsberg.com/en/stages-and-backlots/backlots/metropolitan-backlot/",
+        "https://www.studiobabelsberg.com/en/contact/"
+      ],
       "official_url": "https://www.studiobabelsberg.com/",
       "commission_url": "https://www.bbfc.de/en/",
       "photo": {
@@ -529,9 +586,14 @@
       "type": "Studio & backlot",
       "setting": "Purpose-built studio complex in Budapest with eleven stages, including nine soundstages and around 19,000 square metres of filming space, plus backlot areas and underwater filming facilities.",
       "known_for": "Dune: Part One (2021), Blade Runner 2049 (2017)",
+      "facilities": "11 stages totalling over 19,000 m2: nine soundstages (largest Stage 6, 4,373 m2 and 20 m high; Stages 3 and 4, 2,662 m2 each) and two VFX stages with a 100 m2 greenbox; a 23 x 18.5 x 3 m water tank, 4-hectare backlot, about 4,000 m2 of production offices in four buildings with makeup and dressing rooms, and 8,409 m2 of warehouses and workshops in 15 units.",
+      "suitability": "Soundproofed, heated and air-conditioned stages with overhead grids and loading doors, offered for features, series, animation and documentaries; the studio cites the 30 percent Hungarian tax credit and runs on solar energy and district heating.",
+      "source_urls": [
+        "https://origostudios.com/",
+        "https://origostudios.com/stages-and-facilities/"
+      ],
       "official_url": "https://origostudios.com/",
-      "commission_url": "https://nfi.hu/en",
-      "photo": null
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "vajdahunyad-castle",
@@ -553,20 +615,6 @@
       }
     },
     {
-      "id": "rvk-studios-gufunes",
-      "name": "RVK Studios",
-      "country": "Iceland",
-      "region": "Capital Region (Reykjavík)",
-      "lat": 64.14694,
-      "lng": -21.8125,
-      "type": "Studio & backlot",
-      "setting": "Around 8,000 square metres of stages in a converted fertiliser plant at Gufunes, with three large studios a short drive from downtown Reykjavík.",
-      "known_for": "Katla (2021), Trapped, Against the Ice (2022)",
-      "official_url": "https://rvkstudios.is/",
-      "commission_url": "https://filminiceland.com/locations/",
-      "photo": null
-    },
-    {
       "id": "reynisfjara-beach",
       "name": "Reynisfjara",
       "country": "Iceland",
@@ -584,6 +632,27 @@
         "author": "Strwiki2017",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "rvk-studios-gufunes",
+      "name": "RVK Studios",
+      "country": "Iceland",
+      "region": "Capital Region (Reykjavík)",
+      "lat": 64.1469,
+      "lng": -21.8125,
+      "type": "Studio & backlot",
+      "setting": "Around 8,000 square metres of stages in a converted fertiliser plant at Gufunes, with three large studios a short drive from downtown Reykjavík.",
+      "known_for": "Katla (2021), Trapped, Against the Ice (2022)",
+      "facilities": "Three acoustically isolated stages of 2,775, 1,506 and 1,317 m2, all 16 m high, with 733 m2 of props and set storage next to Stage 1; dressing, makeup and wardrobe rooms, casting suites, open-plan and private offices, meeting rooms, a cafeteria and post-production with six edit suites and a 4K screening room.",
+      "suitability": "Full production services for films, series, commercials, music videos and photo shoots; stage floors take heavy loads and large access doors let vehicles inside. The studio cites Iceland's 25 to 35 percent rebate.",
+      "logistics": "Thengilsbas 14, Gufunes: a 7-minute drive from downtown Reykjavik, with parking on site and limited air traffic overhead.",
+      "source_urls": [
+        "https://rvkstudios.is/",
+        "https://rvkstudios.is/studios/information/",
+        "https://rvkstudios.is/studios/facilities/"
+      ],
+      "official_url": "https://rvkstudios.is/",
+      "commission_url": "https://filminiceland.com/locations/"
     },
     {
       "id": "svinafellsjokull-glacier",
@@ -614,9 +683,16 @@
       "type": "Studio & backlot",
       "setting": "Ireland's longest-established film studios, offering sound stages, workshops and production offices on an 18-acre site in Bray.",
       "known_for": "Braveheart, Excalibur, Penny Dreadful",
+      "facilities": "Eight sound stages from 3,000 to 23,250 sq ft (Stage F 23,250 sq ft at 21 ft high, Stage H 21,000 sq ft at 43 ft), over 120,000 sq ft of creative space with 25,000 sq ft of production offices and 57,000 sq ft of support space; a 120,000-litre underwater tank with camera pit in Stage A, workshops, backlot areas, hair and makeup, props and wardrobe departments.",
+      "suitability": "Self-contained, secure 18-acre site with drive-in access on selected stages, meeting rooms and secure broadband; the on-site team offers space planning for interior and exterior sets.",
+      "logistics": "Herbert Road, Bray, County Wicklow, 12 miles south of Dublin; ample parking on site.",
+      "source_urls": [
+        "https://www.ardmore.ie/",
+        "https://www.ardmore.ie/stages",
+        "https://www.ardmore.ie/amenities"
+      ],
       "official_url": "https://www.ardmore.ie/",
-      "commission_url": "https://www.screenireland.ie/locations",
-      "photo": null
+      "commission_url": "https://www.screenireland.ie/locations"
     },
     {
       "id": "kilmainham-gaol",
@@ -661,11 +737,19 @@
       "name": "Cinecittà",
       "country": "Italy",
       "region": "Rome, Lazio",
-      "lat": 41.851944,
-      "lng": 12.577222,
+      "lat": 41.8519,
+      "lng": 12.5772,
       "type": "Studio & backlot",
       "setting": "Historic Rome studio complex founded in 1937, with sound stages including the vast Teatro 5 and permanent backlot sets such as ancient Rome.",
       "known_for": "Ben-Hur (1959), La Dolce Vita (1960), Rome (2005-2007, HBO/BBC)",
+      "facilities": "22 soundstages (24 planned) from 380 to 3,500 m2, the largest Stage 22 (3,500 m2) and Stage 5 (2,880 m2), each with dressing rooms, offices, makeup rooms and workshops; an LED volume in Stage 18 with a 452 m2 curved wall (8 m high, 52 m long), a 417 m2 motorised ceiling and a 25 m rotating platform; a backlot of nearly 10 hectares with power and water and permanent sets, plus set construction, film lab and audio and video post-production.",
+      "suitability": "Stages are soundproof, air conditioned and many have waterproof trapdoors for effects; they can be booked individually or in combination. Five new soundstages and four renovations are announced for 2026.",
+      "source_urls": [
+        "https://cinecitta.com/en/",
+        "https://cinecitta.com/en/studios/venues/stages/",
+        "https://cinecitta.com/en/studios/spazi/permanent-sets-backlot/",
+        "https://cinecitta.com/en/studios/services/virtual-production/"
+      ],
       "official_url": "https://www.cinecitta.com/",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
@@ -818,6 +902,14 @@
       "type": "Studio & backlot",
       "setting": "Television production campus in Hilversum with large audience studios such as Studio 21 and 22 and most national broadcasters on site.",
       "known_for": "The Voice of Holland, The Voice Kids",
+      "facilities": "Studio 21 is offered as an event location with a 360 m2 LED screen, sound installation and light ceiling; the park houses over 100 media companies including NOS, RTL, NEP, EMG and ITV, with restaurants, a gym, a hair and makeup salon and childcare on site.",
+      "suitability": "A private business park without public opening hours; employees need a valid access pass and visitors are welcome around event start times. Studio specifications and rental terms are not published on the park's own site.",
+      "logistics": "Joop van den Endeplein 1, Hilversum: own railway station Hilversum Media Park with four trains an hour and a footbridge into the park; by car via A1 exit 9 Laren/Hilversum; 24-hour parking deck and garage A at EUR 2.00 per hour, card payment only.",
+      "source_urls": [
+        "https://www.mediapark.nl/",
+        "https://www.mediapark.nl/faciliteiten/",
+        "https://www.mediapark.nl/contact-route/"
+      ],
       "official_url": "https://www.mediapark.nl/",
       "commission_url": "https://www.filmcommission.nl/",
       "photo": {
@@ -851,14 +943,20 @@
       "name": "Dagslys Studios",
       "country": "Norway",
       "region": "Oslo (Nydalen)",
-      "lat": 59.94861,
-      "lng": 10.76944,
+      "lat": 59.9486,
+      "lng": 10.7694,
       "type": "Studio & backlot",
       "setting": "Five purpose-built stages from 81 to 500 square metres in Nydalen, Oslo, with lighting and grip rental, workshops, props storage and costume and makeup rooms in the same building.",
       "known_for": "Amundsen (2019)",
+      "facilities": "Five studios of 500, 211, 137, 124 and 81 m2 with shared makeup and costume fitting areas, showers, a dining space for 30, art department and props storage, a carpentry workshop and production offices; lighting, camera, generator and truck rental in the same building.",
+      "suitability": "Studios and equipment are rented for any media and film production, with 24-hour equipment delivery; part of Oslo Film Studios.",
+      "logistics": "Gjerdrums vei 6, Nydalen, Oslo",
+      "source_urls": [
+        "https://www.dagslys.no/en/",
+        "https://www.dagslys.no/en/our-studios/"
+      ],
       "official_url": "https://www.dagslys.no/en/",
-      "commission_url": "https://www.norwegianfilm.com/locations",
-      "photo": null
+      "commission_url": "https://www.norwegianfilm.com/locations"
     },
     {
       "id": "preikestolen",
@@ -884,11 +982,18 @@
       "name": "ATM Studio",
       "country": "Poland",
       "region": "Masovia (Warsaw)",
-      "lat": 52.19172,
-      "lng": 21.12497,
+      "lat": 52.1917,
+      "lng": 21.125,
       "type": "Studio & backlot",
       "setting": "Film and television production centre of around 14,000 square metres in Warsaw's Wawer district, with multiple soundstages, TV studios, production offices and post-production facilities.",
       "known_for": "The Voice of Poland, Dancing with the Stars: Taniec z gwiazdami",
+      "facilities": "Six halls totalling 5,200 m2: Hall A 1,500 m2 (45 x 34 m, 12 m high), Halls B to E 800 m2 each (32 x 25 m, 6 to 7 m high) and Hall F 500 m2; 14 dressing rooms of 34 m2 and two VIP dressing rooms of 60 m2, eight makeup rooms, scenic warehouses of 110 to 440 m2, a 3,900 kg cargo lift, catering and conference rooms on a 14,000 m2 site.",
+      "suitability": "Offers set design and construction, lighting and sound, post-production and VFX, costume and prop rental, OB vans and a virtual studio; two 4 MVA transformer stations, per-hall power connections from 16 A to 400 A, fibre links for nationwide TV transmission and silent ventilation for sound recording. Quotes on request.",
+      "logistics": "Wal Miedzeszynski 384, Wawer district, about 12 km from Warsaw city centre; three independent parking areas.",
+      "source_urls": [
+        "https://atmstudio.eu/",
+        "https://atmstudio.eu/en/"
+      ],
       "official_url": "https://www.atmstudio.eu/",
       "commission_url": "https://pfc.pisf.pl/",
       "photo": {
@@ -998,11 +1103,25 @@
       "name": "Ciudad de la Luz",
       "country": "Spain",
       "region": "Alicante, Valencian Community",
-      "lat": 38.308943,
-      "lng": -0.529347,
+      "lat": 38.3089,
+      "lng": -0.5293,
       "type": "Studio & backlot",
       "setting": "Purpose-built studio complex beside the Mediterranean on the edge of Alicante, with large sound stages, exterior water tanks and production support buildings, reopened to shoots in 2022.",
       "known_for": "Asterix at the Olympic Games (2008), The Impossible (2012)",
+      "facilities": "Six sound stages from 1,620 to 2,340 m2 (Plato 3: 2,340 m2 and 2,000 kVA; Plato 4: 1,794 m2; Platos 1, 2, 5 and 6: 1,620 m2, 12.5 m high, 10 x 8 m door, 1,250 kVA), interior tanks in Platos 3 and 5; an exterior 100 x 80 m water tank (8,000 m2, 1.2 m base, 5.2 m in a 30 x 30 m pit, 120 x 12 m green screen) with an infinity horizon to the Mediterranean; Backlot 1 of 42,367 m2 and Backlot 2 of 75,246 m2, each with 4,000 kVA; production buildings, workshops, storage, auditorium and post-production.",
+      "suitability": "Stages have NC-25 acoustic insulation and silent air conditioning; the tank offers up to 16 m underwater visibility, wave and water cannon systems and fills in 48 hours. 24-hour private security and access control let production teams work at any hour.",
+      "logistics": "On the edge of Alicante; the site cites an international airport nearby and Madrid under two hours by AVE high-speed train.",
+      "source_urls": [
+        "https://www.ciudaddelaluz.com/",
+        "https://www.ciudaddelaluz.com/en",
+        "https://www.ciudaddelaluz.com/water-tank",
+        "https://www.ciudaddelaluz.com/plato/plato-1",
+        "https://www.ciudaddelaluz.com/plato/plato-3",
+        "https://www.ciudaddelaluz.com/plato/plato-4",
+        "https://www.ciudaddelaluz.com/backlot/backlot-1-terreno-natural-compactado",
+        "https://www.ciudaddelaluz.com/backlot/backlot-2-terreno-natural-compactado-y-zona-pavimentada",
+        "https://www.ciudaddelaluz.com/production-buildings"
+      ],
       "official_url": "https://ciudaddelaluz.com/",
       "commission_url": "https://www.shootinginspain.info/",
       "photo": {
@@ -1036,7 +1155,7 @@
       "name": "Tabernas Desert",
       "country": "Spain",
       "region": "Almería, Andalusia",
-      "lat": 37.0,
+      "lat": 37,
       "lng": -2.45,
       "type": "Mountains & wilderness",
       "setting": "Europe's only true desert, with eroded badlands, dry riverbeds and surviving western town sets from the spaghetti-western era.",
@@ -1048,25 +1167,6 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Amanecer_en_el_desierto.jpg",
         "author": "Dgalan",
         "license": "CC BY-SA 4.0"
-      }
-    },
-    {
-      "id": "film-i-vast-trollhattan",
-      "name": "Film i Väst",
-      "country": "Sweden",
-      "region": "Västra Götaland (Trollhättan)",
-      "lat": 58.27389,
-      "lng": 12.27944,
-      "type": "Studio & backlot",
-      "setting": "Regional film fund and studio base in Trollhättan, nicknamed Trollywood, whose stages and industrial halls have held full-scale purpose-built sets.",
-      "known_for": "Dogville (2003), Melancholia (2011)",
-      "official_url": "https://www.filmivast.se/",
-      "commission_url": "https://filmcommissionsweden.se/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Film_I_V%C3%A4st_Entr%C3%A9.jpg",
-        "author": "User Tubaist on sv.wikipedia",
-        "license": "CC BY-SA 3.0"
       }
     },
     {
@@ -1086,6 +1186,33 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Rauks_(3881539849).jpg",
         "author": "allen watkin from London, UK",
         "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "film-i-vast-trollhattan",
+      "name": "Film i Väst",
+      "country": "Sweden",
+      "region": "Västra Götaland (Trollhättan)",
+      "lat": 58.2739,
+      "lng": 12.2794,
+      "type": "Studio & backlot",
+      "setting": "Regional film fund and studio base in Trollhättan, nicknamed Trollywood, whose stages and industrial halls have held full-scale purpose-built sets.",
+      "known_for": "Dogville (2003), Melancholia (2011)",
+      "price_note": "Studio Fares SEK 25,000 for the first day and SEK 20,000 per following day, plus 25 percent VAT (own site)",
+      "facilities": "Studio Fares: one 1,100 m2 sound stage (31.3 x 36.1 m, 10 m to the gallery) with a telfer system of 40 hoists, 1,000 A permanent power plus 1,000 A temporary, and doors 4.5 m high; props storage, carpentry workshop, production offices with 26 desks on two floors, three dressing rooms, makeup and wardrobe and a 50-seat cafe with kitchen.",
+      "suitability": "Rented primarily to Film i Vast co-productions under a licence agreement; external bookings are accepted at most two months ahead. The rent includes utilities, parking, cleaning and use of the facilities.",
+      "logistics": "Trollhattan; gated, secure parking with four EV charging points. Website in Swedish only.",
+      "source_urls": [
+        "https://filmivast.se/",
+        "https://filmivast.se/samproducera-med-oss/produktion/studio-fares-var-fullskaliga-filmstudio"
+      ],
+      "official_url": "https://www.filmivast.se/",
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+        "author": "User Tubaist on sv.wikipedia",
+        "license": "CC BY-SA 3.0"
       }
     },
     {
@@ -1155,6 +1282,16 @@
       "type": "Studio & backlot",
       "setting": "Major studio complex west of London whose facilities include large sound stages, the vast 007 Stage, backlots and an underwater filming tank.",
       "known_for": "No Time to Die, Star Wars: The Force Awakens",
+      "facilities": "30 stages including the 007 Stage (59,092 sq ft, 5,490 m2, 12 m high, with a 91 x 22 m interior tank 2 m deep), an underwater stage with a 20 x 10 x 6 m tank of 1.2 million litres kept at 30 C, three backlots (Paddock Lot, North Lot) with a 32,000 sq ft water pad, workshops of 1,000 to 12,000 sq ft, production offices, hair and makeup rooms, six mixing theatres and 20 cutting rooms.",
+      "suitability": "Stages are hired individually or in combination; an Indie Film Hub keeps two stages for independent film, over 150 on-lot businesses supply equipment hire, motion capture and 3D scanning, and Diving Services UK manages the underwater stage. Canteen, bar, cinema and 24/7 security on the lot.",
+      "logistics": "Pinewood Road, Iver Heath: 10 miles from Heathrow, via M4 junction 5 or A40 junction 1; about 45 minutes from Baker Street by Underground to Uxbridge then 10 minutes by taxi, with a free shuttle bus to Uxbridge, Slough, Gerrards Cross and West Ruislip stations; on-site parking.",
+      "source_urls": [
+        "https://pinewoodgroup.com/",
+        "https://pinewoodgroup.com/pinewood-studios/",
+        "https://pinewoodgroup.com/pinewood-studios/stages-and-support-spaces/",
+        "https://pinewoodgroup.com/pinewood-studios/stages/007-stage/",
+        "https://pinewoodgroup.com/pinewood-studios/stages/underwater-stage/"
+      ],
       "official_url": "https://pinewoodgroup.com/",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/",
       "photo": {

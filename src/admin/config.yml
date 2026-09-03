@@ -600,7 +600,7 @@ collections:
               - { label: "Regio (provincie/streek)", name: region, widget: string }
               - { label: Breedtegraad, name: lat, widget: number, value_type: float, step: 0.0001 }
               - { label: Lengtegraad, name: lng, widget: number, value_type: float, step: 0.0001 }
-              - { label: Type, name: type, widget: select, options: ["Castle & estate", "Palace & landmark", "Historic town & street", "Village & countryside", "City & skyline", "Coast & beach", "Mountains & wilderness", "Forest & lake", "Hotel & interiors", "Church & monastery", "Transport & infrastructure", "Industrial & derelict", "Modern architecture", "Studio & backlot"] }
+              - { label: Type, name: type, widget: select, options: ["Castle & estate", "Palace & landmark", "Historic town & street", "Village & countryside", "City & skyline", "Coast & beach", "Mountains & wilderness", "Forest & lake", "Hotel & interiors", "Church & monastery", "Transport & infrastructure", "Industrial & derelict", "Modern architecture", "Studio & backlot", "House & apartment", "Hospital, prison & institution", "Office, school & public building", "Bar, restaurant & shop", "Theatre, arena & venue"] }
               - { label: "Wat biedt de plek (1 zin)", name: setting, widget: text }
               - { label: "Bekend van (producties)", name: known_for, widget: string, required: false }
               - { label: "Gepubliceerde prijs (tekst, alleen wat de locatie zelf publiceert)", name: price_note, widget: string, required: false, hint: "Bijv. 'Day rate from € 2,500 (own site)'. Nooit schatten; leeg is beter dan een gok." }

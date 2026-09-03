@@ -2566,6 +2566,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .guide-search-field input::placeholder { color: var(--muted); font-weight: 400; }
 .guide-select:focus, .guide-search-field input:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
 .guide-count { margin: 14px 0 0; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
+.guide-total { margin: -6px 0 22px; font-size: 0.95rem; color: var(--muted); }
+.guide-more { display: block; margin: 26px auto 0; }
 
 .guide-map {
   height: 430px; margin-top: 18px;
