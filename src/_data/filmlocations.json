@@ -1723,7 +1723,13 @@
         "https://www.komedija.hr"
       ],
       "official_url": "https://www.komedija.hr",
-      "commission_url": "https://havc.hr"
+      "commission_url": "https://havc.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Komedija_Zagreb.JPG/960px-Komedija_Zagreb.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Komedija_Zagreb.JPG",
+        "author": "Donatus Darko Tepert",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-kopacki-rit",
@@ -1816,7 +1822,13 @@
         "https://www.nsk.hr"
       ],
       "official_url": "https://www.nsk.hr",
-      "commission_url": "https://havc.hr"
+      "commission_url": "https://havc.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/National_and_University_Library_in_Zagreb_20200613_DSC_0037r.jpg/960px-National_and_University_Library_in_Zagreb_20200613_DSC_0037r.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:National_and_University_Library_in_Zagreb_20200613_DSC_0037r.jpg",
+        "author": "Branko Radovanović",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-opatija",
@@ -2586,7 +2598,13 @@
       ],
       "url": "https://filmcommission.gov.cz/en/location/landek-park/",
       "official_url": "https://www.landekpark.cz/",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ova_Anselm_%28Urx%29_01.jpg/960px-Ova_Anselm_%28Urx%29_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ova_Anselm_(Urx)_01.jpg",
+        "author": "Tedmek",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "cz-lovosice-port",
@@ -2858,7 +2876,13 @@
         "https://www.techmania.cz/en"
       ],
       "official_url": "https://www.techmania.cz/en",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Techmania_Plze%C5%88.jpg/960px-Techmania_Plze%C5%88.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Techmania_Plze%C5%88.jpg",
+        "author": "JoiZif",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-terezin-small-fortress",
@@ -3117,7 +3141,13 @@
         "https://dokk1.dk"
       ],
       "official_url": "https://dokk1.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Europapladsstation.jpg/960px-Europapladsstation.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Europapladsstation.jpg",
+        "author": "Mtlarsen",
+        "license": "Public domain"
+      }
     },
     {
       "id": "dk-dr-koncerthuset",
@@ -3208,7 +3238,13 @@
         "https://hcandersenshus.dk"
       ],
       "official_url": "https://hcandersenshus.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/76/Hc-andersens-hus.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hc-andersens-hus.jpg",
+        "author": "Hansjorn at Danish Wikipedia",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "dk-hotel-koldingfjord",
@@ -3223,7 +3259,13 @@
         "https://www.koldingfjord.dk"
       ],
       "official_url": "https://www.koldingfjord.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Hotel_Koldingfjord_-_Denmark.jpg/960px-Hotel_Koldingfjord_-_Denmark.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hotel_Koldingfjord_-_Denmark.jpg",
+        "author": "FaceMePLS from The Hague, The Netherlands",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "kronborg-castle",
@@ -3415,7 +3457,13 @@
         "https://torvehallernekbh.dk"
       ],
       "official_url": "https://torvehallernekbh.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Torvehallerne_2011-09-09.jpg/960px-Torvehallerne_2011-09-09.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Torvehallerne_2011-09-09.jpg",
+        "author": "Knud Winckelmann",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "dk-utzon-center",
@@ -5260,7 +5308,13 @@
         "https://www.altefeuerwache.com/"
       ],
       "official_url": "https://www.altefeuerwache.com/",
-      "commission_url": "https://www.film.mfg.de/"
+      "commission_url": "https://www.film.mfg.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Alte_Feuerwache_von_oben.jpg/960px-Alte_Feuerwache_von_oben.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Alte_Feuerwache_von_oben.jpg",
+        "author": "Stebug",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-alte-oper-frankfurt",
@@ -5367,7 +5421,13 @@
         "https://www.bayerisches-eisenbahnmuseum.de/"
       ],
       "official_url": "https://www.bayerisches-eisenbahnmuseum.de/",
-      "commission_url": "https://www.fff-bayern.de/"
+      "commission_url": "https://www.fff-bayern.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Steam_Engine_18_478_S_3-6_2009-10-11.jpg/960px-Steam_Engine_18_478_S_3-6_2009-10-11.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Steam_Engine_18_478_S_3-6_2009-10-11.jpg",
+        "author": "Bergfalke2",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-beelitz-heilstaetten",
@@ -6912,6 +6972,21 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-aquaticum-debrecen",
+      "name": "Aquaticum Debrecen",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar County (Debrecen)",
+      "lat": 47.5531,
+      "lng": 21.6297,
+      "type": "Hotel & interiors",
+      "setting": "A large thermal spa and wellness hotel complex in Debrecen's Great Forest park, with indoor and outdoor pools, saunas and function space that the operator lists for conferences and events.",
+      "source_urls": [
+        "https://aquaticum.hu/"
+      ],
+      "official_url": "https://aquaticum.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-balna-budapest",
       "name": "Balna Budapest",
       "country": "Hungary",
@@ -7057,6 +7132,22 @@
       }
     },
     {
+      "id": "hu-fort-monostor",
+      "name": "Fort Monostor",
+      "country": "Hungary",
+      "region": "Komarom-Esztergom County (Komarom)",
+      "lat": 47.7499,
+      "lng": 18.1042,
+      "type": "Castle & estate",
+      "setting": "A 19th-century brick fortress complex on the edge of Komarom, with casemates, tunnels and a separate star-shaped outer fort, now a heritage site with its own wedding and conference venues.",
+      "source_urls": [
+        "https://erod.hu/",
+        "https://erod.hu/rendezvenyhelyszin/"
+      ],
+      "official_url": "https://erod.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-gellert-baths",
       "name": "Gellert Baths",
       "country": "Hungary",
@@ -7145,6 +7236,22 @@
       }
     },
     {
+      "id": "hu-kaloczy-square-event-center",
+      "name": "Kaloczy Square Event Center",
+      "country": "Hungary",
+      "region": "Gyor-Moson-Sopron County (Gyor)",
+      "lat": 47.692,
+      "lng": 17.6291,
+      "type": "Theatre, arena & venue",
+      "setting": "A renovated riverside boathouse on Kaloczy square in Gyor, on the bank of the Mosoni-Duna, run as an event venue for weddings and corporate and family gatherings.",
+      "capacity": "80 people",
+      "source_urls": [
+        "https://gyorprojekt.hu/kaloczy-teri-rendezvenykozpont"
+      ],
+      "official_url": "https://gyorprojekt.hu/kaloczy-teri-rendezvenykozpont",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-kelenfold-power-plant",
       "name": "Kelenfold Power Plant",
       "country": "Hungary",
@@ -7158,6 +7265,21 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-kolcsey-center-debrecen",
+      "name": "Kolcsey Center",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar County (Debrecen)",
+      "lat": 47.5347,
+      "lng": 21.6225,
+      "type": "Theatre, arena & venue",
+      "setting": "A large concert and conference venue in Debrecen with a main hall, several function rooms and a glass-fronted foyer, hired out through its own events office for conferences and functions.",
+      "source_urls": [
+        "https://kolcseykozpont.hu/"
+      ],
+      "official_url": "https://kolcseykozpont.hu/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -7236,6 +7358,21 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-met-arena-szekesfehervar",
+      "name": "MET Arena Szekesfehervar",
+      "country": "Hungary",
+      "region": "Fejer County (Szekesfehervar)",
+      "lat": 47.1935,
+      "lng": 18.4841,
+      "type": "Theatre, arena & venue",
+      "setting": "A modern indoor arena in an industrial zone of Szekesfehervar, built for a top-division handball club, marketed on its own site as a venue for sport, concerts and conferences.",
+      "source_urls": [
+        "https://albaarena.hu/"
+      ],
+      "official_url": "https://albaarena.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-millenaris-park",
       "name": "Millenaris Park",
       "country": "Hungary",
@@ -7249,6 +7386,22 @@
         "https://www.millenaris.hu/en/"
       ],
       "official_url": "https://www.millenaris.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-modem-debrecen",
+      "name": "MODEM Modern and Contemporary Arts Center",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar County (Debrecen)",
+      "lat": 47.5335,
+      "lng": 21.621,
+      "type": "Modern architecture",
+      "setting": "A glass-fronted exhibition building in central Debrecen with large open gallery halls and a minimal facade, used for contemporary art shows and with its rooms listed for hire on its own site.",
+      "source_urls": [
+        "https://modemart.hu/",
+        "https://modemart.hu/teremberles/"
+      ],
+      "official_url": "https://modemart.hu/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -7400,6 +7553,21 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-pannonhalma-archabbey",
+      "name": "Pannonhalma Archabbey",
+      "country": "Hungary",
+      "region": "Gyor-Moson-Sopron County (Pannonhalma)",
+      "lat": 47.5493,
+      "lng": 17.7635,
+      "type": "Church & monastery",
+      "setting": "A working Benedictine monastery on a hilltop above the town of Pannonhalma, with a basilica, cloister, library and vineyard, part of it open to visitors and hired out for weddings and corporate events.",
+      "source_urls": [
+        "https://pannonhalmifoapatsag.hu/"
+      ],
+      "official_url": "https://pannonhalmifoapatsag.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-piarist-centre",
       "name": "Piarist Centre",
       "country": "Hungary",
@@ -7453,6 +7621,22 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-sostoi-muzeumfalu",
+      "name": "Sostoi Muzeumfalu",
+      "country": "Hungary",
+      "region": "Szabolcs-Szatmar-Bereg County (Nyiregyhaza)",
+      "lat": 48.0087,
+      "lng": 21.7186,
+      "type": "Village & countryside",
+      "setting": "An open-air ethnographic museum near Nyiregyhaza with relocated village houses, a windmill, a church and a school laid out as a walkable historic village, with its own page for hiring the site for photo and film shoots.",
+      "source_urls": [
+        "https://muzeumfalu.hu/",
+        "https://muzeumfalu.hu/fotozas-filmezes/"
+      ],
+      "official_url": "https://muzeumfalu.hu/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -7530,6 +7714,21 @@
       }
     },
     {
+      "id": "hu-university-of-debrecen-main-building",
+      "name": "University of Debrecen Main Building",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar County (Debrecen)",
+      "lat": 47.5563,
+      "lng": 21.6214,
+      "type": "Office, school & public building",
+      "setting": "A neo-baroque university building from 1932 in Debrecen with a domed central hall, a long facade and formal gardens, still used daily for teaching and by the university's own event office.",
+      "source_urls": [
+        "https://unideb.hu/"
+      ],
+      "official_url": "https://unideb.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-urania-national-film-theatre",
       "name": "Urania National Film Theatre",
       "country": "Hungary",
@@ -7569,6 +7768,21 @@
       }
     },
     {
+      "id": "hu-veszprem-arena",
+      "name": "Veszprem Arena",
+      "country": "Hungary",
+      "region": "Veszprem County (Veszprem)",
+      "lat": 47.1058,
+      "lng": 17.9341,
+      "type": "Theatre, arena & venue",
+      "setting": "A modern indoor sports and event hall on the edge of Veszprem, home to a top-division handball club, with a rentable arena floor and function rooms used for concerts and corporate events.",
+      "source_urls": [
+        "https://veszpremarena.hu/"
+      ],
+      "official_url": "https://veszpremarena.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-wekerle-estate",
       "name": "Wekerle Estate",
       "country": "Hungary",
@@ -7582,6 +7796,21 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-zsolnay-cultural-quarter",
+      "name": "Zsolnay Cultural Quarter",
+      "country": "Hungary",
+      "region": "Baranya County (Pecs)",
+      "lat": 46.0779,
+      "lng": 18.2482,
+      "type": "Industrial & derelict",
+      "setting": "A former 19th-century Zsolnay ceramics factory in Pecs with preserved kilns, chimneys and workshop halls, now a cultural quarter of museums and function spaces hired out for weddings and corporate events.",
+      "source_urls": [
+        "https://zsolnaynegyed.hu/"
+      ],
+      "official_url": "https://zsolnaynegyed.hu/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -14370,6 +14599,23 @@
       }
     },
     {
+      "id": "uk-arbeia-roman-fort",
+      "name": "Arbeia Roman Fort",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "lat": 55.0045,
+      "lng": -1.4311,
+      "type": "Castle & estate",
+      "setting": "A reconstructed Roman fort and supply base at South Shields, with a rebuilt gatehouse, barrack blocks and commanding officer's house on the original foundations.",
+      "suitability": "Part of the North East Museums group, which states it welcomes film, television and photography companies to hire its venues",
+      "source_urls": [
+        "https://www.arbeiaromanfort.org.uk",
+        "https://www.northeastmuseums.org.uk/venue-hire"
+      ],
+      "official_url": "https://www.arbeiaromanfort.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-audley-end-house",
       "name": "Audley End House and Gardens",
       "country": "United Kingdom",
@@ -14383,6 +14629,21 @@
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-ayr-racecourse",
+      "name": "Ayr Racecourse",
+      "country": "United Kingdom",
+      "region": "South Ayrshire",
+      "lat": 55.4654,
+      "lng": -4.6084,
+      "type": "Theatre, arena & venue",
+      "setting": "Scotland's principal racecourse on the Ayrshire coast, with grandstands, a parade ring and parkland hired for events between race meetings.",
+      "source_urls": [
+        "https://ayr-racecourse.co.uk"
+      ],
+      "official_url": "https://ayr-racecourse.co.uk",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-barrowland-ballroom",
@@ -14710,6 +14971,21 @@
       }
     },
     {
+      "id": "uk-chiswick-park",
+      "name": "Chiswick Park",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.4945,
+      "lng": -0.2677,
+      "type": "Office, school & public building",
+      "setting": "A landscaped west London business park of glass office buildings around a lake, promoted by its operator as a filming location for adverts and corporate shoots.",
+      "source_urls": [
+        "https://www.enjoy-work.com"
+      ],
+      "official_url": "https://www.enjoy-work.com",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-cliveden",
       "name": "Cliveden",
       "country": "United Kingdom",
@@ -14768,6 +15044,37 @@
       }
     },
     {
+      "id": "uk-copper-box-arena",
+      "name": "Copper Box Arena",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5443,
+      "lng": -0.0201,
+      "type": "Theatre, arena & venue",
+      "setting": "A copper clad multi sport arena built for the 2012 Olympics in Queen Elizabeth Olympic Park, with a sprung floor hall hired for filming, sport and events.",
+      "source_urls": [
+        "https://www.copperboxarena.org.uk"
+      ],
+      "official_url": "https://www.copperboxarena.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-cotswold-farm-park",
+      "name": "Cotswold Farm Park",
+      "country": "United Kingdom",
+      "region": "Gloucestershire",
+      "lat": 51.9389,
+      "lng": -1.8389,
+      "type": "Village & countryside",
+      "setting": "A working rare breeds farm in the Cotswolds founded by broadcaster Adam Henson, with barns, fields and animal enclosures across open hillside.",
+      "known_for": "Countryfile",
+      "source_urls": [
+        "https://www.cotswoldfarmpark.co.uk"
+      ],
+      "official_url": "https://www.cotswoldfarmpark.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-coventry-transport-museum",
       "name": "Coventry Transport Museum",
       "country": "United Kingdom",
@@ -14789,6 +15096,21 @@
       }
     },
     {
+      "id": "uk-crossness-pumping-station",
+      "name": "Crossness Pumping Station",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5091,
+      "lng": 0.1384,
+      "type": "Industrial & derelict",
+      "setting": "A Victorian sewage pumping station in south east London, its ornate cast iron interior housing a restored beam engine and hired for filming.",
+      "source_urls": [
+        "https://www.crossness.org.uk"
+      ],
+      "official_url": "https://www.crossness.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-crumlin-road-gaol",
       "name": "Crumlin Road Gaol",
       "country": "United Kingdom",
@@ -14802,6 +15124,21 @@
       ],
       "official_url": "https://www.crumlinroadgaol.com/",
       "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-cutty-sark",
+      "name": "Cutty Sark",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.4829,
+      "lng": -0.0096,
+      "type": "Transport & infrastructure",
+      "setting": "A preserved nineteenth century tea clipper in dry dock at Greenwich, its decks, rigging and cargo hold open for events and location hire.",
+      "source_urls": [
+        "https://www.rmg.co.uk/cutty-sark"
+      ],
+      "official_url": "https://www.rmg.co.uk/cutty-sark",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-dean-clough",
@@ -14838,6 +15175,38 @@
       ],
       "official_url": "https://www.digbethloc.com/",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-discovery-museum",
+      "name": "Discovery Museum",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "lat": 54.9693,
+      "lng": -1.6248,
+      "type": "Industrial & derelict",
+      "setting": "A free museum in Newcastle housed in Blandford House, an Edwardian former Co-operative Wholesale Society warehouse, with galleries and a turbine ship on display.",
+      "suitability": "Part of the North East Museums group, which states it welcomes film, television and photography companies to hire its venues",
+      "source_urls": [
+        "https://www.discoverymuseum.org.uk",
+        "https://www.northeastmuseums.org.uk/venue-hire"
+      ],
+      "official_url": "https://www.discoverymuseum.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-dreamland-margate",
+      "name": "Dreamland Margate",
+      "country": "United Kingdom",
+      "region": "Kent",
+      "lat": 51.3852,
+      "lng": 1.3772,
+      "type": "Theatre, arena & venue",
+      "setting": "A restored 1920s seaside amusement park on the Kent coast with a wooden scenic railway and vintage rides, used as a period seaside backdrop.",
+      "source_urls": [
+        "https://www.dreamland.co.uk"
+      ],
+      "official_url": "https://www.dreamland.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-dyrham-park",
@@ -14901,6 +15270,21 @@
         "author": "Steve Daniels",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-falkirk-wheel",
+      "name": "Falkirk Wheel",
+      "country": "United Kingdom",
+      "region": "Falkirk",
+      "lat": 56.0005,
+      "lng": -3.8417,
+      "type": "Transport & infrastructure",
+      "setting": "A rotating boat lift connecting two canals near Falkirk, managed by Scottish Canals with a visitor centre, basin and towpaths around it.",
+      "source_urls": [
+        "https://www.scottishcanals.co.uk"
+      ],
+      "official_url": "https://www.scottishcanals.co.uk",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-fort-amherst",
@@ -15008,6 +15392,21 @@
       }
     },
     {
+      "id": "uk-here-east",
+      "name": "Here East",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5466,
+      "lng": -0.0226,
+      "type": "Modern architecture",
+      "setting": "A converted Olympic press and broadcast centre beside the canal in Hackney Wick, now offices, television studios and workshop space.",
+      "source_urls": [
+        "https://www.hereeast.com"
+      ],
+      "official_url": "https://www.hereeast.com",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-hylands-house",
       "name": "Hylands House",
       "country": "United Kingdom",
@@ -15077,6 +15476,21 @@
       }
     },
     {
+      "id": "uk-kempton-park-racecourse",
+      "name": "Kempton Park Racecourse",
+      "country": "United Kingdom",
+      "region": "Surrey",
+      "lat": 51.4179,
+      "lng": -0.4093,
+      "type": "Theatre, arena & venue",
+      "setting": "A Jockey Club racecourse near Sunbury with grandstands, a parade ring and open parkland, hired for filming and photography between race meetings.",
+      "source_urls": [
+        "https://www.kempton.co.uk"
+      ],
+      "official_url": "https://www.kempton.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-knole",
       "name": "Knole",
       "country": "United Kingdom",
@@ -15119,6 +15533,36 @@
         "author": "Scribwik",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "uk-leeds-corn-exchange",
+      "name": "Leeds Corn Exchange",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.7973,
+      "lng": -1.5404,
+      "type": "Bar, restaurant & shop",
+      "setting": "A domed Victorian former corn trading hall in Leeds city centre, now independent shops and studio units under a cast iron and glass roof.",
+      "source_urls": [
+        "https://leedscornexchange.co.uk"
+      ],
+      "official_url": "https://leedscornexchange.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-littledean-jail",
+      "name": "Littledean Jail",
+      "country": "United Kingdom",
+      "region": "Gloucestershire",
+      "lat": 51.822,
+      "lng": -2.4756,
+      "type": "Hospital, prison & institution",
+      "setting": "A former Victorian prison and police lock up in the Forest of Dean, now a museum with original cell blocks and a courtroom.",
+      "source_urls": [
+        "https://www.littledeanjail.com"
+      ],
+      "official_url": "https://www.littledeanjail.com",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-loseley-park",
@@ -15164,6 +15608,22 @@
         "author": "Stephen Richards",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-mediacityuk",
+      "name": "MediaCityUK",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4731,
+      "lng": -2.2985,
+      "type": "Office, school & public building",
+      "setting": "A media and business campus on Salford Quays with BBC and ITV studios, offices and waterside plazas, including the purpose built Coronation Street set, used for broadcast and corporate productions.",
+      "known_for": "Coronation Street",
+      "source_urls": [
+        "https://www.mediacityuk.co.uk"
+      ],
+      "official_url": "https://www.mediacityuk.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-mitchell-library",
@@ -15254,6 +15714,36 @@
       }
     },
     {
+      "id": "uk-national-slate-museum",
+      "name": "National Slate Museum",
+      "country": "United Kingdom",
+      "region": "Gwynedd",
+      "lat": 53.12,
+      "lng": -4.1213,
+      "type": "Industrial & derelict",
+      "setting": "A former slate quarry workshop at Llanberis in Snowdonia, with working machinery, a giant waterwheel and quarrymen's cottages preserved on site.",
+      "source_urls": [
+        "https://museum.wales/slate/"
+      ],
+      "official_url": "https://museum.wales/slate/",
+      "commission_url": "https://www.gov.wales/film-and-tv-locations-wales"
+    },
+    {
+      "id": "uk-national-space-centre",
+      "name": "National Space Centre",
+      "country": "United Kingdom",
+      "region": "Leicestershire",
+      "lat": 52.6538,
+      "lng": -1.1323,
+      "type": "Modern architecture",
+      "setting": "A space science museum in Leicester with a distinctive rocket tower, planetarium and exhibition halls, available for venue hire including production use.",
+      "source_urls": [
+        "https://www.spacecentre.co.uk"
+      ],
+      "official_url": "https://www.spacecentre.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-no1-royal-crescent",
       "name": "No.1 Royal Crescent",
       "country": "United Kingdom",
@@ -15277,6 +15767,21 @@
         "author": "Photograph by Mike Peel (www.mikepeel.net).",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "uk-old-billingsgate",
+      "name": "Old Billingsgate",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.509,
+      "lng": -0.084,
+      "type": "Industrial & derelict",
+      "setting": "The former Victorian fish market hall on the Thames in the City of London, a column free riverside space hired for productions and functions.",
+      "source_urls": [
+        "https://oldbillingsgate.co.uk"
+      ],
+      "official_url": "https://oldbillingsgate.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-old-royal-naval-college",
@@ -15336,6 +15841,37 @@
       ],
       "official_url": "https://www.urbansplash.co.uk/regeneration/projects/park-hill",
       "commission_url": "https://screenyorkshire.co.uk/"
+    },
+    {
+      "id": "uk-peoples-history-museum",
+      "name": "People's History Museum",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4814,
+      "lng": -2.2534,
+      "type": "Industrial & derelict",
+      "setting": "The national museum of democracy in Manchester, housed in a former Edwardian hydraulic pumping station beside the River Irwell, with galleries and an events space.",
+      "source_urls": [
+        "https://www.phm.org.uk"
+      ],
+      "official_url": "https://www.phm.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-perth-racecourse",
+      "name": "Perth Racecourse",
+      "country": "United Kingdom",
+      "region": "Perth and Kinross",
+      "lat": 56.4235,
+      "lng": -3.4038,
+      "type": "Theatre, arena & venue",
+      "setting": "A Scottish jump racing course set in Scone Palace Park near Perth, with grandstands and parkland offered for film and television location filming.",
+      "suitability": "Film and TV location filming advertised as a dedicated service alongside weddings and corporate hire",
+      "source_urls": [
+        "https://www.perth-races.co.uk"
+      ],
+      "official_url": "https://www.perth-races.co.uk",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-peterhead-prison-museum",
@@ -15456,6 +15992,21 @@
       }
     },
     {
+      "id": "uk-rhondda-heritage-park",
+      "name": "Rhondda Heritage Park",
+      "country": "United Kingdom",
+      "region": "Rhondda Cynon Taf",
+      "lat": 51.6106,
+      "lng": -3.388,
+      "type": "Industrial & derelict",
+      "setting": "A former colliery in the Rhondda valley, South Wales, preserved with pithead buildings and winding gear as a mining heritage museum.",
+      "source_urls": [
+        "https://www.rhonddaheritagepark.com"
+      ],
+      "official_url": "https://www.rhonddaheritagepark.com",
+      "commission_url": "https://www.gov.wales/film-and-tv-locations-wales"
+    },
+    {
       "id": "uk-ribblehead-viaduct",
       "name": "Ribblehead Viaduct",
       "country": "United Kingdom",
@@ -15475,6 +16026,22 @@
         "author": "Tom Corser",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-riverside-museum",
+      "name": "Riverside Museum",
+      "country": "United Kingdom",
+      "region": "Glasgow",
+      "lat": 55.8652,
+      "lng": -4.3062,
+      "type": "Modern architecture",
+      "setting": "A Zaha Hadid designed transport museum where the Kelvin meets the Clyde in Glasgow, with a zigzag roofline, a recreated street and a tall ship moored outside.",
+      "suitability": "Photography, filming and sketching permitted under Glasgow Life's museum guidelines, with venue hire available",
+      "source_urls": [
+        "https://www.glasgowlife.org.uk/museums/riverside-museum"
+      ],
+      "official_url": "https://www.glasgowlife.org.uk/museums/riverside-museum",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-royal-albert-hall",
@@ -15498,6 +16065,21 @@
         "author": "Iridescent",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-royal-highland-centre",
+      "name": "Royal Highland Centre",
+      "country": "United Kingdom",
+      "region": "Edinburgh",
+      "lat": 55.9404,
+      "lng": -3.3817,
+      "type": "Theatre, arena & venue",
+      "setting": "A large showground and exhibition centre at Ingliston near Edinburgh Airport, with halls, arenas and outdoor space hired for events and productions.",
+      "source_urls": [
+        "https://www.royalhighlandcentre.co.uk"
+      ],
+      "official_url": "https://www.royalhighlandcentre.co.uk",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-royal-holloway",
@@ -15560,6 +16142,23 @@
       }
     },
     {
+      "id": "uk-segedunum-roman-fort",
+      "name": "Segedunum Roman Fort",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "lat": 54.9879,
+      "lng": -1.5323,
+      "type": "Castle & estate",
+      "setting": "The excavated remains of a Roman fort at Wallsend marking the eastern end of Hadrian's Wall, with a reconstructed bathhouse, viewing tower and museum.",
+      "suitability": "Part of the North East Museums group, which states it welcomes film, television and photography companies to hire its venues",
+      "source_urls": [
+        "https://www.segedunumromanfort.org.uk",
+        "https://www.northeastmuseums.org.uk/venue-hire"
+      ],
+      "official_url": "https://www.segedunumromanfort.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-shepton-mallet-prison",
       "name": "Shepton Mallet Prison",
       "country": "United Kingdom",
@@ -15579,6 +16178,37 @@
         "author": "Nigel Freeman",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-shrewsbury-prison",
+      "name": "Shrewsbury Prison",
+      "country": "United Kingdom",
+      "region": "Shropshire",
+      "lat": 52.7116,
+      "lng": -2.748,
+      "type": "Hospital, prison & institution",
+      "setting": "A closed Victorian prison on The Dana in Shrewsbury, with wings, cells and exercise yards intact from its use until 2013.",
+      "suitability": "Production and film location hire listed as a dedicated service alongside tours and ghost events",
+      "source_urls": [
+        "https://www.shrewsburyprison.com"
+      ],
+      "official_url": "https://www.shrewsburyprison.com",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-silverstone-circuit",
+      "name": "Silverstone Circuit",
+      "country": "United Kingdom",
+      "region": "Northamptonshire",
+      "lat": 52.0718,
+      "lng": -1.0143,
+      "type": "Transport & infrastructure",
+      "setting": "A motor racing circuit on a former airfield in Northamptonshire, with grandstands, pit garages and a test track hired for motoring productions.",
+      "source_urls": [
+        "https://www.silverstone.co.uk"
+      ],
+      "official_url": "https://www.silverstone.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-snape-maltings",
@@ -15690,6 +16320,21 @@
       }
     },
     {
+      "id": "uk-st-georges-bristol",
+      "name": "St George's Bristol",
+      "country": "United Kingdom",
+      "region": "Bristol",
+      "lat": 51.4536,
+      "lng": -2.6041,
+      "type": "Theatre, arena & venue",
+      "setting": "A deconsecrated Georgian church on Brandon Hill in Bristol converted into a concert hall, its columned interior hired for recordings, filming and events.",
+      "source_urls": [
+        "https://www.stgeorgesbristol.co.uk"
+      ],
+      "official_url": "https://www.stgeorgesbristol.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-st-georges-market-belfast",
       "name": "St George's Market",
       "country": "United Kingdom",
@@ -15709,6 +16354,21 @@
         "author": "Ardfern",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-swg3",
+      "name": "SWG3",
+      "country": "United Kingdom",
+      "region": "Glasgow",
+      "lat": 55.8652,
+      "lng": -4.3001,
+      "type": "Industrial & derelict",
+      "setting": "A converted warehouse and former whisky bond in Glasgow's Yorkhill, now a multi room venue used for music, events and film and television production.",
+      "source_urls": [
+        "https://www.swg3.tv"
+      ],
+      "official_url": "https://www.swg3.tv",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-the-bluecoat",
@@ -15755,6 +16415,21 @@
       }
     },
     {
+      "id": "uk-o2-belfast",
+      "name": "The O2 Belfast",
+      "country": "United Kingdom",
+      "region": "Belfast",
+      "lat": 54.604,
+      "lng": -5.9145,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor arena in the Odyssey complex on Belfast's Queen's Quay, home to ice hockey and concerts, with a bowl and function spaces for hire.",
+      "source_urls": [
+        "https://theo2belfast.com/"
+      ],
+      "official_url": "https://theo2belfast.com/",
+      "commission_url": "https://www.northernirelandscreen.co.uk/"
+    },
+    {
       "id": "uk-old-truman-brewery",
       "name": "The Old Truman Brewery",
       "country": "United Kingdom",
@@ -15791,6 +16466,22 @@
       }
     },
     {
+      "id": "uk-sharp-project",
+      "name": "The Sharp Project",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.5014,
+      "lng": -2.1959,
+      "type": "Studio & backlot",
+      "setting": "A converted industrial estate in north Manchester built as television and digital production studios, with offices, a yard and outdoor space for crews and vehicles.",
+      "source_urls": [
+        "https://thesharpproject.co.uk",
+        "https://screenmanchester.com/"
+      ],
+      "official_url": "https://thesharpproject.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-tank-museum-bovington",
       "name": "The Tank Museum",
       "country": "United Kingdom",
@@ -15810,6 +16501,51 @@
         "author": "Louise M Evans",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "uk-thinktank-birmingham",
+      "name": "Thinktank, Birmingham Science Museum",
+      "country": "United Kingdom",
+      "region": "West Midlands",
+      "lat": 52.4829,
+      "lng": -1.8856,
+      "type": "Office, school & public building",
+      "setting": "A science museum at Millennium Point in Birmingham with galleries of steam engines, vehicles and interactive exhibits across four floors, available for venue hire.",
+      "source_urls": [
+        "https://www.birminghammuseums.org.uk/thinktank"
+      ],
+      "official_url": "https://www.birminghammuseums.org.uk/thinktank",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-titanic-belfast",
+      "name": "Titanic Belfast",
+      "country": "United Kingdom",
+      "region": "Belfast",
+      "lat": 54.6081,
+      "lng": -5.9098,
+      "type": "Modern architecture",
+      "setting": "A six floor angular aluminium clad museum on the Belfast slipway where the Titanic was built, with galleries and function spaces hired for events.",
+      "source_urls": [
+        "https://www.titanicbelfast.com"
+      ],
+      "official_url": "https://www.titanicbelfast.com",
+      "commission_url": "https://www.northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-tobacco-dock",
+      "name": "Tobacco Dock",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5083,
+      "lng": -0.0595,
+      "type": "Industrial & derelict",
+      "setting": "A Grade I listed early nineteenth century dock warehouse in Wapping, with exposed brick vaults and cast iron columns hired as an events space.",
+      "source_urls": [
+        "https://www.tobaccodocklondon.com"
+      ],
+      "official_url": "https://www.tobaccodocklondon.com",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-tower-bridge",
@@ -15875,6 +16611,21 @@
       }
     },
     {
+      "id": "uk-troxy",
+      "name": "Troxy",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5128,
+      "lng": -0.044,
+      "type": "Theatre, arena & venue",
+      "setting": "A former 1930s cinema in Limehouse converted into an events venue, its art deco auditorium and foyers hired for filming, television and live shows.",
+      "source_urls": [
+        "https://www.troxy.co.uk"
+      ],
+      "official_url": "https://www.troxy.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-two-temple-place",
       "name": "Two Temple Place",
       "country": "United Kingdom",
@@ -15895,6 +16646,51 @@
         "author": "Tony Hisgett from Birmingham, UK",
         "license": "CC BY 2.0"
       }
+    },
+    {
+      "id": "uk-ulster-transport-museum",
+      "name": "Ulster Transport Museum",
+      "country": "United Kingdom",
+      "region": "County Down",
+      "lat": 54.6523,
+      "lng": -5.805,
+      "type": "Transport & infrastructure",
+      "setting": "A National Museums NI transport museum at Cultra on Belfast Lough, with halls of trains, cars and aircraft beside the adjoining Ulster Folk Museum's historic buildings.",
+      "source_urls": [
+        "https://www.nmni.com/Home/Ulster-Transport-Museum"
+      ],
+      "official_url": "https://www.nmni.com/Home/Ulster-Transport-Museum",
+      "commission_url": "https://www.northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-union-chapel",
+      "name": "Union Chapel",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5448,
+      "lng": -0.1024,
+      "type": "Church & monastery",
+      "setting": "A working Victorian Gothic chapel in Islington that doubles as a music venue, its galleried octagonal interior hired for filming and concerts.",
+      "source_urls": [
+        "https://www.unionchapel.org.uk"
+      ],
+      "official_url": "https://www.unionchapel.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-university-of-salford",
+      "name": "University of Salford",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4732,
+      "lng": -2.2971,
+      "type": "Office, school & public building",
+      "setting": "A university campus beside MediaCityUK on Salford Quays, with lecture theatres, media production studios and modern teaching buildings.",
+      "source_urls": [
+        "https://www.salford.ac.uk"
+      ],
+      "official_url": "https://www.salford.ac.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-utilita-arena-birmingham",
@@ -15933,6 +16729,21 @@
       }
     },
     {
+      "id": "uk-verdant-works",
+      "name": "Verdant Works",
+      "country": "United Kingdom",
+      "region": "Dundee",
+      "lat": 56.4616,
+      "lng": -2.9834,
+      "type": "Industrial & derelict",
+      "setting": "A restored nineteenth century jute mill in Dundee with original machinery and mill buildings, run as a museum of the city's textile industry.",
+      "source_urls": [
+        "https://www.verdantworks.com"
+      ],
+      "official_url": "https://www.verdantworks.com",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
       "id": "uk-victoria-baths",
       "name": "Victoria Baths",
       "country": "United Kingdom",
@@ -15952,6 +16763,21 @@
         "author": "Ridiculopathy",
         "license": "CC0"
       }
+    },
+    {
+      "id": "uk-w5-belfast",
+      "name": "W5",
+      "country": "United Kingdom",
+      "region": "Belfast",
+      "lat": 54.6046,
+      "lng": -5.915,
+      "type": "Theatre, arena & venue",
+      "setting": "An interactive science discovery centre inside the Odyssey complex on Belfast's Queen's Quay, with exhibition floors and workshop spaces.",
+      "source_urls": [
+        "https://www.w5online.co.uk"
+      ],
+      "official_url": "https://www.w5online.co.uk",
+      "commission_url": "https://www.northernirelandscreen.co.uk/"
     },
     {
       "id": "uk-wales-millennium-centre",
@@ -15975,6 +16801,21 @@
       }
     },
     {
+      "id": "uk-westonbirt-arboretum",
+      "name": "Westonbirt, The National Arboretum",
+      "country": "United Kingdom",
+      "region": "Gloucestershire",
+      "lat": 51.6058,
+      "lng": -2.2237,
+      "type": "Forest & lake",
+      "setting": "A Forestry England arboretum in Gloucestershire with thousands of labelled trees, formal avenues and a treetop walkway.",
+      "source_urls": [
+        "https://www.forestryengland.uk/westonbirt-the-national-arboretum"
+      ],
+      "official_url": "https://www.forestryengland.uk/westonbirt-the-national-arboretum",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "uk-wiltons-music-hall",
       "name": "Wilton's Music Hall",
       "country": "United Kingdom",
@@ -15995,6 +16836,53 @@
         "author": "James Perry",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-winter-gardens-blackpool",
+      "name": "Winter Gardens Blackpool",
+      "country": "United Kingdom",
+      "region": "Lancashire",
+      "lat": 53.8171,
+      "lng": -3.051,
+      "type": "Theatre, arena & venue",
+      "setting": "A Victorian entertainment complex in Blackpool covering almost five acres, with the domed Spanish Hall, an opera house and function rooms hired for events.",
+      "source_urls": [
+        "https://www.wintergardensblackpool.co.uk"
+      ],
+      "official_url": "https://www.wintergardensblackpool.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-woodhorn-museum",
+      "name": "Woodhorn Museum",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "lat": 55.1898,
+      "lng": -1.5503,
+      "type": "Industrial & derelict",
+      "setting": "A former colliery near Ashington in Northumberland with preserved pithead buildings, a winding engine and headstocks, run as a mining heritage museum.",
+      "suitability": "Part of the North East Museums group, which states it welcomes film, television and photography companies to hire its venues",
+      "source_urls": [
+        "https://www.northeastmuseums.org.uk/woodhorn-museum",
+        "https://www.northeastmuseums.org.uk/venue-hire"
+      ],
+      "official_url": "https://www.northeastmuseums.org.uk/woodhorn-museum",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-wookey-hole",
+      "name": "Wookey Hole",
+      "country": "United Kingdom",
+      "region": "Somerset",
+      "lat": 51.2263,
+      "lng": -2.676,
+      "type": "Mountains & wilderness",
+      "setting": "A show cave complex in the Mendip Hills near Wells, with limestone chambers, an underground river and an attached Victorian paper mill.",
+      "source_urls": [
+        "https://www.wookey.co.uk"
+      ],
+      "official_url": "https://www.wookey.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "uk-wrest-park",
