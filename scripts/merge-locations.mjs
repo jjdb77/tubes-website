@@ -3,6 +3,9 @@
 // Bestanden die "enrich-" heten of studios-patch.json zijn PATCHES ({id, veld...});
 // de rest zijn hele locaties. Dubbele id's en namen worden overgeslagen, en
 // locations-dropped.json (naast de map) houdt bewust geschrapte locaties weg.
+import fs from "node:fs";
+import path from "node:path";
+
 const [repo, outDir, ...flags] = process.argv.slice(2);
 const dry = flags.includes("--dry");
 const file = path.join(repo, "src/_data/filmlocations.json");
