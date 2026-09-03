@@ -12661,24 +12661,6 @@
       "commission_url": "https://pisf.pl"
     },
     {
-      "id": "pl-halemba-wirek-ruda-slaska",
-      "name": "Former Halemba-Wirek Mine Demolition Yard",
-      "country": "Poland",
-      "region": "Silesian Voivodeship",
-      "lat": 50.2717,
-      "lng": 18.9086,
-      "type": "Industrial & derelict",
-      "setting": "A post-mining industrial complex at the former Halemba-Wirek colliery in Ruda Slaska, with abandoned halls, cranes, storage buildings and a derelict-styled house used for industrial and post-apocalyptic scenes.",
-      "facilities": "Power and water, parking, briefing room, office space",
-      "suitability": "Industrial, war, thriller, horror and post-apocalyptic productions, commercials and music videos",
-      "permit_needed": "No",
-      "source_urls": [
-        "https://silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek"
-      ],
-      "official_url": "https://silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
-      "commission_url": "https://pisf.pl"
-    },
-    {
       "id": "pl-halemba-wirek-mine",
       "name": "Former Halemba-Wirek Mine Dismantling Centre",
       "country": "Poland",
@@ -12880,23 +12862,6 @@
         "https://koneser.eu"
       ],
       "official_url": "https://koneser.eu",
-      "commission_url": "https://pisf.pl"
-    },
-    {
-      "id": "pl-kopalnia-cwiczebna-dabrowa",
-      "name": "Kopalnia Cwiczebna training mine",
-      "country": "Poland",
-      "region": "Silesian Voivodeship",
-      "lat": 50.3184,
-      "lng": 19.1837,
-      "type": "Industrial & derelict",
-      "setting": "An underground mining school in Dabrowa Gornicza with three levels of tunnels, original mechanical and electrical training equipment and brick-lined corridors, part of the Sztygarka municipal museum since 2010.",
-      "facilities": "Vehicle access, parking, power supply, low light and low noise underground",
-      "permit_needed": "No",
-      "source_urls": [
-        "https://silesiafilmcommission.pl/location/kopalnia-cwiczebna"
-      ],
-      "official_url": "https://silesiafilmcommission.pl/location/kopalnia-cwiczebna",
       "commission_url": "https://pisf.pl"
     },
     {
@@ -13510,23 +13475,6 @@
       "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
-      "id": "pl-walcownia-cynku-katowice",
-      "name": "Walcownia Cynku zinc rolling mill",
-      "country": "Poland",
-      "region": "Silesian Voivodeship",
-      "lat": 50.2635,
-      "lng": 19.082,
-      "type": "Industrial & derelict",
-      "setting": "A preserved zinc rolling mill in the Szopienice district of Katowice, built 1903 to 1917, spanning 5,000 square metres with furnaces, casting carousels, rolling mills and four original steam engines.",
-      "facilities": "Heating and air conditioning, parking, WiFi, power 230/460V 16A-64A, changing rooms",
-      "permit_needed": "No",
-      "source_urls": [
-        "https://silesiafilmcommission.pl/location/muzeum-hutnictwa-cynku-walcownia"
-      ],
-      "official_url": "https://silesiafilmcommission.pl/location/muzeum-hutnictwa-cynku-walcownia",
-      "commission_url": "https://pisf.pl"
-    },
-    {
       "id": "pl-warsaw-uprising-museum",
       "name": "Warsaw Uprising Museum",
       "country": "Poland",
@@ -13602,23 +13550,6 @@
       "url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
       "official_url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
       "commission_url": "https://www.silesiafilmcommission.pl"
-    },
-    {
-      "id": "pl-wieza-cisnien-katowice",
-      "name": "Wieza Cisnien water tower, Katowice-Borki",
-      "country": "Poland",
-      "region": "Silesian Voivodeship",
-      "lat": 50.23,
-      "lng": 19.08,
-      "type": "Industrial & derelict",
-      "setting": "A 66 metre brick water tower in the Borki district of Katowice, designed in 1907 and built 1911-1912, with a circular 17 metre footprint and a dome shaped like a Prussian military helmet.",
-      "known_for": "Sol ziemi czarnej (dir. Kazimierz Kutz)",
-      "permit_needed": "Yes",
-      "source_urls": [
-        "https://silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki"
-      ],
-      "official_url": "https://silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
-      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-swiebodzki-station",
