@@ -3951,7 +3951,13 @@
         "https://en.wikipedia.org/wiki/Heidelberg_University"
       ],
       "official_url": "https://www.uni-heidelberg.de/en",
-      "commission_url": "https://www.mfg.de/en/"
+      "commission_url": "https://www.mfg.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/K%C3%B6nigstuhl%2C_Heidelberg%2C_U-17.jpg/960px-K%C3%B6nigstuhl%2C_Heidelberg%2C_U-17.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:K%C3%B6nigstuhl,_Heidelberg,_U-17.jpg",
+        "author": "Jörg Braukmann",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-hellerau",
@@ -3971,7 +3977,13 @@
         "https://www.hellerau.org/vermietung"
       ],
       "official_url": "https://www.hellerau.org/",
-      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+      "commission_url": "https://www.mdm-online.de/en/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Dresden-Hellerau1.jpg/960px-Dresden-Hellerau1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dresden-Hellerau1.jpg",
+        "author": "User:Kolossos",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-humboldt-university-berlin",
@@ -4040,7 +4052,13 @@
         "https://kloster-eberbach.de/en/das-kloster/kloster-eberbach-als-drehort"
       ],
       "official_url": "https://www.kloster-eberbach.de/en/",
-      "commission_url": "https://www.hessenfilm.de/en/"
+      "commission_url": "https://www.hessenfilm.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Steinberg_Rheingau_2.jpg/960px-Steinberg_Rheingau_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Steinberg_Rheingau_2.jpg",
+        "author": "Tomas er",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-kokerei-hansa",
@@ -4092,7 +4110,13 @@
         "https://www.landschaftspark.de/en/frequently-asked-questions/photographers-and-film-makers/"
       ],
       "official_url": "https://www.landschaftspark.de/en/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hochofen_5_at_Landschaftspark_Duisburg-Nord.jpg/960px-Hochofen_5_at_Landschaftspark_Duisburg-Nord.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hochofen_5_at_Landschaftspark_Duisburg-Nord.jpg",
+        "author": "Sch0p3nh4u3r",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-lanxess-arena",
@@ -4110,7 +4134,13 @@
         "https://en.wikipedia.org/wiki/Lanxess_Arena"
       ],
       "official_url": "https://www.lanxess-arena.de/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Lanxess-Arena%2C_K%C3%B6ln-7892.jpg/960px-Lanxess-Arena%2C_K%C3%B6ln-7892.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lanxess-Arena,_K%C3%B6ln-7892.jpg",
+        "author": "Raimond Spekking",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-ruedersdorf-museum-park",
@@ -4162,7 +4192,13 @@
         "https://en.wikipedia.org/wiki/N%C3%BCrburgring"
       ],
       "official_url": "https://www.nuerburgring.de/en/",
-      "commission_url": "http://www.germanfilms.de"
+      "commission_url": "http://www.germanfilms.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/N%C3%BCrburg_%28Burg%29_01.jpg/960px-N%C3%BCrburg_%28Burg%29_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:N%C3%BCrburg_(Burg)_01.jpg",
+        "author": "Thomas Hummel",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-olympiapark-munich",
@@ -4193,7 +4229,13 @@
         "https://www.asisi.de/en/panorama/leipzig/"
       ],
       "official_url": "https://www.asisi.de/en/panorama/leipzig/",
-      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+      "commission_url": "https://www.mdm-online.de/en/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/LE-Connewitz_Gasometer_I_Panometer-01.jpg/960px-LE-Connewitz_Gasometer_I_Panometer-01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:LE-Connewitz_Gasometer_I_Panometer-01.jpg",
+        "author": "Radler59",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-peenemuende",
@@ -4209,7 +4251,13 @@
         "https://en.wikipedia.org/wiki/Peenem%C3%BCnde_Army_Research_Center"
       ],
       "official_url": "https://www.museum-peenemuende.de/",
-      "commission_url": "http://www.germanfilms.de"
+      "commission_url": "http://www.germanfilms.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kraftwerk_Peenemuende_2.jpg/960px-Kraftwerk_Peenemuende_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kraftwerk_Peenemuende_2.jpg",
+        "author": "Peter Wippermann",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-schauspielhaus-bochum",
@@ -4225,7 +4273,13 @@
         "https://www.schauspielhausbochum.de/en/"
       ],
       "official_url": "https://www.schauspielhausbochum.de/en/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Schauspielhaus_Bochum_2019.jpg/960px-Schauspielhaus_Bochum_2019.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Schauspielhaus_Bochum_2019.jpg",
+        "author": "SB Alexander Kruse",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-seebruecke-sellin",
@@ -4301,7 +4355,13 @@
         "https://en.wikipedia.org/wiki/Stuttgart_Hauptbahnhof"
       ],
       "official_url": "https://www.bahnhof.de/en/stuttgart-hbf",
-      "commission_url": "https://www.mfg.de/en/"
+      "commission_url": "https://www.mfg.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2018-08-30_EC_218_%22Chiemgau%22_Salzburg_-_Stuttgart_%2842581205930%29.jpg/960px-2018-08-30_EC_218_%22Chiemgau%22_Salzburg_-_Stuttgart_%2842581205930%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:2018-08-30_EC_218_%22Chiemgau%22_Salzburg_-_Stuttgart_(42581205930).jpg",
+        "author": "Dining Car from Wien",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "de-tempelhof-airport",
@@ -4318,7 +4378,13 @@
         "https://en.wikipedia.org/wiki/Tempelhof_Airport"
       ],
       "official_url": "https://www.thf-berlin.de/",
-      "commission_url": "https://www.bbfc.de/en/"
+      "commission_url": "https://www.bbfc.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Berlin_-_Flughafen_Tempelhof_-_2016.jpg/960px-Berlin_-_Flughafen_Tempelhof_-_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Berlin_-_Flughafen_Tempelhof_-_2016.jpg",
+        "author": "Avda",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-teufelsberg",
@@ -4336,7 +4402,13 @@
         "https://www.teufelsberg-berlin.de/events/eventlocation-mieten/"
       ],
       "official_url": "https://www.teufelsberg-berlin.de/",
-      "commission_url": "https://www.bbfc.de/en/"
+      "commission_url": "https://www.bbfc.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Funkturm_Berlin_View_13.jpg/960px-Funkturm_Berlin_View_13.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Funkturm_Berlin_View_13.jpg",
+        "author": "A.Savin",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-voelklinger-huette",
@@ -4372,7 +4444,13 @@
         "https://en.wikipedia.org/wiki/Weissenhof_Estate"
       ],
       "official_url": "https://www.weissenhofmuseum.de/en/",
-      "commission_url": "https://www.mfg.de/en/"
+      "commission_url": "https://www.mfg.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/WeissenhofMuseum-pjt.jpg/960px-WeissenhofMuseum-pjt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:WeissenhofMuseum-pjt.jpg",
+        "author": "Pjt56 --- If you use the picture outside Wikipedia I would appreciate a short e-mail to pjt56@gmx.net or a message on my",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-westfalenhallen-dortmund",
@@ -4390,7 +4468,13 @@
         "https://www.westfalenhallen-gruppe.de/"
       ],
       "official_url": "https://www.westfalenhallen-gruppe.de/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/U-Bahnhof_Westfalenhallen_11.jpg/960px-U-Bahnhof_Westfalenhallen_11.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Westfalenhallen_11.jpg",
+        "author": "Joehawkins",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-wuensdorf-garrison-town",
@@ -4453,7 +4537,13 @@
         "https://www.visitgreece.gr/mainland/peloponnese/epidaurus/"
       ],
       "official_url": "https://www.visitgreece.gr/mainland/peloponnese/epidaurus/",
-      "commission_url": "https://filmcommission.gr/locations/"
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/The_great_theater_of_Epidaurus%2C_designed_by_Polykleitos_the_Younger_in_the_4th_century_BC%2C_Sanctuary_of_Asklepeios_at_Epidaurus%2C_Greece_%2814015010416%29.jpg/960px-The_great_theater_of_Epidaurus%2C_designed_by_Polykleitos_the_Younger_in_the_4th_century_BC%2C_Sanctuary_of_Asklepeios_at_Epidaurus%2C_Greece_%2814015010416%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_great_theater_of_Epidaurus,_designed_by_Polykleitos_the_Younger_in_the_4th_century_BC,_Sanctuary_of_Asklepeios_at_Epidaurus,_Greece_(14015010416).jpg",
+        "author": "Carole Raddato from FRANKFURT, Germany",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "gr-ano-poli-thessaloniki",
@@ -4483,7 +4573,13 @@
         "https://www.auth.gr/en/"
       ],
       "official_url": "https://www.auth.gr/en/",
-      "commission_url": "https://filmcommission.gr/locations/"
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Central_Thessaloniki_Aerial.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Central_Thessaloniki_Aerial.jpg",
+        "author": "en:User:Salonica84",
+        "license": "Public domain"
+      }
     },
     {
       "id": "gr-chania-old-town",
@@ -4637,7 +4733,13 @@
         "https://www.peloponnese.gr/"
       ],
       "official_url": "https://www.peloponnese.gr/",
-      "commission_url": "https://filmcommission.gr/locations/"
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%CE%94%CE%B7%CE%BC%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF_%CE%9D%CE%B1%CF%85%CF%80%CE%BB%CE%AF%CE%BF%CF%85%2C_Nafplio_Town_Hall.jpg/960px-%CE%94%CE%B7%CE%BC%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF_%CE%9D%CE%B1%CF%85%CF%80%CE%BB%CE%AF%CE%BF%CF%85%2C_Nafplio_Town_Hall.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:%CE%94%CE%B7%CE%BC%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF_%CE%9D%CE%B1%CF%85%CF%80%CE%BB%CE%AF%CE%BF%CF%85,_Nafplio_Town_Hall.jpg",
+        "author": "Apaleutos25",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nu-boyana-hellenic",
@@ -4682,7 +4784,13 @@
         "https://www.olp.gr/en/"
       ],
       "official_url": "https://www.olp.gr/en/",
-      "commission_url": "https://filmcommission.gr/locations/"
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%CE%9B%CE%B9%CE%BC%CE%AC%CE%BD%CE%B9_%CF%84%CE%BF%CF%85_%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC.jpg/960px-%CE%9B%CE%B9%CE%BC%CE%AC%CE%BD%CE%B9_%CF%84%CE%BF%CF%85_%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:%CE%9B%CE%B9%CE%BC%CE%AC%CE%BD%CE%B9_%CF%84%CE%BF%CF%85_%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC.jpg",
+        "author": "Apaleutos25 (Giorgos Voudouris)",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "gr-port-of-thessaloniki",
@@ -4697,7 +4805,13 @@
         "https://www.thpa.gr/en/"
       ],
       "official_url": "https://www.thpa.gr/en/",
-      "commission_url": "https://filmcommission.gr/locations/"
+      "commission_url": "https://filmcommission.gr/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NewPortofThessaloniki.jpg/960px-NewPortofThessaloniki.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:NewPortofThessaloniki.jpg",
+        "author": "Nikolakas83",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "gr-rio-antirrio-bridge",
@@ -4902,7 +5016,13 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.varnegyed.hu/",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Hal%C3%A1szb%C3%A1stya_2017.jpg/960px-Hal%C3%A1szb%C3%A1stya_2017.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hal%C3%A1szb%C3%A1stya_2017.jpg",
+        "author": "Brian Adamson",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "hu-gellert-baths",
@@ -5264,7 +5384,13 @@
         "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
       ],
       "official_url": "https://rudasfurdo.hu/en/",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rudas_gyogyfurdo_P7290076-1000.jpg/960px-Rudas_gyogyfurdo_P7290076-1000.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rudas_gyogyfurdo_P7290076-1000.jpg",
+        "author": "misibacsi",
+        "license": "Public domain"
+      }
     },
     {
       "id": "hu-sopron",
@@ -5348,7 +5474,13 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tokajcivertanlegi1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tokajcivertanlegi1.jpg",
+        "author": "Civertan",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hu-urania-national-film-theatre",
@@ -5434,7 +5566,13 @@
         "https://en.wikipedia.org/wiki/Dettifoss"
       ],
       "official_url": "https://www.vatnajokulsthjodgardur.is/en/areas/nordursvaedi/dettifoss",
-      "commission_url": "https://filminiceland.com/locations/"
+      "commission_url": "https://filminiceland.com/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Dettifoss_TimBekaert.JPG/960px-Dettifoss_TimBekaert.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dettifoss_TimBekaert.JPG",
+        "author": "Tbc",
+        "license": "Public domain"
+      }
     },
     {
       "id": "is-djupavik-herring-factory",
@@ -5671,7 +5809,13 @@
         "https://en.wikipedia.org/wiki/Adare_Manor"
       ],
       "official_url": "https://www.adaremanor.com/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Adare_Manor_Aerial.jpg/960px-Adare_Manor_Aerial.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Adare_Manor_Aerial.jpg",
+        "author": "IrishFireside from Ishpeming, MI, USA",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "ardmore-studios",
@@ -5711,7 +5855,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aughnanure_Castle_%28pixinn.net%29.jpg/960px-Aughnanure_Castle_%28pixinn.net%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aughnanure_Castle_(pixinn.net).jpg",
+        "author": "Christophe Meneboeuf",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ie-charles-fort",
@@ -5745,7 +5895,13 @@
         "https://chq.ie/"
       ],
       "official_url": "https://chq.ie/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/The_chq_Building%2C_Custom_Quay_-_geograph.org.uk_-_2191593.jpg/960px-The_chq_Building%2C_Custom_Quay_-_geograph.org.uk_-_2191593.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_chq_Building,_Custom_Quay_-_geograph.org.uk_-_2191593.jpg",
+        "author": "Eric Jones",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ie-cobh-heritage-centre",
@@ -5762,7 +5918,13 @@
         "https://en.wikipedia.org/wiki/Cobh"
       ],
       "official_url": "https://www.cobhheritage.com/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Heritage_centre%2C_An_Cobh_-_geograph.org.uk_-_249726.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Heritage_centre,_An_Cobh_-_geograph.org.uk_-_249726.jpg",
+        "author": "Peter Craine",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ie-cork-city-gaol",
@@ -5779,7 +5941,13 @@
         "https://corkcitygaol.com/venue-hire/"
       ],
       "official_url": "https://www.corkcitygaol.com/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Cork_City_Jail.jpg/960px-Cork_City_Jail.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cork_City_Jail.jpg",
+        "author": "Sheila1988",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-cork-city-hall",
@@ -5794,7 +5962,13 @@
         "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/"
       ],
       "official_url": "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Cork_City_Hall_Achitects_Stone.jpg/960px-Cork_City_Hall_Achitects_Stone.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cork_City_Hall_Achitects_Stone.jpg",
+        "author": "Xx78900",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-derrynane-house",
@@ -5814,7 +5988,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Derrynane_House_2018-08-03_-_1.jpg/960px-Derrynane_House_2018-08-03_-_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Derrynane_House_2018-08-03_-_1.jpg",
+        "author": "August Schwerdfeger",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "ie-donegal-castle",
@@ -5832,7 +6012,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/73/Donegalcastle.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Donegalcastle.jpg",
+        "author": "Benson Wills",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ie-doneraile-court",
@@ -5852,7 +6038,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Doneraile_Court_-_geograph.org.uk_-_1392610.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Doneraile_Court_-_geograph.org.uk_-_1392610.jpg",
+        "author": "Mike Searle",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ie-dublin-castle",
@@ -5871,7 +6063,13 @@
         "https://dublincastle.ie/capacity/"
       ],
       "official_url": "https://www.dublincastle.ie/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Dubhlinn_Gardens_Dublin_Castle_01.JPG/960px-The_Dubhlinn_Gardens_Dublin_Castle_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Dubhlinn_Gardens_Dublin_Castle_01.JPG",
+        "author": "J.-H. Janßen",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ie-dun-aonghasa",
@@ -5886,7 +6084,13 @@
         "https://www.heritageireland.ie/visit/places-to-visit/dun-aonghasa/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/dun-aonghasa/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dun_Aonghasa_%28cropped%29.JPG/960px-Dun_Aonghasa_%28cropped%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dun_Aonghasa_(cropped).JPG",
+        "author": "Ronan Mac Giollapharaic",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-emo-court",
@@ -5905,7 +6109,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/emo-court/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Emo_Park%2C_Portarlington%2C_Co._Laois_%2822609660763%29.jpg/960px-Emo_Park%2C_Portarlington%2C_Co._Laois_%2822609660763%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Emo_Park,_Portarlington,_Co._Laois_(22609660763).jpg",
+        "author": "National Library of Ireland on The Commons",
+        "license": "Public domain"
+      }
     },
     {
       "id": "ie-glendalough",
@@ -5924,7 +6134,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/St._Kevin%27s_Kitchen%2C_Glendalough%2C_Co._Wicklow_%282023%29.jpg/960px-St._Kevin%27s_Kitchen%2C_Glendalough%2C_Co._Wicklow_%282023%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:St._Kevin%27s_Kitchen,_Glendalough,_Co._Wicklow_(2023).jpg",
+        "author": "Denzillacey",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-killarney-national-park",
@@ -5961,7 +6177,13 @@
         "https://killruddery.com/pages/events-and-gatherings"
       ],
       "official_url": "https://killruddery.com/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kilruddery.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kilruddery.JPG",
+        "author": "User: (WT-shared) Spircle at wts wikivoyage",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "kilmainham-gaol",
@@ -5995,7 +6217,13 @@
         "https://www.heritageireland.ie/visit/places-to-visit/lough-gur/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/lough-gur/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/LoughGur_2002.jpg/960px-LoughGur_2002.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:LoughGur_2002.jpg",
+        "author": "No machine-readable author provided. Christian1965~commonswiki assumed (based on copyright claims).",
+        "license": "Public domain"
+      }
     },
     {
       "id": "ie-pearse-museum",
@@ -6072,7 +6300,13 @@
         "https://heritageireland.ie/visit/venue-hire/filming-and-photography/"
       ],
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg/960px-The_Abbey%2C_Sligo_aka_Dominican_Friary_%288671560382%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Abbey,_Sligo_aka_Dominican_Friary_(8671560382).jpg",
+        "author": "National Library of Ireland on The Commons",
+        "license": "No restrictions"
+      }
     },
     {
       "id": "ie-strokestown-park",
@@ -6091,7 +6325,13 @@
         "https://strokestownpark.ie/film-location/"
       ],
       "official_url": "https://strokestownpark.ie/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Strokestown.jpg/960px-Strokestown.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Strokestown.jpg",
+        "author": "TISHMUR",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-custom-house-visitor-centre",
@@ -6126,7 +6366,13 @@
         "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/filming-in-the-english-market/"
       ],
       "official_url": "http://www.englishmarket.ie/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/57/Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg",
+        "author": "Andy Beecroft",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ie-trinity-college-dublin",
@@ -6143,7 +6389,13 @@
         "https://en.wikipedia.org/wiki/Trinity_College_Dublin"
       ],
       "official_url": "https://www.tcd.ie/",
-      "commission_url": "https://www.screenireland.ie/locations"
+      "commission_url": "https://www.screenireland.ie/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Trinity_Business_School_3.jpg/960px-Trinity_Business_School_3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Trinity_Business_School_3.jpg",
+        "author": "Mx. Granger",
+        "license": "CC0"
+      }
     },
     {
       "id": "ie-wicklows-historic-gaol",
@@ -6175,7 +6427,13 @@
         "https://www.anticocaffegreco.eu/"
       ],
       "official_url": "https://www.anticocaffegreco.eu/",
-      "commission_url": "https://www.romalaziofilmcommission.it/"
+      "commission_url": "https://www.romalaziofilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg/960px-Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg",
+        "author": "Ludwig Passini",
+        "license": "Public domain"
+      }
     },
     {
       "id": "it-arena-di-verona",
@@ -6334,7 +6592,13 @@
         "https://www.cittadellascienza.it/"
       ],
       "official_url": "https://www.cittadellascienza.it/",
-      "commission_url": "https://www.fcrc.it/"
+      "commission_url": "https://www.fcrc.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Citt%C3%A0_della_Scienza_Cortile.jpg/960px-Citt%C3%A0_della_Scienza_Cortile.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Citt%C3%A0_della_Scienza_Cortile.jpg",
+        "author": "Pinotto992",
+        "license": "Public domain"
+      }
     },
     {
       "id": "it-craco",
@@ -6387,7 +6651,13 @@
         "https://www.grandhoteletdemilan.it/"
       ],
       "official_url": "https://www.grandhoteletdemilan.it/",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4a/3668MilanoGrandHotel.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:3668MilanoGrandHotel.JPG",
+        "author": "Geobia",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-grand-hotel-villa-serbelloni",
@@ -6402,7 +6672,13 @@
         "https://www.villaserbelloni.com/"
       ],
       "official_url": "https://www.villaserbelloni.com/",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bellagio_-_Grand_Hotel_Villa_Serbelloni.jpg/960px-Bellagio_-_Grand_Hotel_Villa_Serbelloni.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bellagio_-_Grand_Hotel_Villa_Serbelloni.jpg",
+        "author": "This picture belongs to Xavier Caré. Please credit : Xavier Caré / Wikimedia Commons / CC-BY-SA. If you would like speci",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-grande-miniera-serbariu",
@@ -6502,7 +6778,13 @@
         "https://www.rfi.it/"
       ],
       "official_url": "https://www.rfi.it/",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Milan_CentralStation_016_4294.jpg/960px-Milan_CentralStation_016_4294.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Milan_CentralStation_016_4294.jpg",
+        "author": "Ludvig14",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-mole-antonelliana-museo-cinema",
@@ -6688,7 +6970,13 @@
         "https://www.sportesalute.eu/"
       ],
       "official_url": "https://www.sportesalute.eu/",
-      "commission_url": "https://www.romalaziofilmcommission.it/"
+      "commission_url": "https://www.romalaziofilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Stadio_Olimpico_2024.jpg/960px-Stadio_Olimpico_2024.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Stadio_Olimpico_2024.jpg",
+        "author": "Messapi, cropped by Blackcat",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-teatro-alla-scala",
@@ -6762,7 +7050,13 @@
         "https://www.comune.tropea.vv.it/"
       ],
       "official_url": "https://www.comune.tropea.vv.it/",
-      "commission_url": "https://www.calabriafilmcommission.it/"
+      "commission_url": "https://www.calabriafilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tropea_-_Veduta_da_Via_Carmine_-_3.jpg/960px-Tropea_-_Veduta_da_Via_Carmine_-_3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tropea_-_Veduta_da_Via_Carmine_-_3.jpg",
+        "author": "Benjamin Smith",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "villa-del-balbianello",
@@ -6797,7 +7091,13 @@
         "https://fondoambiente.it/luoghi/villa-necchi-campiglio"
       ],
       "official_url": "https://fondoambiente.it/luoghi/villa-necchi-campiglio",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Villa_Necchi_Campiglio_20220818-174847.jpg/960px-Villa_Necchi_Campiglio_20220818-174847.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villa_Necchi_Campiglio_20220818-174847.jpg",
+        "author": "Thomas Kowalski",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "mt-comino-blue-lagoon",
@@ -6860,7 +7160,13 @@
         "https://en.wikipedia.org/wiki/Fort_Manoel"
       ],
       "official_url": "https://dinlarthelwa.org/",
-      "commission_url": "https://screenmalta.com/"
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Chapel_of_St._Anthony%2C_Fort_Manoel_%285%29.jpg/960px-Chapel_of_St._Anthony%2C_Fort_Manoel_%285%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Chapel_of_St._Anthony,_Fort_Manoel_(5).jpg",
+        "author": "Tranceliner",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fort-ricasoli",
@@ -6938,7 +7244,13 @@
         "https://en.wikipedia.org/wiki/Malta_Story"
       ],
       "official_url": "https://www.heritagemalta.mt/museums-sites/malta-maritime-museum/",
-      "commission_url": "https://screenmalta.com/"
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vittoriosa-seafront-maritime-museum.JPG/960px-Vittoriosa-seafront-maritime-museum.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vittoriosa-seafront-maritime-museum.JPG",
+        "author": "Mboesch",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "mt-manoel-theatre",
@@ -7040,7 +7352,13 @@
         "https://www.um.edu.mt/"
       ],
       "official_url": "https://www.um.edu.mt/",
-      "commission_url": "https://screenmalta.com/"
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2022_-_Univ_of_Malta.jpg/960px-2022_-_Univ_of_Malta.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:2022_-_Univ_of_Malta.jpg",
+        "author": "Chell Hill",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "mt-valletta-design-cluster",
@@ -7055,7 +7373,13 @@
         "https://valletta2018.org/"
       ],
       "official_url": "https://valletta2018.org/",
-      "commission_url": "https://screenmalta.com/"
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Valletta_Design_Cluster_facade.jpg/960px-Valletta_Design_Cluster_facade.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Valletta_Design_Cluster_facade.jpg",
+        "author": "EnriqueTabone",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "mt-valletta-historic-centre",
@@ -7095,7 +7419,13 @@
         "https://en.wikipedia.org/wiki/Valletta_Waterfront"
       ],
       "official_url": "https://www.vallettawaterfront.com/",
-      "commission_url": "https://screenmalta.com/"
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/3_Valletta_waterfront_090917.jpg/960px-3_Valletta_waterfront_090917.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:3_Valletta_waterfront_090917.jpg",
+        "author": "NAC",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-ahoy-rotterdam",
@@ -7111,7 +7441,13 @@
         "https://www.ahoy.nl/"
       ],
       "official_url": "https://www.ahoy.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Rotterdam_Ahoy_2.jpg/960px-Rotterdam_Ahoy_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rotterdam_Ahoy_2.jpg",
+        "author": "Tukka",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "amsterdam-canal-ring",
@@ -7145,7 +7481,13 @@
         "https://www.aviodrome.nl/"
       ],
       "official_url": "https://www.aviodrome.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Entree_aviodrome.png/960px-Entree_aviodrome.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Entree_aviodrome.png",
+        "author": "Libema123",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-bataviawerf",
@@ -7213,7 +7555,13 @@
         "https://www.euromast.nl/"
       ],
       "official_url": "https://www.euromast.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Rotterdam_euromast.jpg/960px-Rotterdam_euromast.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rotterdam_euromast.jpg",
+        "author": "F.Eveleens",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "nl-fort-bij-vechten",
@@ -7243,7 +7591,13 @@
         "https://www.forum.nl/"
       ],
       "official_url": "https://www.forum.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Forum_aan_de_Nieuwe_Markt.jpg/960px-Forum_aan_de_Nieuwe_Markt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Forum_aan_de_Nieuwe_Markt.jpg",
+        "author": "JAHensens",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "nl-giethoorn",
@@ -7260,7 +7614,13 @@
         "https://en.wikipedia.org/wiki/Giethoorn"
       ],
       "official_url": "https://www.giethoorntourism.com/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Giethoorn_Netherlands_flckr05.jpg/960px-Giethoorn_Netherlands_flckr05.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Giethoorn_Netherlands_flckr05.jpg",
+        "author": "PhotoBobil",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "nl-hoge-veluwe",
@@ -7275,7 +7635,13 @@
         "https://www.hogeveluwe.nl/"
       ],
       "official_url": "https://www.hogeveluwe.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sand_Area_Hoge_Veluwe.jpg/960px-Sand_Area_Hoge_Veluwe.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sand_Area_Hoge_Veluwe.jpg",
+        "author": "Stefan Kruithof",
+        "license": "Public domain"
+      }
     },
     {
       "id": "nl-johan-cruijff-arena",
@@ -7305,7 +7671,13 @@
         "https://www.kinderdijk.com/"
       ],
       "official_url": "https://www.kinderdijk.com/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/KinderdijkWindmills.jpg/960px-KinderdijkWindmills.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:KinderdijkWindmills.jpg",
+        "author": "Willard84",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "nl-kruisherenhotel",
@@ -7372,7 +7744,13 @@
         "https://www.natuurmonumenten.nl/natuurgebieden/loonse-en-drunense-duinen"
       ],
       "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/loonse-en-drunense-duinen",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Loonse_en_Drunense_Duinen_drone_video.ogv/500px--Loonse_en_Drunense_Duinen_drone_video.ogv.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Loonse_en_Drunense_Duinen_drone_video.ogv",
+        "author": "Wdejager",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-louis-hartlooper-complex",
@@ -7537,7 +7915,13 @@
         "https://www.openluchtmuseum.nl/"
       ],
       "official_url": "https://www.openluchtmuseum.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nederlands_Openluchtmuseum827.JPG/960px-Nederlands_Openluchtmuseum827.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nederlands_Openluchtmuseum827.JPG",
+        "author": "Rainer Halama",
+        "license": "CC BY-SA 3.0 nl"
+      }
     },
     {
       "id": "nl-neeltje-jans-oosterscheldekering",
@@ -7582,7 +7966,13 @@
         "https://www.psv.nl/"
       ],
       "official_url": "https://www.psv.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Psv_stadion_2019.jpg/960px-Psv_stadion_2019.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Psv_stadion_2019.jpg",
+        "author": "Dutchlad1985",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-radio-kootwijk",
@@ -7599,7 +7989,13 @@
         "https://en.wikipedia.org/wiki/Radio_Kootwijk"
       ],
       "official_url": "https://www.staatsbosbeheer.nl/uit-in-de-natuur/locaties/radio-kootwijk",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Radio_Kootwijk_Gebouw_A.jpg/960px-Radio_Kootwijk_Gebouw_A.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Radio_Kootwijk_Gebouw_A.jpg",
+        "author": "Bert K.",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "nl-rietveld-schroderhuis",
@@ -7662,7 +8058,13 @@
         "https://ssrotterdam.nl/zalen/"
       ],
       "official_url": "https://www.ssrotterdam.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/De_SS_Rotterdam.jpeg/960px-De_SS_Rotterdam.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:De_SS_Rotterdam.jpeg",
+        "author": "Marczoutendijk",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-strijp-s",
@@ -7677,7 +8079,13 @@
         "https://www.strijp-s.nl/"
       ],
       "official_url": "https://www.strijp-s.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Lichtkunst_op_Strijp-S.jpg/960px-Lichtkunst_op_Strijp-S.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lichtkunst_op_Strijp-S.jpg",
+        "author": "Edwin Hoek",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "nl-thialf",
@@ -7692,7 +8100,13 @@
         "https://www.thialf.nl/"
       ],
       "official_url": "https://www.thialf.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Thialf_ijsbaan.jpg/960px-Thialf_ijsbaan.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Thialf_ijsbaan.jpg",
+        "author": "Evelien1009",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-van-nelle-fabriek",
@@ -7708,7 +8122,13 @@
         "https://en.wikipedia.org/wiki/Van_Nelle_Factory"
       ],
       "official_url": "http://www.van-nelle-fabriek.com",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rotterdam_van_nelle_fabriek.jpg/960px-Rotterdam_van_nelle_fabriek.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rotterdam_van_nelle_fabriek.jpg",
+        "author": "F.Eveleens",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "nl-gevangenismuseum-veenhuizen",
@@ -8844,21 +9264,6 @@
       "commission_url": "https://www.shootinginspain.info/"
     },
     {
-      "id": "es-carcel-de-segovia",
-      "name": "Antigua Carcel de Segovia",
-      "country": "Spain",
-      "region": "Segovia, Castile and Leon",
-      "lat": 40.9492,
-      "lng": -4.1223,
-      "type": "Hospital, prison & institution",
-      "setting": "A former provincial prison in Segovia's old town, its cell blocks and courtyard converted into a cultural and exhibition centre.",
-      "source_urls": [
-        "https://www.lacarceldesegovia.com/"
-      ],
-      "official_url": "https://www.lacarceldesegovia.com/",
-      "commission_url": "https://www.shootinginspain.info/"
-    },
-    {
       "id": "es-auditorio-de-tenerife",
       "name": "Auditorio de Tenerife",
       "country": "Spain",
@@ -8867,9 +9272,12 @@
       "lng": -16.2513,
       "type": "Theatre, arena & venue",
       "setting": "A sail-shaped concert hall on the Santa Cruz de Tenerife waterfront designed by Santiago Calatrava, with a curved white concrete shell around the main auditorium.",
+      "facilities": "More than 15 multi-purpose spaces for events, described as having over 100 different corners, equipped with technical facilities for conferences and events.",
+      "suitability": "Interior and exterior filming, photoshoots, vehicle catalogue shoots, fashion and advertising productions are hosted; enquiries go through a dedicated filming contact (localizaciones@auditoriodetenerife.com), separate from the general events and conferences contact.",
       "source_urls": [
         "https://www.auditoriodetenerife.com/en/",
-        "https://en.wikipedia.org/wiki/Auditorio_de_Tenerife"
+        "https://en.wikipedia.org/wiki/Auditorio_de_Tenerife",
+        "https://www.auditoriodetenerife.com/en/conferences-events-and-locations/"
       ],
       "official_url": "https://www.auditoriodetenerife.com/en/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -8963,6 +9371,8 @@
       "type": "Theatre, arena & venue",
       "setting": "FC Barcelona's stadium in the Les Corts district, one of Europe's largest football grounds, with tiered stands, a museum and tour access during redevelopment.",
       "known_for": "Goal! II: Living the Dream (2007)",
+      "capacity": 99354,
+      "facilities": "The stadium includes a presidential box and VIP lounge, press rooms and television studios, and the FC Barcelona club museum.",
       "source_urls": [
         "https://www.fcbarcelona.com/en/club/facilities/spotify-camp-nou",
         "https://en.wikipedia.org/wiki/Camp_Nou"
@@ -8995,9 +9405,13 @@
       "lng": -0.35,
       "type": "Modern architecture",
       "setting": "A cluster of white concrete and glass structures by Santiago Calatrava and Felix Candela beside the old Turia riverbed, including a planetarium dome, an opera house, a science museum and an oceanarium.",
+      "facilities": "Six buildings (Palau de les Arts Reina Sofia, Hemisferic, Museu de les Ciencies, Umbracle, Agora and Oceanografic) across a 350,000 m2 site along a two-kilometre axis.",
+      "suitability": "The complex's buildings have been used for business launches, photo shoots, feature films, advertising, catalogues and music videos, both indoors and outdoors, nationally and internationally.",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.cac.es/",
-        "https://en.wikipedia.org/wiki/City_of_Arts_and_Sciences"
+        "https://en.wikipedia.org/wiki/City_of_Arts_and_Sciences",
+        "https://cac.es/en/eventos-corporativos-valencia/"
       ],
       "official_url": "https://www.cac.es/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -9011,9 +9425,15 @@
       "lng": -8.5257,
       "type": "Modern architecture",
       "setting": "A hilltop complex of curved stone and glass buildings by Peter Eisenman above Santiago de Compostela, combining library, museum and archive functions on wide open plazas.",
+      "price_note": "Space rental fees (own site, General tariff for private for-profit hire): Floor -1 hall (1,731 m2, up to 800 people) EUR 4,800/day; Fontan Auditorium (694 seats) EUR 2,100/day; CINC Convention Hall (250 people) EUR 1,250/day; Museum/Tirantes Hall (up to 300 people) EUR 1,800/day; outdoor squares and enclosures EUR 500/day; other indoor spaces EUR 600/day. A Reduced tariff for public bodies and non-profits is roughly half these rates.",
+      "capacity": 800,
+      "facilities": "Nine main rentable spaces: the Fontan Auditorium (836 m2, 694 seats, dividable), CINC's Auditorium 1 (177 seats), Auditorium 2 (106 seats) and Convention Hall (250 people), the Gaias Centre Museum's Floor -1 hall (1,731 m2, up to 800 people in theatre layout) and Museum Hall (1,081 m2, up to 300 people for a cocktail reception), the Library's Xose Neira Vilas Auditorium (121 seats), meeting rooms from 26 to 168 m2 (8 to 50 people), and outdoor squares and enclosures.",
+      "logistics": "On-site covered parking is available at EUR 30/month.",
       "source_urls": [
         "https://www.cidadedacultura.gal/",
-        "https://en.wikipedia.org/wiki/City_of_Culture_of_Galicia"
+        "https://en.wikipedia.org/wiki/City_of_Culture_of_Galicia",
+        "https://www.cidadedacultura.gal/en/info/spaces-let",
+        "https://www.cidadedacultura.gal/en/system/files/downloads/2025/01/gaias_aluguer_espazos_en_25.pdf"
       ],
       "official_url": "https://www.cidadedacultura.gal/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -9092,8 +9512,14 @@
       "lng": -3.7065,
       "type": "Office, school & public building",
       "setting": "A former 18th-century army barracks in Madrid with a long baroque facade and large parade-ground courtyards, converted into a public cultural centre.",
+      "price_note": "Filming day rates set by Madrid Destino (own site, tariff effective July 2025) vary by room, e.g. Patio Central EUR 10,000/day for a commercial, EUR 7,000/day for a feature film or series, EUR 1,050/day for a short film or documentary; smaller rooms from EUR 1,000/day for a commercial. Technical equipment is not included in the published rate for the Auditorium/Concert Hall or the Assembly Hall (Salon de Actos).",
+      "facilities": "Rentable spaces include Sala de Bovedas 1 and 2 (basement), the Auditorio/Sala de Conciertos, Sala Polivalente/Cafeteria, Sala de Exposiciones 2, Patio Central, Patio Sur and Patio Norte (ground floor), a Teatro, Salon de Actos, two rehearsal rooms and the Terraza Mirador (first floor).",
+      "suitability": "Filming requests are handled by Madrid Film Office, with a minimum of 10 working days to process the contract, and use must be compatible with the centre's own programming.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.condeduquemadrid.es/"
+        "https://www.condeduquemadrid.es/",
+        "https://www.madrid-destino.com/rodajes",
+        "https://www.madrid-destino.com/sites/default/files/2025-09/2025%20TARIFAS%20COMERCIALES%20C.A.%20Act.%20Julio%2025%20rodajes.pdf"
       ],
       "official_url": "https://www.condeduquemadrid.es/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -9169,9 +9595,12 @@
       "lng": 2.1744,
       "type": "Hospital, prison & institution",
       "setting": "A former working hospital in Barcelona built as a campus of Art Nouveau pavilions with domes, mosaics and underground connecting tunnels, now a monument and event venue.",
+      "capacity": 300,
+      "facilities": "Event spaces in the Administration Pavilion: the Lluis Domenech i Montaner Room (170 m2), Sala Pau Gil (245 m2), Francesc Cambo room (245 m2), the Hipostyle Hall (465 m2, drinks reception up to 300 people), a Board room (109 m2), eight meeting rooms (six of 45 m2, two of 90 m2, the latter splittable), the 1902 Room with a private terrace, and outdoor garden areas.",
       "source_urls": [
         "https://www.santpaubarcelona.org/en",
-        "https://en.wikipedia.org/wiki/Hospital_de_Sant_Pau"
+        "https://en.wikipedia.org/wiki/Hospital_de_Sant_Pau",
+        "https://santpaubarcelona.org/en/lloguer-despais/"
       ],
       "official_url": "https://www.santpaubarcelona.org/en",
       "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
@@ -9201,9 +9630,16 @@
       "lng": -3.6977,
       "type": "Industrial & derelict",
       "setting": "A former municipal slaughterhouse and cattle market beside the Manzanares river, its early 20th-century brick pavilions converted into galleries, studios and event spaces.",
+      "price_note": "Filming day rates set by Madrid Destino (own site, tariff effective July 2025) vary by space and production type, e.g. Nave 16 (complete) EUR 16,000/day for a commercial, EUR 12,500/day for a feature film or series, EUR 2,300/day for a short film or documentary; Plaza Matadero (A+B) EUR 8,750/day for a commercial, EUR 1,250/day for a short film or documentary. Half-day rates are about 60% of the full-day rate.",
+      "facilities": "Rentable filming spaces include Plaza Matadero (sections A and B, combinable), Nave 16 (full nave or modules), the Naves Teatro Espanol (Sala Fernando Arrabal, Sala Max Aub, Nave 12-Cafeteria), Sala 2, Terrario, Espacio Taller, and the Cineteca (Sala Azcona, Sala Borau, vestibule, set and archive).",
+      "suitability": "Filming requests are handled by Madrid Film Office (info@madridfilmoffice.com), with a minimum of 10 working days to process the contract once documentation is received. Use must be compatible with the centre's own programming, and outdoor areas stay open to the public and cannot be closed off entirely. A full filming day is a maximum of 12 hours; night sessions (up to 10 hours) carry a 25% surcharge and Sunday/holiday sessions a 40% surcharge, both subject to the centre's approval. Discounts of up to 100% apply for feature films, series, documentaries, shorts and music videos backed by ICAA or Comunidad/Ayuntamiento de Madrid, up to 90% for TV entertainment programmes, and up to 50% for advertising productions.",
+      "permit_needed": "Yes",
+      "logistics": "The producer or organiser covers costs such as security, cleaning and supplies, and must take out an insurance policy covering the space's use.",
       "source_urls": [
         "https://www.mataderomadrid.org/",
-        "https://en.wikipedia.org/wiki/Matadero_Madrid"
+        "https://en.wikipedia.org/wiki/Matadero_Madrid",
+        "https://www.madrid-destino.com/rodajes",
+        "https://www.madrid-destino.com/sites/default/files/2025-09/2025%20TARIFAS%20COMERCIALES%20C.A.%20Act.%20Julio%2025%20rodajes.pdf"
       ],
       "official_url": "https://www.mataderomadrid.org/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -9279,8 +9715,14 @@
       "lng": -3.6918,
       "type": "Office, school & public building",
       "setting": "Madrid's ornate former post office building on Plaza de Cibeles, now the city hall, with a public exhibition centre, a rooftop viewpoint and a domed central hall.",
+      "price_note": "Filming day rates set by Madrid Destino (own site, tariff effective July 2025) vary by room, e.g. Patio de Operaciones EUR 10,000/day for a commercial, EUR 7,000/day for a feature film or series, EUR 1,500/day for a short film or documentary; Galeria de Cristal EUR 9,200/day for a commercial. Half-day rates are about 60% of the full-day rate.",
+      "facilities": "Rentable rooms include the Galeria de Cristal, the Pasaje Galeria de Cristal, the Patio de Operaciones, the Auditorio Caja de Musica, the Mirador (7th floor), the Capilla, Carmen Santonja and Sigfrido Martin Begue rooms (2nd floor), the Jorge G. Berlanga room, an exhibition space on the 1st floor, and the Area Social (6th floor mezzanine).",
+      "suitability": "Filming requests are handled by Madrid Film Office, with a minimum of 10 working days to process the contract. Use must be compatible with the centre's own programming; cultural-interest filming or reporting about the centre's own activities can be authorised free of charge, while commercial filming that identifies the CentroCentro brand needs approval from the Artistic Direction and Management.",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.centrocentro.org/"
+        "https://www.centrocentro.org/",
+        "https://www.madrid-destino.com/rodajes",
+        "https://www.madrid-destino.com/sites/default/files/2025-09/2025%20TARIFAS%20COMERCIALES%20C.A.%20Act.%20Julio%2025%20rodajes.pdf"
       ],
       "official_url": "https://www.centrocentro.org/",
       "commission_url": "https://www.shootinginspain.info/"
@@ -9294,9 +9736,12 @@
       "lng": 2.1756,
       "type": "Theatre, arena & venue",
       "setting": "A Modernista concert hall in Barcelona by Lluis Domenech i Montaner, with a stained-glass skylight, sculpted facades and an ornate main auditorium.",
+      "facilities": "Rentable spaces listed are the Concert Hall, Petit Palau, Foyer, Rehearsal Hall, Lluis Millet Room and a Terrace.",
+      "suitability": "Space rental is offered specifically for filming and recordings, in addition to musical activities and corporate/social events, each with its own dedicated contact line.",
       "source_urls": [
         "https://www.palaumusica.cat/en",
-        "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
+        "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana",
+        "https://www.palaumusica.cat/en/space-rental_1159197"
       ],
       "official_url": "https://www.palaumusica.cat/en",
       "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
@@ -9422,9 +9867,12 @@
       "lng": -1.9758,
       "type": "Industrial & derelict",
       "setting": "A former state tobacco factory in San Sebastian, its early 20th-century industrial halls converted into a contemporary culture and creation centre.",
+      "capacity": 600,
+      "facilities": "Ten rentable spaces: Patio (620 m2, 10 m high; banquet 220 / cocktail 600 / theatre 400), Cine hall (327 m2, 5 m high; theatre or classroom 229), Sala 1 (184 m2, 5.5 m high; banquet 80 / cocktail 120 / theatre 120 / classroom 80), Prisma + Terraza (309 + 139 m2; banquet 180 / cocktail 285 / theatre 200), Plaza (492 m2, 23-27 m high; banquet 180 / cocktail 430 / theatre 200), Nave 1 (211 m2, cocktail 220), Nave 2 (343 m2, cocktail 171), the film and audiovisual lab (265 m2, cocktail 130), Terraza Este (200 m2, outdoor, cocktail 200), and the first-floor Distribuidor (335 m2, cocktail 170).",
       "source_urls": [
         "https://www.tabakalera.eus/",
-        "https://en.wikipedia.org/wiki/Tabakalera"
+        "https://en.wikipedia.org/wiki/Tabakalera",
+        "https://www.tabakalera.eus/es/alquiler-de-espacios"
       ],
       "official_url": "https://www.tabakalera.eus/",
       "commission_url": "https://www.bifilmcommission.com/locations/"
@@ -9537,9 +9985,12 @@
       "lng": -3.0169,
       "type": "Transport & infrastructure",
       "setting": "A working transporter bridge over the Ria de Bilbao between Portugalete and Las Arenas, carrying a suspended gondola across the estuary since 1893, with a walkway on top.",
+      "facilities": "Rentable spaces include four open-air terraces above the estuary, the elevated walkway (Pasarela, 50 metres above the estuary), and the gondola (Barquilla, which carries an in-cabin TV channel running 24 hours a day), plus advertising spots (posters and shop-window displays) inside and outside the gondola.",
+      "suitability": "The bridge hosts private events such as parties and receptions on the open-air terraces or on the elevated walkway; marquees can also be rented for the terraces.",
       "source_urls": [
         "https://puente-colgante.com/",
-        "https://en.wikipedia.org/wiki/Vizcaya_Bridge"
+        "https://en.wikipedia.org/wiki/Vizcaya_Bridge",
+        "https://puente-colgante.com/alquiler-de-espacios/"
       ],
       "official_url": "https://puente-colgante.com/",
       "commission_url": "https://www.bifilmcommission.com/locations/"

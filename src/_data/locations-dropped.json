@@ -1,0 +1,8 @@
+{
+  "note": "Locaties die bewust NIET in de gids horen. De samenvoeging slaat ze over en haalt ze weg als ze er al in staan. Reden erbij, zodat een volgende ronde ze niet opnieuw toevoegt.",
+  "ids": {
+    "uk-cains-brewery-village": "eigen domein toont een lege 'Welcome to your new website'-pagina",
+    "uk-titan-crane": "titanclydebank.com stuurt door naar een restaurant, geen werkende pagina van de locatie",
+    "es-carcel-de-segovia": "lacarceldesegovia.com is overgenomen en stuurt door naar een goksite"
+  }
+}

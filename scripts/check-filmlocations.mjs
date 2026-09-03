@@ -120,7 +120,9 @@ if (net) {
   console.log(`checking ${urls.size} URLs...`);
   const list = [...urls.entries()];
   let idx = 0;
-  const UA = "Mozilla/5.0 (compatible; tubes-locations-guide-check/1.0; +https://www.tubes.media)";
+  // Een "compatible"-User-Agent lokt juist bot-blokkades uit; met een gewone
+  // browserstring lijkt de controle op een echte bezoeker, wat we willen weten.
+  const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
   const one = async (u) => {
     for (const method of ["HEAD", "GET"]) {
       try {
@@ -141,12 +143,15 @@ if (net) {
     while (idx < list.length) {
       const [u, tag] = list[idx++];
       const status = await one(u);
+      if (/wikimedia\.org/.test(u)) await new Promise((r) => setTimeout(r, 400));
       if (typeof status === "number" && status >= 200 && status < 400) continue;
       if (status === 403 && blocked(u)) { softResults.push(`${tag}: 403 (blocks bots, fine in a browser) ${u}`); continue; }
       results.push(`${tag}: ${status} ${u}`);
     }
   };
-  await Promise.all(Array.from({ length: 8 }, worker));
+  // Wikimedia knijpt af bij te veel gelijktijdige verzoeken; twee stromen en een
+  // korte pauze houden de uitslag bruikbaar in plaats van een muur van 429's.
+  await Promise.all(Array.from({ length: 3 }, worker));
   for (const r of softResults.sort()) console.log("note " + r);
   for (const r of results.sort()) console.log("URL " + r);
   console.log(`${results.length} URL problems, ${softResults.length} bot-blocked but fine`);
