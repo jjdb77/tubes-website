@@ -27,13 +27,13 @@
       <label class="loc-field" for="guide-country">Country
         <select id="guide-country" class="guide-select">
           <option value="">All countries</option>
-          {% for c in countries | sort %}<option>{{ c }}</option>{% endfor %}
+          {% for c in countries | sort %}{% set n = 0 %}{% for loc in filmlocations.locations %}{% if loc.country == c %}{% set n = n + 1 %}{% endif %}{% endfor %}<option value="{{ c }}">{{ c }} ({{ n }})</option>{% endfor %}
         </select>
       </label>
       <label class="loc-field" for="guide-type">Type
         <select id="guide-type" class="guide-select">
           <option value="">All types</option>
-          {% for t in types | sort %}<option>{{ t }}</option>{% endfor %}
+          {% for t in types | sort %}{% set n = 0 %}{% for loc in filmlocations.locations %}{% if loc.type == t %}{% set n = n + 1 %}{% endif %}{% endfor %}<option value="{{ t }}">{{ t }} ({{ n }})</option>{% endfor %}
         </select>
       </label>
     </div>
