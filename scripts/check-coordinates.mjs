@@ -22,32 +22,48 @@ const km = (a, b, c, d) => {
   return Math.round(2 * R * Math.asin(Math.sqrt(s)));
 };
 
-const geocode = async (q, country) => {
+// Nominatim knijpt hard af zodra er meer sessies vanaf hetzelfde adres vragen.
+// Photon (van Komoot) draait op dezelfde OpenStreetMap-gegevens en is dan de
+// tweede kans; zonder die terugval bestaat de uitslag vooral uit "niet gevonden".
+const nominatim = async (q) => {
   const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1&addressdetails=0`;
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const r = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "en" } });
-      if (r.status === 429) { await sleep(3000 * (attempt + 1)); continue; }
+      if (r.status === 429) { await sleep(2000 * (attempt + 1)); continue; }
       if (!r.ok) return null;
       const j = await r.json();
       if (!j.length) return null;
-      return { lat: Number(j[0].lat), lng: Number(j[0].lon), name: j[0].display_name };
-    } catch { await sleep(1500); }
+      return { lat: Number(j[0].lat), lng: Number(j[0].lon), name: j[0].display_name, via: "osm" };
+    } catch { await sleep(1000); }
   }
   return null;
 };
+const photon = async (q) => {
+  try {
+    const r = await fetch(`https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=1`, { headers: { "User-Agent": UA } });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const f = j.features && j.features[0];
+    if (!f) return null;
+    const [lng, lat] = f.geometry.coordinates;
+    const p = f.properties || {};
+    return { lat, lng, name: [p.name, p.city, p.country].filter(Boolean).join(", "), via: "photon" };
+  } catch { return null; }
+};
+const geocode = async (q) => (await nominatim(q)) || (await photon(q));
 
 let checked = 0, off = 0, missing = 0, fixed = 0;
 for (const l of locs) {
   const query = `${l.name}, ${l.region}, ${l.country}`;
-  const hit = (await geocode(query, l.country)) || (await geocode(`${l.name}, ${l.country}`, l.country));
+  const hit = (await geocode(query)) || (await geocode(`${l.name}, ${l.country}`));
   await sleep(1100); // Nominatim: hoogstens 1 verzoek per seconde
   if (!hit) { missing++; console.log(`NOTFOUND ${l.id} (${l.name}, ${l.region})`); continue; }
   checked++;
   const d = km(l.lat, l.lng, hit.lat, hit.lng);
   if (d > MAX_KM) {
     off++;
-    console.log(`OFF ${d} km  ${l.id} (${l.name}) has ${l.lat},${l.lng} | osm ${hit.lat},${hit.lng} -> ${hit.name.slice(0, 80)}`);
+    console.log(`OFF ${d} km  ${l.id} (${l.name}) has ${l.lat},${l.lng} | ${hit.via} ${hit.lat},${hit.lng} -> ${hit.name.slice(0, 80)}`);
     if (fix) { l.lat = Math.round(hit.lat * 10000) / 10000; l.lng = Math.round(hit.lng * 10000) / 10000; fixed++; }
   }
 }
