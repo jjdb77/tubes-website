@@ -67,8 +67,10 @@
       <div class="guide-main">
         <div class="guide-grid" data-guide-grid>
           {% for loc in filmlocations.locations %}
-          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}"
-                   data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.country + ' ' + loc.type + ' ' + loc.setting + ' ' + loc.known_for + ' ' + loc.facilities + ' ' + loc.suitability + ' ' + loc.logistics) | lower }}">
+          {#- De zoektekst staat bewust NIET als attribuut in de kaart: met honderden
+              locaties zou dat de hele beschrijving verdubbelen (kaart plus JSON) en de
+              pagina fors zwaarder maken. De browser bouwt hem hieronder uit guide-data. -#}
+          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}">
             {% if loc.photo and loc.photo.thumb %}
             <figure class="guide-photo">
               <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -151,6 +153,11 @@
     const MAX = 3;
     const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
     const byId = Object.fromEntries(data.locations.map((l) => [l.id, l]));
+    // Zoektekst per locatie, uit de gegevens zelf (zie de opmerking bij de kaart).
+    const searchText = new Map(data.locations.map((l) => [l.id,
+      [l.name, l.region, l.country, l.type, l.setting, l.known_for, l.facilities, l.suitability, l.logistics]
+        .filter(Boolean).join(" ").toLowerCase()]));
+    const textOf = (card) => searchText.get(card.dataset.id) || "";
 
     // Incentive per land, uit de incentivetabel ("Spain (mainland)" -> "Spain")
     const incentiveByCountry = {};
@@ -219,9 +226,9 @@
         const hard = (listMode === "all" || favs.has(card.dataset.id)) &&
                      (!country.value || card.dataset.country === country.value) &&
                      (!type.value || card.dataset.type === type.value) &&
-                     aiTerms.every((t) => card.dataset.search.includes(t));
+                     aiTerms.every((t) => textOf(card).includes(t));
         if (!hard) { card.hidden = true; continue; }
-        const score = needles.reduce((n, w) => n + (card.dataset.search.includes(w) ? 1 : 0), 0);
+        const score = needles.reduce((n, w) => n + (textOf(card).includes(w) ? 1 : 0), 0);
         if (needles.length && score === 0) { card.hidden = true; continue; }
         if (score > best) best = score;
         pool.push({ card, score });
@@ -251,7 +258,7 @@
     // uit de data zelf. Klikken zet meteen het juiste filter.
     const suggestEl = root.querySelector("[data-suggest]");
     const KEYWORDS = ["mountains", "mountain village", "castle", "palace", "beach", "coast", "cliffs", "forest", "lake", "glacier", "desert", "hotel", "monastery", "old town", "medieval", "village", "city", "bridge", "railway", "harbour", "island", "studio", "sound stage", "water tank", "backlot", "hospital", "prison", "factory", "warehouse", "office", "school", "university", "restaurant", "bar", "theatre", "stadium", "airport", "station", "housing estate", "apartment", "villa", "manor", "farm", "docks", "mine", "power station", "brutalist", "modernist", "1960s", "1970s", "1980s"];
-    const haystack = cards.map((c) => c.dataset.search).join(" ");
+    const haystack = [...searchText.values()].join(" ");
     const pool = [];
     for (const t of [...root.querySelectorAll("#guide-type option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Type", value: t });
     for (const c of [...root.querySelectorAll("#guide-country option")].map((o) => o.value).filter(Boolean)) pool.push({ kind: "Country", value: c });
