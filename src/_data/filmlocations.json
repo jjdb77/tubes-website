@@ -916,6 +916,36 @@
       }
     },
     {
+      "id": "dk-bornholms-lufthavn",
+      "name": "Bornholm Airport",
+      "country": "Denmark",
+      "region": "Bornholm",
+      "lat": 55.0649,
+      "lng": 14.7542,
+      "type": "Transport & infrastructure",
+      "setting": "Regional airport near Roenne on Bornholm with scheduled flights to Copenhagen, Aalborg, Billund and Sonderborg, the island's only air link.",
+      "source_urls": [
+        "https://www.bornholms-lufthavn.dk/"
+      ],
+      "official_url": "https://www.bornholms-lufthavn.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-carlsberg-byen",
+      "name": "Carlsberg Byen",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.6656,
+      "lng": 12.5349,
+      "type": "Industrial & derelict",
+      "setting": "Former Carlsberg brewery grounds in Copenhagen, redeveloped into a city district that keeps historic brewery halls and towers alongside new office, retail and residential buildings.",
+      "source_urls": [
+        "https://www.carlsbergbyen.dk/en/"
+      ],
+      "official_url": "https://www.carlsbergbyen.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
       "id": "christiansborg-palace",
       "name": "Christiansborg Palace",
       "country": "Denmark",
@@ -935,6 +965,87 @@
       }
     },
     {
+      "id": "dk-copenhill",
+      "name": "CopenHill (Amager Bakke)",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.6843,
+      "lng": 12.6193,
+      "type": "Industrial & derelict",
+      "setting": "Working waste-to-energy plant in Copenhagen with a rooftop ski slope, climbing wall and hiking trail built onto its sloped roof, plus a rooftop bar and cafe.",
+      "facilities": "Rooftop bar and event space, cafe, elevator access to the roof",
+      "source_urls": [
+        "https://copenhill.dk/en/",
+        "https://a-r-c.dk/"
+      ],
+      "official_url": "https://copenhill.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-dr-koncerthuset",
+      "name": "DR Koncerthuset",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.6544,
+      "lng": 12.5766,
+      "type": "Theatre, arena & venue",
+      "setting": "Concert hall in Copenhagen's Orestad district built for Danish public broadcaster DR, with a main concert hall, four recording studios and a restaurant, available for external hire.",
+      "facilities": "Concert hall, four recording studios, external hire for concerts and conferences",
+      "source_urls": [
+        "http://www.drkoncerthuset.dk/"
+      ],
+      "official_url": "http://www.drkoncerthuset.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-faengslet-horsens",
+      "name": "FAENGSLET (Horsens State Prison)",
+      "country": "Denmark",
+      "region": "Central Jutland",
+      "lat": 55.8739,
+      "lng": 9.8364,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Danish state prison in Horsens, closed in 2006 and reopened as a prison museum whose cell wings, exercise yards and workshop buildings are hired out for events and overnight stays.",
+      "facilities": "Cell wings, museum halls, conference and event spaces, overnight accommodation",
+      "source_urls": [
+        "https://www.faengslet.dk/en/",
+        "https://en.wikipedia.org/wiki/Horsens_State_Prison"
+      ],
+      "official_url": "https://www.faengslet.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-filmby-aarhus",
+      "name": "Filmby Aarhus",
+      "country": "Denmark",
+      "region": "Central Jutland",
+      "lat": 56.151,
+      "lng": 10.2142,
+      "type": "Studio & backlot",
+      "setting": "Creative business park in Aarhus's Sydhavnen district housing over 80 film, TV, gaming and animation companies, with production premises and an event bar for hire.",
+      "facilities": "Rental of commercial premises and production facilities, event bar",
+      "source_urls": [
+        "https://filmbyaarhus.dk/"
+      ],
+      "official_url": "https://filmbyaarhus.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-gammel-estrup",
+      "name": "Gammel Estrup",
+      "country": "Denmark",
+      "region": "Central Jutland",
+      "lat": 56.4379,
+      "lng": 10.3444,
+      "type": "House & apartment",
+      "setting": "Renaissance manor house in Jutland, home to Denmark's national museum of manor life, with period rooms, stables, a moat and surrounding parkland used for events.",
+      "source_urls": [
+        "https://www.gammelestrup.dk/en/"
+      ],
+      "official_url": "https://www.gammelestrup.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
       "id": "kronborg-castle",
       "name": "Kronborg Castle",
       "country": "Denmark",
@@ -952,6 +1063,22 @@
         "author": "Artico2",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "dk-moens-klint",
+      "name": "Moens Klint (GeoCenter)",
+      "country": "Denmark",
+      "region": "Zealand",
+      "lat": 54.9661,
+      "lng": 12.5483,
+      "type": "Coast & beach",
+      "setting": "White chalk cliffs on the island of Moen rising up to 128 metres above the Baltic Sea, with a science centre, forest trails and beach access at the cliff base.",
+      "suitability": "Group bookings, guided tours and business/school event hosting",
+      "source_urls": [
+        "https://www.moensklint.dk/"
+      ],
+      "official_url": "https://www.moensklint.dk/",
+      "commission_url": "https://www.dfi.dk/en"
     },
     {
       "id": "nordisk-film-studios-valby",
@@ -981,6 +1108,160 @@
       }
     },
     {
+      "id": "dk-nordkraft",
+      "name": "Nordkraft",
+      "country": "Denmark",
+      "region": "North Jutland",
+      "lat": 57.0466,
+      "lng": 9.9323,
+      "type": "Industrial & derelict",
+      "setting": "Former coal-fired power station on Aalborg's harbour front converted into a culture house, with theatre, music and exhibition halls inside the original turbine building.",
+      "price_note": "Commercial photography in shared areas from DKK 1,000 (about EUR 134) per day (own site)",
+      "price_eur_day": 134,
+      "source_urls": [
+        "https://www.nordkraft.dk/"
+      ],
+      "official_url": "https://www.nordkraft.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-odense-havn",
+      "name": "Odense Havn",
+      "country": "Denmark",
+      "region": "Funen",
+      "lat": 55.418,
+      "lng": 10.3841,
+      "type": "Transport & infrastructure",
+      "setting": "Commercial port on Funen with 3.9 kilometres of quay, heavy-lift cranes and large storage areas, used for offshore wind component handling and industrial tenants.",
+      "facilities": "Industrial space and quay for lease, heavy-load area, crane operations up to 1,200 tonnes",
+      "source_urls": [
+        "https://www.odensehavn.dk/en/"
+      ],
+      "official_url": "https://www.odensehavn.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-refshaleoen",
+      "name": "Refshaleøen",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.701,
+      "lng": 12.6317,
+      "type": "Industrial & derelict",
+      "setting": "Former B&W shipyard peninsula in Copenhagen harbour, its industrial sheds, open dock space and workshop halls now let out for events, studios and small businesses.",
+      "facilities": "Industrial halls, open quay and dock space, event venues for hire",
+      "source_urls": [
+        "https://www.refshaleoen.dk/en",
+        "https://refshaleoen.dk/film/",
+        "https://en.wikipedia.org/wiki/Refshale%C3%B8en"
+      ],
+      "official_url": "https://www.refshaleoen.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-roskilde-cathedral",
+      "name": "Roskilde Cathedral",
+      "country": "Denmark",
+      "region": "Zealand",
+      "lat": 55.6414,
+      "lng": 12.0803,
+      "type": "Church & monastery",
+      "setting": "Brick cathedral in Roskilde and UNESCO World Heritage site, burial church of the Danish monarchy for over 500 years, with regular organ concerts and cultural events.",
+      "source_urls": [
+        "https://www.roskildedomkirke.dk/"
+      ],
+      "official_url": "https://www.roskildedomkirke.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-tivoli-gardens",
+      "name": "Tivoli Gardens",
+      "country": "Denmark",
+      "region": "Copenhagen",
+      "lat": 55.6734,
+      "lng": 12.5692,
+      "type": "Theatre, arena & venue",
+      "setting": "Amusement park and pleasure garden in central Copenhagen dating from 1843, with rides, concert stages, themed architecture and landscaped gardens.",
+      "known_for": "Reptilicus (1961)",
+      "source_urls": [
+        "https://www.tivoli.dk/en",
+        "https://en.wikipedia.org/wiki/Tivoli_Gardens"
+      ],
+      "official_url": "https://www.tivoli.dk/en",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-utzon-center",
+      "name": "Utzon Center",
+      "country": "Denmark",
+      "region": "North Jutland",
+      "lat": 57.0495,
+      "lng": 9.9262,
+      "type": "Office, school & public building",
+      "setting": "Waterfront exhibition and knowledge centre in Aalborg designed by architect Jorn Utzon as his last work, with gallery halls, a restaurant and rooms available for hire.",
+      "facilities": "Room hire and booking, on-site restaurant",
+      "source_urls": [
+        "https://www.utzoncenter.dk/en"
+      ],
+      "official_url": "https://www.utzoncenter.dk/en",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "fi-kaapelitehdas",
+      "name": "Cable Factory (Kaapelitehdas)",
+      "country": "Finland",
+      "region": "Uusimaa",
+      "lat": 60.1619,
+      "lng": 24.9039,
+      "type": "Industrial & derelict",
+      "setting": "Former Nokia cable factory in Helsinki's Ruoholahti district, a long brick industrial building with high factory halls, now a large cultural centre housing museums, studios, galleries and rentable event spaces.",
+      "facilities": "Dedicated space-for-rent pages for event and studio hire within the former factory halls.",
+      "logistics": "Managed by Kiinteistö Oy Kaapelitalo; member of the Trans Europe Halles network of industrial cultural venues.",
+      "source_urls": [
+        "http://www.kaapelitehdas.fi/en/",
+        "https://fi.wikipedia.org/wiki/Kaapelitehdas"
+      ],
+      "official_url": "http://www.kaapelitehdas.fi/en/",
+      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+    },
+    {
+      "id": "fi-finlayson-area",
+      "name": "Finlayson Area",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5021,
+      "lng": 23.7574,
+      "type": "Industrial & derelict",
+      "setting": "Former cotton mill founded in 1820 beside the Tammerkoski rapids in Tampere, a complex of red-brick factory buildings including the 1877 Plevna weaving hall, now holding restaurants, a cinema, shops and offices.",
+      "source_urls": [
+        "https://finlaysoninalue.fi/en/homepage/",
+        "https://www.filmtampere.com/locations/finlayson-area/",
+        "https://en.wikipedia.org/wiki/Finlayson_(company)",
+        "https://en.wikipedia.org/wiki/Finlayson,_Tampere"
+      ],
+      "url": "https://www.filmtampere.com/locations/finlayson-area/",
+      "official_url": "https://finlaysoninalue.fi/en/homepage/",
+      "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-helsinki-olympic-stadium",
+      "name": "Helsinki Olympic Stadium",
+      "country": "Finland",
+      "region": "Uusimaa",
+      "lat": 60.1869,
+      "lng": 24.9272,
+      "type": "Theatre, arena & venue",
+      "setting": "Functionalist 1938 stadium built for the 1952 Olympics, with a 72-metre tower and a renovated bowl used today for athletics, concerts, conferences and stadium tours.",
+      "known_for": "The Amazing Race (US, 2006)",
+      "facilities": "Meeting rooms, restaurant, seated event spaces and a rentable tower with panoramic views.",
+      "source_urls": [
+        "https://www.stadion.fi/en",
+        "https://en.wikipedia.org/wiki/Helsinki_Olympic_Stadium"
+      ],
+      "official_url": "https://www.stadion.fi/en",
+      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+    },
+    {
       "id": "ivalo-lapland",
       "name": "Ivalo",
       "country": "Finland",
@@ -998,6 +1279,42 @@
         "author": "Birit Schenk",
         "license": "CC BY 2.5"
       }
+    },
+    {
+      "id": "fi-kehrasaari",
+      "name": "Kehräsaari",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4967,
+      "lng": 23.7633,
+      "type": "Industrial & derelict",
+      "setting": "Former needle factory and wool mill on a small island in central Tampere, its 1897 red-brick U-shaped building now a shopping and business centre linked by footbridge to the riverside Koskikeskus district.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/kehrasaari/",
+        "https://fi.wikipedia.org/wiki/Kehr%C3%A4saari"
+      ],
+      "url": "https://www.filmtampere.com/locations/kehrasaari/",
+      "official_url": "https://www.filmtampere.com/locations/kehrasaari/",
+      "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-levi-ski-resort",
+      "name": "Levi Ski Resort",
+      "country": "Finland",
+      "region": "Lapland",
+      "lat": 67.805,
+      "lng": 24.8019,
+      "type": "Mountains & wilderness",
+      "setting": "Finland's largest ski resort on Levi fell in Kittila, with 43 marked slopes and 27 lifts amid birch and pine wilderness, used in winter for skiing and Northern Lights and in summer for fell hiking under the midnight sun.",
+      "known_for": "The Grand Tour: A Scandi Flick (2022)",
+      "source_urls": [
+        "https://www.levi.fi/en/",
+        "https://filmlapland.fi/best-areas-for-filming/kittila/",
+        "https://en.wikipedia.org/wiki/Levi,_Finland"
+      ],
+      "url": "https://filmlapland.fi/best-areas-for-filming/kittila/",
+      "official_url": "https://www.levi.fi/en/",
+      "commission_url": "https://filmlapland.fi/"
     },
     {
       "id": "mediapolis-tampere",
@@ -1026,6 +1343,23 @@
       }
     },
     {
+      "id": "fi-pitkaniemi-hospital",
+      "name": "Pitkäniemi Hospital Area",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4786,
+      "lng": 23.579,
+      "type": "Hospital, prison & institution",
+      "setting": "Former psychiatric hospital on a lakeshore park in Nokia near Tampere, with stone buildings from the 1890s including an Italianate villa, in clinical use from 1900 until closure in 2024 and now largely vacant.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
+        "https://fi.wikipedia.org/wiki/Pitk%C3%A4niemen_sairaala"
+      ],
+      "url": "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
+      "official_url": "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
+      "commission_url": "https://www.filmtampere.com/"
+    },
+    {
       "id": "senate-square-helsinki",
       "name": "Senate Square",
       "country": "Finland",
@@ -1043,6 +1377,311 @@
         "author": "Bahnfrend",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fi-suomenlinna",
+      "name": "Suomenlinna",
+      "country": "Finland",
+      "region": "Uusimaa",
+      "lat": 60.1436,
+      "lng": 24.9844,
+      "type": "Castle & estate",
+      "setting": "Sea fortress built from 1748 across a cluster of islands off Helsinki, with stone bastions, tunnels, dry docks and cobbled courtyards, now a UNESCO World Heritage site with museums and open parkland.",
+      "logistics": "Official site publishes separate instructions for filming and photography and a dedicated contact for bookings.",
+      "source_urls": [
+        "https://suomenlinna.fi/en/",
+        "https://en.wikipedia.org/wiki/Suomenlinna"
+      ],
+      "official_url": "https://suomenlinna.fi/en/",
+      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+    },
+    {
+      "id": "fi-suvilahti",
+      "name": "Suvilahti",
+      "country": "Finland",
+      "region": "Uusimaa",
+      "lat": 60.1864,
+      "lng": 24.9722,
+      "type": "Industrial & derelict",
+      "setting": "Former power plant and gasworks complex in Helsinki with red-brick industrial halls and open concrete yards, now a cultural venue mixing galleries, restaurants and a brewery inside the original industrial shells.",
+      "facilities": "Site explicitly offers outdoor and indoor space rental for events, festivals and photo shoots.",
+      "logistics": "Managed by Kiinteistö Oy Kaapelitalo; multiple independent tenants occupy separate buildings on the site.",
+      "source_urls": [
+        "https://www.suvilahti.fi/en",
+        "https://fi.wikipedia.org/wiki/Suvilahti_(Helsinki)"
+      ],
+      "official_url": "https://www.suvilahti.fi/en",
+      "commission_url": "https://www.filminfinland.com/en/frontpage/"
+    },
+    {
+      "id": "fi-tampere-hall",
+      "name": "Tampere Hall",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4958,
+      "lng": 23.7817,
+      "type": "Theatre, arena & venue",
+      "setting": "Largest congress centre in the Nordic countries, a modern building beside Sorsapuisto park in central Tampere with a 1,756-seat main auditorium and several smaller halls used for concerts and conferences.",
+      "capacity": 1756,
+      "source_urls": [
+        "https://www.tampere-talo.fi",
+        "https://www.filmtampere.com/locations/tampere-hall/",
+        "https://en.wikipedia.org/wiki/Tampere_Hall"
+      ],
+      "url": "https://www.filmtampere.com/locations/tampere-hall/",
+      "official_url": "https://www.tampere-talo.fi",
+      "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-tampere-market-hall",
+      "name": "Tampere Market Hall (Kauppahalli)",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.497,
+      "lng": 23.7587,
+      "type": "Bar, restaurant & shop",
+      "setting": "Largest market hall in the Nordic countries when it opened in 1901, a protected two-story brick building in central Tampere with roughly 30 food stalls, cafes and restaurants.",
+      "source_urls": [
+        "https://kauppahalli.tampere.fi/",
+        "https://www.filmtampere.com/locations/tampere-indoor-market-kauppahalli/",
+        "https://fi.wikipedia.org/wiki/Tampereen_kauppahalli"
+      ],
+      "url": "https://www.filmtampere.com/locations/tampere-indoor-market-kauppahalli/",
+      "official_url": "https://kauppahalli.tampere.fi/",
+      "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-turku-castle",
+      "name": "Turku Castle",
+      "country": "Finland",
+      "region": "Southwest Finland",
+      "lat": 60.4353,
+      "lng": 22.2286,
+      "type": "Castle & estate",
+      "setting": "Medieval keep begun around 1280 at the mouth of the Aura river, expanded into a Renaissance bailey under Gustav Vasa in the 16th century, now a city museum with period rooms, banqueting halls and rentable event spaces.",
+      "known_for": "Sadan miekan mies (1951), The Girl King (2015)",
+      "source_urls": [
+        "https://turunlinna.fi/",
+        "https://en.wikipedia.org/wiki/Turku_Castle"
+      ],
+      "official_url": "https://turunlinna.fi/",
+      "commission_url": "https://wffc.fi/"
+    },
+    {
+      "id": "fr-accor-arena",
+      "name": "Accor Arena",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8389,
+      "lng": 2.3792,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-purpose indoor arena in Bercy seating up to about 20,300, built into a grass-covered pyramid, used for concerts, sport and large events.",
+      "source_urls": [
+        "https://www.accorarena.com/"
+      ],
+      "official_url": "https://www.accorarena.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-allianz-riviera",
+      "name": "Allianz Riviera",
+      "country": "France",
+      "region": "Alpes-Maritimes, Provence-Alpes-Côte d'Azur",
+      "lat": 43.7053,
+      "lng": 7.1925,
+      "type": "Theatre, arena & venue",
+      "setting": "Nice football stadium with a translucent wave-shaped roof, home to OGC Nice and used for concerts and other large events.",
+      "source_urls": [
+        "https://www.allianz-riviera.fr/"
+      ],
+      "official_url": "https://www.allianz-riviera.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-base-sous-marine-saint-nazaire",
+      "name": "Base sous-marine de Saint-Nazaire (La Base)",
+      "country": "France",
+      "region": "Loire-Atlantique, Pays de la Loire",
+      "lat": 47.2759,
+      "lng": -2.2026,
+      "type": "Industrial & derelict",
+      "setting": "Reinforced-concrete U-boat pens built by the German navy in WWII on the Saint-Nazaire docks, now holding exhibition halls, a climbing wall and a rooftop garden.",
+      "source_urls": [
+        "https://www.saint-nazaire-tourisme.com/"
+      ],
+      "official_url": "https://www.saint-nazaire-tourisme.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-bassins-de-lumieres",
+      "name": "Bassins de Lumières",
+      "country": "France",
+      "region": "Gironde, Nouvelle-Aquitaine",
+      "lat": 44.8656,
+      "lng": -0.5539,
+      "type": "Industrial & derelict",
+      "setting": "Former WWII submarine pens on the Bordeaux docks converted into a digital art centre, with four raw concrete basins used for large-scale wall and floor projections.",
+      "source_urls": [
+        "https://www.bassins-lumieres.com/"
+      ],
+      "official_url": "https://www.bassins-lumieres.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Bassins_de_Lumi%C3%A8res_Boreaux_2024_%283%29.jpg/960px-Bassins_de_Lumi%C3%A8res_Boreaux_2024_%283%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bassins_de_Lumi%C3%A8res_Boreaux_2024_(3).jpg",
+        "author": "Benreis",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-bnf-richelieu",
+      "name": "Bibliothèque nationale de France, site Richelieu",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8674,
+      "lng": 2.3389,
+      "type": "Office, school & public building",
+      "setting": "Historic national library building in central Paris with a 19th-century domed reading room and ornate galleries, reopened after a long restoration.",
+      "source_urls": [
+        "https://www.bnf.fr/"
+      ],
+      "official_url": "https://www.bnf.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-bourse-de-commerce",
+      "name": "Bourse de Commerce, Pinault Collection",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8635,
+      "lng": 2.3439,
+      "type": "Modern architecture",
+      "setting": "Former 19th-century grain exchange with a circular rotunda and glass dome, renovated by Tadao Ando with an internal concrete cylinder as a contemporary art museum.",
+      "source_urls": [
+        "https://www.pinaultcollection.com/en/boursedecommerce"
+      ],
+      "official_url": "https://www.pinaultcollection.com/en/boursedecommerce",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-centre-historique-minier-lewarde",
+      "name": "Centre Historique Minier (Lewarde Mining Centre)",
+      "country": "France",
+      "region": "Nord, Hauts-de-France",
+      "lat": 50.3628,
+      "lng": 3.1719,
+      "type": "Industrial & derelict",
+      "setting": "Preserved coal mine museum in the former Delloye colliery, with pithead buildings, a headframe, underground galleries and workshops from the Nord-Pas-de-Calais coalfield.",
+      "source_urls": [
+        "https://www.chm-lewarde.com/"
+      ],
+      "official_url": "https://www.chm-lewarde.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Centre_historique_minier_de_Lewarde_%2838598%29.jpg/960px-Centre_historique_minier_de_Lewarde_%2838598%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Centre_historique_minier_de_Lewarde_(38598).jpg",
+        "author": "JackyM59",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-chamonix-mont-blanc",
+      "name": "Chamonix-Mont-Blanc",
+      "country": "France",
+      "region": "Haute-Savoie, Auvergne-Rhône-Alpes",
+      "lat": 45.9231,
+      "lng": 6.87,
+      "type": "Mountains & wilderness",
+      "setting": "Alpine resort town below Mont Blanc with cable cars up to the Aiguille du Midi and nearby glaciers, a base for mountaineering and skiing since the 19th century.",
+      "source_urls": [
+        "https://www.chamonix.com/"
+      ],
+      "official_url": "https://www.chamonix.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-chateau-if",
+      "name": "Château d'If",
+      "country": "France",
+      "region": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur",
+      "lat": 43.2799,
+      "lng": 5.3251,
+      "type": "Hospital, prison & institution",
+      "setting": "16th-century island fortress off Marseille used as a state prison into the 19th century, the setting of The Count of Monte Cristo and a location in The French Connection.",
+      "known_for": "The French Connection (1971)",
+      "source_urls": [
+        "https://www.chateau-if.fr/",
+        "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+      ],
+      "official_url": "https://www.chateau-if.fr/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/9335202_GSL_Chateau_d%27If_2007.jpg/960px-9335202_GSL_Chateau_d%27If_2007.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:9335202_GSL_Chateau_d%27If_2007.jpg",
+        "author": "Cavernia",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-chemin-de-fer-baie-de-somme",
+      "name": "Chemin de Fer de la Baie de Somme",
+      "country": "France",
+      "region": "Somme, Hauts-de-France",
+      "lat": 50.1857,
+      "lng": 1.6376,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage steam and diesel railway running along the Somme bay between Le Crotoy, Saint-Valery-sur-Somme and Cayeux, with period stations and rolling stock.",
+      "source_urls": [
+        "https://www.cfbs-baiedesomme.fr/"
+      ],
+      "official_url": "https://www.cfbs-baiedesomme.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-mode-design",
+      "name": "Cité de la Mode et du Design",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.841,
+      "lng": 2.367,
+      "type": "Modern architecture",
+      "setting": "Former riverside customs warehouse on the Seine reclad in a green glass and steel skin, housing a design school, offices, a club and event floors over the water.",
+      "source_urls": [
+        "https://www.citemodedesign.fr/"
+      ],
+      "official_url": "https://www.citemodedesign.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-voile-eric-tabarly",
+      "name": "Cité de la Voile Éric Tabarly (Keroman submarine base)",
+      "country": "France",
+      "region": "Morbihan, Brittany",
+      "lat": 47.7292,
+      "lng": -3.3703,
+      "type": "Industrial & derelict",
+      "setting": "WWII U-boat pens on the Keroman peninsula in Lorient with roofs up to 7.5 metres thick, now holding a sailing museum, boatyards and a marina business park.",
+      "source_urls": [
+        "https://www.citevoile-tabarly.com/",
+        "https://fr.wikipedia.org/wiki/Base_sous-marine_de_Lorient"
+      ],
+      "official_url": "https://www.citevoile-tabarly.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-sciences-industrie",
+      "name": "Cité des Sciences et de l'Industrie",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8963,
+      "lng": 2.3881,
+      "type": "Office, school & public building",
+      "setting": "Large science museum in the Parc de la Villette built inside a converted 1960s abattoir hall, with the geodesic dome cinema La Géode standing alongside it.",
+      "source_urls": [
+        "https://www.cite-sciences.fr/"
+      ],
+      "official_url": "https://www.cite-sciences.fr/",
+      "commission_url": "https://www.filmfrance.net/"
     },
     {
       "id": "cite-du-cinema",
@@ -1073,6 +1712,73 @@
       }
     },
     {
+      "id": "fr-cite-fruges",
+      "name": "Cité Frugès",
+      "country": "France",
+      "region": "Gironde, Nouvelle-Aquitaine",
+      "lat": 44.7989,
+      "lng": -0.6478,
+      "type": "House & apartment",
+      "setting": "Estate of concrete houses built by Le Corbusier and Pierre Jeanneret in Pessac in 1926 in flat-roofed cubic and terraced forms, UNESCO-listed since 2016.",
+      "source_urls": [
+        "https://www.fondationlecorbusier.fr/",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_Frug%C3%A8s"
+      ],
+      "official_url": "https://www.fondationlecorbusier.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-internationale-universitaire",
+      "name": "Cité Internationale Universitaire de Paris",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.821,
+      "lng": 2.3378,
+      "type": "Office, school & public building",
+      "setting": "Campus of more than 40 national residence halls in varied architectural styles on the southern edge of Paris, housing international students since the 1920s.",
+      "source_urls": [
+        "https://www.ciup.fr/"
+      ],
+      "official_url": "https://www.ciup.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-radieuse-marseille",
+      "name": "Cité Radieuse, Marseille",
+      "country": "France",
+      "region": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur",
+      "lat": 43.2601,
+      "lng": 5.3959,
+      "type": "House & apartment",
+      "setting": "Le Corbusier's 1952 concrete apartment block on stilts in Marseille, with 337 duplex units, an internal shopping street and a rooftop terrace.",
+      "source_urls": [
+        "https://www.citeradieuse-marseille.com/"
+      ],
+      "official_url": "https://www.citeradieuse-marseille.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/View_from_the_Cit%C3%A9_radieuse_towards_the_sea_with_%C3%8Eles_du_Frioul%2C_Marseille.jpg/960px-View_from_the_Cit%C3%A9_radieuse_towards_the_sea_with_%C3%8Eles_du_Frioul%2C_Marseille.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:View_from_the_Cit%C3%A9_radieuse_towards_the_sea_with_%C3%8Eles_du_Frioul,_Marseille.jpg",
+        "author": "Carl Ha",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-ecomusee-creusot-montceau",
+      "name": "Écomusée Creusot Montceau",
+      "country": "France",
+      "region": "Saône-et-Loire, Bourgogne-Franche-Comté",
+      "lat": 46.8,
+      "lng": 4.4333,
+      "type": "Industrial & derelict",
+      "setting": "Industrial heritage network around the former Schneider steelworks in Le Creusot, with the Château de la Verrerie glassworks-turned-mansion as its main site.",
+      "source_urls": [
+        "https://www.ecomusee-creusot-montceau.fr/"
+      ],
+      "official_url": "https://www.ecomusee-creusot-montceau.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
       "id": "etretat-cliffs",
       "name": "Étretat Cliffs",
       "country": "France",
@@ -1092,6 +1798,249 @@
       }
     },
     {
+      "id": "fr-hopital-bicetre",
+      "name": "Hôpital Bicêtre",
+      "country": "France",
+      "region": "Val-de-Marne, Île-de-France",
+      "lat": 48.8082,
+      "lng": 2.3563,
+      "type": "Hospital, prison & institution",
+      "setting": "Large hospital complex south of Paris with historic pavilions and a tall water reservoir building, listed by AP-HP among the sites it regularly opens to film crews.",
+      "source_urls": [
+        "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
+      ],
+      "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-hopital-maritime-berck",
+      "name": "Hôpital Maritime de Berck",
+      "country": "France",
+      "region": "Pas-de-Calais, Hauts-de-France",
+      "lat": 50.4045,
+      "lng": 1.59,
+      "type": "Hospital, prison & institution",
+      "setting": "Seafront AP-HP hospital in Berck-sur-Mer built as a 19th-century marine sanatorium, named on the AP-HP's list of hospitals that regularly welcome film shoots.",
+      "source_urls": [
+        "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
+      ],
+      "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-hopital-raymond-poincare",
+      "name": "Hôpital Raymond-Poincaré",
+      "country": "France",
+      "region": "Hauts-de-Seine, Île-de-France",
+      "lat": 48.8305,
+      "lng": 2.1889,
+      "type": "Hospital, prison & institution",
+      "setting": "Rehabilitation hospital in Garches with early 20th-century pavilion wards and gardens, one of the AP-HP sites named as regularly opened for commercial filming.",
+      "source_urls": [
+        "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
+      ],
+      "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-hopital-saint-louis",
+      "name": "Hôpital Saint-Louis",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8722,
+      "lng": 2.3702,
+      "type": "Hospital, prison & institution",
+      "setting": "Working Paris hospital built around an early 17th-century brick and stone quadrilateral courtyard, one of the AP-HP sites named as regularly hosting commercial filming.",
+      "source_urls": [
+        "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
+      ],
+      "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-institut-lumiere",
+      "name": "Institut Lumière",
+      "country": "France",
+      "region": "Rhône, Auvergne-Rhône-Alpes",
+      "lat": 45.7452,
+      "lng": 4.8704,
+      "type": "Office, school & public building",
+      "setting": "Museum in the former Lumière family home in Lyon, dedicated to Auguste and Louis Lumière and the birth of cinema, close to the site of their original factory.",
+      "source_urls": [
+        "https://www.institut-lumiere.org/",
+        "https://en.wikipedia.org/wiki/Institut_Lumi%C3%A8re"
+      ],
+      "official_url": "https://www.institut-lumiere.org/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-condition-publique",
+      "name": "La Condition Publique",
+      "country": "France",
+      "region": "Nord, Hauts-de-France",
+      "lat": 50.6942,
+      "lng": 3.1815,
+      "type": "Industrial & derelict",
+      "setting": "Former municipal wool-conditioning warehouse in Roubaix, a long glass-roofed 19th-century industrial hall now run as a cultural and event venue.",
+      "source_urls": [
+        "https://www.laconditionpublique.com/"
+      ],
+      "official_url": "https://www.laconditionpublique.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-la-defense",
+      "name": "La Défense",
+      "country": "France",
+      "region": "Hauts-de-Seine, Île-de-France",
+      "lat": 48.8918,
+      "lng": 2.236,
+      "type": "Modern architecture",
+      "setting": "Purpose-built business district west of Paris with high-rise office towers, an elevated pedestrian esplanade and the Grande Arche at its western end.",
+      "source_urls": [
+        "https://www.parisladefense.com/"
+      ],
+      "official_url": "https://www.parisladefense.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-le-104-centquatre",
+      "name": "Le 104 (Centquatre-Paris)",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.889,
+      "lng": 2.3765,
+      "type": "Theatre, arena & venue",
+      "setting": "Former municipal funeral parlour in northern Paris with two vast glass-roofed halls, now an arts centre with studios and space hired for events and shoots.",
+      "source_urls": [
+        "https://www.104.fr/"
+      ],
+      "official_url": "https://www.104.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-grand-hotel-cabourg",
+      "name": "Le Grand Hôtel Cabourg",
+      "country": "France",
+      "region": "Calvados, Normandy",
+      "lat": 49.2865,
+      "lng": 0.0781,
+      "type": "Hotel & interiors",
+      "setting": "Belle Époque seafront hotel in Cabourg that inspired Marcel Proust's Grand Hôtel de Balbec, with period public rooms overlooking the beach.",
+      "source_urls": [
+        "https://www.hotelsbarriere.com/en/cabourg/le-grand-hotel.html"
+      ],
+      "official_url": "https://www.hotelsbarriere.com/en/cabourg/le-grand-hotel.html",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-le-train-bleu",
+      "name": "Le Train Bleu",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.845,
+      "lng": 2.3733,
+      "type": "Bar, restaurant & shop",
+      "setting": "Belle Époque restaurant inside Gare de Lyon station, listed as a historic monument since 1972, with gilded ceilings and large painted murals of French regions.",
+      "known_for": "La Femme Nikita (1990), Mr. Bean's Holiday (2007), Micmacs (2009), Place Vendôme (1998)",
+      "source_urls": [
+        "https://www.le-train-bleu.com/",
+        "https://en.wikipedia.org/wiki/Le_Train_Bleu_(restaurant)"
+      ],
+      "official_url": "https://www.le-train-bleu.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-les-deux-magots",
+      "name": "Les Deux Magots",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8539,
+      "lng": 2.3336,
+      "type": "Bar, restaurant & shop",
+      "setting": "Historic Saint-Germain-des-Prés cafe with a covered terrace and wood-panelled interior, a literary and artist meeting place since the late 19th century.",
+      "source_urls": [
+        "https://www.lesdeuxmagots.fr/"
+      ],
+      "official_url": "https://www.lesdeuxmagots.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-les-docks-marseille",
+      "name": "Les Docks, Marseille",
+      "country": "France",
+      "region": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur",
+      "lat": 43.3097,
+      "lng": 5.3672,
+      "type": "Industrial & derelict",
+      "setting": "Row of 19th-century dockside warehouses on the Joliette waterfront, restored around an internal courtyard of offices, shops and restaurants.",
+      "source_urls": [
+        "https://www.lesdocks-marseille.com/"
+      ],
+      "official_url": "https://www.lesdocks-marseille.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-les-fermes-de-marie",
+      "name": "Les Fermes de Marie",
+      "country": "France",
+      "region": "Haute-Savoie, Auvergne-Rhône-Alpes",
+      "lat": 45.8566,
+      "lng": 6.6178,
+      "type": "Hotel & interiors",
+      "setting": "Alpine hotel in Megève built from reassembled 18th and 19th-century farm buildings, with a spa and chalet-style interiors furnished in reclaimed wood.",
+      "source_urls": [
+        "https://fermesdemarie.com/"
+      ],
+      "official_url": "https://fermesdemarie.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-halles-de-lyon-paul-bocuse",
+      "name": "Les Halles de Lyon Paul Bocuse",
+      "country": "France",
+      "region": "Rhône, Auvergne-Rhône-Alpes",
+      "lat": 45.7657,
+      "lng": 4.8508,
+      "type": "Bar, restaurant & shop",
+      "setting": "Covered food market in Lyon with about fifty stalls of butchers, cheesemongers, bakers and small restaurants, named after chef Paul Bocuse.",
+      "source_urls": [
+        "https://halles-de-lyon-paulbocuse.com/"
+      ],
+      "official_url": "https://halles-de-lyon-paulbocuse.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-mucem",
+      "name": "MuCEM",
+      "country": "France",
+      "region": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur",
+      "lat": 43.2965,
+      "lng": 5.3543,
+      "type": "Modern architecture",
+      "setting": "Marseille museum in a concrete cube wrapped in a black lattice screen, linked by a footbridge to the 13th-century Fort Saint-Jean at the harbour entrance.",
+      "source_urls": [
+        "https://www.mucem.org/"
+      ],
+      "official_url": "https://www.mucem.org/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-omaha-beach",
+      "name": "Omaha Beach",
+      "country": "France",
+      "region": "Calvados, Normandy",
+      "lat": 49.3472,
+      "lng": -0.8546,
+      "type": "Coast & beach",
+      "setting": "Stretch of Normandy coast where American forces landed on D-Day, 6 June 1944, backed by bluffs, the American Cemetery and the Overlord Museum.",
+      "source_urls": [
+        "https://www.overlordmuseum.com/"
+      ],
+      "official_url": "https://www.overlordmuseum.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
       "id": "palace-of-versailles",
       "name": "Palace of Versailles",
       "country": "France",
@@ -1108,6 +2057,138 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_(cropped).jpg",
         "author": "ToucanWings",
         "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "fr-palais-garnier",
+      "name": "Palais Garnier",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8719,
+      "lng": 2.3316,
+      "type": "Theatre, arena & venue",
+      "setting": "19th-century opera house with a grand marble staircase, a gilded foyer and a ceiling painted by Chagall, home to the Paris Opera Ballet.",
+      "source_urls": [
+        "https://www.operadeparis.fr/"
+      ],
+      "official_url": "https://www.operadeparis.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-camargue-parc-naturel",
+      "name": "Parc naturel régional de Camargue",
+      "country": "France",
+      "region": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur",
+      "lat": 43.5333,
+      "lng": 4.6167,
+      "type": "Village & countryside",
+      "setting": "Rhône delta wetland reserve of lagoons, salt pans and marshland grazed by black bulls and white horses, managed as a regional nature park.",
+      "source_urls": [
+        "https://www.parc-camargue.fr/"
+      ],
+      "official_url": "https://www.parc-camargue.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-phare-de-cordouan",
+      "name": "Phare de Cordouan",
+      "country": "France",
+      "region": "Gironde, Nouvelle-Aquitaine",
+      "lat": 45.5931,
+      "lng": -1.1639,
+      "type": "Transport & infrastructure",
+      "setting": "Working lighthouse on a rock at the mouth of the Gironde estuary, built from 1584 with a royal apartment and chapel inside, UNESCO-listed since 2021.",
+      "source_urls": [
+        "https://www.phare-de-cordouan.fr/"
+      ],
+      "official_url": "https://www.phare-de-cordouan.fr/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-piscine-molitor",
+      "name": "Piscine Molitor",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8462,
+      "lng": 2.2534,
+      "type": "Theatre, arena & venue",
+      "setting": "Art Deco outdoor and indoor swimming pool complex from 1929 in western Paris, restored as part of a hotel with the original tiled pools kept in use.",
+      "source_urls": [
+        "https://www.molitorparis.com/"
+      ],
+      "official_url": "https://www.molitorparis.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-stade-de-france",
+      "name": "Stade de France",
+      "country": "France",
+      "region": "Seine-Saint-Denis, Île-de-France",
+      "lat": 48.9245,
+      "lng": 2.3601,
+      "type": "Theatre, arena & venue",
+      "setting": "National stadium in Saint-Denis seating over 80,000, built for the 1998 World Cup and used for major sport, concerts and ceremonies.",
+      "source_urls": [
+        "https://www.stadefrance.com/"
+      ],
+      "official_url": "https://www.stadefrance.com/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-station-f",
+      "name": "Station F",
+      "country": "France",
+      "region": "Paris, Île-de-France",
+      "lat": 48.8342,
+      "lng": 2.3746,
+      "type": "Industrial & derelict",
+      "setting": "Former Halle Freyssinet railway freight depot, a single steel-framed hall over 300 metres long in southeast Paris, now a start-up campus with open floors and event space.",
+      "source_urls": [
+        "https://stationf.co/"
+      ],
+      "official_url": "https://stationf.co/",
+      "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-viaduc-de-millau",
+      "name": "Viaduc de Millau",
+      "country": "France",
+      "region": "Aveyron, Occitanie",
+      "lat": 44.0767,
+      "lng": 3.0233,
+      "type": "Transport & infrastructure",
+      "setting": "Cable-stayed road bridge across the Tarn valley, the tallest of its kind in the world at 343 metres, carrying the A75 motorway.",
+      "source_urls": [
+        "https://www.leviaducdemillau.com/"
+      ],
+      "official_url": "https://www.leviaducdemillau.com/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/00_0237_Millau_-_D%C3%A9partement_Aveyron.jpg/960px-00_0237_Millau_-_D%C3%A9partement_Aveyron.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:00_0237_Millau_-_D%C3%A9partement_Aveyron.jpg",
+        "author": "W. Bulach",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-villa-savoye",
+      "name": "Villa Savoye",
+      "country": "France",
+      "region": "Yvelines, Île-de-France",
+      "lat": 48.9207,
+      "lng": 2.0289,
+      "type": "House & apartment",
+      "setting": "Le Corbusier's white 1931 villa in Poissy raised on thin pilotis, with ribbon windows, a roof garden and a spiral ramp, managed as a national monument.",
+      "source_urls": [
+        "https://www.villa-savoye.fr/"
+      ],
+      "official_url": "https://www.villa-savoye.fr/",
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Savoye_3.JPG/960px-Savoye_3.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Savoye_3.JPG",
+        "author": "Wasily",
+        "license": "CC0"
       }
     },
     {
@@ -1911,6 +2992,146 @@
       }
     },
     {
+      "id": "is-blue-lagoon",
+      "name": "Blue Lagoon",
+      "country": "Iceland",
+      "region": "Reykjanes",
+      "lat": 63.8792,
+      "lng": -22.4443,
+      "type": "Hotel & interiors",
+      "setting": "A geothermal spa with milky blue water set in a black lava field on the Reykjanes Peninsula, with a bathhouse and treatment building on its edge.",
+      "known_for": "Hostel: Part II",
+      "source_urls": [
+        "https://filminiceland.com/made-in-iceland/hostel-part-ii",
+        "https://en.wikipedia.org/wiki/Blue_Lagoon_(geothermal_spa)"
+      ],
+      "official_url": "https://filminiceland.com/made-in-iceland/hostel-part-ii",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-dettifoss",
+      "name": "Dettifoss",
+      "country": "Iceland",
+      "region": "North Iceland",
+      "lat": 65.8147,
+      "lng": -16.3845,
+      "type": "Mountains & wilderness",
+      "setting": "A wide, high-volume waterfall on the Jokulsa a Fjollum river in a barren canyon, with grey glacial water dropping between near-vertical rock walls.",
+      "known_for": "Prometheus",
+      "source_urls": [
+        "https://www.vatnajokulsthjodgardur.is/en/areas/nordursvaedi/dettifoss",
+        "https://en.wikipedia.org/wiki/Dettifoss"
+      ],
+      "official_url": "https://www.vatnajokulsthjodgardur.is/en/areas/nordursvaedi/dettifoss",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-djupavik-herring-factory",
+      "name": "Djupavik Herring Factory",
+      "country": "Iceland",
+      "region": "Westfjords",
+      "lat": 65.9444,
+      "lng": -21.559,
+      "type": "Industrial & derelict",
+      "setting": "Disused 1930s herring-oil factory on a remote fjord in the Strandir area, with rusted machinery and concrete tanks left largely intact next to a small hotel in the former workers' housing.",
+      "known_for": "Justice League, Sigur Ros music video",
+      "source_urls": [
+        "https://djupavik.is/"
+      ],
+      "official_url": "https://djupavik.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-hafnarfjordur-harbour",
+      "name": "Hafnarfjordur Harbour",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.0646,
+      "lng": -21.9713,
+      "type": "Transport & infrastructure",
+      "setting": "A working fishing and cargo harbour in the town of Hafnarfjordur just south of Reykjavik, with quays and warehouses set against black lava rock.",
+      "known_for": "Shackleton (2002 miniseries)",
+      "source_urls": [
+        "https://www.hafnarfjardarhofn.is/",
+        "https://filminiceland.com/made-in-iceland/shackleton",
+        "https://en.wikipedia.org/wiki/Hafnarfj%C3%B6r%C3%B0ur"
+      ],
+      "url": "https://filminiceland.com/made-in-iceland/shackleton",
+      "official_url": "https://www.hafnarfjardarhofn.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-harpa-concert-hall",
+      "name": "Harpa Concert Hall",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1503,
+      "lng": -21.9325,
+      "type": "Theatre, arena & venue",
+      "setting": "Glass-clad concert and conference hall on the Reykjavik waterfront, its honeycomb facade covering several auditoriums and a large public lobby used for performances and events.",
+      "known_for": "Sense8, Black Mirror (Crocodile), The Bachelor, Heart of Stone",
+      "source_urls": [
+        "https://www.harpa.is/en",
+        "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
+      ],
+      "official_url": "https://www.harpa.is/en",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-jokulsarlon",
+      "name": "Jokulsarlon",
+      "country": "Iceland",
+      "region": "Southeast Iceland",
+      "lat": 64.0703,
+      "lng": -16.2117,
+      "type": "Coast & beach",
+      "setting": "A glacial lagoon at the edge of Vatnajokull where icebergs calve from an outlet glacier and drift toward the sea, with a black sand beach across the road.",
+      "known_for": "A View to a Kill, Die Another Day, Lara Croft: Tomb Raider, Batman Begins",
+      "source_urls": [
+        "https://icelagoon.is/",
+        "https://en.wikipedia.org/wiki/J%C3%B6kuls%C3%A1rl%C3%B3n"
+      ],
+      "official_url": "https://icelagoon.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-lake-myvatn",
+      "name": "Lake Myvatn",
+      "country": "Iceland",
+      "region": "North Iceland",
+      "lat": 65.6,
+      "lng": -17,
+      "type": "Forest & lake",
+      "setting": "A shallow volcanic lake ringed by lava formations, pseudocraters and geothermal ground, with wetlands used by large numbers of breeding ducks.",
+      "known_for": "The Fate of the Furious",
+      "source_urls": [
+        "https://www.visitmyvatn.is/",
+        "https://filminiceland.com/made-in-iceland/the-fate-of-the-furious"
+      ],
+      "url": "https://filminiceland.com/made-in-iceland/the-fate-of-the-furious",
+      "official_url": "https://www.visitmyvatn.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-perlan",
+      "name": "Perlan",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1292,
+      "lng": -21.9189,
+      "type": "Office, school & public building",
+      "setting": "A domed observation building on Oskjuhlid hill in Reykjavik, built over old geothermal water storage tanks, combining a museum, planetarium and viewing deck.",
+      "known_for": "The Christmas Quest",
+      "source_urls": [
+        "https://perlan.is/",
+        "https://filminiceland.com/made-in-iceland/the-christmas-quest",
+        "https://en.wikipedia.org/wiki/Perlan"
+      ],
+      "url": "https://filminiceland.com/made-in-iceland/the-christmas-quest",
+      "official_url": "https://perlan.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
       "id": "reynisfjara-beach",
       "name": "Reynisfjara",
       "country": "Iceland",
@@ -1951,6 +3172,23 @@
       "commission_url": "https://filminiceland.com/locations/"
     },
     {
+      "id": "is-sundholl-reykjavikur",
+      "name": "Sundholl Reykjavikur",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1417,
+      "lng": -21.9203,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1937 indoor municipal swimming pool in central Reykjavik with a functionalist facade, white-tiled changing rooms and an outdoor terrace with hot tubs added later.",
+      "known_for": "Hollin (The Palace, 2010 documentary)",
+      "source_urls": [
+        "https://reykjavik.is/en/swimming-pools",
+        "https://en.wikipedia.org/wiki/Sundh%C3%B6llin"
+      ],
+      "official_url": "https://reykjavik.is/en/swimming-pools",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
       "id": "svinafellsjokull-glacier",
       "name": "Svínafellsjökull",
       "country": "Iceland",
@@ -1968,6 +3206,58 @@
         "author": "Mikołaj Bańka",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "is-thingvellir-national-park",
+      "name": "Thingvellir National Park",
+      "country": "Iceland",
+      "region": "South Iceland",
+      "lat": 64.2538,
+      "lng": -21.0373,
+      "type": "Mountains & wilderness",
+      "setting": "A rift valley and former open-air assembly site where the North American and Eurasian tectonic plates meet, with a gorge, lava fields and Iceland's largest natural lake.",
+      "known_for": "Game of Thrones",
+      "source_urls": [
+        "https://www.thingvellir.is/en/",
+        "https://en.wikipedia.org/wiki/Game_of_Thrones_(season_4)",
+        "https://en.wikipedia.org/wiki/%C3%9Eingvellir"
+      ],
+      "official_url": "https://www.thingvellir.is/en/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-vik-i-myrdal",
+      "name": "Vik i Myrdal",
+      "country": "Iceland",
+      "region": "South Iceland",
+      "lat": 63.4194,
+      "lng": -19.0097,
+      "type": "Village & countryside",
+      "setting": "A small coastal village with a black-steepled church on a hill above a cluster of houses, close to black sand cliffs and sea stacks.",
+      "known_for": "Katla",
+      "source_urls": [
+        "https://www.visitvik.is/",
+        "https://en.wikipedia.org/wiki/V%C3%ADk_%C3%AD_M%C3%BDrdal"
+      ],
+      "official_url": "https://www.visitvik.is/",
+      "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "ie-adare-manor",
+      "name": "Adare Manor",
+      "country": "Ireland",
+      "region": "County Limerick",
+      "lat": 52.5642,
+      "lng": -8.7776,
+      "type": "Hotel & interiors",
+      "setting": "Neo-Gothic mansion and golf resort on the River Maigue in County Limerick, with oak-panelled interiors, cloistered gardens and a 19th-century monastic ruin on the grounds.",
+      "known_for": "The Last Remake of Beau Geste (1977)",
+      "source_urls": [
+        "https://www.adaremanor.com/",
+        "https://en.wikipedia.org/wiki/Adare_Manor"
+      ],
+      "official_url": "https://www.adaremanor.com/",
+      "commission_url": "https://www.screenireland.ie/locations"
     },
     {
       "id": "ardmore-studios",
@@ -1991,6 +3281,236 @@
       "commission_url": "https://www.screenireland.ie/locations"
     },
     {
+      "id": "ie-aughnanure-castle",
+      "name": "Aughnanure Castle",
+      "country": "Ireland",
+      "region": "County Galway",
+      "lat": 53.4178,
+      "lng": -9.2711,
+      "type": "Castle & estate",
+      "setting": "Six-storey tower house of the O'Flaherty clan on a rocky outcrop above Lough Corrib near Oughterard in County Galway, with a banqueting hall and watchtower.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/aughnanure-castle/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-charles-fort",
+      "name": "Charles Fort",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.6942,
+      "lng": -8.4931,
+      "type": "Castle & estate",
+      "setting": "Star-shaped 17th-century coastal fortification above Kinsale harbour in west Cork, with bastions, gun batteries and barrack ruins overlooking the Atlantic approach.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/charles-fort/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/charles-fort/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-chq-building",
+      "name": "CHQ Building",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3488,
+      "lng": -6.2478,
+      "type": "Industrial & derelict",
+      "setting": "Restored 1820 bonded warehouse on Custom House Quay in Dublin's docklands, now a glass-roofed hall with retail units, food outlets and hireable event and exhibition space.",
+      "source_urls": [
+        "https://chq.ie/"
+      ],
+      "official_url": "https://chq.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-cobh-heritage-centre",
+      "name": "Cobh Heritage Centre",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.8488,
+      "lng": -8.2996,
+      "type": "Transport & infrastructure",
+      "setting": "Emigration and maritime history exhibition in Cobh's former Victorian railway station, on the harbour town that was the Titanic's last port of call.",
+      "known_for": "The Eclipse (2009), Angela's Ashes (1999)",
+      "source_urls": [
+        "https://www.cobhheritage.com/",
+        "https://en.wikipedia.org/wiki/Cobh"
+      ],
+      "official_url": "https://www.cobhheritage.com/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-cork-city-gaol",
+      "name": "Cork City Gaol",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.8995,
+      "lng": -8.499,
+      "type": "Hospital, prison & institution",
+      "setting": "Restored 19th-century prison on a hillside above Cork city, with galleried cell blocks and warders' quarters, hired out for corporate events and filming or photo shoots.",
+      "source_urls": [
+        "https://www.corkcitygaol.com/"
+      ],
+      "official_url": "https://www.corkcitygaol.com/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-cork-city-hall",
+      "name": "Cork City Hall",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.8965,
+      "lng": -8.4659,
+      "type": "Office, school & public building",
+      "setting": "1936 limestone civic building on the River Lee in Cork, with a domed concert hall, council chamber and function rooms available through the council's facilities-hire process.",
+      "source_urls": [
+        "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/"
+      ],
+      "official_url": "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-derrynane-house",
+      "name": "Derrynane House",
+      "country": "Ireland",
+      "region": "County Kerry",
+      "lat": 51.7636,
+      "lng": -10.1289,
+      "type": "House & apartment",
+      "setting": "Coastal home of nineteenth-century political leader Daniel O'Connell on the Ring of Kerry, with period rooms, a walled garden and dunes running down to the Atlantic.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/derrynane-house/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-donegal-castle",
+      "name": "Donegal Castle",
+      "country": "Ireland",
+      "region": "County Donegal",
+      "lat": 54.655,
+      "lng": -8.1106,
+      "type": "Castle & estate",
+      "setting": "Restored 15th-century tower house and Jacobean wing in the centre of Donegal town, once the stronghold of the O'Donnell clan, on the banks of the River Eske.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-doneraile-court",
+      "name": "Doneraile Court",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 52.2165,
+      "lng": -8.5824,
+      "type": "House & apartment",
+      "setting": "Georgian house and deer park in north Cork, with a walled garden, follies and grazing red deer, cared for by the Office of Public Works.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-dublin-castle",
+      "name": "Dublin Castle",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3429,
+      "lng": -6.2675,
+      "type": "Palace & landmark",
+      "setting": "Former seat of British administration in Ireland in central Dublin, with state apartments, a medieval tower, Georgian interiors and a courtyard used for state events.",
+      "source_urls": [
+        "https://www.dublincastle.ie/"
+      ],
+      "official_url": "https://www.dublincastle.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-dun-aonghasa",
+      "name": "Dún Aonghasa",
+      "country": "Ireland",
+      "region": "County Galway",
+      "lat": 53.1258,
+      "lng": -9.7681,
+      "type": "Coast & beach",
+      "setting": "Prehistoric stone fort on a sheer cliff edge on Inishmore in the Aran Islands, with concentric ramparts and a defensive band of upright stones.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/dun-aonghasa/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/dun-aonghasa/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-emo-court",
+      "name": "Emo Court",
+      "country": "Ireland",
+      "region": "County Laois",
+      "lat": 53.1072,
+      "lng": -7.1969,
+      "type": "House & apartment",
+      "setting": "Neoclassical domed mansion designed by James Gandon in County Laois, with formal lawns, a lake and an avenue of Wellingtonia trees, managed by the OPW.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/emo-court/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/emo-court/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-glendalough",
+      "name": "Glendalough",
+      "country": "Ireland",
+      "region": "County Wicklow",
+      "lat": 53.0103,
+      "lng": -6.3275,
+      "type": "Church & monastery",
+      "setting": "Early medieval monastic site in a glaciated Wicklow valley, with a round tower, ruined stone churches and two lakes, managed by the Office of Public Works.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/glendalough-visitor-centre/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-killarney-national-park",
+      "name": "Killarney National Park",
+      "country": "Ireland",
+      "region": "County Kerry",
+      "lat": 52.0037,
+      "lng": -9.5577,
+      "type": "Mountains & wilderness",
+      "setting": "Ireland's first national park, around the Lakes of Killarney and the MacGillycuddy's Reeks mountains, with oak woodland, waterfalls and a resident red deer herd.",
+      "source_urls": [
+        "https://www.killarneynationalpark.ie/",
+        "https://en.wikipedia.org/wiki/Killarney_National_Park"
+      ],
+      "official_url": "https://www.killarneynationalpark.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-killruddery-house",
+      "name": "Killruddery House",
+      "country": "Ireland",
+      "region": "County Wicklow",
+      "lat": 53.1818,
+      "lng": -6.1021,
+      "type": "House & apartment",
+      "setting": "Elizabethan-revival mansion on the edge of Bray with a domed Victorian conservatory, formal gardens with twin canals, woodland walks and a working farmyard on the wider estate.",
+      "known_for": "Excalibur, My Left Foot, The Tudors, Fate: The Winx Saga",
+      "source_urls": [
+        "https://killruddery.com/",
+        "https://en.wikipedia.org/wiki/Killruddery_House"
+      ],
+      "official_url": "https://killruddery.com/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
       "id": "kilmainham-gaol",
       "name": "Kilmainham Gaol",
       "country": "Ireland",
@@ -2010,6 +3530,51 @@
       }
     },
     {
+      "id": "ie-lough-gur",
+      "name": "Lough Gur",
+      "country": "Ireland",
+      "region": "County Limerick",
+      "lat": 52.5075,
+      "lng": -8.5312,
+      "type": "Forest & lake",
+      "setting": "Archaeological landscape around a horseshoe-shaped lake in County Limerick, with a Stone Age visitor centre, a stone circle and Iron Age hut sites.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/lough-gur/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/lough-gur/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-pearse-museum",
+      "name": "Pearse Museum & St Enda's Park",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.2829,
+      "lng": -6.2816,
+      "type": "House & apartment",
+      "setting": "Former school run by Patrick Pearse in a Georgian house in Rathfarnham, south Dublin, set in a public park with woodland, a walled garden and a stream.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/pearse-museum-st-endas-park/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/pearse-museum-st-endas-park/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-portumna-castle",
+      "name": "Portumna Castle and Gardens",
+      "country": "Ireland",
+      "region": "County Galway",
+      "lat": 53.0892,
+      "lng": -8.2189,
+      "type": "Castle & estate",
+      "setting": "Early 17th-century semi-fortified house on Lough Derg in east Galway, with restored formal gardens, a kitchen garden and a woodland park managed by the OPW.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/portumna-castle-and-gardens/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
       "id": "skellig-michael",
       "name": "Skellig Michael",
       "country": "Ireland",
@@ -2027,6 +3592,101 @@
         "author": "Jerzy Strzelecki",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "ie-sligo-abbey",
+      "name": "Sligo Abbey",
+      "country": "Ireland",
+      "region": "County Sligo",
+      "lat": 54.271,
+      "lng": -8.47,
+      "type": "Church & monastery",
+      "setting": "Ruined 13th-century Dominican friary in Sligo town, with a carved altar, cloister arcade and medieval tomb sculptures, open seasonally under the OPW.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/sligo-abbey/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-strokestown-park",
+      "name": "Strokestown Park House",
+      "country": "Ireland",
+      "region": "County Roscommon",
+      "lat": 53.7765,
+      "lng": -8.0978,
+      "type": "House & apartment",
+      "setting": "Palladian-style Georgian house in County Roscommon set on about 300 acres, with a walled garden, the National Famine Museum and its own listed film location page.",
+      "source_urls": [
+        "https://strokestownpark.ie/"
+      ],
+      "official_url": "https://strokestownpark.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-custom-house-visitor-centre",
+      "name": "The Custom House Visitor Centre",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3485,
+      "lng": -6.2531,
+      "type": "Office, school & public building",
+      "setting": "Neoclassical 18th-century government building on the Liffey quays in Dublin, with a visitor centre in the vaulted basement telling the story of its construction and 1921 fire.",
+      "source_urls": [
+        "https://www.heritageireland.ie/visit/places-to-visit/custom-house-visitor-centre/"
+      ],
+      "official_url": "https://www.heritageireland.ie/visit/places-to-visit/custom-house-visitor-centre/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-english-market-cork",
+      "name": "The English Market",
+      "country": "Ireland",
+      "region": "County Cork",
+      "lat": 51.898,
+      "lng": -8.474,
+      "type": "Bar, restaurant & shop",
+      "setting": "Covered Victorian food market in the centre of Cork, trading since 1788, with cast-iron arcades, fishmongers, butchers and a fountain courtyard; filming is arranged through Cork City Council.",
+      "source_urls": [
+        "http://www.englishmarket.ie/",
+        "https://www.corkcity.ie/en/council-services/public-info/events-hosting-and-licences/use-of-council-facilities/filming-in-the-english-market/"
+      ],
+      "official_url": "http://www.englishmarket.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-trinity-college-dublin",
+      "name": "Trinity College Dublin",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3437,
+      "lng": -6.2544,
+      "type": "Office, school & public building",
+      "setting": "Ireland's oldest university, with cobbled squares, Georgian and Victorian quadrangles and the Long Room library, on a walled campus in the centre of Dublin.",
+      "known_for": "Educating Rita, Michael Collins, Circle of Friends",
+      "source_urls": [
+        "https://www.tcd.ie/",
+        "https://en.wikipedia.org/wiki/Trinity_College_Dublin"
+      ],
+      "official_url": "https://www.tcd.ie/",
+      "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-wicklows-historic-gaol",
+      "name": "Wicklow's Historic Gaol",
+      "country": "Ireland",
+      "region": "County Wicklow",
+      "lat": 52.9791,
+      "lng": -6.0374,
+      "type": "Hospital, prison & institution",
+      "setting": "Former county gaol in Wicklow town, in use from 1702 to 1924, with narrow cell blocks, a condemned cell and exercise yards preserved as a visitor attraction.",
+      "known_for": "Ghost Hunters International (2009)",
+      "source_urls": [
+        "https://www.wicklowshistoricgaol.com/",
+        "https://en.wikipedia.org/wiki/Wicklow_Gaol"
+      ],
+      "official_url": "https://www.wicklowshistoricgaol.com/",
+      "commission_url": "https://www.screenireland.ie/locations"
     },
     {
       "id": "cinecitta",
@@ -2151,6 +3811,22 @@
       }
     },
     {
+      "id": "nl-ahoy-rotterdam",
+      "name": "Ahoy Rotterdam",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.8833,
+      "lng": 4.4884,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-hall arena and convention complex in Rotterdam-Zuid with a 16,000-capacity main arena, used for sport, concerts and the 2021 Eurovision Song Contest.",
+      "known_for": "Eurovision Song Contest 2021",
+      "source_urls": [
+        "https://www.ahoy.nl/"
+      ],
+      "official_url": "https://www.ahoy.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "amsterdam-canal-ring",
       "name": "Amsterdam Canal Ring",
       "country": "Netherlands",
@@ -2170,6 +3846,55 @@
       }
     },
     {
+      "id": "nl-aviodrome",
+      "name": "Aviodrome",
+      "country": "Netherlands",
+      "region": "Flevoland",
+      "lat": 52.4582,
+      "lng": 5.5308,
+      "type": "Transport & infrastructure",
+      "setting": "Aviation museum and heritage hangars at Lelystad Airport with historic aircraft including a DC-2, DC-3 and Fokker airliners on static and taxiway display.",
+      "source_urls": [
+        "https://www.aviodrome.nl/"
+      ],
+      "official_url": "https://www.aviodrome.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-bataviawerf",
+      "name": "Bataviawerf (Batavialand)",
+      "country": "Netherlands",
+      "region": "Flevoland",
+      "lat": 52.5224,
+      "lng": 5.4365,
+      "type": "Industrial & derelict",
+      "setting": "Working historic shipyard in Lelystad building full-size replica VOC ships beside a reconstructed seventeenth-century harbour, sail loft and rigging sheds.",
+      "suitability": "Small shoots (up to 4 people) allowed during opening hours with 2 working days notice; larger productions get exclusive access outside opening hours with 10 working days notice",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.batavialand.nl/",
+        "https://www.batavialand.nl/over-batavialand/unieke-foto-en-filmlocatie-locatie-in-flevoland/"
+      ],
+      "url": "https://www.batavialand.nl/over-batavialand/unieke-foto-en-filmlocatie-locatie-in-flevoland/",
+      "official_url": "https://www.batavialand.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-blokhuispoort",
+      "name": "Blokhuispoort",
+      "country": "Netherlands",
+      "region": "Friesland",
+      "lat": 53.1998,
+      "lng": 5.801,
+      "type": "Hospital, prison & institution",
+      "setting": "Former nineteenth-century prison in Leeuwarden with a star-shaped cell wing, converted into a cultural venue with a library, hostel and workspaces.",
+      "source_urls": [
+        "https://www.blokhuispoort.nl/"
+      ],
+      "official_url": "https://www.blokhuispoort.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "erasmusbrug",
       "name": "Erasmusbrug",
       "country": "Netherlands",
@@ -2187,6 +3912,233 @@
         "author": "Martin Falbisoner",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-euromast",
+      "name": "Euromast",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9054,
+      "lng": 4.4666,
+      "type": "City & skyline",
+      "setting": "185-metre observation tower beside Rotterdam's Park, with a rotating Euroscoop deck near the top giving a panoramic view over the city and harbour.",
+      "source_urls": [
+        "https://www.euromast.nl/"
+      ],
+      "official_url": "https://www.euromast.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-fort-bij-vechten",
+      "name": "Fort bij Vechten",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0585,
+      "lng": 5.1675,
+      "type": "Industrial & derelict",
+      "setting": "Nineteenth-century fortress of the New Dutch Waterline near Bunnik, with brick casemates, powder magazines and grass-covered ramparts around a moat.",
+      "source_urls": [
+        "https://www.fortvechten.nl/"
+      ],
+      "official_url": "https://www.fortvechten.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-forum-groningen",
+      "name": "Forum Groningen",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2189,
+      "lng": 6.5703,
+      "type": "Office, school & public building",
+      "setting": "Contemporary multi-storey public library and culture building on Groningen's Grote Markt, with a rooftop terrace, cinema and stacked glass atria.",
+      "source_urls": [
+        "https://www.forum.nl/"
+      ],
+      "official_url": "https://www.forum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-giethoorn",
+      "name": "Giethoorn",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.7389,
+      "lng": 6.0781,
+      "type": "Village & countryside",
+      "setting": "Car-free village of thatched farmhouses linked by canals, footbridges and punting boats in the Overijssel peatlands, part of the Weerribben-Wieden wetland.",
+      "known_for": "Fanfare (1958)",
+      "source_urls": [
+        "https://www.giethoorntourism.com/",
+        "https://en.wikipedia.org/wiki/Giethoorn"
+      ],
+      "official_url": "https://www.giethoorntourism.com/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-hoge-veluwe",
+      "name": "Hoge Veluwe National Park",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 52.0975,
+      "lng": 5.8264,
+      "type": "Forest & lake",
+      "setting": "A 5,400-hectare national park of drift sand, heathland and pine forest on the Veluwe, home to the Kroller-Muller Museum and free-roaming red deer and wild boar.",
+      "source_urls": [
+        "https://www.hogeveluwe.nl/"
+      ],
+      "official_url": "https://www.hogeveluwe.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-johan-cruijff-arena",
+      "name": "Johan Cruijff ArenA",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.3144,
+      "lng": 4.9428,
+      "type": "Theatre, arena & venue",
+      "setting": "55,000-seat retractable-roof stadium in Amsterdam Zuidoost, home to Ajax, with a bowl of tiered stands usable for matches, concerts and productions.",
+      "source_urls": [
+        "https://www.johancruijffarena.nl/"
+      ],
+      "official_url": "https://www.johancruijffarena.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-kinderdijk",
+      "name": "Kinderdijk",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.8825,
+      "lng": 4.6317,
+      "type": "Village & countryside",
+      "setting": "UNESCO World Heritage polder landscape south-east of Rotterdam with nineteen eighteenth-century windmills lined along parallel waterways.",
+      "source_urls": [
+        "https://www.kinderdijk.com/"
+      ],
+      "official_url": "https://www.kinderdijk.com/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-kruisherenhotel",
+      "name": "Kruisherenhotel Maastricht",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8487,
+      "lng": 5.6838,
+      "type": "Hotel & interiors",
+      "setting": "Fifteenth-century Gothic monastery church and cloister in Maastricht converted into a design hotel, keeping vaulted ceilings, stained glass and a choir loft.",
+      "source_urls": [
+        "https://www.oostwegelcollection.nl/kruisherenhotel-maastricht/"
+      ],
+      "official_url": "https://www.oostwegelcollection.nl/kruisherenhotel-maastricht/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-kurhaus",
+      "name": "Kurhaus Den Haag",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 52.1132,
+      "lng": 4.2816,
+      "type": "Hotel & interiors",
+      "setting": "Grand 1885 beachfront hotel at Scheveningen with a domed Kurzaal ballroom of murals and chandeliers, and terraces facing the North Sea promenade.",
+      "source_urls": [
+        "https://www.kurhaus.nl/"
+      ],
+      "official_url": "https://www.kurhaus.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-lloyd-hotel",
+      "name": "Lloyd Hotel",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.3742,
+      "lng": 4.9347,
+      "type": "Hotel & interiors",
+      "setting": "Former 1921 emigrant hotel on Amsterdam's eastern docklands, rebuilt with room categories from one to five stars mixing Art Deco and contemporary interiors.",
+      "source_urls": [
+        "http://www.lloydhotel.com/"
+      ],
+      "official_url": "http://www.lloydhotel.com/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-loonse-en-drunense-duinen",
+      "name": "Loonse en Drunense Duinen",
+      "country": "Netherlands",
+      "region": "North Brabant",
+      "lat": 51.6527,
+      "lng": 5.1318,
+      "type": "Mountains & wilderness",
+      "setting": "Inland drift-sand dune area of around 2,000 hectares between Tilburg and 's-Hertogenbosch, with open sand plains, marram grass and pine forest edges.",
+      "source_urls": [
+        "https://www.natuurmonumenten.nl/natuurgebieden/loonse-en-drunense-duinen"
+      ],
+      "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/loonse-en-drunense-duinen",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-louis-hartlooper-complex",
+      "name": "Louis Hartlooper Complex",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0894,
+      "lng": 5.1256,
+      "type": "Theatre, arena & venue",
+      "setting": "Former 1921 courthouse in Utrecht converted into an arthouse cinema and cafe, with a wood-panelled former courtroom now used as a screening room.",
+      "source_urls": [
+        "https://www.louishartloopercomplex.nl/"
+      ],
+      "official_url": "https://www.louishartloopercomplex.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-maeslantkering",
+      "name": "Maeslantkering / Keringhuis",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9568,
+      "lng": 4.167,
+      "type": "Transport & infrastructure",
+      "setting": "Giant swinging steel storm surge barrier at Hoek van Holland guarding the Nieuwe Waterweg, each of its two arms as long as the Eiffel Tower is high.",
+      "source_urls": [
+        "https://www.keringhuis.nl/"
+      ],
+      "official_url": "https://www.keringhuis.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-manteling-van-walcheren",
+      "name": "Manteling van Walcheren",
+      "country": "Netherlands",
+      "region": "Zeeland",
+      "lat": 51.5796,
+      "lng": 3.5627,
+      "type": "Coast & beach",
+      "setting": "Dune woodland and beach reserve on the Walcheren coast near Domburg and Oostkapelle, combining old estate woods with open dunes and North Sea beach.",
+      "source_urls": [
+        "https://www.natuurmonumenten.nl/natuurgebieden/manteling-van-walcheren"
+      ],
+      "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/manteling-van-walcheren",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-markthal",
+      "name": "Markthal Rotterdam",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9201,
+      "lng": 4.487,
+      "type": "Bar, restaurant & shop",
+      "setting": "Arched 2014 market hall in Rotterdam with a horseshoe of apartments wrapped around a food market floor of stalls, restaurants and a barrel-vaulted ceiling mural.",
+      "source_urls": [
+        "https://www.markthal.nl/"
+      ],
+      "official_url": "https://www.markthal.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "media-park-hilversum",
@@ -2214,6 +4166,341 @@
         "author": "Dick van Aggelen",
         "license": "CC0"
       }
+    },
+    {
+      "id": "nl-museum-buurtspoorweg",
+      "name": "Museum Buurtspoorweg",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.1517,
+      "lng": 6.7439,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage narrow-gauge railway between Haaksbergen and Boekelo near the German border, with early twentieth-century steam trains and a period station building.",
+      "source_urls": [
+        "https://www.museumbuurtspoorweg.nl/"
+      ],
+      "official_url": "https://www.museumbuurtspoorweg.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-museumstoomtram-hoorn-medemblik",
+      "name": "Museum Steam Tram Hoorn-Medemblik",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.6425,
+      "lng": 5.0597,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage steam railway running 20 kilometres between Hoorn and Medemblik, with restored period carriages, a working locomotive shed and historic stations.",
+      "source_urls": [
+        "https://www.stoomtram.nl/"
+      ],
+      "official_url": "https://www.stoomtram.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-ndsm-werf",
+      "name": "NDSM Wharf",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.4004,
+      "lng": 4.893,
+      "type": "Industrial & derelict",
+      "setting": "Former shipyard on the IJ in Amsterdam-Noord with a vast former assembly hall, dry docks and cranes, now used for events and creative work.",
+      "source_urls": [
+        "https://www.ndsm.nl/"
+      ],
+      "official_url": "https://www.ndsm.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-nemo-science-museum",
+      "name": "NEMO Science Museum",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.3738,
+      "lng": 4.9124,
+      "type": "Office, school & public building",
+      "setting": "Renzo Piano-designed green, ship-shaped science museum rising from the water at Amsterdam's Oosterdok, with a sloped public roof terrace and open exhibition floors.",
+      "source_urls": [
+        "https://www.nemosciencemuseum.nl/"
+      ],
+      "official_url": "https://www.nemosciencemuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-openluchtmuseum",
+      "name": "Netherlands Open Air Museum",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 52.0107,
+      "lng": 5.9107,
+      "type": "Village & countryside",
+      "setting": "Open-air heritage museum near Arnhem with more than 80 relocated historic Dutch buildings, farmhouses and windmills arranged as period villages around a working canal.",
+      "source_urls": [
+        "https://www.openluchtmuseum.nl/"
+      ],
+      "official_url": "https://www.openluchtmuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-neeltje-jans-oosterscheldekering",
+      "name": "Oosterscheldekering / Neeltje Jans",
+      "country": "Netherlands",
+      "region": "Zeeland",
+      "lat": 51.6403,
+      "lng": 3.6997,
+      "type": "Transport & infrastructure",
+      "setting": "Nine-kilometre storm surge barrier across the Oosterschelde estuary with 62 movable steel gates on concrete piers, its visitor centre on the artificial island of Neeltje Jans.",
+      "source_urls": [
+        "https://www.neeltjejans.nl/"
+      ],
+      "official_url": "https://www.neeltjejans.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-tuschinski",
+      "name": "Pathe Tuschinski",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.3665,
+      "lng": 4.8947,
+      "type": "Theatre, arena & venue",
+      "setting": "1921 Art Deco and Amsterdam School cinema on the Reguliersbreestraat, with an ornate auditorium, stained glass, mosaics and a sweeping foyer staircase.",
+      "source_urls": [
+        "https://www.pathe.nl/bioscoop/tuschinski"
+      ],
+      "official_url": "https://www.pathe.nl/bioscoop/tuschinski",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-philips-stadion",
+      "name": "Philips Stadion",
+      "country": "Netherlands",
+      "region": "North Brabant",
+      "lat": 51.4417,
+      "lng": 5.4674,
+      "type": "Theatre, arena & venue",
+      "setting": "35,000-seat home stadium of PSV in Eindhoven, with four continuous tiers of covered seating around the pitch.",
+      "source_urls": [
+        "https://www.psv.nl/"
+      ],
+      "official_url": "https://www.psv.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-radio-kootwijk",
+      "name": "Radio Kootwijk",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 52.1764,
+      "lng": 5.8325,
+      "type": "Industrial & derelict",
+      "setting": "Isolated 1920s Expressionist transmitter hall on the Veluwe heathland, a monumental concrete radio station known as Building A, now used for events and productions.",
+      "known_for": "Mindhunters (2004)",
+      "source_urls": [
+        "https://www.staatsbosbeheer.nl/uit-in-de-natuur/locaties/radio-kootwijk",
+        "https://en.wikipedia.org/wiki/Radio_Kootwijk"
+      ],
+      "official_url": "https://www.staatsbosbeheer.nl/uit-in-de-natuur/locaties/radio-kootwijk",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-rietveld-schroderhuis",
+      "name": "Rietveld Schroder House",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0853,
+      "lng": 5.1476,
+      "type": "House & apartment",
+      "setting": "UNESCO-listed 1924 De Stijl house in Utrecht by Gerrit Rietveld, with sliding partition walls, primary-colour accents and a flexible open first floor.",
+      "source_urls": [
+        "https://www.rietveldschroderhuis.nl/"
+      ],
+      "official_url": "https://www.rietveldschroderhuis.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-sint-pietersberg-enci",
+      "name": "Sint-Pietersberg / ENCI Quarry",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8264,
+      "lng": 5.6875,
+      "type": "Industrial & derelict",
+      "setting": "Former limestone quarry on the southern edge of Maastricht, now a reclaimed nature area of white marl cliffs, terraces and a lake beside the old cement works.",
+      "source_urls": [
+        "https://www.natuurmonumenten.nl/natuurgebieden/sint-pietersberg-enci-groeve"
+      ],
+      "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/sint-pietersberg-enci-groeve",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-huis-sonneveld",
+      "name": "Sonneveld House",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9241,
+      "lng": 4.4658,
+      "type": "House & apartment",
+      "setting": "Fully furnished 1933 Nieuwe Bouwen villa in Rotterdam with period Functionalist interiors, tubular steel furniture and built-in fittings kept intact.",
+      "source_urls": [
+        "https://www.huissonneveld.nl/"
+      ],
+      "official_url": "https://www.huissonneveld.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-ss-rotterdam",
+      "name": "SS Rotterdam",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9022,
+      "lng": 4.4881,
+      "type": "Transport & infrastructure",
+      "setting": "1959 ocean liner of the Holland America Line permanently moored in Rotterdam, kept with original Art Deco and mid-century interiors, now a hotel and museum ship.",
+      "source_urls": [
+        "https://www.ssrotterdam.nl/"
+      ],
+      "official_url": "https://www.ssrotterdam.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-strijp-s",
+      "name": "Strijp-S",
+      "country": "Netherlands",
+      "region": "North Brabant",
+      "lat": 51.4466,
+      "lng": 5.4577,
+      "type": "Industrial & derelict",
+      "setting": "Former closed Philips factory campus in Eindhoven redeveloped into a creative district of brick industrial halls, courtyards and new residential towers.",
+      "source_urls": [
+        "https://www.strijp-s.nl/"
+      ],
+      "official_url": "https://www.strijp-s.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-thialf",
+      "name": "Thialf",
+      "country": "Netherlands",
+      "region": "Friesland",
+      "lat": 52.939,
+      "lng": 5.9424,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor 400-metre speed skating arena in Heerenveen with tiered seating for around 12,500 spectators, also used for concerts and events on the ice floor.",
+      "source_urls": [
+        "https://www.thialf.nl/"
+      ],
+      "official_url": "https://www.thialf.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-van-nelle-fabriek",
+      "name": "Van Nelle Factory",
+      "country": "Netherlands",
+      "region": "South Holland",
+      "lat": 51.9228,
+      "lng": 4.4336,
+      "type": "Industrial & derelict",
+      "setting": "UNESCO-listed 1931 factory in Rotterdam built for processing coffee, tea and tobacco, with steel-framed glass curtain walls and an elevated conveyor bridge.",
+      "source_urls": [
+        "http://www.van-nelle-fabriek.com",
+        "https://en.wikipedia.org/wiki/Van_Nelle_Factory"
+      ],
+      "official_url": "http://www.van-nelle-fabriek.com",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-gevangenismuseum-veenhuizen",
+      "name": "Veenhuizen Prison Museum",
+      "country": "Netherlands",
+      "region": "Drenthe",
+      "lat": 53.0413,
+      "lng": 6.3903,
+      "type": "Hospital, prison & institution",
+      "setting": "Former nineteenth-century penal colony building in Veenhuizen, part of the UNESCO Colonies of Benevolence, with cell blocks, courtyards and institutional corridors.",
+      "source_urls": [
+        "https://www.gevangenismuseum.nl/"
+      ],
+      "official_url": "https://www.gevangenismuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-vsm-veluwe",
+      "name": "Veluwsche Stoomtrein Maatschappij",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 52.16,
+      "lng": 5.9867,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage steam and diesel railway between Apeldoorn and Dieren through Veluwe forest, with a restored 1887 station and period rolling stock at Beekbergen.",
+      "source_urls": [
+        "https://www.vsm.nl/"
+      ],
+      "official_url": "https://www.vsm.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-westergasfabriek",
+      "name": "Westergasfabriek",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.3866,
+      "lng": 4.871,
+      "type": "Industrial & derelict",
+      "setting": "Former nineteenth-century coal gasworks in Amsterdam converted into an events site with several brick halls, a cobbled courtyard and a surrounding park.",
+      "source_urls": [
+        "https://www.westergasfabriek.nl/"
+      ],
+      "official_url": "https://www.westergasfabriek.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-wilhelminabrug-deventer",
+      "name": "Wilhelminabrug",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.2489,
+      "lng": 6.1578,
+      "type": "Transport & infrastructure",
+      "setting": "Steel arch road bridge over the IJssel at Deventer, used as the stand-in Arnhem bridge for the 1977 film A Bridge Too Far because the real bridge's surroundings had changed too much.",
+      "known_for": "A Bridge Too Far (1977)",
+      "source_urls": [
+        "https://www.deventer.nl/",
+        "https://nl.wikipedia.org/wiki/Wilhelminabrug_(Deventer)"
+      ],
+      "official_url": "https://www.deventer.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-zonnestraal",
+      "name": "Zonnestraal Sanatorium",
+      "country": "Netherlands",
+      "region": "North Holland",
+      "lat": 52.2021,
+      "lng": 5.1543,
+      "type": "Hospital, prison & institution",
+      "setting": "Modernist 1928 former tuberculosis sanatorium near Hilversum by architect Jan Duiker, with steel-framed pavilions, large glass walls and a wooded park setting.",
+      "source_urls": [
+        "https://www.zonnestraal.org/"
+      ],
+      "official_url": "https://www.zonnestraal.org/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-zlsm",
+      "name": "Zuid-Limburgse Stoomtrein Maatschappij",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.856,
+      "lng": 5.8715,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage steam railway through the South Limburg hills between Simpelveld, Kerkrade and Vetschau, with vintage carriages and period station buildings.",
+      "source_urls": [
+        "https://www.zlsm.nl/"
+      ],
+      "official_url": "https://www.zlsm.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "atlantic-ocean-road",
@@ -3436,6 +5723,52 @@
       "commission_url": "https://www.bifilmcommission.com/locations/"
     },
     {
+      "id": "se-abisko-national-park",
+      "name": "Abisko National Park",
+      "country": "Sweden",
+      "region": "Norrbotten (Norrland)",
+      "lat": 68.3538,
+      "lng": 18.7869,
+      "type": "Mountains & wilderness",
+      "setting": "National park in Swedish Lapland around Lake Tornetrask, with birch forest, mountain heath, the Abisko canyon and a mountain station used as a base for hiking and aurora viewing.",
+      "source_urls": [
+        "https://sverigesnationalparker.se/park/abisko-nationalpark/"
+      ],
+      "official_url": "https://sverigesnationalparker.se/park/abisko-nationalpark/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-dalhalla",
+      "name": "Dalhalla",
+      "country": "Sweden",
+      "region": "Dalarna",
+      "lat": 61.0084,
+      "lng": 15.0172,
+      "type": "Theatre, arena & venue",
+      "setting": "Open-air amphitheatre built into a flooded former limestone quarry near Rattvik in Dalarna, with a stage, restaurant and glamping accommodation beside the water.",
+      "facilities": "Restaurant, glamping tents, transfer buses for events",
+      "source_urls": [
+        "https://www.dalhalla.se/en/"
+      ],
+      "official_url": "https://www.dalhalla.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-falu-gruva",
+      "name": "Falu Gruva (Falun Mine)",
+      "country": "Sweden",
+      "region": "Dalarna",
+      "lat": 60.607,
+      "lng": 15.621,
+      "type": "Industrial & derelict",
+      "setting": "UNESCO-listed copper mine in Falun, Dalarna, with underground tour routes, a mine museum, historic miners' cottages and a large open pit.",
+      "source_urls": [
+        "https://falugruva.se/en/"
+      ],
+      "official_url": "https://falugruva.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
       "id": "faro-island",
       "name": "Fårö",
       "country": "Sweden",
@@ -3480,6 +5813,175 @@
         "author": "User Tubaist on sv.wikipedia",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "se-icehotel",
+      "name": "Icehotel",
+      "country": "Sweden",
+      "region": "Norrbotten (Norrland)",
+      "lat": 67.8557,
+      "lng": 20.5942,
+      "type": "Hotel & interiors",
+      "setting": "Hotel rebuilt each winter from ice and snow from the Torne River in Jukkasjarvi, Swedish Lapland, alongside a year-round warm wing, with conference and wedding facilities.",
+      "facilities": "Conference and events facilities, weddings program",
+      "source_urls": [
+        "https://www.icehotel.com/"
+      ],
+      "official_url": "https://www.icehotel.com/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-kulturhuset-stadsteatern",
+      "name": "Kulturhuset Stadsteatern",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3324,
+      "lng": 18.0649,
+      "type": "Theatre, arena & venue",
+      "setting": "Culture house and municipal theatre on Sergels torg in central Stockholm, with several stages, exhibition halls, a library and rooms available for hire.",
+      "source_urls": [
+        "https://kulturhusetstadsteatern.se/"
+      ],
+      "official_url": "https://kulturhusetstadsteatern.se/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-langholmen",
+      "name": "Langholmen",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3186,
+      "lng": 18.0263,
+      "type": "Hospital, prison & institution",
+      "setting": "Former state prison on a small island in central Stockholm, closed in 1975 and converted into a hotel, hostel and restaurant that keeps its original cell wings.",
+      "facilities": "Hotel, hostel, restaurant and conference rooms in former cell wings",
+      "source_urls": [
+        "https://www.langholmen.com/en/"
+      ],
+      "official_url": "https://www.langholmen.com/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-lindholmen",
+      "name": "Lindholmen",
+      "country": "Sweden",
+      "region": "Vastra Gotaland (Gothenburg)",
+      "lat": 57.7075,
+      "lng": 11.9385,
+      "type": "Industrial & derelict",
+      "setting": "Former shipyard peninsula in Gothenburg redeveloped since the 1990s into a science park of offices, test beds and studios jointly run by the city and industry.",
+      "source_urls": [
+        "https://www.lindholmen.se/en"
+      ],
+      "official_url": "https://www.lindholmen.se/en",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-liseberg",
+      "name": "Liseberg",
+      "country": "Sweden",
+      "region": "Vastra Gotaland (Gothenburg)",
+      "lat": 57.6942,
+      "lng": 11.993,
+      "type": "Theatre, arena & venue",
+      "setting": "Amusement park in central Gothenburg with rides, stages and gardens, plus on-site hotels and dedicated conference and event spaces for hire.",
+      "facilities": "Conference spaces at the park, Lisebergsbyn and Grand Curiosa Hotel",
+      "source_urls": [
+        "https://www.liseberg.se/en/"
+      ],
+      "official_url": "https://www.liseberg.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-malmo-live",
+      "name": "Malmo Live",
+      "country": "Sweden",
+      "region": "Skane (Malmo)",
+      "lat": 55.6098,
+      "lng": 12.9976,
+      "type": "Theatre, arena & venue",
+      "setting": "Concert hall and congress centre in Malmo, home to the Malmo Symphony Orchestra, with a main concert hall and several smaller performance spaces.",
+      "source_urls": [
+        "https://www.malmolive.se/en/"
+      ],
+      "official_url": "https://www.malmolive.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-royal-swedish-opera",
+      "name": "Royal Swedish Opera",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3298,
+      "lng": 18.07,
+      "type": "Theatre, arena & venue",
+      "setting": "National opera and ballet house on Gustav Adolfs torg in Stockholm, founded in 1773, with a 19th-century auditorium due for renovation from 2027.",
+      "source_urls": [
+        "https://www.operan.se/en/"
+      ],
+      "official_url": "https://www.operan.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-skansen",
+      "name": "Skansen",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3253,
+      "lng": 18.1036,
+      "type": "Village & countryside",
+      "setting": "Open-air museum on Djurgarden in Stockholm, the oldest of its kind in the world, with about 190 historic buildings relocated from across Sweden plus a zoo.",
+      "facilities": "Business bookings and bookable group experiences",
+      "source_urls": [
+        "https://www.skansen.se/en/"
+      ],
+      "official_url": "https://www.skansen.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-universeum",
+      "name": "Universeum",
+      "country": "Sweden",
+      "region": "Vastra Gotaland (Gothenburg)",
+      "lat": 57.6947,
+      "lng": 11.9836,
+      "type": "Office, school & public building",
+      "setting": "Sweden's national science centre in Gothenburg, a ten-floor building with rainforest and ocean exhibits, a visualisation dome and dedicated event and conference spaces.",
+      "source_urls": [
+        "https://www.universeum.se/en/"
+      ],
+      "official_url": "https://www.universeum.se/en/",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-vasa-museum",
+      "name": "Vasa Museum",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.328,
+      "lng": 18.0913,
+      "type": "Office, school & public building",
+      "setting": "Maritime museum on Djurgarden in Stockholm built around the salvaged 17th-century warship Vasa, which sank on its maiden voyage in 1628.",
+      "source_urls": [
+        "https://www.vasamuseet.se/en"
+      ],
+      "official_url": "https://www.vasamuseet.se/en",
+      "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-visby",
+      "name": "Visby",
+      "country": "Sweden",
+      "region": "Gotland",
+      "lat": 57.6349,
+      "lng": 18.2948,
+      "type": "Historic town & street",
+      "setting": "Medieval walled town on Gotland and a UNESCO World Heritage site, with a 3.4 kilometre town wall, cobbled lanes and ruined medieval churches.",
+      "source_urls": [
+        "https://visitgotland.se/en/see-and-do/visby"
+      ],
+      "official_url": "https://visitgotland.se/en/see-and-do/visby",
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "ystad",
@@ -3546,6 +6048,21 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-barrowland-ballroom",
+      "name": "Barrowland Ballroom",
+      "country": "United Kingdom",
+      "region": "Glasgow, Scotland",
+      "lat": 55.8558,
+      "lng": -4.2337,
+      "type": "Theatre, arena & venue",
+      "setting": "Category B listed 1930s dance hall and live music venue in Glasgow's East End, with its original sprung floor and a neon sign facade on the Gallowgate.",
+      "source_urls": [
+        "https://glasgow-barrowland.com/"
+      ],
+      "official_url": "https://glasgow-barrowland.com/",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
       "id": "uk-battersea-power-station",
       "name": "Battersea Power Station",
       "country": "United Kingdom",
@@ -3561,6 +6078,82 @@
       ],
       "official_url": "https://batterseapowerstation.co.uk/",
       "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-beamish-museum",
+      "name": "Beamish Museum",
+      "country": "United Kingdom",
+      "region": "County Durham, North of England",
+      "lat": 54.8797,
+      "lng": -1.6398,
+      "type": "Historic town & street",
+      "setting": "Open-air museum in County Durham recreating a Georgian, Victorian and 1950s north-east England landscape with a working colliery, tramway, town street and farm.",
+      "source_urls": [
+        "https://www.beamish.org.uk/"
+      ],
+      "official_url": "https://www.beamish.org.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-belfast-city-hall",
+      "name": "Belfast City Hall",
+      "country": "United Kingdom",
+      "region": "Belfast, Northern Ireland",
+      "lat": 54.5964,
+      "lng": -5.9295,
+      "type": "Office, school & public building",
+      "setting": "Baroque Revival city hall of 1906 in central Belfast, with a domed rotunda, marble entrance hall, council chamber and banqueting hall.",
+      "source_urls": [
+        "https://www.belfastcity.gov.uk/cityhall"
+      ],
+      "official_url": "https://www.belfastcity.gov.uk/cityhall",
+      "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-belfast-harbour-studios",
+      "name": "Belfast Harbour Studios",
+      "country": "United Kingdom",
+      "region": "Belfast, Northern Ireland",
+      "lat": 54.6067,
+      "lng": -5.9027,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built film and television studio complex on Belfast's Queen's Island, including the former Paint Hall shipyard building converted into sound stages.",
+      "known_for": "Game of Thrones",
+      "source_urls": [
+        "https://www.belfastharbourstudios.com/"
+      ],
+      "official_url": "https://www.belfastharbourstudios.com/",
+      "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-big-pit",
+      "name": "Big Pit National Coal Museum",
+      "country": "United Kingdom",
+      "region": "Torfaen, Wales",
+      "lat": 51.7676,
+      "lng": -3.0813,
+      "type": "Industrial & derelict",
+      "setting": "Former working coal mine at Blaenavon in the South Wales valleys, part of a World Heritage industrial landscape, with pithead buildings and an underground tour.",
+      "source_urls": [
+        "https://museum.wales/bigpit/"
+      ],
+      "official_url": "https://museum.wales/bigpit/",
+      "commission_url": "https://www.creative.wales/filming-wales/locations"
+    },
+    {
+      "id": "uk-birmingham-hippodrome",
+      "name": "Birmingham Hippodrome",
+      "country": "United Kingdom",
+      "region": "West Midlands, Midlands",
+      "lat": 52.4763,
+      "lng": -1.8977,
+      "type": "Theatre, arena & venue",
+      "setting": "Edwardian theatre in Birmingham's Southside, a working proscenium arch auditorium with a fly tower, used for touring opera, ballet and musicals.",
+      "source_urls": [
+        "https://www.birminghamhippodrome.com/"
+      ],
+      "official_url": "https://www.birminghamhippodrome.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
     },
     {
       "id": "uk-bodleian-library",
@@ -3655,6 +6248,21 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-cains-brewery-village",
+      "name": "Cains Brewery Village",
+      "country": "United Kingdom",
+      "region": "Merseyside, North of England",
+      "lat": 53.391,
+      "lng": -2.978,
+      "type": "Industrial & derelict",
+      "setting": "Former Robert Cain brewery complex south of Liverpool city centre, its red brick industrial buildings and courtyards now let as event, retail and filming space.",
+      "source_urls": [
+        "https://www.cainsbreweryvillage.co.uk"
+      ],
+      "official_url": "https://www.cainsbreweryvillage.co.uk",
+      "commission_url": "https://www.liverpoolfilmoffice.tv/"
+    },
+    {
       "id": "uk-charlestown-harbour",
       "name": "Charlestown Harbour",
       "country": "United Kingdom",
@@ -3715,6 +6323,81 @@
       ],
       "official_url": "https://www.colnevalleyrailway.co.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-conwy-suspension-bridge",
+      "name": "Conwy Suspension Bridge",
+      "country": "United Kingdom",
+      "region": "Conwy, Wales",
+      "lat": 53.2798,
+      "lng": -3.828,
+      "type": "Transport & infrastructure",
+      "setting": "1826 Thomas Telford suspension bridge across the Conwy estuary in north Wales, beside Conwy Castle, with its original tollhouse kept furnished.",
+      "source_urls": [
+        "https://www.nationaltrust.org.uk/visit/wales/conwy-suspension-bridge"
+      ],
+      "official_url": "https://www.nationaltrust.org.uk/visit/wales/conwy-suspension-bridge",
+      "commission_url": "https://www.creative.wales/filming-wales/locations"
+    },
+    {
+      "id": "uk-coventry-transport-museum",
+      "name": "Coventry Transport Museum",
+      "country": "United Kingdom",
+      "region": "West Midlands, Midlands",
+      "lat": 52.4088,
+      "lng": -1.5108,
+      "type": "Transport & infrastructure",
+      "setting": "Museum in central Coventry holding one of the largest collections of British-made cars, motorcycles and bicycles, with large open display halls.",
+      "source_urls": [
+        "https://www.transport-museum.com/"
+      ],
+      "official_url": "https://www.transport-museum.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-crumlin-road-gaol",
+      "name": "Crumlin Road Gaol",
+      "country": "United Kingdom",
+      "region": "Belfast, Northern Ireland",
+      "lat": 54.6103,
+      "lng": -5.9385,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Victorian prison in north Belfast, closed in 1996, with its radial cell wings, a tunnel to the courthouse and an execution chamber preserved for tours and hire.",
+      "source_urls": [
+        "https://www.crumlinroadgaol.com/"
+      ],
+      "official_url": "https://www.crumlinroadgaol.com/",
+      "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-dean-clough",
+      "name": "Dean Clough",
+      "country": "United Kingdom",
+      "region": "West Yorkshire, North of England",
+      "lat": 53.7284,
+      "lng": -1.8643,
+      "type": "Industrial & derelict",
+      "setting": "Former Crossley's carpet mill complex in Halifax, a chain of Victorian stone mill buildings around courtyards now used as offices, galleries and studios.",
+      "source_urls": [
+        "https://www.deanclough.com"
+      ],
+      "official_url": "https://www.deanclough.com",
+      "commission_url": "https://screenyorkshire.co.uk/"
+    },
+    {
+      "id": "uk-digbeth-loc-studios",
+      "name": "Digbeth Loc. Studios",
+      "country": "United Kingdom",
+      "region": "West Midlands, Midlands",
+      "lat": 52.4746,
+      "lng": -1.8847,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built television and film studio complex in the Digbeth district of Birmingham with multiple sound stages and production offices.",
+      "source_urls": [
+        "https://digbethlocstudios.co.uk"
+      ],
+      "official_url": "https://digbethlocstudios.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
     },
     {
       "id": "uk-dyrham-park",
@@ -3867,6 +6550,36 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-ikon-gallery",
+      "name": "Ikon Gallery",
+      "country": "United Kingdom",
+      "region": "West Midlands, Midlands",
+      "lat": 52.4776,
+      "lng": -1.9107,
+      "type": "Office, school & public building",
+      "setting": "Contemporary art gallery in a restored Victorian board school building in Birmingham's Brindleyplace, with galleries, a tower and a public square outside.",
+      "source_urls": [
+        "https://www.ikon-gallery.org"
+      ],
+      "official_url": "https://www.ikon-gallery.org",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-kelvingrove",
+      "name": "Kelvingrove Art Gallery and Museum",
+      "country": "United Kingdom",
+      "region": "Glasgow, Scotland",
+      "lat": 55.8687,
+      "lng": -4.2907,
+      "type": "Office, school & public building",
+      "setting": "Red sandstone Edwardian museum and art gallery in Glasgow's West End, with an organ-fitted central hall, galleries and a park setting beside the River Kelvin.",
+      "source_urls": [
+        "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum"
+      ],
+      "official_url": "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
       "id": "uk-knole",
       "name": "Knole",
       "country": "United Kingdom",
@@ -3913,6 +6626,81 @@
       ],
       "official_url": "https://loseleypark.co.uk/filming/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-manchester-central",
+      "name": "Manchester Central Convention Complex",
+      "country": "United Kingdom",
+      "region": "Greater Manchester, North of England",
+      "lat": 53.4764,
+      "lng": -2.2471,
+      "type": "Theatre, arena & venue",
+      "setting": "Former Manchester Central railway station, a wrought iron and glass Victorian train shed converted into an exhibition and convention venue in the city centre.",
+      "source_urls": [
+        "https://www.manchestercentral.co.uk"
+      ],
+      "official_url": "https://www.manchestercentral.co.uk",
+      "commission_url": "https://www.marketingmanchester.com/screen-manchester"
+    },
+    {
+      "id": "uk-mitchell-library",
+      "name": "Mitchell Library",
+      "country": "United Kingdom",
+      "region": "Glasgow, Scotland",
+      "lat": 55.8664,
+      "lng": -4.2695,
+      "type": "Office, school & public building",
+      "setting": "Edwardian domed public reference library in Glasgow, one of Europe's largest, with a grand entrance hall, reading rooms and function spaces.",
+      "source_urls": [
+        "https://www.glasgowlife.org.uk/libraries/venues/the-mitchell-library"
+      ],
+      "official_url": "https://www.glasgowlife.org.uk/libraries/venues/the-mitchell-library",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
+      "id": "uk-ironbridge-gorge",
+      "name": "Museum of the Gorge, Ironbridge",
+      "country": "United Kingdom",
+      "region": "Shropshire, Midlands",
+      "lat": 52.6293,
+      "lng": -2.4936,
+      "type": "Industrial & derelict",
+      "setting": "Former riverside warehouse at Ironbridge, part of the Ironbridge Gorge World Heritage Site of 18th century ironworking remains along the River Severn.",
+      "source_urls": [
+        "https://www.ironbridge.org.uk"
+      ],
+      "official_url": "https://www.ironbridge.org.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-national-justice-museum",
+      "name": "National Justice Museum",
+      "country": "United Kingdom",
+      "region": "Nottinghamshire, Midlands",
+      "lat": 52.9521,
+      "lng": -1.1466,
+      "type": "Hospital, prison & institution",
+      "setting": "Former courthouse and prison in Nottingham's Lace Market, with Georgian courtrooms, Victorian cells and a medieval undercroft, now a museum of law and punishment.",
+      "source_urls": [
+        "https://www.nationaljusticemuseum.org.uk/"
+      ],
+      "official_url": "https://www.nationaljusticemuseum.org.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-national-railway-museum",
+      "name": "National Railway Museum",
+      "country": "United Kingdom",
+      "region": "North Yorkshire, North of England",
+      "lat": 53.9605,
+      "lng": -1.0961,
+      "type": "Transport & infrastructure",
+      "setting": "National collection of historic locomotives and rolling stock in York, housed in former railway engine sheds with large open halls and turntables.",
+      "source_urls": [
+        "https://www.railwaymuseum.org.uk/"
+      ],
+      "official_url": "https://www.railwaymuseum.org.uk/",
+      "commission_url": "https://screenyorkshire.co.uk/"
     },
     {
       "id": "uk-no1-royal-crescent",
@@ -3962,6 +6750,36 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-park-hill",
+      "name": "Park Hill",
+      "country": "United Kingdom",
+      "region": "South Yorkshire, North of England",
+      "lat": 53.38,
+      "lng": -1.4582,
+      "type": "House & apartment",
+      "setting": "Grade II* listed 1960s brutalist housing estate overlooking Sheffield city centre, its long deck-access blocks partly restored and partly awaiting refurbishment.",
+      "source_urls": [
+        "https://www.urbansplash.co.uk/regeneration/projects/park-hill"
+      ],
+      "official_url": "https://www.urbansplash.co.uk/regeneration/projects/park-hill",
+      "commission_url": "https://screenyorkshire.co.uk/"
+    },
+    {
+      "id": "uk-peterhead-prison-museum",
+      "name": "Peterhead Prison Museum",
+      "country": "United Kingdom",
+      "region": "Aberdeenshire, Scotland",
+      "lat": 57.5074,
+      "lng": -1.7857,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Scottish state prison at Peterhead, closed in 2013, with its original cell blocks, exercise yard and perimeter wall open as a museum.",
+      "source_urls": [
+        "https://www.peterheadprisonmuseum.com"
+      ],
+      "official_url": "https://www.peterheadprisonmuseum.com",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
       "id": "pinewood-studios",
       "name": "Pinewood Studios",
       "country": "United Kingdom",
@@ -3991,6 +6809,22 @@
       }
     },
     {
+      "id": "uk-portmeirion",
+      "name": "Portmeirion",
+      "country": "United Kingdom",
+      "region": "Gwynedd, Wales",
+      "lat": 52.9101,
+      "lng": -4.0972,
+      "type": "Village & countryside",
+      "setting": "Italianate village on the Gwynedd coast built by Clough Williams-Ellis between 1925 and 1975, with pastel-coloured buildings, a piazza and subtropical gardens.",
+      "known_for": "The Prisoner",
+      "source_urls": [
+        "https://www.portmeirion.wales/"
+      ],
+      "official_url": "https://www.portmeirion.wales/",
+      "commission_url": "https://www.creative.wales/filming-wales/locations"
+    },
+    {
       "id": "uk-portsmouth-historic-dockyard",
       "name": "Portsmouth Historic Dockyard",
       "country": "United Kingdom",
@@ -4004,6 +6838,37 @@
       ],
       "official_url": "https://www.historicdockyard.co.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-wrexham-racecourse-ground",
+      "name": "Racecourse Ground",
+      "country": "United Kingdom",
+      "region": "Wrexham, Wales",
+      "lat": 53.0486,
+      "lng": -3.0027,
+      "type": "Theatre, arena & venue",
+      "setting": "Football stadium in Wrexham, north Wales, one of the oldest international football grounds still in use, with stands close to the pitch on all four sides.",
+      "known_for": "Welcome to Wrexham",
+      "source_urls": [
+        "https://www.wrexhamafc.co.uk/"
+      ],
+      "official_url": "https://www.wrexhamafc.co.uk/",
+      "commission_url": "https://www.creative.wales/filming-wales/locations"
+    },
+    {
+      "id": "uk-ribblehead-viaduct",
+      "name": "Ribblehead Viaduct",
+      "country": "United Kingdom",
+      "region": "North Yorkshire, North of England",
+      "lat": 54.2102,
+      "lng": -2.3701,
+      "type": "Transport & infrastructure",
+      "setting": "24-arch stone railway viaduct carrying the Settle to Carlisle line across open moorland in the Yorkshire Dales.",
+      "source_urls": [
+        "https://www.settle-carlisle.co.uk/"
+      ],
+      "official_url": "https://www.settle-carlisle.co.uk/",
+      "commission_url": "https://screenyorkshire.co.uk/"
     },
     {
       "id": "uk-royal-albert-hall",
@@ -4036,6 +6901,36 @@
       ],
       "official_url": "https://www.royalholloway.ac.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-salts-mill",
+      "name": "Salts Mill",
+      "country": "United Kingdom",
+      "region": "West Yorkshire, North of England",
+      "lat": 53.8388,
+      "lng": -1.7873,
+      "type": "Industrial & derelict",
+      "setting": "Former Victorian textile mill in the Saltaire World Heritage village near Bradford, a vast stone and iron structure now used as galleries, shops and offices.",
+      "source_urls": [
+        "https://www.saltsmill.org.uk/"
+      ],
+      "official_url": "https://www.saltsmill.org.uk/",
+      "commission_url": "https://screenyorkshire.co.uk/"
+    },
+    {
+      "id": "uk-sec-centre",
+      "name": "SEC Centre",
+      "country": "United Kingdom",
+      "region": "Glasgow, Scotland",
+      "lat": 55.8636,
+      "lng": -4.2887,
+      "type": "Theatre, arena & venue",
+      "setting": "Exhibition and conference centre on the Clyde in Glasgow, alongside the SSE Hydro concert arena, with large column-free halls used for events and filming.",
+      "source_urls": [
+        "https://www.sec.co.uk/"
+      ],
+      "official_url": "https://www.sec.co.uk/",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-shepton-mallet-prison",
@@ -4115,6 +7010,51 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-ss-nomadic",
+      "name": "SS Nomadic",
+      "country": "United Kingdom",
+      "region": "Belfast, Northern Ireland",
+      "lat": 54.6067,
+      "lng": -5.9089,
+      "type": "Transport & infrastructure",
+      "setting": "Restored 1911 tender ship in Belfast's Hamilton Dock, the last remaining vessel of the White Star Line, moored beside Titanic Belfast as a museum ship.",
+      "source_urls": [
+        "https://titanicbelfast.com/explore/ss-nomadic/"
+      ],
+      "official_url": "https://titanicbelfast.com/explore/ss-nomadic/",
+      "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-st-georges-market-belfast",
+      "name": "St George's Market",
+      "country": "United Kingdom",
+      "region": "Belfast, Northern Ireland",
+      "lat": 54.5958,
+      "lng": -5.9245,
+      "type": "Bar, restaurant & shop",
+      "setting": "Late Victorian covered market hall in Belfast, a red brick and steel structure with market stalls, used for markets, events and filming when not trading.",
+      "source_urls": [
+        "https://www.belfastcity.gov.uk/stgeorgesmarket"
+      ],
+      "official_url": "https://www.belfastcity.gov.uk/stgeorgesmarket",
+      "commission_url": "https://northernirelandscreen.co.uk/"
+    },
+    {
+      "id": "uk-the-bluecoat",
+      "name": "The Bluecoat",
+      "country": "United Kingdom",
+      "region": "Merseyside, North of England",
+      "lat": 53.4041,
+      "lng": -2.9839,
+      "type": "Office, school & public building",
+      "setting": "Britain's oldest surviving purpose-built arts centre, a Grade I listed early Georgian charity school building in central Liverpool with galleries, a courtyard and function rooms.",
+      "source_urls": [
+        "https://www.thebluecoat.org.uk"
+      ],
+      "official_url": "https://www.thebluecoat.org.uk",
+      "commission_url": "https://www.liverpoolfilmoffice.tv/"
+    },
+    {
       "id": "uk-chatham-historic-dockyard",
       "name": "The Historic Dockyard Chatham",
       "country": "United Kingdom",
@@ -4146,6 +7086,21 @@
       "commission_url": "https://filmlondon.org.uk/"
     },
     {
+      "id": "uk-piece-hall",
+      "name": "The Piece Hall",
+      "country": "United Kingdom",
+      "region": "West Yorkshire, North of England",
+      "lat": 53.722,
+      "lng": -1.8576,
+      "type": "Bar, restaurant & shop",
+      "setting": "Grade I listed 18th century cloth hall in Halifax, a colonnaded stone quadrangle of former merchants' rooms around a large open square, now shops, bars and an events space.",
+      "source_urls": [
+        "https://www.thepiecehall.co.uk/"
+      ],
+      "official_url": "https://www.thepiecehall.co.uk/",
+      "commission_url": "https://screenyorkshire.co.uk/"
+    },
+    {
       "id": "uk-tank-museum-bovington",
       "name": "The Tank Museum",
       "country": "United Kingdom",
@@ -4159,6 +7114,21 @@
       ],
       "official_url": "https://www.tankmuseum.org/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-titan-crane",
+      "name": "Titan Crane",
+      "country": "United Kingdom",
+      "region": "West Dunbartonshire, Scotland",
+      "lat": 55.9013,
+      "lng": -4.4009,
+      "type": "Industrial & derelict",
+      "setting": "Cantilever giant crane of 1907 on the Clyde at Clydebank, the last structure standing from the former John Brown shipyard, with a visitor centre inside its base.",
+      "source_urls": [
+        "https://www.titanclydebank.com"
+      ],
+      "official_url": "https://www.titanclydebank.com",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-tower-bridge",
@@ -4176,6 +7146,21 @@
       ],
       "official_url": "https://www.towerbridge.org.uk/",
       "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-trades-hall-glasgow",
+      "name": "Trades Hall of Glasgow",
+      "country": "United Kingdom",
+      "region": "Glasgow, Scotland",
+      "lat": 55.8577,
+      "lng": -4.2451,
+      "type": "Office, school & public building",
+      "setting": "Robert Adam designed 18th century guild hall in central Glasgow, with a domed saloon and panelled function rooms still used by the city's trade incorporations.",
+      "source_urls": [
+        "https://www.tradeshallglasgow.co.uk"
+      ],
+      "official_url": "https://www.tradeshallglasgow.co.uk",
+      "commission_url": "https://www.screen.scot/"
     },
     {
       "id": "uk-trinity-buoy-wharf",
@@ -4206,6 +7191,66 @@
       ],
       "official_url": "https://twotempleplace.org/hire/filming/",
       "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-utilita-arena-birmingham",
+      "name": "Utilita Arena Birmingham",
+      "country": "United Kingdom",
+      "region": "West Midlands, Midlands",
+      "lat": 52.4839,
+      "lng": -1.9099,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor arena in central Birmingham seating several thousand, used for concerts, sport and other large events at the NEC Group's city centre site.",
+      "source_urls": [
+        "https://www.utilitaarenabham.co.uk"
+      ],
+      "official_url": "https://www.utilitaarenabham.co.uk",
+      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
+    },
+    {
+      "id": "uk-va-dundee",
+      "name": "V&A Dundee",
+      "country": "United Kingdom",
+      "region": "Dundee, Scotland",
+      "lat": 56.4595,
+      "lng": -2.9709,
+      "type": "Modern architecture",
+      "setting": "Waterfront design museum on the Dundee riverside with a stacked-stone exterior by architect Kengo Kuma, opened in 2018 beside the historic ship RRS Discovery.",
+      "source_urls": [
+        "https://www.vam.ac.uk/dundee"
+      ],
+      "official_url": "https://www.vam.ac.uk/dundee",
+      "commission_url": "https://www.screen.scot/"
+    },
+    {
+      "id": "uk-victoria-baths",
+      "name": "Victoria Baths",
+      "country": "United Kingdom",
+      "region": "Greater Manchester, North of England",
+      "lat": 53.4603,
+      "lng": -2.2164,
+      "type": "Theatre, arena & venue",
+      "setting": "Disused Edwardian public baths in Manchester with three original pools, a Turkish suite and stained glass, hired as a filming location since its closure in 1993.",
+      "source_urls": [
+        "https://victoriabaths.org.uk/"
+      ],
+      "official_url": "https://victoriabaths.org.uk/",
+      "commission_url": "https://www.marketingmanchester.com/screen-manchester"
+    },
+    {
+      "id": "uk-wales-millennium-centre",
+      "name": "Wales Millennium Centre",
+      "country": "United Kingdom",
+      "region": "Cardiff, Wales",
+      "lat": 51.4648,
+      "lng": -3.1633,
+      "type": "Theatre, arena & venue",
+      "setting": "Steel and slate clad performing arts centre on Cardiff Bay, with a main theatre, studio spaces and a bronze-lettered curved facade.",
+      "source_urls": [
+        "https://www.wmc.org.uk/"
+      ],
+      "official_url": "https://www.wmc.org.uk/",
+      "commission_url": "https://www.creative.wales/filming-wales/locations"
     },
     {
       "id": "uk-wiltons-music-hall",

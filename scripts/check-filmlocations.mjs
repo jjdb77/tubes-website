@@ -112,6 +112,11 @@ if (net) {
       if (URL_OK(u) && !urls.has(u)) urls.set(u, `${l.id} ${k}`);
     }
   }
+  // Sommige sites (Cloudflare e.d.) geven elk geautomatiseerd verzoek een 403,
+  // ook met een browser-User-Agent, terwijl ze in een browser gewoon werken.
+  // Die melden we apart, zodat een echte dode link opvalt.
+  const BOT_BLOCKED = ["northernirelandscreen.co.uk", "hants.gov.uk", "iwm.org.uk", "nationaltrust.org.uk", "english-heritage.org.uk"];
+  const blocked = (u) => BOT_BLOCKED.some((h) => u.includes(h));
   console.log(`checking ${urls.size} URLs...`);
   const list = [...urls.entries()];
   let idx = 0;
@@ -131,17 +136,20 @@ if (net) {
     }
     return 0;
   };
-  const results = [];
+  const results = [], softResults = [];
   const worker = async () => {
     while (idx < list.length) {
       const [u, tag] = list[idx++];
       const status = await one(u);
-      if (!(typeof status === "number" && status >= 200 && status < 400)) results.push(`${tag}: ${status} ${u}`);
+      if (typeof status === "number" && status >= 200 && status < 400) continue;
+      if (status === 403 && blocked(u)) { softResults.push(`${tag}: 403 (blocks bots, fine in a browser) ${u}`); continue; }
+      results.push(`${tag}: ${status} ${u}`);
     }
   };
   await Promise.all(Array.from({ length: 8 }, worker));
+  for (const r of softResults.sort()) console.log("note " + r);
   for (const r of results.sort()) console.log("URL " + r);
-  console.log(`${results.length} URL problems`);
+  console.log(`${results.length} URL problems, ${softResults.length} bot-blocked but fine`);
 }
 
 for (const w of warn) console.log("warn " + w);
