@@ -21,14 +21,6 @@ sections:
         link_label: Book your free Health Check
         text: |
           A free 45 minute review of how your production company handles budgets, actuals, forecasting, approvals and reporting. Practical findings and three concrete improvements, no sales pitch.
-      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Clapboard_%28191836749%29.jpeg/960px-Clapboard_%28191836749%29.jpeg
-        image_alt: "A blank clapperboard under studio lights"
-        image_credit: "Image: Thomas Marlowe (CC0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Clapboard_(191836749).jpeg)"
-        heading: Budget Builder
-        url: /tools/budget-builder/
-        link_label: Build a budget
-        text: |
-          Build a production budget online: start with a template, import an existing budget or start from scratch. Add your costs and the totals stay up to date. Download as Excel, CSV or PDF. No account needed.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meteora%27s_monastery_2.jpg/960px-Meteora%27s_monastery_2.jpg
         image_alt: "Meteora, Kalambaka, Thessaly: one of the locations in the guide"
         image_credit: "Photo: Stathis floros (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg)"

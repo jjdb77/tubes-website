@@ -9,6 +9,10 @@ permalink: /tools/budget-builder/
 # account-variant aanstaat, voor accounts en versies); server.js geeft
 # /tools/budget-builder/ daarom een CSP met connect-src 'self'.
 browser_only: true
+# Tijdelijk van de site gehaald (3-9-2026, verzoek Joachim): niet op /resources/,
+# niet in de footer, en noindex zodat hij ook uit sitemap en llms.txt blijft.
+# De URL blijft gewoon werken. Zie "Budget Builder" in CLAUDE.md om hem terug te zetten.
+noindex: true
 sections:
   - type: hero
     kicker: Free tool
