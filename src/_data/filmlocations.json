@@ -6893,6 +6893,22 @@
       }
     },
     {
+      "id": "gr-benaki-museum-piraeus",
+      "name": "Benaki Museum, Piraeus Street building",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9745,
+      "lng": 23.7086,
+      "type": "Office, school & public building",
+      "setting": "One of the Benaki Museum's Athens buildings, on Pireos street in the Rouf district, used for exhibitions and events and listed as a modern Greece filming location by the Hellenic Film Commission.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/benaki-museum/"
+      ],
+      "url": "https://filmcommission.gr/locations/benaki-museum/",
+      "official_url": "https://filmcommission.gr/locations/benaki-museum/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-chania-old-town",
       "name": "Chania Old Town",
       "country": "Greece",
@@ -6906,6 +6922,22 @@
       ],
       "official_url": "https://www.chania.gr/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-city-link-athens",
+      "name": "City Link",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9773,
+      "lng": 23.7346,
+      "type": "Bar, restaurant & shop",
+      "setting": "A shopping, dining and entertainment complex in central Athens near Panepistimiou street, listed as a modern Greece filming location by the Hellenic Film Commission.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/city-link/"
+      ],
+      "url": "https://filmcommission.gr/locations/city-link/",
+      "official_url": "https://filmcommission.gr/locations/city-link/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-corfu-old-town",
@@ -6968,6 +7000,22 @@
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
+      "id": "gr-karystos",
+      "name": "Karystos",
+      "country": "Greece",
+      "region": "Central Greece",
+      "lat": 38.0137,
+      "lng": 24.4192,
+      "type": "Historic town & street",
+      "setting": "A harbour town on the southern coast of Evia below Mount Ochi, documented as a filming location in the Hellenic Film Commission's catalogue.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/karistos-evia/"
+      ],
+      "url": "https://filmcommission.gr/locations/karistos-evia/",
+      "official_url": "https://filmcommission.gr/locations/karistos-evia/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-lavrio-technological-cultural-park",
       "name": "Lavrio Technological and Cultural Park",
       "country": "Greece",
@@ -6981,6 +7029,22 @@
       ],
       "official_url": "http://www.ltp.ntua.gr/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-linoperamata-power-plant",
+      "name": "Linoperamata Power Plant",
+      "country": "Greece",
+      "region": "Crete",
+      "lat": 35.3412,
+      "lng": 25.0518,
+      "type": "Industrial & derelict",
+      "setting": "A public power station on the coast west of Heraklion, listed as an industrial landscape filming location by the Hellenic Film Commission.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/power-plant-linoperamata/"
+      ],
+      "url": "https://filmcommission.gr/locations/power-plant-linoperamata/",
+      "official_url": "https://filmcommission.gr/locations/power-plant-linoperamata/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-megaron-athens-concert-hall",
@@ -7191,6 +7255,23 @@
         "author": "Ggia",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "gr-thessaloniki-city-hall",
+      "name": "Thessaloniki City Hall",
+      "country": "Greece",
+      "region": "Central Macedonia",
+      "lat": 40.6235,
+      "lng": 22.9539,
+      "type": "Office, school & public building",
+      "setting": "The seat of the Thessaloniki municipal government on Vasileos Georgiou Square, listed as a modern architecture filming location by the Hellenic Film Commission.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/city-hall-of-thessaloniki/",
+        "https://www.thessaloniki.gr"
+      ],
+      "url": "https://filmcommission.gr/locations/city-hall-of-thessaloniki/",
+      "official_url": "https://www.thessaloniki.gr",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-vikos-gorge",
@@ -12456,6 +12537,21 @@
       }
     },
     {
+      "id": "pl-kul-lublin",
+      "name": "Catholic University of Lublin (KUL)",
+      "country": "Poland",
+      "region": "Lublin Voivodeship",
+      "lat": 51.2478,
+      "lng": 22.5447,
+      "type": "Office, school & public building",
+      "setting": "A university in Lublin founded in 1918, with a historic main building on Aleje Raclawickie housing faculties, libraries and archives that include manuscripts by Adam Mickiewicz.",
+      "source_urls": [
+        "https://www.kul.pl"
+      ],
+      "official_url": "https://www.kul.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-cavatina-hall",
       "name": "Cavatina Hall",
       "country": "Poland",
@@ -12602,6 +12698,22 @@
       "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
+      "id": "pl-dawna-synagoga-zarki",
+      "name": "Former synagogue, Zarki (MGOK)",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.628,
+      "lng": 19.348,
+      "type": "Church & monastery",
+      "setting": "A 19th-century former synagogue in the small town of Zarki, now the municipal cultural centre (MGOK), with power, water and vehicle access offered for filming.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/dawna-synagoga-obecnie-mgok-w-zarkach"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/dawna-synagoga-obecnie-mgok-w-zarkach",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-gdansk-shipyard",
       "name": "Gdansk Shipyard (European Solidarity Centre)",
       "country": "Poland",
@@ -12686,6 +12798,38 @@
         "https://silesiafilmcommission.pl/location/budynek-dyrekcji-huty-batory"
       ],
       "official_url": "https://silesiafilmcommission.pl/location/budynek-dyrekcji-huty-batory",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-ice-krakow",
+      "name": "ICE Krakow Congress Centre",
+      "country": "Poland",
+      "region": "Lesser Poland Voivodeship",
+      "lat": 50.0489,
+      "lng": 19.9367,
+      "type": "Theatre, arena & venue",
+      "setting": "A congress centre on the Vistula riverbank in Krakow run by the city's development agency, with an auditorium hall, a theatre hall and a chamber hall used for conferences, concerts and theatrical productions.",
+      "logistics": "ul. Marii Konopnickiej 17, Krakow",
+      "source_urls": [
+        "https://icekrakow.pl"
+      ],
+      "official_url": "https://icekrakow.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-teatr-slowackiego-krakow",
+      "name": "Juliusz Slowacki Theatre",
+      "country": "Poland",
+      "region": "Lesser Poland Voivodeship",
+      "lat": 50.0639,
+      "lng": 19.9431,
+      "type": "Theatre, arena & venue",
+      "setting": "A late 19th-century municipal theatre on plac Swietego Ducha in Krakow, with an ornate main auditorium plus the smaller Dom Machin and MOS stages, offering building tours and venue hire.",
+      "source_urls": [
+        "https://teatrwkrakowie.pl",
+        "https://pl.wikipedia.org/wiki/Teatr_im._Juliusza_S%C5%82owackiego_w_Krakowie"
+      ],
+      "official_url": "https://teatrwkrakowie.pl",
       "commission_url": "https://pisf.pl"
     },
     {
@@ -12827,6 +12971,22 @@
       }
     },
     {
+      "id": "pl-mocak-krakow",
+      "name": "MOCAK Museum of Contemporary Art",
+      "country": "Poland",
+      "region": "Lesser Poland Voivodeship",
+      "lat": 50.0393,
+      "lng": 19.9558,
+      "type": "Industrial & derelict",
+      "setting": "A contemporary art museum in Krakow's Zablocie district, built into the former administrative building of the Oskar Schindler Enamel Factory, with galleries laid out through the historic industrial structure.",
+      "logistics": "ul. Lipowa 4, Krakow",
+      "source_urls": [
+        "https://mocak.pl"
+      ],
+      "official_url": "https://mocak.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-muzeum-emigracji-gdynia",
       "name": "Muzeum Emigracji (Emigration Museum)",
       "country": "Poland",
@@ -12873,6 +13033,21 @@
       ],
       "official_url": "https://muzeumkinematografii.pl",
       "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
+    },
+    {
+      "id": "pl-nfm-wroclaw",
+      "name": "National Forum of Music (NFM)",
+      "country": "Poland",
+      "region": "Lower Silesian Voivodeship",
+      "lat": 51.107,
+      "lng": 17.0264,
+      "type": "Theatre, arena & venue",
+      "setting": "A 2015 concert hall complex on plac Wolnosci in Wroclaw, run jointly by the city, the region and the ministry of culture, with a main hall plus red, black and chamber halls available to hire.",
+      "source_urls": [
+        "https://nfm.wroclaw.pl"
+      ],
+      "official_url": "https://nfm.wroclaw.pl",
+      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-nikiszowiec",
@@ -13059,6 +13234,22 @@
       "commission_url": "https://pfc.pisf.pl/"
     },
     {
+      "id": "pl-mtp-poznan",
+      "name": "Poznan International Fair (MTP)",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4036,
+      "lng": 16.9089,
+      "type": "Theatre, arena & venue",
+      "setting": "Poland's largest trade fair complex in central Poznan, dating from 1921, with 15 pavilions, a congress centre, banqueting spaces and an event plaza used for exhibitions and large-scale events.",
+      "facilities": "15 exhibition pavilions, congress centre, underground parking, on-site hotels and restaurants",
+      "source_urls": [
+        "https://www.mtp.pl"
+      ],
+      "official_url": "https://www.mtp.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-poznan-town-hall",
       "name": "Poznan Town Hall",
       "country": "Poland",
@@ -13139,6 +13330,22 @@
       "commission_url": "https://silesiafilm.com/"
     },
     {
+      "id": "pl-stary-browar-poznan",
+      "name": "Stary Browar",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4025,
+      "lng": 16.9285,
+      "type": "Industrial & derelict",
+      "setting": "A former brewery in central Poznan converted into a mixed retail, dining and contemporary art complex, with the original brick brewery buildings kept alongside new gallery and shopping spaces.",
+      "logistics": "ul. Polwiejska 42, Poznan",
+      "source_urls": [
+        "https://starybrowar5050.com"
+      ],
+      "official_url": "https://starybrowar5050.com",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-stary-szpital-zywiec",
       "name": "Stary Szpital w Żywcu (Old Hospital, Żywiec)",
       "country": "Poland",
@@ -13173,6 +13380,21 @@
       "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
+      "id": "pl-filharmonia-szczecin",
+      "name": "Szczecin Philharmonic",
+      "country": "Poland",
+      "region": "West Pomeranian Voivodeship",
+      "lat": 53.4292,
+      "lng": 14.558,
+      "type": "Theatre, arena & venue",
+      "setting": "An angular glass and white concrete concert hall in Szczecin, winner of the EU Mies van der Rohe architecture award, with a large symphonic hall plus smaller chamber and multimedia halls and a hall rental service.",
+      "source_urls": [
+        "https://filharmonia.szczecin.pl"
+      ],
+      "official_url": "https://filharmonia.szczecin.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-szkola-bierun",
       "name": "Szkoła Podstawowa w Bieruniu (Bieruń Primary School)",
       "country": "Poland",
@@ -13205,6 +13427,37 @@
       "url": "https://www.silesiafilmcommission.pl/location/kopalnia-cwiczebna",
       "official_url": "https://www.silesiafilmcommission.pl/location/kopalnia-cwiczebna",
       "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-teatr-muzyczny-gdynia",
+      "name": "Teatr Muzyczny im. Danuty Baduszkowej",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship",
+      "lat": 54.5166,
+      "lng": 18.5456,
+      "type": "Theatre, arena & venue",
+      "setting": "A musical theatre building on plac Grunwaldzki in Gdynia with the largest musical stage in Poland alongside a new stage and a chamber stage, staging large scale musical productions.",
+      "source_urls": [
+        "https://muzyczny.org"
+      ],
+      "official_url": "https://muzyczny.org",
+      "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-twierdza-boyen-gizycko",
+      "name": "Twierdza Boyen (Boyen Fortress)",
+      "country": "Poland",
+      "region": "Warmian-Masurian Voivodeship",
+      "lat": 54.0321,
+      "lng": 21.748,
+      "type": "Hospital, prison & institution",
+      "setting": "A 19th-century Prussian fortress in Gizycko with ramparts, a parade ground, a powder laboratory and an armourer's workshop, hosting reenactments, festivals and light shows on its central majdan.",
+      "logistics": "ul. Turystyczna 1, Gizycko",
+      "source_urls": [
+        "https://twierdza.gizycko.pl"
+      ],
+      "official_url": "https://twierdza.gizycko.pl",
+      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-tyskie-brewery",
@@ -13318,6 +13571,22 @@
       }
     },
     {
+      "id": "pl-wielka-krokiew-zakopane",
+      "name": "Wielka Krokiew",
+      "country": "Poland",
+      "region": "Lesser Poland Voivodeship",
+      "lat": 49.2794,
+      "lng": 19.9639,
+      "type": "Theatre, arena & venue",
+      "setting": "A ski jumping hill and stadium on the edge of Zakopane, host of the Four Hills Tournament and of televised New Year's Eve concerts broadcast live from its outrun and stands.",
+      "source_urls": [
+        "https://wielkakrokiew.pl",
+        "https://pl.wikipedia.org/wiki/Wielka_Krokiew"
+      ],
+      "official_url": "https://wielkakrokiew.pl",
+      "commission_url": "https://pisf.pl"
+    },
+    {
       "id": "pl-wieza-cisnien-borki",
       "name": "Wieża Ciśnień Katowice-Borki (Borki Water Tower)",
       "country": "Poland",
@@ -13333,6 +13602,23 @@
       "url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
       "official_url": "https://www.silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
       "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-wieza-cisnien-katowice",
+      "name": "Wieza Cisnien water tower, Katowice-Borki",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.23,
+      "lng": 19.08,
+      "type": "Industrial & derelict",
+      "setting": "A 66 metre brick water tower in the Borki district of Katowice, designed in 1907 and built 1911-1912, with a circular 17 metre footprint and a dome shaped like a Prussian military helmet.",
+      "known_for": "Sol ziemi czarnej (dir. Kazimierz Kutz)",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki"
+      ],
+      "official_url": "https://silesiafilmcommission.pl/location/wieza-cisnien-katowice-borki",
+      "commission_url": "https://pisf.pl"
     },
     {
       "id": "pl-swiebodzki-station",
@@ -15280,6 +15566,24 @@
         "author": "User Tubaist on sv.wikipedia",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "se-filmhuset",
+      "name": "Filmhuset",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3401,
+      "lng": 18.1031,
+      "type": "Office, school & public building",
+      "setting": "The Brutalist 1970 headquarters of the Swedish Film Institute in Gardet, Stockholm, built to resemble a camera, housing a film archive, offices and two public cinemas.",
+      "known_for": "Guldbagge Awards ceremony, Stockholm International Film Festival industry programme",
+      "facilities": "Two cinemas (Bio Victor and Bio Mauritz) available for public rental, a large film archive, open plan offices",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Swedish_Film_Institute",
+        "https://www.filminstitutet.se/en/"
+      ],
+      "official_url": "https://www.filminstitutet.se/en/",
+      "commission_url": "https://filmstockholm.se"
     },
     {
       "id": "se-icehotel",
