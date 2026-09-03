@@ -52,7 +52,13 @@
         "https://www.burgtheater.at/"
       ],
       "official_url": "https://www.burgtheater.at/",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Wien_-_Burgtheater.JPG/960px-Wien_-_Burgtheater.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Burgtheater.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-erzberg",
@@ -187,7 +193,13 @@
         "https://www.justiz.gv.at/"
       ],
       "official_url": "https://www.justiz.gv.at/",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Wien_01_Justizpalast_a.jpg/960px-Wien_01_Justizpalast_a.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_01_Justizpalast_a.jpg",
+        "author": "Gugerell",
+        "license": "CC0"
+      }
     },
     {
       "id": "at-karl-marx-hof",
@@ -202,7 +214,13 @@
         "https://www.dasrotewien.at/seite/karl-marx-hof"
       ],
       "official_url": "https://www.dasrotewien.at/seite/karl-marx-hof",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Karl-Marx-Hof_2009.jpg/960px-Karl-Marx-Hof_2009.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Karl-Marx-Hof_2009.jpg",
+        "author": "Dreizung",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "at-kirche-am-steinhof",
@@ -342,7 +360,13 @@
         "https://www.purkersdorf.at/sanatorium"
       ],
       "official_url": "https://www.purkersdorf.at/sanatorium",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Sanatoriumpurkersdorf1-2.JPG/960px-Sanatoriumpurkersdorf1-2.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sanatoriumpurkersdorf1-2.JPG",
+        "author": "derivative work: Alberto Fernandez Fernandez (talk) Sanatoriumpurkersdorf1.JPG: Roman Klementschitz, Wien",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "schoenbrunn-palace",
@@ -505,7 +529,13 @@
         "https://www.volksoper.at/"
       ],
       "official_url": "https://www.volksoper.at/",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wien_-_Volksoper.JPG/960px-Wien_-_Volksoper.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Volksoper.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-wiener-riesenrad",
@@ -536,7 +566,13 @@
         "https://www.stadthalle.com/"
       ],
       "official_url": "https://www.stadthalle.com/",
-      "commission_url": "https://www.filmfonds-wien.at/"
+      "commission_url": "https://www.filmfonds-wien.at/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/WienerStadthalle.jpg/960px-WienerStadthalle.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:WienerStadthalle.jpg",
+        "author": "No machine-readable author provided. Extrawurst assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "at-worthersee",
@@ -608,7 +644,13 @@
         "https://www.screenflanders.be/nl/locaties/database/abdij-van-herkenrode"
       ],
       "official_url": "https://www.screenflanders.be/nl/locaties/database/abdij-van-herkenrode",
-      "commission_url": "https://screenflanders.be/"
+      "commission_url": "https://screenflanders.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Herkenrodeabdij_6-11-2008_15-47-29.JPG/960px-Herkenrodeabdij_6-11-2008_15-47-29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Herkenrodeabdij_6-11-2008_15-47-29.JPG",
+        "author": "Paul Hermans",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-alden-biesen",
@@ -1287,7 +1329,13 @@
       ],
       "url": "https://www.screenflanders.be/nl/locaties/database/station-mechelen",
       "official_url": "https://www.belgiantrain.be/nl/about-sncb/contact/shootings",
-      "commission_url": "https://screenflanders.be/"
+      "commission_url": "https://screenflanders.be/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bouw_station_Mechelen_van_Salvatore_Bono_2024_5.jpg/960px-Bouw_station_Mechelen_van_Salvatore_Bono_2024_5.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bouw_station_Mechelen_van_Salvatore_Bono_2024_5.jpg",
+        "author": "Smiley.toerist",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-stoomcentrum-maldegem",
@@ -1452,7 +1500,13 @@
         "https://www.hnk-split.hr"
       ],
       "official_url": "https://www.hnk-split.hr",
-      "commission_url": "https://havc.hr"
+      "commission_url": "https://havc.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/960px-Split_080620-133710-IMG_0968x.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Split_080620-133710-IMG_0968x.jpg",
+        "author": "Tatyana Peshkova",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-hnk-zajc-rijeka",
@@ -1513,7 +1567,13 @@
         "https://www.trznice-zg.hr"
       ],
       "official_url": "https://www.trznice-zg.hr",
-      "commission_url": "https://havc.hr"
+      "commission_url": "https://havc.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Dolac_01.JPG/960px-Dolac_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dolac_01.JPG",
+        "author": "Rilegator",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-drazen-petrovic-hall",
@@ -3692,6 +3752,22 @@
       }
     },
     {
+      "id": "fr-fontevraud",
+      "name": "Abbaye Royale de Fontevraud",
+      "country": "France",
+      "region": "Maine-et-Loire, Pays de la Loire",
+      "lat": 47.1814,
+      "lng": 0.0517,
+      "type": "Church & monastery",
+      "setting": "Former royal abbey near Chinon founded in 1101, with a Romanesque church, medieval kitchens and cloisters plus an on-site hotel, its own site publishing information for film and TV shoots.",
+      "source_urls": [
+        "https://www.fontevraud.fr",
+        "https://en.wikipedia.org/wiki/Fontevraud_Abbey"
+      ],
+      "official_url": "https://www.fontevraud.fr",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
       "id": "fr-accor-arena",
       "name": "Accor Arena",
       "country": "France",
@@ -3713,6 +3789,22 @@
       }
     },
     {
+      "id": "fr-aeroport-cdg",
+      "name": "Aeroport Paris-Charles de Gaulle",
+      "country": "France",
+      "region": "Val-d'Oise, Ile-de-France",
+      "lat": 49.0097,
+      "lng": 2.5478,
+      "type": "Transport & infrastructure",
+      "setting": "France's main international airport north of Paris, with terminals, control-tower views and airside areas that operator Groupe ADP makes available for filming through a dedicated production service.",
+      "source_urls": [
+        "https://www.parisaeroport.fr/professionnels/programme-de-conformite/tournages-photos",
+        "https://en.wikipedia.org/wiki/Charles_de_Gaulle_Airport"
+      ],
+      "official_url": "https://www.parisaeroport.fr",
+      "commission_url": "https://www.filmparisregion.com"
+    },
+    {
       "id": "fr-allianz-riviera",
       "name": "Allianz Riviera",
       "country": "France",
@@ -3732,6 +3824,37 @@
         "author": "Mirasol",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "fr-aquaboulevard",
+      "name": "Aquaboulevard",
+      "country": "France",
+      "region": "Paris, Ile-de-France",
+      "lat": 48.8313,
+      "lng": 2.2748,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor and outdoor water park in the 15th arrondissement, with wave pools, slides and tropical-style planting, hired through its own professional booking service for shoots and events.",
+      "source_urls": [
+        "https://www.aquaboulevard.fr"
+      ],
+      "official_url": "https://www.aquaboulevard.fr",
+      "commission_url": "https://www.filmparisregion.com"
+    },
+    {
+      "id": "fr-arenes-nimes",
+      "name": "Arenes de Nimes",
+      "country": "France",
+      "region": "Gard, Occitanie",
+      "lat": 43.835,
+      "lng": 4.36,
+      "type": "Theatre, arena & venue",
+      "setting": "Roman amphitheatre built around 100 AD in the centre of Nimes, seating up to 24,000 for its own ferias and concerts, with a covered arena floor usable for filming outside the events calendar.",
+      "source_urls": [
+        "https://www.arenes-nimes.com",
+        "https://en.wikipedia.org/wiki/Arena_of_N%C3%AEmes"
+      ],
+      "official_url": "https://www.arenes-nimes.com",
+      "commission_url": "https://occitanie-films.fr"
     },
     {
       "id": "fr-base-sous-marine-saint-nazaire",
@@ -3822,6 +3945,21 @@
       "commission_url": "https://www.filmfrance.net/"
     },
     {
+      "id": "fr-cap-sciences",
+      "name": "Cap Sciences",
+      "country": "France",
+      "region": "Gironde, Nouvelle-Aquitaine",
+      "lat": 44.8596,
+      "lng": -0.5542,
+      "type": "Office, school & public building",
+      "setting": "Science centre inside Hangar 20, a former dockside cargo warehouse on the Garonne in Bordeaux, keeping the hangar's steel roof trusses over its exhibition floor, with halls listed to hire.",
+      "source_urls": [
+        "https://www.cap-sciences.net"
+      ],
+      "official_url": "https://www.cap-sciences.net",
+      "commission_url": "https://www.alca-nouvelle-aquitaine.fr"
+    },
+    {
       "id": "fr-centre-historique-minier-lewarde",
       "name": "Centre Historique Minier (Lewarde Mining Centre)",
       "country": "France",
@@ -3896,6 +4034,37 @@
       }
     },
     {
+      "id": "fr-chateau-hospitalet",
+      "name": "Chateau l'Hospitalet",
+      "country": "France",
+      "region": "Aude, Occitanie",
+      "lat": 43.1677,
+      "lng": 3.1144,
+      "type": "Village & countryside",
+      "setting": "Wine estate on the La Clape massif near Narbonne, with vineyards, cellars, a hotel and restaurants around a courtyard, hosting its own annual jazz festival and grounds used for private events.",
+      "source_urls": [
+        "https://www.chateau-hospitalet.com"
+      ],
+      "official_url": "https://www.chateau-hospitalet.com",
+      "commission_url": "https://occitanie-films.fr"
+    },
+    {
+      "id": "fr-chateau-la-coste",
+      "name": "Chateau La Coste",
+      "country": "France",
+      "region": "Bouches-du-Rhone, Provence-Alpes-Cote d'Azur",
+      "lat": 43.6359,
+      "lng": 5.4198,
+      "type": "Village & countryside",
+      "setting": "Organic vineyard estate near Aix-en-Provence with a sculpture trail and pavilions by architects including Tadao Ando and Renzo Piano, a hotel and restaurant, and grounds hired for weddings.",
+      "source_urls": [
+        "https://www.chateau-la-coste.com",
+        "https://en.wikipedia.org/wiki/Ch%C3%A2teau_La_Coste"
+      ],
+      "official_url": "https://www.chateau-la-coste.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
       "id": "fr-chemin-de-fer-baie-de-somme",
       "name": "Chemin de Fer de la Baie de Somme",
       "country": "France",
@@ -3915,6 +4084,54 @@
       ],
       "official_url": "https://www.chemindefer-baiedesomme.fr/",
       "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-cite-automobile",
+      "name": "Cite de l'Automobile",
+      "country": "France",
+      "region": "Haut-Rhin, Grand Est",
+      "lat": 47.7608,
+      "lng": 7.3286,
+      "type": "Office, school & public building",
+      "setting": "Mulhouse car museum built around the Schlumpf brothers' collection, with several hundred vehicles under one roof lit by rows of replica cast-iron lamp posts, its site publishing venue-hire terms.",
+      "source_urls": [
+        "https://www.citedelautomobile.com",
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_l%27Automobile"
+      ],
+      "official_url": "https://www.citedelautomobile.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-cite-espace",
+      "name": "Cite de l'Espace",
+      "country": "France",
+      "region": "Haute-Garonne, Occitanie",
+      "lat": 43.587,
+      "lng": 1.4932,
+      "type": "Theatre, arena & venue",
+      "setting": "Space-themed science centre on the eastern edge of Toulouse, with a full-size Ariane rocket outdoors, planetarium domes and simulator halls, hired out for seminars and corporate events.",
+      "source_urls": [
+        "https://www.cite-espace.com",
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_l%27espace"
+      ],
+      "official_url": "https://www.cite-espace.com",
+      "commission_url": "https://occitanie-films.fr"
+    },
+    {
+      "id": "fr-cite-de-la-mer",
+      "name": "Cite de la Mer",
+      "country": "France",
+      "region": "Manche, Normandie",
+      "lat": 49.6421,
+      "lng": -1.6173,
+      "type": "Transport & infrastructure",
+      "setting": "Maritime museum inside Cherbourg's 1933 Art Deco former transatlantic liner terminal, keeping the original departure hall, with a decommissioned submarine on display and dockside harbour views.",
+      "source_urls": [
+        "https://www.citedelamer.com",
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_de_la_Mer"
+      ],
+      "official_url": "https://www.citedelamer.com",
+      "commission_url": "https://www.normandieimages.fr"
     },
     {
       "id": "fr-cite-mode-design",
@@ -3993,6 +4210,37 @@
         "author": "Iunity",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fr-cite-livre-aix",
+      "name": "Cite du Livre",
+      "country": "France",
+      "region": "Bouches-du-Rhone, Provence-Alpes-Cote d'Azur",
+      "lat": 43.5248,
+      "lng": 5.4391,
+      "type": "Industrial & derelict",
+      "setting": "Former match factory in Aix-en-Provence, converted into a library and performance complex that keeps its industrial brick shell and a large auditorium used by the Festival d'Aix.",
+      "source_urls": [
+        "https://www.citedulivre-aix.com"
+      ],
+      "official_url": "https://www.citedulivre-aix.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-cite-du-train",
+      "name": "Cite du Train",
+      "country": "France",
+      "region": "Haut-Rhin, Grand Est",
+      "lat": 47.7506,
+      "lng": 7.2939,
+      "type": "Transport & infrastructure",
+      "setting": "One of the world's largest railway museums, in Mulhouse, with locomotives and carriages under a long-span roof and a reconstructed period station platform, published as available for hire and filming.",
+      "source_urls": [
+        "https://www.citedutrain.com",
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_du_Train"
+      ],
+      "official_url": "https://www.citedutrain.com",
+      "commission_url": "https://www.filmfrance.net"
     },
     {
       "id": "fr-cite-fruges",
@@ -4097,6 +4345,84 @@
         "author": "Jörg Braukmann",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fr-futuroscope",
+      "name": "Futuroscope",
+      "country": "France",
+      "region": "Vienne, Nouvelle-Aquitaine",
+      "lat": 46.6692,
+      "lng": 0.3689,
+      "type": "Theatre, arena & venue",
+      "setting": "Multimedia theme park north of Poitiers built around futuristic pavilions and a lake, with cinema domes and landscaped outdoor sets, offering seminar and private event hire outside opening hours.",
+      "source_urls": [
+        "https://www.futuroscope.com",
+        "https://en.wikipedia.org/wiki/Futuroscope"
+      ],
+      "official_url": "https://www.futuroscope.com",
+      "commission_url": "https://www.alca-nouvelle-aquitaine.fr"
+    },
+    {
+      "id": "fr-gare-saint-sauveur",
+      "name": "Gare Saint Sauveur",
+      "country": "France",
+      "region": "Nord, Hauts-de-France",
+      "lat": 50.6272,
+      "lng": 3.0724,
+      "type": "Transport & infrastructure",
+      "setting": "Former goods yard of a 19th-century Lille railway station, now an exhibition and events venue keeping the open shed structure and platform-level halls of the original depot.",
+      "source_urls": [
+        "https://lillegrandpalais.com/gare-saint-sauveur"
+      ],
+      "official_url": "https://lillegrandpalais.com/gare-saint-sauveur",
+      "commission_url": "https://www.pictanovo.com"
+    },
+    {
+      "id": "fr-marseille-port",
+      "name": "Grand Port Maritime de Marseille",
+      "country": "France",
+      "region": "Bouches-du-Rhone, Provence-Alpes-Cote d'Azur",
+      "lat": 43.3269,
+      "lng": 5.3539,
+      "type": "Transport & infrastructure",
+      "setting": "France's largest port, with the working container terminals and warehouses of Marseille-Fos and the historic Joliette basin, with its own published filming-permit process for productions.",
+      "source_urls": [
+        "https://www.marseille-port.fr/autorisation-de-tournage"
+      ],
+      "official_url": "https://www.marseille-port.fr",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-haras-lamballe",
+      "name": "Haras National de Lamballe",
+      "country": "France",
+      "region": "Cotes-d'Armor, Bretagne",
+      "lat": 48.4714,
+      "lng": -2.5194,
+      "type": "Village & countryside",
+      "setting": "State stud farm founded in 1825 in a former army barracks in Lamballe, with stone stable blocks around a courtyard and a riding arena, its own site listing hire for weddings and seminars.",
+      "source_urls": [
+        "https://www.haras-lamballe.com",
+        "https://fr.wikipedia.org/wiki/Haras_national_de_Lamballe"
+      ],
+      "official_url": "https://www.haras-lamballe.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-haras-du-pin",
+      "name": "Haras National du Pin",
+      "country": "France",
+      "region": "Orne, Normandie",
+      "lat": 48.7383,
+      "lng": 0.147,
+      "type": "Village & countryside",
+      "setting": "France's oldest national stud, an 18th-century complex of stables around a formal chateau-style courtyard in the Orne countryside, with an equestrian arena and grounds listed for seminar hire.",
+      "source_urls": [
+        "https://www.haras-national-du-pin.com",
+        "https://en.wikipedia.org/wiki/Haras_national_du_Pin"
+      ],
+      "official_url": "https://www.haras-national-du-pin.com",
+      "commission_url": "https://www.normandieimages.fr"
     },
     {
       "id": "fr-hopital-bicetre",
@@ -4217,6 +4543,22 @@
       }
     },
     {
+      "id": "fr-cite-du-vin",
+      "name": "La Cite du Vin",
+      "country": "France",
+      "region": "Gironde, Nouvelle-Aquitaine",
+      "lat": 44.8625,
+      "lng": -0.5503,
+      "type": "Modern architecture",
+      "setting": "Twisting glass and aluminium tower on Bordeaux's Garonne quays, built around a wine museum and a top-floor tasting room, with function spaces used for private events and film screenings.",
+      "source_urls": [
+        "https://www.laciteduvin.com",
+        "https://en.wikipedia.org/wiki/Cit%C3%A9_du_Vin"
+      ],
+      "official_url": "https://www.laciteduvin.com",
+      "commission_url": "https://www.alca-nouvelle-aquitaine.fr"
+    },
+    {
       "id": "fr-condition-publique",
       "name": "La Condition Publique",
       "country": "France",
@@ -4257,6 +4599,52 @@
       }
     },
     {
+      "id": "fr-friche-belle-de-mai",
+      "name": "La Friche la Belle de Mai",
+      "country": "France",
+      "region": "Bouches-du-Rhone, Provence-Alpes-Cote d'Azur",
+      "lat": 43.3105,
+      "lng": 5.39,
+      "type": "Industrial & derelict",
+      "setting": "Former SEITA tobacco factory in Marseille converted into a multi-storey arts complex, with raw concrete floors, a rooftop garden and a skatepark, hired out through its own privatisation service.",
+      "source_urls": [
+        "https://www.lafriche.org/professionnels/entreprises/privatisations/",
+        "https://fr.wikipedia.org/wiki/La_Friche_la_Belle_de_Mai"
+      ],
+      "official_url": "https://www.lafriche.org",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-piscine-roubaix",
+      "name": "La Piscine, Musee d'Art et d'Industrie Andre Diligent",
+      "country": "France",
+      "region": "Nord, Hauts-de-France",
+      "lat": 50.6925,
+      "lng": 3.1679,
+      "type": "Theatre, arena & venue",
+      "setting": "1932 Art Deco municipal swimming pool in Roubaix converted into a museum, keeping its tiled pool basin, stained glass and rows of former changing cubicles as exhibition space.",
+      "source_urls": [
+        "https://www.roubaix-lapiscine.com"
+      ],
+      "official_url": "https://www.roubaix-lapiscine.com",
+      "commission_url": "https://www.pictanovo.com"
+    },
+    {
+      "id": "fr-sucriere-lyon",
+      "name": "La Sucriere",
+      "country": "France",
+      "region": "Rhone, Auvergne-Rhone-Alpes",
+      "lat": 45.737,
+      "lng": 4.8151,
+      "type": "Industrial & derelict",
+      "setting": "Former sugar warehouse on the Confluence docks in Lyon, a long brick and concrete shed on the Saone quayside, now an exhibition and events venue run by a professional events operator.",
+      "source_urls": [
+        "https://www.gl-lyonevents.com/fr/la-sucriere"
+      ],
+      "official_url": "https://www.gl-lyonevents.com/fr/la-sucriere",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
       "id": "fr-le-104-centquatre",
       "name": "Le 104 (Centquatre-Paris)",
       "country": "France",
@@ -4291,6 +4679,37 @@
       "commission_url": "https://www.filmfrance.net/"
     },
     {
+      "id": "fr-grand-rex",
+      "name": "Le Grand Rex",
+      "country": "France",
+      "region": "Paris, Ile-de-France",
+      "lat": 48.8706,
+      "lng": 2.3478,
+      "type": "Theatre, arena & venue",
+      "setting": "1932 Art Deco single-screen cinema and concert hall on Boulevard Poissonniere, with a domed starlit auditorium seating over 2,700, hired out for premieres, shows and filming.",
+      "source_urls": [
+        "https://www.legrandrex.com",
+        "https://en.wikipedia.org/wiki/Grand_Rex"
+      ],
+      "official_url": "https://www.legrandrex.com",
+      "commission_url": "https://www.filmparisregion.com"
+    },
+    {
+      "id": "fr-le-silo",
+      "name": "Le Silo",
+      "country": "France",
+      "region": "Bouches-du-Rhone, Provence-Alpes-Cote d'Azur",
+      "lat": 43.3109,
+      "lng": 5.3665,
+      "type": "Industrial & derelict",
+      "setting": "1920s grain silo on Marseille's Arenc docks, gutted and rebuilt inside as a concert and conference hall while keeping its raw concrete exterior, hired for shows and corporate events.",
+      "source_urls": [
+        "https://www.le-silo.fr"
+      ],
+      "official_url": "https://www.le-silo.fr",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
       "id": "fr-le-train-bleu",
       "name": "Le Train Bleu",
       "country": "France",
@@ -4312,6 +4731,38 @@
         "author": "Gryffindor",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fr-tripostal",
+      "name": "Le Tripostal",
+      "country": "France",
+      "region": "Nord, Hauts-de-France",
+      "lat": 50.6367,
+      "lng": 3.0728,
+      "type": "Industrial & derelict",
+      "setting": "Former postal sorting depot beside Lille-Flandres station, converted into a bare-shell exhibition hall with high ceilings and loading-bay access, hired for shows and events.",
+      "source_urls": [
+        "https://lillegrandpalais.com/tripostal",
+        "https://fr.wikipedia.org/wiki/Tripostal"
+      ],
+      "official_url": "https://lillegrandpalais.com/tripostal",
+      "commission_url": "https://www.pictanovo.com"
+    },
+    {
+      "id": "fr-abattoirs-toulouse",
+      "name": "Les Abattoirs, Musee - Frac Occitanie Toulouse",
+      "country": "France",
+      "region": "Haute-Garonne, Occitanie",
+      "lat": 43.6009,
+      "lng": 1.4295,
+      "type": "Industrial & derelict",
+      "setting": "Former municipal slaughterhouse on the Garonne in Toulouse, converted into a contemporary art museum that keeps the original brick halls, steel roof trusses and a loading yard.",
+      "source_urls": [
+        "https://www.lesabattoirs.org",
+        "https://fr.wikipedia.org/wiki/Les_Abattoirs"
+      ],
+      "official_url": "https://www.lesabattoirs.org",
+      "commission_url": "https://occitanie-films.fr"
     },
     {
       "id": "fr-les-deux-magots",
@@ -4365,6 +4816,22 @@
       "commission_url": "https://www.filmfrance.net/"
     },
     {
+      "id": "fr-les-frigos",
+      "name": "Les Frigos",
+      "country": "France",
+      "region": "Paris, Ile-de-France",
+      "lat": 48.8311,
+      "lng": 2.379,
+      "type": "Industrial & derelict",
+      "setting": "Former refrigerated railway goods depot near the old Paris-Ivry station, now artist studios behind a graffiti-covered brick facade, with raw interiors and a covered yard in the 13th arrondissement.",
+      "source_urls": [
+        "https://www.lesfrigos.com",
+        "https://fr.wikipedia.org/wiki/Les_Frigos"
+      ],
+      "official_url": "https://www.lesfrigos.com",
+      "commission_url": "https://www.filmparisregion.com"
+    },
+    {
       "id": "fr-halles-de-lyon-paul-bocuse",
       "name": "Les Halles de Lyon Paul Bocuse",
       "country": "France",
@@ -4384,6 +4851,37 @@
       "commission_url": "https://www.filmfrance.net/"
     },
     {
+      "id": "fr-subs-lyon",
+      "name": "Les Subsistances",
+      "country": "France",
+      "region": "Rhone, Auvergne-Rhone-Alpes",
+      "lat": 45.7682,
+      "lng": 4.8169,
+      "type": "Industrial & derelict",
+      "setting": "Former military supply depot on the Saone quays in Lyon, now a centre for performing-arts creation with rehearsal halls, a courtyard and studios, published as available to hire.",
+      "source_urls": [
+        "https://www.les-subs.com"
+      ],
+      "official_url": "https://www.les-subs.com",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
+      "id": "fr-rungis-marche",
+      "name": "Marche International de Rungis",
+      "country": "France",
+      "region": "Val-de-Marne, Ile-de-France",
+      "lat": 48.7597,
+      "lng": 2.3536,
+      "type": "Bar, restaurant & shop",
+      "setting": "The world's largest wholesale food market, south of Paris, with vast refrigerated halls, loading docks and pre-dawn trading floors, offering event space and press filming through its own services team.",
+      "source_urls": [
+        "https://www.rungisinternational.com",
+        "https://en.wikipedia.org/wiki/Rungis_International_Market"
+      ],
+      "official_url": "https://www.rungisinternational.com",
+      "commission_url": "https://www.filmparisregion.com"
+    },
+    {
       "id": "fr-mucem",
       "name": "MuCEM",
       "country": "France",
@@ -4400,6 +4898,22 @@
       ],
       "official_url": "https://www.mucem.org/",
       "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-musee-air-espace",
+      "name": "Musee de l'Air et de l'Espace",
+      "country": "France",
+      "region": "Seine-Saint-Denis, Ile-de-France",
+      "lat": 48.9471,
+      "lng": 2.4349,
+      "type": "Transport & infrastructure",
+      "setting": "Aerospace museum built around historic hangars at the edge of Paris-Le Bourget airport, with aircraft, open apron and runway views bookable through its own filming and photography service.",
+      "source_urls": [
+        "https://www.museeairespace.fr",
+        "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27air_et_de_l%27espace"
+      ],
+      "official_url": "https://www.museeairespace.fr",
+      "commission_url": "https://www.filmparisregion.com"
     },
     {
       "id": "fr-omaha-beach",
@@ -4442,6 +4956,38 @@
       }
     },
     {
+      "id": "fr-palais-justice-lyon",
+      "name": "Palais de Justice Historique de Lyon",
+      "country": "France",
+      "region": "Rhone, Auvergne-Rhone-Alpes",
+      "lat": 45.7619,
+      "lng": 4.8281,
+      "type": "Hospital, prison & institution",
+      "setting": "24-column neoclassical courthouse on the Saone in Vieux Lyon, its listed interior including a vast public hall, still used for hearings and available for filming by arrangement with the Cour d'appel.",
+      "source_urls": [
+        "https://www.cours-appel.justice.fr/lyon/",
+        "https://fr.wikipedia.org/wiki/Palais_de_justice_historique_de_Lyon"
+      ],
+      "official_url": "https://www.cours-appel.justice.fr/lyon/",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
+      "id": "fr-palais-festivals-cannes",
+      "name": "Palais des Festivals et des Congres",
+      "country": "France",
+      "region": "Alpes-Maritimes, Provence-Alpes-Cote d'Azur",
+      "lat": 43.5509,
+      "lng": 7.0173,
+      "type": "Theatre, arena & venue",
+      "setting": "Cannes' seafront convention centre and home of the Cannes Film Festival, with cinema auditoriums, exhibition halls and the red-carpet staircase, hired for congresses and events year round.",
+      "source_urls": [
+        "https://www.palaisdesfestivals.com",
+        "https://en.wikipedia.org/wiki/Palais_des_Festivals_et_des_Congr%C3%A8s"
+      ],
+      "official_url": "https://www.palaisdesfestivals.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
       "id": "fr-palais-garnier",
       "name": "Palais Garnier",
       "country": "France",
@@ -4479,6 +5025,22 @@
       ],
       "official_url": "https://www.parc-camargue.fr/",
       "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-paris-expo-versailles",
+      "name": "Paris Expo Porte de Versailles",
+      "country": "France",
+      "region": "Paris, Ile-de-France",
+      "lat": 48.8319,
+      "lng": 2.2891,
+      "type": "Theatre, arena & venue",
+      "setting": "Paris's largest exhibition centre, eight halls totalling over 200,000 square metres beside the ring road, hired for trade shows, corporate events and filming through operator Viparis.",
+      "source_urls": [
+        "https://www.viparis.com",
+        "https://en.wikipedia.org/wiki/Paris_Expo_Porte_de_Versailles"
+      ],
+      "official_url": "https://www.viparis.com",
+      "commission_url": "https://www.filmparisregion.com"
     },
     {
       "id": "fr-phare-de-cordouan",
@@ -4526,6 +5088,21 @@
       }
     },
     {
+      "id": "fr-corbusier-firminy",
+      "name": "Site Le Corbusier, Firminy",
+      "country": "France",
+      "region": "Loire, Auvergne-Rhone-Alpes",
+      "lat": 45.3814,
+      "lng": 4.2866,
+      "type": "Modern architecture",
+      "setting": "Le Corbusier's Firminy-Vert complex, completed after his death, with a raw-concrete Unite d'habitation apartment block, a stadium and a church, its visitor centre offering room hire for seminars.",
+      "source_urls": [
+        "https://www.sitelecorbusier.com"
+      ],
+      "official_url": "https://www.sitelecorbusier.com",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
       "id": "fr-stade-de-france",
       "name": "Stade de France",
       "country": "France",
@@ -4560,6 +5137,52 @@
       ],
       "official_url": "https://stationf.co/",
       "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-theatre-antique-orange",
+      "name": "Theatre Antique d'Orange",
+      "country": "France",
+      "region": "Vaucluse, Provence-Alpes-Cote d'Azur",
+      "lat": 44.1358,
+      "lng": 4.8092,
+      "type": "Theatre, arena & venue",
+      "setting": "Best-preserved Roman theatre stage wall in Europe, in Orange, with tiered stone seating for around 9,000, used every summer as the main stage of the Choregies opera festival.",
+      "source_urls": [
+        "https://www.theatre-antique.com"
+      ],
+      "official_url": "https://www.theatre-antique.com",
+      "commission_url": "https://www.filmfrance.net"
+    },
+    {
+      "id": "fr-theatre-antique-vienne",
+      "name": "Theatre Antique de Vienne",
+      "country": "France",
+      "region": "Isere, Auvergne-Rhone-Alpes",
+      "lat": 45.5249,
+      "lng": 4.8789,
+      "type": "Theatre, arena & venue",
+      "setting": "Roman theatre cut into a hillside above Vienne on the Rhone, with tiered stone seating for around 7,000, used every summer as the main stage of the Jazz a Vienne festival.",
+      "source_urls": [
+        "https://jazzavienne.com"
+      ],
+      "official_url": "https://jazzavienne.com",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
+      "id": "fr-tribunal-paris",
+      "name": "Tribunal de Paris",
+      "country": "France",
+      "region": "Paris, Ile-de-France",
+      "lat": 48.8947,
+      "lng": 2.3107,
+      "type": "Hospital, prison & institution",
+      "setting": "Renzo Piano's 160-metre glass courthouse tower at Porte de Clichy, housing Paris's civil and criminal courts around a public hall and stacked courtroom floors, with filming possible by arrangement.",
+      "source_urls": [
+        "https://www.tribunal-de-paris.justice.fr",
+        "https://fr.wikipedia.org/wiki/Tribunal_de_Paris"
+      ],
+      "official_url": "https://www.tribunal-de-paris.justice.fr",
+      "commission_url": "https://www.filmparisregion.com"
     },
     {
       "id": "fr-viaduc-de-millau",
@@ -4607,6 +5230,22 @@
         "author": "Wasily",
         "license": "CC0"
       }
+    },
+    {
+      "id": "fr-vulcania",
+      "name": "Vulcania",
+      "country": "France",
+      "region": "Puy-de-Dome, Auvergne-Rhone-Alpes",
+      "lat": 45.8134,
+      "lng": 2.9405,
+      "type": "Theatre, arena & venue",
+      "setting": "Volcano-themed science park built into the Auvergne hillside near Clermont-Ferrand, with underground galleries and a crater-shaped amphitheatre, listing seminar and private event hire.",
+      "source_urls": [
+        "https://www.vulcania.com",
+        "https://en.wikipedia.org/wiki/Vulcania"
+      ],
+      "official_url": "https://www.vulcania.com",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
     },
     {
       "id": "de-alte-feuerwache-mannheim",
@@ -9468,6 +10107,23 @@
       }
     },
     {
+      "id": "nl-airborne-museum-hartenstein",
+      "name": "Airborne Museum Hartenstein",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 51.9881,
+      "lng": 5.8325,
+      "type": "House & apartment",
+      "setting": "A nineteenth-century villa in Oosterbeek that served as the British 1st Airborne Division headquarters during the 1944 Battle of Arnhem, now a war museum on the same site.",
+      "known_for": "A Bridge Too Far (1977)",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Airborne_Museum",
+        "https://www.airbornemuseum.nl/"
+      ],
+      "official_url": "https://www.airbornemuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "amsterdam-canal-ring",
       "name": "Amsterdam Canal Ring",
       "country": "Netherlands",
@@ -9554,6 +10210,22 @@
       }
     },
     {
+      "id": "nl-akerk-groningen",
+      "name": "Der Aa-kerk",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2164,
+      "lng": 6.5622,
+      "type": "Church & monastery",
+      "setting": "A deconsecrated medieval church in the city of Groningen, used today as a venue for exhibitions, concerts and hired events.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Akerk",
+        "https://www.aakerk.nl/"
+      ],
+      "official_url": "https://www.aakerk.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "erasmusbrug",
       "name": "Erasmusbrug",
       "country": "Netherlands",
@@ -9571,6 +10243,23 @@
         "author": "Martin Falbisoner",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-euroborg",
+      "name": "Euroborg",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2058,
+      "lng": 6.5917,
+      "type": "Theatre, arena & venue",
+      "setting": "A multifunctional stadium in the city of Groningen, home ground of football club FC Groningen, with business suites and function rooms hired out for events and weddings.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Euroborg",
+        "https://www.euroborg.nl/",
+        "https://www.euroborg.nl/zakelijk"
+      ],
+      "official_url": "https://www.euroborg.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "nl-euromast",
@@ -9659,6 +10348,70 @@
       }
     },
     {
+      "id": "nl-grand-hotel-karel-v",
+      "name": "Grand Hotel Karel V",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0879,
+      "lng": 5.1187,
+      "type": "Hotel & interiors",
+      "setting": "A hotel in central Utrecht built around a former commandery of the Teutonic Order that later served as a military barracks and hospital, with gardens and rooms for hire.",
+      "source_urls": [
+        "https://www.karelv.nl/"
+      ],
+      "official_url": "https://www.karelv.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-groninger-museum",
+      "name": "Groninger Museum",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2119,
+      "lng": 6.5656,
+      "type": "Modern architecture",
+      "setting": "A museum in the city of Groningen in a brightly coloured postmodern building designed with Alessandro Mendini, with galleries and event spaces available for hire.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Groninger_Museum",
+        "https://www.groningermuseum.nl/"
+      ],
+      "official_url": "https://www.groningermuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-grote-kerk-veere",
+      "name": "Grote Kerk Veere",
+      "country": "Netherlands",
+      "region": "Zeeland",
+      "lat": 51.5469,
+      "lng": 3.6672,
+      "type": "Church & monastery",
+      "setting": "A large late-gothic former church in the small Zeeland town of Veere, deconsecrated and now used as an exhibition and events space available for hire.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Grote_of_Onze-Lieve-Vrouwekerk_(Veere)",
+        "https://www.grotekerkveere.nl/"
+      ],
+      "official_url": "https://www.grotekerkveere.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-kamp-westerbork",
+      "name": "Herinneringscentrum Kamp Westerbork",
+      "country": "Netherlands",
+      "region": "Drenthe",
+      "lat": 52.9167,
+      "lng": 6.6069,
+      "type": "Hospital, prison & institution",
+      "setting": "The site of a Second World War transit camp near Hooghalen from which over 100,000 people were deported, now a memorial centre with a visitor centre and archive.",
+      "known_for": "Westerbork film (1944)",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Kamp_Westerbork",
+        "https://www.kampwesterbork.nl/"
+      ],
+      "official_url": "https://www.kampwesterbork.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-hoge-veluwe",
       "name": "Hoge Veluwe National Park",
       "country": "Netherlands",
@@ -9678,6 +10431,70 @@
         "author": "Stefan Kruithof",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "nl-hoog-catharijne",
+      "name": "Hoog Catharijne",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0911,
+      "lng": 5.1134,
+      "type": "Bar, restaurant & shop",
+      "setting": "A large indoor shopping centre next to Utrecht Centraal station with shops, restaurants and public concourses that have served as a backdrop for productions.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Hoog_Catharijne",
+        "https://www.hoogcatharijne.nl/"
+      ],
+      "official_url": "https://www.hoogcatharijne.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-hotel-new-york-rotterdam",
+      "name": "Hotel New York",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 51.9041,
+      "lng": 4.4843,
+      "type": "Hotel & interiors",
+      "setting": "A hotel and restaurant on Rotterdam's Wilhelminapier in the former head office of the Holland America Line, with period interiors and function rooms for hire.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Hotel_New_York_(Rotterdam)",
+        "https://www.hotelnewyork.nl/"
+      ],
+      "official_url": "https://www.hotelnewyork.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-woudagemaal",
+      "name": "Ir. D.F. Woudagemaal",
+      "country": "Netherlands",
+      "region": "Friesland",
+      "lat": 52.8464,
+      "lng": 5.68,
+      "type": "Transport & infrastructure",
+      "setting": "A steam-powered pumping station near Lemmer, built in 1920 and still operational, among the largest of its kind, with meeting arrangements available on site.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Ir._D.F._Woudagemaal",
+        "https://www.woudagemaal.nl/",
+        "https://www.woudagemaal.nl/arrangementen/vergaderingen"
+      ],
+      "official_url": "https://www.woudagemaal.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-jaarbeurs-utrecht",
+      "name": "Jaarbeurs Utrecht",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0845,
+      "lng": 5.1041,
+      "type": "Theatre, arena & venue",
+      "setting": "A large convention, trade fair and event complex next to Utrecht Centraal station, with multiple exhibition halls hired out for congresses, fairs and productions.",
+      "source_urls": [
+        "https://www.jaarbeurs.nl/"
+      ],
+      "official_url": "https://www.jaarbeurs.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "nl-johan-cruijff-arena",
@@ -9738,6 +10555,22 @@
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
+      "id": "nl-kunstlinie-almere",
+      "name": "Kunstlinie",
+      "country": "Netherlands",
+      "region": "Flevoland",
+      "lat": 52.3675,
+      "lng": 5.2186,
+      "type": "Theatre, arena & venue",
+      "setting": "A theatre and exhibition centre in Almere with a business hire programme for its auditoriums and foyers.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Kunstlinie",
+        "https://www.kunstlinie.nl/"
+      ],
+      "official_url": "https://www.kunstlinie.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-kurhaus",
       "name": "Kurhaus Den Haag",
       "country": "Netherlands",
@@ -9771,6 +10604,23 @@
         "https://thehoxton.com/amsterdam/lloyd/"
       ],
       "official_url": "https://thehoxton.com/amsterdam/lloyd/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-lochal",
+      "name": "LocHal",
+      "country": "Netherlands",
+      "region": "Noord-Brabant",
+      "lat": 51.5613,
+      "lng": 5.0857,
+      "type": "Industrial & derelict",
+      "setting": "A former railway repair workshop in Tilburg's Spoorzone, converted into a public library and culture hall that is marketed as an events and business location.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/LocHal",
+        "https://www.lochal.nl/",
+        "https://www.lochal.nl/evenementenlocatie-de-LocHal"
+      ],
+      "official_url": "https://www.lochal.nl/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -9814,6 +10664,22 @@
         "author": "Ger Barbiers",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-maassilo",
+      "name": "Maassilo",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 51.8975,
+      "lng": 4.4939,
+      "type": "Industrial & derelict",
+      "setting": "A former grain silo and elevator on Rotterdam's Maashaven, converted into a club, concert and business events venue while keeping its raw concrete industrial interior.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Maassilo",
+        "https://www.maassilo.com/"
+      ],
+      "official_url": "https://www.maassilo.com/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "nl-maeslantkering",
@@ -10011,6 +10877,39 @@
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
+      "id": "nl-oostvaardersplassen",
+      "name": "Oostvaardersplassen",
+      "country": "Netherlands",
+      "region": "Flevoland",
+      "lat": 52.4508,
+      "lng": 5.3517,
+      "type": "Forest & lake",
+      "setting": "A large wetland nature reserve between Almere and Lelystad, reclaimed from the former Zuiderzee seabed, used as the setting for wildlife documentaries.",
+      "known_for": "De Nieuwe Wildernis (2013)",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Oostvaardersplassen",
+        "https://www.staatsbosbeheer.nl/oostvaardersplassen"
+      ],
+      "official_url": "https://www.staatsbosbeheer.nl/oostvaardersplassen",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-paleis-het-loo",
+      "name": "Paleis Het Loo",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 52.2342,
+      "lng": 5.9458,
+      "type": "Palace & landmark",
+      "setting": "A former royal residence on the edge of Apeldoorn, open as a national museum with formal gardens and rooms hired out for exhibitions and events.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Paleis_Het_Loo",
+        "https://www.paleishetloo.nl/"
+      ],
+      "official_url": "https://www.paleishetloo.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-tuschinski",
       "name": "Pathe Tuschinski",
       "country": "Netherlands",
@@ -10082,6 +10981,38 @@
         "https://www.rietveldschroderhuis.nl/"
       ],
       "official_url": "https://www.rietveldschroderhuis.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-rijksmuseum-twenthe",
+      "name": "Rijksmuseum Twenthe",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.2278,
+      "lng": 6.8969,
+      "type": "Office, school & public building",
+      "setting": "An art museum in Enschede with historic and modern collections, hosting exhibitions and business events in its galleries.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Rijksmuseum_Twenthe",
+        "https://www.rijksmuseumtwenthe.nl/"
+      ],
+      "official_url": "https://www.rijksmuseumtwenthe.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-rodahal",
+      "name": "Rodahal",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8679,
+      "lng": 6.0625,
+      "type": "Theatre, arena & venue",
+      "setting": "A multipurpose events and concert hall in Kerkrade marketed for business parties, concerts and sports events.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Rodahal",
+        "https://www.rodahal.nl/"
+      ],
+      "official_url": "https://www.rodahal.nl/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
@@ -10166,6 +11097,22 @@
       }
     },
     {
+      "id": "nl-theater-aan-het-vrijthof",
+      "name": "Theater aan het Vrijthof",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.85,
+      "lng": 5.6881,
+      "type": "Theatre, arena & venue",
+      "setting": "A theatre on Maastricht's central Vrijthof square with multiple stages, offering its auditoriums and foyers for business hire alongside its regular programme.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Theater_aan_het_Vrijthof",
+        "https://www.theateraanhetvrijthof.nl/"
+      ],
+      "official_url": "https://www.theateraanhetvrijthof.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-thialf",
       "name": "Thialf",
       "country": "Netherlands",
@@ -10185,6 +11132,22 @@
         "author": "Evelien1009",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-tt-circuit-assen",
+      "name": "TT Circuit Assen",
+      "country": "Netherlands",
+      "region": "Drenthe",
+      "lat": 52.9616,
+      "lng": 6.5233,
+      "type": "Transport & infrastructure",
+      "setting": "A permanent motor racing circuit near Assen in use since 1955, host of the Dutch MotoGP round and hired out for other events outside race weekends.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/TT_Circuit_Assen",
+        "https://www.ttcircuit.com/"
+      ],
+      "official_url": "https://www.ttcircuit.com/",
+      "commission_url": "https://www.filmcommission.nl/"
     },
     {
       "id": "nl-van-nelle-fabriek",
@@ -10245,6 +11208,39 @@
       }
     },
     {
+      "id": "nl-verkadefabriek",
+      "name": "Verkadefabriek",
+      "country": "Netherlands",
+      "region": "Noord-Brabant",
+      "lat": 51.6956,
+      "lng": 5.2975,
+      "type": "Theatre, arena & venue",
+      "setting": "A former Verkade biscuit factory in 's-Hertogenbosch converted into a culture centre with theatre halls, cinema screens, a cafe and business hire.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Verkadefabriek_('s-Hertogenbosch)",
+        "https://www.verkadefabriek.nl/"
+      ],
+      "official_url": "https://www.verkadefabriek.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-watersnoodmuseum",
+      "name": "Watersnoodmuseum",
+      "country": "Netherlands",
+      "region": "Zeeland",
+      "lat": 51.6175,
+      "lng": 3.9819,
+      "type": "Industrial & derelict",
+      "setting": "A museum near Ouwerkerk built inside four Phoenix caissons that were used to close the last dike breach after the 1953 flood disaster, with halls available for group and business bookings.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Watersnoodmuseum",
+        "https://www.watersnoodmuseum.nl/",
+        "https://www.watersnoodmuseum.nl/nl/het-museum/groepen"
+      ],
+      "official_url": "https://www.watersnoodmuseum.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-westergasfabriek",
       "name": "Westergasfabriek",
       "country": "Netherlands",
@@ -10289,6 +11285,54 @@
       }
     },
     {
+      "id": "nl-wilminktheater-enschede",
+      "name": "Wilminktheater en Muziekcentrum",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.2224,
+      "lng": 6.8956,
+      "type": "Theatre, arena & venue",
+      "setting": "A theatre and concert hall in Enschede's Nationaal Muziekkwartier with a business and venue-hire programme alongside its performance schedule.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Wilminktheater_en_Muziekcentrum_Enschede",
+        "https://www.wilminktheater.nl/"
+      ],
+      "official_url": "https://www.wilminktheater.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-wtc-expo-leeuwarden",
+      "name": "WTC Expo Leeuwarden",
+      "country": "Netherlands",
+      "region": "Friesland",
+      "lat": 53.2003,
+      "lng": 5.7728,
+      "type": "Theatre, arena & venue",
+      "setting": "A convention and exhibition centre in Leeuwarden with several halls hired out for congresses, fairs and business events.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/WTC_Leeuwarden",
+        "https://www.wtcexpo.nl/"
+      ],
+      "official_url": "https://www.wtcexpo.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-zaanse-schans",
+      "name": "Zaanse Schans",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.4739,
+      "lng": 4.8164,
+      "type": "Village & countryside",
+      "setting": "A relocated riverside hamlet of wooden houses, workshops and working windmills in Zaanstad, run as a heritage attraction with its own business events programme.",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Zaanse_Schans",
+        "https://www.dezaanseschans.nl/"
+      ],
+      "official_url": "https://www.dezaanseschans.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
       "id": "nl-zonnestraal",
       "name": "Zonnestraal Sanatorium",
       "country": "Netherlands",
@@ -10322,6 +11366,24 @@
         "https://www.zlsm.nl/"
       ],
       "official_url": "https://www.zlsm.nl/",
+      "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-zuiderzeemuseum",
+      "name": "Zuiderzeemuseum",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.7037,
+      "lng": 5.2972,
+      "type": "Village & countryside",
+      "setting": "An open-air and indoor museum in Enkhuizen that reconstructs a historic Zuiderzee fishing village with relocated houses, workshops and a working harbour.",
+      "facilities": "Group and business bookings, meeting rooms, catering",
+      "source_urls": [
+        "https://nl.wikipedia.org/wiki/Zuiderzeemuseum",
+        "https://www.zuiderzeemuseum.nl/",
+        "https://www.zuiderzeemuseum.nl/zakelijk"
+      ],
+      "official_url": "https://www.zuiderzeemuseum.nl/",
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
