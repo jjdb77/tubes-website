@@ -790,6 +790,87 @@
       "commission_url": "https://screen.brussels/"
     },
     {
+      "id": "hr-church-st-donatus-zadar",
+      "name": "Church of St. Donatus",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.1158,
+      "lng": 15.2244,
+      "type": "Church & monastery",
+      "setting": "Circular ninth-century pre-Romanesque church built partly from recycled Roman stone on Zadar's ancient forum, now used as a concert venue for its acoustics.",
+      "known_for": "Through the Centuries (per Zadar Film Commission)",
+      "source_urls": [
+        "https://www.amzd.hr/en/",
+        "https://www.zadarfilmcommission.com/en"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en",
+      "official_url": "https://www.amzd.hr/en/",
+      "commission_url": "https://www.zadarfilmcommission.com/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Church_of_Saint_Donatus%2C_Zadar_-_September_2017.jpg/960px-Church_of_Saint_Donatus%2C_Zadar_-_September_2017.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Church_of_Saint_Donatus,_Zadar_-_September_2017.jpg",
+        "author": "Martin Falbisoner",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-hnk-zajc-rijeka",
+      "name": "Croatian National Theatre Ivan pl. Zajc",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3244,
+      "lng": 14.4448,
+      "type": "Theatre, arena & venue",
+      "setting": "Opera house opened in 1885 in central Rijeka with a gilded horseshoe auditorium, main stage and rehearsal rooms, still in daily use for opera, ballet and drama.",
+      "source_urls": [
+        "https://hnk-zajc.hr/en",
+        "https://www.kvarner-film.org/en/location"
+      ],
+      "url": "https://www.kvarner-film.org/en/location",
+      "official_url": "https://hnk-zajc.hr/en",
+      "commission_url": "https://www.kvarner-film.org/en/"
+    },
+    {
+      "id": "hr-diocletians-palace-split",
+      "name": "Diocletian's Palace",
+      "country": "Croatia",
+      "region": "Split-Dalmatia County",
+      "lat": 43.5085,
+      "lng": 16.4402,
+      "type": "Palace & landmark",
+      "setting": "Fourth-century Roman imperial palace whose walls, basement halls and peristyle form the living core of Split's old town, mixing ancient masonry with shops and homes.",
+      "known_for": "Game of Thrones (Meereen, seasons 4 to 6)",
+      "source_urls": [
+        "https://visitsplit.com/en/1/homepage",
+        "https://en.wikipedia.org/wiki/Diocletian%27s_Palace"
+      ],
+      "official_url": "https://visitsplit.com/en/1/homepage",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Old_Town%2C_Split_%28P1080956%29.jpg/960px-Old_Town%2C_Split_%28P1080956%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Old_Town,_Split_(P1080956).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-drazen-petrovic-hall",
+      "name": "Dražen Petrović Basketball Hall",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8026,
+      "lng": 15.9634,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor arena at Zagreb's Cibona sports complex with seating for around 5,400, home court of KK Cibona and a regular venue for concerts and other events.",
+      "source_urls": [
+        "https://www.cibona.com/",
+        "https://filmzagreb.hr/?product_cat=sport"
+      ],
+      "url": "https://filmzagreb.hr/?product_cat=sport",
+      "official_url": "https://www.cibona.com/",
+      "commission_url": "https://filmzagreb.hr/"
+    },
+    {
       "id": "dubrovnik-old-town",
       "name": "Dubrovnik Old Town",
       "country": "Croatia",
@@ -805,6 +886,29 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/960px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg",
         "author": "Zysko serhii",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-esplanade-zagreb",
+      "name": "Esplanade Zagreb Hotel",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8052,
+      "lng": 15.9759,
+      "type": "Hotel & interiors",
+      "setting": "Art Deco hotel opened in 1925 next to Zagreb's main station to serve Orient Express passengers, with a marble lobby, period ballroom and historic guest rooms.",
+      "source_urls": [
+        "https://www.esplanade.hr/en",
+        "https://filmzagreb.hr/?product_cat=arhitecture"
+      ],
+      "url": "https://filmzagreb.hr/?product_cat=arhitecture",
+      "official_url": "https://www.esplanade.hr/en",
+      "commission_url": "https://filmzagreb.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Zagreb_Hotel_Esplanade_Mihanovi%C4%87a_1.jpg/960px-Zagreb_Hotel_Esplanade_Mihanovi%C4%87a_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zagreb_Hotel_Esplanade_Mihanovi%C4%87a_1.jpg",
+        "author": "Palauenc05",
         "license": "CC BY-SA 4.0"
       }
     },
@@ -833,6 +937,86 @@
       "commission_url": "https://filmingincroatia.hr/"
     },
     {
+      "id": "hr-krka-national-park",
+      "name": "Krka National Park",
+      "country": "Croatia",
+      "region": "Šibenik-Knin County",
+      "lat": 43.9189,
+      "lng": 15.9785,
+      "type": "Forest & lake",
+      "setting": "Karst river canyon with a chain of travertine waterfalls, lakes and old watermills, plus the island monastery of Visovac reached only by boat.",
+      "source_urls": [
+        "https://www.npkrka.hr/en",
+        "https://filmingincroatia.hr/"
+      ],
+      "official_url": "https://www.npkrka.hr/en",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Krka_Nationalpark_BW_2024-09-30_14-15-02.jpg/960px-Krka_Nationalpark_BW_2024-09-30_14-15-02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Krka_Nationalpark_BW_2024-09-30_14-15-02.jpg",
+        "author": "Berthold Werner",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-lauba-zagreb",
+      "name": "Lauba",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8117,
+      "lng": 15.9404,
+      "type": "Industrial & derelict",
+      "setting": "Former Zagreb textile and later arms factory converted into an open art house, with a large column-free exhibition hall, glass additions and a sculpture garden.",
+      "source_urls": [
+        "https://lauba.hr/en/",
+        "https://filmzagreb.hr/?product_cat=other"
+      ],
+      "url": "https://filmzagreb.hr/?product_cat=other",
+      "official_url": "https://lauba.hr/en/",
+      "commission_url": "https://filmzagreb.hr/"
+    },
+    {
+      "id": "hr-opatija",
+      "name": "Opatija",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3349,
+      "lng": 14.3068,
+      "type": "Coast & beach",
+      "setting": "Belle-epoque resort town on the Kvarner riviera with a twelve-kilometre coastal promenade, villa gardens and grand hotels dating from the Austro-Hungarian era.",
+      "source_urls": [
+        "https://visitopatija.com/en",
+        "https://www.kvarner-film.org/en/location"
+      ],
+      "url": "https://www.kvarner-film.org/en/location",
+      "official_url": "https://visitopatija.com/en",
+      "commission_url": "https://www.kvarner-film.org/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Opatija%2C_HR.jpg/960px-Opatija%2C_HR.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Opatija,_HR.jpg",
+        "author": "Irrmam",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-pag-salt-pans",
+      "name": "Pag Salt Pans",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.4226,
+      "lng": 15.0836,
+      "type": "Industrial & derelict",
+      "setting": "Working saltworks on Pag island with roots in Roman times, laid out as shallow evaporation basins and canals, with a visitor centre run by the salt company Solana Pag.",
+      "known_for": "Following the Salt (documentary, per Zadar Film Commission)",
+      "source_urls": [
+        "https://www.solana-pag.hr/",
+        "https://www.zadarfilmcommission.com/en"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en",
+      "official_url": "https://www.solana-pag.hr/",
+      "commission_url": "https://www.zadarfilmcommission.com/en"
+    },
+    {
       "id": "plitvice-lakes",
       "name": "Plitvice Lakes National Park",
       "country": "Croatia",
@@ -852,6 +1036,163 @@
       }
     },
     {
+      "id": "hr-port-of-rijeka",
+      "name": "Port of Rijeka",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3272,
+      "lng": 14.4285,
+      "type": "Transport & infrastructure",
+      "setting": "Working deep-sea cargo port on the Kvarner Gulf with container terminals, cranes, warehouses and the older Delta basin quaysides close to the city centre.",
+      "source_urls": [
+        "https://www.lukarijeka.hr/en/",
+        "https://www.kvarner-film.org/en/location"
+      ],
+      "url": "https://www.kvarner-film.org/en/location",
+      "official_url": "https://www.lukarijeka.hr/en/",
+      "commission_url": "https://www.kvarner-film.org/en/"
+    },
+    {
+      "id": "hr-pula-arena",
+      "name": "Pula Arena",
+      "country": "Croatia",
+      "region": "Istria County",
+      "lat": 44.8732,
+      "lng": 13.8501,
+      "type": "Theatre, arena & venue",
+      "setting": "Roman stone amphitheatre in central Pula whose surviving outer wall and tiered seating host summer concerts, the Pula Film Festival and other large outdoor events.",
+      "known_for": "Pula Film Festival (host venue)",
+      "source_urls": [
+        "https://www.arenapula.hr/",
+        "https://www.istriafilmcommission.com/",
+        "https://en.wikipedia.org/wiki/Pula_Arena"
+      ],
+      "official_url": "https://www.arenapula.hr/",
+      "commission_url": "https://www.istriafilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_13-18_HDR_PAN.jpg/960px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_13-18_HDR_PAN.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Anfiteatro_de_Pula,_Croacia,_2017-04-17,_DD_13-18_HDR_PAN.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-rikard-bencic-rijeka",
+      "name": "Rikard Benčić Complex",
+      "country": "Croatia",
+      "region": "Primorje-Gorski Kotar County",
+      "lat": 45.3316,
+      "lng": 14.4314,
+      "type": "Industrial & derelict",
+      "setting": "Former sugar refinery and later Rikard Benčić machine factory in central Rijeka, restored as an industrial heritage complex now housing the Rijeka City Museum.",
+      "source_urls": [
+        "https://muzej-rijeka.hr/en/",
+        "https://www.kvarner-film.org/en/location"
+      ],
+      "url": "https://www.kvarner-film.org/en/location",
+      "official_url": "https://muzej-rijeka.hr/en/",
+      "commission_url": "https://www.kvarner-film.org/en/"
+    },
+    {
+      "id": "hr-st-nicholas-fortress-sibenik",
+      "name": "St. Nicholas Fortress",
+      "country": "Croatia",
+      "region": "Šibenik-Knin County",
+      "lat": 43.7338,
+      "lng": 15.8915,
+      "type": "Castle & estate",
+      "setting": "Triangular sixteenth-century sea fortress guarding the entrance to Šibenik's channel, a UNESCO World Heritage site reachable only by boat.",
+      "known_for": "Game of Thrones (Astapor scenes, season 3)",
+      "source_urls": [
+        "https://tvrdjava-kulture.hr/en/",
+        "https://en.wikipedia.org/wiki/Fortress_of_St._Nicholas,_%C5%A0ibenik"
+      ],
+      "official_url": "https://tvrdjava-kulture.hr/en/",
+      "commission_url": "https://filmingincroatia.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Aerial_image_of_St._Nicholas_Fortress_%28view_from_the_southeast%29.jpg/960px-Aerial_image_of_St._Nicholas_Fortress_%28view_from_the_southeast%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_St._Nicholas_Fortress_(view_from_the_southeast).jpg",
+        "author": "Carsten Steger",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-maksimir-stadium",
+      "name": "Stadion Maksimir",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8187,
+      "lng": 16.0179,
+      "type": "Theatre, arena & venue",
+      "setting": "Zagreb's largest football ground, home of GNK Dinamo Zagreb and the national team, with open bowl seating for more than 35,000 next to Maksimir Park.",
+      "source_urls": [
+        "https://www.zagreb.hr/en",
+        "https://filmzagreb.hr/?product_cat=sport",
+        "https://en.wikipedia.org/wiki/Stadion_Maksimir"
+      ],
+      "url": "https://filmzagreb.hr/?product_cat=sport",
+      "official_url": "https://www.zagreb.hr/en",
+      "commission_url": "https://filmzagreb.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Maksimirski_stadion_Zagreb.jpg/960px-Maksimirski_stadion_Zagreb.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Maksimirski_stadion_Zagreb.jpg",
+        "author": "Suradnik13",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-veli-rat-lighthouse",
+      "name": "Veli Rat Lighthouse",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.1521,
+      "lng": 14.8202,
+      "type": "Transport & infrastructure",
+      "setting": "Working stone lighthouse of 1849 at the northern tip of Dugi Otok, one of the tallest on the Adriatic, reached by a track through pine forest above a rocky cove.",
+      "source_urls": [
+        "https://zadar.travel/en/",
+        "https://www.zadarfilmcommission.com/en"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en",
+      "official_url": "https://zadar.travel/en/",
+      "commission_url": "https://www.zadarfilmcommission.com/en"
+    },
+    {
+      "id": "hr-vis-military-tunnels",
+      "name": "Vis Military Tunnels",
+      "country": "Croatia",
+      "region": "Split-Dalmatia County",
+      "lat": 43.0434,
+      "lng": 16.1655,
+      "type": "Industrial & derelict",
+      "setting": "Concrete tunnels cut into the hillsides of Vis by the Yugoslav army when the island was a closed military zone, now partly open to visitors and used as wine cellars.",
+      "known_for": "Mamma Mia! Here We Go Again (2018)",
+      "source_urls": [
+        "https://tz-vis.hr/en/",
+        "https://en.wikipedia.org/wiki/Vis_(town)",
+        "https://filmingincroatia.hr/"
+      ],
+      "official_url": "https://tz-vis.hr/en/",
+      "commission_url": "https://filmingincroatia.hr/"
+    },
+    {
+      "id": "hr-zagreb-fair",
+      "name": "Zagreb Fair",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7804,
+      "lng": 15.9722,
+      "type": "Office, school & public building",
+      "setting": "Mid-twentieth-century trade fair ground south of the Sava with modernist exhibition pavilions, large halls and an open showground used for trade events year round.",
+      "source_urls": [
+        "https://www.zv.hr/en",
+        "https://filmzagreb.hr/?product_cat=arhitecture"
+      ],
+      "url": "https://filmzagreb.hr/?product_cat=arhitecture",
+      "official_url": "https://www.zv.hr/en",
+      "commission_url": "https://filmzagreb.hr/"
+    },
+    {
       "id": "kromeriz-archbishops-palace",
       "name": "Archbishop's Palace, Kroměříž",
       "country": "Czech Republic",
@@ -869,6 +1210,21 @@
         "author": "Radim Holiš",
         "license": "CC BY-SA 3.0 cz"
       }
+    },
+    {
+      "id": "cz-aviation-museum-kunovice",
+      "name": "Aviation Museum Kunovice",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.0419,
+      "lng": 17.4664,
+      "type": "Transport & infrastructure",
+      "setting": "Aircraft collection and hangars at Kunovice airfield near Uherské Hradiště, on the site of the former Let Kunovice aircraft works, with propeller planes and gliders on display.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/the-aviation-museum-in-kunovice/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/the-aviation-museum-in-kunovice/",
+      "commission_url": "https://www.filmcommission.cz/"
     },
     {
       "id": "barrandov-studios",
@@ -897,6 +1253,75 @@
       }
     },
     {
+      "id": "cz-bohnice-psychiatric-hospital",
+      "name": "Bohnice Psychiatric Hospital",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.1314,
+      "lng": 14.4108,
+      "type": "Hospital, prison & institution",
+      "setting": "Pavilion-style psychiatric hospital campus opened in 1909 on a wooded hillside in north Prague, dozens of period brick buildings connected by paths and gardens, still in clinical use.",
+      "source_urls": [
+        "https://www.bohnice.cz/"
+      ],
+      "official_url": "https://www.bohnice.cz/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-brnenec-textile-factory",
+      "name": "Brněnec Textile Factory",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 49.6275,
+      "lng": 16.5219,
+      "type": "Industrial & derelict",
+      "setting": "19th century textile mill complex on the Svitava river in the village of Brněnec, with brick production halls, a chimney and former worker housing.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/brnenec-textile-factory/",
+        "https://en.wikipedia.org/wiki/Brn%C4%9Bnec"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/brnenec-textile-factory/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-brno-exhibition-centre",
+      "name": "Brno Exhibition Centre",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1875,
+      "lng": 16.5781,
+      "type": "Theatre, arena & venue",
+      "setting": "Large trade fair and exhibition ground south-west of Brno's centre, with functionalist 1920s pavilions and modern halls used for conventions, concerts and filming.",
+      "source_urls": [
+        "https://www.bvv.cz/en/",
+        "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/",
+      "official_url": "https://www.bvv.cz/en/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-cafe-louvre",
+      "name": "Café Louvre",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0812,
+      "lng": 14.4177,
+      "type": "Bar, restaurant & shop",
+      "setting": "Grand 1902 Art Nouveau café on Národní street in Prague, with a billiard room and tall windows over the street, run continuously except for a closure during the communist period.",
+      "source_urls": [
+        "https://www.cafelouvre.cz/en"
+      ],
+      "official_url": "https://www.cafelouvre.cz/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Prague_Caf%C3%A9_Louvre_Interior_3.jpg/960px-Prague_Caf%C3%A9_Louvre_Interior_3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Prague_Caf%C3%A9_Louvre_Interior_3.jpg",
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "cesky-krumlov",
       "name": "Český Krumlov",
       "country": "Czech Republic",
@@ -914,6 +1339,561 @@
         "author": "DominikCK1999",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "cz-cheb-train-station",
+      "name": "Cheb Railway Station",
+      "country": "Czech Republic",
+      "region": "Karlovy Vary Region",
+      "lat": 50.0722,
+      "lng": 12.3806,
+      "type": "Transport & infrastructure",
+      "setting": "Historic railway station in the west Bohemian border town of Cheb, with period platforms and a station building listed by the national film commission as a filming location.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/cheb-train-station/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/cheb-train-station/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-depo2015",
+      "name": "DEPO2015",
+      "country": "Czech Republic",
+      "region": "Plzeň Region",
+      "lat": 49.7423,
+      "lng": 13.3611,
+      "type": "Theatre, arena & venue",
+      "setting": "Former bus depot in Plzeň converted into a creative and cultural centre, with workshop halls, a gallery and event space that keep the building's industrial steel roof trusses.",
+      "source_urls": [
+        "https://www.depo2015.cz/",
+        "https://filmcommission.gov.cz/en/location/depo2015/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/depo2015/",
+      "official_url": "https://www.depo2015.cz/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-dolni-morava-sky-bridge",
+      "name": "Dolní Morava Sky Bridge",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.1275,
+      "lng": 16.8264,
+      "type": "Mountains & wilderness",
+      "setting": "721-metre pedestrian suspension bridge strung between two ridges above the Dolní Morava mountain resort near Králický Sněžník, with a glass-floored lookout and a nearby forest canopy walkway.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/dolni-morava-sky-bridge-and-treetop-walkway/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/dolni-morava-sky-bridge-and-treetop-walkway/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-dolni-vitkovice",
+      "name": "Dolní Vítkovice",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.82,
+      "lng": 18.28,
+      "type": "Industrial & derelict",
+      "setting": "Former ironworks and coking plant just south of Ostrava's centre, with blast furnaces, a gasometer and a coal tower preserved as an industrial heritage site with exhibition and event space.",
+      "source_urls": [
+        "https://www.dolnivitkovice.cz/en",
+        "https://filmcommission.gov.cz/en/location/dolni-vitkovice-area/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/dolni-vitkovice-area/",
+      "official_url": "https://www.dolnivitkovice.cz/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Doln%C3%AD_Oblast_V%C3%ADtkovice_2024.jpg/960px-Doln%C3%AD_Oblast_V%C3%ADtkovice_2024.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Doln%C3%AD_Oblast_V%C3%ADtkovice_2024.jpg",
+        "author": "Czech Tea",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "cz-gong-dolni-vitkovice",
+      "name": "Gong",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.818,
+      "lng": 18.282,
+      "type": "Theatre, arena & venue",
+      "setting": "Former gasometer at the Lower Vítkovice ironworks in Ostrava converted into a circular concert and exhibition hall inside its riveted steel shell.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/gong-dolni-vitkovice/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/gong-dolni-vitkovice/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-grandhotel-pupp",
+      "name": "Grandhotel Pupp",
+      "country": "Czech Republic",
+      "region": "Karlovy Vary Region",
+      "lat": 50.2191,
+      "lng": 12.8788,
+      "type": "Hotel & interiors",
+      "setting": "Baroque and neoclassical spa hotel at the head of Karlovy Vary's colonnade, with ballrooms, a casino and period guest rooms dating back to the 18th century.",
+      "known_for": "Casino Royale (2006), Last Holiday (2006)",
+      "source_urls": [
+        "https://www.pupp.cz/en",
+        "https://filmcommission.gov.cz/en/location/grandhotel-pupp/",
+        "https://en.wikipedia.org/wiki/Grandhotel_Pupp"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/grandhotel-pupp/",
+      "official_url": "https://www.pupp.cz/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Karlsbad%2C_Grandhotel_Pupp_IMG_6410.JPG/960px-Karlsbad%2C_Grandhotel_Pupp_IMG_6410.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Karlsbad,_Grandhotel_Pupp_IMG_6410.JPG",
+        "author": "Hedwig Storch",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "cz-holesovice-market",
+      "name": "Holešovice Market",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.1041,
+      "lng": 14.4442,
+      "type": "Bar, restaurant & shop",
+      "setting": "Late 19th century cattle market and slaughterhouse complex on the Vltava embankment in Holešovice, with brick market halls now used for food stalls, shops and events.",
+      "source_urls": [
+        "https://www.holesovickatrznice.cz/"
+      ],
+      "official_url": "https://www.holesovickatrznice.cz/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-hotel-jalta",
+      "name": "Hotel Jalta",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0811,
+      "lng": 14.4284,
+      "type": "Hotel & interiors",
+      "setting": "1958 socialist-modernist hotel on Wenceslas Square with a preserved Cold War-era nuclear bunker in the basement, run today as a functioning hotel with a small museum.",
+      "source_urls": [
+        "https://www.hoteljalta.com/en"
+      ],
+      "official_url": "https://www.hoteljalta.com/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/HotelJalta.jpg/960px-HotelJalta.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:HotelJalta.jpg",
+        "author": "Jklamo",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-hotel-thermal",
+      "name": "Hotel Thermal",
+      "country": "Czech Republic",
+      "region": "Karlovy Vary Region",
+      "lat": 50.2296,
+      "lng": 12.8747,
+      "type": "Hotel & interiors",
+      "setting": "Brutalist 1970s hotel and congress complex beside the Ohře river in Karlovy Vary, with a rooftop pool and an open-air cinema terrace, the home base of the city's international film festival.",
+      "source_urls": [
+        "https://www.hotelthermal.cz/en",
+        "https://filmcommission.gov.cz/en/location/hotel-thermal/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/hotel-thermal/",
+      "official_url": "https://www.hotelthermal.cz/en",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-invalidovna",
+      "name": "Invalidovna",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0951,
+      "lng": 14.4522,
+      "type": "Hospital, prison & institution",
+      "setting": "Baroque veterans' and invalids' home built from 1731 in Prague's Karlín district, with long arcaded wings and a central chapel, partly restored and partly awaiting renovation.",
+      "source_urls": [
+        "https://www.invalidovna.cz/",
+        "https://en.wikipedia.org/wiki/Invalidovna"
+      ],
+      "official_url": "https://www.invalidovna.cz/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-klementinum",
+      "name": "Klementinum",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0867,
+      "lng": 14.4164,
+      "type": "Office, school & public building",
+      "setting": "Former Jesuit college in Prague's Old Town now housing the National Library, with a baroque astronomical tower, mirrored chapel and historic library halls available for events and filming.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/klementinum/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/klementinum/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg/960px-Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg",
+        "author": "Skot",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-lovosice-port",
+      "name": "Lovosice Port",
+      "country": "Czech Republic",
+      "region": "Ústí nad Labem Region",
+      "lat": 50.515,
+      "lng": 14.0511,
+      "type": "Transport & infrastructure",
+      "setting": "River port and container terminal on the Elbe at Lovosice in north Bohemia, with cranes, quaysides and warehouse sheds serving inland barge traffic.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/lovosice-port/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/lovosice-port/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-lucerna-palace",
+      "name": "Lucerna Palace",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0811,
+      "lng": 14.4258,
+      "type": "Theatre, arena & venue",
+      "setting": "1921 Art Nouveau passage complex in central Prague, with a domed concert hall, one of the city's oldest cinemas and a chain of shopping arcades under glass roofs.",
+      "source_urls": [
+        "https://lucerna.cz/en/",
+        "https://en.wikipedia.org/wiki/Lucerna_Palace"
+      ],
+      "official_url": "https://lucerna.cz/en/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Die_Jugendstil-Fenster_im_Lucerna-Palast_%28Pal%C3%A1c_Lucerna%29_in_Prag_02.jpg/960px-Die_Jugendstil-Fenster_im_Lucerna-Palast_%28Pal%C3%A1c_Lucerna%29_in_Prag_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Die_Jugendstil-Fenster_im_Lucerna-Palast_(Pal%C3%A1c_Lucerna)_in_Prag_02.jpg",
+        "author": "JensKunstfreund",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-luhacovice-spa",
+      "name": "Luhačovice Spa",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.1008,
+      "lng": 17.7553,
+      "type": "Hotel & interiors",
+      "setting": "Moravian spa town built up from 1902 around mineral springs, with colonnades and hotel buildings designed by architect Dušan Jurkovič in a distinctive folk-art style.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/luhacovice-spa/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/luhacovice-spa/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-mahen-theatre",
+      "name": "Mahen Theatre",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1964,
+      "lng": 16.6131,
+      "type": "Theatre, arena & venue",
+      "setting": "1882 neo-baroque theatre in Brno, the first public building in Europe lit entirely by Edison electric light, still in use as part of the National Theatre Brno.",
+      "known_for": "First electrically lit theatre building in Europe (1882)",
+      "source_urls": [
+        "https://www.ndbrno.cz/en",
+        "https://filmcommission.gov.cz/en/location/mahen-theatre/",
+        "https://en.wikipedia.org/wiki/Mahen_Theatre"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/mahen-theatre/",
+      "official_url": "https://www.ndbrno.cz/en",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-masaryk-university",
+      "name": "Masaryk University",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1986,
+      "lng": 16.605,
+      "type": "Office, school & public building",
+      "setting": "Brno's largest university, spanning a historic main building near the city centre and modern faculty campuses, with lecture halls and campus architecture listed by the film commission.",
+      "source_urls": [
+        "https://www.muni.cz/en",
+        "https://filmcommission.gov.cz/en/atypical-architecture/"
+      ],
+      "official_url": "https://www.muni.cz/en",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-michal-mine",
+      "name": "Michal Mine",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.8423,
+      "lng": 18.3406,
+      "type": "Industrial & derelict",
+      "setting": "Complete early 20th century coal mine surface plant in Ostrava-Michálkovice, with preserved machine hall, boiler house and pithead baths run as a branch of the National Technical Museum.",
+      "source_urls": [
+        "https://www.dul-michal.cz/",
+        "https://filmcommission.gov.cz/en/location/michal-mine/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/michal-mine/",
+      "official_url": "https://www.dul-michal.cz/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Michal_Mine%2C_Ostrava-Mich%C3%A1lkovice.jpg/960px-Michal_Mine%2C_Ostrava-Mich%C3%A1lkovice.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Michal_Mine,_Ostrava-Mich%C3%A1lkovice.jpg",
+        "author": "Marta Malina Moraczewska",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-municipal-house",
+      "name": "Municipal House",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0879,
+      "lng": 14.4275,
+      "type": "Office, school & public building",
+      "setting": "Art Nouveau civic building on Republic Square in Prague completed in 1912, with the Smetana concert hall, ceremonial reception rooms, a café and restaurant behind an ornate mosaic facade.",
+      "source_urls": [
+        "https://www.obecnidum.cz/en",
+        "https://filmcommission.gov.cz/en/location/municipal-house/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/municipal-house/",
+      "official_url": "https://www.obecnidum.cz/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Casa_municipal%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_09.jpg/960px-Casa_municipal%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_09.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Casa_municipal,_Praga,_Rep%C3%BAblica_Checa,_2022-07-02,_DD_09.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-olomouc-town-hall",
+      "name": "Olomouc Town Hall",
+      "country": "Czech Republic",
+      "region": "Olomouc Region",
+      "lat": 49.5938,
+      "lng": 17.2509,
+      "type": "Office, school & public building",
+      "setting": "Gothic and Renaissance town hall on Olomouc's main square, with a tower, an open loggia and an astronomical clock rebuilt in a socialist-realist style after wartime damage.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/olomouc-town-hall/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/olomouc-town-hall/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-pardubice-hospital",
+      "name": "Pardubice Hospital",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0345,
+      "lng": 15.7889,
+      "type": "Hospital, prison & institution",
+      "setting": "Regional hospital campus in Pardubice combining older pavilion wings with newer clinical buildings, listed by the national film commission as an available filming location.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/pardubice-hospital/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/pardubice-hospital/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-prague-main-station",
+      "name": "Prague Main Railway Station",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0831,
+      "lng": 14.4358,
+      "type": "Transport & infrastructure",
+      "setting": "Prague's principal railway terminus, with an Art Nouveau departure hall from 1909 by architect Josef Fanta grafted onto a modern underground concourse and platforms.",
+      "known_for": "Mission: Impossible (1996)",
+      "source_urls": [
+        "https://spravazeleznic.cz",
+        "https://filmcommission.gov.cz/en/location/prague-main-train-station/",
+        "https://en.wikipedia.org/wiki/Prague_main_railway_station"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/prague-main-train-station/",
+      "official_url": "https://spravazeleznic.cz",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-prague-metro",
+      "name": "Prague Metro",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0827,
+      "lng": 14.4249,
+      "type": "Transport & infrastructure",
+      "setting": "Three line underground network opened in 1974, with deep late-communist era stations finished in coloured anodised aluminium panels and marble, still in daily operation.",
+      "source_urls": [
+        "https://www.dpp.cz/en",
+        "https://filmcommission.gov.cz/en/location/subway/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/subway/",
+      "official_url": "https://www.dpp.cz/en",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-sokol-hradec-kralove",
+      "name": "Sokol Hradec Králové Sports Complex",
+      "country": "Czech Republic",
+      "region": "Hradec Králové Region",
+      "lat": 50.2092,
+      "lng": 15.8322,
+      "type": "Theatre, arena & venue",
+      "setting": "Functionalist gymnasium and sports hall complex built for the Sokol movement in Hradec Králové, with large open exercise halls and period fittings.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/sokol-hradec-kralove-sports-complex/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/sokol-hradec-kralove-sports-complex/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-terezin-small-fortress",
+      "name": "Terezín Small Fortress",
+      "country": "Czech Republic",
+      "region": "Ústí nad Labem Region",
+      "lat": 50.5125,
+      "lng": 14.1572,
+      "type": "Hospital, prison & institution",
+      "setting": "18th century star fort east of Terezín used as a political prison under Austria-Hungary and as a Gestapo prison during the German occupation, with cell blocks and courtyards preserved as a memorial.",
+      "known_for": "Fateless (2005)",
+      "source_urls": [
+        "https://www.pamatnik-terezin.cz/",
+        "https://en.wikipedia.org/wiki/Small_Fortress",
+        "https://en.wikipedia.org/wiki/Fateless_(film)"
+      ],
+      "official_url": "https://www.pamatnik-terezin.cz/",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Terez%C3%ADn_-_At_the_Small_Fortress_01.jpg/960px-Terez%C3%ADn_-_At_the_Small_Fortress_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Terez%C3%ADn_-_At_the_Small_Fortress_01.jpg",
+        "author": "Txllxt TxllxT",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "cz-thomas-bata-villa",
+      "name": "Thomas Bata Villa",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.2293,
+      "lng": 17.6579,
+      "type": "House & apartment",
+      "setting": "Functionalist 1911 villa built for shoe manufacturer Tomáš Baťa on the edge of Zlín's factory district, later enlarged and now used as a museum of the Baťa family and its management methods.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/thomas-bata-villa-in-zlin/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/thomas-bata-villa-in-zlin/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-tomas-bata-university",
+      "name": "Tomas Bata University in Zlín",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.2227,
+      "lng": 17.6649,
+      "type": "Office, school & public building",
+      "setting": "University built inside the former Baťa shoe factory's functionalist halls in Zlín, glass-and-steel-frame factory buildings from the 1930s adapted into lecture rooms and laboratories.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/tbu-zlin/",
+        "https://en.wikipedia.org/wiki/Tomas_Bata_University_in_Zl%C3%ADn"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/tbu-zlin/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-underground-water-reservoir-brno",
+      "name": "Underground Water Reservoir Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1965,
+      "lng": 16.5966,
+      "type": "Industrial & derelict",
+      "setting": "Disused 19th century brick water reservoir cut into a hillside near Brno's exhibition grounds, with vaulted underground chambers now hired out for exhibitions and events.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/underground-water-reservoir-brno/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/underground-water-reservoir-brno/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-villa-stiassni",
+      "name": "Villa Stiassni",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.19,
+      "lng": 16.58,
+      "type": "House & apartment",
+      "setting": "1929 functionalist villa in Brno built for textile manufacturer Alfred Stiassni and later used as a state guesthouse, with period furniture, gardens and a swimming pool.",
+      "source_urls": [
+        "https://www.stiassni.cz/",
+        "https://filmcommission.gov.cz/en/location/stiassni-villa-in-brno/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/stiassni-villa-in-brno/",
+      "official_url": "https://www.stiassni.cz/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-villa-tugendhat",
+      "name": "Villa Tugendhat",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.2072,
+      "lng": 16.6161,
+      "type": "House & apartment",
+      "setting": "UNESCO-listed 1930 modernist villa in Brno by Ludwig Mies van der Rohe, with a glass-walled living hall, an onyx wall and a travertine terrace over the garden and city.",
+      "source_urls": [
+        "https://www.tugendhat.eu/en",
+        "https://filmcommission.gov.cz/en/location/tugendhat-villa/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/tugendhat-villa/",
+      "official_url": "https://www.tugendhat.eu/en",
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Villa_Tugendhat%2C_Brno.jpg/960px-Villa_Tugendhat%2C_Brno.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villa_Tugendhat,_Brno.jpg",
+        "author": "Thomas Ledl",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "cz-winternitz-villa",
+      "name": "Winternitz Villa",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0673,
+      "lng": 14.3885,
+      "type": "House & apartment",
+      "setting": "1932 house in Prague's Smíchov district designed by Adolf Loos around his raumplan of interlocking split levels, now a museum open for tours and filming by appointment.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/winternitz-villa/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/winternitz-villa/",
+      "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-zlin-factory-complex",
+      "name": "Zlín Factory Complex",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.2227,
+      "lng": 17.6649,
+      "type": "Industrial & derelict",
+      "setting": "Grid of red brick functionalist factory halls built by the Baťa shoe company in Zlín from the 1920s, now reused as a university, offices and cultural venues.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/zlin-factory-complex/",
+        "https://en.wikipedia.org/wiki/Zl%C3%ADn"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/location/zlin-factory-complex/",
+      "commission_url": "https://www.filmcommission.cz/"
     },
     {
       "id": "dk-bornholms-lufthavn",
@@ -2883,6 +3863,156 @@
       "commission_url": "https://www.filmstiftung.de/en/"
     },
     {
+      "id": "gr-epidaurus-ancient-theatre",
+      "name": "Ancient Theatre of Epidaurus",
+      "country": "Greece",
+      "region": "Peloponnese (Argolis)",
+      "lat": 37.5959,
+      "lng": 23.0794,
+      "type": "Theatre, arena & venue",
+      "setting": "Fourth-century BC stone amphitheatre seating around thirteen thousand, renowned for its acoustics and still used each summer for live theatre performances.",
+      "source_urls": [
+        "https://www.visitgreece.gr/mainland/peloponnese/epidaurus/"
+      ],
+      "official_url": "https://www.visitgreece.gr/mainland/peloponnese/epidaurus/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-ano-poli-thessaloniki",
+      "name": "Ano Poli (Thessaloniki Old Town)",
+      "country": "Greece",
+      "region": "Macedonia (Thessaloniki)",
+      "lat": 40.6403,
+      "lng": 22.95,
+      "type": "Historic town & street",
+      "setting": "Hillside old quarter of Thessaloniki above the Byzantine walls, with narrow lanes, Ottoman-era houses and views down over the modern city and the Thermaic Gulf.",
+      "source_urls": [
+        "https://www.thessaloniki.gr/"
+      ],
+      "official_url": "https://www.thessaloniki.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-aristotle-university-thessaloniki",
+      "name": "Aristotle University of Thessaloniki",
+      "country": "Greece",
+      "region": "Macedonia (Thessaloniki)",
+      "lat": 40.6285,
+      "lng": 22.9599,
+      "type": "Office, school & public building",
+      "setting": "Greece's largest university, its main campus built from the 1950s in central Thessaloniki with lecture halls, a library, faculty buildings and open campus grounds.",
+      "source_urls": [
+        "https://www.auth.gr/en/"
+      ],
+      "official_url": "https://www.auth.gr/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-chania-old-town",
+      "name": "Chania Old Town",
+      "country": "Greece",
+      "region": "Crete",
+      "lat": 35.5162,
+      "lng": 24.0176,
+      "type": "Historic town & street",
+      "setting": "Venetian harbour town on Crete with a stone lighthouse, waterfront arsenali warehouses, a former mosque and a maze of Venetian and Ottoman-era lanes behind the quay.",
+      "source_urls": [
+        "https://www.chania.gr/"
+      ],
+      "official_url": "https://www.chania.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-corfu-old-town",
+      "name": "Corfu Old Town",
+      "country": "Greece",
+      "region": "Ionian Islands (Corfu)",
+      "lat": 39.6243,
+      "lng": 19.9217,
+      "type": "Historic town & street",
+      "setting": "Fortified Ionian old town shaped by Venetian, French and British rule, with two citadels, a cricket ground on the Spianada and narrow Venetian-style lanes known as kantounia.",
+      "source_urls": [
+        "https://www.corfu.gr/"
+      ],
+      "official_url": "https://www.corfu.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-diakofto-kalavryta-railway",
+      "name": "Diakofto-Kalavryta Rack Railway",
+      "country": "Greece",
+      "region": "Peloponnese (Achaea)",
+      "lat": 38.1667,
+      "lng": 22.1333,
+      "type": "Transport & infrastructure",
+      "setting": "Narrow-gauge rack-and-pinion heritage railway climbing the Vouraikos Gorge from the coast at Diakofto to the mountain town of Kalavryta, using original early twentieth-century rolling stock.",
+      "source_urls": [
+        "https://www.odontotos.com/"
+      ],
+      "official_url": "https://www.odontotos.com/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-elefsina-industrial-heritage",
+      "name": "Elefsina Industrial Heritage Sites",
+      "country": "Greece",
+      "region": "Attica (Elefsina)",
+      "lat": 38.041,
+      "lng": 23.541,
+      "type": "Industrial & derelict",
+      "setting": "Cluster of disused nineteenth and twentieth-century factory buildings, including a former soap works and oil mill, along the Elefsina waterfront, reused as venues since the town's 2023 European Capital of Culture year.",
+      "source_urls": [
+        "https://2023eleusis.eu/en/"
+      ],
+      "official_url": "https://2023eleusis.eu/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-hotel-grande-bretagne",
+      "name": "Hotel Grande Bretagne",
+      "country": "Greece",
+      "region": "Attica (Athens)",
+      "lat": 37.9755,
+      "lng": 23.7332,
+      "type": "Hotel & interiors",
+      "setting": "Nineteenth-century grand hotel on Athens' Syntagma Square, with a marble lobby, ballrooms, a rooftop restaurant facing the Acropolis and a long history as the city's diplomatic hotel.",
+      "source_urls": [
+        "https://www.grandebretagne.com/"
+      ],
+      "official_url": "https://www.grandebretagne.com/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-lavrio-technological-cultural-park",
+      "name": "Lavrio Technological and Cultural Park",
+      "country": "Greece",
+      "region": "Attica (Lavrio)",
+      "lat": 37.715,
+      "lng": 24.0567,
+      "type": "Industrial & derelict",
+      "setting": "Former nineteenth and twentieth-century silver and lead mining and smelting works at Lavrio, with brick furnace buildings, workshops and ore-washing structures now reused as a research and cultural park.",
+      "source_urls": [
+        "https://www.lavrio.gr/"
+      ],
+      "official_url": "https://www.lavrio.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-megaron-athens-concert-hall",
+      "name": "Megaron, The Athens Concert Hall",
+      "country": "Greece",
+      "region": "Attica (Athens)",
+      "lat": 37.9755,
+      "lng": 23.7488,
+      "type": "Theatre, arena & venue",
+      "setting": "Marble-clad concert hall complex in central Athens with several auditoriums, the largest seating around two thousand, plus rehearsal and conference spaces.",
+      "source_urls": [
+        "https://www.megaron.gr/en/"
+      ],
+      "official_url": "https://www.megaron.gr/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
       "id": "meteora",
       "name": "Meteora",
       "country": "Greece",
@@ -2902,6 +4032,36 @@
       }
     },
     {
+      "id": "gr-milos-mining-museum",
+      "name": "Milos Mining Museum",
+      "country": "Greece",
+      "region": "Cyclades (Milos)",
+      "lat": 36.7333,
+      "lng": 24.427,
+      "type": "Industrial & derelict",
+      "setting": "Museum at Adamas on Milos covering the island's sulphur, bentonite and perlite mining industry, with equipment and the surrounding quarried volcanic landscape.",
+      "source_urls": [
+        "https://www.milosminingmuseum.com/"
+      ],
+      "official_url": "https://www.milosminingmuseum.com/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-nafplio",
+      "name": "Nafplio",
+      "country": "Greece",
+      "region": "Peloponnese (Argolis)",
+      "lat": 37.5673,
+      "lng": 22.8072,
+      "type": "Historic town & street",
+      "setting": "Former first capital of modern Greece on the Argolic Gulf, with a Venetian old town, two hilltop fortresses and a small fort standing on an islet in the harbour.",
+      "source_urls": [
+        "https://www.peloponnese.gr/"
+      ],
+      "official_url": "https://www.peloponnese.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
       "id": "nu-boyana-hellenic",
       "name": "Nu Boyana Hellenic Film Studios",
       "country": "Greece",
@@ -2914,6 +4074,67 @@
       "official_url": "https://nuboyana.com/",
       "commission_url": "https://filmcommission.gr/locations/",
       "photo": null
+    },
+    {
+      "id": "gr-oaka-athens-olympic-complex",
+      "name": "OAKA Athens Olympic Sports Complex",
+      "country": "Greece",
+      "region": "Attica (Athens)",
+      "lat": 38.0356,
+      "lng": 23.7853,
+      "type": "Theatre, arena & venue",
+      "setting": "Olympic athletics stadium and sports complex in Athens with a Santiago Calatrava glass and steel roof, an indoor arena, velodrome and swimming pools on the same grounds.",
+      "source_urls": [
+        "https://www.oaka.com.gr/en/"
+      ],
+      "official_url": "https://www.oaka.com.gr/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-port-of-piraeus",
+      "name": "Port of Piraeus",
+      "country": "Greece",
+      "region": "Attica (Athens)",
+      "lat": 37.943,
+      "lng": 23.637,
+      "type": "Transport & infrastructure",
+      "setting": "Greece's main passenger and container port beside Athens, with working quays, ferry terminals, a fishing harbour and the older Mikrolimano marina nearby.",
+      "known_for": "Never on Sunday (1960)",
+      "source_urls": [
+        "https://www.olp.gr/en/"
+      ],
+      "official_url": "https://www.olp.gr/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-port-of-thessaloniki",
+      "name": "Port of Thessaloniki",
+      "country": "Greece",
+      "region": "Macedonia (Thessaloniki)",
+      "lat": 40.6364,
+      "lng": 22.935,
+      "type": "Transport & infrastructure",
+      "setting": "Working container and passenger port on Thessaloniki's waterfront, with cargo piers, a passenger terminal and the early twentieth-century customs house pier 1 warehouses.",
+      "source_urls": [
+        "https://www.thpa.gr/en/"
+      ],
+      "official_url": "https://www.thpa.gr/en/",
+      "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-rio-antirrio-bridge",
+      "name": "Rio-Antirrio Bridge",
+      "country": "Greece",
+      "region": "Peloponnese / Western Greece",
+      "lat": 38.322,
+      "lng": 21.773,
+      "type": "Transport & infrastructure",
+      "setting": "Cable-stayed suspension bridge nearly three kilometres long crossing the Gulf of Corinth on four pylons, linking the Peloponnese at Rio to Antirrio on the mainland.",
+      "source_urls": [
+        "https://www.gefyra.gr/"
+      ],
+      "official_url": "https://www.gefyra.gr/",
+      "commission_url": "https://filmcommission.gr/locations/"
     },
     {
       "id": "skopelos",
@@ -2933,6 +4154,21 @@
         "author": "Chris Taklis",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "gr-vikos-gorge",
+      "name": "Vikos Gorge",
+      "country": "Greece",
+      "region": "Epirus (Zagori)",
+      "lat": 39.8672,
+      "lng": 20.7594,
+      "type": "Mountains & wilderness",
+      "setting": "Deep limestone gorge in the Zagori region of the Pindus mountains, with sheer cliff walls, a hiking trail along the riverbed and stone-built villages on its rim.",
+      "source_urls": [
+        "https://www.visitgreece.gr/mainland/epirus/vikos-gorge/"
+      ],
+      "official_url": "https://www.visitgreece.gr/mainland/epirus/vikos-gorge/",
+      "commission_url": "https://filmcommission.gr/locations/"
     },
     {
       "id": "hungarian-state-opera-house",
@@ -3689,6 +4925,138 @@
       "commission_url": "https://www.screenireland.ie/locations"
     },
     {
+      "id": "it-antico-caffe-greco",
+      "name": "Antico Caffè Greco",
+      "country": "Italy",
+      "region": "Rome, Lazio",
+      "lat": 41.9058,
+      "lng": 12.4822,
+      "type": "Bar, restaurant & shop",
+      "setting": "Coffee house on Via Condotti in Rome open since 1760, with a chain of small salons hung with paintings and 19th-century furnishings, among the city's oldest surviving interiors.",
+      "source_urls": [
+        "https://www.anticocaffegreco.eu/"
+      ],
+      "official_url": "https://www.anticocaffegreco.eu/",
+      "commission_url": "https://www.romalaziofilmcommission.it/"
+    },
+    {
+      "id": "it-arena-di-verona",
+      "name": "Arena di Verona",
+      "country": "Italy",
+      "region": "Verona, Veneto",
+      "lat": 45.4384,
+      "lng": 10.9916,
+      "type": "Theatre, arena & venue",
+      "setting": "1st-century Roman amphitheatre in central Verona, its arena floor and stone tiers used since 1913 for outdoor opera performances every summer.",
+      "known_for": "Letters to Juliet (2010)",
+      "source_urls": [
+        "https://www.arena.it/"
+      ],
+      "official_url": "https://www.arena.it/",
+      "commission_url": "https://www.venetofilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Piazza_Bra_seen_from_the_arenas_%28Verona%29.jpg/960px-Piazza_Bra_seen_from_the_arenas_%28Verona%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Piazza_Bra_seen_from_the_arenas_(Verona).jpg",
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-base-milano",
+      "name": "Base Milano",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.452,
+      "lng": 9.1645,
+      "type": "Industrial & derelict",
+      "setting": "Former Ansaldo machine works in Milan's Tortona district, converted into a co-working and cultural hub whose large industrial halls host exhibitions, fashion events and shoots.",
+      "source_urls": [
+        "https://base.milano.it/"
+      ],
+      "official_url": "https://base.milano.it/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-belmond-hotel-cipriani",
+      "name": "Belmond Hotel Cipriani",
+      "country": "Italy",
+      "region": "Venice, Veneto",
+      "lat": 45.4249,
+      "lng": 12.3405,
+      "type": "Hotel & interiors",
+      "setting": "Hotel on Giudecca island in Venice with gardens, an outdoor pool and lagoon-facing rooms in a converted 16th-century building, reached from Saint Mark's Square by private launch.",
+      "source_urls": [
+        "https://www.belmond.com/hotels/europe/italy/venice/belmond-hotel-cipriani/"
+      ],
+      "official_url": "https://www.belmond.com/hotels/europe/italy/venice/belmond-hotel-cipriani/",
+      "commission_url": "https://www.venetofilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Giudecca_island_Hotel_Cipriani_IMG_9202.jpg/960px-Giudecca_island_Hotel_Cipriani_IMG_9202.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Giudecca_island_Hotel_Cipriani_IMG_9202.jpg",
+        "author": "Bjoertvedt",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-unibocconi",
+      "name": "Bocconi University",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4498,
+      "lng": 9.1866,
+      "type": "Office, school & public building",
+      "setting": "Milan business university campus that includes the Grafton Architects-designed SDA building, with lecture halls, a library, courtyards and contemporary architecture around Via Sarfatti.",
+      "source_urls": [
+        "https://www.unibocconi.it/"
+      ],
+      "official_url": "https://www.unibocconi.it/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/94/Biblioteca_Universit%C3%A0_Bocconi.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Biblioteca_Universit%C3%A0_Bocconi.jpg",
+        "author": "Corinto88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-caffe-florian",
+      "name": "Caffè Florian",
+      "country": "Italy",
+      "region": "Venice, Veneto",
+      "lat": 45.4337,
+      "lng": 12.3385,
+      "type": "Bar, restaurant & shop",
+      "setting": "Coffee house on Saint Mark's Square in Venice open since 1720, with a sequence of small decorated rooms, mirrors and painted panels largely unchanged since the 19th century.",
+      "known_for": "Casino Royale (2006), The Tourist (2010)",
+      "source_urls": [
+        "https://www.caffeflorian.com/",
+        "https://en.wikipedia.org/wiki/Caff%C3%A8_Florian"
+      ],
+      "official_url": "https://www.caffeflorian.com/",
+      "commission_url": "https://www.venetofilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Caff%C3%A8_Florian_%28Venice%29-msu-5776-.jpg/960px-Caff%C3%A8_Florian_%28Venice%29-msu-5776-.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Caff%C3%A8_Florian_(Venice)-msu-5776-.jpg",
+        "author": "Matthias Süßen",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-campo-imperatore-gran-sasso",
+      "name": "Campo Imperatore, Gran Sasso",
+      "country": "Italy",
+      "region": "Gran Sasso, Abruzzo",
+      "lat": 42.439,
+      "lng": 13.627,
+      "type": "Mountains & wilderness",
+      "setting": "High plateau beneath the Gran Sasso massif in Abruzzo, known locally as Italy's Little Tibet, with wide alpine grassland and a former ski hotel where Mussolini was briefly held in 1943.",
+      "source_urls": [
+        "https://www.gransassolagapark.it/"
+      ],
+      "official_url": "https://www.gransassolagapark.it/",
+      "commission_url": "https://www.abruzzofilmcommission.com/"
+    },
+    {
       "id": "cinecitta",
       "name": "Cinecittà",
       "country": "Italy",
@@ -3716,6 +5084,341 @@
       }
     },
     {
+      "id": "it-citta-della-scienza",
+      "name": "Città della Scienza",
+      "country": "Italy",
+      "region": "Naples, Campania",
+      "lat": 40.808,
+      "lng": 14.181,
+      "type": "Office, school & public building",
+      "setting": "Science museum and congress centre on the former Bagnoli industrial waterfront in Naples, with interactive exhibition halls, an auditorium and modular event spaces for hire.",
+      "source_urls": [
+        "https://www.cittadellascienza.it/"
+      ],
+      "official_url": "https://www.cittadellascienza.it/",
+      "commission_url": "https://www.fcrc.it/"
+    },
+    {
+      "id": "it-craco",
+      "name": "Craco",
+      "country": "Italy",
+      "region": "Craco, Basilicata",
+      "lat": 40.3988,
+      "lng": 16.4405,
+      "type": "Village & countryside",
+      "setting": "Abandoned hilltop town in Basilicata, evacuated after a 1963 landslide, with medieval stone houses, a tower and a church left standing on the exposed ridge.",
+      "known_for": "The Passion of the Christ (2004), Quantum of Solace (2008), Wonder Woman (2017)",
+      "source_urls": [
+        "http://www.craco.eu/",
+        "https://en.wikipedia.org/wiki/Craco"
+      ],
+      "official_url": "http://www.craco.eu/",
+      "commission_url": "https://www.lucanafilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Basilicata_._Paesaggio_presso_Craco%2C_Matera.jpg/960px-Basilicata_._Paesaggio_presso_Craco%2C_Matera.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Basilicata_._Paesaggio_presso_Craco,_Matera.jpg",
+        "author": "Antuang",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-fabbrica-del-vapore",
+      "name": "Fabbrica del Vapore",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.482,
+      "lng": 9.172,
+      "type": "Industrial & derelict",
+      "setting": "Former 19th-century tram and rail-carriage factory in Milan, now a municipal cultural centre with industrial brick halls and an outdoor yard used for exhibitions and events.",
+      "source_urls": [
+        "https://www.fabbricadelvapore.org/"
+      ],
+      "official_url": "https://www.fabbricadelvapore.org/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-grand-hotel-et-de-milan",
+      "name": "Grand Hotel et de Milan",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4695,
+      "lng": 9.1917,
+      "type": "Hotel & interiors",
+      "setting": "1863 hotel in central Milan near La Scala, with period salons, an internal courtyard and rooms including the suite where composer Giuseppe Verdi lived and died.",
+      "source_urls": [
+        "https://www.grandhoteletdemilan.it/"
+      ],
+      "official_url": "https://www.grandhoteletdemilan.it/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-grand-hotel-villa-serbelloni",
+      "name": "Grand Hotel Villa Serbelloni",
+      "country": "Italy",
+      "region": "Bellagio, Lombardy",
+      "lat": 45.986,
+      "lng": 9.2576,
+      "type": "Hotel & interiors",
+      "setting": "Nineteenth-century lakeside hotel on the Bellagio promontory overlooking Lake Como, with period public rooms, terraced gardens and views over both branches of the lake.",
+      "source_urls": [
+        "https://www.villaserbelloni.com/"
+      ],
+      "official_url": "https://www.villaserbelloni.com/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-grande-miniera-serbariu",
+      "name": "Grande Miniera di Serbariu",
+      "country": "Italy",
+      "region": "Carbonia, Sardinia",
+      "lat": 39.169,
+      "lng": 8.522,
+      "type": "Industrial & derelict",
+      "setting": "Former coal mine at Carbonia in Sardinia, its headframe, washery buildings and underground galleries preserved as a mining museum with period machinery and accessible tunnel sections.",
+      "source_urls": [
+        "https://www.museodelcarbone.it/"
+      ],
+      "official_url": "https://www.museodelcarbone.it/",
+      "commission_url": "https://www.sardegnafilmcommission.it/"
+    },
+    {
+      "id": "it-ivrea-industrial-city",
+      "name": "Ivrea, Industrial City of the 20th Century",
+      "country": "Italy",
+      "region": "Ivrea, Piedmont",
+      "lat": 45.47,
+      "lng": 7.8745,
+      "type": "Industrial & derelict",
+      "setting": "Early to mid-20th-century Olivetti factory town in Piedmont, its rationalist and modernist office and social buildings along Via Jervis forming a UNESCO World Heritage industrial landscape.",
+      "known_for": "Adriano Olivetti: La forza di un sogno (2013 miniseries)",
+      "source_urls": [
+        "https://www.ivreacittaindustriale.it/",
+        "https://en.wikipedia.org/wiki/Ivrea"
+      ],
+      "official_url": "https://www.ivreacittaindustriale.it/",
+      "commission_url": "https://www.fctp.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2021-linux-day-olivetti%2C_Ivrea%2C_Italy.jpg/960px-2021-linux-day-olivetti%2C_Ivrea%2C_Italy.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:2021-linux-day-olivetti,_Ivrea,_Italy.jpg",
+        "author": "Norberto Patrignani",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-lingotto-pinacoteca-agnelli",
+      "name": "Lingotto Rooftop Track and Pinacoteca Agnelli",
+      "country": "Italy",
+      "region": "Turin, Piedmont",
+      "lat": 45.0326,
+      "lng": 7.6636,
+      "type": "Modern architecture",
+      "setting": "Former Fiat car factory in Turin with a rooftop test track encircling the building, now containing exhibition halls, a hotel and the Pinacoteca Agnelli art gallery beneath a glass pavilion.",
+      "known_for": "The Italian Job (1969)",
+      "source_urls": [
+        "https://www.pinacoteca-agnelli.it/",
+        "https://en.wikipedia.org/wiki/Lingotto"
+      ],
+      "official_url": "https://www.pinacoteca-agnelli.it/",
+      "commission_url": "https://www.fctp.it/"
+    },
+    {
+      "id": "it-manifattura-tabacchi",
+      "name": "Manifattura Tabacchi",
+      "country": "Italy",
+      "region": "Florence, Tuscany",
+      "lat": 43.7838,
+      "lng": 11.2295,
+      "type": "Industrial & derelict",
+      "setting": "Former state tobacco factory in Florence, redeveloped into a mixed district with courtyards, industrial-style halls and a dedicated events venue called Motel.",
+      "source_urls": [
+        "https://www.manifatturatabacchi.com/"
+      ],
+      "official_url": "https://www.manifatturatabacchi.com/",
+      "commission_url": "https://www.toscanafilmcommission.it/"
+    },
+    {
+      "id": "it-mercato-centrale-firenze",
+      "name": "Mercato Centrale Firenze",
+      "country": "Italy",
+      "region": "Florence, Tuscany",
+      "lat": 43.7766,
+      "lng": 11.2532,
+      "type": "Bar, restaurant & shop",
+      "setting": "Nineteenth-century iron-and-glass covered market near San Lorenzo in Florence, with a ground-floor produce market and an upper-floor food hall of stalls and communal tables.",
+      "source_urls": [
+        "https://www.mercatocentrale.it/firenze/"
+      ],
+      "official_url": "https://www.mercatocentrale.it/firenze/",
+      "commission_url": "https://www.toscanafilmcommission.it/"
+    },
+    {
+      "id": "it-milano-centrale",
+      "name": "Milano Centrale Railway Station",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4859,
+      "lng": 9.2044,
+      "type": "Transport & infrastructure",
+      "setting": "Monumental 1931 railway terminus in Milan with a vast steel-and-glass train shed, marble ticket halls and Art Deco and Assyrian-influenced decoration across several levels.",
+      "source_urls": [
+        "https://www.rfi.it/"
+      ],
+      "official_url": "https://www.rfi.it/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-mole-antonelliana-museo-cinema",
+      "name": "Mole Antonelliana - National Cinema Museum",
+      "country": "Italy",
+      "region": "Turin, Piedmont",
+      "lat": 45.0691,
+      "lng": 7.6936,
+      "type": "Office, school & public building",
+      "setting": "Nineteenth-century domed landmark in Turin housing the National Cinema Museum, with a spiral ramp, a central exhibition hall beneath the dome and a glass panoramic lift to the top.",
+      "source_urls": [
+        "https://www.museocinema.it/"
+      ],
+      "official_url": "https://www.museocinema.it/",
+      "commission_url": "https://www.fctp.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mole_Antonelliana_2016.jpg/960px-Mole_Antonelliana_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mole_Antonelliana_2016.jpg",
+        "author": "Caulfield",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-ogr-torino",
+      "name": "OGR Torino",
+      "country": "Italy",
+      "region": "Turin, Piedmont",
+      "lat": 45.0596,
+      "lng": 7.6614,
+      "type": "Industrial & derelict",
+      "setting": "Former 19th-century railway repair workshop in Turin, restored into a steel-and-glass exhibition and event hall with an attached production and rehearsal wing.",
+      "source_urls": [
+        "https://ogrtorino.it/"
+      ],
+      "official_url": "https://ogrtorino.it/",
+      "commission_url": "https://www.fctp.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/OGR_-_Officine_Grandi_Riparazioni_%284618221719%29.jpg/960px-OGR_-_Officine_Grandi_Riparazioni_%284618221719%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:OGR_-_Officine_Grandi_Riparazioni_(4618221719).jpg",
+        "author": "Fulvio Spada",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "it-ortigia-siracusa",
+      "name": "Ortigia",
+      "country": "Italy",
+      "region": "Syracuse, Sicily",
+      "lat": 37.0606,
+      "lng": 15.2947,
+      "type": "Historic town & street",
+      "setting": "Historic island core of Syracuse in Sicily, with a baroque cathedral built into the columns of a Greek temple, narrow lanes, a waterfront promenade and a Norman castle at its tip.",
+      "source_urls": [
+        "https://www.comune.siracusa.it/"
+      ],
+      "official_url": "https://www.comune.siracusa.it/",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "it-eur-palazzo-congressi",
+      "name": "Palazzo dei Congressi, EUR",
+      "country": "Italy",
+      "region": "Rome, Lazio",
+      "lat": 41.8329,
+      "lng": 12.4715,
+      "type": "Office, school & public building",
+      "setting": "Rationalist congress hall in Rome's EUR district, built for a cancelled 1942 world's fair, with a marble facade, a colonnaded portico and a large domed hall, managed by EUR SpA.",
+      "known_for": "L'Eclisse (1962), La Grande Bellezza (2013)",
+      "source_urls": [
+        "https://www.eurspa.it/",
+        "https://en.wikipedia.org/wiki/EUR"
+      ],
+      "official_url": "https://www.eurspa.it/",
+      "commission_url": "https://www.romalaziofilmcommission.it/"
+    },
+    {
+      "id": "it-bologna-porticoes",
+      "name": "Porticoes of Bologna",
+      "country": "Italy",
+      "region": "Bologna, Emilia-Romagna",
+      "lat": 44.4739,
+      "lng": 11.3122,
+      "type": "Historic town & street",
+      "setting": "Covered walkways lining central Bologna's streets, including the roughly 3.8 km arcade climbing to the Sanctuary of San Luca, a UNESCO World Heritage arrangement of porticoes.",
+      "source_urls": [
+        "https://www.comune.bologna.it/"
+      ],
+      "official_url": "https://www.comune.bologna.it/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Arcade_of_Sanctuary_of_the_Madonna_di_San_Luca%2C_Bologna%2C_Italy.jpg/960px-Arcade_of_Sanctuary_of_the_Madonna_di_San_Luca%2C_Bologna%2C_Italy.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Arcade_of_Sanctuary_of_the_Madonna_di_San_Luca,_Bologna,_Italy.jpg",
+        "author": "Ввласенко",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "it-porto-antico-genova",
+      "name": "Porto Antico di Genova",
+      "country": "Italy",
+      "region": "Genoa, Liguria",
+      "lat": 44.409,
+      "lng": 8.928,
+      "type": "Transport & infrastructure",
+      "setting": "Nineteenth-century harbour warehouses and docks in Genoa, redeveloped for Expo 1992 into a waterfront of piazzas, a marina, an aquarium and event spaces along the old quays.",
+      "source_urls": [
+        "https://www.portoantico.it/"
+      ],
+      "official_url": "https://www.portoantico.it/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Porto_Antico_Genova_varie_05.jpg/960px-Porto_Antico_Genova_varie_05.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Porto_Antico_Genova_varie_05.jpg",
+        "author": "Alessio Sbarbaro",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "it-porto-vecchio-trieste",
+      "name": "Porto Vecchio di Trieste",
+      "country": "Italy",
+      "region": "Trieste, Friuli-Venezia Giulia",
+      "lat": 45.656,
+      "lng": 13.768,
+      "type": "Transport & infrastructure",
+      "setting": "Disused free port in Trieste with about seventy hectares of 19th-century warehouses, rail sidings and quays between the city centre and the sea, now under partial redevelopment.",
+      "source_urls": [
+        "https://www.adspmao.it/"
+      ],
+      "official_url": "https://www.adspmao.it/",
+      "commission_url": "https://www.fvgfilmcommission.com/"
+    },
+    {
+      "id": "it-san-siro-stadium",
+      "name": "San Siro Stadium (Stadio Giuseppe Meazza)",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4781,
+      "lng": 9.124,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-tiered football stadium in Milan shared by AC Milan and Inter, with a distinctive spiral-ramp exterior and seating for over 75,000.",
+      "source_urls": [
+        "https://www.sansirostadium.com/"
+      ],
+      "official_url": "https://www.sansirostadium.com/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Giuseppe_Meazza_%28San_Siro%29_stadium%2C_exterior_view.jpg/960px-Giuseppe_Meazza_%28San_Siro%29_stadium%2C_exterior_view.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Giuseppe_Meazza_(San_Siro)_stadium,_exterior_view.jpg",
+        "author": "John Seb Barber",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
       "id": "sassi-di-matera",
       "name": "Sassi di Matera",
       "country": "Italy",
@@ -3733,6 +5436,95 @@
         "author": "Bönisch",
         "license": "CC BY-SA 2.0 de"
       }
+    },
+    {
+      "id": "it-stadio-olimpico",
+      "name": "Stadio Olimpico",
+      "country": "Italy",
+      "region": "Rome, Lazio",
+      "lat": 41.9342,
+      "lng": 12.4547,
+      "type": "Theatre, arena & venue",
+      "setting": "Rome's main stadium in the Foro Italico complex, with tiered seating for over 70,000 used for football, athletics, concerts and other large events.",
+      "source_urls": [
+        "https://www.sportesalute.eu/"
+      ],
+      "official_url": "https://www.sportesalute.eu/",
+      "commission_url": "https://www.romalaziofilmcommission.it/"
+    },
+    {
+      "id": "it-teatro-alla-scala",
+      "name": "Teatro alla Scala",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4674,
+      "lng": 9.1899,
+      "type": "Theatre, arena & venue",
+      "setting": "1778 opera house in central Milan with a gilded horseshoe auditorium, tiered boxes, a museum wing and a stage house used for opera, ballet and concerts.",
+      "source_urls": [
+        "https://www.teatroallascala.org/"
+      ],
+      "official_url": "https://www.teatroallascala.org/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/20110725_Milano_La_Scala_5507.jpg/960px-20110725_Milano_La_Scala_5507.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20110725_Milano_La_Scala_5507.jpg",
+        "author": "Jakub Hałun",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-teatro-massimo",
+      "name": "Teatro Massimo",
+      "country": "Italy",
+      "region": "Palermo, Sicily",
+      "lat": 38.1207,
+      "lng": 13.3596,
+      "type": "Theatre, arena & venue",
+      "setting": "Largest opera house in Italy, in central Palermo, with a neoclassical facade, a horseshoe auditorium seating around 1,300 and backstage and rehearsal spaces.",
+      "known_for": "The Godfather Part III (1990)",
+      "source_urls": [
+        "https://www.teatromassimo.it/",
+        "https://en.wikipedia.org/wiki/Teatro_Massimo"
+      ],
+      "official_url": "https://www.teatromassimo.it/",
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg/960px-Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg",
+        "author": "Vinpao",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-napoli-metro-toledo",
+      "name": "Toledo Metro Station",
+      "country": "Italy",
+      "region": "Naples, Campania",
+      "lat": 40.8395,
+      "lng": 14.2494,
+      "type": "Transport & infrastructure",
+      "setting": "Underground metro station in central Naples built around 40 metres deep, with a mosaic-lined vaulted concourse known as the Crater de Luz, part of the city's art-station network.",
+      "source_urls": [
+        "https://www.anm.it/"
+      ],
+      "official_url": "https://www.anm.it/",
+      "commission_url": "https://www.fcrc.it/"
+    },
+    {
+      "id": "it-tropea",
+      "name": "Tropea",
+      "country": "Italy",
+      "region": "Tropea, Calabria",
+      "lat": 38.6772,
+      "lng": 15.8987,
+      "type": "Historic town & street",
+      "setting": "Clifftop town on Calabria's Tyrrhenian coast, with a historic centre of stone lanes and balconies overlooking the beach and the offshore Santa Maria dell'Isola sanctuary.",
+      "source_urls": [
+        "https://www.comune.tropea.vv.it/"
+      ],
+      "official_url": "https://www.comune.tropea.vv.it/",
+      "commission_url": "https://www.calabriafilmcommission.it/"
     },
     {
       "id": "villa-del-balbianello",
@@ -3754,6 +5546,85 @@
       }
     },
     {
+      "id": "it-villa-necchi-campiglio",
+      "name": "Villa Necchi Campiglio",
+      "country": "Italy",
+      "region": "Milan, Lombardy",
+      "lat": 45.4711,
+      "lng": 9.2027,
+      "type": "House & apartment",
+      "setting": "1930s rationalist villa in central Milan designed by Piero Portaluppi, with period interiors, a garden, swimming pool and tennis court, run as a house museum by FAI.",
+      "known_for": "I Am Love (2009)",
+      "source_urls": [
+        "https://fondoambiente.it/luoghi/villa-necchi-campiglio"
+      ],
+      "official_url": "https://fondoambiente.it/luoghi/villa-necchi-campiglio",
+      "commission_url": "https://italianfilmcommissions.it/"
+    },
+    {
+      "id": "mt-comino-blue-lagoon",
+      "name": "Blue Lagoon, Comino",
+      "country": "Malta",
+      "region": "Comino",
+      "lat": 36.014,
+      "lng": 14.3234,
+      "type": "Coast & beach",
+      "setting": "Shallow turquoise channel between Comino and the islet of Cominotto, with white sand under clear water and low limestone cliffs on both shores.",
+      "known_for": "The Count of Monte Cristo (2002)",
+      "source_urls": [
+        "https://www.visitgozo.com/",
+        "https://en.wikipedia.org/wiki/Comino"
+      ],
+      "official_url": "https://www.visitgozo.com/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Malta_-_Ghajnsielem_-_Comino_%2B_Large_Blue_Lagoon_Rock_%2B_Small_Blue_Lagoon_Rock_%2B_Cominotto_%2B_Blue_Lagoon_02_ies.jpg/960px-Malta_-_Ghajnsielem_-_Comino_%2B_Large_Blue_Lagoon_Rock_%2B_Small_Blue_Lagoon_Rock_%2B_Cominotto_%2B_Blue_Lagoon_02_ies.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Malta_-_Ghajnsielem_-_Comino_%2B_Large_Blue_Lagoon_Rock_%2B_Small_Blue_Lagoon_Rock_%2B_Cominotto_%2B_Blue_Lagoon_02_ies.jpg",
+        "author": "Frank Vincentz",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "mt-dwejra",
+      "name": "Dwejra",
+      "country": "Malta",
+      "region": "Gozo",
+      "lat": 36.0536,
+      "lng": 14.1883,
+      "type": "Coast & beach",
+      "setting": "Rocky bay on Gozo's west coast with an inland sea joined to the open water by a natural tunnel, on a stretch of coastline once marked by the collapsed Azure Window.",
+      "known_for": "Game of Thrones (season 1), Clash of the Titans (2010)",
+      "source_urls": [
+        "https://www.visitgozo.com/",
+        "https://en.wikipedia.org/wiki/Dwejra"
+      ],
+      "official_url": "https://www.visitgozo.com/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bah%C3%ADa_de_Dwejra%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_47-58_PAN.jpg/960px-Bah%C3%ADa_de_Dwejra%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_47-58_PAN.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bah%C3%ADa_de_Dwejra,_isla_de_Gozo,_Malta,_2021-08-22,_DD_47-58_PAN.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "mt-fort-manoel",
+      "name": "Fort Manoel",
+      "country": "Malta",
+      "region": "Gżira",
+      "lat": 35.9029,
+      "lng": 14.5049,
+      "type": "Castle & estate",
+      "setting": "Baroque star fort built 1723 to 1755 on its own islet in Marsamxett Harbour, restored with bastions, a chapel and a large open parade ground used for big set builds.",
+      "known_for": "Assassin's Creed (2016), World War Z (2013), By the Sea (2015)",
+      "source_urls": [
+        "https://dinlarthelwa.org/",
+        "https://en.wikipedia.org/wiki/Fort_Manoel"
+      ],
+      "official_url": "https://dinlarthelwa.org/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
       "id": "fort-ricasoli",
       "name": "Fort Ricasoli",
       "country": "Malta",
@@ -3769,6 +5640,29 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Forst_Ricasoli.jpg/960px-Forst_Ricasoli.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Forst_Ricasoli.jpg",
         "author": "Pichemist",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "mt-fort-st-elmo",
+      "name": "Fort St Elmo",
+      "country": "Malta",
+      "region": "Valletta",
+      "lat": 35.902,
+      "lng": 14.5188,
+      "type": "Castle & estate",
+      "setting": "Star-shaped sixteenth-century fort at the tip of the Valletta peninsula, now home to the National War Museum, with bastions, a parade ground and sea-facing ramparts.",
+      "known_for": "Assassin's Creed (2016), Da Vinci's Demons (2013-2015)",
+      "source_urls": [
+        "https://www.heritagemalta.mt/museums-sites/fort-st-elmo-and-national-war-museum/",
+        "https://en.wikipedia.org/wiki/Fort_Saint_Elmo"
+      ],
+      "official_url": "https://www.heritagemalta.mt/museums-sites/fort-st-elmo-and-national-war-museum/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fuerte_de_San_Telmo%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_218.jpg/960px-Fuerte_de_San_Telmo%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_218.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fuerte_de_San_Telmo,_La_Valeta,_isla_de_Malta,_Malta,_2021-08-25,_DD_218.jpg",
+        "author": "Diego Delso",
         "license": "CC BY-SA 4.0"
       }
     },
@@ -3792,6 +5686,46 @@
       }
     },
     {
+      "id": "mt-malta-maritime-museum",
+      "name": "Malta Maritime Museum",
+      "country": "Malta",
+      "region": "Birgu (Vittoriosa)",
+      "lat": 35.8878,
+      "lng": 14.5208,
+      "type": "Industrial & derelict",
+      "setting": "Former Royal Naval bakery on the Vittoriosa waterfront, now a museum of Malta's dockyards and Grand Harbour shipping history from the Knights to the twentieth century.",
+      "known_for": "Malta Story (1953, depicting the wartime dockyards)",
+      "source_urls": [
+        "https://www.heritagemalta.mt/museums-sites/malta-maritime-museum/",
+        "https://en.wikipedia.org/wiki/Malta_Story"
+      ],
+      "official_url": "https://www.heritagemalta.mt/museums-sites/malta-maritime-museum/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-manoel-theatre",
+      "name": "Manoel Theatre",
+      "country": "Malta",
+      "region": "Valletta",
+      "lat": 35.8998,
+      "lng": 14.5126,
+      "type": "Theatre, arena & venue",
+      "setting": "Baroque theatre opened in 1732 in central Valletta, one of Europe's oldest still in use, with a gilded three-tier horseshoe auditorium seating around 620.",
+      "known_for": "By the Sea (2015)",
+      "source_urls": [
+        "https://teatrumanoel.com.mt/",
+        "https://en.wikipedia.org/wiki/Manoel_Theatre"
+      ],
+      "official_url": "https://teatrumanoel.com.mt/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Manoel_theatre_%2812843882153%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Manoel_theatre_(12843882153).jpg",
+        "author": "R Muscat",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
       "id": "mdina",
       "name": "Mdina",
       "country": "Malta",
@@ -3809,6 +5743,121 @@
         "author": "Frank Vincentz",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "mt-palazzo-parisio",
+      "name": "Palazzo Parisio",
+      "country": "Malta",
+      "region": "Naxxar",
+      "lat": 35.9149,
+      "lng": 14.4442,
+      "type": "House & apartment",
+      "setting": "Eighteenth-century palace remodelled in the 1860s with gilded salons, frescoed halls and Italianate walled gardens with an orangery and grotto.",
+      "suitability": "The venue's own site lists filming among the activities it hosts, alongside weddings, product launches and fashion shows.",
+      "source_urls": [
+        "https://www.palazzoparisio.com/"
+      ],
+      "official_url": "https://www.palazzoparisio.com/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Palazzo_Parisio_and_Gardens.jpeg/960px-Palazzo_Parisio_and_Gardens.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palazzo_Parisio_and_Gardens.jpeg",
+        "author": "Continentaleurope",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "mt-popeye-village",
+      "name": "Popeye Village",
+      "country": "Malta",
+      "region": "Mellieħa",
+      "lat": 35.9608,
+      "lng": 14.3407,
+      "type": "Studio & backlot",
+      "setting": "Wooden waterfront village built as the full-scale set for the 1980 Popeye musical, kept afterwards on Anchor Bay as a walk-through attraction.",
+      "known_for": "Popeye (1980)",
+      "source_urls": [
+        "https://popeyemalta.com/",
+        "https://en.wikipedia.org/wiki/Popeye_Village"
+      ],
+      "official_url": "https://popeyemalta.com/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pueblo_de_Popeye%2C_Mellie%C4%A7a%2C_isla_de_Malta%2C_Malta%2C_2021-08-24%2C_DD_02-03_PAN.jpg/960px-Pueblo_de_Popeye%2C_Mellie%C4%A7a%2C_isla_de_Malta%2C_Malta%2C_2021-08-24%2C_DD_02-03_PAN.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Pueblo_de_Popeye,_Mellie%C4%A7a,_isla_de_Malta,_Malta,_2021-08-24,_DD_02-03_PAN.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "mt-university-of-malta",
+      "name": "University of Malta",
+      "country": "Malta",
+      "region": "Msida",
+      "lat": 35.9021,
+      "lng": 14.4835,
+      "type": "Office, school & public building",
+      "setting": "Main university campus at Tal-Qroqq, with lecture halls, a library and a mix of 1960s and later buildings spread over a hillside site near Msida.",
+      "source_urls": [
+        "https://www.um.edu.mt/"
+      ],
+      "official_url": "https://www.um.edu.mt/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-valletta-design-cluster",
+      "name": "Valletta Design Cluster",
+      "country": "Malta",
+      "region": "Valletta",
+      "lat": 35.8975,
+      "lng": 14.514,
+      "type": "Office, school & public building",
+      "setting": "Restored eighteenth-century Ospizio building in Valletta, later a hospital and armoury, now converted into shared workspaces and studios for Malta's creative economy.",
+      "source_urls": [
+        "https://valletta2018.org/"
+      ],
+      "official_url": "https://valletta2018.org/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-valletta-historic-centre",
+      "name": "Valletta Historic Centre",
+      "country": "Malta",
+      "region": "Valletta",
+      "lat": 35.899,
+      "lng": 14.5137,
+      "type": "Historic town & street",
+      "setting": "UNESCO-listed sixteenth-century fortified capital on a narrow peninsula, its grid of limestone streets lined with baroque churches, auberges and balconied townhouses.",
+      "known_for": "World War Z (2013), Murder on the Orient Express (2017), By the Sea (2015)",
+      "source_urls": [
+        "https://www.visitvalletta.mt/",
+        "https://en.wikipedia.org/wiki/Valletta"
+      ],
+      "official_url": "https://www.visitvalletta.mt/",
+      "commission_url": "https://screenmalta.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Saint_Patrick%27s_Street_Valletta_%2870394%29.jpg/960px-Saint_Patrick%27s_Street_Valletta_%2870394%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Saint_Patrick%27s_Street_Valletta_(70394).jpg",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "mt-valletta-waterfront",
+      "name": "Valletta Waterfront",
+      "country": "Malta",
+      "region": "Valletta",
+      "lat": 35.8901,
+      "lng": 14.508,
+      "type": "Bar, restaurant & shop",
+      "setting": "Row of restored eighteenth-century baroque warehouses along the Grand Harbour quayside, now a strip of restaurants, bars and shops beside the cruise terminal.",
+      "known_for": "World War Z (2013)",
+      "source_urls": [
+        "https://www.vallettawaterfront.com/",
+        "https://en.wikipedia.org/wiki/Valletta_Waterfront"
+      ],
+      "official_url": "https://www.vallettawaterfront.com/",
+      "commission_url": "https://screenmalta.com/"
     },
     {
       "id": "nl-ahoy-rotterdam",
@@ -4503,6 +6552,24 @@
       "commission_url": "https://www.filmcommission.nl/"
     },
     {
+      "id": "no-akershus-fortress",
+      "name": "Akershus Fortress",
+      "country": "Norway",
+      "region": "Oslo",
+      "lat": 59.9067,
+      "lng": 10.7361,
+      "type": "Castle & estate",
+      "setting": "Medieval castle on Oslo's harbour promontory, expanded into an 18th-century bastioned fortress, with a stone keep, cobbled courtyards and government reception rooms still in ceremonial use.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/akershus-fortress",
+        "https://en.wikipedia.org/wiki/Akershus_Fortress",
+        "https://www.forsvarsbygg.no/no/festningene/"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/akershus-fortress",
+      "official_url": "https://www.forsvarsbygg.no/no/festningene/",
+      "commission_url": "https://www.norwegianfilm.com/locations/akershus-fortress"
+    },
+    {
       "id": "atlantic-ocean-road",
       "name": "Atlantic Ocean Road",
       "country": "Norway",
@@ -4520,6 +6587,23 @@
         "author": "Ernst Vikne",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "no-bastoy-prison",
+      "name": "Bastøy Prison",
+      "country": "Norway",
+      "region": "Vestfold",
+      "lat": 59.3806,
+      "lng": 10.5259,
+      "type": "Hospital, prison & institution",
+      "setting": "Low-security island prison in the Oslofjord run on an open, self-sufficient farming regime, with wooden former manor buildings alongside newer institutional blocks.",
+      "known_for": "King of Devil's Island (2010), Where to Invade Next (2015), Sicko (2007, DVD extras)",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Bast%C3%B8y_Prison",
+        "https://www.kriminalomsorgen.no/bastoey-fengsel.5018998-237612.html"
+      ],
+      "official_url": "https://www.kriminalomsorgen.no/bastoey-fengsel.5018998-237612.html",
+      "commission_url": "https://www.norwegianfilm.com/locations"
     },
     {
       "id": "dagslys-studios-oslo",
@@ -4542,6 +6626,95 @@
       "commission_url": "https://www.norwegianfilm.com/locations"
     },
     {
+      "id": "no-hakonshallen",
+      "name": "Håkonshallen",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.3997,
+      "lng": 5.3175,
+      "type": "Palace & landmark",
+      "setting": "Stone royal reception hall built in the 1250s inside Bergenhus fortress, rebuilt after a 1944 harbour explosion, with a vaulted timber-roofed great hall used for concerts and ceremonies.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/hakonshallen",
+        "https://no.wikipedia.org/wiki/H%C3%A5konshallen",
+        "https://bymuseet.no/museum/hakonshallen/"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/hakonshallen",
+      "official_url": "https://bymuseet.no/museum/hakonshallen/",
+      "commission_url": "https://www.norwegianfilm.com/locations/hakonshallen"
+    },
+    {
+      "id": "no-domkirkeruinene-hamar",
+      "name": "Hamar Cathedral Ruins (Domkirkeodden)",
+      "country": "Norway",
+      "region": "Innlandet",
+      "lat": 60.7922,
+      "lng": 11.0385,
+      "type": "Church & monastery",
+      "setting": "Ruins of a medieval stone cathedral on a headland by Lake Mjøsa, enclosed since 1998 in a modern glass and steel protective dome, part of a wider open-air history museum site.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/hamar-dome-domkirkeodden",
+        "https://no.wikipedia.org/wiki/Domkirkeruinene_p%C3%A5_Hamar",
+        "https://domkirkeodden.no"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/hamar-dome-domkirkeodden",
+      "official_url": "https://domkirkeodden.no",
+      "commission_url": "https://www.norwegianfilm.com/locations/hamar-dome-domkirkeodden"
+    },
+    {
+      "id": "no-hartvig-nissen-school",
+      "name": "Hartvig Nissen School",
+      "country": "Norway",
+      "region": "Oslo",
+      "lat": 59.9186,
+      "lng": 10.7166,
+      "type": "Office, school & public building",
+      "setting": "Working upper secondary school building from 1899 in Oslo's Frogner district, a brick institutional building with classrooms and a courtyard used as the real setting for a teen drama series.",
+      "known_for": "Skam (2015-2017)",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Skam_(TV_series)",
+        "https://en.wikipedia.org/wiki/Hartvig_Nissen_School",
+        "https://hartvig-nissen.vgs.no"
+      ],
+      "official_url": "https://hartvig-nissen.vgs.no",
+      "commission_url": "https://www.norwegianfilm.com/locations"
+    },
+    {
+      "id": "no-njardarheimr-gudvangen",
+      "name": "Njardarheimr Viking Valley",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.8797,
+      "lng": 6.8431,
+      "type": "Village & countryside",
+      "setting": "Reconstructed Viking-age settlement of turf-roofed timber longhouses and workshops at the head of Nærøyfjorden, built and staffed as a living-history village.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/viking-valley-njardarheimr-gudvangen",
+        "http://www.vikingvalley.no/",
+        "https://no.wikipedia.org/wiki/Gudvangen"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/viking-valley-njardarheimr-gudvangen",
+      "official_url": "http://www.vikingvalley.no/",
+      "commission_url": "https://www.norwegianfilm.com/locations/viking-valley-njardarheimr-gudvangen"
+    },
+    {
+      "id": "no-odda-swimming-pool",
+      "name": "Odda Public Swimming Pool",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.0657,
+      "lng": 6.5461,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor municipal swimming pool in the former industrial town of Odda at the head of the Sørfjord, run as a public bathhouse with scheduled sessions for the local community.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/odda-public-swimming-pool",
+        "https://ullensvang.kommune.no/tenester/kultur-idrett-og-fritid/folkebading/"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/odda-public-swimming-pool",
+      "official_url": "https://ullensvang.kommune.no/tenester/kultur-idrett-og-fritid/folkebading/",
+      "commission_url": "https://www.norwegianfilm.com/locations/odda-public-swimming-pool"
+    },
+    {
       "id": "preikestolen",
       "name": "Preikestolen (Pulpit Rock)",
       "country": "Norway",
@@ -4559,6 +6732,78 @@
         "author": "Clementp.fr",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "no-sagene-folkebad",
+      "name": "Sagene Folkebad",
+      "country": "Norway",
+      "region": "Oslo",
+      "lat": 59.9313,
+      "lng": 10.7594,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor public bathhouse from 1899 in late-historicist style beside the Akerselva river, with arched windows and a period stair hall, still operating as a pool and rehabilitation facility.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/sagene-folkebad",
+        "https://sagenefolkebad.no",
+        "https://no.wikipedia.org/wiki/Sagene_bad"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/sagene-folkebad",
+      "official_url": "https://sagenefolkebad.no",
+      "commission_url": "https://www.norwegianfilm.com/locations/sagene-folkebad"
+    },
+    {
+      "id": "no-stavanger-svommehall",
+      "name": "Stavanger Swimming Hall",
+      "country": "Norway",
+      "region": "Rogaland",
+      "lat": 58.9694,
+      "lng": 5.7286,
+      "type": "Theatre, arena & venue",
+      "setting": "Municipal indoor pool completed in 1971 next to Stavanger city hall, built in exposed concrete with a 25-metre pool, diving tower and separate children's pool.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/stavanger-swimming-pool",
+        "https://no.wikipedia.org/wiki/Stavanger_sv%C3%B8mmehall",
+        "https://www.stavanger.kommune.no/kultur-og-fritid/svommehaller/"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/stavanger-swimming-pool",
+      "official_url": "https://www.stavanger.kommune.no/kultur-og-fritid/svommehaller/",
+      "commission_url": "https://www.norwegianfilm.com/locations/stavanger-swimming-pool"
+    },
+    {
+      "id": "no-vemork",
+      "name": "Vemork",
+      "country": "Norway",
+      "region": "Telemark",
+      "lat": 59.8717,
+      "lng": 8.4944,
+      "type": "Industrial & derelict",
+      "setting": "Former hydroelectric and heavy-water plant on a gorge above Rjukan, with a monumental early-20th-century industrial facade, now a museum reached by cable car or an 8 km sabotage trail.",
+      "known_for": "Kampen om tungtvannet (1948), The Heroes of Telemark (1965), Kampen om tungtvannet / The Saboteurs (TV series, 2015)",
+      "source_urls": [
+        "https://www.nia.no",
+        "https://no.wikipedia.org/wiki/Vemork",
+        "https://en.wikipedia.org/wiki/Vemork"
+      ],
+      "official_url": "https://www.nia.no",
+      "commission_url": "https://www.norwegianfilm.com/locations"
+    },
+    {
+      "id": "no-vinje-church",
+      "name": "Vinje Church",
+      "country": "Norway",
+      "region": "Telemark",
+      "lat": 59.6194,
+      "lng": 7.8433,
+      "type": "Church & monastery",
+      "setting": "Wooden cross-shaped parish church built in 1796 in the rural Vinje valley, seating around 225, with a painted interior altarpiece and carved benches from the 1930s.",
+      "source_urls": [
+        "https://www.norwegianfilm.com/locations/vinje-church",
+        "https://no.wikipedia.org/wiki/Vinje_kirke_(Telemark)",
+        "https://vinje.kyrkja.no"
+      ],
+      "url": "https://www.norwegianfilm.com/locations/vinje-church",
+      "official_url": "https://vinje.kyrkja.no",
+      "commission_url": "https://www.norwegianfilm.com/locations/vinje-church"
     },
     {
       "id": "pl-alvernia-studios",
@@ -4952,6 +7197,106 @@
       }
     },
     {
+      "id": "pt-algarve-international-circuit",
+      "name": "Algarve International Circuit",
+      "country": "Portugal",
+      "region": "Algarve (Portimao)",
+      "lat": 37.2308,
+      "lng": -8.6267,
+      "type": "Theatre, arena & venue",
+      "setting": "FIA-grade motor racing circuit near Portimao with elevation changes of up to forty metres, a start-finish straight, paddock buildings and grandstands.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/algarve-international-circuit/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/algarve-international-circuit/",
+      "official_url": "https://portugalfilmcommission.com/en/location/algarve-international-circuit/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-barbadinhos-pumping-station",
+      "name": "Barbadinhos Steam Pumping Station",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7247,
+      "lng": -9.1155,
+      "type": "Industrial & derelict",
+      "setting": "Steam-powered water pumping station in Xabregas that operated from 1880 to 1928, preserving four steam engines inside its industrial hall as part of Lisbon's water museum.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/barbadinhos-steam-pumping-station/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/barbadinhos-steam-pumping-station/",
+      "official_url": "https://portugalfilmcommission.com/en/location/barbadinhos-steam-pumping-station/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-braga-municipal-stadium",
+      "name": "Braga Municipal Stadium",
+      "country": "Portugal",
+      "region": "Norte (Braga)",
+      "lat": 41.5661,
+      "lng": -8.4227,
+      "type": "Theatre, arena & venue",
+      "setting": "Football stadium built into a disused granite quarry on Monte Castro, with seating on two sides only and the bare quarry rock face left exposed behind each goal.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/braga-municipal-stadium/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/braga-municipal-stadium/",
+      "official_url": "https://portugalfilmcommission.com/en/location/braga-municipal-stadium/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-casa-da-musica",
+      "name": "Casa da Musica",
+      "country": "Portugal",
+      "region": "Porto",
+      "lat": 41.1596,
+      "lng": -8.6307,
+      "type": "Theatre, arena & venue",
+      "setting": "Angular concrete concert hall by Rem Koolhaas on Porto's Rotunda da Boavista, with a shoebox-shaped main auditorium and several smaller performance rooms.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/casa-da-musica/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/casa-da-musica/",
+      "official_url": "https://portugalfilmcommission.com/en/location/casa-da-musica/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-casa-de-mateus",
+      "name": "Casa de Mateus",
+      "country": "Portugal",
+      "region": "Norte (Vila Real)",
+      "lat": 41.2989,
+      "lng": -7.725,
+      "type": "House & apartment",
+      "setting": "Baroque manor house near Vila Real with formal box-hedge gardens and a cedar tunnel, pictured on the label of Mateus Rose wine and used as a venue for concerts and cultural events.",
+      "source_urls": [
+        "https://www.casademateus.com/"
+      ],
+      "official_url": "https://www.casademateus.com/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-casa-dos-patudos",
+      "name": "Casa dos Patudos",
+      "country": "Portugal",
+      "region": "Ribatejo (Alpiarca)",
+      "lat": 39.2456,
+      "lng": -8.5775,
+      "type": "House & apartment",
+      "setting": "Early twentieth-century manor house in Alpiarca designed by architect Raul Lino for collector Jose Relvas, with period interiors and furnishings now open as a museum.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/casa-dos-patudos-alpiarca-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/casa-dos-patudos-alpiarca-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/casa-dos-patudos-alpiarca-museum/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
       "id": "convento-de-cristo-tomar",
       "name": "Convento de Cristo",
       "country": "Portugal",
@@ -4971,6 +7316,168 @@
       }
     },
     {
+      "id": "pt-estacao-do-rossio",
+      "name": "Estacao do Rossio",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7147,
+      "lng": -9.1394,
+      "type": "Transport & infrastructure",
+      "setting": "Neo-Manueline railway station on Lisbon's Rossio square, with two horseshoe-arched doorways on its facade and platforms reached through a tunnel under the Bairro Alto hill.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/estacao-do-rossio/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/estacao-do-rossio/",
+      "official_url": "https://portugalfilmcommission.com/en/location/estacao-do-rossio/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-evora-historic-centre",
+      "name": "Evora Historic Centre",
+      "country": "Portugal",
+      "region": "Alentejo (Evora)",
+      "lat": 38.5714,
+      "lng": -7.9135,
+      "type": "Historic town & street",
+      "setting": "UNESCO-listed Alentejo city within Roman and medieval walls, with a Roman temple, whitewashed streets, a granite cathedral and the bone-lined Capela dos Ossos.",
+      "source_urls": [
+        "https://www.cm-evora.pt/"
+      ],
+      "official_url": "https://www.cm-evora.pt/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-farol-dos-capelinhos",
+      "name": "Farol dos Capelinhos",
+      "country": "Portugal",
+      "region": "Azores (Faial)",
+      "lat": 38.5989,
+      "lng": -28.8394,
+      "type": "Transport & infrastructure",
+      "setting": "Coastal lighthouse on Faial partly buried by ash from the 1957-58 Capelinhos submarine volcanic eruption, standing on the new lava and ash landscape it created.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/farol-dos-capelinhos/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/farol-dos-capelinhos/",
+      "official_url": "https://portugalfilmcommission.com/en/location/farol-dos-capelinhos/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-lousal-mining-museum",
+      "name": "Lousal Mining Museum",
+      "country": "Portugal",
+      "region": "Alentejo (Grandola)",
+      "lat": 38.0356,
+      "lng": -8.6294,
+      "type": "Industrial & derelict",
+      "setting": "Former pyrite-mining village in Grandola built around a twentieth-century mining company's power plant, now a museum with mining machinery, tools and worker housing.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/lousal-mining-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/lousal-mining-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/lousal-mining-museum/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-lx-factory",
+      "name": "LX Factory",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7036,
+      "lng": -9.1774,
+      "type": "Industrial & derelict",
+      "setting": "Former nineteenth-century textile and printing factory complex in Alcantara, now industrial halls, courtyards and a rooftop rented out as creative studios and event and shoot space.",
+      "source_urls": [
+        "https://lxfactory.com/en/"
+      ],
+      "official_url": "https://lxfactory.com/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-madeira-botanical-garden",
+      "name": "Madeira Botanical Garden",
+      "country": "Portugal",
+      "region": "Madeira (Funchal)",
+      "lat": 32.6612,
+      "lng": -16.8974,
+      "type": "Village & countryside",
+      "setting": "Terraced hillside garden above Funchal with exotic and native plant collections on volcanic slopes, reached by road or by a cable car from Monte.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/madeira-botanical-garden/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/madeira-botanical-garden/",
+      "official_url": "https://portugalfilmcommission.com/en/location/madeira-botanical-garden/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-marvao",
+      "name": "Marvao",
+      "country": "Portugal",
+      "region": "Alentejo (Portalegre district)",
+      "lat": 39.3958,
+      "lng": -7.3778,
+      "type": "Historic town & street",
+      "setting": "Walled hilltop village on the Spanish border in the Serra de Sao Mamede, with a castle, whitewashed houses and long views over the surrounding plain.",
+      "source_urls": [
+        "https://www.cm-marvao.pt/"
+      ],
+      "official_url": "https://www.cm-marvao.pt/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-mercado-do-bolhao",
+      "name": "Mercado do Bolhao",
+      "country": "Portugal",
+      "region": "Porto",
+      "lat": 41.1495,
+      "lng": -8.6069,
+      "type": "Bar, restaurant & shop",
+      "setting": "Porto's historic municipal market, reopened in 2022 after renovation, with two levels of fish, meat, flower and grocery stalls under a restored iron and glass roof.",
+      "source_urls": [
+        "https://mercadobolhao.pt/"
+      ],
+      "official_url": "https://mercadobolhao.pt/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-museu-nacional-ferroviario",
+      "name": "Museu Nacional Ferroviario",
+      "country": "Portugal",
+      "region": "Centro (Entroncamento)",
+      "lat": 39.4667,
+      "lng": -8.4667,
+      "type": "Transport & infrastructure",
+      "setting": "National railway museum on the site of Entroncamento's railway works, with steam locomotives, carriages and workshop sheds spanning more than a century of Portuguese rail history.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
+      "official_url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-portalegre-tapestry-museum",
+      "name": "Portalegre Tapestry Museum (Guy Fino)",
+      "country": "Portugal",
+      "region": "Alentejo (Portalegre)",
+      "lat": 39.2967,
+      "lng": -7.43,
+      "type": "Office, school & public building",
+      "setting": "Tapestry museum inside a former noble town house in Portalegre, remodelled to display the local tapestry workshop's collection and archive alongside the original architecture.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
+      "official_url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
       "id": "praia-do-guincho",
       "name": "Praia do Guincho",
       "country": "Portugal",
@@ -4988,6 +7495,56 @@
         "author": "Alvesgaspar",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "pt-quinta-do-pisao",
+      "name": "Quinta do Pisao",
+      "country": "Portugal",
+      "region": "Lisbon region (Cascais)",
+      "lat": 38.7228,
+      "lng": -9.4429,
+      "type": "House & apartment",
+      "setting": "Former farm estate on the edge of the Sintra-Cascais Natural Park, with old agricultural buildings, pine woods, pasture and a small lake open to visitors.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/quinta-do-pisao/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/quinta-do-pisao/",
+      "official_url": "https://portugalfilmcommission.com/en/location/quinta-do-pisao/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-santa-cruz-municipal-aerodrome",
+      "name": "Santa Cruz Municipal Aerodrome",
+      "country": "Portugal",
+      "region": "Centro (Torres Vedras)",
+      "lat": 39.0914,
+      "lng": -9.3225,
+      "type": "Transport & infrastructure",
+      "setting": "Small municipal airfield close to the Santa Cruz beaches near Torres Vedras, home to the local aeroclub and one of the earliest civil aviation sites near Lisbon.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/santa-cruz-municipal-aerodrome/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/santa-cruz-municipal-aerodrome/",
+      "official_url": "https://portugalfilmcommission.com/en/location/santa-cruz-municipal-aerodrome/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-universidade-de-coimbra",
+      "name": "University of Coimbra (Paco das Escolas)",
+      "country": "Portugal",
+      "region": "Centro (Coimbra)",
+      "lat": 40.2079,
+      "lng": -8.4257,
+      "type": "Office, school & public building",
+      "setting": "UNESCO-listed royal-palace-turned-university courtyard in Coimbra, with the Joanina Baroque library, a bell tower and ceremonial halls still in academic use.",
+      "source_urls": [
+        "https://visit.uc.pt/en/",
+        "https://portugalfilmcommission.com/en/location/universidade-de-coimbra/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/universidade-de-coimbra/",
+      "official_url": "https://visit.uc.pt/en/",
+      "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
       "id": "es-almaden-mining-park",
