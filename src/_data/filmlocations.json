@@ -1417,10 +1417,17 @@
       "country": "Czech Republic",
       "region": "Zlín Region",
       "lat": 49.3,
-      "lng": 17.377222,
+      "lng": 17.3772,
       "type": "Palace & landmark",
       "setting": "UNESCO-listed baroque archbishop's palace with opulent state rooms and formal gardens that have stood in for imperial Vienna.",
       "known_for": "Amadeus (1984)",
+      "capacity": 150,
+      "facilities": "Sala terrena (full hall): up to 150 people (100 seated). Single hall of the Sala terrena: 70. Stucco Hall and Tiled Stove Hall: 50 (with chairs and tables). Cold-kitchen catering available. Adjacent to the Palace Garden (own site).",
+      "suitability": "The palace's own site notes that films have been shot there ('Filmovalo se u nas') (own site).",
+      "source_urls": [
+        "https://www.zamek-kromeriz.cz/pronajmy/",
+        "https://www.zamek-kromeriz.cz/pro-media/"
+      ],
       "official_url": "https://www.zamek-kromeriz.cz/",
       "commission_url": "https://www.filmcommission.cz/",
       "photo": {
@@ -1480,8 +1487,13 @@
       "lng": 14.4108,
       "type": "Hospital, prison & institution",
       "setting": "Pavilion-style psychiatric hospital campus opened in 1909 on a wooded hillside in north Prague, dozens of period brick buildings connected by paths and gardens, still in clinical use.",
+      "price_note": "Filming from CZK 5,000 per hour for interior, CZK 4,500 per hour for exterior, plus CZK 2,000 per hour for professional supervision (own site).",
+      "facilities": "Interior and exterior filming spaces are available within the hospital grounds (own site).",
+      "suitability": "Interior and exterior filming are permitted (own site).",
+      "permit_needed": "Yes",
       "source_urls": [
-        "https://www.bohnice.cz/"
+        "https://www.bohnice.cz/",
+        "https://bohnice.cz/reklamni-a-filmova-produkce/"
       ],
       "official_url": "https://www.bohnice.cz/",
       "commission_url": "https://www.filmcommission.cz/"
@@ -1511,9 +1523,12 @@
       "lng": 16.5781,
       "type": "Theatre, arena & venue",
       "setting": "Large trade fair and exhibition ground south-west of Brno's centre, with functionalist 1920s pavilions and modern halls used for conventions, concerts and filming.",
+      "facilities": "14 exhibition halls (19 conference halls). Conference hall E1abc: theatre capacity 1,008, congress capacity 936. Conference hall Rotunda: theatre capacity 450. Smaller halls from 30 (theatre). Open-air areas from 1,797 to 12,809 sqm (paved, gravel or bituminous surface). Hall heights from 2.9 to 26.7 m (own site).",
+      "logistics": "On-site Expoparking service (own site).",
       "source_urls": [
         "https://www.bvv.cz/en/",
-        "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/"
+        "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/",
+        "https://www.bvv.cz/en/rental/spaces"
       ],
       "url": "https://filmcommission.gov.cz/en/location/brno-exhibition-centre/",
       "official_url": "https://www.bvv.cz/en/",
@@ -1595,9 +1610,12 @@
       "lng": 13.3611,
       "type": "Theatre, arena & venue",
       "setting": "Former bus depot in Plzeň converted into a creative and cultural centre, with workshop halls, a gallery and event space that keep the building's industrial steel roof trusses.",
+      "facilities": "Industrial complex with a cafe, market hall and event spaces; wheelchair accessible throughout except some office areas (own site).",
+      "logistics": "On-site parking within the complex; address Presslova 14, Plzen (own site).",
       "source_urls": [
         "https://www.depo2015.cz/",
-        "https://filmcommission.gov.cz/en/location/depo2015/"
+        "https://filmcommission.gov.cz/en/location/depo2015/",
+        "https://www.depo2015.cz/pronajmy"
       ],
       "url": "https://filmcommission.gov.cz/en/location/depo2015/",
       "official_url": "https://www.depo2015.cz/",
@@ -1627,9 +1645,11 @@
       "lng": 18.28,
       "type": "Industrial & derelict",
       "setting": "Former ironworks and coking plant just south of Ostrava's centre, with blast furnaces, a gasometer and a coal tower preserved as an industrial heritage site with exhibition and event space.",
+      "suitability": "Photography and filming on site is governed by the venue's published rules for photography and filming in the area and its buildings (own site).",
       "source_urls": [
         "https://www.dolnivitkovice.cz/en",
-        "https://filmcommission.gov.cz/en/location/dolni-vitkovice-area/"
+        "https://filmcommission.gov.cz/en/location/dolni-vitkovice-area/",
+        "https://www.dolnivitkovice.cz/en/pronajem-prostor/"
       ],
       "url": "https://filmcommission.gov.cz/en/location/dolni-vitkovice-area/",
       "official_url": "https://www.dolnivitkovice.cz/en",
@@ -1666,10 +1686,13 @@
       "type": "Hotel & interiors",
       "setting": "Baroque and neoclassical spa hotel at the head of Karlovy Vary's colonnade, with ballrooms, a casino and period guest rooms dating back to the 18th century.",
       "known_for": "Casino Royale (2006), Last Holiday (2006)",
+      "facilities": "Festive Hall: 735 sqm, ceiling height 15 m, natural light, up to 500 people (cocktail), 424 (banquet), 400 (theatre). Johann Georg hall: 122 sqm, up to 84 (theatre), 70 (cocktail). Heinrich room: 32 sqm, up to 12 (block setup). Beethoven rooms: 29 to 73 sqm, 8 to 45 (theatre), combined Beethoven II+III up to 50 (cocktail). Floor loading capacity is described as sufficient for passenger cars (own site).",
+      "suitability": "The hotel says it has attracted filmmakers since the early days of cinema, with dozens of films shot there including the Bond film Casino Royale (own site).",
       "source_urls": [
         "https://www.pupp.cz/en",
         "https://filmcommission.gov.cz/en/location/grandhotel-pupp/",
-        "https://en.wikipedia.org/wiki/Grandhotel_Pupp"
+        "https://en.wikipedia.org/wiki/Grandhotel_Pupp",
+        "https://www.pupp.cz/en/halls"
       ],
       "url": "https://filmcommission.gov.cz/en/location/grandhotel-pupp/",
       "official_url": "https://www.pupp.cz/en",
@@ -1690,8 +1713,10 @@
       "lng": 14.4442,
       "type": "Bar, restaurant & shop",
       "setting": "Late 19th century cattle market and slaughterhouse complex on the Vltava embankment in Holešovice, with brick market halls now used for food stalls, shops and events.",
+      "facilities": "Hala 13: 1,500 sqm. Hala 11: 560 sqm. Hala 17: 900 sqm. Trzni namesti (market square): 2,600 sqm. Korzo: 4,000 sqm. Hala 40 (4th floor): 485 sqm. Hala 22 market stalls from 10 sqm (own site).",
       "source_urls": [
-        "https://www.holesovickatrznice.cz/"
+        "https://www.holesovickatrznice.cz/",
+        "https://www.holesovickatrznice.cz/pronajem"
       ],
       "official_url": "https://www.holesovickatrznice.cz/",
       "commission_url": "https://www.filmcommission.cz/"
@@ -1733,28 +1758,6 @@
       "url": "https://filmcommission.gov.cz/en/location/hotel-thermal/",
       "official_url": "https://www.hotelthermal.cz/en",
       "commission_url": "https://www.filmcommission.cz/"
-    },
-    {
-      "id": "cz-invalidovna",
-      "name": "Invalidovna",
-      "country": "Czech Republic",
-      "region": "Prague",
-      "lat": 50.0951,
-      "lng": 14.4522,
-      "type": "Hospital, prison & institution",
-      "setting": "Baroque veterans' and invalids' home built from 1731 in Prague's Karlín district, with long arcaded wings and a central chapel, partly restored and partly awaiting renovation.",
-      "source_urls": [
-        "https://www.invalidovna.cz/",
-        "https://en.wikipedia.org/wiki/Invalidovna"
-      ],
-      "official_url": "https://www.invalidovna.cz/",
-      "commission_url": "https://www.filmcommission.cz/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Praha%2C_Invalidovna.JPG/960px-Praha%2C_Invalidovna.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Praha,_Invalidovna.JPG",
-        "author": "Aktron",
-        "license": "CC BY-SA 3.0"
-      }
     },
     {
       "id": "cz-klementinum",
@@ -1801,9 +1804,11 @@
       "lng": 14.4258,
       "type": "Theatre, arena & venue",
       "setting": "1921 Art Nouveau passage complex in central Prague, with a domed concert hall, one of the city's oldest cinemas and a chain of shopping arcades under glass roofs.",
+      "facilities": "Main cinema: 453 seats, 4K digital projection with 3D and Dolby Surround 7.1. Small cinema hall: 51 seats, 2K digital projection with 3D and Dolby Surround 7.1. Marble Hall: 300 sqm, 150 to 350 people depending on the event, parquet floor, stage, dressing room and toilets. Gallery: 400 sqm, 150 to 200 people. Cafe: 300 sqm, 120 seats. Club Konicek: 90 sqm, 44 seats (own site).",
       "source_urls": [
         "https://lucerna.cz/en/",
-        "https://en.wikipedia.org/wiki/Lucerna_Palace"
+        "https://en.wikipedia.org/wiki/Lucerna_Palace",
+        "https://lucerna.cz/en/7_rentals"
       ],
       "official_url": "https://lucerna.cz/en/",
       "commission_url": "https://www.filmcommission.cz/",
@@ -1885,9 +1890,13 @@
       "lng": 18.3406,
       "type": "Industrial & derelict",
       "setting": "Complete early 20th century coal mine surface plant in Ostrava-Michálkovice, with preserved machine hall, boiler house and pithead baths run as a branch of the National Technical Museum.",
+      "suitability": "Exterior photography is permitted for personal use. Interior photography without flash, tripod, selfie stick or lighting equipment is allowed only in guide-designated rooms for personal use. Guided-tour filming and drone footage are not permitted (own site).",
+      "permit_needed": "Yes",
+      "logistics": "Parking in front of the mine entrance; buses park within the grounds (own site).",
       "source_urls": [
         "https://www.dul-michal.cz/",
-        "https://filmcommission.gov.cz/en/location/michal-mine/"
+        "https://filmcommission.gov.cz/en/location/michal-mine/",
+        "https://www.dul-michal.cz/cs/informace-pro-navstevniky/fotografovani-a-nataceni"
       ],
       "url": "https://filmcommission.gov.cz/en/location/michal-mine/",
       "official_url": "https://www.dul-michal.cz/",
@@ -1908,9 +1917,12 @@
       "lng": 14.4275,
       "type": "Office, school & public building",
       "setting": "Art Nouveau civic building on Republic Square in Prague completed in 1912, with the Smetana concert hall, ceremonial reception rooms, a café and restaurant behind an ornate mosaic facade.",
+      "facilities": "Ten halls and rooms including the Smetana Hall, Mayor's Hall, Gregr Hall, Sladkovsky Hall, Palacky Hall and Rieger Hall, plus several parlours and a confectionery space (own site).",
+      "logistics": "Address nam. Republiky 1090/5, Prague 1. Metro A (Mustek, 4 minute walk) or metro B (Namesti Republiky); tram lines 6, 8, 15, 26 to Namesti Republiky (own site).",
       "source_urls": [
         "https://www.obecnidum.cz/en",
-        "https://filmcommission.gov.cz/en/location/municipal-house/"
+        "https://filmcommission.gov.cz/en/location/municipal-house/",
+        "https://www.obecnidum.cz/en/pronajem-salu/"
       ],
       "url": "https://filmcommission.gov.cz/en/location/municipal-house/",
       "official_url": "https://www.obecnidum.cz/en",
@@ -2079,6 +2091,9 @@
       "lng": 16.5966,
       "type": "Industrial & derelict",
       "setting": "Disused 19th century brick water reservoir cut into a hillside near Brno's exhibition grounds, with vaulted underground chambers now hired out for exhibitions and events.",
+      "facilities": "Vaulted underground spaces; declared a cultural monument in 2019 (Czech Film Commission).",
+      "permit_needed": "Yes",
+      "logistics": "Owned by the City of Brno; administration is being handed to TIC BRNO (Brno Tourist Information Centre), which leases the space to film crews (Czech Film Commission).",
       "source_urls": [
         "https://filmcommission.gov.cz/en/location/underground-water-reservoir-brno/"
       ],
@@ -2094,12 +2109,15 @@
       "lng": 16.58,
       "type": "House & apartment",
       "setting": "1929 functionalist villa in Brno built for textile manufacturer Alfred Stiassni and later used as a state guesthouse, with period furniture, gardens and a swimming pool.",
+      "facilities": "Garden of over 3 hectares with a tennis court, swimming pool, terrace and loggia. Interior salons with wood panelling, marble fireplaces and stucco. A modern lecture building is also on site (current official site: vila-stiassni.cz).",
+      "logistics": "Parking on Hroznova street, not within the villa grounds. Address Hroznova 14, Brno-Pisarky (vila-stiassni.cz).",
       "source_urls": [
         "https://www.stiassni.cz/",
-        "https://filmcommission.gov.cz/en/location/stiassni-villa-in-brno/"
+        "https://filmcommission.gov.cz/en/location/stiassni-villa-in-brno/",
+        "https://vila-stiassni.cz/cs"
       ],
       "url": "https://filmcommission.gov.cz/en/location/stiassni-villa-in-brno/",
-      "official_url": "https://www.stiassni.cz/",
+      "official_url": "https://www.vila-stiassni.cz/",
       "commission_url": "https://www.filmcommission.cz/"
     },
     {
@@ -2111,9 +2129,14 @@
       "lng": 16.6161,
       "type": "House & apartment",
       "setting": "UNESCO-listed 1930 modernist villa in Brno by Ludwig Mies van der Rohe, with a glass-walled living hall, an onyx wall and a travertine terrace over the garden and city.",
+      "facilities": "Garden and multiple floors, including exhibition rooms on the technical floor (own site).",
+      "suitability": "Filming and photo shoots are listed among the event types permitted at the villa (own site).",
+      "permit_needed": "Yes",
       "source_urls": [
         "https://www.tugendhat.eu/en",
-        "https://filmcommission.gov.cz/en/location/tugendhat-villa/"
+        "https://filmcommission.gov.cz/en/location/tugendhat-villa/",
+        "https://www.vilatugendhat.cz/en",
+        "https://www.vilatugendhat.cz/en/rental/"
       ],
       "url": "https://filmcommission.gov.cz/en/location/tugendhat-villa/",
       "official_url": "https://www.tugendhat.eu/en",
@@ -5243,9 +5266,11 @@
       "lng": 19.0716,
       "type": "Theatre, arena & venue",
       "setting": "Riverside performing arts complex opened in 2005 on the Pest embankment, combining a concert hall, a multipurpose festival theatre and exhibition galleries under one roof.",
+      "logistics": "Complimentary parking for visitors with paid tickets. Accessible by car from Soroksari ut, Konyves Kalman korut and Rakoczi Bridge. Served by trams 1, 2 and 24, buses 54 and 15, and the H7 suburban railway (HEV). Address: 1095 Budapest, Komor Marcell u. 1 (own site).",
       "source_urls": [
         "https://www.mupa.hu/en",
-        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://mupa.hu/en/about/venue-hire"
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.mupa.hu/en",
@@ -5260,9 +5285,14 @@
       "lng": 19.0705,
       "type": "Bar, restaurant & shop",
       "setting": "Ornate fin-de-siecle grand cafe on the ground floor of the New York Palace, with gilded columns, frescoed ceilings and marble tables, listed by the national film commission among Budapest's historic coffee houses.",
+      "price_note": "Conference package from EUR 115 per person per day, including room rental, coffee breaks, lunch and AV equipment (own site).",
+      "capacity": 600,
+      "facilities": "Twelve meeting rooms. Rome hall: 441 sqm (550 theatre / 320 banquet) with a 770 sqm foyer. Rossini: 178 sqm (150 theatre / 100 banquet). Vivaldi: 126 sqm (120 theatre / 90 banquet). Bellini, Verdi and Puccini: 40 theatre / 30 banquet each. New York Cafe hall and Marble Salon: 120 banquet each. Red Salon: 30 banquet. An additional 240 sqm of walkway space on the first and second floors. Some rooms can be darkened (own site).",
+      "logistics": "A freight elevator allows equipment and vehicles to be brought inside. Events require a minimum of 15 guests (own site).",
       "source_urls": [
         "https://newyorkcafe.hu/en/",
-        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://newyorkcafe.hu/en/event-venues/"
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://newyorkcafe.hu/en/",
@@ -5313,6 +5343,8 @@
       "lng": 19.0552,
       "type": "Industrial & derelict",
       "setting": "Former municipal gasworks on the Danube in Obuda, its striped brick gasholders and domed towers now enclosed within a riverside office and technology park.",
+      "facilities": "165,000 sqm total site area, 82,000 sqm gross leasable area, over 2,000 underground parking spaces (own site).",
+      "logistics": "Address 1031 Budapest, Zahony utca 7, Obuda, about 6 km from the centre of Budapest. Over 2,000 underground parking spaces (own site).",
       "source_urls": [
         "https://graphisoftpark.com/en/",
         "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
@@ -5495,9 +5527,12 @@
       "lng": 19.0651,
       "type": "Theatre, arena & venue",
       "setting": "Art Nouveau cinema and event hall of 1896 on the Grand Boulevard, with a Moorish-influenced facade and a decorated auditorium ceiling, named by the national film commission among Budapest's classic movie theatres.",
+      "capacity": 460,
+      "facilities": "Grand Hall (Diszterem): 425 seats for screenings, up to 460 for other events; stage area about 100 sqm with a high ceiling; three theatre dressing rooms plus one VIP dressing room. Two chamber rooms with 46 seats each. Cafe seats up to 200 when combined with the upstairs mirror room. Retractable screen 820 x 480 cm. 22,000 ANSI lumen full HD cinema projector. Sound system with 8 NEXO speakers and 2 subwoofers, installed 2013 (own site).",
       "source_urls": [
         "https://urania-nf.hu/",
-        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+        "https://urania-nf.hu/rendezvenyhelyszin"
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://urania-nf.hu/",
