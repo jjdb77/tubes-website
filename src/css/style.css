@@ -2568,6 +2568,7 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .guide-count { margin: 14px 0 0; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
 .guide-total { margin: -6px 0 22px; font-size: 0.95rem; color: var(--muted); }
 .guide-more { display: block; margin: 26px auto 0; }
+.guide-partial { margin: 18px 0 0; font-size: 0.9rem; color: var(--muted); font-style: italic; }
 
 .guide-map {
   height: 430px; margin-top: 18px;

@@ -68,7 +68,7 @@
         <div class="guide-grid" data-guide-grid>
           {% for loc in filmlocations.locations %}
           <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-type="{{ loc.type }}"
-                   data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.country + ' ' + loc.type + ' ' + loc.setting + ' ' + loc.known_for) | lower }}">
+                   data-search="{{ (loc.name + ' ' + loc.region + ' ' + loc.country + ' ' + loc.type + ' ' + loc.setting + ' ' + loc.known_for + ' ' + loc.facilities + ' ' + loc.suitability + ' ' + loc.logistics) | lower }}">
             {% if loc.photo and loc.photo.thumb %}
             <figure class="guide-photo">
               <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -95,6 +95,7 @@
           </article>
           {% endfor %}
         </div>
+        <p class="guide-partial" data-guide-partial hidden aria-live="polite"></p>
         <button type="button" class="button button-secondary guide-more" data-guide-more hidden></button>
         <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-location">suggest a location</a>.</p>
       </div>
@@ -196,25 +197,47 @@
     let limit = PAGE;
     let matched = new Set();
     const visibleIds = () => [...matched];
+    // Zoeken op losse woorden: elk woord moet ergens in de kaart voorkomen,
+    // dus "hospital madrid" vindt ook een ziekenhuis waarvan de naam anders is.
+    // Zonder deze splitsing zou alleen een letterlijke zin matchen.
+    // Vulwoorden eruit, anders strandt "castle near Prague" op "near".
+    const STOP = new Set(["near", "close", "around", "with", "without", "and", "for", "the", "a", "an", "of", "in", "on", "at", "to", "from", "by", "or", "my", "we", "need", "looking", "some", "any", "that", "this", "it", "is", "are", "be", "can", "would", "like"]);
+    const words = (s) => s.trim().toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
+    // Zoeken vindt liefst alle woorden, maar valt terug op de kaarten met de
+    // meeste treffers. Anders levert "castle near Prague" niets op zodra er
+    // geen kasteel in Praag zelf staat, terwijl er wel iets in de buurt is.
+    const partialEl = root.querySelector("[data-guide-partial]");
     const applyFilters = (keepLimit) => {
       if (keepLimit !== true) limit = PAGE;
-      const needle = q.value.trim().toLowerCase();
+      const needles = words(q.value);
       matched = new Set();
       let shown = 0;
+      // Eerst de harde filters (lijst, land, type, AI-chips), dan de woorden scoren.
+      const pool = [];
+      let best = 0;
       for (const card of cards) {
-        const ok = (listMode === "all" || favs.has(card.dataset.id)) &&
-                   (!country.value || card.dataset.country === country.value) &&
-                   (!type.value || card.dataset.type === type.value) &&
-                   (!needle || card.dataset.search.includes(needle)) &&
-                   aiTerms.every((t) => card.dataset.search.includes(t));
-        if (ok) matched.add(card.dataset.id);
+        const hard = (listMode === "all" || favs.has(card.dataset.id)) &&
+                     (!country.value || card.dataset.country === country.value) &&
+                     (!type.value || card.dataset.type === type.value) &&
+                     aiTerms.every((t) => card.dataset.search.includes(t));
+        if (!hard) { card.hidden = true; continue; }
+        const score = needles.reduce((n, w) => n + (card.dataset.search.includes(w) ? 1 : 0), 0);
+        if (needles.length && score === 0) { card.hidden = true; continue; }
+        if (score > best) best = score;
+        pool.push({ card, score });
+      }
+      for (const item of pool) {
+        const ok = item.score === best;
+        if (ok) matched.add(item.card.dataset.id);
         const show = ok && shown < limit;
-        card.hidden = !show;
+        item.card.hidden = !show;
         if (show) shown++;
       }
       const left = matched.size - shown;
       countEl.textContent = matched.size + " of " + cards.length + " locations";
       noneEl.hidden = matched.size > 0;
+      partialEl.hidden = !(needles.length > 1 && best > 0 && best < needles.length);
+      if (!partialEl.hidden) partialEl.textContent = "No location matches every word. Showing the closest matches on " + best + " of " + needles.length + " words.";
       moreBtn.hidden = left <= 0;
       moreBtn.textContent = "Show " + Math.min(PAGE, left) + " more (" + left + " left)";
       updateMap();
