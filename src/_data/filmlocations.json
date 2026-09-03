@@ -204,7 +204,13 @@
         "https://museumarbeitswelt.at/location/"
       ],
       "official_url": "https://www.museumarbeitswelt.at",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Museum_Arbeitswelt_Steyr_2006.jpg/960px-Museum_Arbeitswelt_Steyr_2006.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Museum_Arbeitswelt_Steyr_2006.jpg",
+        "author": "Walter Luttenberger",
+        "license": "Public domain"
+      }
     },
     {
       "id": "at-naschmarkt",
@@ -329,7 +335,13 @@
         "https://www.tabakfabrik-linz.at/"
       ],
       "official_url": "https://www.tabakfabrik-linz.at/",
-      "commission_url": "https://www.filminaustria.com/"
+      "commission_url": "https://www.filminaustria.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tabakfabrik_Linz_Luftbild_2.jpg/960px-Tabakfabrik_Linz_Luftbild_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tabakfabrik_Linz_Luftbild_2.jpg",
+        "author": "Stadt Linz / Screenshot: Christoph Waghubinger (Lewenstein)",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "at-universitat-wien",
@@ -816,7 +828,13 @@
         "https://www.kursaaloostende.be/en/"
       ],
       "official_url": "https://www.kursaaloostende.be/en/",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Casino_Kursaal.jpg/960px-Casino_Kursaal.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Casino_Kursaal.jpg",
+        "author": "Wasily at Dutch Wikipedia",
+        "license": "Public domain"
+      }
     },
     {
       "id": "be-la-monnaie",
@@ -883,7 +901,13 @@
         "https://www.herita.be/nl/monumenten/paleis-op-de-meir"
       ],
       "official_url": "https://www.herita.be/nl/monumenten/paleis-op-de-meir",
-      "commission_url": "https://www.screenflanders.be/en"
+      "commission_url": "https://www.screenflanders.be/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg",
+        "author": "Vandevorst, Kris",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "be-sint-pietersabdij-gent",
@@ -1541,6 +1565,21 @@
       }
     },
     {
+      "id": "cz-budweiser-budvar-brewery",
+      "name": "Budweiser Budvar Brewery",
+      "country": "Czech Republic",
+      "region": "South Bohemian Region (Ceske Budejovice)",
+      "lat": 48.9951,
+      "lng": 14.4759,
+      "type": "Industrial & derelict",
+      "setting": "Working state brewery on the northern edge of Ceske Budejovice, with early 20th century brick brewhouses, cellars, bottling lines and a visitor centre offering plant tours.",
+      "source_urls": [
+        "https://www.budejovickybudvar.cz/en"
+      ],
+      "official_url": "https://www.budejovickybudvar.cz/en",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-cafe-louvre",
       "name": "Café Louvre",
       "country": "Czech Republic",
@@ -1602,6 +1641,38 @@
       }
     },
     {
+      "id": "cz-coal-water-tower-vratislavice",
+      "name": "Coal and Water Storage Tower Vratislavice",
+      "country": "Czech Republic",
+      "region": "Liberec Region (Vratislavice nad Nisou)",
+      "lat": 50.7353,
+      "lng": 15.0937,
+      "type": "Industrial & derelict",
+      "setting": "Early 20th century coaling station and water tower on the edge of Liberec, with a 75 metre boiler chimney and a steam power house linked by a two arch bridge, largely unaltered.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/coal-and-water-storage-tower-vratislavice/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/coal-and-water-storage-tower-vratislavice/",
+      "official_url": "https://filmcommission.gov.cz/en/location/coal-and-water-storage-tower-vratislavice/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-dalesice-brewery",
+      "name": "Dalesice Brewery",
+      "country": "Czech Republic",
+      "region": "Vysocina Region (Dalesice)",
+      "lat": 49.1311,
+      "lng": 16.0802,
+      "type": "Industrial & derelict",
+      "setting": "Small joint stock brewery in the village of Dalesice with 19th century brewhouse machinery, a malting floor, an on site hotel and restaurant, and a brewery museum.",
+      "known_for": "Postriziny (Cutting It Short)",
+      "source_urls": [
+        "https://www.pivovar-dalesice.cz/"
+      ],
+      "official_url": "https://www.pivovar-dalesice.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-depo2015",
       "name": "DEPO2015",
       "country": "Czech Republic",
@@ -1620,6 +1691,22 @@
       "url": "https://filmcommission.gov.cz/en/location/depo2015/",
       "official_url": "https://www.depo2015.cz/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-dlouhe-strane-power-plant",
+      "name": "Dlouhe Strane Power Plant",
+      "country": "Czech Republic",
+      "region": "Olomouc Region (Loucna nad Desnou, Jeseniky mountains)",
+      "lat": 50.0713,
+      "lng": 17.1565,
+      "type": "Industrial & derelict",
+      "setting": "Pumped storage hydroelectric plant in the Jeseniky mountains with an upper reservoir on a bare ridge and a turbine hall built deep inside the mountain, open for guided tours.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/dlouhe-strane-power-plant/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/dlouhe-strane-power-plant/",
+      "official_url": "https://filmcommission.gov.cz/en/location/dlouhe-strane-power-plant/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-dolni-morava-sky-bridge",
@@ -1662,6 +1749,22 @@
       }
     },
     {
+      "id": "cz-flaje-dam",
+      "name": "Flaje Dam",
+      "country": "Czech Republic",
+      "region": "Usti nad Labem Region (Cesky Jiretin, Krusne hory)",
+      "lat": 50.6763,
+      "lng": 13.5459,
+      "type": "Transport & infrastructure",
+      "setting": "Concrete arch dam in the Krusne hory mountains near the German border, holding back a reservoir in a forested valley, with the dam wall and spillway accessible on foot.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/flaje-dam/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/flaje-dam/",
+      "official_url": "https://filmcommission.gov.cz/en/location/flaje-dam/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-gong-dolni-vitkovice",
       "name": "Gong",
       "country": "Czech Republic",
@@ -1674,7 +1777,13 @@
         "https://filmcommission.gov.cz/en/location/gong-dolni-vitkovice/"
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/gong-dolni-vitkovice/",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Doln%C3%AD_oblast_V%C3%ADtkovic%2C_plynojem_07-08-2012.JPG/960px-Doln%C3%AD_oblast_V%C3%ADtkovic%2C_plynojem_07-08-2012.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Doln%C3%AD_oblast_V%C3%ADtkovic,_plynojem_07-08-2012.JPG",
+        "author": "Honza chodec",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "cz-grandhotel-pupp",
@@ -1757,7 +1866,73 @@
       ],
       "url": "https://filmcommission.gov.cz/en/location/hotel-thermal/",
       "official_url": "https://www.hotelthermal.cz/en",
-      "commission_url": "https://www.filmcommission.cz/"
+      "commission_url": "https://www.filmcommission.cz/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hotel_Thermal.jpg/960px-Hotel_Thermal.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hotel_Thermal.jpg",
+        "author": "cs:ŠJů",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "cz-hranicar-usti",
+      "name": "Hranicar",
+      "country": "Czech Republic",
+      "region": "Usti nad Labem Region (Usti nad Labem)",
+      "lat": 50.6628,
+      "lng": 14.0338,
+      "type": "Bar, restaurant & shop",
+      "setting": "Former border crossing customs house on the Elbe riverbank, converted into a community arts centre with a cinema, gallery, bar and courtyard used for events.",
+      "source_urls": [
+        "https://www.hranicar-usti.cz/"
+      ],
+      "official_url": "https://www.hranicar-usti.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-jested-tower-hotel",
+      "name": "Jested Tower Hotel",
+      "country": "Czech Republic",
+      "region": "Liberec Region (Liberec)",
+      "lat": 50.7328,
+      "lng": 14.9839,
+      "type": "Modern architecture",
+      "setting": "Single cone shaped hotel and television transmitter on the summit of Jested mountain above Liberec, reached by cable car, with a circular restaurant and panoramic windows.",
+      "source_urls": [
+        "https://www.jested.cz/"
+      ],
+      "official_url": "https://www.jested.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-jihoceske-divadlo",
+      "name": "Jihoceske Divadlo (South Bohemian Theatre)",
+      "country": "Czech Republic",
+      "region": "South Bohemian Region (Ceske Budejovice)",
+      "lat": 48.9724,
+      "lng": 14.475,
+      "type": "Theatre, arena & venue",
+      "setting": "Repertory theatre in central Ceske Budejovice with an early 20th century auditorium, stage house and backstage workshops still used for daily opera, drama and ballet productions.",
+      "source_urls": [
+        "https://www.jihoceskedivadlo.cz/"
+      ],
+      "official_url": "https://www.jihoceskedivadlo.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-klasterni-hradisko-military-hospital-olomouc",
+      "name": "Klasterni Hradisko (Military Hospital Olomouc)",
+      "country": "Czech Republic",
+      "region": "Olomouc Region (Olomouc)",
+      "lat": 49.606,
+      "lng": 17.2658,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Premonstratensian monastery on the edge of Olomouc, now a working military hospital, with baroque courtyards and church interiors alongside functioning medical wards.",
+      "source_urls": [
+        "https://www.vnol.cz/"
+      ],
+      "official_url": "https://www.vnol.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-klementinum",
@@ -1779,6 +1954,23 @@
         "author": "Skot",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-landek-park",
+      "name": "Landek Park",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region (Ostrava)",
+      "lat": 49.8666,
+      "lng": 18.263,
+      "type": "Industrial & derelict",
+      "setting": "Former hard coal mine at Petrkovice on the edge of Ostrava, now an open-air mining museum with pit head towers, wagons and underground galleries open to visitors.",
+      "source_urls": [
+        "https://www.landekpark.cz/",
+        "https://filmcommission.gov.cz/en/location/landek-park/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/landek-park/",
+      "official_url": "https://www.landekpark.cz/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-lovosice-port",
@@ -2007,6 +2199,22 @@
       }
     },
     {
+      "id": "cz-textile-engineering-school-liberec",
+      "name": "Secondary School of Textile Engineering Liberec",
+      "country": "Czech Republic",
+      "region": "Liberec Region (Liberec, Dolni Hanychov)",
+      "lat": 50.7439,
+      "lng": 15.0335,
+      "type": "Office, school & public building",
+      "setting": "Working textile college on Textilni street with period spinning and weaving machinery still in place alongside plain classroom interiors and a gated parking yard.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/school-of-textile-engineering-liberec/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/school-of-textile-engineering-liberec/",
+      "official_url": "https://filmcommission.gov.cz/en/location/school-of-textile-engineering-liberec/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-sokol-hradec-kralove",
       "name": "Sokol Hradec Králové Sports Complex",
       "country": "Czech Republic",
@@ -2020,6 +2228,21 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/sokol-hradec-kralove-sports-complex/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-techmania-science-center",
+      "name": "Techmania Science Center",
+      "country": "Czech Republic",
+      "region": "Plzen Region (Plzen)",
+      "lat": 49.7402,
+      "lng": 13.3621,
+      "type": "Office, school & public building",
+      "setting": "Interactive science museum in a former Skoda Works foundry hall in the Bory district of Plzen, combining a large industrial shed with modern exhibition halls and a planetarium.",
+      "source_urls": [
+        "https://www.techmania.cz/en"
+      ],
+      "official_url": "https://www.techmania.cz/en",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-terezin-small-fortress",
@@ -2044,6 +2267,22 @@
         "author": "Txllxt TxllxT",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-papirna-plzen",
+      "name": "The Papirna Multifunctional Center",
+      "country": "Czech Republic",
+      "region": "Plzen Region (Plzen)",
+      "lat": 49.7369,
+      "lng": 13.3841,
+      "type": "Industrial & derelict",
+      "setting": "Renovated paper mill building of about 4,000 square metres by the Radbuza river near central Plzen, holding a large industrial hall, an art studio, cafe and exhibition rooms.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/location/the-papirna-multifunctional-center-in-pilsen/"
+      ],
+      "url": "https://filmcommission.gov.cz/en/location/the-papirna-multifunctional-center-in-pilsen/",
+      "official_url": "https://filmcommission.gov.cz/en/location/the-papirna-multifunctional-center-in-pilsen/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-thomas-bata-villa",
@@ -2424,7 +2663,13 @@
         "https://www.odensehavn.dk/en/"
       ],
       "official_url": "https://www.odensehavn.dk/en/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Odense_Havn%2C_Lind%C3%B8.jpg/960px-Odense_Havn%2C_Lind%C3%B8.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Odense_Havn,_Lind%C3%B8.jpg",
+        "author": "Balut85",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "dk-refshaleoen",
@@ -2623,7 +2868,13 @@
       ],
       "url": "https://www.filmtampere.com/locations/kehrasaari/",
       "official_url": "https://www.filmtampere.com/locations/kehrasaari/",
-      "commission_url": "https://www.filmtampere.com/"
+      "commission_url": "https://www.filmtampere.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Kehr%C3%A4saari_in_Tampere_Sep2007.jpg/960px-Kehr%C3%A4saari_in_Tampere_Sep2007.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kehr%C3%A4saari_in_Tampere_Sep2007.jpg",
+        "author": "Methem (Mikko J. Putkonen)",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "fi-levi-ski-resort",
@@ -2879,7 +3130,13 @@
         "https://www.saint-nazaire-tourisme.com/"
       ],
       "official_url": "https://www.saint-nazaire-tourisme.com/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Base_ssmarin_stnazaire.jpg/960px-Base_ssmarin_stnazaire.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Base_ssmarin_stnazaire.jpg",
+        "author": "KaTeznik",
+        "license": "CC BY-SA 2.0 fr"
+      }
     },
     {
       "id": "fr-bassins-de-lumieres",
@@ -3198,7 +3455,13 @@
         "https://www.ecomusee-creusot-montceau.fr/"
       ],
       "official_url": "https://www.ecomusee-creusot-montceau.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Entr%C3%A9e_Ch%C3%A2teau_de_la_Verrerie_Le_Creusot.jpg/960px-Entr%C3%A9e_Ch%C3%A2teau_de_la_Verrerie_Le_Creusot.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Ch%C3%A2teau_de_la_Verrerie_Le_Creusot.jpg",
+        "author": "Nicolas Richoffer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "etretat-cliffs",
@@ -3257,7 +3520,13 @@
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
       "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HopitalMaritimeBerck1900.jpg/960px-HopitalMaritimeBerck1900.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:HopitalMaritimeBerck1900.jpg",
+        "author": "Indication : L. Courtoisnon.",
+        "license": "Public domain"
+      }
     },
     {
       "id": "fr-hopital-raymond-poincare",
@@ -3274,7 +3543,13 @@
         "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp"
       ],
       "official_url": "https://www.aphp.fr/nous-connaitre/culture-patrimoine-et-histoire/tourner-des-films-lap-hp",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Garches_-_H%C3%B4pital_Raymond_Poincar%C3%A9.jpg/960px-Garches_-_H%C3%B4pital_Raymond_Poincar%C3%A9.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Garches_-_H%C3%B4pital_Raymond_Poincar%C3%A9.jpg",
+        "author": "Benjism89",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-hopital-saint-louis",
@@ -3602,7 +3877,13 @@
         "https://www.phare-de-cordouan.fr/"
       ],
       "official_url": "https://www.phare-de-cordouan.fr/",
-      "commission_url": "https://www.filmfrance.net/"
+      "commission_url": "https://www.filmfrance.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Phare_de_Cordouan_32.jpg/960px-Phare_de_Cordouan_32.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Phare_de_Cordouan_32.jpg",
+        "author": "Rémih",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-piscine-molitor",
@@ -3780,7 +4061,13 @@
         "https://en.wikipedia.org/wiki/Bavaria_Film"
       ],
       "official_url": "https://www.filmstadt.de/",
-      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
+      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0d/M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
+        "author": "Unbekannte Autoren und Grafiker; Scan von Auktionshaus Vladimir Gutowski",
+        "license": "Public domain"
+      }
     },
     {
       "id": "de-beelitz-heilstaetten",
@@ -4033,7 +4320,13 @@
         "https://kampnagel.de/en/service/corporate-hire"
       ],
       "official_url": "https://www.kampnagel.de/en/",
-      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+      "commission_url": "https://www.moin-filmfoerderung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kampnagel_%28Hamburg_2012%29.JPG/960px-Kampnagel_%28Hamburg_2012%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kampnagel_(Hamburg_2012).JPG",
+        "author": "Soenke Rahn",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-kap-arkona",
@@ -4049,7 +4342,13 @@
         "https://en.wikipedia.org/wiki/Kap_Arkona"
       ],
       "official_url": "https://www.kap-arkona.de/",
-      "commission_url": "http://www.germanfilms.de"
+      "commission_url": "http://www.germanfilms.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/CapeArkonaLighthouses.jpg/960px-CapeArkonaLighthouses.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:CapeArkonaLighthouses.jpg",
+        "author": "Unukorno",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-kloster-eberbach",
@@ -4444,7 +4743,13 @@
         "https://www.voelklinger-huette.org/en/hinweise-zum-fotografieren/"
       ],
       "official_url": "https://www.voelklinger-huette.org/en/",
-      "commission_url": "http://www.germanfilms.de"
+      "commission_url": "http://www.germanfilms.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VH_Eingang_pano.jpg/960px-VH_Eingang_pano.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:VH_Eingang_pano.jpg",
+        "author": "LokilechBasispreis Das kann",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-weissenhofsiedlung",
@@ -4538,7 +4843,13 @@
         "https://en.wikipedia.org/wiki/Zollverein_Coal_Mine_Industrial_Complex"
       ],
       "official_url": "https://www.zollverein.de/en/",
-      "commission_url": "https://www.filmstiftung.de/en/"
+      "commission_url": "https://www.filmstiftung.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aerial_image_of_shaft_12_of_the_Zollverein_Coal_Mine_Industrial_Complex_in_Essen_%28view_from_the_east%29.jpg/960px-Aerial_image_of_shaft_12_of_the_Zollverein_Coal_Mine_Industrial_Complex_in_Essen_%28view_from_the_east%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_shaft_12_of_the_Zollverein_Coal_Mine_Industrial_Complex_in_Essen_(view_from_the_east).jpg",
+        "author": "Carsten Steger",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "gr-epidaurus-ancient-theatre",
@@ -5172,7 +5483,13 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://kordastudio.hu/",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Bicske_k%C3%B6rny%C3%A9ke.png/960px-Bicske_k%C3%B6rny%C3%A9ke.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bicske_k%C3%B6rny%C3%A9ke.png",
+        "author": "Milei.vencel",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hu-lake-balaton",
@@ -6686,7 +7003,13 @@
         "https://www.fabbricadelvapore.org/chi-siamo/spazi/"
       ],
       "official_url": "https://www.fabbricadelvapore.org/",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/20170921-01_fabbrica_del_vapore.jpg/960px-20170921-01_fabbrica_del_vapore.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20170921-01_fabbrica_del_vapore.jpg",
+        "author": "roberto monevi",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-grand-hotel-et-de-milan",
@@ -6801,7 +7124,13 @@
         "https://www.manifatturatabacchi.com/motel/"
       ],
       "official_url": "https://www.manifatturatabacchi.com/",
-      "commission_url": "https://www.toscanafilmcommission.it/"
+      "commission_url": "https://www.toscanafilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Manifattura_tabacchi_firenze.JPG/960px-Manifattura_tabacchi_firenze.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Manifattura_tabacchi_firenze.JPG",
+        "author": "sailko",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "it-mercato-centrale-firenze",
@@ -6816,7 +7145,13 @@
         "https://www.mercatocentrale.it/firenze/"
       ],
       "official_url": "https://www.mercatocentrale.it/firenze/",
-      "commission_url": "https://www.toscanafilmcommission.it/"
+      "commission_url": "https://www.toscanafilmcommission.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Mercato_centrale_di_san_lorenzo_02.jpg/960px-Mercato_centrale_di_san_lorenzo_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mercato_centrale_di_san_lorenzo_02.jpg",
+        "author": "Sailko",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "it-milano-centrale",
@@ -6904,7 +7239,13 @@
         "https://www.comune.siracusa.it/"
       ],
       "official_url": "https://www.comune.siracusa.it/",
-      "commission_url": "https://italianfilmcommissions.it/"
+      "commission_url": "https://italianfilmcommissions.it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ortigia_dall%27alto.jpg/960px-Ortigia_dall%27alto.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ortigia_dall%27alto.jpg",
+        "author": "Agostino Artnoir Sella",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "it-eur-palazzo-congressi",
@@ -7599,7 +7940,13 @@
       ],
       "url": "https://www.batavialand.nl/over-batavialand/unieke-foto-en-filmlocatie-locatie-in-flevoland/",
       "official_url": "https://www.batavialand.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/De_BATAVIA_voor_de_film_onderweg_als_de_NIEUW_HOORN_%2802%29.jpg/960px-De_BATAVIA_voor_de_film_onderweg_als_de_NIEUW_HOORN_%2802%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:De_BATAVIA_voor_de_film_onderweg_als_de_NIEUW_HOORN_(02).jpg",
+        "author": "ADZee",
+        "license": "Public domain"
+      }
     },
     {
       "id": "nl-blokhuispoort",
@@ -7614,7 +7961,13 @@
         "https://www.blokhuispoort.nl/"
       ],
       "official_url": "https://www.blokhuispoort.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/20190227_Blokhuispoort_Leeuwarden.jpg/960px-20190227_Blokhuispoort_Leeuwarden.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20190227_Blokhuispoort_Leeuwarden.jpg",
+        "author": "Gouwenaar",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "erasmusbrug",
@@ -7669,7 +8022,13 @@
         "https://www.fortvechten.nl/"
       ],
       "official_url": "https://www.fortvechten.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/511574-Fort_Vechten.jpg/960px-511574-Fort_Vechten.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:511574-Fort_Vechten.jpg",
+        "author": "Johan Bakker",
+        "license": "CC BY-SA 3.0 nl"
+      }
     },
     {
       "id": "nl-forum-groningen",
@@ -7749,7 +8108,13 @@
         "https://www.johancruijffarena.nl/"
       ],
       "official_url": "https://www.johancruijffarena.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Arena%2C_Ajax_stadion%2C_Amsterdam.JPG/960px-Arena%2C_Ajax_stadion%2C_Amsterdam.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Arena,_Ajax_stadion,_Amsterdam.JPG",
+        "author": "Alf van Beem",
+        "license": "CC0"
+      }
     },
     {
       "id": "nl-kinderdijk",
@@ -7858,7 +8223,13 @@
         "https://www.louishartloopercomplex.nl/"
       ],
       "official_url": "https://www.hartlooper.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Overzicht_-_Utrecht_-_20329952_-_RCE.jpg/960px-Overzicht_-_Utrecht_-_20329952_-_RCE.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Overzicht_-_Utrecht_-_20329952_-_RCE.jpg",
+        "author": "Ger Barbiers",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-maeslantkering",
@@ -7888,7 +8259,13 @@
         "https://www.natuurmonumenten.nl/natuurgebieden/manteling-van-walcheren"
       ],
       "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/manteling-van-walcheren",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Natura2000_-_Manteling_van_Walcheren.png/960px-Natura2000_-_Manteling_van_Walcheren.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Natura2000_-_Manteling_van_Walcheren.png",
+        "author": "Map data (c) OpenStreetMap contributors, CC-BY-SA • Shape files infrastructure and nature (railway, roads, water, forest",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "nl-markthal",
@@ -7903,7 +8280,13 @@
         "https://www.markthal.nl/"
       ],
       "official_url": "https://www.markthal.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Markthal_Rotterdam_bij_avond.jpg/960px-Markthal_Rotterdam_bij_avond.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Markthal_Rotterdam_bij_avond.jpg",
+        "author": "Paul Arps from The Netherlands",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "media-park-hilversum",
@@ -7945,7 +8328,13 @@
         "https://www.museumbuurtspoorweg.nl/"
       ],
       "official_url": "https://www.museumbuurtspoorweg.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Station_Haaksbergen.jpg/960px-Station_Haaksbergen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Station_Haaksbergen.jpg",
+        "author": "Tubantia",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "nl-museumstoomtram-hoorn-medemblik",
@@ -7993,7 +8382,13 @@
         "https://www.nemosciencemuseum.nl/"
       ],
       "official_url": "https://www.nemosciencemuseum.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Amsterdam_vue_Nemo.JPG/960px-Amsterdam_vue_Nemo.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Amsterdam_vue_Nemo.JPG",
+        "author": "Velvet",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "nl-openluchtmuseum",
@@ -8133,7 +8528,13 @@
         "https://www.huissonneveld.nl/"
       ],
       "official_url": "https://www.huissonneveld.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rotterdam_sonneveld.jpg/960px-Rotterdam_sonneveld.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rotterdam_sonneveld.jpg",
+        "author": "Wikifrits",
+        "license": "Public domain"
+      }
     },
     {
       "id": "nl-ss-rotterdam",
@@ -8251,7 +8652,13 @@
         "https://www.vsm.nl/"
       ],
       "official_url": "https://www.stoomtrein.org/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Station_Beekbergen.jpg/960px-Station_Beekbergen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Station_Beekbergen.jpg",
+        "author": "Lexw",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "nl-westergasfabriek",
@@ -8289,7 +8696,13 @@
         "https://nl.wikipedia.org/wiki/Wilhelminabrug_(Deventer)"
       ],
       "official_url": "https://www.deventer.nl/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Wilhelminabrug_Deventer.jpg/960px-Wilhelminabrug_Deventer.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wilhelminabrug_Deventer.jpg",
+        "author": "Apdency",
+        "license": "CC0"
+      }
     },
     {
       "id": "nl-zonnestraal",
@@ -8304,7 +8717,13 @@
         "https://www.zonnestraal.org/"
       ],
       "official_url": "https://www.zonnestraal.org/",
-      "commission_url": "https://www.filmcommission.nl/"
+      "commission_url": "https://www.filmcommission.nl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Mr.M._C._Dresselhuyspaviljoen%2C_overzicht_van_de_zuidvleugel%2C_dan_wel_scheeve_vleugel%2C_tijdens_restauratie_-_Hilversum_-_20422171_-_RCE.jpg/960px-Mr.M._C._Dresselhuyspaviljoen%2C_overzicht_van_de_zuidvleugel%2C_dan_wel_scheeve_vleugel%2C_tijdens_restauratie_-_Hilversum_-_20422171_-_RCE.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mr.M._C._Dresselhuyspaviljoen,_overzicht_van_de_zuidvleugel,_dan_wel_scheeve_vleugel,_tijdens_restauratie_-_Hilversum_-_20422171_-_RCE.jpg",
+        "author": "Kris Roderburg",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "nl-zlsm",
@@ -8411,7 +8830,13 @@
       ],
       "url": "https://www.norwegianfilm.com/locations/hakonshallen",
       "official_url": "https://bymuseet.no/museum/hakonshallen/",
-      "commission_url": "https://www.norwegianfilm.com/locations/hakonshallen"
+      "commission_url": "https://www.norwegianfilm.com/locations/hakonshallen",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Haakonshallen_Bergen_Norway_2009_1.JPG/960px-Haakonshallen_Bergen_Norway_2009_1.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Haakonshallen_Bergen_Norway_2009_1.JPG",
+        "author": "User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outside WMF projects.)",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "no-domkirkeruinene-hamar",
@@ -8717,7 +9142,13 @@
         "https://koszyki.com/"
       ],
       "official_url": "https://koszyki.com/",
-      "commission_url": "https://pfc.pisf.pl/"
+      "commission_url": "https://pfc.pisf.pl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Front_facade_of_Hala_Koszyki%2C_Warsaw%2C_Poland.jpg/960px-Front_facade_of_Hala_Koszyki%2C_Warsaw%2C_Poland.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Front_facade_of_Hala_Koszyki,_Warsaw,_Poland.jpg",
+        "author": "Chris Olszewski",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "pl-hel-peninsula",
@@ -8841,7 +9272,13 @@
         "https://en.wikipedia.org/wiki/Nowa_Huta"
       ],
       "official_url": "https://nck.krakow.pl",
-      "commission_url": "https://pfc.pisf.pl/"
+      "commission_url": "https://pfc.pisf.pl/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Plac_Centralny_w_rytmie_symetrii.jpg/960px-Plac_Centralny_w_rytmie_symetrii.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Plac_Centralny_w_rytmie_symetrii.jpg",
+        "author": "Ptaszek747",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ogrodzieniec-castle",
@@ -9162,7 +9599,13 @@
       ],
       "url": "https://portugalfilmcommission.com/en/location/casa-dos-patudos-alpiarca-museum/",
       "official_url": "https://portugalfilmcommission.com/en/location/casa-dos-patudos-alpiarca-museum/",
-      "commission_url": "https://portugalfilmcommission.com/en/location/"
+      "commission_url": "https://portugalfilmcommission.com/en/location/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Casa-patudos_foto-pan.jpg/960px-Casa-patudos_foto-pan.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Casa-patudos_foto-pan.jpg",
+        "author": "Luisjmatias",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "convento-de-cristo-tomar",
@@ -9476,7 +9919,13 @@
         "https://en.wikipedia.org/wiki/Azkuna_Zentroa"
       ],
       "official_url": "https://www.azkunazentroa.eus/",
-      "commission_url": "https://www.bifilmcommission.com/locations/"
+      "commission_url": "https://www.bifilmcommission.com/locations/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bilbao_Alhondiga-tomasfano-01.jpg/960px-Bilbao_Alhondiga-tomasfano-01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bilbao_Alhondiga-tomasfano-01.jpg",
+        "author": "Tomas Fano",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "es-bardenas-reales",
@@ -9515,7 +9964,13 @@
         "https://en.wikipedia.org/wiki/Belchite"
       ],
       "official_url": "https://www.belchite.es/",
-      "commission_url": "https://www.shootinginspain.info/"
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/78/Church_of_San_Mart%C3%ADn_de_Tours%2C_Belchite%2C_Zaragoza%2C_Spain%2C_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite%2C_Zaragoza.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Church_of_San_Mart%C3%ADn_de_Tours,_Belchite,_Zaragoza,_Spain,_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite,_Zaragoza.jpg",
+        "author": "Mireille Marseille",
+        "license": "CC0"
+      }
     },
     {
       "id": "es-bilbao-metro",
@@ -9551,7 +10006,13 @@
         "https://bombasgens.com/"
       ],
       "official_url": "https://bombasgens.com/",
-      "commission_url": "https://www.shootinginspain.info/"
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/F%C3%A0brica_de_Bombes_Gens%2C_avinguda_de_Burjassot%2C_Val%C3%A8ncia.JPG/960px-F%C3%A0brica_de_Bombes_Gens%2C_avinguda_de_Burjassot%2C_Val%C3%A8ncia.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:F%C3%A0brica_de_Bombes_Gens,_avinguda_de_Burjassot,_Val%C3%A8ncia.JPG",
+        "author": "Joanbanjo",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-camp-nou",
@@ -9796,7 +10257,13 @@
         "https://ajuntament.barcelona.cat/fabraicoats/"
       ],
       "official_url": "https://ajuntament.barcelona.cat/fabraicoats/",
-      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Montserrat_Alonso_-_%40malonsoplana_-_14961061147.jpg/960px-Montserrat_Alonso_-_%40malonsoplana_-_14961061147.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Montserrat_Alonso_-_@malonsoplana_-_14961061147.jpg",
+        "author": "diveuniversefest",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "es-gran-teatre-del-liceu",
@@ -9919,7 +10386,13 @@
         "https://en.wikipedia.org/wiki/Market_of_San_Miguel"
       ],
       "official_url": "https://www.mercadodesanmiguel.es/",
-      "commission_url": "https://www.shootinginspain.info/"
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mercado_de_San_Miguel_2025.jpg/960px-Mercado_de_San_Miguel_2025.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mercado_de_San_Miguel_2025.jpg",
+        "author": "Fernando",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-mini-hollywood-oasys",
@@ -9950,7 +10423,13 @@
         "https://www.museodelferrocarril.org/"
       ],
       "official_url": "https://www.museodelferrocarril.org/",
-      "commission_url": "https://www.shootinginspain.info/"
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Madrid_-_Estaci%C3%B3n_Delicias_-_130120_123012.jpg/960px-Madrid_-_Estaci%C3%B3n_Delicias_-_130120_123012.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estaci%C3%B3n_Delicias_-_130120_123012.jpg",
+        "author": "Barcex",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-palacio-de-cibeles",
@@ -10005,7 +10484,13 @@
         "https://ascatedrais.xunta.gal/"
       ],
       "official_url": "https://ascatedrais.xunta.gal/",
-      "commission_url": "https://www.shootinginspain.info/"
+      "commission_url": "https://www.shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/2101-_As_Catedrais_%28Lugo%29-jlcernadas.jpg/960px-2101-_As_Catedrais_%28Lugo%29-jlcernadas.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:2101-_As_Catedrais_(Lugo)-jlcernadas.jpg",
+        "author": "Jose Luis Cernadas Iglesias from Coruña, España",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "es-las-ventas-bullring",
@@ -10418,7 +10903,13 @@
         "https://kulturhusetstadsteatern.se/uthyrning"
       ],
       "official_url": "https://kulturhusetstadsteatern.se/",
-      "commission_url": "https://filmcommissionsweden.se/"
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Kulturhuset_2009.jpg/960px-Kulturhuset_2009.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kulturhuset_2009.jpg",
+        "author": "Holger.Ellgaard",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "se-langholmen",
@@ -10540,7 +11031,13 @@
         "https://www.skansen.se/en/"
       ],
       "official_url": "https://www.skansen.se/en/",
-      "commission_url": "https://filmcommissionsweden.se/"
+      "commission_url": "https://filmcommissionsweden.se/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Skansenakv_lemurer.jpg/960px-Skansenakv_lemurer.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Skansenakv_lemurer.jpg",
+        "author": "No machine-readable author provided. Basilivh assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "se-universeum",
