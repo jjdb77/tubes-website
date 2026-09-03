@@ -15,7 +15,7 @@ sections:
     text: |
       Sections, lines, quantities and rates, with percentages such as contingency on top. Totals follow as you type. Start from the Movie Magic account structure, import an existing export, and download an Excel file in the layout Tubes uses.
 
-      Everything happens in your browser. Nothing is sent until you choose to save a version to an account.
+      Everything stays in your browser: the budget and up to ten saved versions live on this device, and nothing is sent to us. Download a file to keep a copy or to open it on another computer.
 ---
 {#- Gratis tool "Budget Builder". Bewust géén CMS-secties: het bewerkdeel is te
     specifiek. Tekst wijzig je hier, opmaak staat in style.css (blok "Gratis
@@ -23,13 +23,14 @@ sections:
     lezer voor xlsx/CSV (import) is js/budget-compare.js, dat als bibliotheek
     meelaadt (window.BudgetCompare). Formaten staan in js/budget-templates.js. -#}
 
-<section class="section theme-white bb-section" id="tool" data-budget-builder data-max-lines="2000" data-max-versions="10">
+{#- data-storage: "local" = versies in de browser (actief); "account" = versies op de server met e-mail en wachtwoord (code blijft aanwezig). -#}
+<section class="section theme-white bb-section" id="tool" data-budget-builder data-storage="local" data-max-lines="2000" data-max-versions="10">
   <div class="container">
 
     <div class="bb-top">
       <div class="bb-top-text">
         <h2>Build your budget</h2>
-        <p>Add sections and lines, or pick a format under Templates. The budget is kept in this browser as you type; saving a version to an account asks for an email address and password.</p>
+        <p>Add sections and lines, or pick a format under Templates. The budget is kept in this browser as you type. Save version keeps a named copy on this device, and a file download takes it anywhere.</p>
       </div>
       <div class="bb-actions">
         <span class="bb-account" data-bb-account>Not signed in · <button type="button" class="bc-link-button" data-bb-login>Log in</button></span>
@@ -98,8 +99,15 @@ sections:
           <span class="bb-label">Share per section</span>
           <div class="bb-share-list" data-bb-share-list></div>
         </div>
-        <div class="bb-privacy">
-          <strong>Kept in this browser.</strong> Your budget is saved on this device as you type. Save a version to an account to keep it safe and open it on another computer.
+        <div class="bb-privacy" data-bb-how>
+          <strong>How saving works</strong>
+          <ul>
+            <li><strong>As you type</strong>, the budget is stored in this browser. Close the tab and come back: it is still here.</li>
+            <li><strong>Save version</strong> keeps a named copy on this device, up to ten. Open, rename or delete them under "versions" above.</li>
+            <li><strong>This device only.</strong> Another computer, another browser or a cleared browser history does not have them.</li>
+            <li><strong>Download as file</strong> for a copy you can keep, email or open elsewhere with "Open a file". Excel and CSV are under Export.</li>
+            <li>Nothing is sent to us. Only the Feedback button sends what you type there.</li>
+          </ul>
         </div>
       </aside>
     </div>
@@ -127,12 +135,15 @@ sections:
   <dialog class="bb-dialog" data-bb-dialog="versions">
     <button type="button" class="bb-dialog-close" data-bb-close aria-label="Close">&times;</button>
     <h3>Your versions</h3>
-    <p class="bb-dialog-intro" data-bb-versions-intro>Up to ten versions of one budget.</p>
+    <p class="bb-dialog-intro" data-bb-versions-intro>Up to ten versions of one budget, saved in this browser.</p>
     <div class="bb-versions" data-bb-versions></div>
     <div class="bb-dialog-actions">
       <button type="button" class="button button-primary" data-bb-save-new>Save current as a new version</button>
+      <button type="button" class="button button-secondary" data-bb-file-save>Download as file</button>
+      <label class="button button-secondary bc-file">Open a file <input class="visually-hidden" type="file" accept=".json,application/json" data-bb-file-open></label>
       <button type="button" class="button button-secondary" data-bb-logout>Log out</button>
     </div>
+    <p class="bb-dialog-note" data-bb-versions-note>Versions stay on this device. A downloaded file (.json) is the way to keep a copy or to move a budget to another computer.</p>
   </dialog>
 
   <dialog class="bb-dialog" data-bb-dialog="import">
@@ -202,10 +213,10 @@ This free builder covers the first step. When you want the rest, the Excel it ex
   theme: "white",
   heading: "Questions about this tool",
   items: [
-    { question: "Do I need an account?",
-      answer: "No. You can build, import and export a budget without one; it stays in this browser. An account is only needed to save versions and open them elsewhere. You can log in before you start, halfway or at the end." },
-    { question: "What does an account store?",
-      answer: "Your email address, a password (stored as a hash, never readable) and the versions you save: up to ten versions of one budget, each up to 2,000 lines. The data sits on the Tubes server in the EU. Delete a version or ask us to remove the account at any time." },
+    { question: "Where is my budget saved?",
+      answer: "In your own browser, on this device. The budget you are working on is stored as you type, and Save version keeps up to ten named copies next to it. Nothing is sent to Tubes. Another computer or browser does not see these budgets, and clearing your browser data removes them." },
+    { question: "How do I keep a copy or move it to another computer?",
+      answer: "Under versions, choose Download as file: you get a small .json file with the whole budget. Keep it, email it, and load it anywhere with Open a file. For a spreadsheet, use Export for Excel or CSV." },
     { question: "Which formats can I import?",
       answer: "A Movie Magic Budgeting export (.xlsx, with its Topsheet, Categories and Account Details sheets), and any budget as Excel or CSV with a code, description and amount per line. Sections come from headings, a section column or the topsheet." },
     { question: "How does the Excel export look?",

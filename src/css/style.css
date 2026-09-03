@@ -2972,6 +2972,11 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .bb-bar > span { display: block; height: 100%; background: var(--status-blue-ink); border-radius: 3px; }
 .bb-privacy { background: #EAF1FC; border: 1px solid rgba(45, 108, 196, 0.16); border-radius: var(--radius-wash); padding: 12px 14px; font-size: 0.82rem; }
 .bb-privacy strong { color: var(--ink); }
+.bb-privacy > strong { display: block; margin-bottom: 6px; font-size: 0.86rem; }
+.bb-privacy ul { margin: 0; padding-left: 18px; }
+.bb-privacy li { margin-bottom: 5px; }
+/* Lokale opslag actief: geen account-elementen */
+.bb-section.is-local [data-bb-logout], .bb-section.is-local [data-bb-login] { display: none; }
 
 /* Dialogen */
 .bb-dialog {

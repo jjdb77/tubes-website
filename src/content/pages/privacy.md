@@ -159,13 +159,13 @@ sections:
 
       You also have the right to complain to a data protection supervisory authority. Because we are based in the Netherlands, that is the Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl). If you are in the United Kingdom you may complain to the Information Commissioner's Office (ico.org.uk), and if you are elsewhere in the European Union you may complain to the authority in the country where you live or work.
 
-      ### 14. Accounts for the free Budget Builder
+      ### 14. The free tools: Budget Builder and Budget Compare
 
-      The [Budget Builder](/tools/budget-builder/) works without an account: the budget you build stays in your own browser. If you choose to save a version, we ask for an email address and a password and create an account for you.
+      The [Budget Builder](/tools/budget-builder/) and the [Budget Compare](/tools/budget-compare/) tool run in your own browser. The budget you build, the versions you save and the files you load stay on your device; they are not sent to us. Clearing your browser data removes them.
 
-      For such an account we store your email address, your password as a hash (we cannot read it back), the moment the account was created, and the budget versions you save (at most ten, each at most 2,000 lines). We use the email address to keep your budgets together, to let you log in, and to contact you about this tool. We do not add it to a newsletter and we do not share it with others. The data is stored on our server in the European Union and is visible to the people at Tubes who maintain the tool.
+      The Budget Builder has a feedback button. What you type there, with the email address you optionally add, is stored with our contact messages and used only to follow up on your feedback.
 
-      You can delete a version yourself in the tool. To remove the account and everything in it, email [contact@tubes.media](mailto:contact@tubes.media); we do that within 30 days. The [Budget Compare](/tools/budget-compare/) tool stores nothing at all: it has no upload endpoint and runs entirely in your browser.
+      The Budget Builder can also be switched to saving versions in an account (email address and password). That option is currently switched off. If we switch it on, this notice will describe what such an account stores before it is used.
 
       ### 15. Changes to this notice
 

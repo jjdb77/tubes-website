@@ -639,6 +639,15 @@
 
   // ---------- Account en versies ----------
 
+  // Opslag: "local" (versies in deze browser, actief) of "account" (server,
+  // e-mail + wachtwoord). Schakelen: data-storage op de sectie in de template.
+  const STORAGE_MODE = root.dataset.storage === "account" ? "account" : "local";
+  root.classList.add(STORAGE_MODE === "local" ? "is-local" : "is-account");
+  const VERSIONS_KEY = "tubes-budget-builder-versions";
+  const readLocalVersions = () => { try { const v = JSON.parse(localStorage.getItem(VERSIONS_KEY) || "{}"); return v && typeof v === "object" && !Array.isArray(v) ? v : {}; } catch { return {}; } };
+  const writeLocalVersions = (v) => { try { localStorage.setItem(VERSIONS_KEY, JSON.stringify(v)); return true; } catch { return false; } };
+  const localSummaries = () => Object.values(readLocalVersions()).map(({ budget: _b, ...rest }) => rest).sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
+
   const account = { user: null, versions: [], offline: false };
   const accountEl = $("[data-bb-account]");
   const saveButtons = $$("[data-bb-save]");
@@ -664,6 +673,13 @@
   }
 
   function renderAccount() {
+    if (STORAGE_MODE === "local") {
+      const n = account.versions.length;
+      accountEl.innerHTML = `Saved in this browser · <button type="button" class="bc-link-button" data-bb-versions-open>${n} of ${MAX_VERSIONS} version${n === 1 ? "" : "s"}</button>`;
+      $("[data-bb-versions-open]", accountEl).addEventListener("click", () => { prepareDialog("versions"); openDialog("versions"); });
+      setSaveButtons((b) => { b.textContent = "Save version"; });
+      return;
+    }
     if (account.user) {
       const n = account.versions.length;
       accountEl.innerHTML = `${esc(account.user.email)} · <button type="button" class="bc-link-button" data-bb-versions-open>${n} of ${MAX_VERSIONS} version${n === 1 ? "" : "s"}</button>`;
@@ -676,11 +692,16 @@
     }
   }
 
-  api("/api/tools/me").then((data) => {
-    account.user = data.user;
-    account.versions = data.versions || [];
+  if (STORAGE_MODE === "local") {
+    account.versions = localSummaries();
     renderAccount();
-  }).catch(() => { account.offline = true; });
+  } else {
+    api("/api/tools/me").then((data) => {
+      account.user = data.user;
+      account.versions = data.versions || [];
+      renderAccount();
+    }).catch(() => { account.offline = true; });
+  }
 
   const accountDialog = dialogs.account;
   const accountForm = $("[data-bb-account-form]");
@@ -708,7 +729,8 @@
     accountForm.email.focus();
   }
   for (const tab of $$("[data-bb-mode]", accountDialog)) tab.addEventListener("click", () => setAccountMode(tab.dataset.bbMode));
-  $("[data-bb-login]").addEventListener("click", () => openAccount("login", false));
+  const loginButton = $("[data-bb-login]"); // bestaat niet meer zodra renderAccount() al gelopen is (lokale opslag)
+  if (loginButton) loginButton.addEventListener("click", () => openAccount("login", false));
 
   accountForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -733,7 +755,34 @@
     }
   });
 
+  // Lokaal: versie in localStorage; op de server: PUT /api/tools/versions/:id
+  function saveVersionLocal(asNew) {
+    const versions = readLocalVersions();
+    const isNew = asNew || !versions[budget.id];
+    if (isNew && Object.keys(versions).length >= MAX_VERSIONS) {
+      notice(`You can keep up to ${MAX_VERSIONS} versions in this browser. Delete one to save a new one.`, "error");
+      prepareDialog("versions"); openDialog("versions");
+      return;
+    }
+    if (asNew) {
+      budget.id = uid();
+      const m = /^(.*?)(\d+)\s*$/.exec(budget.name || "");
+      budget.name = m ? `${m[1]}${Number(m[2]) + 1}` : `${budget.name || "Draft"} 2`;
+      renderMeta();
+      saveLocal();
+    }
+    const t = totals();
+    versions[budget.id] = { id: budget.id, name: budget.name || "Untitled", production: budget.production || "", updatedAt: new Date().toISOString(), lines: lineCount(), total: t.subtotal, budget: JSON.parse(JSON.stringify(budget)) };
+    if (!writeLocalVersions(versions)) { notice("This browser does not allow saving (private window or storage full). Use Download as file instead.", "error"); return; }
+    account.versions = localSummaries();
+    dirty = false;
+    renderAccount();
+    notice(`Saved "${budget.name || "Untitled"}" in this browser (${account.versions.length} of ${MAX_VERSIONS} versions).`, "ok");
+    if (dialogs.versions.open) prepareDialog("versions");
+  }
+
   async function saveVersion(asNew) {
+    if (STORAGE_MODE === "local") { if (lineCount() > MAX_LINES) { notice(`A version can hold up to ${MAX_LINES} lines.`, "error"); return; } saveVersionLocal(asNew); return; }
     if (!account.user) { openAccount("register", true); return; }
     if (lineCount() > MAX_LINES) { notice(`A version can hold up to ${MAX_LINES} lines.`, "error"); return; }
     if (asNew) {
@@ -772,7 +821,10 @@
 
   function renderVersions() {
     const list = $("[data-bb-versions]");
-    $("[data-bb-versions-intro]").textContent = `${account.versions.length} of ${MAX_VERSIONS} versions saved${account.user ? ` for ${account.user.email}` : ""}.`;
+    if (STORAGE_MODE === "local") account.versions = localSummaries();
+    $("[data-bb-versions-intro]").textContent = STORAGE_MODE === "local"
+      ? `${account.versions.length} of ${MAX_VERSIONS} versions saved in this browser.`
+      : `${account.versions.length} of ${MAX_VERSIONS} versions saved${account.user ? ` for ${account.user.email}` : ""}.`;
     if (!account.versions.length) { list.innerHTML = `<p class="bb-help">No versions saved yet.</p>`; return; }
     list.innerHTML = account.versions.map((v) => `<div class="bb-version${v.id === budget.id ? " is-current" : ""}" data-version="${esc(v.id)}">
         <div class="bb-version-text"><strong>${esc(v.name || "Untitled")}</strong>${v.production ? ` <span class="bb-help">${esc(v.production)}</span>` : ""}<span class="bb-help">${v.lines} line${v.lines === 1 ? "" : "s"} · total ${money(v.total || 0)} · ${new Date(v.updatedAt).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}${v.id === budget.id ? " · open now" : ""}</span></div>
@@ -785,8 +837,9 @@
     const id = button.closest("[data-version]").dataset.version;
     try {
       if (button.dataset.vact === "open") {
-        const data = await api(`/api/tools/versions/${encodeURIComponent(id)}`);
-        budget = data.budget;
+        const data = STORAGE_MODE === "local" ? { budget: (readLocalVersions()[id] || {}).budget } : await api(`/api/tools/versions/${encodeURIComponent(id)}`);
+        if (!data.budget) throw new Error("This version no longer exists.");
+        budget = JSON.parse(JSON.stringify(data.budget));
         budget.additionals = Array.isArray(budget.additionals) ? budget.additionals : [];
         dirty = false;
         saveLocal();
@@ -795,8 +848,8 @@
         notice(`Opened "${budget.name || "Untitled"}".`, "ok");
       } else if (button.dataset.vact === "delete") {
         if (button.dataset.armed !== "1") { button.dataset.armed = "1"; button.textContent = "Delete?"; button.classList.add("is-armed"); setTimeout(() => { button.dataset.armed = ""; button.innerHTML = "&times;"; button.classList.remove("is-armed"); }, 4000); return; }
-        const data = await api(`/api/tools/versions/${encodeURIComponent(id)}`, { method: "DELETE" });
-        account.versions = data.versions || [];
+        if (STORAGE_MODE === "local") { const v = readLocalVersions(); delete v[id]; writeLocalVersions(v); account.versions = localSummaries(); }
+        else { const data = await api(`/api/tools/versions/${encodeURIComponent(id)}`, { method: "DELETE" }); account.versions = data.versions || []; }
         if (id === budget.id) dirty = true;
         renderAccount();
         renderVersions();
@@ -928,6 +981,32 @@
     notice(withLines ? `${t.name}: ${sections.length} sections, ${sections.reduce((n, s) => n + s.lines.length, 0)} lines.` : `${t.name}: ${sections.length} categories added. Pick the cost types per section, or add blank lines.`, "ok");
   }
   $("[data-bb-templates]").addEventListener("click", (e) => { const b = e.target.closest("[data-tact]"); if (b) applyTemplate(b); });
+
+  // ---------- Budget als bestand (.json) ----------
+
+  $("[data-bb-file-save]").addEventListener("click", () => {
+    const data = { format: "tubes-budget-builder", version: 1, savedAt: new Date().toISOString(), budget };
+    download(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }), fileStem() + ".json");
+    notice("Downloaded the budget as a file. Open it here with Open a file.", "ok");
+  });
+  $("[data-bb-file-open]").addEventListener("change", async (e) => {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = "";
+    if (!file) return;
+    try {
+      const data = JSON.parse(await file.text());
+      const b = data && data.budget ? data.budget : data;
+      if (!b || !Array.isArray(b.sections)) throw new Error("bad");
+      budget = { ...emptyBudget(), ...b, id: String(b.id || uid()), sections: b.sections.map(newSection), additionals: (b.additionals || []).map(newAdditional) };
+      dirty = true;
+      saveLocal();
+      renderAll();
+      dialogs.versions.close();
+      notice(`Opened ${file.name}. Use Save version to keep it in this browser.`, "ok");
+    } catch {
+      notice("This is not a budget file from the Budget Builder.", "error");
+    }
+  });
 
   // ---------- Feedback ----------
 
