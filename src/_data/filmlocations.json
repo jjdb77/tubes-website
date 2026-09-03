@@ -5497,7 +5497,13 @@
         "https://www.duisburgkontor.de/"
       ],
       "official_url": "https://www.duisburgkontor.de/",
-      "commission_url": "https://www.filmstiftung.de/"
+      "commission_url": "https://www.filmstiftung.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Innenhafen_in_Duisburg.jpg/960px-Innenhafen_in_Duisburg.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Innenhafen_in_Duisburg.jpg",
+        "author": "Matt.smz86",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "de-eisenbahnmuseum-bochum",
@@ -5595,7 +5601,13 @@
         "https://www.frauenkirche-dresden.de/"
       ],
       "official_url": "https://www.frauenkirche-dresden.de/",
-      "commission_url": "https://www.mdm-online.de/"
+      "commission_url": "https://www.mdm-online.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/100130_150006_Dresden_Frauenkirche_winter_blue_sky-2.jpg/960px-100130_150006_Dresden_Frauenkirche_winter_blue_sky-2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:100130_150006_Dresden_Frauenkirche_winter_blue_sky-2.jpg",
+        "author": "Netopyr",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-funkhaus-berlin",
@@ -5703,7 +5715,13 @@
         "https://www.hansaviertel.berlin/"
       ],
       "official_url": "https://www.hansaviertel.berlin/",
-      "commission_url": "https://www.medienboard.de/en/"
+      "commission_url": "https://www.medienboard.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Berlin_Mitte_Hansaviertel.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Berlin_Mitte_Hansaviertel.png",
+        "author": "BishkekRocks",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-heidelberg-university",
@@ -5797,7 +5815,13 @@
         "https://www.justiz.bayern.de/gericht/olg/m/"
       ],
       "official_url": "https://www.justiz.bayern.de/gericht/olg/m/",
-      "commission_url": "https://www.fff-bayern.de/"
+      "commission_url": "https://www.fff-bayern.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aerial_image_of_Justizpalast_Munich.jpg/960px-Aerial_image_of_Justizpalast_Munich.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Justizpalast_Munich.jpg",
+        "author": "Carsten Steger",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-kadewe",
@@ -5827,7 +5851,13 @@
         "https://www.berlin.de/gerichte/kammergericht/"
       ],
       "official_url": "https://www.berlin.de/gerichte/kammergericht/",
-      "commission_url": "https://www.medienboard.de/en/"
+      "commission_url": "https://www.medienboard.de/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/141019_Kammergericht_Berlin.jpg/960px-141019_Kammergericht_Berlin.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:141019_Kammergericht_Berlin.jpg",
+        "author": "Ansgar Koreng",
+        "license": "CC BY-SA 3.0 de"
+      }
     },
     {
       "id": "de-kampnagel",
@@ -5960,7 +5990,13 @@
         "https://www.wiesbaden.de/kurhaus"
       ],
       "official_url": "https://www.wiesbaden.de/kurhaus",
-      "commission_url": "https://www.hessenfilm.de/"
+      "commission_url": "https://www.hessenfilm.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Kurhaus%28Wiesbaden%29.jpg/960px-Kurhaus%28Wiesbaden%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kurhaus(Wiesbaden).jpg",
+        "author": "Martin Kraft",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-landschaftspark-duisburg-nord",
@@ -6027,7 +6063,13 @@
         "https://museums.nuernberg.de/memorium-nuremberg-trials/"
       ],
       "official_url": "https://museums.nuernberg.de/memorium-nuremberg-trials/",
-      "commission_url": "https://www.fff-bayern.de/"
+      "commission_url": "https://www.fff-bayern.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Nuremberg_-_justice_palace_2012_%28aka%29.jpg/960px-Nuremberg_-_justice_palace_2012_%28aka%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nuremberg_-_justice_palace_2012_(aka).jpg",
+        "author": "André Karwath aka Aka",
+        "license": "CC BY-SA 2.5"
+      }
     },
     {
       "id": "de-ruedersdorf-museum-park",
@@ -6058,7 +6100,13 @@
         "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/"
       ],
       "official_url": "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Marine_-_Ehrenmal_Laboe.jpg/960px-Marine_-_Ehrenmal_Laboe.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Marine_-_Ehrenmal_Laboe.jpg",
+        "author": "MonaLisa1998",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "neuschwanstein-castle",
@@ -6211,7 +6259,13 @@
         "https://www.schlosshotel-kronberg.com/"
       ],
       "official_url": "https://www.schlosshotel-kronberg.com/",
-      "commission_url": "https://www.hessenfilm.de/"
+      "commission_url": "https://www.hessenfilm.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Schlosshotel-kronberg002.jpg/960px-Schlosshotel-kronberg002.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Schlosshotel-kronberg002.jpg",
+        "author": "dontworry",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-schwimmoper-wuppertal",
@@ -6226,7 +6280,13 @@
         "https://www.wsw-online.de/"
       ],
       "official_url": "https://www.wsw-online.de/",
-      "commission_url": "https://www.filmstiftung.de/"
+      "commission_url": "https://www.filmstiftung.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Wuppertal_Schwimmoper_S%C3%BCd.jpg/960px-Wuppertal_Schwimmoper_S%C3%BCd.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wuppertal_Schwimmoper_S%C3%BCd.jpg",
+        "author": "Pitichinaccio",
+        "license": "Public domain"
+      }
     },
     {
       "id": "de-seebruecke-sellin",
@@ -6257,7 +6317,13 @@
         "https://www.speicherstadtmuseum.de/"
       ],
       "official_url": "https://www.speicherstadtmuseum.de/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Speicherstadt_abends.jpg/960px-Speicherstadt_abends.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Speicherstadt_abends.jpg",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-spinnerei-leipzig",
@@ -6288,7 +6354,13 @@
         "https://www.st-michaelis.de/"
       ],
       "official_url": "https://www.st-michaelis.de/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/"
+      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hamburg-Michaeliskirche-Hafen.jpg/960px-Hamburg-Michaeliskirche-Hafen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hamburg-Michaeliskirche-Hafen.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-staatstheater-stuttgart",
@@ -6303,7 +6375,13 @@
         "https://www.staatstheater-stuttgart.de/"
       ],
       "official_url": "https://www.staatstheater-stuttgart.de/",
-      "commission_url": "https://www.film.mfg.de/"
+      "commission_url": "https://www.film.mfg.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Stuttgart_Staatstheater_9.jpg/960px-Stuttgart_Staatstheater_9.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Stuttgart_Staatstheater_9.jpg",
+        "author": "Schlaier",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "studio-babelsberg",
@@ -6460,7 +6538,13 @@
         "https://www.muenchen.de/en/sights/viktualienmarkt"
       ],
       "official_url": "https://www.muenchen.de/en/sights/viktualienmarkt",
-      "commission_url": "https://www.fff-bayern.de/"
+      "commission_url": "https://www.fff-bayern.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Viktualienmarkt_2016.jpg/960px-Viktualienmarkt_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Viktualienmarkt_2016.jpg",
+        "author": "Wikiolo",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-voelklinger-huette",
@@ -6937,7 +7021,13 @@
         "https://en.wikipedia.org/wiki/Spinalonga"
       ],
       "official_url": "https://www.visitgreece.gr/islands/crete/spinalonga-island/",
-      "commission_url": "https://www.ekome.media"
+      "commission_url": "https://www.ekome.media",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg/960px-20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
+        "author": "Ggia",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "gr-vikos-gorge",
@@ -8262,7 +8352,13 @@
         "https://www.corkoperahouse.ie"
       ],
       "official_url": "https://www.corkoperahouse.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/CorkOperaHouse2017.jpg/960px-CorkOperaHouse2017.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:CorkOperaHouse2017.jpg",
+        "author": "Charles Curling",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-curragh-camp",
@@ -8277,7 +8373,13 @@
         "https://www.military.ie"
       ],
       "official_url": "https://www.military.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Badge_of_the_Irish_Defence_Forces.svg/960px-Badge_of_the_Irish_Defence_Forces.svg.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Badge_of_the_Irish_Defence_Forces.svg",
+        "author": "Designed by Irish Volunteers (Eoin MacNeill)",
+        "license": "Public domain"
+      }
     },
     {
       "id": "ie-derrynane-house",
@@ -8393,7 +8495,13 @@
         "https://www.dublinport.ie"
       ],
       "official_url": "https://www.dublinport.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DublinPort.jpg/960px-DublinPort.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:DublinPort.jpg",
+        "author": "Niels Johannes",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ie-dun-aonghasa",
@@ -8454,7 +8562,13 @@
         "https://www.fortdunree.com"
       ],
       "official_url": "https://www.fortdunree.com",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Dunree_fort.JPG/960px-Dunree_fort.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dunree_fort.JPG",
+        "author": "Kittysoftpaws",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-glendalough",
@@ -8577,7 +8691,13 @@
         "https://www.milkmarketlimerick.ie"
       ],
       "official_url": "https://www.milkmarketlimerick.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Milk_Market_sign.jpg/960px-Milk_Market_sign.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Milk_Market_sign.jpg",
+        "author": "Sheila1988",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-muckross-house",
@@ -8592,7 +8712,13 @@
         "https://muckross-house.ie"
       ],
       "official_url": "https://muckross-house.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Eastern_Facade.jpg/960px-Eastern_Facade.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Eastern_Facade.jpg",
+        "author": "Emmett.Hume",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ie-pearse-museum",
@@ -8647,7 +8773,13 @@
         "https://www.powerscourt.ie"
       ],
       "official_url": "https://www.powerscourt.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Powerscourt_Fountain.JPG/960px-Powerscourt_Fountain.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Powerscourt_Fountain.JPG",
+        "author": "Amanda Susan Munroe",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ie-richmond-barracks",
@@ -8662,7 +8794,13 @@
         "https://www.richmondbarracks.ie"
       ],
       "official_url": "https://www.richmondbarracks.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/27/Richmond_Barracks%2C_Dublin.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Richmond_Barracks,_Dublin.jpg",
+        "author": "Unknown authorUnknown author",
+        "license": "Public domain"
+      }
     },
     {
       "id": "skellig-michael",
@@ -8720,7 +8858,13 @@
         "https://spikeislandcork.ie"
       ],
       "official_url": "https://spikeislandcork.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Aerial_view_of_Spike_Island%2C_Co._Cork.jpg/960px-Aerial_view_of_Spike_Island%2C_Co._Cork.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Spike_Island,_Co._Cork.jpg",
+        "author": "Caoimheen3",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ie-strokestown-park",
@@ -8824,7 +8968,13 @@
         "https://www.universityofgalway.ie"
       ],
       "official_url": "https://www.universityofgalway.ie",
-      "commission_url": "https://www.screenireland.ie"
+      "commission_url": "https://www.screenireland.ie",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Galway_University_Hospital.jpg/960px-Galway_University_Hospital.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Galway_University_Hospital.jpg",
+        "author": "Sulmac at en.wikipedia",
+        "license": "Public domain"
+      }
     },
     {
       "id": "ie-wicklows-historic-gaol",
@@ -8899,7 +9049,13 @@
         "https://www.arsenale.it"
       ],
       "official_url": "https://www.arsenale.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Campo_de_l%27Arsenal.jpg/960px-Campo_de_l%27Arsenal.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Campo_de_l%27Arsenal.jpg",
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-base-milano",
@@ -9111,7 +9267,13 @@
         "https://www.aeroportodicomiso.eu"
       ],
       "official_url": "https://www.aeroportodicomiso.eu",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Aeroporto_di_Comiso.jpeg/960px-Aeroporto_di_Comiso.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aeroporto_di_Comiso.jpeg",
+        "author": "Carlo Dani",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-craco",
@@ -9174,7 +9336,13 @@
         "https://www.fortedibard.it"
       ],
       "official_url": "https://www.fortedibard.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ForteDiBardHoneAug052023_02.jpg/960px-ForteDiBardHoneAug052023_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:ForteDiBardHoneAug052023_02.jpg",
+        "author": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-grand-hotel-et-de-milan",
@@ -9210,7 +9378,13 @@
         "https://www.grandhotelrimini.com"
       ],
       "official_url": "https://www.grandhotelrimini.com",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Grand_Hotel_Rimini.jpg/960px-Grand_Hotel_Rimini.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Grand_Hotel_Rimini.jpg",
+        "author": "Michele1978rimini",
+        "license": "Public domain"
+      }
     },
     {
       "id": "it-grand-hotel-villa-serbelloni",
@@ -9261,7 +9435,13 @@
         "https://www.interportopd.it"
       ],
       "official_url": "https://www.interportopd.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Padova-2007.gif/960px-Padova-2007.gif",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Padova-2007.gif",
+        "author": "Ivanfurlanis",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "it-ivrea-industrial-city",
@@ -9517,7 +9697,13 @@
         "https://www.palaflorio.it"
       ],
       "official_url": "https://www.palaflorio.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Palaflorio_Bari_Italy.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palaflorio_Bari_Italy.jpeg",
+        "author": "FIVB",
+        "license": "Public domain"
+      }
     },
     {
       "id": "it-eur-palazzo-congressi",
@@ -9553,7 +9739,13 @@
         "https://www.piscinadellerose.net"
       ],
       "official_url": "https://www.piscinadellerose.net",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Roma_EUR_Piscina_delle_Rose_vista_dal_basso.jpg/960px-Roma_EUR_Piscina_delle_Rose_vista_dal_basso.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Roma_EUR_Piscina_delle_Rose_vista_dal_basso.jpg",
+        "author": "Blackcat",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "it-bologna-porticoes",
@@ -9614,7 +9806,13 @@
         "https://www.portodigioiatauro.it"
       ],
       "official_url": "https://www.portodigioiatauro.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/95/Gioiatauro_seaport.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gioiatauro_seaport.jpg",
+        "author": "The original uploader was Istvánka at Hungarian Wikipedia.",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "it-porto-vecchio-trieste",
@@ -9766,7 +9964,13 @@
         "https://www.fondazionepetruzzelli.it"
       ],
       "official_url": "https://www.fondazionepetruzzelli.it",
-      "commission_url": "https://www.italyformovies.it"
+      "commission_url": "https://www.italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg/960px-Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg",
+        "author": "Benjamin Smith",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "it-napoli-metro-toledo",
@@ -9889,7 +10093,13 @@
         "https://heritagemalta.mt/explore/domvs-romana/"
       ],
       "official_url": "https://heritagemalta.mt/explore/domvs-romana/",
-      "commission_url": "https://screenmalta.com"
+      "commission_url": "https://screenmalta.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Sudika_Rabat_Domus_Romana.jpg/960px-Sudika_Rabat_Domus_Romana.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sudika_Rabat_Domus_Romana.jpg",
+        "author": "Sudika",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "mt-dwejra",
@@ -9994,7 +10204,13 @@
         "https://www.issuqtalbelt.com"
       ],
       "official_url": "https://www.issuqtalbelt.com",
-      "commission_url": "https://screenmalta.com"
+      "commission_url": "https://screenmalta.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Is-Suq_Tal-Belt.jpg/960px-Is-Suq_Tal-Belt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Is-Suq_Tal-Belt.jpg",
+        "author": "Michael Calleja",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "mt-malta-aviation-museum",
@@ -10009,7 +10225,13 @@
         "https://maltaaviationmuseum.com"
       ],
       "official_url": "https://maltaaviationmuseum.com",
-      "commission_url": "https://screenmalta.com"
+      "commission_url": "https://screenmalta.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Malta_Air_Museum.png/960px-Malta_Air_Museum.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Malta_Air_Museum.png",
+        "author": "A2-33",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "malta-film-studios",
@@ -10185,7 +10407,13 @@
         "https://heritagemalta.mt/explore/the-inquisitors-palace/"
       ],
       "official_url": "https://heritagemalta.mt/explore/the-inquisitors-palace/",
-      "commission_url": "https://screenmalta.com"
+      "commission_url": "https://screenmalta.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Inquisitor%27s_Palace_in_Birgu.jpg/960px-Inquisitor%27s_Palace_in_Birgu.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Inquisitor%27s_Palace_in_Birgu.jpg",
+        "author": "Continentaleurope",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "mt-xara-palace-mdina",
@@ -14467,7 +14695,13 @@
         "https://slagthuset.se"
       ],
       "official_url": "https://slagthuset.se",
-      "commission_url": "https://filmiskane.se"
+      "commission_url": "https://filmiskane.se",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Slagthuset%2C_Malm%C3%B6%2C_2016.jpg/960px-Slagthuset%2C_Malm%C3%B6%2C_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Slagthuset,_Malm%C3%B6,_2016.jpg",
+        "author": "Jorchr",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "se-universeum",
