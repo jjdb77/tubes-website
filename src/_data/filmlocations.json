@@ -3,6 +3,181 @@
   "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos or data from other location databases; record only what a venue itself publishes, and keep source URLs.",
   "locations": [
     {
+      "id": "at-bergisel-ski-jump",
+      "name": "Bergisel Ski Jump",
+      "country": "Austria",
+      "region": "Tyrol",
+      "lat": 47.2468,
+      "lng": 11.4001,
+      "type": "Theatre, arena & venue",
+      "setting": "Zaha Hadid's 2002 ski jump tower on Innsbruck's Bergisel hill, combining a competition in-run and judging tower with a public viewing platform and cafe over the city.",
+      "source_urls": [
+        "https://www.bergisel.info/"
+      ],
+      "official_url": "https://www.bergisel.info/",
+      "commission_url": "https://www.cinetirol.com/en/"
+    },
+    {
+      "id": "at-erzberg",
+      "name": "Erzberg",
+      "country": "Austria",
+      "region": "Styria",
+      "lat": 47.5243,
+      "lng": 14.9118,
+      "type": "Industrial & derelict",
+      "setting": "Open-pit iron ore mine near Eisenerz with terraced orange slopes over 700 metres high, a tourist park offering truck and cable tours through the workings, and host to the annual Erzbergrodeo enduro race.",
+      "source_urls": [
+        "https://www.abenteuer-erzberg.at/"
+      ],
+      "official_url": "https://www.abenteuer-erzberg.at/",
+      "commission_url": "https://www.cinestyria.com"
+    },
+    {
+      "id": "at-gasometer-wien",
+      "name": "Gasometer Vienna",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1849,
+      "lng": 16.4173,
+      "type": "Industrial & derelict",
+      "setting": "Four former 19th-century gasholders in Vienna's Simmering district, rebuilt with glass domes into apartments, offices, a shopping mall, cinema and event hall around their original brick shells.",
+      "known_for": "The Living Daylights (1987)",
+      "source_urls": [
+        "https://www.gasometer.at/",
+        "https://en.wikipedia.org/wiki/Gasometer_(Vienna)"
+      ],
+      "official_url": "https://www.gasometer.at/",
+      "commission_url": "https://www.viennafilmcommission.at/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Simmering_%28Wien%29_-_Gasometer_%282%29.JPG/960px-Simmering_%28Wien%29_-_Gasometer_%282%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Simmering_(Wien)_-_Gasometer_(2).JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "at-hallstatt",
+      "name": "Hallstatt",
+      "country": "Austria",
+      "region": "Upper Austria (Salzkammergut)",
+      "lat": 47.5622,
+      "lng": 13.6493,
+      "type": "Village & countryside",
+      "setting": "Lakeside Alpine village of stacked wooden and stucco houses between the Hallstatter See and a steep mountainside, reachable by funicular to the salt mine above.",
+      "source_urls": [
+        "https://www.hallstatt.net/"
+      ],
+      "official_url": "https://www.hallstatt.net/",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
+      "id": "at-hangar-7-salzburg",
+      "name": "Hangar-7",
+      "country": "Austria",
+      "region": "Salzburg",
+      "lat": 47.7937,
+      "lng": 13.0074,
+      "type": "Modern architecture",
+      "setting": "Curved glass and steel aviation hangar at Salzburg Airport housing the Flying Bulls historic aircraft collection, a restaurant and event spaces beneath its open-span dome roof.",
+      "source_urls": [
+        "https://www.hangar-7.com/"
+      ],
+      "official_url": "https://www.hangar-7.com/",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
+      "id": "at-hotel-sacher-wien",
+      "name": "Hotel Sacher Vienna",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2039,
+      "lng": 16.3695,
+      "type": "Hotel & interiors",
+      "setting": "Grand 1876 hotel opposite the State Opera, with red-panelled parlours, a chandeliered dining room and the original Sachertorte kitchen.",
+      "source_urls": [
+        "https://www.sacher.com/en/vienna"
+      ],
+      "official_url": "https://www.sacher.com/en/vienna",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-kirche-am-steinhof",
+      "name": "Kirche am Steinhof (Klinik Penzing)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2105,
+      "lng": 16.2788,
+      "type": "Hospital, prison & institution",
+      "setting": "Otto Wagner's Art Nouveau hospital church of 1907 crowning a hillside campus of pavilion wards built for the former Lower Austrian asylum, now Vienna's Klinik Penzing.",
+      "source_urls": [
+        "https://www.gesundheitsverbund.at/kliniken/klinik-penzing",
+        "https://en.wikipedia.org/wiki/Kirche_am_Steinhof"
+      ],
+      "official_url": "https://www.gesundheitsverbund.at/kliniken/klinik-penzing",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-kitzbuhel",
+      "name": "Kitzbühel",
+      "country": "Austria",
+      "region": "Tyrol",
+      "lat": 47.4467,
+      "lng": 12.3925,
+      "type": "Village & countryside",
+      "setting": "Alpine market town below the Hahnenkamm and Kitzbueheler Horn, with a pastel-fronted medieval centre and ski infrastructure running from the streets onto the pistes.",
+      "source_urls": [
+        "https://www.kitzbuehel.com/"
+      ],
+      "official_url": "https://www.kitzbuehel.com/",
+      "commission_url": "https://www.cinetirol.com/en/"
+    },
+    {
+      "id": "at-kunsthaus-graz",
+      "name": "Kunsthaus Graz",
+      "country": "Austria",
+      "region": "Styria",
+      "lat": 47.0722,
+      "lng": 15.4344,
+      "type": "Modern architecture",
+      "setting": "Biomorphic blue-panelled contemporary art museum of 2003 on the Mur riverbank, its bulging acrylic shell fitted with roof-top nozzle skylights beside Graz's baroque old town.",
+      "source_urls": [
+        "https://www.museum-joanneum.at/kunsthaus-graz"
+      ],
+      "official_url": "https://www.museum-joanneum.at/kunsthaus-graz",
+      "commission_url": "https://www.cinestyria.com"
+    },
+    {
+      "id": "at-museum-arbeitswelt-steyr",
+      "name": "Museum Arbeitswelt Steyr",
+      "country": "Austria",
+      "region": "Upper Austria",
+      "lat": 48.0428,
+      "lng": 14.4165,
+      "type": "Industrial & derelict",
+      "setting": "Museum of industrial and labour history housed in a former weapons and bicycle factory hall in Steyr's Wehrgraben quarter, with original machine-hall interiors.",
+      "source_urls": [
+        "https://www.museumarbeitswelt.at"
+      ],
+      "official_url": "https://www.museumarbeitswelt.at",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
+      "id": "at-naschmarkt",
+      "name": "Naschmarkt",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1989,
+      "lng": 16.3636,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1.5-kilometre open-air market along the Wienzeile with produce stalls, delicatessens and restaurants, and a Saturday flea market at its western end.",
+      "source_urls": [
+        "https://www.naschmarkt-vienna.com",
+        "https://en.wikipedia.org/wiki/Naschmarkt"
+      ],
+      "official_url": "https://www.naschmarkt-vienna.com",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
       "id": "salzburg-old-town",
       "name": "Salzburg Old Town",
       "country": "Austria",
@@ -41,6 +216,22 @@
       }
     },
     {
+      "id": "at-semmering-railway",
+      "name": "Semmering Railway",
+      "country": "Austria",
+      "region": "Lower Austria",
+      "lat": 47.643,
+      "lng": 15.831,
+      "type": "Transport & infrastructure",
+      "setting": "The world's first standard-gauge mountain railway, opened in 1854, still an operating OBB main line with sixteen tunnels and stone viaducts climbing the Semmering pass.",
+      "source_urls": [
+        "https://www.oebb.at/en",
+        "https://en.wikipedia.org/wiki/Semmering_railway"
+      ],
+      "official_url": "https://www.oebb.at/en",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
       "id": "soelden",
       "name": "Sölden",
       "country": "Austria",
@@ -58,6 +249,193 @@
         "author": "Leo-setä",
         "license": "CC BY 2.0"
       }
+    },
+    {
+      "id": "at-tabakfabrik-linz",
+      "name": "Tabakfabrik Linz",
+      "country": "Austria",
+      "region": "Upper Austria",
+      "lat": 48.3123,
+      "lng": 14.299,
+      "type": "Industrial & derelict",
+      "setting": "A converted 1935 Bauhaus-style tobacco factory in Linz, now a creative and start-up quarter with exhibition halls, event spaces and a rooftop terrace across the Danube from the old town.",
+      "source_urls": [
+        "https://www.tabakfabrik-linz.at/"
+      ],
+      "official_url": "https://www.tabakfabrik-linz.at/",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
+      "id": "at-universitat-wien",
+      "name": "University of Vienna Main Building",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2136,
+      "lng": 16.3608,
+      "type": "Office, school & public building",
+      "setting": "Historicist university building of 1884 on the Ringstrasse, with an arcaded courtyard of scholars' monuments, a grand ceremonial hall and lecture theatres.",
+      "source_urls": [
+        "https://www.univie.ac.at/en/"
+      ],
+      "official_url": "https://www.univie.ac.at/en/",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-rathaus-wien",
+      "name": "Vienna City Hall (Rathaus)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2108,
+      "lng": 16.3572,
+      "type": "Office, school & public building",
+      "setting": "Neo-Gothic seat of Vienna's city government from 1883, with a vaulted arcaded courtyard, ceremonial halls and a square in front used for open-air events and markets.",
+      "source_urls": [
+        "https://www.wien.gv.at/verwaltung/rathaus/",
+        "https://en.wikipedia.org/wiki/Vienna_City_Hall"
+      ],
+      "official_url": "https://www.wien.gv.at/verwaltung/rathaus/",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-wiener-staatsoper",
+      "name": "Vienna State Opera",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2035,
+      "lng": 16.3691,
+      "type": "Theatre, arena & venue",
+      "setting": "An 1869 opera house on the Ringstrasse with a gilded auditorium, grand staircase and backstage areas that host around 350 performances a season.",
+      "source_urls": [
+        "https://www.wiener-staatsoper.at/en/"
+      ],
+      "official_url": "https://www.wiener-staatsoper.at/en/",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-wiener-riesenrad",
+      "name": "Wiener Riesenrad (Prater)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2166,
+      "lng": 16.3948,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1897 giant Ferris wheel and adjoining amusement park on the edge of the Prater, with vintage gondola cabins and a fairground of rides, food stalls and an events hall.",
+      "known_for": "The Third Man (1949)",
+      "source_urls": [
+        "https://www.wienerriesenrad.com/"
+      ],
+      "official_url": "https://www.wienerriesenrad.com/",
+      "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-worthersee",
+      "name": "Wörthersee",
+      "country": "Austria",
+      "region": "Carinthia",
+      "lat": 46.6167,
+      "lng": 14.1667,
+      "type": "Forest & lake",
+      "setting": "A 19-kilometre subalpine lake ringed by resort towns, promenades, lidos and wooded hills between Klagenfurt and Velden.",
+      "source_urls": [
+        "https://www.woerthersee.com/"
+      ],
+      "official_url": "https://www.woerthersee.com/",
+      "commission_url": "https://www.filminaustria.com/"
+    },
+    {
+      "id": "be-abattoir-anderlecht",
+      "name": "Abattoir, Anderlecht",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8375,
+      "lng": 4.3175,
+      "type": "Bar, restaurant & shop",
+      "setting": "Historic livestock market and food-hall complex in Anderlecht, Brussels, with weekend markets, the FOODMET food hall and renovated buildings used for events.",
+      "source_urls": [
+        "https://www.abattoir.be/"
+      ],
+      "official_url": "https://www.abattoir.be/",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-alden-biesen",
+      "name": "Alden Biesen Castle",
+      "country": "Belgium",
+      "region": "Limburg",
+      "lat": 50.8657,
+      "lng": 5.5372,
+      "type": "Castle & estate",
+      "setting": "Moated former headquarters of the Teutonic Order in Bilzen with formal gardens and a museum, now a conference and cultural centre that lists availability for film shoots.",
+      "suitability": "Website lists availability for film shooting alongside conferences and events.",
+      "source_urls": [
+        "https://www.alden-biesen.be/en"
+      ],
+      "official_url": "https://www.alden-biesen.be/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-ancienne-belgique",
+      "name": "Ancienne Belgique (AB)",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8489,
+      "lng": 4.3496,
+      "type": "Theatre, arena & venue",
+      "setting": "Concert hall on Boulevard Anspach in central Brussels with two stages, offering the venue for private hire and running its own in-house production and photography team.",
+      "source_urls": [
+        "https://www.abconcerts.be/en/",
+        "https://www.abconcerts.be/en/your-event-at-ab"
+      ],
+      "official_url": "https://www.abconcerts.be/en/",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-autoworld",
+      "name": "Autoworld",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.839,
+      "lng": 4.3944,
+      "type": "Office, school & public building",
+      "setting": "Vintage and classic car museum in the Cinquantenaire park's Belvedere hall in Brussels, hired out as an event space for more than a thousand guests.",
+      "facilities": "Event space for over 1,000 guests among the car collection, with escape-game and audio-guide experiences.",
+      "source_urls": [
+        "https://www.autoworld.be/en/"
+      ],
+      "official_url": "https://www.autoworld.be/en/",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-bois-du-cazier",
+      "name": "Bois du Cazier",
+      "country": "Belgium",
+      "region": "Hainaut",
+      "lat": 50.3811,
+      "lng": 4.4433,
+      "type": "Industrial & derelict",
+      "setting": "Former coal mine at Marcinelle near Charleroi with preserved headframes and pithead buildings, site of the 1956 mining disaster, now housing industry and glass museums.",
+      "known_for": "Inferno Below (2003 documentary)",
+      "source_urls": [
+        "https://www.leboisducazier.be/en",
+        "https://en.wikipedia.org/wiki/Bois_du_Cazier"
+      ],
+      "official_url": "https://www.leboisducazier.be/en",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "be-bozar",
+      "name": "Bozar",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8443,
+      "lng": 4.3597,
+      "type": "Theatre, arena & venue",
+      "setting": "Centre for Fine Arts in central Brussels hosting concerts, exhibitions and film screenings across several halls, with a dedicated team for private and corporate venue hire.",
+      "source_urls": [
+        "https://www.bozar.be/en"
+      ],
+      "official_url": "https://www.bozar.be/en",
+      "commission_url": "https://screen.brussels/"
     },
     {
       "id": "bruges-historic-centre",
@@ -79,6 +457,113 @@
       }
     },
     {
+      "id": "be-c-mine",
+      "name": "C-mine",
+      "country": "Belgium",
+      "region": "Limburg",
+      "lat": 50.9656,
+      "lng": 5.4934,
+      "type": "Industrial & derelict",
+      "setting": "Former Winterslag coalmine in Genk with preserved headframes and a compressor hall, now a creative cluster of more than 30 spaces that are rented out for events.",
+      "source_urls": [
+        "http://c-mine.be/en"
+      ],
+      "official_url": "http://c-mine.be/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-chateau-de-freyr",
+      "name": "Château de Freÿr",
+      "country": "Belgium",
+      "region": "Namur",
+      "lat": 50.2306,
+      "lng": 4.8814,
+      "type": "Castle & estate",
+      "setting": "Renaissance chateau on a bend of the Meuse near Hastière with terraced 18th-century gardens, whose barn and orangeries can be booked for events.",
+      "source_urls": [
+        "https://freyr.be/en"
+      ],
+      "official_url": "https://freyr.be/en",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "be-spa-francorchamps",
+      "name": "Circuit de Spa-Francorchamps",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.4372,
+      "lng": 5.9714,
+      "type": "Transport & infrastructure",
+      "setting": "Seven-kilometre motor racing circuit through the Ardennes hills near Francorchamps, host of the Formula 1 Belgian Grand Prix, with the track and facilities available to hire for private and business events.",
+      "source_urls": [
+        "https://www.spa-francorchamps.be/en/"
+      ],
+      "official_url": "https://www.spa-francorchamps.be/en/",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "be-citadelle-de-namur",
+      "name": "Citadel of Namur",
+      "country": "Belgium",
+      "region": "Namur",
+      "lat": 50.4547,
+      "lng": 4.8551,
+      "type": "Castle & estate",
+      "setting": "Hilltop fortress complex above Namur spanning two thousand years of military building, with underground passages, a park and rooms offered for professional and private hire.",
+      "source_urls": [
+        "https://citadelle.namur.be/en"
+      ],
+      "official_url": "https://citadelle.namur.be/en",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "be-doel",
+      "name": "Doel",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.3167,
+      "lng": 4.2667,
+      "type": "Village & countryside",
+      "setting": "Polder village on the Scheldt earmarked for demolition since the 1990s to expand the port of Antwerp, now with around 200 empty houses, street art and a small remaining community.",
+      "known_for": "National Geographic feature (2025)",
+      "source_urls": [
+        "https://www.doel2020.org/"
+      ],
+      "official_url": "https://www.doel2020.org/",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-flagey",
+      "name": "Flagey",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8264,
+      "lng": 4.3723,
+      "type": "Theatre, arena & venue",
+      "setting": "1938 Art Deco former national radio building on Place Sainte-Croix in Brussels, now a music and cinema centre with studios and halls available for venue hire.",
+      "source_urls": [
+        "https://www.flagey.be/en"
+      ],
+      "official_url": "https://www.flagey.be/en",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-grand-hornu",
+      "name": "Grand-Hornu",
+      "country": "Belgium",
+      "region": "Hainaut",
+      "lat": 50.4353,
+      "lng": 3.8394,
+      "type": "Industrial & derelict",
+      "setting": "Neoclassical former colliery and workers' town near Mons, built 1810 to 1830 around an oval courtyard, now a design and contemporary art centre with rooms available for hire.",
+      "source_urls": [
+        "https://www.grand-hornu.be/en",
+        "https://en.wikipedia.org/wiki/Grand-Hornu"
+      ],
+      "official_url": "https://www.grand-hornu.be/en",
+      "commission_url": "https://www.wallimage.be/"
+    },
+    {
       "id": "gravensteen",
       "name": "Gravensteen",
       "country": "Belgium",
@@ -96,6 +581,82 @@
         "author": "Marc Ryckaert (MJJR)",
         "license": "CC BY 3.0"
       }
+    },
+    {
+      "id": "be-halles-de-schaerbeek",
+      "name": "Halles de Schaerbeek",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8672,
+      "lng": 4.3774,
+      "type": "Theatre, arena & venue",
+      "setting": "Former covered market hall in Schaerbeek, Brussels, converted into a performing arts venue for dance and theatre, with its hall offered for hire.",
+      "source_urls": [
+        "https://www.halles.be/en/"
+      ],
+      "official_url": "https://www.halles.be/en/",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-handelsbeurs-gent",
+      "name": "Handelsbeurs Concert Hall",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 51.05,
+      "lng": 3.7222,
+      "type": "Theatre, arena & venue",
+      "setting": "19th-century former merchants' exchange on the Kouter in Ghent, now a concert hall with a brasserie, offering its hall for private hire.",
+      "source_urls": [
+        "https://www.haconcerts.be/en"
+      ],
+      "official_url": "https://www.haconcerts.be/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-kortrijk-xpo",
+      "name": "Kortrijk Xpo",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 50.814,
+      "lng": 3.279,
+      "type": "Theatre, arena & venue",
+      "setting": "40,000 square metre exhibition and conference campus in Kortrijk with six halls and a covered boulevard connecting them, rented out for trade shows, conferences and public events.",
+      "facilities": "Six halls, a Meeting Center with five rooms, catering, ticketing, parking and technical support.",
+      "source_urls": [
+        "https://kortrijkxpo.com/en"
+      ],
+      "official_url": "https://kortrijkxpo.com/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-kursaal-oostende",
+      "name": "Kursaal Oostende",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 51.232,
+      "lng": 2.9198,
+      "type": "Theatre, arena & venue",
+      "setting": "Seafront concert and congress hall in Ostend with a large auditorium and casino, offering dedicated business and corporate event spaces.",
+      "source_urls": [
+        "https://www.kursaaloostende.be/en/"
+      ],
+      "official_url": "https://www.kursaaloostende.be/en/",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-la-monnaie",
+      "name": "La Monnaie / De Munt",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8497,
+      "lng": 4.3556,
+      "type": "Theatre, arena & venue",
+      "setting": "Belgium's national opera house in central Brussels, offering venue hire and audiovisual exploitation services alongside its main stage and the smaller Malibran room.",
+      "source_urls": [
+        "https://www.lamonnaiedemunt.be/en"
+      ],
+      "official_url": "https://www.lamonnaiedemunt.be/en",
+      "commission_url": "https://screen.brussels/"
     },
     {
       "id": "lites-studios",
@@ -117,6 +678,116 @@
       ],
       "official_url": "https://www.litesstudios.com/",
       "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-kasteel-van-loppem",
+      "name": "Loppem Castle",
+      "country": "Belgium",
+      "region": "West Flanders",
+      "lat": 51.1129,
+      "lng": 3.1414,
+      "type": "Castle & estate",
+      "setting": "Neo-Gothic castle built in the 1850s and 1860s near Bruges with original interiors and art collections, whose former stables now form a hall for hire.",
+      "facilities": "Former stables converted into an event hall for 250 to 300 seated guests or 450 standing, plus vaulted cellars for smaller groups.",
+      "source_urls": [
+        "https://www.kasteelvanloppem.be/nl"
+      ],
+      "official_url": "https://www.kasteelvanloppem.be/nl",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-paleis-op-de-meir",
+      "name": "Paleis op de Meir",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.2179,
+      "lng": 4.4142,
+      "type": "House & apartment",
+      "setting": "1745 rococo mansion on Antwerp's main shopping street, once refurbished for Napoleon Bonaparte, now a heritage house offering rooms for dinners, receptions and meetings.",
+      "source_urls": [
+        "https://www.herita.be/nl/monumenten/paleis-op-de-meir"
+      ],
+      "official_url": "https://www.herita.be/nl/monumenten/paleis-op-de-meir",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-sint-pietersabdij-gent",
+      "name": "Saint Peter's Abbey, Ghent",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 51.0392,
+      "lng": 3.7256,
+      "type": "Church & monastery",
+      "setting": "Former Benedictine abbey by Sint-Pietersplein in Ghent with a baroque church, historic cellars and a south-facing vineyard garden, whose rooms are hired for receptions and conferences.",
+      "facilities": "Historic cellar and loft rooms, courtyard and south-facing garden with vineyard, underground parking nearby.",
+      "source_urls": [
+        "https://historischehuizen.stad.gent/en",
+        "https://historischehuizen.stad.gent/en/hire"
+      ],
+      "official_url": "https://historischehuizen.stad.gent/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-stoomcentrum-maldegem",
+      "name": "Stoomcentrum Maldegem",
+      "country": "Belgium",
+      "region": "East Flanders",
+      "lat": 51.1994,
+      "lng": 3.4497,
+      "type": "Transport & infrastructure",
+      "setting": "Volunteer-run heritage railway based at Maldegem station, running historic steam and diesel trains through the Meetjesland countryside.",
+      "suitability": "Website explicitly offers photo and film location bookings alongside private charters and group visits.",
+      "source_urls": [
+        "https://stoomtreinmaldegem.be/nl/"
+      ],
+      "official_url": "https://stoomtreinmaldegem.be/nl/",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-stuk-leuven",
+      "name": "STUK, Leuven",
+      "country": "Belgium",
+      "region": "Flemish Brabant",
+      "lat": 50.8767,
+      "lng": 4.7008,
+      "type": "Theatre, arena & venue",
+      "setting": "Multidisciplinary arts centre on Naamsestraat in Leuven with theatre spaces, a cinema and studios, offering rooms and rehearsal spaces for rent.",
+      "source_urls": [
+        "https://www.stuk.be/en"
+      ],
+      "official_url": "https://www.stuk.be/en",
+      "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-tour-and-taxis",
+      "name": "Tour & Taxis",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8642,
+      "lng": 4.3486,
+      "type": "Industrial & derelict",
+      "setting": "Former customs and rail freight depot on the Brussels canal, with 19th-century brick, glass and iron warehouse halls now used as a large indoor event and exhibition venue.",
+      "source_urls": [
+        "https://www.tour-taxis.com/en/",
+        "https://en.wikipedia.org/wiki/Tour_%26_Taxis"
+      ],
+      "official_url": "https://www.tour-taxis.com/en/",
+      "commission_url": "https://screen.brussels/"
+    },
+    {
+      "id": "be-villa-empain",
+      "name": "Villa Empain",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8103,
+      "lng": 4.3891,
+      "type": "House & apartment",
+      "setting": "1930s Art Deco mansion on Avenue Franklin Roosevelt in Brussels, home to the Boghossian Foundation, with salons, gardens and a bar that can be privatised for events.",
+      "source_urls": [
+        "https://villaempain.com/en/"
+      ],
+      "official_url": "https://villaempain.com/en/",
+      "commission_url": "https://screen.brussels/"
     },
     {
       "id": "dubrovnik-old-town",
@@ -440,6 +1111,183 @@
       }
     },
     {
+      "id": "de-alte-oper-frankfurt",
+      "name": "Alte Oper Frankfurt",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1147,
+      "lng": 8.6707,
+      "type": "Theatre, arena & venue",
+      "setting": "Rebuilt 1880s opera house in Frankfurt, now a concert and congress venue with a restored historicist facade and a modern auditorium behind it.",
+      "source_urls": [
+        "https://www.alteoper.de/en/",
+        "https://en.wikipedia.org/wiki/Alte_Oper"
+      ],
+      "official_url": "https://www.alteoper.de/en/",
+      "commission_url": "https://www.hessenfilm.de/en/"
+    },
+    {
+      "id": "de-autostadt-wolfsburg",
+      "name": "Autostadt Wolfsburg",
+      "country": "Germany",
+      "region": "Lower Saxony",
+      "lat": 52.4278,
+      "lng": 10.7889,
+      "type": "Office, school & public building",
+      "setting": "Car-brand visitor park beside the Volkswagen plant in Wolfsburg, with pavilions, glass delivery towers, a museum hall and landscaped grounds beside a canal.",
+      "source_urls": [
+        "https://www.autostadt.de/en",
+        "https://en.wikipedia.org/wiki/Autostadt"
+      ],
+      "official_url": "https://www.autostadt.de/en",
+      "commission_url": "https://www.nordmedia.de/"
+    },
+    {
+      "id": "de-bauhaus-dessau",
+      "name": "Bauhaus Dessau",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.8375,
+      "lng": 12.2467,
+      "type": "Modern architecture",
+      "setting": "1926 Bauhaus school building by Walter Gropius in Dessau, a UNESCO World Heritage site with glass curtain walls, workshop wings, studio flats and an auditorium.",
+      "source_urls": [
+        "https://www.bauhaus-dessau.de/en/",
+        "https://en.wikipedia.org/wiki/Bauhaus_Dessau"
+      ],
+      "official_url": "https://www.bauhaus-dessau.de/en/",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+    },
+    {
+      "id": "de-bavaria-filmstadt",
+      "name": "Bavaria Filmstadt",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.0492,
+      "lng": 11.5342,
+      "type": "Studio & backlot",
+      "setting": "Working film studio complex in Grünwald near Munich with sound stages, a backlot and standing sets used for German film and television production since the 1920s.",
+      "known_for": "Das Boot (1981), The NeverEnding Story (1984)",
+      "source_urls": [
+        "https://www.bavaria-filmstadt.de/en/",
+        "https://en.wikipedia.org/wiki/Bavaria_Film"
+      ],
+      "official_url": "https://www.bavaria-filmstadt.de/en/",
+      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
+    },
+    {
+      "id": "de-beelitz-heilstaetten",
+      "name": "Beelitz-Heilstätten",
+      "country": "Germany",
+      "region": "Brandenburg",
+      "lat": 52.2422,
+      "lng": 12.9928,
+      "type": "Hospital, prison & institution",
+      "setting": "Sprawling former tuberculosis sanatorium and military hospital south of Berlin with dozens of derelict Wilhelmine-era pavilions, overgrown grounds and a former alpine slide building.",
+      "known_for": "Valkyrie (2008), The Pianist (2002), Hannibal Rising (2007)",
+      "source_urls": [
+        "https://beelitz-heilstaetten.de/",
+        "https://en.wikipedia.org/wiki/Beelitz-Heilst%C3%A4tten"
+      ],
+      "official_url": "https://beelitz-heilstaetten.de/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-hohenschoenhausen-memorial",
+      "name": "Berlin-Hohenschönhausen Memorial",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5541,
+      "lng": 13.5093,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Stasi remand prison in Lichtenberg with preserved interrogation rooms, cells and a prisoner transport van, run as a memorial site open for research and filming about East Germany.",
+      "source_urls": [
+        "https://www.stiftung-hsh.de/en/",
+        "https://en.wikipedia.org/wiki/Berlin-Hohensch%C3%B6nhausen_Memorial"
+      ],
+      "official_url": "https://www.stiftung-hsh.de/en/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-deutsches-museum",
+      "name": "Deutsches Museum",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.13,
+      "lng": 11.5836,
+      "type": "Office, school & public building",
+      "setting": "Large science and technology museum on an island in the Isar in Munich, with historic machine halls, a planetarium and collections spanning mining to aerospace.",
+      "source_urls": [
+        "https://www.deutsches-museum.de/en/",
+        "https://en.wikipedia.org/wiki/Deutsches_Museum"
+      ],
+      "official_url": "https://www.deutsches-museum.de/en/",
+      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
+    },
+    {
+      "id": "de-elbphilharmonie",
+      "name": "Elbphilharmonie",
+      "country": "Germany",
+      "region": "Hamburg",
+      "lat": 53.5412,
+      "lng": 9.9836,
+      "type": "Theatre, arena & venue",
+      "setting": "Concert hall on the Elbe in Hamburg's HafenCity, built above a former cocoa warehouse with a glass wave-shaped upper structure, a public plaza and two auditoriums.",
+      "source_urls": [
+        "https://www.elbphilharmonie.de/en/",
+        "https://en.wikipedia.org/wiki/Elbphilharmonie"
+      ],
+      "official_url": "https://www.elbphilharmonie.de/en/",
+      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+    },
+    {
+      "id": "de-ferropolis",
+      "name": "Ferropolis",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.7196,
+      "lng": 12.2814,
+      "type": "Industrial & derelict",
+      "setting": "Open-air museum on a peninsula in a former lignite mining lake near Gräfenhainichen, displaying five giant excavators and dredgers on a bare industrial ground used for festivals and events.",
+      "source_urls": [
+        "https://www.ferropolis.de/en/",
+        "https://en.wikipedia.org/wiki/Ferropolis"
+      ],
+      "official_url": "https://www.ferropolis.de/en/",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+    },
+    {
+      "id": "de-frankfurt-bankenviertel",
+      "name": "Frankfurt Bankenviertel",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1109,
+      "lng": 8.674,
+      "type": "City & skyline",
+      "setting": "Frankfurt's financial district of glass office towers grouped around the old town and the river Main, the only high-rise skyline of its kind in Germany.",
+      "source_urls": [
+        "https://www.frankfurt-tourismus.de/en/"
+      ],
+      "official_url": "https://www.frankfurt-tourismus.de/en/",
+      "commission_url": "https://www.hessenfilm.de/en/"
+    },
+    {
+      "id": "de-gasometer-oberhausen",
+      "name": "Gasometer Oberhausen",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4806,
+      "lng": 6.8514,
+      "type": "Industrial & derelict",
+      "setting": "117-metre disused gas holder in Oberhausen converted into an exhibition hall, with a vast cylindrical interior used for large-scale installations.",
+      "source_urls": [
+        "https://www.gasometer.de/en/",
+        "https://en.wikipedia.org/wiki/Gasometer_Oberhausen"
+      ],
+      "official_url": "https://www.gasometer.de/en/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
       "id": "goerlitz-old-town",
       "name": "Görlitz Old Town",
       "country": "Germany",
@@ -459,6 +1307,198 @@
       }
     },
     {
+      "id": "de-hamburg-rathaus",
+      "name": "Hamburg Rathaus",
+      "country": "Germany",
+      "region": "Hamburg",
+      "lat": 53.5507,
+      "lng": 9.993,
+      "type": "Office, school & public building",
+      "setting": "Neo-Renaissance city hall of 1897 on the Rathausmarkt in Hamburg, with a 112-metre tower, an ornate facade and several hundred rooms including ceremonial halls.",
+      "source_urls": [
+        "https://www.hamburg.de/rathaus/",
+        "https://en.wikipedia.org/wiki/Hamburg_Rathaus"
+      ],
+      "official_url": "https://www.hamburg.de/rathaus/",
+      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+    },
+    {
+      "id": "de-heidelberg-university",
+      "name": "Heidelberg University",
+      "country": "Germany",
+      "region": "Baden-Württemberg",
+      "lat": 49.4101,
+      "lng": 8.7105,
+      "type": "Office, school & public building",
+      "setting": "Germany's oldest university, with a baroque Old University building, a Great Hall and a historic student prison around Universitätsplatz in Heidelberg's old town.",
+      "source_urls": [
+        "https://www.uni-heidelberg.de/en",
+        "https://en.wikipedia.org/wiki/Heidelberg_University"
+      ],
+      "official_url": "https://www.uni-heidelberg.de/en",
+      "commission_url": "https://www.mfg.de/en/"
+    },
+    {
+      "id": "de-hellerau",
+      "name": "Hellerau",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.1,
+      "lng": 13.7639,
+      "type": "House & apartment",
+      "setting": "Early twentieth-century garden city on the edge of Dresden built around the Hellerau Festival Theatre, with modernist workshop housing and a rhythmic-gymnastics hall used for performance and film.",
+      "source_urls": [
+        "https://www.hellerau.org/",
+        "https://en.wikipedia.org/wiki/Hellerau"
+      ],
+      "official_url": "https://www.hellerau.org/",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+    },
+    {
+      "id": "de-humboldt-university-berlin",
+      "name": "Humboldt University of Berlin",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.5177,
+      "lng": 13.3934,
+      "type": "Office, school & public building",
+      "setting": "Berlin's oldest university on Unter den Linden, with a neoclassical main building, historic lecture halls, a courtyard and library reading rooms in the government district.",
+      "source_urls": [
+        "https://www.hu-berlin.de/en/",
+        "https://en.wikipedia.org/wiki/Humboldt_University_of_Berlin"
+      ],
+      "official_url": "https://www.hu-berlin.de/en/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-kampnagel",
+      "name": "Kampnagel",
+      "country": "Germany",
+      "region": "Hamburg",
+      "lat": 53.5793,
+      "lng": 10.0284,
+      "type": "Industrial & derelict",
+      "setting": "Former crane factory in Hamburg's Winterhude district converted into a production house for theatre, dance and performance, with large industrial halls and a forecourt.",
+      "source_urls": [
+        "https://www.kampnagel.de/en/",
+        "https://en.wikipedia.org/wiki/Kampnagel"
+      ],
+      "official_url": "https://www.kampnagel.de/en/",
+      "commission_url": "https://www.moin-filmfoerderung.de/en/"
+    },
+    {
+      "id": "de-kap-arkona",
+      "name": "Kap Arkona",
+      "country": "Germany",
+      "region": "Mecklenburg-Vorpommern",
+      "lat": 54.6789,
+      "lng": 13.4344,
+      "type": "Transport & infrastructure",
+      "setting": "Northern tip of Rügen with two historic lighthouses, a former Cold War radar bunker and a reconstructed Slavic hillfort on chalk and boulder-clay cliffs above the Baltic.",
+      "source_urls": [
+        "https://www.kap-arkona.de/",
+        "https://en.wikipedia.org/wiki/Kap_Arkona"
+      ],
+      "official_url": "https://www.kap-arkona.de/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-kloster-eberbach",
+      "name": "Kloster Eberbach",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.0328,
+      "lng": 8.0347,
+      "type": "Church & monastery",
+      "setting": "Former Cistercian monastery in the Rheingau with a Romanesque basilica, a vaulted dormitory, wine cellars and surrounding vineyards, now run as an events and wine estate.",
+      "known_for": "The Name of the Rose (1986)",
+      "source_urls": [
+        "https://www.kloster-eberbach.de/en/",
+        "https://en.wikipedia.org/wiki/Eberbach_Abbey"
+      ],
+      "official_url": "https://www.kloster-eberbach.de/en/",
+      "commission_url": "https://www.hessenfilm.de/en/"
+    },
+    {
+      "id": "de-kokerei-hansa",
+      "name": "Kokerei Hansa",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.5484,
+      "lng": 7.475,
+      "type": "Industrial & derelict",
+      "setting": "Former coking plant in Dortmund with intact coke oven batteries, coal towers, pump houses and machine halls preserved as an industrial heritage site.",
+      "source_urls": [
+        "https://www.lwl-industriemuseum.de/de/standorte/kokerei-hansa/",
+        "https://de.wikipedia.org/wiki/Kokerei_Hansa"
+      ],
+      "official_url": "https://www.lwl-industriemuseum.de/de/standorte/kokerei-hansa/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-koenigsstuhl-ruegen",
+      "name": "Königsstuhl (Rügen)",
+      "country": "Germany",
+      "region": "Mecklenburg-Vorpommern",
+      "lat": 54.5522,
+      "lng": 13.6083,
+      "type": "Coast & beach",
+      "setting": "Chalk cliff on Rügen's Jasmund coast rising sharply above the Baltic, within a national park of beech forest, with a visitor centre built into the clifftop.",
+      "source_urls": [
+        "https://koenigsstuhl.com/",
+        "https://en.wikipedia.org/wiki/K%C3%B6nigsstuhl_(R%C3%BCgen)"
+      ],
+      "official_url": "https://koenigsstuhl.com/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-landschaftspark-duisburg-nord",
+      "name": "Landschaftspark Duisburg-Nord",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4949,
+      "lng": 6.7644,
+      "type": "Industrial & derelict",
+      "setting": "Disused early twentieth-century ironworks in Duisburg with blast furnaces, gasometers, bunkers and pipe bridges left standing in a public park, floodlit at night and open for climbing and diving.",
+      "source_urls": [
+        "https://www.landschaftspark.de/en/",
+        "https://en.wikipedia.org/wiki/Landschaftspark"
+      ],
+      "official_url": "https://www.landschaftspark.de/en/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-lanxess-arena",
+      "name": "Lanxess Arena",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 50.9385,
+      "lng": 6.9829,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor arena in Cologne's Deutz district with a bowl seating around 20,000, used for concerts, ice hockey, basketball and television productions.",
+      "source_urls": [
+        "https://www.lanxess-arena.de/",
+        "https://en.wikipedia.org/wiki/Lanxess_Arena"
+      ],
+      "official_url": "https://www.lanxess-arena.de/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-ruedersdorf-museum-park",
+      "name": "Museum Park Rüdersdorf",
+      "country": "Germany",
+      "region": "Brandenburg",
+      "lat": 52.4645,
+      "lng": 13.8017,
+      "type": "Industrial & derelict",
+      "setting": "Former limestone quarry and cement works east of Berlin preserved as an open-air museum, with quarry faces, kilns, a narrow-gauge railway and industrial machinery halls.",
+      "source_urls": [
+        "https://www.museumspark.de/"
+      ],
+      "official_url": "https://www.museumspark.de/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
       "id": "neuschwanstein-castle",
       "name": "Neuschwanstein Castle",
       "country": "Germany",
@@ -476,6 +1516,117 @@
         "author": "Thomas Wolf, www.foto-tw.de",
         "license": "CC BY-SA 3.0 de"
       }
+    },
+    {
+      "id": "de-nuerburgring",
+      "name": "Nürburgring",
+      "country": "Germany",
+      "region": "Rhineland-Palatinate",
+      "lat": 50.3356,
+      "lng": 6.9475,
+      "type": "Theatre, arena & venue",
+      "setting": "Motor racing circuit in the Eifel hills with the 20.8-kilometre Nordschleife loop and a separate shorter Grand Prix track, plus paddock, grandstands and a visitor centre.",
+      "known_for": "Rush (2013)",
+      "source_urls": [
+        "https://www.nuerburgring.de/en/",
+        "https://en.wikipedia.org/wiki/N%C3%BCrburgring"
+      ],
+      "official_url": "https://www.nuerburgring.de/en/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-olympiapark-munich",
+      "name": "Olympiapark München",
+      "country": "Germany",
+      "region": "Bavaria",
+      "lat": 48.1687,
+      "lng": 11.5504,
+      "type": "Theatre, arena & venue",
+      "setting": "1972 Olympic park in Munich with a tent-roofed stadium, hall and swimming venue around an artificial hill and lake, still used for concerts and sporting events.",
+      "source_urls": [
+        "https://www.olympiapark.de/en/",
+        "https://en.wikipedia.org/wiki/Olympiapark_(Munich)"
+      ],
+      "official_url": "https://www.olympiapark.de/en/",
+      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/"
+    },
+    {
+      "id": "de-panometer-leipzig",
+      "name": "Panometer Leipzig",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.3211,
+      "lng": 12.3628,
+      "type": "Industrial & derelict",
+      "setting": "Former gasometer in Leipzig converted into a 360-degree panorama exhibition space, with a cylindrical brick interior more than thirty metres high.",
+      "source_urls": [
+        "https://www.asisi.de/en/panorama/leipzig/"
+      ],
+      "official_url": "https://www.asisi.de/en/panorama/leipzig/",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/"
+    },
+    {
+      "id": "de-peenemuende",
+      "name": "Peenemünde",
+      "country": "Germany",
+      "region": "Mecklenburg-Vorpommern",
+      "lat": 54.1444,
+      "lng": 13.7736,
+      "type": "Industrial & derelict",
+      "setting": "Former Wehrmacht rocket research site on Usedom where the V2 was developed, with a preserved power station now housing a museum on wartime and Cold War history.",
+      "source_urls": [
+        "https://www.museum-peenemuende.de/",
+        "https://en.wikipedia.org/wiki/Peenem%C3%BCnde_Army_Research_Center"
+      ],
+      "official_url": "https://www.museum-peenemuende.de/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-schauspielhaus-bochum",
+      "name": "Schauspielhaus Bochum",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4722,
+      "lng": 7.2175,
+      "type": "Theatre, arena & venue",
+      "setting": "Repertory theatre in Bochum with a 1950s auditorium, stage house and rehearsal spaces, one of Germany's leading state theatres.",
+      "source_urls": [
+        "https://www.schauspielhausbochum.de/en/"
+      ],
+      "official_url": "https://www.schauspielhausbochum.de/en/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-seebruecke-sellin",
+      "name": "Seebrücke Sellin",
+      "country": "Germany",
+      "region": "Mecklenburg-Vorpommern",
+      "lat": 54.3806,
+      "lng": 13.9756,
+      "type": "Transport & infrastructure",
+      "setting": "Pleasure pier of the Baltic resort of Sellin on Rügen, a rebuilt wooden and steel structure reaching out over the sea with a restaurant at its end.",
+      "source_urls": [
+        "https://www.ostseebad-sellin.de/",
+        "https://en.wikipedia.org/wiki/Sellin"
+      ],
+      "official_url": "https://www.ostseebad-sellin.de/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-spinnerei-leipzig",
+      "name": "Spinnerei Leipzig",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.3175,
+      "lng": 12.3344,
+      "type": "Industrial & derelict",
+      "setting": "Former cotton mill in Leipzig's Plagwitz district, once continental Europe's largest, now a complex of galleries, artist studios and industrial halls around cobbled courtyards.",
+      "source_urls": [
+        "https://www.spinnerei.de/en/",
+        "https://en.wikipedia.org/wiki/Leipziger_Baumwollspinnerei"
+      ],
+      "official_url": "https://www.spinnerei.de/en/",
+      "commission_url": "https://www.mdm-online.de/en/film-commission/"
     },
     {
       "id": "studio-babelsberg",
@@ -504,6 +1655,151 @@
         "author": "Unify",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "de-stuttgart-hauptbahnhof",
+      "name": "Stuttgart Hauptbahnhof",
+      "country": "Germany",
+      "region": "Baden-Württemberg",
+      "lat": 48.7841,
+      "lng": 9.1815,
+      "type": "Transport & infrastructure",
+      "setting": "Stuttgart's main railway station, a 1920s stone terminus building with a tower, currently being converted into an underground through-station as part of the Stuttgart 21 project.",
+      "source_urls": [
+        "https://www.bahnhof.de/en/stuttgart-hbf",
+        "https://en.wikipedia.org/wiki/Stuttgart_Hauptbahnhof"
+      ],
+      "official_url": "https://www.bahnhof.de/en/stuttgart-hbf",
+      "commission_url": "https://www.mfg.de/en/"
+    },
+    {
+      "id": "de-tempelhof-airport",
+      "name": "Tempelhof Airport",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.4728,
+      "lng": 13.4034,
+      "type": "Transport & infrastructure",
+      "setting": "Former Berlin city airport with a terminal building over a kilometre long, vast disused hangars and a 300-hectare former airfield now a public park, hired for filming, events and trade fairs.",
+      "known_for": "Bridge of Spies (2015), The Hunger Games: Mockingjay Part 2 (2015)",
+      "source_urls": [
+        "https://gruen-berlin.de/tempelhofer-feld",
+        "https://en.wikipedia.org/wiki/Tempelhof_Airport"
+      ],
+      "official_url": "https://gruen-berlin.de/tempelhofer-feld",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-teufelsberg",
+      "name": "Teufelsberg",
+      "country": "Germany",
+      "region": "Berlin",
+      "lat": 52.4953,
+      "lng": 13.2361,
+      "type": "Industrial & derelict",
+      "setting": "Cold War listening station of geodesic radomes and control buildings on an artificial hill of wartime rubble in the Grunewald forest, with derelict interiors and open roof terraces.",
+      "source_urls": [
+        "https://www.teufelsberg-berlin.de/",
+        "https://en.wikipedia.org/wiki/Teufelsberg"
+      ],
+      "official_url": "https://www.teufelsberg-berlin.de/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-voelklinger-huette",
+      "name": "Völklinger Hütte",
+      "country": "Germany",
+      "region": "Saarland",
+      "lat": 49.2508,
+      "lng": 6.8494,
+      "type": "Industrial & derelict",
+      "setting": "Disused nineteenth-century ironworks in Völklingen, a UNESCO World Heritage site with blast furnaces, ore bunkers, a power hall and elevated walkways through the plant.",
+      "source_urls": [
+        "https://www.voelklinger-huette.org/en/",
+        "https://en.wikipedia.org/wiki/V%C3%B6lklingen_Ironworks"
+      ],
+      "official_url": "https://www.voelklinger-huette.org/en/",
+      "commission_url": "http://www.germanfilms.de"
+    },
+    {
+      "id": "de-weissenhofsiedlung",
+      "name": "Weissenhofsiedlung",
+      "country": "Germany",
+      "region": "Baden-Württemberg",
+      "lat": 48.8022,
+      "lng": 9.1725,
+      "type": "House & apartment",
+      "setting": "1927 modernist housing estate on a Stuttgart hillside designed by Mies van der Rohe, Le Corbusier and other Weimar-era architects, with flat-roofed white houses, two of them open as a museum.",
+      "source_urls": [
+        "https://www.weissenhofmuseum.de/en/",
+        "https://en.wikipedia.org/wiki/Weissenhof_Estate"
+      ],
+      "official_url": "https://www.weissenhofmuseum.de/en/",
+      "commission_url": "https://www.mfg.de/en/"
+    },
+    {
+      "id": "de-westfalenhallen-dortmund",
+      "name": "Westfalenhallen",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4977,
+      "lng": 7.4596,
+      "type": "Theatre, arena & venue",
+      "setting": "Exhibition and event complex in Dortmund with several linked halls, including a large arena hall, built from the 1920s onward and still used for trade fairs, sport and concerts.",
+      "source_urls": [
+        "https://www.westfalenhallen.de/",
+        "https://en.wikipedia.org/wiki/Westfalenhallen"
+      ],
+      "official_url": "https://www.westfalenhallen.de/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-wuensdorf-garrison-town",
+      "name": "Wünsdorf Garrison Town",
+      "country": "Germany",
+      "region": "Brandenburg",
+      "lat": 52.1697,
+      "lng": 13.2939,
+      "type": "Hospital, prison & institution",
+      "setting": "Former Wehrmacht and later Soviet military headquarters town near Zossen, with barracks, a domed former officers' club and rows of abandoned housing blocks.",
+      "source_urls": [
+        "https://waldstadt-wuensdorf.de/",
+        "https://en.wikipedia.org/wiki/W%C3%BCnsdorf"
+      ],
+      "official_url": "https://waldstadt-wuensdorf.de/",
+      "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-zeche-zollern",
+      "name": "Zeche Zollern",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.5459,
+      "lng": 7.4547,
+      "type": "Industrial & derelict",
+      "setting": "Former colliery in Dortmund with an Art Nouveau machine hall, ornate portal building and preserved pit head machinery, run as part of the Westphalian Industrial Museum.",
+      "source_urls": [
+        "https://www.lwl-industriemuseum.de/de/standorte/zeche-zollern/",
+        "https://en.wikipedia.org/wiki/Zollern_Colliery"
+      ],
+      "official_url": "https://www.lwl-industriemuseum.de/de/standorte/zeche-zollern/",
+      "commission_url": "https://www.filmstiftung.de/en/"
+    },
+    {
+      "id": "de-zeche-zollverein",
+      "name": "Zeche Zollverein",
+      "country": "Germany",
+      "region": "North Rhine-Westphalia",
+      "lat": 51.4903,
+      "lng": 7.0454,
+      "type": "Industrial & derelict",
+      "setting": "Former coal mine and coking plant in Essen, a UNESCO World Heritage site with Bauhaus-style winding towers, coking ovens, conveyor bridges and vast industrial halls now used for exhibitions and events.",
+      "source_urls": [
+        "https://www.zollverein.de/en/",
+        "https://en.wikipedia.org/wiki/Zollverein_Coal_Mine_Industrial_Complex"
+      ],
+      "official_url": "https://www.zollverein.de/en/",
+      "commission_url": "https://www.filmstiftung.de/en/"
     },
     {
       "id": "meteora",
@@ -978,6 +2274,23 @@
       }
     },
     {
+      "id": "pl-alvernia-studios",
+      "name": "Alvernia Studios",
+      "country": "Poland",
+      "region": "Lesser Poland (Alwernia)",
+      "lat": 50.1025,
+      "lng": 19.5469,
+      "type": "Studio & backlot",
+      "setting": "A domed studio complex near Krakow with multiple sound stages and a large blue-screen hall, built on a former limestone quarry site 18 kilometres from Krakow Airport.",
+      "known_for": "Arbitrage (2012), Vamps (2012), Essential Killing (2010)",
+      "source_urls": [
+        "http://www.alvernia.com/en/",
+        "https://en.wikipedia.org/wiki/Alvernia_Studios"
+      ],
+      "official_url": "http://www.alvernia.com/en/",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
       "id": "atm-studio-warsaw",
       "name": "ATM Studio",
       "country": "Poland",
@@ -1004,6 +2317,112 @@
       }
     },
     {
+      "id": "pl-centennial-hall-wroclaw",
+      "name": "Centennial Hall",
+      "country": "Poland",
+      "region": "Lower Silesian Voivodeship (Wroclaw)",
+      "lat": 51.1069,
+      "lng": 17.0773,
+      "type": "Theatre, arena & venue",
+      "setting": "A UNESCO-listed 1913 reinforced-concrete domed hall in Wroclaw, seating up to 6,000 beneath a 42-metre ribbed concrete dome, set in surrounding park and garden grounds.",
+      "source_urls": [
+        "https://halastulecia.pl/en"
+      ],
+      "official_url": "https://halastulecia.pl/en",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-ec1-lodz",
+      "name": "EC1 Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7675,
+      "lng": 19.4686,
+      "type": "Industrial & derelict",
+      "setting": "A former coal-fired power station of 1907 in central Lodz, restored as a science and culture centre with its original turbine hall, boiler house and control rooms intact.",
+      "source_urls": [
+        "https://ec1lodz.pl/"
+      ],
+      "official_url": "https://ec1lodz.pl/",
+      "commission_url": "https://lodzfilmcommission.pl/"
+    },
+    {
+      "id": "pl-gdansk-shipyard",
+      "name": "Gdansk Shipyard (European Solidarity Centre)",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship (Gdansk)",
+      "lat": 54.3625,
+      "lng": 18.6539,
+      "type": "Industrial & derelict",
+      "setting": "The historic Lenin Shipyard gate and slipways where the Solidarity movement began in 1980, bordered by the European Solidarity Centre's rusted-steel museum building and surviving shipyard halls.",
+      "known_for": "Man of Iron (1981)",
+      "source_urls": [
+        "https://ecs.gda.pl/en"
+      ],
+      "official_url": "https://ecs.gda.pl/en",
+      "commission_url": "https://filmcommission.pomorskie.eu"
+    },
+    {
+      "id": "pl-hala-koszyki-warsaw",
+      "name": "Hala Koszyki",
+      "country": "Poland",
+      "region": "Masovia (Warsaw)",
+      "lat": 52.2222,
+      "lng": 21.011,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1908 steel-framed market hall in Warsaw's Ochota district, restored behind its original facade into a food hall of restaurants, bars and shops around a glazed central nave.",
+      "source_urls": [
+        "https://koszyki.com/"
+      ],
+      "official_url": "https://koszyki.com/",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-hel-peninsula",
+      "name": "Hel Peninsula",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship (Hel)",
+      "lat": 54.6066,
+      "lng": 18.8027,
+      "type": "Coast & beach",
+      "setting": "A 35-kilometre sand spit enclosing the Bay of Gdansk, with pine-backed Baltic beaches on its open-sea side and a historic fishing town and former naval base at its tip.",
+      "source_urls": [
+        "https://www.hel.eu"
+      ],
+      "official_url": "https://www.hel.eu",
+      "commission_url": "https://filmcommission.pomorskie.eu"
+    },
+    {
+      "id": "pl-historic-guido-mine",
+      "name": "Historic Guido Coal Mine",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Zabrze)",
+      "lat": 50.3009,
+      "lng": 18.7861,
+      "type": "Industrial & derelict",
+      "setting": "A former working coal mine in Zabrze, now a branch of the Museum of Coal Mining, with underground tours down to 320 metres and a preserved pithead machine hall.",
+      "source_urls": [
+        "https://muzeumgornictwa.pl"
+      ],
+      "official_url": "https://muzeumgornictwa.pl",
+      "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-kasprowy-wierch-cable-car",
+      "name": "Kasprowy Wierch Cable Car",
+      "country": "Poland",
+      "region": "Lesser Poland (Zakopane, Tatra Mountains)",
+      "lat": 49.2318,
+      "lng": 19.9816,
+      "type": "Transport & infrastructure",
+      "setting": "A 1936 aerial cableway climbing from Kuznice to the 1,987-metre summit of Kasprowy Wierch in the Tatras, run in two stages with a mid-station at Myslenickie Turnie.",
+      "source_urls": [
+        "https://pkl.pl/en/kasprowy-wierch"
+      ],
+      "official_url": "https://pkl.pl/en/kasprowy-wierch",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
       "id": "kazimierz-krakow",
       "name": "Kazimierz, Kraków",
       "country": "Poland",
@@ -1023,6 +2442,54 @@
       }
     },
     {
+      "id": "pl-manufaktura-lodz",
+      "name": "Manufaktura",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7795,
+      "lng": 19.4445,
+      "type": "Industrial & derelict",
+      "setting": "Izrael Poznanski's 19th-century red-brick textile mill complex in Lodz, converted into a shopping, leisure and museum quarter around its original factory yard and chimney.",
+      "source_urls": [
+        "https://www.manufaktura.com/"
+      ],
+      "official_url": "https://www.manufaktura.com/",
+      "commission_url": "https://lodzfilmcommission.pl/"
+    },
+    {
+      "id": "pl-nikiszowiec",
+      "name": "Nikiszowiec",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2433,
+      "lng": 19.0814,
+      "type": "House & apartment",
+      "setting": "A brick workers' housing estate built 1908-1918 for the Giesche coal mine, its enclosed courtyard blocks, arcaded passages and communal bakery still inhabited today.",
+      "source_urls": [
+        "https://www.katowice.eu",
+        "https://en.wikipedia.org/wiki/Nikiszowiec"
+      ],
+      "official_url": "https://www.katowice.eu",
+      "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-nowa-huta",
+      "name": "Nowa Huta",
+      "country": "Poland",
+      "region": "Lesser Poland (Krakow)",
+      "lat": 50.0722,
+      "lng": 20.0375,
+      "type": "City & skyline",
+      "setting": "A planned socialist-realist steelworkers' town built from 1949 beside the former Lenin steelworks, with a monumental central square, arcaded avenues and uniform apartment blocks.",
+      "known_for": "Man of Marble (1977)",
+      "source_urls": [
+        "https://nck.krakow.pl",
+        "https://en.wikipedia.org/wiki/Nowa_Huta"
+      ],
+      "official_url": "https://nck.krakow.pl",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
       "id": "ogrodzieniec-castle",
       "name": "Ogrodzieniec Castle",
       "country": "Poland",
@@ -1040,6 +2507,143 @@
         "author": "Łukasz Śmigasiewicz",
         "license": "CC BY-SA 3.0 pl"
       }
+    },
+    {
+      "id": "pl-opera-lesna-sopot",
+      "name": "Opera Lesna (Sopot Forest Opera)",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship (Sopot)",
+      "lat": 54.4446,
+      "lng": 18.5444,
+      "type": "Theatre, arena & venue",
+      "setting": "An open-air amphitheatre cut into wooded dunes above Sopot, seating around 4,300 beneath a part-covered stage, home to the annual Sopot Festival.",
+      "source_urls": [
+        "https://www.operalesna.pl"
+      ],
+      "official_url": "https://www.operalesna.pl",
+      "commission_url": "https://filmcommission.pomorskie.eu"
+    },
+    {
+      "id": "pl-orp-blyskawica",
+      "name": "ORP Blyskawica",
+      "country": "Poland",
+      "region": "Pomeranian Voivodeship (Gdynia)",
+      "lat": 54.5196,
+      "lng": 18.5512,
+      "type": "Transport & infrastructure",
+      "setting": "A Grom-class destroyer launched in 1936 and preserved as a museum ship on Gdynia's waterfront, with its bridge, gun turrets and below-deck compartments open to visitors.",
+      "source_urls": [
+        "https://muzeummw.pl"
+      ],
+      "official_url": "https://muzeummw.pl",
+      "commission_url": "https://filmcommission.pomorskie.eu"
+    },
+    {
+      "id": "pl-palace-of-culture-warsaw",
+      "name": "Palace of Culture and Science",
+      "country": "Poland",
+      "region": "Masovia (Warsaw)",
+      "lat": 52.2318,
+      "lng": 21.0058,
+      "type": "Palace & landmark",
+      "setting": "A 237-metre socialist-classicist tower built in 1955 as a gift from the Soviet Union, holding theatres, cinemas, a congress hall, museums and an observation deck over central Warsaw.",
+      "source_urls": [
+        "https://www.pkin.pl/en"
+      ],
+      "official_url": "https://www.pkin.pl/en",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-pge-narodowy",
+      "name": "PGE Narodowy",
+      "country": "Poland",
+      "region": "Masovia (Warsaw)",
+      "lat": 52.2398,
+      "lng": 21.0454,
+      "type": "Theatre, arena & venue",
+      "setting": "Warsaw's national stadium of 2011, built on the site of the former Tenth-Anniversary Stadium, with a retractable roof and a facade patterned on the Polish flag.",
+      "source_urls": [
+        "https://www.pgenarodowy.pl"
+      ],
+      "official_url": "https://www.pgenarodowy.pl",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-poznan-town-hall",
+      "name": "Poznan Town Hall",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship (Poznan)",
+      "lat": 52.4086,
+      "lng": 16.9482,
+      "type": "Office, school & public building",
+      "setting": "A Renaissance town hall of 1560 on Poznan's Old Market Square, rebuilt to Italian designs, with an arcaded facade, a mechanical clock with butting goats and a council chamber now a history museum.",
+      "source_urls": [
+        "https://www.poznan.pl"
+      ],
+      "official_url": "https://www.poznan.pl",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-spodek-katowice",
+      "name": "Spodek",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Katowice)",
+      "lat": 50.2661,
+      "lng": 19.0253,
+      "type": "Theatre, arena & venue",
+      "setting": "A saucer-shaped 1971 sports and concert arena in central Katowice, its suspended roof spanning a hall seating up to about 11,500 for events.",
+      "source_urls": [
+        "https://www.spodekkatowice.pl/en"
+      ],
+      "official_url": "https://www.spodekkatowice.pl/en",
+      "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-stadion-slaski",
+      "name": "Stadion Slaski",
+      "country": "Poland",
+      "region": "Silesian Voivodeship (Chorzow)",
+      "lat": 50.2882,
+      "lng": 18.9735,
+      "type": "Theatre, arena & venue",
+      "setting": "A bowl stadium built in 1956 on a reclaimed slag heap in Chorzow, rebuilt with a membrane roof and seating around 54,000 for football, speedway and concerts.",
+      "source_urls": [
+        "https://www.stadionslaski.pl"
+      ],
+      "official_url": "https://www.stadionslaski.pl",
+      "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-warsaw-uprising-museum",
+      "name": "Warsaw Uprising Museum",
+      "country": "Poland",
+      "region": "Masovia (Warsaw)",
+      "lat": 52.2321,
+      "lng": 20.9814,
+      "type": "Industrial & derelict",
+      "setting": "A former tram power station on Wola's Przyokopowa street, converted into a museum of the 1944 uprising, retaining its brick turbine hall and machinery among the exhibition spaces.",
+      "source_urls": [
+        "https://www.1944.pl/en"
+      ],
+      "official_url": "https://www.1944.pl/en",
+      "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-wieliczka-salt-mine",
+      "name": "Wieliczka Salt Mine",
+      "country": "Poland",
+      "region": "Lesser Poland (Wieliczka)",
+      "lat": 49.9792,
+      "lng": 20.0639,
+      "type": "Industrial & derelict",
+      "setting": "A working salt mine near Krakow dating to the 13th century, its tunnels reaching over 300 metres deep and including carved underground chapels and chambers open to visitors.",
+      "known_for": "On the Silver Globe (1988), Spellbinder: Land of the Dragon Lord (1997)",
+      "source_urls": [
+        "https://www.wieliczka-saltmine.com",
+        "https://en.wikipedia.org/wiki/Wieliczka_Salt_Mine"
+      ],
+      "official_url": "https://www.wieliczka-saltmine.com",
+      "commission_url": "https://pfc.pisf.pl/"
     },
     {
       "id": "alfama-lisbon",
@@ -1099,6 +2703,213 @@
       }
     },
     {
+      "id": "es-almaden-mining-park",
+      "name": "Almaden Mining Park",
+      "country": "Spain",
+      "region": "Ciudad Real, Castilla-La Mancha",
+      "lat": 38.7754,
+      "lng": -4.8479,
+      "type": "Industrial & derelict",
+      "setting": "A former mercury mine in Ciudad Real with headframes, shafts and underground galleries open for visits, worked from Roman times until closure in 2001.",
+      "source_urls": [
+        "https://parqueminerodealmaden.es/",
+        "https://en.wikipedia.org/wiki/Almad%C3%A9n"
+      ],
+      "official_url": "https://parqueminerodealmaden.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-chamberi-ghost-station",
+      "name": "Anden 0 (Chamberi Ghost Station)",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4331,
+      "lng": -3.7037,
+      "type": "Transport & infrastructure",
+      "setting": "A disused 1919 Madrid Metro station preserved with its original tiled advertisements and platform furniture, opened to the public as a small museum called Anden 0.",
+      "source_urls": [
+        "https://www.metromadrid.es/en/conoce-metro/anden-0",
+        "https://en.wikipedia.org/wiki/Chamber%C3%AD_(Madrid_Metro)"
+      ],
+      "official_url": "https://www.metromadrid.es/en/conoce-metro/anden-0",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-carcel-de-segovia",
+      "name": "Antigua Carcel de Segovia",
+      "country": "Spain",
+      "region": "Segovia, Castile and Leon",
+      "lat": 40.9492,
+      "lng": -4.1223,
+      "type": "Hospital, prison & institution",
+      "setting": "A former provincial prison in Segovia's old town, its cell blocks and courtyard converted into a cultural and exhibition centre.",
+      "source_urls": [
+        "https://www.lacarceldesegovia.com/"
+      ],
+      "official_url": "https://www.lacarceldesegovia.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-auditorio-de-tenerife",
+      "name": "Auditorio de Tenerife",
+      "country": "Spain",
+      "region": "Santa Cruz de Tenerife, Canary Islands",
+      "lat": 28.4561,
+      "lng": -16.2513,
+      "type": "Theatre, arena & venue",
+      "setting": "A sail-shaped concert hall on the Santa Cruz de Tenerife waterfront designed by Santiago Calatrava, with a curved white concrete shell around the main auditorium.",
+      "source_urls": [
+        "https://www.auditoriodetenerife.com/en/",
+        "https://en.wikipedia.org/wiki/Auditorio_de_Tenerife"
+      ],
+      "official_url": "https://www.auditoriodetenerife.com/en/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-azkuna-zentroa",
+      "name": "Azkuna Zentroa",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.2597,
+      "lng": -2.9371,
+      "type": "Industrial & derelict",
+      "setting": "A former wine and grain warehouse, the Alhondiga, in Bilbao rebuilt by Philippe Starck behind its original brick facade, with 43 varied columns under a rooftop pool and terrace.",
+      "source_urls": [
+        "https://www.azkunazentroa.eus/",
+        "https://en.wikipedia.org/wiki/Azkuna_Zentroa"
+      ],
+      "official_url": "https://www.azkunazentroa.eus/",
+      "commission_url": "https://www.bifilmcommission.com/locations/"
+    },
+    {
+      "id": "es-bardenas-reales",
+      "name": "Bardenas Reales",
+      "country": "Spain",
+      "region": "Navarre",
+      "lat": 42.1908,
+      "lng": -1.47,
+      "type": "Mountains & wilderness",
+      "setting": "A semi-desert badlands landscape in southern Navarre with eroded clay buttes, plateaus and canyons, crossed by marked tracks inside a managed nature reserve.",
+      "source_urls": [
+        "https://bardenasreales.es/",
+        "https://en.wikipedia.org/wiki/Bardenas_Reales"
+      ],
+      "official_url": "https://bardenasreales.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-belchite",
+      "name": "Belchite (old town)",
+      "country": "Spain",
+      "region": "Zaragoza, Aragon",
+      "lat": 41.3064,
+      "lng": -0.7542,
+      "type": "Historic town & street",
+      "setting": "The ruined shell of a town destroyed in the 1937 Battle of Belchite, left standing as a memorial with intact facades, a bell tower and rubble-filled streets open to visitors.",
+      "known_for": "The Adventures of Baron Munchausen (1988), Pan's Labyrinth (2006)",
+      "source_urls": [
+        "https://www.belchite.es/",
+        "https://en.wikipedia.org/wiki/Belchite"
+      ],
+      "official_url": "https://www.belchite.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-bilbao-metro",
+      "name": "Bilbao Metro",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.263,
+      "lng": -2.935,
+      "type": "Transport & infrastructure",
+      "setting": "A metro network known for Norman Foster's glass-tube station entrances, locally called fosteritos, running through Bilbao and under the Nervion estuary.",
+      "source_urls": [
+        "https://www.metrobilbao.eus/"
+      ],
+      "official_url": "https://www.metrobilbao.eus/",
+      "commission_url": "https://www.bifilmcommission.com/locations/"
+    },
+    {
+      "id": "es-bombas-gens",
+      "name": "Bombas Gens",
+      "country": "Spain",
+      "region": "Valencia, Valencian Community",
+      "lat": 39.4855,
+      "lng": -0.3856,
+      "type": "Industrial & derelict",
+      "setting": "A former water-pump factory in Valencia built in Art Deco style, its restored halls now an art foundation with gallery and workshop spaces.",
+      "source_urls": [
+        "https://bombasgens.com/"
+      ],
+      "official_url": "https://bombasgens.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-camp-nou",
+      "name": "Camp Nou",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3808,
+      "lng": 2.1228,
+      "type": "Theatre, arena & venue",
+      "setting": "FC Barcelona's stadium in the Les Corts district, one of Europe's largest football grounds, with tiered stands, a museum and tour access during redevelopment.",
+      "known_for": "Goal! II: Living the Dream (2007)",
+      "source_urls": [
+        "https://www.fcbarcelona.com/en/club/facilities/spotify-camp-nou",
+        "https://en.wikipedia.org/wiki/Camp_Nou"
+      ],
+      "official_url": "https://www.fcbarcelona.com/en/club/facilities/spotify-camp-nou",
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-canfranc-station",
+      "name": "Canfranc International Railway Station",
+      "country": "Spain",
+      "region": "Huesca, Aragon",
+      "lat": 42.7514,
+      "lng": -0.5142,
+      "type": "Transport & infrastructure",
+      "setting": "A Beaux-Arts railway station in the Pyrenees built for a cross-border line to France, its platforms and grand hall largely disused since 1970 and now under partial restoration.",
+      "source_urls": [
+        "https://www.canfranc.es/",
+        "https://en.wikipedia.org/wiki/Canfranc_International_railway_station"
+      ],
+      "official_url": "https://www.canfranc.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-city-of-arts-and-sciences",
+      "name": "City of Arts and Sciences",
+      "country": "Spain",
+      "region": "Valencia, Valencian Community",
+      "lat": 39.4542,
+      "lng": -0.35,
+      "type": "Modern architecture",
+      "setting": "A cluster of white concrete and glass structures by Santiago Calatrava and Felix Candela beside the old Turia riverbed, including a planetarium dome, an opera house, a science museum and an oceanarium.",
+      "source_urls": [
+        "https://www.cac.es/",
+        "https://en.wikipedia.org/wiki/City_of_Arts_and_Sciences"
+      ],
+      "official_url": "https://www.cac.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-city-of-culture-of-galicia",
+      "name": "City of Culture of Galicia",
+      "country": "Spain",
+      "region": "A Coruna, Galicia",
+      "lat": 42.8702,
+      "lng": -8.5257,
+      "type": "Modern architecture",
+      "setting": "A hilltop complex of curved stone and glass buildings by Peter Eisenman above Santiago de Compostela, combining library, museum and archive functions on wide open plazas.",
+      "source_urls": [
+        "https://www.cidadedacultura.gal/",
+        "https://en.wikipedia.org/wiki/City_of_Culture_of_Galicia"
+      ],
+      "official_url": "https://www.cidadedacultura.gal/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
       "id": "ciudad-de-la-luz",
       "name": "Ciudad de la Luz",
       "country": "Spain",
@@ -1132,6 +2943,286 @@
       }
     },
     {
+      "id": "es-ciudad-encantada",
+      "name": "Ciudad Encantada",
+      "country": "Spain",
+      "region": "Cuenca, Castilla-La Mancha",
+      "lat": 40.2081,
+      "lng": -2.0097,
+      "type": "Mountains & wilderness",
+      "setting": "A karst rock park near Cuenca where erosion has carved limestone into towers and shapes along a signed walking route through pine forest.",
+      "source_urls": [
+        "https://www.ciudadencantada.es/",
+        "https://en.wikipedia.org/wiki/Ciudad_Encantada"
+      ],
+      "official_url": "https://www.ciudadencantada.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-complutense-university-madrid",
+      "name": "Complutense University of Madrid",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4492,
+      "lng": -3.7281,
+      "type": "Office, school & public building",
+      "setting": "A large 1930s university campus, Ciudad Universitaria, west of central Madrid, with monumental faculty buildings, an observatory and open lawns.",
+      "source_urls": [
+        "https://www.ucm.es/",
+        "https://en.wikipedia.org/wiki/Complutense_University_of_Madrid"
+      ],
+      "official_url": "https://www.ucm.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-conde-duque",
+      "name": "Conde Duque",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4298,
+      "lng": -3.7065,
+      "type": "Office, school & public building",
+      "setting": "A former 18th-century army barracks in Madrid with a long baroque facade and large parade-ground courtyards, converted into a public cultural centre.",
+      "source_urls": [
+        "https://www.condeduquemadrid.es/"
+      ],
+      "official_url": "https://www.condeduquemadrid.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-corralejo-dunes",
+      "name": "Corralejo Dunes Natural Park",
+      "country": "Spain",
+      "region": "Fuerteventura, Canary Islands",
+      "lat": 28.7333,
+      "lng": -13.8667,
+      "type": "Coast & beach",
+      "setting": "A protected dune field and beach on the north coast of Fuerteventura, with shifting white sand hills managed by the island council.",
+      "source_urls": [
+        "https://www.cabildofuer.es/"
+      ],
+      "official_url": "https://www.cabildofuer.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-euskalduna-palace",
+      "name": "Euskalduna Palace",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.267,
+      "lng": -2.945,
+      "type": "Theatre, arena & venue",
+      "setting": "A congress and concert hall in Bilbao built in weathered steel on the site of the former Euskalduna shipyard, its shape referencing a ship's hull under construction.",
+      "source_urls": [
+        "https://euskalduna.eus/en",
+        "https://en.wikipedia.org/wiki/Euskalduna_Conference_Centre_and_Concert_Hall"
+      ],
+      "official_url": "https://euskalduna.eus/en",
+      "commission_url": "https://www.bifilmcommission.com/locations/"
+    },
+    {
+      "id": "es-fabra-i-coats",
+      "name": "Fabra i Coats",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.4338,
+      "lng": 2.1903,
+      "type": "Industrial & derelict",
+      "setting": "A former 19th-century textile mill in Barcelona's Sant Andreu district, its long brick sheds and chimney now used as artist studios and a cultural centre.",
+      "source_urls": [
+        "https://ajuntament.barcelona.cat/fabraicoats/"
+      ],
+      "official_url": "https://ajuntament.barcelona.cat/fabraicoats/",
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-gran-teatre-del-liceu",
+      "name": "Gran Teatre del Liceu",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3803,
+      "lng": 2.1736,
+      "type": "Theatre, arena & venue",
+      "setting": "Barcelona's main opera house on La Rambla, with a gilded horseshoe auditorium, a grand foyer and a stage house rebuilt after a 1994 fire.",
+      "source_urls": [
+        "https://www.liceubarcelona.cat/en",
+        "https://en.wikipedia.org/wiki/Liceu"
+      ],
+      "official_url": "https://www.liceubarcelona.cat/en",
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-hospital-de-sant-pau",
+      "name": "Hospital de Sant Pau",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.4128,
+      "lng": 2.1744,
+      "type": "Hospital, prison & institution",
+      "setting": "A former working hospital in Barcelona built as a campus of Art Nouveau pavilions with domes, mosaics and underground connecting tunnels, now a monument and event venue.",
+      "source_urls": [
+        "https://www.santpaubarcelona.org/en",
+        "https://en.wikipedia.org/wiki/Hospital_de_Sant_Pau"
+      ],
+      "official_url": "https://www.santpaubarcelona.org/en",
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-las-medulas",
+      "name": "Las Medulas",
+      "country": "Spain",
+      "region": "Leon, Castile and Leon",
+      "lat": 42.4589,
+      "lng": -6.76,
+      "type": "Industrial & derelict",
+      "setting": "A red-cliffed landscape left by Roman open-cast gold mining, honeycombed with tunnels and covered in chestnut trees, managed as a protected heritage site in the Bierzo hills.",
+      "source_urls": [
+        "https://www.fundacionlasmedulas.info/",
+        "https://en.wikipedia.org/wiki/Las_M%C3%A9dulas"
+      ],
+      "official_url": "https://www.fundacionlasmedulas.info/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-matadero-madrid",
+      "name": "Matadero Madrid",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.3915,
+      "lng": -3.6977,
+      "type": "Industrial & derelict",
+      "setting": "A former municipal slaughterhouse and cattle market beside the Manzanares river, its early 20th-century brick pavilions converted into galleries, studios and event spaces.",
+      "source_urls": [
+        "https://www.mataderomadrid.org/",
+        "https://en.wikipedia.org/wiki/Matadero_Madrid"
+      ],
+      "official_url": "https://www.mataderomadrid.org/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-mercado-central-valencia",
+      "name": "Mercado Central de Valencia",
+      "country": "Spain",
+      "region": "Valencia, Valencian Community",
+      "lat": 39.4735,
+      "lng": -0.3789,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1928 Art Nouveau market hall in central Valencia with domed ceilings, stained glass and stalls trading under an iron and tile structure.",
+      "source_urls": [
+        "https://www.mercadocentralvalencia.es/"
+      ],
+      "official_url": "https://www.mercadocentralvalencia.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-mercado-de-san-miguel",
+      "name": "Mercado de San Miguel",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4154,
+      "lng": -3.709,
+      "type": "Bar, restaurant & shop",
+      "setting": "A restored early 1900s cast-iron and glass market hall next to Plaza Mayor in Madrid, now a covered food and tapas market.",
+      "source_urls": [
+        "https://www.mercadodesanmiguel.es/",
+        "https://en.wikipedia.org/wiki/Market_of_San_Miguel"
+      ],
+      "official_url": "https://www.mercadodesanmiguel.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-mini-hollywood-oasys",
+      "name": "Mini Hollywood (Oasys Parque Tematico)",
+      "country": "Spain",
+      "region": "Almeria, Andalusia",
+      "lat": 37.0949,
+      "lng": -2.4356,
+      "type": "Studio & backlot",
+      "setting": "A preserved western film set in the Tabernas desert built for 1960s Spaghetti Westerns, with a saloon, jail and main street still used for stunt shows and shoots.",
+      "known_for": "A Fistful of Dollars (1964), For a Few Dollars More (1965)",
+      "source_urls": [
+        "https://www.miniHollywood.com/"
+      ],
+      "official_url": "https://www.miniHollywood.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-museo-del-ferrocarril-madrid",
+      "name": "Museo del Ferrocarril de Madrid",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.3993,
+      "lng": -3.6921,
+      "type": "Transport & infrastructure",
+      "setting": "Spain's railway museum, housed in the former Delicias terminus with its 19th-century iron and glass trainshed, displaying historic locomotives and carriages.",
+      "source_urls": [
+        "https://www.museodelferrocarril.org/"
+      ],
+      "official_url": "https://www.museodelferrocarril.org/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-palacio-de-cibeles",
+      "name": "Palacio de Cibeles / CentroCentro",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4188,
+      "lng": -3.6918,
+      "type": "Office, school & public building",
+      "setting": "Madrid's ornate former post office building on Plaza de Cibeles, now the city hall, with a public exhibition centre, a rooftop viewpoint and a domed central hall.",
+      "source_urls": [
+        "https://www.centrocentro.org/"
+      ],
+      "official_url": "https://www.centrocentro.org/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-palau-de-la-musica-catalana",
+      "name": "Palau de la Musica Catalana",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3875,
+      "lng": 2.1756,
+      "type": "Theatre, arena & venue",
+      "setting": "A Modernista concert hall in Barcelona by Lluis Domenech i Montaner, with a stained-glass skylight, sculpted facades and an ornate main auditorium.",
+      "source_urls": [
+        "https://www.palaumusica.cat/en",
+        "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
+      ],
+      "official_url": "https://www.palaumusica.cat/en",
+      "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-playa-de-las-catedrales",
+      "name": "Playa de las Catedrales",
+      "country": "Spain",
+      "region": "Lugo, Galicia",
+      "lat": 43.5543,
+      "lng": -7.1574,
+      "type": "Coast & beach",
+      "setting": "A tidal beach at Ribadeo shaped by sea arches and cliffs up to 30 metres high, fully walkable only at low tide and reached with a free timed permit in summer.",
+      "source_urls": [
+        "https://ascatedrais.xunta.gal/"
+      ],
+      "official_url": "https://ascatedrais.xunta.gal/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-las-ventas-bullring",
+      "name": "Plaza de Toros de Las Ventas",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4323,
+      "lng": -3.6633,
+      "type": "Theatre, arena & venue",
+      "setting": "Madrid's Neo-Mudejar bullring seating over 23,000, with brick and ceramic tile facades, tiered stands and an on-site bullfighting museum.",
+      "source_urls": [
+        "https://www.las-ventas.com/"
+      ],
+      "official_url": "https://www.las-ventas.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
       "id": "real-alcazar-seville",
       "name": "Real Alcázar of Seville",
       "country": "Spain",
@@ -1151,6 +3242,85 @@
       }
     },
     {
+      "id": "es-riotinto-mining-park",
+      "name": "Riotinto Mining Park",
+      "country": "Spain",
+      "region": "Huelva, Andalusia",
+      "lat": 37.6989,
+      "lng": -6.5936,
+      "type": "Industrial & derelict",
+      "setting": "An open-cast copper and mineral mining landscape in Huelva province with reddened terrain, a heritage mining railway and a mining museum.",
+      "source_urls": [
+        "https://www.parquemineroderiotinto.es/"
+      ],
+      "official_url": "https://www.parquemineroderiotinto.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-royal-tapestry-factory",
+      "name": "Royal Tapestry Factory",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4058,
+      "lng": -3.6824,
+      "type": "Industrial & derelict",
+      "setting": "A working tapestry and carpet workshop in Madrid founded in 1721, still weaving on wooden looms in its original workshop halls, open for guided tours.",
+      "source_urls": [
+        "https://www.realfabricadetapices.com/",
+        "https://en.wikipedia.org/wiki/Royal_Tapestry_Factory"
+      ],
+      "official_url": "https://www.realfabricadetapices.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-santiago-bernabeu-stadium",
+      "name": "Santiago Bernabeu Stadium",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4531,
+      "lng": -3.6884,
+      "type": "Theatre, arena & venue",
+      "setting": "Real Madrid's stadium in central Madrid, seating over 80,000 under a retractable roof, with dressing rooms, a trophy room and pitch-level tour access.",
+      "known_for": "Goal! (2005)",
+      "source_urls": [
+        "https://www.realmadrid.com/en/tickets/santiago-bernabeu-tour",
+        "https://en.wikipedia.org/wiki/Bernab%C3%A9u_(stadium)"
+      ],
+      "official_url": "https://www.realmadrid.com/en/tickets/santiago-bernabeu-tour",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-soller-railway",
+      "name": "Soller Railway",
+      "country": "Spain",
+      "region": "Mallorca, Balearic Islands",
+      "lat": 39.7639,
+      "lng": 2.7146,
+      "type": "Transport & infrastructure",
+      "setting": "A narrow-gauge heritage railway on Mallorca linking Palma to Soller through the Serra de Tramuntana, still running vintage wooden carriages dating from 1912.",
+      "source_urls": [
+        "https://www.trendesoller.com/"
+      ],
+      "official_url": "https://www.trendesoller.com/",
+      "commission_url": "https://mallorcafilmcommission.net/"
+    },
+    {
+      "id": "es-tabakalera",
+      "name": "Tabakalera",
+      "country": "Spain",
+      "region": "Gipuzkoa, Basque Country",
+      "lat": 43.3167,
+      "lng": -1.9758,
+      "type": "Industrial & derelict",
+      "setting": "A former state tobacco factory in San Sebastian, its early 20th-century industrial halls converted into a contemporary culture and creation centre.",
+      "source_urls": [
+        "https://www.tabakalera.eus/",
+        "https://en.wikipedia.org/wiki/Tabakalera"
+      ],
+      "official_url": "https://www.tabakalera.eus/",
+      "commission_url": "https://www.bifilmcommission.com/locations/"
+    },
+    {
       "id": "tabernas-desert",
       "name": "Tabernas Desert",
       "country": "Spain",
@@ -1168,6 +3338,102 @@
         "author": "Dgalan",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-timanfaya-national-park",
+      "name": "Timanfaya National Park",
+      "country": "Spain",
+      "region": "Lanzarote, Canary Islands",
+      "lat": 28.9942,
+      "lng": -13.7933,
+      "type": "Mountains & wilderness",
+      "setting": "A national park on Lanzarote covering volcanic terrain formed by 18th-century eruptions, with lava fields, craters and a visitor route by coach.",
+      "source_urls": [
+        "https://www.reservasparquesnacionales.es/",
+        "https://en.wikipedia.org/wiki/Timanfaya_National_Park"
+      ],
+      "official_url": "https://www.reservasparquesnacionales.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-tower-of-hercules",
+      "name": "Tower of Hercules",
+      "country": "Spain",
+      "region": "A Coruna, Galicia",
+      "lat": 43.3858,
+      "lng": -8.4064,
+      "type": "Transport & infrastructure",
+      "setting": "A still-operating Roman lighthouse on a headland outside A Coruna, the oldest lighthouse in continuous use in the world, refaced in granite in the 18th century.",
+      "source_urls": [
+        "https://www.torredeherculesacoruna.com/",
+        "https://en.wikipedia.org/wiki/Tower_of_Hercules"
+      ],
+      "official_url": "https://www.torredeherculesacoruna.com/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-university-of-alcala",
+      "name": "University of Alcala",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4825,
+      "lng": -3.3611,
+      "type": "Office, school & public building",
+      "setting": "A 16th-century university campus in Alcala de Henares, centred on the Colegio de San Ildefonso with its plateresque facade and a historic assembly hall.",
+      "source_urls": [
+        "https://www.uah.es/en/",
+        "https://en.wikipedia.org/wiki/University_of_Alcal%C3%A1"
+      ],
+      "official_url": "https://www.uah.es/en/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-university-of-salamanca",
+      "name": "University of Salamanca",
+      "country": "Spain",
+      "region": "Salamanca, Castile and Leon",
+      "lat": 40.9614,
+      "lng": -5.6667,
+      "type": "Office, school & public building",
+      "setting": "Spain's oldest university, with a 16th-century plateresque facade, cloisters and historic lecture halls set around Salamanca's old town.",
+      "source_urls": [
+        "https://www.usal.es/",
+        "https://en.wikipedia.org/wiki/University_of_Salamanca"
+      ],
+      "official_url": "https://www.usal.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-university-of-seville",
+      "name": "University of Seville (Rectorado)",
+      "country": "Spain",
+      "region": "Seville, Andalusia",
+      "lat": 37.3808,
+      "lng": -5.9912,
+      "type": "Office, school & public building",
+      "setting": "Seville's university rectorate housed in the former Royal Tobacco Factory, an 18th-century industrial building with long stone facades, courtyards and vaulted halls.",
+      "source_urls": [
+        "https://www.us.es/",
+        "https://en.wikipedia.org/wiki/University_of_Seville"
+      ],
+      "official_url": "https://www.us.es/",
+      "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-vizcaya-bridge",
+      "name": "Vizcaya Bridge",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.3231,
+      "lng": -3.0169,
+      "type": "Transport & infrastructure",
+      "setting": "A working transporter bridge over the Ria de Bilbao between Portugalete and Las Arenas, carrying a suspended gondola across the estuary since 1893, with a walkway on top.",
+      "source_urls": [
+        "https://puente-colgante.com/",
+        "https://en.wikipedia.org/wiki/Vizcaya_Bridge"
+      ],
+      "official_url": "https://puente-colgante.com/",
+      "commission_url": "https://www.bifilmcommission.com/locations/"
     },
     {
       "id": "faro-island",
@@ -1235,6 +3501,288 @@
       }
     },
     {
+      "id": "uk-aerospace-bristol",
+      "name": "Aerospace Bristol",
+      "country": "United Kingdom",
+      "region": "Bristol, England",
+      "lat": 51.515,
+      "lng": -2.581,
+      "type": "Industrial & derelict",
+      "setting": "Aviation museum on the former Filton airfield site with a hangar housing a preserved Concorde alongside earlier Bristol-built aircraft.",
+      "source_urls": [
+        "https://aerospacebristol.org/"
+      ],
+      "official_url": "https://aerospacebristol.org/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-amberley-museum",
+      "name": "Amberley Museum",
+      "country": "United Kingdom",
+      "region": "West Sussex, England",
+      "lat": 50.9075,
+      "lng": -0.5445,
+      "type": "Industrial & derelict",
+      "setting": "Open-air industrial heritage museum on a former chalk quarry near Arundel, with narrow-gauge railways, a lime works, workshops and period industrial buildings.",
+      "source_urls": [
+        "https://amberleymuseum.co.uk/"
+      ],
+      "official_url": "https://amberleymuseum.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-audley-end-house",
+      "name": "Audley End House and Gardens",
+      "country": "United Kingdom",
+      "region": "Essex, England",
+      "lat": 52.0154,
+      "lng": 0.2094,
+      "type": "House & apartment",
+      "setting": "Jacobean mansion near Saffron Walden remodelled in the eighteenth century, with state rooms, a service wing and Capability Brown parkland.",
+      "source_urls": [
+        "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/"
+      ],
+      "official_url": "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-battersea-power-station",
+      "name": "Battersea Power Station",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.4816,
+      "lng": -0.144,
+      "type": "Industrial & derelict",
+      "setting": "Decommissioned Thames-side coal power station with four white chimneys, its turbine halls and boiler house now restored inside a mixed-use redevelopment.",
+      "known_for": "The King's Speech, Children of Men",
+      "source_urls": [
+        "https://batterseapowerstation.co.uk/",
+        "https://en.wikipedia.org/wiki/Battersea_Power_Station"
+      ],
+      "official_url": "https://batterseapowerstation.co.uk/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-bodleian-library",
+      "name": "Bodleian Library",
+      "country": "United Kingdom",
+      "region": "Oxfordshire, England",
+      "lat": 51.7534,
+      "lng": -1.254,
+      "type": "Office, school & public building",
+      "setting": "Historic university library in central Oxford with the vaulted Divinity School and Duke Humfrey's medieval reading room, hired for filming by arrangement.",
+      "known_for": "Harry Potter and the Philosopher's Stone, Harry Potter and the Chamber of Secrets",
+      "source_urls": [
+        "https://www.bodleian.ox.ac.uk/whats-on/filming"
+      ],
+      "official_url": "https://www.bodleian.ox.ac.uk/whats-on/filming",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-borough-market",
+      "name": "Borough Market",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5055,
+      "lng": -0.091,
+      "type": "Bar, restaurant & shop",
+      "setting": "Covered Victorian food market south of London Bridge with wrought-iron arcades, market stalls and surrounding cobbled streets.",
+      "known_for": "Harry Potter and the Prisoner of Azkaban, Bridget Jones's Diary",
+      "source_urls": [
+        "https://boroughmarket.org.uk/filming-and-photography/"
+      ],
+      "official_url": "https://boroughmarket.org.uk/filming-and-photography/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-bressingham-steam-museum",
+      "name": "Bressingham Steam and Gardens",
+      "country": "United Kingdom",
+      "region": "Norfolk, England",
+      "lat": 52.4,
+      "lng": 1.071,
+      "type": "Transport & infrastructure",
+      "setting": "Steam preservation site near Diss with narrow-gauge railways, a collection of traction engines and steam locomotives, and surrounding show gardens.",
+      "source_urls": [
+        "https://www.bressingham.co.uk/"
+      ],
+      "official_url": "https://www.bressingham.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-bristol-old-vic",
+      "name": "Bristol Old Vic",
+      "country": "United Kingdom",
+      "region": "Bristol, England",
+      "lat": 51.4515,
+      "lng": -2.5952,
+      "type": "Theatre, arena & venue",
+      "setting": "Working eighteenth-century theatre in central Bristol, one of the oldest continuously operating in the English-speaking world, with a Georgian auditorium and backstage spaces.",
+      "source_urls": [
+        "https://bristololdvic.org.uk/"
+      ],
+      "official_url": "https://bristololdvic.org.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-brooklands-museum",
+      "name": "Brooklands Museum",
+      "country": "United Kingdom",
+      "region": "Surrey, England",
+      "lat": 51.3547,
+      "lng": -0.4606,
+      "type": "Transport & infrastructure",
+      "setting": "Site of the world's first purpose-built motor racing circuit near Weybridge, with a surviving banked track section, aircraft hangars and early aviation and motoring exhibits.",
+      "source_urls": [
+        "https://www.brooklandsmuseum.com/"
+      ],
+      "official_url": "https://www.brooklandsmuseum.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-butser-ancient-farm",
+      "name": "Butser Ancient Farm",
+      "country": "United Kingdom",
+      "region": "Hampshire, England",
+      "lat": 50.9743,
+      "lng": -0.9743,
+      "type": "Village & countryside",
+      "setting": "Open-air archaeological site near Chalton with reconstructed Iron Age roundhouses, a Roman villa and Anglo-Saxon buildings set in working farmland.",
+      "source_urls": [
+        "https://www.butserancientfarm.co.uk/"
+      ],
+      "official_url": "https://www.butserancientfarm.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-charlestown-harbour",
+      "name": "Charlestown Harbour",
+      "country": "United Kingdom",
+      "region": "Cornwall, England",
+      "lat": 50.331,
+      "lng": -4.7561,
+      "type": "Transport & infrastructure",
+      "setting": "Small Georgian-era dry-dock harbour near St Austell, still used by tall ships, with quayside cottages and period pilchard cellars around the basin.",
+      "known_for": "Poldark",
+      "source_urls": [
+        "https://www.charlestownharbour.com/"
+      ],
+      "official_url": "https://www.charlestownharbour.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-cheddar-gorge",
+      "name": "Cheddar Gorge",
+      "country": "United Kingdom",
+      "region": "Somerset, England",
+      "lat": 51.2823,
+      "lng": -2.7695,
+      "type": "Mountains & wilderness",
+      "setting": "England's largest gorge, with 130-metre limestone cliffs, show caves and a clifftop footpath managed as part of the Longleat Estate.",
+      "source_urls": [
+        "https://www.cheddargorge.co.uk/"
+      ],
+      "official_url": "https://www.cheddargorge.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-cliveden",
+      "name": "Cliveden",
+      "country": "United Kingdom",
+      "region": "Buckinghamshire, England",
+      "lat": 51.5389,
+      "lng": -0.6883,
+      "type": "Hotel & interiors",
+      "setting": "Italianate mansion above the Thames at Taplow, now a hotel, with formal parterre gardens, a walled garden and woodland grounds managed by the National Trust.",
+      "known_for": "Scandal",
+      "source_urls": [
+        "https://www.nationaltrust.org.uk/visit/berkshire-buckinghamshire-oxfordshire/cliveden"
+      ],
+      "official_url": "https://www.nationaltrust.org.uk/visit/berkshire-buckinghamshire-oxfordshire/cliveden",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-colne-valley-railway",
+      "name": "Colne Valley Railway",
+      "country": "United Kingdom",
+      "region": "Essex, England",
+      "lat": 51.9613,
+      "lng": 0.598,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage standard-gauge railway on the Essex-Suffolk border with a rebuilt country station, signal box and steam and diesel locomotives.",
+      "source_urls": [
+        "https://www.colnevalleyrailway.co.uk/"
+      ],
+      "official_url": "https://www.colnevalleyrailway.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-dyrham-park",
+      "name": "Dyrham Park",
+      "country": "United Kingdom",
+      "region": "Gloucestershire, England",
+      "lat": 51.4903,
+      "lng": -2.4477,
+      "type": "House & apartment",
+      "setting": "Baroque country house near Bath set in a steep deer park, with panelled state rooms, a Delftware collection and a walled garden.",
+      "known_for": "The Remains of the Day",
+      "source_urls": [
+        "https://www.nationaltrust.org.uk/visit/gloucestershire-cotswolds/dyrham-park",
+        "https://en.wikipedia.org/wiki/Dyrham_Park"
+      ],
+      "official_url": "https://www.nationaltrust.org.uk/visit/gloucestershire-cotswolds/dyrham-park",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-eden-project",
+      "name": "Eden Project",
+      "country": "United Kingdom",
+      "region": "Cornwall, England",
+      "lat": 50.3613,
+      "lng": -4.7444,
+      "type": "Modern architecture",
+      "setting": "Environmental attraction built into a former china clay pit near St Austell, with two giant geodesic biome domes housing rainforest and Mediterranean planting.",
+      "known_for": "Die Another Day",
+      "source_urls": [
+        "https://www.edenproject.com/",
+        "https://en.wikipedia.org/wiki/Eden_Project"
+      ],
+      "official_url": "https://www.edenproject.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-elstree-studios",
+      "name": "Elstree Studios",
+      "country": "United Kingdom",
+      "region": "Hertfordshire, England",
+      "lat": 51.6473,
+      "lng": -0.281,
+      "type": "Studio & backlot",
+      "setting": "Film and television studio complex at Borehamwood with several sound stages, dating back to the 1920s and long used for major British productions.",
+      "known_for": "Star Wars, Indiana Jones and the Last Crusade",
+      "source_urls": [
+        "https://elstreestudios.co.uk/",
+        "https://en.wikipedia.org/wiki/Elstree_Studios"
+      ],
+      "official_url": "https://elstreestudios.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-fort-amherst",
+      "name": "Fort Amherst",
+      "country": "United Kingdom",
+      "region": "Kent, England",
+      "lat": 51.3891,
+      "lng": 0.5262,
+      "type": "Industrial & derelict",
+      "setting": "Napoleonic-era fortification above Chatham with brick ramparts, gun batteries and a network of tunnels cut into the chalk.",
+      "source_urls": [
+        "https://www.fortamherst.com/"
+      ],
+      "official_url": "https://www.fortamherst.com/",
+      "commission_url": "https://www.kentfilmoffice.co.uk/"
+    },
+    {
       "id": "freshwater-west",
       "name": "Freshwater West",
       "country": "United Kingdom",
@@ -1254,6 +3802,37 @@
       }
     },
     {
+      "id": "uk-fulham-palace",
+      "name": "Fulham Palace",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.4739,
+      "lng": -0.2136,
+      "type": "House & apartment",
+      "setting": "Moated former residence of the Bishop of London beside the Thames at Putney, combining Tudor courtyards, Georgian rooms and walled gardens available for filming.",
+      "source_urls": [
+        "https://www.fulhampalace.org/venue-hire/filming/"
+      ],
+      "official_url": "https://www.fulhampalace.org/venue-hire/filming/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-geevor-tin-mine",
+      "name": "Geevor Tin Mine",
+      "country": "United Kingdom",
+      "region": "Cornwall, England",
+      "lat": 50.1519,
+      "lng": -5.676,
+      "type": "Industrial & derelict",
+      "setting": "Former working tin mine on the Cornish coast near Pendeen, with headframes, processing mills, underground tunnels and dressing floors preserved as a museum.",
+      "known_for": "Poldark",
+      "source_urls": [
+        "https://geevor.com/"
+      ],
+      "official_url": "https://geevor.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
       "id": "glenfinnan-viaduct",
       "name": "Glenfinnan Viaduct",
       "country": "United Kingdom",
@@ -1271,6 +3850,116 @@
         "author": "Eric Kilby",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "uk-hylands-house",
+      "name": "Hylands House",
+      "country": "United Kingdom",
+      "region": "Essex, England",
+      "lat": 51.728,
+      "lng": 0.447,
+      "type": "House & apartment",
+      "setting": "Neoclassical villa near Chelmsford set in landscaped parkland, with Regency reception rooms available for filming and events.",
+      "source_urls": [
+        "https://www.hylandsestate.co.uk/"
+      ],
+      "official_url": "https://www.hylandsestate.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-knole",
+      "name": "Knole",
+      "country": "United Kingdom",
+      "region": "Kent, England",
+      "lat": 51.2726,
+      "lng": 0.1998,
+      "type": "House & apartment",
+      "setting": "Sprawling calendar house near Sevenoaks with medieval and Tudor courtyards, a deer park and largely unaltered seventeenth-century state rooms.",
+      "known_for": "Orlando, Wolf Hall",
+      "source_urls": [
+        "https://www.nationaltrust.org.uk/visit/kent/knole",
+        "https://en.wikipedia.org/wiki/Knole,_Kent"
+      ],
+      "official_url": "https://www.nationaltrust.org.uk/visit/kent/knole",
+      "commission_url": "https://www.kentfilmoffice.co.uk/"
+    },
+    {
+      "id": "uk-landguard-fort",
+      "name": "Landguard Fort",
+      "country": "United Kingdom",
+      "region": "Suffolk, England",
+      "lat": 51.933,
+      "lng": 1.316,
+      "type": "Industrial & derelict",
+      "setting": "Coastal artillery fort at the mouth of the River Orwell near Felixstowe, rebuilt in stages from the seventeenth to the twentieth century with gun casemates and magazines.",
+      "source_urls": [
+        "https://www.landguard.com/"
+      ],
+      "official_url": "https://www.landguard.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-loseley-park",
+      "name": "Loseley Park",
+      "country": "United Kingdom",
+      "region": "Surrey, England",
+      "lat": 51.2115,
+      "lng": -0.6114,
+      "type": "House & apartment",
+      "setting": "Elizabethan mansion near Guildford with panelled state rooms, a walled garden and surrounding parkland, hired for filming.",
+      "known_for": "Bridget Jones's Diary, The Wedding Date",
+      "source_urls": [
+        "https://loseleypark.co.uk/filming/"
+      ],
+      "official_url": "https://loseleypark.co.uk/filming/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-no1-royal-crescent",
+      "name": "No.1 Royal Crescent",
+      "country": "United Kingdom",
+      "region": "Somerset, England",
+      "lat": 51.3862,
+      "lng": -2.3652,
+      "type": "House & apartment",
+      "setting": "End-of-terrace Georgian townhouse on Bath's Royal Crescent, restored and furnished as a museum showing how it looked in the 1700s.",
+      "known_for": "Bridgerton",
+      "source_urls": [
+        "https://no1royalcrescent.org.uk/"
+      ],
+      "official_url": "https://no1royalcrescent.org.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-old-royal-naval-college",
+      "name": "Old Royal Naval College",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.4818,
+      "lng": -0.0066,
+      "type": "Palace & landmark",
+      "setting": "Baroque waterfront complex of colonnaded courts and a domed Painted Hall at Greenwich, hired as a stand-in for period Paris, Victorian London and other settings.",
+      "known_for": "Bridgerton, The Crown, Les Misérables, Thor",
+      "source_urls": [
+        "https://ornc.org/explore-whats-here/filming-location/"
+      ],
+      "official_url": "https://ornc.org/explore-whats-here/filming-location/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-orford-ness",
+      "name": "Orford Ness",
+      "country": "United Kingdom",
+      "region": "Suffolk, England",
+      "lat": 52.085,
+      "lng": 1.565,
+      "type": "Industrial & derelict",
+      "setting": "Shingle spit on the Suffolk coast used for decades as a secret military testing site, with derelict laboratories, pagoda-shaped test buildings and a lighthouse.",
+      "source_urls": [
+        "https://www.nationaltrust.org.uk/visit/suffolk/orford-ness-national-nature-reserve"
+      ],
+      "official_url": "https://www.nationaltrust.org.uk/visit/suffolk/orford-ness-national-nature-reserve",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
       "id": "pinewood-studios",
@@ -1300,6 +3989,253 @@
         "author": "Ajay Tegala",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-portsmouth-historic-dockyard",
+      "name": "Portsmouth Historic Dockyard",
+      "country": "United Kingdom",
+      "region": "Hampshire, England",
+      "lat": 50.8058,
+      "lng": -1.1092,
+      "type": "Transport & infrastructure",
+      "setting": "Working Royal Navy dockyard and heritage site with historic warships, dry docks and Georgian storehouses along Portsmouth Harbour.",
+      "source_urls": [
+        "https://www.historicdockyard.co.uk/"
+      ],
+      "official_url": "https://www.historicdockyard.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-royal-albert-hall",
+      "name": "Royal Albert Hall",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5009,
+      "lng": -0.1774,
+      "type": "Theatre, arena & venue",
+      "setting": "Circular Victorian concert hall with a domed glass and iron roof, tiered galleries and a large stage, available for filming and photography by arrangement.",
+      "known_for": "The Man Who Knew Too Much, The King's Speech",
+      "source_urls": [
+        "https://www.royalalberthall.com/hire-and-facilities/filming-and-photography/",
+        "https://en.wikipedia.org/wiki/Royal_Albert_Hall"
+      ],
+      "official_url": "https://www.royalalberthall.com/hire-and-facilities/filming-and-photography/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-royal-holloway",
+      "name": "Royal Holloway, University of London",
+      "country": "United Kingdom",
+      "region": "Surrey, England",
+      "lat": 51.426,
+      "lng": -0.5622,
+      "type": "Office, school & public building",
+      "setting": "Victorian university campus at Egham centred on the ornate French Renaissance-style Founder's Building, with quadrangles, a chapel and a picture gallery.",
+      "source_urls": [
+        "https://www.royalholloway.ac.uk/"
+      ],
+      "official_url": "https://www.royalholloway.ac.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-shepton-mallet-prison",
+      "name": "Shepton Mallet Prison",
+      "country": "United Kingdom",
+      "region": "Somerset, England",
+      "lat": 51.1907,
+      "lng": -2.5436,
+      "type": "Hospital, prison & institution",
+      "setting": "Former English prison dating to 1610, closed in 2013, with cell wings, exercise yards and a gatehouse now hired as an events and filming venue.",
+      "source_urls": [
+        "https://sheptonmalletprison.com/"
+      ],
+      "official_url": "https://sheptonmalletprison.com/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-snape-maltings",
+      "name": "Snape Maltings",
+      "country": "United Kingdom",
+      "region": "Suffolk, England",
+      "lat": 52.1836,
+      "lng": 1.5039,
+      "type": "Industrial & derelict",
+      "setting": "Former Victorian malting complex on the River Alde, its brick maltings and kilns converted into a concert hall, galleries and shops.",
+      "source_urls": [
+        "https://snapemaltings.co.uk/"
+      ],
+      "official_url": "https://snapemaltings.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-somerset-house",
+      "name": "Somerset House",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5115,
+      "lng": -0.118,
+      "type": "Palace & landmark",
+      "setting": "Neoclassical courtyard building on the Strand with a fountain court and river terrace, hired for events and productions in central London.",
+      "known_for": "The Duchess, Sherlock Holmes",
+      "source_urls": [
+        "https://www.somersethouse.org.uk/venue-hire",
+        "https://en.wikipedia.org/wiki/Somerset_House"
+      ],
+      "official_url": "https://www.somersethouse.org.uk/venue-hire",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-southwold-pier",
+      "name": "Southwold Pier",
+      "country": "United Kingdom",
+      "region": "Suffolk, England",
+      "lat": 52.3247,
+      "lng": 1.6796,
+      "type": "Transport & infrastructure",
+      "setting": "Traditional seaside pier rebuilt in the 2000s on its Edwardian footings, with a pavilion, amusement arcade and end-of-pier walkway over the North Sea.",
+      "source_urls": [
+        "https://southwoldpier.co.uk/"
+      ],
+      "official_url": "https://southwoldpier.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-ss-great-britain",
+      "name": "SS Great Britain",
+      "country": "United Kingdom",
+      "region": "Bristol, England",
+      "lat": 51.4491,
+      "lng": -2.6197,
+      "type": "Transport & infrastructure",
+      "setting": "Preserved Victorian iron-hulled steamship in her original dry dock in Bristol, with restored decks, engine room and dockside museum buildings.",
+      "source_urls": [
+        "https://www.ssgreatbritain.org/"
+      ],
+      "official_url": "https://www.ssgreatbritain.org/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-chatham-historic-dockyard",
+      "name": "The Historic Dockyard Chatham",
+      "country": "United Kingdom",
+      "region": "Kent, England",
+      "lat": 51.4004,
+      "lng": 0.5309,
+      "type": "Transport & infrastructure",
+      "setting": "80-acre former Royal Navy dockyard on the Medway with Georgian ropewalks, covered slips, dry docks and historic ships used as period maritime backdrops.",
+      "known_for": "Call the Midwife, Sherlock Holmes",
+      "source_urls": [
+        "https://thedockyard.co.uk/filming/"
+      ],
+      "official_url": "https://thedockyard.co.uk/filming/",
+      "commission_url": "https://www.kentfilmoffice.co.uk/"
+    },
+    {
+      "id": "uk-old-truman-brewery",
+      "name": "The Old Truman Brewery",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5225,
+      "lng": -0.0723,
+      "type": "Industrial & derelict",
+      "setting": "Former East End brewery complex on Brick Lane with converted vat rooms, yards and warehouse floors hired as event and shoot space.",
+      "source_urls": [
+        "https://www.trumanbrewery.com/"
+      ],
+      "official_url": "https://www.trumanbrewery.com/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-tank-museum-bovington",
+      "name": "The Tank Museum",
+      "country": "United Kingdom",
+      "region": "Dorset, England",
+      "lat": 50.6944,
+      "lng": -2.2409,
+      "type": "Transport & infrastructure",
+      "setting": "Military vehicle museum on the Bovington army camp with several hundred tanks and armoured vehicles, indoor halls and outdoor arena space.",
+      "source_urls": [
+        "https://www.tankmuseum.org/"
+      ],
+      "official_url": "https://www.tankmuseum.org/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-tower-bridge",
+      "name": "Tower Bridge",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5055,
+      "lng": -0.0754,
+      "type": "Transport & infrastructure",
+      "setting": "Bascule and suspension bridge over the Thames with twin Victorian Gothic towers and a glass-floored high-level walkway overlooking the city.",
+      "known_for": "The Mummy Returns, Spider-Man: Far From Home",
+      "source_urls": [
+        "https://www.towerbridge.org.uk/",
+        "https://en.wikipedia.org/wiki/Tower_Bridge"
+      ],
+      "official_url": "https://www.towerbridge.org.uk/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-trinity-buoy-wharf",
+      "name": "Trinity Buoy Wharf",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5093,
+      "lng": 0.0083,
+      "type": "Industrial & derelict",
+      "setting": "Former lighthouse testing wharf at the mouth of the River Lea, with a lightship, converted shipping-container studios and dockside sheds.",
+      "source_urls": [
+        "https://trinitybuoywharf.com/"
+      ],
+      "official_url": "https://trinitybuoywharf.com/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-two-temple-place",
+      "name": "Two Temple Place",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5117,
+      "lng": -0.1113,
+      "type": "House & apartment",
+      "setting": "Neo-Gothic mansion built for William Waldorf Astor beside the Thames, with a galleried great hall and carved wood interiors offered for filming.",
+      "source_urls": [
+        "https://twotempleplace.org/hire/filming/"
+      ],
+      "official_url": "https://twotempleplace.org/hire/filming/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-wiltons-music-hall",
+      "name": "Wilton's Music Hall",
+      "country": "United Kingdom",
+      "region": "Greater London, England",
+      "lat": 51.5107,
+      "lng": -0.0654,
+      "type": "Theatre, arena & venue",
+      "setting": "Surviving Victorian music hall in Wapping with a barley-twist column auditorium and worn brick backstage areas, hired for filming and photography.",
+      "source_urls": [
+        "https://wiltons.org.uk/hire/filming/"
+      ],
+      "official_url": "https://wiltons.org.uk/hire/filming/",
+      "commission_url": "https://filmlondon.org.uk/"
+    },
+    {
+      "id": "uk-wrest-park",
+      "name": "Wrest Park",
+      "country": "United Kingdom",
+      "region": "Bedfordshire, England",
+      "lat": 52.0642,
+      "lng": -0.4267,
+      "type": "House & apartment",
+      "setting": "Country house near Silsoe built in French chateau style, set within formal gardens with canals, pavilions and woodland walks.",
+      "source_urls": [
+        "https://www.english-heritage.org.uk/visit/places/wrest-park/"
+      ],
+      "official_url": "https://www.english-heritage.org.uk/visit/places/wrest-park/",
+      "commission_url": "https://britishfilmcommission.org.uk/"
     }
   ]
 }
