@@ -12123,6 +12123,23 @@
       }
     },
     {
+      "id": "pt-adega-mayor",
+      "name": "Adega Mayor",
+      "country": "Portugal",
+      "region": "Alentejo (Campo Maior)",
+      "lat": 39.0502,
+      "lng": -7.0941,
+      "type": "Modern architecture",
+      "setting": "A contemporary winery building in Campo Maior, Alentejo, offering vineyard tours and tastings alongside its architecture, listed in Portugal Film Commission's location database.",
+      "source_urls": [
+        "https://www.adegamayor.pt",
+        "https://portugalfilmcommission.com/locais-de-filmagem/adega-mayor/"
+      ],
+      "url": "https://portugalfilmcommission.com/locais-de-filmagem/adega-mayor/",
+      "official_url": "https://www.adegamayor.pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "alfama-lisbon",
       "name": "Alfama",
       "country": "Portugal",
@@ -12163,6 +12180,21 @@
         "author": "GabrielStella",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pt-armazens-chiado",
+      "name": "Armazéns do Chiado",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.711,
+      "lng": -9.1394,
+      "type": "Bar, restaurant & shop",
+      "setting": "A rebuilt 19th century department store in Lisbon's Chiado district, now a shopping centre behind its restored historic facade after the 1988 Chiado fire.",
+      "source_urls": [
+        "https://www.armazensdochiado.com"
+      ],
+      "official_url": "https://www.armazensdochiado.com",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-barbadinhos-pumping-station",
@@ -12254,6 +12286,37 @@
       }
     },
     {
+      "id": "pt-castelo-beja",
+      "name": "Castelo de Beja",
+      "country": "Portugal",
+      "region": "Alentejo (Beja)",
+      "lat": 38.0172,
+      "lng": -7.8653,
+      "type": "Castle & estate",
+      "setting": "A medieval castle with a tall keep in the town of Beja, southern Alentejo, catalogued among Portugal Film Commission's castle locations.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/locais-de-filmagem/castelo-de-beja/"
+      ],
+      "url": "https://portugalfilmcommission.com/locais-de-filmagem/castelo-de-beja/",
+      "official_url": "https://portugalfilmcommission.com/locais-de-filmagem/castelo-de-beja/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-cpf-porto",
+      "name": "Centro Português de Fotografia",
+      "country": "Portugal",
+      "region": "Porto",
+      "lat": 41.1447,
+      "lng": -8.6159,
+      "type": "Hospital, prison & institution",
+      "setting": "Porto's former prison and law court building on Largo Amor de Perdição, now the national photography museum and archive, with its original cell wings preserved.",
+      "source_urls": [
+        "https://cpf.pt"
+      ],
+      "official_url": "https://cpf.pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "convento-de-cristo-tomar",
       "name": "Convento de Cristo",
       "country": "Portugal",
@@ -12290,6 +12353,21 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-estadio-dragao",
+      "name": "Estádio do Dragão",
+      "country": "Portugal",
+      "region": "Porto",
+      "lat": 41.1618,
+      "lng": -8.5837,
+      "type": "Theatre, arena & venue",
+      "setting": "FC Porto's stadium in Campanhã, opened in 2003 with about 50,000 seats, offering pitch, stands, museum and hospitality areas.",
+      "source_urls": [
+        "https://www.fcporto.pt"
+      ],
+      "official_url": "https://www.fcporto.pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-evora-historic-centre",
       "name": "Evora Historic Centre",
       "country": "Portugal",
@@ -12303,6 +12381,21 @@
       ],
       "official_url": "https://www.cm-evora.pt/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-braco-de-prata",
+      "name": "Fábrica Braço de Prata",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7438,
+      "lng": -9.1012,
+      "type": "Industrial & derelict",
+      "setting": "A former military ammunition factory in Marvila, Lisbon, converted into a cultural complex with a theatre, bar and exhibition halls across its old industrial buildings.",
+      "source_urls": [
+        "https://www.bracodeprata.com"
+      ],
+      "official_url": "https://www.bracodeprata.com",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-farol-dos-capelinhos",
@@ -12320,6 +12413,22 @@
       "url": "https://portugalfilmcommission.com/en/location/farol-dos-capelinhos/",
       "official_url": "https://portugalfilmcommission.com/en/location/farol-dos-capelinhos/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-herdade-freixo",
+      "name": "Herdade do Freixo",
+      "country": "Portugal",
+      "region": "Alentejo (Redondo)",
+      "lat": 38.6847,
+      "lng": -7.6752,
+      "type": "Modern architecture",
+      "setting": "A rolling Alentejo wine estate near Redondo whose modern winery building won ArchDaily's Building of the Year in 2018, set among vineyards with wide viewpoints.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/locais-de-filmagem/herdade-do-freixo/"
+      ],
+      "url": "https://portugalfilmcommission.com/locais-de-filmagem/herdade-do-freixo/",
+      "official_url": "https://portugalfilmcommission.com/locais-de-filmagem/herdade-do-freixo/",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-lousal-mining-museum",
@@ -12392,6 +12501,22 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-mosteiro-tibaes",
+      "name": "Mosteiro de São Martinho de Tibães",
+      "country": "Portugal",
+      "region": "Norte (Braga)",
+      "lat": 41.5554,
+      "lng": -8.4788,
+      "type": "Church & monastery",
+      "setting": "A Benedictine monastery complex near Braga with a baroque church, cloisters and gardens spanning eight centuries of building history, catalogued as a Portugal Film Commission location.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/locais-de-filmagem/mosteiro-de-tibaes/"
+      ],
+      "url": "https://portugalfilmcommission.com/locais-de-filmagem/mosteiro-de-tibaes/",
+      "official_url": "https://portugalfilmcommission.com/locais-de-filmagem/mosteiro-de-tibaes/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-museu-nacional-ferroviario",
       "name": "Museu Nacional Ferroviario",
       "country": "Portugal",
@@ -12409,6 +12534,21 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-piscina-mares",
+      "name": "Piscina das Marés",
+      "country": "Portugal",
+      "region": "Norte (Matosinhos)",
+      "lat": 41.1931,
+      "lng": -8.7073,
+      "type": "Theatre, arena & venue",
+      "setting": "Álvaro Siza's tidal swimming pools built into the rocks at Leça da Palmeira, Matosinhos, using seawater pools framed in board marked concrete.",
+      "source_urls": [
+        "https://www.cm-matosinhos.pt"
+      ],
+      "official_url": "https://www.cm-matosinhos.pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-portalegre-tapestry-museum",
       "name": "Portalegre Tapestry Museum (Guy Fino)",
       "country": "Portugal",
@@ -12424,6 +12564,21 @@
       "url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
       "official_url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-porto-leixoes",
+      "name": "Porto de Leixões",
+      "country": "Portugal",
+      "region": "Norte (Matosinhos)",
+      "lat": 41.1826,
+      "lng": -8.7063,
+      "type": "Transport & infrastructure",
+      "setting": "The deep water port of Leixões between Matosinhos and Leça da Palmeira, with container terminals, a cruise terminal and breakwaters managed by port authority APDL.",
+      "source_urls": [
+        "https://www.apdl.pt"
+      ],
+      "official_url": "https://www.apdl.pt",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "praia-do-guincho",
@@ -12478,6 +12633,21 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-time-out-market",
+      "name": "Time Out Market Lisboa",
+      "country": "Portugal",
+      "region": "Lisbon",
+      "lat": 38.7075,
+      "lng": -9.1467,
+      "type": "Bar, restaurant & shop",
+      "setting": "The restored 1892 Mercado da Ribeira market hall by Cais do Sodré in Lisbon, now a large food hall with dozens of kitchens and counters under Time Out's management.",
+      "source_urls": [
+        "https://www.timeout.pt/time-out-market-lisboa/pt"
+      ],
+      "official_url": "https://www.timeout.pt/time-out-market-lisboa/pt",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-universidade-de-coimbra",
       "name": "University of Coimbra (Paco das Escolas)",
       "country": "Portugal",
@@ -12493,6 +12663,23 @@
       "url": "https://portugalfilmcommission.com/en/location/universidade-de-coimbra/",
       "official_url": "https://visit.uc.pt/en/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "es-barajas-airport",
+      "name": "Adolfo Suárez Madrid-Barajas Airport",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4952,
+      "lng": -3.5734,
+      "type": "Transport & infrastructure",
+      "setting": "Madrid's main international airport, operated by Aena, with passenger terminals and airside areas listed under transport locations in the Madrid Film Office catalogue.",
+      "source_urls": [
+        "https://www.aena.es/en/adolfo-suarez-madrid-barajas.html",
+        "https://madridfilmoffice.com/localizaciones/"
+      ],
+      "url": "https://madridfilmoffice.com/localizaciones/",
+      "official_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas.html",
+      "commission_url": "https://madridfilmoffice.com"
     },
     {
       "id": "es-almaden-mining-park",
@@ -12708,6 +12895,55 @@
       }
     },
     {
+      "id": "es-casco-vallecas",
+      "name": "Casco Histórico y Mercado de Villa de Vallecas",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.3864,
+      "lng": -3.6483,
+      "type": "Historic town & street",
+      "setting": "The old quarter of Villa de Vallecas in southeast Madrid, with its historic square and adjoining municipal market, catalogued by Madrid Film Office for street and market scenes.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/casco-historico-y-mercado-villa-de-vallecas/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/casco-historico-y-mercado-villa-de-vallecas/",
+      "official_url": "https://madridfilmoffice.com/localizacion/casco-historico-y-mercado-villa-de-vallecas/",
+      "commission_url": "https://madridfilmoffice.com"
+    },
+    {
+      "id": "es-castillo-almodovar",
+      "name": "Castillo de Almodóvar del Río",
+      "country": "Spain",
+      "region": "Córdoba, Andalusia",
+      "lat": 37.8074,
+      "lng": -5.0238,
+      "type": "Castle & estate",
+      "setting": "A restored medieval hilltop castle above the Guadalquivir in Almodóvar del Río, listed in Andalucía Film Commission's network of singular private venues.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacionsingular/castillo-de-almodovar/"
+      ],
+      "url": "https://andaluciafilm.com/localizacionsingular/castillo-de-almodovar/",
+      "official_url": "https://andaluciafilm.com/localizacionsingular/castillo-de-almodovar/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
+      "id": "es-cc-arturo-soria",
+      "name": "Centro Comercial Arturo Soria Plaza",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.45,
+      "lng": -3.6508,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 7,000 square metre shopping centre in Ciudad Lineal with two retail floors, renovated in 2019, listed on the Madrid Film Office catalogue with production offices and loading access.",
+      "facilities": "Production offices, dressing rooms, catering space, storage, electric hookups, loading dock, parking",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/centro-comercial-arturo-soria-plaza/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/centro-comercial-arturo-soria-plaza/",
+      "official_url": "https://madridfilmoffice.com/localizacion/centro-comercial-arturo-soria-plaza/",
+      "commission_url": "https://madridfilmoffice.com"
+    },
+    {
       "id": "es-city-of-arts-and-sciences",
       "name": "City of Arts and Sciences",
       "country": "Spain",
@@ -12811,6 +13047,23 @@
       }
     },
     {
+      "id": "es-ciudad-pegaso",
+      "name": "Ciudad Pegaso",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4471,
+      "lng": -3.5955,
+      "type": "House & apartment",
+      "setting": "A 1955 workers housing estate in San Blas-Canillejas with low rise apartment blocks, single family homes, a parish church and shared sports ground, catalogued by Madrid Film Office.",
+      "suitability": "Residential streets and building exteriors; filming permit issued through Madrid's Negociado de Autorizaciones de Rodajes.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/ciudad-pegaso/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/ciudad-pegaso/",
+      "official_url": "https://madridfilmoffice.com/localizacion/ciudad-pegaso/",
+      "commission_url": "https://madridfilmoffice.com"
+    },
+    {
       "id": "es-complutense-university-madrid",
       "name": "Complutense University of Madrid",
       "country": "Spain",
@@ -12875,6 +13128,38 @@
       "commission_url": "https://www.shootinginspain.info/"
     },
     {
+      "id": "es-mestalla",
+      "name": "Estadio Mestalla",
+      "country": "Spain",
+      "region": "Valencia, Valencian Community",
+      "lat": 39.4745,
+      "lng": -0.3582,
+      "type": "Theatre, arena & venue",
+      "setting": "Valencia CF's stadium near the city centre, one of Spain's older large football grounds, with pitch, stands and hospitality areas available through the club.",
+      "source_urls": [
+        "https://www.valenciacf.com"
+      ],
+      "official_url": "https://www.valenciacf.com",
+      "commission_url": "https://www.culturaydeporte.gob.es"
+    },
+    {
+      "id": "es-sanchez-pizjuan",
+      "name": "Estadio Ramón Sánchez-Pizjuán",
+      "country": "Spain",
+      "region": "Seville, Andalusia",
+      "lat": 37.3841,
+      "lng": -5.9706,
+      "type": "Theatre, arena & venue",
+      "setting": "Sevilla FC's stadium in Nervión, built in 1958, with pitch, stands, dressing rooms, press areas and an adjoining sports complex of 13 pitches offered for filming.",
+      "capacity": 43500,
+      "source_urls": [
+        "https://andaluciafilm.com/localizacionsingular/estadio-ramon-sanchez-pizjuan/"
+      ],
+      "url": "https://andaluciafilm.com/localizacionsingular/estadio-ramon-sanchez-pizjuan/",
+      "official_url": "https://andaluciafilm.com/localizacionsingular/estadio-ramon-sanchez-pizjuan/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-euskalduna-palace",
       "name": "Euskalduna Palace",
       "country": "Spain",
@@ -12910,6 +13195,38 @@
         "author": "diveuniversefest",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "es-fira-barcelona",
+      "name": "Fira de Barcelona (Montjuïc venue)",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3745,
+      "lng": 2.1503,
+      "type": "Theatre, arena & venue",
+      "setting": "Barcelona's historic trade fair complex on Montjuïc by Plaça d'Espanya, with several exhibition halls and a central avenue used for conventions, launches and large events.",
+      "source_urls": [
+        "https://www.firabarcelona.com"
+      ],
+      "official_url": "https://www.firabarcelona.com",
+      "commission_url": "https://www.bcncatfilmcommission.com"
+    },
+    {
+      "id": "es-fuerteventura-airport",
+      "name": "Fuerteventura Airport",
+      "country": "Spain",
+      "region": "Fuerteventura, Canary Islands",
+      "lat": 28.4471,
+      "lng": -13.8661,
+      "type": "Transport & infrastructure",
+      "setting": "The island airport of Fuerteventura, operated by Aena, catalogued by Canary Islands Film Commission under its airport locations.",
+      "source_urls": [
+        "https://www.aena.es/en/fuerteventura.html",
+        "https://canaryislandsfilm.com/portfolio/aeropuertos/"
+      ],
+      "url": "https://canaryislandsfilm.com/portfolio/aeropuertos/",
+      "official_url": "https://www.aena.es/en/fuerteventura.html",
+      "commission_url": "https://www.canaryislandsfilm.com"
     },
     {
       "id": "es-gran-teatre-del-liceu",
@@ -12951,6 +13268,54 @@
         "author": "Thomas Ledl",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-hotel-alfonso-xiii",
+      "name": "Hotel Alfonso XIII",
+      "country": "Spain",
+      "region": "Seville, Andalusia",
+      "lat": 37.3815,
+      "lng": -5.9927,
+      "type": "Hotel & interiors",
+      "setting": "A 1928 regionalista hotel built for the Ibero-American Exposition in Seville, with mudejar and baroque details, columned courtyards and a tower, listed in Andalucía Film Commission's network of singular venues.",
+      "known_for": "The Crown, Berlin, Lawrence of Arabia",
+      "facilities": "Standard electrical grid, production offices, limited technical parking, adjacent gardens",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacionsingular/hotel-alfonso-xiii/"
+      ],
+      "url": "https://andaluciafilm.com/localizacionsingular/hotel-alfonso-xiii/",
+      "official_url": "https://andaluciafilm.com/localizacionsingular/hotel-alfonso-xiii/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
+      "id": "es-la-model",
+      "name": "La Model",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3784,
+      "lng": 2.1522,
+      "type": "Hospital, prison & institution",
+      "setting": "Barcelona's former Model prison in the Eixample, closed in 2017 after 113 years, now a memorial space with courtyard tours ahead of redevelopment into public facilities and housing.",
+      "source_urls": [
+        "https://www.lamodel.barcelona"
+      ],
+      "official_url": "https://www.lamodel.barcelona",
+      "commission_url": "https://www.bcncatfilmcommission.com"
+    },
+    {
+      "id": "es-la-termica",
+      "name": "La Térmica",
+      "country": "Spain",
+      "region": "Málaga, Andalusia",
+      "lat": 36.6895,
+      "lng": -4.4458,
+      "type": "Office, school & public building",
+      "setting": "A provincial council cultural centre in Málaga with halls, a courtyard and exhibition spaces used for screenings and events, available for external space bookings.",
+      "source_urls": [
+        "https://latermicamalaga.com"
+      ],
+      "official_url": "https://latermicamalaga.com",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-las-medulas",
@@ -13019,6 +13384,36 @@
       }
     },
     {
+      "id": "es-mercado-colon",
+      "name": "Mercado de Colón",
+      "country": "Spain",
+      "region": "Valencia, Valencian Community",
+      "lat": 39.4693,
+      "lng": -0.3682,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1916 modernist market hall in Valencia's Eixample designed by Francisco Mora, its original iron and glass structure now housing cafes and restaurants.",
+      "source_urls": [
+        "https://www.mercadocolon.es"
+      ],
+      "official_url": "https://www.mercadocolon.es",
+      "commission_url": "https://www.culturaydeporte.gob.es"
+    },
+    {
+      "id": "es-mercado-ribera",
+      "name": "Mercado de la Ribera",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.2556,
+      "lng": -2.9243,
+      "type": "Bar, restaurant & shop",
+      "setting": "A large Art Deco covered market on the Nervión riverbank in Bilbao's old town, with several trading floors of food stalls.",
+      "source_urls": [
+        "https://www.mercadodelaribera.biz"
+      ],
+      "official_url": "https://www.mercadodelaribera.biz",
+      "commission_url": "https://www.culturaydeporte.gob.es"
+    },
+    {
       "id": "es-mercado-de-san-miguel",
       "name": "Mercado de San Miguel",
       "country": "Spain",
@@ -13039,6 +13434,24 @@
         "author": "Fernando",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-mercado-vallehermoso",
+      "name": "Mercado Municipal de Vallehermoso",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.4342,
+      "lng": -3.7086,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1930 municipal market hall in Chamberí with a coloured corner facade, its stalls and storage areas offered for filming outside main trading hours.",
+      "facilities": "Vehicle access, restricted loading hours, catering area, storage space, restrooms",
+      "suitability": "Best available Sunday evenings and Mondays; other schedules negotiable with the market.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/mercado-municipal-de-vallehermoso/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/mercado-municipal-de-vallehermoso/",
+      "official_url": "https://madridfilmoffice.com/localizacion/mercado-municipal-de-vallehermoso/",
+      "commission_url": "https://madridfilmoffice.com"
     },
     {
       "id": "es-mini-hollywood-oasys",
@@ -13099,6 +13512,22 @@
       "commission_url": "https://www.shootinginspain.info/"
     },
     {
+      "id": "es-palacio-domecq",
+      "name": "Palacio Domecq",
+      "country": "Spain",
+      "region": "Cádiz, Andalusia",
+      "lat": 36.6872,
+      "lng": -6.1367,
+      "type": "Palace & landmark",
+      "setting": "A historic sherry house palace in Jerez de la Frontera, listed in Andalucía Film Commission's network of singular private venues.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacionsingular/palacio-domecq/"
+      ],
+      "url": "https://andaluciafilm.com/localizacionsingular/palacio-domecq/",
+      "official_url": "https://andaluciafilm.com/localizacionsingular/palacio-domecq/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-palau-de-la-musica-catalana",
       "name": "Palau de la Musica Catalana",
       "country": "Spain",
@@ -13116,6 +13545,21 @@
       ],
       "official_url": "https://www.palaumusica.cat/en",
       "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
+    },
+    {
+      "id": "es-palau-sant-jordi",
+      "name": "Palau Sant Jordi",
+      "country": "Spain",
+      "region": "Barcelona, Catalonia",
+      "lat": 41.3635,
+      "lng": 2.1526,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor arena on Montjuïc designed by Arata Isozaki for the 1992 Olympics, used for concerts, sports events and large productions.",
+      "source_urls": [
+        "https://www.palausantjordi.barcelona"
+      ],
+      "official_url": "https://www.palausantjordi.barcelona",
+      "commission_url": "https://www.bcncatfilmcommission.com"
     },
     {
       "id": "es-playa-de-las-catedrales",
@@ -13152,6 +13596,53 @@
       ],
       "official_url": "https://www.las-ventas.com/",
       "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-poblado-san-cristobal",
+      "name": "Poblado Dirigido de San Cristóbal de los Ángeles",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.3569,
+      "lng": -3.6932,
+      "type": "House & apartment",
+      "setting": "A 1959 social housing scheme in Villaverde built as open superblocks around courtyards, with two 12 and 14 storey towers and a surviving brick factory chimney, listed by Madrid Film Office.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/poblado-dirigido-de-san-cristobal-de-los-angeles/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/poblado-dirigido-de-san-cristobal-de-los-angeles/",
+      "official_url": "https://madridfilmoffice.com/localizacion/poblado-dirigido-de-san-cristobal-de-los-angeles/",
+      "commission_url": "https://madridfilmoffice.com"
+    },
+    {
+      "id": "es-puerto-bilbao",
+      "name": "Puerto de Bilbao",
+      "country": "Spain",
+      "region": "Biscay, Basque Country",
+      "lat": 43.332,
+      "lng": -3.0335,
+      "type": "Transport & infrastructure",
+      "setting": "The port of Bilbao at the mouth of the Nervión estuary, with container terminals, quaysides and breakwaters managed by the Bilbao Port Authority.",
+      "source_urls": [
+        "https://www.bilbaoport.eus"
+      ],
+      "official_url": "https://www.bilbaoport.eus",
+      "commission_url": "https://www.culturaydeporte.gob.es"
+    },
+    {
+      "id": "es-puerto-las-palmas",
+      "name": "Puerto de Las Palmas",
+      "country": "Spain",
+      "region": "Gran Canaria, Canary Islands",
+      "lat": 28.1411,
+      "lng": -15.426,
+      "type": "Transport & infrastructure",
+      "setting": "The commercial and passenger port of Las Palmas de Gran Canaria, with quaysides, terminal buildings and the Santa Catalina wharf, catalogued by Canary Islands Film Commission's ports category.",
+      "source_urls": [
+        "https://canaryislandsfilm.com/portfolio/puertos/"
+      ],
+      "url": "https://canaryislandsfilm.com/portfolio/puertos/",
+      "official_url": "https://canaryislandsfilm.com/portfolio/puertos/",
+      "commission_url": "https://www.canaryislandsfilm.com"
     },
     {
       "id": "real-alcazar-seville",
@@ -13192,6 +13683,21 @@
         "author": "David Perez",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "es-riyadh-air-metropolitano",
+      "name": "Riyadh Air Metropolitano",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.436,
+      "lng": -3.5997,
+      "type": "Theatre, arena & venue",
+      "setting": "Atlético Madrid's stadium in San Blas-Canillejas, built with conference and event functions alongside football, offering outdoor areas for private functions.",
+      "source_urls": [
+        "https://www.atleticodemadrid.com/riyadhairmetropolitano"
+      ],
+      "official_url": "https://www.atleticodemadrid.com/riyadhairmetropolitano",
+      "commission_url": "https://madridfilmoffice.com"
     },
     {
       "id": "es-royal-tapestry-factory",
@@ -13336,6 +13842,24 @@
       }
     },
     {
+      "id": "es-tuneles-m30",
+      "name": "Túneles M-30",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.3932,
+      "lng": -3.6777,
+      "type": "Transport & infrastructure",
+      "setting": "Underground service galleries and technical chambers within Madrid's M-30 ring road tunnels, reaching about 60 metres deep, made available by the road operator for corridor and underground scenes.",
+      "known_for": "Perverso, 30 Monedas, ¡García!, Intergalactic",
+      "logistics": "Access via Calle Méndez Álvaro 95; arranged through the tunnel operator Madrid Calle 30.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/tuneles-m30/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/tuneles-m30/",
+      "official_url": "https://madridfilmoffice.com/localizacion/tuneles-m30/",
+      "commission_url": "https://madridfilmoffice.com"
+    },
+    {
       "id": "es-university-of-alcala",
       "name": "University of Alcala",
       "country": "Spain",
@@ -13413,6 +13937,22 @@
         "author": "Javier Mediavilla Ezquibela Esta imagen tiene una licencia libre (que puedes ver abajo), pero si la usas fuera de los pr",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "es-zona-industrial-vallecas",
+      "name": "Zona Industrial Villa de Vallecas",
+      "country": "Spain",
+      "region": "Madrid",
+      "lat": 40.374,
+      "lng": -3.6122,
+      "type": "Industrial & derelict",
+      "setting": "A small industrial pocket of Villa de Vallecas with narrow streets, warehouses and low workshop buildings on distinctive corner plots, catalogued by Madrid Film Office.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/zona-industrial-villa-de-vallecas/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/zona-industrial-villa-de-vallecas/",
+      "official_url": "https://madridfilmoffice.com/localizacion/zona-industrial-villa-de-vallecas/",
+      "commission_url": "https://madridfilmoffice.com"
     },
     {
       "id": "se-abisko-national-park",
