@@ -50,6 +50,14 @@ const BAD_FILE = /(^|[ _-])(map|karte|mapa|carte|locator|location|coat[ _]of[ _]
 const WEAK = new Set(["the", "of", "and", "de", "la", "le", "el", "du", "des", "van", "der", "die", "das", "il", "in", "at", "on", "a", "an", "old", "new", "national", "royal", "museum", "centre", "center", "park", "house", "hotel", "station", "theatre", "theater", "castle", "church", "city", "hall", "studio", "studios", "fort", "mine", "bridge", "tower", "factory", "works", "market", "school", "university", "hospital", "prison"]);
 const keyWords = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter((w) => w.length > 2 && !WEAK.has(w));
 
+// Wikipedia van het land zelf: veel kleinere locaties hebben geen Engels
+// artikel, maar wel een Duits, Frans, Tsjechisch of Hongaars.
+const WIKI = {
+  Austria: "de", Germany: "de", Switzerland: "de", France: "fr", Belgium: "nl", Netherlands: "nl",
+  Italy: "it", Spain: "es", Portugal: "pt", Poland: "pl", "Czech Republic": "cs", Hungary: "hu",
+  Croatia: "hr", Greece: "el", Denmark: "da", Sweden: "sv", Norway: "no", Finland: "fi", Iceland: "is",
+};
+
 // Zoek het Wikipedia-artikel dat bij deze plek hoort. Twee eisen tegen een
 // verkeerde foto: de coördinaten van het artikel liggen dicht bij die van de
 // locatie, en de titel deelt een kenmerkend woord met de naam (of het artikel
@@ -58,8 +66,13 @@ const findFile = async (loc) => {
   const want = keyWords(loc.name);
   // Woorden die alleen de plaats aanduiden tellen niet als bewijs.
   const place = new Set(keyWords(`${loc.region} ${loc.country}`));
-  for (const q of [`${loc.name} ${loc.region}`, `${loc.name} ${loc.country}`, loc.name]) {
-    const j = await api("en.wikipedia.org", {
+  const hosts = ["en.wikipedia.org"];
+  const lang = WIKI[loc.country];
+  if (lang) hosts.push(`${lang}.wikipedia.org`);
+  const queries = [];
+  for (const host of hosts) for (const q of [`${loc.name} ${loc.region}`, `${loc.name} ${loc.country}`, loc.name]) queries.push([host, q]);
+  for (const [host, q] of queries) {
+    const j = await api(host, {
       action: "query", generator: "search", gsrsearch: q, gsrlimit: "5",
       prop: "coordinates|pageprops", ppprop: "page_image_free",
     });
