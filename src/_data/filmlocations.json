@@ -3582,7 +3582,13 @@
       ],
       "url": "https://filmzagreb.hr/product/museum-arts-crafts/",
       "official_url": "https://www.muo.hr/",
-      "commission_url": "https://havc.hr/"
+      "commission_url": "https://havc.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Arts_and_Crafts_Museum_in_Zagreb_03.jpg/960px-Arts_and_Crafts_Museum_in_Zagreb_03.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Arts_and_Crafts_Museum_in_Zagreb_03.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-nsk-zagreb",
@@ -4076,7 +4082,13 @@
       ],
       "url": "https://filmzagreb.hr/product/autobusni-kolodvor/",
       "official_url": "https://filmzagreb.hr/product/autobusni-kolodvor/",
-      "commission_url": "https://havc.hr/"
+      "commission_url": "https://havc.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Zagreb_Main_Bus_Station.jpg/960px-Zagreb_Main_Bus_Station.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zagreb_Main_Bus_Station.jpg",
+        "author": "Suradnik13",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hr-zagreb-faculty-of-law",
@@ -4218,7 +4230,13 @@
       ],
       "url": "https://brnofilm.cz/lokace/az-tower/",
       "official_url": "https://brnofilm.cz/lokace/az-tower/",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Brno_Montage_IV.png/960px-Brno_Montage_IV.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Brno_Montage_IV.png",
+        "author": "Brno-Freiheitsplatz2.jpg: SchiDD Brno_Katedrála_sv._Petra_a_Pavla_(St.Peter_and_St.Paul_Cathedral).jpg: JRodSilva Brno-L",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "barrandov-studios",
@@ -5229,7 +5247,13 @@
       ],
       "url": "https://filmcommission.gov.cz/lokace-mesice-letiste-v-pardubicich-se-otevira-filmarum/",
       "official_url": "https://www.airport-pardubice.cz",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Leti%C5%A1te_pardubice_nov%C3%BD_termin%C3%A1l_2018.jpg/960px-Leti%C5%A1te_pardubice_nov%C3%BD_termin%C3%A1l_2018.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Leti%C5%A1te_pardubice_nov%C3%BD_termin%C3%A1l_2018.jpg",
+        "author": "MafioSSi7",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-pardubice-hospital",
@@ -5829,7 +5853,13 @@
       ],
       "url": "https://brnofilm.cz/lokace/zbrojovka/",
       "official_url": "https://brnofilm.cz/lokace/zbrojovka/",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Brno%2C_%C5%98e%C4%8Dkovice%2C_depozit%C3%A1%C5%99_TMB%2C_DOD_2013%2C_traktor_s_p%C5%99%C3%ADv%C4%9Bsem_%2802%29.jpg/960px-Brno%2C_%C5%98e%C4%8Dkovice%2C_depozit%C3%A1%C5%99_TMB%2C_DOD_2013%2C_traktor_s_p%C5%99%C3%ADv%C4%9Bsem_%2802%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Brno,_%C5%98e%C4%8Dkovice,_depozit%C3%A1%C5%99_TMB,_DOD_2013,_traktor_s_p%C5%99%C3%ADv%C4%9Bsem_(02).jpg",
+        "author": "Harold",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "cz-zlin-factory-complex",
@@ -5878,7 +5908,13 @@
         "https://en.wikipedia.org/wiki/Bella_Center"
       ],
       "official_url": "https://www.bellacenter.dk/en",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/BellaCenterStation.jpg/960px-BellaCenterStation.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:BellaCenterStation.jpg",
+        "author": "Strot",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "dk-bornholms-lufthavn",
@@ -5947,7 +5983,13 @@
         "https://www.cirkusbygningen.dk"
       ],
       "official_url": "https://www.cirkusbygningen.dk",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/71/Copenhagen-Cirkusbygningen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Copenhagen-Cirkusbygningen.jpg",
+        "author": "Kåre Thor Olsen",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "dk-copenhagen-city-hall",
@@ -5964,7 +6006,13 @@
         "https://en.wikipedia.org/wiki/Copenhagen_City_Hall"
       ],
       "official_url": "https://www.kk.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Copenhagen_aerial_view_by_night.jpg/960px-Copenhagen_aerial_view_by_night.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Copenhagen_aerial_view_by_night.jpg",
+        "author": "Bill Ebbesen",
+        "license": "Public domain"
+      }
     },
     {
       "id": "dk-politigarden",
@@ -6036,7 +6084,13 @@
         "https://en.wikipedia.org/wiki/DR_Byen"
       ],
       "official_url": "https://www.dr.dk/om-dr",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DR_Byen_Station_%C3%98restads_Boulevard.JPG/960px-DR_Byen_Station_%C3%98restads_Boulevard.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:DR_Byen_Station_%C3%98restads_Boulevard.JPG",
+        "author": "Froztbyte",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "dk-dr-koncerthuset",
@@ -6145,7 +6199,13 @@
         "https://godsbanen.dk/en/"
       ],
       "official_url": "https://godsbanen.dk/en/",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/%C3%85rhus_Godsbaneg%C3%A5rd_%28hovedbygning%29.jpg/960px-%C3%85rhus_Godsbaneg%C3%A5rd_%28hovedbygning%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:%C3%85rhus_Godsbaneg%C3%A5rd_(hovedbygning).jpg",
+        "author": "RhinoMind",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "dk-hc-andersens-hus",
@@ -12679,6 +12739,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-adria-palota",
+      "name": "Adria Palota",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5048,
+      "lng": 19.0494,
+      "type": "Palace & landmark",
+      "setting": "An 1902 neo-Baroque office palace on Szabadság tér, built for a shipping company by architect Artúr Meinig, now vacant and decaying behind a marble staircase and Adriatic-themed frescoes.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-akvarium-klub",
       "name": "Akvarium Klub",
       "country": "Hungary",
@@ -12774,6 +12850,24 @@
       ],
       "official_url": "https://piaconline.hu",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-budapest-congress-centre",
+      "name": "Budapest Congress Centre",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4885,
+      "lng": 19.0223,
+      "type": "Theatre, arena & venue",
+      "setting": "A conference and exhibition complex in the Buda Hills attached to a four-star hotel, with a main auditorium, 20 further meeting rooms and up to 4,000 square metres of exhibition space.",
+      "capacity": 2000,
+      "facilities": "20 multifunctional rooms, up to 4,000 sqm exhibition space, catering, AV support, adjoining 319-room hotel",
+      "suitability": "Congresses, gala dinners for up to 900 guests, exhibitions and corporate events",
+      "source_urls": [
+        "https://www.bcc.hu"
+      ],
+      "official_url": "https://www.bcc.hu",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-keleti-station",
@@ -13026,6 +13120,21 @@
       }
     },
     {
+      "id": "hu-fovarosi-nagycirkusz",
+      "name": "Fővárosi Nagycirkusz",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5194,
+      "lng": 19.081,
+      "type": "Theatre, arena & venue",
+      "setting": "Hungary's permanent state circus building beside Városliget park and the zoo, a purpose-built circus hall used for shows and private bookings such as birthday events.",
+      "source_urls": [
+        "https://fovarosinagycirkusz.hu"
+      ],
+      "official_url": "https://fovarosinagycirkusz.hu",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-gellert-baths",
       "name": "Gellert Baths",
       "country": "Hungary",
@@ -13059,6 +13168,22 @@
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.gerbeaud.hu/en/",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-globus-konzervgyar",
+      "name": "Globus Konzervgyár, Kőbánya",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4829,
+      "lng": 19.1557,
+      "type": "Industrial & derelict",
+      "setting": "A canning factory in the Kőbánya district whose castellated brick exterior gives it the look of an old fortress rather than a working food plant.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-godollo-palace",
@@ -13125,6 +13250,23 @@
       ],
       "official_url": "https://groupamaarena.com",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-gundel",
+      "name": "Gundel Restaurant",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5174,
+      "lng": 19.0771,
+      "type": "Bar, restaurant & shop",
+      "setting": "A landmark Hungarian restaurant in City Park operating since the 1890s, its upstairs rooms in the historic building used as a formal events venue for weddings, conferences and banquets.",
+      "capacity": 3000,
+      "suitability": "Corporate events, weddings, conferences and private celebrations",
+      "source_urls": [
+        "https://www.gundel.hu"
+      ],
+      "official_url": "https://www.gundel.hu",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-hortobagy-np",
@@ -13418,6 +13560,38 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-szentfold-templom",
+      "name": "Magyar Szentföld-templom, Hűvösvölgy",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5383,
+      "lng": 18.9695,
+      "type": "Church & monastery",
+      "setting": "An unfinished 1940s reinforced-concrete church in a Buda woodland suburb, meant to unite replicas of Holy Land pilgrimage sites, left as a roofless shell of bare columns.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
+    },
+    {
+      "id": "hu-mavag-telep",
+      "name": "MÁVAG Colony",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4859,
+      "lng": 19.1134,
+      "type": "House & apartment",
+      "setting": "A early-20th-century workers' housing colony built for the MÁVAG railway-equipment works in Kőbánya, its closed rows of company housing largely unchanged since the era of state industry.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-met-arena-szekesfehervar",
       "name": "MET Arena Szekesfehervar",
       "country": "Hungary",
@@ -13434,6 +13608,22 @@
       ],
       "official_url": "https://albaarena.hu/",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-szabo-ervin-library",
+      "name": "Metropolitan Ervin Szabó Library",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4895,
+      "lng": 19.0647,
+      "type": "Office, school & public building",
+      "setting": "Budapest's central public library, its reading rooms fitted into the ornate former Wenckheim Palace with gilded ceilings and marble staircases behind the working library shelving.",
+      "source_urls": [
+        "https://www.fszek.hu",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "official_url": "https://www.fszek.hu",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-millenaris-park",
@@ -13573,6 +13763,25 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-nfi-costume-warehouse",
+      "name": "NFI Costume Warehouse, Fót",
+      "country": "Hungary",
+      "region": "Pest",
+      "lat": 47.616,
+      "lng": 19.1713,
+      "type": "Studio & backlot",
+      "setting": "A 2,500 square-metre costume store run by the National Film Institute near Fót, holding about 130,000 costumes and accessories from medieval dress to 20th-century uniforms for hire to productions.",
+      "known_for": "Rise of the Raven, Fairy Garden, Son of Saul, Hadik",
+      "suitability": "Costume hire for film shoots, theatrical productions, museum exhibitions and themed events",
+      "source_urls": [
+        "https://nfi.hu/en/costume",
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/costume",
+      "official_url": "https://nfi.hu/en/costume",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-nfi-studios",
       "name": "NFI Studios",
       "country": "Hungary",
@@ -13609,6 +13818,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-obuda-kiserleti-lakotelep",
+      "name": "Óbuda Experimental Housing Estate",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5428,
+      "lng": 19.0329,
+      "type": "House & apartment",
+      "setting": "A late-1960s housing estate in Óbuda built as a testbed for precast-concrete residential forms, still standing as an example of state-era experimental design.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-obuda-gas-factory",
       "name": "Obuda Gas Factory",
       "country": "Hungary",
@@ -13626,6 +13851,22 @@
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://graphisoftpark.com/en/",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-obuda-harisnyagyar",
+      "name": "Óbuda Stocking Factory",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5504,
+      "lng": 19.0465,
+      "type": "Industrial & derelict",
+      "setting": "A clinker-brick hosiery factory complex in Óbuda whose blank walls and towers resemble a Hanseatic warehouse district rather than a 20th-century textile plant.",
+      "source_urls": [
+        "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+      ],
+      "url": "https://nfi.hu/en/location-guide-1",
+      "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-okisz-headquarters",
@@ -13717,6 +13958,25 @@
         "author": "Unknown authorUnknown author",
         "license": "CC BY-SA 2.5"
       }
+    },
+    {
+      "id": "hu-papp-laszlo-arena",
+      "name": "Papp László Budapest Sportaréna",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5019,
+      "lng": 19.1054,
+      "type": "Theatre, arena & venue",
+      "setting": "Budapest's main indoor arena, opened in 2003 on the site of an earlier hall destroyed by fire, hosting concerts, championship sport and corporate events.",
+      "capacity": 12500,
+      "facilities": "Variable seating: 12,500 for concerts, 12,000 for handball, 11,390 for boxing, 9,479 for ice hockey",
+      "suitability": "Concerts, sporting events, business meetings and corporate events",
+      "source_urls": [
+        "https://budapestarena.hu",
+        "https://en.wikipedia.org/wiki/Papp_L%C3%A1szl%C3%B3_Budapest_Sportar%C3%A9na"
+      ],
+      "official_url": "https://budapestarena.hu",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-parisi-udvar",
@@ -13948,6 +14208,22 @@
         "author": "Civertan",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "hu-trafo",
+      "name": "Trafó House of Contemporary Arts",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4839,
+      "lng": 19.0725,
+      "type": "Theatre, arena & venue",
+      "setting": "A contemporary dance, music and exhibition venue in Ferencváros housed in a former electrical transformer station, its industrial hall kept largely as found.",
+      "suitability": "Hosts performances and events with image and video recording",
+      "source_urls": [
+        "https://www.trafo.hu"
+      ],
+      "official_url": "https://www.trafo.hu",
+      "commission_url": "https://nfi.hu"
     },
     {
       "id": "hu-university-of-debrecen-main-building",
@@ -15895,6 +16171,23 @@
       }
     },
     {
+      "id": "it-biblioteca-aosta",
+      "name": "Biblioteca Regionale Bruno Salvadori, Aosta",
+      "country": "Italy",
+      "region": "Aosta Valley",
+      "lat": 45.7355,
+      "lng": 7.3152,
+      "type": "Office, school & public building",
+      "setting": "A 1996 glass-fronted regional library in Aosta built against a 17th-century noble residence and the ruins of a medieval charity hospice, over a Roman-era gate.",
+      "facilities": "Water and mains power on site, road access for large vehicles",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16373/biblioteca-regionale-bruno-salvadori-aosta"
+      ],
+      "url": "https://italyformovies.it/location/detail/16373/biblioteca-regionale-bruno-salvadori-aosta",
+      "official_url": "https://italyformovies.it/location/detail/16373/biblioteca-regionale-bruno-salvadori-aosta",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-biblioteca-alessandrina-roma",
       "name": "Biblioteca Universitaria Alessandrina, Roma",
       "country": "Italy",
@@ -16054,6 +16347,23 @@
       "commission_url": "https://www.italyformovies.it"
     },
     {
+      "id": "it-caserma-villarey-ancona",
+      "name": "Caserma Villarey, Ancona",
+      "country": "Italy",
+      "region": "Marche",
+      "lat": 43.6198,
+      "lng": 13.5176,
+      "type": "Office, school & public building",
+      "setting": "An 1865-67 military barracks in Ancona built to hold over 1,200 soldiers, now home to the economics faculty of the Marche Polytechnic University.",
+      "facilities": "Water and mains power on site, road access for large vehicles and on foot",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16242/universita-giorgio-fua-di-ancona"
+      ],
+      "url": "https://italyformovies.it/location/detail/16242/universita-giorgio-fua-di-ancona",
+      "official_url": "https://italyformovies.it/location/detail/16242/universita-giorgio-fua-di-ancona",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-cava-bauxite-spinazzola",
       "name": "Cava di Bauxite di Spinazzola",
       "country": "Italy",
@@ -16072,6 +16382,23 @@
       "commission_url": "https://italyformovies.it"
     },
     {
+      "id": "it-cava-pusiano",
+      "name": "Cava di Pusiano",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.8016,
+      "lng": 9.27,
+      "type": "Industrial & derelict",
+      "setting": "A disused stone quarry near Lake Pusiano, worked for decades and later used as an illegal dump before the municipality reclaimed it and reopened the site in 2004.",
+      "facilities": "Mains power but no running water on site, car access",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/17727/cava-di-pusiano"
+      ],
+      "url": "https://italyformovies.it/location/detail/17727/cava-di-pusiano",
+      "official_url": "https://italyformovies.it/location/detail/17727/cava-di-pusiano",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-cave-carrara",
       "name": "Cave di Carrara",
       "country": "Italy",
@@ -16087,6 +16414,23 @@
       ],
       "url": "https://italyformovies.it/location/detail/15142/cave-di-carrara",
       "official_url": "https://italyformovies.it/location/detail/15142/cave-di-carrara",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-cave-rubbio",
+      "name": "Cave Dipinte di Rubbio",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.7988,
+      "lng": 11.652,
+      "type": "Industrial & derelict",
+      "setting": "A group of former limestone quarries at 1,057 metres above Bassano del Grappa, their rock amphitheatres painted with murals by local artist Toni Zarpellon since the 1980s.",
+      "facilities": "No water or mains power on site, reached by paved road, unpaved track or footpath",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16204/cave-dipinte-di-rubbio"
+      ],
+      "url": "https://italyformovies.it/location/detail/16204/cave-dipinte-di-rubbio",
+      "official_url": "https://italyformovies.it/location/detail/16204/cave-dipinte-di-rubbio",
       "commission_url": "https://italyformovies.it"
     },
     {
@@ -16494,6 +16838,23 @@
       ],
       "url": "https://italyformovies.it/location/detail/18745/ex-zuccherificio-eridania-ceggia",
       "official_url": "https://italyformovies.it/location/detail/18745/ex-zuccherificio-eridania-ceggia",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-fabbrica-borroni",
+      "name": "Fabbrica Borroni, Bollate",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.5447,
+      "lng": 9.1189,
+      "type": "Industrial & derelict",
+      "setting": "An 1890 textile mill near Milan, family-run from 1925 to 2001, now an events space of three halls including one with cast-iron columns and another with 7.5-metre vaulted ceilings.",
+      "facilities": "Water and mains power on site, paved road access",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/17769/fabbrica-borroni"
+      ],
+      "url": "https://italyformovies.it/location/detail/17769/fabbrica-borroni",
+      "official_url": "https://italyformovies.it/location/detail/17769/fabbrica-borroni",
       "commission_url": "https://italyformovies.it"
     },
     {
@@ -17321,6 +17682,23 @@
       "commission_url": "https://italyformovies.it"
     },
     {
+      "id": "it-porto-termoli",
+      "name": "Porto di Termoli",
+      "country": "Italy",
+      "region": "Molise",
+      "lat": 42.004,
+      "lng": 14.9979,
+      "type": "Transport & infrastructure",
+      "setting": "A 45,000 square-metre Adriatic harbour in Termoli with a tourist marina on one mole and shipyards on the other, used by fishing boats, ferries to the Tremiti Islands and the coast guard.",
+      "facilities": "Water and mains power on site, road access for large and off-road vehicles",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/17905/porto-di-termoli"
+      ],
+      "url": "https://italyformovies.it/location/detail/17905/porto-di-termoli",
+      "official_url": "https://italyformovies.it/location/detail/17905/porto-di-termoli",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-porto-flavia",
       "name": "Porto Flavia, Iglesias",
       "country": "Italy",
@@ -17782,6 +18160,23 @@
       ],
       "url": "https://italyformovies.it/location/detail/10028/universita-degli-studi-mediterranea-reggio-calabria",
       "official_url": "https://italyformovies.it/location/detail/10028/universita-degli-studi-mediterranea-reggio-calabria",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-unical",
+      "name": "Università della Calabria, Arcavacata",
+      "country": "Italy",
+      "region": "Calabria",
+      "lat": 39.3615,
+      "lng": 16.2264,
+      "type": "Office, school & public building",
+      "setting": "A 1968 university campus on over 200 hectares of hillside at Rende, designed by Vittorio Gregotti around a 2-kilometre elevated walkway spanning the Crati valley.",
+      "facilities": "Water and mains power on site, road access for large vehicles",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/10040/unical-universita-della-calabria"
+      ],
+      "url": "https://italyformovies.it/location/detail/10040/unical-universita-della-calabria",
+      "official_url": "https://italyformovies.it/location/detail/10040/unical-universita-della-calabria",
       "commission_url": "https://italyformovies.it"
     },
     {
@@ -27444,6 +27839,23 @@
       }
     },
     {
+      "id": "uk-bourne-woods",
+      "name": "Bourne Woods",
+      "country": "United Kingdom",
+      "region": "Surrey",
+      "lat": 51.1874,
+      "lng": -0.772,
+      "type": "Forest & lake",
+      "setting": "Forestry England woodland near Farnham with a natural bowl clearing used for battle scenes and forest exteriors, bookable through the national filming team.",
+      "known_for": "Gladiator, Napoleon, Robin Hood",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.forestryengland.uk/article/commercial-filming"
+      ],
+      "official_url": "https://www.forestryengland.uk/article/commercial-filming",
+      "commission_url": "https://screensouth.org"
+    },
+    {
       "id": "uk-bradford-on-avon-tithe-barn",
       "name": "Bradford-on-Avon Tithe Barn",
       "country": "United Kingdom",
@@ -27828,6 +28240,22 @@
       }
     },
     {
+      "id": "uk-cotswold-airport",
+      "name": "Cotswold Airport",
+      "country": "United Kingdom",
+      "region": "Gloucestershire",
+      "lat": 51.6686,
+      "lng": -2.0569,
+      "type": "Transport & infrastructure",
+      "setting": "Former RAF airfield near Cirencester with active runways, hangars and a stored Boeing 747 available for interior and exterior aviation filming.",
+      "facilities": "Runways, hangars, Boeing 747 'Negus' for exterior and interior filming, secure discrete site",
+      "source_urls": [
+        "https://www.cotswoldairport.com/filming"
+      ],
+      "official_url": "https://www.cotswoldairport.com/filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
+    },
+    {
       "id": "uk-cotswold-farm-park",
       "name": "Cotswold Farm Park",
       "country": "United Kingdom",
@@ -28129,6 +28557,23 @@
         "author": "Clem Rutter, Rochester Kent",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-foxton-locks",
+      "name": "Foxton Locks",
+      "country": "United Kingdom",
+      "region": "Leicestershire",
+      "lat": 52.4992,
+      "lng": -0.9826,
+      "type": "Transport & infrastructure",
+      "setting": "Grade II listed staircase of ten locks, the longest flight in Britain, on the Grand Union Canal, with a former inclined boat lift and towpath open for filming under Canal and River Trust permit.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://canalrivertrust.org.uk/places-to-visit/foxton-locks",
+        "https://canalrivertrust.org.uk/filming"
+      ],
+      "official_url": "https://canalrivertrust.org.uk/places-to-visit/foxton-locks",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "freshwater-west",
@@ -28711,6 +29156,21 @@
         "author": "No machine-readable author provided. Andeggs~commonswiki assumed (based on copyright claims).",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "uk-museum-of-liverpool",
+      "name": "Museum of Liverpool",
+      "country": "United Kingdom",
+      "region": "Merseyside",
+      "lat": 53.403,
+      "lng": -2.9956,
+      "type": "Modern architecture",
+      "setting": "Angular white waterfront museum on Liverpool's Pier Head, part of National Museums Liverpool's group of seven sites made available for commercial filming.",
+      "source_urls": [
+        "https://www.liverpoolmuseums.org.uk/filming"
+      ],
+      "official_url": "https://www.liverpoolmuseums.org.uk/filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-ironbridge-gorge",
@@ -29715,6 +30175,40 @@
       "commission_url": "https://filmlondon.org.uk"
     },
     {
+      "id": "uk-standedge-tunnel",
+      "name": "Standedge Tunnel",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.5866,
+      "lng": -1.9664,
+      "type": "Transport & infrastructure",
+      "setting": "Britain's longest, deepest and highest canal tunnel, cut through the Pennines at Marsden on the Huddersfield Narrow Canal, with a visitor centre and boat trips into the tunnel, open for filming under Canal and River Trust permit.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://canalrivertrust.org.uk/places-to-visit/standedge-tunnel-and-visitor-centre",
+        "https://canalrivertrust.org.uk/filming"
+      ],
+      "official_url": "https://canalrivertrust.org.uk/places-to-visit/standedge-tunnel-and-visitor-centre",
+      "commission_url": "https://screenyorkshire.co.uk"
+    },
+    {
+      "id": "uk-sutton-scarsdale-hall",
+      "name": "Sutton Scarsdale Hall",
+      "country": "United Kingdom",
+      "region": "Derbyshire",
+      "lat": 53.2155,
+      "lng": -1.339,
+      "type": "House & apartment",
+      "setting": "Roofless shell of a Georgian country mansion on a Derbyshire hillside, its bare facades and empty window openings used as a ruined-grandeur filming backdrop.",
+      "known_for": "Batman v Superman: Dawn of Justice",
+      "source_urls": [
+        "https://www.english-heritage.org.uk/visit/places/sutton-scarsdale-hall/",
+        "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
+      ],
+      "official_url": "https://www.english-heritage.org.uk/visit/places/sutton-scarsdale-hall/",
+      "commission_url": "https://britishfilmcommission.org.uk"
+    },
+    {
       "id": "uk-swg3",
       "name": "SWG3",
       "country": "United Kingdom",
@@ -29952,6 +30446,22 @@
         "author": "Louise M Evans",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "uk-thetford-forest",
+      "name": "Thetford Forest",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "lat": 52.4637,
+      "lng": 0.6919,
+      "type": "Forest & lake",
+      "setting": "England's largest lowland pine forest, spanning the Norfolk-Suffolk border, with rides and clearings bookable for filming through Forestry England's national team.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.forestryengland.uk/article/commercial-filming"
+      ],
+      "official_url": "https://www.forestryengland.uk/article/commercial-filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-thinktank-birmingham",
