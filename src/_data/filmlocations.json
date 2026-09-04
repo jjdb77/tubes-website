@@ -3528,6 +3528,23 @@
       }
     },
     {
+      "id": "cz-automatic-mills-pardubice",
+      "name": "Automatic Mills, Pardubice",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0417,
+      "lng": 15.7816,
+      "type": "Industrial & derelict",
+      "setting": "A 1909 Gocar-designed automatic flour mill on the Chrudimka river in central Pardubice, in continuous operation until 2013 and now being redeveloped as a cultural quarter with a gallery and public square.",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/automatic-mills-pardubice",
+        "https://www.automatickemlyny.eu"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/automatic-mills-pardubice",
+      "official_url": "https://www.automatickemlyny.eu",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-aviation-museum-kunovice",
       "name": "Aviation Museum Kunovice",
       "country": "Czech Republic",
@@ -3542,6 +3559,22 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/the-aviation-museum-in-kunovice/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-az-tower-brno",
+      "name": "AZ Tower, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1757,
+      "lng": 16.6056,
+      "type": "City & skyline",
+      "setting": "The tallest building in the Czech Republic, a 111 metre, 30-storey tower in Brno completed in 2013, with a ground-floor shopping gallery, mid-rise commercial floors and apartments on the top levels.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/az-tower/"
+      ],
+      "url": "https://brnofilm.cz/lokace/az-tower/",
+      "official_url": "https://brnofilm.cz/lokace/az-tower/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "barrandov-studios",
@@ -3661,6 +3694,22 @@
         "https://www.budejovickybudvar.cz/en"
       ],
       "official_url": "https://www.budejovickybudvar.cz/en",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-cafe-bajer-pardubice",
+      "name": "Cafe Bajer, Pardubice",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0386,
+      "lng": 15.7791,
+      "type": "Bar, restaurant & shop",
+      "setting": "An early 20th-century cafe in Pardubice reopened by its current owners in 1998, its rooms filled with period advertising signs, a winter garden, a small courtyard terrace and a working antique cash register.",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/cafe-bajer-pardubice"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/cafe-bajer-pardubice",
+      "official_url": "https://eastbohemiafilmoffice.cz/en/locations/cafe-bajer-pardubice",
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
@@ -4081,6 +4130,24 @@
       }
     },
     {
+      "id": "cz-klubcentrum-usti-nad-orlici",
+      "name": "Klubcentrum Culture House, Usti nad Orlici",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 49.9738,
+      "lng": 16.3942,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1980s culture house in Usti nad Orlici with a 600-seat multi-purpose hall, stage, bar and dressing rooms, its own lighting and sound equipment, next to a hotel and restaurant.",
+      "capacity": 600,
+      "facilities": "Stage, bar, dressing rooms, lounges, in-house lighting and sound equipment",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/culture-house-klubcentrum-usti-n-o"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/culture-house-klubcentrum-usti-n-o",
+      "official_url": "https://eastbohemiafilmoffice.cz/en/locations/culture-house-klubcentrum-usti-n-o",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-kraus-apartment-plzen",
       "name": "Kraus Apartment, Plzen",
       "country": "Czech Republic",
@@ -4095,6 +4162,39 @@
       ],
       "url": "https://filmcommission.gov.cz/lokace-mesice-loosovy-interiery-v-plzni/",
       "official_url": "https://www.visitplzen.eu",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-lachema-brno",
+      "name": "Lachema, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.2536,
+      "lng": 16.592,
+      "type": "Industrial & derelict",
+      "setting": "Empty production halls and corridors of a former Czechoslovak chemical works in Brno that made laboratory reagents, dyes and biochemicals from 1953 until its 2010 closure, now home to a stunt team.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/lachema/"
+      ],
+      "url": "https://brnofilm.cz/lokace/lachema/",
+      "official_url": "https://brnofilm.cz/lokace/lachema/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-lahofer-winery-znojmo",
+      "name": "Lahofer Winery, Znojmo",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 48.8472,
+      "lng": 16.0856,
+      "type": "Bar, restaurant & shop",
+      "setting": "A working vineyard winery near Znojmo with a sculpted concrete roofline, a walkable viewing roof, an open-air summer amphitheatre and modern cellars, set among vines looking toward Austria.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/vinarstvi-lahofer-znojmo/",
+        "https://www.lahofer.cz"
+      ],
+      "url": "https://brnofilm.cz/lokace/vinarstvi-lahofer-znojmo/",
+      "official_url": "https://www.lahofer.cz",
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
@@ -4238,6 +4338,23 @@
       }
     },
     {
+      "id": "cz-mendel-greenhouse-brno",
+      "name": "Mendel Greenhouse, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1913,
+      "lng": 16.5938,
+      "type": "Office, school & public building",
+      "setting": "A modern glasshouse rebuilt on the footprint of Gregor Mendel's original greenhouse at the Augustinian Abbey in Brno, combining a permanent exhibition, event space and working plant beds.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/mendeluv-sklenik/",
+        "https://www.mendelmuseum.muni.cz"
+      ],
+      "url": "https://brnofilm.cz/lokace/mendeluv-sklenik/",
+      "official_url": "https://www.mendelmuseum.muni.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-michal-mine",
       "name": "Michal Mine",
       "country": "Czech Republic",
@@ -4356,6 +4473,23 @@
       "commission_url": "https://www.filmcommission.cz/"
     },
     {
+      "id": "cz-pardubice-prison",
+      "name": "Pardubice Prison",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0427,
+      "lng": 15.7998,
+      "type": "Hospital, prison & institution",
+      "setting": "A working prison in Pardubice that makes cells, a visiting room and cellars available for filming, arranged directly through the facility's own spokesperson.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/pardubice-prison"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/pardubice-prison",
+      "official_url": "https://eastbohemiafilmoffice.cz/en/locations/pardubice-prison",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-prague-main-station",
       "name": "Prague Main Railway Station",
       "country": "Czech Republic",
@@ -4430,6 +4564,23 @@
       "commission_url": "https://www.filmcommission.cz/"
     },
     {
+      "id": "cz-spielberk-office-centrum-brno",
+      "name": "Spielberk Office Centrum, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.182,
+      "lng": 16.6045,
+      "type": "Office, school & public building",
+      "setting": "A Class A business park in Brno made of five low-rise office villas in Dutch brick with roof terraces, set asymmetrically around a lake with a view toward the city's cathedral.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/spielberk-office-centrum/",
+        "https://www.spielberk.cz"
+      ],
+      "url": "https://brnofilm.cz/lokace/spielberk-office-centrum/",
+      "official_url": "https://www.spielberk.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-techmania-science-center",
       "name": "Techmania Science Center",
       "country": "Czech Republic",
@@ -4449,6 +4600,23 @@
         "author": "JoiZif",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-teplarny-brno",
+      "name": "Teplarny Brno (Spitalka heating plant)",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1961,
+      "lng": 16.6231,
+      "type": "Industrial & derelict",
+      "setting": "A working district heating and power plant on Spitalka street in Brno, opened in 1930 on piled marsh foundations, with an old boiler house still holding historic Kolben-Danek machinery.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/teplarny-brno/",
+        "https://www.teplarny.cz"
+      ],
+      "url": "https://brnofilm.cz/lokace/teplarny-brno/",
+      "official_url": "https://www.teplarny.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-terezin-small-fortress",
@@ -4473,6 +4641,22 @@
         "author": "Txllxt TxllxT",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-the-factory-lichkov",
+      "name": "The Factory, Lichkov",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0979,
+      "lng": 16.666,
+      "type": "Industrial & derelict",
+      "setting": "A disused timber factory in Lichkov near the Polish border, running from 1871 until a 1973 fire and 1990s privatisation closed it, its chimney with a stork's nest above an empty 22,400 square metre brownfield.",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/the-factory-lichkov"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/the-factory-lichkov",
+      "official_url": "https://eastbohemiafilmoffice.cz/en/locations/the-factory-lichkov",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-papirna-plzen",
@@ -4615,6 +4799,23 @@
       }
     },
     {
+      "id": "cz-vodojemy-zluty-kopec-brno",
+      "name": "Vodojemy na Zlutem kopci, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.1962,
+      "lng": 16.5905,
+      "type": "Industrial & derelict",
+      "setting": "Two disused brick water reservoirs from 1872 on Zluty kopec hill in Brno, joined later by two concrete tanks, decommissioned in 1997 and now toured as cavernous underground chambers.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/vodojemy-na-zlutem-kopci/",
+        "https://www.vodojemybrno.cz"
+      ],
+      "url": "https://brnofilm.cz/lokace/vodojemy-na-zlutem-kopci/",
+      "official_url": "https://www.vodojemybrno.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-vojna-memorial",
       "name": "Vojna Memorial",
       "country": "Czech Republic",
@@ -4633,6 +4834,23 @@
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
+      "id": "cz-vonwiller-factory-zamberk",
+      "name": "Vonwiller Factory, Zamberk",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0871,
+      "lng": 16.4651,
+      "type": "Industrial & derelict",
+      "setting": "A former 1838 textile mill on the edge of Zamberk, now a museum of antique machinery and vehicles, with a working line-shaft machine shop, forge, narrow-gauge railway and a stock of vintage cars.",
+      "facilities": "Functional line-shaft machine shop with over 30 machines, forge, narrow-gauge railway, vintage car and motorcycle collection, restoration workshop",
+      "source_urls": [
+        "https://eastbohemiafilmoffice.cz/en/locations/vonwiller-factory-zamberk"
+      ],
+      "url": "https://eastbohemiafilmoffice.cz/en/locations/vonwiller-factory-zamberk",
+      "official_url": "https://eastbohemiafilmoffice.cz/en/locations/vonwiller-factory-zamberk",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-winternitz-villa",
       "name": "Winternitz Villa",
       "country": "Czech Republic",
@@ -4646,6 +4864,38 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/winternitz-villa/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-zabrdovice-baths-brno",
+      "name": "Zabrdovice Municipal Baths, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.2025,
+      "lng": 16.6293,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1932 Bohuslav Fuchs bathing complex in Brno's Zabrdovice district built around two courtyards, its outdoor pool still operating as a public lido while the closed indoor winter baths await reuse.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/mestske-lazne-v-zabrdovicich/"
+      ],
+      "url": "https://brnofilm.cz/lokace/mestske-lazne-v-zabrdovicich/",
+      "official_url": "https://brnofilm.cz/lokace/mestske-lazne-v-zabrdovicich/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-zbrojovka-brno",
+      "name": "Zbrojovka, Brno",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.2059,
+      "lng": 16.6337,
+      "type": "Industrial & derelict",
+      "setting": "The former Czechoslovak state arms works in Brno's Husovice district, founded in 1918, which also repaired cars and rail equipment and made weapons before its 1945 machinery seeded the Zetor tractor brand.",
+      "source_urls": [
+        "https://brnofilm.cz/lokace/zbrojovka/"
+      ],
+      "url": "https://brnofilm.cz/lokace/zbrojovka/",
+      "official_url": "https://brnofilm.cz/lokace/zbrojovka/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-zlin-factory-complex",
@@ -6703,6 +6953,28 @@
       }
     },
     {
+      "id": "fr-halle-tony-garnier-lyon",
+      "name": "Halle Tony Garnier",
+      "country": "France",
+      "region": "Auvergne-Rhone-Alpes",
+      "lat": 45.7299,
+      "lng": 4.825,
+      "type": "Industrial & derelict",
+      "setting": "A vast steel-framed former livestock market hall of 1864 in central Lyon, converted into the city's largest standing-capacity venue for concerts, trade fairs and exhibitions.",
+      "known_for": "L'Innocent",
+      "source_urls": [
+        "https://www.halle-tony-garnier.com/fr/archives/ils-sont-venus"
+      ],
+      "official_url": "https://www.halle-tony-garnier.com/",
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Halle_Tony_Garnier_-_Lyon.JPG/960px-Halle_Tony_Garnier_-_Lyon.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Halle_Tony_Garnier_-_Lyon.JPG",
+        "author": "Myrelingues",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
       "id": "fr-haras-lamballe",
       "name": "Haras National de Lamballe",
       "country": "France",
@@ -7031,6 +7303,41 @@
       "commission_url": "https://www.filmfrance.net/"
     },
     {
+      "id": "fr-bateau-feu-dunkerque",
+      "name": "Le Bateau Feu",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "lat": 51.0371,
+      "lng": 2.3809,
+      "type": "Theatre, arena & venue",
+      "setting": "A 20th century national theatre in central Dunkirk with a large main stage and backstage artist workshops, named by the regional film commission among its exceptional filming locations.",
+      "source_urls": [
+        "https://www.lebateaufeu.com/",
+        "https://www.pictanovo.com/bureau-daccueil-des-tournages/"
+      ],
+      "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
+      "official_url": "https://www.lebateaufeu.com/",
+      "commission_url": "https://www.pictanovo.com"
+    },
+    {
+      "id": "fr-le-fresnoy-tourcoing",
+      "name": "Le Fresnoy",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "lat": 50.7001,
+      "lng": 3.1547,
+      "type": "Studio & backlot",
+      "setting": "A national contemporary art school in Tourcoing built inside a former early 20th century entertainment complex, with production studios under a large suspended roof and rentable spaces for private events.",
+      "facilities": "Production studios, a cinema, a restaurant, rooftop access, rooms available for private hire",
+      "source_urls": [
+        "https://www.lefresnoy.net/fr/le-lieu",
+        "https://www.pictanovo.com/bureau-daccueil-des-tournages/"
+      ],
+      "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
+      "official_url": "https://www.lefresnoy.net/",
+      "commission_url": "https://www.pictanovo.com"
+    },
+    {
       "id": "fr-grand-hotel-cabourg",
       "name": "Le Grand Hôtel Cabourg",
       "country": "France",
@@ -7280,6 +7587,22 @@
       }
     },
     {
+      "id": "fr-lycee-gaston-monnerville-cahors",
+      "name": "Lycee Gaston Monnerville",
+      "country": "France",
+      "region": "Occitanie",
+      "lat": 44.4637,
+      "lng": 1.4546,
+      "type": "Office, school & public building",
+      "setting": "A working vocational and general secondary school in Cahors, listed by the local film office as an available shooting location for productions needing classrooms and school corridors.",
+      "source_urls": [
+        "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html"
+      ],
+      "url": "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html",
+      "official_url": "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html",
+      "commission_url": "http://www.gindoucinema.org"
+    },
+    {
       "id": "fr-rungis-marche",
       "name": "Marche International de Rungis",
       "country": "France",
@@ -7522,6 +7845,22 @@
         "author": "BikerNormand from Morsan, Eure, France",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "fr-pont-eiffel-sur-le-lot",
+      "name": "Pont Eiffel sur le Lot",
+      "country": "France",
+      "region": "Occitanie",
+      "lat": 44.484,
+      "lng": 1.6428,
+      "type": "Transport & infrastructure",
+      "setting": "A 19th century metal footbridge over the Lot river at Bouzies, on the riverside towpath through the gorge, listed as a filming location by the Lot department's film office.",
+      "source_urls": [
+        "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html"
+      ],
+      "url": "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html",
+      "official_url": "http://www.gindoucinema.org/index.php/commission-du-film/lieux-de-tournages.html",
+      "commission_url": "http://www.gindoucinema.org"
     },
     {
       "id": "fr-provence-studios",
@@ -7782,6 +8121,22 @@
       }
     },
     {
+      "id": "de-alte-klinik-greifenstein",
+      "name": "Alte Klinik Greifenstein",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.6079,
+      "lng": 8.2912,
+      "type": "Hospital, prison & institution",
+      "setting": "A former specialist lung clinic at Waldhof in Greifenstein, in operation until 2020, with about 4,500 square metres of floor space across an older building and later extensions.",
+      "source_urls": [
+        "https://www.hessenfilm.de/location-details/138"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/138",
+      "official_url": "https://www.hessenfilm.de/location-details/138",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
       "id": "de-alte-oper-frankfurt",
       "name": "Alte Oper Frankfurt",
       "country": "Germany",
@@ -7951,6 +8306,23 @@
         "author": "Nstannik",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "de-boardinghaus-weinberg-campus",
+      "name": "Boardinghaus Weinberg Campus",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.4935,
+      "lng": 11.9353,
+      "type": "Hotel & interiors",
+      "setting": "Three late classicist villas grouped around a courtyard at the edge of Halle's Weinberg Campus technology park, now listed guest houses with one and two room serviced apartments.",
+      "source_urls": [
+        "https://www.weinberg-campus.de",
+        "https://www.mdm-online.de/film-commission/location-guide/boardinghaus-weinberg-campus"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/boardinghaus-weinberg-campus",
+      "official_url": "https://www.weinberg-campus.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-breuninger-kaufhaus-erfurt",
@@ -8253,6 +8625,22 @@
       "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
+      "id": "de-georg-gassmann-stadion-marburg",
+      "name": "Georg-Gassmann-Stadion",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.7978,
+      "lng": 8.7544,
+      "type": "Theatre, arena & venue",
+      "setting": "Marburg's athletics stadium in the Ockershausen district, with a modern 400 metre synthetic running track and long jump, shot put and pole vault facilities.",
+      "source_urls": [
+        "https://www.hessenfilm.de/location-details/124"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/124",
+      "official_url": "https://www.hessenfilm.de/location-details/124",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
       "id": "de-glaeserne-manufaktur-dresden",
       "name": "Glaeserne Manufaktur (Volkswagen)",
       "country": "Germany",
@@ -8285,6 +8673,23 @@
       "url": "https://www.mdm-online.de/film-commission/location-guide/glasmanufaktur-harzkristall",
       "official_url": "https://www.harzkristall.de",
       "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-goethe-universitaet-frankfurt",
+      "name": "Goethe-Universitaet Frankfurt am Main",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1278,
+      "lng": 8.6692,
+      "type": "Office, school & public building",
+      "setting": "One of Germany's largest universities, with more than 158 degree programmes spread across four campuses in Frankfurt, linked by the city's public transport network.",
+      "source_urls": [
+        "http://www.uni-frankfurt.de",
+        "https://www.hessenfilm.de/location-details/50"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/50",
+      "official_url": "http://www.uni-frankfurt.de",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "goerlitz-old-town",
@@ -8322,6 +8727,38 @@
       ],
       "official_url": "https://www.althoffcollection.com/en/althoff-grandhotel-schloss-bensberg/",
       "commission_url": "https://www.filmstiftung.de/"
+    },
+    {
+      "id": "de-gymnasium-st-augustin-grimma",
+      "name": "Gymnasium St. Augustin zu Grimma",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.2358,
+      "lng": 12.7313,
+      "type": "Office, school & public building",
+      "setting": "A grammar school in Grimma founded in 1450, housed since the 19th century in the former Augustinian monastery buildings, with its current facade dating from a full 1891 rebuild.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/gymnasium-st-augustin-zu-grimma"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/gymnasium-st-augustin-zu-grimma",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/gymnasium-st-augustin-zu-grimma",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-halle-neustadt",
+      "name": "Halle-Neustadt (noerdliche Neustadt)",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.4815,
+      "lng": 11.9227,
+      "type": "City & skyline",
+      "setting": "A large prefabricated socialist new town built from 1964 to house workers near the Buna and Leuna chemical plants, originally planned with generous greenery and public art between the blocks.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/halle-neustadt-noerdliche-neustadt-aussen"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/halle-neustadt-noerdliche-neustadt-aussen",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/halle-neustadt-noerdliche-neustadt-aussen",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-hamburg-rathaus",
@@ -8365,6 +8802,23 @@
         "author": "BishkekRocks",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "de-hauptbahnhof-frankfurt",
+      "name": "Hauptbahnhof Frankfurt",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1061,
+      "lng": 8.6643,
+      "type": "Transport & infrastructure",
+      "setting": "Frankfurt's main station, Germany's second busiest long-distance rail hub, with a broad historicist concourse building where travellers from many routes cross paths.",
+      "source_urls": [
+        "https://www.bahnhof.de/bahnhof-de/frankfurt(main)hbf",
+        "https://www.hessenfilm.de/location-details/52"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/52",
+      "official_url": "https://www.bahnhof.de/bahnhof-de/frankfurt(main)hbf",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "de-hauptbahnhof-leipzig",
@@ -8449,6 +8903,39 @@
       }
     },
     {
+      "id": "de-hinterbergwerk-wiesbaden",
+      "name": "Hinterbergwerk",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.0827,
+      "lng": 8.3245,
+      "type": "Studio & backlot",
+      "setting": "The largest rental studio in Wiesbaden, combining older building character with modern technical fit-out for photo and film production in the Rhine-Main area.",
+      "source_urls": [
+        "http://www.hinterbergwerk.com",
+        "https://www.hessenfilm.de/location-details/78"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/78",
+      "official_url": "http://www.hinterbergwerk.com",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
+      "id": "de-historische-feuerwehr-marburg",
+      "name": "Historisches Feuerwehrhaus Ketzerbach",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.8142,
+      "lng": 8.7669,
+      "type": "Office, school & public building",
+      "setting": "A two storey fire station built in 1911 on Ketzerbach in Marburg's old town, still in use by a volunteer fire brigade unit and keeping vintage engines and equipment on site.",
+      "source_urls": [
+        "https://www.hessenfilm.de/location-details/136"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/136",
+      "official_url": "https://www.hessenfilm.de/location-details/136",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
       "id": "de-adlon-berlin",
       "name": "Hotel Adlon Kempinski Berlin",
       "country": "Germany",
@@ -8481,6 +8968,22 @@
       ],
       "official_url": "https://www.hu-berlin.de/en/",
       "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-hyparschale-magdeburg",
+      "name": "Hyparschale Magdeburg",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 52.1206,
+      "lng": 11.6396,
+      "type": "Modern architecture",
+      "setting": "A 1969 multi-purpose hall by engineer Ulrich Muther next to Magdeburg's Stadthalle, built from four self-supporting hyperbolic paraboloid concrete shells and reopened in 2024 after restoration.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/hyparschale-magdeburg"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/hyparschale-magdeburg",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/hyparschale-magdeburg",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-justizpalast-muenchen",
@@ -8662,6 +9165,40 @@
       "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
+      "id": "de-krystallpalast-variete-leipzig",
+      "name": "Krystallpalast Variete Leipzig",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.3373,
+      "lng": 12.3768,
+      "type": "Theatre, arena & venue",
+      "setting": "A variety theatre in Leipzig reviving the name of a celebrated venue destroyed in 1943, rebuilt in the 1990s behind a preserved historic facade in the Magazingasse.",
+      "source_urls": [
+        "https://www.krystallpalast.de",
+        "https://www.mdm-online.de/film-commission/location-guide/krystallpalast-variete-leipzig"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/krystallpalast-variete-leipzig",
+      "official_url": "https://www.krystallpalast.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-kulturzentrum-schlachthof-wiesbaden",
+      "name": "Kulturzentrum Schlachthof Wiesbaden",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.0665,
+      "lng": 8.2476,
+      "type": "Theatre, arena & venue",
+      "setting": "A collectively run cultural centre in a former Wiesbaden slaughterhouse, now Hesse's largest socio-cultural venue with close to 400 events and 300,000 visitors a year.",
+      "source_urls": [
+        "http://www.schlachthof-wiesbaden.de",
+        "https://www.hessenfilm.de/location-details/161"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/161",
+      "official_url": "http://www.schlachthof-wiesbaden.de",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
       "id": "de-bethanien-berlin",
       "name": "Kunstquartier Bethanien",
       "country": "Germany",
@@ -8748,6 +9285,22 @@
       }
     },
     {
+      "id": "de-leichtathletikhalle-erfurt",
+      "name": "Leichtathletikhalle Erfurt (Hartwig-Gauder-Halle)",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.9621,
+      "lng": 11.0374,
+      "type": "Theatre, arena & venue",
+      "setting": "An indoor athletics hall built in 1994 as part of the Erfurt-Sued sports centre, with a 200 metre indoor track and about 9,200 square metres of training and competition space.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/leichtathletikhalle-erfurt-hartwig-gauder-halle"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/leichtathletikhalle-erfurt-hartwig-gauder-halle",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/leichtathletikhalle-erfurt-hartwig-gauder-halle",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-memorium-nuernberg",
       "name": "Memorium Nuremberg Trials",
       "country": "Germany",
@@ -8771,6 +9324,22 @@
       }
     },
     {
+      "id": "de-monte-kali-heringen",
+      "name": "Monte Kali",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.8865,
+      "lng": 10.0118,
+      "type": "Industrial & derelict",
+      "setting": "A large potash mining spoil heap over 500 metres high near Heringen in eastern Hesse, made up of more than 200 million tonnes of salt waste from the works below.",
+      "source_urls": [
+        "https://www.hessenfilm.de/location-details/156"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/156",
+      "official_url": "https://www.hessenfilm.de/location-details/156",
+      "commission_url": "https://www.hessenfilm.de"
+    },
+    {
       "id": "de-ruedersdorf-museum-park",
       "name": "Museum Park Rüdersdorf",
       "country": "Germany",
@@ -8785,6 +9354,23 @@
       ],
       "official_url": "https://www.museumspark.de/",
       "commission_url": "https://www.bbfc.de/en/"
+    },
+    {
+      "id": "de-museum-reinhard-ernst",
+      "name": "Museum Reinhard Ernst",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.0785,
+      "lng": 8.2459,
+      "type": "Office, school & public building",
+      "setting": "A museum of abstract art after 1945 in Wiesbaden, opened in 2024 in a building designed by Pritzker Prize winning architect Fumihiko Maki.",
+      "source_urls": [
+        "http://www.museum-re.de",
+        "https://www.hessenfilm.de/location-details/163"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/163",
+      "official_url": "http://www.museum-re.de",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "de-musikforum-katharinenkirche",
@@ -8976,6 +9562,40 @@
       "url": "https://www.mdm-online.de/film-commission/location-guide/porsche-leipzig-gmbh",
       "official_url": "https://www.porsche-leipzig.com",
       "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-pressnitztalbahn",
+      "name": "Pressnitztalbahn (Museumsbahn Steinbach-Joehstadt)",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 50.546,
+      "lng": 13.1376,
+      "type": "Transport & infrastructure",
+      "setting": "A narrow gauge heritage railway opened in 1892 running about eight kilometres between Steinbach and Joehstadt in the Erzgebirge, with restored locomotives and carriages from the 1960s to 1980s.",
+      "source_urls": [
+        "https://www.pressnitztalbahn.de",
+        "https://www.mdm-online.de/film-commission/location-guide/pressnitztalbahn-museumsbahn-steinbach-joehstadt"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/pressnitztalbahn-museumsbahn-steinbach-joehstadt",
+      "official_url": "https://www.pressnitztalbahn.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-raumfabrik-frankfurt",
+      "name": "Raumfabrik Frankfurt",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1629,
+      "lng": 8.636,
+      "type": "Industrial & derelict",
+      "setting": "A former metalware factory hall from the 1960s in Frankfurt's Heddernheim district, converted into a roughly 2,100 square metre event and production space that keeps its industrial character.",
+      "source_urls": [
+        "http://www.raumfabrik-frankfurt.com",
+        "https://www.hessenfilm.de/location-details/176"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/176",
+      "official_url": "http://www.raumfabrik-frankfurt.com",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "de-ruhr-uni-bochum",
@@ -9173,6 +9793,22 @@
       }
     },
     {
+      "id": "de-stadtbad-chemnitz",
+      "name": "Stadtbad Chemnitz",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 50.8392,
+      "lng": 12.921,
+      "type": "Theatre, arena & venue",
+      "setting": "A Neue Sachlichkeit swimming hall completed in 1935, the largest and most modern in Europe at the time, with a clear and functional layout of interlocking pool spaces inside and out.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/stadtbad-chemnitz"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/stadtbad-chemnitz",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/stadtbad-chemnitz",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "studio-babelsberg",
       "name": "Studio Babelsberg",
       "country": "Germany",
@@ -9274,6 +9910,22 @@
       }
     },
     {
+      "id": "de-truppenuebungsplatz-oberlausitz",
+      "name": "Truppenuebungsplatz Oberlausitz",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.4609,
+      "lng": 14.7431,
+      "type": "Hospital, prison & institution",
+      "setting": "Saxony's only active military training ground, set in the Muskau Heath, the largest inland dune landscape in eastern Germany, with flat plains and steep enclosed dune terrain.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/truppenuebungsplatz-oberlausitz"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/truppenuebungsplatz-oberlausitz",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/truppenuebungsplatz-oberlausitz",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-ueberseestadt-bremen",
       "name": "Uberseestadt Bremen",
       "country": "Germany",
@@ -9289,6 +9941,23 @@
       ],
       "official_url": "https://www.ueberseestadt-bremen.de/",
       "commission_url": "https://www.nordmedia.de/"
+    },
+    {
+      "id": "de-universitaet-witzenhausen",
+      "name": "Universitaet Witzenhausen",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 51.3332,
+      "lng": 9.8434,
+      "type": "Office, school & public building",
+      "setting": "The Witzenhausen campus of the University of Kassel, an internationally known centre for agricultural and international food science set in a small historic north Hesse town.",
+      "source_urls": [
+        "https://www.uni-kassel.de/uni/universitaet/kontakt-und-standorte/standort-witzenhausen/",
+        "https://www.hessenfilm.de/location-details/147"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/147",
+      "official_url": "https://www.uni-kassel.de/uni/universitaet/kontakt-und-standorte/standort-witzenhausen/",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "de-uni-goettingen",
@@ -9319,6 +9988,22 @@
       ],
       "official_url": "https://uni-tuebingen.de/en/",
       "commission_url": "https://www.film.mfg.de/"
+    },
+    {
+      "id": "de-verlagsgebaeude-leipziger-volkszeitung",
+      "name": "Verlagsgebaeude der Leipziger Volkszeitung",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.332,
+      "lng": 12.3754,
+      "type": "Office, school & public building",
+      "setting": "The central Leipzig headquarters of the city's largest daily newspaper, a historic industrial building converted into a modern office block with editorial rooms and meeting spaces.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/verlagsgebaeude-der-leipziger-volkszeitung"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/verlagsgebaeude-der-leipziger-volkszeitung",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/verlagsgebaeude-der-leipziger-volkszeitung",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-viktualienmarkt",
@@ -9412,6 +10097,23 @@
         "author": "Joehawkins",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "de-westside-studios-frankfurt",
+      "name": "Westside Studios",
+      "country": "Germany",
+      "region": "Hesse",
+      "lat": 50.1229,
+      "lng": 8.5899,
+      "type": "Studio & backlot",
+      "setting": "A large rental film and photo studio in Frankfurt, about nine minutes from the airport, equipped with a robotic camera rig and rail system plus extensive lighting gear.",
+      "source_urls": [
+        "http://westside-studios.eu",
+        "https://www.hessenfilm.de/location-details/75"
+      ],
+      "url": "https://www.hessenfilm.de/location-details/75",
+      "official_url": "http://westside-studios.eu",
+      "commission_url": "https://www.hessenfilm.de"
     },
     {
       "id": "de-world-trade-center-dresden",
@@ -10471,6 +11173,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-aquincum-museum",
+      "name": "Aquincum Museum",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5639,
+      "lng": 19.0503,
+      "type": "Historic town & street",
+      "setting": "The excavated civilian town of the Roman settlement of Aquincum in north Budapest, with an open-air archaeological park of house foundations and a museum building of Roman finds from the site.",
+      "suitability": "Site publishes rentable venues (berelheto helyszinek) for weddings and events",
+      "source_urls": [
+        "https://www.aquincum.hu"
+      ],
+      "official_url": "https://www.aquincum.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-balna-budapest",
       "name": "Balna Budapest",
       "country": "Hungary",
@@ -10486,6 +11204,21 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://balnabudapest.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-batthyany-market-hall",
+      "name": "Batthyany Square Market Hall",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5061,
+      "lng": 19.0376,
+      "type": "Bar, restaurant & shop",
+      "setting": "A steel-framed 19th century covered market hall on the Buda bank of the Danube at Batthyany ter, in daily use for food stalls beside a metro and suburban rail interchange.",
+      "source_urls": [
+        "https://piaconline.hu"
+      ],
+      "official_url": "https://piaconline.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -10682,6 +11415,22 @@
       }
     },
     {
+      "id": "hu-fono-budai-zenehaz",
+      "name": "Fono Budai Zenehaz",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4599,
+      "lng": 19.0434,
+      "type": "Theatre, arena & venue",
+      "setting": "A folk music venue in Budapest's Kelenfold district, built around a dance-house hall used for Hungarian, Balkan and other traditional folk dance and concert programmes, with rooms available together or separately.",
+      "suitability": "Site states its rooms can be rented together or separately, by individual quote",
+      "source_urls": [
+        "https://fono.hu"
+      ],
+      "official_url": "https://fono.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-fort-monostor",
       "name": "Fort Monostor",
       "country": "Hungary",
@@ -10810,6 +11559,23 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-skanzen-szentendre",
+      "name": "Hungarian Open Air Museum (Skanzen)",
+      "country": "Hungary",
+      "region": "Pest",
+      "lat": 47.6935,
+      "lng": 19.0483,
+      "type": "Village & countryside",
+      "setting": "An open-air ethnographic museum near Szentendre with reconstructed village buildings, farmhouses, churches and a mill relocated from different regions of historic Hungary, set among fields and orchards.",
+      "suitability": "Site publishes a dedicated event venue (rendezvenyter) with wedding hire and wedding-photography terms",
+      "source_urls": [
+        "https://skanzen.hu/hu/rendezvenyter",
+        "https://skanzen.hu"
+      ],
+      "official_url": "https://skanzen.hu/hu/rendezvenyter",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-railway-history-park",
       "name": "Hungarian Railway History Park",
       "country": "Hungary",
@@ -10844,6 +11610,22 @@
         "author": "Mike is Michi",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hu-hungarospa-hajduszoboszlo",
+      "name": "Hungarospa Hajduszoboszlo",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar",
+      "lat": 47.4534,
+      "lng": 21.3962,
+      "type": "Hotel & interiors",
+      "setting": "A large thermal and wellness bath complex on the Great Plain, combining a medicinal thermal bath, an indoor adventure pool, an aquapark and an open-air beach area with an on-site hotel and campsite.",
+      "suitability": "Site lists event venues (rendezvenyhelyszinek) among its facilities",
+      "source_urls": [
+        "https://hungarospa.hu"
+      ],
+      "official_url": "https://hungarospa.hu",
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "hu-kaloczy-square-event-center",
@@ -11052,6 +11834,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-momkult",
+      "name": "MOM Cultural Center",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.49,
+      "lng": 19.0185,
+      "type": "Office, school & public building",
+      "setting": "A multidisciplinary cultural centre in the Nemetvolgy area of Budapest with a theatre hall, a domed hall and several named function rooms, plus an open-air stage and promenade.",
+      "suitability": "Site publishes an event venue (rendezvenyhelyszin) section for hiring its halls",
+      "source_urls": [
+        "https://momkult.hu"
+      ],
+      "official_url": "https://momkult.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-mome-zugliget",
       "name": "MOME Zugliget Campus",
       "country": "Hungary",
@@ -11228,6 +12026,22 @@
         "https://origostudios.com/stages-and-facilities/"
       ],
       "official_url": "https://origostudios.com/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-palace-hotel-lillafured",
+      "name": "Palace Hotel Lillafured",
+      "country": "Hungary",
+      "region": "Borsod-Abauj-Zemplen",
+      "lat": 48.1046,
+      "lng": 20.6231,
+      "type": "Hotel & interiors",
+      "setting": "A castle-style hotel built in the 1920s in the Bukk Mountains near Miskolc, overlooking the Szinva valley, Hamori Lake and a waterfall, with period interiors and historical exhibitions.",
+      "suitability": "Site lists corporate events, team-building and weddings among its services",
+      "source_urls": [
+        "https://hotelpalota.hu"
+      ],
+      "official_url": "https://hotelpalota.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -11413,6 +12227,22 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.szechenyifurdo.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-tihany-abbey",
+      "name": "Tihany Abbey",
+      "country": "Hungary",
+      "region": "Veszprem",
+      "lat": 46.9137,
+      "lng": 17.8897,
+      "type": "Church & monastery",
+      "setting": "A Benedictine abbey on a peninsula above Lake Balaton, nearly 1,000 years old, with a baroque twin-towered church, a crypt holding the tomb of King Andrew I and a museum on the monastic community.",
+      "suitability": "Abbey's public calendar shows the church closed to visitors for weddings on published dates",
+      "source_urls": [
+        "https://tihanyiapatsag.hu"
+      ],
+      "official_url": "https://tihanyiapatsag.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -11861,6 +12691,21 @@
       }
     },
     {
+      "id": "ie-ardfert-cathedral",
+      "name": "Ardfert Cathedral",
+      "country": "Ireland",
+      "region": "Kerry",
+      "lat": 52.3287,
+      "lng": -9.7817,
+      "type": "Church & monastery",
+      "setting": "A group of three medieval churches near Tralee dedicated to St Brendan, including a 12th-century cathedral with a 13th-century window and a Romanesque chapel, open for venue hire including filming.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/ardfert-cathedral/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/ardfert-cathedral/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ardmore-studios",
       "name": "Ardmore Studios",
       "country": "Ireland",
@@ -11880,6 +12725,23 @@
       ],
       "official_url": "https://www.ardmore.ie/",
       "commission_url": "https://www.screenireland.ie/locations"
+    },
+    {
+      "id": "ie-ashford-studios",
+      "name": "Ashford Studios",
+      "country": "Ireland",
+      "region": "Wicklow",
+      "lat": 53.0248,
+      "lng": -6.1005,
+      "type": "Studio & backlot",
+      "setting": "A film and TV production studio at Ballyhenry near Ashford in County Wicklow, about 40 minutes from Dublin, offering sound stages and access to surrounding countryside locations; its backlot has stood in for the Vikings series.",
+      "known_for": "Vikings",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/studio-sets",
+        "https://www.ashfordstudios.com/"
+      ],
+      "official_url": "https://www.ashfordstudios.com/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-aughnanure-castle",
@@ -12275,6 +13137,21 @@
         "author": "Kittysoftpaws",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "ie-fota-arboretum-gardens",
+      "name": "Fota Arboretum and Gardens",
+      "country": "Ireland",
+      "region": "Cork",
+      "lat": 51.8935,
+      "lng": -8.3023,
+      "type": "Village & countryside",
+      "setting": "An 11-hectare arboretum on Fota Island in Cork Harbour with rare trees and shrubs, an ornamental pond, an orangery and formal gardens laid out in the early 19th century, open for filming and photography by arrangement.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/fota-arboretum-and-gardens/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/fota-arboretum-and-gardens/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-glendalough",
@@ -12689,6 +13566,21 @@
       }
     },
     {
+      "id": "ie-blasket-centre-kerry",
+      "name": "The Blasket Centre (Ionad an Bhlascaoid)",
+      "country": "Ireland",
+      "region": "Kerry",
+      "lat": 52.1322,
+      "lng": -10.4632,
+      "type": "Office, school & public building",
+      "setting": "A heritage visitor centre at Dún Chaoin on the Dingle Peninsula documenting the Irish-speaking Blasket Islands community, with a clifftop viewing platform over the islands, refurbished in 2022.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/the-blasket-centre-ionad-an-bhlascaoid/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/the-blasket-centre-ionad-an-bhlascaoid/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-custom-house-visitor-centre",
       "name": "The Custom House Visitor Centre",
       "country": "Ireland",
@@ -12768,6 +13660,24 @@
         "author": "Mx. Granger",
         "license": "CC0"
       }
+    },
+    {
+      "id": "ie-troy-studios-limerick",
+      "name": "Troy Studios",
+      "country": "Ireland",
+      "region": "Limerick",
+      "lat": 52.6739,
+      "lng": -8.5552,
+      "type": "Studio & backlot",
+      "setting": "A four-stage, 100,000-square-foot film and TV studio complex at the National Technology Park in Castletroy, Limerick, with a 5-acre backlot and on-site parking for large productions.",
+      "known_for": "Nightflyers, Foundation",
+      "facilities": "Four sound stages plus T stage totalling around 100,000 sq ft of stage space, 350,000 sq ft under one roof, 5-acre backlot, parking for 623 cars and 30 trucks",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/studio-sets",
+        "https://troystudios.ie/"
+      ],
+      "official_url": "https://troystudios.ie/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-university-of-galway",
