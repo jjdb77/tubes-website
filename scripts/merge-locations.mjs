@@ -56,6 +56,12 @@ for (const f of fs.readdirSync(outDir).filter((f) => f.endsWith(".json")).sort()
   }
   for (const l of arr) {
     const c = clean(l);
+    // Agents schrijven tussentijds weg; zo'n bestand kan halve entries bevatten.
+    // Die overslaan in plaats van erop stuklopen.
+    if (!c.id || !c.name || !c.country || typeof c.lat !== "number" || typeof c.lng !== "number") {
+      console.log(`incomplete, skipped (${f}): ${c.id || c.name || "(no id)"}`);
+      continue;
+    }
     if (DROP[c.id]) { console.log(`dropped on purpose (${f}): ${c.id} ${DROP[c.id]}`); continue; }
     if (byId.has(c.id) || names.has(nameKey(c))) { skippedDup++; console.log(`dup skipped (${f}): ${c.id} ${c.name}`); continue; }
     byId.set(c.id, c); names.add(nameKey(c)); data.locations.push(c); added++;

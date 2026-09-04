@@ -11525,6 +11525,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-groupama-arena",
+      "name": "Groupama Arena",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4754,
+      "lng": 19.0952,
+      "type": "Theatre, arena & venue",
+      "setting": "The football stadium of Ferencvarosi TC on Ulloi ut in Budapest, a modern all-seater ground also used for concerts and other events.",
+      "suitability": "Site references events and concerts hosted at the stadium beyond football matches",
+      "source_urls": [
+        "https://groupamaarena.com"
+      ],
+      "official_url": "https://groupamaarena.com",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-hortobagy-np",
       "name": "Hortobagy National Park",
       "country": "Hungary",
@@ -11556,6 +11572,22 @@
         "https://zenehaza.hu"
       ],
       "official_url": "https://zenehaza.hu/teremberles",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-hungarian-national-theatre",
+      "name": "Hungarian National Theatre",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4708,
+      "lng": 19.0709,
+      "type": "Theatre, arena & venue",
+      "setting": "The national repertory theatre of Hungary in a purpose-built 2002 building beside the Danube in southern Pest, home to its own drama company and visiting productions.",
+      "suitability": "Theatre operates a dedicated events organisation department for bookings and rentals",
+      "source_urls": [
+        "https://nemzetiszinhaz.hu"
+      ],
+      "official_url": "https://nemzetiszinhaz.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -11691,6 +11723,22 @@
         "https://kincsempark.hu"
       ],
       "official_url": "https://kincsempark.hu/rendezvenyszervezes/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-kodaly-center",
+      "name": "Kodaly Center",
+      "country": "Hungary",
+      "region": "Baranya",
+      "lat": 46.0753,
+      "lng": 18.2446,
+      "type": "Theatre, arena & venue",
+      "setting": "A modern concert hall in Pecs's Zsolnay Quarter, home to the Pannon Philharmonic Orchestra, with a main concert hall, a studio theatre space and conference rooms.",
+      "suitability": "Site publishes event and conference venue rental services alongside a recording studio",
+      "source_urls": [
+        "https://kodalykozpont.hu"
+      ],
+      "official_url": "https://kodalykozpont.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -11898,6 +11946,22 @@
         "https://www.mvm-dome.hu"
       ],
       "official_url": "https://www.mvm-dome.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-nagyerdei-stadion",
+      "name": "Nagyerdei Stadion",
+      "country": "Hungary",
+      "region": "Hajdu-Bihar",
+      "lat": 47.554,
+      "lng": 21.6329,
+      "type": "Theatre, arena & venue",
+      "setting": "The football stadium of Debreceni VSC on the edge of the Nagyerdo forest park in Debrecen, with VIP and skybox hospitality areas alongside the pitch and stands.",
+      "suitability": "Club site lists stadium facility rental among its services, alongside VIP and skybox packages",
+      "source_urls": [
+        "https://dvsc.hu"
+      ],
+      "official_url": "https://dvsc.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -12230,6 +12294,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-szeged-new-synagogue",
+      "name": "Szeged New Synagogue",
+      "country": "Hungary",
+      "region": "Csongrad-Csanad",
+      "lat": 46.254,
+      "lng": 20.1424,
+      "type": "Church & monastery",
+      "setting": "An Art Nouveau synagogue in Szeged completed in 1903 by architect Lipot Baumhorn, mixing secession, historicist and Gothic Revival forms under a large central dome.",
+      "suitability": "Site publishes guided tours and hosts concerts and cultural events, with groups of up to 100 accommodated",
+      "source_urls": [
+        "https://szegedizsinagoga.hu"
+      ],
+      "official_url": "https://szegedizsinagoga.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-tihany-abbey",
       "name": "Tihany Abbey",
       "country": "Hungary",
@@ -12280,6 +12360,22 @@
         "https://unideb.hu/"
       ],
       "official_url": "https://unideb.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-university-of-szeged-main-building",
+      "name": "University of Szeged Main Building",
+      "country": "Hungary",
+      "region": "Csongrad-Csanad",
+      "lat": 46.25,
+      "lng": 20.1465,
+      "type": "Office, school & public building",
+      "setting": "The historic central building of the University of Szeged on Dugonics ter, an early 20th century academic building used for teaching, administration and formal university functions.",
+      "suitability": "University publishes its central building as an event venue (rendezvenyhelyszin)",
+      "source_urls": [
+        "https://u-szeged.hu"
+      ],
+      "official_url": "https://u-szeged.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -12356,6 +12452,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-vigszinhaz",
+      "name": "Vigszinhaz (Vig Theatre)",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5126,
+      "lng": 19.0514,
+      "type": "Theatre, arena & venue",
+      "setting": "A large historic theatre on Szent Istvan korut in Budapest, with a main stage and several affiliated smaller stages across the district, offering backstage tours of the building.",
+      "suitability": "Theatre operates a dedicated organisation office for event bookings and offers facility tours (VigTour)",
+      "source_urls": [
+        "https://vigszinhaz.hu"
+      ],
+      "official_url": "https://vigszinhaz.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-wekerle-estate",
       "name": "Wekerle Estate",
       "country": "Hungary",
@@ -12388,6 +12500,22 @@
       ],
       "official_url": "https://zsolnaynegyed.hu/",
       "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "is-akureyrarkirkja",
+      "name": "Akureyrarkirkja",
+      "country": "Iceland",
+      "region": "Northeastern Region",
+      "lat": 65.6799,
+      "lng": -18.0909,
+      "type": "Church & monastery",
+      "setting": "A 1940 Lutheran church on a hill above central Akureyri, designed by Gudjon Samuelsson with a stepped concrete facade related to his Hallgrimskirkja in Reykjavik.",
+      "source_urls": [
+        "https://www.akureyrarkirkja.is",
+        "https://en.wikipedia.org/wiki/Akureyrarkirkja"
+      ],
+      "official_url": "https://www.akureyrarkirkja.is",
+      "commission_url": "https://filminiceland.com"
     },
     {
       "id": "is-blue-lagoon",
@@ -12446,6 +12574,21 @@
       "commission_url": "https://filminiceland.com/locations/"
     },
     {
+      "id": "is-grandi-harbour",
+      "name": "Grandi (Reykjavik Old Harbour)",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.153,
+      "lng": -21.952,
+      "type": "Transport & infrastructure",
+      "setting": "The working fishing harbour at Grandi on Reykjavik's western shore, with slipways and fish-processing buildings now shared with whale-watching boats, seafood restaurants and design studios.",
+      "source_urls": [
+        "https://www.faxafloahafnir.is/en/"
+      ],
+      "official_url": "https://www.faxafloahafnir.is/en/",
+      "commission_url": "https://filminiceland.com"
+    },
+    {
       "id": "is-hafnarfjordur-harbour",
       "name": "Hafnarfjordur Harbour",
       "country": "Iceland",
@@ -12463,6 +12606,22 @@
       "url": "https://filminiceland.com/made-in-iceland/shackleton",
       "official_url": "https://www.hafnarfjardarhofn.is/",
       "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-hafnarhus",
+      "name": "Hafnarhus (Reykjavik Art Museum)",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.149,
+      "lng": -21.9406,
+      "type": "Industrial & derelict",
+      "setting": "A former harbourside warehouse at Reykjavik's old docks, converted into the main building of the Reykjavik Art Museum with large open exhibition halls under its original roof structure.",
+      "source_urls": [
+        "https://listasafnreykjavikur.is/hafnarhus",
+        "https://en.wikipedia.org/wiki/Reykjav%C3%ADk_Art_Museum"
+      ],
+      "official_url": "https://listasafnreykjavikur.is/hafnarhus",
+      "commission_url": "https://filminiceland.com"
     },
     {
       "id": "is-harpa-concert-hall",
@@ -12483,6 +12642,23 @@
       ],
       "official_url": "https://www.harpa.is/en",
       "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-hofdi",
+      "name": "Hofdi",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1465,
+      "lng": -21.9064,
+      "type": "House & apartment",
+      "setting": "A 1909 timber house on Reykjavik's waterfront, owned by the city and used for official receptions, with the flags of the United States and the Soviet Union still hung inside.",
+      "known_for": "1986 Reykjavik Summit (Ronald Reagan and Mikhail Gorbachev)",
+      "source_urls": [
+        "https://www.visitreykjavik.is/hofdi-house",
+        "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
+      ],
+      "official_url": "https://www.visitreykjavik.is/hofdi-house",
+      "commission_url": "https://filminiceland.com"
     },
     {
       "id": "is-jokulsarlon",
@@ -12537,6 +12713,22 @@
       "commission_url": "https://filminiceland.com/locations/"
     },
     {
+      "id": "is-laugardalslaug",
+      "name": "Laugardalslaug",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1461,
+      "lng": -21.8799,
+      "type": "Theatre, arena & venue",
+      "setting": "Iceland's largest conventional swimming pool complex, in Reykjavik's Laugardalur valley, with an indoor Olympic-size pool, a 50 metre outdoor pool, eight hot pots and a steam bath.",
+      "source_urls": [
+        "https://www.reykjavik.is/stadir/laugardalslaug",
+        "https://en.wikipedia.org/wiki/Laugardalslaug"
+      ],
+      "official_url": "https://www.reykjavik.is/stadir/laugardalslaug",
+      "commission_url": "https://filminiceland.com"
+    },
+    {
       "id": "is-perlan",
       "name": "Perlan",
       "country": "Iceland",
@@ -12555,6 +12747,22 @@
       "url": "https://filminiceland.com/made-in-iceland/the-christmas-quest",
       "official_url": "https://perlan.is/",
       "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-reykjavik-city-hall",
+      "name": "Reykjavik City Hall",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1461,
+      "lng": -21.9425,
+      "type": "Office, school & public building",
+      "setting": "The seat of Reykjavik's city government on the edge of the Tjornin pond, a low glass and stone building from 1992 that also hosts exhibitions, concerts and public functions.",
+      "source_urls": [
+        "https://www.reykjavik.is/en",
+        "https://en.wikipedia.org/wiki/Reykjav%C3%ADk_City_Hall"
+      ],
+      "official_url": "https://www.reykjavik.is/en",
+      "commission_url": "https://filminiceland.com"
     },
     {
       "id": "reynisfjara-beach",
@@ -12649,6 +12857,22 @@
       ],
       "official_url": "https://www.thingvellir.is/en/",
       "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-university-of-iceland",
+      "name": "University of Iceland",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1402,
+      "lng": -21.954,
+      "type": "Office, school & public building",
+      "setting": "Iceland's oldest and largest university, founded in 1911, with its main building and campus grouped around Sudurgata in central Reykjavik.",
+      "source_urls": [
+        "https://english.hi.is",
+        "https://en.wikipedia.org/wiki/University_of_Iceland"
+      ],
+      "official_url": "https://english.hi.is",
+      "commission_url": "https://filminiceland.com"
     },
     {
       "id": "is-vik-i-myrdal",
@@ -22305,6 +22529,21 @@
       }
     },
     {
+      "id": "es-laboral-ciudad-de-la-cultura-gijon",
+      "name": "Laboral Ciudad de la Cultura",
+      "country": "Spain",
+      "region": "Asturias",
+      "lat": 43.5247,
+      "lng": -5.6151,
+      "type": "Modern architecture",
+      "setting": "Former 1950s vocational university complex in Gijon, one of Spain's largest buildings, with a tall tower, a domed theatre and courtyard, now a cultural centre offering spaces for hire and its own filming rental process.",
+      "source_urls": [
+        "https://www.laboralciudaddelacultura.com/"
+      ],
+      "official_url": "https://www.laboralciudaddelacultura.com/",
+      "commission_url": "https://spainfilmcommission.com/"
+    },
+    {
       "id": "es-las-medulas",
       "name": "Las Medulas",
       "country": "Spain",
@@ -22637,6 +22876,36 @@
       "commission_url": "https://www.shootinginspain.info/"
     },
     {
+      "id": "es-palacio-de-la-aljaferia-zaragoza",
+      "name": "Palacio de la Aljaferia",
+      "country": "Spain",
+      "region": "Aragon",
+      "lat": 41.6565,
+      "lng": -0.8967,
+      "type": "Palace & landmark",
+      "setting": "Fortified 11th century Moorish palace in Zaragoza, with horseshoe arches and a courtyard garden, later remodelled by the Catholic Monarchs and now home to the Aragonese regional parliament.",
+      "source_urls": [
+        "https://www.cortesaragon.es/"
+      ],
+      "official_url": "https://www.cortesaragon.es/",
+      "commission_url": "https://spainfilmcommission.com/"
+    },
+    {
+      "id": "es-palacio-de-la-magdalena-santander",
+      "name": "Palacio de la Magdalena",
+      "country": "Spain",
+      "region": "Cantabria",
+      "lat": 43.4692,
+      "lng": -3.7661,
+      "type": "Palace & landmark",
+      "setting": "Early 20th century royal summer residence on its own peninsula park in Santander, English and Montanes-style architecture, now a summer university campus that also hosts conferences and weddings.",
+      "source_urls": [
+        "https://www.palaciomagdalena.com/"
+      ],
+      "official_url": "https://www.palaciomagdalena.com/",
+      "commission_url": "https://spainfilmcommission.com/"
+    },
+    {
       "id": "es-palacio-domecq",
       "name": "Palacio Domecq",
       "country": "Spain",
@@ -22653,6 +22922,21 @@
       "url": "https://andaluciafilm.com/localizacionsingular/palacio-domecq/",
       "official_url": "https://andaluciafilm.com/localizacionsingular/palacio-domecq/",
       "commission_url": "https://andaluciafilm.com"
+    },
+    {
+      "id": "es-palau-de-congressos-valencia",
+      "name": "Palau de Congressos de Valencia",
+      "country": "Spain",
+      "region": "Valencian Community",
+      "lat": 39.4962,
+      "lng": -0.4021,
+      "type": "Office, school & public building",
+      "setting": "1998 convention centre by architect Norman Foster in northern Valencia, with a marble-clad hall, a large auditorium and multiple meeting rooms available for hire.",
+      "source_urls": [
+        "https://www.palcongres-vlc.com/en/"
+      ],
+      "official_url": "https://www.palcongres-vlc.com/en/",
+      "commission_url": "https://spainfilmcommission.com/"
     },
     {
       "id": "es-palau-de-la-musica-catalana",
