@@ -11274,6 +11274,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-budapest-prison-museum",
+      "name": "Budapest Prison Museum",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5118,
+      "lng": 19.0646,
+      "type": "Hospital, prison & institution",
+      "setting": "The Hungarian Prison Service's professional history collection in Budapest, exhibiting uniforms, restraints, firearms and other institutional material from the Austro-Hungarian era to the present.",
+      "suitability": "Site publishes guided tours by advance reservation, for groups of 8 to 20 people",
+      "source_urls": [
+        "https://bv.gov.hu/hu/budapesti-bortonmuzeum"
+      ],
+      "official_url": "https://bv.gov.hu/hu/budapesti-bortonmuzeum",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-deli-station",
       "name": "Budapest-Deli Railway Station",
       "country": "Hungary",
@@ -11505,6 +11521,22 @@
         "https://en.wikipedia.org/wiki/G%C3%B6d%C3%B6ll%C5%91_Palace"
       ],
       "official_url": "https://www.kiralyikastely.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-gozsdu-udvar",
+      "name": "Gozsdu Udvar",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4979,
+      "lng": 19.0616,
+      "type": "House & apartment",
+      "setting": "A chain of seven connected courtyards running between two parallel streets in Budapest's Jewish Quarter, formed by 19th century apartment blocks and now lined with bars, restaurants and a regular weekend market.",
+      "suitability": "Site publishes a regular weekend market and day and night programming through the courtyards",
+      "source_urls": [
+        "https://www.gozsduudvar.hu"
+      ],
+      "official_url": "https://www.gozsduudvar.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -12204,6 +12236,22 @@
         "author": "misibacsi",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "hu-satoraljaujhely-prison-museum",
+      "name": "Satoraljaujhely Prison Museum",
+      "country": "Hungary",
+      "region": "Borsod-Abauj-Zemplen",
+      "lat": 48.3961,
+      "lng": 21.6561,
+      "type": "Hospital, prison & institution",
+      "setting": "A prison museum in the town of Satoraljaujhely, next to the still-operating Satoraljaujhely Prison and Detention Facility, displaying the history of the Hungarian penal system from feudal punishments to the modern era.",
+      "suitability": "Site publishes museum visits and school group programmes run with the local Crime Prevention Committee",
+      "source_urls": [
+        "https://bv.gov.hu/hu/bortonmuzeum"
+      ],
+      "official_url": "https://bv.gov.hu/hu/bortonmuzeum",
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "hu-sopron",
