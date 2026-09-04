@@ -275,9 +275,9 @@
                      (!country.value || card.dataset.country === country.value) &&
                      (!type.value || card.dataset.type === type.value) &&
                      aiTerms.every((t) => textOf(card).includes(t));
-        if (!hard) { card.hidden = true; continue; }
+        if (!hard) { if (!card.hidden) card.hidden = true; continue; }
         const score = needles.reduce((n, w) => n + (textOf(card).includes(w) ? 1 : 0), 0);
-        if (needles.length && score === 0) { card.hidden = true; continue; }
+        if (needles.length && score === 0) { if (!card.hidden) card.hidden = true; continue; }
         if (score > best) best = score;
         pool.push({ card, score });
       }
@@ -285,7 +285,9 @@
         const ok = item.score === best;
         if (ok) matched.add(item.card.dataset.id);
         const show = ok && shown < limit;
-        item.card.hidden = !show;
+        // Alleen schrijven als het verandert: met duizenden kaarten kost een
+        // blinde toewijzing per toetsaanslag merkbaar veel herberekening.
+        if (item.card.hidden === show) item.card.hidden = !show;
         if (show) shown++;
       }
       const left = matched.size - shown;
@@ -298,7 +300,13 @@
       updateMap();
     };
     moreBtn.addEventListener("click", () => { limit += PAGE; applyFilters(true); });
-    q.addEventListener("input", applyFilters);
+    // Even wachten tot het typen stilvalt: elke aanslag filtert anders duizenden
+    // kaarten opnieuw, en dan gaat het toetsenbord haperen.
+    let typeTimer = null;
+    q.addEventListener("input", () => {
+      clearTimeout(typeTimer);
+      typeTimer = setTimeout(() => applyFilters(), 140);
+    });
     country.addEventListener("change", applyFilters);
     type.addEventListener("change", applyFilters);
 
