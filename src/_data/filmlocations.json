@@ -12970,6 +12970,29 @@
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
+      "id": "gr-kapa-studios",
+      "name": "Kapa Studios",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9824,
+      "lng": 23.9027,
+      "type": "Studio & backlot",
+      "setting": "A 70,000 sqm studio complex in Spata, Attica, with twelve sound stages from 400 to 2,100 sqm, plus a 20,000 sqm backlot with standing sets including a 1960s Greek village and a reality-TV house.",
+      "known_for": "House of David, Tehran, The Witch, Sasmos",
+      "facilities": "12 sound stages (Spata and Markopoulo sites) from 400 sqm/7.3m height to 2,100 sqm/18m height, HD-equipped control rooms, generators and climate control; a 20,000 sqm open backlot with standing sets: a Big Brother house (700 sqm on a 5,000 sqm plot with pool), a 1960s-style Greek village (6,000 sqm) and a church set with a 70-seat amphitheatre (5,000 sqm).",
+      "suitability": "Indoor sound stages for studio-based production plus outdoor backlot shooting on standing sets; the company describes itself as serving both Greek and international productions.",
+      "source_urls": [
+        "https://kapastudios.com/",
+        "https://kapastudios.com/sound-stages/",
+        "https://kapastudios.com/backlot/",
+        "https://kapastudios.com/our-productions/",
+        "https://filmcommission.gr/production-company/kapa-studios/"
+      ],
+      "url": "https://filmcommission.gr/production-company/kapa-studios/",
+      "official_url": "https://kapastudios.com/",
+      "commission_url": "https://filmcommission.gr/"
+    },
+    {
       "id": "gr-karystos",
       "name": "Karystos",
       "country": "Greece",
@@ -17212,6 +17235,25 @@
       "commission_url": "https://www.screenireland.ie/locations"
     },
     {
+      "id": "it-10-watt-location-milano",
+      "name": "10 Watt Location",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.4443,
+      "lng": 9.1533,
+      "type": "Studio & backlot",
+      "setting": "A multi-studio complex in Milan's Navigli district with several naturally lit photo and video studios for advertising and events, listed by Lombardy's film commission since 2004.",
+      "known_for": "Trivago, Kinley, Banca Mediolanum",
+      "facilities": "Six named studio spaces (Light, Color, Lounge, Yori, Acqua e Gym, and an outdoor area); the Spazio/Studio Light room measures about 200 square metres with a ceiling up to 6.10 metres, 30 kW of power and full blackout capability.",
+      "suitability": "Advertised for advertising photo and video production as well as corporate events; spaces are furnished and technically equipped and can be booked for production or events.",
+      "source_urls": [
+        "https://www.10wattlocation.com/",
+        "https://www.filmcomlombardia.it/guida_alla_produzione/dettaglio_aziende_ajax.php?id=533"
+      ],
+      "official_url": "https://www.10wattlocation.com/",
+      "commission_url": "https://www.filmcomlombardia.it/"
+    },
+    {
       "id": "it-aeroporto-bolzano",
       "name": "Aeroporto di Bolzano",
       "country": "Italy",
@@ -18709,6 +18751,25 @@
       }
     },
     {
+      "id": "it-on-air-milano",
+      "name": "On Air Milano",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.5141,
+      "lng": 9.2543,
+      "type": "Studio & backlot",
+      "setting": "A virtual production studio in Milan built around an LED-wall stage for commercials and television, running since 1991 with in-house post-production alongside the shooting stage.",
+      "known_for": "Zero, 23, Grimaldi Lines, UPower Lifestyle",
+      "facilities": "An LED-wall virtual production stage plus 12 post-production workstations on site.",
+      "suitability": "Runs full virtual-production workflows from concept to final master, including studio hire, virtual environment creation and on-set consultation.",
+      "source_urls": [
+        "https://www.onairmilano.tv/",
+        "https://www.filmcomlombardia.it/guida_alla_produzione/dettaglio_aziende_ajax.php?id=160"
+      ],
+      "official_url": "https://www.onairmilano.tv/",
+      "commission_url": "https://www.filmcomlombardia.it/"
+    },
+    {
       "id": "it-ortigia-siracusa",
       "name": "Ortigia",
       "country": "Italy",
@@ -19400,6 +19461,24 @@
       }
     },
     {
+      "id": "it-teatro-tre-milano",
+      "name": "Teatro Tre",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.5073,
+      "lng": 9.2472,
+      "type": "Studio & backlot",
+      "setting": "A production studio in Milan offering sound-stage space for advertising, fashion and television shoots alongside its own set-design, scenography and costume workshops, operating since 1984.",
+      "known_for": "Lavazza, Prada, Maserati, Vodafone",
+      "suitability": "Listed by Lombardy's film commission under sound stages/photo studios (studi/fotografici/teatri di posa), with in-house scenography, costume and make-up services.",
+      "source_urls": [
+        "https://teatrotre.com/",
+        "https://www.filmcomlombardia.it/guida_alla_produzione/dettaglio_aziende_ajax.php?id=502"
+      ],
+      "official_url": "https://teatrotre.com/",
+      "commission_url": "https://www.filmcomlombardia.it/"
+    },
+    {
       "id": "it-teatro-verdi-pisa",
       "name": "Teatro Verdi, Pisa",
       "country": "Italy",
@@ -19578,6 +19657,31 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Villa_Necchi_Campiglio_20220818-174847.jpg",
         "author": "Thomas Kowalski",
         "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-y40-studios-montegrotto",
+      "name": "Y-40 The Deep Joy",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.3196,
+      "lng": 11.7842,
+      "type": "Studio & backlot",
+      "setting": "An underwater filming tank inside the Hotel Terme Millepini in Montegrotto Terme, with thermal water down to 42 metres, used for underwater photo and video shoots and advertising campaigns.",
+      "facilities": "4,300 cubic metres of thermal water at 32-34 degrees C; underwater platforms from -1.3m to -42.15m; a 60-metre underwater cave system; a 13-metre transparent tunnel; two 30-metre ceiling rigging beams rated to 1 tonne per metre; adjustable underwater and surface lighting and audio, with full blackout possible.",
+      "suitability": "Advertised for underwater photo shoots, video and advertising campaigns, with underwater DoP supervision, professional divers, lighting, backdrop installation and make-up/wardrobe support on site.",
+      "source_urls": [
+        "https://www.y-40.com/en/y-40-studios-about/",
+        "https://www.y-40.com/en/",
+        "https://commons.wikimedia.org/wiki/File:Apnea_Italia.jpg"
+      ],
+      "official_url": "https://www.y-40.com/en/y-40-studios-about/",
+      "commission_url": "https://venetofilmcommission.com/it/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Apnea_Italia.jpg/960px-Apnea_Italia.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Apnea_Italia.jpg",
+        "author": "Apnea Evolution",
+        "license": "CC BY-SA 2.0"
       }
     },
     {
@@ -27598,6 +27702,28 @@
       "commission_url": "https://madridfilmoffice.com/"
     },
     {
+      "id": "es-galaxia-studios-valencia",
+      "name": "Galaxia Studios",
+      "country": "Spain",
+      "region": "Valencian Community",
+      "lat": 39.517,
+      "lng": -0.4743,
+      "type": "Studio & backlot",
+      "setting": "A studio complex in Paterna near Valencia with four sound stages from 200 to 1,000 square metres, production offices, dubbing studios and control rooms, beside the V-30 motorway.",
+      "facilities": "Plato 1: 1,000 sq m, 28x40 m, 7 m to catwalks, 800 kW. Plato 2: 600 sq m, 17x34 m, 6.5 m, 500 kW. Plato 3: 400 sq m, 17x23 m, 6.5 m, 500 kW. Plato 4: 200 sq m, 15x13.5 m, 3.5 m, 50 kW. Also 3,000 sq m of production offices, 30 multipurpose rooms, 15 post-production suites, 6 sound/dubbing studios, 3 control rooms and two 2 MW power transformer centres",
+      "suitability": "Stages adaptable for cinema, fiction series, entertainment programmes, advertising and photography",
+      "logistics": "10 minutes from Valencia city centre, next to the V-30 motorway, 5 minutes from Valencia airport, 15 minutes from Joaquín Sorolla train station",
+      "source_urls": [
+        "https://galaxiastudios.es/platos/",
+        "https://galaxiastudios.es/quienes-somos/",
+        "https://galaxiastudios.es/contacto/",
+        "https://studios.spainfilmcommission.com/studio/galaxia-estudios"
+      ],
+      "url": "https://studios.spainfilmcommission.com/studio/galaxia-estudios",
+      "official_url": "https://galaxiastudios.es/platos/",
+      "commission_url": "https://www.filmvalencia.com"
+    },
+    {
       "id": "es-gran-canaria-platos",
       "name": "Gran Canaria Platos",
       "country": "Spain",
@@ -28350,6 +28476,27 @@
       }
     },
     {
+      "id": "es-palma-pictures",
+      "name": "Palma Pictures",
+      "country": "Spain",
+      "region": "Balearic Islands",
+      "lat": 39.6262,
+      "lng": 2.7197,
+      "type": "Studio & backlot",
+      "setting": "A production services company in Marratxi near Palma with a 1,000 square metre sound stage, production offices and in-house camera, grip and lighting kit for hire on Mallorca.",
+      "facilities": "1,000 sq m sound stage (partly solar powered), on-site production offices, in-house camera, grip, lighting and location support equipment",
+      "suitability": "Production services company covering scripted, unscripted, commercials and photo/motion work, based on Mallorca with reach across mainland Spain, the Canary Islands and Portugal",
+      "source_urls": [
+        "https://www.palmapictures.es/studio-equipment",
+        "https://www.palmapictures.es/contact",
+        "https://www.palmapictures.es/scripted/",
+        "https://studios.spainfilmcommission.com/studio/palma-pictures"
+      ],
+      "url": "https://studios.spainfilmcommission.com/studio/palma-pictures",
+      "official_url": "https://www.palmapictures.es/studio-equipment",
+      "commission_url": "https://www.mallorcafilmcommission.com"
+    },
+    {
       "id": "es-parc-audiovisual-catalunya",
       "name": "Parc Audiovisual de Catalunya",
       "country": "Spain",
@@ -28470,6 +28617,27 @@
       ],
       "official_url": "https://madridfilmoffice.com/localizacion/poligono-industrial-julian-camarillo/",
       "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
+      "id": "es-proima-zebra-astur",
+      "name": "Proima Zebra Astur",
+      "country": "Spain",
+      "region": "Asturias",
+      "lat": 43.3198,
+      "lng": -5.802,
+      "type": "Studio & backlot",
+      "setting": "A television production complex in Oviedo with four stages (1,268, 492 and 350 square metres, plus a 150 square metre chroma stage), built for broadcaster RTPA and hired out for other productions.",
+      "known_for": "Siempre al Día, Conexión Asturias, Asturias.Report, Babel",
+      "facilities": "Plato 1: 1,268 sq m. Plato 2: 492 sq m. Plato 3: 350 sq m. Chroma stage: 150 sq m",
+      "suitability": "Purpose-built as the main production base for regional broadcaster RTPA, also used for TV production, brand content and events",
+      "source_urls": [
+        "https://proima-zebrastur.com/Platos",
+        "https://proima-zebrastur.com/Produccion",
+        "https://studios.spainfilmcommission.com/studio/proima-zebra-astur"
+      ],
+      "url": "https://studios.spainfilmcommission.com/studio/proima-zebra-astur",
+      "official_url": "https://proima-zebrastur.com/Platos",
+      "commission_url": "https://www.filmcommissionasturias.com"
     },
     {
       "id": "es-puerto-bilbao",
