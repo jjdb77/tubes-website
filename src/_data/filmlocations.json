@@ -13399,6 +13399,27 @@
       "commission_url": "https://filmcommission.gr"
     },
     {
+      "id": "gr-studio-karamanos",
+      "name": "Studio Karamanos",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 38.0411,
+      "lng": 23.7135,
+      "type": "Studio & backlot",
+      "setting": "Television and event studio in Ilion, Athens, combined with a camera and lighting equipment rental house, used for entertainment shows and commercials.",
+      "known_for": "MasterChef, Who Wants to Be a Millionaire",
+      "facilities": "Site describes it as the largest TV studio in Greece and one of the largest in the Balkans; camera equipment (Arri film and digital cameras, lenses, monitors), lighting (HMI, LED, tungsten, moving heads, dimmers, trusses), camera cars and lighting trucks",
+      "suitability": "Hosts multiple concurrent television and commercial productions.",
+      "logistics": "58 Dragoumanou St, Ilion, Attica 13122, Athens",
+      "source_urls": [
+        "https://studiokaramanos.gr",
+        "https://filmcommission.gr/company/p-karamanos-s-a/"
+      ],
+      "url": "https://filmcommission.gr/company/p-karamanos-s-a/",
+      "official_url": "https://studiokaramanos.gr",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-symi-port",
       "name": "Symi Port (Gialos)",
       "country": "Greece",
@@ -17099,6 +17120,24 @@
       }
     },
     {
+      "id": "it-arca-studios-turin",
+      "name": "Arca Studios",
+      "country": "Italy",
+      "region": "Piedmont",
+      "lat": 45.0936,
+      "lng": 7.6828,
+      "type": "Studio & backlot",
+      "setting": "A production facility in the Docks Dora industrial complex in Turin, with two soundproofed recording studios and around 400 square metres of flexible set and event space for small and medium productions.",
+      "facilities": "Two soundproofed studios for dubbing, sound recording and Foley; two multi-purpose halls (Sala Rossa and Sala Bianca); about 400 sqm of rentable space in total; two coworking areas and two meeting rooms with fibre internet.",
+      "suitability": "Advertised for short- and long-term hire of equipped spaces for film and photo sets.",
+      "source_urls": [
+        "https://arcastudios.it/",
+        "https://www.fctp.it/location.php"
+      ],
+      "official_url": "https://arcastudios.it/",
+      "commission_url": "https://www.fctp.it/"
+    },
+    {
       "id": "it-arena-di-verona",
       "name": "Arena di Verona",
       "country": "Italy",
@@ -17500,6 +17539,23 @@
       "commission_url": "https://italyformovies.it"
     },
     {
+      "id": "it-csc-sicilia-palermo",
+      "name": "Centro Sperimentale di Cinematografia - Sicilia",
+      "country": "Italy",
+      "region": "Sicily",
+      "lat": 38.1181,
+      "lng": 13.3385,
+      "type": "Studio & backlot",
+      "setting": "The Sicilian branch of Italy's national film school, housed in the Cantieri Culturali alla Zisa cultural complex in Palermo, with a 250 square metre sound stage and audio and color grading suites.",
+      "facilities": "A 250 sqm sound stage (teatro di posa), plus audio post-production and color-correction booths and editing bays.",
+      "suitability": "Mainly used for the film school's own training and student productions; the page does not publish hire terms for outside productions, so external availability should be confirmed directly with the school or Sicilia Film Commission.",
+      "source_urls": [
+        "https://www.siciliafilmcommission.org/centro-sperimentale-di-cinematografia-sede-sicilia/"
+      ],
+      "official_url": "https://www.siciliafilmcommission.org/centro-sperimentale-di-cinematografia-sede-sicilia/",
+      "commission_url": "https://www.siciliafilmcommission.org/"
+    },
+    {
       "id": "cinecitta",
       "name": "Cinecittà",
       "country": "Italy",
@@ -17559,6 +17615,23 @@
       "url": "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna",
       "official_url": "https://www.scarabeoentertainment.it/",
       "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-cineporto-bari",
+      "name": "Cineporto di Bari",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.1372,
+      "lng": 16.8389,
+      "type": "Studio & backlot",
+      "setting": "A production support centre for Apulia Film Commission inside the Fiera del Levante exhibition grounds in Bari, with production offices, casting and costume facilities and a small in-house cinema.",
+      "facilities": "About 1,200 sqm total: equipped production offices, casting rooms, hair and make-up rooms, costume storage, a set-design workshop, and an HD screening room with 98 seats.",
+      "suitability": "Used by Apulia Film Commission as the logistical base for productions shooting in the region; also hosts festival screenings and casting calls.",
+      "source_urls": [
+        "https://www.apuliafilmcommission.it/cineporti/cineporto-di-bari/"
+      ],
+      "official_url": "https://www.apuliafilmcommission.it/cineporti/cineporto-di-bari/",
+      "commission_url": "https://www.apuliafilmcommission.it/"
     },
     {
       "id": "it-cineteca-di-bologna",
@@ -17663,6 +17736,25 @@
         "author": "Antuang",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-distretto-campano-audiovisivo",
+      "name": "Distretto Campano dell'Audiovisivo",
+      "country": "Italy",
+      "region": "Campania",
+      "lat": 40.816,
+      "lng": 14.1784,
+      "type": "Studio & backlot",
+      "setting": "A production hub for Film Commission Regione Campania in a former NATO Southern Europe base at Bagnoli, Naples, with offices, workshops and a screening and color grading room across 10,000 square metres.",
+      "facilities": "10,000 sqm across 4 levels in the former San Laise Park education/NATO complex: casting rooms, wardrobe/props/set-decoration workrooms and storerooms, production and direction offices, a screening room, a color grading and audio mix room, a render farm and animation labs, plus co-working space.",
+      "suitability": "Built as a Cine-Hub offering temporary production facilities (offices, casting, wardrobe and props workrooms) for productions filming in Campania, alongside a business incubator and training programme; confirmed in operation by a Film Commission event held on site in March 2026.",
+      "source_urls": [
+        "https://fcrc.it/distretto-campano-dellaudiovisivo-polo-del-digitale-e-dellanimazione-creativa-4/",
+        "https://fcrc.it/wp-content/uploads/FCRC_DISTRETTO_ENG.pdf",
+        "https://fcrc.it/ritorno-a-napoli-film-e-dibattiti-celebrano-il-cinema-italoamericano-degli-anni-30/"
+      ],
+      "official_url": "https://fcrc.it/distretto-campano-dellaudiovisivo-polo-del-digitale-e-dellanimazione-creativa-4/",
+      "commission_url": "https://www.fcrc.it/"
     },
     {
       "id": "it-domus-mercatorum-verona",
@@ -18119,6 +18211,23 @@
         "author": "sailko",
         "license": "CC BY 2.5"
       }
+    },
+    {
+      "id": "it-manifatture-digitali-cinema-prato",
+      "name": "Manifatture Digitali Cinema - MDC Prato",
+      "country": "Italy",
+      "region": "Tuscany",
+      "lat": 43.8801,
+      "lng": 11.0921,
+      "type": "Studio & backlot",
+      "setting": "A production support centre run by Toscana Film Commission in Prato, offering infrastructure for audiovisual productions alongside a tailoring workshop and a theatre nearby in the same district.",
+      "facilities": "Cineporto-style production support infrastructure at Via Dolce de' Mazzamuti 1; a separate costume/tailoring workshop at Via Santa Caterina 13; the Teatro Francesco Nuti at Via Santa Caterina 11.",
+      "source_urls": [
+        "https://www.manifatturedigitalicinema.it/",
+        "https://www.toscanafilmcommission.it/"
+      ],
+      "official_url": "https://www.manifatturedigitalicinema.it/",
+      "commission_url": "https://www.toscanafilmcommission.it/"
     },
     {
       "id": "it-masseria-marinella",
@@ -19235,6 +19344,23 @@
       "url": "https://italyformovies.it/location/detail/10040/unical-universita-della-calabria",
       "official_url": "https://italyformovies.it/location/detail/10040/unical-universita-della-calabria",
       "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-videoporto-genova",
+      "name": "Videoporto Genova",
+      "country": "Italy",
+      "region": "Liguria",
+      "lat": 44.4155,
+      "lng": 8.8761,
+      "type": "Studio & backlot",
+      "setting": "A production support centre run by Genova-Liguria Film Commission inside Villa Durazzo Bombrini in Cornigliano, Genoa, with a sound stage, guest accommodation and workshop space for visiting productions.",
+      "facilities": "A sound stage (sala di posa), production offices, dressing rooms, laboratory/workshop space, and on-site guest accommodation (foresteria).",
+      "suitability": "Advertised by the film commission as available for hire to local, national and international productions.",
+      "source_urls": [
+        "https://www.glfc.it/videoporto-genova/"
+      ],
+      "official_url": "https://www.glfc.it/videoporto-genova/",
+      "commission_url": "https://www.glfc.it/"
     },
     {
       "id": "villa-del-balbianello",
@@ -25152,6 +25278,25 @@
       }
     },
     {
+      "id": "pt-algarve-studios",
+      "name": "Algarve Studios",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.0163,
+      "lng": -7.9352,
+      "type": "Studio & backlot",
+      "setting": "Multimedia content studio in central Faro offering studio space, equipment rental and production crew for video and photo shoots in the Algarve.",
+      "suitability": "Site lists equipment rental, production crew (camera operators, cinematographers, drone operators, producers), lighting and casting services.",
+      "logistics": "Praceta Aleixo da Cunha no 8, Faro, Algarve",
+      "source_urls": [
+        "https://algarvestudios.com/",
+        "https://portugalfilmcommission.com/entidades/algarve-studios/"
+      ],
+      "url": "https://portugalfilmcommission.com/entidades/algarve-studios/",
+      "official_url": "https://algarvestudios.com/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-armazens-chiado",
       "name": "Armazéns do Chiado",
       "country": "Portugal",
@@ -25566,6 +25711,51 @@
       }
     },
     {
+      "id": "pt-estudio-da-fabrica",
+      "name": "Estudio da Fabrica",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "lat": 38.7078,
+      "lng": -9.1366,
+      "type": "Studio & backlot",
+      "setting": "Multifunctional video and photo studio in the Lisbon area with two sound stages for commercials, music videos, interviews and online video production.",
+      "facilities": "2 studios totalling approx. 400 sqm, with a white cyclorama and a chroma-key cyclorama, production areas, hair and make-up rooms, green room and equipped kitchen",
+      "suitability": "Site states the studios are rented by producers, independent filmmakers, photographers, advertising and digital agencies and music video production companies; equipment rental covers HD/4K/6K cameras, lighting, a Blackmagic ATEM multi-camera system, audio gear and a teleprompter.",
+      "source_urls": [
+        "https://www.estudiodafabrica.pt",
+        "https://portugalfilmcommission.com/entidades/estudio-da-fabrica/"
+      ],
+      "url": "https://portugalfilmcommission.com/entidades/estudio-da-fabrica/",
+      "official_url": "https://www.estudiodafabrica.pt",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-valentim-de-carvalho",
+      "name": "Estudios Valentim de Carvalho",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "lat": 38.7016,
+      "lng": -9.2904,
+      "type": "Studio & backlot",
+      "setting": "Television studio complex in Paco de Arcos with six sound stages used for national broadcasts, music recording and the Portuguese Eurovision selection show.",
+      "known_for": "Festival RTP da Cancao",
+      "facilities": "6 studios: Studio 1, 176 sqm (16x11m, 6.5m ceiling); Studio 2, 450 sqm, 350 kW installed lighting; Studio 2B, 230 sqm; Studio 3, 1500 sqm stage plus 600 sqm warehouse, 13m ceiling, lighting grid at 10m, up to 12 cameras, 98-channel digital sound control room; Studio 4, 144 sqm; Studio 5, 216 sqm; Studio 6, 216 sqm",
+      "suitability": "Site states Studio 1 has soundproofed acoustic conditions used for music recording; the complex is used for national TV broadcasts and the RTP Festival da Cancao.",
+      "source_urls": [
+        "https://valentim.pt/conteudos/estudios-televisao",
+        "https://pt.wikipedia.org/wiki/Valentim_de_Carvalho",
+        "https://pt.wikipedia.org/wiki/Festival_RTP_da_Can%C3%A7%C3%A3o_2026"
+      ],
+      "official_url": "https://valentim.pt/conteudos/estudios-televisao",
+      "commission_url": "https://portugalfilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Joe_Fossard_in_1997_during_production_of_the_Ithaka_album_Stellafly_at_Est%C3%BAdios_Valentim_de_Carvalho_Lisbon_Portugal_photograph_by_Ithaka_Darin_Pappas.jpg/960px-Joe_Fossard_in_1997_during_production_of_the_Ithaka_album_Stellafly_at_Est%C3%BAdios_Valentim_de_Carvalho_Lisbon_Portugal_photograph_by_Ithaka_Darin_Pappas.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Joe_Fossard_in_1997_during_production_of_the_Ithaka_album_Stellafly_at_Est%C3%BAdios_Valentim_de_Carvalho_Lisbon_Portugal_photograph_by_Ithaka_Darin_Pappas.jpg",
+        "author": "IthakaDarinPappas",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "pt-evora-historic-centre",
       "name": "Evora Historic Centre",
       "country": "Portugal",
@@ -25858,6 +26048,27 @@
       "url": "https://portugalfilmcommission.com/en/location/mourisca-tide-mill/",
       "official_url": "https://portugalfilmcommission.com/en/location/mourisca-tide-mill/",
       "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-moviebox-studios-algarve",
+      "name": "MovieBox Studios Algarve",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.1226,
+      "lng": -8.0288,
+      "type": "Studio & backlot",
+      "setting": "Former brewery site in Loule converted into a production complex with warehouses, stages and workshops, plus hardstanding for builds and unit base, used for film and TV productions in the Algarve.",
+      "known_for": "The Infernal Machine",
+      "facilities": "Units A1-A3, 2000 sqm each at 18m height; stage B1, 3716 sqm at 8.4m with equal-size ancillary unit B2; unit C, 1250 sqm at 10.4m; unit D, 1465 sqm at 10.4m; stage E1, 906 sqm at 8.4m with construction workshop unit E; production suite F, 450 sqm; units G (573 sqm), H propstore (83 sqm), I (342 sqm), J (236 sqm); unit K, 3500 sqm at 18m; unit L, 1655 sqm at 7m; propstores M, 578 sqm at 6m",
+      "suitability": "Site describes exclusive-use warehouse and stage space plus about 20,000 sq ft of workshop and ancillary space for prop storage and construction, with a concrete hardstanding area for builds, parking and VFX work; further sound stages and specialist VFX and water stages are planned.",
+      "logistics": "Loteamento Industrial de Loule 3, 8100-285 Loule; multiple loading doors, on-site parking",
+      "source_urls": [
+        "https://www.movieboxgroup.com/studios-phase-1",
+        "https://portugalfilmcommission.com/entidades/moviebox-studios-algarve/"
+      ],
+      "url": "https://portugalfilmcommission.com/entidades/moviebox-studios-algarve/",
+      "official_url": "https://www.movieboxgroup.com/studios-phase-1",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "pt-museu-nacional-ferroviario",
@@ -26319,6 +26530,25 @@
       "commission_url": "https://portugalfilmcommission.com/"
     },
     {
+      "id": "es-297-studio",
+      "name": "297Studio",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.3085,
+      "lng": -3.7776,
+      "type": "Studio & backlot",
+      "setting": "A column free 700 sqm sound stage in Leganes, south of Madrid, with a large cyclorama, dressing rooms and direct street level vehicle access for series, commercials and photo shoots.",
+      "price_note": "Rates on request; electricity billed separately at EUR 0.55 per kWh (own site).",
+      "facilities": "Column-free main stage 21.8 x 30.6 m x 5.0 m high (about 700 sqm); cyclorama 11.55 m wide x 5.4 m deep x 3.9 m high; four dressing rooms with showers; 26 private parking spaces plus adjacent public parking; direct street access with a goods lift rated to 2 tonnes.",
+      "logistics": "In Leganes, south of Madrid; direct street-level access, goods lift and on-site parking (own site).",
+      "source_urls": [
+        "https://edificio.297.studio/",
+        "https://madridfilmoffice.com/localizacion/297studio/"
+      ],
+      "official_url": "https://edificio.297.studio/",
+      "commission_url": "https://www.madridfilmoffice.com"
+    },
+    {
       "id": "es-barajas-airport",
       "name": "Adolfo Suárez Madrid-Barajas Airport",
       "country": "Spain",
@@ -26417,6 +26647,26 @@
         "author": "Tomas Fano",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "es-banzai-studio",
+      "name": "Banzai Studio",
+      "country": "Spain",
+      "region": "Catalonia",
+      "lat": 41.4579,
+      "lng": 2.2635,
+      "type": "Studio & backlot",
+      "setting": "A 400 sqm soundproofed sound stage in an industrial estate in Badalona, near Barcelona, with two permanent cycloramas, used for commercials, music videos and virtual production.",
+      "known_for": "Gum, Alhambra, Celofan",
+      "facilities": "400 sqm soundproofed, climate-controlled stage with 600 sqm of adjoining service areas; two permanent cycloramas in an L-infinity chroma-key configuration with fibre-optic lighting; dressing rooms, make-up area, client lounge, offices and kitchen.",
+      "suitability": "Positioned for advertising, music videos, film, TV series and photo shoots (own site).",
+      "logistics": "In an industrial estate in Badalona (Barcelones), north-east of Barcelona (own site).",
+      "source_urls": [
+        "https://www.banzaistudio.tv",
+        "https://www.bcncatfilmcommission.com/ca/companies/?f%5B0%5D=im_field_company_tags%3A1308"
+      ],
+      "official_url": "https://www.banzaistudio.tv",
+      "commission_url": "https://www.bcncatfilmcommission.com"
     },
     {
       "id": "es-bardenas-reales",
@@ -27073,6 +27323,24 @@
       "commission_url": "https://andaluciafilm.com"
     },
     {
+      "id": "es-fort-bravo",
+      "name": "Fort Bravo / Texas Hollywood",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.0476,
+      "lng": -2.421,
+      "type": "Studio & backlot",
+      "setting": "A permanent western style backlot in the Tabernas desert with a saloon, jail, church and ranch buildings, built for spaghetti westerns and still used for filming and photography.",
+      "known_for": "The Good, the Bad and the Ugly, The Sisters Brothers, That Dirty Black Bag",
+      "facilities": "Western town backlot with saloon, jail, church, ranch houses and stables; horse-drawn carriages and livestock on site; on-site restaurant/bar and swimming pool.",
+      "logistics": "In the Tabernas desert, Almeria province; on-site restaurant, bar and overnight stays in bungalows or camping pitches for cast and crew (own site).",
+      "source_urls": [
+        "https://fortbravo.org"
+      ],
+      "official_url": "https://fortbravo.org",
+      "commission_url": "https://www.andaluciafilm.com"
+    },
+    {
       "id": "es-fuerteventura-airport",
       "name": "Fuerteventura Airport",
       "country": "Spain",
@@ -27105,6 +27373,29 @@
       ],
       "official_url": "https://madridfilmoffice.com/localizacion/fundacion-carlos-de-amberes/",
       "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
+      "id": "es-gran-canaria-platos",
+      "name": "Gran Canaria Platos",
+      "country": "Spain",
+      "region": "Canary Islands",
+      "lat": 28.1289,
+      "lng": -15.4349,
+      "type": "Studio & backlot",
+      "setting": "A publicly owned studio complex on Gran Canaria with two large sound stages, one built as a virtual production volume with a curved LED wall, plus two backlot plots.",
+      "known_for": "The Abyss, Deep Water, The Penguin Lessons, Die drei Fragezeichen",
+      "price_note": "Stage 1 (LED volume in use): from EUR 11,700 per weekday (1-day minimum) down to EUR 6,000 per weekday for bookings of 72+ days, plus non-working-day surcharges; non-LED setup/wrap days from EUR 2,000 per weekday. Stage 2: from EUR 1,500 per weekday (1-day minimum) down to EUR 1,275 per weekday for bookings of 90+ days (own published tariff, May 2026).",
+      "facilities": "Stage 1 (Estudio Virtual XR): 1,220 sqm rodaje zone (48 x 25 m), 12 m to catwalk, noise floor under 20 dBA, 400-1,200 kW power; LED volume with a 40 x 8 m curved wall plus two moving screens and two ceiling screens (9x10 m and 9x5 m); workshop, dressing rooms, hair/make-up and wardrobe areas, 21 parking spaces. Stage 2: 1,800 sqm rodaje zone (56.25 x 32 m), same height and power range, workshop and storage. Two adjoining plots of bare land: 1,447 sqm and 2,513 sqm, each with water/power connection.",
+      "suitability": "Standard use hours Monday-Friday 08:00-20:00 and Saturday 08:00-15:00 (Sunday and holidays 08:00-20:00); use outside these hours is billed extra per 15-minute block (own published terms).",
+      "logistics": "On Gran Canaria; about 20 km from the island's airport (own site).",
+      "source_urls": [
+        "https://www.grancanariafilm.com/rodar-en-gran-canaria/gran-canaria-platos/",
+        "https://canaryislandsfilm.com/portfolio/platos-de-cine-en-gran-canaria/",
+        "https://www.spegc.org/wp-content/uploads/2026/05/condiciones-cesion-uso-temporal-gc-platos-13-05-2026.pdf"
+      ],
+      "url": "https://canaryislandsfilm.com/portfolio/platos-de-cine-en-gran-canaria/",
+      "official_url": "https://www.grancanariafilm.com/rodar-en-gran-canaria/gran-canaria-platos/",
+      "commission_url": "https://www.canaryislandsfilm.com"
     },
     {
       "id": "es-gran-teatre-del-liceu",
@@ -27361,6 +27652,26 @@
         "author": "Elpalacio",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "es-madrid-content-city",
+      "name": "Madrid Content City",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.6213,
+      "lng": -3.7273,
+      "type": "Studio & backlot",
+      "setting": "A production complex in Tres Cantos, north of Madrid, with two large sound stages, twelve smaller warehouse units, production offices and crew facilities, built on the former Secuoya Studios site.",
+      "facilities": "Two sound stages of 2,350-2,800 sqm built (1,500-2,000 sqm usable recording space each, independently operable), plus 12 warehouse units of about 800 sqm on two floors, production offices, a training school, student residence, 11 restaurants and about 2,500 sqm of parking.",
+      "logistics": "Tres Cantos, about 18 km north of central Madrid; about 15 minutes from Plaza Castilla and 20 minutes from Adolfo Suarez Madrid-Barajas airport (own site).",
+      "source_urls": [
+        "https://madridcontentcity.com/",
+        "https://madridcontentcity.com/instalaciones/",
+        "https://madridcontentcity.com/about-hub/",
+        "https://secuoyastudios.com/"
+      ],
+      "official_url": "https://madridcontentcity.com/instalaciones/",
+      "commission_url": "https://www.madridfilmoffice.com"
     },
     {
       "id": "es-matadero-madrid",
@@ -27816,6 +28127,24 @@
       }
     },
     {
+      "id": "es-parc-audiovisual-catalunya",
+      "name": "Parc Audiovisual de Catalunya",
+      "country": "Spain",
+      "region": "Catalonia",
+      "lat": 41.5939,
+      "lng": 2.0069,
+      "type": "Studio & backlot",
+      "setting": "A former hospital in Terrassa converted into a studio park with four sound stages from 400 to 1,260 sqm, offices and interior sets, run by the city council and the Catalan government.",
+      "facilities": "Plato 1: 1,200 sqm (38 x 28 m, 9.75 m to catwalk, 400 kW, 50 dB soundproofing, silent climate control). Plato 2: 600 sqm (28 x 18 m, 7.75 m, 200 kW, 12 x 5 m cyclorama). Plato 3: 1,260 sqm (40.83 x 30.98 m, 9.79 m, 320 kW, 75 dB soundproofing). Plato 4: 400 sqm (U-shaped cyclorama 12.3 x 11.1 m, 6.5 m high, 160 kW, 75 dB). All stages have vehicle access doors and fibre internet.",
+      "logistics": "On the former Sant Llatzer hospital grounds in Terrassa (Valles Occidental), with office space and location scouting support on site (own site).",
+      "source_urls": [
+        "https://www.parcaudiovisual.cat",
+        "https://www.parcaudiovisual.cat/platos/"
+      ],
+      "official_url": "https://www.parcaudiovisual.cat",
+      "commission_url": "https://www.bcncatfilmcommission.com"
+    },
+    {
       "id": "es-playa-de-las-catedrales",
       "name": "Playa de las Catedrales",
       "country": "Spain",
@@ -28039,6 +28368,27 @@
       ],
       "official_url": "https://www.atleticodemadrid.com/riyadhairmetropolitano",
       "commission_url": "https://madridfilmoffice.com"
+    },
+    {
+      "id": "es-robolt-studio",
+      "name": "Robolt Studio",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.458,
+      "lng": -3.7113,
+      "type": "Studio & backlot",
+      "setting": "A virtual production studio in Madrid's Tetuan district with four stages, including an 800 sqm LED volume stage with a robotic motion-control rig, used for commercials and music videos.",
+      "known_for": "Erborian, Nike, Mutua Madrilena, Benidorm Fest",
+      "capacity": 60,
+      "facilities": "Studio XL: 800 sqm, 7.2 m ceiling (4.5 m at sides), 12.16 x 4.32 m LED wall (1.8 mm pitch) plus a 5 x 3 m ceiling LED screen, robotic motion-control arm on a 9 m track, 31 kW power. Studio L: 380 sqm with a 10 x 3.8 m cyclorama. Studio M: 240 sqm, U-shaped cyclorama, capacity 60 people, podcast room included. Studio S: 150 sqm. Total complex about 1,500 sqm across four stages.",
+      "logistics": "About 3 minutes on foot from Francos Rodriguez metro station; 3 on-site parking spaces; vehicle access up to 3 m height (own site).",
+      "source_urls": [
+        "https://robolt.es/alquilerplatomadrid/",
+        "https://madridfilmoffice.com/localizacion/robolt-studio-xl-plato-de-produccion-virtual-pantallas-led/"
+      ],
+      "url": "https://madridfilmoffice.com/localizacion/robolt-studio-xl-plato-de-produccion-virtual-pantallas-led/",
+      "official_url": "https://robolt.es/alquilerplatomadrid/",
+      "commission_url": "https://www.madridfilmoffice.com"
     },
     {
       "id": "es-royal-tapestry-factory",
