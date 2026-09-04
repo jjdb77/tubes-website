@@ -2119,7 +2119,7 @@
       "source_urls": [
         "https://www.galeries-royales-saint-hubert.com"
       ],
-      "official_url": "https://www.galeries-royales-saint-hubert.com",
+      "official_url": "https://www.grsh.be/",
       "commission_url": "https://screen.brussels"
     },
     {
@@ -10761,7 +10761,7 @@
         "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/"
       ],
       "official_url": "https://www.deutscher-marinebund.de/marine-ehrenmal-laboe/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "commission_url": "https://www.moin-filmfoerderung.de/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Marine_-_Ehrenmal_Laboe.jpg/960px-Marine_-_Ehrenmal_Laboe.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Marine_-_Ehrenmal_Laboe.jpg",
@@ -11212,7 +11212,7 @@
         "https://www.speicherstadtmuseum.de/events-location.html"
       ],
       "official_url": "https://www.speicherstadtmuseum.de/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "commission_url": "https://www.moin-filmfoerderung.de/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Speicherstadt_abends.jpg/960px-Speicherstadt_abends.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Speicherstadt_abends.jpg",
@@ -11251,7 +11251,7 @@
         "https://www.st-michaelis.de/michel-besuch/ihre-veranstaltung-am-michel"
       ],
       "official_url": "https://www.st-michaelis.de/",
-      "commission_url": "https://www.filmfoerderung-hamburgschleswigholstein.de/",
+      "commission_url": "https://www.moin-filmfoerderung.de/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hamburg-Michaeliskirche-Hafen.jpg/960px-Hamburg-Michaeliskirche-Hafen.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Hamburg-Michaeliskirche-Hafen.jpg",
@@ -12716,7 +12716,7 @@
         "https://en.wikipedia.org/wiki/Spinalonga"
       ],
       "official_url": "https://www.visitgreece.gr/islands/crete/spinalonga-island/",
-      "commission_url": "https://www.ekome.media",
+      "commission_url": "https://filmcommission.gr/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg/960px-20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
@@ -17199,29 +17199,6 @@
       }
     },
     {
-      "id": "it-ivrea-industrial-city",
-      "name": "Ivrea, Industrial City of the 20th Century",
-      "country": "Italy",
-      "region": "Ivrea, Piedmont",
-      "lat": 45.47,
-      "lng": 7.8745,
-      "type": "Industrial & derelict",
-      "setting": "Early to mid-20th-century Olivetti factory town in Piedmont, its rationalist and modernist office and social buildings along Via Jervis forming a UNESCO World Heritage industrial landscape.",
-      "known_for": "Adriano Olivetti: La forza di un sogno (2013 miniseries)",
-      "source_urls": [
-        "https://www.ivreacittaindustriale.it/",
-        "https://en.wikipedia.org/wiki/Ivrea"
-      ],
-      "official_url": "https://www.ivreacittaindustriale.it/",
-      "commission_url": "https://www.fctp.it/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2021-linux-day-olivetti%2C_Ivrea%2C_Italy.jpg/960px-2021-linux-day-olivetti%2C_Ivrea%2C_Italy.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:2021-linux-day-olivetti,_Ivrea,_Italy.jpg",
-        "author": "Norberto Patrignani",
-        "license": "CC BY-SA 4.0"
-      }
-    },
-    {
       "id": "it-lingotto-pinacoteca-agnelli",
       "name": "Lingotto Rooftop Track and Pinacoteca Agnelli",
       "country": "Italy",
@@ -17601,7 +17578,7 @@
       "source_urls": [
         "https://www.comune.siracusa.it/"
       ],
-      "official_url": "https://www.comune.siracusa.it/",
+      "official_url": "https://www.siracusaturismo.net/",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ortigia_dall%27alto.jpg/960px-Ortigia_dall%27alto.jpg",
@@ -20626,7 +20603,7 @@
       "source_urls": [
         "https://www.tolhuistuin.nl"
       ],
-      "official_url": "https://www.tolhuistuin.nl",
+      "official_url": "https://tolhuistuin.nl/",
       "commission_url": "https://www.filmcommission.nl"
     },
     {
@@ -22212,7 +22189,7 @@
       "source_urls": [
         "https://www.hel.eu"
       ],
-      "official_url": "https://www.hel.eu",
+      "official_url": "https://www.hel.pl/",
       "commission_url": "https://filmcommission.pomorskie.eu"
     },
     {
@@ -26976,7 +26953,7 @@
         "https://en.wikipedia.org/wiki/Avicii_Arena"
       ],
       "official_url": "https://www.aviciiarena.se/en",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-chalmers",
@@ -27023,7 +27000,7 @@
         "https://www.eriksdalsbadet.se"
       ],
       "official_url": "https://www.eriksdalsbadet.se",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-falu-gruva",
@@ -27135,7 +27112,7 @@
         "https://en.wikipedia.org/wiki/Gr%C3%B6na_Lund"
       ],
       "official_url": "https://www.gronalund.com/en",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-icehotel",
@@ -27207,7 +27184,7 @@
         "https://kirunalapland.se/en/"
       ],
       "official_url": "https://www.lkab.com/en/",
-      "commission_url": "https://www.filmpolnord.se"
+      "commission_url": "https://www.filmpoolnord.se/"
     },
     {
       "id": "se-konserthuset-stockholm",
@@ -27223,7 +27200,7 @@
         "https://en.wikipedia.org/wiki/Stockholm_Concert_Hall"
       ],
       "official_url": "https://www.konserthuset.se/en",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-kulturhuset-stadsteatern",
@@ -27321,7 +27298,7 @@
         "https://en.wikipedia.org/wiki/Lund_University"
       ],
       "official_url": "https://www.lunduniversity.lu.se",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-malmo-live",
@@ -27360,7 +27337,7 @@
         "https://en.wikipedia.org/wiki/Karlskrona"
       ],
       "official_url": "https://www.marinmuseum.se/en/",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-naas-slott",
@@ -27393,7 +27370,7 @@
         "https://www.nalen.com"
       ],
       "official_url": "https://www.nalen.com",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-ostermalmshallen",
@@ -27408,7 +27385,7 @@
         "https://www.ostermalmshallen.se"
       ],
       "official_url": "https://www.ostermalmshallen.se",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-port-of-gothenburg",
@@ -27526,7 +27503,7 @@
         "https://en.wikipedia.org/wiki/Turning_Torso"
       ],
       "official_url": "https://www.hsb.se/turningtorso",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-universeum",
@@ -27565,7 +27542,7 @@
         "https://en.wikipedia.org/wiki/Uppsala_University"
       ],
       "official_url": "https://www.uu.se/en",
-      "commission_url": "https://www.filmregion.se"
+      "commission_url": "https://filmcommissionsweden.se/"
     },
     {
       "id": "se-vasa-museum",
@@ -29560,7 +29537,7 @@
         "https://museum.wales/slate/"
       ],
       "official_url": "https://museum.wales/slate/",
-      "commission_url": "https://www.gov.wales/film-and-tv-locations-wales",
+      "commission_url": "https://www.creative.wales/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Dinorwig_Slate_Quarry_Workshops_%28Welsh_Slate_Museum_Buildings%29_IMG_6930c.jpg/960px-Dinorwig_Slate_Quarry_Workshops_%28Welsh_Slate_Museum_Buildings%29_IMG_6930c.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Dinorwig_Slate_Quarry_Workshops_(Welsh_Slate_Museum_Buildings)_IMG_6930c.jpg",
@@ -29977,7 +29954,7 @@
         "https://www.rhonddaheritagepark.com"
       ],
       "official_url": "https://www.rhonddaheritagepark.com",
-      "commission_url": "https://www.gov.wales/film-and-tv-locations-wales",
+      "commission_url": "https://www.creative.wales/",
       "photo": {
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/70/Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg",
@@ -30358,7 +30335,6 @@
         "https://www.spacestudiosmanchester.co.uk",
         "https://screenmanchester.com/facilities/space-studios-manchester/"
       ],
-      "url": "https://screenmanchester.com/facilities/space-studios-manchester/",
       "official_url": "https://www.spacestudiosmanchester.co.uk",
       "commission_url": "https://screenmanchester.com"
     },
