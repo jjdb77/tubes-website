@@ -739,8 +739,9 @@ function addAiUsage(tokIn, tokOut) {
 // /beheer nog een 503 geeft; kan weg zodra ADMIN_PASSWORD is gezet.
 app.get("/api/contact/status", (req, res) => {
   res.set("Cache-Control", "no-store");
-  let stored = 0;
-  try { stored = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean).length; } catch {}
+  // Het aantal berichten stond hier eerder ook in; dat is uit de openbare
+  // melding gehaald omdat het niets zegt over een storing en wel iets prijsgeeft
+  // over hoeveel aanvragen er binnenkomen. Het aantal staat in de opstartlog.
   let backlog = "pending";
   try {
     const flag = JSON.parse(fs.readFileSync(BACKLOG_FLAG, "utf8"));
@@ -751,7 +752,6 @@ app.get("/api/contact/status", (req, res) => {
     mail_from_set: Boolean(process.env.MAIL_FROM),
     admin_password: Boolean(process.env.ADMIN_PASSWORD),
     volume: Boolean(process.env.RAILWAY_VOLUME_MOUNT_PATH),
-    stored,
     backlog,
   });
 });
