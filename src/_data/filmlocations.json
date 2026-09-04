@@ -1195,6 +1195,36 @@
       }
     },
     {
+      "id": "be-abbaye-d-orval",
+      "name": "Abbaye d'Orval",
+      "country": "Belgium",
+      "region": "Luxembourg Province",
+      "lat": 49.6409,
+      "lng": 5.35,
+      "type": "Church & monastery",
+      "setting": "Cistercian abbey near Florenville in Luxembourg province, with medieval ruins beside a working monastery known for its Trappist beer and cheese.",
+      "source_urls": [
+        "https://www.orval.be"
+      ],
+      "official_url": "https://www.orval.be",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
+      "id": "be-abbaye-de-maredsous",
+      "name": "Abbaye de Maredsous",
+      "country": "Belgium",
+      "region": "Namur",
+      "lat": 50.3021,
+      "lng": 4.7663,
+      "type": "Church & monastery",
+      "setting": "Neo-Gothic Benedictine abbey near Denée in Namur province, founded in 1872, with a working monastery, cheese and beer production and a visitor centre.",
+      "source_urls": [
+        "https://www.maredsous.com"
+      ],
+      "official_url": "https://www.maredsous.com",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-abdij-herkenrode",
       "name": "Abdij van Herkenrode",
       "country": "Belgium",
@@ -1279,6 +1309,21 @@
       "url": "https://www.screenflanders.be/nl/locaties/database/stedelijk-zwembad-aquatopia",
       "official_url": "https://www.aquatopia.be",
       "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-strepy-thieu",
+      "name": "Ascenseur de Strépy-Thieu",
+      "country": "Belgium",
+      "region": "Hainaut",
+      "lat": 50.4784,
+      "lng": 4.1096,
+      "type": "Transport & infrastructure",
+      "setting": "Boat lift on the Canal du Centre in Hainaut, part of a UNESCO-listed historic waterway with older hydraulic lifts nearby, raising vessels between two canal levels.",
+      "source_urls": [
+        "https://www.canalducentre.be"
+      ],
+      "official_url": "https://www.canalducentre.be",
+      "commission_url": "https://www.wallimage.be"
     },
     {
       "id": "be-autoworld",
@@ -1409,6 +1454,38 @@
       "commission_url": "https://screen.brussels"
     },
     {
+      "id": "be-chateau-de-beloeil",
+      "name": "Château de Beloeil",
+      "country": "Belgium",
+      "region": "Hainaut",
+      "lat": 50.551,
+      "lng": 3.7301,
+      "type": "Castle & estate",
+      "setting": "18th and 19th-century château of the Ligne family in Beloeil, Hainaut, with formal French gardens, a long ornamental lake and rooms open to the public.",
+      "known_for": "Les Jeux de société, Angélique, L'échange des princesses, La Guerre des trônes",
+      "source_urls": [
+        "https://www.chateaudebeloeil.com",
+        "https://fr.wikipedia.org/wiki/Château_de_Belœil"
+      ],
+      "official_url": "https://www.chateaudebeloeil.com",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
+      "id": "be-chateau-de-bouillon",
+      "name": "Château de Bouillon",
+      "country": "Belgium",
+      "region": "Luxembourg Province",
+      "lat": 49.7927,
+      "lng": 5.0653,
+      "type": "Castle & estate",
+      "setting": "Medieval fortress overlooking the town of Bouillon and the Semois river in Luxembourg province, one of Belgium's oldest surviving feudal castles.",
+      "source_urls": [
+        "https://www.chateaudebouillon.com"
+      ],
+      "official_url": "https://www.chateaudebouillon.com",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-chateau-de-freyr",
       "name": "Château de Freÿr",
       "country": "Belgium",
@@ -1424,6 +1501,37 @@
       ],
       "official_url": "https://freyr.be/en",
       "commission_url": "https://www.wallimage.be/"
+    },
+    {
+      "id": "be-chateau-de-jehay",
+      "name": "Château de Jehay",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.5772,
+      "lng": 5.323,
+      "type": "Castle & estate",
+      "setting": "Renaissance-era castle with a chequered stone facade in Amay, Liège province, moated and set in a landscaped domain managed by the Province of Liège.",
+      "source_urls": [
+        "https://jehay.be",
+        "https://fr.wikipedia.org/wiki/Château_de_Jehay"
+      ],
+      "official_url": "https://jehay.be",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
+      "id": "be-chateau-de-veves",
+      "name": "Château de Vêves",
+      "country": "Belgium",
+      "region": "Namur",
+      "lat": 50.2207,
+      "lng": 4.9826,
+      "type": "Castle & estate",
+      "setting": "Medieval castle with rounded towers and pointed roofs in Celles, Namur province, restored in the 19th and 20th centuries and open for tours.",
+      "source_urls": [
+        "https://www.chateau-de-veves.be"
+      ],
+      "official_url": "https://www.chateau-de-veves.be",
+      "commission_url": "https://www.wallimage.be"
     },
     {
       "id": "be-spa-francorchamps",
@@ -1490,6 +1598,21 @@
       "commission_url": "https://screen.brussels"
     },
     {
+      "id": "be-val-saint-lambert",
+      "name": "Cristallerie du Val Saint Lambert",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.5915,
+      "lng": 5.4805,
+      "type": "Industrial & derelict",
+      "setting": "Crystal glassworks founded in 1826 on the site of a former abbey in Seraing, near Liège, still producing crystal, with a factory, shop and heritage buildings open to visitors.",
+      "source_urls": [
+        "https://www.val-saint-lambert.com"
+      ],
+      "official_url": "https://www.val-saint-lambert.com",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-de-grote-post-oostende",
       "name": "De Grote Post",
       "country": "Belgium",
@@ -1527,6 +1650,36 @@
       }
     },
     {
+      "id": "be-grottes-de-han",
+      "name": "Domaine des Grottes de Han",
+      "country": "Belgium",
+      "region": "Namur",
+      "lat": 50.1183,
+      "lng": 5.1989,
+      "type": "Forest & lake",
+      "setting": "Show caves carved by the Lesse river near Han-sur-Lesse in Namur province, combined with a wildlife park and adventure trail on the surrounding land.",
+      "source_urls": [
+        "https://www.grotte-de-han.be"
+      ],
+      "official_url": "https://www.grotte-de-han.be",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
+      "id": "be-euro-space-center",
+      "name": "Euro Space Center",
+      "country": "Belgium",
+      "region": "Luxembourg Province",
+      "lat": 50.0077,
+      "lng": 5.2204,
+      "type": "Theatre, arena & venue",
+      "setting": "Space-themed visitor and education centre in Redu-Transinne, Luxembourg province, with astronaut training simulators, a planetarium and full-scale space hardware replicas.",
+      "source_urls": [
+        "https://www.eurospacecenter.be"
+      ],
+      "official_url": "https://www.eurospacecenter.be",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-flagey",
       "name": "Flagey",
       "country": "Belgium",
@@ -1561,6 +1714,21 @@
       ],
       "official_url": "https://www.galeries-royales-saint-hubert.com",
       "commission_url": "https://screen.brussels"
+    },
+    {
+      "id": "be-grand-curtius",
+      "name": "Grand Curtius",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.6471,
+      "lng": 5.5835,
+      "type": "Office, school & public building",
+      "setting": "Museum of archaeology, decorative arts and weapons in Liège, housed in the restored 17th-century mansion of arms merchant Jean Curtius on the Meuse.",
+      "source_urls": [
+        "https://www.grandcurtius.be"
+      ],
+      "official_url": "https://www.grandcurtius.be",
+      "commission_url": "https://www.wallimage.be"
     },
     {
       "id": "be-grand-hospice-brussels",
@@ -1890,6 +2058,36 @@
       "commission_url": "https://screen.brussels/"
     },
     {
+      "id": "be-mas-antwerp",
+      "name": "MAS (Museum aan de Stroom)",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.2289,
+      "lng": 4.4047,
+      "type": "Office, school & public building",
+      "setting": "Tower-shaped museum from 2011 in Antwerp's old harbour district, with a spiralling public route past galleries to a rooftop panorama over the city and river.",
+      "source_urls": [
+        "https://www.mas.be"
+      ],
+      "official_url": "https://www.mas.be",
+      "commission_url": "https://www.screenflanders.be"
+    },
+    {
+      "id": "be-mundaneum",
+      "name": "Mundaneum",
+      "country": "Belgium",
+      "region": "Hainaut",
+      "lat": 50.4576,
+      "lng": 3.9556,
+      "type": "Office, school & public building",
+      "setting": "Archive centre and museum in Mons documenting Paul Otlet's early 20th-century project to catalogue the world's knowledge, recognised by UNESCO's Memory of the World register.",
+      "source_urls": [
+        "https://www.mundaneum.org"
+      ],
+      "official_url": "https://www.mundaneum.org",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-paleis-op-de-meir",
       "name": "Paleis op de Meir",
       "country": "Belgium",
@@ -1909,6 +2107,21 @@
         "author": "Vandevorst, Kris",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "be-red-star-line-museum",
+      "name": "Red Star Line Museum",
+      "country": "Belgium",
+      "region": "Antwerp",
+      "lat": 51.2333,
+      "lng": 4.4034,
+      "type": "Office, school & public building",
+      "setting": "Museum in the former Red Star Line shipping company warehouses on the Antwerp quays, telling the story of transatlantic emigration to America between 1873 and 1934.",
+      "source_urls": [
+        "https://www.redstarline.be"
+      ],
+      "official_url": "https://www.redstarline.be",
+      "commission_url": "https://www.screenflanders.be"
     },
     {
       "id": "be-sint-pietersabdij-gent",
@@ -2063,6 +2276,21 @@
       ],
       "official_url": "https://www.stuk.be/en",
       "commission_url": "https://www.screenflanders.be/en"
+    },
+    {
+      "id": "be-theatre-de-liege",
+      "name": "Théâtre de Liège",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.6407,
+      "lng": 5.5748,
+      "type": "Theatre, arena & venue",
+      "setting": "Contemporary performing arts theatre in Liège with a large auditorium and studio spaces, part of the city's cultural quarter near the Meuse.",
+      "source_urls": [
+        "https://www.theatredeliege.be"
+      ],
+      "official_url": "https://www.theatredeliege.be",
+      "commission_url": "https://www.wallimage.be"
     },
     {
       "id": "be-tour-and-taxis",
@@ -11971,6 +12199,21 @@
       }
     },
     {
+      "id": "ie-dwyer-mcallister-cottage",
+      "name": "Dwyer McAllister Cottage",
+      "country": "Ireland",
+      "region": "Wicklow",
+      "lat": 52.9621,
+      "lng": -6.5645,
+      "type": "House & apartment",
+      "setting": "A restored thatched and whitewashed cottage at Derrynamuck near Donard, rebuilt after an 1799 skirmish of the 1798 rebellion, with period furnishings on display.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/dwyer-mcallister-cottage/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/dwyer-mcallister-cottage/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-emo-court",
       "name": "Emo Court",
       "country": "Ireland",
@@ -11994,6 +12237,21 @@
         "author": "National Library of Ireland on The Commons",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "ie-farmleigh-house-dublin",
+      "name": "Farmleigh House and Gardens",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.364,
+      "lng": -6.358,
+      "type": "House & apartment",
+      "setting": "The Irish state's 78-acre guesthouse estate near Phoenix Park, an Edwardian mansion built for the Guinness family with walled gardens, lakeside walks and a working farm, its grounds open to the public and available for filming.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/farmleigh-house-and-gardens/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/farmleigh-house-and-gardens/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-fort-dunree",
@@ -12042,6 +12300,23 @@
         "author": "Denzillacey",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "ie-government-buildings-dublin",
+      "name": "Government Buildings, Dublin",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3392,
+      "lng": -6.253,
+      "type": "Office, school & public building",
+      "setting": "A working government complex on Upper Merrion Street housing the Department of the Taoiseach, the Department of Finance and the Attorney General's office, completed in 1922 and open for free guided tours on Saturdays.",
+      "facilities": "Guided tours, wheelchair access and lift, assistance dogs only",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/government-buildings/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/government-buildings/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-killarney-national-park",
@@ -12180,6 +12455,21 @@
       }
     },
     {
+      "id": "ie-newmills-corn-flax-mills",
+      "name": "Newmills Corn and Flax Mills",
+      "country": "Ireland",
+      "region": "Donegal",
+      "lat": 54.9291,
+      "lng": -7.8084,
+      "type": "Industrial & derelict",
+      "setting": "A working 19th-century flax and corn mill complex on Churchill Road near Letterkenny, with a forge, scutcher's cottage and one of the largest working waterwheels still turning in Ireland.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/newmills-corn-and-flax-mills/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/newmills-corn-and-flax-mills/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-pearse-museum",
       "name": "Pearse Museum & St Enda's Park",
       "country": "Ireland",
@@ -12241,6 +12531,21 @@
       }
     },
     {
+      "id": "ie-reginalds-tower-waterford",
+      "name": "Reginald's Tower, Waterford",
+      "country": "Ireland",
+      "region": "Waterford",
+      "lat": 52.2605,
+      "lng": -7.1054,
+      "type": "Palace & landmark",
+      "setting": "A Norman stone tower on the Waterford quays, in continuous use for over 800 years and now a branch of the Waterford Museum of Treasures with Viking-era exhibits and a spiral staircase.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/reginalds-tower/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/reginalds-tower/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-richmond-barracks",
       "name": "Richmond Barracks",
       "country": "Ireland",
@@ -12262,6 +12567,22 @@
         "author": "Unknown authorUnknown author",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "ie-royal-hospital-kilmainham",
+      "name": "Royal Hospital Kilmainham (IMMA)",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3429,
+      "lng": -6.2995,
+      "type": "Hospital, prison & institution",
+      "setting": "A 17th-century former retirement home for army pensioners on Military Road, Kilmainham, now the Irish Museum of Modern Art, with formal courtyards and grounds available for filming and events.",
+      "suitability": "Venue hire for weddings, corporate events, community gatherings and filming/photography projects",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/royal-hospital-kilmainham/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/royal-hospital-kilmainham/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "skellig-michael",
@@ -12326,6 +12647,21 @@
         "author": "Caoimheen3",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "ie-st-audoens-church-dublin",
+      "name": "St Audoen's Church and Visitor Centre",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3438,
+      "lng": -6.2742,
+      "type": "Church & monastery",
+      "setting": "Dublin's only remaining medieval parish church, on Corn Market near High Street, with an active Church of Ireland section and a 15th-century tomb monument, open to visitors and venue hire.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/st-audoens-church-visitor-centre/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/st-audoens-church-visitor-centre/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-strokestown-park",
@@ -12394,6 +12730,21 @@
         "author": "Andy Beecroft",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "ie-the-main-guard-clonmel",
+      "name": "The Main Guard, Clonmel",
+      "country": "Ireland",
+      "region": "Tipperary",
+      "lat": 52.353,
+      "lng": -7.7014,
+      "type": "Office, school & public building",
+      "setting": "A restored 17th-century courthouse and former barracks on Sarsfield Street in Clonmel, with a sandstone arcade and exhibition and event spaces, available for venue hire including filming.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/the-main-guard/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/the-main-guard/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-trinity-college-dublin",
