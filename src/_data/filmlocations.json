@@ -20326,6 +20326,22 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-sao-vicente-lighthouse",
+      "name": "Cabo de Sao Vicente Lighthouse",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.0229,
+      "lng": -8.9965,
+      "type": "Transport & infrastructure",
+      "setting": "Working lighthouse at the tip of Cabo de Sao Vicente near Sagres, on the cliffs of Portugal's south-western corner, listed in the national film commission's lighthouse network.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/sao-vicente-lighthouse/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/sao-vicente-lighthouse/",
+      "official_url": "https://portugalfilmcommission.com/en/location/sao-vicente-lighthouse/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-casa-da-musica",
       "name": "Casa da Musica",
       "country": "Portugal",
@@ -20496,6 +20512,22 @@
       }
     },
     {
+      "id": "pt-corroios-tide-mill",
+      "name": "Corroios Tide Mill",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.644,
+      "lng": -9.1448,
+      "type": "Industrial & derelict",
+      "setting": "Restored 17th century tide mill on the Coina estuary in Seixal, part of the Seixal municipal ecomuseum, using the rise and fall of the tide to power its milling machinery.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/corroios-tide-mill/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/corroios-tide-mill/",
+      "official_url": "https://portugalfilmcommission.com/en/location/corroios-tide-mill/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-culturgest",
       "name": "Culturgest",
       "country": "Portugal",
@@ -20553,6 +20585,29 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Porto_Est%C3%A1dio_do_Drag%C3%A3o_2.jpg",
         "author": "Валерий Дед",
         "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "pt-estoi-palace",
+      "name": "Estoi Palace",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.0964,
+      "lng": -7.8956,
+      "type": "Palace & landmark",
+      "setting": "Rococo and neoclassical revival palace from the 19th century near Faro, mixing Baroque and Romantic decoration, with formal gardens and a wing now run as a hotel.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/estoi-palace/",
+        "https://en.wikipedia.org/wiki/Estoi_Palace"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/estoi-palace/",
+      "official_url": "https://portugalfilmcommission.com/en/location/estoi-palace/",
+      "commission_url": "https://portugalfilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Palacio_de_Estoi%2C_Faro_-_Algarve_-_1._30.11.2018.jpg/960px-Palacio_de_Estoi%2C_Faro_-_Algarve_-_1._30.11.2018.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palacio_de_Estoi,_Faro_-_Algarve_-_1._30.11.2018.jpg",
+        "author": "Bextrel",
+        "license": "CC BY-SA 4.0"
       }
     },
     {
@@ -20708,6 +20763,38 @@
       ],
       "official_url": "https://www.cm-loule.pt",
       "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-monastery-of-coz",
+      "name": "Monastery of Coz",
+      "country": "Portugal",
+      "region": "Centro de Portugal",
+      "lat": 39.6021,
+      "lng": -8.9557,
+      "type": "Church & monastery",
+      "setting": "Cistercian nunnery near Alcobaca founded in the 13th century, one of the wealthiest female monasteries of the order in Portugal by the 16th century, protected as a National Monument since 2021.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/monastery-of-coz/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/monastery-of-coz/",
+      "official_url": "https://portugalfilmcommission.com/en/location/monastery-of-coz/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-monastery-of-grijo",
+      "name": "Monastery of Grijo",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 41.0286,
+      "lng": -8.5828,
+      "type": "Church & monastery",
+      "setting": "Former Augustinian canonry near Vila Nova de Gaia, mother house of the community that later moved to build the Monastery of Serra do Pilar, left partly in ruins after that move.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/monastery-of-grijo/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/monastery-of-grijo/",
+      "official_url": "https://portugalfilmcommission.com/en/location/monastery-of-grijo/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "pt-mosteiro-tibaes",
@@ -20885,6 +20972,45 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-santa-marta-lighthouse",
+      "name": "Santa Marta Lighthouse",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.6904,
+      "lng": -9.4213,
+      "type": "Transport & infrastructure",
+      "setting": "Working lighthouse on the Cascais waterfront built inside the grounds of the former Santa Marta Fort, a white tiled quadrangular tower with blue stripes and a red lantern overlooking the Tagus estuary, with a lighthouse museum on site.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/santa-marta-lighthouse/",
+        "https://en.wikipedia.org/wiki/Santa_Marta_Lighthouse"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/santa-marta-lighthouse/",
+      "official_url": "https://portugalfilmcommission.com/en/location/santa-marta-lighthouse/",
+      "commission_url": "https://portugalfilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Faro_de_Santa_Marta%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_13-15_HDR.jpg/960px-Faro_de_Santa_Marta%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_13-15_HDR.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Faro_de_Santa_Marta,_Cascais,_Portugal,_2022-07-25,_DD_13-15_HDR.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-sao-domingos-mine",
+      "name": "Sao Domingos Mine",
+      "country": "Portugal",
+      "region": "Alentejo",
+      "lat": 37.6554,
+      "lng": -7.5091,
+      "type": "Industrial & derelict",
+      "setting": "Abandoned open-pit copper and pyrite mining complex near Mertola, worked from the 1850s to 1966, left with ochre-coloured pit lakes, spoil heaps and derelict processing buildings.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/sao-domingos-mine/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/sao-domingos-mine/",
+      "official_url": "https://portugalfilmcommission.com/en/location/sao-domingos-mine/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-time-out-market",
       "name": "Time Out Market Lisboa",
       "country": "Portugal",
@@ -20923,6 +21049,22 @@
       "url": "https://portugalfilmcommission.com/en/location/universidade-de-coimbra/",
       "official_url": "https://visit.uc.pt/en/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-vlc-studios",
+      "name": "VLC Studios",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 40.8908,
+      "lng": -8.3493,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built production studio complex in Vale de Cambra, near Porto, listed in the national film commission's building catalogue under modern architecture.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/vlc-studios-2/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/vlc-studios-2/",
+      "official_url": "https://portugalfilmcommission.com/en/location/vlc-studios-2/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "es-barajas-airport",
