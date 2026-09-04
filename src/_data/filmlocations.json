@@ -6313,7 +6313,13 @@
         "https://www.musikhusetaarhus.dk/en"
       ],
       "official_url": "https://www.musikhusetaarhus.dk/en",
-      "commission_url": "https://www.dfi.dk/en"
+      "commission_url": "https://www.dfi.dk/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Aarhus_musichouse_%2811834397843%29.jpg/960px-Aarhus_musichouse_%2811834397843%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aarhus_musichouse_(11834397843).jpg",
+        "author": "EHRENBERG Kommunikation",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "nordisk-film-studios-valby",
@@ -6380,7 +6386,13 @@
         "https://en.wikipedia.org/wiki/Nyboder"
       ],
       "official_url": "https://www.ejendomsstyrelsen.dk",
-      "commission_url": "https://www.dfi.dk"
+      "commission_url": "https://www.dfi.dk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Nyboder.JPG/960px-Nyboder.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nyboder.JPG",
+        "author": "Jesper Hertel",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "dk-odense-havn",
@@ -6927,7 +6939,13 @@
         "https://en.wikipedia.org/wiki/Sibelius_Hall"
       ],
       "official_url": "https://www.sibeliustalo.fi/en/",
-      "commission_url": "https://www.businessfinland.fi"
+      "commission_url": "https://www.businessfinland.fi",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sibelius_hall_Lahti.jpg/960px-Sibelius_hall_Lahti.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sibelius_hall_Lahti.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fi-stable-yards-tallipiha",
@@ -7008,7 +7026,13 @@
       ],
       "url": "https://www.filmtampere.com/locations/tampere-city-hall/",
       "official_url": "https://www.filmtampere.com/locations/tampere-city-hall/",
-      "commission_url": "https://www.filmtampere.com"
+      "commission_url": "https://www.filmtampere.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Tampere_city_hall.jpg/960px-Tampere_city_hall.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tampere_city_hall.jpg",
+        "author": "Stane",
+        "license": "CC BY-SA 2.5"
+      }
     },
     {
       "id": "fi-tampere-hall",
@@ -7071,7 +7095,13 @@
       ],
       "url": "https://www.filmtampere.com/locations/tullikamari-cultural-center/",
       "official_url": "https://www.filmtampere.com/locations/tullikamari-cultural-center/",
-      "commission_url": "https://www.filmtampere.com"
+      "commission_url": "https://www.filmtampere.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Ratapihankatu_-_panoramio.jpg/960px-Ratapihankatu_-_panoramio.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ratapihankatu_-_panoramio.jpg",
+        "author": "Jorge Franganillo",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "fi-turku-castle",
@@ -7434,7 +7464,13 @@
       ],
       "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
       "official_url": "https://lachartreusedeneuville.org/",
-      "commission_url": "https://www.pictanovo.com"
+      "commission_url": "https://www.pictanovo.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Chartreuseneuville04.jpg/960px-Chartreuseneuville04.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Chartreuseneuville04.jpg",
+        "author": "Pir6mon",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-chateau-if",
@@ -9450,7 +9486,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/17",
       "official_url": "https://www.documenta-halle.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Documenta13.jpg/960px-Documenta13.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Documenta13.jpg",
+        "author": "Cindybeau",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-duisburg-innenhafen",
@@ -9643,7 +9685,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-leipzig-halle-aussen",
       "official_url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-leipzig-halle-aussen",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bahnhof_Flughafen_Halle_Leipzig.jpg/960px-Bahnhof_Flughafen_Halle_Leipzig.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bahnhof_Flughafen_Halle_Leipzig.jpg",
+        "author": "dierk schaefer",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "de-frankfurt-bankenviertel",
@@ -9695,7 +9743,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/frohnauer-hammer",
       "official_url": "https://www.mdm-online.de/film-commission/location-guide/frohnauer-hammer",
-      "commission_url": "https://www.mdm-online.de"
+      "commission_url": "https://www.mdm-online.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Frohnauer_Hammer_2010_%281%29.jpg/960px-Frohnauer_Hammer_2010_%281%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Frohnauer_Hammer_2010_(1).jpg",
+        "author": "Harke",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-funkhaus-berlin",
@@ -9979,7 +10033,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/52",
       "official_url": "https://www.bahnhof.de/bahnhof-de/frankfurt(main)hbf",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hauptbahnhof_Frankfurt.jpg/960px-Hauptbahnhof_Frankfurt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hauptbahnhof_Frankfurt.jpg",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "license": "CC BY-SA 3.0 de"
+      }
     },
     {
       "id": "de-hauptbahnhof-leipzig",
@@ -9996,7 +10056,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/hauptbahnhof-leipzig-inkl-bahn-u-gleisanlagen",
       "official_url": "https://www.bahnhof.de/bahnhof-de/leipzig-hbf",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/LE_Hauptbahnhof-4.jpg/960px-LE_Hauptbahnhof-4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:LE_Hauptbahnhof-4.jpg",
+        "author": "Appaloosa",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-hauptgebaeude-fsu-jena",
@@ -10180,7 +10246,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/hyparschale-magdeburg",
       "official_url": "https://www.mdm-online.de/film-commission/location-guide/hyparschale-magdeburg",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hyparschale_-_Magdeburg.jpg/960px-Hyparschale_-_Magdeburg.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hyparschale_-_Magdeburg.jpg",
+        "author": "Tobi882",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-jahrhunderthalle-frankfurt",
@@ -10197,7 +10269,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/16",
       "official_url": "https://www.myticket-jahrhunderthalle.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Jahrhunderthalle_Frankfurt.jpg/960px-Jahrhunderthalle_Frankfurt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Jahrhunderthalle_Frankfurt.jpg",
+        "author": "A. Köhler",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-justizpalast-muenchen",
@@ -10426,7 +10504,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/161",
       "official_url": "http://www.schlachthof-wiesbaden.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wasserturm_Schlachthof_Wiesbaden.jpg/960px-Wasserturm_Schlachthof_Wiesbaden.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wasserturm_Schlachthof_Wiesbaden.jpg",
+        "author": "Martin Kraft",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-bethanien-berlin",
@@ -10584,7 +10668,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/156",
       "official_url": "https://www.hessenfilm.de/location-details/156",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Salzberg_kaliwerk_wintershall_heringen.jpg/960px-Salzberg_kaliwerk_wintershall_heringen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Salzberg_kaliwerk_wintershall_heringen.jpg",
+        "author": "2micha",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-museum-kalkwerk-lengefeld",
@@ -10634,7 +10724,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/163",
       "official_url": "http://www.museum-re.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Museum_Reinhard_Ernst_Entrance_Sign.jpg/960px-Museum_Reinhard_Ernst_Entrance_Sign.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Museum_Reinhard_Ernst_Entrance_Sign.jpg",
+        "author": "Tessa Bury",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "de-musikforum-katharinenkirche",
@@ -10800,7 +10896,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/113",
       "official_url": "https://www.hessenfilm.de/location-details/113",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Frankfurt_Osthafen_Uebersichtsplan_22082009.JPG/960px-Frankfurt_Osthafen_Uebersichtsplan_22082009.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Frankfurt_Osthafen_Uebersichtsplan_22082009.JPG",
+        "author": "Total number of my uploaded files: 1116",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-panometer-leipzig",
@@ -10911,7 +11013,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/49",
       "official_url": "https://www.heppenheim.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heppenheim_Rathaus_RZ.jpg/960px-Heppenheim_Rathaus_RZ.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Heppenheim_Rathaus_RZ.jpg",
+        "author": "Luidger",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-rathaus-wernigerode",
@@ -10928,7 +11036,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/rathaus-wernigerode",
       "official_url": "https://www.wernigerode.de",
-      "commission_url": "https://www.mdm-online.de"
+      "commission_url": "https://www.mdm-online.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/WR-Rathaus_Wernigerode_Sommer_2026.jpg/960px-WR-Rathaus_Wernigerode_Sommer_2026.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:WR-Rathaus_Wernigerode_Sommer_2026.jpg",
+        "author": "Enter",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-raumfabrik-frankfurt",
@@ -11074,7 +11188,13 @@
       ],
       "url": "https://www.hessenfilm.de/location-details/71",
       "official_url": "https://www.skywalk-willingen.de",
-      "commission_url": "https://www.hessenfilm.de"
+      "commission_url": "https://www.hessenfilm.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Skywalk_Willingen1.png/960px-Skywalk_Willingen1.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Skywalk_Willingen1.png",
+        "author": "Mindax25",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-speicherstadt-hamburg",
@@ -11174,7 +11294,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/stadtbad-chemnitz",
       "official_url": "https://www.mdm-online.de/film-commission/location-guide/stadtbad-chemnitz",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chemnitz_Stadtbad1.JPG/960px-Chemnitz_Stadtbad1.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Chemnitz_Stadtbad1.JPG",
+        "author": "Lysippos",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-stadtverwaltung-gera-baudezernat",
@@ -11548,7 +11674,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/world-trade-center-dresden",
       "official_url": "https://www.wtc-dresden.de",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Dresden-WTC-night.jpg/960px-Dresden-WTC-night.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dresden-WTC-night.jpg",
+        "author": "User:Kolossos",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-wuensdorf-garrison-town",
@@ -11625,7 +11757,13 @@
       ],
       "url": "https://www.mdm-online.de/film-commission/location-guide/zuckerfabrik-oldisleben-technisches-denkmal-der-suedzucker-ag",
       "official_url": "https://www.mdm-online.de/film-commission/location-guide/zuckerfabrik-oldisleben-technisches-denkmal-der-suedzucker-ag",
-      "commission_url": "https://www.mdm-online.de/film-commission/"
+      "commission_url": "https://www.mdm-online.de/film-commission/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sugar_refinery_Oldisleben_01.jpg/960px-Sugar_refinery_Oldisleben_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sugar_refinery_Oldisleben_01.jpg",
+        "author": "Aschroet",
+        "license": "CC0"
+      }
     },
     {
       "id": "gr-academy-athens",
@@ -12054,7 +12192,13 @@
       ],
       "url": "https://filmcommission.gr/locations/karistos-evia/",
       "official_url": "https://filmcommission.gr/locations/karistos-evia/",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/20090531_Karystos_Evia_island_Greece.jpg/960px-20090531_Karystos_Evia_island_Greece.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20090531_Karystos_Evia_island_Greece.jpg",
+        "author": "Ggia",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "gr-kavala",
@@ -12626,7 +12770,13 @@
       ],
       "url": "https://filmcommission.gr/locations/city-hall-of-thessaloniki/",
       "official_url": "https://www.thessaloniki.gr",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Archaeological_Museum%2C_Thessaloniki%2C_Greece_%287457978664%29.jpg/960px-Archaeological_Museum%2C_Thessaloniki%2C_Greece_%287457978664%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Archaeological_Museum,_Thessaloniki,_Greece_(7457978664).jpg",
+        "author": "Carole Raddato from FRANKFURT, Germany",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "gr-tichero-railway-station",
@@ -12816,7 +12966,13 @@
         "https://www.aquincum.hu"
       ],
       "official_url": "https://www.aquincum.hu",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Aquincum_3_-_KKriszti.jpg/960px-Aquincum_3_-_KKriszti.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aquincum_3_-_KKriszti.jpg",
+        "author": "KKriszti",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hu-balna-budapest",
@@ -12901,7 +13057,13 @@
         "https://www.bmc.hu"
       ],
       "official_url": "https://www.bmc.hu",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Liszt_Ferenc_Zenem%C5%B1v%C3%A9szeti_Egyetem_2013-ban_fel%C3%BAj%C3%ADtott_homlokzata.JPG/960px-Liszt_Ferenc_Zenem%C5%B1v%C3%A9szeti_Egyetem_2013-ban_fel%C3%BAj%C3%ADtott_homlokzata.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Liszt_Ferenc_Zenem%C5%B1v%C3%A9szeti_Egyetem_2013-ban_fel%C3%BAj%C3%ADtott_homlokzata.JPG",
+        "author": "Thaler",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hu-nyugati-station",
@@ -12935,7 +13097,13 @@
         "https://bv.gov.hu/hu/budapesti-bortonmuzeum"
       ],
       "official_url": "https://bv.gov.hu/hu/budapesti-bortonmuzeum",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Rabbinerseminar.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Rabbinerseminar.jpg",
+        "author": "Cesarzambrano1 (de.wikipedia)",
+        "license": "Public domain"
+      }
     },
     {
       "id": "hu-deli-station",
@@ -13216,7 +13384,13 @@
         "https://www.gozsduudvar.hu"
       ],
       "official_url": "https://www.gozsduudvar.hu",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Gozsdu-udvar_%28840._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_2.jpg/960px-Gozsdu-udvar_%28840._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gozsdu-udvar_(840._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_2.jpg",
+        "author": "torobala",
+        "license": "CC BY-SA 2.5 hu"
+      }
     },
     {
       "id": "hu-nagyvasarcsarnok",
@@ -13316,7 +13490,13 @@
         "https://nemzetiszinhaz.hu"
       ],
       "official_url": "https://nemzetiszinhaz.hu",
-      "commission_url": "https://nfi.hu/en"
+      "commission_url": "https://nfi.hu/en",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/91/Magyar_Nemzeti_M%C3%BAzeum.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Magyar_Nemzeti_M%C3%BAzeum.jpg",
+        "author": "hu:user:Pasztilla",
+        "license": "Public domain"
+      }
     },
     {
       "id": "hu-skanzen-szentendre",
@@ -27564,6 +27744,23 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-avoncroft-museum",
+      "name": "Avoncroft Museum of Historic Buildings",
+      "country": "United Kingdom",
+      "region": "Worcestershire",
+      "lat": 52.3136,
+      "lng": -2.0722,
+      "type": "Village & countryside",
+      "setting": "19-acre open-air museum near Bromsgrove with 30 rescued historic buildings including a medieval town house, a 1940s prefab and a working windmill, available for commercial filming.",
+      "known_for": "Doctors, Nativity 2",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.avoncroft.org.uk/filming"
+      ],
+      "official_url": "https://www.avoncroft.org.uk/filming",
+      "commission_url": "https://www.filmbirmingham.co.uk"
+    },
+    {
       "id": "uk-ayr-racecourse",
       "name": "Ayr Racecourse",
       "country": "United Kingdom",
@@ -28083,6 +28280,22 @@
       }
     },
     {
+      "id": "uk-chiltern-open-air-museum",
+      "name": "Chiltern Open Air Museum",
+      "country": "United Kingdom",
+      "region": "Buckinghamshire",
+      "lat": 51.6355,
+      "lng": -0.542,
+      "type": "Village & countryside",
+      "setting": "45-acre open-air museum of rescued historic buildings near Chalfont St Peter, from rustic farmsteads and Victorian cottages to wartime Nissen huts, hired out for filming.",
+      "known_for": "Call the Midwife, Downton Abbey, Midsomer Murders, Grantchester, Taskmaster",
+      "source_urls": [
+        "https://coam.org.uk/filming"
+      ],
+      "official_url": "https://coam.org.uk/filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
+    },
+    {
       "id": "uk-chiswick-house",
       "name": "Chiswick House and Gardens",
       "country": "United Kingdom",
@@ -28517,6 +28730,38 @@
       "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
+      "id": "uk-exeter-college-oxford",
+      "name": "Exeter College, Oxford",
+      "country": "United Kingdom",
+      "region": "Oxfordshire",
+      "lat": 51.7539,
+      "lng": -1.2558,
+      "type": "Office, school & public building",
+      "setting": "City-centre Oxford college with a Gothic Revival chapel, front quad and gardens on Turl Street, used as a filming location for period and detective drama.",
+      "known_for": "Endeavour",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.exeter.ox.ac.uk/visit/filming"
+      ],
+      "official_url": "https://www.exeter.ox.ac.uk/visit/filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
+    },
+    {
+      "id": "uk-explosion-museum-gosport",
+      "name": "Explosion Museum of Naval Firepower",
+      "country": "United Kingdom",
+      "region": "Hampshire",
+      "lat": 50.8074,
+      "lng": -1.1263,
+      "type": "Industrial & derelict",
+      "setting": "Former Royal Navy armaments depot at Priddy's Hard, Gosport, with magazine buildings and quaysides on Portsmouth Harbour, welcoming TV, radio and commercial filming.",
+      "source_urls": [
+        "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
+      ],
+      "official_url": "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums",
+      "commission_url": "https://screensouth.org"
+    },
+    {
       "id": "uk-falkirk-wheel",
       "name": "Falkirk Wheel",
       "country": "United Kingdom",
@@ -28536,6 +28781,22 @@
         "author": "Sean Mack",
         "license": "CC BY 2.5"
       }
+    },
+    {
+      "id": "uk-fleet-air-arm-museum",
+      "name": "Fleet Air Arm Museum",
+      "country": "United Kingdom",
+      "region": "Somerset",
+      "lat": 51.0149,
+      "lng": -2.6365,
+      "type": "Industrial & derelict",
+      "setting": "Naval aviation museum on the working airbase at RNAS Yeovilton with historic aircraft, a Concorde and hangar interiors, welcoming TV, radio and commercial filming.",
+      "source_urls": [
+        "https://www.royalnavymuseums.org.uk/visit-us/fleet-air-arm-museum",
+        "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
+      ],
+      "official_url": "https://www.royalnavymuseums.org.uk/visit-us/fleet-air-arm-museum",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-fort-amherst",
@@ -28731,6 +28992,37 @@
         "author": "Jim Osley",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-hms-caroline",
+      "name": "HMS Caroline",
+      "country": "United Kingdom",
+      "region": "Belfast",
+      "lat": 54.6139,
+      "lng": -5.9026,
+      "type": "Transport & infrastructure",
+      "setting": "First World War Royal Navy light cruiser preserved as a museum ship in Belfast's Titanic Quarter, with its decks and machinery spaces open for TV, radio and commercial filming.",
+      "source_urls": [
+        "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
+      ],
+      "official_url": "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums",
+      "commission_url": "https://northernirelandscreen.co.uk"
+    },
+    {
+      "id": "uk-hms-trincomalee",
+      "name": "HMS Trincomalee",
+      "country": "United Kingdom",
+      "region": "Hartlepool",
+      "lat": 54.6903,
+      "lng": -1.207,
+      "type": "Transport & infrastructure",
+      "setting": "Britain's oldest floating warship, an 1817 frigate preserved at Hartlepool's Maritime Experience quayside, with decks and rigging open for TV, radio and commercial filming.",
+      "source_urls": [
+        "https://hms-trincomalee.co.uk/",
+        "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
+      ],
+      "official_url": "https://hms-trincomalee.co.uk/",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-holy-trinity-goodramgate-york",
@@ -29074,6 +29366,22 @@
         "author": "Anyhoo",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-magdalen-college-oxford",
+      "name": "Magdalen College, Oxford",
+      "country": "United Kingdom",
+      "region": "Oxfordshire",
+      "lat": 51.7545,
+      "lng": -1.246,
+      "type": "Office, school & public building",
+      "setting": "Medieval Oxford college with a bell tower, cloisters, deer park and riverside walk, hired for documentary, feature film and photography outside term time.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.magd.ox.ac.uk/visiting/filming/"
+      ],
+      "official_url": "https://www.magd.ox.ac.uk/visiting/filming/",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-manchester-central",
@@ -29813,6 +30121,22 @@
       ],
       "official_url": "https://www.royalholloway.ac.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-ryedale-folk-museum",
+      "name": "Ryedale Folk Museum",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "lat": 54.302,
+      "lng": -0.9158,
+      "type": "Village & countryside",
+      "setting": "Open-air museum of relocated rural buildings at Hutton-le-Hole in the North York Moors, spanning Iron Age to 1950s interiors, hired out for filming.",
+      "known_for": "Death Comes to Pemberley, Hacker the Dog",
+      "source_urls": [
+        "https://www.ryedalefolkmuseum.co.uk/filming"
+      ],
+      "official_url": "https://www.ryedalefolkmuseum.co.uk/filming",
+      "commission_url": "https://screenyorkshire.co.uk"
     },
     {
       "id": "uk-salts-mill",
@@ -30674,6 +30998,21 @@
       }
     },
     {
+      "id": "uk-ulster-folk-museum",
+      "name": "Ulster Folk Museum",
+      "country": "United Kingdom",
+      "region": "County Down",
+      "lat": 54.6468,
+      "lng": -5.7936,
+      "type": "Village & countryside",
+      "setting": "Open-air museum at Cultra near Belfast with relocated cottages, shops, a meeting house and cobbled streets recreating rural and small-town Ulster life, hired out for filming.",
+      "source_urls": [
+        "https://www.nationalmuseumsni.org/venue-hire"
+      ],
+      "official_url": "https://www.nationalmuseumsni.org/venue-hire",
+      "commission_url": "https://northernirelandscreen.co.uk"
+    },
+    {
       "id": "uk-ulster-transport-museum",
       "name": "Ulster Transport Museum",
       "country": "United Kingdom",
@@ -30714,6 +31053,22 @@
         "author": "\"Fin Fahey\"",
         "license": "CC BY-SA 2.5"
       }
+    },
+    {
+      "id": "uk-university-college-oxford",
+      "name": "University College, Oxford",
+      "country": "United Kingdom",
+      "region": "Oxfordshire",
+      "lat": 51.7521,
+      "lng": -1.2517,
+      "type": "Office, school & public building",
+      "setting": "Oxford's oldest college, fronting the High Street with a 17th-century quadrangle and chapel, available for filming during university vacations with the Domestic Bursar's permission.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.univ.ox.ac.uk/visiting/filming/"
+      ],
+      "official_url": "https://www.univ.ox.ac.uk/visiting/filming/",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-university-of-leeds",
@@ -30937,6 +31292,22 @@
       "commission_url": "https://screensouth.org"
     },
     {
+      "id": "uk-weald-and-downland-museum",
+      "name": "Weald and Downland Living Museum",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "lat": 50.9072,
+      "lng": -0.7594,
+      "type": "Village & countryside",
+      "setting": "40-acre open-air museum near Chichester with 50 rescued and rebuilt historic buildings from the 13th to 19th centuries and a reconstructed Saxon hall, used for period film and TV interiors and exteriors.",
+      "known_for": "The Repair Shop, Good Omens, The Hollow Crown: Henry VI Part II",
+      "source_urls": [
+        "https://www.wealddown.co.uk/commercial/filming-photography/"
+      ],
+      "official_url": "https://www.wealddown.co.uk/commercial/filming-photography/",
+      "commission_url": "https://screensouth.org"
+    },
+    {
       "id": "uk-westonbirt-arboretum",
       "name": "Westonbirt, The National Arboretum",
       "country": "United Kingdom",
@@ -31045,6 +31416,22 @@
       ],
       "official_url": "https://www.wintergardensblackpool.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/"
+    },
+    {
+      "id": "uk-wolfson-college-oxford",
+      "name": "Wolfson College, Oxford",
+      "country": "United Kingdom",
+      "region": "Oxfordshire",
+      "lat": 51.7711,
+      "lng": -1.2543,
+      "type": "Office, school & public building",
+      "setting": "1970s Oxford college on the banks of the Cherwell with modernist buildings and riverside gardens, available for filming with the events office's permission.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.wolfson.ox.ac.uk/filming"
+      ],
+      "official_url": "https://www.wolfson.ox.ac.uk/filming",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-woodhorn-museum",
