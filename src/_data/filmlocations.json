@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "photo_note": "Photos are Wikimedia Commons thumbnails (hotlinked) with author and licence shown, or owner-supplied uploads in /assets/images with written permission. Never copy photos or data from other location databases; record only what a venue itself publishes, and keep source URLs.",
   "locations": [
     {
@@ -2915,7 +2915,13 @@
       ],
       "url": "https://filmzagreb.hr/product/art-pavilion-zagreb/",
       "official_url": "https://www.umjetnicki-paviljon.hr",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pabell%C3%B3n_del_Arte%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_05.JPG/960px-Pabell%C3%B3n_del_Arte%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_05.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Pabell%C3%B3n_del_Arte,_Zagreb,_Croacia,_2014-04-20,_DD_05.JPG",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hr-botanical-garden-zagreb",
@@ -2979,7 +2985,13 @@
       ],
       "url": "https://filmzagreb.hr/product/bundek/",
       "official_url": "https://filmzagreb.hr/product/bundek/",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Beach_at_Lake_Bundek.jpg/960px-Beach_at_Lake_Bundek.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Beach_at_Lake_Bundek.jpg",
+        "author": "stipopavlovic",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "hr-church-st-mark-zagreb",
@@ -3063,7 +3075,13 @@
       ],
       "url": "https://filmzagreb.hr/product/croatian-national-theatre/",
       "official_url": "https://www.hnk.hr",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Teatro_Nacional%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_01.JPG/960px-Teatro_Nacional%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_01.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Teatro_Nacional,_Zagreb,_Croacia,_2014-04-20,_DD_01.JPG",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "hr-hnk-zajc-rijeka",
@@ -3295,7 +3313,13 @@
       ],
       "url": "https://filmzagreb.hr/product/tunnel-gric/",
       "official_url": "https://filmzagreb.hr/product/tunnel-gric/",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Underground_tunnels_beneath_Zagreb_-_Tunel_Gri%C4%8D_%2828435019105%29.jpg/960px-Underground_tunnels_beneath_Zagreb_-_Tunel_Gri%C4%8D_%2828435019105%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Underground_tunnels_beneath_Zagreb_-_Tunel_Gri%C4%8D_(28435019105).jpg",
+        "author": "Miroslav Vajdic from Zagreb, Croatia",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "hr-hendrix-bridge",
@@ -3548,7 +3572,13 @@
       ],
       "url": "https://filmzagreb.hr/product/mimara/",
       "official_url": "https://www.mimara.hr",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mimara_Museum%2C_Zagreb_02.jpg/960px-Mimara_Museum%2C_Zagreb_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mimara_Museum,_Zagreb_02.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-museum-ancient-glass-zadar",
@@ -3945,7 +3975,13 @@
       ],
       "url": "https://filmzagreb.hr/product/westin-zagreb/",
       "official_url": "https://filmzagreb.hr/product/westin-zagreb/",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Hotel_Westin%2C_istok%2C_Zagreb_2025.jpg/960px-Hotel_Westin%2C_istok%2C_Zagreb_2025.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hotel_Westin,_istok,_Zagreb_2025.jpg",
+        "author": "Runolist",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-tvornica-kulture",
@@ -5348,7 +5384,13 @@
         "https://filmcommission.gov.cz/en/featured-location-the-gloomily-strange-plumlov-castle/"
       ],
       "official_url": "https://filmcommission.gov.cz/en/featured-location-the-gloomily-strange-plumlov-castle/",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Z%C3%A1mek_Plumlov%2C_okres_Prost%C4%9Bjov_%2804%29.jpg/960px-Z%C3%A1mek_Plumlov%2C_okres_Prost%C4%9Bjov_%2804%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Z%C3%A1mek_Plumlov,_okres_Prost%C4%9Bjov_(04).jpg",
+        "author": "Jiří Komárek",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "cz-prague-main-station",
@@ -5503,7 +5545,13 @@
         "https://filmcommission.gov.cz/en/featured-location-stramberk-moravia-s-bethlehem-at-the-foot-of-the-beskyd-mountains/"
       ],
       "official_url": "https://filmcommission.gov.cz/en/featured-location-stramberk-moravia-s-bethlehem-at-the-foot-of-the-beskyd-mountains/",
-      "commission_url": "https://filmcommission.gov.cz/en/"
+      "commission_url": "https://filmcommission.gov.cz/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%C5%A0tramberk_%28CZE%29_-_general_view_of_the_town.jpg/960px-%C5%A0tramberk_%28CZE%29_-_general_view_of_the_town.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:%C5%A0tramberk_(CZE)_-_general_view_of_the_town.jpg",
+        "author": "David Paloch (Caroig)",
+        "license": "CC BY-SA 2.5"
+      }
     },
     {
       "id": "cz-techmania-science-center",
@@ -11780,7 +11828,13 @@
       ],
       "url": "https://filmcommission.gr/locations/academy-of-athens/",
       "official_url": "https://www.academyofathens.gr",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Akademie_von_Athen.jpg/960px-Akademie_von_Athen.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Akademie_von_Athen.jpg",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "license": "CC BY-SA 3.0 de"
+      }
     },
     {
       "id": "gr-achilleion",
@@ -11931,7 +11985,13 @@
       ],
       "url": "https://filmcommission.gr/locations/athens-city-hall/",
       "official_url": "https://www.cityofathens.gr",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Athens_Acropolis_at_Daybreak.jpg/960px-Athens_Acropolis_at_Daybreak.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg",
+        "author": "Andrew Parlette",
+        "license": "CC BY 4.0"
+      }
     },
     {
       "id": "gr-athens-conservatoire",
