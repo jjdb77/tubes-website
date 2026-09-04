@@ -12668,6 +12668,23 @@
       "commission_url": "https://filminiceland.com/locations/"
     },
     {
+      "id": "ie-14-henrietta-street",
+      "name": "14 Henrietta Street",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3523,
+      "lng": -6.2702,
+      "type": "House & apartment",
+      "setting": "A Georgian townhouse on Henrietta Street that later became a tenement, now a museum of Dublin housing history with restored interiors and original wallpaper found during conservation work.",
+      "known_for": "The Man Who Invented Christmas",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/period-britain",
+        "https://14henriettastreet.ie"
+      ],
+      "official_url": "https://14henriettastreet.ie",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-adare-manor",
       "name": "Adare Manor",
       "country": "Ireland",
@@ -12767,6 +12784,86 @@
         "author": "Christophe Meneboeuf",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "ie-ballycorus-leadmines",
+      "name": "Ballycorus Leadmines",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.2246,
+      "lng": -6.1637,
+      "type": "Industrial & derelict",
+      "setting": "A ruined 19th-century lead-smelting works on the Dublin/Wicklow border near Kilternan, with a tall chimney and the remains of a flue running up the hillside, listed by Screen Ireland as a hidden-gem filming location.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/hidden-gems"
+      ],
+      "url": "https://www.screenireland.ie/locations/hidden-gems",
+      "official_url": "https://www.screenireland.ie/locations/hidden-gems",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-bantry-house-cork",
+      "name": "Bantry House and Garden",
+      "country": "Ireland",
+      "region": "Cork",
+      "lat": 51.6771,
+      "lng": -9.4654,
+      "type": "House & apartment",
+      "setting": "A stately home overlooking Bantry Bay in West Cork, owned by the White family since 1739, with Italianate formal gardens and a fine art and furniture collection, hired for weddings and events.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/period-britain",
+        "http://bantryhouse.com/"
+      ],
+      "official_url": "http://bantryhouse.com/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-bord-gais-energy-theatre",
+      "name": "Bord Gáis Energy Theatre",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3442,
+      "lng": -6.24,
+      "type": "Theatre, arena & venue",
+      "setting": "A large modern theatre on Grand Canal Square in Dublin's Docklands, designed by Daniel Libeskind, listed by Screen Ireland among its science-fiction filming locations.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/science-fiction",
+        "https://www.bordgaisenergytheatre.ie"
+      ],
+      "official_url": "https://www.bordgaisenergytheatre.ie",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-borris-house-carlow",
+      "name": "Borris House",
+      "country": "Ireland",
+      "region": "Carlow",
+      "lat": 52.5985,
+      "lng": -6.9265,
+      "type": "House & apartment",
+      "setting": "A Regency country house at Borris in County Carlow, seat of the MacMorrough Kavanagh family, hired out in full for weddings, corporate events and productions, with gardens overlooking the River Barrow.",
+      "suitability": "Whole-house hire for weddings, corporate events and celebrations",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/period-britain",
+        "https://borrishouse.ie/"
+      ],
+      "official_url": "https://borrishouse.ie/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-ceide-fields-mayo",
+      "name": "Céide Fields Visitor Centre",
+      "country": "Ireland",
+      "region": "Mayo",
+      "lat": 54.3073,
+      "lng": -9.4581,
+      "type": "Office, school & public building",
+      "setting": "An award-winning visitor centre at Glenurla near Ballycastle in north Mayo, built beside a 110-metre sea cliff, interpreting the Neolithic field system preserved in the surrounding bog.",
+      "source_urls": [
+        "https://heritageireland.ie/places-to-visit/ceide-fields-neolithic-site-visitor-centre/"
+      ],
+      "official_url": "https://heritageireland.ie/places-to-visit/ceide-fields-neolithic-site-visitor-centre/",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-charles-fort",
@@ -13154,6 +13251,21 @@
       "commission_url": "https://www.screenireland.ie/"
     },
     {
+      "id": "ie-galway-cathedral",
+      "name": "Galway Cathedral",
+      "country": "Ireland",
+      "region": "Galway",
+      "lat": 53.2752,
+      "lng": -9.0576,
+      "type": "Church & monastery",
+      "setting": "The Catholic Cathedral of Our Lady Assumed into Heaven and St Nicholas, on Gaol Road on Galway's Nun's Island, built on the site of the former city gaol.",
+      "source_urls": [
+        "https://www.galwaycathedral.ie"
+      ],
+      "official_url": "https://www.galwaycathedral.ie",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-glendalough",
       "name": "Glendalough",
       "country": "Ireland",
@@ -13265,6 +13377,38 @@
       }
     },
     {
+      "id": "ie-kings-inns-dublin",
+      "name": "King's Inns, Dublin",
+      "country": "Ireland",
+      "region": "Dublin",
+      "lat": 53.3536,
+      "lng": -6.2727,
+      "type": "Office, school & public building",
+      "setting": "Ireland's oldest law school and sole Inn of Court, in a James Gandon building of 1806 on Constitution Hill in Dublin, with a 110,000-volume library, offering its halls for venue hire.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/period-britain",
+        "https://www.kingsinns.ie"
+      ],
+      "official_url": "https://www.kingsinns.ie",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-living-bridge-limerick",
+      "name": "Living Bridge, University of Limerick",
+      "country": "Ireland",
+      "region": "Limerick",
+      "lat": 52.6797,
+      "lng": -8.5717,
+      "type": "Transport & infrastructure",
+      "setting": "A curved pedestrian suspension bridge over the River Shannon on the University of Limerick campus, listed by Screen Ireland among its science-fiction filming locations.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/science-fiction",
+        "https://www.ul.ie"
+      ],
+      "official_url": "https://www.ul.ie",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
       "id": "ie-lough-gur",
       "name": "Lough Gur",
       "country": "Ireland",
@@ -13305,6 +13449,22 @@
         "author": "Sheila1988",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "ie-mizen-head-bridge",
+      "name": "Mizen Head Signal Station and Bridge",
+      "country": "Ireland",
+      "region": "Cork",
+      "lat": 51.4501,
+      "lng": -9.8198,
+      "type": "Transport & infrastructure",
+      "setting": "A former fog-signal station on Ireland's most south-westerly point in West Cork, reached by a footbridge across a deep chasm, listed by Screen Ireland as a hidden-gem filming location.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/hidden-gems"
+      ],
+      "url": "https://www.screenireland.ie/locations/hidden-gems",
+      "official_url": "https://www.screenireland.ie/locations/hidden-gems",
+      "commission_url": "https://www.screenireland.ie/"
     },
     {
       "id": "ie-muckross-house",
@@ -13636,6 +13796,22 @@
         "https://heritageireland.ie/places-to-visit/the-main-guard/"
       ],
       "official_url": "https://heritageireland.ie/places-to-visit/the-main-guard/",
+      "commission_url": "https://www.screenireland.ie/"
+    },
+    {
+      "id": "ie-wonderful-barn-kildare",
+      "name": "The Wonderful Barn",
+      "country": "Ireland",
+      "region": "Kildare",
+      "lat": 53.3597,
+      "lng": -6.5099,
+      "type": "Industrial & derelict",
+      "setting": "An 18th-century corkscrew-shaped grain storage tower near Leixlip, built as a famine-relief project, with a spiral external staircase, listed by Screen Ireland as a hidden-gem filming location.",
+      "source_urls": [
+        "https://www.screenireland.ie/locations/hidden-gems"
+      ],
+      "url": "https://www.screenireland.ie/locations/hidden-gems",
+      "official_url": "https://www.screenireland.ie/locations/hidden-gems",
       "commission_url": "https://www.screenireland.ie/"
     },
     {
@@ -21526,6 +21702,21 @@
       "commission_url": "https://madridfilmoffice.com"
     },
     {
+      "id": "es-castell-de-bellver-palma",
+      "name": "Castell de Bellver",
+      "country": "Spain",
+      "region": "Balearic Islands",
+      "lat": 39.5639,
+      "lng": 2.6188,
+      "type": "Castle & estate",
+      "setting": "Gothic circular hilltop castle overlooking Palma, built in the early 14th century as a royal residence, later used as a military prison, now a history museum with spaces the city council makes available for hire.",
+      "source_urls": [
+        "https://castelldebellver.palma.cat/en/"
+      ],
+      "official_url": "https://castelldebellver.palma.cat/en/",
+      "commission_url": "https://spainfilmcommission.com/"
+    },
+    {
       "id": "es-castillo-almodovar",
       "name": "Castillo de Almodóvar del Río",
       "country": "Spain",
@@ -22044,6 +22235,21 @@
       }
     },
     {
+      "id": "es-kursaal-san-sebastian",
+      "name": "Kursaal Congress Centre",
+      "country": "Spain",
+      "region": "Basque Country",
+      "lat": 43.3245,
+      "lng": -1.9791,
+      "type": "Theatre, arena & venue",
+      "setting": "1999 congress and concert building by architect Rafael Moneo on the San Sebastian seafront, two glass cube auditoria that host the San Sebastian Film Festival and rentable event spaces.",
+      "source_urls": [
+        "https://www.kursaal.eus/en"
+      ],
+      "official_url": "https://www.kursaal.eus/en",
+      "commission_url": "https://spainfilmcommission.com/"
+    },
+    {
       "id": "es-la-model",
       "name": "La Model",
       "country": "Spain",
@@ -22361,6 +22567,22 @@
       }
     },
     {
+      "id": "es-museo-artes-decorativas-madrid",
+      "name": "Museo Nacional de Artes Decorativas",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4178,
+      "lng": -3.6899,
+      "type": "Office, school & public building",
+      "setting": "Decorative arts museum from 1912 in a 19th century Madrid townhouse near the Retiro park, with four floors of period rooms including a Valencian 18th century tiled kitchen and an Imperial staircase.",
+      "suitability": "Restricted hours around the museum's own opening times, fee applies",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/museo-nacional-de-artes-decorativas/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/museo-nacional-de-artes-decorativas/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-nave-bellver-madrid",
       "name": "Nave Bellver",
       "country": "Spain",
@@ -22539,6 +22761,21 @@
       ],
       "official_url": "https://www.poble-espanyol.com/en/space-for-rent-barcelona/",
       "commission_url": "https://www.bcncatfilmcommission.com/"
+    },
+    {
+      "id": "es-poligono-industrial-la-ceramica",
+      "name": "Poligono Industrial Ceramica",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4048,
+      "lng": -3.6565,
+      "type": "Industrial & derelict",
+      "setting": "Small 1980s industrial estate in Puente de Vallecas, built as repetitive brick warehouses with two-pitched roofs along a single curved access street, used by small and medium local businesses.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/poligono-industrial-la-ceramica/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/poligono-industrial-la-ceramica/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-poligono-industrial-julian-camarillo",
