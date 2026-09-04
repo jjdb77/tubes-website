@@ -265,6 +265,39 @@ Twee vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tu
 - Prijzen: Producer Pro **vanaf** € 49/mnd incl. 2 users en max. 3 actieve projecten, € 25/mnd per extra user t/m 10; daarboven Enterprise (onbeperkt projecten). "Actief" = tegelijk lopend, niet per jaar. De kaart toont een klein "From" via het veld `price_prefix`.
 - Prijskaarten (Home + /plans/) tonen automatisch de lokale valuta: JS in `src/js/site.js` detecteert het land via `ipapi.co` (client-side, geen server-wijziging) en rekent elk `€ NN`-bedrag binnen `.pricing-grid` om. Koersen liggen **vast** (ingevroren op 14-08-2026, niet live): USD 1.1525, GBP 0.8541, CAD 1.6064, AUD 1.6335, DKK 7.4758 — eurolanden houden €, GB/AU/CA/DK krijgen hun eigen valuta, de rest van de wereld valt terug op USD. Bezoeker kan dit overrulen via het valutaveld boven de kaarten (`pricing.njk`); keuze blijft staan via `localStorage`. Koersen bijwerken = alleen de `rate`-waarden in site.js aanpassen, geen contentwijziging nodig.
 
+## Mail en dataregio (uitgezocht 4-9-2026)
+
+De site en het CRM draaien sinds 26-8-2026 in **EU West (Amsterdam)**. Wat er nog
+buiten de EU ligt is de mail. Twee knoppen, allebei zonder extra kosten:
+
+**Resend** kent vier regio's: North Virginia, **Ireland (eu-west-1)**, São Paulo en
+Tokyo. Je kiest de regio **bij het toevoegen van een domein**; een bestaand domein
+verhuizen betekent verwijderen, opnieuw toevoegen in de nieuwe regio en de
+DNS-records opnieuw zetten. In de prijslijst staat geen beperking per abonnement.
+- Nu geverifieerd: **appsolutions.nl** (DKIM op `resend._domainkey.appsolutions.nl`,
+  return-path `send.appsolutions.nl` met `v=spf1 include:amazonses.com ~all`).
+  DNS staat bij **TransIP**. In welke regio dat domein staat is alleen in het
+  Resend-dashboard te zien.
+- ⚠️ Verhuizen van appsolutions.nl raakt **ook 4Relations** (wachtwoordmails), want
+  dat gebruikt hetzelfde domein.
+- **Advies: voeg `tubes.media` toe als nieuw domein in de regio Ireland** en zet
+  `MAIL_FROM` op bijvoorbeeld `Tubes <no-reply@tubes.media>`. Geen onderbreking voor
+  appsolutions.nl, een betere afzender voor leads, en in dezelfde DNS-ronde kan het
+  **ontbrekende SPF-record** van tubes.media erbij. Let op: DNS van tubes.media staat
+  bij **Squarespace** (nsone/squarespacedns) en daar moet Joachim zelf inloggen.
+
+**Google Workspace dataregio's** (mailboxen contact@/joachim@tubes.media, MX wijst
+naar Google): je kunt per organisatie-eenheid kiezen tussen **Verenigde Staten en
+Europa**. "Fundamental data regions" zit in **Business Standard en Business Plus**
+(en Frontline Standard, Education Standard, Enterprise Essentials); "Enterprise data
+regions" in Frontline Plus, Enterprise Plus of via de Data Regions-add-on. Het dekt
+de inhoud van Gmail, Drive, Agenda, Meet en Chat in rust en tijdens verwerking,
+**niet** logs en cache. Instellen: Admin console > Account (Compliance) >
+Dataregio's, regel voor de organisatie-eenheid.
+- ⚠️ Nog te controleren: **welke Workspace-editie** dit account heeft. De
+  Admin console vroeg om een passkey, dus dat kan alleen Joachim zelf bekijken
+  (admin.google.com > Facturering > Abonnementen).
+
 ## Openstaand
 
 - [ ] Railway: `ADMIN_PASSWORD` op tubes-website zetten (het volume staat er sinds 20-8-2026); daarmee werkt /beheer. In Railway kun je Variables > New Variable gebruiken en als waarde `${{ secret(28) }}` invullen, dan genereert Railway er zelf een.
@@ -276,7 +309,9 @@ Twee vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tu
 - [ ] Optioneel: IndexNow aanzetten (staat in Bing Webmaster Tools). Meldt nieuwe/gewijzigde URL's direct aan Bing in plaats van te wachten op een crawl; nuttig omdat er vaak gedeployd wordt. Vergt een sleutelbestand op de site plus een ping bij deploy.
 - [x] **en.tubes.media gered** (1-8-2026): wijst naar Railway, 301't naar www, certificaat actief. De links van Product Hunt, LinkedIn en AlternativeTo komen weer aan.
 - [ ] Die drie profielen alsnog naar https://www.tubes.media/ laten wijzen (een directe link is beter dan een 301), plus Capterra claimen en de prijs op AlternativeTo corrigeren ($100-990 → € 49/mnd). Zie docs/directory-listings.md.
-- [ ] SPF-record toevoegen bij Squarespace: TXT @ met `v=spf1 include:_spf.google.com ~all`
+- [ ] SPF-record toevoegen bij Squarespace: TXT @ met `v=spf1 include:_spf.google.com ~all` (tubes.media heeft er nog steeds geen)
+- [ ] Mail in de EU: `tubes.media` als Resend-domein in de regio Ireland toevoegen en `MAIL_FROM` omzetten; zie "Mail en dataregio"
+- [ ] Google Workspace: editie nakijken en, als het Business Standard of hoger is, de dataregio op Europa zetten
 - [ ] Squarespace-account: e-mailadres nakijken (verlengingsmails komen nu niet aan, domein verloopt 10-5-2027)
 - [ ] Etappe 2: Workspace-facturering checken → domein naar TransIP → Squarespace opzeggen (+ SPF/DKIM toevoegen bij TransIP)
 - [ ] Academy-video's: nieuwe plek kiezen ("Access all videos"-knop staat verborgen)
