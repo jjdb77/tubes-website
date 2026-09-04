@@ -89,6 +89,46 @@
       "commission_url": "https://www.austrianfilms.com/"
     },
     {
+      "id": "at-brigittenauer-bad",
+      "name": "Brigittenauer Bad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2356,
+      "lng": 16.364,
+      "type": "Theatre, arena & venue",
+      "setting": "A municipal indoor and outdoor swimming complex in Vienna's Brigittenau district, with plain functional architecture, large glazed halls and outdoor lawns for everyday, present-day scenes.",
+      "facilities": "Indoor multipurpose pool, teaching pool and heated pool with sauna area; outdoor non-swimmer pool, sunbathing lawns and water playground",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/brigittenauer-bad",
+        "https://www.wien.gv.at/freizeit/baeder/"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/brigittenauer-bad",
+      "official_url": "https://www.wien.gv.at/freizeit/baeder/",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-brunnenmarkt",
+      "name": "Brunnenmarkt",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2111,
+      "lng": 16.3356,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 948 metre open-air street market with around 170 stalls in Vienna's Ottakring district, dating to 1786 and merged with the former Yppenmarkt in 2009, repaved as a level pedestrian zone since 2010.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/brunnenmarkt-1"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/brunnenmarkt-1",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/brunnenmarkt-1",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Brunnenmarkt_02.jpg/960px-Brunnenmarkt_02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Brunnenmarkt_02.jpg",
+        "author": "Peter Gugerell",
+        "license": "Public domain"
+      }
+    },
+    {
       "id": "at-burgtheater-wien",
       "name": "Burgtheater",
       "country": "Austria",
@@ -108,6 +148,58 @@
         "author": "C.Stadler/Bwag",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "at-depot-kunst-und-diskussion",
+      "name": "Depot (Kunst und Diskussion)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2032,
+      "lng": 16.3569,
+      "type": "Theatre, arena & venue",
+      "setting": "An art and discussion venue on Breite Gasse in Vienna's Neubau district, with a 36 square metre cafe and a 75 square metre function room seating around 100, plus a small outdoor terrace.",
+      "capacity": 100,
+      "source_urls": [
+        "https://www.depot.or.at",
+        "https://www.viennafilmcommission.at/en/locations/depot-kunst-und-diskussion-event-space-cafe"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/depot-kunst-und-diskussion-event-space-cafe",
+      "official_url": "https://www.depot.or.at",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-dschungel-wien",
+      "name": "Dschungel Wien",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2021,
+      "lng": 16.3603,
+      "type": "Theatre, arena & venue",
+      "setting": "A children's and youth theatre in Vienna's MuseumsQuartier with three stages, two studio spaces, a foyer box office and its own cafe.",
+      "source_urls": [
+        "https://www.dschungelwien.at",
+        "https://www.viennafilmcommission.at/en/locations/dschungel-vienna-theater-house-for-young-audiences"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/dschungel-vienna-theater-house-for-young-audiences",
+      "official_url": "https://www.dschungelwien.at",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-ernst-fuchs-museum",
+      "name": "Ernst Fuchs Museum (Otto Wagner Villa)",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2098,
+      "lng": 16.256,
+      "type": "Office, school & public building",
+      "setting": "A museum in Otto Wagner's 1888 Villa I in Vienna's Penzing district, combining the architect's original interiors with large-format paintings by Ernst Fuchs and a garden fountain pavilion.",
+      "source_urls": [
+        "https://www.ernstfuchsmuseum.at",
+        "https://www.viennafilmcommission.at/en/locations/ernst-fuchs-museum-in-the-otto-wagner-villa"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/ernst-fuchs-museum-in-the-otto-wagner-villa",
+      "official_url": "https://www.ernstfuchsmuseum.at",
+      "commission_url": "https://viennafilmcommission.at"
     },
     {
       "id": "at-erzberg",
@@ -247,6 +339,38 @@
       }
     },
     {
+      "id": "at-imperial-riding-school-vienna",
+      "name": "Hotel Imperial Riding School Vienna, Autograph Collection",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1967,
+      "lng": 16.3865,
+      "type": "Hotel & interiors",
+      "setting": "A hotel in the former Imperial Spanish Riding School building in Vienna's Landstrasse district, with guest rooms overlooking either a sculpture garden or the nearby Russian Orthodox church.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/imperial-riding-school-autograph-collection-hotel-room"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/imperial-riding-school-autograph-collection-hotel-room",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/imperial-riding-school-autograph-collection-hotel-room",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-hotel-kaiserhof-wien",
+      "name": "Hotel Kaiserhof Wien",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1976,
+      "lng": 16.3686,
+      "type": "Hotel & interiors",
+      "setting": "A 4-star hotel on a quiet side street in Vienna's Wieden district, opened in 1896, with turn-of-the-century interiors and room categories running from Classic to newly renovated Superior rooms.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/hotel-kaiserhof-wien"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/hotel-kaiserhof-wien",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/hotel-kaiserhof-wien",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
       "id": "at-hotel-sacher-wien",
       "name": "Hotel Sacher Vienna",
       "country": "Austria",
@@ -384,6 +508,46 @@
       }
     },
     {
+      "id": "at-kongressbad",
+      "name": "Kongressbad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2219,
+      "lng": 16.3111,
+      "type": "Theatre, arena & venue",
+      "setting": "An open-air municipal pool in Vienna's Ottakring district, opened in 1928 during the Red Vienna era, with a heritage-protected entrance and red-and-white wooden facades.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/kongressbad",
+        "https://www.wien.gv.at/freizeit/baeder/"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/kongressbad",
+      "official_url": "https://www.wien.gv.at/freizeit/baeder/",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-krapfenwaldlbad",
+      "name": "Krapfenwaldlbad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2661,
+      "lng": 16.331,
+      "type": "Theatre, arena & venue",
+      "setting": "An open-air bath on Vienna's Kahlenberg hill in the Doebling district, with several pools, wide sunbathing lawns and a view over the city; the main building and 1920s Waldhaus keep their original look.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/krapfenwaldlbad",
+        "https://www.wien.gv.at/freizeit/baeder/"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/krapfenwaldlbad",
+      "official_url": "https://www.wien.gv.at/freizeit/baeder/",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/D%C3%B6bling_%28Wien%29_-_Krapfenwaldlbad.JPG/960px-D%C3%B6bling_%28Wien%29_-_Krapfenwaldlbad.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:D%C3%B6bling_(Wien)_-_Krapfenwaldlbad.JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "at-kunsthaus-graz",
       "name": "Kunsthaus Graz",
       "country": "Austria",
@@ -404,6 +568,52 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Graz_Kunsthaus_vom_Schlossberg_20061126.jpg",
         "author": "Marion Schneider &amp; Christoph Aistleitner",
         "license": "CC BY-SA 2.5"
+      }
+    },
+    {
+      "id": "at-leopold-museum",
+      "name": "Leopold Museum",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2026,
+      "lng": 16.3591,
+      "type": "Office, school & public building",
+      "setting": "A museum of Austrian art from the late 19th century to 1945 in Vienna's MuseumsQuartier, housed in a white limestone-clad cube with about 5,400 square metres of exhibition space over five floors.",
+      "source_urls": [
+        "https://www.leopoldmuseum.org/en",
+        "https://www.viennafilmcommission.at/en/locations/leopold-museum"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/leopold-museum",
+      "official_url": "https://www.leopoldmuseum.org/en",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Wien_07_Leopold_Museum_a.jpg/960px-Wien_07_Leopold_Museum_a.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_07_Leopold_Museum_a.jpg",
+        "author": "Gugerell",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "at-mumok",
+      "name": "mumok - Museum moderner Kunst",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2037,
+      "lng": 16.3578,
+      "type": "Office, school & public building",
+      "setting": "A museum of modern and contemporary art in Vienna's MuseumsQuartier, built as a dark anthracite basalt block with a curved roof and column-free exhibition floors of up to 700 square metres.",
+      "source_urls": [
+        "https://www.mumok.at/en",
+        "https://www.viennafilmcommission.at/en/locations/mumok-museum-moderner-kunst-stiftung-ludwig-wien-"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/mumok-museum-moderner-kunst-stiftung-ludwig-wien-",
+      "official_url": "https://www.mumok.at/en",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Wien%2C_MuseumsQuartier%2C_mumok_--_2018_--_3081.jpg/960px-Wien%2C_MuseumsQuartier%2C_mumok_--_2018_--_3081.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien,_MuseumsQuartier,_mumok_--_2018_--_3081.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0"
       }
     },
     {
@@ -451,6 +661,78 @@
         "author": "C.Stadler/Bwag",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "at-natural-history-museum-vienna",
+      "name": "Natural History Museum of Vienna",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2053,
+      "lng": 16.3598,
+      "type": "Office, school & public building",
+      "setting": "A historicist museum on Vienna's Ringstrasse with 39 exhibition rooms holding the Venus of Willendorf, dinosaur skeletons and a large meteorite collection, alongside active research departments.",
+      "source_urls": [
+        "https://www.nhm-wien.ac.at/en",
+        "https://www.viennafilmcommission.at/en/locations/natural-history-museum-of-vienna"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/natural-history-museum-of-vienna",
+      "official_url": "https://www.nhm-wien.ac.at/en",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-palais-auersperg",
+      "name": "Palais Auersperg",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2073,
+      "lng": 16.355,
+      "type": "Palace & landmark",
+      "setting": "A baroque city palace in Vienna's Josefstadt district with a grand ballroom, smaller salons and a garden, hired out for period and contemporary film, photo and commercial productions.",
+      "source_urls": [
+        "https://www.palaisauersperg.events/raeume-entdecken/",
+        "https://www.viennafilmcommission.at/en/locations/palais-auersperg"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/palais-auersperg",
+      "official_url": "https://www.palaisauersperg.events/raeume-entdecken/",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-palais-daun-kinsky",
+      "name": "Palais Kinsky",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2115,
+      "lng": 16.3636,
+      "type": "Palace & landmark",
+      "setting": "A baroque palace on the Freyung in Vienna's Innere Stadt district; five rooms on its second floor are rented out separately for filming, with a hall supervisor on site and a small goods lift.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/palais-daun-kinsky"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/palais-daun-kinsky",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/palais-daun-kinsky",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Palais_Kinsky_Vienna_June_2006_103.jpg/960px-Palais_Kinsky_Vienna_June_2006_103.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palais_Kinsky_Vienna_June_2006_103.jpg",
+        "author": "Gryffindor",
+        "license": "CC BY 2.5"
+      }
+    },
+    {
+      "id": "at-palais-niederoesterreich",
+      "name": "Palais Niederoesterreich",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2101,
+      "lng": 16.3652,
+      "type": "Office, school & public building",
+      "setting": "A former seat of the Lower Austrian Estates on Herrengasse in central Vienna, dating back to the 16th century, now an event venue with historic rooms such as the Landtagssaal and Rittersaal.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/palais-niederosterreich"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/palais-niederosterreich",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/palais-niederosterreich",
+      "commission_url": "https://viennafilmcommission.at"
     },
     {
       "id": "salzburg-old-town",
@@ -543,6 +825,23 @@
       }
     },
     {
+      "id": "at-simmeringer-bad",
+      "name": "Simmeringer Bad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1637,
+      "lng": 16.4286,
+      "type": "Theatre, arena & venue",
+      "setting": "A multi-purpose municipal swimming facility in Vienna's Simmering district, with indoor and outdoor pools, a toddler pool, a slide tower and sunbathing lawns bordered by trees.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/simmeringer-bad",
+        "https://www.wien.gv.at/freizeit/baeder/"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/simmeringer-bad",
+      "official_url": "https://www.wien.gv.at/freizeit/baeder/",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
       "id": "soelden",
       "name": "Sölden",
       "country": "Austria",
@@ -560,6 +859,41 @@
         "author": "Leo-setä",
         "license": "CC BY 2.0"
       }
+    },
+    {
+      "id": "at-stadtkino-kunstlerhaus",
+      "name": "Stadtkino im Kunstlerhaus",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.201,
+      "lng": 16.3713,
+      "type": "Theatre, arena & venue",
+      "setting": "An arthouse cinema built in 1947 inside Vienna's Kunstlerhaus building on Akademiestrasse, with a decorated period interior, a foyer restaurant and its own festival programme.",
+      "source_urls": [
+        "https://www.stadtkinowien.at",
+        "https://www.viennafilmcommission.at/en/locations/stadtkino-im-kunstlerhaus"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/stadtkino-im-kunstlerhaus",
+      "official_url": "https://www.stadtkinowien.at",
+      "commission_url": "https://viennafilmcommission.at"
+    },
+    {
+      "id": "at-steigenberger-herrenhof",
+      "name": "Steigenberger Hotel Herrenhof Vienna",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.2098,
+      "lng": 16.3663,
+      "type": "Hotel & interiors",
+      "setting": "A listed 1913 building on Herrengasse in central Vienna, originally built as a school, now a hotel with 196 rooms, a bar, event spaces and penthouse suites overlooking the rooftops.",
+      "capacity": 196,
+      "source_urls": [
+        "https://www.steigenberger.com/en/hotels/all-hotels/austria/vienna/steigenberger-hotel-herrenhof-vienna",
+        "https://www.viennafilmcommission.at/en/locations/steigenberger-hotel-herrenhof-vienna"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/steigenberger-hotel-herrenhof-vienna",
+      "official_url": "https://www.steigenberger.com/en/hotels/all-hotels/austria/vienna/steigenberger-hotel-herrenhof-vienna",
+      "commission_url": "https://viennafilmcommission.at"
     },
     {
       "id": "at-tabakfabrik-linz",
@@ -583,6 +917,46 @@
         "author": "Stadt Linz / Screenshot: Christoph Waghubinger (Lewenstein)",
         "license": "CC BY 3.0"
       }
+    },
+    {
+      "id": "at-technisches-museum-wien",
+      "name": "Technisches Museum Wien",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1909,
+      "lng": 16.318,
+      "type": "Office, school & public building",
+      "setting": "Austria's largest museum of technology and industry, on Mariahilfer Strasse in Vienna's Penzing district, combining historic collection halls with exhibitions on current science and engineering.",
+      "source_urls": [
+        "https://www.technischesmuseum.at/en",
+        "https://www.viennafilmcommission.at/en/locations/vienna-museum-of-science-and-technology"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/vienna-museum-of-science-and-technology",
+      "official_url": "https://www.technischesmuseum.at/en",
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Wien_-_Technisches_Museum_%282%29.JPG/960px-Wien_-_Technisches_Museum_%282%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Technisches_Museum_(2).JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "at-theresienbad",
+      "name": "Theresienbad",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1818,
+      "lng": 16.3281,
+      "type": "Theatre, arena & venue",
+      "setting": "A public indoor and outdoor swimming bath in Vienna's Meidling district, reopened in the 1960s and still showing some original mosaic decoration alongside a children's pool section.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/theresienbad",
+        "https://www.wien.gv.at/freizeit/baeder/"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/theresienbad",
+      "official_url": "https://www.wien.gv.at/freizeit/baeder/",
+      "commission_url": "https://viennafilmcommission.at"
     },
     {
       "id": "at-thuryhof",
@@ -659,6 +1033,22 @@
       ],
       "official_url": "https://www.wiener-staatsoper.at/en/",
       "commission_url": "https://www.viennafilmcommission.at/en/"
+    },
+    {
+      "id": "at-viktor-adler-markt",
+      "name": "Viktor-Adler-Markt",
+      "country": "Austria",
+      "region": "Vienna",
+      "lat": 48.1767,
+      "lng": 16.3764,
+      "type": "Bar, restaurant & shop",
+      "setting": "A neighbourhood market between Favoritenstrasse and Senefeldergasse in Vienna's Favoriten district, founded in 1877 and expanded in 1910, with a farmers' market section on Leibnizgasse.",
+      "source_urls": [
+        "https://www.viennafilmcommission.at/en/locations/viktor-adler-markt"
+      ],
+      "url": "https://www.viennafilmcommission.at/en/locations/viktor-adler-markt",
+      "official_url": "https://www.viennafilmcommission.at/en/locations/viktor-adler-markt",
+      "commission_url": "https://viennafilmcommission.at"
     },
     {
       "id": "at-volksoper-wien",
@@ -1634,6 +2024,70 @@
       "commission_url": "https://www.wallimage.be/"
     },
     {
+      "id": "hr-abandoned-bus-station-gracac",
+      "name": "Abandoned Bus Station, Gračac",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.2863,
+      "lng": 15.8363,
+      "type": "Industrial & derelict",
+      "setting": "A disused bus terminal in the inland town of Gračac, next to the main road, listed by the Zadar Film Commission as a derelict-places location.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/abandoned-bus-station/6"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/abandoned-bus-station/6",
+      "official_url": "https://www.zadarfilmcommission.com/en/location/abandoned-bus-station/6",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-airfield-sepurine",
+      "name": "Abandoned Military Airfield, Šepurine",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.2171,
+      "lng": 15.1625,
+      "type": "Industrial & derelict",
+      "setting": "A disused military runway with deteriorated hangars near the village of Šepurine by Nin, set between the sea and Velebit mountain, listed by the Zadar Film Commission.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/abandoned-military-airport-sepurine-with-abandoned-hangars/4"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/abandoned-military-airport-sepurine-with-abandoned-hangars/4",
+      "official_url": "https://www.zadarfilmcommission.com/en/location/abandoned-military-airport-sepurine-with-abandoned-hangars/4",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-music-academy-zagreb",
+      "name": "Academy of Music, University of Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8126,
+      "lng": 15.9719,
+      "type": "Office, school & public building",
+      "setting": "The University of Zagreb's music academy building on Gundulićeva ulica in the city centre, listed by the Zagreb Film Office among schools and universities.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/music-academy-2/"
+      ],
+      "url": "https://filmzagreb.hr/product/music-academy-2/",
+      "official_url": "https://filmzagreb.hr/product/music-academy-2/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-arena-centar-zagreb",
+      "name": "Arena Centar, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7703,
+      "lng": 15.94,
+      "type": "Bar, restaurant & shop",
+      "setting": "A large shopping centre in Novi Zagreb next to the Arena Zagreb hall, listed by the Zagreb Film Office as an architectural filming location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/arena-centar/"
+      ],
+      "url": "https://filmzagreb.hr/product/arena-centar/",
+      "official_url": "https://filmzagreb.hr/product/arena-centar/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-arena-zagreb",
       "name": "Arena Zagreb",
       "country": "Croatia",
@@ -1677,6 +2131,22 @@
       ],
       "official_url": "https://filmzagreb.hr/product/britanski-square-market/",
       "commission_url": "https://filmzagreb.hr"
+    },
+    {
+      "id": "hr-church-st-mark-zagreb",
+      "name": "Church of St Mark, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8164,
+      "lng": 15.9736,
+      "type": "Church & monastery",
+      "setting": "A medieval parish church on St Mark's Square in Zagreb's Upper Town, known for its tiled roof, listed by the Zagreb Film Office as an Old Town location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/church-of-st-marko/"
+      ],
+      "url": "https://filmzagreb.hr/product/church-of-st-marko/",
+      "official_url": "https://filmzagreb.hr/product/church-of-st-marko/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-church-st-donatus-zadar",
@@ -1806,6 +2276,22 @@
       "commission_url": "https://filmzagreb.hr"
     },
     {
+      "id": "hr-domovinski-most",
+      "name": "Domovinski Most (Homeland Bridge)",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7712,
+      "lng": 16.0686,
+      "type": "Transport & infrastructure",
+      "setting": "A cable-stayed road bridge over the Sava on Zagreb's eastern bypass, listed by the Zagreb Film Office as a traffic-connection location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/domovinski-most-homeland-bridge/"
+      ],
+      "url": "https://filmzagreb.hr/product/domovinski-most-homeland-bridge/",
+      "official_url": "https://filmzagreb.hr/product/domovinski-most-homeland-bridge/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-drazen-petrovic-hall",
       "name": "Dražen Petrović Basketball Hall",
       "country": "Croatia",
@@ -1847,6 +2333,22 @@
         "author": "Zysko serhii",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-dvorac-podolje",
+      "name": "Dvorac Podolje (Hamor Castle)",
+      "country": "Croatia",
+      "region": "Zagreb County",
+      "lat": 45.8016,
+      "lng": 15.6959,
+      "type": "Castle & estate",
+      "setting": "A small noble manor house in the Hamor part of Samobor, near Zagreb, listed by the Zagreb Film Office as a castle-and-manor location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/hamor-castle/"
+      ],
+      "url": "https://filmzagreb.hr/product/hamor-castle/",
+      "official_url": "https://filmzagreb.hr/product/hamor-castle/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-esplanade-zagreb",
@@ -1902,6 +2404,22 @@
       "commission_url": "https://havc.hr"
     },
     {
+      "id": "hr-hendrix-bridge",
+      "name": "Hendrix Bridge, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7848,
+      "lng": 15.9563,
+      "type": "Transport & infrastructure",
+      "setting": "A pedestrian and cycling bridge over the Sava in the Kajzerica district, catalogued by the Zagreb Film Office among the city's bridges.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/hendrix-bridge/"
+      ],
+      "url": "https://filmzagreb.hr/product/hendrix-bridge/",
+      "official_url": "https://filmzagreb.hr/product/hendrix-bridge/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-hotel-international-zagreb",
       "name": "Hotel International Zagreb",
       "country": "Croatia",
@@ -1917,6 +2435,22 @@
       ],
       "official_url": "https://filmzagreb.hr/product/hotel-international/",
       "commission_url": "https://filmzagreb.hr"
+    },
+    {
+      "id": "hr-hotel-jadran-zagreb",
+      "name": "Hotel Jadran, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8136,
+      "lng": 15.9844,
+      "type": "Hotel & interiors",
+      "setting": "A bed-and-breakfast hotel on Vlaška ulica between Zagreb's Upper and Lower Town, with 49 rooms and a restaurant, listed by the Zagreb Film Office.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/hotel-jadran/"
+      ],
+      "url": "https://filmzagreb.hr/product/hotel-jadran/",
+      "official_url": "https://filmzagreb.hr/product/hotel-jadran/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-hotel-kvarner-opatija",
@@ -2057,6 +2591,40 @@
       "commission_url": "https://havc.hr"
     },
     {
+      "id": "hr-museum-ancient-glass-zadar",
+      "name": "Museum of Ancient Glass, Zadar",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.1143,
+      "lng": 15.2295,
+      "type": "Office, school & public building",
+      "setting": "A museum in central Zadar holding Roman-era glass, with a glassblowing workshop, souvenir shop and exhibition halls, listed by the Zadar Film Commission.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/museum-of-glass-zadar/73",
+        "https://www.mas-zadar.hr/en"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/museum-of-glass-zadar/73",
+      "official_url": "https://www.mas-zadar.hr/en",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-museum-arts-crafts-zagreb",
+      "name": "Museum of Arts and Crafts, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8094,
+      "lng": 15.9685,
+      "type": "Office, school & public building",
+      "setting": "A decorative-arts museum on Trg Republike Hrvatske in central Zagreb, its historicist building and galleries listed by the Zagreb Film Office as a filming location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/museum-arts-crafts/",
+        "https://www.muo.hr/"
+      ],
+      "url": "https://filmzagreb.hr/product/museum-arts-crafts/",
+      "official_url": "https://www.muo.hr/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-nsk-zagreb",
       "name": "National and University Library in Zagreb",
       "country": "Croatia",
@@ -2076,6 +2644,22 @@
         "author": "Branko Radovanović",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-oktogon-passage",
+      "name": "Oktogon Passage",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8125,
+      "lng": 15.9749,
+      "type": "Historic town & street",
+      "setting": "A covered shopping arcade with a vaulted glass roof linking Ilica and Trg Petra Preradovića in central Zagreb, catalogued by the Zagreb Film Office as an architectural location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/oktogon-passage/"
+      ],
+      "url": "https://filmzagreb.hr/product/oktogon-passage/",
+      "official_url": "https://filmzagreb.hr/product/oktogon-passage/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-opatija",
@@ -2114,6 +2698,22 @@
       ],
       "official_url": "https://filmzagreb.hr/product/opatovina/",
       "commission_url": "https://filmzagreb.hr"
+    },
+    {
+      "id": "hr-ostri-rat-lighthouse",
+      "name": "Oštri Rat Lighthouse, Zadar",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.1301,
+      "lng": 15.2043,
+      "type": "Transport & infrastructure",
+      "setting": "A working lighthouse with a spiral staircase and keeper's house on the Puntamika coast at Zadar, listed by the Zadar Film Commission.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/lighthouse-zadar/69"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/lighthouse-zadar/69",
+      "official_url": "https://www.zadarfilmcommission.com/en/location/lighthouse-zadar/69",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-pag-salt-pans",
@@ -2237,6 +2837,39 @@
       "commission_url": "https://filmzagreb.hr"
     },
     {
+      "id": "hr-sheraton-zagreb",
+      "name": "Sheraton Zagreb Hotel",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8072,
+      "lng": 15.9846,
+      "type": "Hotel & interiors",
+      "setting": "A 306-room hotel on Ulica kneza Borne in central Zagreb with two restaurants, a piano bar, casino and indoor pool, listed by the Zagreb Film Office.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/sheraton-zagreb/",
+        "https://www.marriott.com/en-us/hotels/zagsi-sheraton-zagreb-hotel/overview/"
+      ],
+      "url": "https://filmzagreb.hr/product/sheraton-zagreb/",
+      "official_url": "https://www.marriott.com/en-us/hotels/zagsi-sheraton-zagreb-hotel/overview/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-tunnel-sljeme",
+      "name": "Sljeme Tunnel",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8633,
+      "lng": 15.9826,
+      "type": "Transport & infrastructure",
+      "setting": "A road tunnel through the Medvednica hills north of Zagreb, listed by the Zagreb Film Office under traffic-connection locations.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/tunnel-sljeme/"
+      ],
+      "url": "https://filmzagreb.hr/product/tunnel-sljeme/",
+      "official_url": "https://filmzagreb.hr/product/tunnel-sljeme/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-st-nicholas-fortress-sibenik",
       "name": "St. Nicholas Fortress",
       "country": "Croatia",
@@ -2284,6 +2917,38 @@
       }
     },
     {
+      "id": "hr-svetice-pool",
+      "name": "Svetice Sports and Recreation Centre",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8168,
+      "lng": 16.0147,
+      "type": "Theatre, arena & venue",
+      "setting": "A public swimming pool complex in eastern Zagreb with several basins, run by the city's sport and youth office and listed for filming by the Zagreb Film Office.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/svetice-pool/"
+      ],
+      "url": "https://filmzagreb.hr/product/svetice-pool/",
+      "official_url": "https://filmzagreb.hr/product/svetice-pool/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-tc-maksimir",
+      "name": "Tenis Centar Maksimir",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8213,
+      "lng": 16.0328,
+      "type": "Theatre, arena & venue",
+      "setting": "A working tennis and squash club in the Maksimir neighbourhood of Zagreb, listed by the Zagreb Film Office under sport objects.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/tc-maksimir/"
+      ],
+      "url": "https://filmzagreb.hr/product/tc-maksimir/",
+      "official_url": "https://filmzagreb.hr/product/tc-maksimir/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
       "id": "hr-tvornica-kulture",
       "name": "Tvornica Kulture",
       "country": "Croatia",
@@ -2298,6 +2963,22 @@
       ],
       "official_url": "https://tvornicakulture.com",
       "commission_url": "https://filmzagreb.hr"
+    },
+    {
+      "id": "hr-vatroslav-lisinski-hall",
+      "name": "Vatroslav Lisinski Concert Hall",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8011,
+      "lng": 15.9802,
+      "type": "Theatre, arena & venue",
+      "setting": "Zagreb's main concert hall on Trg Stjepana Radića, with a large auditorium and smaller performance space, listed by the Zagreb Film Office as an architectural filming location.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/vatroslav-lisinski-concert-hall/"
+      ],
+      "url": "https://filmzagreb.hr/product/vatroslav-lisinski-concert-hall/",
+      "official_url": "https://filmzagreb.hr/product/vatroslav-lisinski-concert-hall/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-veli-rat-lighthouse",
@@ -2321,6 +3002,88 @@
         "author": "Dominik Matus",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "hr-zapadni-kolodvor",
+      "name": "West Railway Station, Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8093,
+      "lng": 15.9556,
+      "type": "Transport & infrastructure",
+      "setting": "A smaller working railway station in the Črnomerec district of Zagreb, listed in the Zagreb Film Office catalogue alongside the nearby Hendrix and Youth bridges.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/railway-station-west/"
+      ],
+      "url": "https://filmzagreb.hr/product/railway-station-west/",
+      "official_url": "https://filmzagreb.hr/product/railway-station-west/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-zadar-airport",
+      "name": "Zadar Airport",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.0998,
+      "lng": 15.3581,
+      "type": "Transport & infrastructure",
+      "setting": "An international airport at Zemunik Donji outside Zadar, with two runways and a modern terminal, listed by the Zadar Film Commission for filming.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/airport-zadar/7",
+        "https://zadar-airport.hr/en/homepage/"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/airport-zadar/7",
+      "official_url": "https://zadar-airport.hr/en/homepage/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-zadar-green-market",
+      "name": "Zadar City Market",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.115,
+      "lng": 15.2238,
+      "type": "Bar, restaurant & shop",
+      "setting": "An open-air produce market with green and white awnings in the centre of Zadar's old town, listed by the Zadar Film Commission.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/market-zadar/70"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/market-zadar/70",
+      "official_url": "https://www.zadarfilmcommission.com/en/location/market-zadar/70",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-zadar-county-building",
+      "name": "Zadar County Office Building",
+      "country": "Croatia",
+      "region": "Zadar County",
+      "lat": 44.1172,
+      "lng": 15.221,
+      "type": "Office, school & public building",
+      "setting": "The seat of the Zadar County administration on the Zadar peninsula, a walled building by the sea, listed by the Zadar Film Commission.",
+      "source_urls": [
+        "https://www.zadarfilmcommission.com/en/location/county-office-building/25",
+        "https://zadarska-zupanija.hr/"
+      ],
+      "url": "https://www.zadarfilmcommission.com/en/location/county-office-building/25",
+      "official_url": "https://zadarska-zupanija.hr/",
+      "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-zagreb-bus-station",
+      "name": "Zagreb Bus Station",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8035,
+      "lng": 15.993,
+      "type": "Transport & infrastructure",
+      "setting": "The city's main long-distance bus terminal on Avenija Marina Držića, a working transit hub catalogued by the Zagreb Film Office for traffic-connection scenes.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/autobusni-kolodvor/"
+      ],
+      "url": "https://filmzagreb.hr/product/autobusni-kolodvor/",
+      "official_url": "https://filmzagreb.hr/product/autobusni-kolodvor/",
+      "commission_url": "https://havc.hr/"
     },
     {
       "id": "hr-zagreb-faculty-of-law",
@@ -3937,6 +4700,38 @@
       }
     },
     {
+      "id": "fi-hatanpaa-manor",
+      "name": "Hatanpaa Manor",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4834,
+      "lng": 23.7508,
+      "type": "House & apartment",
+      "setting": "A manor house on the shore of Lake Pyhajarvi close to central Tampere, set in an English-style park with rose gardens and on-site parking for about 20 cars.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/hatanpaa-manor/"
+      ],
+      "url": "https://www.filmtampere.com/locations/hatanpaa-manor/",
+      "official_url": "https://www.filmtampere.com/locations/hatanpaa-manor/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-haveri-mine",
+      "name": "Haveri Mine",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.7091,
+      "lng": 23.2432,
+      "type": "Industrial & derelict",
+      "setting": "A former iron and gold mine near Ylojarvi, closed in 1960 and since flooded to form a deep, clear water-filled pit now used as a dive site.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/haveri-mine/"
+      ],
+      "url": "https://www.filmtampere.com/locations/haveri-mine/",
+      "official_url": "https://www.filmtampere.com/locations/haveri-mine/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
       "id": "fi-helsinki-olympic-stadium",
       "name": "Helsinki Olympic Stadium",
       "country": "Finland",
@@ -3959,6 +4754,23 @@
         "author": "Joneikifi",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fi-hiedanranta-area",
+      "name": "Hiedanranta Area",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5166,
+      "lng": 23.6853,
+      "type": "Industrial & derelict",
+      "setting": "A former pulp and paper mill site on Tampere's lakeshore, now repurposed as a mixed venue for arts, culture and research while redevelopment of the wider area continues.",
+      "source_urls": [
+        "https://www.hiedanranta.fi/en/",
+        "https://www.filmtampere.com/locations/hiedanranta-area/"
+      ],
+      "url": "https://www.filmtampere.com/locations/hiedanranta-area/",
+      "official_url": "https://www.hiedanranta.fi/en/",
+      "commission_url": "https://www.filmtampere.com"
     },
     {
       "id": "ivalo-lapland",
@@ -4067,6 +4879,22 @@
       "commission_url": "https://www.filmtampere.com"
     },
     {
+      "id": "fi-nokia-museums",
+      "name": "Nokia Museums (Hinttala)",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4806,
+      "lng": 23.5287,
+      "type": "Office, school & public building",
+      "setting": "A local history museum in the town of Nokia occupying a relocated worker's house, part of a small cluster of preserved 19th and 20th century industrial-era homes.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/nokia-museums/"
+      ],
+      "url": "https://www.filmtampere.com/locations/nokia-museums/",
+      "official_url": "https://www.filmtampere.com/locations/nokia-museums/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
       "id": "fi-finnpark-garages",
       "name": "Parking Garages by Finnpark",
       "country": "Finland",
@@ -4081,6 +4909,54 @@
       ],
       "url": "https://www.filmtampere.com/locations/parking-garages-by-finnpark/",
       "official_url": "https://www.filmtampere.com/locations/parking-garages-by-finnpark/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-pekilo",
+      "name": "Pekilo Performance and Event Venue",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 62.0273,
+      "lng": 24.6387,
+      "type": "Theatre, arena & venue",
+      "setting": "A former animal-feed factory building beside the closed Mantta pulp mill, converted into an exhibition and event space with variable rooms and a ceiling rising to 12 metres.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/pekilo-performance-and-event-venue/"
+      ],
+      "url": "https://www.filmtampere.com/locations/pekilo-performance-and-event-venue/",
+      "official_url": "https://www.filmtampere.com/locations/pekilo-performance-and-event-venue/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-pirkkala-old-church",
+      "name": "Pirkkala Old Church",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4608,
+      "lng": 23.5673,
+      "type": "Church & monastery",
+      "setting": "A wooden church built in 1921 in Pirkkala, with an adjoining cemetery, a church boat and a bird observation tower on the grounds.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/pirkkala-old-church/"
+      ],
+      "url": "https://www.filmtampere.com/locations/pirkkala-old-church/",
+      "official_url": "https://www.filmtampere.com/locations/pirkkala-old-church/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-pispala-area",
+      "name": "Pispala Area",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5034,
+      "lng": 23.7104,
+      "type": "Historic town & street",
+      "setting": "A protected hillside neighbourhood in Tampere of narrow streets and restored wooden houses between two lakes, home to Rajaportti, the oldest public sauna in Finland.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/pispala-area/"
+      ],
+      "url": "https://www.filmtampere.com/locations/pispala-area/",
+      "official_url": "https://www.filmtampere.com/locations/pispala-area/",
       "commission_url": "https://www.filmtampere.com"
     },
     {
@@ -4101,6 +4977,23 @@
       "url": "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
       "official_url": "https://www.filmtampere.com/locations/pitkaniemi-hospital-area/",
       "commission_url": "https://www.filmtampere.com/"
+    },
+    {
+      "id": "fi-sarkanniemi",
+      "name": "Sarkanniemi Amusement Park",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5039,
+      "lng": 23.7438,
+      "type": "Theatre, arena & venue",
+      "setting": "A lakeside amusement park in central Tampere combining rides, an aquarium, a planetarium, a children's zoo and the Nasinneula observation tower.",
+      "source_urls": [
+        "https://www.sarkanniemi.fi/en",
+        "https://www.filmtampere.com/locations/sarkaniemi-amusement-park/"
+      ],
+      "url": "https://www.filmtampere.com/locations/sarkaniemi-amusement-park/",
+      "official_url": "https://www.sarkanniemi.fi/en",
+      "commission_url": "https://www.filmtampere.com"
     },
     {
       "id": "senate-square-helsinki",
@@ -4306,6 +5199,61 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/View_from_Turku_Cathedral_tower.jpg/960px-View_from_Turku_Cathedral_tower.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:View_from_Turku_Cathedral_tower.jpg",
         "author": "Markus Koljonen (Dilaudid) with thanks to Jontts and Turku Cathedral",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "fi-vehoniemi-car-museum",
+      "name": "Vehoniemi Car Museum",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.4085,
+      "lng": 24.1575,
+      "type": "Office, school & public building",
+      "setting": "A car museum on the Vehoniemi ridge near Kangasala, open since 1983, with a rotating display of vintage vehicles kept in running order.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/vehoniemi-car-museum/"
+      ],
+      "url": "https://www.filmtampere.com/locations/vehoniemi-car-museum/",
+      "official_url": "https://www.filmtampere.com/locations/vehoniemi-car-museum/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fi-viitaniemi-quarry",
+      "name": "Viitaniemi Quarry",
+      "country": "Finland",
+      "region": "Pirkanmaa",
+      "lat": 61.5839,
+      "lng": 24.6713,
+      "type": "Industrial & derelict",
+      "setting": "An open-pit feldspar quarry near Orivesi, worked from 1935 to 1965 for lithium-bearing feldspar, with gemstones still found among its waste rock piles.",
+      "source_urls": [
+        "https://www.filmtampere.com/locations/viitaniemi-quarry/"
+      ],
+      "url": "https://www.filmtampere.com/locations/viitaniemi-quarry/",
+      "official_url": "https://www.filmtampere.com/locations/viitaniemi-quarry/",
+      "commission_url": "https://www.filmtampere.com"
+    },
+    {
+      "id": "fr-abbaye-saint-michel-thierache",
+      "name": "Abbaye de Saint-Michel-en-Thierache",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "lat": 49.9275,
+      "lng": 4.1344,
+      "type": "Church & monastery",
+      "setting": "A Benedictine abbey founded in 945 in Saint-Michel-en-Thierache, rebuilt several times, with a 17th century baroque facade, a central cloister, an abbey church, a chapter house and a refectory.",
+      "source_urls": [
+        "https://www.saint-michel-en-thierache.fr/CULTURE-PATRIMOINE/L-Abbaye-de-Saint-Michel-en-Thierache",
+        "https://www.pictanovo.com/bureau-daccueil-des-tournages/"
+      ],
+      "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
+      "official_url": "https://www.saint-michel-en-thierache.fr/CULTURE-PATRIMOINE/L-Abbaye-de-Saint-Michel-en-Thierache",
+      "commission_url": "https://www.pictanovo.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Abbaye_de_Saint-Michel_en_Thi%C3%A9rache_-_Clo%C3%AEtre.JPG/960px-Abbaye_de_Saint-Michel_en_Thi%C3%A9rache_-_Clo%C3%AEtre.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Abbaye_de_Saint-Michel_en_Thi%C3%A9rache_-_Clo%C3%AEtre.JPG",
+        "author": "Igmar911",
         "license": "CC BY-SA 3.0"
       }
     },
@@ -4573,6 +5521,23 @@
         "author": "Florian Pépellin",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "fr-chartreuse-de-neuville",
+      "name": "Chartreuse de Neuville",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "lat": 50.4702,
+      "lng": 1.79,
+      "type": "Church & monastery",
+      "setting": "A former Carthusian monastery near Montreuil-sur-Mer, restored around cloistered gardens, run by an association that rents out its halls for events alongside its heritage and cultural programme.",
+      "source_urls": [
+        "https://lachartreusedeneuville.org/",
+        "https://www.pictanovo.com/bureau-daccueil-des-tournages/"
+      ],
+      "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
+      "official_url": "https://lachartreusedeneuville.org/",
+      "commission_url": "https://www.pictanovo.com"
     },
     {
       "id": "fr-chateau-if",
@@ -4887,6 +5852,22 @@
       }
     },
     {
+      "id": "fr-couvent-du-pouy-dax",
+      "name": "Couvent du Pouy",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 43.7084,
+      "lng": -1.0519,
+      "type": "Church & monastery",
+      "setting": "A 19th century convent on the edge of Dax, empty for over a decade, with a chapel, cloister galleries around a courtyard garden, and rooms and offices on three floors, listed by the regional film commission.",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
+    },
+    {
       "id": "fr-ecomusee-creusot-montceau",
       "name": "Écomusée Creusot Montceau",
       "country": "France",
@@ -4908,6 +5889,40 @@
       }
     },
     {
+      "id": "fr-entrepot-beraud-sudreau",
+      "name": "Entrepot Beraud-Sudreau",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 45.1692,
+      "lng": 1.5337,
+      "type": "Industrial & derelict",
+      "setting": "A 10,000 square metre former warehouse in Brive-la-Gaillarde, split into two halls of 6,000 and 4,000 square metres with 200 square metres of offices, listed by the regional film commission.",
+      "facilities": "Two buildings of 6,000 and 4,000 square metres including 200 square metres of offices",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
+    },
+    {
+      "id": "fr-escat-bergerac",
+      "name": "Escat",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 44.8535,
+      "lng": 0.4875,
+      "type": "Industrial & derelict",
+      "setting": "A former tobacco-processing plant in Bergerac with five buildings totalling 42,000 square metres, offered by the regional film commission for productions needing large industrial floor space.",
+      "facilities": "Five buildings of 20,000, 5,500, 5,500, 5,500 and 5,500 square metres",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
+    },
+    {
       "id": "etretat-cliffs",
       "name": "Étretat Cliffs",
       "country": "France",
@@ -4925,6 +5940,47 @@
         "author": "Jörg Braukmann",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fr-familistere-guise",
+      "name": "Familistere de Guise",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "lat": 49.9042,
+      "lng": 3.6261,
+      "type": "House & apartment",
+      "setting": "A 19th century workers' housing complex in Guise built by industrialist Jean-Baptiste Godin, with glazed courtyards and communal apartment wings, now a museum that also hosts corporate events.",
+      "source_urls": [
+        "https://www.familistere.com/fr",
+        "https://www.pictanovo.com/bureau-daccueil-des-tournages/"
+      ],
+      "url": "https://www.pictanovo.com/bureau-daccueil-des-tournages/",
+      "official_url": "https://www.familistere.com/fr",
+      "commission_url": "https://www.pictanovo.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Pavillon_central_int%C3%A9rieur_du_Familist%C3%A8re_de_Guise.jpg/960px-Pavillon_central_int%C3%A9rieur_du_Familist%C3%A8re_de_Guise.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Pavillon_central_int%C3%A9rieur_du_Familist%C3%A8re_de_Guise.jpg",
+        "author": "JackyM59",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "fr-france-tabac-sarlat",
+      "name": "France-Tabac",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 44.8772,
+      "lng": 1.211,
+      "type": "Industrial & derelict",
+      "setting": "A former tobacco warehouse complex on the edge of Sarlat-la-Caneda, five buildings totalling 14,400 square metres, listed by the Perigord film office for set construction and large interiors.",
+      "facilities": "Five buildings of 6,235, 2,700, 2,160, 2,160 and 1,141 square metres",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+        "https://www.cine-passion24.com"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
     },
     {
       "id": "fr-futuroscope",
@@ -5107,6 +6163,29 @@
       }
     },
     {
+      "id": "fr-hopital-saint-cyr-villeneuve",
+      "name": "Hopital Saint-Cyr",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 44.4085,
+      "lng": 0.711,
+      "type": "Hospital, prison & institution",
+      "setting": "A 19th century hospital in central Villeneuve-sur-Lot, in use until 2015, with a neoclassical arcaded facade, a painted chapel, a former apothecary and wards over three floors around a wooded park.",
+      "facilities": "Large lorry-accessible car park, water and electricity available on site",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Villeneuve-sur-Lot_-_H%C3%B4pital_Saint-Cyr_-1.JPG/960px-Villeneuve-sur-Lot_-_H%C3%B4pital_Saint-Cyr_-1.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villeneuve-sur-Lot_-_H%C3%B4pital_Saint-Cyr_-1.JPG",
+        "author": "Jacques Mossot",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
       "id": "fr-hopital-saint-louis",
       "name": "Hôpital Saint-Louis",
       "country": "France",
@@ -5261,6 +6340,23 @@
       ],
       "official_url": "https://www.gl-lyonevents.com/fr/la-sucriere",
       "commission_url": "https://www.auvergnerhonealpes-cinema.fr"
+    },
+    {
+      "id": "fr-lagora-angouleme",
+      "name": "Lagora",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 45.6485,
+      "lng": 0.1562,
+      "type": "Industrial & derelict",
+      "setting": "A disused 10,000 square metre leisure and commercial complex in Angouleme, split across three buildings and listed by the regional film commission for large-scale sets.",
+      "facilities": "Three buildings of 3,650, 2,411 and 1,552 square metres",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
     },
     {
       "id": "fr-le-104-centquatre",
@@ -5488,6 +6584,23 @@
       ],
       "official_url": "https://halles-de-lyon-paulbocuse.com/",
       "commission_url": "https://www.filmfrance.net/"
+    },
+    {
+      "id": "fr-studios-saint-menet",
+      "name": "Les Studios de Saint-Menet",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "lat": 43.2892,
+      "lng": 5.4992,
+      "type": "Studio & backlot",
+      "setting": "A former chocolate factory in Marseille's Saint-Menet district converted into roughly 30,000 square metres of sound stages, office space and three usable rooftop terraces across three buildings.",
+      "facilities": "Private parking for over 200 vehicles, ready-to-shoot sets, three practicable roof terraces, a green-screen studio",
+      "suitability": "Sound stages and office space for film and TV production",
+      "source_urls": [
+        "https://cinema.marseille.fr/pages/les-studios-de-saint-menet"
+      ],
+      "official_url": "https://cinema.marseille.fr/pages/les-studios-de-saint-menet",
+      "commission_url": "https://cinema.marseille.fr"
     },
     {
       "id": "fr-subs-lyon",
@@ -5758,6 +6871,25 @@
       }
     },
     {
+      "id": "fr-provence-studios",
+      "name": "Provence Studios",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "lat": 43.4063,
+      "lng": 5.0142,
+      "type": "Studio & backlot",
+      "setting": "A studio complex on 22 hectares near Martigues with sixteen sound stages up to 2,400 square metres, two 18,000 square metre backlots and ready-built prison, police station and courtroom sets.",
+      "known_for": "Titane, The Serpent Queen, Gaston Lagaffe",
+      "facilities": "1,000 sqm of production offices, 8,000 sqm of workshops and joinery, dressing rooms, a virtual production LED stage of 14 by 14 metres",
+      "suitability": "Ready-built prison, police station, morgue, hospital room and courtroom sets, plus two exterior backlots",
+      "source_urls": [
+        "https://www.provence-studios.com/",
+        "https://cinema.marseille.fr/pages/provence-studios"
+      ],
+      "official_url": "https://www.provence-studios.com/",
+      "commission_url": "https://cinema.marseille.fr"
+    },
+    {
       "id": "fr-corbusier-firminy",
       "name": "Site Le Corbusier, Firminy",
       "country": "France",
@@ -5851,6 +6983,23 @@
       }
     },
     {
+      "id": "fr-transpalux-saint-yrieix",
+      "name": "Transpalux",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 45.6753,
+      "lng": 0.1269,
+      "type": "Industrial & derelict",
+      "setting": "A film lighting and grip company's premises in Saint-Yrieix-sur-Charente near Angoulême, offered by the regional film commission as three separate industrial halls of 487 to 710 square metres.",
+      "facilities": "Three buildings of 603.7, 710.4 and 487.1 square metres",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
+    },
+    {
       "id": "fr-tribunal-paris",
       "name": "Tribunal de Paris",
       "country": "France",
@@ -5871,6 +7020,23 @@
         "author": "Cahtls",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "fr-tsf-studios-aquitaine",
+      "name": "TSF Studios d'Aquitaine",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 44.8075,
+      "lng": -0.5489,
+      "type": "Studio & backlot",
+      "setting": "A 400 square metre studio building run by a film equipment rental company in Bègles, in the Bordeaux metropolitan area, listed by the regional film commission for shoots needing a single controllable space.",
+      "facilities": "One building of 400 square metres",
+      "source_urls": [
+        "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+      ],
+      "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "commission_url": "https://alca-nouvelle-aquitaine.fr"
     },
     {
       "id": "fr-viaduc-de-millau",
@@ -7358,6 +8524,28 @@
       }
     },
     {
+      "id": "gr-allatini-factory",
+      "name": "Allatini Factory",
+      "country": "Greece",
+      "region": "Central Macedonia",
+      "lat": 40.6376,
+      "lng": 22.9395,
+      "type": "Industrial & derelict",
+      "setting": "A 19th century flour mill and brewery complex in Thessaloniki with brick industrial buildings and tall chimneys, partly disused, used as an industrial period backdrop.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/allatini-factory/"
+      ],
+      "url": "https://filmcommission.gr/locations/allatini-factory/",
+      "official_url": "https://filmcommission.gr/locations/allatini-factory/",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0b/AllatiniMills.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:AllatiniMills.jpg",
+        "author": "Unknown author",
+        "license": "Public domain"
+      }
+    },
+    {
       "id": "gr-anargyrios-korgialenios-school-spetses",
       "name": "Anargyrios and Korgialenios School of Spetses",
       "country": "Greece",
@@ -7430,6 +8618,29 @@
       }
     },
     {
+      "id": "gr-aslan-pasha-mosque-ioannina",
+      "name": "Aslan Pasha Mosque",
+      "country": "Greece",
+      "region": "Epirus",
+      "lat": 39.6736,
+      "lng": 20.8603,
+      "type": "Church & monastery",
+      "setting": "An 18th century Ottoman mosque inside Ioannina Castle, now housing the municipal ethnographic museum, with a domed prayer hall and minaret used for period Ottoman-era scenes.",
+      "source_urls": [
+        "https://www.ioannina.gr/",
+        "https://filmcommission.gr/locations/aslan-pasha-mosque/"
+      ],
+      "url": "https://filmcommission.gr/locations/aslan-pasha-mosque/",
+      "official_url": "https://www.ioannina.gr/",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aslan_Pasha_Mosque.jpg/960px-Aslan_Pasha_Mosque.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aslan_Pasha_Mosque.jpg",
+        "author": "Inkey",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
       "id": "gr-athens-conservatoire",
       "name": "Athens Conservatoire",
       "country": "Greece",
@@ -7459,6 +8670,28 @@
       "url": "https://filmcommission.gr/locations/benaki-museum/",
       "official_url": "https://filmcommission.gr/locations/benaki-museum/",
       "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-chalkida",
+      "name": "Chalkida",
+      "country": "Greece",
+      "region": "Central Greece",
+      "lat": 38.4623,
+      "lng": 23.5946,
+      "type": "Historic town & street",
+      "setting": "The main town of Evia on the narrow Evripos Strait, linked to the mainland by a sliding bridge, with a working waterfront used for town and bridge scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/chalkida/"
+      ],
+      "url": "https://filmcommission.gr/locations/chalkida/",
+      "official_url": "https://filmcommission.gr/locations/chalkida/",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Straight_of_Evripos_old_bridge_Chalkida_Greece.jpg/960px-Straight_of_Evripos_old_bridge_Chalkida_Greece.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Straight_of_Evripos_old_bridge_Chalkida_Greece.jpg",
+        "author": "Jebulon",
+        "license": "CC0"
+      }
     },
     {
       "id": "gr-chania-old-town",
@@ -7552,6 +8785,60 @@
       "commission_url": "https://filmcommission.gr"
     },
     {
+      "id": "gr-factory-heraklion",
+      "name": "Factory, Heraklion",
+      "country": "Greece",
+      "region": "Crete",
+      "lat": 35.3391,
+      "lng": 25.1333,
+      "type": "Industrial & derelict",
+      "setting": "A working factory building on the outskirts of Heraklion in Crete, listed by the national film commission as an industrial location for interior and exterior filming.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/factory-heraklion-crete/"
+      ],
+      "url": "https://filmcommission.gr/locations/factory-heraklion-crete/",
+      "official_url": "https://filmcommission.gr/locations/factory-heraklion-crete/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-fertilizer-factory-drapetsona",
+      "name": "Fertilizer Factory, Drapetsona",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9491,
+      "lng": 23.6283,
+      "type": "Industrial & derelict",
+      "setting": "A derelict phosphate fertiliser plant on the Piraeus waterfront at Drapetsona, with rusted processing towers and silos used as a decayed industrial backdrop.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/fertilizer-factors/"
+      ],
+      "url": "https://filmcommission.gr/locations/fertilizer-factors/",
+      "official_url": "https://filmcommission.gr/locations/fertilizer-factors/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-fiskardo-port",
+      "name": "Fiskardo Port",
+      "country": "Greece",
+      "region": "Ionian Islands",
+      "lat": 38.4609,
+      "lng": 20.5752,
+      "type": "Transport & infrastructure",
+      "setting": "A small working fishing harbour on the northern tip of Kefalonia lined with pastel Venetian-style buildings, used for coastal village and harbour scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/fiskardo-port/"
+      ],
+      "url": "https://filmcommission.gr/locations/fiskardo-port/",
+      "official_url": "https://filmcommission.gr/locations/fiskardo-port/",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Fiskardo%2C_Kefalonia.jpg/960px-Fiskardo%2C_Kefalonia.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fiskardo,_Kefalonia.jpg",
+        "author": "Christos Vittoratos",
+        "license": "Public domain"
+      }
+    },
+    {
       "id": "gr-hotel-grande-bretagne",
       "name": "Hotel Grande Bretagne",
       "country": "Greece",
@@ -7583,6 +8870,29 @@
       "commission_url": "https://filmcommission.gr"
     },
     {
+      "id": "gr-kavala",
+      "name": "Kavala",
+      "country": "Greece",
+      "region": "East Macedonia and Thrace",
+      "lat": 40.9369,
+      "lng": 24.4123,
+      "type": "Historic town & street",
+      "setting": "A port city on Greece's northern coast with a Byzantine aqueduct, a hilltop old town and a working harbour, used for historic townscape and waterfront scenes.",
+      "source_urls": [
+        "https://www.kavala.gov.gr/",
+        "https://filmcommission.gr/locations/kavala/"
+      ],
+      "url": "https://filmcommission.gr/locations/kavala/",
+      "official_url": "https://www.kavala.gov.gr/",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kavala-Aqueduct.jpg/960px-Kavala-Aqueduct.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kavala-Aqueduct.jpg",
+        "author": "Edal Anton Lefterov",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "gr-lavrio-technological-cultural-park",
       "name": "Lavrio Technological and Cultural Park",
       "country": "Greece",
@@ -7611,6 +8921,22 @@
       ],
       "url": "https://filmcommission.gr/locations/power-plant-linoperamata/",
       "official_url": "https://filmcommission.gr/locations/power-plant-linoperamata/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-megalo-livadi-mines-serifos",
+      "name": "Megalo Livadi Mines, Serifos",
+      "country": "Greece",
+      "region": "South Aegean",
+      "lat": 37.1411,
+      "lng": 24.4322,
+      "type": "Industrial & derelict",
+      "setting": "The disused iron ore loading and mining works at Megalo Livadi on Serifos, with rusted machinery, jetties and mine galleries left from the island's early 20th century mining industry.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/megalo-livadi-mines-2/"
+      ],
+      "url": "https://filmcommission.gr/locations/megalo-livadi-mines-2/",
+      "official_url": "https://filmcommission.gr/locations/megalo-livadi-mines-2/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -7667,6 +8993,23 @@
       "commission_url": "https://filmcommission.gr/locations/"
     },
     {
+      "id": "gr-nafpaktos-port",
+      "name": "Nafpaktos Port",
+      "country": "Greece",
+      "region": "Western Greece",
+      "lat": 38.3926,
+      "lng": 21.8287,
+      "type": "Transport & infrastructure",
+      "setting": "A small circular Venetian-era harbour in the town of Nafpaktos on the Gulf of Corinth, enclosed by old fortifications, used for historic port and townscape scenes.",
+      "source_urls": [
+        "https://www.nafpaktos.gr/",
+        "https://filmcommission.gr/locations/nafpaktos-port/"
+      ],
+      "url": "https://filmcommission.gr/locations/nafpaktos-port/",
+      "official_url": "https://www.nafpaktos.gr/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-nafplio",
       "name": "Nafplio",
       "country": "Greece",
@@ -7688,6 +9031,23 @@
       }
     },
     {
+      "id": "gr-national-kapodistrian-university-athens",
+      "name": "National and Kapodistrian University of Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9803,
+      "lng": 23.7327,
+      "type": "Office, school & public building",
+      "setting": "The neoclassical main building of Greece's oldest university on Panepistimiou Street in central Athens, part of the 19th century Athens Trilogy, used for grand academic and civic interiors and facades.",
+      "source_urls": [
+        "https://en.uoa.gr/",
+        "https://filmcommission.gr/locations/athens-university/"
+      ],
+      "url": "https://filmcommission.gr/locations/athens-university/",
+      "official_url": "https://en.uoa.gr/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-national-bank-of-greece-hq",
       "name": "National Bank of Greece Headquarters",
       "country": "Greece",
@@ -7700,6 +9060,39 @@
         "https://filmcommission.gr/locations/national-bank/"
       ],
       "official_url": "https://filmcommission.gr/locations/national-bank/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-national-historical-museum-athens",
+      "name": "National Historical Museum (Old Parliament House)",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9776,
+      "lng": 23.7328,
+      "type": "Office, school & public building",
+      "setting": "The former Greek Parliament building on Stadiou Street in Athens, now the National Historical Museum, with 19th century chambers and a grand facade used for period government scenes.",
+      "source_urls": [
+        "https://www.nhmuseum.gr/en/",
+        "https://filmcommission.gr/locations/national-history-museum/"
+      ],
+      "url": "https://filmcommission.gr/locations/national-history-museum/",
+      "official_url": "https://www.nhmuseum.gr/en/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-nestos-railway",
+      "name": "Nestos Railway",
+      "country": "Greece",
+      "region": "East Macedonia and Thrace",
+      "lat": 41.0878,
+      "lng": 24.7888,
+      "type": "Transport & infrastructure",
+      "setting": "A stretch of the historic railway line between Xanthi and Kavala that follows the Nestos river gorge, with track, bridges and forested slopes for period rail scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/nestos-railway/"
+      ],
+      "url": "https://filmcommission.gr/locations/nestos-railway/",
+      "official_url": "https://filmcommission.gr/locations/nestos-railway/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -7737,6 +9130,22 @@
       ],
       "official_url": "https://www.oaka.com.gr/en/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-old-tobacco-warehouses-xanthi",
+      "name": "Old Tobacco Warehouses, Xanthi",
+      "country": "Greece",
+      "region": "East Macedonia and Thrace",
+      "lat": 41.1381,
+      "lng": 24.8864,
+      "type": "Industrial & derelict",
+      "setting": "A cluster of late 19th and early 20th century tobacco processing and storage warehouses in Xanthi's old town, with brick facades and large open floors used for industrial and period townscape scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/old-tobacco-warehouses/"
+      ],
+      "url": "https://filmcommission.gr/locations/old-tobacco-warehouses/",
+      "official_url": "https://filmcommission.gr/locations/old-tobacco-warehouses/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-port-of-piraeus",
@@ -7782,6 +9191,38 @@
       }
     },
     {
+      "id": "gr-power-plant-katerini",
+      "name": "Power Plant, Katerini",
+      "country": "Greece",
+      "region": "Central Macedonia",
+      "lat": 40.2714,
+      "lng": 22.5088,
+      "type": "Industrial & derelict",
+      "setting": "An industrial power plant near Katerini in Central Macedonia, listed by the national film commission as a large-scale industrial filming location.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/power-plant/"
+      ],
+      "url": "https://filmcommission.gr/locations/power-plant/",
+      "official_url": "https://filmcommission.gr/locations/power-plant/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-power-station-lavrio",
+      "name": "Power Station of Lavrio",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.7143,
+      "lng": 24.0548,
+      "type": "Industrial & derelict",
+      "setting": "A power station on the coast at Lavrio in southern Attica, part of the town's industrial mining and metallurgy heritage, used as a large-scale industrial backdrop.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/power-station-of-lavrio/"
+      ],
+      "url": "https://filmcommission.gr/locations/power-station-of-lavrio/",
+      "official_url": "https://filmcommission.gr/locations/power-station-of-lavrio/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-rio-antirrio-bridge",
       "name": "Rio-Antirrio Bridge",
       "country": "Greece",
@@ -7795,6 +9236,23 @@
       ],
       "official_url": "https://www.gefyra.gr/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-serifos-city-hall",
+      "name": "Serifos City Hall",
+      "country": "Greece",
+      "region": "South Aegean",
+      "lat": 37.1594,
+      "lng": 24.4735,
+      "type": "Office, school & public building",
+      "setting": "The town hall of the Cycladic island of Serifos, a small cubic municipal building in the hilltop settlement of Chora, used for island town and civic scenes.",
+      "source_urls": [
+        "https://www.serifos.gr/",
+        "https://filmcommission.gr/locations/serifos-city-hall/"
+      ],
+      "url": "https://filmcommission.gr/locations/serifos-city-hall/",
+      "official_url": "https://www.serifos.gr/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "skopelos",
@@ -7871,6 +9329,61 @@
       "commission_url": "https://filmcommission.gr"
     },
     {
+      "id": "gr-tichero-railway-station",
+      "name": "Tichero Railway Station",
+      "country": "Greece",
+      "region": "East Macedonia and Thrace",
+      "lat": 41.0278,
+      "lng": 26.2965,
+      "type": "Transport & infrastructure",
+      "setting": "A small railway station in the village of Tichero in the Evros region of northeastern Greece, on a rural line used for period and rural transport scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/tichero-railway-station/"
+      ],
+      "url": "https://filmcommission.gr/locations/tichero-railway-station/",
+      "official_url": "https://filmcommission.gr/locations/tichero-railway-station/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-toplou-monastery",
+      "name": "Toplou Monastery",
+      "country": "Greece",
+      "region": "Crete",
+      "lat": 35.2216,
+      "lng": 26.2161,
+      "type": "Church & monastery",
+      "setting": "A fortified Orthodox monastery in eastern Crete with thick defensive walls, a bell tower and an inner courtyard, still an active working monastery with its own wine and olive oil estate.",
+      "source_urls": [
+        "http://toplou.gr",
+        "https://filmcommission.gr/locations/toplou-monastery/"
+      ],
+      "url": "https://filmcommission.gr/locations/toplou-monastery/",
+      "official_url": "http://toplou.gr",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Moni_Toplou_R02.jpg/960px-Moni_Toplou_R02.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Moni_Toplou_R02.jpg",
+        "author": "Marc Ryckaert (MJJR)",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "gr-venetian-shipyard-corfu",
+      "name": "Venetian Shipyard, Corfu",
+      "country": "Greece",
+      "region": "Ionian Islands",
+      "lat": 39.6234,
+      "lng": 19.9295,
+      "type": "Industrial & derelict",
+      "setting": "A former Venetian-era shipyard site near Corfu's Old Fortress, with stone quays and boat sheds from the island's maritime history, used for historic waterfront scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/venetianshipyard/"
+      ],
+      "url": "https://filmcommission.gr/locations/venetianshipyard/",
+      "official_url": "https://filmcommission.gr/locations/venetianshipyard/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-vikos-gorge",
       "name": "Vikos Gorge",
       "country": "Greece",
@@ -7884,6 +9397,62 @@
       ],
       "official_url": "https://www.visitgreece.gr/mainland/epirus/vikos-gorge/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-zappeion-hall",
+      "name": "Zappeion Hall",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9715,
+      "lng": 23.7363,
+      "type": "Theatre, arena & venue",
+      "setting": "A 19th century exhibition and conference hall next to the National Garden in Athens, with a colonnaded courtyard and grand halls used for formal indoor and exterior scenes.",
+      "source_urls": [
+        "https://www.zappeion.gr/en",
+        "https://filmcommission.gr/locations/zappeion-hall/"
+      ],
+      "url": "https://filmcommission.gr/locations/zappeion-hall/",
+      "official_url": "https://www.zappeion.gr/en",
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Courtyard_Zappeion_Athens%2C_Greece.jpg/960px-Courtyard_Zappeion_Athens%2C_Greece.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Courtyard_Zappeion_Athens,_Greece.jpg",
+        "author": "Jebulon",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "hu-a38-ship",
+      "name": "A38 Ship",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4765,
+      "lng": 19.0629,
+      "type": "Theatre, arena & venue",
+      "setting": "A converted Ukrainian stone-carrier ship moored on the Danube in Budapest, run as a concert and event venue with a hall, roof terrace and bow terrace.",
+      "facilities": "Concert hall, roof terrace, bow terrace and separate studio space",
+      "source_urls": [
+        "https://www.a38.hu/hu/rendezvenyszervezes",
+        "https://www.a38.hu"
+      ],
+      "official_url": "https://www.a38.hu/hu/rendezvenyszervezes",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-akvarium-klub",
+      "name": "Akvarium Klub",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4987,
+      "lng": 19.0542,
+      "type": "Theatre, arena & venue",
+      "setting": "A club and event venue built partly below street level on Erzsebet ter in central Budapest, with a large hall, a smaller hall and an outdoor terrace.",
+      "source_urls": [
+        "https://akvariumklub.hu/rendezvenyhelyszin/",
+        "https://akvariumklub.hu"
+      ],
+      "official_url": "https://akvariumklub.hu/rendezvenyhelyszin/",
+      "commission_url": "https://nfi.hu/en"
     },
     {
       "id": "hu-andrassy-avenue",
@@ -7951,6 +9520,22 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-budapest-music-center",
+      "name": "Budapest Music Center",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4857,
+      "lng": 19.0611,
+      "type": "Theatre, arena & venue",
+      "setting": "A modern concert hall and music institute in the Ferencvaros district of Budapest, with a flexible-configuration auditorium used for concerts and corporate or cultural events.",
+      "facilities": "Flexible-configuration concert hall with technical and catering services",
+      "source_urls": [
+        "https://www.bmc.hu"
+      ],
+      "official_url": "https://www.bmc.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -8036,6 +9621,22 @@
         "https://eszterhaza.hu/"
       ],
       "official_url": "https://eszterhaza.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-fertorakos-quarry",
+      "name": "Fertorakos Quarry (Kofejto)",
+      "country": "Hungary",
+      "region": "Gyor-Moson-Sopron",
+      "lat": 47.7263,
+      "lng": 16.6433,
+      "type": "Industrial & derelict",
+      "setting": "A disused limestone quarry near Sopron with an open cave chamber converted into a cave theatre, used for opera and concerts and hired out for weddings and corporate events.",
+      "suitability": "Site lists weddings, receptions and corporate events alongside its theatre programme",
+      "source_urls": [
+        "http://www.fertorakosikofejto.hu/"
+      ],
+      "official_url": "http://www.fertorakosikofejto.hu/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -8137,6 +9738,23 @@
         "https://en.wikipedia.org/wiki/G%C3%B6d%C3%B6ll%C5%91_Palace"
       ],
       "official_url": "https://www.kiralyikastely.hu/en/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-nagyvasarcsarnok",
+      "name": "Great Market Hall (Nagyvasarcsarnok)",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4867,
+      "lng": 19.0589,
+      "type": "Bar, restaurant & shop",
+      "setting": "Budapest's largest and oldest indoor market hall on Fovam ter, a steel-framed 19th century building with a Zsolnay-tiled roof, in daily use as a food market with stalls on three levels.",
+      "suitability": "Evening and nighttime events for over 1,000 people can be organised in the hall, per the operator's site",
+      "source_urls": [
+        "https://piaconline.hu",
+        "https://en.wikipedia.org/wiki/Great_Market_Hall"
+      ],
+      "official_url": "https://piaconline.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -8520,6 +10138,22 @@
       }
     },
     {
+      "id": "hu-parisi-udvar",
+      "name": "Parisi Udvar",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4934,
+      "lng": 19.0549,
+      "type": "Hotel & interiors",
+      "setting": "A restored 1817 shopping arcade in central Budapest under a stained-glass and mosaic dome mixing Gothic, Moorish and Art Nouveau detail, now the lobby and restaurant of a hotel.",
+      "suitability": "Hotel publishes photography and event hosting as services",
+      "source_urls": [
+        "https://parisiudvarhotel.hu/"
+      ],
+      "official_url": "https://parisiudvarhotel.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-piarist-centre",
       "name": "Piarist Centre",
       "country": "Hungary",
@@ -8534,6 +10168,23 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://www.piarista.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-puskas-arena",
+      "name": "Puskas Arena",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5031,
+      "lng": 19.0981,
+      "type": "Theatre, arena & venue",
+      "setting": "Hungary's national football stadium in Budapest, rebuilt on the site of the old Nepstadion, with tiered event spaces from a Sky Lounge to VIP suites alongside the pitch and stands.",
+      "capacity": 67155,
+      "facilities": "Business VIP, VIP Club, Sky Lounge and Sky Lobby event spaces for 20 to 1,000 people, plus stadium tours",
+      "source_urls": [
+        "https://puskasarena.com"
+      ],
+      "official_url": "https://puskasarena.com",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -8739,6 +10390,22 @@
         "https://oneveszpremarena.hu/rendezvenyek"
       ],
       "official_url": "https://veszpremarena.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-vigado-concert-hall",
+      "name": "Vigado Concert Hall",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.496,
+      "lng": 19.0496,
+      "type": "Theatre, arena & venue",
+      "setting": "An 1865 concert and ballroom building on the Pest riverbank of the Danube, restored with its historic hall and staircases, used for concerts, galas and exhibitions.",
+      "suitability": "Site states the building offers space for cultural and business events, galas and representative occasions",
+      "source_urls": [
+        "https://vigado.hu"
+      ],
+      "official_url": "https://vigado.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -13035,6 +14702,24 @@
       "commission_url": "https://www.norwegianfilm.com"
     },
     {
+      "id": "no-floibanen",
+      "name": "Floibanen Funicular",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.3964,
+      "lng": 5.3286,
+      "type": "Transport & infrastructure",
+      "setting": "A funicular railway climbing 302 metres from Bergen's city centre to the summit of Mount Floyen, running two carriages on an 848 metre track through forest.",
+      "source_urls": [
+        "https://www.floyen.no/en",
+        "https://norwegianfilm.com/locations/floibanen-funicular",
+        "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
+      ],
+      "url": "https://norwegianfilm.com/locations/floibanen-funicular",
+      "official_url": "https://www.floyen.no/en",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
       "id": "no-hakonshallen",
       "name": "Håkonshallen",
       "country": "Norway",
@@ -13136,6 +14821,41 @@
       "commission_url": "https://www.norwegianfilm.com"
     },
     {
+      "id": "no-kilden",
+      "name": "Kilden Performing Arts Centre",
+      "country": "Norway",
+      "region": "Agder",
+      "lat": 58.1391,
+      "lng": 7.997,
+      "type": "Theatre, arena & venue",
+      "setting": "A waterfront performing arts centre on Odderoya in Kristiansand, housing a theatre, concert hall and opera under one curved wooden roof.",
+      "source_urls": [
+        "https://kilden.com/en/",
+        "https://norwegianfilm.com/locations/kilden-kristiansand",
+        "https://en.wikipedia.org/wiki/Kilden_Performing_Arts_Centre"
+      ],
+      "url": "https://norwegianfilm.com/locations/kilden-kristiansand",
+      "official_url": "https://kilden.com/en/",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
+      "id": "no-kunstsilo",
+      "name": "Kunstsilo",
+      "country": "Norway",
+      "region": "Agder",
+      "lat": 58.1382,
+      "lng": 7.997,
+      "type": "Industrial & derelict",
+      "setting": "A 1935 grain silo on Kristiansand's harbour, converted into an art museum where the original concrete silo cells form circular galleries around a central atrium.",
+      "source_urls": [
+        "https://kunstsilo.no/en",
+        "https://norwegianfilm.com/locations/kunstsilo"
+      ],
+      "url": "https://norwegianfilm.com/locations/kunstsilo",
+      "official_url": "https://kunstsilo.no/en",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
       "id": "no-lyse-abbey",
       "name": "Lyse Abbey",
       "country": "Norway",
@@ -13223,6 +14943,24 @@
       }
     },
     {
+      "id": "no-realfagbygget",
+      "name": "Realfagbygget, University of Bergen",
+      "country": "Norway",
+      "region": "Vestland",
+      "lat": 60.3849,
+      "lng": 5.3286,
+      "type": "Office, school & public building",
+      "setting": "A large brutalist science building on the University of Bergen's Nygardshoyden campus, built through the 1960s and 70s with long raw-concrete corridors and lecture halls.",
+      "source_urls": [
+        "https://www.uib.no/matnat",
+        "https://norwegianfilm.com/locations/realfagbygget-university-of-bergen",
+        "https://en.wikipedia.org/wiki/Natural_Science_Building_(University_of_Bergen)"
+      ],
+      "url": "https://norwegianfilm.com/locations/realfagbygget-university-of-bergen",
+      "official_url": "https://www.uib.no/matnat",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
       "id": "no-rjukan-station",
       "name": "Rjukan Station",
       "country": "Norway",
@@ -13237,6 +14975,23 @@
       "url": "https://www.norwegianfilm.com/locations/rjukan-station",
       "official_url": "https://www.norwegianfilm.com/locations/rjukan-station",
       "commission_url": "https://www.norwegianfilm.com"
+    },
+    {
+      "id": "no-roros-old-town",
+      "name": "Roros Old Town",
+      "country": "Norway",
+      "region": "Trondelag",
+      "lat": 62.5695,
+      "lng": 11.6604,
+      "type": "Historic town & street",
+      "setting": "A UNESCO-listed former copper-mining town of streets lined with tarred timber houses, with slag-heap and smelter backdrops largely unchanged since the 17th and 18th centuries.",
+      "source_urls": [
+        "https://www.roros.no/en",
+        "https://norwegianfilm.com/locations/roros-old-town"
+      ],
+      "url": "https://norwegianfilm.com/locations/roros-old-town",
+      "official_url": "https://www.roros.no/en",
+      "commission_url": "https://norwegianfilm.com"
     },
     {
       "id": "no-sagene-folkebad",
@@ -13273,6 +15028,24 @@
       "commission_url": "https://www.norwegianfilm.com"
     },
     {
+      "id": "no-sametinget",
+      "name": "Sami Parliament of Norway (Sametinget)",
+      "country": "Norway",
+      "region": "Finnmark",
+      "lat": 69.4715,
+      "lng": 25.4983,
+      "type": "Office, school & public building",
+      "setting": "The Sami Parliament's assembly building in Karasjok, a timber and birch-clad hall with a tepee-shaped debating chamber, seat of the elected body representing Norway's Sami population.",
+      "source_urls": [
+        "https://sametinget.no/",
+        "https://norwegianfilm.com/locations/karasjok-sami-parliament",
+        "https://en.wikipedia.org/wiki/S%C3%A1mi_Parliament_of_Norway"
+      ],
+      "url": "https://norwegianfilm.com/locations/karasjok-sami-parliament",
+      "official_url": "https://sametinget.no/",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
       "id": "no-sentralen",
       "name": "Sentralen",
       "country": "Norway",
@@ -13291,6 +15064,23 @@
       "commission_url": "https://www.norwegianfilm.com"
     },
     {
+      "id": "no-geiteryggen",
+      "name": "Skien Airport, Geiteryggen",
+      "country": "Norway",
+      "region": "Telemark",
+      "lat": 59.1845,
+      "lng": 9.5673,
+      "type": "Transport & infrastructure",
+      "setting": "A regional airport southwest of Skien with a single runway and a 1960s-era terminal, still active for scheduled and general aviation in the Grenland area.",
+      "source_urls": [
+        "https://norwegianfilm.com/locations/geiteryggen-flyplass",
+        "https://en.wikipedia.org/wiki/Skien_Airport,_Geiteryggen"
+      ],
+      "url": "https://norwegianfilm.com/locations/geiteryggen-flyplass",
+      "official_url": "https://norwegianfilm.com/locations/geiteryggen-flyplass",
+      "commission_url": "https://norwegianfilm.com"
+    },
+    {
       "id": "no-stavanger-svommehall",
       "name": "Stavanger Swimming Hall",
       "country": "Norway",
@@ -13307,6 +15097,22 @@
       "url": "https://www.norwegianfilm.com/locations/stavanger-swimming-pool",
       "official_url": "https://www.stavanger.kommune.no/kultur-og-fritid/svommehaller/",
       "commission_url": "https://www.norwegianfilm.com/locations/stavanger-swimming-pool"
+    },
+    {
+      "id": "no-vestre-the-plus",
+      "name": "The Plus (Vestre)",
+      "country": "Norway",
+      "region": "Innlandet",
+      "lat": 59.9561,
+      "lng": 12.1674,
+      "type": "Industrial & derelict",
+      "setting": "A furniture factory and visitor centre near the Swedish border, built as a cross-shaped stack of gabled volumes combining working production floors with public exhibition space.",
+      "source_urls": [
+        "https://norwegianfilm.com/locations/vestre-the-plus"
+      ],
+      "url": "https://norwegianfilm.com/locations/vestre-the-plus",
+      "official_url": "https://norwegianfilm.com/locations/vestre-the-plus",
+      "commission_url": "https://norwegianfilm.com"
     },
     {
       "id": "no-vemork",
@@ -13371,6 +15177,23 @@
         "author": "The Soul Driver",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-alfa-towers-poznan",
+      "name": "Alfa Towers, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.407,
+      "lng": 16.9233,
+      "type": "City & skyline",
+      "setting": "A row of five twelve-storey towers built 1965-1972 along Swiety Marcin street in central Poznan, ground floors let to shops and services, upper floors a mix of dated and modernised office space.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/wiezowce-alfa/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/wiezowce-alfa/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/wiezowce-alfa/",
+      "commission_url": "https://poznanfilmcommission.pl"
     },
     {
       "id": "pl-alvernia-studios",
@@ -13438,6 +15261,43 @@
         "author": "Serecki",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "pl-bedzin-marketplace",
+      "name": "Bedzin Marketplace",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.3308,
+      "lng": 19.1307,
+      "type": "Bar, restaurant & shop",
+      "setting": "A twice-weekly outdoor market in Bedzin covering about 40,000 square metres of paved and hard-standing ground, with open stalls and covered commercial shelters.",
+      "facilities": "Approximately 40,000 square metres of market ground, covered stalls, on-site parking",
+      "permit_needed": "Yes",
+      "logistics": "Market days are Wednesday and Saturday; clean-up runs Thursday, Sunday and Monday, so Tuesday or Friday is recommended for filming.",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/targowisko-miejskie"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/targowisko-miejskie",
+      "official_url": "https://silesiafilmcommission.pl/en/location/targowisko-miejskie",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-bytom-railway-station",
+      "name": "Bytom railway station",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.343,
+      "lng": 18.9153,
+      "type": "Transport & infrastructure",
+      "setting": "A 1920s station building in central Bytom with a clock tower, a large unstaffed concourse without shops or ticket booths, underground passages and a train shed, now faded from its original state.",
+      "facilities": "Parking nearby, bus station in close proximity",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/dworzec-kolejowy-w-bytomiu"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/dworzec-kolejowy-w-bytomiu",
+      "official_url": "https://silesiafilmcommission.pl/en/location/dworzec-kolejowy-w-bytomiu",
+      "commission_url": "https://silesiafilmcommission.pl/en"
     },
     {
       "id": "pl-kul-lublin",
@@ -13512,6 +15372,94 @@
       ],
       "official_url": "https://cmwl.pl",
       "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-chorzowska-50-katowice",
+      "name": "Chorzowska 50 office building",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2656,
+      "lng": 19.0157,
+      "type": "Office, school & public building",
+      "setting": "A fourteen-storey office tower in central Katowice with a retail arcade, conference centre and around 660 parking spaces across five levels, close to two regional airports.",
+      "facilities": "660 parking spaces across five floors, on-site security and video surveillance, retail arcade",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/biurowiec-chorzowska-50",
+        "https://www.chorzowska50.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/biurowiec-chorzowska-50",
+      "official_url": "https://www.chorzowska50.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-cmc-poland-zawiercie",
+      "name": "CMC Poland Steelworks, Zawiercie",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.4915,
+      "lng": 19.4493,
+      "type": "Industrial & derelict",
+      "setting": "A working steelworks in Zawiercie founded in 1900 that rolls steel bars and profiles, with a gated entrance, caretaker's lodge, and a large yard usable as a parking or unit base.",
+      "facilities": "Gated entrance with caretaker's lodge, large parking and staging area",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/huta-cmc-zawiercie"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/huta-cmc-zawiercie",
+      "official_url": "https://silesiafilmcommission.pl/en/location/huta-cmc-zawiercie",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-debiec-estate-poznan",
+      "name": "Debiec socialist-realist estate, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.3658,
+      "lng": 16.9091,
+      "type": "City & skyline",
+      "setting": "A 1948-1960 planned housing estate on Kasztanowa street in Poznan's Debiec district, built as five residential colonies around shared courtyards and arcades, an example of Polish socialist-realist planning.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/osiedle-socrealistyczne/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/osiedle-socrealistyczne/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/osiedle-socrealistyczne/",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-poznan-stare-miasto-court",
+      "name": "District Court Poznan-Stare Miasto",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4108,
+      "lng": 16.9269,
+      "type": "Hospital, prison & institution",
+      "setting": "A 1905-1908 Wilhelmine Baroque courthouse in central Poznan with wrought-iron staircase balustrades and restored courtrooms, standing next to a still-operating 19th-century prison.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/sad-rejonowy-stare-miasto/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/sad-rejonowy-stare-miasto/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/sad-rejonowy-stare-miasto/",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-dworzec-letni-poznan",
+      "name": "Dworzec Letni, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.405,
+      "lng": 16.9124,
+      "type": "Transport & infrastructure",
+      "setting": "A restored 1902 station building attached to Poznan's main railway station, with partly period-dressed interiors and a contemporary platform, repeatedly used as a film location.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/dworzec-letni/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/dworzec-letni/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/dworzec-letni/",
+      "commission_url": "https://poznanfilmcommission.pl"
     },
     {
       "id": "pl-dworzec-pkp-sosnowiec",
@@ -13623,6 +15571,41 @@
       "commission_url": "https://filmcommission.pomorskie.eu"
     },
     {
+      "id": "pl-glogowska-tram-depot-poznan",
+      "name": "Glogowska Tram Depot, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.3877,
+      "lng": 16.8944,
+      "type": "Transport & infrastructure",
+      "setting": "A working tram depot in Poznan opened in 1907 on a 2.9 hectare site, with vehicle maintenance halls, a 1962 office block and a preserved horse-drawn tram kept in running order.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/zajezdnia-tramwajowa-glogowska/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/zajezdnia-tramwajowa-glogowska/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/zajezdnia-tramwajowa-glogowska/",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-cegielski-works-poznan",
+      "name": "H. Cegielski Works, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.3823,
+      "lng": 16.9119,
+      "type": "Industrial & derelict",
+      "setting": "The last working section of the historic Cegielski engineering works in Poznan, with early 20th-century production halls, later office blocks, in-house built machinery and its own rail siding.",
+      "facilities": "Rail siding on site, mixed production and office halls",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/zaklady-h-cegielskiego/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/zaklady-h-cegielskiego/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/zaklady-h-cegielskiego/",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
       "id": "pl-hala-koszyki-warsaw",
       "name": "Hala Koszyki",
       "country": "Poland",
@@ -13674,6 +15657,26 @@
       "commission_url": "https://silesiafilm.com/"
     },
     {
+      "id": "pl-hotel-diament-ustron",
+      "name": "Hotel Diament Ustron",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 49.7186,
+      "lng": 18.8267,
+      "type": "Hotel & interiors",
+      "setting": "A resort and spa hotel in the wooded Zawodzie district of Ustron, with a pyramid-shaped main building from 1979, 121 rooms, conference space and an indoor pool with a wave feature.",
+      "capacity": 121,
+      "facilities": "121 rooms, conference hall, spa and wellness area with pool, on-site restaurant, parking",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/hotel-diament-ustron",
+        "http://www.diamentustron.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/hotel-diament-ustron",
+      "official_url": "http://www.diamentustron.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
       "id": "pl-huta-batory-chorzow",
       "name": "Huta Batory director's building",
       "country": "Poland",
@@ -13723,6 +15726,25 @@
       "commission_url": "https://pisf.pl"
     },
     {
+      "id": "pl-katowice-academy-of-music",
+      "name": "Karol Szymanowski Academy of Music, Katowice",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2558,
+      "lng": 19.0301,
+      "type": "Office, school & public building",
+      "setting": "A music conservatory in central Katowice combining a neo-Gothic former Silesian Sejm building with a modern wing holding a 480-seat concert hall, library and practice rooms.",
+      "facilities": "Electricity on site, parking in front of the building",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/akademia-muzyczna",
+        "https://www.am.katowice.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/akademia-muzyczna",
+      "official_url": "https://www.am.katowice.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
       "id": "pl-kasprowy-wierch-cable-car",
       "name": "Kasprowy Wierch Cable Car",
       "country": "Poland",
@@ -13736,6 +15758,24 @@
       ],
       "official_url": "https://pkl.pl/en/kasprowy-wierch",
       "commission_url": "https://pfc.pisf.pl/"
+    },
+    {
+      "id": "pl-muchowiec-airport-katowice",
+      "name": "Katowice-Muchowiec Airport",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.238,
+      "lng": 19.0338,
+      "type": "Transport & infrastructure",
+      "setting": "A small general-aviation airfield and aeroclub on the southern edge of Katowice, with grass and paved runways, hangars and open apron space inside the city ring road.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/lotnisko-muchowiec",
+        "http://www.aeroklub.katowice.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/lotnisko-muchowiec",
+      "official_url": "http://www.aeroklub.katowice.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
     },
     {
       "id": "kazimierz-krakow",
@@ -13807,6 +15847,24 @@
       "commission_url": "https://pisf.pl"
     },
     {
+      "id": "pl-laziska-power-plant",
+      "name": "Laziska Power Plant",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.1326,
+      "lng": 18.8462,
+      "type": "Industrial & derelict",
+      "setting": "A coal-fired power station at Laziska Gorne built in 1917, still operated by Tauron, with heat-exchanger halls, an on-site energy museum and surrounding woodland and meadow.",
+      "facilities": "Electricity on site, parking available, energy museum on the premises",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/elektrownia-laziska"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/elektrownia-laziska",
+      "official_url": "https://silesiafilmcommission.pl/en/location/elektrownia-laziska",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
       "id": "pl-lodz-film-school",
       "name": "Lodz Film School (PWSFTviT)",
       "country": "Poland",
@@ -13858,6 +15916,23 @@
       ],
       "official_url": "https://mocak.pl",
       "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-morasko-campus-poznan",
+      "name": "Morasko Campus, Adam Mickiewicz University",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4675,
+      "lng": 16.9224,
+      "type": "Office, school & public building",
+      "setting": "A university campus in northern Poznan built from 1984 onward in late modernist and postmodernist styles, with wide pedestrian routes, lecture buildings, a sports centre and a swimming pool.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/kampus-morasko/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/kampus-morasko/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/kampus-morasko/",
+      "commission_url": "https://poznanfilmcommission.pl"
     },
     {
       "id": "pl-muzeum-emigracji-gdynia",
@@ -14154,6 +16229,79 @@
       }
     },
     {
+      "id": "pl-awf-poznan",
+      "name": "Poznan University of Physical Education campus",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.399,
+      "lng": 16.9332,
+      "type": "Office, school & public building",
+      "setting": "A university sports campus in Poznan with a multi-function stadium, swimming pool, tennis courts and a sports hall, alongside a 1960s socialist-realist main building and an early 20th-century rectorate.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/akademia-wychowania-fizycznego/",
+        "https://awf.poznan.pl"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/akademia-wychowania-fizycznego/",
+      "official_url": "https://awf.poznan.pl",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-poznan-lawica-airport",
+      "name": "Poznan-Lawica Airport",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4147,
+      "lng": 16.8258,
+      "type": "Transport & infrastructure",
+      "setting": "A single-runway regional airport in Poznan named after Henryk Wieniawski, with a compact modern terminal, a mezzanine level and a nearby vintage 1916 Albatros aircraft on display.",
+      "facilities": "Large car park in front of the terminal",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/port-lotniczy-lawica/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/port-lotniczy-lawica/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/port-lotniczy-lawica/",
+      "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-katowice-regional-court",
+      "name": "Regional Court in Katowice",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2492,
+      "lng": 19.0269,
+      "type": "Hospital, prison & institution",
+      "setting": "A six-storey courthouse in Katowice completed in 2009, an elongated cuboid block with 51 courtrooms, a planted internal courtyard and over 600 office rooms.",
+      "facilities": "51 courtrooms, internal courtyard, rear parking area",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/sad-okregowy-w-katowicach",
+        "http://www.katowice.so.gov.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/sad-okregowy-w-katowicach",
+      "official_url": "http://www.katowice.so.gov.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-sosnowiec-hospital",
+      "name": "Regional Specialist Hospital No. 5, Sosnowiec",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.3034,
+      "lng": 19.1234,
+      "type": "Hospital, prison & institution",
+      "setting": "A working trauma hospital in Sosnowiec opened in 1988 on the site of the former Coal Miners' Hospital, with a helicopter landing pad and an underground tunnel to its emergency department.",
+      "facilities": "Helicopter landing pad, underground patient transfer tunnel, on-site car park",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/szpital-w-sosnowcu"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/szpital-w-sosnowcu",
+      "official_url": "https://silesiafilmcommission.pl/en/location/szpital-w-sosnowcu",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
       "id": "pl-sad-rejonowy-sosnowiec",
       "name": "Sąd Rejonowy w Sosnowcu (Sosnowiec District Court)",
       "country": "Poland",
@@ -14169,6 +16317,44 @@
       "url": "https://www.silesiafilmcommission.pl/location/sad-rejonowy-w-sosnowcu",
       "official_url": "https://www.silesiafilmcommission.pl/location/sad-rejonowy-w-sosnowcu",
       "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-slaskie-centrum-targowe-chorzow",
+      "name": "Silesian Trade Centre, Hall 3, Chorzow",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2884,
+      "lng": 19.0023,
+      "type": "Theatre, arena & venue",
+      "setting": "An empty 40 by 100 metre steel-framed exhibition hall at a trade centre next to Silesia Park in Chorzow, with a loading ramp and two vehicle entrance gates, ready to be dressed for a build.",
+      "facilities": "Electricity on site, parking in front of the hall, loading ramp and two vehicle entrance gates",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/hala-targowo-wystawiennicza-slaskie-centrum-targowe",
+        "http://www.targislaskie.pl/"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/hala-targowo-wystawiennicza-slaskie-centrum-targowe",
+      "official_url": "https://silesiafilmcommission.pl/en/location/hala-targowo-wystawiennicza-slaskie-centrum-targowe",
+      "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-silesian-voivodeship-office",
+      "name": "Silesian Voivodeship Office, Katowice",
+      "country": "Poland",
+      "region": "Silesian Voivodeship",
+      "lat": 50.2537,
+      "lng": 19.025,
+      "type": "Office, school & public building",
+      "setting": "A 1925-1929 government headquarters in central Katowice with a 260-seat former regional parliament hall, a marble ceremonial hall, and six kilometres of corridors across 634 rooms.",
+      "facilities": "634 rooms, 260-seat hall, marble hall, on-site parking",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://silesiafilmcommission.pl/en/location/slaski-urzad-wojewodzki-w-katowicach",
+        "https://www.katowice.uw.gov.pl"
+      ],
+      "url": "https://silesiafilmcommission.pl/en/location/slaski-urzad-wojewodzki-w-katowicach",
+      "official_url": "https://www.katowice.uw.gov.pl",
+      "commission_url": "https://silesiafilmcommission.pl/en"
     },
     {
       "id": "pl-spodek-katowice",
@@ -14211,6 +16397,24 @@
       ],
       "official_url": "https://www.stadionslaski.pl",
       "commission_url": "https://silesiafilm.com/"
+    },
+    {
+      "id": "pl-stara-gazownia-poznan",
+      "name": "Stara Gazownia, Poznan",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4027,
+      "lng": 16.943,
+      "type": "Industrial & derelict",
+      "setting": "A mid-19th-century former gasworks on the Warta riverbank in central Poznan, part restored as red and clinker brick offices with a period staircase, part left in ruin.",
+      "known_for": "Transatlantyk Festival",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/stara-gazownia/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/stara-gazownia/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/stara-gazownia/",
+      "commission_url": "https://poznanfilmcommission.pl"
     },
     {
       "id": "pl-stary-browar-poznan",
@@ -14325,6 +16529,23 @@
       ],
       "official_url": "https://muzyczny.org",
       "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-tor-poznan",
+      "name": "Tor Poznan racing circuit",
+      "country": "Poland",
+      "region": "Greater Poland Voivodeship",
+      "lat": 52.4182,
+      "lng": 16.8069,
+      "type": "Theatre, arena & venue",
+      "setting": "A car and motorcycle racing circuit near Poznan built in 1975-1977, with an adjoining karting track, small grandstands and a mix of open and wooded surrounding terrain.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://poznanfilmcommission.pl/lokacja/tor-poznan/"
+      ],
+      "url": "https://poznanfilmcommission.pl/lokacja/tor-poznan/",
+      "official_url": "https://poznanfilmcommission.pl/lokacja/tor-poznan/",
+      "commission_url": "https://poznanfilmcommission.pl"
     },
     {
       "id": "pl-twierdza-boyen-gizycko",
@@ -15612,6 +17833,23 @@
       }
     },
     {
+      "id": "es-colegio-aleman-madrid",
+      "name": "Colegio Aleman de Madrid",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.508,
+      "lng": -3.7044,
+      "type": "Office, school & public building",
+      "setting": "German international school built in 2015 on a 34,700 square metre campus in Fuencarral, with a courtyard, assembly hall, sports hall and football pitch, filmed only outside term time.",
+      "facilities": "Courtyard, assembly hall, sports hall, football pitch, production offices, dressing rooms, catering area, own parking",
+      "suitability": "Filming only on non-school days (weekends, holidays)",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/colegio-aleman-de-madrid/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/colegio-aleman-de-madrid/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-complutense-university-madrid",
       "name": "Complutense University of Madrid",
       "country": "Spain",
@@ -15674,6 +17912,23 @@
       ],
       "official_url": "https://www.cabildofuer.es/",
       "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-aeropuerto-cuatro-vientos",
+      "name": "Cuatro Vientos Airport",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.3765,
+      "lng": -3.7841,
+      "type": "Transport & infrastructure",
+      "setting": "General-aviation aerodrome opened in 1911, 8km from central Madrid, mixed civil-military use with flying schools, hangars, workshops and three control towers, no scheduled passenger traffic.",
+      "facilities": "Hangars, workshops, terminal building with cafeteria, parking for about 220 vehicles",
+      "suitability": "Availability depends on the project and space required",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/aeropuerto-de-madrid-cuatro-vientos/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/aeropuerto-de-madrid-cuatro-vientos/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-mestalla",
@@ -15806,6 +18061,22 @@
       "commission_url": "https://www.bcncatfilmcommission.com/en/locations"
     },
     {
+      "id": "es-hospital-12-octubre-exteriores",
+      "name": "Hospital 12 de Octubre",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.3768,
+      "lng": -3.6959,
+      "type": "Hospital, prison & institution",
+      "setting": "Large public hospital complex opened in 1973 in Usera, with a 15-storey red brick inpatient tower, a semicircular maternity building and a newer glass outpatient block around wide gardens and its own helipad.",
+      "suitability": "Contact point covers exterior filming on the surrounding public street only; interior or grounds filming needs separate agreement with the site manager",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/exteriores-del-hospital-12-de-octubre/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/exteriores-del-hospital-12-de-octubre/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-hospital-de-sant-pau",
       "name": "Hospital de Sant Pau",
       "country": "Spain",
@@ -15855,6 +18126,29 @@
       }
     },
     {
+      "id": "es-instituto-cervantes-madrid",
+      "name": "Instituto Cervantes Headquarters",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4215,
+      "lng": -3.6965,
+      "type": "Office, school & public building",
+      "setting": "A 1918 former bank headquarters on Calle Alcala known as the Edificio de las Cariatides, with a caryatid facade, a stained glass domed lobby, a vault-turned-exhibition room and a rooftop terrace.",
+      "facilities": "Lobby, exhibition hall, original elevators, main staircase, assembly hall, vault room, rooftop terrace",
+      "suitability": "Restricted hours: Monday is the most workable filming day, Saturday mornings possible at extra cost, difficult vehicle access",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/instituto-cervantes/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/instituto-cervantes/",
+      "commission_url": "https://madridfilmoffice.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Edificio_de_las_Cari%C3%A1tides_-_Instituto_Cervantes_-_01.jpg/960px-Edificio_de_las_Cari%C3%A1tides_-_Instituto_Cervantes_-_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Edificio_de_las_Cari%C3%A1tides_-_Instituto_Cervantes_-_01.jpg",
+        "author": "Carlos Delgado",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
       "id": "es-la-model",
       "name": "La Model",
       "country": "Spain",
@@ -15868,6 +18162,23 @@
       ],
       "official_url": "https://www.lamodel.barcelona",
       "commission_url": "https://www.bcncatfilmcommission.com"
+    },
+    {
+      "id": "es-la-nave-madrid",
+      "name": "La Nave Madrid",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.3477,
+      "lng": -3.6963,
+      "type": "Industrial & derelict",
+      "setting": "Former 1940s elevator factory of the Boetticher company in Villaverde, converted into a public innovation centre with a large open barrel-vaulted hall, a tower, classrooms and an auditorium.",
+      "facilities": "Large open industrial hall, tower, classrooms, auditorium, rooftop with views over Villaverde",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/la-nave-boetticher/",
+        "https://www.lanavemadrid.com/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/la-nave-boetticher/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-la-termica",
@@ -15957,6 +18268,23 @@
         "author": "Felivet",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "es-mercado-anton-martin",
+      "name": "Mercado de Anton Martin",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4115,
+      "lng": -3.6988,
+      "type": "Bar, restaurant & shop",
+      "setting": "Three-storey covered food market from the historic centre of Madrid, mixing traditional butcher, fishmonger and grocery stalls with newer restaurant units and a flamenco dance school on the top floor.",
+      "facilities": "Freight lift, mains power, extra production space available, suitable for direct sound indoors",
+      "suitability": "Night and weekend filming possible at extra cost, vehicle access is limited in the surrounding residential streets",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/mercado-de-anton-martin/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/mercado-de-anton-martin/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-mercado-colon",
@@ -16056,6 +18384,45 @@
       ],
       "official_url": "https://www.miniHollywood.com/",
       "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-museo-abc-madrid",
+      "name": "Museo ABC de Dibujo e Ilustracion",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4277,
+      "lng": -3.7096,
+      "type": "Office, school & public building",
+      "setting": "Former Mahou brewery building from 1891 near Plaza Espana, refurbished into a museum of illustration with six floors around an interior courtyard, exposed brick and a 200 square metre main exhibition hall.",
+      "facilities": "Main exhibition hall, glass room, cube room, mains power, extra production space, suitable for direct sound",
+      "suitability": "Night and weekend filming possible at extra cost, fixed filming rates, subject to project approval",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/museo-abc/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/museo-abc/",
+      "commission_url": "https://madridfilmoffice.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Madrid_-_Museo_ABC_1.jpg/960px-Madrid_-_Museo_ABC_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Madrid_-_Museo_ABC_1.jpg",
+        "author": "Zarateman",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "es-museo-chicote",
+      "name": "Museo Chicote",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4197,
+      "lng": -3.6989,
+      "type": "Bar, restaurant & shop",
+      "setting": "Art Deco cocktail bar on the Gran Via opened in 1931, with its original 1930s wood and chrome interior by Luis Gutierrez Soto intact, plus an in-house sound and lighting rig.",
+      "facilities": "Storage area, catering area, dressing rooms, restrooms, vehicle access with restricted load/unload hours",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/museo-chicote/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/museo-chicote/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-museo-del-ferrocarril-madrid",
@@ -17118,6 +19485,22 @@
       }
     },
     {
+      "id": "uk-barnsley-metrodome",
+      "name": "Barnsley Metrodome",
+      "country": "United Kingdom",
+      "region": "South Yorkshire",
+      "lat": 53.5546,
+      "lng": -1.4709,
+      "type": "Theatre, arena & venue",
+      "setting": "Sports and leisure complex in Barnsley from 1989 with a sports hall, dressing rooms and a ten-pin bowling centre that hosts international tournaments.",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/barnsely-metrodome/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/barnsely-metrodome/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/barnsely-metrodome/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
       "id": "uk-barrowland-ballroom",
       "name": "Barrowland Ballroom",
       "country": "United Kingdom",
@@ -17407,6 +19790,23 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-castlefield-manchester",
+      "name": "Castlefield",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4758,
+      "lng": -2.2557,
+      "type": "Historic town & street",
+      "setting": "Mixed historic and modern quarter of central Manchester with a Roman fort site, canals, red-brick Victorian warehouses and a disused railway viaduct alongside glass towers.",
+      "known_for": "Peaky Blinders, Fool Me Once, World on Fire, The Irregulars, Cold Feet, Coronation Street",
+      "source_urls": [
+        "https://screenmanchester.com/locations/castlefield/"
+      ],
+      "url": "https://screenmanchester.com/locations/castlefield/",
+      "official_url": "https://screenmanchester.com/locations/castlefield/",
+      "commission_url": "https://screenmanchester.com"
+    },
+    {
       "id": "uk-charlestown-harbour",
       "name": "Charlestown Harbour",
       "country": "United Kingdom",
@@ -17467,6 +19867,24 @@
         "author": "Patche99z",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "uk-city-varieties-music-hall",
+      "name": "City Varieties Music Hall",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.799,
+      "lng": -1.5428,
+      "type": "Theatre, arena & venue",
+      "setting": "Victorian music hall in Leeds city centre, built 1865 and little altered since, with an intact period auditorium once used for the BBC's The Good Old Days.",
+      "known_for": "Ghost Stories, Testament of Youth, The ABC Murders",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/city-varieties-music-hall-leeds/",
+        "https://leedsheritagetheatres.com/city-varieties-music-hall/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/city-varieties-music-hall-leeds/",
+      "official_url": "https://leedsheritagetheatres.com/city-varieties-music-hall/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
       "id": "uk-cliveden",
@@ -17799,6 +20217,22 @@
       }
     },
     {
+      "id": "uk-english-institute-of-sport-sheffield",
+      "name": "English Institute of Sport Sheffield",
+      "country": "United Kingdom",
+      "region": "South Yorkshire",
+      "lat": 53.3984,
+      "lng": -1.4247,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor multi-sport arena in Sheffield with a 200m track, several sports halls and a large gym, built as a national athletics training base.",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/english-institute-of-sport-sheffield/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/english-institute-of-sport-sheffield/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/english-institute-of-sport-sheffield/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
       "id": "uk-falkirk-wheel",
       "name": "Falkirk Wheel",
       "country": "United Kingdom",
@@ -17925,6 +20359,40 @@
       }
     },
     {
+      "id": "uk-halifax-town-centre",
+      "name": "Halifax town centre",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.7229,
+      "lng": -1.8605,
+      "type": "Historic town & street",
+      "setting": "West Yorkshire mill town with Georgian townhouses, a Victorian arcade, cobbled streets, pubs and a working indoor market, used repeatedly for period and present-day drama.",
+      "known_for": "Ackley Bridge, Gentleman Jack, Last Tango in Halifax",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/halifax/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/halifax/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/halifax/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
+      "id": "uk-heaton-park",
+      "name": "Heaton Park",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.5305,
+      "lng": -2.2673,
+      "type": "Village & countryside",
+      "setting": "Large historic park on the edge of Manchester with Heaton Hall, play areas, a boating lake, golf course and open grounds adaptable for period or contemporary scenes.",
+      "known_for": "Coronation Street, It's a Sin, Brassic, Ridley, Bancroft",
+      "source_urls": [
+        "https://screenmanchester.com/locations/heaton-park/"
+      ],
+      "url": "https://screenmanchester.com/locations/heaton-park/",
+      "official_url": "https://screenmanchester.com/locations/heaton-park/",
+      "commission_url": "https://screenmanchester.com"
+    },
+    {
       "id": "uk-here-east",
       "name": "Here East",
       "country": "United Kingdom",
@@ -17945,6 +20413,23 @@
         "author": "Jim Osley",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-holy-trinity-goodramgate-york",
+      "name": "Holy Trinity Church, Goodramgate",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "lat": 53.961,
+      "lng": -1.0804,
+      "type": "Church & monastery",
+      "setting": "Small parish church in a secluded churchyard in York, with fabric from the 12th to 15th centuries, box pews and 1470s stained glass, hired out for period filming.",
+      "known_for": "Gentleman Jack",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/holy-trinity-church/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/holy-trinity-church/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/holy-trinity-church/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
       "id": "uk-hylands-house",
@@ -17992,6 +20477,24 @@
       }
     },
     {
+      "id": "uk-keighley-worth-valley-railway",
+      "name": "Keighley and Worth Valley Railway",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.8313,
+      "lng": -1.9488,
+      "type": "Transport & infrastructure",
+      "setting": "Five-mile heritage railway between Keighley and Oxenhope with preserved stations and rolling stock giving period scenes from the 1860s to the 1960s.",
+      "known_for": "The Railway Children, The Railway Children Return, Peaky Blinders, All Creatures Great and Small",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/industrial/keighley-worth-valley-railway/",
+        "https://www.kwvr.co.uk"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/industrial/keighley-worth-valley-railway/",
+      "official_url": "https://www.kwvr.co.uk",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
       "id": "uk-kelvingrove",
       "name": "Kelvingrove Art Gallery and Museum",
       "country": "United Kingdom",
@@ -18035,6 +20538,23 @@
         "author": "James Emmans",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-king-street-manchester",
+      "name": "King Street, Manchester",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4812,
+      "lng": -2.2462,
+      "type": "Bar, restaurant & shop",
+      "setting": "18th and 19th-century shopping street in central Manchester lined with former bank and insurance buildings now used as shops and restaurants.",
+      "known_for": "Peaky Blinders, Genius, Boiling Point, The Stranger",
+      "source_urls": [
+        "https://screenmanchester.com/locations/king-street/"
+      ],
+      "url": "https://screenmanchester.com/locations/king-street/",
+      "official_url": "https://screenmanchester.com/locations/king-street/",
+      "commission_url": "https://screenmanchester.com"
     },
     {
       "id": "uk-knole",
@@ -18341,6 +20861,59 @@
       }
     },
     {
+      "id": "uk-north-light-film-studios",
+      "name": "North Light Film Studios",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.6187,
+      "lng": -1.799,
+      "type": "Studio & backlot",
+      "setting": "Converted 19th-century woollen mill near Huddersfield with four sound stages totalling over 19,000 sq ft, plus surrounding mill buildings used as extra sets.",
+      "known_for": "Happy Valley, Jericho, Jamaica Inn, Where the Heart Is",
+      "facilities": "Four stages, over 19,000 sq ft total, converted mill buildings for additional sets",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/double/north-light-film-studios-2/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/double/north-light-film-studios-2/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/double/north-light-film-studios-2/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
+      "id": "uk-north-yorkshire-moors-railway",
+      "name": "North Yorkshire Moors Railway",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "lat": 54.2473,
+      "lng": -0.7784,
+      "type": "Transport & infrastructure",
+      "setting": "Heritage steam railway running 24 miles through the North York Moors, with period stations at Pickering, Goathland and Grosmont used for productions set from the 1930s onward.",
+      "known_for": "Downton Abbey, Harry Potter and the Philosopher's Stone, Heartbeat, Dad's Army (2016)",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/industrial/north-yorkshire-moors-railway/",
+        "https://www.nymr.co.uk"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/industrial/north-yorkshire-moors-railway/",
+      "official_url": "https://www.nymr.co.uk",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
+      "id": "uk-northern-quarter-manchester",
+      "name": "Northern Quarter",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4835,
+      "lng": -2.2351,
+      "type": "Historic town & street",
+      "setting": "Grid of red-brick streets and back alleys in central Manchester whose look has doubled for other cities on screen, from 1940s Brooklyn to 1980s Manhattan.",
+      "known_for": "Captain America, The Crown, It's a Sin, Boiling Point, Morbius",
+      "source_urls": [
+        "https://screenmanchester.com/locations/northern-quarter/"
+      ],
+      "url": "https://screenmanchester.com/locations/northern-quarter/",
+      "official_url": "https://screenmanchester.com/locations/northern-quarter/",
+      "commission_url": "https://screenmanchester.com"
+    },
+    {
       "id": "uk-old-billingsgate",
       "name": "Old Billingsgate",
       "country": "United Kingdom",
@@ -18561,6 +21134,42 @@
         "author": "Colin Smith",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-prime-studios-leeds",
+      "name": "Prime Studios",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.8011,
+      "lng": -1.5662,
+      "type": "Studio & backlot",
+      "setting": "Film and TV production hub in Leeds with several sound stages, warehouse space, production offices and an on-site cinema, also home to a film school.",
+      "known_for": "Bank of Dave, The ABC Murders, Girlfriends, The Duke",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/prime-studios/",
+        "https://primestudios.co.uk"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/prime-studios/",
+      "official_url": "https://primestudios.co.uk",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
+      "id": "uk-production-park-wakefield",
+      "name": "Production Park",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.6747,
+      "lng": -1.4943,
+      "type": "Studio & backlot",
+      "setting": "Studio complex in Wakefield with Yorkshire's first LED virtual production volume (over 3,000 panels), plus rehearsal studios, crew accommodation and dining space.",
+      "facilities": "Modular LED volume of 3,000+ panels, on-site crew and artist accommodation, multiple studios, production offices, dining and green rooms",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/production-park/",
+        "https://www.productionpark.com"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/production-park/",
+      "official_url": "https://www.productionpark.com",
+      "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
       "id": "uk-wrexham-racecourse-ground",
@@ -18901,6 +21510,23 @@
       }
     },
     {
+      "id": "uk-space-studios-manchester",
+      "name": "Space Studios Manchester",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.4701,
+      "lng": -2.1983,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built film and TV production complex in Beswick, Manchester, with 760,000 sq ft of space including a 30,000 sq ft main stage, offices, workshops and unit base parking.",
+      "source_urls": [
+        "https://www.spacestudiosmanchester.co.uk",
+        "https://screenmanchester.com/facilities/space-studios-manchester/"
+      ],
+      "url": "https://screenmanchester.com/facilities/space-studios-manchester/",
+      "official_url": "https://www.spacestudiosmanchester.co.uk",
+      "commission_url": "https://screenmanchester.com"
+    },
+    {
       "id": "uk-ss-great-britain",
       "name": "SS Great Britain",
       "country": "United Kingdom",
@@ -18985,6 +21611,23 @@
       }
     },
     {
+      "id": "uk-st-johns-gardens-manchester",
+      "name": "St John's Gardens, Manchester",
+      "country": "United Kingdom",
+      "region": "Greater Manchester",
+      "lat": 53.478,
+      "lng": -2.2529,
+      "type": "Village & countryside",
+      "setting": "Small public garden square off Quay Street in central Manchester, laid out in 1932 on the site of a former church and graveyard, used for quieter scenes near the city centre.",
+      "known_for": "Domino Day, Cobra, Fresh Meat, Age Before Beauty",
+      "source_urls": [
+        "https://screenmanchester.com/locations/st-johns-gardens/"
+      ],
+      "url": "https://screenmanchester.com/locations/st-johns-gardens/",
+      "official_url": "https://screenmanchester.com/locations/st-johns-gardens/",
+      "commission_url": "https://screenmanchester.com"
+    },
+    {
       "id": "uk-swg3",
       "name": "SWG3",
       "country": "United Kingdom",
@@ -18998,6 +21641,22 @@
       ],
       "official_url": "https://www.swg3.tv",
       "commission_url": "https://www.screen.scot/"
+    },
+    {
+      "id": "uk-tapton-masonic-hall-sheffield",
+      "name": "Tapton Masonic Hall",
+      "country": "United Kingdom",
+      "region": "South Yorkshire",
+      "lat": 53.3758,
+      "lng": -1.5154,
+      "type": "Theatre, arena & venue",
+      "setting": "Grade II listed former family home in Sheffield turned Masonic hall, with a stairway, library, reception rooms, bar and a period dance floor room for hire.",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/tapton-masonic-hall-sheffield/"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/tapton-masonic-hall-sheffield/",
+      "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/historic/tapton-masonic-hall-sheffield/",
+      "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
       "id": "uk-the-bluecoat",
@@ -19019,6 +21678,43 @@
         "author": "Arthur John Picton",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-bottle-yard-studios",
+      "name": "The Bottle Yard Studios",
+      "country": "United Kingdom",
+      "region": "Bristol",
+      "lat": 51.4101,
+      "lng": -2.5804,
+      "type": "Studio & backlot",
+      "setting": "Council-run studio complex on the site of a former sherry bottling plant in south Bristol, with eleven sound stages across two sites and a rooftop solar array.",
+      "known_for": "Poldark, Wolf Hall, Broadchurch series 3, The Pale Horse, Rivals, Hellboy",
+      "facilities": "Eleven stages across two sites (TBY2 stages of 20,000, 16,500 and 7,000 sq ft)",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/The_Bottle_Yard_Studios",
+        "https://www.thebottleyard.com"
+      ],
+      "url": "https://www.thebottleyard.com",
+      "official_url": "https://www.thebottleyard.com",
+      "commission_url": "https://www.filminginengland.co.uk"
+    },
+    {
+      "id": "uk-the-depot-liverpool",
+      "name": "The Depot",
+      "country": "United Kingdom",
+      "region": "Merseyside",
+      "lat": 53.4083,
+      "lng": -2.935,
+      "type": "Studio & backlot",
+      "setting": "Purpose-built studio at Liverpool Innovation Park with two 20,000 sq ft stages, production offices, workshops and a 1.7-acre unit base with parking for 200 vehicles.",
+      "known_for": "Hollyoaks, The Batman, Fantastic Beasts, Peaky Blinders, House of Guinness",
+      "facilities": "Two stages (39ft high, 195ft x 96ft), 400 amps power per stage, on-site production offices, cafe and gym, parking for 200 vehicles",
+      "source_urls": [
+        "https://liverpoolfilmoffice.tv/the-depot/"
+      ],
+      "url": "https://liverpoolfilmoffice.tv/the-depot/",
+      "official_url": "https://liverpoolfilmoffice.tv/the-depot/",
+      "commission_url": "https://liverpoolfilmoffice.tv"
     },
     {
       "id": "uk-chatham-historic-dockyard",
@@ -19435,6 +22131,25 @@
       }
     },
     {
+      "id": "uk-versa-leeds-studios",
+      "name": "Versa Leeds Studios",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.7893,
+      "lng": -1.57,
+      "type": "Studio & backlot",
+      "setting": "Multi-stage production facility on Whitehall Road, Leeds, opened 2020, with four stages up to 27,000 sq ft, production offices, workshops and on-site parking.",
+      "known_for": "Bodies, Boat Story, Platform 7, Marvel's Secret Invasion",
+      "facilities": "Four stages from 10,500 to 27,000 sq ft, prop stores, workshops, wardrobe, hair/makeup studio, green room, two car parks with EV charging",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/versa-leeds-studios/",
+        "https://www.versastudios.com"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/versa-leeds-studios/",
+      "official_url": "https://www.versastudios.com",
+      "commission_url": "https://www.screenyorkshire.co.uk"
+    },
+    {
       "id": "uk-victoria-baths",
       "name": "Victoria Baths",
       "country": "United Kingdom",
@@ -19454,6 +22169,24 @@
         "author": "Ridiculopathy",
         "license": "CC0"
       }
+    },
+    {
+      "id": "uk-victoria-leeds",
+      "name": "Victoria Leeds",
+      "country": "United Kingdom",
+      "region": "West Yorkshire",
+      "lat": 53.7984,
+      "lng": -1.541,
+      "type": "Bar, restaurant & shop",
+      "setting": "Restored Victorian shopping arcade in Leeds combining the 1990 Victoria Quarter and 2016 Victoria Gate, with Britain's largest stained-glass ceiling and mosaic floors.",
+      "known_for": "The ABC Murders",
+      "source_urls": [
+        "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/victoria-leeds/",
+        "https://www.victorialeeds.co.uk"
+      ],
+      "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/victoria-leeds/",
+      "official_url": "https://www.victorialeeds.co.uk",
+      "commission_url": "https://www.screenyorkshire.co.uk"
     },
     {
       "id": "uk-w5-belfast",
