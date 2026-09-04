@@ -727,6 +727,30 @@ function addAiUsage(tokIn, tokOut) {
 
 // Alleen of het AI-zoeken aanstaat (sleutel gezet): de pagina toont de knop
 // pas als dit true is, dus zonder sleutel is er geen dode knop te zien.
+// Kleine statusmelding voor het formulier: staat de mail aan, is de achterstand
+// verstuurd, hoeveel berichten liggen er. Alleen ja/nee en aantallen, geen
+// adressen, inhoud of sleutels, net als de status van AI-zoeken hierboven.
+// Bedoeld om op afstand te kunnen zien waarom een mail niet aankomt zolang
+// /beheer nog een 503 geeft; kan weg zodra ADMIN_PASSWORD is gezet.
+app.get("/api/contact/status", (req, res) => {
+  res.set("Cache-Control", "no-store");
+  let stored = 0;
+  try { stored = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean).length; } catch {}
+  let backlog = "pending";
+  try {
+    const flag = JSON.parse(fs.readFileSync(BACKLOG_FLAG, "utf8"));
+    backlog = `sent ${flag.sent} at ${flag.at}`;
+  } catch {}
+  res.json({
+    mail_key: Boolean(MAIL_KEY),
+    mail_from_set: Boolean(process.env.MAIL_FROM),
+    admin_password: Boolean(process.env.ADMIN_PASSWORD),
+    volume: Boolean(process.env.RAILWAY_VOLUME_MOUNT_PATH),
+    stored,
+    backlog,
+  });
+});
+
 app.get("/api/location-search/status", (req, res) => {
   res.set("Cache-Control", "no-store");
   res.json({ enabled: Boolean(AI_KEY) });
