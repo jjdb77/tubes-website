@@ -4355,6 +4355,25 @@
       "commission_url": "https://filmzagreb.hr/"
     },
     {
+      "id": "hr-zagreb-film",
+      "name": "Zagreb Film",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8136,
+      "lng": 15.9873,
+      "type": "Studio & backlot",
+      "setting": "Croatia's veteran animation studio, producing shorts and features since 1953 across three Zagreb premises with artist studios, shooting equipment and a small theatre.",
+      "known_for": "Surogat, Professor Balthazar",
+      "facilities": "Artist studios, shooting equipment, a small theatre, film storage and video duplication across three Zagreb locations.",
+      "logistics": "Vlaska 70, Zagreb.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Zagreb_Film",
+        "http://zagrebfilm.hr"
+      ],
+      "official_url": "http://zagrebfilm.hr",
+      "commission_url": "https://filmingincroatia.hr"
+    },
+    {
       "id": "hr-zagreb-glavni-kolodvor",
       "name": "Zagreb Main Railway Station",
       "country": "Croatia",
@@ -4731,6 +4750,25 @@
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
+      "id": "cz-d1-studios",
+      "name": "D1 Studios",
+      "country": "Czech Republic",
+      "region": "Central Bohemian Region",
+      "lat": 49.9749,
+      "lng": 14.6094,
+      "type": "Studio & backlot",
+      "setting": "Virtual production facility near Prague with one 29x27m stage, 11m high, and a 180-degree curved LED wall about 14m in diameter for XR and motion capture work.",
+      "facilities": "Single stage 29x27m, 11m height, with prep, make-up and office rooms. LED wall P2.6 1000nits, 180-degree curved, 14.32m diameter (18x6m), movable ceiling.",
+      "suitability": "Virtual production, XR stage shoots, full-body motion capture and digital doubles.",
+      "logistics": "Modletice 141, Praha-vychod, near Prague.",
+      "source_urls": [
+        "https://www.d1studios.cz",
+        "https://filmcommission.gov.cz/en/stages-studios/"
+      ],
+      "official_url": "https://www.d1studios.cz",
+      "commission_url": "https://filmcommission.gov.cz"
+    },
+    {
       "id": "cz-dalesice-brewery",
       "name": "Dalesice Brewery",
       "country": "Czech Republic",
@@ -4821,6 +4859,25 @@
         "author": "Czech Tea",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "cz-fantasy-studios",
+      "name": "Fantasy Studios",
+      "country": "Czech Republic",
+      "region": "Central Bohemian Region",
+      "lat": 50.147,
+      "lng": 14.1162,
+      "type": "Studio & backlot",
+      "setting": "Virtual production studio in Kladno with two stages, 29.4x27.7m and 17.4x12.1m, used for content creation and motion capture, with a Prague production office.",
+      "facilities": "Studio A: 29.4x27.7m. Studio B: 17.4x12.1m. Virtual production and motion capture equipment.",
+      "suitability": "Virtual production filming.",
+      "logistics": "Studios at Hutska 249, Kladno; production office at Pristavni 16a, Prague 7.",
+      "source_urls": [
+        "https://www.fantasystudios.cz",
+        "https://filmcommission.gov.cz/en/stages-studios/"
+      ],
+      "official_url": "https://www.fantasystudios.cz",
+      "commission_url": "https://filmcommission.gov.cz"
     },
     {
       "id": "cz-flaje-dam",
@@ -5629,6 +5686,25 @@
       }
     },
     {
+      "id": "cz-prague-studios",
+      "name": "Prague Studios",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.134,
+      "lng": 14.5198,
+      "type": "Studio & backlot",
+      "setting": "A large Prague production complex with nine sound stages, a 25-acre backlot and a dedicated water stage, used by international streaming and studio productions.",
+      "known_for": "Foundation (Apple TV+)",
+      "facilities": "9 soundproof stages, 25-acre backlot, dedicated water stage. A HIVE complex under development adds 18,500m2 of stages, offices, workshops and storage.",
+      "logistics": "Touzimska 867, Prague 18.",
+      "source_urls": [
+        "https://www.praguestudios.com",
+        "https://filmcommission.gov.cz/en/stages-studios/"
+      ],
+      "official_url": "https://www.praguestudios.com",
+      "commission_url": "https://filmcommission.gov.cz"
+    },
+    {
       "id": "cz-prilepy-chateau",
       "name": "Přílepy Chateau",
       "country": "Czech Republic",
@@ -5900,6 +5976,25 @@
       }
     },
     {
+      "id": "cz-ttc-studio-jinonice",
+      "name": "TTC Studio Jinonice",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0492,
+      "lng": 14.3646,
+      "type": "Studio & backlot",
+      "setting": "Two sound stages in Prague's Jinonice district, about 1,200m2 and 270m2, used for film, television, commercials and photography since 2007.",
+      "facilities": "Studio 1: approx. 1,200m2, 10m height. Studio 2: 270m2. Make-up and costume rooms, offices, changing rooms and storage, both stages blackened and heated.",
+      "suitability": "Film and television productions, commercials, photography and presentation events.",
+      "logistics": "Stodulecka 586/4, Prague 5, with ample on-site parking.",
+      "source_urls": [
+        "https://www.studiojinonice.cz",
+        "https://filmcommission.gov.cz/en/stages-studios/"
+      ],
+      "official_url": "https://www.studiojinonice.cz",
+      "commission_url": "https://filmcommission.gov.cz"
+    },
+    {
       "id": "cz-underground-water-reservoir-brno",
       "name": "Underground Water Reservoir Brno",
       "country": "Czech Republic",
@@ -5916,6 +6011,24 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/underground-water-reservoir-brno/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-upp",
+      "name": "UPP (Universal Production Partners)",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0684,
+      "lng": 14.4554,
+      "type": "Studio & backlot",
+      "setting": "Prague visual effects house offering virtual production services and a dedicated stage at its Milin studio outside the city.",
+      "suitability": "Virtual production filming and VFX supervision.",
+      "logistics": "Head office at Zitomirska 7, Prague 10.",
+      "source_urls": [
+        "https://www.upp.cz",
+        "https://filmcommission.gov.cz/en/stages-studios/"
+      ],
+      "official_url": "https://www.upp.cz",
+      "commission_url": "https://filmcommission.gov.cz"
     },
     {
       "id": "cz-usti-nad-orlici-hospital",
@@ -6562,6 +6675,25 @@
         "author": "EHRENBERG Kommunikation",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "dk-shortcut",
+      "name": "Nordisk Film Shortcut (360 Stage)",
+      "country": "Denmark",
+      "region": "Capital Region of Denmark",
+      "lat": 55.6678,
+      "lng": 12.514,
+      "type": "Studio & backlot",
+      "setting": "A 360-degree LED volume in Valby, Copenhagen, 16 metres in diameter with walls and ceiling fully covered in LED panels, built for virtual production.",
+      "facilities": "360-degree LED stage, 16m diameter, full LED coverage on walls and ceiling, Unreal Engine and optical camera tracking. On-site sound suites, editing suites and Dolby Atmos mixing theatre.",
+      "suitability": "Virtual production filming, previsualisation and driving plates.",
+      "logistics": "Mosedalvej 14, Valby, Copenhagen.",
+      "source_urls": [
+        "https://www.shortcut.dk",
+        "https://shortcut.dk/ledstage/"
+      ],
+      "official_url": "https://www.shortcut.dk",
+      "commission_url": "https://www.filmindenmark.dk"
     },
     {
       "id": "nordisk-film-studios-valby",
@@ -14984,6 +15116,25 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-stern-film-studio",
+      "name": "Stern Film Studio",
+      "country": "Hungary",
+      "region": "Pest County",
+      "lat": 47.6422,
+      "lng": 19.0341,
+      "type": "Studio & backlot",
+      "setting": "A four-stage studio complex in Pomaz near Budapest, built on a former industrial site, with a 5,000m2 backlot and a water tank built into one of the stages.",
+      "known_for": "Dracula, The Alienist, Berlin Station, Dune: Prophecy",
+      "facilities": "Stage A: 2,280m2, 12.5m height. Stage B: 1,482m2, 12.5m height, with a water pool. Stage C: 837m2, 5.3m height. Stage D: 148m2, 6m height. Offices 1,295m2, workshops 4,421m2, backlot 5,000m2, extras holding, dressing/hair/make-up rooms, catering area, theatre/meeting room (198m2), car park/unit base 2,500m2.",
+      "logistics": "Bihari Janos utca 1, Pomaz, about 20 minutes from Budapest.",
+      "source_urls": [
+        "https://sternfilm.com/",
+        "https://hu.wikipedia.org/wiki/Stern_Film_St%C3%BAdi%C3%B3_%C3%A9s_M%C3%A9diacentrum"
+      ],
+      "official_url": "https://sternfilm.com/",
+      "commission_url": "https://nfi.hu"
+    },
+    {
       "id": "hu-szazados-art-colony",
       "name": "Szazados Road Art Colony",
       "country": "Hungary",
@@ -15595,6 +15746,24 @@
       ],
       "official_url": "https://rvkstudios.is/",
       "commission_url": "https://filminiceland.com/locations/"
+    },
+    {
+      "id": "is-studio-syrland",
+      "name": "Studio Syrland",
+      "country": "Iceland",
+      "region": "Capital Region",
+      "lat": 64.1483,
+      "lng": -21.8628,
+      "type": "Studio & backlot",
+      "setting": "Reykjavik production facility running since 1988, combining a recording stage with camera, lighting and grip equipment rental, listed under Film in Iceland's studio category.",
+      "facilities": "Studio A and control room; camera, lighting, grip, truck and power equipment rental in partnership with Storyline Studios Scandinavia.",
+      "logistics": "Vatnagardar 4, Reykjavik.",
+      "source_urls": [
+        "https://www.syrland.is",
+        "https://www.filminiceland.com/service-companies"
+      ],
+      "official_url": "https://www.syrland.is",
+      "commission_url": "https://www.filminiceland.com"
     },
     {
       "id": "is-sundholl-reykjavikur",
@@ -22864,6 +23033,23 @@
       "commission_url": "https://www.norwegianfilm.com/locations/stavanger-swimming-pool"
     },
     {
+      "id": "no-storyline-studios",
+      "name": "Storyline Studios (Studio C)",
+      "country": "Norway",
+      "region": "Akershus",
+      "lat": 59.9188,
+      "lng": 10.6115,
+      "type": "Studio & backlot",
+      "setting": "A 427m2 sound stage at the Filmparken complex in Jar near Oslo, with a 5.4m ceiling, an infinity cyc wall, a greenscreen floor and an Unreal Engine virtual production pipeline.",
+      "facilities": "427m2 stage, 5.4m ceiling height with 12 lighting grid lifts, 360-degree cyc/infinity wall, greenscreen walls and floor, kitchen, make-up area, client lounge, ground-floor drive-in access.",
+      "logistics": "Wedel Jarlsbergs vei 36, Jar (Baerum), near Oslo.",
+      "source_urls": [
+        "https://www.storylinestudios.com/studio-visuals"
+      ],
+      "official_url": "https://www.storylinestudios.com/studio-visuals",
+      "commission_url": "https://www.nfi.no"
+    },
+    {
       "id": "no-vestre-the-plus",
       "name": "The Plus (Vestre)",
       "country": "Norway",
@@ -24765,6 +24951,27 @@
       "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
+      "id": "pl-arterion",
+      "name": "Studio Filmowe Arterion",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7773,
+      "lng": 19.4708,
+      "type": "Studio & backlot",
+      "setting": "Two air-conditioned sound stages in central Lodz, 15x11m and 17x10m with 4.2m ceilings, used for commercials, corporate video and photo shoots with blue and green screen.",
+      "known_for": "Komisarz Alex",
+      "facilities": "Studio 1: 15x11m, 4.2m height. Studio 2: 17x10m, 4.2m height. 346m2 total, two dressing rooms with private bathrooms, two make-up rooms, suspended lighting rig, blue and green screen.",
+      "suitability": "Blue and green screen filming, good truck access for scenography.",
+      "logistics": "Central Lodz, close to the A2 motorway exit and Lodz Fabryczna railway station; ul. Pomorska 69/71.",
+      "source_urls": [
+        "https://arterion.pl/",
+        "https://arterion.pl/hale-zdjeciowe/",
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/studio-filmowe-arterion/"
+      ],
+      "official_url": "https://arterion.pl/",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
+    },
+    {
       "id": "pl-superjednostka",
       "name": "Superjednostka",
       "country": "Poland",
@@ -25080,6 +25287,22 @@
       "url": "https://silesiafilmcommission.pl/en/location/water-tower-restaurant",
       "official_url": "http://wodnawieza.pl/",
       "commission_url": "https://silesiafilmcommission.pl/en"
+    },
+    {
+      "id": "pl-wfdif",
+      "name": "WFDiF (Wytwornia Filmow Dokumentalnych i Fabularnych)",
+      "country": "Poland",
+      "region": "Masovian Voivodeship",
+      "lat": 52.202,
+      "lng": 21.0422,
+      "type": "Studio & backlot",
+      "setting": "Warsaw production complex dating to 1949, with two sound stages added in 1960 for feature films, historically used by directors including Andrzej Wajda and Krzysztof Kieslowski.",
+      "source_urls": [
+        "https://pl.wikipedia.org/wiki/Wytw%C3%B3rnia_Film%C3%B3w_Dokumentalnych_i_Fabularnych",
+        "http://www.wfdif.pl/"
+      ],
+      "official_url": "http://www.wfdif.pl/",
+      "commission_url": "https://www.pisf.pl"
     },
     {
       "id": "pl-wieliczka-salt-mine",
@@ -29477,6 +29700,25 @@
         "author": "Mickaël Delcey (Silverkey)",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "se-ystad-studios",
+      "name": "Ystad Studios",
+      "country": "Sweden",
+      "region": "Skane",
+      "lat": 55.434,
+      "lng": 13.8447,
+      "type": "Studio & backlot",
+      "setting": "Two 600m2 sound stages in Ystad built for the Wallander and Bron/The Bridge productions, now run by the regional film fund and hired out to other productions.",
+      "known_for": "Wallander, Bron/The Bridge",
+      "price_note": "Ernst Hugo stage from SEK 10,000/day or SEK 50,000/week; Anna Q stage from SEK 8,000/day or SEK 40,000/week, excl. VAT (Film i Skane).",
+      "facilities": "Ernst Hugo stage: 600m2, virtual production with a 25x4m projection screen in a 180-degree semicircle. Anna Q stage: 600m2, set-construction stage. 6 production offices, conference room for 20, 2 dressing rooms, make-up/costume areas, green room, dining hall, wardrobe storage, parking.",
+      "logistics": "Elis Nilssons vag 12, Ystad.",
+      "source_urls": [
+        "https://www.filmiskane.se/ystad-studios"
+      ],
+      "official_url": "https://www.filmiskane.se/ystad-studios",
+      "commission_url": "https://www.filmiskane.se"
     },
     {
       "id": "uk-aerospace-bristol",
