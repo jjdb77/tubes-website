@@ -1303,6 +1303,21 @@
       }
     },
     {
+      "id": "be-blegny-mine",
+      "name": "Blegny-Mine",
+      "country": "Belgium",
+      "region": "Liège",
+      "lat": 50.6871,
+      "lng": 5.7243,
+      "type": "Industrial & derelict",
+      "setting": "Former coal mine near Liège, one of four coal mines in Europe still offering underground visits through its original shaft and galleries.",
+      "source_urls": [
+        "https://www.blegnymine.be"
+      ],
+      "official_url": "https://www.blegnymine.be",
+      "commission_url": "https://www.wallimage.be"
+    },
+    {
       "id": "be-bois-du-cazier",
       "name": "Bois du Cazier",
       "country": "Belgium",
@@ -1379,6 +1394,21 @@
       "commission_url": "https://www.screenflanders.be/en"
     },
     {
+      "id": "be-cbbd-brussels",
+      "name": "Centre Belge de la Bande Dessinée",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8512,
+      "lng": 4.3602,
+      "type": "Office, school & public building",
+      "setting": "Comic strip museum in a 1906 Art Nouveau former textile warehouse designed by Victor Horta in central Brussels, with galleries, a library and a brasserie.",
+      "source_urls": [
+        "https://www.cbbd.be"
+      ],
+      "official_url": "https://www.cbbd.be",
+      "commission_url": "https://screen.brussels"
+    },
+    {
       "id": "be-chateau-de-freyr",
       "name": "Château de Freÿr",
       "country": "Belgium",
@@ -1444,6 +1474,22 @@
       }
     },
     {
+      "id": "be-coudenberg",
+      "name": "Coudenberg, Former Palace of Brussels",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8429,
+      "lng": 4.3598,
+      "type": "Palace & landmark",
+      "setting": "Underground archaeological site beneath Place Royale in Brussels, preserving the foundations and halls of the former Palace of Coudenberg, open to visitors and used for filming.",
+      "suitability": "Site publishes information on filming (tournage) alongside visitor tours",
+      "source_urls": [
+        "https://coudenberg.brussels"
+      ],
+      "official_url": "https://coudenberg.brussels",
+      "commission_url": "https://screen.brussels"
+    },
+    {
       "id": "be-de-grote-post-oostende",
       "name": "De Grote Post",
       "country": "Belgium",
@@ -1500,6 +1546,21 @@
         "author": "Busoni",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "be-galeries-royales-saint-hubert",
+      "name": "Galeries Royales Saint-Hubert",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8482,
+      "lng": 4.3551,
+      "type": "Bar, restaurant & shop",
+      "setting": "Glass-roofed shopping arcade from 1847 in central Brussels, with three linked galleries of boutiques, cafes, a cinema and a theatre.",
+      "source_urls": [
+        "https://www.galeries-royales-saint-hubert.com"
+      ],
+      "official_url": "https://www.galeries-royales-saint-hubert.com",
+      "commission_url": "https://screen.brussels"
     },
     {
       "id": "be-grand-hospice-brussels",
@@ -1625,6 +1686,21 @@
       "commission_url": "https://screenflanders.be/"
     },
     {
+      "id": "be-hopital-erasme",
+      "name": "Hôpital Erasme / Campus Erasme",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8138,
+      "lng": 4.265,
+      "type": "Hospital, prison & institution",
+      "setting": "University hospital of the Université Libre de Bruxelles in Anderlecht, a large modernist 1970s hospital campus with wards, corridors and outdoor grounds.",
+      "source_urls": [
+        "https://erasme.ulb.ac.be"
+      ],
+      "official_url": "https://erasme.ulb.ac.be",
+      "commission_url": "https://screen.brussels"
+    },
+    {
       "id": "be-janseniustoren-leuven",
       "name": "Janseniustoren",
       "country": "Belgium",
@@ -1653,6 +1729,21 @@
       ],
       "official_url": "https://www.screenflanders.be/nl/locaties/database/k-tower",
       "commission_url": "https://screenflanders.be/"
+    },
+    {
+      "id": "be-kanal-brussels",
+      "name": "Kanal-Centre Pompidou",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8593,
+      "lng": 4.3485,
+      "type": "Office, school & public building",
+      "setting": "Former 1930s Citroën garage on the Brussels canal, now a contemporary art museum with raw industrial halls, a large open floor and a rooftop terrace.",
+      "source_urls": [
+        "https://kanal.brussels"
+      ],
+      "official_url": "https://kanal.brussels",
+      "commission_url": "https://screen.brussels"
     },
     {
       "id": "be-kortrijk-xpo",
@@ -1698,6 +1789,36 @@
         "author": "Wasily at Dutch Wikipedia",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "be-kvs-brussels",
+      "name": "KVS (Koninklijke Vlaamse Schouwburg)",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8555,
+      "lng": 4.3518,
+      "type": "Theatre, arena & venue",
+      "setting": "Brussels' Flemish-language city theatre, combining a restored 19th-century theatre building with a modern extension, used for stage productions and events.",
+      "source_urls": [
+        "https://www.kvs.be"
+      ],
+      "official_url": "https://www.kvs.be",
+      "commission_url": "https://screen.brussels"
+    },
+    {
+      "id": "be-la-bellone",
+      "name": "La Bellone",
+      "country": "Belgium",
+      "region": "Brussels-Capital Region",
+      "lat": 50.8513,
+      "lng": 4.346,
+      "type": "Theatre, arena & venue",
+      "setting": "18th-century townhouse in central Brussels covered by a glass roof, now a house for the performing arts with an archive, exhibition space and courtyard.",
+      "source_urls": [
+        "https://www.bellone.be"
+      ],
+      "official_url": "https://www.bellone.be",
+      "commission_url": "https://screen.brussels"
     },
     {
       "id": "be-la-monnaie",
@@ -3135,6 +3256,24 @@
       "commission_url": "https://havc.hr"
     },
     {
+      "id": "cz-64-u-hradeb-prague",
+      "name": "64 U Hradeb, Prague",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "lat": 50.0871,
+      "lng": 14.4047,
+      "type": "Theatre, arena & venue",
+      "setting": "A derelict 1964 cinema behind a courtyard off Mostecka street in Prague's Mala Strana, flood-damaged in 2002 and left as raw concrete and brick around a 600-seat hall with a balcony.",
+      "facilities": "Around 3,000 square metres of interior including main hall, corridors and a paved courtyard atrium",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-64-u-hradeb-univerzalni-prostor-v-srdci-male-strany/",
+        "https://64uhradeb.cz"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-64-u-hradeb-univerzalni-prostor-v-srdci-male-strany/",
+      "official_url": "https://64uhradeb.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "kromeriz-archbishops-palace",
       "name": "Archbishop's Palace, Kroměříž",
       "country": "Czech Republic",
@@ -3201,6 +3340,23 @@
         "author": "IgorCalzone1",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-bilina-spa",
+      "name": "Bilina Spa (Kyselka)",
+      "country": "Czech Republic",
+      "region": "Usti nad Labem Region",
+      "lat": 50.5424,
+      "lng": 13.758,
+      "type": "Hotel & interiors",
+      "setting": "A disused 19th-century spa in Bilina with an empty main building, two guest wings, an inhalation hall and a forest park, offered completely bare and open to interior changes for filming.",
+      "known_for": "I, Mattoni (Ja, Mattoni)",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-bilina-lazne-s-dramatickym-osudem-cekaji-na-novy-zivot/"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-bilina-lazne-s-dramatickym-osudem-cekaji-na-novy-zivot/",
+      "official_url": "https://filmcommission.gov.cz/lokace-mesice-bilina-lazne-s-dramatickym-osudem-cekaji-na-novy-zivot/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-bohnice-psychiatric-hospital",
@@ -3339,6 +3495,23 @@
         "author": "VitVit",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cz-chomutov-municipal-baths",
+      "name": "Chomutov Municipal Baths",
+      "country": "Czech Republic",
+      "region": "Usti nad Labem Region",
+      "lat": 50.4632,
+      "lng": 13.4163,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1980s indoor swimming complex in Chomutov with a 50 metre pool, a two-storey entrance hall, an underground plant room and wide terraces, empty and awaiting redevelopment.",
+      "facilities": "Connected to mains electricity, several thousand square metres of interior",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-giganticke-prostory-mestskych-lazni-v-chomutove-jako-originalni-filmova-lokace/"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-giganticke-prostory-mestskych-lazni-v-chomutove-jako-originalni-filmova-lokace/",
+      "official_url": "https://filmcommission.gov.cz/lokace-mesice-giganticke-prostory-mestskych-lazni-v-chomutove-jako-originalni-filmova-lokace/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-coal-water-tower-vratislavice",
@@ -3624,6 +3797,23 @@
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
+      "id": "cz-kaznice-brno",
+      "name": "Kaznice Brno (Brno House of Correction)",
+      "country": "Czech Republic",
+      "region": "South Moravian Region",
+      "lat": 49.2001,
+      "lng": 16.6224,
+      "type": "Hospital, prison & institution",
+      "setting": "A 1740s Baroque former prison and orphanage in central Brno, four linked wings around three courtyards under an intact 18th-century roof, mostly empty aside from monthly public tours.",
+      "facilities": "Electricity in the chapel, workshop room and corridor to the former death cells; running water in the front building; almost 8,000 square metres of interior.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-140-mistnosti-brnenske-barokni-kaznice-laka-variabilitou/"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-140-mistnosti-brnenske-barokni-kaznice-laka-variabilitou/",
+      "official_url": "https://filmcommission.gov.cz/lokace-mesice-140-mistnosti-brnenske-barokni-kaznice-laka-variabilitou/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-klasterni-hradisko-military-hospital-olomouc",
       "name": "Klasterni Hradisko (Military Hospital Olomouc)",
       "country": "Czech Republic",
@@ -3663,6 +3853,23 @@
       }
     },
     {
+      "id": "cz-kraus-apartment-plzen",
+      "name": "Kraus Apartment, Plzen",
+      "country": "Czech Republic",
+      "region": "Pilsen Region",
+      "lat": 49.7412,
+      "lng": 13.3703,
+      "type": "House & apartment",
+      "setting": "An Adolf Loos-designed 1930-31 apartment in Plzen with a green Cipollino marble salon under a dark mahogany ceiling, mirrored walls, an adjoining dining room and a fitted-wardrobe bedroom.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-loosovy-interiery-v-plzni/",
+        "https://www.visitplzen.eu"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-loosovy-interiery-v-plzni/",
+      "official_url": "https://www.visitplzen.eu",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-landek-park",
       "name": "Landek Park",
       "country": "Czech Republic",
@@ -3684,6 +3891,22 @@
         "author": "Tedmek",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "cz-liebieg-villa-liberec",
+      "name": "Liebieg Villa, Liberec",
+      "country": "Czech Republic",
+      "region": "Liberec Region",
+      "lat": 50.7677,
+      "lng": 15.0679,
+      "type": "House & apartment",
+      "setting": "A romantic historicist villa built in three stages between 1897 and 1911 for the Liebieg textile family in Liberec, with a mythological ceiling fresco in its Hall of Fables and a period motor garage.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-majestatna-sidla-liebigu-v-liberci/"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-majestatna-sidla-liebigu-v-liberci/",
+      "official_url": "https://filmcommission.gov.cz/lokace-mesice-majestatna-sidla-liebigu-v-liberci/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-lovosice-port",
@@ -3814,6 +4037,23 @@
       }
     },
     {
+      "id": "cz-michaluv-statek-pohled",
+      "name": "Michaluv Statek Farmstead, Pohled",
+      "country": "Czech Republic",
+      "region": "Vysocina Region",
+      "lat": 49.6036,
+      "lng": 15.6481,
+      "type": "Village & countryside",
+      "setting": "A preserved farmstead in the small village of Pohled on the Sazava river in Vysocina, with a farmhouse, cattle byre, granary, barn and open dooryard illustrating rural life from the 17th to early 20th century.",
+      "facilities": "Farmhouse interior about 50 square metres, byre 60 square metres, granary 50 square metres, yard 2,000 square metres, garden 4,800 square metres",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-michaluv-statek-autenticky-navrat-do-zivota-selskeho-lidu/"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-michaluv-statek-autenticky-navrat-do-zivota-selskeho-lidu/",
+      "official_url": "https://filmcommission.gov.cz/lokace-mesice-michaluv-statek-autenticky-navrat-do-zivota-selskeho-lidu/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-municipal-house",
       "name": "Municipal House",
       "country": "Czech Republic",
@@ -3853,6 +4093,24 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/olomouc-town-hall/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "cz-pardubice-airport",
+      "name": "Pardubice Airport",
+      "country": "Czech Republic",
+      "region": "Pardubice Region",
+      "lat": 50.0165,
+      "lng": 15.7366,
+      "type": "Transport & infrastructure",
+      "setting": "A small international airport on the edge of Pardubice next to the racecourse, with a 2.5 kilometre by 75 metre runway, ground-support vehicles and hangar space, open to filming.",
+      "logistics": "Filming permits are typically issued within days rather than weeks, provided the runway does not need a long closure.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-letiste-v-pardubicich-se-otevira-filmarum/",
+        "https://www.airport-pardubice.cz"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-letiste-v-pardubicich-se-otevira-filmarum/",
+      "official_url": "https://www.airport-pardubice.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-pardubice-hospital",
@@ -4022,6 +4280,25 @@
       "commission_url": "https://www.filmcommission.cz/"
     },
     {
+      "id": "cz-tlumacov-stud-farm",
+      "name": "Tlumacov Stud Farm",
+      "country": "Czech Republic",
+      "region": "Zlin Region",
+      "lat": 49.2479,
+      "lng": 17.5003,
+      "type": "Village & countryside",
+      "setting": "A working state stud farm near Zlin founded in 1925 on an 18th-century manor yard, with vaulted stables for around 115 breeding stallions of several breeds, a forge and a director's villa.",
+      "capacity": 115,
+      "facilities": "Three stables, forge, insemination station, equine treadmill, riding hall, horse-drawn carriages available",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-zemsky-hrebcinec-v-tlumacove/",
+        "https://www.hrebcinec-tlumacov.cz"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-zemsky-hrebcinec-v-tlumacove/",
+      "official_url": "https://www.hrebcinec-tlumacov.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-tomas-bata-university",
       "name": "Tomas Bata University in Zlín",
       "country": "Czech Republic",
@@ -4110,6 +4387,24 @@
       }
     },
     {
+      "id": "cz-vojna-memorial",
+      "name": "Vojna Memorial",
+      "country": "Czech Republic",
+      "region": "Central Bohemian Region",
+      "lat": 49.6403,
+      "lng": 14.0018,
+      "type": "Hospital, prison & institution",
+      "setting": "An intact forced-labour camp near Pribram built in 1947-49 for uranium mining and later a political prison until 1960, preserved with its command building, bunker and unheated punishment cells.",
+      "known_for": "Zdivocela zeme, Bumerang, Piknik, Nackt unter Wolfen",
+      "source_urls": [
+        "https://filmcommission.gov.cz/lokace-mesice-autenticky-dochovany-vezensky-areal-pamatnik-vojna/",
+        "https://www.muzeum-pribram.cz"
+      ],
+      "url": "https://filmcommission.gov.cz/lokace-mesice-autenticky-dochovany-vezensky-areal-pamatnik-vojna/",
+      "official_url": "https://www.muzeum-pribram.cz",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-winternitz-villa",
       "name": "Winternitz Villa",
       "country": "Czech Republic",
@@ -4139,6 +4434,22 @@
       ],
       "official_url": "https://filmcommission.gov.cz/en/location/zlin-factory-complex/",
       "commission_url": "https://www.filmcommission.cz/"
+    },
+    {
+      "id": "dk-bakken",
+      "name": "Bakken (Dyrehavsbakken)",
+      "country": "Denmark",
+      "region": "Capital Region",
+      "lat": 55.7757,
+      "lng": 12.5753,
+      "type": "Theatre, arena & venue",
+      "setting": "An amusement park dating to 1583 inside the Jaegersborg Dyrehave deer park north of Copenhagen, with rides, variety theatres and restaurants under old beech trees.",
+      "suitability": "Hosts company events and group bookings (own site: 'Firmaarrangementer')",
+      "source_urls": [
+        "https://www.bakken.dk"
+      ],
+      "official_url": "https://www.bakken.dk",
+      "commission_url": "https://www.dfi.dk/en"
     },
     {
       "id": "dk-bella-center",
@@ -4211,6 +4522,22 @@
       }
     },
     {
+      "id": "dk-cirkusbygningen",
+      "name": "Cirkusbygningen",
+      "country": "Denmark",
+      "region": "Capital Region",
+      "lat": 55.6761,
+      "lng": 12.5651,
+      "type": "Theatre, arena & venue",
+      "setting": "A domed circus building from 1886 in central Copenhagen near Tivoli, its ring and tiered seating now hired out for shows, dinner theatre and events.",
+      "suitability": "Building available for hire for events (own site: 'Lej bygningen til dit event')",
+      "source_urls": [
+        "https://www.cirkusbygningen.dk"
+      ],
+      "official_url": "https://www.cirkusbygningen.dk",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
       "id": "dk-copenhagen-city-hall",
       "name": "Copenhagen City Hall",
       "country": "Denmark",
@@ -4281,6 +4608,23 @@
         "author": "Mtlarsen",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "dk-dr-byen",
+      "name": "DR Byen",
+      "country": "Denmark",
+      "region": "Capital Region",
+      "lat": 55.6558,
+      "lng": 12.589,
+      "type": "Studio & backlot",
+      "setting": "The headquarters and production complex of the Danish Broadcasting Corporation on Amager, opened between 2006 and 2010, combining newsrooms, TV studios and the DR Koncerthuset concert hall.",
+      "known_for": "Borgen, The Killing (Forbrydelsen)",
+      "source_urls": [
+        "https://www.dr.dk/om-dr",
+        "https://en.wikipedia.org/wiki/DR_Byen"
+      ],
+      "official_url": "https://www.dr.dk/om-dr",
+      "commission_url": "https://www.dfi.dk/en"
     },
     {
       "id": "dk-dr-koncerthuset",
@@ -4376,6 +4720,22 @@
       }
     },
     {
+      "id": "dk-godsbanen",
+      "name": "Godsbanen",
+      "country": "Denmark",
+      "region": "Central Denmark Region",
+      "lat": 56.1536,
+      "lng": 10.1942,
+      "type": "Industrial & derelict",
+      "setting": "A former railway goods yard in Aarhus converted into a production house for culture and the arts, with its long brick freight sheds and tracks-side hall available to rent for events.",
+      "suitability": "Rooms and halls for hire for events (own site: 'Lej lokaler og skab events')",
+      "source_urls": [
+        "https://godsbanen.dk/en/"
+      ],
+      "official_url": "https://godsbanen.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
       "id": "dk-hc-andersens-hus",
       "name": "H.C. Andersens Hus",
       "country": "Denmark",
@@ -4437,6 +4797,22 @@
       }
     },
     {
+      "id": "dk-mch-messecenter-herning",
+      "name": "MCH Messecenter Herning",
+      "country": "Denmark",
+      "region": "Central Denmark Region",
+      "lat": 56.1205,
+      "lng": 8.9551,
+      "type": "Theatre, arena & venue",
+      "setting": "Denmark's largest exhibition and entertainment complex, spread across roughly 130 acres in Herning with halls used for trade fairs, concerts, sport and stage productions.",
+      "source_urls": [
+        "https://www.mch.dk",
+        "https://en.wikipedia.org/wiki/MCH_Messecenter_Herning"
+      ],
+      "official_url": "https://www.mch.dk",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
       "id": "dk-moens-klint",
       "name": "Moens Klint (GeoCenter)",
       "country": "Denmark",
@@ -4450,6 +4826,21 @@
         "https://www.moensklint.dk/"
       ],
       "official_url": "https://www.moensklint.dk/",
+      "commission_url": "https://www.dfi.dk/en"
+    },
+    {
+      "id": "dk-musikhuset-aarhus",
+      "name": "Musikhuset Aarhus",
+      "country": "Denmark",
+      "region": "Central Denmark Region",
+      "lat": 56.153,
+      "lng": 10.1991,
+      "type": "Theatre, arena & venue",
+      "setting": "A concert and performance complex in central Aarhus with ten stages under one glass-fronted roof, hosting everything from opera and classical concerts to comedy and family theatre.",
+      "source_urls": [
+        "https://www.musikhusetaarhus.dk/en"
+      ],
+      "official_url": "https://www.musikhusetaarhus.dk/en",
       "commission_url": "https://www.dfi.dk/en"
     },
     {
@@ -4540,6 +4931,23 @@
         "author": "Balut85",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "dk-oresund-bridge",
+      "name": "Oresund Bridge",
+      "country": "Denmark",
+      "region": "Capital Region",
+      "lat": 55.5829,
+      "lng": 12.7955,
+      "type": "Transport & infrastructure",
+      "setting": "A cable-stayed rail and motorway bridge running nearly 8 kilometres from the Swedish coast to the artificial island of Peberholm, continuing to Denmark via the Oresund Tunnel.",
+      "known_for": "The Bridge (Bron/Broen)",
+      "source_urls": [
+        "https://www.oresundsbron.com/en",
+        "https://en.wikipedia.org/wiki/%C3%98resund_Bridge"
+      ],
+      "official_url": "https://www.oresundsbron.com/en",
+      "commission_url": "https://www.dfi.dk/en"
     },
     {
       "id": "dk-refshaleoen",
@@ -4653,6 +5061,23 @@
         "author": "Liberaler Humanist",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "dk-vridsloeselille-faengsel",
+      "name": "Vridslose Prison (Vridsloeselille Faengsel)",
+      "country": "Denmark",
+      "region": "Capital Region",
+      "lat": 55.6603,
+      "lng": 12.3478,
+      "type": "Hospital, prison & institution",
+      "setting": "A closed state prison in Albertslund built in 1859 and shut in 2018, its walled complex of cell blocks and a main gatehouse still standing at the edge of the town.",
+      "known_for": "The Olsen Gang (Olsen-banden) film series",
+      "source_urls": [
+        "https://www.kriminalforsorgen.dk/en/",
+        "https://en.wikipedia.org/wiki/Vridsl%C3%B8selille_Prison"
+      ],
+      "official_url": "https://www.kriminalforsorgen.dk/en/",
+      "commission_url": "https://www.dfi.dk/en"
     },
     {
       "id": "fi-kaapelitehdas",
@@ -7154,6 +7579,22 @@
       }
     },
     {
+      "id": "de-alte-schokoladenfabrik-oderwitz",
+      "name": "Alte Schokoladenfabrik Oderwitz",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 50.9511,
+      "lng": 14.7255,
+      "type": "Industrial & derelict",
+      "setting": "A fully vacant former chocolate factory site in Oderwitz near Goerlitz, with an administration building with a period staircase alongside disused production and storage halls.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/alte-schokoladenfabrik-oderwitz"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/alte-schokoladenfabrik-oderwitz",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/alte-schokoladenfabrik-oderwitz",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-autostadt-wolfsburg",
       "name": "Autostadt Wolfsburg",
       "country": "Germany",
@@ -7284,6 +7725,56 @@
       }
     },
     {
+      "id": "de-breuninger-kaufhaus-erfurt",
+      "name": "Breuninger Kaufhaus Erfurt",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.9769,
+      "lng": 11.0313,
+      "type": "Bar, restaurant & shop",
+      "setting": "A department store built in the 1990s in Erfurt's historic city centre, designed to fit the scale of the surrounding 1,250 year old old town while offering large modern retail floors inside.",
+      "source_urls": [
+        "https://www.breuninger.com",
+        "https://www.mdm-online.de/film-commission/location-guide/breuninger-kaufhaus-erfurt"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/breuninger-kaufhaus-erfurt",
+      "official_url": "https://www.breuninger.com",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-container-terminal-halle-saale",
+      "name": "Container Terminal Halle (Saale)",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.5241,
+      "lng": 11.9428,
+      "type": "Transport & infrastructure",
+      "setting": "A working inland freight terminal on the Saale river in Halle, with rail and road links, a harbour basin, quayside, tracks, weighing and loading equipment across a large industrial site.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/container-terminal-halle-saale"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/container-terminal-halle-saale",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/container-terminal-halle-saale",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-deutsche-nationalbibliothek-leipzig",
+      "name": "Deutsche Nationalbibliothek (Deutsche Buecherei)",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.3225,
+      "lng": 12.395,
+      "type": "Office, school & public building",
+      "setting": "The Leipzig home of Germany's national library, founded in 1912 and holding around 20 million items, in a purpose-built early 20th century building on Deutscher Platz.",
+      "source_urls": [
+        "https://www.dnb.de/EN",
+        "https://www.mdm-online.de/film-commission/location-guide/deutsche-nationalbibliothek-deutsche-buecherei"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/deutsche-nationalbibliothek-deutsche-buecherei",
+      "official_url": "https://www.dnb.de/EN",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-deutsches-museum",
       "name": "Deutsches Museum",
       "country": "Germany",
@@ -7319,6 +7810,22 @@
         "author": "Matt.smz86",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "de-ehemaliges-kaufhaus-hermann-tietz-gera",
+      "name": "Ehemaliges Kaufhaus Hermann Tietz Gera",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.8786,
+      "lng": 12.0841,
+      "type": "Industrial & derelict",
+      "setting": "A former department store in Gera dating to 1882, one of the first built by the Hermann Tietz chain, with the grand facade the company used to signal the scale of its business inside.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/ehemaliges-kaufhaus-hermann-tietz-gera"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/ehemaliges-kaufhaus-hermann-tietz-gera",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/ehemaliges-kaufhaus-hermann-tietz-gera",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-eisenbahnmuseum-bochum",
@@ -7396,6 +7903,38 @@
       "commission_url": "https://www.medienboard.de/en/"
     },
     {
+      "id": "de-flughafen-dresden-international",
+      "name": "Flughafen Dresden International",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.121,
+      "lng": 13.7626,
+      "type": "Transport & infrastructure",
+      "setting": "Dresden's airport, with a terminal built in 2001 in a glazed contemporary industrial style and Saxony's first underground S-Bahn station in its lower level.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/flughafen-dresden-international"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-dresden-international",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-dresden-international",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-flughafen-leipzig-halle",
+      "name": "Flughafen Leipzig/Halle",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.4212,
+      "lng": 12.2296,
+      "type": "Transport & infrastructure",
+      "setting": "An intercontinental airport between Leipzig and Halle, expanded around 2000 with a central terminal combining a railway station, multi storey car park and passenger check-in in one complex.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/flughafen-leipzig-halle-aussen"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-leipzig-halle-aussen",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/flughafen-leipzig-halle-aussen",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-frankfurt-bankenviertel",
       "name": "Frankfurt Bankenviertel",
       "country": "Germany",
@@ -7467,6 +8006,57 @@
         "author": "Arne Müseler",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "de-gedenkstaette-hoheneck",
+      "name": "Gedenkstaette Hoheneck",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 50.7045,
+      "lng": 12.7836,
+      "type": "Hospital, prison & institution",
+      "setting": "A listed former prison complex in Stollberg with a main tract and three wings; cells occupied the south and west wings over four floors, and the north wing held workshop production lines.",
+      "source_urls": [
+        "https://www.gedenkstaette-hoheneck.de",
+        "https://www.mdm-online.de/film-commission/location-guide/gedenkstaette-hoheneck"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/gedenkstaette-hoheneck",
+      "official_url": "https://www.gedenkstaette-hoheneck.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-glaeserne-manufaktur-dresden",
+      "name": "Glaeserne Manufaktur (Volkswagen)",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.0445,
+      "lng": 13.7559,
+      "type": "Industrial & derelict",
+      "setting": "Volkswagen's Transparent Factory in central Dresden, opened in 2001, where car assembly takes place behind glass walls visible to visitors alongside a showroom.",
+      "source_urls": [
+        "https://www.glaesernemanufaktur.de",
+        "https://www.mdm-online.de/film-commission/location-guide/volkswagen-sachsen-gmbh-die-glaeserne-manufaktur"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/volkswagen-sachsen-gmbh-die-glaeserne-manufaktur",
+      "official_url": "https://www.glaesernemanufaktur.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-glasmanufaktur-harzkristall",
+      "name": "Glasmanufaktur Harzkristall",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.8672,
+      "lng": 10.8798,
+      "type": "Industrial & derelict",
+      "setting": "One of Germany's few remaining working glassworks, at Derenburg in the Harz, where visitors can watch traditional glassblowing on the factory floor alongside a cafe and shop.",
+      "source_urls": [
+        "https://www.harzkristall.de",
+        "https://www.mdm-online.de/film-commission/location-guide/glasmanufaktur-harzkristall"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/glasmanufaktur-harzkristall",
+      "official_url": "https://www.harzkristall.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "goerlitz-old-town",
@@ -7547,6 +8137,40 @@
         "author": "BishkekRocks",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "de-hauptbahnhof-leipzig",
+      "name": "Hauptbahnhof Leipzig",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.3442,
+      "lng": 12.3803,
+      "type": "Transport & infrastructure",
+      "setting": "Leipzig's main station, with a nearly 300 metre long concourse building and a six-vault steel platform hall, built with a strong symmetrical layout on both sides of the tracks.",
+      "source_urls": [
+        "https://www.bahnhof.de/bahnhof-de/leipzig-hbf",
+        "https://www.mdm-online.de/film-commission/location-guide/hauptbahnhof-leipzig-inkl-bahn-u-gleisanlagen"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/hauptbahnhof-leipzig-inkl-bahn-u-gleisanlagen",
+      "official_url": "https://www.bahnhof.de/bahnhof-de/leipzig-hbf",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
+      "id": "de-hauptgebaeude-fsu-jena",
+      "name": "Hauptgebaeude FSU Jena",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.9294,
+      "lng": 11.5894,
+      "type": "Office, school & public building",
+      "setting": "The main Art Nouveau building of Friedrich Schiller University Jena, opened in 1908 for the university's 350th anniversary, with an asymmetrical three to four storey facade.",
+      "source_urls": [
+        "https://www.uni-jena.de/en",
+        "https://www.mdm-online.de/film-commission/location-guide/hauptgebaeude-fsu-jena-aussen"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/hauptgebaeude-fsu-jena-aussen",
+      "official_url": "https://www.uni-jena.de/en",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-heidelberg-university",
@@ -7794,6 +8418,22 @@
       "commission_url": "http://www.germanfilms.de"
     },
     {
+      "id": "de-kriminalpanoptikum-aschersleben",
+      "name": "Kriminalpanoptikum Aschersleben",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 51.7553,
+      "lng": 11.452,
+      "type": "Hospital, prison & institution",
+      "setting": "A former remand prison in Aschersleben, a bare red brick Prussian utility building from the late 19th century with barred windows, now kept as a crime and prison history exhibit.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/kriminalpanoptikum-in-der-untersuchungshaftanstalt-aschersleben"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/kriminalpanoptikum-in-der-untersuchungshaftanstalt-aschersleben",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/kriminalpanoptikum-in-der-untersuchungshaftanstalt-aschersleben",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-bethanien-berlin",
       "name": "Kunstquartier Bethanien",
       "country": "Germany",
@@ -7919,6 +8559,22 @@
       "commission_url": "https://www.bbfc.de/en/"
     },
     {
+      "id": "de-musikforum-katharinenkirche",
+      "name": "Musikforum Katharinenkirche",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 52.6004,
+      "lng": 11.8637,
+      "type": "Church & monastery",
+      "setting": "A former monastery church in Stendal, dating back to a 1468 dedication, converted into an acoustically modern concert hall hosting about 50 concerts and events a year.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/musikforum-katharinenkirche"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/musikforum-katharinenkirche",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/musikforum-katharinenkirche",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-laboe-marine-ehrenmal",
       "name": "Naval Memorial Laboe",
       "country": "Germany",
@@ -7982,6 +8638,23 @@
       }
     },
     {
+      "id": "de-oberlandesgericht-dresden",
+      "name": "Oberlandesgericht Dresden (Staendehaus)",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.0532,
+      "lng": 13.7394,
+      "type": "Hospital, prison & institution",
+      "setting": "Dresden's higher regional court, housed in the former Staendehaus built 1901-06 by Paul Wallot, standing between the Bruehlsche Terrasse and the Schlossplatz in the old town.",
+      "source_urls": [
+        "https://www.justiz.sachsen.de/olg/",
+        "https://www.mdm-online.de/film-commission/location-guide/oberlandesgericht-dresden"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/oberlandesgericht-dresden",
+      "official_url": "https://www.justiz.sachsen.de/olg/",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-olympiapark-munich",
       "name": "Olympiapark München",
       "country": "Germany",
@@ -8021,6 +8694,23 @@
       }
     },
     {
+      "id": "de-parkhaus-domplatz-erfurt",
+      "name": "Parkhaus Domplatz Erfurt",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 50.9773,
+      "lng": 11.0222,
+      "type": "Transport & infrastructure",
+      "setting": "A multi storey car park cut into Erfurt's medieval old town next to the cathedral and Petersberg citadel, with a glazed exit leading straight onto the Domplatz.",
+      "source_urls": [
+        "https://www.stadtwerke-erfurt.de/parken",
+        "https://www.mdm-online.de/film-commission/location-guide/parkhaus-domplatz-erfurt"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/parkhaus-domplatz-erfurt",
+      "official_url": "https://www.stadtwerke-erfurt.de/parken",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-peenemuende",
       "name": "Peenemünde",
       "country": "Germany",
@@ -8041,6 +8731,23 @@
         "author": "Peter Wippermann",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "de-porsche-leipzig",
+      "name": "Porsche Leipzig",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.4065,
+      "lng": 12.2902,
+      "type": "Industrial & derelict",
+      "setting": "Porsche's Leipzig production site, combining a working car factory with a 32 metre diamond-shaped Experience Centre building set in landscaped grounds.",
+      "source_urls": [
+        "https://www.porsche-leipzig.com",
+        "https://www.mdm-online.de/film-commission/location-guide/porsche-leipzig-gmbh"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/porsche-leipzig-gmbh",
+      "official_url": "https://www.porsche-leipzig.com",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-ruhr-uni-bochum",
@@ -8078,6 +8785,22 @@
         "author": "SB Alexander Kruse",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "de-schiffshebewerk-rothensee",
+      "name": "Schiffshebewerk Rothensee",
+      "country": "Germany",
+      "region": "Saxony-Anhalt",
+      "lat": 52.2265,
+      "lng": 11.674,
+      "type": "Transport & infrastructure",
+      "setting": "A 1938 ship lift on the Mittelland Canal north of Magdeburg, an engineering monument that connected canal traffic to the Elbe until 2001.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/schiffshebewerk-rothensee"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/schiffshebewerk-rothensee",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/schiffshebewerk-rothensee",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "de-schlosshotel-kronberg",
@@ -8463,6 +9186,23 @@
       }
     },
     {
+      "id": "de-world-trade-center-dresden",
+      "name": "World Trade Center Dresden",
+      "country": "Germany",
+      "region": "Saxony",
+      "lat": 51.0484,
+      "lng": 13.7214,
+      "type": "Office, school & public building",
+      "setting": "An office complex in Dresden that is part of the worldwide World Trade Center network, with flexibly divided office units available for rent by the day.",
+      "source_urls": [
+        "https://www.wtc-dresden.de",
+        "https://www.mdm-online.de/film-commission/location-guide/world-trade-center-dresden"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/world-trade-center-dresden",
+      "official_url": "https://www.wtc-dresden.de",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
+    },
+    {
       "id": "de-wuensdorf-garrison-town",
       "name": "Wünsdorf Garrison Town",
       "country": "Germany",
@@ -8522,6 +9262,22 @@
         "author": "Carsten Steger",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "de-zuckerfabrik-oldisleben",
+      "name": "Zuckerfabrik Oldisleben",
+      "country": "Germany",
+      "region": "Thuringia",
+      "lat": 51.313,
+      "lng": 11.1731,
+      "type": "Industrial & derelict",
+      "setting": "The world's only sugar beet factory preserved as a technical monument, near Oldisleben, keeping its production line and the social spaces used by its workers.",
+      "source_urls": [
+        "https://www.mdm-online.de/film-commission/location-guide/zuckerfabrik-oldisleben-technisches-denkmal-der-suedzucker-ag"
+      ],
+      "url": "https://www.mdm-online.de/film-commission/location-guide/zuckerfabrik-oldisleben-technisches-denkmal-der-suedzucker-ag",
+      "official_url": "https://www.mdm-online.de/film-commission/location-guide/zuckerfabrik-oldisleben-technisches-denkmal-der-suedzucker-ag",
+      "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
       "id": "gr-allatini-factory",
@@ -9574,6 +10330,23 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-childrens-railway",
+      "name": "Children's Railway (Gyermekvasut)",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.497,
+      "lng": 18.9723,
+      "type": "Transport & infrastructure",
+      "setting": "A narrow-gauge forest railway in the Buda hills staffed on-train by schoolchildren under adult supervision, running steam and diesel services between Huvosvolgy and Szechenyi-hegy.",
+      "suitability": "Site offers hire of a special carriage or special train for private and corporate events",
+      "source_urls": [
+        "https://gyermekvasut.hu/kulonkocsi-es-kulonvonat-berles/",
+        "https://gyermekvasut.hu"
+      ],
+      "official_url": "https://gyermekvasut.hu/kulonkocsi-es-kulonvonat-berles/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-csepel-works",
       "name": "Csepel Works",
       "country": "Hungary",
@@ -9605,6 +10378,23 @@
         "https://en.wikipedia.org/wiki/Castle_of_Di%C3%B3sgy%C5%91r"
       ],
       "official_url": "https://diosgyorivar.hu/",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-dreher-breweries",
+      "name": "Dreher Breweries",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4886,
+      "lng": 19.1473,
+      "type": "Industrial & derelict",
+      "setting": "A working brewery complex in the Kobanya district of Budapest, Hungary's best known beer producer, offering organised factory tours of its production halls.",
+      "suitability": "Site offers bookable factory visits (gyarlatogatas) of the working brewery",
+      "source_urls": [
+        "https://www.dreherzrt.hu/sorutazas/jelentkezes-sorturara/",
+        "https://www.dreherzrt.hu"
+      ],
+      "official_url": "https://www.dreherzrt.hu/sorutazas/jelentkezes-sorturara/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -9775,6 +10565,40 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-house-of-hungarian-music",
+      "name": "House of Hungarian Music",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5132,
+      "lng": 19.0837,
+      "type": "Modern architecture",
+      "setting": "A 2022 concert and exhibition building by Sou Fujimoto in Budapest's City Park, with a canopy roof cut by tree-shaped openings over glass-walled halls, a 360-degree dome cinema and recording studios.",
+      "suitability": "Site publishes room hire (teremberles) for its halls and studios",
+      "source_urls": [
+        "https://zenehaza.hu/teremberles",
+        "https://zenehaza.hu"
+      ],
+      "official_url": "https://zenehaza.hu/teremberles",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-railway-history-park",
+      "name": "Hungarian Railway History Park",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.5411,
+      "lng": 19.097,
+      "type": "Transport & infrastructure",
+      "setting": "An open-air railway museum in Budapest with a working turntable, roundhouse and rolling stock from steam to electric era, plus an 870-metre operating narrow-gauge line.",
+      "capacity": 2500,
+      "facilities": "Orient Hall (up to 2,500 people), Kando Room (40 people) and outdoor grounds for hire",
+      "source_urls": [
+        "https://vasuttortenetipark.hu"
+      ],
+      "official_url": "https://vasuttortenetipark.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hungarian-state-opera-house",
       "name": "Hungarian State Opera House",
       "country": "Hungary",
@@ -9810,6 +10634,22 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-kecskemetfilm-studio",
+      "name": "Kecskemetfilm Animation Studio",
+      "country": "Hungary",
+      "region": "Bacs-Kiskun",
+      "lat": 46.9206,
+      "lng": 19.702,
+      "type": "Studio & backlot",
+      "setting": "A working animation studio in Kecskemet producing short and feature animated films, also home to the Kecskemet Animation Film Festival, with facilities visited on organised studio tours.",
+      "suitability": "Studio offers organised visits (studiolatogatas) to its production facility",
+      "source_urls": [
+        "https://kecskemetfilm.hu"
+      ],
+      "official_url": "https://kecskemetfilm.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-kelenfold-power-plant",
       "name": "Kelenfold Power Plant",
       "country": "Hungary",
@@ -9823,6 +10663,24 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-kincsem-park",
+      "name": "Kincsem Park",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4972,
+      "lng": 19.1341,
+      "type": "Theatre, arena & venue",
+      "setting": "Hungary's only horse racing track, an 86-hectare site in Budapest with grandstands, a panorama restaurant with VIP boxes and grounds used for galloping, trotting and greyhound racing.",
+      "facilities": "Panorama restaurant with separated VIP boxes overlooking the track",
+      "suitability": "Site publishes corporate event, conference and private celebration hire, customised to the event type",
+      "source_urls": [
+        "https://kincsempark.hu/rendezvenyszervezes/",
+        "https://kincsempark.hu"
+      ],
+      "official_url": "https://kincsempark.hu/rendezvenyszervezes/",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -10002,6 +10860,21 @@
       "commission_url": "https://nfi.hu/en"
     },
     {
+      "id": "hu-mvm-dome",
+      "name": "MVM Dome",
+      "country": "Hungary",
+      "region": "Budapest",
+      "lat": 47.4735,
+      "lng": 19.1003,
+      "type": "Theatre, arena & venue",
+      "setting": "A large modern indoor arena on Ulloi ut in Budapest's Nepliget district, built for concerts, sports events and expos with VIP hospitality areas and on-site parking.",
+      "source_urls": [
+        "https://www.mvm-dome.hu"
+      ],
+      "official_url": "https://www.mvm-dome.hu",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
       "id": "hu-new-york-cafe",
       "name": "New York Cafe",
       "country": "Hungary",
@@ -10092,6 +10965,22 @@
       ],
       "url": "https://nfi.hu/en/location-guide-1",
       "official_url": "https://nfi.hu/en/location-guide-1",
+      "commission_url": "https://nfi.hu/en"
+    },
+    {
+      "id": "hu-opusztaszer-heritage-park",
+      "name": "Opusztaszer National Heritage Park",
+      "country": "Hungary",
+      "region": "Csongrad-Csanad",
+      "lat": 46.4858,
+      "lng": 20.0896,
+      "type": "Village & countryside",
+      "setting": "An open-air heritage park on the Great Plain marking the site of Hungary's first national assembly, with a rotunda housing the Feszty circular panorama painting, reconstructed period buildings and an ethnographic skanzen.",
+      "suitability": "Park's tourist office organises weddings and events on site",
+      "source_urls": [
+        "https://opusztaszer.hu"
+      ],
+      "official_url": "https://opusztaszer.hu",
       "commission_url": "https://nfi.hu/en"
     },
     {
@@ -11568,6 +12457,22 @@
       "commission_url": "https://www.screenireland.ie/locations"
     },
     {
+      "id": "it-aeroporto-caproni-trento",
+      "name": "Aeroporto Gianni Caproni, Trento",
+      "country": "Italy",
+      "region": "Trentino",
+      "lat": 46.0219,
+      "lng": 11.1256,
+      "type": "Transport & infrastructure",
+      "setting": "A small regional airport south of Trento in the Adige valley, handling private and tourist flights, with an aviation museum and a helicopter base on site.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/848/aeroporto-gianni-caproni-trento"
+      ],
+      "url": "https://italyformovies.it/location/detail/848/aeroporto-gianni-caproni-trento",
+      "official_url": "https://italyformovies.it/location/detail/848/aeroporto-gianni-caproni-trento",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-antico-caffe-greco",
       "name": "Antico Caffè Greco",
       "country": "Italy",
@@ -11674,6 +12579,23 @@
       }
     },
     {
+      "id": "it-biblioteca-alessandrina-roma",
+      "name": "Biblioteca Universitaria Alessandrina, Roma",
+      "country": "Italy",
+      "region": "Lazio",
+      "lat": 41.901,
+      "lng": 12.5122,
+      "type": "Office, school & public building",
+      "setting": "A university library founded in 1667, moved in 1935 to Rome's Citta Universitaria campus behind the rectorate, now run by the Italian ministry of culture.",
+      "source_urls": [
+        "https://alessandrina.cultura.gov.it/",
+        "https://italyformovies.it/location/detail/18128/biblioteca-universitaria-alessandrina-roma"
+      ],
+      "url": "https://italyformovies.it/location/detail/18128/biblioteca-universitaria-alessandrina-roma",
+      "official_url": "https://alessandrina.cultura.gov.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-unibocconi",
       "name": "Bocconi University",
       "country": "Italy",
@@ -11750,6 +12672,55 @@
       "commission_url": "https://www.abruzzofilmcommission.com/"
     },
     {
+      "id": "it-cantiere-ernesto-riva",
+      "name": "Cantiere Ernesto Riva, Laglio",
+      "country": "Italy",
+      "region": "Lombardy",
+      "lat": 45.881,
+      "lng": 9.138,
+      "type": "Industrial & derelict",
+      "setting": "A boatyard on Lake Como founded in 1771 at Laglio, still building and restoring wooden rowing, sailing and motor boats, with a second workshop opened at Maslianico in 2010.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/19019/cantiere-ernesto-riva"
+      ],
+      "url": "https://italyformovies.it/location/detail/19019/cantiere-ernesto-riva",
+      "official_url": "https://italyformovies.it/location/detail/19019/cantiere-ernesto-riva",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-carcere-borbonico-santo-stefano",
+      "name": "Carcere Borbonico di Santo Stefano",
+      "country": "Italy",
+      "region": "Lazio",
+      "lat": 40.7898,
+      "lng": 13.4546,
+      "type": "Hospital, prison & institution",
+      "setting": "A disused 1795 island prison off Ventotene built on a Panopticon plan, used to hold political prisoners into the 20th century and closed in 1965, now inside a state nature reserve.",
+      "source_urls": [
+        "https://www.parcocirceo.it/",
+        "https://italyformovies.it/location/detail/17008/carcere-borbonico-di-santo-stefano"
+      ],
+      "url": "https://italyformovies.it/location/detail/17008/carcere-borbonico-di-santo-stefano",
+      "official_url": "https://www.parcocirceo.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-carcere-di-accadia",
+      "name": "Carcere di Accadia",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.1588,
+      "lng": 15.3315,
+      "type": "Hospital, prison & institution",
+      "setting": "A prison building completed in 1993 in the Apulian hill town of Accadia with capacity for 90 inmates, never used as a jail and now owned by the municipality as a storage depot.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/17436/carcere-di-accadia"
+      ],
+      "url": "https://italyformovies.it/location/detail/17436/carcere-di-accadia",
+      "official_url": "https://italyformovies.it/location/detail/17436/carcere-di-accadia",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-carcere-di-volturara-appula",
       "name": "Carcere di Volturara Appula",
       "country": "Italy",
@@ -11765,6 +12736,40 @@
       "url": "https://www.italyformovies.it/location?pagina=3",
       "official_url": "https://www.comune.volturaraappula.fg.it",
       "commission_url": "https://www.italyformovies.it"
+    },
+    {
+      "id": "it-centrale-fies-dro",
+      "name": "Centrale Elettrica di Fies",
+      "country": "Italy",
+      "region": "Trentino",
+      "lat": 45.9902,
+      "lng": 10.9267,
+      "type": "Industrial & derelict",
+      "setting": "An early 20th century hydroelectric plant on the Sarca river near Dro, partly still in operation, since 2002 also run as Centrale Fies, a laboratory for theatre, cinema and performance.",
+      "source_urls": [
+        "https://www.centralefies.it/",
+        "https://italyformovies.it/location/detail/1675/centrale-elettrica-di-fies-dro"
+      ],
+      "url": "https://italyformovies.it/location/detail/1675/centrale-elettrica-di-fies-dro",
+      "official_url": "https://www.centralefies.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-centrale-idrodinamica-trieste",
+      "name": "Centrale Idrodinamica e Sottostazione Elettrica, Trieste",
+      "country": "Italy",
+      "region": "Friuli-Venezia Giulia",
+      "lat": 45.6607,
+      "lng": 13.7644,
+      "type": "Industrial & derelict",
+      "setting": "A restored 1887 to 1890 hydraulic power station in Trieste's Porto Vecchio that once pressurised water for the port's cranes and hoists, with accumulator towers, a boiler house and a tall chimney, now a museum building.",
+      "source_urls": [
+        "https://www.portovecchiotrieste.it/",
+        "https://italyformovies.it/location/detail/18886/centrale-idrodinamica-e-sottostazione-elettrica-trieste"
+      ],
+      "url": "https://italyformovies.it/location/detail/18886/centrale-idrodinamica-e-sottostazione-elettrica-trieste",
+      "official_url": "https://www.portovecchiotrieste.it/",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "cinecitta",
@@ -11792,6 +12797,40 @@
         "author": "Andrea Martella",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-cinema-fulgor-rimini",
+      "name": "Cinema Fulgor, Rimini",
+      "country": "Italy",
+      "region": "Emilia-Romagna",
+      "lat": 44.0616,
+      "lng": 12.5659,
+      "type": "Theatre, arena & venue",
+      "setting": "A historic single screen cinema inside a rebuilt 18th century palazzo in central Rimini, associated with Federico Fellini's childhood and evoked in his films, restored in 2018 with sets by Dante Ferretti.",
+      "source_urls": [
+        "https://www.fellinimuseum.it/",
+        "https://italyformovies.it/location/detail/18838/cinema-fulgor-rimini"
+      ],
+      "url": "https://italyformovies.it/location/detail/18838/cinema-fulgor-rimini",
+      "official_url": "https://www.fellinimuseum.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-cineporto-emilia-romagna",
+      "name": "Cineporto dell'Emilia-Romagna",
+      "country": "Italy",
+      "region": "Emilia-Romagna",
+      "lat": 44.5447,
+      "lng": 10.8072,
+      "type": "Studio & backlot",
+      "setting": "A privately built production studio near Modena with a column free sound stage, offices and post-production suites, designed for film, advertising and photo shoots with easy truck access.",
+      "source_urls": [
+        "https://www.scarabeoentertainment.it/",
+        "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna"
+      ],
+      "url": "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna",
+      "official_url": "https://www.scarabeoentertainment.it/",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "it-cineteca-di-bologna",
@@ -11872,6 +12911,83 @@
         "author": "Antuang",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-domus-mercatorum-verona",
+      "name": "Domus Mercatorum, Verona",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.4431,
+      "lng": 10.9972,
+      "type": "Office, school & public building",
+      "setting": "A medieval merchants' guild hall on Piazza Erbe in Verona, built under the Scaligeri lords with a brick portico, mullioned windows and Ghibelline battlements.",
+      "source_urls": [
+        "https://www.vr.camcom.it/",
+        "https://italyformovies.it/location/detail/18779/domus-mercatorum-verona"
+      ],
+      "url": "https://italyformovies.it/location/detail/18779/domus-mercatorum-verona",
+      "official_url": "https://www.vr.camcom.it/",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Domus_Mercatorum_-_Verona_2016.jpg/960px-Domus_Mercatorum_-_Verona_2016.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Domus_Mercatorum_-_Verona_2016.jpg",
+        "author": "Jose Luiz",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-ex-carcere-le-nuove-torino",
+      "name": "Ex Carcere Le Nuove, Torino",
+      "country": "Italy",
+      "region": "Piedmont",
+      "lat": 45.0681,
+      "lng": 7.6605,
+      "type": "Hospital, prison & institution",
+      "setting": "A former Turin prison built from 1857 for solitary confinement, used to hold political prisoners under fascism and the Nazi occupation, closed in the 1980s and now housing court offices, a museum and an air raid bunker.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/356/ex-carcere-le-nuove-torino"
+      ],
+      "url": "https://italyformovies.it/location/detail/356/ex-carcere-le-nuove-torino",
+      "official_url": "https://italyformovies.it/location/detail/356/ex-carcere-le-nuove-torino",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Torino_-_Museo_del_carcere_Le_Nuove_-_202209250717.jpg/960px-Torino_-_Museo_del_carcere_Le_Nuove_-_202209250717.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Torino_-_Museo_del_carcere_Le_Nuove_-_202209250717.jpg",
+        "author": "Mastrocom",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-ex-ospedale-forlanini-roma",
+      "name": "Ex Ospedale Carlo Forlanini, Roma",
+      "country": "Italy",
+      "region": "Lazio",
+      "lat": 41.8667,
+      "lng": 12.4497,
+      "type": "Hospital, prison & institution",
+      "setting": "A closed 1930s tuberculosis sanatorium in Rome, built as a self-contained horseshoe-shaped campus with wards, laboratories, a theatre and a cinema, vacated in 2015.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18871/ex-ospedale-carlo-forlanini-roma"
+      ],
+      "url": "https://italyformovies.it/location/detail/18871/ex-ospedale-carlo-forlanini-roma",
+      "official_url": "https://italyformovies.it/location/detail/18871/ex-ospedale-carlo-forlanini-roma",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-ex-zuccherificio-eridania-ceggia",
+      "name": "Ex Zuccherificio Eridania, Ceggia",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.6827,
+      "lng": 12.6429,
+      "type": "Industrial & derelict",
+      "setting": "A disused sugar refinery in the countryside near Ceggia in the Veneto, first run as a distillery in 1936 and closed in 2001, with brick factory halls, storage buildings and water settling tanks.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18745/ex-zuccherificio-eridania-ceggia"
+      ],
+      "url": "https://italyformovies.it/location/detail/18745/ex-zuccherificio-eridania-ceggia",
+      "official_url": "https://italyformovies.it/location/detail/18745/ex-zuccherificio-eridania-ceggia",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "it-fabbrica-del-vapore",
@@ -11998,6 +13114,22 @@
       "commission_url": "https://www.sardegnafilmcommission.it/"
     },
     {
+      "id": "it-hotel-stammer-chiusa",
+      "name": "Hotel Stammer, Chiusa",
+      "country": "Italy",
+      "region": "South Tyrol",
+      "lat": 46.6488,
+      "lng": 11.6024,
+      "type": "Hotel & interiors",
+      "setting": "An early 20th century mountain hotel in the Val di Funes near Chiusa in South Tyrol, extended through the mid-century, now standing empty with period interiors and alpine surroundings.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18529/hotel-stammer-chiusa"
+      ],
+      "url": "https://italyformovies.it/location/detail/18529/hotel-stammer-chiusa",
+      "official_url": "https://italyformovies.it/location/detail/18529/hotel-stammer-chiusa",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-interporto-di-padova",
       "name": "Interporto di Padova",
       "country": "Italy",
@@ -12100,6 +13232,23 @@
       "commission_url": "https://www.italyformovies.it"
     },
     {
+      "id": "it-masseria-tagliente",
+      "name": "Masseria Tagliente, Martina Franca",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 40.7042,
+      "lng": 17.34,
+      "type": "House & apartment",
+      "setting": "A mid-19th century fortified farmhouse estate in the Murge hills near Martina Franca, with a manor house, chapel and around twenty trulli, still run as a working agricultural and livestock estate.",
+      "source_urls": [
+        "https://www.masseriatagliente.it/",
+        "https://italyformovies.it/location/detail/18332/masseria-tagliente-martina-franca"
+      ],
+      "url": "https://italyformovies.it/location/detail/18332/masseria-tagliente-martina-franca",
+      "official_url": "https://www.masseriatagliente.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-maxxi",
       "name": "MAXXI - National Museum of 21st Century Arts",
       "country": "Italy",
@@ -12136,6 +13285,77 @@
       }
     },
     {
+      "id": "it-mercato-coperto-trieste",
+      "name": "Mercato Coperto, Trieste",
+      "country": "Italy",
+      "region": "Friuli-Venezia Giulia",
+      "lat": 45.6517,
+      "lng": 13.777,
+      "type": "Bar, restaurant & shop",
+      "setting": "A 1936 covered market in Trieste with a rationalist facade, wide glazed windows and a spiral ramp linking two trading floors of food, clothing and footwear stalls.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18908/mercato-coperto-trieste"
+      ],
+      "url": "https://italyformovies.it/location/detail/18908/mercato-coperto-trieste",
+      "official_url": "https://italyformovies.it/location/detail/18908/mercato-coperto-trieste",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Mercato_Coperto%2C_Trieste_%281%29.jpg/960px-Mercato_Coperto%2C_Trieste_%281%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mercato_Coperto,_Trieste_(1).jpg",
+        "author": "Peter Christian Riemann",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-mercato-vucciria-palermo",
+      "name": "Mercato della Vucciria, Palermo",
+      "country": "Italy",
+      "region": "Sicily",
+      "lat": 38.1174,
+      "lng": 13.3637,
+      "type": "Bar, restaurant & shop",
+      "setting": "A historic market quarter in central Palermo once devoted to the meat and fish trade, today a reduced but atmospheric warren of stalls, street food stands and nightlife.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18062/mercato-della-vucciria-palermo"
+      ],
+      "url": "https://italyformovies.it/location/detail/18062/mercato-della-vucciria-palermo",
+      "official_url": "https://italyformovies.it/location/detail/18062/mercato-della-vucciria-palermo",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-mercato-erbe-bologna",
+      "name": "Mercato delle Erbe, Bologna",
+      "country": "Italy",
+      "region": "Emilia-Romagna",
+      "lat": 44.4952,
+      "lng": 11.3407,
+      "type": "Bar, restaurant & shop",
+      "setting": "A covered food market in central Bologna built in 1910 with an iron and glass roof on a Greek cross plan, rebuilt after wartime bomb damage and now combining market stalls with bars and restaurants.",
+      "source_urls": [
+        "https://www.mercatodelleerbe.it/",
+        "https://italyformovies.it/location/detail/18027/mercato-delle-erbe-bologna"
+      ],
+      "url": "https://italyformovies.it/location/detail/18027/mercato-delle-erbe-bologna",
+      "official_url": "https://www.mercatodelleerbe.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-mercato-ittico-ancona",
+      "name": "Mercato Ittico di Ancona",
+      "country": "Italy",
+      "region": "Marche",
+      "lat": 43.617,
+      "lng": 13.5171,
+      "type": "Bar, restaurant & shop",
+      "setting": "A fish market and cold storage warehouse by Ancona's docks, designed by Gaetano Minnucci, where wholesale auctions for trawled and blue fish are still held on weekday mornings.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16239/mercato-ittico-di-ancona"
+      ],
+      "url": "https://italyformovies.it/location/detail/16239/mercato-ittico-di-ancona",
+      "official_url": "https://italyformovies.it/location/detail/16239/mercato-ittico-di-ancona",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-milano-centrale",
       "name": "Milano Centrale Railway Station",
       "country": "Italy",
@@ -12159,6 +13379,54 @@
         "author": "Ludvig14",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-miniera-raibl",
+      "name": "Miniera di Raibl, Cave del Predil",
+      "country": "Italy",
+      "region": "Friuli-Venezia Giulia",
+      "lat": 46.4413,
+      "lng": 13.571,
+      "type": "Industrial & derelict",
+      "setting": "A former lead and zinc mine near Tarvisio with 120 kilometres of galleries, closed in 1990 and now a geo-mining park with a mining museum and an electric train tour through the tunnels.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18896/miniera-di-raibl-cave-del-predil"
+      ],
+      "url": "https://italyformovies.it/location/detail/18896/miniera-di-raibl-cave-del-predil",
+      "official_url": "https://italyformovies.it/location/detail/18896/miniera-di-raibl-cave-del-predil",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-miniera-montecatini-san-giovanni-rotondo",
+      "name": "Miniera Montecatini, San Giovanni Rotondo",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 41.7069,
+      "lng": 15.7288,
+      "type": "Industrial & derelict",
+      "setting": "A former bauxite mine in the Gargano hills near San Giovanni Rotondo, worked by the Montecatini company from 1937 to 1973, left as an industrial and quarrying landscape.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16222/miniera-montecatini"
+      ],
+      "url": "https://italyformovies.it/location/detail/16222/miniera-montecatini",
+      "official_url": "https://italyformovies.it/location/detail/16222/miniera-montecatini",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-miniera-trabonella-caltanissetta",
+      "name": "Miniera Trabonella, Caltanissetta",
+      "country": "Italy",
+      "region": "Sicily",
+      "lat": 37.4903,
+      "lng": 14.0633,
+      "type": "Industrial & derelict",
+      "setting": "A former sulphur mine near Caltanissetta worked from around 1825 to 1950, one of Sicily's deepest at 270 metres, with surviving administration buildings, kilns and winding gear.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/17317/miniera-trabonella-caltanissetta"
+      ],
+      "url": "https://italyformovies.it/location/detail/17317/miniera-trabonella-caltanissetta",
+      "official_url": "https://italyformovies.it/location/detail/17317/miniera-trabonella-caltanissetta",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "it-mole-antonelliana-museo-cinema",
@@ -12258,6 +13526,23 @@
         "author": "Agostino Artnoir Sella",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "it-ospedale-molinette-torino",
+      "name": "Ospedale Molinette, Torino",
+      "country": "Italy",
+      "region": "Piedmont",
+      "lat": 45.0438,
+      "lng": 7.6671,
+      "type": "Hospital, prison & institution",
+      "setting": "A large active university hospital in Turin opened in 1935, built as a self-contained health campus of dozens of pavilions linked by covered walkways and underground tunnels.",
+      "source_urls": [
+        "https://www.cittadellasalute.to.it/",
+        "https://italyformovies.it/location/detail/17998/ospedale-molinette-torino"
+      ],
+      "url": "https://italyformovies.it/location/detail/17998/ospedale-molinette-torino",
+      "official_url": "https://www.cittadellasalute.to.it/",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "it-palaflorio",
@@ -12371,6 +13656,39 @@
       }
     },
     {
+      "id": "it-porto-di-ancona",
+      "name": "Porto di Ancona",
+      "country": "Italy",
+      "region": "Marche",
+      "lat": 43.617,
+      "lng": 13.5171,
+      "type": "Transport & infrastructure",
+      "setting": "A natural harbour port in the Marche used since antiquity, today Italy's leading port for vehicle and passenger ferry traffic and among the busiest on the Adriatic for container freight.",
+      "source_urls": [
+        "https://www.porto.ancona.it/",
+        "https://italyformovies.it/location/detail/169/porto-di-ancona"
+      ],
+      "url": "https://italyformovies.it/location/detail/169/porto-di-ancona",
+      "official_url": "https://www.porto.ancona.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-porto-di-cagliari",
+      "name": "Porto di Cagliari",
+      "country": "Italy",
+      "region": "Sardinia",
+      "lat": 39.2172,
+      "lng": 9.1133,
+      "type": "Transport & infrastructure",
+      "setting": "A multifunction commercial and passenger port in the Gulf of Angels at Cagliari, developed over centuries into today's terminal and still central to Sardinia's shipping trade.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/269/porto-di-cagliari"
+      ],
+      "url": "https://italyformovies.it/location/detail/269/porto-di-cagliari",
+      "official_url": "https://italyformovies.it/location/detail/269/porto-di-cagliari",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-porto-di-gioia-tauro",
       "name": "Porto di Gioia Tauro",
       "country": "Italy",
@@ -12389,6 +13707,62 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:Gioiatauro_seaport.jpg",
         "author": "The original uploader was Istvánka at Hungarian Wikipedia.",
         "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "it-porto-di-napoli",
+      "name": "Porto di Napoli",
+      "country": "Italy",
+      "region": "Campania",
+      "lat": 40.8359,
+      "lng": 14.2488,
+      "type": "Transport & infrastructure",
+      "setting": "A major container and passenger port on the Bay of Naples with shipyards, warehouses and the modernist Casa del Portuale building, among the city's most requested filming locations.",
+      "source_urls": [
+        "https://www.adsptirrenocentrale.it/",
+        "https://italyformovies.it/location/detail/322/porto-di-napoli"
+      ],
+      "url": "https://italyformovies.it/location/detail/322/porto-di-napoli",
+      "official_url": "https://www.adsptirrenocentrale.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-porto-di-taranto",
+      "name": "Porto di Taranto",
+      "country": "Italy",
+      "region": "Apulia",
+      "lat": 40.5488,
+      "lng": 17.0806,
+      "type": "Transport & infrastructure",
+      "setting": "A working commercial and industrial port on the Ionian coast in Apulia, among Italy's busiest for freight, with a separate marina in the old town offering berths and boat services.",
+      "source_urls": [
+        "https://www.port.taranto.it/",
+        "https://italyformovies.it/location/detail/16233/porto-di-taranto"
+      ],
+      "url": "https://italyformovies.it/location/detail/16233/porto-di-taranto",
+      "official_url": "https://www.port.taranto.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-porto-flavia",
+      "name": "Porto Flavia, Iglesias",
+      "country": "Italy",
+      "region": "Sardinia",
+      "lat": 39.3315,
+      "lng": 8.4323,
+      "type": "Industrial & derelict",
+      "setting": "An early 20th century mineral loading facility cut into a coastal cliff near Iglesias, part of an underground tunnel system that loaded ore directly onto ships, now inside a mining heritage park.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/16849/porto-flavia"
+      ],
+      "url": "https://italyformovies.it/location/detail/16849/porto-flavia",
+      "official_url": "https://italyformovies.it/location/detail/16849/porto-flavia",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Porto_Flavia%2C_Sardegna_01.jpg/960px-Porto_Flavia%2C_Sardegna_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Porto_Flavia,_Sardegna_01.jpg",
+        "author": "Emanuele Lattarulo",
+        "license": "CC BY 2.0"
       }
     },
     {
@@ -12464,6 +13838,23 @@
       }
     },
     {
+      "id": "it-scuola-grande-san-giovanni-venezia",
+      "name": "Scuola Grande di San Giovanni Evangelista, Venezia",
+      "country": "Italy",
+      "region": "Veneto",
+      "lat": 45.4384,
+      "lng": 12.3258,
+      "type": "Office, school & public building",
+      "setting": "A 13th century confraternity building in Venice with a Gothic hall, a Renaissance staircase by Mauro Codussi and a baroque chapter hall, now run as a museum and event venue.",
+      "source_urls": [
+        "https://www.scuolasangiovanni.it/",
+        "https://italyformovies.it/location/detail/18765/scuola-grande-san-giovanni-evangelista-di-venezia"
+      ],
+      "url": "https://italyformovies.it/location/detail/18765/scuola-grande-san-giovanni-evangelista-di-venezia",
+      "official_url": "https://www.scuolasangiovanni.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
       "id": "it-stadio-olimpico",
       "name": "Stadio Olimpico",
       "country": "Italy",
@@ -12485,6 +13876,28 @@
       }
     },
     {
+      "id": "it-stazione-porta-susa-torino",
+      "name": "Stazione di Porta Susa, Torino",
+      "country": "Italy",
+      "region": "Piedmont",
+      "lat": 45.0718,
+      "lng": 7.666,
+      "type": "Transport & infrastructure",
+      "setting": "A modern high speed rail hub in Turin with a 385 metre steel and glass concourse, built over a buried through line, used for contemporary station and transit scenes.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/18298/stazione-di-porta-susa-torino"
+      ],
+      "url": "https://italyformovies.it/location/detail/18298/stazione-di-porta-susa-torino",
+      "official_url": "https://italyformovies.it/location/detail/18298/stazione-di-porta-susa-torino",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Torino_Porta_Susa_2014_06.jpg/960px-Torino_Porta_Susa_2014_06.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Torino_Porta_Susa_2014_06.jpg",
+        "author": "Incola",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
       "id": "it-teatro-alla-scala",
       "name": "Teatro alla Scala",
       "country": "Italy",
@@ -12503,6 +13916,29 @@
         "file_page": "https://commons.wikimedia.org/wiki/File:20110725_Milano_La_Scala_5507.jpg",
         "author": "Jakub Hałun",
         "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-teatro-san-carlo-napoli",
+      "name": "Teatro di San Carlo, Napoli",
+      "country": "Italy",
+      "region": "Campania",
+      "lat": 40.8374,
+      "lng": 14.2498,
+      "type": "Theatre, arena & venue",
+      "setting": "An 18th century royal opera house beside Naples' Palazzo Reale, seating around 1,400 across five tiers of boxes, still in regular use for opera, ballet and concerts.",
+      "source_urls": [
+        "https://www.teatrosancarlo.it/it/",
+        "https://italyformovies.it/location/detail/18352/teatro-di-san-carlo-napoli"
+      ],
+      "url": "https://italyformovies.it/location/detail/18352/teatro-di-san-carlo-napoli",
+      "official_url": "https://www.teatrosancarlo.it/it/",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Teatro_di_San_Carlo_Napoli.jpg/960px-Teatro_di_San_Carlo_Napoli.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Teatro_di_San_Carlo_Napoli.jpg",
+        "author": "Ariannakho",
+        "license": "CC BY 4.0"
       }
     },
     {
@@ -12529,6 +13965,29 @@
       }
     },
     {
+      "id": "it-teatro-massimo-bellini-catania",
+      "name": "Teatro Massimo Bellini, Catania",
+      "country": "Italy",
+      "region": "Sicily",
+      "lat": 37.5043,
+      "lng": 15.0908,
+      "type": "Theatre, arena & venue",
+      "setting": "An 1890 opera house in Catania with an eclectic facade and a horseshoe auditorium of four tiers of boxes seating around 2,000, still used for opera and concerts.",
+      "source_urls": [
+        "https://www.teatromassimobellini.it/",
+        "https://italyformovies.it/location/detail/17297/teatro-bellini-catania"
+      ],
+      "url": "https://italyformovies.it/location/detail/17297/teatro-bellini-catania",
+      "official_url": "https://www.teatromassimobellini.it/",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Catania_-_Teatro_Massimo_Vincenzo_Bellini_2090.jpg/960px-Catania_-_Teatro_Massimo_Vincenzo_Bellini_2090.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Catania_-_Teatro_Massimo_Vincenzo_Bellini_2090.jpg",
+        "author": "Phyrexian",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
       "id": "it-teatro-petruzzelli",
       "name": "Teatro Petruzzelli",
       "country": "Italy",
@@ -12546,6 +14005,29 @@
         "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg/960px-Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Bari_-_Teatro_Petruzzelli_-_Fa%C3%A7ade.jpg",
         "author": "Benjamin Smith",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "it-teatro-verdi-pisa",
+      "name": "Teatro Verdi, Pisa",
+      "country": "Italy",
+      "region": "Tuscany",
+      "lat": 43.7164,
+      "lng": 10.4048,
+      "type": "Theatre, arena & venue",
+      "setting": "A 19th century theatre in central Pisa with a neoclassical facade and portico, built 1865 to 1867, with one of the largest stages in Italy at 26 by 32 metres.",
+      "source_urls": [
+        "https://www.teatrodipisa.pi.it/",
+        "https://italyformovies.it/location/detail/17103/teatro-verdi-di-pisa"
+      ],
+      "url": "https://italyformovies.it/location/detail/17103/teatro-verdi-di-pisa",
+      "official_url": "https://www.teatrodipisa.pi.it/",
+      "commission_url": "https://italyformovies.it",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Teatro_Giuseppe_Verdi_%28Pisa%29.jpg/960px-Teatro_Giuseppe_Verdi_%28Pisa%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Teatro_Giuseppe_Verdi_(Pisa).jpg",
+        "author": "Teatrodipisanonufficiale",
         "license": "CC BY-SA 4.0"
       }
     },
@@ -12584,6 +14066,39 @@
         "author": "Benjamin Smith",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "it-universita-federico-ii-napoli",
+      "name": "Universita degli Studi di Napoli Federico II",
+      "country": "Italy",
+      "region": "Campania",
+      "lat": 40.8497,
+      "lng": 14.2649,
+      "type": "Office, school & public building",
+      "setting": "The neo-baroque main building of one of the world's oldest universities on Corso Umberto I in Naples, built 1897 to 1908 with a grand staircase and a former Jesuit cloister behind it.",
+      "source_urls": [
+        "https://www.unina.it/",
+        "https://italyformovies.it/location/detail/18354/universita-degli-studi-di-napoli-federico-ii"
+      ],
+      "url": "https://italyformovies.it/location/detail/18354/universita-degli-studi-di-napoli-federico-ii",
+      "official_url": "https://www.unina.it/",
+      "commission_url": "https://italyformovies.it"
+    },
+    {
+      "id": "it-universita-mediterranea-reggio-calabria",
+      "name": "Universita degli Studi Mediterranea, Reggio Calabria",
+      "country": "Italy",
+      "region": "Calabria",
+      "lat": 38.1035,
+      "lng": 15.6398,
+      "type": "Office, school & public building",
+      "setting": "Calabria's first university, founded in 1968, with a hillside 1990s campus at Feo di Vito focused on architecture, engineering and agricultural sciences.",
+      "source_urls": [
+        "https://italyformovies.it/location/detail/10028/universita-degli-studi-mediterranea-reggio-calabria"
+      ],
+      "url": "https://italyformovies.it/location/detail/10028/universita-degli-studi-mediterranea-reggio-calabria",
+      "official_url": "https://italyformovies.it/location/detail/10028/universita-degli-studi-mediterranea-reggio-calabria",
+      "commission_url": "https://italyformovies.it"
     },
     {
       "id": "villa-del-balbianello",
@@ -12633,6 +14148,39 @@
         "author": "Thomas Kowalski",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "mt-american-university-of-malta",
+      "name": "American University of Malta",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8821,
+      "lng": 14.5198,
+      "type": "Office, school & public building",
+      "setting": "A university campus on Triq Dom Mintoff in Bormla (Cospicua), inside the former Cottonera dockyard area, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/american-university-of-malta/",
+        "https://aum.edu.mt/"
+      ],
+      "url": "https://screenmalta.com/locations/american-university-of-malta/",
+      "official_url": "https://aum.edu.mt/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-birgu",
+      "name": "Birgu (Vittoriosa)",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8881,
+      "lng": 14.5238,
+      "type": "Historic town & street",
+      "setting": "One of the Three Cities on Malta's Grand Harbour, with a fortified waterfront, narrow streets and a working marina, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/birgu/"
+      ],
+      "url": "https://screenmalta.com/locations/birgu/",
+      "official_url": "https://screenmalta.com/locations/birgu/",
+      "commission_url": "https://screenmalta.com/"
     },
     {
       "id": "mt-comino-blue-lagoon",
@@ -12700,6 +14248,22 @@
         "author": "Diego Delso",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "mt-floriana",
+      "name": "Floriana",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.893,
+      "lng": 14.5053,
+      "type": "Historic town & street",
+      "setting": "A fortified town directly outside Valletta's gates, with 17th-century bastions, gardens and government buildings, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/floriana/"
+      ],
+      "url": "https://screenmalta.com/locations/floriana/",
+      "official_url": "https://screenmalta.com/locations/floriana/",
+      "commission_url": "https://screenmalta.com/"
     },
     {
       "id": "mt-fort-manoel",
@@ -12788,6 +14352,22 @@
         "author": "Michael Calleja",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "mt-kordin-old-military-prison",
+      "name": "Kordin Old Military Prison",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8739,
+      "lng": 14.5063,
+      "type": "Hospital, prison & institution",
+      "setting": "A historic military prison building in the Kordin/Corradino area near Paola, listed in the Malta Film Commission's Screen Malta location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/kordin-old-military-prison/"
+      ],
+      "url": "https://screenmalta.com/locations/kordin-old-military-prison/",
+      "official_url": "https://screenmalta.com/locations/kordin-old-military-prison/",
+      "commission_url": "https://screenmalta.com/"
     },
     {
       "id": "mt-malta-aviation-museum",
@@ -12896,6 +14476,38 @@
       }
     },
     {
+      "id": "mt-marsa",
+      "name": "Marsa",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8829,
+      "lng": 14.4945,
+      "type": "Industrial & derelict",
+      "setting": "A working harbour and industrial district at the head of Malta's Grand Harbour, with workshops, storage yards and light industry, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/marsa/"
+      ],
+      "url": "https://screenmalta.com/locations/marsa/",
+      "official_url": "https://screenmalta.com/locations/marsa/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-marsaxlokk",
+      "name": "Marsaxlokk",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.8418,
+      "lng": 14.5448,
+      "type": "Coast & beach",
+      "setting": "A working fishing village on Malta's south-east coast, known for its harbour of traditional luzzu boats and waterfront market, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/marsaxlokk/"
+      ],
+      "url": "https://screenmalta.com/locations/marsaxlokk/",
+      "official_url": "https://screenmalta.com/locations/marsaxlokk/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
       "id": "mdina",
       "name": "Mdina",
       "country": "Malta",
@@ -12958,6 +14570,39 @@
         "author": "Diego Delso",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "mt-mosta-church",
+      "name": "Rotunda of Mosta (Mosta Church)",
+      "country": "Malta",
+      "region": "Northern Region",
+      "lat": 35.9101,
+      "lng": 14.4258,
+      "type": "Church & monastery",
+      "setting": "A domed parish basilica in the centre of Mosta, one of the largest unsupported church domes in Europe, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/mosta-church/",
+        "https://mostachurch.com/"
+      ],
+      "url": "https://screenmalta.com/locations/mosta-church/",
+      "official_url": "https://mostachurch.com/",
+      "commission_url": "https://screenmalta.com/"
+    },
+    {
+      "id": "mt-sliema",
+      "name": "Sliema",
+      "country": "Malta",
+      "region": "South Eastern Region",
+      "lat": 35.9128,
+      "lng": 14.5021,
+      "type": "City & skyline",
+      "setting": "A dense seafront town across the harbour from Valletta, lined with hotels, apartment blocks and a long promenade, listed in the Malta Film Commission's location catalogue.",
+      "source_urls": [
+        "https://screenmalta.com/locations/sliema/"
+      ],
+      "url": "https://screenmalta.com/locations/sliema/",
+      "official_url": "https://screenmalta.com/locations/sliema/",
+      "commission_url": "https://screenmalta.com/"
     },
     {
       "id": "mt-spazju-kreattiv",
@@ -13124,6 +14769,36 @@
       }
     },
     {
+      "id": "nl-adam-toren",
+      "name": "A'DAM Toren",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.3838,
+      "lng": 4.9021,
+      "type": "Modern architecture",
+      "setting": "Former Shell office tower from 1971 in Amsterdam-Noord, now a hotel and events building with a rooftop observation deck and bar overlooking the IJ and the city.",
+      "source_urls": [
+        "https://www.adamtoren.nl"
+      ],
+      "official_url": "https://www.adamtoren.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-academiehuis-zwolle",
+      "name": "Academiehuis Grote of Sint-Michaëlskerk",
+      "country": "Netherlands",
+      "region": "Overijssel",
+      "lat": 52.5118,
+      "lng": 6.0922,
+      "type": "Church & monastery",
+      "setting": "Deconsecrated late-Gothic church in the centre of Zwolle, now a cultural venue with a glass mezzanine floor inserted under the vaulted ceiling for events and concerts.",
+      "source_urls": [
+        "https://www.academiehuiszwolle.nl"
+      ],
+      "official_url": "https://www.academiehuiszwolle.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-ahoy-rotterdam",
       "name": "Ahoy Rotterdam",
       "country": "Netherlands",
@@ -13231,6 +14906,21 @@
       }
     },
     {
+      "id": "nl-beeld-en-geluid",
+      "name": "Beeld en Geluid",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.2353,
+      "lng": 5.1731,
+      "type": "Office, school & public building",
+      "setting": "Media museum and broadcast archive in Hilversum's Media Park, in a 2006 building by Neutelings Riedijk with coloured glass panels, galleries and event spaces.",
+      "source_urls": [
+        "https://www.beeldengeluid.nl"
+      ],
+      "official_url": "https://www.beeldengeluid.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-blokhuispoort",
       "name": "Blokhuispoort",
       "country": "Netherlands",
@@ -13250,6 +14940,66 @@
         "author": "Gouwenaar",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-bonnefantenmuseum",
+      "name": "Bonnefantenmuseum",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8425,
+      "lng": 5.7013,
+      "type": "Office, school & public building",
+      "setting": "Museum of old masters and contemporary art on the Maas in Maastricht, in a 1995 building by Aldo Rossi topped with a distinctive rocket-shaped dome.",
+      "source_urls": [
+        "https://www.bonnefanten.nl"
+      ],
+      "official_url": "https://www.bonnefanten.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-continium-kerkrade",
+      "name": "Continium",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8655,
+      "lng": 6.0632,
+      "type": "Office, school & public building",
+      "setting": "Science and discovery museum in Kerkrade on a former coal mine site, with interactive galleries on technology and industrial heritage.",
+      "source_urls": [
+        "http://www.continium.nl"
+      ],
+      "official_url": "http://www.continium.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-cacaofabriek-helmond",
+      "name": "De Cacaofabriek",
+      "country": "Netherlands",
+      "region": "Noord-Brabant",
+      "lat": 51.4733,
+      "lng": 5.655,
+      "type": "Industrial & derelict",
+      "setting": "Former cocoa factory in Helmond converted into a cultural venue with a cinema, concert hall, exhibition space and brasserie, also available for private hire.",
+      "source_urls": [
+        "https://www.cacaofabriek.nl"
+      ],
+      "official_url": "https://www.cacaofabriek.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-de-hallen-amsterdam",
+      "name": "De Hallen Amsterdam",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.367,
+      "lng": 4.8682,
+      "type": "Industrial & derelict",
+      "setting": "Former early 1900s tram depot in Amsterdam Oud-West, redeveloped into a complex with a cinema, food hall, library, hotel and market spaces around a central courtyard.",
+      "source_urls": [
+        "https://www.dehallen-amsterdam.nl"
+      ],
+      "official_url": "https://www.dehallen-amsterdam.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-akerk-groningen",
@@ -13272,6 +15022,21 @@
         "author": "Gouwenaar",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "nl-drents-museum",
+      "name": "Drents Museum",
+      "country": "Netherlands",
+      "region": "Drenthe",
+      "lat": 52.9929,
+      "lng": 6.5643,
+      "type": "Office, school & public building",
+      "setting": "Provincial museum of Drenthe in Assen, combining historic buildings on the Brink square with a modern underground wing, holding archaeology and art collections.",
+      "source_urls": [
+        "https://www.drentsmuseum.nl"
+      ],
+      "official_url": "https://www.drentsmuseum.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "erasmusbrug",
@@ -13340,6 +15105,51 @@
       }
     },
     {
+      "id": "nl-evoluon",
+      "name": "Evoluon",
+      "country": "Netherlands",
+      "region": "Noord-Brabant",
+      "lat": 51.4435,
+      "lng": 5.4469,
+      "type": "Modern architecture",
+      "setting": "Flying-saucer-shaped former Philips technology museum from 1966 in Eindhoven, now a conference and events venue with a large domed hall and surrounding terraces.",
+      "source_urls": [
+        "https://www.evoluon.com"
+      ],
+      "official_url": "https://www.evoluon.com",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-eye-filmmuseum",
+      "name": "Eye Filmmuseum",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.3843,
+      "lng": 4.9008,
+      "type": "Office, school & public building",
+      "setting": "Angular white film museum and archive on the IJ waterfront in Amsterdam-Noord, with screening rooms, an exhibition hall and event spaces overlooking the water.",
+      "source_urls": [
+        "https://www.eyefilm.nl"
+      ],
+      "official_url": "https://www.eyefilm.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-fenix-rotterdam",
+      "name": "Fenix",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 51.9021,
+      "lng": 4.4843,
+      "type": "Industrial & derelict",
+      "setting": "Former Holland-Amerika Lijn transit warehouse on Katendrecht in Rotterdam, now a migration museum with an internal spiral staircase, exhibition halls and a rooftop terrace over the Maas.",
+      "source_urls": [
+        "https://fenix.nl"
+      ],
+      "official_url": "https://fenix.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-fort-bij-vechten",
       "name": "Fort bij Vechten",
       "country": "Netherlands",
@@ -13381,6 +15191,51 @@
         "author": "JAHensens",
         "license": "CC BY 4.0"
       }
+    },
+    {
+      "id": "nl-fraeylemaborg",
+      "name": "Fraeylemaborg",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2155,
+      "lng": 6.8096,
+      "type": "Castle & estate",
+      "setting": "14th-century fortified manor house near Slochteren in Groningen, with a moat, English landscape garden and rooms furnished to show the life of a borg estate.",
+      "source_urls": [
+        "https://www.fraeylemaborg.nl"
+      ],
+      "official_url": "https://www.fraeylemaborg.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-fries-museum",
+      "name": "Fries Museum",
+      "country": "Netherlands",
+      "region": "Friesland",
+      "lat": 53.1995,
+      "lng": 5.7943,
+      "type": "Office, school & public building",
+      "setting": "Provincial museum of Friesland on the Zaailand square in Leeuwarden, in a 2013 building with galleries covering Frisian history, art and archaeology.",
+      "source_urls": [
+        "https://www.friesmuseum.nl"
+      ],
+      "official_url": "https://www.friesmuseum.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-gelredome",
+      "name": "GelreDome",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 51.9627,
+      "lng": 5.8928,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-purpose stadium in Arnhem with a retractable roof and pitch, home ground of football club Vitesse, also used for concerts, exhibitions and other large indoor events.",
+      "source_urls": [
+        "https://www.gelredome.nl"
+      ],
+      "official_url": "https://www.gelredome.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-giethoorn",
@@ -13553,6 +15408,36 @@
       }
     },
     {
+      "id": "nl-huis-doorn",
+      "name": "Huis Doorn",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.0314,
+      "lng": 5.3386,
+      "type": "House & apartment",
+      "setting": "Country house near Doorn where German Kaiser Wilhelm II lived in exile from 1920 to 1941, now a museum with his furniture, art collection and surrounding park.",
+      "source_urls": [
+        "https://www.huisdoorn.nl"
+      ],
+      "official_url": "https://www.huisdoorn.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-hunebedcentrum",
+      "name": "Hunebedcentrum",
+      "country": "Netherlands",
+      "region": "Drenthe",
+      "lat": 52.9313,
+      "lng": 6.799,
+      "type": "Office, school & public building",
+      "setting": "Visitor centre in Borger, Drenthe, dedicated to the region's prehistoric hunebedden, with an outdoor reconstructed Stone Age settlement and indoor exhibition galleries.",
+      "source_urls": [
+        "https://www.hunebedcentrum.eu"
+      ],
+      "official_url": "https://www.hunebedcentrum.eu",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-woudagemaal",
       "name": "Ir. D.F. Woudagemaal",
       "country": "Netherlands",
@@ -13621,6 +15506,25 @@
       }
     },
     {
+      "id": "nl-kasteel-de-haar",
+      "name": "Kasteel de Haar",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.1214,
+      "lng": 4.9862,
+      "type": "Castle & estate",
+      "setting": "The largest castle in the Netherlands, rebuilt in neo-Gothic style by architect Cuypers around 1900 near Utrecht, set in an English landscape park with a chapel and outbuildings.",
+      "capacity": 130,
+      "suitability": "Location hire for weddings, private events and filming, in settings around the castle, the Chapel or the Courtyard",
+      "logistics": "Address Kasteellaan 1, Haarzuilens; site tours and quotes arranged through the venue's events department",
+      "source_urls": [
+        "https://kasteeldehaar.nl",
+        "https://kasteeldehaar.nl/locatieverhuur"
+      ],
+      "official_url": "https://kasteeldehaar.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-kinderdijk",
       "name": "Kinderdijk",
       "country": "Netherlands",
@@ -13656,6 +15560,21 @@
       ],
       "official_url": "https://www.oostwegelcollection.nl/kruisherenhotel-maastricht/",
       "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-kunsthal-rotterdam",
+      "name": "Kunsthal Rotterdam",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 51.9108,
+      "lng": 4.4734,
+      "type": "Office, school & public building",
+      "setting": "Exhibition building designed by Rem Koolhaas in Rotterdam's Museumpark, with a ramped route through several large halls used for temporary art and design shows.",
+      "source_urls": [
+        "https://www.kunsthal.nl"
+      ],
+      "official_url": "https://www.kunsthal.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-kunstlinie-almere",
@@ -13860,6 +15779,36 @@
       }
     },
     {
+      "id": "nl-martiniplaza",
+      "name": "Martiniplaza",
+      "country": "Netherlands",
+      "region": "Groningen",
+      "lat": 53.2025,
+      "lng": 6.5556,
+      "type": "Theatre, arena & venue",
+      "setting": "Congress, sports and events venue in Groningen with several halls, an ice rink and a theatre, used for exhibitions, concerts and conferences.",
+      "source_urls": [
+        "https://www.martiniplaza.nl"
+      ],
+      "official_url": "https://www.martiniplaza.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-mecc-maastricht",
+      "name": "MECC Maastricht",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8393,
+      "lng": 5.7118,
+      "type": "Theatre, arena & venue",
+      "setting": "Convention and exhibition centre in Maastricht with several halls and meeting rooms, used for trade fairs, congresses and concerts.",
+      "source_urls": [
+        "https://www.mecc.nl"
+      ],
+      "official_url": "https://www.mecc.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "media-park-hilversum",
       "name": "Media Park Hilversum",
       "country": "Netherlands",
@@ -13885,6 +15834,21 @@
         "author": "Dick van Aggelen",
         "license": "CC0"
       }
+    },
+    {
+      "id": "nl-muiderslot",
+      "name": "Muiderslot",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.3344,
+      "lng": 5.0711,
+      "type": "Castle & estate",
+      "setting": "Moated medieval castle from around 1285 at the mouth of the Vecht in Muiden, with a keep, inner courtyard and surrounding gardens, run as a Rijksmuseum branch.",
+      "source_urls": [
+        "https://www.muiderslot.nl"
+      ],
+      "official_url": "https://www.muiderslot.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-museum-buurtspoorweg",
@@ -13921,6 +15885,21 @@
       ],
       "official_url": "https://www.stoomtram.nl/",
       "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-naturalis-leiden",
+      "name": "Naturalis Biodiversity Center",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 52.1649,
+      "lng": 4.4729,
+      "type": "Office, school & public building",
+      "setting": "Natural history museum in Leiden with a 2019 building by Neutelings Riedijk, laboratories, storage depots and public galleries holding one of Europe's larger biodiversity collections.",
+      "source_urls": [
+        "https://www.naturalis.nl"
+      ],
+      "official_url": "https://www.naturalis.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-ndsm-werf",
@@ -14043,6 +16022,21 @@
       }
     },
     {
+      "id": "nl-paleis-soestdijk",
+      "name": "Paleis Soestdijk",
+      "country": "Netherlands",
+      "region": "Utrecht",
+      "lat": 52.1935,
+      "lng": 5.2791,
+      "type": "Palace & landmark",
+      "setting": "Former royal residence in Baarn used by Queen Juliana and Prince Bernhard, an 18th-century palace with formal gardens now open for tours and events after restoration.",
+      "source_urls": [
+        "https://www.paleissoestdijk.nl"
+      ],
+      "official_url": "https://www.paleissoestdijk.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-tuschinski",
       "name": "Pathe Tuschinski",
       "country": "Netherlands",
@@ -14104,6 +16098,21 @@
       }
     },
     {
+      "id": "nl-rdm-rotterdam",
+      "name": "RDM Rotterdam",
+      "country": "Netherlands",
+      "region": "Zuid-Holland",
+      "lat": 51.8968,
+      "lng": 4.4184,
+      "type": "Industrial & derelict",
+      "setting": "Former shipyard of the Rotterdamsche Droogdok Maatschappij on the Maas in Rotterdam, now a campus with a large steel-framed assembly hall, quaysides and workshops used for events and productions.",
+      "source_urls": [
+        "https://rdmrotterdam.nl"
+      ],
+      "official_url": "https://rdmrotterdam.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-rietveld-schroderhuis",
       "name": "Rietveld Schroder House",
       "country": "Netherlands",
@@ -14163,6 +16172,21 @@
       }
     },
     {
+      "id": "nl-schokland",
+      "name": "Schokland",
+      "country": "Netherlands",
+      "region": "Flevoland",
+      "lat": 52.6339,
+      "lng": 5.7736,
+      "type": "Village & countryside",
+      "setting": "Former island in the old Zuiderzee, now surrounded by reclaimed polder land in Flevoland, a UNESCO World Heritage site with a museum and remains of the former village.",
+      "source_urls": [
+        "https://www.schokland.nl"
+      ],
+      "official_url": "https://www.schokland.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-sint-pietersberg-enci",
       "name": "Sint-Pietersberg / ENCI Quarry",
       "country": "Netherlands",
@@ -14176,6 +16200,36 @@
       ],
       "official_url": "https://www.natuurmonumenten.nl/natuurgebieden/sint-pietersberg-enci-groeve",
       "commission_url": "https://www.filmcommission.nl/"
+    },
+    {
+      "id": "nl-slot-loevestein",
+      "name": "Slot Loevestein",
+      "country": "Netherlands",
+      "region": "Gelderland",
+      "lat": 51.815,
+      "lng": 5.0264,
+      "type": "Castle & estate",
+      "setting": "Moated 14th-century castle at the confluence of the Maas and Waal near Gorinchem, known as the prison Hugo Grotius escaped from in a book chest, now a Rijksmuseum branch.",
+      "source_urls": [
+        "https://www.slotloevestein.nl"
+      ],
+      "official_url": "https://www.slotloevestein.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
+      "id": "nl-snowworld-landgraaf",
+      "name": "SnowWorld Landgraaf",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.8748,
+      "lng": 6.0218,
+      "type": "Theatre, arena & venue",
+      "setting": "Indoor ski centre in Landgraaf, Limburg, with several snow slopes, a lodge and event spaces used for winter sports and functions.",
+      "source_urls": [
+        "https://www.snowworld.com"
+      ],
+      "official_url": "https://www.snowworld.com",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-huis-sonneveld",
@@ -14197,6 +16251,21 @@
         "author": "Wikifrits",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "nl-sphinxkwartier",
+      "name": "Sphinxkwartier",
+      "country": "Netherlands",
+      "region": "Limburg",
+      "lat": 50.858,
+      "lng": 5.697,
+      "type": "Industrial & derelict",
+      "setting": "Former Sphinx ceramics factory site in Maastricht, redeveloped into a mixed-use district with former industrial halls, including the Timmerfabriek, reused for culture and events.",
+      "source_urls": [
+        "https://www.sphinxkwartier.nl"
+      ],
+      "official_url": "https://www.sphinxkwartier.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-ss-rotterdam",
@@ -14287,6 +16356,21 @@
       }
     },
     {
+      "id": "nl-tolhuistuin",
+      "name": "Tolhuistuin",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.3837,
+      "lng": 4.9049,
+      "type": "Theatre, arena & venue",
+      "setting": "Former Shell staff building and garden on the IJ in Amsterdam-Noord, now a cultural venue with a hall, terrace and riverside garden used for concerts and events.",
+      "source_urls": [
+        "https://www.tolhuistuin.nl"
+      ],
+      "official_url": "https://www.tolhuistuin.nl",
+      "commission_url": "https://www.filmcommission.nl"
+    },
+    {
       "id": "nl-tt-circuit-assen",
       "name": "TT Circuit Assen",
       "country": "Netherlands",
@@ -14307,6 +16391,21 @@
         "author": "Will Pittenger",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "nl-van-abbemuseum",
+      "name": "Van Abbemuseum",
+      "country": "Netherlands",
+      "region": "Noord-Brabant",
+      "lat": 51.4345,
+      "lng": 5.4818,
+      "type": "Office, school & public building",
+      "setting": "Museum of modern and contemporary art in Eindhoven, combining a 1936 building with a 2003 extension, with galleries used for exhibitions and events.",
+      "source_urls": [
+        "https://vanabbemuseum.nl"
+      ],
+      "official_url": "https://vanabbemuseum.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-gevangenismuseum-veenhuizen",
@@ -14365,6 +16464,21 @@
         "author": "User:LeeGer",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "nl-vestingmuseum-naarden",
+      "name": "Vestingmuseum Naarden",
+      "country": "Netherlands",
+      "region": "Noord-Holland",
+      "lat": 52.2924,
+      "lng": 5.1598,
+      "type": "Historic town & street",
+      "setting": "Museum inside the underground casemates of the star-shaped 17th-century fortress town of Naarden, with brick tunnels, powder rooms and ramparts open to visitors.",
+      "source_urls": [
+        "https://www.vestingmuseum.nl"
+      ],
+      "official_url": "https://www.vestingmuseum.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-watersnoodmuseum",
@@ -14493,6 +16607,21 @@
         "author": "Zairon",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "nl-zeeuws-museum",
+      "name": "Zeeuws Museum",
+      "country": "Netherlands",
+      "region": "Zeeland",
+      "lat": 51.5007,
+      "lng": 3.6143,
+      "type": "Church & monastery",
+      "setting": "Regional museum of Zeeland housed in the medieval abbey complex of Middelburg, combining historic abbey rooms with a modern glass extension.",
+      "source_urls": [
+        "https://www.zeeuwsmuseum.nl"
+      ],
+      "official_url": "https://www.zeeuwsmuseum.nl",
+      "commission_url": "https://www.filmcommission.nl"
     },
     {
       "id": "nl-zonnestraal",
@@ -15282,6 +17411,22 @@
       "commission_url": "https://silesiafilmcommission.pl/en"
     },
     {
+      "id": "pl-brus-tram-depot-lodz",
+      "name": "Brus Tram Depot, Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7537,
+      "lng": 19.3814,
+      "type": "Transport & infrastructure",
+      "setting": "The smallest tram depot in Lodz, on the road toward Konstantynow Lodzki, whose infrastructure has changed relatively little in a century of operation.",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/zajezdnia-tramwajowa-na-brusie/"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/zajezdnia-tramwajowa-na-brusie/",
+      "official_url": "https://bazadanych.lodzfilmcommission.pl/lokacje/zajezdnia-tramwajowa-na-brusie/",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
+    },
+    {
       "id": "pl-bytom-railway-station",
       "name": "Bytom railway station",
       "country": "Poland",
@@ -15517,6 +17662,23 @@
       "commission_url": "https://pisf.pl"
     },
     {
+      "id": "pl-expo-lodz",
+      "name": "Expo Lodz exhibition hall",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7492,
+      "lng": 19.45,
+      "type": "Theatre, arena & venue",
+      "setting": "A modern exhibition centre in Lodz with conference rooms alongside its main trade-fair hall, used for events and available for filming.",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/hala-expo-lodz/",
+        "https://expo-lodz.pl"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/hala-expo-lodz/",
+      "official_url": "https://expo-lodz.pl",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
+    },
+    {
       "id": "pl-halemba-wirek-mine",
       "name": "Former Halemba-Wirek Mine Dismantling Centre",
       "country": "Poland",
@@ -15534,6 +17696,23 @@
       "url": "https://www.silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
       "official_url": "https://www.silesiafilmcommission.pl/location/oddzial-centrow-demontazowych-dawna-kopalnia-halemba-wirek",
       "commission_url": "https://www.silesiafilmcommission.pl"
+    },
+    {
+      "id": "pl-drewnowska-hospital-lodz",
+      "name": "Former hospital on Drewnowska street, Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7822,
+      "lng": 19.4417,
+      "type": "Hospital, prison & institution",
+      "setting": "A former hospital building on Drewnowska street in Lodz with its own chapel and grounds, listed by the local film commission as a location for institutional interiors.",
+      "known_for": "Kruk. Szepty slychac po zmroku",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/szpital-przy-ul-drewnowskiej-w-lodzi/"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/szpital-przy-ul-drewnowskiej-w-lodzi/",
+      "official_url": "https://bazadanych.lodzfilmcommission.pl/lokacje/szpital-przy-ul-drewnowskiej-w-lodzi/",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
     },
     {
       "id": "pl-dawna-synagoga-zarki",
@@ -15708,6 +17887,24 @@
       ],
       "official_url": "https://icekrakow.pl",
       "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-jotes-machine-factory-lodz",
+      "name": "Jotes Machine Factory, Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7471,
+      "lng": 19.5172,
+      "type": "Industrial & derelict",
+      "setting": "A working machine-tool factory in Lodz tracing back to an 1866 mechanical workshop, still designing, building and distributing surface, cylindrical and internal grinders.",
+      "known_for": "Weekend",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/fabryka-maszyn-jotes/",
+        "https://www.jotes.pl"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/fabryka-maszyn-jotes/",
+      "official_url": "https://www.jotes.pl",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
     },
     {
       "id": "pl-teatr-slowackiego-krakow",
@@ -15933,6 +18130,25 @@
       "url": "https://poznanfilmcommission.pl/lokacja/kampus-morasko/",
       "official_url": "https://poznanfilmcommission.pl/lokacja/kampus-morasko/",
       "commission_url": "https://poznanfilmcommission.pl"
+    },
+    {
+      "id": "pl-mosir-sports-hall-lodz",
+      "name": "MOSiR Sports Hall, Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7494,
+      "lng": 19.4517,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1957 socialist-realist sports hall in Lodz nicknamed the Palace of Sport, seating around 9,000 and also used for concerts, trade events and religious gatherings.",
+      "known_for": "Cold War, Commissioner Alex",
+      "capacity": 9000,
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/hala-sportowa-mosir/",
+        "http://mosir.lodz.pl/index.php/nasze-obiekty/hala-sportowa"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/hala-sportowa-mosir/",
+      "official_url": "http://mosir.lodz.pl/index.php/nasze-obiekty/hala-sportowa",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
     },
     {
       "id": "pl-muzeum-emigracji-gdynia",
@@ -16319,6 +18535,22 @@
       "commission_url": "https://www.silesiafilmcommission.pl"
     },
     {
+      "id": "pl-sieradz-railway-station",
+      "name": "Sieradz railway station",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.5974,
+      "lng": 18.7147,
+      "type": "Transport & infrastructure",
+      "setting": "A 19th-century station building typical of small stations built under Russian rule, on the only stop between Lodz and Kalisz, about 70 kilometres from Lodz.",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/dworzec-kolejowy-w-sieradzu/"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/dworzec-kolejowy-w-sieradzu/",
+      "official_url": "https://bazadanych.lodzfilmcommission.pl/lokacje/dworzec-kolejowy-w-sieradzu/",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
+    },
+    {
       "id": "pl-slaskie-centrum-targowe-chorzow",
       "name": "Silesian Trade Centre, Hall 3, Chorzow",
       "country": "Poland",
@@ -16529,6 +18761,23 @@
       ],
       "official_url": "https://muzyczny.org",
       "commission_url": "https://pisf.pl"
+    },
+    {
+      "id": "pl-textilimpex-office-lodz",
+      "name": "Textilimpex office building, Lodz",
+      "country": "Poland",
+      "region": "Lodz Voivodeship",
+      "lat": 51.7687,
+      "lng": 19.4633,
+      "type": "Office, school & public building",
+      "setting": "A mid to late 20th-century office building in central Lodz with a spacious entrance hall, listed by the local film commission for interior office shoots.",
+      "known_for": "Tabletki uspokajajace Labofarm",
+      "source_urls": [
+        "https://bazadanych.lodzfilmcommission.pl/lokacje/biurowiec-textilimpex/"
+      ],
+      "url": "https://bazadanych.lodzfilmcommission.pl/lokacje/biurowiec-textilimpex/",
+      "official_url": "https://bazadanych.lodzfilmcommission.pl/lokacje/biurowiec-textilimpex/",
+      "commission_url": "https://ec1lodz.pl/lodz-film-commission/"
     },
     {
       "id": "pl-tor-poznan",
@@ -17975,6 +20224,23 @@
       }
     },
     {
+      "id": "es-estadio-vallehermoso",
+      "name": "Estadio Vallehermoso",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4414,
+      "lng": -3.711,
+      "type": "Theatre, arena & venue",
+      "setting": "Municipal athletics stadium reopened in 2019 in Chamberi, with a partly covered 10,000-seat stand around a lime-green 400m track, a covered training straight and a natural grass infield.",
+      "capacity": 10000,
+      "facilities": "Access control, offices, changing rooms, storage, technical rooms, covered training straight",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/estadio-vallehermoso/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/estadio-vallehermoso/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-euskalduna-palace",
       "name": "Euskalduna Palace",
       "country": "Spain",
@@ -18043,6 +20309,23 @@
       "url": "https://canaryislandsfilm.com/portfolio/aeropuertos/",
       "official_url": "https://www.aena.es/en/fuerteventura.html",
       "commission_url": "https://www.canaryislandsfilm.com"
+    },
+    {
+      "id": "es-fundacion-carlos-de-amberes",
+      "name": "Fundacion Carlos de Amberes",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4313,
+      "lng": -3.6859,
+      "type": "Church & monastery",
+      "setting": "Private cultural foundation in a former 1584 church in the Salamanca district, protected as a site of cultural interest, with its chapel, two exhibition rooms and an auditorium with a dressing room and translation booth.",
+      "facilities": "Chapel, two exhibition rooms, auditorium with dressing room and translation booth, terrace access",
+      "suitability": "Restricted hours around regular activities, difficult vehicle access",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/fundacion-carlos-de-amberes/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/fundacion-carlos-de-amberes/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-gran-teatre-del-liceu",
@@ -18218,6 +20501,22 @@
       ],
       "official_url": "https://www.fundacionlasmedulas.info/",
       "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-pabellon-madrid-arena",
+      "name": "Madrid Arena",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4131,
+      "lng": -3.7382,
+      "type": "Theatre, arena & venue",
+      "setting": "Circular multipurpose arena with a glazed dome on the Casa de Campo exhibition ground, three connected floors, a retractable seating rack and a tunnel link to two neighbouring pavilions.",
+      "facilities": "Retractable seating, changing rooms, dressing rooms, cafeteria, press boxes, vehicle access to the main floor, outdoor area for trucks and mobile units",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/pabellon-multiusos-madrid-arena/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/pabellon-multiusos-madrid-arena/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-matadero-madrid",
@@ -18450,6 +20749,39 @@
       }
     },
     {
+      "id": "es-nave-bellver-madrid",
+      "name": "Nave Bellver",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4622,
+      "lng": -3.7052,
+      "type": "Industrial & derelict",
+      "setting": "Former sawmill in Tetuan converted into an events space, keeping its high ceilings, natural light and worn industrial character, now used for cultural events and shoots.",
+      "facilities": "Dressing rooms, catering area, restrooms, vehicle access",
+      "suitability": "Filming rates scale with the size of the shoot",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/nave-bellver/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/nave-bellver/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
+      "id": "es-oficinas-room-mate-madrid",
+      "name": "Oficinas Room Mate",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4262,
+      "lng": -3.7025,
+      "type": "Office, school & public building",
+      "setting": "Former 18th century tapestry factory palace in central Madrid, restored in 2011 as offices for the Room Mate hotel chain, with a soundproofed 450 square metre event hall, a small cinema and a rooftop terrace.",
+      "facilities": "Soundproofed main hall, small screening room, rooftop terrace, freight lift, production offices, dressing rooms, catering area, own parking",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/oficinas-room-mate/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/oficinas-room-mate/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-palacio-de-cibeles",
       "name": "Palacio de Cibeles / CentroCentro",
       "country": "Spain",
@@ -18581,6 +20913,37 @@
       "commission_url": "https://madridfilmoffice.com"
     },
     {
+      "id": "es-poble-espanyol-barcelona",
+      "name": "Poble Espanyol",
+      "country": "Spain",
+      "region": "Catalonia",
+      "lat": 41.3696,
+      "lng": 2.1468,
+      "type": "Historic town & street",
+      "setting": "Open-air architecture museum on Montjuic built for the 1929 exhibition, recreating streets and squares from across Spain with more than 100 full-scale building facades, workshops and courtyards.",
+      "source_urls": [
+        "https://www.poble-espanyol.com/en/space-for-rent-barcelona/",
+        "https://www.poble-espanyol.com/en/"
+      ],
+      "official_url": "https://www.poble-espanyol.com/en/space-for-rent-barcelona/",
+      "commission_url": "https://www.bcncatfilmcommission.com/"
+    },
+    {
+      "id": "es-poligono-industrial-julian-camarillo",
+      "name": "Poligono Industrial Julian Camarillo",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4314,
+      "lng": -3.6321,
+      "type": "Industrial & derelict",
+      "setting": "Industrial estate built between the 1950s and 1970s near the M-30 and M-40 ring roads, mixing surviving factories, warehouses and workshops with converted offices, low-rise housing and some abandoned units.",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/poligono-industrial-julian-camarillo/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/poligono-industrial-julian-camarillo/",
+      "commission_url": "https://madridfilmoffice.com/"
+    },
+    {
       "id": "es-puerto-bilbao",
       "name": "Puerto de Bilbao",
       "country": "Spain",
@@ -18641,6 +21004,23 @@
         "author": "Ajay Suresh from New York, NY, USA. Edited by MenkinAlRire",
         "license": "CC BY 2.0"
       }
+    },
+    {
+      "id": "es-residencia-de-estudiantes-madrid",
+      "name": "Residencia de Estudiantes",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4411,
+      "lng": -3.6882,
+      "type": "Office, school & public building",
+      "setting": "Student residence founded in 1910 in a Mudejar-style cluster of pavilions from 1915, once home to Garcia Lorca, Dali and Bunuel, with a historic assembly hall, twin residential wings and a historic garden.",
+      "facilities": "Assembly hall, twin residential pavilions, garden, office wing, rooftop, own parking with access to the building",
+      "suitability": "Weekend filming preferred, night filming possible, script and ethical review required before booking",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/residencia-de-estudiantes/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/residencia-de-estudiantes/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-riotinto-mining-park",
@@ -18775,6 +21155,25 @@
         "author": "Dgalan",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-teatro-la-latina-madrid",
+      "name": "Teatro La Latina",
+      "country": "Spain",
+      "region": "Community of Madrid",
+      "lat": 40.4116,
+      "lng": -3.7088,
+      "type": "Theatre, arena & venue",
+      "setting": "900-seat theatre on the Plaza de la Cebada spread over three floors, with a lobby, club level and boxes, and an upper amphitheatre with good sightlines and acoustics.",
+      "known_for": "El Corte Ingles Emidio Tucci advert (2023)",
+      "capacity": 900,
+      "facilities": "Lobby, stalls, club level, boxes, amphitheatre, dressing rooms, catering area, storage",
+      "suitability": "Subject to the theatre's regular show schedule",
+      "source_urls": [
+        "https://madridfilmoffice.com/localizacion/teatro-la-latina/"
+      ],
+      "official_url": "https://madridfilmoffice.com/localizacion/teatro-la-latina/",
+      "commission_url": "https://madridfilmoffice.com/"
     },
     {
       "id": "es-timanfaya-national-park",
