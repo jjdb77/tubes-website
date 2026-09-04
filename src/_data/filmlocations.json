@@ -4023,6 +4023,21 @@
       }
     },
     {
+      "id": "cz-brummel-house-plzen",
+      "name": "Brummel's House, Plzeň",
+      "country": "Czech Republic",
+      "region": "Pilsen Region",
+      "lat": 49.7461,
+      "lng": 13.3642,
+      "type": "Modern architecture",
+      "setting": "A 1929 townhouse in Plzeň with an interior designed by architect Adolf Loos for the Brummel family, its five rooms and original furniture surviving wartime bombing and a 1980s demolition attempt.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-pilsen-s-modern-architecture-marvels-by-adolf-loos/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-pilsen-s-modern-architecture-marvels-by-adolf-loos/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-budweiser-budvar-brewery",
       "name": "Budweiser Budvar Brewery",
       "country": "Czech Republic",
@@ -4335,6 +4350,23 @@
       ],
       "url": "https://eastbohemiafilmoffice.cz/en/locations/the-hamza-treatment-centre",
       "official_url": "https://eastbohemiafilmoffice.cz/en/locations/the-hamza-treatment-centre",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-hlubina-coal-mine-ostrava",
+      "name": "Hlubina Coal Mine, Ostrava",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.8159,
+      "lng": 18.2811,
+      "type": "Industrial & derelict",
+      "setting": "A former coal mine in Ostrava's Lower Vítkovice industrial complex, reconstructed since 2015 into a cultural centre with studios, rehearsal rooms and multipurpose halls inside its 19th and 20th century mining buildings.",
+      "known_for": "Ghost Recon: Alpha",
+      "facilities": "Screening rooms for 22 and 60 people, 368 m2 of open office space, music rehearsal rooms and a recording studio in the Cineport building",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-unique-industrial-atmosphere-at-the-hlubina-coal-mine/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-unique-industrial-atmosphere-at-the-hlubina-coal-mine/",
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
@@ -4977,6 +5009,21 @@
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
+      "id": "cz-plumlov-castle",
+      "name": "Plumlov Castle",
+      "country": "Czech Republic",
+      "region": "Olomouc Region",
+      "lat": 49.4661,
+      "lng": 17.0149,
+      "type": "Castle & estate",
+      "setting": "A single-wing Mannerist castle built 1680-1688 above the Hloučela stream near Plumlov for the Liechtenstein family, its 1686 stuccoed hall and painted ceilings surviving from an originally planned four-wing design.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-the-gloomily-strange-plumlov-castle/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-the-gloomily-strange-plumlov-castle/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
       "id": "cz-prague-main-station",
       "name": "Prague Main Railway Station",
       "country": "Czech Republic",
@@ -5017,6 +5064,22 @@
         "author": "Matěj Čadil=en:User:Neral as confirmed here 2007-01-25 (in Czech)",
         "license": "CC BY 1.0"
       }
+    },
+    {
+      "id": "cz-prilepy-chateau",
+      "name": "Přílepy Chateau",
+      "country": "Czech Republic",
+      "region": "Zlín Region",
+      "lat": 49.3188,
+      "lng": 17.6216,
+      "type": "Hospital, prison & institution",
+      "setting": "An abandoned chateau in the village of Přílepy in the Zlín Region, converted from a 15th-century fortress by 1885 and later run as a maternity hospital until it emptied, set in a public park with rare trees.",
+      "logistics": "18 km from Kroměříž; crew accommodation available 3 km away in Holešov",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-former-maternity-hospital-showcases-impressive-interiors/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-former-maternity-hospital-showcases-impressive-interiors/",
+      "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
       "id": "cz-schejbal-vila-chocen",
@@ -5098,6 +5161,21 @@
       ],
       "url": "https://eastbohemiafilmoffice.cz/en/locations/statek-uhersko-farmhouse",
       "official_url": "https://eastbohemiafilmoffice.cz/en/locations/statek-uhersko-farmhouse",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-stramberk",
+      "name": "Štramberk",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.5912,
+      "lng": 18.117,
+      "type": "Historic town & street",
+      "setting": "A small town in the Beskyd foothills known as Moravia's Bethlehem, with half-timbered 18th and 19th century cottages, a Baroque town square and the Gothic Trúba tower, the last remnant of its 13th-century castle.",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-stramberk-moravia-s-bethlehem-at-the-foot-of-the-beskyd-mountains/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-stramberk-moravia-s-bethlehem-at-the-foot-of-the-beskyd-mountains/",
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
@@ -5384,6 +5462,23 @@
       ],
       "url": "https://eastbohemiafilmoffice.cz/en/locations/vonwiller-factory-zamberk",
       "official_url": "https://eastbohemiafilmoffice.cz/en/locations/vonwiller-factory-zamberk",
+      "commission_url": "https://filmcommission.gov.cz/en/"
+    },
+    {
+      "id": "cz-wesselsky-water-mill",
+      "name": "Wesselský Water Mill, Loučky",
+      "country": "Czech Republic",
+      "region": "Moravian-Silesian Region",
+      "lat": 49.6808,
+      "lng": 17.8088,
+      "type": "Industrial & derelict",
+      "setting": "A working watermill on the Oder river in Loučky, with a functioning 3.6 metre mill wheel, eight farm buildings and period interiors that can be adapted to different historical eras.",
+      "facilities": "Accommodation for up to 12 guests on site, parking for up to 10 cars and a bus, lockable storage space",
+      "logistics": "50 km from Ostrava, 70 km from Olomouc; larger crews can be housed 5 to 8 km away",
+      "source_urls": [
+        "https://filmcommission.gov.cz/en/featured-location-wesselsky-water-mill-authenticity-at-every-turn/"
+      ],
+      "official_url": "https://filmcommission.gov.cz/en/featured-location-wesselsky-water-mill-authenticity-at-every-turn/",
       "commission_url": "https://filmcommission.gov.cz/en/"
     },
     {
@@ -26190,6 +26285,22 @@
       "commission_url": "https://britishfilmcommission.org.uk/"
     },
     {
+      "id": "uk-assembly-rooms-edinburgh",
+      "name": "Assembly Rooms",
+      "country": "United Kingdom",
+      "region": "Edinburgh",
+      "lat": 55.9528,
+      "lng": -3.1986,
+      "type": "Theatre, arena & venue",
+      "setting": "Category A-listed Georgian assembly rooms on George Street in Edinburgh's New Town, council-owned and hired out for events, conferences and film shoots.",
+      "source_urls": [
+        "https://cultureedinburgh.com/our-venues/assembly-rooms",
+        "https://cultureedinburgh.com/home/venue-hire"
+      ],
+      "official_url": "https://cultureedinburgh.com/our-venues/assembly-rooms",
+      "commission_url": "https://screen.scot"
+    },
+    {
       "id": "uk-audley-end-house",
       "name": "Audley End House and Gardens",
       "country": "United Kingdom",
@@ -26395,6 +26506,23 @@
       }
     },
     {
+      "id": "uk-blaenavon-ironworks",
+      "name": "Blaenavon Ironworks",
+      "country": "United Kingdom",
+      "region": "Torfaen",
+      "lat": 51.7758,
+      "lng": -3.0908,
+      "type": "Industrial & derelict",
+      "setting": "UNESCO World Heritage ironworks in the South Wales valleys with ruined blast furnaces, a water balance tower and rows of furnished workers' cottages, hired for filming and photography.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks",
+        "https://cadw.gov.wales/visit/venue-hire/filming-photography"
+      ],
+      "official_url": "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks",
+      "commission_url": "https://walesscreen.com"
+    },
+    {
       "id": "uk-bluebell-railway",
       "name": "Bluebell Railway",
       "country": "United Kingdom",
@@ -26595,6 +26723,24 @@
       ],
       "official_url": "https://camdenmarket.com/filming",
       "commission_url": "https://filmlondon.org.uk"
+    },
+    {
+      "id": "uk-castell-coch",
+      "name": "Castell Coch",
+      "country": "United Kingdom",
+      "region": "Cardiff",
+      "lat": 51.5359,
+      "lng": -3.2548,
+      "type": "Castle & estate",
+      "setting": "Victorian Gothic Revival castle above Cardiff, rebuilt from a ruined 13th-century fortress with richly decorated interiors, hired out for filming.",
+      "known_for": "Da Vinci's Demons",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://cadw.gov.wales/visit/places-to-visit/castell-coch",
+        "https://cadw.gov.wales/visit/venue-hire/filming-photography"
+      ],
+      "official_url": "https://cadw.gov.wales/visit/places-to-visit/castell-coch",
+      "commission_url": "https://walesscreen.com"
     },
     {
       "id": "uk-castle-acre-priory",
@@ -27559,6 +27705,23 @@
         "author": "No machine-readable author provided. Jungpionier assumed (based on copyright claims).",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "uk-lincoln-castle",
+      "name": "Lincoln Castle",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "lat": 53.2349,
+      "lng": -0.541,
+      "type": "Hospital, prison & institution",
+      "setting": "Norman castle in Lincoln whose Victorian separate-system prison building, with its wedge-shaped chapel and cells, is used as a filming location.",
+      "known_for": "Downton Abbey",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lincoln_Castle",
+        "https://www.lincolncastle.com/"
+      ],
+      "official_url": "https://www.lincolncastle.com/",
+      "commission_url": "https://britishfilmcommission.org.uk"
     },
     {
       "id": "uk-lincolns-inn",
@@ -28605,6 +28768,23 @@
       }
     },
     {
+      "id": "uk-st-davids-bishops-palace",
+      "name": "St Davids Bishop's Palace",
+      "country": "United Kingdom",
+      "region": "Pembrokeshire",
+      "lat": 51.8823,
+      "lng": -5.2706,
+      "type": "Church & monastery",
+      "setting": "Ruined 14th-century bishop's palace beside St Davids Cathedral in Pembrokeshire, with a great hall, arcaded parapets and undercrofts, available for filming and exhibitions.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://cadw.gov.wales/visit/places-to-visit/st-davids-bishops-palace",
+        "https://cadw.gov.wales/visit/venue-hire/filming-photography"
+      ],
+      "official_url": "https://cadw.gov.wales/visit/places-to-visit/st-davids-bishops-palace",
+      "commission_url": "https://walesscreen.com"
+    },
+    {
       "id": "uk-st-georges-bristol",
       "name": "St George's Bristol",
       "country": "United Kingdom",
@@ -29028,6 +29208,23 @@
       }
     },
     {
+      "id": "uk-tretower-court",
+      "name": "Tretower Court and Castle",
+      "country": "United Kingdom",
+      "region": "Powys",
+      "lat": 51.884,
+      "lng": -3.1858,
+      "type": "House & apartment",
+      "setting": "Fortified 15th-century manor house beside a Norman round tower in the Brecon Beacons, with a restored great hall and period garden, available for filming.",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://cadw.gov.wales/visit/places-to-visit/tretower-court-and-castle",
+        "https://cadw.gov.wales/visit/venue-hire/filming-photography"
+      ],
+      "official_url": "https://cadw.gov.wales/visit/places-to-visit/tretower-court-and-castle",
+      "commission_url": "https://walesscreen.com"
+    },
+    {
       "id": "uk-trinity-buoy-wharf",
       "name": "Trinity Buoy Wharf",
       "country": "United Kingdom",
@@ -29173,6 +29370,22 @@
         "author": "Gerald England",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "uk-usher-hall",
+      "name": "Usher Hall",
+      "country": "United Kingdom",
+      "region": "Edinburgh",
+      "lat": 55.9473,
+      "lng": -3.2049,
+      "type": "Theatre, arena & venue",
+      "setting": "Category A-listed Edwardian concert hall in Edinburgh seating up to 2,200, council-owned and hired out for conferences, concerts and film shoots.",
+      "source_urls": [
+        "https://cultureedinburgh.com/our-venues/usher-hall",
+        "https://cultureedinburgh.com/home/venue-hire"
+      ],
+      "official_url": "https://cultureedinburgh.com/our-venues/usher-hall",
+      "commission_url": "https://screen.scot"
     },
     {
       "id": "uk-utilita-arena-birmingham",
