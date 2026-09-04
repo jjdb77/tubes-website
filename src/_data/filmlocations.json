@@ -340,7 +340,13 @@
       ],
       "url": "https://viennafilmcommission.at/en/locations/filmhaus-cinema-spittelberg",
       "official_url": "https://www.filmhaus.at",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Filmhaus_Kinosaal.jpg/960px-Filmhaus_Kinosaal.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Filmhaus_Kinosaal.jpg",
+        "author": "Peter Schmidt",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-floridsdorfer-markt",
@@ -357,7 +363,13 @@
       ],
       "url": "https://viennafilmcommission.at/en/locations/floridsdorfer-markt",
       "official_url": "https://www.wien.gv.at/freizeit/maerkte/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Wien_21_Floridsdorfer_Markt_a.jpg/960px-Wien_21_Floridsdorfer_Markt_a.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_21_Floridsdorfer_Markt_a.jpg",
+        "author": "Peter Gugerell",
+        "license": "CC0"
+      }
     },
     {
       "id": "at-flughafen-aspern",
@@ -506,7 +518,13 @@
       ],
       "url": "https://viennafilmcommission.at/en/locations/heidi-horten-collection",
       "official_url": "https://www.hortencollection.com",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cassini_Vortrag_HHC.jpg/960px-Cassini_Vortrag_HHC.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cassini_Vortrag_HHC.jpg",
+        "author": "SonnensturmNr7",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-imperial-riding-school-vienna",
@@ -709,7 +727,13 @@
       ],
       "url": "https://www.viennafilmcommission.at/en/locations/kongressbad",
       "official_url": "https://www.wien.gv.at/freizeit/baeder/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wien_16_Kongressbad_b.jpg/960px-Wien_16_Kongressbad_b.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_16_Kongressbad_b.jpg",
+        "author": "Gugerell",
+        "license": "CC0"
+      }
     },
     {
       "id": "at-krapfenwaldlbad",
@@ -806,7 +830,13 @@
       ],
       "url": "https://viennafilmcommission.at/en/locations/laaerbergbad",
       "official_url": "https://www.wien.gv.at/freizeit/baeder/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/KurparkOberlaa5.JPG/960px-KurparkOberlaa5.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:KurparkOberlaa5.JPG",
+        "author": "Own work",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "at-leopold-museum",
@@ -915,7 +945,13 @@
       ],
       "url": "https://www.viennafilmcommission.at/en/locations/natural-history-museum-of-vienna",
       "official_url": "https://www.nhm-wien.ac.at/en",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Wien_-_Naturhistorisches_Museum_%284%29.JPG/960px-Wien_-_Naturhistorisches_Museum_%284%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Naturhistorisches_Museum_(4).JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-ottakringer-bad",
@@ -949,7 +985,13 @@
       ],
       "url": "https://www.viennafilmcommission.at/en/locations/palais-auersperg",
       "official_url": "https://www.palaisauersperg.events/raeume-entdecken/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Wien_-_Palais_Auersperg_%284%29.JPG/960px-Wien_-_Palais_Auersperg_%284%29.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_-_Palais_Auersperg_(4).JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "at-palais-daun-kinsky",
@@ -1004,7 +1046,13 @@
       ],
       "url": "https://viennafilmcommission.at/en/locations/rochusmarkt",
       "official_url": "https://www.wien.gv.at/freizeit/maerkte/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wien_Rochusmarkt.jpg/960px-Wien_Rochusmarkt.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wien_Rochusmarkt.jpg",
+        "author": "Invisigoth67",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "salzburg-old-town",
@@ -1245,7 +1293,13 @@
       ],
       "url": "https://www.viennafilmcommission.at/en/locations/theresienbad",
       "official_url": "https://www.wien.gv.at/freizeit/baeder/",
-      "commission_url": "https://viennafilmcommission.at"
+      "commission_url": "https://viennafilmcommission.at",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Theresienbad_2.JPG/960px-Theresienbad_2.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Theresienbad_2.JPG",
+        "author": "Thomas Ledl",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "at-thuryhof",
@@ -1701,7 +1755,13 @@
         "https://www.blegnymine.be"
       ],
       "official_url": "https://www.blegnymine.be",
-      "commission_url": "https://www.wallimage.be"
+      "commission_url": "https://www.wallimage.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blegny_Mine_1.jpg/960px-Blegny_Mine_1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Blegny_Mine_1.jpg",
+        "author": "Norbert Schnitzler",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-bois-du-cazier",
@@ -1872,7 +1932,13 @@
         "https://www.chateau-de-veves.be"
       ],
       "official_url": "https://www.chateau-de-veves.be",
-      "commission_url": "https://www.wallimage.be"
+      "commission_url": "https://www.wallimage.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/V%C3%AAves_CH1aJPG.jpg/960px-V%C3%AAves_CH1aJPG.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:V%C3%AAves_CH1aJPG.jpg",
+        "author": "Jean-Pol GRANDMONT",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "be-spa-francorchamps",
@@ -2069,7 +2135,13 @@
         "https://www.grandcurtius.be"
       ],
       "official_url": "https://www.grandcurtius.be",
-      "commission_url": "https://www.wallimage.be"
+      "commission_url": "https://www.wallimage.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Grand_Curtius_5-02-2010_19-24-56.png/960px-Grand_Curtius_5-02-2010_19-24-56.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Grand_Curtius_5-02-2010_19-24-56.png",
+        "author": "Paul Hermans",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-grand-hospice-brussels",
@@ -2252,7 +2324,13 @@
         "https://kanal.brussels"
       ],
       "official_url": "https://kanal.brussels",
-      "commission_url": "https://screen.brussels"
+      "commission_url": "https://screen.brussels",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Citro%C3%ABn_Belux_Yser.jpg/960px-Citro%C3%ABn_Belux_Yser.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Citro%C3%ABn_Belux_Yser.jpg",
+        "author": "Edison McCullen",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "be-kortrijk-xpo",
@@ -2426,7 +2504,13 @@
         "https://www.mundaneum.org"
       ],
       "official_url": "https://www.mundaneum.org",
-      "commission_url": "https://www.wallimage.be"
+      "commission_url": "https://www.wallimage.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Mundaneum_Tir%C3%A4ng_Karteikaarten.jpg/960px-Mundaneum_Tir%C3%A4ng_Karteikaarten.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mundaneum_Tir%C3%A4ng_Karteikaarten.jpg",
+        "author": "Zinneke",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "be-paleis-op-de-meir",
@@ -2462,7 +2546,13 @@
         "https://www.redstarline.be"
       ],
       "official_url": "https://www.redstarline.be",
-      "commission_url": "https://www.screenflanders.be"
+      "commission_url": "https://www.screenflanders.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Red_Star_Line_Museum.jpg/960px-Red_Star_Line_Museum.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Red_Star_Line_Museum.jpg",
+        "author": "DimiTalen",
+        "license": "CC0"
+      }
     },
     {
       "id": "be-sint-pietersabdij-gent",
@@ -2631,7 +2721,13 @@
         "https://www.theatredeliege.be"
       ],
       "official_url": "https://www.theatredeliege.be",
-      "commission_url": "https://www.wallimage.be"
+      "commission_url": "https://www.wallimage.be",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Th%C3%A9%C3%A2tre_de_Li%C3%A8ge.svg/960px-Th%C3%A9%C3%A2tre_de_Li%C3%A8ge.svg.png",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_de_Li%C3%A8ge.svg",
+        "author": "Olivier Debie",
+        "license": "Public domain"
+      }
     },
     {
       "id": "be-tour-and-taxis",
@@ -2759,7 +2855,13 @@
       ],
       "url": "https://filmzagreb.hr/product/music-academy-2/",
       "official_url": "https://filmzagreb.hr/product/music-academy-2/",
-      "commission_url": "https://havc.hr/"
+      "commission_url": "https://havc.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zagreb_University_Music_Academy.jpg/960px-Zagreb_University_Music_Academy.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zagreb_University_Music_Academy.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-arena-centar-zagreb",
@@ -2790,6 +2892,46 @@
         "https://filmzagreb.hr/product/arena-zagreb/"
       ],
       "official_url": "https://filmzagreb.hr/product/arena-zagreb/",
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jarun_20160702_5087_%28cropped%29.jpg/960px-Jarun_20160702_5087_%28cropped%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Jarun_20160702_5087_(cropped).jpg",
+        "author": "Branko Radovanović",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "hr-art-pavilion-zagreb",
+      "name": "Art Pavilion Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8071,
+      "lng": 15.9786,
+      "type": "Office, school & public building",
+      "setting": "Steel-framed exhibition hall on Zagreb's Zrinjevac park, originally built for the 1896 Budapest exhibition and re-erected in the city, now an art gallery with a domed central hall.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/art-pavilion-zagreb/",
+        "https://www.umjetnicki-paviljon.hr"
+      ],
+      "url": "https://filmzagreb.hr/product/art-pavilion-zagreb/",
+      "official_url": "https://www.umjetnicki-paviljon.hr",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
+      "id": "hr-botanical-garden-zagreb",
+      "name": "Botanical Garden of the University of Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8047,
+      "lng": 15.9717,
+      "type": "Office, school & public building",
+      "setting": "University-run botanical garden next to Zagreb's main railway station, with greenhouses, ponds and around 5,000 plant species laid out as an English-style landscape park.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/botanical-garden-zagreb/",
+        "https://botanickivrt.biol.pmf.hr"
+      ],
+      "url": "https://filmzagreb.hr/product/botanical-garden-zagreb/",
+      "official_url": "https://botanickivrt.biol.pmf.hr",
       "commission_url": "https://filmzagreb.hr"
     },
     {
@@ -2823,6 +2965,23 @@
       "commission_url": "https://filmzagreb.hr"
     },
     {
+      "id": "hr-bundek",
+      "name": "Bundek Park",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7848,
+      "lng": 15.9891,
+      "type": "Forest & lake",
+      "setting": "Lakeside park in Novi Zagreb with two lakes, a bathing area, barbecue spots, playgrounds and a cycling and skating track around the water.",
+      "facilities": "545,000 m2 park with 470,000 m2 of green area, 50,000 m2 of lakes, 10,000 m2 of paths, 10 free barbecue areas and a 1,650 metre cycling and skating track",
+      "source_urls": [
+        "https://filmzagreb.hr/product/bundek/"
+      ],
+      "url": "https://filmzagreb.hr/product/bundek/",
+      "official_url": "https://filmzagreb.hr/product/bundek/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-church-st-mark-zagreb",
       "name": "Church of St Mark, Zagreb",
       "country": "Croatia",
@@ -2836,7 +2995,13 @@
       ],
       "url": "https://filmzagreb.hr/product/church-of-st-marko/",
       "official_url": "https://filmzagreb.hr/product/church-of-st-marko/",
-      "commission_url": "https://havc.hr/"
+      "commission_url": "https://havc.hr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Zagreb_St_Mark_church.jpg/960px-Zagreb_St_Mark_church.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Zagreb_St_Mark_church.jpg",
+        "author": "Larisa Uhryn",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-church-st-donatus-zadar",
@@ -2882,6 +3047,23 @@
         "author": "Tatyana Peshkova",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "hr-hnk-zagreb",
+      "name": "Croatian National Theatre in Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8095,
+      "lng": 15.97,
+      "type": "Theatre, arena & venue",
+      "setting": "Neo-baroque opera and drama house on the Republic of Croatia Square in Zagreb, opened in 1895, with a gilded auditorium, foyer and working stage still in daily use.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/croatian-national-theatre/",
+        "https://www.hnk.hr"
+      ],
+      "url": "https://filmzagreb.hr/product/croatian-national-theatre/",
+      "official_url": "https://www.hnk.hr",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-hnk-zajc-rijeka",
@@ -2963,7 +3145,13 @@
         "https://filmzagreb.hr/product/dom-sportova/"
       ],
       "official_url": "https://filmzagreb.hr/product/dom-sportova/",
-      "commission_url": "https://filmzagreb.hr"
+      "commission_url": "https://filmzagreb.hr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Dom_sportova_%28Zagreb%29.jpg/960px-Dom_sportova_%28Zagreb%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Dom_sportova_(Zagreb).jpg",
+        "author": "Suradnik13",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hr-domovinski-most",
@@ -3094,6 +3282,22 @@
       "commission_url": "https://havc.hr"
     },
     {
+      "id": "hr-tunnel-gric",
+      "name": "Grič Tunnel",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8143,
+      "lng": 15.9746,
+      "type": "Transport & infrastructure",
+      "setting": "Pedestrian tunnel cut through Zagreb's Grič hill in the 1940s, linking the Ilica and Mesnička areas of the Upper Town, with bare concrete walls and arched side chambers.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/tunnel-gric/"
+      ],
+      "url": "https://filmzagreb.hr/product/tunnel-gric/",
+      "official_url": "https://filmzagreb.hr/product/tunnel-gric/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-hendrix-bridge",
       "name": "Hendrix Bridge, Zagreb",
       "country": "Croatia",
@@ -3158,6 +3362,23 @@
       "commission_url": "https://havc.hr"
     },
     {
+      "id": "hr-hotel-panorama",
+      "name": "Hotel Panorama Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8057,
+      "lng": 15.9521,
+      "type": "Hotel & interiors",
+      "setting": "Business hotel near Zagreb's fairground with conference rooms, a restaurant, lobby bar and fitness studio, used for corporate and hospitality scenes.",
+      "facilities": "280 rooms and suites, 9 multifunctional meeting rooms, restaurant, lobby bar with terrace, fitness studio and sauna",
+      "source_urls": [
+        "https://filmzagreb.hr/product/hotel-panorama/"
+      ],
+      "url": "https://filmzagreb.hr/product/hotel-panorama/",
+      "official_url": "https://filmzagreb.hr/product/hotel-panorama/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "jadran-film",
       "name": "Jadran Film",
       "country": "Croatia",
@@ -3180,6 +3401,22 @@
       ],
       "official_url": "https://www.jadran-film.com/",
       "commission_url": "https://filmingincroatia.hr/"
+    },
+    {
+      "id": "hr-jankomir-bridge",
+      "name": "Jankomir Bridge",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7924,
+      "lng": 15.8548,
+      "type": "Transport & infrastructure",
+      "setting": "Road bridge carrying the Zagreb bypass over the Sava river on the city's western edge, a steel and concrete structure used for traffic and industrial-area shots.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/jankomir-bridge/"
+      ],
+      "url": "https://filmzagreb.hr/product/jankomir-bridge/",
+      "official_url": "https://filmzagreb.hr/product/jankomir-bridge/",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-komedija-zagreb",
@@ -3240,6 +3477,22 @@
       }
     },
     {
+      "id": "hr-jarun",
+      "name": "Lake Jarun",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.7858,
+      "lng": 15.9296,
+      "type": "Forest & lake",
+      "setting": "Recreational lake and park complex in western Zagreb built for the 1987 World Student Games, with rowing lanes, beaches, cafes and cycling paths around the water.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/jarun/"
+      ],
+      "url": "https://filmzagreb.hr/product/jarun/",
+      "official_url": "https://filmzagreb.hr/product/jarun/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-lauba-zagreb",
       "name": "Lauba",
       "country": "Croatia",
@@ -3279,6 +3532,23 @@
       ],
       "official_url": "https://www.pp-medvednica.hr",
       "commission_url": "https://havc.hr"
+    },
+    {
+      "id": "hr-mimara",
+      "name": "Mimara Museum",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8082,
+      "lng": 15.9668,
+      "type": "Office, school & public building",
+      "setting": "Neo-Renaissance former school building on Roosevelt Square in Zagreb, now home to the Mimara Museum's collection of European paintings, sculpture and applied art.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/mimara/",
+        "https://www.mimara.hr"
+      ],
+      "url": "https://filmzagreb.hr/product/mimara/",
+      "official_url": "https://www.mimara.hr",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-museum-ancient-glass-zadar",
@@ -3560,6 +3830,22 @@
       "commission_url": "https://havc.hr/"
     },
     {
+      "id": "hr-ssd-dubrava",
+      "name": "ŠSD Dubrava Sports Hall",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8325,
+      "lng": 16.0626,
+      "type": "Theatre, arena & venue",
+      "setting": "Multi-purpose school sports hall in Zagreb's Dubrava district, used for handball, basketball and other indoor sports, with bleacher seating and changing rooms.",
+      "source_urls": [
+        "https://filmzagreb.hr/product/ssd-dubrava/"
+      ],
+      "url": "https://filmzagreb.hr/product/ssd-dubrava/",
+      "official_url": "https://filmzagreb.hr/product/ssd-dubrava/",
+      "commission_url": "https://filmzagreb.hr"
+    },
+    {
       "id": "hr-st-nicholas-fortress-sibenik",
       "name": "St. Nicholas Fortress",
       "country": "Croatia",
@@ -3637,6 +3923,23 @@
       "url": "https://filmzagreb.hr/product/tc-maksimir/",
       "official_url": "https://filmzagreb.hr/product/tc-maksimir/",
       "commission_url": "https://havc.hr/"
+    },
+    {
+      "id": "hr-westin-zagreb",
+      "name": "The Westin Zagreb",
+      "country": "Croatia",
+      "region": "City of Zagreb",
+      "lat": 45.8066,
+      "lng": 15.9661,
+      "type": "Hotel & interiors",
+      "setting": "High-rise hotel in central Zagreb with a casino, indoor pool and spa, conference and banqueting rooms, and a restaurant and bars used for hospitality shoots.",
+      "facilities": "340 rooms and suites, 13 multifunctional congress and banqueting rooms, indoor swimming pool, spa and casino",
+      "source_urls": [
+        "https://filmzagreb.hr/product/westin-zagreb/"
+      ],
+      "url": "https://filmzagreb.hr/product/westin-zagreb/",
+      "official_url": "https://filmzagreb.hr/product/westin-zagreb/",
+      "commission_url": "https://filmzagreb.hr"
     },
     {
       "id": "hr-tvornica-kulture",
@@ -11265,6 +11568,40 @@
       "commission_url": "https://www.mdm-online.de/film-commission/"
     },
     {
+      "id": "gr-academy-athens",
+      "name": "Academy of Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9804,
+      "lng": 23.7348,
+      "type": "Office, school & public building",
+      "setting": "Neoclassical seat of Greece's national academy of sciences and letters on Panepistimiou Street in central Athens, with a colonnaded portico and tall columns topped by statues of Athena and Apollo.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/academy-of-athens/",
+        "https://www.academyofathens.gr"
+      ],
+      "url": "https://filmcommission.gr/locations/academy-of-athens/",
+      "official_url": "https://www.academyofathens.gr",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-achilleion",
+      "name": "Achilleion Palace",
+      "country": "Greece",
+      "region": "Ionian Islands",
+      "lat": 39.5628,
+      "lng": 19.9042,
+      "type": "Palace & landmark",
+      "setting": "Neoclassical summer palace built for Empress Elisabeth of Austria above Gastouri, Corfu, with a garden of statues, a colonnaded terrace and sea views, run today as a museum.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/achilleio-museum/",
+        "https://www.achillion-corfu.gr"
+      ],
+      "url": "https://filmcommission.gr/locations/achilleio-museum/",
+      "official_url": "https://www.achillion-corfu.gr",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-allatini-factory",
       "name": "Allatini Factory",
       "country": "Greece",
@@ -11382,6 +11719,23 @@
       }
     },
     {
+      "id": "gr-athens-city-hall",
+      "name": "Athens City Hall",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9816,
+      "lng": 23.7288,
+      "type": "Office, school & public building",
+      "setting": "Seat of the Athens municipal council on Kotzia Square, a 19th-century building with a council chamber, offices and an inner courtyard used for civic scenes.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/athens-city-hall/",
+        "https://www.cityofathens.gr"
+      ],
+      "url": "https://filmcommission.gr/locations/athens-city-hall/",
+      "official_url": "https://www.cityofathens.gr",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-athens-conservatoire",
       "name": "Athens Conservatoire",
       "country": "Greece",
@@ -11410,6 +11764,22 @@
       ],
       "url": "https://filmcommission.gr/locations/benaki-museum/",
       "official_url": "https://filmcommission.gr/locations/benaki-museum/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-chalki-port",
+      "name": "Chalki Port (Emporeio)",
+      "country": "Greece",
+      "region": "South Aegean",
+      "lat": 36.2221,
+      "lng": 27.6119,
+      "type": "Transport & infrastructure",
+      "setting": "Small harbour of Emporeio, the main village of Chalki island in the Dodecanese, lined with restored neoclassical captains' houses and the working ferry and fishing quay.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/chalki-port/"
+      ],
+      "url": "https://filmcommission.gr/locations/chalki-port/",
+      "official_url": "https://filmcommission.gr/locations/chalki-port/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -11580,6 +11950,22 @@
       }
     },
     {
+      "id": "gr-parliament",
+      "name": "Hellenic Parliament",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9753,
+      "lng": 23.737,
+      "type": "Office, school & public building",
+      "setting": "Former royal palace on Syntagma Square that now houses the Hellenic Parliament, with a long neoclassical facade overlooking the square and the Tomb of the Unknown Soldier.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/the-parliament/"
+      ],
+      "url": "https://filmcommission.gr/locations/the-parliament/",
+      "official_url": "https://filmcommission.gr/locations/the-parliament/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-hotel-grande-bretagne",
       "name": "Hotel Grande Bretagne",
       "country": "Greece",
@@ -11632,6 +12018,22 @@
         "author": "Edal Anton Lefterov",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "gr-kotzia-square",
+      "name": "Kotzia Square",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9816,
+      "lng": 23.7288,
+      "type": "City & skyline",
+      "setting": "Central Athens square in front of the City Hall, with an excavated ancient road visible under glass, arcaded 19th-century buildings and the National Bank headquarters nearby.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/kotzia-square/"
+      ],
+      "url": "https://filmcommission.gr/locations/kotzia-square/",
+      "official_url": "https://filmcommission.gr/locations/kotzia-square/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-lavrio-technological-cultural-park",
@@ -11719,6 +12121,22 @@
       }
     },
     {
+      "id": "gr-milos-mines",
+      "name": "Milos Mines",
+      "country": "Greece",
+      "region": "South Aegean",
+      "lat": 36.7263,
+      "lng": 24.4472,
+      "type": "Industrial & derelict",
+      "setting": "Disused open-cast sulphur and perlite mining area on the island of Milos, with cut rock faces, old loading structures and access roads near the port town of Adamas.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/milos-mines/"
+      ],
+      "url": "https://filmcommission.gr/locations/milos-mines/",
+      "official_url": "https://filmcommission.gr/locations/milos-mines/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-milos-mining-museum",
       "name": "Milos Mining Museum",
       "country": "Greece",
@@ -11804,6 +12222,22 @@
       "commission_url": "https://filmcommission.gr"
     },
     {
+      "id": "gr-national-garden",
+      "name": "National Garden of Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9736,
+      "lng": 23.7378,
+      "type": "City & skyline",
+      "setting": "19th-century public park behind the Greek Parliament in central Athens, with shaded paths, ponds, ancient fragments and a small zoo, bordering the Zappeion grounds.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/national-garden/"
+      ],
+      "url": "https://filmcommission.gr/locations/national-garden/",
+      "official_url": "https://filmcommission.gr/locations/national-garden/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-national-historical-museum-athens",
       "name": "National Historical Museum (Old Parliament House)",
       "country": "Greece",
@@ -11818,6 +12252,23 @@
       ],
       "url": "https://filmcommission.gr/locations/national-history-museum/",
       "official_url": "https://www.nhmuseum.gr/en/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-national-library",
+      "name": "National Library of Greece, old building",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9853,
+      "lng": 23.7103,
+      "type": "Office, school & public building",
+      "setting": "Neoclassical former home of the National Library of Greece on Panepistimiou Street, part of the Athens Trilogy with a domed reading room and a marble double staircase.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/national-library/",
+        "https://www.nlg.gr"
+      ],
+      "url": "https://filmcommission.gr/locations/national-library/",
+      "official_url": "https://www.nlg.gr",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -11886,6 +12337,22 @@
       ],
       "url": "https://filmcommission.gr/locations/old-tobacco-warehouses/",
       "official_url": "https://filmcommission.gr/locations/old-tobacco-warehouses/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-faistos-field",
+      "name": "Phaistos Rural Fields",
+      "country": "Greece",
+      "region": "Region of Crete",
+      "lat": 35.0512,
+      "lng": 24.8142,
+      "type": "Village & countryside",
+      "setting": "Open farmland and olive groves on the Phaistos plain in south-central Crete, with the Minoan palace ruins nearby and views over the Messara valley to the Psiloritis range.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/faistos-field/"
+      ],
+      "url": "https://filmcommission.gr/locations/faistos-field/",
+      "official_url": "https://filmcommission.gr/locations/faistos-field/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -11961,6 +12428,22 @@
       ],
       "url": "https://filmcommission.gr/locations/power-station-of-lavrio/",
       "official_url": "https://filmcommission.gr/locations/power-station-of-lavrio/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-rethymno-harbour",
+      "name": "Rethymno Venetian Harbour",
+      "country": "Greece",
+      "region": "Region of Crete",
+      "lat": 35.3699,
+      "lng": 24.4757,
+      "type": "Transport & infrastructure",
+      "setting": "Working Venetian-era harbour of Rethymno, Crete, with a stone lighthouse, quayside tavernas and fishing boats moored below the old town and the Fortezza fortress.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/rethymno-harbour/"
+      ],
+      "url": "https://filmcommission.gr/locations/rethymno-harbour/",
+      "official_url": "https://filmcommission.gr/locations/rethymno-harbour/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -12050,6 +12533,22 @@
         "https://filmcommission.gr/locations/stavros-niarchos-foundation-cultural-centre/"
       ],
       "official_url": "https://filmcommission.gr/locations/stavros-niarchos-foundation-cultural-centre/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
+      "id": "gr-symi-port",
+      "name": "Symi Port (Gialos)",
+      "country": "Greece",
+      "region": "South Aegean",
+      "lat": 36.6167,
+      "lng": 27.8349,
+      "type": "Transport & infrastructure",
+      "setting": "Working harbour of Symi town, Gialos, ringed by pastel-coloured neoclassical houses on the hillside, with fishing boats, cafes and the old customs house on the quay.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/symi-port/"
+      ],
+      "url": "https://filmcommission.gr/locations/symi-port/",
+      "official_url": "https://filmcommission.gr/locations/symi-port/",
       "commission_url": "https://filmcommission.gr"
     },
     {
@@ -22662,6 +23161,22 @@
       "commission_url": "https://silesiafilmcommission.pl/en"
     },
     {
+      "id": "pt-adega-baia-arruda",
+      "name": "Adega Baía da Arruda",
+      "country": "Portugal",
+      "region": "Azores",
+      "lat": 38.4054,
+      "lng": -28.0575,
+      "type": "Industrial & derelict",
+      "setting": "Small working winery on Pico Island in the Azores, set among the UNESCO-listed currais, stone-walled plots that shelter vines grown directly on volcanic rock.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/adega-baia-da-arruda/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/adega-baia-da-arruda/",
+      "official_url": "https://portugalfilmcommission.com/en/location/adega-baia-da-arruda/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-adega-mayor",
       "name": "Adega Mayor",
       "country": "Portugal",
@@ -22770,6 +23285,22 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-cabo-da-roca",
+      "name": "Cabo da Roca Lighthouse",
+      "country": "Portugal",
+      "region": "Lisbon District",
+      "lat": 38.7809,
+      "lng": -9.4994,
+      "type": "Transport & infrastructure",
+      "setting": "Working lighthouse on Cabo da Roca near Colares, mainland Europe's westernmost point, standing on wind-blown cliffs above the Atlantic.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/farol-do-cabo-da-roca/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-da-roca/",
+      "official_url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-da-roca/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-sao-vicente-lighthouse",
       "name": "Cabo de Sao Vicente Lighthouse",
       "country": "Portugal",
@@ -22784,6 +23315,38 @@
       "url": "https://portugalfilmcommission.com/en/location/sao-vicente-lighthouse/",
       "official_url": "https://portugalfilmcommission.com/en/location/sao-vicente-lighthouse/",
       "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-cabo-espichel",
+      "name": "Cabo Espichel Lighthouse",
+      "country": "Portugal",
+      "region": "Setúbal District",
+      "lat": 38.414,
+      "lng": -9.2222,
+      "type": "Transport & infrastructure",
+      "setting": "Working lighthouse on the cliffs of Cabo Espichel near Sesimbra, beside a walled pilgrimage sanctuary and rows of former pilgrims' lodgings on an open headland.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/farol-do-cabo-espichel/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-espichel/",
+      "official_url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-espichel/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-cacela-velha",
+      "name": "Cacela Velha",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.1574,
+      "lng": -7.5462,
+      "type": "Historic town & street",
+      "setting": "Small fortified hilltop village on the eastern Algarve coast overlooking the Ria Formosa lagoon, with whitewashed houses, a small fort and a parish church around a single square.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/cacela-velha/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/cacela-velha/",
+      "official_url": "https://portugalfilmcommission.com/en/location/cacela-velha/",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-casa-da-musica",
@@ -23172,6 +23735,22 @@
       "commission_url": "https://portugalfilmcommission.com"
     },
     {
+      "id": "pt-mina-sal-gema",
+      "name": "Loulé Rock Salt Mine",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.14,
+      "lng": -8.0233,
+      "type": "Industrial & derelict",
+      "setting": "Underground rock salt mine in the Algarve hinterland near Loulé, with excavated caverns and tunnels used for cave and underground filming; coordinates mark the town centre, not the mine entrance.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/mina-de-sal-gema/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/mina-de-sal-gema/",
+      "official_url": "https://portugalfilmcommission.com/en/location/mina-de-sal-gema/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-lousal-mining-museum",
       "name": "Lousal Mining Museum",
       "country": "Portugal",
@@ -23305,6 +23884,22 @@
       "commission_url": "https://portugalfilmcommission.com/"
     },
     {
+      "id": "pt-monchique-range",
+      "name": "Monchique Range",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.3276,
+      "lng": -8.5766,
+      "type": "Mountains & wilderness",
+      "setting": "Forested mountain range in the western Algarve rising to Fóia, with natural pools, waterfalls and hillside villages, cooler and greener than the coast below.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/monchique-range/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/monchique-range/",
+      "official_url": "https://portugalfilmcommission.com/en/location/monchique-range/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
       "id": "pt-mosteiro-tibaes",
       "name": "Mosteiro de São Martinho de Tibães",
       "country": "Portugal",
@@ -23318,6 +23913,22 @@
       ],
       "url": "https://portugalfilmcommission.com/locais-de-filmagem/mosteiro-de-tibaes/",
       "official_url": "https://portugalfilmcommission.com/locais-de-filmagem/mosteiro-de-tibaes/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-mourisca-mill",
+      "name": "Mourisca Tide Mill",
+      "country": "Portugal",
+      "region": "Setúbal District",
+      "lat": 38.5282,
+      "lng": -8.8031,
+      "type": "Industrial & derelict",
+      "setting": "Restored tide mill on the Sado estuary near Setúbal, using the rise and fall of the tide to turn its grinding wheels, now managed as a heritage and educational site.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/mourisca-tide-mill/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/mourisca-tide-mill/",
+      "official_url": "https://portugalfilmcommission.com/en/location/mourisca-tide-mill/",
       "commission_url": "https://portugalfilmcommission.com"
     },
     {
@@ -23389,6 +24000,22 @@
         "author": "Manuel de Sousa",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "pt-pero-negro",
+      "name": "Pero Negro Railway Station",
+      "country": "Portugal",
+      "region": "Lisbon District",
+      "lat": 38.9887,
+      "lng": -9.1976,
+      "type": "Transport & infrastructure",
+      "setting": "Small rural railway station on the Oeste line near Sobral de Monte Agraço, with a period station building, platform and level crossing still used by regional trains.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/estacao-ferroviaria-de-pero-negro/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/estacao-ferroviaria-de-pero-negro/",
+      "official_url": "https://portugalfilmcommission.com/en/location/estacao-ferroviaria-de-pero-negro/",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-pestana-palace-lisbon",
@@ -23542,6 +24169,38 @@
       "url": "https://portugalfilmcommission.com/en/location/quinta-do-pisao/",
       "official_url": "https://portugalfilmcommission.com/en/location/quinta-do-pisao/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-rabelo-boatyard",
+      "name": "Rabelo Boat Yard",
+      "country": "Portugal",
+      "region": "Porto District",
+      "lat": 41.1407,
+      "lng": -8.6126,
+      "type": "Industrial & derelict",
+      "setting": "Working shipyard on the Douro riverfront in Porto that still builds and repairs traditional rabelo boats once used to carry Port wine barrels downriver.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/rabelo-boat-yard/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/rabelo-boat-yard/",
+      "official_url": "https://portugalfilmcommission.com/en/location/rabelo-boat-yard/",
+      "commission_url": "https://portugalfilmcommission.com"
+    },
+    {
+      "id": "pt-ria-formosa",
+      "name": "Ria Formosa",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.0622,
+      "lng": -7.7231,
+      "type": "Coast & beach",
+      "setting": "Lagoon system of barrier islands, salt marshes and channels along the eastern Algarve coast near Tavira and Faro, home to fishing communities, salt pans and wading birds.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/ria-formosa/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/ria-formosa/",
+      "official_url": "https://portugalfilmcommission.com/en/location/ria-formosa/",
+      "commission_url": "https://portugalfilmcommission.com"
     },
     {
       "id": "pt-santa-cruz-municipal-aerodrome",
@@ -23886,6 +24545,23 @@
       }
     },
     {
+      "id": "es-bodegas-alvear",
+      "name": "Bodegas Alvear",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.5818,
+      "lng": -4.643,
+      "type": "Industrial & derelict",
+      "setting": "Working winery in Montilla, Córdoba, founded in 1729, with barrel cellars, courtyards and production buildings used for the local Montilla-Moriles wines.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/bodegas-alvear/",
+        "https://www.alvear.es"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/bodegas-alvear/",
+      "official_url": "https://www.alvear.es",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-bombas-gens",
       "name": "Bombas Gens",
       "country": "Spain",
@@ -23952,6 +24628,22 @@
         "author": "Antonio Orga",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-casa-cuartel",
+      "name": "Casa Cuartel de la Guardia Civil, Aracena",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.8949,
+      "lng": -6.5624,
+      "type": "Hospital, prison & institution",
+      "setting": "Civil Guard barracks in Aracena in the Sierra de Huelva, listed by the regional film commission under its heritage-architecture and prison-building category.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/casa-cuartel-guardia-civil/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/casa-cuartel-guardia-civil/",
+      "official_url": "https://andaluciafilm.com/localizacion/casa-cuartel-guardia-civil/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-casco-vallecas",
@@ -24025,6 +24717,22 @@
       "url": "https://madridfilmoffice.com/localizacion/centro-comercial-arturo-soria-plaza/",
       "official_url": "https://madridfilmoffice.com/localizacion/centro-comercial-arturo-soria-plaza/",
       "commission_url": "https://madridfilmoffice.com"
+    },
+    {
+      "id": "es-chiringuito-serenade",
+      "name": "Chiringuito Serenade, Bolonia",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 36.0822,
+      "lng": -5.764,
+      "type": "Bar, restaurant & shop",
+      "setting": "Beach bar on Bolonia beach near Tarifa, a simple wood-built restaurant serving the dune-backed beach beside the Baelo Claudia Roman ruins.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/chiringuito-serenade-bolonia/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/chiringuito-serenade-bolonia/",
+      "official_url": "https://andaluciafilm.com/localizacion/chiringuito-serenade-bolonia/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-city-of-arts-and-sciences",
@@ -24219,6 +24927,22 @@
       }
     },
     {
+      "id": "es-cooperativa-olivarera",
+      "name": "Cooperativa Olivarera Nuestra Señora del Puerto",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.8339,
+      "lng": -6.3389,
+      "type": "Industrial & derelict",
+      "setting": "Working olive oil cooperative in the small Sierra de Huelva town of Zufre, with mill buildings, storage tanks and loading areas used to process the local harvest.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/cooperativa-olivarera-nuestra-senora-del-puerto/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/cooperativa-olivarera-nuestra-senora-del-puerto/",
+      "official_url": "https://andaluciafilm.com/localizacion/cooperativa-olivarera-nuestra-senora-del-puerto/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-corralejo-dunes",
       "name": "Corralejo Dunes Natural Park",
       "country": "Spain",
@@ -24270,6 +24994,22 @@
         "author": "Valencia CF",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-estadio-nuevo-colombino",
+      "name": "Estadio Nuevo Colombino",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.2467,
+      "lng": -6.9542,
+      "type": "Theatre, arena & venue",
+      "setting": "Football stadium in Huelva, home ground of Recreativo de Huelva, with a modern bowl-shaped stand used for sports and crowd scenes.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/estadio-de-futbol-nuevo-colombino/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/estadio-de-futbol-nuevo-colombino/",
+      "official_url": "https://andaluciafilm.com/localizacion/estadio-de-futbol-nuevo-colombino/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-sanchez-pizjuan",
@@ -24363,6 +25103,22 @@
       ],
       "official_url": "https://www.firabarcelona.com",
       "commission_url": "https://www.bcncatfilmcommission.com"
+    },
+    {
+      "id": "es-hospital-san-juan",
+      "name": "Former Hospital de San Juan de Dios, Jaén",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.7729,
+      "lng": -3.7883,
+      "type": "Hospital, prison & institution",
+      "setting": "Former hospital building in the historic centre of Jaén, listed by the regional film commission under historic centres and hospitals; coordinates mark the town centre.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/antiguo-hospital-san-juande-dios/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/antiguo-hospital-san-juande-dios/",
+      "official_url": "https://andaluciafilm.com/localizacion/antiguo-hospital-san-juande-dios/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-fuerteventura-airport",
@@ -24478,6 +25234,23 @@
         "author": "Diego Delso",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-hotel-oromana",
+      "name": "Hotel Oromana",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.3276,
+      "lng": -5.8445,
+      "type": "Hotel & interiors",
+      "setting": "Hotel set among pinewoods above Alcalá de Guadaíra near Seville, a low-rise building with gardens and a pool used for period and contemporary hospitality scenes.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/hotel-oromana/",
+        "https://www.hoteloromana.com"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/hotel-oromana/",
+      "official_url": "https://www.hoteloromana.com",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-instituto-cervantes-madrid",
@@ -24709,6 +25482,22 @@
       }
     },
     {
+      "id": "es-mercado-feria",
+      "name": "Mercado de Feria",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.3995,
+      "lng": -5.9915,
+      "type": "Bar, restaurant & shop",
+      "setting": "Covered municipal market on Calle Feria in Seville's Macarena district, said to be the city's oldest, with iron-framed stalls selling fresh produce, fish and tapas bars.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/mercado-de-feria/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/mercado-de-feria/",
+      "official_url": "https://andaluciafilm.com/localizacion/mercado-de-feria/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-mercado-ribera",
       "name": "Mercado de la Ribera",
       "country": "Spain",
@@ -24784,6 +25573,22 @@
       ],
       "official_url": "https://www.miniHollywood.com/",
       "commission_url": "https://www.shootinginspain.info/"
+    },
+    {
+      "id": "es-muelle-riotinto",
+      "name": "Muelle de la Rio Tinto Company Limited",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.245,
+      "lng": -6.946,
+      "type": "Industrial & derelict",
+      "setting": "Historic ore-loading pier built by the Rio Tinto Company on the Huelva waterfront, an iron-framed structure once used to load mineral trains onto ships.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/muelle-de-la-rio-tinto-company-limited/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/muelle-de-la-rio-tinto-company-limited/",
+      "official_url": "https://andaluciafilm.com/localizacion/muelle-de-la-rio-tinto-company-limited/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-museo-abc-madrid",
@@ -25258,6 +26063,22 @@
       }
     },
     {
+      "id": "es-santa-justa",
+      "name": "Santa Justa Station",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.393,
+      "lng": -5.9741,
+      "type": "Transport & infrastructure",
+      "setting": "Seville's main railway station, a large modern terminus with a vaulted departure hall serving high-speed AVE trains and regional services across Andalusia.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/estacion-de-santa-justa/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/estacion-de-santa-justa/",
+      "official_url": "https://andaluciafilm.com/localizacion/estacion-de-santa-justa/",
+      "commission_url": "https://andaluciafilm.com"
+    },
+    {
       "id": "es-santiago-bernabeu-stadium",
       "name": "Santiago Bernabeu Stadium",
       "country": "Spain",
@@ -25332,6 +26153,22 @@
         "author": "Dgalan",
         "license": "CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "es-teatro-alameda",
+      "name": "Teatro Alameda, Tarifa",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 36.0133,
+      "lng": -5.605,
+      "type": "Theatre, arena & venue",
+      "setting": "Municipal cinema and theatre on the Alameda in Tarifa's old town, a public building used for screenings, performances and civic events on Spain's southernmost point.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/teatro-alameda/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/teatro-alameda/",
+      "official_url": "https://andaluciafilm.com/localizacion/teatro-alameda/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-teatro-la-latina-madrid",
@@ -25495,6 +26332,22 @@
         "author": "Javier Mediavilla Ezquibela Esta imagen tiene una licencia libre (que puedes ver abajo), pero si la usas fuera de los pr",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "es-pabellon-control-aguas",
+      "name": "Water Control Pavilion, Cristóbal Colón Power Station",
+      "country": "Spain",
+      "region": "Andalusia",
+      "lat": 37.2166,
+      "lng": -6.9442,
+      "type": "Industrial & derelict",
+      "setting": "Water intake control building of the Cristóbal Colón combined-cycle power station on the Huelva estuary, a compact industrial structure among pipework and cooling infrastructure.",
+      "source_urls": [
+        "https://andaluciafilm.com/localizacion/pabellon-de-control-de-aguas-central-termica-cristobal-colon/"
+      ],
+      "url": "https://andaluciafilm.com/localizacion/pabellon-de-control-de-aguas-central-termica-cristobal-colon/",
+      "official_url": "https://andaluciafilm.com/localizacion/pabellon-de-control-de-aguas-central-termica-cristobal-colon/",
+      "commission_url": "https://andaluciafilm.com"
     },
     {
       "id": "es-zona-industrial-vallecas",
@@ -28842,6 +29695,24 @@
       "url": "https://screenmanchester.com/locations/st-johns-gardens/",
       "official_url": "https://screenmanchester.com/locations/st-johns-gardens/",
       "commission_url": "https://screenmanchester.com"
+    },
+    {
+      "id": "uk-st-pauls-cathedral",
+      "name": "St Paul's Cathedral",
+      "country": "United Kingdom",
+      "region": "Greater London",
+      "lat": 51.5138,
+      "lng": -0.0985,
+      "type": "Church & monastery",
+      "setting": "Working Anglican cathedral in the City of London with Wren's dome, geometric staircase and west steps, hired for feature and TV filming through its press office.",
+      "known_for": "Harry Potter, Sherlock Holmes, Mary Poppins Returns, Mission: Impossible - Fallout, Paddington 2, Wonka, The Diplomat",
+      "permit_needed": "Yes",
+      "source_urls": [
+        "https://www.stpauls.co.uk/filming-st-pauls",
+        "https://www.stpauls.co.uk/filming-and-photography"
+      ],
+      "official_url": "https://www.stpauls.co.uk/filming-st-pauls",
+      "commission_url": "https://filmlondon.org.uk"
     },
     {
       "id": "uk-swg3",
