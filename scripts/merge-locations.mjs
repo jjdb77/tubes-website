@@ -41,7 +41,20 @@ const nameKey = (l) => `${l.country}|${String(l.name).toLowerCase().replace(/[^a
 const names = new Set(data.locations.map(nameKey));
 let added = 0, skippedDup = 0, patched = 0;
 for (const f of fs.readdirSync(outDir).filter((f) => f.endsWith(".json")).sort()) {
-  const arr = JSON.parse(fs.readFileSync(path.join(outDir, f), "utf8"));
+  // Agents zetten hun werkbestanden soms in dezelfde map, en een opgehaalde
+  // pagina kan een .json-naam hebben gekregen. Zo'n bestand overslaan in plaats
+  // van de hele samenvoeging te laten mislukken.
+  let arr;
+  try {
+    arr = JSON.parse(fs.readFileSync(path.join(outDir, f), "utf8"));
+  } catch (err) {
+    console.log(`geen geldige JSON, overgeslagen: ${f} (${err.message.slice(0, 60)})`);
+    continue;
+  }
+  if (!Array.isArray(arr)) {
+    console.log(`geen lijst, overgeslagen: ${f}`);
+    continue;
+  }
   // Patchbestanden bevatten {id, veld...} en geen hele locaties.
   if (f === "studios-patch.json" || f.startsWith("enrich-")) {
     for (const p of arr) {
