@@ -7358,6 +7358,21 @@
       }
     },
     {
+      "id": "gr-anargyrios-korgialenios-school-spetses",
+      "name": "Anargyrios and Korgialenios School of Spetses",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.2741,
+      "lng": 23.1434,
+      "type": "Office, school & public building",
+      "setting": "Historic boarding school building on the island of Spetses, listed by the Hellenic Film Commission as a filming location among its historic sites.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/anargirios-and-korgialenios-school/"
+      ],
+      "official_url": "https://filmcommission.gr/locations/anargirios-and-korgialenios-school/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "gr-epidaurus-ancient-theatre",
       "name": "Ancient Theatre of Epidaurus",
       "country": "Greece",
@@ -7413,6 +7428,21 @@
         "author": "en:User:Salonica84",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "gr-athens-conservatoire",
+      "name": "Athens Conservatoire",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9735,
+      "lng": 23.7434,
+      "type": "Office, school & public building",
+      "setting": "Music conservatory building in central Athens, listed by the Hellenic Film Commission among its Modern Greece filming locations.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/conservatoiry-of-athens/"
+      ],
+      "official_url": "https://filmcommission.gr/locations/conservatoiry-of-athens/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-benaki-museum-piraeus",
@@ -7505,6 +7535,21 @@
       ],
       "official_url": "https://2023eleusis.eu/en/",
       "commission_url": "https://filmcommission.gr/locations/"
+    },
+    {
+      "id": "gr-emst",
+      "name": "EMST, National Museum of Contemporary Art",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.963,
+      "lng": 23.7253,
+      "type": "Industrial & derelict",
+      "setting": "Athens contemporary art museum housed in the former Fix Brewery building on Kallirois Avenue, listed by the Hellenic Film Commission as a filming location.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/national-museum-of-contemporary-art/"
+      ],
+      "official_url": "https://filmcommission.gr/locations/national-museum-of-contemporary-art/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-hotel-grande-bretagne",
@@ -7643,6 +7688,21 @@
       }
     },
     {
+      "id": "gr-national-bank-of-greece-hq",
+      "name": "National Bank of Greece Headquarters",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.9757,
+      "lng": 23.7254,
+      "type": "Office, school & public building",
+      "setting": "Head office building of Greece's National Bank in central Athens, listed by the Hellenic Film Commission among its Modern Greece filming locations.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/national-bank/"
+      ],
+      "official_url": "https://filmcommission.gr/locations/national-bank/",
+      "commission_url": "https://filmcommission.gr"
+    },
+    {
       "id": "nu-boyana-hellenic",
       "name": "Nu Boyana Hellenic Film Studios",
       "country": "Greece",
@@ -7777,6 +7837,21 @@
         "author": "Ggia",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "gr-stavros-niarchos-foundation-cultural-centre",
+      "name": "Stavros Niarchos Foundation Cultural Centre",
+      "country": "Greece",
+      "region": "Attica",
+      "lat": 37.941,
+      "lng": 23.6933,
+      "type": "Theatre, arena & venue",
+      "setting": "Cultural complex on the Faliro waterfront in Athens housing the Greek National Opera and National Library, listed by the Hellenic Film Commission as a filming location.",
+      "source_urls": [
+        "https://filmcommission.gr/locations/stavros-niarchos-foundation-cultural-centre/"
+      ],
+      "official_url": "https://filmcommission.gr/locations/stavros-niarchos-foundation-cultural-centre/",
+      "commission_url": "https://filmcommission.gr"
     },
     {
       "id": "gr-thessaloniki-city-hall",
