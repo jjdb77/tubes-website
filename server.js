@@ -125,10 +125,15 @@ app.post("/api/contact", (req, res) => {
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true });
 
-  // Suggesties van de locatievergelijking gaan meteen per mail door; de rest
-  // van de contactberichten staat (voorlopig) alleen op /beheer.
-  if (!flagged) {
+  // Alles gaat per mail door. Een suggestie voor een van de lijsten krijgt zijn
+  // eigen opmaak en onderwerp; al het andere gaat als contactbericht naar
+  // CONTACT_EMAIL. Ook een bericht met het honeypot-veld ingevuld sturen we
+  // door, gemarkeerd: dat kan een wachtwoordmanager zijn geweest en een echte
+  // aanvraag mag nooit stil verdwijnen.
+  if (LOCATIE_PREFIX.test(String(entry.message || ""))) {
     meldLocatieSuggestie(entry).catch((err) => console.error("[mail] locatiesuggestie:", err.message));
+  } else {
+    meldContactbericht(entry).catch((err) => console.error("[mail] contactbericht:", err.message));
   }
 });
 
@@ -434,7 +439,7 @@ async function verstuurWachtenden({ alles = false } = {}) {
   return wachtenden.length;
 }
 
-async function stuurMail(naar, onderwerp, html) {
+async function stuurMail(naar, onderwerp, html, antwoordNaar) {
   const ontvangers = adressen(naar);
   if (!MAIL_KEY || !ontvangers.length) {
     console.warn("[mail] geen sleutel of geen ontvanger, mail niet verstuurd:", onderwerp);
@@ -447,7 +452,14 @@ async function stuurMail(naar, onderwerp, html) {
       method: "POST",
       signal: stop.signal,
       headers: { Authorization: `Bearer ${MAIL_KEY}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: MAIL_FROM, to: ontvangers, subject: onderwerp, html }),
+      body: JSON.stringify({
+        from: MAIL_FROM,
+        to: ontvangers,
+        subject: onderwerp,
+        html,
+        // Antwoorden gaat zo rechtstreeks naar de afzender van het formulier.
+        ...(antwoordNaar ? { reply_to: antwoordNaar } : {}),
+      }),
     });
     if (!res.ok) {
       console.error("[mail] verzenden mislukt:", res.status, await res.text().catch(() => ""));
@@ -520,6 +532,72 @@ async function meldLocatieSuggestie(entry) {
   </div>`;
 
   await stuurMail(LOCATION_EMAIL, `${soort} suggestion: ${locatie} (${naam})`, html);
+}
+
+// Elk gewoon contact- of demobericht gaat meteen per mail door. Eerder stonden
+// die alleen in het JSONL-bestand op de volume, zichtbaar via /beheer; zolang
+// ADMIN_PASSWORD daar niet staat kwam een aanvraag dus nergens aan.
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "joachim@tubes.media";
+
+async function meldContactbericht(entry) {
+  if (!MAIL_KEY) return;
+  const naam = `${entry.first_name} ${entry.last_name}`.trim();
+  const vanaf = entry.page ? `https://www.tubes.media${entry.page}` : "https://www.tubes.media/contact/";
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p><strong>${esc(naam)}</strong> heeft het contactformulier ingevuld.</p>
+    <p><a href="mailto:${esc(entry.email)}">${esc(entry.email)}</a>${entry.phone ? ` &middot; ${esc(entry.phone)}` : ""} &middot; ${esc(stamp(entry.at))}</p>
+    <p style="background:#F6F7F9;padding:12px;border-radius:8px;white-space:pre-line">${esc(entry.message)}</p>
+    ${entry.spam ? '<p style="color:#8a6d3b"><em>Let op: het verborgen veld was ingevuld. Meestal een bot, maar soms een wachtwoordmanager, dus dit bericht kan echt zijn.</em></p>' : ""}
+    <p><a href="${esc(vanaf)}">De pagina waar het vandaan komt</a> &middot; <a href="https://www.tubes.media/beheer">Alle berichten op /beheer</a></p>
+  </div>`;
+  const onderwerp = `${entry.spam ? "Mogelijk spam: " : ""}Contactformulier: ${naam}`;
+  await stuurMail(CONTACT_EMAIL, onderwerp, html, entry.email);
+}
+
+// Eenmalige inhaalslag. Tot 4-9-2026 werden gewone contactberichten alleen naar
+// het bestand op de volume geschreven en nooit gemaild, en zonder ADMIN_PASSWORD
+// is /beheer onbereikbaar, dus lagen ze daar onzichtbaar. Bij de eerste start na
+// die wijziging gaan ze alsnog als een overzicht de deur uit. Het merkbestand op
+// de volume zorgt dat dit precies een keer gebeurt, ook na een redeploy.
+const BACKLOG_FLAG = path.join(DATA_DIR, "backlog-mailed.json");
+
+async function stuurAchterstandNa() {
+  if (!MAIL_KEY) return;
+  if (fs.existsSync(BACKLOG_FLAG)) return;
+  let regels = [];
+  try {
+    regels = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean);
+  } catch {
+    return; // nog geen berichten, niets na te sturen
+  }
+  // Suggesties voor de lijsten gingen al meteen per mail door; alleen de rest
+  // heeft nooit iemand bereikt.
+  const berichten = regels
+    .map((r) => { try { return JSON.parse(r); } catch { return null; } })
+    .filter((e) => e && e.message && !LOCATIE_PREFIX.test(String(e.message)));
+  if (!berichten.length) {
+    try { fs.writeFileSync(BACKLOG_FLAG, JSON.stringify({ at: new Date().toISOString(), sent: 0 })); } catch {}
+    return;
+  }
+  const TOON = 200;
+  const tonen = berichten.slice(-TOON).reverse();
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p>Deze berichten stonden al op de server maar zijn nooit gemaild: tot nu gingen alleen suggesties voor de lijsten meteen door, de rest bleef op /beheer staan.</p>
+    <p><strong>${berichten.length}</strong> bericht${berichten.length === 1 ? "" : "en"} in totaal${berichten.length > TOON ? `, hieronder de laatste ${TOON}` : ""}. Vanaf nu gaat elk nieuw bericht meteen per mail door.</p>
+    ${tonen.map((e) => `<div style="border-top:1px solid #E3E7EB;padding:12px 0">
+      <p style="margin:0 0 4px"><strong>${esc(`${e.first_name || ""} ${e.last_name || ""}`.trim() || "(geen naam)")}</strong>${e.spam ? ' <span style="color:#8a6d3b">(verborgen veld ingevuld)</span>' : ""}</p>
+      <p style="margin:0 0 6px"><a href="mailto:${esc(e.email || "")}">${esc(e.email || "(geen adres)")}</a>${e.phone ? ` &middot; ${esc(e.phone)}` : ""} &middot; ${esc(stamp(e.at))}${e.page ? ` &middot; ${esc(e.page)}` : ""}</p>
+      <p style="margin:0;background:#F6F7F9;padding:10px;border-radius:8px;white-space:pre-line">${esc(e.message)}</p>
+    </div>`).join("")}
+    <p><a href="https://www.tubes.media/beheer">Alles op /beheer</a> (vereist ADMIN_PASSWORD op de Railway-service).</p>
+  </div>`;
+  const ok = await stuurMail(CONTACT_EMAIL, `Inhaalslag: ${berichten.length} eerder ontvangen bericht${berichten.length === 1 ? "" : "en"}`, html);
+  if (ok) {
+    try { fs.writeFileSync(BACKLOG_FLAG, JSON.stringify({ at: new Date().toISOString(), sent: berichten.length })); } catch {}
+    console.log(`[start] inhaalslag verstuurd: ${berichten.length} berichten naar ${CONTACT_EMAIL}`);
+  } else {
+    console.warn("[start] inhaalslag NIET verstuurd; blijft staan voor de volgende start");
+  }
 }
 
 // Eén mail per aanvraag, en alleen als het na een paar pogingen nog steeds
@@ -1337,4 +1415,14 @@ app.use((req, res) => {
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Tubes site + formulierbackend op poort ${PORT}, data in ${DATA_FILE}`);
+  // Tel de bewaarde berichten en meld of de mail aanstaat. Zonder
+  // ADMIN_PASSWORD geeft /beheer een 503 en is het bestand onleesbaar; dan is
+  // deze regel in de opstartlog de enige manier om te zien of er iets ligt.
+  try {
+    const regels = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean).length;
+    console.log(`[start] ${regels} bewaarde berichten; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}; /beheer ${process.env.ADMIN_PASSWORD ? "beschikbaar" : "geeft 503 (geen ADMIN_PASSWORD)"}`);
+  } catch {
+    console.log(`[start] nog geen berichtenbestand; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}`);
+  }
+  stuurAchterstandNa().catch((err) => console.error("[start] inhaalslag mislukt:", err.message));
 });
