@@ -563,7 +563,11 @@ const BACKLOG_FLAG = path.join(DATA_DIR, "backlog-mailed.json");
 
 async function stuurAchterstandNa() {
   if (!MAIL_KEY) return;
-  if (fs.existsSync(BACKLOG_FLAG)) return;
+  // Opnieuw laten sturen kan met RESEND_BACKLOG=1 op de Railway-service: handig
+  // als de overzichtsmail in de spam is beland. Zet hem daarna weer uit, anders
+  // komt hij bij elke deploy langs.
+  const opnieuw = /^(1|true|ja)$/i.test(String(process.env.RESEND_BACKLOG || ""));
+  if (fs.existsSync(BACKLOG_FLAG) && !opnieuw) return;
   let regels = [];
   try {
     regels = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean);
@@ -592,6 +596,7 @@ async function stuurAchterstandNa() {
     <p><a href="https://www.tubes.media/beheer">Alles op /beheer</a> (vereist ADMIN_PASSWORD op de Railway-service).</p>
   </div>`;
   const ok = await stuurMail(CONTACT_EMAIL, `Inhaalslag: ${berichten.length} eerder ontvangen bericht${berichten.length === 1 ? "" : "en"}`, html);
+  if (opnieuw) console.log("[start] inhaalslag opnieuw verstuurd op verzoek (RESEND_BACKLOG)");
   if (ok) {
     try { fs.writeFileSync(BACKLOG_FLAG, JSON.stringify({ at: new Date().toISOString(), sent: berichten.length })); } catch {}
     console.log(`[start] inhaalslag verstuurd: ${berichten.length} berichten naar ${CONTACT_EMAIL}`);
