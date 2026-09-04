@@ -20397,6 +20397,22 @@
       }
     },
     {
+      "id": "pt-casa-junqueiro-regional-museum",
+      "name": "Casa Junqueiro Regional Museum",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 41.0914,
+      "lng": -6.8079,
+      "type": "Office, school & public building",
+      "setting": "Regional museum opened in 1998 in the historic centre of Freixo de Espada a Cinta, on the ground floor of the mansion that belonged to the father of poet Guerra Junqueiro, showing the town's stately-home character.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/casa-junqueiro-regional-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/casa-junqueiro-regional-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/casa-junqueiro-regional-museum/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-castelo-beja",
       "name": "Castelo de Beja",
       "country": "Portugal",
@@ -20491,6 +20507,22 @@
         "author": "69joehawkins",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "pt-convent-of-jesus-setubal",
+      "name": "Convent of Jesus, Setubal",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.5268,
+      "lng": -8.8959,
+      "type": "Church & monastery",
+      "setting": "Late 15th century Manueline convent church in Setubal, one of the earliest examples of the style, with twisted stone columns and a vaulted interior, its former convent buildings now housing a municipal museum.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/convent-of-jesus/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/convent-of-jesus/",
+      "official_url": "https://portugalfilmcommission.com/en/location/convent-of-jesus/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "convento-de-cristo-tomar",
@@ -20664,6 +20696,22 @@
       "commission_url": "https://portugalfilmcommission.com/en/location/"
     },
     {
+      "id": "pt-forte-das-berlengas",
+      "name": "Forte das Berlengas",
+      "country": "Portugal",
+      "region": "Centro de Portugal",
+      "lat": 39.4144,
+      "lng": -9.5111,
+      "type": "Castle & estate",
+      "setting": "17th century fort on the Berlengas archipelago off Peniche, built to defend the islands and now shared with a nature reserve, reached only by boat.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/forte-das-berlengas/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/forte-das-berlengas/",
+      "official_url": "https://portugalfilmcommission.com/en/location/forte-das-berlengas/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-herdade-freixo",
       "name": "Herdade do Freixo",
       "country": "Portugal",
@@ -20797,6 +20845,22 @@
       "commission_url": "https://portugalfilmcommission.com/"
     },
     {
+      "id": "pt-monastery-of-serra-do-pilar",
+      "name": "Monastery of Serra do Pilar",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 41.1383,
+      "lng": -8.608,
+      "type": "Church & monastery",
+      "setting": "Augustinian monastery complex above Vila Nova de Gaia begun in 1538, notable for its circular church and cloister, occupied by Wellington's troops in 1809 during the Peninsular War for its command of the Douro.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/monastery-of-serra-do-pilar/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/monastery-of-serra-do-pilar/",
+      "official_url": "https://portugalfilmcommission.com/en/location/monastery-of-serra-do-pilar/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-mosteiro-tibaes",
       "name": "Mosteiro de São Martinho de Tibães",
       "country": "Portugal",
@@ -20828,6 +20892,22 @@
       "url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
       "official_url": "https://portugalfilmcommission.com/en/location/museu-nacional-ferroviario/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-museum-condes-de-castro-guimaraes",
+      "name": "Museum Condes de Castro Guimaraes",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.6921,
+      "lng": -9.4216,
+      "type": "Office, school & public building",
+      "setting": "Early 20th century neo-Manueline mansion on the Cascais waterfront, built as a private residence and now a municipal museum with towers, a library and gardens overlooking the bay.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/museum-condes-de-castro-guimaraes/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/museum-condes-de-castro-guimaraes/",
+      "official_url": "https://portugalfilmcommission.com/en/location/museum-condes-de-castro-guimaraes/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "pt-paco-de-calheiros",
@@ -20867,6 +20947,22 @@
       }
     },
     {
+      "id": "pt-pestana-palace-lisbon",
+      "name": "Pestana Palace Lisbon",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.704,
+      "lng": -9.1872,
+      "type": "Hotel & interiors",
+      "setting": "19th century palace in Alcantara converted into a luxury hotel, keeping its period reception rooms and gardens alongside newer hotel wings, listed in the national film commission's palace catalogue.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/pestana-palace-lisbon/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/pestana-palace-lisbon/",
+      "official_url": "https://portugalfilmcommission.com/en/location/pestana-palace-lisbon/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-piscina-mares",
       "name": "Piscina das Marés",
       "country": "Portugal",
@@ -20897,6 +20993,22 @@
       "url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
       "official_url": "https://portugalfilmcommission.com/en/location/portalegre-tapestry-museum-guy-fino/",
       "commission_url": "https://portugalfilmcommission.com/en/location/"
+    },
+    {
+      "id": "pt-portimao-museum",
+      "name": "Portimao Museum",
+      "country": "Portugal",
+      "region": "Algarve",
+      "lat": 37.1307,
+      "lng": -8.5346,
+      "type": "Office, school & public building",
+      "setting": "Municipal museum in Portimao housed in a former fish canning factory on the riverfront, keeping the industrial shell and machinery pits of the cannery alongside its exhibition galleries.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/portimao-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/portimao-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/portimao-museum/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "pt-porto-leixoes",
@@ -20937,6 +21049,39 @@
         "author": "Alvesgaspar",
         "license": "CC BY-SA 3.0"
       }
+    },
+    {
+      "id": "pt-quinta-da-fidalga",
+      "name": "Quinta da Fidalga",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.6335,
+      "lng": -9.1047,
+      "type": "Village & countryside",
+      "setting": "Municipal park and former country estate in Seixal, on the south bank of the Tagus, with wooded grounds listed by the national film commission for garden and forest settings.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/quinta-da-fidalga/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/quinta-da-fidalga/",
+      "official_url": "https://portugalfilmcommission.com/en/location/quinta-da-fidalga/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-quinta-de-santana-do-gradil",
+      "name": "Quinta de Sant'Ana do Gradil",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.9819,
+      "lng": -9.2474,
+      "type": "Village & countryside",
+      "setting": "Working farm and vineyard estate near the village of Gradil, 35km north of Lisbon, with 12 hectares of vines, olive and cypress groves, orchards, meadows and several holiday cottages.",
+      "facilities": "Five holiday houses, gardens, swimming pool",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/quinta-de-santana-do-gradil/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/quinta-de-santana-do-gradil/",
+      "official_url": "https://portugalfilmcommission.com/en/location/quinta-de-santana-do-gradil/",
+      "commission_url": "https://portugalfilmcommission.com/"
     },
     {
       "id": "pt-quinta-do-pisao",
@@ -21011,6 +21156,54 @@
       "commission_url": "https://portugalfilmcommission.com/"
     },
     {
+      "id": "pt-setubal-fishing-dock",
+      "name": "Setubal Fishing Dock",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.5203,
+      "lng": -8.8936,
+      "type": "Transport & infrastructure",
+      "setting": "Working fishing dock on the Sado estuary at Setubal, with moored trawlers, quayside fish auction sheds and views across the estuary to the Troia peninsula.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/setubal-docks/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/setubal-docks/",
+      "official_url": "https://portugalfilmcommission.com/en/location/setubal-docks/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-silk-and-territory-museum",
+      "name": "Silk and Territory Museum",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 41.0914,
+      "lng": -6.8079,
+      "type": "Office, school & public building",
+      "setting": "Museum in Freixo de Espada a Cinta holding the town's ethnographic, archaeological and geological collections alongside a display on hand silk weaving, still practised locally with centuries-old wooden looms.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/silk-and-territory-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/silk-and-territory-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/silk-and-territory-museum/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-teixeira-lopes-house-museum",
+      "name": "Teixeira Lopes House Museum",
+      "country": "Portugal",
+      "region": "Porto and North",
+      "lat": 41.1287,
+      "lng": -8.6117,
+      "type": "Office, school & public building",
+      "setting": "House and sculpture workshop built in 1895 in Vila Nova de Gaia for sculptor Jose Teixeira Lopes, now a city council run house museum holding his art collection.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/teixeira-lopes-house-museum/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/teixeira-lopes-house-museum/",
+      "official_url": "https://portugalfilmcommission.com/en/location/teixeira-lopes-house-museum/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
       "id": "pt-time-out-market",
       "name": "Time Out Market Lisboa",
       "country": "Portugal",
@@ -21064,6 +21257,22 @@
       ],
       "url": "https://portugalfilmcommission.com/en/location/vlc-studios-2/",
       "official_url": "https://portugalfilmcommission.com/en/location/vlc-studios-2/",
+      "commission_url": "https://portugalfilmcommission.com/"
+    },
+    {
+      "id": "pt-wine-cellars-jose-maria-da-fonseca",
+      "name": "Wine Cellars Jose Maria da Fonseca",
+      "country": "Portugal",
+      "region": "Lisbon Region",
+      "lat": 38.5179,
+      "lng": -9.0157,
+      "type": "Industrial & derelict",
+      "setting": "Historic wine cellars of one of Portugal's oldest table wine producers, founded in 1834 in Azeitao, with ageing cellars, a museum house and production buildings open to visitors.",
+      "source_urls": [
+        "https://portugalfilmcommission.com/en/location/wine-cellars-jose-maria-da-fonseca/"
+      ],
+      "url": "https://portugalfilmcommission.com/en/location/wine-cellars-jose-maria-da-fonseca/",
+      "official_url": "https://portugalfilmcommission.com/en/location/wine-cellars-jose-maria-da-fonseca/",
       "commission_url": "https://portugalfilmcommission.com/"
     },
     {
@@ -22760,6 +22969,39 @@
       }
     },
     {
+      "id": "se-avicii-arena",
+      "name": "Avicii Arena",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.2936,
+      "lng": 18.0832,
+      "type": "Theatre, arena & venue",
+      "setting": "A spherical indoor arena in Johanneshov, Stockholm, one of the largest hemispherical buildings in the world, used for concerts, sport and large-scale events with a SkyView cable car running up its outer shell.",
+      "suitability": "Arena bookable for events (own site: 'Moten & Event', 'Book arena')",
+      "source_urls": [
+        "https://www.aviciiarena.se/en",
+        "https://en.wikipedia.org/wiki/Avicii_Arena"
+      ],
+      "official_url": "https://www.aviciiarena.se/en",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
+      "id": "se-chalmers",
+      "name": "Chalmers University of Technology",
+      "country": "Sweden",
+      "region": "Vastra Gotaland",
+      "lat": 57.6897,
+      "lng": 11.9765,
+      "type": "Office, school & public building",
+      "setting": "A research university campus along Kungsportsavenyen in Gothenburg, with early 20th-century main buildings and later science and engineering blocks around a long central mall.",
+      "source_urls": [
+        "https://www.chalmers.se/en/",
+        "https://en.wikipedia.org/wiki/Chalmers_University_of_Technology"
+      ],
+      "official_url": "https://www.chalmers.se/en/",
+      "commission_url": "https://www.filmivast.se"
+    },
+    {
       "id": "se-dalhalla",
       "name": "Dalhalla",
       "country": "Sweden",
@@ -22774,6 +23016,21 @@
       ],
       "official_url": "https://www.dalhalla.se/en/",
       "commission_url": "https://filmcommissionsweden.se/"
+    },
+    {
+      "id": "se-eriksdalsbadet",
+      "name": "Eriksdalsbadet",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3045,
+      "lng": 18.0757,
+      "type": "Theatre, arena & venue",
+      "setting": "Stockholm's largest public swimming complex on Sodermalm, with an Olympic-sized 50 metre indoor pool, an outdoor pool and diving towers used for competitions.",
+      "source_urls": [
+        "https://www.eriksdalsbadet.se"
+      ],
+      "official_url": "https://www.eriksdalsbadet.se",
+      "commission_url": "https://www.filmregion.se"
     },
     {
       "id": "se-falu-gruva",
@@ -22808,6 +23065,23 @@
         "author": "allen watkin from London, UK",
         "license": "CC BY-SA 2.0"
       }
+    },
+    {
+      "id": "se-feskekorka",
+      "name": "Feskekorka",
+      "country": "Sweden",
+      "region": "Vastra Gotaland",
+      "lat": 57.701,
+      "lng": 11.9578,
+      "type": "Bar, restaurant & shop",
+      "setting": "A neo-Gothic fish market hall in central Gothenburg, built in 1874 to resemble a church, with fish counters and small restaurants inside its single vaulted space.",
+      "suitability": "Space available for corporate events, weddings and kickoffs (own site: 'Foretagsevent', 'Brollop', 'Boka Event')",
+      "source_urls": [
+        "https://www.feskekorka.se",
+        "https://en.wikipedia.org/wiki/Feskek%C3%B6rka"
+      ],
+      "official_url": "https://www.feskekorka.se",
+      "commission_url": "https://www.filmivast.se"
     },
     {
       "id": "film-i-vast-trollhattan",
@@ -22855,6 +23129,22 @@
       "commission_url": "https://filmstockholm.se"
     },
     {
+      "id": "se-grona-lund",
+      "name": "Grona Lund",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3233,
+      "lng": 18.0958,
+      "type": "Theatre, arena & venue",
+      "setting": "A small, densely packed amusement park on Djurgarden's waterfront in Stockholm, open since 1883 with over 30 rides and three indoor and outdoor stages used for summer concerts.",
+      "source_urls": [
+        "https://www.gronalund.com/en",
+        "https://en.wikipedia.org/wiki/Gr%C3%B6na_Lund"
+      ],
+      "official_url": "https://www.gronalund.com/en",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
       "id": "se-icehotel",
       "name": "Icehotel",
       "country": "Sweden",
@@ -22877,6 +23167,22 @@
       }
     },
     {
+      "id": "se-innovatum",
+      "name": "Innovatum",
+      "country": "Sweden",
+      "region": "Vastra Gotaland",
+      "lat": 58.2718,
+      "lng": 12.2786,
+      "type": "Industrial & derelict",
+      "setting": "A former NOHAB locomotive and engine works in Trollhattan, its brick factory halls now a business park, science centre and meeting venue around the old workshop buildings.",
+      "source_urls": [
+        "https://innovatum.se",
+        "https://en.wikipedia.org/wiki/Nohab"
+      ],
+      "official_url": "https://innovatum.se",
+      "commission_url": "https://www.filmivast.se"
+    },
+    {
       "id": "se-kaggeholms-gard",
       "name": "Kaggeholms Gård",
       "country": "Sweden",
@@ -22892,6 +23198,39 @@
       ],
       "official_url": "https://kaggeholm.se",
       "commission_url": "https://filmstockholm.se"
+    },
+    {
+      "id": "se-kiruna-mine",
+      "name": "Kiruna Mine (LKAB)",
+      "country": "Sweden",
+      "region": "Norrbotten",
+      "lat": 67.8018,
+      "lng": 20.2011,
+      "type": "Industrial & derelict",
+      "setting": "A working underground iron-ore mine beneath Kiruna with an ore body 4 kilometres long, its headframes and processing plant dominating the edge of the town.",
+      "source_urls": [
+        "https://www.lkab.com/en/",
+        "https://en.wikipedia.org/wiki/Kiruna_Mine",
+        "https://kirunalapland.se/en/"
+      ],
+      "official_url": "https://www.lkab.com/en/",
+      "commission_url": "https://www.filmpolnord.se"
+    },
+    {
+      "id": "se-konserthuset-stockholm",
+      "name": "Konserthuset Stockholm",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3351,
+      "lng": 18.0632,
+      "type": "Theatre, arena & venue",
+      "setting": "The main concert hall for orchestral music in Stockholm, overlooking Hotorget, home to the Royal Stockholm Philharmonic Orchestra and the venue for the annual Nobel Prize ceremony.",
+      "source_urls": [
+        "https://www.konserthuset.se/en",
+        "https://en.wikipedia.org/wiki/Stockholm_Concert_Hall"
+      ],
+      "official_url": "https://www.konserthuset.se/en",
+      "commission_url": "https://www.filmregion.se"
     },
     {
       "id": "se-kulturhuset-stadsteatern",
@@ -22976,6 +23315,22 @@
       }
     },
     {
+      "id": "se-lund-university",
+      "name": "Lund University",
+      "country": "Sweden",
+      "region": "Skane",
+      "lat": 55.7053,
+      "lng": 13.1939,
+      "type": "Office, school & public building",
+      "setting": "One of Northern Europe's oldest universities, its 19th-century main building facing the historic Lundagard park next to Lund Cathedral in the centre of Lund.",
+      "source_urls": [
+        "https://www.lunduniversity.lu.se",
+        "https://en.wikipedia.org/wiki/Lund_University"
+      ],
+      "official_url": "https://www.lunduniversity.lu.se",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
       "id": "se-malmo-live",
       "name": "Malmo Live",
       "country": "Sweden",
@@ -22999,6 +23354,22 @@
       }
     },
     {
+      "id": "se-marinmuseum-karlskrona",
+      "name": "Marinmuseum (Naval Museum), Karlskrona",
+      "country": "Sweden",
+      "region": "Blekinge",
+      "lat": 56.1615,
+      "lng": 15.5997,
+      "type": "Transport & infrastructure",
+      "setting": "Sweden's naval museum on the island of Stumholmen in Karlskrona, part of the country's only baroque naval town and still-active naval base, with historic ships moored alongside.",
+      "source_urls": [
+        "https://www.marinmuseum.se/en/",
+        "https://en.wikipedia.org/wiki/Karlskrona"
+      ],
+      "official_url": "https://www.marinmuseum.se/en/",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
       "id": "se-naas-slott",
       "name": "Naas Slott",
       "country": "Sweden",
@@ -23014,6 +23385,53 @@
       ],
       "official_url": "https://naas.se",
       "commission_url": "https://filmivast.com"
+    },
+    {
+      "id": "se-nalen",
+      "name": "Nalen",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.337,
+      "lng": 18.0676,
+      "type": "Theatre, arena & venue",
+      "setting": "A 1920s entertainment building in central Stockholm combining a concert hall, restaurant and function rooms, long associated with Swedish jazz and now hired out for concerts, dinners and conferences.",
+      "suitability": "Rooms and hall available for booking (own site: 'Bokningsforfragan', 'Moten & fest')",
+      "source_urls": [
+        "https://www.nalen.com"
+      ],
+      "official_url": "https://www.nalen.com",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
+      "id": "se-ostermalmshallen",
+      "name": "Ostermalms Saluhall",
+      "country": "Sweden",
+      "region": "Stockholm",
+      "lat": 59.3359,
+      "lng": 18.0777,
+      "type": "Bar, restaurant & shop",
+      "setting": "A market hall on Ostermalmstorg in Stockholm, open since 1888, with stalls and small restaurants for fish, meat, cheese and produce under an iron-framed roof.",
+      "source_urls": [
+        "https://www.ostermalmshallen.se"
+      ],
+      "official_url": "https://www.ostermalmshallen.se",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
+      "id": "se-port-of-gothenburg",
+      "name": "Port of Gothenburg",
+      "country": "Sweden",
+      "region": "Vastra Gotaland",
+      "lat": 57.7001,
+      "lng": 11.9307,
+      "type": "Transport & infrastructure",
+      "setting": "The largest port in the Nordic countries, handling nearly 30 percent of Sweden's foreign trade across container, roro, ferry and energy terminals along the Gota Alv river mouth.",
+      "source_urls": [
+        "https://www.portofgothenburg.com",
+        "https://en.wikipedia.org/wiki/Port_of_Gothenburg"
+      ],
+      "official_url": "https://www.portofgothenburg.com",
+      "commission_url": "https://www.filmivast.se"
     },
     {
       "id": "se-royal-swedish-opera",
@@ -23102,6 +23520,22 @@
       "commission_url": "https://filmcommissionsweden.se"
     },
     {
+      "id": "se-turning-torso",
+      "name": "Turning Torso",
+      "country": "Sweden",
+      "region": "Skane",
+      "lat": 55.6133,
+      "lng": 12.9763,
+      "type": "Modern architecture",
+      "setting": "A twisting residential skyscraper on Malmo's Vastra Hamnen waterfront, completed in 2005 to a Santiago Calatrava design of nine rotating cube sections, formerly the tallest building in the Nordic region.",
+      "source_urls": [
+        "https://www.hsb.se/turningtorso",
+        "https://en.wikipedia.org/wiki/Turning_Torso"
+      ],
+      "official_url": "https://www.hsb.se/turningtorso",
+      "commission_url": "https://www.filmregion.se"
+    },
+    {
       "id": "se-universeum",
       "name": "Universeum",
       "country": "Sweden",
@@ -23123,6 +23557,22 @@
         "author": "Erik031",
         "license": "Public domain"
       }
+    },
+    {
+      "id": "se-uppsala-university",
+      "name": "Uppsala University Main Building",
+      "country": "Sweden",
+      "region": "Uppsala",
+      "lat": 59.8576,
+      "lng": 17.6295,
+      "type": "Office, school & public building",
+      "setting": "The main hall (Universitetshuset) of Sweden's oldest university, a domed 19th-century building in central Uppsala used for ceremonies, lectures and public ceremonies.",
+      "source_urls": [
+        "https://www.uu.se/en",
+        "https://en.wikipedia.org/wiki/Uppsala_University"
+      ],
+      "official_url": "https://www.uu.se/en",
+      "commission_url": "https://www.filmregion.se"
     },
     {
       "id": "se-vasa-museum",
