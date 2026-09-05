@@ -1214,7 +1214,7 @@
   {
    "id": "bg-ufo-film-studios",
    "name": "UFO Film Studios",
-   "city": "Sofia Province",
+   "city": "Dolna Malina",
    "country": "Bulgaria",
    "lat": 42.6773,
    "lng": 23.6717,
@@ -2145,7 +2145,7 @@
   {
    "id": "ee-bfm-film-studio-tallinn",
    "name": "BFM Film Studio, Tallinn University",
-   "city": "Harju County",
+   "city": "Tallinn",
    "country": "Estonia",
    "lat": 59.439,
    "lng": 24.771,
@@ -2169,7 +2169,7 @@
   {
    "id": "ee-ida-hub-film-studios",
    "name": "Ida Hub Film Studios",
-   "city": "Ida-Viru County",
+   "city": "Jõhvi",
    "country": "Estonia",
    "lat": 59.3527,
    "lng": 27.4134,
@@ -2238,7 +2238,7 @@
   {
    "id": "ee-tallinnfilm-studio-paljassaare",
    "name": "Tallinnfilm Studio (Tallinn Film Wonderland)",
-   "city": "Harju County",
+   "city": "Tallinn",
    "country": "Estonia",
    "lat": 59.4538,
    "lng": 24.703,
@@ -7565,7 +7565,7 @@
   {
    "id": "lt-kino-manufaktura",
    "name": "Kino Manufaktura",
-   "city": "Vilnius County",
+   "city": "Vilnius",
    "country": "Lithuania",
    "lat": 54.6779,
    "lng": 25.3159,
@@ -7588,7 +7588,7 @@
   {
    "id": "lt-ks-independent-film-studio",
    "name": "KS Independent Film Studio",
-   "city": "Vilnius County",
+   "city": "Bareikiškės",
    "country": "Lithuania",
    "lat": 54.6166,
    "lng": 25.4634,
@@ -7612,7 +7612,7 @@
   {
    "id": "lt-lithuanian-film-studio",
    "name": "Lithuanian Film Studio",
-   "city": "Vilnius County",
+   "city": "Vilnius",
    "country": "Lithuania",
    "lat": 54.6778,
    "lng": 25.2499,
@@ -7680,7 +7680,7 @@
   {
    "id": "lt-vilnius-film-cluster-green-screen-studio",
    "name": "Vilnius Film Cluster Green Screen Studio",
-   "city": "Vilnius County",
+   "city": "Vilnius",
    "country": "Lithuania",
    "lat": 54.6306,
    "lng": 25.2568,
@@ -8046,6 +8046,71 @@
    "guide_url": "/compare-film-tv-locations/#loc-lu-zeilt-studio-foetz"
   },
   {
+   "id": "mt-kukumajsa-productions",
+   "name": "Kukumajsa Productions",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A Maltese production company founded in 2010 by director Rebecca Cremona, producing feature and short films, travel programmes, music videos, commercials and PSAs, and since 2024 television.",
+   "services": "Feature and short film production, travel programmes, music videos, commercials, PSAs, television series",
+   "credits": "Simshar",
+   "facilities": null,
+   "group": null,
+   "founded": 2010,
+   "official_url": "https://kukumajsa.com/",
+   "source_urls": [
+    "https://kukumajsa.com/",
+    "https://kukumajsa.com/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "mt-latina-pictures",
+   "name": "Latina Pictures",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Maltese film and TV production and service company led by Winston Azzopardi and Rita Galea, providing line producing, location scouting and budgeting for international productions filming in Malta.",
+   "services": "Line producing, location scouting, budgeting, production services for international film and TV shoots",
+   "credits": "Troy, Gladiator II, Assassin's Creed, World War Z, 13 Hours",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://latina.mt/",
+   "source_urls": [
+    "https://latina.mt/",
+    "https://latina.mt/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "mt-limestone-pictures",
+   "name": "Limestone Pictures",
+   "city": "Qala",
+   "country": "Malta",
+   "lat": 36.0397,
+   "lng": 14.2853,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Gozo based production services company connecting foreign filmmakers with Malta and the Mediterranean, offering executive producing, local fixing, location scouting, casting and marine filming services.",
+   "services": "Executive producing, production services, local fixing, location scouting, casting and crew, marine and water services, post-production",
+   "credits": "Gladiator, Game of Thrones, Jurassic World Dominion, Troy, Captain Phillips",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://limestonepicturesltd.com/",
+   "source_urls": [
+    "https://limestonepicturesltd.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "mt-malta-film-studios",
    "name": "Malta Film Studios",
    "city": "Kalkara",
@@ -8072,6 +8137,70 @@
    },
    "guide_id": "malta-film-studios",
    "guide_url": "/compare-film-tv-locations/#loc-malta-film-studios"
+  },
+  {
+   "id": "mt-maltafilm",
+   "name": "MALTAFILM",
+   "city": "Ta' Xbiex",
+   "country": "Malta",
+   "lat": 35.8967,
+   "lng": 14.4975,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "A Ta' Xbiex based production company making commercials, advertising campaigns, motion graphics and still photography, and co-producing international feature films.",
+   "services": "Film and commercial production, international co-production, advertising campaigns, motion graphics, still photography",
+   "credits": "Mutiny, Socios.com, Betsafe, NordicBet",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.maltafilm.com.mt/",
+   "source_urls": [
+    "https://www.maltafilm.com.mt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "mt-movieone",
+   "name": "MovieOne",
+   "city": "St Julian's",
+   "country": "Malta",
+   "lat": 35.9181,
+   "lng": 14.488,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Malta based production service company covering the full journey from development to delivery, handling line producing, location management, crew sourcing, permits and corporate set-up for foreign shoots.",
+   "services": "Line producing, budget analysis, location scouting, crew sourcing, permits, entity formation, production accounting, MFC cash rebate administration",
+   "credits": "Gladiator II, Game of Thrones, Mission: Impossible: The Final Reckoning, Jurassic World Dominion",
+   "facilities": null,
+   "group": "EnerOne Ltd",
+   "founded": null,
+   "official_url": "https://moviemt-one.com/en/",
+   "source_urls": [
+    "https://moviemt-one.com/en/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "mt-pellikola",
+   "name": "Pellikola",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "An independent Maltese production company that produces, co-produces and services film and television projects for local and international clients, from development through post-production and distribution.",
+   "services": "Production, co-production, servicing of foreign shoots, development and financing support, post-production coordination, distribution support",
+   "credits": "Luzzu, Żejtune, The Devil's Double, By the Sea, Game of Thrones",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://pellikola.com/",
+   "source_urls": [
+    "https://pellikola.com/",
+    "https://pellikola.com/contact"
+   ],
+   "photo": null
   },
   {
    "id": "mt-popeye-village",
@@ -8105,6 +8234,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-mt-popeye-village"
   },
   {
+   "id": "mt-shadeena-entertainment",
+   "name": "Shadeena Entertainment",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A Malta based development and production company founded by Martin Bonnici, creating original film and digital content and providing co-production and production services for projects filming in Malta.",
+   "services": "Original content development and production, co-production financing and talent support, production services, assistance with Malta's cash rebate",
+   "credits": "Is-Sriep Reġgħu Saru Velenużi",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.shadeena.com/",
+   "source_urls": [
+    "https://www.shadeena.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "mt-stargate-studios-malta",
    "name": "Stargate Studios Malta",
    "city": "Mosta",
@@ -8122,6 +8272,29 @@
    "official_url": "https://www.stargatestudios.com.mt/",
    "source_urls": [
     "https://www.stargatestudios.com.mt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "mt-take-two",
+   "name": "Take Two",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "A Maltese production company founded in 2008 by Abigail Mallia and Carlos DeBattista, producing feature films, TV series, documentaries and short films, plus music videos and commercials.",
+   "services": "Feature film, TV series, documentary and short film production, music videos, commercials, corporate content, creative development",
+   "credits": "Seven Doors, Merjen, Holy Mary!, Nighttime at the Station, The Evangelists",
+   "facilities": null,
+   "group": null,
+   "founded": 2008,
+   "official_url": "https://www.taketwo.mt/",
+   "source_urls": [
+    "https://www.taketwo.mt/",
+    "https://www.taketwo.mt/films-and-series",
+    "https://www.taketwo.mt/commercial"
    ],
    "photo": null
   },
@@ -10626,7 +10799,7 @@
   {
    "id": "ro-creic-film-studio-cluj",
    "name": "CREIC Film Studio, Cluj-Napoca",
-   "city": "Cluj County",
+   "city": "Cluj-Napoca",
    "country": "Romania",
    "lat": 46.8209,
    "lng": 23.5797,
@@ -11052,7 +11225,7 @@
   {
    "id": "sk-a4-studio",
    "name": "A4 Studio",
-   "city": "Bratislava Region",
+   "city": "Bratislava",
    "country": "Slovakia",
    "lat": 48.1635,
    "lng": 17.1443,
@@ -11072,6 +11245,157 @@
    "photo": null,
    "guide_id": "sk-a4-studio",
    "guide_url": "/compare-film-tv-locations/#loc-sk-a4-studio"
+  },
+  {
+   "id": "sk-artichoke",
+   "name": "Artichoke",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Bratislava animation and film production company making animated features and series alongside arthouse fiction and documentaries on architecture, design and fashion.",
+   "services": "Animation production (stop-motion, 2D, 3D), fiction feature production, documentary production, co-financing, post-production, orchestral music recording",
+   "credits": "Hurikan, White Plastic Sky, Tales from the Magic Garden, Electra",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.artichoke.sk",
+   "source_urls": [
+    "https://www.artichoke.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-arytmia",
+   "name": "Arytmia",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava film production company making fiction features with directors such as Juraj Lehotsky, aimed at both festival and general audiences.",
+   "services": "Film production",
+   "credits": "Nobody Likes Me, Plastic Symphony, Guzzling Mouth",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://arytmiafilm.sk/en/",
+   "source_urls": [
+    "https://arytmiafilm.sk/en/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-attackfilm",
+   "name": "Attack Film",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Bratislava documentary production company known for portrait films about cultural and historical figures.",
+   "services": "Documentary film production",
+   "credits": "Andy Warhol: American Dream",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.attackfilm.sk",
+   "source_urls": [
+    "https://www.attackfilm.sk",
+    "https://www.attackfilm.sk/kontakt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-bfilm",
+   "name": "BFILM",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava film production and distribution company working on international co-productions for cinema and streaming release.",
+   "services": "Film production, distribution, co-production",
+   "credits": "Amerikanka, Autickari",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.bfilm.sk",
+   "source_urls": [
+    "https://www.bfilm.sk",
+    "https://www.bfilm.sk/kontakt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-dimas",
+   "name": "Dimas",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Bratislava audio and video post-production facility specialising in cinema and TV dubbing, film mixing, mastering and DCP deliveries, Dolby and DTS licensed.",
+   "services": "Dubbing, film mixing (5.1/7.1), DCP mastering, DVD/Blu-ray authoring, sound design and restoration, music mixing and mastering, ADR, voice-over and foley recording",
+   "credits": null,
+   "facilities": "Theatre Suite, Surround Suite, mastering studio, five editing rooms, foley studio, Dolby and DTS certified",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.dimas.sk",
+   "source_urls": [
+    "https://www.dimas.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-dnaproduction",
+   "name": "DNA Production",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Bratislava production company handling Slovak crew, locations and local production services for international and regional TV drama series.",
+   "services": "Local production services, crew coordination, location management",
+   "credits": "The Crime Angel Returns, Specialists, Bestia, Wicked Deal",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://dnaproduction.sk/en",
+   "source_urls": [
+    "https://dnaproduction.sk/en",
+    "https://dnaproduction.sk/en/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-furiafilm",
+   "name": "Furia Film",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Bratislava audiovisual production company handling project management from script development through production, distribution and film sales.",
+   "services": "Development, production, distribution, film sales",
+   "credits": "Sarlatan, Dom Uprostred, Milota, Pivnica",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.furiafilm.sk",
+   "source_urls": [
+    "https://www.furiafilm.sk",
+    "https://www.furiafilm.sk/kontakt"
+   ],
+   "photo": null
   },
   {
    "id": "sk-hitchhiker-cinema",
@@ -11095,9 +11419,31 @@
    "photo": null
   },
   {
+   "id": "sk-kerekesfilm",
+   "name": "Kerekes Film",
+   "city": "Kosice",
+   "country": "Slovakia",
+   "lat": 48.7164,
+   "lng": 21.2611,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Kosice-based production company making documentary and hybrid films built around character-driven, personal storytelling.",
+   "services": "Documentary and hybrid film production",
+   "credits": "107 Mothers, Cooking History, Velvet Terrorists, Occupation 1968, 66 Seasons",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://kerekesfilm.com/",
+   "source_urls": [
+    "https://kerekesfilm.com/",
+    "https://kerekesfilm.com/contact/"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-koliba-studios",
    "name": "Koliba Studios",
-   "city": "Bratislava Region",
+   "city": "Bratislava",
    "country": "Slovakia",
    "lat": 48.1712,
    "lng": 17.0995,
@@ -11116,6 +11462,69 @@
    "photo": null,
    "guide_id": "sk-koliba-studios",
    "guide_url": "/compare-film-tv-locations/#loc-sk-koliba-studios"
+  },
+  {
+   "id": "sk-mphilms",
+   "name": "MPhilms",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Bratislava production company making documentary films and artistic projects for Slovak and Central European audiences.",
+   "services": "Documentary film production, distribution",
+   "credits": "Kalmanov den, Vysvetlenie na vsetko, Moc, Banditi pre Baladu, Raj na zemi",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.mphilms.sk",
+   "source_urls": [
+    "https://www.mphilms.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-plutoon",
+   "name": "plutoon",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Bratislava animation and VFX studio producing 2D and 3D animation, illustration and picture post-production for advertising agencies and production companies.",
+   "services": "2D and 3D animation, illustration, VFX, graphic design, sound post-production",
+   "credits": "BNB City Hub, Nieco tomu chyba, Vizia 2030, Rayuela, Kvapka",
+   "facilities": "Green screen/blue screen studio, in-house audio post equipment",
+   "group": null,
+   "founded": 2013,
+   "official_url": "https://plutoon.sk",
+   "source_urls": [
+    "https://plutoon.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-postprostudio",
+   "name": "PostPro Studio",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Bratislava sound post-production studio handling recording, mixing, mastering and sound design for film, television, documentary and commercial projects.",
+   "services": "Sound recording, mixing, mastering, sound design, audio post-production",
+   "credits": "Happy Birthday My Love, Letni Rebeli, Potlesk, Zlata Zem, Drobci",
+   "facilities": "Certified acoustics, 5.1 monitoring with Eve Audio",
+   "group": null,
+   "founded": null,
+   "official_url": "http://postpro.sk",
+   "source_urls": [
+    "http://postpro.sk"
+   ],
+   "photo": null
   },
   {
    "id": "sk-pubres",
@@ -11139,9 +11548,73 @@
    "photo": null
   },
   {
+   "id": "sk-reversfilms",
+   "name": "Revers Films",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Bratislava production company offering service production for international clients shooting in Slovakia, alongside its own commercials and short films.",
+   "services": "Service production, commercial production, short film production",
+   "credits": "VUB, Skoda, ERSTE, O2, Telekom",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.revers.sk",
+   "source_urls": [
+    "https://www.revers.sk",
+    "https://www.revers.sk/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-rightandstuff",
+   "name": "Right&Stuff",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Bratislava production house specialised in TV and online commercials for Slovak and international brands, offering photo and video production, post-production and creative direction.",
+   "services": "Photo and video production, post-production (editing, colour grading, animation), creative direction",
+   "credits": "Audi Slovensko, VUB Banka, Tatra Banka, Orange Slovensko, O2 Slovakia",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.rightstuff.sk/en.html",
+   "source_urls": [
+    "https://www.rightstuff.sk/en.html"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-sentimentalfilm",
+   "name": "SentimentalFilm",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava independent production and distribution company that has produced and released more than 40 Slovak feature films and documentaries since 2011.",
+   "services": "Film production, distribution, development",
+   "credits": "Il Boemo, Koza, Nina, Wirbel",
+   "facilities": null,
+   "group": null,
+   "founded": 2011,
+   "official_url": "https://www.sentimentalfilm.com",
+   "source_urls": [
+    "https://www.sentimentalfilm.com"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-shining-studio",
    "name": "Shining Studio",
-   "city": "Bratislava Region",
+   "city": "Stupava",
    "country": "Slovakia",
    "lat": 48.2744,
    "lng": 17.0207,
@@ -11160,6 +11633,134 @@
    "photo": null,
    "guide_id": "sk-shining-studio",
    "guide_url": "/compare-film-tv-locations/#loc-sk-shining-studio"
+  },
+  {
+   "id": "sk-silverart",
+   "name": "Silverart",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava production company making fiction features and international co-productions, founded by producer Katarina Krnacova.",
+   "services": "Feature film production, international co-production, TV series development",
+   "credits": "Flood, Glorious Utopia, The Last Baroness",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.silverartfilm.sk",
+   "source_urls": [
+    "https://www.silverartfilm.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-stonepp",
+   "name": "Stone PP",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Bratislava post-production studio for TV commercials and film work, offering editing, 3D animation, colour grading, VFX, voiceover recording and online finishing.",
+   "services": "Editing, 3D modelling and animation, colour grading, VFX, voiceover recording, audio mixing, online finishing",
+   "credits": "Telekom, Tesco, Lidl, CSOB, Skoda",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://www.stonepp.tv/",
+   "source_urls": [
+    "http://www.stonepp.tv/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-studio727",
+   "name": "Studio 727",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Bratislava post-production and production services house offering VFX, 3D animation, editing, colour grading and sound mixing from three in-house film stages.",
+   "services": "Dailies and editing, compositing and VFX, colour grading, 3D animation, digital asset creation, sound mixing, film restoration, equipment rental, virtual production",
+   "credits": "Broken Promise, Anjeli, Cistic, Apricot Island",
+   "facilities": "Three film stages (90 to 322 sqm), 100 TB backup storage, 12-seat screening cinema",
+   "group": null,
+   "founded": 1997,
+   "official_url": "https://www.727.sk",
+   "source_urls": [
+    "https://www.727.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-surosound",
+   "name": "Surosound",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Bratislava sound post-production company providing recording, editing, mixing and dubbing for film, television, radio and web productions since 1997.",
+   "services": "Sound recording, editing, mixing, dubbing, sound integration",
+   "credits": "Tonko Slavka a Kuzelne Svetlo, Zrada, Mesto Tienov",
+   "facilities": "Two AVID Ultimate HD systems plus AVID/Apple FCX video post tools",
+   "group": null,
+   "founded": 1997,
+   "official_url": "http://surosound.sk/home/surosound",
+   "source_urls": [
+    "http://surosound.sk/home/surosound"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-wandalproduction",
+   "name": "Wandal Production",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava film production company behind Slovak feature films and TV projects, founded by producer Wanda Adamik Hrycova.",
+   "services": "Feature film production, TV production",
+   "credits": "Colette, Ciara, Moj Neznamy Vojak, Vlny, Let z Kabulu",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://www.wandal.sk/home/",
+   "source_urls": [
+    "http://www.wandal.sk/home/",
+    "http://www.wandal.sk/kontakt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-whatiffilms",
+   "name": "What If Films",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava film production company developing genre features and documentaries that combine audience reach with social themes.",
+   "services": "Film development and production",
+   "credits": "Summer Rebels, Little Hanoi, My World Upside Down, Lovebots, Gold Digger",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://www.whatiffilms.sk/",
+   "source_urls": [
+    "http://www.whatiffilms.sk/",
+    "http://www.whatiffilms.sk/contact"
+   ],
+   "photo": null
   },
   {
    "id": "si-bela-film",
@@ -15482,7 +16083,7 @@
   {
    "id": "uk-northern-studios-hartlepool",
    "name": "The Northern Studios",
-   "city": "County Durham",
+   "city": "Hartlepool",
    "country": "United Kingdom",
    "lat": 54.6857,
    "lng": -1.2041,

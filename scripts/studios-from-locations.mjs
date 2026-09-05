@@ -58,6 +58,11 @@ const CITY = {
   "uk-sky-studios-elstree": "Borehamwood", "uk-longcross-studios": "Chertsey", "uk-north-light-film-studios": "Huddersfield",
   "uk-shepperton-studios": "Shepperton", "uk-warner-bros-studios-leavesden": "Leavesden", "uk-dragon-studios": "Llanharan",
   "uk-studio-ulster": "Belfast", "uk-wardpark-studios": "Cumbernauld", "uk-cardington-studios": "Cardington",
+  "bg-ufo-film-studios": "Dolna Malina", "ee-bfm-film-studio-tallinn": "Tallinn", "ee-ida-hub-film-studios": "Johvi",
+  "ee-tallinnfilm-studio-paljassaare": "Tallinn", "lt-kino-manufaktura": "Vilnius", "lt-ks-independent-film-studio": "Bareikiskes",
+  "lt-lithuanian-film-studio": "Vilnius", "lt-vilnius-film-cluster-green-screen-studio": "Vilnius",
+  "ro-creic-film-studio-cluj": "Cluj-Napoca", "sk-a4-studio": "Bratislava", "sk-koliba-studios": "Bratislava",
+  "sk-shining-studio": "Stupava", "uk-northern-studios-hartlepool": "Hartlepool",
 };
 const city = (l, prev) => {
   const key = Object.keys(CITY).find((k) => l.id.startsWith(k) || k.startsWith(l.id));
