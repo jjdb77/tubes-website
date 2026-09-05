@@ -197,13 +197,17 @@
         ...(extra[card.dataset.id] || {}),
       };
     };
+    // Accenten wegvouwen bij het zoeken: wie "Zlin" of "Munchen" typt hoort
+    // "Zlín" en "München" te vinden. Alleen voor het vergelijken, niet voor
+    // wat er op het scherm staat.
+    const fold = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const byId = {};
     const searchText = new Map();
     for (const card of document.querySelectorAll(".guide-card")) {
       const l = readCard(card);
       byId[l.id] = l;
-      searchText.set(l.id, [l.name, l.region, l.country, l.type, l.setting, l.known_for, l.facilities, l.suitability, l.logistics]
-        .filter(Boolean).join(" ").toLowerCase());
+      searchText.set(l.id, fold([l.name, l.region, l.country, l.type, l.setting, l.known_for, l.facilities, l.suitability, l.logistics]
+        .filter(Boolean).join(" ")));
     }
     const textOf = (card) => searchText.get(card.dataset.id) || "";
 
@@ -257,7 +261,7 @@
     // Zonder deze splitsing zou alleen een letterlijke zin matchen.
     // Vulwoorden eruit, anders strandt "castle near Prague" op "near".
     const STOP = new Set(["near", "close", "around", "with", "without", "and", "for", "the", "a", "an", "of", "in", "on", "at", "to", "from", "by", "or", "my", "we", "need", "looking", "some", "any", "that", "this", "it", "is", "are", "be", "can", "would", "like"]);
-    const words = (s) => s.trim().toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
+    const words = (s) => fold(s.trim()).replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
     // Zoeken vindt liefst alle woorden, maar valt terug op de kaarten met de
     // meeste treffers. Anders levert "castle near Prague" niets op zodra er
     // geen kasteel in Praag zelf staat, terwijl er wel iets in de buurt is.
@@ -323,10 +327,10 @@
 
     const hideSuggest = () => { suggestEl.hidden = true; suggestEl.innerHTML = ""; q.setAttribute("aria-expanded", "false"); };
     const showSuggest = () => {
-      const needle = q.value.trim().toLowerCase();
+      const needle = fold(q.value.trim());
       if (needle.length < 2) { hideSuggest(); return; }
-      const starts = pool.filter((s) => s.value.toLowerCase().startsWith(needle));
-      const contains = pool.filter((s) => !s.value.toLowerCase().startsWith(needle) && s.value.toLowerCase().includes(needle));
+      const starts = pool.filter((s) => fold(s.value).startsWith(needle));
+      const contains = pool.filter((s) => !fold(s.value).startsWith(needle) && fold(s.value).includes(needle));
       const hits = [...starts, ...contains].slice(0, 8);
       if (!hits.length) { hideSuggest(); return; }
       suggestEl.innerHTML = hits.map((s, i) => `<button type="button" data-s-kind="${esc(s.kind)}" data-s-value="${esc(s.value)}"><span class="guide-suggest-kind">${esc(s.kind)}</span>${esc(s.value)}${s.extra ? `<small>${esc(s.extra)}</small>` : ""}</button>`).join("");

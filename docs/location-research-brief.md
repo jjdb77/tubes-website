@@ -57,11 +57,19 @@ swimming pools, event venues; "Hotel & interiors" for hotels, spas, ballrooms.)
 
 Required:
 - id: "<cc>-<slug>" lowercase, hyphens, ascii only, cc = ISO 2-letter country code
-  (uk, ie, nl, be, de, fr, es, it, hu, cz, at, pl, pt, gr, hr, mt, dk, se, no, fi, is).
+  (uk, ie, nl, be, de, fr, es, it, hu, cz, at, pl, pt, gr, hr, mt, dk, se, no, fi, is,
+  ro, bg, rs, lt, lv, ee, sk, si, lu, ch).
 - name: the place's own name (English where one exists, otherwise the local name).
 - country: exactly the English country name used in the guide, e.g. "United Kingdom",
-  "Czech Republic", "Netherlands".
-- region: province / county / region, e.g. "Greater Manchester", "Noord-Holland", "Bavaria".
+  "Czech Republic", "Netherlands", "Romania", "Bulgaria", "Serbia", "Lithuania", "Latvia",
+  "Estonia", "Slovakia", "Slovenia", "Luxembourg", "Switzerland".
+- region: province / county / region, e.g. "Greater Manchester", "North Holland", "Bavaria".
+  Write it in ASCII without accents ("Ile-de-France", "Zlin Region", "Baden-Wurttemberg")
+  and use the English name where there is a common one (Brittany, not Bretagne; Lisbon, not
+  Lisboa). No "(city)" in brackets: write "Katowice, Silesian Voivodeship". In the United
+  Kingdom leave English counties bare ("Surrey", not "Surrey, England") and add the nation
+  for the others ("Glasgow, Scotland", "Cardiff, Wales", "Belfast, Northern Ireland").
+  Running `node scripts/normalize-regions.mjs` after a round fixes most of this anyway.
 - lat, lng: decimal degrees with 4 decimals, the actual spot. Check them: Wikipedia
   infobox, Wikidata, or Nominatim (curl -s -A "tubes-locations-guide" "https://nominatim.openstreetmap.org/search?q=<query>&format=json&limit=1", max 1 request per second).
 - type: one of the strings above.

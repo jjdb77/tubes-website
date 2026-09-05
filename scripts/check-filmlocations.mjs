@@ -47,6 +47,17 @@ const BBOX = {
   Spain: [[35.9, 43.8, -9.4, 4.4], [27.6, 29.5, -18.2, -13.3]],
   Sweden: [[55.3, 69.1, 10.9, 24.2]],
   "United Kingdom": [[49.9, 60.9, -8.2, 1.8]],
+  // Toegevoegd 5-9-2026 (vijfde ronde: tien productielanden erbij)
+  Bulgaria: [[41.2, 44.3, 22.3, 28.7]],
+  Estonia: [[57.5, 59.8, 21.7, 28.3]],
+  Latvia: [[55.6, 58.1, 20.9, 28.3]],
+  Lithuania: [[53.9, 56.5, 20.9, 26.9]],
+  Luxembourg: [[49.4, 50.2, 5.7, 6.6]],
+  Romania: [[43.6, 48.3, 20.2, 29.8]],
+  Serbia: [[42.2, 46.2, 18.8, 23.1]],
+  Slovakia: [[47.7, 49.7, 16.8, 22.6]],
+  Slovenia: [[45.4, 46.9, 13.3, 16.7]],
+  Switzerland: [[45.8, 47.9, 5.9, 10.6]],
 };
 // "No restrictions" is de Commons-aanduiding voor beeld zonder bekende rechten
 // (meestal archiefmateriaal); dat mag, net als de CC-licenties en publiek domein.
