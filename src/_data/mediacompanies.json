@@ -913,7 +913,7 @@
    "facilities": "Main hall of 1,100 sqm (30m x 36m, 6.6m ceiling height) with a seamless paintable concrete floor and 174 rigging/anchor points, one circuit of black molton cyclorama, a 6m x 12m foyer with kitchen, a make-up room, wardrobe, shower and laundry room, and six flexible rooms usable as dressing rooms or production offices.",
    "group": null,
    "founded": null,
-   "official_url": "https://www.rvstudio.be",
+   "official_url": "https://www.rvstudio.be/en",
    "source_urls": [
     "https://www.rvstudio.be",
     "https://www.rvstudio.be/contact"
@@ -1340,14 +1340,15 @@
    "facilities": "Nine stages totalling 8,000 m2; the largest are Studio 2 (1,200 m2, 47 x 23 m, over 10 m high) and Studio 4 (1,200 m2, 60 x 20 m, 8 m working height), with Studio 6-7 a divisible 950 m2 complex and Studio 9 a 440 m2 TV studio. A 1,000 m2 production hub with offices and its own transformer station, plus carpentry, paint, plaster and model workshops.",
    "group": null,
    "founded": null,
-   "official_url": "https://www.jadran-film.com/",
+   "official_url": "https://www.jadran-film.eu/",
    "source_urls": [
     "https://jadran-film.eu/",
     "https://jadran-film.eu/studio-2/",
     "https://jadran-film.eu/studio-4/",
     "https://jadran-film.eu/studio-6-7/",
     "https://jadran-film.eu/studio-9/",
-    "https://jadran-film.eu/production-hub/"
+    "https://jadran-film.eu/production-hub/",
+    "https://www.jadran-film.com/"
    ],
    "photo": null,
    "guide_id": "jadran-film",
@@ -1411,10 +1412,10 @@
    "facilities": "Artist studios, shooting equipment, a small theatre, film storage and video duplication across three Zagreb locations.",
    "group": null,
    "founded": null,
-   "official_url": "http://zagrebfilm.hr",
+   "official_url": "https://zagrebfilm.hr/",
    "source_urls": [
     "https://en.wikipedia.org/wiki/Zagreb_Film",
-    "http://zagrebfilm.hr"
+    "https://zagrebfilm.hr/"
    ],
    "photo": null,
    "guide_id": "hr-zagreb-film",
@@ -1767,30 +1768,6 @@
    "photo": null,
    "guide_id": "dk-filmby-aarhus",
    "guide_url": "/compare-film-tv-locations/#loc-dk-filmby-aarhus"
-  },
-  {
-   "id": "dk-filmbyen-avedore",
-   "name": "Filmbyen",
-   "city": "Hvidovre",
-   "country": "Denmark",
-   "lat": 55.633,
-   "lng": 12.444,
-   "type": "Studio",
-   "specialism": "Sound stages & backlot",
-   "summary": "A production complex of offices, sound stages, edit suites and filmmaker pavilions built inside a former military barracks in Avedore, headquarters of Zentropa and home to several other Danish production companies.",
-   "services": null,
-   "credits": "Klovn, Dear Wendy, Dommeren",
-   "facilities": null,
-   "group": null,
-   "founded": null,
-   "official_url": "https://zentropa.dk",
-   "source_urls": [
-    "https://zentropa.dk",
-    "https://da.wikipedia.org/wiki/Filmbyen"
-   ],
-   "photo": null,
-   "guide_id": "dk-filmbyen-avedore",
-   "guide_url": "/compare-film-tv-locations/#loc-dk-filmbyen-avedore"
   },
   {
    "id": "dk-final-cut-for-real",
@@ -3275,7 +3252,7 @@
    "facilities": "One building of 400 square metres",
    "group": null,
    "founded": null,
-   "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+   "official_url": "https://www.tsf.fr/studios/studios-bordeaux/",
    "source_urls": [
     "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
    ],
@@ -3324,6 +3301,30 @@
     "https://xilam.com/en/presentation/"
    ],
    "photo": null
+  },
+  {
+   "id": "de-westside-studios-frankfurt",
+   "name": "069 Westside Studio",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "lat": 50.1229,
+   "lng": 8.5899,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "A large rental film and photo studio in Frankfurt, about nine minutes from the airport, equipped with a robotic camera rig and rail system plus extensive lighting gear.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.069westside.studio/",
+   "source_urls": [
+    "http://westside-studios.eu",
+    "https://www.hessenfilm.de/location-details/75"
+   ],
+   "photo": null,
+   "guide_id": "de-westside-studios-frankfurt",
+   "guide_url": "/compare-film-tv-locations/#loc-de-westside-studios-frankfurt"
   },
   {
    "id": "de-101-studios-frankfurt",
@@ -3411,35 +3412,6 @@
     "https://www.bavaria-fiction.de/"
    ],
    "photo": null
-  },
-  {
-   "id": "de-bavaria-filmstadt",
-   "name": "Bavaria Filmstadt",
-   "city": "Grünwald",
-   "country": "Germany",
-   "lat": 48.0492,
-   "lng": 11.5342,
-   "type": "Studio",
-   "specialism": "Sound stages & backlot",
-   "summary": "Working film studio complex in Grünwald near Munich with sound stages, a backlot and standing sets used for German film and television production since the 1920s.",
-   "services": null,
-   "credits": "Das Boot (1981), The NeverEnding Story (1984)",
-   "facilities": null,
-   "group": null,
-   "founded": null,
-   "official_url": "https://www.filmstadt.de/",
-   "source_urls": [
-    "https://www.bavaria-filmstadt.de/en/",
-    "https://en.wikipedia.org/wiki/Bavaria_Film"
-   ],
-   "photo": {
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0d/M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
-    "file_page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
-    "author": "Unbekannte Autoren und Grafiker; Scan von Auktionshaus Vladimir Gutowski",
-    "license": "Public domain"
-   },
-   "guide_id": "de-bavaria-filmstadt",
-   "guide_url": "/compare-film-tv-locations/#loc-de-bavaria-filmstadt"
   },
   {
    "id": "de-bavaria-studios-koeln",
@@ -3598,6 +3570,28 @@
    "photo": null
   },
   {
+   "id": "de-das-werk",
+   "name": "Das Werk",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "lat": 50.1109,
+   "lng": 8.6821,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Post-production and VFX network for TV, cinema and social media commercials, offering colour grading, editing, motion graphics and CGI from offices across Germany plus Amsterdam and London.",
+   "services": "Colour grading, editing, VFX, CGI, motion graphics, AI-assisted production and post-production, distribution and archiving",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.daswerk.com/",
+   "source_urls": [
+    "https://www.daswerk.com/about/",
+    "https://www.daswerk.com/impressum/"
+   ],
+   "photo": null
+  },
+  {
    "id": "de-ffs-synchron",
    "name": "FFS Film- und Fernseh-Synchron",
    "city": "Munich",
@@ -3745,9 +3739,9 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "http://www.hinterbergwerk.com",
+   "official_url": "https://www.hinterbergwerk.com/",
    "source_urls": [
-    "http://www.hinterbergwerk.com",
+    "https://www.hinterbergwerk.com/",
     "https://www.hessenfilm.de/location-details/78"
    ],
    "photo": null,
@@ -4049,6 +4043,29 @@
    "guide_url": "/compare-film-tv-locations/#loc-de-nivre-studio-weimar"
   },
   {
+   "id": "de-optical-art",
+   "name": "Optical Art",
+   "city": "Hamburg",
+   "country": "Germany",
+   "lat": 53.5511,
+   "lng": 9.9937,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Hamburg post-production house for cinema and TV, covering dailies, editing, colour grading, visual effects, title design and DCP mastering.",
+   "services": "Dailies, editing, colour grading, visual effects, title design, mastering and QC, online services",
+   "credits": "Nord bei Nordwest, Kommissar Dupin: Bretonische Sehnsucht, Ein Sommer in Italien: WM 1990, Zwei Am Zug, Sommer auf Asphalt",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.opticalart.de/",
+   "source_urls": [
+    "https://www.opticalart.de/",
+    "https://www.opticalart.de/kontakt/",
+    "https://www.opticalart.de/projekte/"
+   ],
+   "photo": null
+  },
+  {
    "id": "de-pantaleon-films",
    "name": "Pantaleon Films",
    "city": "Munich",
@@ -4140,6 +4157,28 @@
    "photo": null
   },
   {
+   "id": "de-rc-production",
+   "name": "RC Production",
+   "city": "Potsdam",
+   "country": "Germany",
+   "lat": 52.3906,
+   "lng": 13.0645,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Potsdam dubbing house creating German-language versions of feature films and series, now also incorporating the former Hermes Synchron studios.",
+   "services": "Dubbing, voice casting, recording direction, production management",
+   "credits": "Lee Cronin's The Mummy, One Battle After Another, Mortal Kombat 2, Five Nights at Freddy's 2, Ballerina",
+   "facilities": null,
+   "group": null,
+   "founded": 1995,
+   "official_url": "https://www.rcproduction.de/",
+   "source_urls": [
+    "https://www.rcproduction.de/",
+    "https://www.rcproduction.de/ueber-uns/"
+   ],
+   "photo": null
+  },
+  {
    "id": "de-redseven-entertainment",
    "name": "Redseven Entertainment",
    "city": "Munich",
@@ -4157,6 +4196,29 @@
    "official_url": "https://www.redseven.de/",
    "source_urls": [
     "https://www.redseven.de/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "de-rise-fx",
+   "name": "RISE FX",
+   "city": "Berlin",
+   "country": "Germany",
+   "lat": 52.52,
+   "lng": 13.405,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Full-service visual effects studio for feature film and television, founded in Berlin with further sites in Cologne, Munich, Stuttgart and London.",
+   "services": "Script analysis and VFX breakdown, previsualisation, on-set supervision, compositing, 3D animation and CGI, matte painting, simulation and rendering, lidar 3D scanning",
+   "credits": "The Last of Us, Stranger Things, Fantastic Four, Guardians of the Galaxy Vol. 3, Fallout",
+   "facilities": null,
+   "group": null,
+   "founded": 2007,
+   "official_url": "http://www.rise-fx.com/",
+   "source_urls": [
+    "http://www.rise-fx.com/",
+    "http://www.rise-fx.com/rise-visual-effects-studios-about-rise.php",
+    "http://www.rise-fx.com/rise-visual-effects-studios-imprint-privacy-policy.php"
    ],
    "photo": null
   },
@@ -4323,6 +4385,28 @@
    "photo": null
   },
   {
+   "id": "de-studio-funk",
+   "name": "Studio Funk",
+   "city": "Hamburg",
+   "country": "Germany",
+   "lat": 53.5511,
+   "lng": 9.9937,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Audio consultancy and sound production studio for commercials and feature film, with offices in Hamburg, Berlin, Duesseldorf and Frankfurt am Main.",
+   "services": "Sound design and audio consulting, AI-audio, sound production for commercials and feature film",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.studio-funk.de/",
+   "source_urls": [
+    "https://www.studio-funk.de/",
+    "https://www.studio-funk.de/about"
+   ],
+   "photo": null
+  },
+  {
    "id": "de-studio-hamburg",
    "name": "Studio Hamburg",
    "city": "Hamburg",
@@ -4337,7 +4421,7 @@
    "facilities": "Studio A1 731.9 m2, A2 801.4 m2, A3 1,006.2 m2, A4 847.0 m2, A5 796.1 m2, A6 505.1 m2 (six stages between 500 and 1,000 m2).",
    "group": null,
    "founded": null,
-   "official_url": "https://www.studio-berlin.de/studios-in-hamburg/",
+   "official_url": "https://www.studio-hamburg.de/atelier-und-technik/",
    "source_urls": [
     "https://www.studio-berlin.de/studios-in-hamburg/",
     "https://www.studio-berlin.de/kontakt/"
@@ -4345,6 +4429,27 @@
    "photo": null,
    "guide_id": "de-studio-hamburg",
    "guide_url": "/compare-film-tv-locations/#loc-de-studio-hamburg"
+  },
+  {
+   "id": "de-studio-hamburg-postproduction",
+   "name": "Studio Hamburg Postproduction",
+   "city": "Hamburg",
+   "country": "Germany",
+   "lat": 53.5511,
+   "lng": 9.9937,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Full-service post-production and broadcast services company with sites in Hamburg, Berlin, Rostock, Lueneburg and Ismaning, covering colour correction, sound mixing, VFX, and film digitisation and restoration.",
+   "services": "Colour correction, sound mixing, visual effects, film digitisation and restoration, broadcast technology and production staffing",
+   "credits": "Krank Berlin, Der Nazi-Clan: Hitlers Hofstaat, Die Toten von Marnow, Schlafende Hunde, Schwarze Fruechte",
+   "facilities": null,
+   "group": "Studio Hamburg",
+   "founded": null,
+   "official_url": "https://www.studio-hamburg-postproduction.de/",
+   "source_urls": [
+    "https://www.studio-hamburg-postproduction.de/"
+   ],
+   "photo": null
   },
   {
    "id": "de-studiopark-kindermedienzentrum-erfurt",
@@ -4522,30 +4627,6 @@
     "https://wave-line.de/ueber-uns"
    ],
    "photo": null
-  },
-  {
-   "id": "de-westside-studios-frankfurt",
-   "name": "Westside Studios",
-   "city": "Frankfurt",
-   "country": "Germany",
-   "lat": 50.1229,
-   "lng": 8.5899,
-   "type": "Studio",
-   "specialism": "Sound stages & backlot",
-   "summary": "A large rental film and photo studio in Frankfurt, about nine minutes from the airport, equipped with a robotic camera rig and rail system plus extensive lighting gear.",
-   "services": null,
-   "credits": null,
-   "facilities": null,
-   "group": null,
-   "founded": null,
-   "official_url": "http://westside-studios.eu",
-   "source_urls": [
-    "http://westside-studios.eu",
-    "https://www.hessenfilm.de/location-details/75"
-   ],
-   "photo": null,
-   "guide_id": "de-westside-studios-frankfurt",
-   "guide_url": "/compare-film-tv-locations/#loc-de-westside-studios-frankfurt"
   },
   {
    "id": "de-x-filme",
@@ -6083,7 +6164,7 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "https://www.scarabeoentertainment.it/",
+   "official_url": "https://www.cineportoemiliaromagna.it/",
    "source_urls": [
     "https://www.scarabeoentertainment.it/",
     "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna"
@@ -7050,9 +7131,9 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "http://arunasmatelis.com/",
+   "official_url": "https://arunasmatelis.com/",
    "source_urls": [
-    "http://arunasmatelis.com/"
+    "https://arunasmatelis.com/"
    ],
    "photo": null
   },
@@ -8614,9 +8695,9 @@
    "facilities": "Facilities include a recording studio, photography studios (K-03, K-04, K-05), colour correction suites including a 4K colour correction room, a motion capture and rehearsal space, sound and image post-production suites, and production offices.",
    "group": null,
    "founded": null,
-   "official_url": "http://www.alvernia.com/en/",
+   "official_url": "https://www.alvernia.com/en/",
    "source_urls": [
-    "http://www.alvernia.com/en/",
+    "https://www.alvernia.com/en/",
     "https://en.wikipedia.org/wiki/Alvernia_Studios"
    ],
    "photo": {
@@ -9016,9 +9097,9 @@
    "facilities": null,
    "group": "Polish Filmmakers Association (SFP)",
    "founded": 2008,
-   "official_url": "http://www.studiomunka.pl/",
+   "official_url": "https://www.studiomunka.pl/",
    "source_urls": [
-    "http://www.studiomunka.pl/"
+    "https://www.studiomunka.pl/"
    ],
    "photo": null
   },
@@ -9037,9 +9118,9 @@
    "facilities": null,
    "group": null,
    "founded": 2003,
-   "official_url": "http://www.telemark.com.pl/",
+   "official_url": "https://telemark.com.pl/",
    "source_urls": [
-    "http://www.telemark.com.pl/",
+    "https://telemark.com.pl/",
     "https://pl.wikipedia.org/wiki/Telemark_(firma_producencka)"
    ],
    "photo": null
@@ -9080,10 +9161,10 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "http://www.wfdif.pl/",
+   "official_url": "https://wfdif.pl/",
    "source_urls": [
     "https://pl.wikipedia.org/wiki/Wytw%C3%B3rnia_Film%C3%B3w_Dokumentalnych_i_Fabularnych",
-    "http://www.wfdif.pl/"
+    "https://wfdif.pl/"
    ],
    "photo": null,
    "guide_id": "pl-wfdif",
@@ -9131,6 +9212,27 @@
    "official_url": "https://coraleuropa.pt/",
    "source_urls": [
     "https://coraleuropa.pt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-crimproductions",
+   "name": "CRIM Productions",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lisbon production company making feature and short fiction films, creative documentaries and television series for international festivals and broadcasters.",
+   "services": "Feature film, short film, documentary and television series production",
+   "credits": "O Vento Assobiando nas Gruas, Morte e Vida Madalena, Francisco Perdido, O Ultimo Banho, Verdade ou Consequencia",
+   "facilities": null,
+   "group": null,
+   "founded": 2005,
+   "official_url": "https://www.crim-productions.com/",
+   "source_urls": [
+    "https://www.crim-productions.com/"
    ],
    "photo": null
   },
@@ -9210,6 +9312,71 @@
    "photo": null
   },
   {
+   "id": "pt-faux",
+   "name": "FAUX",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Lisbon production company founded to make the personal documentary and fiction projects of its founder, since grown into a catalogue with several international directors.",
+   "services": "Documentary and feature film production",
+   "credits": "A Noiva, Paraiso, Raiva, Treblinka, Cante",
+   "facilities": null,
+   "group": null,
+   "founded": 2002,
+   "official_url": "https://www.faux.pt/",
+   "source_urls": [
+    "https://www.faux.pt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-fronteirafilmes",
+   "name": "Fronteira Filmes",
+   "city": "Porto",
+   "country": "Portugal",
+   "lat": 41.1579,
+   "lng": -8.6291,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Independent Porto production company making documentary and fiction films through collaborative, small-team productions.",
+   "services": "Documentary and fiction film production",
+   "credits": "A Quem Possa Ouvir-me, Shadows, Retrato, CRU, O Ceu em Queda",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://fronteirafilmes.pt/",
+   "source_urls": [
+    "https://fronteirafilmes.pt/sobre-nos"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-garage",
+   "name": "Garage",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Lisbon production house making commercials, photography and film for advertising agencies and brands.",
+   "services": "Commercial production, photography, film production",
+   "credits": "MEO, NOS, Santander, Lidl, Pingo Doce",
+   "facilities": null,
+   "group": null,
+   "founded": 2005,
+   "official_url": "https://www.garage.pt/",
+   "source_urls": [
+    "https://www.garage.pt/en/about",
+    "https://www.garage.pt/en/work",
+    "https://www.garage.pt/en/contacts"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-ingreme",
    "name": "Ingreme",
    "city": "Lisbon",
@@ -9273,6 +9440,48 @@
    "photo": null
   },
   {
+   "id": "pt-loudnessfilms",
+   "name": "Loudness Films",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Lisbon post-production facility for film and television offering sound mixing, colour grading, sound design, foley and digital mastering, working with international productions.",
+   "services": "Re-recording mixing, colour grading, sound design, foley and ADR, digital lab and DCP, editing",
+   "credits": "Rabo de Peixe, Gloria, Free Solo, Tiger Stripes, Misericordia",
+   "facilities": "Dolby Atmos dubbing stage (350 cubic metres), Dolby Vision certified colour grading suite, recording studio, six configurable editing rooms",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.loudness-films.pt/",
+   "source_urls": [
+    "https://www.loudness-films.pt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-marginalfilmes",
+   "name": "Marginalfilmes",
+   "city": "Barcarena",
+   "country": "Portugal",
+   "lat": 38.7228,
+   "lng": -9.2892,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Portuguese production company making feature films, TV series and documentaries, with international productions in Africa, Spain and Brazil.",
+   "services": "Feature film, TV series, documentary and short film production",
+   "credits": "Quero Ser Uma Estrela, Preto e Branco, Um Rio, Ines de Portugal, Trezes",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.marginalfilmes.pt/",
+   "source_urls": [
+    "https://www.marginalfilmes.pt/"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-moviebox-studios-algarve",
    "name": "MovieBox Studios Algarve",
    "city": "Loulé",
@@ -9297,6 +9506,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-pt-moviebox-studios-algarve"
   },
   {
+   "id": "pt-osomeafuria",
+   "name": "O Som e a Furia",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lisbon production company founded by young filmmakers of Portugal's short film generation, making author-driven fiction, documentary and animated films for international festivals.",
+   "services": "Feature film, short film, documentary and animation production",
+   "credits": "Technoboss",
+   "facilities": null,
+   "group": null,
+   "founded": 1998,
+   "official_url": "https://www.osomeafuria.com/",
+   "source_urls": [
+    "https://www.osomeafuria.com/pt"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-pluralentertainment",
    "name": "Plural Entertainment Portugal",
    "city": "Loures",
@@ -9315,6 +9545,50 @@
    "source_urls": [
     "https://www.pluralentertainment.com/",
     "https://www.pluralentertainment.com/en/about-us"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-pracafilmes",
+   "name": "Praca Filmes",
+   "city": "Montemor-o-Novo",
+   "country": "Portugal",
+   "lat": 38.6497,
+   "lng": -8.2205,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Production company in Montemor-o-Novo making animated and author-driven films and distributing them internationally.",
+   "services": "Animation and film production, international distribution",
+   "credits": "Nayola, Vagabundo, A Flor e o Peixe, Corpo a Corpo, Iris",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://pracafilmes.com/",
+   "source_urls": [
+    "https://pracafilmes.com/pt",
+    "https://pracafilmes.com/pt/sobre-geral",
+    "https://pracafilmes.com/pt/sobre-contactos"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-rawfilmes",
+   "name": "RAW.filmes",
+   "city": "Porto",
+   "country": "Portugal",
+   "lat": 41.1579,
+   "lng": -8.6291,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Porto production house making commercials, fashion films and music videos, with an in-house equipment rental service.",
+   "services": "Commercial production, fashion film, music video production, equipment rental",
+   "credits": "Mercedes, Sony, FNAC, Castelbel, Porto Business School",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://rawfilmes.com/",
+   "source_urls": [
+    "https://rawfilmes.com/"
    ],
    "photo": null
   },
@@ -9357,6 +9631,71 @@
    "official_url": "https://www.rosafilmes.com/",
    "source_urls": [
     "https://www.rosafilmes.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-sardinhaemlata",
+   "name": "Sardinha em Lata",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Lisbon animation production company making feature films, series, shorts and commercial or institutional animated content.",
+   "services": "Animation production for feature films, series, shorts, advertising and institutional content",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": 2007,
+   "official_url": "https://www.sardinhaemlata.com/",
+   "source_urls": [
+    "https://www.sardinhaemlata.com/sobre",
+    "https://www.sardinhaemlata.com/contacto"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-sptelevisao",
+   "name": "SP Televisao",
+   "city": "Cacem",
+   "country": "Portugal",
+   "lat": 38.7686,
+   "lng": -9.2994,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Television production studio near Lisbon making telenovelas, drama series and entertainment formats mainly for broadcaster TVI, with its own complex of six studios.",
+   "services": "Telenovela production, drama series, entertainment formats, international co-production",
+   "credits": "Gloria, Lacos de Sangue, A Promessa, Senhora do Mar, Paginas da Vida",
+   "facilities": null,
+   "group": null,
+   "founded": 2007,
+   "official_url": "https://www.sptelevisao.pt/",
+   "source_urls": [
+    "https://www.sptelevisao.pt/pt/sobre-a-sp-tv/",
+    "https://www.sptelevisao.pt/pt/contactos/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-takeiteasyfilm",
+   "name": "Take It Easy Film",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Lisbon production company making commercials, short films and TV series, with a stated focus on new and alternative audiovisual approaches.",
+   "services": "Film, photo and video production for advertising, cinema and television",
+   "credits": "Um Caroco de Abacate, Finisterra, Crianca Lobo, Lidl, Worten",
+   "facilities": null,
+   "group": null,
+   "founded": 2001,
+   "official_url": "https://www.takeiteasy-film.com/",
+   "source_urls": [
+    "https://www.takeiteasy-film.com/"
    ],
    "photo": null
   },
@@ -9893,9 +10232,9 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "http://nora-pg.si",
+   "official_url": "https://nora-pg.si/",
    "source_urls": [
-    "http://nora-pg.si",
+    "https://nora-pg.si/",
     "https://www.linkedin.com/company/nora-production-group"
    ],
    "photo": null
@@ -10049,6 +10388,27 @@
    "source_urls": [
     "https://www.atipicafilms.com/",
     "https://www.atipicafilms.com/contacto"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-atlantisanimation",
+   "name": "Atlantis Animation",
+   "city": "Santa Cruz de Tenerife",
+   "country": "Spain",
+   "lat": 28.4636,
+   "lng": -16.2518,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Animation studio in Tenerife making 3D animated series and films for international broadcasters and streaming platforms, formerly known as In Efecto.",
+   "services": "3D animation production for series and feature films",
+   "credits": "Messi and the Giants",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://atlantisanimation.com/",
+   "source_urls": [
+    "https://atlantisanimation.com/"
    ],
    "photo": null
   },
@@ -10261,6 +10621,27 @@
    "photo": null
   },
   {
+   "id": "es-elterrat",
+   "name": "El Terrat",
+   "city": "Barcelona",
+   "country": "Spain",
+   "lat": 41.3874,
+   "lng": 2.1686,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Barcelona production company making television entertainment formats, radio, podcasts and theatre, alongside branded content and digital projects.",
+   "services": "Television, radio and podcast production, entertainment formats, theatre production, branded content",
+   "credits": "La Revuelta, El Consultorio de Berto, Crossobar, Futuro Imperfecto, Temps Mort",
+   "facilities": null,
+   "group": null,
+   "founded": 1996,
+   "official_url": "https://www.elterrat.com/",
+   "source_urls": [
+    "https://www.elterrat.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-entropystudio",
    "name": "Entropy Studio",
    "city": "Zaragoza",
@@ -10278,6 +10659,27 @@
    "official_url": "https://www.entropystudio.es/",
    "source_urls": [
     "https://www.entropystudio.es/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-ficcionproducciones",
+   "name": "Ficcion Producciones",
+   "city": "A Coruna",
+   "country": "Spain",
+   "lat": 43.3623,
+   "lng": -8.4115,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Galician production company making television drama series, films and animation, combining live-action production with 3D animation.",
+   "services": "TV series, feature film and animation production",
+   "credits": "Operacion Marea Negra, Vivir sin Permiso, 3 Caminos, Una Historia de Crimenes, Menique",
+   "facilities": null,
+   "group": null,
+   "founded": 2003,
+   "official_url": "https://www.ficcion-producciones.com/",
+   "source_urls": [
+    "https://www.ficcion-producciones.com/"
    ],
    "photo": null
   },
@@ -10373,6 +10775,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-es-galaxia-studios-valencia"
   },
   {
+   "id": "es-gestmusic",
+   "name": "Gestmusic",
+   "city": "Barcelona",
+   "country": "Spain",
+   "lat": 41.3874,
+   "lng": 2.1686,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Barcelona television production company behind several long-running Spanish entertainment and talent formats.",
+   "services": "Entertainment format development and television production",
+   "credits": "Tu Cara Me Suena, Operacion Triunfo, Traitors Espana, Alla Tu, Premios Goya",
+   "facilities": null,
+   "group": "Banijay",
+   "founded": null,
+   "official_url": "https://www.gestmusic.es/",
+   "source_urls": [
+    "https://www.gestmusic.es/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-gran-canaria-platos",
    "name": "Gran Canaria Platos",
    "city": "Las Palmas",
@@ -10462,6 +10885,28 @@
    "photo": null
   },
   {
+   "id": "es-kowalskifilms",
+   "name": "Kowalski Films",
+   "city": "Donostia-San Sebastian",
+   "country": "Spain",
+   "lat": 43.3183,
+   "lng": -1.9812,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Basque production company based in Donostia-San Sebastian making Spanish and Basque-language feature films and TV series.",
+   "services": "Feature film and television production",
+   "credits": "Maixabel, Handia, Akelarre, O Que Arde, Los Tigres",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.kowalskifilms.es/",
+   "source_urls": [
+    "https://www.kowalskifilms.es/",
+    "https://www.sansebastianfestival.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-la-claqueta-pc",
    "name": "La Claqueta PC",
    "city": "Seville",
@@ -10479,6 +10924,28 @@
    "official_url": "https://www.laclaqueta.com/",
    "source_urls": [
     "https://www.laclaqueta.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-laterrazafilms",
+   "name": "La Terraza Films",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Madrid production company making Spanish feature films, including the Goya-nominated La Cena and the Netflix film Mikaela.",
+   "services": "Feature film and television production",
+   "credits": "La Cena, Mikaela, Adu, Valle de Sombras",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.laterrazafilms.com/",
+   "source_urls": [
+    "https://www.laterrazafilms.com/",
+    "https://www.laterrazafilms.com/aviso-legal"
    ],
    "photo": null
   },
@@ -10531,6 +10998,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-es-madrid-content-city"
   },
   {
+   "id": "es-metropolitana",
+   "name": "Metropolitana",
+   "city": "Barcelona",
+   "country": "Spain",
+   "lat": 41.3874,
+   "lng": 2.1686,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Post-production and VFX house for the film, television and advertising industry, with offices in Barcelona and Madrid.",
+   "services": "Visual effects, colour grading and correction",
+   "credits": "El Corte Ingles, Cupra, Airbnb",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.metropolitana.net/",
+   "source_urls": [
+    "https://www.metropolitana.net/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-mini-hollywood-oasys",
    "name": "Mini Hollywood (Oasys Parque Tematico)",
    "city": "Tabernas",
@@ -10545,7 +11033,7 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "https://www.miniHollywood.com/",
+   "official_url": "https://minihollywoodoasys.com/",
    "source_urls": [
     "https://www.miniHollywood.com/"
    ],
@@ -10571,6 +11059,27 @@
    "official_url": "https://www.moriarti.com/",
    "source_urls": [
     "https://www.moriarti.com/nosotros"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-nadieesperfecto",
+   "name": "Nadie es Perfecto",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Madrid independent production company making films, documentaries and TV series from script development through release, working with directors and streaming platforms.",
+   "services": "Feature film, documentary and TV series production, development",
+   "credits": "Netflix, Amazon Prime Video, Universal, Sony, RTVE",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.nadieesperfecto.com/",
+   "source_urls": [
+    "https://www.nadieesperfecto.com/"
    ],
    "photo": null
   },
@@ -10840,6 +11349,27 @@
    "source_urls": [
     "https://www.twinpines.es/",
     "https://www.twinpines.es/contacto"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-usert38",
+   "name": "User T38",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Madrid design, animation and post-production studio working on visual effects for film, streaming series and advertising.",
+   "services": "Design, postproduction, animation, visual effects, commercials production",
+   "credits": "El Cautivo, Abuela Tremenda, La Infiltrada, Las Azules, La Fiera",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://usert38.com/",
+   "source_urls": [
+    "https://usert38.com/"
    ],
    "photo": null
   },
@@ -11677,7 +12207,7 @@
    "facilities": null,
    "group": null,
    "founded": null,
-   "official_url": "https://www.belfastharbourstudios.com/",
+   "official_url": "https://www.belfast-harbour.co.uk/real-estate/belfast-harbour-studios/",
    "source_urls": [
     "https://www.belfastharbourstudios.com/"
    ],
@@ -12034,29 +12564,6 @@
    "photo": null
   },
   {
-   "id": "uk-digbeth-loc-studios",
-   "name": "Digbeth Loc. Studios",
-   "city": "Birmingham",
-   "country": "United Kingdom",
-   "lat": 52.4746,
-   "lng": -1.8847,
-   "type": "Studio",
-   "specialism": "Sound stages & backlot",
-   "summary": "Purpose-built television and film studio complex in the Digbeth district of Birmingham with multiple sound stages and production offices.",
-   "services": null,
-   "credits": null,
-   "facilities": null,
-   "group": null,
-   "founded": null,
-   "official_url": "https://www.digbethloc.com/",
-   "source_urls": [
-    "https://digbethlocstudios.co.uk"
-   ],
-   "photo": null,
-   "guide_id": "uk-digbeth-loc-studios",
-   "guide_url": "/compare-film-tv-locations/#loc-uk-digbeth-loc-studios"
-  },
-  {
    "id": "uk-dneg",
    "name": "DNEG",
    "city": "London",
@@ -12317,9 +12824,9 @@
    "facilities": "Multiple stages from 9,752 to 24,000 sq ft, up to 115,000 sq ft of stage space in total; around 35,000 sq ft of workshops across four workrooms including a mill; 18,000 sq ft of flexible production office space; 300+ vehicle parking; access for full-size articulated trucks.",
    "group": null,
    "founded": null,
-   "official_url": "http://firststagestudios.com/",
+   "official_url": "https://www.firststagestudios.com/",
    "source_urls": [
-    "http://firststagestudios.com/"
+    "https://www.firststagestudios.com/"
    ],
    "photo": null,
    "guide_id": "uk-firststage-studios",
@@ -12429,9 +12936,9 @@
    "facilities": "5-floor Cardiff Bay headquarters with annex facilities, 100+ Avid edit suites",
    "group": null,
    "founded": 1999,
-   "official_url": "http://gorillagroup.tv/",
+   "official_url": "https://gorillagroup.tv/",
    "source_urls": [
-    "http://gorillagroup.tv/"
+    "https://gorillagroup.tv/"
    ],
    "photo": null
   },
@@ -12601,7 +13108,7 @@
    "facilities": "One studio of 10,500 sq ft, 115 x 92 ft, 33.5 ft height, with advanced LED lighting, production, lighting and sound galleries, green rooms, make-up rooms and dressing areas.",
    "group": null,
    "founded": null,
-   "official_url": "https://www.bbcstudioworks.com/locations/kelvin-hall/",
+   "official_url": "https://www.bbcstudioworks.com/studio/kelvin-hall/",
    "source_urls": [
     "https://www.bbcstudioworks.com/locations/kelvin-hall/",
     "https://en.wikipedia.org/wiki/Kelvin_Hall"
