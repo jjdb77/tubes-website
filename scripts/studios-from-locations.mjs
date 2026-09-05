@@ -66,6 +66,24 @@ const city = (l, prev) => {
   return (prev && prev.city) || l.region || "";
 };
 const clip = (s, n) => (s && s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, "") + "." : s);
+// De gids beschrijft bij `suitability` vaak wat de website van de locatie zegt
+// ("Site lists use for ..."). Als dienstenregel op een bedrijfskaart leest dat
+// raar, dus deze staan hier met de inhoud maar zonder die aanhef.
+const SERVICES = {
+  "be-nep-belgium": "TV, film, commercial and event productions, with level-0 warehouse access for loading sets and equipment straight into the studios.",
+  "be-option-media": "Parts of the facility are available to rent, with client visits on site, free parking and direct access from the E19 motorway.",
+  "be-pixel-kinetics-alliance": "Cinema, television, advertising and digital content shoots, plus LED wall and media-server rental with technical crew for live events.",
+  "be-rv-studio": "Television productions, corporate events, fashion shows, theatre rehearsals and cultural events; loading through a 3.9 m by 4 m gate and a 480 kVA high-voltage supply.",
+  "jadran-film": "Full-service production base with base camp infrastructure and dressing, makeup and wardrobe rooms around each stage. Studios 4 and 9 are on long-term lease to a television company and a Studio 10 of 2,500 to 3,200 m2 is planned.",
+  "nl-fotostudio-vk-pijnacker": "Video clips, fashion films, commercials and interviews, with drive-in access for vehicles and equipment.",
+  "nl-nep-netherlands-hilversum": "Turnkey-equipped studios for short-term productions: Studio 22 for large game and entertainment shows, Studio 20 for talk shows and quiz productions.",
+  "nl-studio-8-amsterdam": "Car shoots, fashion productions, commercials, video clips and photography, plus greenscreen and on-location filming.",
+  "nl-studio-noorderfabriek-amsterdam": "Fashion shoots, e-commerce photography, campaigns, video and podcast production, and corporate events.",
+  "pt-algarve-studios": "Equipment rental, production crew (camera operators, cinematographers, drone operators, producers), lighting and casting.",
+  "pt-estudio-da-fabrica": "Studio hire for producers, independent filmmakers, photographers, advertising and digital agencies and music video companies; equipment rental covers HD, 4K and 6K cameras, lighting, a Blackmagic ATEM multi-camera system, audio gear and a teleprompter.",
+  "pt-valentim-de-carvalho": "Music recording in the soundproofed Studio 1, and national TV broadcasts including the RTP Festival da Cancao.",
+  "pt-moviebox-studios-algarve": "Exclusive-use warehouse and stage space plus about 20,000 sq ft of workshop and ancillary space for prop storage and construction, with a concrete hardstanding for builds, parking and VFX work.",
+};
 
 const existing = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { updated: "", note: "", items: [] };
 const keep = existing.items.filter((it) => !it.guide_id);
@@ -85,7 +103,7 @@ const fromGuide = studios.map((l) => {
     type: o.type || "Studio",
     specialism: o.specialism || specialism(l),
     summary: clip(l.setting, 220),
-    services: l.suitability || null,
+    services: SERVICES[l.id] || l.suitability || null,
     credits: l.known_for || null,
     facilities: l.facilities || null,
     group: null,

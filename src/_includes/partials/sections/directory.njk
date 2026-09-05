@@ -89,6 +89,8 @@
           </article>
           {% endfor %}
         </div>
+        <p class="guide-partial" data-guide-partial hidden aria-live="polite"></p>
+        <button type="button" class="button button-secondary guide-more" data-guide-more hidden></button>
         <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-entry">suggest one</a>.</p>
       </div>
 
@@ -155,21 +157,58 @@
       }
       favCountEl.textContent = favs.size ? "(" + favs.size + ")" : "";
     };
-    const visibleIds = () => cards.filter((c) => !c.hidden).map((c) => c.dataset.id);
-    const applyFilters = () => {
-      const needle = q.value.trim().toLowerCase();
+    // Paginering: bij honderden kaarten tonen we er PAGE tegelijk met een knop
+    // "Show more"; de kaart en de telling gaan wel over alle treffers.
+    const PAGE = 48;
+    const moreBtn = root.querySelector("[data-guide-more]");
+    const partialEl = root.querySelector("[data-guide-partial]");
+    let limit = PAGE;
+    let matched = new Set();
+    const visibleIds = () => [...matched];
+    // Zoeken op losse woorden: elk woord moet ergens in de kaart voorkomen, met
+    // een terugval op de kaarten die de meeste woorden halen. Zo levert
+    // "documentary poland" ook iets op als geen enkele kaart beide woorden heeft.
+    const STOP = new Set(["near", "close", "around", "with", "without", "and", "for", "the", "a", "an", "of", "in", "on", "at", "to", "from", "by", "or", "my", "we", "need", "looking", "some", "any", "that", "this", "it", "is", "are", "be", "can", "would", "like"]);
+    const words = (s) => s.trim().toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
+    const applyFilters = (keepLimit) => {
+      if (keepLimit !== true) limit = PAGE;
+      const needles = words(q.value);
+      matched = new Set();
       let shown = 0;
+      const pool = [];
+      let best = 0;
       for (const card of cards) {
-        let ok = (listMode === "all" || favs.has(card.dataset.id)) && (!needle || card.dataset.search.includes(needle));
-        for (const s of selects) if (ok && s.value && card.dataset["f" + s.dataset.dirFilter.charAt(0).toUpperCase() + s.dataset.dirFilter.slice(1)] !== s.value) ok = false;
-        card.hidden = !ok;
-        if (ok) shown++;
+        let hard = listMode === "all" || favs.has(card.dataset.id);
+        for (const s of selects) if (hard && s.value && card.dataset["f" + s.dataset.dirFilter.charAt(0).toUpperCase() + s.dataset.dirFilter.slice(1)] !== s.value) hard = false;
+        if (!hard) { if (!card.hidden) card.hidden = true; continue; }
+        const hay = card.dataset.search;
+        const score = needles.reduce((n, w) => n + (hay.includes(w) ? 1 : 0), 0);
+        if (needles.length && score === 0) { if (!card.hidden) card.hidden = true; continue; }
+        if (score > best) best = score;
+        pool.push({ card, score });
       }
-      countEl.textContent = shown + " of " + cards.length + " " + cfg.noun;
-      noneEl.hidden = shown > 0;
+      for (const item of pool) {
+        const ok = item.score === best;
+        if (ok) matched.add(item.card.dataset.id);
+        const show = ok && shown < limit;
+        // Alleen schrijven als het verandert: blind toewijzen over honderden
+        // kaarten kost per toetsaanslag merkbaar veel herberekening.
+        if (item.card.hidden === show) item.card.hidden = !show;
+        if (show) shown++;
+      }
+      const left = matched.size - shown;
+      countEl.textContent = matched.size + " of " + cards.length + " " + cfg.noun;
+      noneEl.hidden = matched.size > 0;
+      partialEl.hidden = !(needles.length > 1 && best > 0 && best < needles.length);
+      if (!partialEl.hidden) partialEl.textContent = "Nothing matches every word. Showing the closest matches on " + best + " of " + needles.length + " words.";
+      moreBtn.hidden = left <= 0;
+      moreBtn.textContent = "Show " + Math.min(PAGE, left) + " more (" + left + " left)";
       updateMap();
     };
-    q.addEventListener("input", applyFilters);
+    moreBtn.addEventListener("click", () => { limit += PAGE; applyFilters(true); });
+    // Even wachten tot het typen stilvalt, anders filtert elke aanslag opnieuw.
+    let typeTimer = null;
+    q.addEventListener("input", () => { clearTimeout(typeTimer); typeTimer = setTimeout(() => applyFilters(), 140); });
     for (const s of selects) s.addEventListener("change", applyFilters);
     for (const pill of root.querySelectorAll("[data-list]")) pill.addEventListener("click", () => {
       listMode = pill.dataset.list;
@@ -228,6 +267,7 @@
         if (!link) return;
         e.preventDefault();
         const card = document.getElementById("dir-" + link.dataset.goto);
+        if (card && card.hidden && matched.has(link.dataset.goto)) { limit = cards.length; applyFilters(true); }
         if (card) { card.scrollIntoView({ behavior: "smooth", block: "center" }); card.classList.add("is-highlight"); setTimeout(() => card.classList.remove("is-highlight"), 2400); }
       });
     }
