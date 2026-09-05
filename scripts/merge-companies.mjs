@@ -41,7 +41,12 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
     if (names.has(nk)) { skipped.push(`${tag}: duplicate name in ${raw.country}`); continue; }
     const it = {};
     for (const k of FIELDS) it[k] = raw[k] === undefined ? null : raw[k];
-    for (const k of ["services", "credits", "facilities", "group"]) if (typeof it[k] === "string" && !it[k].trim()) it[k] = null;
+    // Een agent levert credits soms als array aan; Nunjucks plakt die zonder
+    // spatie aan elkaar ("A,B,C"), dus hier meteen als tekst wegschrijven.
+    for (const k of ["services", "credits", "facilities", "group", "summary"]) {
+      if (Array.isArray(it[k])) it[k] = it[k].join(", ");
+      if (typeof it[k] === "string" && !it[k].trim()) it[k] = null;
+    }
     if (typeof it.founded === "string" && /^\d{4}$/.test(it.founded)) it.founded = Number(it.founded);
     if (!Array.isArray(it.source_urls) || !it.source_urls.length) it.source_urls = [it.official_url];
     if (it.photo && it.photo.thumb) it.photo.thumb = it.photo.thumb.replace("://thumb.wikimedia.org/", "://upload.wikimedia.org/");

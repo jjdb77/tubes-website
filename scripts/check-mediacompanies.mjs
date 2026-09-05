@@ -73,6 +73,7 @@ for (const [i, c] of items.entries()) {
   if (!boxes) bad(`unknown country "${c.country}"`);
   else if (typeof c.lat === "number" && !boxes.some(([a, b, x, y]) => c.lat >= a && c.lat <= b && c.lng >= x && c.lng <= y)) bad(`coordinates ${c.lat},${c.lng} outside ${c.country}`);
   if (c.summary && c.summary.length > 240) bad(`summary too long (${c.summary.length})`);
+  for (const k of ["services", "credits", "facilities", "group"]) if (c[k] != null && typeof c[k] !== "string") bad(`${k} must be text, not ${Array.isArray(c[k]) ? "an array" : typeof c[k]}`);
   if (c.summary && /award-winning|leading|world-class|premier|best-in-class/i.test(c.summary)) warn.push(`${tag}: marketing wording in summary`);
   for (const s of strings(c)) if (s.includes("—")) { bad("em-dash in text"); break; }
   for (const k of ["official_url", "guide_url"]) if (c[k] != null && !(URL_OK(c[k]) || String(c[k]).startsWith("/"))) bad(`${k} is not a URL`);
