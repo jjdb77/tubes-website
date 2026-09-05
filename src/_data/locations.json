@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-05",
   "fx_note": "Approximate exchange rates (1 EUR in local currency), only used to convert caps and thresholds in the comparison tool.",
   "fx": {
     "EUR": 1,
@@ -32,8 +32,9 @@
       "film_uplift": {
         "rate": 53,
         "net_factor": 0.75,
-        "max_budget": 15000000,
-        "label": "Independent Film Tax Credit (53%, 39.75% net) for films with a core budget up to £15m"
+        "max_budget": 23500000,
+        "upto": 15000000,
+        "label": "Independent Film Tax Credit (53%, 39.75% net) for films with a core budget up to £23.5m, paid on the first £15m of core expenditure"
       },
       "base_share": 0.8,
       "min_spend": "At least 10% of core spend in the UK; high-end TV at least £1m per broadcast hour",
@@ -43,9 +44,15 @@
       "funding_note": "Statutory credit, no annual budget",
       "foreign_spend": "No",
       "paid": "After the corporation tax return",
-      "notes": "The credit is taxable, so 34% is worth 25.5% net. 39% for animation, children's TV and UK VFX work (VFX is exempt from the 80% cap). 53% for independent films with a budget up to £15m. The old film and HETV reliefs close on 1 April 2027.",
+      "notes": "The credit is taxable, so 34% is worth 25.5% net. 39% for animation, children's TV and UK VFX work (VFX is exempt from the 80% cap). 53% for independent films with a core budget up to £23.5m, on the first £15m of spend. Qualifying spend is limited to 80% of core expenditure. The old film and HETV reliefs close on 1 April 2027.",
       "source": "https://www.bfi.org.uk/apply-british-certification-expenditure-credits/about-uk-creative-industry-expenditure-credits",
-      "source_label": "BFI"
+      "source_label": "BFI",
+      "budget_template": {
+        "url": "https://core-cms.bfi.org.uk/media/33859/download",
+        "label": "AVEC stencil (Excel), BFI",
+        "format": "xlsx",
+        "note": "A calculation sheet for the claim, giving HMRC the expenditure statement it needs. Not a budgeting format: budget in your own layout and split UK and non-UK core expenditure."
+      }
     },
     {
       "id": "ireland",
@@ -59,7 +66,7 @@
       "film_uplift": {
         "rate": 40,
         "max_budget": 20000000,
-        "label": "Scéal uplift (40%) for feature films with a budget under €20m and an Irish or EEA key creative"
+        "label": "Scéal uplift (40%) for feature films with eligible expenditure under €20m and an Irish or EEA key creative"
       },
       "base_share": 0.8,
       "min_spend": "€125k eligible spend and €250k total production cost",
@@ -71,9 +78,15 @@
       "funding_note": "Payable credit, no annual budget; up to 90% can be claimed in advance",
       "foreign_spend": "No",
       "paid": "Up to 90% in advance, balance on completion",
-      "notes": "Credit is paid untaxed. 40% for feature films under €20m (Scéal) and 40% on the first €10m when at least €1m is spent on Irish VFX. Cast and crew of any nationality qualify when working in Ireland. Runs to end 2028.",
+      "notes": "Credit is paid untaxed. 40% for feature films with eligible spend under €20m (Scéal) and 40% on the first €10m of VFX spend when at least €1m goes to Irish VFX. Cast and crew of any nationality qualify when working in Ireland. Runs to end 2028.",
       "source": "https://www.screenireland.ie/filming/section-481-1",
-      "source_label": "Screen Ireland"
+      "source_label": "Screen Ireland",
+      "budget_template": {
+        "url": "https://www.screenireland.ie/filming/section-481-1",
+        "label": "Section 481 guidance, Screen Ireland",
+        "format": "page",
+        "note": "No prescribed budget format. Revenue's application takes your own detailed budget and finance plan; Screen Ireland's page lists the compliance documents that go with it."
+      }
     },
     {
       "id": "netherlands",
@@ -84,18 +97,24 @@
       "currency": "EUR",
       "rate": 35,
       "rate_label": "Up to 35%",
-      "min_spend": "Feature: €1m total cost and €150k Dutch spend; series: minimum budget per broadcast minute",
+      "min_spend": "Feature: €1m total cost and €150k Dutch spend; documentary: €250k and €100k; high-end series: €12,000 per broadcast minute for drama (€8,000 animation, €4,000 documentary) and at least €1m per episode",
       "cap": {
         "amount": 3000000,
         "label": "€3m per project and per company per year"
       },
       "funding": "Budget-limited",
-      "funding_note": "Competitive rounds, ranked on points (€20m for film and €9.5m for high-end series in 2026)",
+      "funding_note": "Competitive rounds, ranked on points: €20m for film in four rounds and €9.5m for high-end series in three rounds in 2026, with international co-productions served first up to 70% of a round",
       "foreign_spend": "No",
-      "paid": "30% on signing, balance after audit",
-      "notes": "Selective: applications are ranked, so a strong project can still miss out when a round is oversubscribed. A Dutch producer or co-producer is required. International co-productions are served first in 2026. Next film deadline: 26 October 2026.",
+      "paid": "In instalments under the implementation agreement; the final amount is set on the audited qualifying spend",
+      "notes": "Selective: applications are ranked, so a strong project can still miss out when a round is oversubscribed. A Dutch producer or co-producer is required. International co-productions are served first in 2026. Next deadline for film and series: 26 October 2026.",
       "source": "https://www.filmfonds.nl/en/funding/fund/netherlands-film-production-incentive",
-      "source_label": "Netherlands Film Fund"
+      "source_label": "Netherlands Film Fund",
+      "budget_template": {
+        "url": "https://www.filmfonds.nl/downloads/begrotingsmodel-standaard-production-incentive-excel",
+        "label": "Budget model Standard & Production Incentive (Excel), Netherlands Film Fund",
+        "format": "xlsx",
+        "note": "Mandatory format. Also published as a Movie Magic template and an animation version on the same downloads list."
+      }
     },
     {
       "id": "belgium",
@@ -117,7 +136,13 @@
       "paid": "Up front: it is financing, not a rebate",
       "notes": "Not a rebate but private financing with a tax break for the investor. The producer's net benefit is typically 38 to 40% of eligible Belgian spend. Money arrives before the shoot. Requires a Belgian (co-)producer and a European work.",
       "source": "https://www.screenflanders.be/en/financing/other-funds-incentives/tax-shelter",
-      "source_label": "Screen Flanders"
+      "source_label": "Screen Flanders",
+      "budget_template": {
+        "url": "https://www.vaf.be/files/Subsidiedocumenten/Projectbegroting_ScreenFlandersVAF_2026.xlsx",
+        "label": "Project budget Screen Flanders / VAF 2026 (Excel)",
+        "format": "xlsx",
+        "note": "The tax shelter itself has no prescribed budget format: the intermediary and FPS Finance work from your own budget. Flemish co-producers use this joint form for their Screen Flanders and VAF applications; Wallonia has its own forms."
+      }
     },
     {
       "id": "germany",
@@ -128,18 +153,24 @@
       "currency": "EUR",
       "rate": 30,
       "rate_label": "30%",
-      "min_spend": "DFFF I: €1m total cost and 25% German spend; DFFF II: €20m budget and €8m German spend; GMPF series: €30k per minute",
+      "min_spend": "DFFF I: €1m total cost (€200k documentary, €2m animation) and 25% German spend (20% above €20m); DFFF II: €20m budget and €8m German spend; GMPF series: €30k per minute",
       "cap": {
         "amount": 25000000,
         "label": "€5m (DFFF I) to €25m (DFFF II) per project; series up to €20m per season"
       },
       "funding": "Budget-limited",
-      "funding_note": "First come, first served (€250m a year from 2026); intake for 2026 shoots closed in August 2026",
+      "funding_note": "First come, first served; the €250m for DFFF I, DFFF II and GMPF in 2026 was fully committed by 20 August 2026",
       "foreign_spend": "No",
-      "paid": "In instalments during production",
-      "notes": "30% since February 2025 across all three schemes. The pot runs out: as of August 2026 no more applications are accepted for shoots starting in 2026; the 2027 window opens in November 2026. Public aid is capped at 50% of the total cost.",
+      "paid": "Four instalments of 25%: start of shoot, mid-production, rough cut, final audit",
+      "notes": "30% since February 2025 across all three schemes. The federal pot was doubled to €250m for 2026 and ran out on 20 August 2026; the window for shoots starting in 2027 opens in November 2026. Public aid is capped at 50% of the total cost.",
       "source": "https://www.ffa.de/dfff-i.html",
-      "source_label": "FFA"
+      "source_label": "FFA",
+      "budget_template": {
+        "url": "https://www.ffa.de/files/dfff/antraege/DFFF_Kalkulation-Spiel-und-Dokumentarfilme_2024.xlsx",
+        "label": "DFFF calculation scheme for feature and documentary films (Excel), FFA",
+        "format": "xlsx",
+        "note": "Optional layout: the FFA also accepts Sesam, Movie Magic and PreProducer budgets, as long as the German costs are identifiable."
+      }
     },
     {
       "id": "france",
@@ -151,7 +182,7 @@
       "rate": 30,
       "rate_label": "30% (40% VFX-heavy)",
       "base_share": 0.8,
-      "min_spend": "€250k French spend and 5 shooting days in France",
+      "min_spend": "€250k French spend (or 50% of the budget when the budget is under €500k) and 5 shooting days in France for live action",
       "cap": {
         "amount": 30000000,
         "label": "€30m credit per work"
@@ -160,9 +191,15 @@
       "funding_note": "Statutory credit, no annual budget",
       "foreign_spend": "No",
       "paid": "After the fiscal year, via the French line producer",
-      "notes": "40% when at least 15% of the shots are digitally treated and French VFX spend exceeds €2m. Pay of non-European performers now qualifies (capped at 30% of the budget). Extended to end 2028.",
+      "notes": "40% when at least 15% of the shots are digitally treated and French VFX spend exceeds €2m. The 2026 finance law adds the pay of non-European performers hired by the French executive producer to the eligible base and extends the scheme to end 2028. Paid via the French line producer after the tax year, so budget for interim financing.",
       "source": "https://www.filmfrance.net/en/tax-rebate/tax-rebate-for-international-productions/",
-      "source_label": "Film France"
+      "source_label": "Film France",
+      "budget_template": {
+        "url": "https://www.cnc.fr/documents/36995/147248/Oeuvres+de+fiction+-+formulaire+de+demande+d%27agr%C3%A9ment+provisoire.xlsx/0b690797-c3c3-3b6e-b8ae-c69e27004c8f?t=1617805610129",
+        "label": "Provisional approval application form for fiction (Excel), CNC",
+        "format": "xlsx",
+        "note": "Mandatory form for the agrément provisoire, filed by the French executive producer with the breakdown of French expenditure. Separate versions for animation and VFX works on the CNC page."
+      }
     },
     {
       "id": "spain",
@@ -194,7 +231,13 @@
       "paid": "Through the tax position of a Spanish service company",
       "notes": "30% on the first €1m of Spanish spend, 25% above that. Claimed by an ICAA-registered Spanish service company and passed on through the service contract. Regional schemes go higher: Navarre 35%, Bizkaia up to 60%.",
       "source": "https://spainfilmcommission.com/en/shooting-in-spain/tax-incentives/",
-      "source_label": "Spain Film Commission"
+      "source_label": "Spain Film Commission",
+      "budget_template": {
+        "url": "https://www.cultura.gob.es/cultura/areas/cine/informacion-servicios/in/procedimientos-administrativos/certificado-cultural-rodajes-extranjeros.html",
+        "label": "Cultural certificate for foreign shoots, ICAA",
+        "format": "page",
+        "note": "No prescribed budget format. The Spanish service company applies for the ICAA cultural certificate with the official technical and artistic sheet plus its own budget, then claims the deduction in its tax return."
+      }
     },
     {
       "id": "canary-islands",
@@ -226,7 +269,13 @@
       "paid": "Through the tax position of a Canary Islands service company",
       "notes": "50% on the first €1m, 45% above that (54% on the first €1m when Canary spend exceeds €1.8m). Requires a production or service company resident in the Canary Islands and a regional certificate.",
       "source": "https://www.webtenerife.co.uk/tenerifefilm/how-shoot/incentives/tax-rebate-foreign-productions/",
-      "source_label": "Tenerife Film Commission"
+      "source_label": "Tenerife Film Commission",
+      "budget_template": {
+        "url": "https://www.webtenerife.co.uk/-/media/files/film-commission/como-rodar/incentivos-fiscales/deduccion-producciones-extranjeras/05-list-of-qualifying-expenditure---canary-islands.pdf",
+        "label": "List of qualifying expenditure (PDF), Tenerife Film Commission",
+        "format": "pdf",
+        "note": "No budget format is prescribed; this list shows which cost lines count as Canary spend. The ICAA cultural certificate and the Canary Islands certificate go with the claim."
+      }
     },
     {
       "id": "italy",
@@ -240,15 +289,21 @@
       "min_spend": "€250k Italian spend",
       "cap": {
         "amount": 20000000,
-        "label": "€20m per company per year (2024 rules; the 2026 reform introduced further caps)"
+        "label": "€20m per company or group per year; no per-project cap"
       },
       "funding": "Budget-limited",
-      "funding_note": "Closed annual budget since 2026 (€100m for international productions)",
+      "funding_note": "Closed annual budget since 2026: the 2026 window ran from 3 June to 31 August 2026 (decree of 19 May 2026), and requests beyond the available resources roll into a later session if funds allow",
       "foreign_spend": "Partly",
-      "paid": "Offset against Italian tax or sold to a bank at a 5 to 15% discount",
-      "notes": "Transferable credit granted to the Italian executive producer. The July 2026 reform kept 40% for international productions but moved to a closed annual budget, excluded AI-related costs and tightened documentation. Above-the-line costs of non-EEA persons qualify at 30%.",
-      "source": "https://www.screendaily.com/news/italy-revises-international-tax-credit-maintaining-headline-40-rate-and-banning-relief-for-ai-spend/5196704.article",
-      "source_label": "Screen Daily"
+      "paid": "Offset against Italian tax or sold to a bank at a 5 to 15% discount; 70% of an approved provisional credit can be used at once",
+      "notes": "Transferable credit granted to the Italian executive producer. Since the 2024 revision: €20m per company per year, AI-related costs excluded, above-the-line costs of non-EEA persons at 30%. In 2026 Italy added caps per work and per company and a closed annual budget with fixed application windows, after revoking €66m of credits in 2025.",
+      "source": "https://cinema.cultura.gov.it/per-gli-utenti/approfondimenti-tematici/focus-operatori-non-italiani/",
+      "source_label": "DGCA, Italian Ministry of Culture",
+      "budget_template": {
+        "url": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-tax-credit/",
+        "label": "Tax credit notices and application windows, DGCA",
+        "format": "page",
+        "note": "No public template. The Italian executive producer files the cost plan on the DGCOL platform; the final request needs the eligible costs certified by an auditor registered there."
+      }
     },
     {
       "id": "portugal",
@@ -258,7 +313,7 @@
       "mechanism": "Cash rebate",
       "currency": "EUR",
       "rate": 30,
-      "rate_label": "30% / 25% (up to 40% in low-density regions)",
+      "rate_label": "30% / 25% (large track); 30% to 40% (medium track)",
       "tiers": [
         {
           "upto": 2000000,
@@ -268,18 +323,24 @@
           "rate": 25
         }
       ],
-      "min_spend": "€500k eligible spend (medium track), €2.5m (large track)",
+      "min_spend": "€2.5m eligible spend (large track); €500k (medium track, €200k for documentaries and non-filming activities)",
       "cap": {
         "amount": 6000000,
-        "label": "€6m per work, €3m per episode (large track)"
+        "label": "€6m per work and €3m per episode (large track); €1m (medium track)"
       },
       "funding": "Budget-limited",
-      "funding_note": "First come, first served; €50m a year for 2026 to 2029",
+      "funding_note": "First come, first served; €35m a year for the large track and €15m for the medium track, 2026 to 2029",
       "foreign_spend": "No",
-      "paid": "In stages during production",
-      "notes": "New scheme since June 2026, replacing the old cash rebate. Large track: 30% on the first €2m, 25% above. 40% in the interior, Madeira and the Azores. Cultural test and a local executive producer required.",
+      "paid": "Large track: after completion, by the end of April of the following year; medium track: four instalments from contract signature",
+      "notes": "New scheme since June 2026, replacing the old cash rebate. Large track: 30% on the first €2m, 25% above (30% throughout in the interior, Madeira and the Azores). Medium track: 30%, or 40% in those regions. Cultural test and a local executive producer required.",
       "source": "https://portugalfilmcommission.com/en/script/",
-      "source_label": "Portugal Film Commission"
+      "source_label": "Portugal Film Commission",
+      "budget_template": {
+        "url": "https://portugalfilmcommission.com/wp-content/uploads/2026/07/Orcamento-Despesa-Elegivel-SCRIPT.xlsx",
+        "label": "Eligible expenditure budget (Excel), Portugal Film Commission",
+        "format": "xlsx",
+        "note": "Mandatory attachment to the SCRI.PT application, alongside the cultural self-assessment grid."
+      }
     },
     {
       "id": "malta",
@@ -293,14 +354,21 @@
       "assumption": "Assumes the full 40%: 30% base, 35% with Maltese content or Malta Film Studios, 40% when local crew targets are met",
       "min_spend": "€100k Malta spend and a budget above €200k",
       "cap": null,
-      "cap_label": "No per-project cap; above-the-line costs capped",
+      "cap_label": "No per-project cap; rebate on above-the-line costs capped at €1m or 30% of Malta spend, up to €5m; eligible spend limited to 80% of the budget",
       "funding": "Entitlement",
       "funding_note": "No published annual budget",
       "foreign_spend": "No",
       "paid": "10% advance, balance after final audit",
       "notes": "30% base, 35% when Malta plays Malta or Malta Film Studios are used, 40% when local crew and department targets are met. Crew of any nationality qualifies. Scheme valid to October 2028.",
       "source": "https://screenmalta.com/cash-rebates/",
-      "source_label": "Screen Malta"
+      "source_label": "Screen Malta",
+      "base_share": 0.8,
+      "budget_template": {
+        "url": "https://screenmalta.com/wp-content/uploads/2024/07/Screen-Malta-Financial-Incentives-FILM-TV-GUIDELINES-UPDATES.pdf",
+        "label": "Financial incentives guidelines June 2024 (PDF), Screen Malta",
+        "format": "pdf",
+        "note": "No template. The application takes a top sheet of the overall budget plus an itemised estimate of the Malta spend, with the Financial Form and cultural test from these guidelines."
+      }
     },
     {
       "id": "hungary",
@@ -315,12 +383,18 @@
       "cap": null,
       "cap_label": "No per-project cap; annual envelope HUF 70bn (2026)",
       "funding": "Budget-limited",
-      "funding_note": "Annual envelope; registration reopened without limits on 1 July 2026 after a pause, with a backlog",
+      "funding_note": "Annual collection account of HUF 70bn. The HUF 140bn cap for new registrations in the first half of 2026 expired and registration reopened without a cap on 1 July 2026, with a backlog of several months",
       "foreign_spend": "Partly",
       "paid": "After audit, in HUF",
-      "notes": "Non-Hungarian costs may make up to 25% of the eligible spend, which lifts the effective rebate to 37.5% of Hungarian spend. Principal photography must start within 6 months of registration. Paid in forint, so budget the currency risk.",
+      "notes": "Non-Hungarian costs may make up to 25% of the eligible spend, which lifts the effective rebate to 37.5% of Hungarian spend. Principal photography must start within 6 months of registration, applied for at least 30 days before the shoot. Paid in forint, so budget the currency risk; the NFI charges up to 2.5% administration.",
       "source": "https://nfi.hu/en/filming-in-hungary/hungarian-film-incentive",
-      "source_label": "National Film Institute Hungary"
+      "source_label": "National Film Institute Hungary",
+      "budget_template": {
+        "url": "https://www.nemzetifilmiroda.hu/tamogatasra-jogosultsag-megallapitasara-iranyulo-eljaras",
+        "label": "Registration procedure and forms, National Film Office",
+        "format": "page",
+        "note": "No downloadable Excel: the budget goes into the Film Office's form-filling application, with cost lines fixed by the decree annex. Hungarian language."
+      }
     },
     {
       "id": "czech-republic",
@@ -332,18 +406,24 @@
       "rate": 25,
       "rate_label": "25% (35% animation and VFX)",
       "base_share": 0.8,
-      "min_spend": "CZK 18m per feature, CZK 7.5m per series episode",
+      "min_spend": "CZK 18m feature film, CZK 7.5m per series episode, CZK 5m animated film, CZK 2.5m documentary; digital productions CZK 5m flat",
       "cap": {
         "amount": 450000000,
         "label": "CZK 450m (about €18m) per project"
       },
       "funding": "Budget-limited",
-      "funding_note": "Annual budget; new intake halted in March 2026 and reopens 1 September 2026",
+      "funding_note": "Annual budget; registration was halted on 27 March 2026 and reopened on 1 September 2026",
       "foreign_spend": "Partly",
-      "paid": "After settlement, in CZK; can take up to 2 years",
-      "notes": "25% since 2025 (up from 20%), 35% for animation and VFX-only projects, plus 66% of the withholding tax paid by foreign cast and crew. Payment may be delayed up to two years under the 2026 rules.",
-      "source": "https://www.filmcommission.cz/en/production-incentives/",
-      "source_label": "Czech Film Commission"
+      "paid": "After completion, in CZK; since 2026 the registration decision no longer states the amount and payment can take up to 2 years",
+      "notes": "25% since 2025 (up from 20%), 35% for animation and VFX-only projects, plus 66% of the withholding tax paid by foreign cast and crew. Public aid is capped at 50% of the budget and claims must be filed within 3 years of registration.",
+      "source": "https://filmcommission.gov.cz/en/production-incentives/",
+      "source_label": "Czech Film Commission",
+      "budget_template": {
+        "url": "https://sfa.gov.cz/data/document/2026/08/Zapis-formulare.zip",
+        "label": "Registration forms 2026 (ZIP, Czech), Czech Audiovisual Fund",
+        "format": "zip",
+        "note": "Mandatory forms including the budget and cost tables, in Czech; the fund's applicant guide explains them. The rebate is paid on the audited actual costs."
+      }
     },
     {
       "id": "poland",
@@ -354,7 +434,7 @@
       "currency": "PLN",
       "rate": 30,
       "rate_label": "30%",
-      "min_spend": "75% of the financing secured at application; cultural test",
+      "min_spend": "Eligible Polish spend of at least PLN 4m for a co-produced feature (PLN 1m for a service production), PLN 1m per drama series episode and PLN 300k for a documentary; 75% of the financing secured; cultural test",
       "cap": {
         "amount": 15000000,
         "label": "PLN 15m per production, PLN 20m per beneficiary per year"
@@ -362,10 +442,17 @@
       "funding": "Budget-limited",
       "funding_note": "First come, first served until the annual pot is used",
       "foreign_spend": "No",
-      "paid": "After completion, in PLN",
-      "notes": "Rolling applications until the annual budget is exhausted, with at least 10% reserved for animation. Requires a Polish producer, co-producer or service company.",
+      "paid": "After the final report is verified, in PLN",
+      "notes": "Rolling applications until the annual budget is exhausted, with at least 10% reserved for animation. Requires a Polish producer, co-producer or service company; applications are in Polish. Eligible costs are limited to 80% of the budget and public aid to 50%.",
       "source": "https://pisf.pl/en/zachety-informacje/",
-      "source_label": "Polish Film Institute"
+      "source_label": "Polish Film Institute",
+      "base_share": 0.8,
+      "budget_template": {
+        "url": "https://pisf.pl/en/zachety-informacje/",
+        "label": "Incentive information and application system, Polish Film Institute",
+        "format": "page",
+        "note": "Applications go through the PISF online system in Polish, with the cost estimate as an attachment; PISF publishes a macro-enabled Excel cost estimate for its funding programmes."
+      }
     },
     {
       "id": "iceland",
@@ -388,9 +475,15 @@
       "funding_note": "Open-ended, no annual budget",
       "foreign_spend": "Partly",
       "paid": "After completion and audit, in ISK",
-      "notes": "35% when the production spends at least ISK 350m in Iceland over 30+ working days with 50+ crew. If more than 80% of the total cost is incurred in Iceland, costs elsewhere in the EEA also qualify. Extended to end 2028.",
+      "notes": "35% when the production spends at least ISK 350m in Iceland over 30+ working days with 50+ crew, and for content made for audiences under 18. If more than 80% of the total cost is incurred in Iceland, costs elsewhere in the EEA also qualify. Extended to end 2028.",
       "source": "https://filminiceland.com/incentives",
-      "source_label": "Film in Iceland"
+      "source_label": "Film in Iceland",
+      "budget_template": {
+        "url": "https://kmi.payload.is/api/media/file/Guidelines-for-Applying-for-a-Letter-of-Intent-for-Reimbursement.pdf",
+        "label": "Guidelines for the letter of intent (PDF), Icelandic Film Centre",
+        "format": "pdf",
+        "note": "No template: the application takes an itemised budget and financing plan in your own format. These guidelines list the attachments; a second guide covers the payment application."
+      }
     },
     {
       "id": "norway",
@@ -402,16 +495,22 @@
       "rate": 25,
       "rate_label": "Up to 25%",
       "assumption": "Assumes the project is selected; only five projects were funded in 2026",
-      "min_spend": "NOK 25m feature budget or NOK 10m per series episode; at least NOK 4m Norwegian spend and 30% non-Norwegian financing",
+      "min_spend": "NOK 25m feature budget or NOK 10m per drama series episode (NOK 10m for a documentary feature, NOK 5m per documentary series episode); at least NOK 4m Norwegian spend and 30% non-Norwegian financing",
       "cap": null,
-      "cap_label": "Set per project by the annual award (NOK 84.7m for five projects in 2026)",
+      "cap_label": "Set per project by the annual award (NOK 84.7m across five projects in 2026: one feature and four drama series)",
       "funding": "Selective",
-      "funding_note": "One competitive round a year, heavily oversubscribed",
+      "funding_note": "One competitive round a year, heavily oversubscribed; the 2027 round is expected to open in June with a deadline in November",
       "foreign_spend": "No",
       "paid": "After completion, in NOK",
-      "notes": "Ranked selection against a small annual envelope: 18 applicants asked for NOK 288m in 2026 and five were funded. Parliament has asked for a more competitive scheme from 2027.",
+      "notes": "Ranked selection against a small annual envelope: 18 applicants asked for NOK 288m in 2026 and five were funded. Requires a Norwegian company or a branch of an EEA or UK company. Parliament has asked for a more competitive scheme from 2027.",
       "source": "https://www.norwegianfilm.com/25-incentive",
-      "source_label": "Norwegian Film Commission"
+      "source_label": "Norwegian Film Commission",
+      "budget_template": {
+        "url": "https://www.nfi.no/en/funding-schemes/insentiv/the-norwegian-film-production-incentive",
+        "label": "Application requirements, Norwegian Film Institute",
+        "format": "page",
+        "note": "No template: the NFI portal asks for the total production budget and a separate budget for the Norwegian spend in your own format, plus an auditor's statement on the NFI template at the end."
+      }
     },
     {
       "id": "austria",
@@ -429,12 +528,18 @@
         "label": "€5m per film or single episode, €7.5m per series or season"
       },
       "funding": "Budget-limited",
-      "funding_note": "No legal entitlement: the guidelines state that support depends on availability of federal funds and applications are handled in the order received. The exact 2026 total budget is not published.",
+      "funding_note": "No legal entitlement: first come, first served against federal funds. Intake for 2026 reopened on 2 January 2026 and processing takes about six weeks; the 2026 total budget is not published.",
       "foreign_spend": "Partly",
       "paid": "In three instalments: 30% at the start of the Austrian shoot, 40% after Austrian shooting wraps, 30% after final audit",
       "notes": "A non-repayable grant, not a tax credit. Base rate is up to 30% of eligible costs (the assessment base is itself capped at 80% of total production cost). A Green Bonus for sustainable production adds up to 5 points, and a separate flat EUR 25,000 bonus is available for meeting female head-of-department targets. Fees paid to foreign cast or crew under Austrian withholding tax count for only 50% of the Austria-taxable amount. Current guidelines run from 1 January 2025 to 31 December 2027.",
       "source": "https://fisaplus.com/",
-      "source_label": "FISA+ (Filmstandort Austria / aws)"
+      "source_label": "FISA+ (Filmstandort Austria / aws)",
+      "budget_template": {
+        "url": "https://api.fisaplus.com/fileadmin/user_upload/FISAplus_Abwicklungsdok_2026.xlsx",
+        "label": "FISA+ processing document 2026 (Excel)",
+        "format": "xlsx",
+        "note": "Mandatory workbook with the cost calculation, filed through the aws Fördermanager; the same file is used for the final settlement. German language, about 7 MB."
+      }
     },
     {
       "id": "croatia",
@@ -447,14 +552,21 @@
       "rate_label": "25% (up to 30% in less-developed regions)",
       "min_spend": "€250k feature film, €150k TV film, €100k per TV series episode, €60k for documentary, animation or a post-production-only application",
       "cap": null,
-      "cap_label": "No cap is stated in the official guidelines; unclear whether that means the rebate is genuinely uncapped or the point is simply not published",
+      "cap_label": "No per-project cap stated; the aid, together with other state aid, may not exceed 50% of the budget",
       "funding": "Budget-limited",
       "funding_note": "Awarded on a first-come, first-served basis. The current annual state budget for the scheme and its open or closed status are not published on the official sites.",
       "foreign_spend": "No",
       "paid": "After completion: a Provisional Certificate is issued on qualification, and payment follows a Final Certificate once the audited accounts of the Croatian shoot are approved",
-      "notes": "At least 30% of cast and crew must be Croatian or EEA citizens for a partial shoot in Croatia, 50% for a full shoot. Only spend inside Croatia and wages paid to Croatian tax residents qualify. There is no separate higher rate for VFX or animation, only a lower minimum-spend threshold for those categories. Legal basis: the Law on Audiovisual Activities as amended in 2024 (Official Gazette 123/24) and its Rules and Regulations (Official Gazette 9/24).",
+      "notes": "At least 30% of cast and crew working in Croatia must be Croatian or EEA citizens for a partial shoot, 50% for a full shoot; above €500k of incentive one Croatian trainee per main department, above €1m three Croatian heads of department and 50% Croatian tax residents in the crew. Only spend inside Croatia and wages of Croatian tax residents qualify, capped at 80% of the budget. 70% of the Croatian financing must be secured at application.",
       "source": "https://filmingincroatia.hr/the-incentive-programme/",
-      "source_label": "HAVC (Filming in Croatia)"
+      "source_label": "HAVC (Filming in Croatia)",
+      "base_share": 0.8,
+      "budget_template": {
+        "url": "https://filmingincroatia.hr/wp-content/uploads/2025/06/SERVISNA-PRODUKCIJA.zip",
+        "label": "Service production application forms (ZIP, Croatian), HAVC",
+        "format": "zip",
+        "note": "Mandatory forms including the budget of the Croatian spend, in Croatian. A separate package exists for co-productions."
+      }
     },
     {
       "id": "denmark",
@@ -471,12 +583,18 @@
         "label": "DKK 20m per production"
       },
       "funding": "Budget-limited",
-      "funding_note": "New in 2026: DKK 100m a year for the Live Action scheme and DKK 25m a year for the Animated Films and Series scheme, split over two application rounds a year. Applications are scored against a Production and Cultural Test and ranked, so a qualifying project can still be turned down once a round's budget is committed.",
+      "funding_note": "DKK 100m a year for live action and DKK 25m for animation, in two rounds; DKK 58m was open in the September 2026 round. Applications are ranked on Danish spend, total budget and the production and cultural test, so a qualifying project can still miss out",
       "foreign_spend": "No",
-      "paid": "After completion, once the production and cultural test is passed",
-      "notes": "Denmark had no national automatic incentive until this scheme took effect on 1 January 2026 (its Act and Executive Order are both effective that date). At least 60% of financing must be confirmed at application and at least 25% must come from foreign sources; the lead producer must have prior credits with wide distribution. Regional funds such as Copenhagen Film Fund, FilmFyn, the West Danish Film Fund and Aarhus Film Fund still operate alongside this scheme as separate, discretionary co-investment funds, not automatic rebates.",
+      "paid": "70% once the auditor-endorsed financing plan is in, 30% after the final report is approved",
+      "notes": "New since 1 January 2026. At least 60% of the financing must be confirmed at application and at least 25% must come from foreign sources; the lead producer needs a prior credit with wide distribution. Deadline 24 September 2026, next round expected 8 April 2027. Regional funds such as Copenhagen Film Fund and FilmFyn still operate alongside as discretionary co-investors.",
       "source": "https://slks.dk/english/work-areas/media/the-danish-production-incentive-scheme",
-      "source_label": "Slots- og Kulturstyrelsen (Danish Agency for Culture and Palaces)"
+      "source_label": "Slots- og Kulturstyrelsen (Danish Agency for Culture and Palaces)",
+      "budget_template": {
+        "url": "https://slks.dk/fileadmin/user_upload/SLKS/Omraader/Medier/Produktionsrabatordningen/Tvaergaaende_skabeloner_ENG/Total_budget_and_eligible_expenditure.XLSX",
+        "label": "Total budget and eligible expenditure (Excel), Danish Agency for Culture and Palaces",
+        "format": "xlsx",
+        "note": "Mandatory template, with a matching financing plan template and the test workbook on the scheme page."
+      }
     },
     {
       "id": "finland",
@@ -488,16 +606,22 @@
       "rate": 25,
       "rate_label": "25%",
       "base_share": 0.8,
-      "min_spend": "€500k Finnish spend for any production type; documentary total budget at least €650k; scripted series and animation at least €11,500 per minute",
+      "min_spend": "€500k Finnish spend; minimum total budget €2.5m for a feature film, €650k for a documentary and €11,500 per minute for series and animation; at least 25% foreign financing",
       "cap": null,
       "cap_label": "No per-project cap stated; eligible Finnish spend is itself capped at 80% of the total production budget",
       "funding": "Budget-limited",
-      "funding_note": "Rolling applications against an annual budget under a decree covering 2024 to 2026. The 2026 budget is EUR 10m, with about EUR 7m still available as of September 2026. Renewal of the decree beyond 2026 has not been confirmed.",
+      "funding_note": "Rolling applications against an annual budget under a decree covering 2024 to 2026. The 2026 budget is €10m, with about €7m still available in September 2026; renewal beyond 2026 is not confirmed.",
       "foreign_spend": "No",
       "paid": "After completion only, based on audited costs; no advance payment",
-      "notes": "Administered by Business Finland. Only costs from Finland-tax-liable companies and wages subject to Finnish withholding tax qualify; this is nationality-neutral, so foreign cast and crew can qualify if they become Finnish taxpayers while working there. Minimum spend thresholds were raised in a 2025 reform aimed at larger international projects. The full category-by-category minimum-budget table is published only as an image, so figures beyond the headline ones above could not be confirmed.",
+      "notes": "Administered by Business Finland. Only costs from Finland-tax-liable companies and wages subject to Finnish withholding tax qualify; nationality-neutral. A foreign applicant files through a Finnish production coordinator. Terms effective 1 January 2026.",
       "source": "https://www.businessfinland.fi/en/services/funding/funding-services/cash-rebate/",
-      "source_label": "Business Finland"
+      "source_label": "Business Finland",
+      "budget_template": {
+        "url": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/forms/av_kustannuserittely_cost_breakdown_kostnadskalkyl.xlsx",
+        "label": "Cost breakdown, Finnish part (Excel), Business Finland",
+        "format": "xlsx",
+        "note": "Mandatory attachment to the application; the same breakdown is used for the final cost report."
+      }
     },
     {
       "id": "greece",
@@ -512,15 +636,21 @@
       "min_spend": "€200k for a feature film or TV fiction (varies by category: €60k documentary, €45k short film, €120k per episode for a mini-series up to 16 episodes, €35k per episode for other fiction series, €80k animated feature, €50k animated short)",
       "cap": {
         "amount": 8000000,
-        "label": "€8m per project"
+        "label": "€8m per work (up to €10m for strategic projects by ministerial decision)"
       },
       "funding": "Budget-limited",
-      "funding_note": "The annual budget is set per category by ministerial decision under the Greek Public Investment Programme and EU structural funds; applications outside the allocated envelope for a category are rejected. The exact 2026 total budget and its open or closed status are not published.",
+      "funding_note": "€100m for 2026 (€88m film and TV, €10m animation, €2m games); applications opened 28 April 2026 on the state OPSKE platform and are served until the envelope is used",
       "foreign_spend": "Partly",
       "paid": "After completion and audit, within 3 months of the completion certification decision",
-      "notes": "Administered by the Hellenic Film and Audiovisual Center, Creative Greece (formerly branded EKOME, restructured under Law 5105/2024). Eligible expenses are capped at 80% of the total budget and must be incurred in Greek territory, except for one director's fee and up to two lead actors' fees, which qualify even on foreign invoices. A separate, combinable 30% tax relief exists for investors. Older material on the same site cites a EUR 12m cap rather than the current EUR 8m; this discrepancy is unresolved.",
+      "notes": "Administered by the Hellenic Film and Audiovisual Center, Creative Greece (formerly EKOME). Eligible expenses are capped at 80% of the total budget and must be incurred in Greece, except one director's fee and up to two lead actors' fees on foreign invoices. A separate 30% tax relief exists for investors.",
       "source": "https://www.ekkomed.gr/cash-rebate-crgr-eng/",
-      "source_label": "Hellenic Film and Audiovisual Center, Creative Greece (formerly EKOME)"
+      "source_label": "Hellenic Film and Audiovisual Center, Creative Greece (formerly EKOME)",
+      "budget_template": {
+        "url": "https://www.ekkomed.gr/cash-rebate-crgr-eng/",
+        "label": "CRGR scheme page, Creative Greece",
+        "format": "page",
+        "note": "No public template: the application and its cost table are entered on the OPSKE platform (ependyseis.gr) by the Greek production company, at least 10 days before the shoot."
+      }
     },
     {
       "id": "sweden",
@@ -537,12 +667,18 @@
         "label": "SEK 10m per production"
       },
       "funding": "Budget-limited",
-      "funding_note": "SEK 82.5m was available in the 2026 application round. A July 2026 reform replaced the previous first-come, first-served allocation with a ranking process, so a qualifying project can still miss out once a round's budget is committed.",
+      "funding_note": "SEK 82.5m in the 2026 round (applications 25 August to 8 September 2026); productions with the highest eligible costs are prioritised, so a qualifying project can still miss out",
       "foreign_spend": "No",
       "paid": "After completion, claimed within 3 months",
-      "notes": "In force since 20 September 2022, making Sweden's national scheme older than Denmark's. Only costs from Sweden-tax-liable businesses or Sweden-tax-liable workers qualify, and the production must pass a cultural test. Administration is set to move from Tillväxtverket (the Swedish Agency for Economic and Regional Growth) to the Swedish Film Institute from 1 January 2027. It is not fully confirmed whether the 25% rate itself changed in the July 2026 reform or only the cap and allocation method changed. Regional funds such as Film i Väst, Filmpool Nord and Film i Skåne still operate alongside this scheme as separate, discretionary co-investment funds.",
+      "notes": "In force since 20 September 2022. Only costs from Sweden-tax-liable businesses or workers qualify, and the production must pass a cultural test. Administration is set to move from Tillväxtverket to the Swedish Film Institute from 1 January 2027. Regional funds such as Film i Väst, Filmpool Nord and Film i Skåne operate alongside as discretionary co-investors.",
       "source": "https://tillvaxtverket.se/tillvaxtverket/inenglish/financing/audiovisualworks.2912.html",
-      "source_label": "Tillväxtverket (Swedish Agency for Economic and Regional Growth)"
+      "source_label": "Tillväxtverket (Swedish Agency for Economic and Regional Growth)",
+      "budget_template": {
+        "url": "https://tillvaxtverket.se/inenglish/financing/audiovisualworks/handbooksupportfortheproductionofaudiovisualworks/applicationformandtemplates.6717.html",
+        "label": "Application form and templates, Tillväxtverket",
+        "format": "page",
+        "note": "No budget template: attach an itemised budget for the whole production, for example from Movie Magic, as PDF or Excel, plus the production description template."
+      }
     }
   ],
   "labour_share": 0.5,

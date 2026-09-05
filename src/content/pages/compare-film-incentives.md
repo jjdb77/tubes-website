@@ -2,16 +2,16 @@
 layout: layout.njk
 title: Compare film & TV incentives
 seo_title: "Compare Film & TV Incentives in Europe (2026) | Tubes"
-description: "Compare European production incentives side by side: headline and net value, minimum spend, caps and funding risk for 16 countries and regions. Free tool, checked August 2026."
+description: "Compare European production incentives side by side: headline and net value, minimum spend, caps, funding risk and the budget template each fund asks for, across 22 countries and regions. Free tool, checked September 2026."
 permalink: /compare-film-incentives/
 sections:
   - type: hero
     kicker: Incentive comparison
     title: Compare film & TV *incentives* before you commit
     text: |
-      The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 16 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing.
+      The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 22 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing, plus a link to the budget template each fund asks for.
 
-      Open to everyone, no sign-up. Figures checked against the funds in August 2026. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
+      Open to everyone, no sign-up. Figures checked against the funds in September 2026. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
     buttons_position: side
     tight: true
     buttons:
@@ -23,7 +23,7 @@ sections:
     theme: light
     heading: Compare incentives side by side
     intro: |
-      Search for a country or region, select one to three, and see them next to each other: the incentive, what it is worth on your spend, the conditions and the small print. Enter your total budget and the spend you expect in the location and the tool applies the headline rate, tiers, caps and (for the UK) the tax on the credit, so you compare net value instead of the marketing number.
+      Search for a country or region, select one to three, and see them next to each other: the incentive, what it is worth on your spend, the conditions and the small print. Enter your total budget and the spend you expect in the location and the tool applies the headline rate, tiers, caps and (for the UK) the tax on the credit, so you compare net value instead of the marketing number. Each column also links to the budget template or application form the fund works with, so you can budget in the right layout from the start.
     table_heading: All schemes at a glance
     footnote: |
       Rates apply to eligible local spend, not to the total budget. "Entitlement" means every qualifying project gets the credit; "Budget-limited" and "Selective" mean the money can run out or your project can be turned down. Sources are the funds themselves or, where their pages were not reachable, trade press. Spotted a change? Use the form below.
@@ -42,9 +42,10 @@ sections:
       - **What counts as spend.** Most schemes only credit money spent in the country, and several cap the qualifying base at 80% of the budget (UK, Ireland, France, Spain, Czech Republic). Some exclude parts of the budget altogether, such as above-the-line costs or fees above a threshold.
       - **Entitlement or pot.** The UK, Ireland, France, Spain, Malta and Iceland pay every qualifying project. The Netherlands ranks applications against a fixed budget. Germany's pot for 2026 was empty by August. Norway funded five projects in 2026. A 30% rate is worth nothing when the money has run out.
       - **Caps.** The Dutch incentive stops at € 3m per project, Poland at PLN 15m, Portugal at € 6m. On a large shoot the effective rate drops fast. The UK, Ireland (in practice), Malta, Hungary and Iceland have no cap.
-      - **When the money arrives.** Belgium's tax shelter is financing and lands before the shoot. The Netherlands pays 30% on signing. Ireland lets you claim 90% in advance. The UK and France pay after the tax return, often a year or more after the spend, so budget for interim financing. The Czech rebate can take two years.
+      - **When the money arrives.** Belgium's tax shelter is financing and lands before the shoot. The Netherlands pays part in advance under its implementation agreement. Ireland lets you claim 90% in advance. The UK and France pay after the tax return, often a year or more after the spend, so budget for interim financing. The Czech rebate can take two years.
       - **Local structure.** Every scheme needs a local company: a co-producer, a service producer or your own SPV. That comes with fees, rights conversations and sometimes a cultural test.
       - **Currency.** The UK, Hungary, the Czech Republic, Poland, Iceland and Norway pay in their own currency. Fix the rate, or carry the risk in the contingency.
+      - **The fund's budget format.** The Netherlands, Portugal, Finland, Denmark and Austria only accept their own Excel template; the Czech and Croatian forms are in the local language; the UK and France add a claim or approval form on top of your budget. Build the location scenario in that layout from the start and you will not rebuild it at application. The table links to each one.
 
       The honest comparison is therefore not "30% versus 35%" but a full budget per location: local rates, travel and accommodation, the incentive on the spend that actually qualifies, the timing of the cash, and the cost of the structure that unlocks it.
   - type: cards
@@ -100,10 +101,13 @@ sections:
           Yes, in every scheme on this page. Some want a local co-producer with a share of the rights (Netherlands, Belgium, Germany), some accept a local service company that claims on your behalf (Spain, Italy, France, Hungary), and some expect your own local company or SPV (Ireland, the UK). Budget for the fees and the time this takes.
       - question: How reliable are these figures?
         answer: |
-          Every entry was checked against the fund's own pages or, where those were not reachable, trade press, in August 2026, with the source linked in the table. Schemes change every year (four European schemes changed in 2026 alone), so treat the table as a starting point and confirm the current rules with the fund or your local partner before you budget on them.
+          Every entry was checked against the fund's own pages or, where those were not reachable, trade press, in September 2026, with the source linked in the table. Schemes change every year (four European schemes changed in 2026 alone), so treat the table as a starting point and confirm the current rules with the fund or your local partner before you budget on them.
       - question: Can I suggest a location or correct an entry?
         answer: |
           Yes. Use the "Suggest it" form on this page. Tell us the country or region and, if you have it, the scheme name or a link, and we will add or correct it with verified figures.
+      - question: Which budget template does each fund require?
+        answer: |
+          It differs per fund, and the table links to each one. Some funds only accept their own layout: the Netherlands Film Fund's budget model (also as a Movie Magic template), Portugal's eligible-expenditure workbook, Business Finland's cost breakdown, the Danish total-budget template and the Austrian FISA+ processing document. The Czech and Croatian funds have mandatory form packages in their own language. The UK, Ireland, Spain, Norway, Sweden and Iceland take your own budget and add a claim form, a certificate application or a list of attachments. Germany accepts Sesam, Movie Magic or its own Excel scheme. Where a fund has no public template, the link goes to the page that explains what to file.
       - question: Does Tubes apply for the incentive for me?
         answer: |
           No. Tubes is production management software: budgeting, planning, cost control and reporting. It lets you build a budget per location scenario, in the right currency, compare the scenarios side by side and then track the actual costs against the one you choose. The application itself goes through the fund and your local partner.
