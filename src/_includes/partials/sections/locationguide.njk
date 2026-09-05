@@ -64,6 +64,9 @@
 
     <div class="guide-compare-out" data-guide-compare hidden aria-live="polite"></div>
 
+    {#- Het hartje staat hier eenmaal; elke kaart verwijst ernaar met <use>.
+        Voluit herhalen kostte bij 2800 kaarten ruim 900 kB aan HTML. -#}
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><symbol id="guide-heart" viewBox="0 0 16 16"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol></svg>
     <div class="guide-layout">
       <div class="guide-main">
         <div class="guide-grid" data-guide-grid>
@@ -71,32 +74,10 @@
           {#- De zoektekst staat bewust NIET als attribuut in de kaart: met honderden
               locaties zou dat de hele beschrijving verdubbelen (kaart plus JSON) en de
               pagina fors zwaarder maken. De browser bouwt hem hieronder uit guide-data. -#}
-          <article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-region="{{ loc.region }}" data-type="{{ loc.type }}">
-            {% if loc.photo and loc.photo.thumb %}
-            <figure class="guide-photo">
-              <img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption>Photo: {{ loc.photo.author }} ({{ loc.photo.license }}), <a href="{{ loc.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
-            </figure>
-            {% else %}
-            <div class="guide-photo guide-photo-empty"><span>{{ loc.type }}</span></div>
-            {% endif %}
-            <button type="button" class="guide-fav" data-fav aria-pressed="false" aria-label="Add {{ loc.name }} to my shortlist"><svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
-            <div class="guide-card-body">
-              <h3>{{ loc.name }}</h3>
-              <p class="guide-meta">{{ loc.region }}, {{ loc.country }}</p>
-              <p><span class="loc-tag guide-type-tag">{{ loc.type }}</span></p>
-              <p class="guide-setting">{{ loc.setting }}</p>
-              {% if loc.known_for %}<p class="guide-known"><strong>Seen in:</strong> {{ loc.known_for }}</p>{% endif %}
-              <p class="guide-links">
-                {% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}
-                {% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}
-                {% if loc.url %}<a href="{{ loc.url }}" target="_blank" rel="noopener">Commission listing</a>{% endif %}
-                <a data-incentive-for="{{ loc.country }}" href="/compare-film-incentives/" hidden></a>
-              </p>
-              <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ loc.id }}"> <span>Compare</span></label>
-            </div>
-          </article>
-          {% endfor %}
+<article class="guide-card" id="loc-{{ loc.id }}" data-id="{{ loc.id }}" data-country="{{ loc.country }}" data-region="{{ loc.region }}" data-type="{{ loc.type }}">
+{% if loc.photo and loc.photo.thumb %}<figure class="guide-photo">
+<img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: {{ loc.photo.author }} ({{ loc.photo.license }}), <a href="{{ loc.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>{% else %}<div class="guide-photo guide-photo-empty"><span>{{ loc.type }}</span></div>{% endif %}<button type="button" class="guide-fav" data-fav aria-pressed="false" aria-label="Add {{ loc.name }} to my shortlist"><svg width="17" height="17" aria-hidden="true"><use href="#guide-heart"/></svg></button><div class="guide-card-body"><h3>{{ loc.name }}</h3><p class="guide-meta">{{ loc.region }}, {{ loc.country }}</p><p><span class="loc-tag guide-type-tag">{{ loc.type }}</span></p><p class="guide-setting">{{ loc.setting }}</p>{% if loc.known_for %}<p class="guide-known"><strong>Seen in:</strong> {{ loc.known_for }}</p>{% endif %}<p class="guide-links">{% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}{% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}{% if loc.url %}<a href="{{ loc.url }}" target="_blank" rel="noopener">Commission listing</a>{% endif %}<a data-incentive-for="{{ loc.country }}" href="/compare-film-incentives/" hidden></a></p><label class="guide-pick"><input type="checkbox" data-guide-check value="{{ loc.id }}"> <span>Compare</span></label></div></article>
+          {%- endfor %}
         </div>
         <p class="guide-partial" data-guide-partial hidden aria-live="polite"></p>
         <button type="button" class="button button-secondary guide-more" data-guide-more hidden></button>

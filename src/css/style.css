@@ -2683,7 +2683,10 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 }
 .guide-fav:hover { color: #C23B4B; border-color: #C23B4B; transform: scale(1.08); }
 .guide-fav.is-on { color: #C23B4B; border-color: #C23B4B; }
-.guide-fav.is-on svg path { fill: #C23B4B; }
+/* Het hartje komt uit een <symbol> via <use>; een selector op de path erin
+   pakt niet, dus de vulkleur wordt geerfd vanaf de svg. */
+.guide-fav svg { fill: none; }
+.guide-fav.is-on svg { fill: #C23B4B; }
 
 /* Lijstweergave */
 .guide-grid.is-list { grid-template-columns: 1fr; gap: 12px; }
