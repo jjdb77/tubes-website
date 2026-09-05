@@ -24,6 +24,14 @@ const clean = (l) => {
       // Agents schrijven soms thumb.wikimedia.org of upload.wikimedia.org/.../commons/x/xx/Naam.jpg
       // zonder /thumb/; de eerste host bestaat niet, de tweede is het origineel (te groot).
       let t = String(v.thumb).replace("//thumb.wikimedia.org/", "//upload.wikimedia.org/");
+      // De Commons-API geeft er soms utm-parameters achteraan; die horen niet in
+      // een afbeeldingslink.
+      t = t.replace(/\?utm_[^#]*/, "");
+      // Zonder /thumb/ is het het origineel: megabytes groot, en upload.wikimedia.org
+      // knijpt het hotlinken daarvan af (429), zodat de kaart leeg blijft. Omzetten
+      // naar de miniatuur van 960 pixels breed.
+      const orig = t.match(/^(https:\/\/upload\.wikimedia\.org\/wikipedia\/commons)\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+\.(?:jpe?g|png|gif|webp))$/i);
+      if (orig) t = `${orig[1]}/thumb/${orig[2]}/${orig[3]}/${orig[4]}/960px-${orig[4]}`;
       v = { thumb: t, file_page: v.file_page, author: String(v.author || "").replace(/<[^>]+>/g, "").trim(), license: v.license };
     }
     o[k] = v;

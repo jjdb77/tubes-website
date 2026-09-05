@@ -12063,7 +12063,7 @@
         "https://www.studio-berlin.de/studios-in-hamburg/",
         "https://www.studio-berlin.de/kontakt/"
       ],
-      "official_url": "https://www.studio-berlin.de/studios-in-hamburg/",
+      "official_url": "https://www.studio-hamburg.de/atelier-und-technik/",
       "commission_url": "https://www.moin-filmfoerderung.de/"
     },
     {
@@ -12384,7 +12384,7 @@
     },
     {
       "id": "de-westside-studios-frankfurt",
-      "name": "Westside Studios",
+      "name": "069 Westside Studio",
       "country": "Germany",
       "region": "Hesse",
       "lat": 50.1229,
@@ -12396,7 +12396,7 @@
         "https://www.hessenfilm.de/location-details/75"
       ],
       "url": "https://www.hessenfilm.de/location-details/75",
-      "official_url": "http://westside-studios.eu",
+      "official_url": "https://www.069westside.studio/",
       "commission_url": "https://www.hessenfilm.de"
     },
     {
@@ -17785,7 +17785,7 @@
         "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna"
       ],
       "url": "https://italyformovies.it/location/detail/18972/cineporto-dellemiliaromagna",
-      "official_url": "https://www.scarabeoentertainment.it/",
+      "official_url": "https://www.cineportoemiliaromagna.it/",
       "commission_url": "https://italyformovies.it"
     },
     {
@@ -28162,7 +28162,7 @@
       "source_urls": [
         "https://www.miniHollywood.com/"
       ],
-      "official_url": "https://www.miniHollywood.com/",
+      "official_url": "https://minihollywoodoasys.com/",
       "commission_url": "https://www.shootinginspain.info/"
     },
     {
@@ -30120,7 +30120,7 @@
       "source_urls": [
         "https://www.belfastharbourstudios.com/"
       ],
-      "official_url": "https://www.belfastharbourstudios.com/",
+      "official_url": "https://www.belfast-harbour.co.uk/real-estate/belfast-harbour-studios/",
       "commission_url": "https://northernirelandscreen.co.uk/"
     },
     {
@@ -30861,21 +30861,6 @@
       }
     },
     {
-      "id": "uk-digbeth-loc-studios",
-      "name": "Digbeth Loc. Studios",
-      "country": "United Kingdom",
-      "region": "West Midlands, Midlands",
-      "lat": 52.4746,
-      "lng": -1.8847,
-      "type": "Studio & backlot",
-      "setting": "Purpose-built television and film studio complex in the Digbeth district of Birmingham with multiple sound stages and production offices.",
-      "source_urls": [
-        "https://digbethlocstudios.co.uk"
-      ],
-      "official_url": "https://www.digbethloc.com/",
-      "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/"
-    },
-    {
       "id": "uk-discovery-museum",
       "name": "Discovery Museum",
       "country": "United Kingdom",
@@ -31501,7 +31486,7 @@
         "https://www.bbcstudioworks.com/locations/kelvin-hall/",
         "https://en.wikipedia.org/wiki/Kelvin_Hall"
       ],
-      "official_url": "https://www.bbcstudioworks.com/locations/kelvin-hall/",
+      "official_url": "https://www.bbcstudioworks.com/studio/kelvin-hall/",
       "commission_url": "https://www.screen.scot/"
     },
     {
