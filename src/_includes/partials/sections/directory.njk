@@ -13,6 +13,11 @@
   <div class="container">
     {% if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
     {% if section.intro %}<div class="rich-text section-intro">{{ section.intro | md | safe }}</div>{% endif %}
+    {%- if section.total_note -%}
+    {%- set spread = [] -%}
+    {%- for it in items -%}{%- if it[section.total_key or "country"] and (it[section.total_key or "country"] not in spread) -%}{%- set spread = (spread.push(it[section.total_key or "country"]), spread) -%}{%- endif -%}{%- endfor %}
+    <p class="guide-total"><strong>{{ items | length }} {{ section.noun or "entries" }} in {{ spread | length }} countries</strong>, {{ section.total_note }} Last checked {{ data.updated }}.</p>
+    {%- endif %}
 
     <div class="guide-controls guide-controls-{{ filters.length + 1 }}">
       <div class="loc-field guide-search-field">

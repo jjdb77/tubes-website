@@ -416,6 +416,7 @@ collections:
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: Introtekst, name: intro, widget: markdown, required: false }
               - { label: "Zoekveld: placeholder", name: search_placeholder, widget: string, required: false }
+              - { label: "Regel met het aantal (leeg = niet tonen)", name: total_note, widget: string, required: false, hint: "Komt achter '354 companies in 23 countries, '. Bijv.: each verified on the company's own website." }
               - { label: "Kaart tonen (alleen als de items lat/lng hebben)", name: map, widget: boolean, default: false, required: false }
               - label: "Filters (max. 3)"
                 name: filters

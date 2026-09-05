@@ -26,6 +26,7 @@ sections:
     heading: Search studios, production and post-production companies
     intro: |
       Type what you are after ("virtual production", "documentary", "Dolby Atmos", "service production"), filter by country, type or specialism, and select up to three companies to compare what they do, their facilities and credits, and who they belong to.
+    total_note: "each verified on the company's own website. Growing through your suggestions."
     search_placeholder: "Sound stages, co-producer, VFX, grading, service production ..."
     filters:
       - { key: country, label: Country }

@@ -123,6 +123,9 @@ if (net) {
       if (/wikimedia\.org/.test(u)) await new Promise((r) => setTimeout(r, 400));
       if (typeof status === "number" && status >= 200 && status < 400) continue;
       if (status === 403 || status === 429) { soft.push(`${tag}: ${status} (probably blocks bots; check in a browser) ${u}`); continue; }
+      // Node's fetch weigert een onvolledige certificaatketen; browsers en curl
+      // halen het ontbrekende tussencertificaat zelf op, dus de site werkt wel.
+      if (status === "ERR UNABLE_TO_VERIFY_LEAF_SIGNATURE") { soft.push(`${tag}: incomplete certificate chain (works in a browser) ${u}`); continue; }
       results.push(`${tag}: ${status} ${u}`);
     }
   };
