@@ -1776,7 +1776,7 @@
       "official_url": "https://www.alden-biesen.be/en",
       "commission_url": "https://www.screenflanders.be/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Aldenbiezen.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Aldenbiezen.jpg/960px-Aldenbiezen.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Aldenbiezen.jpg",
         "author": "Paul Hermans",
         "license": "CC BY-SA 3.0"
@@ -2687,7 +2687,7 @@
       "official_url": "https://www.herita.be/nl/monumenten/paleis-op-de-meir",
       "commission_url": "https://www.screenflanders.be/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg/960px-Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Antwerpen_Meir_50_-_102916_-_onroerenderfgoed.jpg",
         "author": "Vandevorst, Kris",
         "license": "CC BY 4.0"
@@ -3207,7 +3207,13 @@
         "https://en.wikipedia.org/wiki/Business_Park_Sofia_metro_station"
       ],
       "official_url": "https://businesspark-sofia.com/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Business_park_Sofia_Metrostation.jpg/960px-Business_park_Sofia_Metrostation.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Business_park_Sofia_Metrostation.jpg",
+        "author": "Nikki070",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "bg-central-balkan-national-park",
@@ -3298,7 +3304,13 @@
         "https://en.wikipedia.org/wiki/International_Fair_Plovdiv"
       ],
       "official_url": "https://www.fair.bg/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/International_Fair_Plovdiv.JPG/960px-International_Fair_Plovdiv.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:International_Fair_Plovdiv.JPG",
+        "author": "Иван Иванов",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "bg-ivan-vazov-national-theatre",
@@ -3335,7 +3347,13 @@
         "https://www.museumruse.com/"
       ],
       "official_url": "https://www.museumruse.com/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kaliopa_House_from_the_east.jpg/960px-Kaliopa_House_from_the_east.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kaliopa_House_from_the_east.jpg",
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "bg-kapana-plovdiv",
@@ -3475,7 +3493,13 @@
         "https://en.wikipedia.org/wiki/National_Opera_and_Ballet_of_Bulgaria"
       ],
       "official_url": "https://www.operasofia.bg/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/National_Opera_Sofia_2009_20090406_003.JPG/960px-National_Opera_Sofia_2009_20090406_003.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:National_Opera_Sofia_2009_20090406_003.JPG",
+        "author": "Apostoloff",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "bg-national-palace-of-culture",
@@ -3628,7 +3652,13 @@
         "https://en.wikipedia.org/wiki/Plovdiv_Regional_Ethnographic_Museum"
       ],
       "official_url": "https://www.ethnograph.info/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Etn_muzei_pld.jpg/960px-Etn_muzei_pld.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Etn_muzei_pld.jpg",
+        "author": "Juan Antonio F. Segal",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "bg-port-of-varna",
@@ -4128,7 +4158,13 @@
         "https://en.wikipedia.org/wiki/Vasil_Levski_National_Stadium"
       ],
       "official_url": "https://mpes.government.bg/",
-      "commission_url": "https://www.nfc.bg/en/"
+      "commission_url": "https://www.nfc.bg/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Vasil_Levski_National_Stadium_2022.jpg/960px-Vasil_Levski_National_Stadium_2022.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vasil_Levski_National_Stadium_2022.jpg",
+        "author": "JukoFF",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "bg-vitosha-nature-park",
@@ -6852,7 +6888,7 @@
       "official_url": "https://www.dpp.cz/en",
       "commission_url": "https://www.filmcommission.cz/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nm-westbound.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Nm-westbound.jpg/960px-Nm-westbound.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Nm-westbound.jpg",
         "author": "Matěj Čadil=en:User:Neral as confirmed here 2007-01-25 (in Czech)",
         "license": "CC BY 1.0"
@@ -7518,7 +7554,7 @@
       "official_url": "https://www.cirkusbygningen.dk",
       "commission_url": "https://www.dfi.dk/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/71/Copenhagen-Cirkusbygningen.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Copenhagen-Cirkusbygningen.jpg/960px-Copenhagen-Cirkusbygningen.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Copenhagen-Cirkusbygningen.jpg",
         "author": "Kåre Thor Olsen",
         "license": "CC BY-SA 3.0"
@@ -7742,7 +7778,7 @@
       "official_url": "https://hcandersenshus.dk",
       "commission_url": "https://www.dfi.dk",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/76/Hc-andersens-hus.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Hc-andersens-hus.jpg/960px-Hc-andersens-hus.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Hc-andersens-hus.jpg",
         "author": "Hansjorn at Danish Wikipedia",
         "license": "CC BY-SA 3.0"
@@ -7904,7 +7940,7 @@
       "official_url": "https://www.nordkraft.dk/",
       "commission_url": "https://www.dfi.dk/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Nordkraft.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Nordkraft.jpg/960px-Nordkraft.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Nordkraft.jpg",
         "author": "Veng",
         "license": "Public domain"
@@ -8131,7 +8167,13 @@
         "https://ammende.ee/en/"
       ],
       "official_url": "https://ammende.ee/en/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ammende_villa_2012.jpg/960px-Ammende_villa_2012.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Ammende_villa_2012.jpg",
+        "author": "Jean-Pierre Dalbéra",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "ee-balti-jaama-turg",
@@ -8179,7 +8221,13 @@
         "https://www.artun.ee/en/"
       ],
       "official_url": "https://www.artun.ee/en/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Eesti_Kunstiakadeemia_uus_%C3%B5ppehoone_Kalamajas.jpg/960px-Eesti_Kunstiakadeemia_uus_%C3%B5ppehoone_Kalamajas.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Eesti_Kunstiakadeemia_uus_%C3%B5ppehoone_Kalamajas.jpg",
+        "author": "Tõnu Tunnel",
+        "license": "Public domain"
+      }
     },
     {
       "id": "ee-estonian-national-museum",
@@ -8628,7 +8676,13 @@
         "https://filmestonia.eu/locations/"
       ],
       "official_url": "https://visitparnu.com/en/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sunset_in_P%C3%A4rnu_beach_%281%29.jpg/960px-Sunset_in_P%C3%A4rnu_beach_%281%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sunset_in_P%C3%A4rnu_beach_(1).jpg",
+        "author": "Kristian Pikner",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ee-patarei-sea-fortress",
@@ -8804,7 +8858,13 @@
         "https://filmestonia.eu/locations/"
       ],
       "official_url": "https://visittallinn.ee/eng",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_%2858%29.jpg/960px-Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_%2858%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Old_Town_of_Tallinn,_Tallinn,_Estonia_-_panoramio_(58).jpg",
+        "author": "Ben Bender",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ee-tallinn-song-festival-grounds",
@@ -8819,7 +8879,13 @@
         "https://www.lauluvaljak.ee/en/"
       ],
       "official_url": "https://www.lauluvaljak.ee/en/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Estonia_-_Flickr_-_Jarvis-4.jpg/960px-Estonia_-_Flickr_-_Jarvis-4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Estonia_-_Flickr_-_Jarvis-4.jpg",
+        "author": "Dennis G. Jarvis",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "ee-tallinn-town-hall",
@@ -8834,7 +8900,13 @@
         "https://raekoda.tallinn.ee/en/"
       ],
       "official_url": "https://raekoda.tallinn.ee/en/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tallinna_Raekoda_11-06-2013.jpg/960px-Tallinna_Raekoda_11-06-2013.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tallinna_Raekoda_11-06-2013.jpg",
+        "author": "Ivar Leidus",
+        "license": "CC BY-SA 3.0 ee"
+      }
     },
     {
       "id": "ee-tallinnfilm-studio-paljassaare",
@@ -8866,7 +8938,13 @@
         "https://airport.ee/en/tartu-airport/"
       ],
       "official_url": "https://airport.ee/en/tartu-airport/",
-      "commission_url": "https://filmestonia.eu/"
+      "commission_url": "https://filmestonia.eu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Approach_lighting_system_of_Tartu_Airport.jpg/960px-Approach_lighting_system_of_Tartu_Airport.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Approach_lighting_system_of_Tartu_Airport.jpg",
+        "author": "Ivo Kruusamägi",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ee-tartu-market-hall",
@@ -9519,7 +9597,7 @@
       "official_url": "https://www.tampere-talo.fi",
       "commission_url": "https://www.filmtampere.com/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tampere_destroyed_in_Civil_War.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tampere_destroyed_in_Civil_War.jpg/960px-Tampere_destroyed_in_Civil_War.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Tampere_destroyed_in_Civil_War.jpg",
         "author": "Unknown authorUnknown author",
         "license": "Public domain"
@@ -10147,7 +10225,13 @@
         "https://www.centrepompidou-metz.fr/"
       ],
       "official_url": "https://www.centrepompidou-metz.fr/",
-      "commission_url": "https://www.grandest.fr/tournages"
+      "commission_url": "https://www.grandest.fr/tournages",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Metz_47.jpg/960px-Metz_47.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Metz_47.jpg",
+        "author": "FrDr",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-chamonix-mont-blanc",
@@ -11142,7 +11226,13 @@
         "https://fr.wikipedia.org/wiki/Escal%27Atlantic"
       ],
       "official_url": "https://www.saint-nazaire-tourisme.com/espace-presse/",
-      "commission_url": "https://www.paysdelaloire.fr/culture-sport-associations/culture/cinema-audiovisuel-et-creation-numerique"
+      "commission_url": "https://www.paysdelaloire.fr/culture-sport-associations/culture/cinema-audiovisuel-et-creation-numerique",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Normandie_color.jpg/960px-Normandie_color.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Normandie_color.jpg",
+        "author": "SS_Normandie_at_sea_view.JPG: *SS_Normandie_at_sea.jpg: Vick the Viking derivative work: Altair78 (talk) derivative work",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-escat-bergerac",
@@ -11380,7 +11470,13 @@
         "https://www.aquarium-st-malo.com/groupe/groupe-individuel/privatisation"
       ],
       "official_url": "https://www.aquarium-st-malo.com/groupe/groupe-individuel/privatisation",
-      "commission_url": "https://filmsenbretagne.org/"
+      "commission_url": "https://filmsenbretagne.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Devanture_du_Grand_Aquarium_Saint-Malo.jpg/960px-Devanture_du_Grand_Aquarium_Saint-Malo.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Devanture_du_Grand_Aquarium_Saint-Malo.jpg",
+        "author": "ServiceCommunicationGASM",
+        "license": "CC0"
+      }
     },
     {
       "id": "fr-marseille-port",
@@ -11437,7 +11533,13 @@
         "https://www.villeurbanne.fr/demarches/associations/organiser-un-evenement-dans-un-espace-exterieur-ouvert-au-public"
       ],
       "official_url": "https://www.villeurbanne.fr/",
-      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/"
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Villeurbanne_gratteciel_courszola_%284%29.jpg/960px-Villeurbanne_gratteciel_courszola_%284%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villeurbanne_gratteciel_courszola_(4).jpg",
+        "author": "Karldupart",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-halle-aux-toiles-rouen",
@@ -11456,7 +11558,13 @@
         "https://www.rouen.fr/fr/tournage-film"
       ],
       "official_url": "https://www.rouen.fr/fr/halle-aux-toiles",
-      "commission_url": "https://normandieimages.fr/"
+      "commission_url": "https://normandieimages.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Fierte_Saint-Romain_et_la_halle_aux_toiles4.jpg/960px-Fierte_Saint-Romain_et_la_halle_aux_toiles4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fierte_Saint-Romain_et_la_halle_aux_toiles4.jpg",
+        "author": "Giogo",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-halle-de-la-machine-toulouse",
@@ -11473,7 +11581,13 @@
         "https://www.halledelamachine.fr/privatisez-la-halle/"
       ],
       "official_url": "https://www.halledelamachine.fr/",
-      "commission_url": "https://www.occitanie-films.fr/"
+      "commission_url": "https://www.occitanie-films.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Minotaure.jpg/960px-Minotaure.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Minotaure.jpg",
+        "author": "Frédéric Neupont",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-halle-tony-garnier-lyon",
@@ -11827,7 +11941,13 @@
         "https://fr.wikipedia.org/wiki/L%27Aventure_Michelin"
       ],
       "official_url": "https://laventure.michelin.com/",
-      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/"
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Fourgonnette_Citro%C3%ABn_type_H_Michelin.jpg/960px-Fourgonnette_Citro%C3%ABn_type_H_Michelin.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fourgonnette_Citro%C3%ABn_type_H_Michelin.jpg",
+        "author": "TCY",
+        "license": "CC0"
+      }
     },
     {
       "id": "fr-cite-du-vin",
@@ -12324,7 +12444,7 @@
       "official_url": "https://www.les-subs.com",
       "commission_url": "https://www.auvergnerhonealpes-cinema.fr",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/df/France-lyon-conservatoire-musique-cour1.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/France-lyon-conservatoire-musique-cour1.jpg/960px-France-lyon-conservatoire-musique-cour1.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:France-lyon-conservatoire-musique-cour1.jpg",
         "author": "Aurelie Chaumat",
         "license": "Public domain"
@@ -12451,7 +12571,13 @@
         "https://memorial-verdun.fr/fr/a-propos/location-de-salles-et-privatisation"
       ],
       "official_url": "https://memorial-verdun.fr/",
-      "commission_url": "https://www.grandest.fr/tournages"
+      "commission_url": "https://www.grandest.fr/tournages",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Memorial_de_Verdun.jpg/960px-Memorial_de_Verdun.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Memorial_de_Verdun.jpg",
+        "author": "Wolfgang Staudt",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-mine-temoin-ales",
@@ -12726,7 +12852,13 @@
         "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Nantes"
       ],
       "official_url": "https://www.cours-appel.justice.fr/rennes",
-      "commission_url": "https://www.paysdelaloire.fr/culture-sport-associations/culture/cinema-audiovisuel-et-creation-numerique"
+      "commission_url": "https://www.paysdelaloire.fr/culture-sport-associations/culture/cinema-audiovisuel-et-creation-numerique",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Palais_de_Justice_%40_Nantes_%287899234144%29.jpg/960px-Palais_de_Justice_%40_Nantes_%287899234144%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Palais_de_Justice_@_Nantes_(7899234144).jpg",
+        "author": "Guilhem Vellut from Annecy, France",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "fr-palais-justice-lyon",
@@ -13067,7 +13199,13 @@
         "https://fr.wikipedia.org/wiki/Pont_du_Gard"
       ],
       "official_url": "https://www.pontdugard.fr/",
-      "commission_url": "https://www.occitanie-films.fr/"
+      "commission_url": "https://www.occitanie-films.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pont_du_Gard_BLS.jpg/960px-Pont_du_Gard_BLS.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Pont_du_Gard_BLS.jpg",
+        "author": "Benh LIEU SONG (Flickr)",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-pont-eiffel-sur-le-lot",
@@ -13208,7 +13346,13 @@
         "https://www.salineroyale.com/centre-de-congres-evenements-prives/tournages/"
       ],
       "official_url": "https://www.salineroyale.com/",
-      "commission_url": "https://www.bourgognefranchecomte.fr/"
+      "commission_url": "https://www.bourgognefranchecomte.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Saline_royale_d%27Arc-et-Senans_nord.jpg/960px-Saline_royale_d%27Arc-et-Senans_nord.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Saline_royale_d%27Arc-et-Senans_nord.jpg",
+        "author": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "fr-corbusier-firminy",
@@ -13277,7 +13421,13 @@
         "https://fr.wikipedia.org/wiki/Stade_Geoffroy-Guichard"
       ],
       "official_url": "https://www.asse.fr/",
-      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/"
+      "commission_url": "https://www.auvergnerhonealpes-cinema.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/St_Etienne_Stade_Geoffroy_Guichard.jpg/960px-St_Etienne_Stade_Geoffroy_Guichard.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:St_Etienne_Stade_Geoffroy_Guichard.jpg",
+        "author": "©ville de St Etienne",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-stade-marie-marvingt-le-mans",
@@ -13501,7 +13651,13 @@
         "https://www.rouen.fr/fr/tournage-film"
       ],
       "official_url": "https://www.operaorchestrenormandierouen.fr/pros/evenementiel/",
-      "commission_url": "https://normandieimages.fr/"
+      "commission_url": "https://normandieimages.fr/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Citadis_302_DSC_9256.jpg/960px-Citadis_302_DSC_9256.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Citadis_302_DSC_9256.jpg",
+        "author": "Cheng-en Cheng",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "fr-tnp-villeurbanne",
@@ -13645,7 +13801,13 @@
         "https://fr.wikipedia.org/wiki/Villa_Demoiselle"
       ],
       "official_url": "https://www.villademoiselle.com/",
-      "commission_url": "https://www.grandest.fr/tournages"
+      "commission_url": "https://www.grandest.fr/tournages",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Villa_Demoiselle2.jpg/960px-Villa_Demoiselle2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villa_Demoiselle2.jpg",
+        "author": "ADT Marne",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-villa-les-roches-brunes-dinard",
@@ -13684,7 +13846,13 @@
         "https://fr.wikipedia.org/wiki/Villa_Majorelle"
       ],
       "official_url": "https://www.musee-ecole-de-nancy.nancy.fr/",
-      "commission_url": "https://www.grandest.fr/tournages"
+      "commission_url": "https://www.grandest.fr/tournages",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Villa_Majorelle_Nancy_vue_g%C3%A9n%C3%A9rale_de_la_fa%C3%A7ade_Nord_r%C3%A9nov%C3%A9e_2020.jpg/960px-Villa_Majorelle_Nancy_vue_g%C3%A9n%C3%A9rale_de_la_fa%C3%A7ade_Nord_r%C3%A9nov%C3%A9e_2020.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Villa_Majorelle_Nancy_vue_g%C3%A9n%C3%A9rale_de_la_fa%C3%A7ade_Nord_r%C3%A9nov%C3%A9e_2020.jpg",
+        "author": "cliché Damien Boyer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "fr-villa-savoye",
@@ -15021,7 +15189,13 @@
       ],
       "url": "https://locationnrw.de/location/folkwang-universitaet-der-kuenste/",
       "official_url": "https://www.folkwang-uni.de/",
-      "commission_url": "https://locationnrw.de/"
+      "commission_url": "https://locationnrw.de/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Essen_Kloster_Werden_Innenhof_2_2005.jpg/960px-Essen_Kloster_Werden_Innenhof_2_2005.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Essen_Kloster_Werden_Innenhof_2_2005.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "de-frankfurt-bankenviertel",
@@ -15608,7 +15782,7 @@
       "official_url": "https://www.hansaviertel.berlin/",
       "commission_url": "https://www.medienboard.de/en/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Berlin_Mitte_Hansaviertel.png",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Berlin_Mitte_Hansaviertel.png/960px-Berlin_Mitte_Hansaviertel.png",
         "file_page": "https://commons.wikimedia.org/wiki/File:Berlin_Mitte_Hansaviertel.png",
         "author": "BishkekRocks",
         "license": "CC BY-SA 3.0"
@@ -16299,7 +16473,13 @@
       ],
       "url": "https://www.filmlocations-bayern.de/Motivsuche/Kempinski-Hotel-Berchtesgaden/",
       "official_url": "https://www.kempinski.com/de/kempinski-hotel-berchtesgaden",
-      "commission_url": "https://www.fff-bayern.de"
+      "commission_url": "https://www.fff-bayern.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kempinski_Hotel_Berchtesgaden_Obersalzberg.jpg/960px-Kempinski_Hotel_Berchtesgaden_Obersalzberg.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kempinski_Hotel_Berchtesgaden_Obersalzberg.jpg",
+        "author": "Ratzer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-kiel-hauptbahnhof",
@@ -17117,7 +17297,13 @@
       ],
       "url": "https://www.filmlocations-bayern.de/Motivsuche/Flughafen-Muenchen/",
       "official_url": "https://www.munich-airport.com/permission-to-film-photograph-264779",
-      "commission_url": "https://www.fff-bayern.de"
+      "commission_url": "https://www.fff-bayern.de",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/M%C3%BCnchen%2C_Hp_Besucherpark_v_W%2C_3.jpeg/960px-M%C3%BCnchen%2C_Hp_Besucherpark_v_W%2C_3.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchen,_Hp_Besucherpark_v_W,_3.jpeg",
+        "author": "Renardo la vulpo",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-museum-kalkwerk-lengefeld",
@@ -18421,7 +18607,13 @@
       ],
       "url": "https://www.nordmedia.de/pages/film_commission/location_guide/subpages/wohn-_und_arbeitsquartier__tabakquartier_-_ehem__fabrik_mit_bueros__lofts_und_eventlocation__bremen/index.html",
       "official_url": "https://www.tabakquartier.com/",
-      "commission_url": "https://www.nordmedia.de/pages/service/film_commission/index.html"
+      "commission_url": "https://www.nordmedia.de/pages/service/film_commission/index.html",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tabakquartier_Bremen_Mai_2021_17.jpg/960px-Tabakquartier_Bremen_Mai_2021_17.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tabakquartier_Bremen_Mai_2021_17.jpg",
+        "author": "Sänger",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "de-technik-museum-speyer",
@@ -19223,7 +19415,7 @@
       "official_url": "https://filmcommission.gr/locations/allatini-factory/",
       "commission_url": "https://filmcommission.gr",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0b/AllatiniMills.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/AllatiniMills.jpg/960px-AllatiniMills.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:AllatiniMills.jpg",
         "author": "Unknown author",
         "license": "Public domain"
@@ -19295,7 +19487,7 @@
       "official_url": "https://www.auth.gr/en/",
       "commission_url": "https://filmcommission.gr/locations/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Central_Thessaloniki_Aerial.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Central_Thessaloniki_Aerial.jpg/960px-Central_Thessaloniki_Aerial.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Central_Thessaloniki_Aerial.jpg",
         "author": "en:User:Salonica84",
         "license": "Public domain"
@@ -19575,7 +19767,13 @@
       ],
       "url": "https://filmcommission.gr/locations/the-parliament/",
       "official_url": "https://filmcommission.gr/locations/the-parliament/",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/%CE%91%CE%BD%CF%84%CF%8E%CE%BD%CE%B7%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%AC%CF%82_-_%CE%9F%CF%81%CE%BA%CE%BF%CE%BC%CF%89%CF%83%CE%AF%CE%B1_%CE%BA%CE%B1%CE%B9_%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AD%CF%82_%CE%94%CE%B7%CE%BB%CF%8E%CF%83%CE%B5%CE%B9%CF%82.jpg/960px-%CE%91%CE%BD%CF%84%CF%8E%CE%BD%CE%B7%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%AC%CF%82_-_%CE%9F%CF%81%CE%BA%CE%BF%CE%BC%CF%89%CF%83%CE%AF%CE%B1_%CE%BA%CE%B1%CE%B9_%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AD%CF%82_%CE%94%CE%B7%CE%BB%CF%8E%CF%83%CE%B5%CE%B9%CF%82.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:%CE%91%CE%BD%CF%84%CF%8E%CE%BD%CE%B7%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%AC%CF%82_-_%CE%9F%CF%81%CE%BA%CE%BF%CE%BC%CF%89%CF%83%CE%AF%CE%B1_%CE%BA%CE%B1%CE%B9_%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AD%CF%82_%CE%94%CE%B7%CE%BB%CF%8E%CF%83%CE%B5%CE%B9%CF%82.jpg",
+        "author": "Αλέξης Τσίπρας Πρωθυπουργός της Ελλάδας from Greece",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "gr-hotel-grande-bretagne",
@@ -19676,7 +19874,13 @@
       ],
       "url": "https://filmcommission.gr/locations/kotzia-square/",
       "official_url": "https://filmcommission.gr/locations/kotzia-square/",
-      "commission_url": "https://filmcommission.gr"
+      "commission_url": "https://filmcommission.gr",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Athens_Kotzia_square.jpg/960px-Athens_Kotzia_square.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Athens_Kotzia_square.jpg",
+        "author": "Badseed",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "gr-lavrio-technological-cultural-park",
@@ -20559,7 +20763,7 @@
       "official_url": "https://bv.gov.hu/hu/budapesti-bortonmuzeum",
       "commission_url": "https://nfi.hu/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Rabbinerseminar.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Rabbinerseminar.jpg/960px-Rabbinerseminar.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Rabbinerseminar.jpg",
         "author": "Cesarzambrano1 (de.wikipedia)",
         "license": "Public domain"
@@ -20760,7 +20964,13 @@
         "https://fovarosinagycirkusz.hu"
       ],
       "official_url": "https://fovarosinagycirkusz.hu",
-      "commission_url": "https://nfi.hu"
+      "commission_url": "https://nfi.hu",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fovarosi-Nagycirkusz-Kep.jpg/960px-Fovarosi-Nagycirkusz-Kep.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fovarosi-Nagycirkusz-Kep.jpg",
+        "author": "Pusztai.dani.uj",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hu-gellert-baths",
@@ -20952,7 +21162,7 @@
       "official_url": "https://nemzetiszinhaz.hu",
       "commission_url": "https://nfi.hu/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/91/Magyar_Nemzeti_M%C3%BAzeum.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Magyar_Nemzeti_M%C3%BAzeum.jpg/960px-Magyar_Nemzeti_M%C3%BAzeum.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Magyar_Nemzeti_M%C3%BAzeum.jpg",
         "author": "hu:user:Pasztilla",
         "license": "Public domain"
@@ -21099,7 +21309,7 @@
       "official_url": "https://kincsempark.hu/rendezvenyszervezes/",
       "commission_url": "https://nfi.hu/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Kincsem_Park_Budapest.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Kincsem_Park_Budapest.jpg/960px-Kincsem_Park_Budapest.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Kincsem_Park_Budapest.jpg",
         "author": "w:User:Gvarady",
         "license": "CC BY-SA 3.0"
@@ -21276,7 +21486,13 @@
         "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
       ],
       "official_url": "https://www.fszek.hu",
-      "commission_url": "https://nfi.hu"
+      "commission_url": "https://nfi.hu",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Szab%C3%B3_Ervin_K%C3%B6nyvt%C3%A1r_%28961._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_111.jpg/960px-Szab%C3%B3_Ervin_K%C3%B6nyvt%C3%A1r_%28961._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_111.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Szab%C3%B3_Ervin_K%C3%B6nyvt%C3%A1r_(961._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_111.jpg",
+        "author": "desperado",
+        "license": "CC BY 2.5 hu"
+      }
     },
     {
       "id": "hu-millenaris-park",
@@ -21643,7 +21859,13 @@
         "https://en.wikipedia.org/wiki/Papp_L%C3%A1szl%C3%B3_Budapest_Sportar%C3%A9na"
       ],
       "official_url": "https://budapestarena.hu",
-      "commission_url": "https://nfi.hu"
+      "commission_url": "https://nfi.hu",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/L%C3%A9gi_felv%C3%A9telen_a_Papp_L%C3%A1szl%C3%B3_Budapest_Sportar%C3%A9na.jpg/960px-L%C3%A9gi_felv%C3%A9telen_a_Papp_L%C3%A1szl%C3%B3_Budapest_Sportar%C3%A9na.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:L%C3%A9gi_felv%C3%A9telen_a_Papp_L%C3%A1szl%C3%B3_Budapest_Sportar%C3%A9na.jpg",
+        "author": "Civertan",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "hu-parisi-udvar",
@@ -21879,7 +22101,7 @@
       "official_url": "https://tihanyiapatsag.hu",
       "commission_url": "https://nfi.hu/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/63/Tihanycivertanlegi1.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tihanycivertanlegi1.jpg/960px-Tihanycivertanlegi1.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Tihanycivertanlegi1.jpg",
         "author": "Civertan",
         "license": "CC BY-SA 3.0"
@@ -21901,7 +22123,7 @@
       "official_url": "https://nfi.hu/en/location-guide-1",
       "commission_url": "https://nfi.hu/en",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tokajcivertanlegi1.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tokajcivertanlegi1.jpg/960px-Tokajcivertanlegi1.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Tokajcivertanlegi1.jpg",
         "author": "Civertan",
         "license": "CC BY-SA 3.0"
@@ -22798,7 +23020,7 @@
       "official_url": "https://www.cobhheritage.com/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Heritage_centre%2C_An_Cobh_-_geograph.org.uk_-_249726.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Heritage_centre%2C_An_Cobh_-_geograph.org.uk_-_249726.jpg/960px-Heritage_centre%2C_An_Cobh_-_geograph.org.uk_-_249726.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Heritage_centre,_An_Cobh_-_geograph.org.uk_-_249726.jpg",
         "author": "Peter Craine",
         "license": "CC BY-SA 2.0"
@@ -22934,7 +23156,7 @@
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/donegal-castle/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/73/Donegalcastle.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Donegalcastle.jpg/960px-Donegalcastle.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Donegalcastle.jpg",
         "author": "Benson Wills",
         "license": "CC BY-SA 2.0"
@@ -22960,7 +23182,7 @@
       "official_url": "https://www.heritageireland.ie/visit/places-to-visit/doneraile-court/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Doneraile_Court_-_geograph.org.uk_-_1392610.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Doneraile_Court_-_geograph.org.uk_-_1392610.jpg/960px-Doneraile_Court_-_geograph.org.uk_-_1392610.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Doneraile_Court_-_geograph.org.uk_-_1392610.jpg",
         "author": "Mike Searle",
         "license": "CC BY-SA 2.0"
@@ -23165,7 +23387,7 @@
       "official_url": "https://www.galwaycathedral.ie",
       "commission_url": "https://www.screenireland.ie/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Galway_cathedral.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Galway_cathedral.jpg/960px-Galway_cathedral.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Galway_cathedral.jpg",
         "author": "Unknown authorUnknown author",
         "license": "CC BY-SA 3.0"
@@ -23250,7 +23472,7 @@
       "official_url": "https://killruddery.com/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kilruddery.JPG",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kilruddery.JPG/960px-Kilruddery.JPG",
         "file_page": "https://commons.wikimedia.org/wiki/File:Kilruddery.JPG",
         "author": "User: (WT-shared) Spircle at wts wikivoyage",
         "license": "CC BY-SA 4.0"
@@ -23500,7 +23722,7 @@
       "official_url": "https://heritageireland.ie/places-to-visit/reginalds-tower/",
       "commission_url": "https://www.screenireland.ie/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Reginalds_Tower_2.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Reginalds_Tower_2.jpg/960px-Reginalds_Tower_2.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Reginalds_Tower_2.jpg",
         "author": "Nmwalsh",
         "license": "CC BY-SA 4.0"
@@ -23523,7 +23745,7 @@
       "official_url": "https://www.richmondbarracks.ie",
       "commission_url": "https://www.screenireland.ie",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/27/Richmond_Barracks%2C_Dublin.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Richmond_Barracks%2C_Dublin.jpg/960px-Richmond_Barracks%2C_Dublin.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Richmond_Barracks,_Dublin.jpg",
         "author": "Unknown authorUnknown author",
         "license": "Public domain"
@@ -23719,7 +23941,7 @@
       "official_url": "http://www.englishmarket.ie/",
       "commission_url": "https://www.screenireland.ie/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/57/Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg/960px-Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Princes_Street_Indoor_Market_-_geograph.org.uk_-_595328.jpg",
         "author": "Andy Beecroft",
         "license": "CC BY-SA 2.0"
@@ -24135,7 +24357,7 @@
       "official_url": "https://www.unibocconi.it/",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/94/Biblioteca_Universit%C3%A0_Bocconi.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Biblioteca_Universit%C3%A0_Bocconi.jpg/960px-Biblioteca_Universit%C3%A0_Bocconi.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Biblioteca_Universit%C3%A0_Bocconi.jpg",
         "author": "Corinto88",
         "license": "CC BY-SA 4.0"
@@ -24422,7 +24644,7 @@
       "official_url": "https://www.cinecitta.com/",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ingressostorico_cinecitta.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ingressostorico_cinecitta.jpg/960px-Ingressostorico_cinecitta.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Ingressostorico_cinecitta.jpg",
         "author": "Andrea Martella",
         "license": "CC BY-SA 4.0"
@@ -24904,7 +25126,7 @@
       "official_url": "https://www.grandhoteletdemilan.it/",
       "commission_url": "https://italianfilmcommissions.it/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4a/3668MilanoGrandHotel.JPG",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/3668MilanoGrandHotel.JPG/960px-3668MilanoGrandHotel.JPG",
         "file_page": "https://commons.wikimedia.org/wiki/File:3668MilanoGrandHotel.JPG",
         "author": "Geobia",
         "license": "CC BY-SA 4.0"
@@ -25466,7 +25688,7 @@
       "official_url": "https://www.palaflorio.it",
       "commission_url": "https://www.italyformovies.it",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Palaflorio_Bari_Italy.jpeg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Palaflorio_Bari_Italy.jpeg/960px-Palaflorio_Bari_Italy.jpeg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Palaflorio_Bari_Italy.jpeg",
         "author": "FIVB",
         "license": "Public domain"
@@ -25643,7 +25865,7 @@
       "official_url": "https://www.portodigioiatauro.it",
       "commission_url": "https://www.italyformovies.it",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/95/Gioiatauro_seaport.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gioiatauro_seaport.jpg/960px-Gioiatauro_seaport.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Gioiatauro_seaport.jpg",
         "author": "The original uploader was Istvánka at Hungarian Wikipedia.",
         "license": "CC BY-SA 3.0"
@@ -27005,7 +27227,13 @@
         "https://en.wikipedia.org/wiki/Latvian_Academy_of_Sciences"
       ],
       "official_url": "https://www.lza.lv/en",
-      "commission_url": "https://www.liveriga.com/en/invest/film-in-riga"
+      "commission_url": "https://www.liveriga.com/en/invest/film-in-riga",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Riga_-_36242016865.jpg/960px-Riga_-_36242016865.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Riga_-_36242016865.jpg",
+        "author": "Sergei Gussev",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "lv-latvian-national-museum-of-art",
@@ -27796,7 +28024,13 @@
         "https://dramosteatras.lt/"
       ],
       "official_url": "https://dramosteatras.lt/",
-      "commission_url": "https://www.lkc.lt/en/"
+      "commission_url": "https://www.lkc.lt/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Kaunas_drama_theatre.jpg/960px-Kaunas_drama_theatre.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kaunas_drama_theatre.jpg",
+        "author": "Lokyz",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "lt-kaunas-ninth-fort",
@@ -28140,7 +28374,13 @@
       ],
       "url": "https://filmvilnius.com/castles-manors-and-mansions/",
       "official_url": "https://www.valdovurumai.lt/en",
-      "commission_url": "https://filmvilnius.com/"
+      "commission_url": "https://filmvilnius.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vilnius_Gedimino_Pilies_Bok%C5%A1tas_Blick_auf_die_Valdovu_rumai.jpg/960px-Vilnius_Gedimino_Pilies_Bok%C5%A1tas_Blick_auf_die_Valdovu_rumai.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Vilnius_Gedimino_Pilies_Bok%C5%A1tas_Blick_auf_die_Valdovu_rumai.jpg",
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "lt-palanga-amber-museum",
@@ -28273,7 +28513,13 @@
       ],
       "url": "https://filmvilnius.com/castles-manors-and-mansions/",
       "official_url": "https://sapiegurumai.lt/",
-      "commission_url": "https://filmvilnius.com/"
+      "commission_url": "https://filmvilnius.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Main_fa%C3%A7ade_of_the_Sapiegos_Palace_in_Antakalnis_eldership_in_Vilnius%2C_Lithuania_in_2024_%282%29.jpg/960px-Main_fa%C3%A7ade_of_the_Sapiegos_Palace_in_Antakalnis_eldership_in_Vilnius%2C_Lithuania_in_2024_%282%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Main_fa%C3%A7ade_of_the_Sapiegos_Palace_in_Antakalnis_eldership_in_Vilnius,_Lithuania_in_2024_(2).jpg",
+        "author": "Pofka",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "lt-smiltyne-ferry",
@@ -28404,7 +28650,13 @@
         "https://www.govilnius.lt/meet-in-vilnius/venue-finder/vilnius-airport"
       ],
       "official_url": "https://www.govilnius.lt/meet-in-vilnius/venue-finder/vilnius-airport",
-      "commission_url": "https://filmvilnius.com/"
+      "commission_url": "https://filmvilnius.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/EYVI-VNO_by_Augustas_Didzgalvis.jpg/960px-EYVI-VNO_by_Augustas_Didzgalvis.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:EYVI-VNO_by_Augustas_Didzgalvis.jpg",
+        "author": "Augustas Didžgalvis",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "lt-vilnius-film-cluster-green-screen-studio",
@@ -29326,7 +29578,13 @@
         "https://en.wikipedia.org/wiki/Upper_S%C3%BBre_Lake"
       ],
       "official_url": "https://www.naturpark-sure.lu/",
-      "commission_url": "https://filmfund.lu/"
+      "commission_url": "https://filmfund.lu/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Staumauer_Esch_-_Sauer_-_panoramio.jpg/960px-Staumauer_Esch_-_Sauer_-_panoramio.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Staumauer_Esch_-_Sauer_-_panoramio.jpg",
+        "author": "Finck Roderick",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "lu-vianden-castle",
@@ -29739,7 +29997,7 @@
       "official_url": "https://teatrumanoel.com.mt/",
       "commission_url": "https://screenmalta.com/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Manoel_theatre_%2812843882153%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Manoel_theatre_%2812843882153%29.jpg/960px-Manoel_theatre_%2812843882153%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Manoel_theatre_(12843882153).jpg",
         "author": "R Muscat",
         "license": "CC BY-SA 2.0"
@@ -30827,7 +31085,7 @@
       "official_url": "https://www.huisdoorn.nl",
       "commission_url": "https://www.filmcommission.nl",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2e/DoornCastle.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/DoornCastle.jpg/960px-DoornCastle.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:DoornCastle.jpg",
         "author": "GVR",
         "license": "CC BY-SA 3.0 nl"
@@ -32024,7 +32282,7 @@
       "official_url": "https://vanabbemuseum.nl",
       "commission_url": "https://www.filmcommission.nl",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Eindhovenvanabbe06.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Eindhovenvanabbe06.jpg/960px-Eindhovenvanabbe06.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Eindhovenvanabbe06.jpg",
         "author": "Wikimedia Commons contributor",
         "license": "CC BY-SA 3.0"
@@ -32141,7 +32399,7 @@
       "official_url": "https://www.westergasfabriek.nl/",
       "commission_url": "https://www.filmcommission.nl/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/55/Westerpark_westergasfabriek.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Westerpark_westergasfabriek.jpg/960px-Westerpark_westergasfabriek.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Westerpark_westergasfabriek.jpg",
         "author": "No machine-readable author provided. Arch assumed (based on copyright claims).",
         "license": "Public domain"
@@ -32952,7 +33210,7 @@
       "official_url": "https://www.nia.no",
       "commission_url": "https://www.norwegianfilm.com/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7b/VemorkHydroelectricPlant.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/VemorkHydroelectricPlant.jpg/960px-VemorkHydroelectricPlant.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:VemorkHydroelectricPlant.jpg",
         "author": "MiSi at German Wikipedia",
         "license": "Public domain"
@@ -35133,7 +35391,7 @@
       "official_url": "https://www.1944.pl/en",
       "commission_url": "https://pfc.pisf.pl/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Warsaw_Uprising.png",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warsaw_Uprising.png/960px-Warsaw_Uprising.png",
         "file_page": "https://commons.wikimedia.org/wiki/File:Warsaw_Uprising.png",
         "author": "PattyB0YY",
         "license": "CC BY-SA 4.0"
@@ -35457,7 +35715,13 @@
       ],
       "url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-da-roca/",
       "official_url": "https://portugalfilmcommission.com/en/location/farol-do-cabo-da-roca/",
-      "commission_url": "https://portugalfilmcommission.com"
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Cabo_da_Roca_%282426924641%29.jpg/960px-Cabo_da_Roca_%282426924641%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cabo_da_Roca_(2426924641).jpg",
+        "author": "Bert Kaufmann from Roermond, Netherlands",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "pt-sao-vicente-lighthouse",
@@ -35505,7 +35769,13 @@
       ],
       "url": "https://portugalfilmcommission.com/en/location/cacela-velha/",
       "official_url": "https://portugalfilmcommission.com/en/location/cacela-velha/",
-      "commission_url": "https://portugalfilmcommission.com"
+      "commission_url": "https://portugalfilmcommission.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Cacela_Velha_Fortress2.jpg/960px-Cacela_Velha_Fortress2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cacela_Velha_Fortress2.jpg",
+        "author": "Marc Ryckaert (MJJR)",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "pt-casa-da-musica",
@@ -35594,7 +35864,7 @@
       "official_url": "https://portugalfilmcommission.com/locais-de-filmagem/castelo-de-beja/",
       "commission_url": "https://portugalfilmcommission.com",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/62/Torre_castelo_beja.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Torre_castelo_beja.jpg/960px-Torre_castelo_beja.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Torre_castelo_beja.jpg",
         "author": "Wikimedia Commons contributor",
         "license": "CC BY-SA 3.0"
@@ -36719,7 +36989,13 @@
         "https://en.wikipedia.org/wiki/Bucharest_National_Opera"
       ],
       "official_url": "https://www.operanb.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Romanian_National_Opera%2C_Bucharest.jpg/960px-Romanian_National_Opera%2C_Bucharest.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Romanian_National_Opera,_Bucharest.jpg",
+        "author": "SPARKY358",
+        "license": "CC0"
+      }
     },
     {
       "id": "ro-gara-de-nord",
@@ -36890,7 +37166,13 @@
         "https://www.primariaclujnapoca.ro/"
       ],
       "official_url": "https://www.primariaclujnapoca.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Primaria_Cluj-Napoca1.jpg/960px-Primaria_Cluj-Napoca1.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Primaria_Cluj-Napoca1.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ro-coltea-hospital",
@@ -36945,7 +37227,13 @@
         "https://en.wikipedia.org/wiki/List_of_films_shot_in_Romania"
       ],
       "official_url": "http://www.snc.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Constanta_shipyard.JPG/960px-Constanta_shipyard.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Constanta_shipyard.JPG",
+        "author": "Acaro",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "ro-corvin-castle",
@@ -37047,7 +37335,13 @@
         "https://en.wikipedia.org/wiki/Grigore_Antipa_National_Museum_of_Natural_History"
       ],
       "official_url": "https://antipa.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2023_-_National_Museum_of_Natural_History_%22Grigore_Antipa%22_-_IMG_01.jpg/960px-2023_-_National_Museum_of_Natural_History_%22Grigore_Antipa%22_-_IMG_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:2023_-_National_Museum_of_Natural_History_%22Grigore_Antipa%22_-_IMG_01.jpg",
+        "author": "Chainwit.",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ro-hala-laminor",
@@ -37115,7 +37409,13 @@
         "https://en.wikipedia.org/wiki/Hungarian_Theatre_of_Cluj"
       ],
       "official_url": "https://www.huntheater.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Opera_maghiara_din_Cluj_Napoca_%2C_Teatrul_Maghiar_din_Cluj_Napoca_16p9.jpg/960px-Opera_maghiara_din_Cluj_Napoca_%2C_Teatrul_Maghiar_din_Cluj_Napoca_16p9.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Opera_maghiara_din_Cluj_Napoca_,_Teatrul_Maghiar_din_Cluj_Napoca_16p9.jpg",
+        "author": "ZARAKA",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ro-national-theatre-bucharest",
@@ -37213,7 +37513,13 @@
         "https://en.wikipedia.org/wiki/Bucharest_State_Circus"
       ],
       "official_url": "https://www.circulmetropolitan.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Bucharest%2C_Globus_Circus.jpg/960px-Bucharest%2C_Globus_Circus.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bucharest,_Globus_Circus.jpg",
+        "author": "Crisreece",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ro-militari-tram-depot",
@@ -37261,7 +37567,13 @@
         "https://en.wikipedia.org/wiki/Museum_of_the_Romanian_Peasant"
       ],
       "official_url": "https://muzeultaranuluiroman.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Bucharest_-_Museum_of_the_Romanian_Peasant_%28MAR2023%29_04.jpg/960px-Bucharest_-_Museum_of_the_Romanian_Peasant_%28MAR2023%29_04.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bucharest_-_Museum_of_the_Romanian_Peasant_(MAR2023)_04.jpg",
+        "author": "Chainwit.",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ro-national-bank-of-romania",
@@ -37293,7 +37605,13 @@
         "https://en.wikipedia.org/wiki/National_Museum_of_Romanian_History"
       ],
       "official_url": "https://www.mnir.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Museo_Nacional_de_Historia_de_Ruman%C3%ADa%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_63.jpg/960px-Museo_Nacional_de_Historia_de_Ruman%C3%ADa%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_63.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Museo_Nacional_de_Historia_de_Ruman%C3%ADa,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_63.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ro-national-oil-museum-ploiesti",
@@ -37810,7 +38128,13 @@
         "https://en.wikipedia.org/wiki/Unirea_Shopping_Center"
       ],
       "official_url": "https://unireashop.ro/",
-      "commission_url": "https://filmedinromania.org/"
+      "commission_url": "https://filmedinromania.org/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IMG-20171002-15321-romania-unirea-bucharest.jpg/960px-IMG-20171002-15321-romania-unirea-bucharest.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:IMG-20171002-15321-romania-unirea-bucharest.jpg",
+        "author": "Rakoon",
+        "license": "CC0"
+      }
     },
     {
       "id": "ro-university-of-bucharest",
@@ -38004,7 +38328,13 @@
       ],
       "url": "https://www.filminserbia.com/location/belgrade-city-library/",
       "official_url": "https://www.bgb.rs/",
-      "commission_url": "https://www.filminserbia.com"
+      "commission_url": "https://www.filminserbia.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Belgrade_city_library_05.jpg/960px-Belgrade_city_library_05.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Belgrade_city_library_05.jpg",
+        "author": "Miomir Magdevski",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "rs-belgrade-fair",
@@ -38193,7 +38523,13 @@
       ],
       "url": "https://www.filminserbia.com/location/faculty-of-dramatic-arts/",
       "official_url": "https://www.filminserbia.com/location/faculty-of-dramatic-arts/",
-      "commission_url": "https://www.filminserbia.com"
+      "commission_url": "https://www.filminserbia.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fakultet_dramskih_umetnosti%2C_Beograd_-_3.jpg/960px-Fakultet_dramskih_umetnosti%2C_Beograd_-_3.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fakultet_dramskih_umetnosti,_Beograd_-_3.jpg",
+        "author": "User:Михајло Анђелковић",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "rs-faculty-of-philosophy-novi-sad",
@@ -38785,7 +39121,13 @@
       ],
       "url": "https://www.filminserbia.com/location/port-belgrade/",
       "official_url": "https://www.filminserbia.com/location/port-belgrade/",
-      "commission_url": "https://www.filminserbia.com"
+      "commission_url": "https://www.filminserbia.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Port_of_Belgrade_and_Belgrade_Fortress.jpg/960px-Port_of_Belgrade_and_Belgrade_Fortress.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Port_of_Belgrade_and_Belgrade_Fortress.jpg",
+        "author": "Boksi",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "rs-princess-ljubicas-residence",
@@ -38801,7 +39143,13 @@
       ],
       "url": "https://www.filminserbia.com/location/princess-ljubicas-residence/",
       "official_url": "https://www.filminserbia.com/location/princess-ljubicas-residence/",
-      "commission_url": "https://www.filminserbia.com"
+      "commission_url": "https://www.filminserbia.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Konak_knjeginje_Ljubice_2.JPG/960px-Konak_knjeginje_Ljubice_2.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Konak_knjeginje_Ljubice_2.JPG",
+        "author": "Original uploader was Goldfinger at sr.wikipedia",
+        "license": "CC BY-SA 3.0 rs"
+      }
     },
     {
       "id": "rs-radisson-collection-old-mill-belgrade",
@@ -39096,7 +39444,13 @@
       ],
       "url": "https://www.filminserbia.com/location/film-archive/",
       "official_url": "https://kinoteka.org.rs/",
-      "commission_url": "https://www.filminserbia.com"
+      "commission_url": "https://www.filminserbia.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jugoslovenska_kinoteka_8.jpg/960px-Jugoslovenska_kinoteka_8.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Jugoslovenska_kinoteka_8.jpg",
+        "author": "Nikolina Šepić",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "rs-zeleni-venac-market-belgrade",
@@ -40015,7 +40369,13 @@
       ],
       "url": "https://www.filmcommission.sk/1313-en/salvator-pharmacy/",
       "official_url": "https://www.filmcommission.sk/1313-en/salvator-pharmacy/",
-      "commission_url": "https://www.filmcommission.sk"
+      "commission_url": "https://www.filmcommission.sk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Apotheke_Salvator_at_Pansk%C3%A1_street_in_Bratislava%2C_Bratislava_I_District.jpg/960px-Apotheke_Salvator_at_Pansk%C3%A1_street_in_Bratislava%2C_Bratislava_I_District.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Apotheke_Salvator_at_Pansk%C3%A1_street_in_Bratislava,_Bratislava_I_District.jpg",
+        "author": "Frettie",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "sk-shining-studio",
@@ -41702,7 +42062,13 @@
         "https://andaluciafilm.com/en/"
       ],
       "official_url": "https://www.astillerosnereo.com/",
-      "commission_url": "https://andaluciafilm.com/en/"
+      "commission_url": "https://andaluciafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Astilleros_Nereo.jpg/960px-Astilleros_Nereo.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Astilleros_Nereo.jpg",
+        "author": "Tyk",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-ateneo-mercantil-de-valencia",
@@ -41741,7 +42107,13 @@
       ],
       "url": "https://www.grancanariafilm.com/en/localizaciones/",
       "official_url": "https://auditorioteatrolaspalmasgc.es/",
-      "commission_url": "https://www.grancanariafilm.com/en/"
+      "commission_url": "https://www.grancanariafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Auditorio_alfredo_kraus_las_palmas_de_gran_canaria.jpg/960px-Auditorio_alfredo_kraus_las_palmas_de_gran_canaria.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Auditorio_alfredo_kraus_las_palmas_de_gran_canaria.jpg",
+        "author": "Pepelopex",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-auditorio-de-tenerife",
@@ -41782,7 +42154,13 @@
         "https://murciafilm.com/"
       ],
       "official_url": "https://auditorioelbatel.es/",
-      "commission_url": "https://murciafilm.com/"
+      "commission_url": "https://murciafilm.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Auditorio_y_palacio_de_congresos_El_Batel_%2820240816_201251%29.jpg/960px-Auditorio_y_palacio_de_congresos_El_Batel_%2820240816_201251%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Auditorio_y_palacio_de_congresos_El_Batel_(20240816_201251).jpg",
+        "author": "P4K1T0",
+        "license": "CC0"
+      }
     },
     {
       "id": "es-azkuna-zentroa",
@@ -41888,7 +42266,13 @@
       ],
       "url": "https://andaluciafilm.com/en/localizacion/barrio-reina-victoria/",
       "official_url": "https://andaluciafilm.com/en/localizacion/barrio-reina-victoria/",
-      "commission_url": "https://andaluciafilm.com/en/"
+      "commission_url": "https://andaluciafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Barrio_Obrero_Huelva.jpg/960px-Barrio_Obrero_Huelva.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Barrio_Obrero_Huelva.jpg",
+        "author": "Anonimous",
+        "license": "Public domain"
+      }
     },
     {
       "id": "es-basque-country-mining-museum",
@@ -41928,7 +42312,7 @@
       "official_url": "https://www.belchite.es/",
       "commission_url": "https://www.shootinginspain.info/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/78/Church_of_San_Mart%C3%ADn_de_Tours%2C_Belchite%2C_Zaragoza%2C_Spain%2C_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite%2C_Zaragoza.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Church_of_San_Mart%C3%ADn_de_Tours%2C_Belchite%2C_Zaragoza%2C_Spain%2C_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite%2C_Zaragoza.jpg/960px-Church_of_San_Mart%C3%ADn_de_Tours%2C_Belchite%2C_Zaragoza%2C_Spain%2C_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite%2C_Zaragoza.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Church_of_San_Mart%C3%ADn_de_Tours,_Belchite,_Zaragoza,_Spain,_iglesia_de_San_Mart%C3%ADn_de_Tours_-_pueblo_viejo_de_Belchite,_Zaragoza.jpg",
         "author": "Mireille Marseille",
         "license": "CC0"
@@ -41992,7 +42376,13 @@
         "https://en.wikipedia.org/wiki/Bilbao_Airport"
       ],
       "official_url": "https://www.aena.es/en/bilbao.html",
-      "commission_url": "https://shootinginspain.info/"
+      "commission_url": "https://shootinginspain.info/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Aeropuerto_Bilbao_Loiu_01.jpg/960px-Aeropuerto_Bilbao_Loiu_01.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aeropuerto_Bilbao_Loiu_01.jpg",
+        "author": "Basotxerri",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-bilbao-metro",
@@ -42484,7 +42874,7 @@
       "official_url": "https://www.ciudaddelaluz.com/",
       "commission_url": "https://www.shootinginspain.info/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Platos_ciudadluz.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Platos_ciudadluz.jpg/960px-Platos_ciudadluz.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Platos_ciudadluz.jpg",
         "author": "Kasiber (assumed)",
         "license": "CC BY-SA 3.0"
@@ -42706,7 +43096,13 @@
       ],
       "url": "https://andaluciafilm.com/en/localizacion/coto-de-las-canteras/",
       "official_url": "https://andaluciafilm.com/en/localizacion/coto-de-las-canteras/",
-      "commission_url": "https://andaluciafilm.com/en/"
+      "commission_url": "https://andaluciafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coto_de_las_Canteras_Osuna.jpg/960px-Coto_de_las_Canteras_Osuna.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Coto_de_las_Canteras_Osuna.jpg",
+        "author": "JamesNarmer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-crtvg-san-marcos-studios",
@@ -42821,7 +43217,13 @@
       ],
       "url": "https://andaluciafilm.com/localizacion/estadio-de-futbol-nuevo-colombino/",
       "official_url": "https://andaluciafilm.com/localizacion/estadio-de-futbol-nuevo-colombino/",
-      "commission_url": "https://andaluciafilm.com"
+      "commission_url": "https://andaluciafilm.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nuevo_Colombino_Huelva_2.jpg/960px-Nuevo_Colombino_Huelva_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Nuevo_Colombino_Huelva_2.jpg",
+        "author": "Calapito",
+        "license": "Public domain"
+      }
     },
     {
       "id": "es-sanchez-pizjuan",
@@ -42975,7 +43377,13 @@
         "https://fortbravo.org/"
       ],
       "official_url": "https://fortbravo.org",
-      "commission_url": "https://www.andaluciafilm.com"
+      "commission_url": "https://www.andaluciafilm.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG/960px-Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG",
+        "author": "REVUpminster",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-fortalesa-de-la-mola",
@@ -43048,7 +43456,13 @@
       ],
       "url": "https://www.grancanariafilm.com/en/localizaciones/",
       "official_url": "https://gabineteliterario.com/",
-      "commission_url": "https://www.grancanariafilm.com/en/"
+      "commission_url": "https://www.grancanariafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Fachada_del_Gabinete_Literario.JPG/960px-Fachada_del_Gabinete_Literario.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Fachada_del_Gabinete_Literario.JPG",
+        "author": "TeodoroSantana",
+        "license": "CC BY-SA 3.0 es"
+      }
     },
     {
       "id": "es-galaxia-studios-valencia",
@@ -43110,7 +43524,13 @@
       ],
       "url": "https://www.grancanariafilm.com/en/localizaciones/",
       "official_url": "https://www.aena.es/en/gran-canaria.html",
-      "commission_url": "https://www.grancanariafilm.com/en/"
+      "commission_url": "https://www.grancanariafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Gran_Canaria_Airport_aerial.jpg/960px-Gran_Canaria_Airport_aerial.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gran_Canaria_Airport_aerial.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-gran-canaria-platos",
@@ -43562,7 +43982,13 @@
         "https://film.turismolanzarote.com/es/"
       ],
       "official_url": "https://cactlanzarote.com/en/visit/jameos-del-agua",
-      "commission_url": "https://film.turismolanzarote.com/es/"
+      "commission_url": "https://film.turismolanzarote.com/es/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Har%C3%ADa_-_MNLC_-_LZ-1_-_Jameos_del_Agua_12_ies.jpg/960px-Har%C3%ADa_-_MNLC_-_LZ-1_-_Jameos_del_Agua_12_ies.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Har%C3%ADa_-_MNLC_-_LZ-1_-_Jameos_del_Agua_12_ies.jpg",
+        "author": "Frank Vincentz",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-barcelona-el-prat-airport",
@@ -43578,7 +44004,13 @@
         "https://en.wikipedia.org/wiki/Josep_Tarradellas_Barcelona%E2%80%93El_Prat_Airport"
       ],
       "official_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat.html",
-      "commission_url": "https://www.bcncatfilmcommission.com/"
+      "commission_url": "https://www.bcncatfilmcommission.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/BCN_AIRPORT_FROM_FLIGHT_BCN-ORY_A320_EC-MLE_%2843952944862%29.jpg/960px-BCN_AIRPORT_FROM_FLIGHT_BCN-ORY_A320_EC-MLE_%2843952944862%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:BCN_AIRPORT_FROM_FLIGHT_BCN-ORY_A320_EC-MLE_(43952944862).jpg",
+        "author": "ERIC SALARD from PARIS, FRANCE",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "es-kursaal-san-sebastian",
@@ -44011,7 +44443,13 @@
       ],
       "url": "https://www.grancanariafilm.com/en/localizaciones/",
       "official_url": "https://mercadodevegueta.com/",
-      "commission_url": "https://www.grancanariafilm.com/en/"
+      "commission_url": "https://www.grancanariafilm.com/en/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Mercado_de_Vegueta.jpg/960px-Mercado_de_Vegueta.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Mercado_de_Vegueta.jpg",
+        "author": "User:Odynny",
+        "license": "Public domain"
+      }
     },
     {
       "id": "es-mercado-vallehermoso",
@@ -44580,7 +45018,13 @@
         "https://mallorcafilmcommission.net/"
       ],
       "official_url": "https://www.aena.es/en/palma-de-mallorca.html",
-      "commission_url": "https://mallorcafilmcommission.net/"
+      "commission_url": "https://mallorcafilmcommission.net/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Aeropuerto_PMI.jpg/960px-Aeropuerto_PMI.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Aeropuerto_PMI.jpg",
+        "author": "No machine-readable author provided. AleXorz assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-palma-pictures",
@@ -44784,7 +45228,13 @@
         "https://en.wikipedia.org/wiki/Port_of_Alicante"
       ],
       "official_url": "https://www.puertoalicante.com/",
-      "commission_url": "https://www.alicantefilmoffice.com/"
+      "commission_url": "https://www.alicantefilmoffice.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Port_of_Alicante_4.jpg/960px-Port_of_Alicante_4.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Port_of_Alicante_4.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-port-of-barcelona",
@@ -45351,7 +45801,13 @@
       ],
       "url": "https://andaluciafilm.com/localizacion/estacion-de-santa-justa/",
       "official_url": "https://andaluciafilm.com/localizacion/estacion-de-santa-justa/",
-      "commission_url": "https://andaluciafilm.com"
+      "commission_url": "https://andaluciafilm.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Station_Sevilla-Santa_Justa_15-03-2011_15-33-05.JPG/960px-Station_Sevilla-Santa_Justa_15-03-2011_15-33-05.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Station_Sevilla-Santa_Justa_15-03-2011_15-33-05.JPG",
+        "author": "Paul Hermans",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-santiago-bernabeu-stadium",
@@ -45650,7 +46106,13 @@
         "https://murciafilm.com/"
       ],
       "official_url": "https://www.teatroromea.es/",
-      "commission_url": "https://murciafilm.com/"
+      "commission_url": "https://murciafilm.com/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Teatro_Romea_Murcia.jpg/960px-Teatro_Romea_Murcia.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Teatro_Romea_Murcia.jpg",
+        "author": "Pedro J Pacheco",
+        "license": "CC BY-SA 3.0 es"
+      }
     },
     {
       "id": "es-universidad-politecnica-de-cartagena",
@@ -45684,7 +46146,13 @@
         "https://www.webtenerife.com/tenerifefilm/como-rodar/permisos-de-rodaje/"
       ],
       "official_url": "https://www.miteco.gob.es/es/parques-nacionales-oapn/red-parques-nacionales/parques-nacionales/teide.html",
-      "commission_url": "https://www.webtenerife.com/tenerifefilm/"
+      "commission_url": "https://www.webtenerife.com/tenerifefilm/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Teide_Canadas.jpg/960px-Teide_Canadas.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Teide_Canadas.jpg",
+        "author": "Ingo Mehling",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "es-tenerife-sur-airport",
@@ -45701,7 +46169,13 @@
         "https://www.webtenerife.com/tenerifefilm/como-rodar/permisos-de-rodaje/aeropuertos/"
       ],
       "official_url": "https://www.aena.es/en/tenerife-sur.html",
-      "commission_url": "https://www.webtenerife.com/tenerifefilm/"
+      "commission_url": "https://www.webtenerife.com/tenerifefilm/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Flughaveno_Tenerifo_Suda%2C_23.jpeg/960px-Flughaveno_Tenerifo_Suda%2C_23.jpeg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Flughaveno_Tenerifo_Suda,_23.jpeg",
+        "author": "Aisano",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "es-teruel-airport",
@@ -46278,7 +46752,7 @@
       "official_url": "https://www.filmivast.se/",
       "commission_url": "https://filmcommissionsweden.se/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg/960px-Film_I_V%C3%A4st_Entr%C3%A9.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Film_I_V%C3%A4st_Entr%C3%A9.jpg",
         "author": "User Tubaist on sv.wikipedia",
         "license": "CC BY-SA 3.0"
@@ -47300,7 +47774,13 @@
         "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
       ],
       "official_url": "https://www.parlament.ch/en",
-      "commission_url": "https://bernfuerdenfilm.ch/"
+      "commission_url": "https://bernfuerdenfilm.ch/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bundeshaus_1128.jpg/960px-Bundeshaus_1128.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bundeshaus_1128.jpg",
+        "author": "Mike Lehmann, Mike Switzerland (talk) 05:54, 14 July 2010 (UTC)",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "ch-fotohalle-schlieren",
@@ -47413,7 +47893,13 @@
         "https://en.wikipedia.org/wiki/Grande_Dixence_Dam"
       ],
       "official_url": "https://www.grande-dixence.ch/",
-      "commission_url": "https://valaisfilmcommission.ch/en/a-propos/"
+      "commission_url": "https://valaisfilmcommission.ch/en/a-propos/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Barrage_de_la_Grande-Dixence.jpg/960px-Barrage_de_la_Grande-Dixence.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Barrage_de_la_Grande-Dixence.jpg",
+        "author": "Jérémy Toma",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "ch-grandhotel-giessbach",
@@ -48305,7 +48791,7 @@
       "official_url": "https://aerospacebristol.org/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Bristol_Aerospace_-_museum_%28geograph_6089810%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bristol_Aerospace_-_museum_%28geograph_6089810%29.jpg/960px-Bristol_Aerospace_-_museum_%28geograph_6089810%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Bristol_Aerospace_-_museum_(geograph_6089810).jpg",
         "author": "Chris Allen",
         "license": "CC BY-SA 2.0"
@@ -48453,7 +48939,13 @@
         "https://cultureedinburgh.com/home/venue-hire"
       ],
       "official_url": "https://cultureedinburgh.com/our-venues/assembly-rooms",
-      "commission_url": "https://screen.scot"
+      "commission_url": "https://screen.scot",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/The_Assembly_Rooms%2C_George_Street_-_geograph.org.uk_-_967953.jpg/960px-The_Assembly_Rooms%2C_George_Street_-_geograph.org.uk_-_967953.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Assembly_Rooms,_George_Street_-_geograph.org.uk_-_967953.jpg",
+        "author": "Simon Johnston",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-audley-end-house",
@@ -48485,7 +48977,13 @@
         "https://www.avoncroft.org.uk/filming"
       ],
       "official_url": "https://www.avoncroft.org.uk/filming",
-      "commission_url": "https://www.filmbirmingham.co.uk"
+      "commission_url": "https://www.filmbirmingham.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Avoncroft_Windmill.jpg/960px-Avoncroft_Windmill.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Avoncroft_Windmill.jpg",
+        "author": "Mike Goodwin",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-ayr-racecourse",
@@ -48568,7 +49066,13 @@
       ],
       "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/barnsely-metrodome/",
       "official_url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/barnsely-metrodome/",
-      "commission_url": "https://www.screenyorkshire.co.uk"
+      "commission_url": "https://www.screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Metrodome_Leisure_Centre%2C_Barnsley_%28geograph_3477208%29.jpg/960px-Metrodome_Leisure_Centre%2C_Barnsley_%28geograph_3477208%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Metrodome_Leisure_Centre,_Barnsley_(geograph_3477208).jpg",
+        "author": "Mark Anderson",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-barrowland-ballroom",
@@ -48654,7 +49158,7 @@
       "official_url": "https://www.beamish.org.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/76/Shepherd_and_Shepherdess_Beamish_-_geograph.org.uk_-_1154547.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Shepherd_and_Shepherdess_Beamish_-_geograph.org.uk_-_1154547.jpg/960px-Shepherd_and_Shepherdess_Beamish_-_geograph.org.uk_-_1154547.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Shepherd_and_Shepherdess_Beamish_-_geograph.org.uk_-_1154547.jpg",
         "author": "John Bedlington",
         "license": "CC BY-SA 2.0"
@@ -48868,7 +49372,13 @@
         "https://cadw.gov.wales/visit/venue-hire/filming-photography"
       ],
       "official_url": "https://cadw.gov.wales/visit/places-to-visit/blaenavon-ironworks",
-      "commission_url": "https://walesscreen.com"
+      "commission_url": "https://walesscreen.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blaenafon_Ironworks-24May2008.jpg/960px-Blaenafon_Ironworks-24May2008.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Blaenafon_Ironworks-24May2008.jpg",
+        "author": "Alan Stanton",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-bletchley-park",
@@ -49067,7 +49577,13 @@
         "https://www.forestryengland.uk/article/commercial-filming"
       ],
       "official_url": "https://www.forestryengland.uk/article/commercial-filming",
-      "commission_url": "https://screensouth.org"
+      "commission_url": "https://screensouth.org",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bourne_Wood_hill_A.jpg/960px-Bourne_Wood_hill_A.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bourne_Wood_hill_A.jpg",
+        "author": "BabelStone",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-bovingdon-airfield-studios",
@@ -49101,7 +49617,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/bradford-on-avon-tithe-barn/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tithe_Barn%2C_Bradford-on-Avon_-_geograph.org.uk_-_1463414.jpg/960px-Tithe_Barn%2C_Bradford-on-Avon_-_geograph.org.uk_-_1463414.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tithe_Barn,_Bradford-on-Avon_-_geograph.org.uk_-_1463414.jpg",
+        "author": "Mark Anderson",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-bray-studios",
@@ -49120,7 +49642,13 @@
         "https://www.braystudios.com/stages"
       ],
       "official_url": "https://www.braystudios.com/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg/960px-Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg",
+        "author": "Chris Allen",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-bressingham-steam-museum",
@@ -49246,7 +49774,7 @@
       "official_url": "https://www.brooklandsmuseum.com/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d9/The_Club_House_Brooklands_-_geograph.org.uk_-_473347.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/The_Club_House_Brooklands_-_geograph.org.uk_-_473347.jpg/960px-The_Club_House_Brooklands_-_geograph.org.uk_-_473347.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:The_Club_House_Brooklands_-_geograph.org.uk_-_473347.jpg",
         "author": "Tony Grant",
         "license": "CC BY-SA 2.0"
@@ -49265,7 +49793,13 @@
         "https://www.brownshotel.com/events"
       ],
       "official_url": "https://www.brownshotel.com/events",
-      "commission_url": "https://www.filmlondon.org.uk/"
+      "commission_url": "https://www.filmlondon.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Brown%27s_Hotel_London.jpg/960px-Brown%27s_Hotel_London.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Brown%27s_Hotel_London.jpg",
+        "author": "Londonmatt",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "uk-butser-ancient-farm",
@@ -49296,7 +49830,13 @@
         "https://camdenmarket.com/filming"
       ],
       "official_url": "https://camdenmarket.com/filming",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Camden_markets_entrance.JPG/960px-Camden_markets_entrance.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Camden_markets_entrance.JPG",
+        "author": "en:User:Grim23",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-canary-wharf",
@@ -49377,7 +49917,13 @@
         "https://cadw.gov.wales/visit/venue-hire/filming-photography"
       ],
       "official_url": "https://cadw.gov.wales/visit/places-to-visit/castell-coch",
-      "commission_url": "https://walesscreen.com"
+      "commission_url": "https://walesscreen.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Castell_Coch_2018.jpg/960px-Castell_Coch_2018.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Castell_Coch_2018.jpg",
+        "author": "DeFacto",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-castle-acre-priory",
@@ -49394,7 +49940,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/castle-acre-priory/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CastleAcrePriory.JPG/960px-CastleAcrePriory.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:CastleAcrePriory.JPG",
+        "author": "JohnArmagh",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-castlefield-manchester",
@@ -49411,7 +49963,13 @@
       ],
       "url": "https://screenmanchester.com/locations/castlefield/",
       "official_url": "https://screenmanchester.com/locations/castlefield/",
-      "commission_url": "https://screenmanchester.com"
+      "commission_url": "https://screenmanchester.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Bridgewater_Canal%2C_Castlefield_Basin_%28geograph_6966336%29.jpg/960px-Bridgewater_Canal%2C_Castlefield_Basin_%28geograph_6966336%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bridgewater_Canal,_Castlefield_Basin_(geograph_6966336).jpg",
+        "author": "David Dixon",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-celtic-manor-resort",
@@ -49515,7 +50073,13 @@
         "https://coam.org.uk/filming"
       ],
       "official_url": "https://coam.org.uk/filming",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Chiltern_Open_Air_Museum_Henton_Mission.jpg/960px-Chiltern_Open_Air_Museum_Henton_Mission.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Chiltern_Open_Air_Museum_Henton_Mission.jpg",
+        "author": "Dorothea Witter-Rieder",
+        "license": "Public domain"
+      }
     },
     {
       "id": "uk-chiswick-house",
@@ -49719,7 +50283,13 @@
         "https://www.conwayhall.org.uk/venue-hire/"
       ],
       "official_url": "https://www.conwayhall.org.uk/venue-hire/",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Conway_hall_2019.JPG/960px-Conway_hall_2019.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Conway_hall_2019.JPG",
+        "author": "Geni",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-conwy-suspension-bridge",
@@ -49826,7 +50396,13 @@
         "https://www.cotswoldairport.com/filming"
       ],
       "official_url": "https://www.cotswoldairport.com/filming",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Control_Tower_at_Cotswold_Airport_2017.jpg/960px-Control_Tower_at_Cotswold_Airport_2017.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Control_Tower_at_Cotswold_Airport_2017.jpg",
+        "author": "SkymasterUK",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-cotswold-farm-park",
@@ -50403,7 +50979,13 @@
         "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
       ],
       "official_url": "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums",
-      "commission_url": "https://screensouth.org"
+      "commission_url": "https://screensouth.org",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Museum_of_Naval_Firepower%2C_Gosport-geograph.org.uk-2992669.jpg/960px-Museum_of_Naval_Firepower%2C_Gosport-geograph.org.uk-2992669.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Museum_of_Naval_Firepower,_Gosport-geograph.org.uk-2992669.jpg",
+        "author": "Chris Talbot",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-fairfield-halls",
@@ -50519,7 +51101,13 @@
         "https://canalrivertrust.org.uk/filming"
       ],
       "official_url": "https://canalrivertrust.org.uk/places-to-visit/foxton-locks",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/FoxtonLocks.jpg/960px-FoxtonLocks.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:FoxtonLocks.jpg",
+        "author": "The original uploader was StephenDawson at English Wikipedia.",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-freemasons-hall-london",
@@ -50603,7 +51191,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/gainsborough-old-hall/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Gainsborough_Old_Hall%2C_2008.jpg/960px-Gainsborough_Old_Hall%2C_2008.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Gainsborough_Old_Hall,_2008.jpg",
+        "author": "John Spooner",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "uk-garden-studios",
@@ -50639,7 +51233,7 @@
       "official_url": "https://geevor.com/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/53/Geevor_tin_mine_headframe.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Geevor_tin_mine_headframe.jpg/960px-Geevor_tin_mine_headframe.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Geevor_tin_mine_headframe.jpg",
         "author": "Ahwmay",
         "license": "Public domain"
@@ -50965,7 +51559,13 @@
         "https://en.wikipedia.org/wiki/Hatfield_House"
       ],
       "official_url": "https://www.hatfield-house.co.uk/venue-hire/filming/",
-      "commission_url": "https://www.filminginengland.co.uk/"
+      "commission_url": "https://www.filminginengland.co.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hatfield_House.jpg/960px-Hatfield_House.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Hatfield_House.jpg",
+        "author": "Allan Engelhardt",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-heaton-park",
@@ -50982,7 +51582,13 @@
       ],
       "url": "https://screenmanchester.com/locations/heaton-park/",
       "official_url": "https://screenmanchester.com/locations/heaton-park/",
-      "commission_url": "https://screenmanchester.com"
+      "commission_url": "https://screenmanchester.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Heaton_Park.jpg/960px-Heaton_Park.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Heaton_Park.jpg",
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-hedsor-house",
@@ -51065,7 +51671,13 @@
         "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
       ],
       "official_url": "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums",
-      "commission_url": "https://northernirelandscreen.co.uk"
+      "commission_url": "https://northernirelandscreen.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/HMS_Caroline.jpg/960px-HMS_Caroline.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:HMS_Caroline.jpg",
+        "author": "Surgeon Oscar Parkes",
+        "license": "Public domain"
+      }
     },
     {
       "id": "uk-hms-trincomalee",
@@ -51081,7 +51693,13 @@
         "https://www.royalnavymuseums.org.uk/commercial-services-royal-navy-museums"
       ],
       "official_url": "https://hms-trincomalee.co.uk/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/H.M.S._Trincomalee%2C_Hartlepool_Maritime_Experience_-_geograph.org.uk_-_1605077.jpg/960px-H.M.S._Trincomalee%2C_Hartlepool_Maritime_Experience_-_geograph.org.uk_-_1605077.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:H.M.S._Trincomalee,_Hartlepool_Maritime_Experience_-_geograph.org.uk_-_1605077.jpg",
+        "author": "Ian Petticrew",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-holy-trinity-goodramgate-york",
@@ -51154,7 +51772,7 @@
       "official_url": "https://www.ikon-gallery.org",
       "commission_url": "https://britishfilmcommission.org.uk/plan-your-production/locations/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fd/IkonGallery.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/IkonGallery.jpg/960px-IkonGallery.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:IkonGallery.jpg",
         "author": "SilentVicinity",
         "license": "Public domain"
@@ -51324,7 +51942,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/kenwood/",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kenwood_House_2.jpg/960px-Kenwood_House_2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kenwood_House_2.jpg",
+        "author": "MrsEllacott",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-king-street-manchester",
@@ -51341,7 +51965,13 @@
       ],
       "url": "https://screenmanchester.com/locations/king-street/",
       "official_url": "https://screenmanchester.com/locations/king-street/",
-      "commission_url": "https://screenmanchester.com"
+      "commission_url": "https://screenmanchester.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/100_King_Street_Manchester.jpg/960px-100_King_Street_Manchester.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:100_King_Street_Manchester.jpg",
+        "author": "Stephen Richards",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-kings-college-cambridge",
@@ -51379,7 +52009,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/kirby-hall/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg/960px-Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Kirby_Hall_-_north_front_from_inner_courtyard-2.jpg",
+        "author": "Wentwort12",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-knebworth-house",
@@ -51513,7 +52149,13 @@
         "https://www.leadenhallmarket.co.uk/filming/"
       ],
       "official_url": "https://www.leadenhallmarket.co.uk/filming/",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg/960px-Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg",
+        "author": "Diliff",
+        "license": "CC BY 2.5"
+      }
     },
     {
       "id": "uk-leeds-castle",
@@ -51574,7 +52216,13 @@
         "https://www.lincolncastle.com/"
       ],
       "official_url": "https://www.lincolncastle.com/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Lincoln%2C_UK_-_panoramio_%2849%29.jpg/960px-Lincoln%2C_UK_-_panoramio_%2849%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lincoln,_UK_-_panoramio_(49).jpg",
+        "author": "Dmitrij M",
+        "license": "CC BY 3.0"
+      }
     },
     {
       "id": "uk-lincolns-inn",
@@ -51589,7 +52237,13 @@
         "https://www.lincolnsinn.org.uk/filming"
       ],
       "official_url": "https://www.lincolnsinn.org.uk/filming",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lincoln%27s_Inn_Gatehouse_-_2017-04-18.jpg/960px-Lincoln%27s_Inn_Gatehouse_-_2017-04-18.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Lincoln%27s_Inn_Gatehouse_-_2017-04-18.jpg",
+        "author": "The wub",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-littledean-jail",
@@ -51646,7 +52300,13 @@
         "https://en.wikipedia.org/wiki/Longcross_Studios"
       ],
       "official_url": "https://www.lxss.co.uk/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Longcross_Studios_Gate_2%2C_Burma_Road_-_geograph.org.uk_-_7530111.jpg/960px-Longcross_Studios_Gate_2%2C_Burma_Road_-_geograph.org.uk_-_7530111.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Longcross_Studios_Gate_2,_Burma_Road_-_geograph.org.uk_-_7530111.jpg",
+        "author": "David Kemp",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-loseley-park",
@@ -51749,7 +52409,7 @@
       "official_url": "https://www.manchestercentral.co.uk",
       "commission_url": "https://www.marketingmanchester.com/screen-manchester",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Manchester_Central_Arena.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Manchester_Central_Arena.jpg/960px-Manchester_Central_Arena.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Manchester_Central_Arena.jpg",
         "author": "Stephen Richards",
         "license": "CC BY-SA 2.0"
@@ -51834,7 +52494,13 @@
         "https://www.middletemple.org.uk/venue-hire/filming"
       ],
       "official_url": "https://www.middletemple.org.uk/venue-hire/filming",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Middle_Temple_Hall_Exterior%2C_London%2C_UK_-_Diliff.jpg/960px-Middle_Temple_Hall_Exterior%2C_London%2C_UK_-_Diliff.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Middle_Temple_Hall_Exterior,_London,_UK_-_Diliff.jpg",
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-mitchell-library",
@@ -51872,7 +52538,13 @@
         "https://www.liverpoolmuseums.org.uk/filming"
       ],
       "official_url": "https://www.liverpoolmuseums.org.uk/filming",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Museum_of_Liverpool_Life_-_DSC06866.JPG/960px-Museum_of_Liverpool_Life_-_DSC06866.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Museum_of_Liverpool_Life_-_DSC06866.JPG",
+        "author": "Rept0n1x",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-ironbridge-gorge",
@@ -52173,7 +52845,13 @@
       ],
       "url": "https://screenmanchester.com/locations/northern-quarter/",
       "official_url": "https://screenmanchester.com/locations/northern-quarter/",
-      "commission_url": "https://screenmanchester.com"
+      "commission_url": "https://screenmanchester.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Oldham_Street%2C_Manchester.jpg/960px-Oldham_Street%2C_Manchester.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Oldham_Street,_Manchester.jpg",
+        "author": "Michael Ashton",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-old-billingsgate",
@@ -52193,7 +52871,7 @@
       "official_url": "https://oldbillingsgate.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/00/Billingsgate_Cartographer%3B_Blome%2C_RichardSurveyor%3B_Stow%2C_John_1720.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Billingsgate_Cartographer%3B_Blome%2C_RichardSurveyor%3B_Stow%2C_John_1720.jpg/960px-Billingsgate_Cartographer%3B_Blome%2C_RichardSurveyor%3B_Stow%2C_John_1720.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Billingsgate_Cartographer;_Blome,_RichardSurveyor;_Stow,_John_1720.jpg",
         "author": "Wikimedia Commons contributor",
         "license": "Public domain"
@@ -52237,7 +52915,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/old-wardour-castle/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Old_Wardour_Castle_56.JPG/960px-Old_Wardour_Castle_56.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Old_Wardour_Castle_56.JPG",
+        "author": "Simon Burchell",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-olympia-london",
@@ -52275,7 +52959,7 @@
       "official_url": "https://www.nationaltrust.org.uk/visit/suffolk/orford-ness-national-nature-reserve",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/39/Looking_towards_Orford_Ness_from_Orford_castle_-_geograph.org.uk_-_1755769.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Looking_towards_Orford_Ness_from_Orford_castle_-_geograph.org.uk_-_1755769.jpg/960px-Looking_towards_Orford_Ness_from_Orford_castle_-_geograph.org.uk_-_1755769.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Looking_towards_Orford_Ness_from_Orford_castle_-_geograph.org.uk_-_1755769.jpg",
         "author": "Chris Gunns",
         "license": "CC BY-SA 2.0"
@@ -52544,7 +53228,7 @@
       "official_url": "https://www.historicdockyard.co.uk/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Portsmouth_Historic_Dockyard_-_geograph.org.uk_-_548109.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Portsmouth_Historic_Dockyard_-_geograph.org.uk_-_548109.jpg/960px-Portsmouth_Historic_Dockyard_-_geograph.org.uk_-_548109.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Portsmouth_Historic_Dockyard_-_geograph.org.uk_-_548109.jpg",
         "author": "Colin Smith",
         "license": "CC BY-SA 2.0"
@@ -52645,7 +53329,7 @@
       "official_url": "https://www.wrexhamafc.co.uk/",
       "commission_url": "https://www.creative.wales/filming-wales/locations",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d2/The_Racecourse_Ground%2C_Wrexham_%28geograph_6141572%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Racecourse_Ground%2C_Wrexham_%28geograph_6141572%29.jpg/960px-The_Racecourse_Ground%2C_Wrexham_%28geograph_6141572%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:The_Racecourse_Ground,_Wrexham_(geograph_6141572).jpg",
         "author": "JThomas",
         "license": "CC BY-SA 2.0"
@@ -52666,7 +53350,7 @@
       "official_url": "https://www.rhonddaheritagepark.com",
       "commission_url": "https://www.creative.wales/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/70/Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg/960px-Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Rhondda_Heritage_Park_-_geograph.org.uk_-_174864.jpg",
         "author": "Chris Allen",
         "license": "CC BY-SA 2.0"
@@ -52732,7 +53416,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/rievaulx-abbey/",
-      "commission_url": "https://screenyorkshire.co.uk"
+      "commission_url": "https://screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/RievaulxAbbey-wyrdlight-24588.jpg/960px-RievaulxAbbey-wyrdlight-24588.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:RievaulxAbbey-wyrdlight-24588.jpg",
+        "author": "Antony McCallum",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-riverside-museum",
@@ -52794,7 +53484,13 @@
         "https://en.wikipedia.org/wiki/Rosewood_London"
       ],
       "official_url": "https://www.rosewoodhotels.com/en/london/meetings-and-events",
-      "commission_url": "https://www.filmlondon.org.uk/"
+      "commission_url": "https://www.filmlondon.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/The_Renaissance_Chancery_Court_Hotel%2C_High_Holborn-4846480310.jpg/960px-The_Renaissance_Chancery_Court_Hotel%2C_High_Holborn-4846480310.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Renaissance_Chancery_Court_Hotel,_High_Holborn-4846480310.jpg",
+        "author": "Robert Cutts",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "uk-roundhouse-camden",
@@ -52810,7 +53506,13 @@
         "https://www.roundhouse.org.uk/venue-hire/filming/"
       ],
       "official_url": "https://www.roundhouse.org.uk/venue-hire/filming/",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Roundhouse%2C_Chalk_Farm_Road%2C_London_NW1_-_geograph.org.uk_-_399270.jpg/960px-The_Roundhouse%2C_Chalk_Farm_Road%2C_London_NW1_-_geograph.org.uk_-_399270.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Roundhouse,_Chalk_Farm_Road,_London_NW1_-_geograph.org.uk_-_399270.jpg",
+        "author": "R Sones",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-royal-albert-hall",
@@ -52894,7 +53596,7 @@
       "official_url": "https://www.royalhighlandcentre.co.uk",
       "commission_url": "https://www.screen.scot/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/91/Cattle_judging%2C_Royal_Highland_Show_-_geograph.org.uk_-_1934398.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Cattle_judging%2C_Royal_Highland_Show_-_geograph.org.uk_-_1934398.jpg/960px-Cattle_judging%2C_Royal_Highland_Show_-_geograph.org.uk_-_1934398.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Cattle_judging,_Royal_Highland_Show_-_geograph.org.uk_-_1934398.jpg",
         "author": "Richard Webb",
         "license": "CC BY-SA 2.0"
@@ -52976,7 +53678,13 @@
         "https://en.wikipedia.org/wiki/Royal_William_Victualling_Yard"
       ],
       "official_url": "https://royalwilliamyard.com/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Royal_William_Victualling_Yard%2C_Plymouth.jpg/960px-Royal_William_Victualling_Yard%2C_Plymouth.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Royal_William_Victualling_Yard,_Plymouth.jpg",
+        "author": "Michael Chapman",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-ryedale-folk-museum",
@@ -52992,7 +53700,13 @@
         "https://www.ryedalefolkmuseum.co.uk/filming"
       ],
       "official_url": "https://www.ryedalefolkmuseum.co.uk/filming",
-      "commission_url": "https://screenyorkshire.co.uk"
+      "commission_url": "https://screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cruck-framed_cottage_from_Stang_End%2C_Ryedale_Folk_Museum%2C_Hutton-le-Hole_-_geograph.org.uk_-_244442.jpg/960px-Cruck-framed_cottage_from_Stang_End%2C_Ryedale_Folk_Museum%2C_Hutton-le-Hole_-_geograph.org.uk_-_244442.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Cruck-framed_cottage_from_Stang_End,_Ryedale_Folk_Museum,_Hutton-le-Hole_-_geograph.org.uk_-_244442.jpg",
+        "author": "Humphrey Bolton",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-salts-mill",
@@ -53047,7 +53761,13 @@
         "https://www.seacontainerslondon.com/events/"
       ],
       "official_url": "https://www.seacontainerslondon.com/events/",
-      "commission_url": "https://www.filmlondon.org.uk/"
+      "commission_url": "https://www.filmlondon.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sea_Containers_building_%28Sea_Containers_House%29.jpg/960px-Sea_Containers_building_%28Sea_Containers_House%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sea_Containers_building_(Sea_Containers_House).jpg",
+        "author": "Acabashi",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-sec-centre",
@@ -53102,7 +53822,13 @@
         "https://www.svr.co.uk/filming"
       ],
       "official_url": "https://www.svr.co.uk/filming",
-      "commission_url": "https://www.filmbirmingham.co.uk"
+      "commission_url": "https://www.filmbirmingham.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/5164_Severn_Valley_Railway_%282%29.jpg/960px-5164_Severn_Valley_Railway_%282%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:5164_Severn_Valley_Railway_(2).jpg",
+        "author": "Duncan Harris",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-shepperton-studios",
@@ -53123,7 +53849,13 @@
         "https://en.wikipedia.org/wiki/Shepperton_Studios"
       ],
       "official_url": "https://pinewoodgroup.com/shepperton-studios/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shepperton_Studios.jpg/960px-Shepperton_Studios.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Shepperton_Studios.jpg",
+        "author": "alexander williams",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-shepton-mallet-prison",
@@ -53140,7 +53872,7 @@
       "official_url": "https://sheptonmalletprison.com/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sheptonmalletgaol.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sheptonmalletgaol.jpg/960px-Sheptonmalletgaol.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Sheptonmalletgaol.jpg",
         "author": "Nigel Freeman",
         "license": "CC BY-SA 2.0"
@@ -53163,7 +53895,13 @@
         "https://shadowboxstudios.com/shinfield/"
       ],
       "official_url": "https://shadowboxstudios.com/shinfield/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shinfield_Studios_entrance%2C_day_time.jpg/960px-Shinfield_Studios_entrance%2C_day_time.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Shinfield_Studios_entrance,_day_time.jpg",
+        "author": "Coz4836",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-shrewsbury-prison",
@@ -53290,7 +54028,7 @@
       "official_url": "https://www.somersethouse.org.uk/venue-hire",
       "commission_url": "https://filmlondon.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/45/The_courtyard_of_Somerset_House%2C_Strand%2C_London_-_geograph.org.uk_-_1601172.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_courtyard_of_Somerset_House%2C_Strand%2C_London_-_geograph.org.uk_-_1601172.jpg/960px-The_courtyard_of_Somerset_House%2C_Strand%2C_London_-_geograph.org.uk_-_1601172.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:The_courtyard_of_Somerset_House,_Strand,_London_-_geograph.org.uk_-_1601172.jpg",
         "author": "Anthony O'Neil",
         "license": "CC BY-SA 2.0"
@@ -53418,7 +54156,13 @@
         "https://cadw.gov.wales/visit/venue-hire/filming-photography"
       ],
       "official_url": "https://cadw.gov.wales/visit/places-to-visit/st-davids-bishops-palace",
-      "commission_url": "https://walesscreen.com"
+      "commission_url": "https://walesscreen.com",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Bishop_de_Gower%27s_palace_-_geograph.org.uk_-_4583171.jpg/960px-Bishop_de_Gower%27s_palace_-_geograph.org.uk_-_4583171.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Bishop_de_Gower%27s_palace_-_geograph.org.uk_-_4583171.jpg",
+        "author": "Philip Pankhurst",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-st-fagans-national-museum-of-history",
@@ -53458,7 +54202,7 @@
       "official_url": "https://www.stgeorgesbristol.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Stgeorgeschapel.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Stgeorgeschapel.jpg/960px-Stgeorgeschapel.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Stgeorgeschapel.jpg",
         "author": "Linda Bailey",
         "license": "CC BY-SA 2.0"
@@ -53517,7 +54261,13 @@
         "https://en.wikipedia.org/wiki/St_Mary%27s_Guildhall,_Coventry"
       ],
       "official_url": "https://www.stmarysguildhall.co.uk/",
-      "commission_url": "https://filmbirmingham.co.uk/"
+      "commission_url": "https://filmbirmingham.co.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/St_Mary%27s_Guildhall%2C_Bayley_Lane%2C_Coventry%2C_Geograph_7417579_by_Jo_and_Steve_Turner.jpg/960px-St_Mary%27s_Guildhall%2C_Bayley_Lane%2C_Coventry%2C_Geograph_7417579_by_Jo_and_Steve_Turner.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:St_Mary%27s_Guildhall,_Bayley_Lane,_Coventry,_Geograph_7417579_by_Jo_and_Steve_Turner.jpg",
+        "author": "Jo and Steve Turner",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-st-pancras-renaissance",
@@ -53558,7 +54308,13 @@
         "https://www.stpauls.co.uk/filming-and-photography"
       ],
       "official_url": "https://www.stpauls.co.uk/filming-st-pauls",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/St_Pauls_aerial_%28cropped%29.jpg/960px-St_Pauls_aerial_%28cropped%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg",
+        "author": "Mark Fosh",
+        "license": "CC BY 2.0"
+      }
     },
     {
       "id": "uk-standedge-tunnel",
@@ -53575,7 +54331,13 @@
         "https://canalrivertrust.org.uk/filming"
       ],
       "official_url": "https://canalrivertrust.org.uk/places-to-visit/standedge-tunnel-and-visitor-centre",
-      "commission_url": "https://screenyorkshire.co.uk"
+      "commission_url": "https://screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Standedge_Tunnel_End%2C_Marsden%2C_West_Yorkshire.jpg/960px-Standedge_Tunnel_End%2C_Marsden%2C_West_Yorkshire.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Standedge_Tunnel_End,_Marsden,_West_Yorkshire.jpg",
+        "author": "Chris Wood (User:chris_j_wood).",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-studio-ulster",
@@ -53612,7 +54374,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/sutton-scarsdale-hall/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sutton_Scarsdale_Hall.jpg/960px-Sutton_Scarsdale_Hall.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sutton_Scarsdale_Hall.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-swansea-arena",
@@ -53629,7 +54397,13 @@
         "https://en.wikipedia.org/wiki/Swansea_Arena"
       ],
       "official_url": "https://www.swansea-arena.co.uk/",
-      "commission_url": "https://www.creative.wales/"
+      "commission_url": "https://www.creative.wales/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Jesus_Christ_Superstar_%28geograph_7745678%29_%28cropped%29.jpg/960px-Jesus_Christ_Superstar_%28geograph_7745678%29_%28cropped%29.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Jesus_Christ_Superstar_(geograph_7745678)_(cropped).jpg",
+        "author": "Alan Hughes",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-swg3",
@@ -53788,7 +54562,13 @@
         "https://www.thecharterhouse.org/filming"
       ],
       "official_url": "https://www.thecharterhouse.org/filming",
-      "commission_url": "https://filmlondon.org.uk"
+      "commission_url": "https://filmlondon.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/London_Charterhouse_-_Entrance_from_Charterhouse_Square.jpg/960px-London_Charterhouse_-_Entrance_from_Charterhouse_Square.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:London_Charterhouse_-_Entrance_from_Charterhouse_Square.jpg",
+        "author": "KJP1",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-custard-factory",
@@ -53958,7 +54738,7 @@
       "official_url": "https://thedockyard.co.uk/filming/",
       "commission_url": "https://www.kentfilmoffice.co.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Chatham_Royal_Dockyard%2C_Dry_Dock_No_2%2C_HMS_Cavalier_-_geograph.org.uk_-_3473089.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Chatham_Royal_Dockyard%2C_Dry_Dock_No_2%2C_HMS_Cavalier_-_geograph.org.uk_-_3473089.jpg/960px-Chatham_Royal_Dockyard%2C_Dry_Dock_No_2%2C_HMS_Cavalier_-_geograph.org.uk_-_3473089.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Chatham_Royal_Dockyard,_Dry_Dock_No_2,_HMS_Cavalier_-_geograph.org.uk_-_3473089.jpg",
         "author": "David Dixon",
         "license": "CC BY-SA 2.0"
@@ -53977,7 +54757,13 @@
         "https://www.landmarklondon.co.uk/meetings-events/"
       ],
       "official_url": "https://www.landmarklondon.co.uk/meetings-events/",
-      "commission_url": "https://www.filmlondon.org.uk/"
+      "commission_url": "https://www.filmlondon.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Landmark_Hotel.jpg/960px-The_Landmark_Hotel.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:The_Landmark_Hotel.jpg",
+        "author": "Danny Robinson",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-the-langham-london",
@@ -54072,7 +54858,7 @@
       "official_url": "https://theo2belfast.com/",
       "commission_url": "https://www.northernirelandscreen.co.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/30/Odyssey_Arena%2C_Belfast_-_geograph.org.uk_-_860741_%28cropped%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Odyssey_Arena%2C_Belfast_-_geograph.org.uk_-_860741_%28cropped%29.jpg/960px-Odyssey_Arena%2C_Belfast_-_geograph.org.uk_-_860741_%28cropped%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Odyssey_Arena,_Belfast_-_geograph.org.uk_-_860741_(cropped).jpg",
         "author": "Ross",
         "license": "CC BY-SA 2.0"
@@ -54217,7 +55003,7 @@
       "official_url": "https://www.tankmuseum.org/",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Exterior_of_The_Tank_Museum.png",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Exterior_of_The_Tank_Museum.png/960px-Exterior_of_The_Tank_Museum.png",
         "file_page": "https://commons.wikimedia.org/wiki/File:Exterior_of_The_Tank_Museum.png",
         "author": "Louise M Evans",
         "license": "CC BY-SA 4.0"
@@ -54239,7 +55025,13 @@
       ],
       "url": "https://www.bathfilmoffice.co.uk/locations",
       "official_url": "https://www.thermaebathspa.com/",
-      "commission_url": "https://www.bathfilmoffice.co.uk/"
+      "commission_url": "https://www.bathfilmoffice.co.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Thermae_Bath_Spa.jpg/960px-Thermae_Bath_Spa.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Thermae_Bath_Spa.jpg",
+        "author": "MichaelMaggs",
+        "license": "CC BY-SA 2.5"
+      }
     },
     {
       "id": "uk-thetford-forest",
@@ -54310,7 +55102,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/tilbury-fort/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tilbury_Fort.jpg/960px-Tilbury_Fort.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Tilbury_Fort.jpg",
+        "author": "Mervyn Rands",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-titanic-belfast",
@@ -54641,7 +55439,7 @@
       "official_url": "https://www.unionchapel.org.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Islington_union_chapel_1.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Islington_union_chapel_1.jpg/960px-Islington_union_chapel_1.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Islington_union_chapel_1.jpg",
         "author": "\"Fin Fahey\"",
         "license": "CC BY-SA 2.5"
@@ -54677,7 +55475,13 @@
         "https://www.leeds.ac.uk/media-relations/doc/filming-permissions"
       ],
       "official_url": "https://www.leeds.ac.uk/media-relations/doc/filming-permissions",
-      "commission_url": "https://screenyorkshire.co.uk"
+      "commission_url": "https://screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Leeds_College_of_Art_blue_plaque.jpg/960px-Leeds_College_of_Art_blue_plaque.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Leeds_College_of_Art_blue_plaque.jpg",
+        "author": "Chemical Engineer",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-university-of-salford",
@@ -54714,7 +55518,13 @@
         "https://cultureedinburgh.com/home/venue-hire"
       ],
       "official_url": "https://cultureedinburgh.com/our-venues/usher-hall",
-      "commission_url": "https://screen.scot"
+      "commission_url": "https://screen.scot",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Usher_Hall%2C_Edinburgh.jpg/960px-Usher_Hall%2C_Edinburgh.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Usher_Hall,_Edinburgh.jpg",
+        "author": "Kim Traynor",
+        "license": "CC BY-SA 3.0"
+      }
     },
     {
       "id": "uk-utilita-arena-birmingham",
@@ -54767,7 +55577,7 @@
       "official_url": "https://www.verdantworks.com",
       "commission_url": "https://www.screen.scot/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Verdant.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Verdant.jpg/960px-Verdant.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Verdant.jpg",
         "author": "David Hawgood",
         "license": "CC BY-SA 2.0"
@@ -54831,7 +55641,13 @@
       ],
       "url": "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/urban/victoria-leeds/",
       "official_url": "https://www.victorialeeds.co.uk",
-      "commission_url": "https://www.screenyorkshire.co.uk"
+      "commission_url": "https://www.screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Victoria_Quarter_Leeds_modern_abstract_stained_glass_canopy_by_Brian_Clarke%2C1990.jpg/960px-Victoria_Quarter_Leeds_modern_abstract_stained_glass_canopy_by_Brian_Clarke%2C1990.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Victoria_Quarter_Leeds_modern_abstract_stained_glass_canopy_by_Brian_Clarke,1990.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-w5-belfast",
@@ -54905,7 +55721,13 @@
         "https://en.wikipedia.org/wiki/Warner_Bros._Studios_Leavesden"
       ],
       "official_url": "https://www.wbsl.com/studios/",
-      "commission_url": "https://britishfilmcommission.org.uk/"
+      "commission_url": "https://britishfilmcommission.org.uk/",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warner_Bros._Studios%2C_Leavesden%2C_September_2023.JPG/960px-Warner_Bros._Studios%2C_Leavesden%2C_September_2023.JPG",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Warner_Bros._Studios,_Leavesden,_September_2023.JPG",
+        "author": "Benoît Prieur",
+        "license": "CC0"
+      }
     },
     {
       "id": "uk-watercress-line",
@@ -54943,7 +55765,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/waverley-abbey/",
-      "commission_url": "https://screensouth.org"
+      "commission_url": "https://screensouth.org",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Waverley_abbey_panorama.jpg/960px-Waverley_abbey_panorama.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Waverley_abbey_panorama.jpg",
+        "author": "Murgatroyd49",
+        "license": "CC BY-SA 4.0"
+      }
     },
     {
       "id": "uk-weald-and-downland-museum",
@@ -54959,7 +55787,13 @@
         "https://www.wealddown.co.uk/commercial/filming-photography/"
       ],
       "official_url": "https://www.wealddown.co.uk/commercial/filming-photography/",
-      "commission_url": "https://screensouth.org"
+      "commission_url": "https://screensouth.org",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Weald_and_Downland_Living_Museum_2019.jpg/960px-Weald_and_Downland_Living_Museum_2019.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Weald_and_Downland_Living_Museum_2019.jpg",
+        "author": "DimiTalen",
+        "license": "CC0"
+      }
     },
     {
       "id": "uk-wembley-stadium",
@@ -55077,7 +55911,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/",
-      "commission_url": "https://screenyorkshire.co.uk"
+      "commission_url": "https://screenyorkshire.co.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Whitby_Abbey_cross_-_geograph.org.uk_-_5541170.jpg/960px-Whitby_Abbey_cross_-_geograph.org.uk_-_5541170.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Whitby_Abbey_cross_-_geograph.org.uk_-_5541170.jpg",
+        "author": "E Gammie",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-wiltons-music-hall",
@@ -55095,7 +55935,7 @@
       "official_url": "https://wiltons.org.uk/hire/filming/",
       "commission_url": "https://filmlondon.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9d/The_Front_Door_of_Wilton%27_s_Music_Hall_%282010%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The_Front_Door_of_Wilton%27_s_Music_Hall_%282010%29.jpg/960px-The_Front_Door_of_Wilton%27_s_Music_Hall_%282010%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:The_Front_Door_of_Wilton%27_s_Music_Hall_(2010).jpg",
         "author": "James Perry",
         "license": "CC BY-SA 3.0"
@@ -55139,7 +55979,13 @@
         "https://www.english-heritage.org.uk/administration/z-archive/02-about-us-archive/about-us/filming-and-tv-locations/"
       ],
       "official_url": "https://www.english-heritage.org.uk/visit/places/wingfield-manor/",
-      "commission_url": "https://britishfilmcommission.org.uk"
+      "commission_url": "https://britishfilmcommission.org.uk",
+      "photo": {
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wingfield_Manor_-_geograph.org.uk_-_6280.jpg/960px-Wingfield_Manor_-_geograph.org.uk_-_6280.jpg",
+        "file_page": "https://commons.wikimedia.org/wiki/File:Wingfield_Manor_-_geograph.org.uk_-_6280.jpg",
+        "author": "Sam Styles",
+        "license": "CC BY-SA 2.0"
+      }
     },
     {
       "id": "uk-winter-gardens-blackpool",
@@ -55232,7 +56078,7 @@
       "official_url": "https://www.northeastmuseums.org.uk/woodhorn-museum",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Narrow_gauge_railway_at_Woodhorn_%28geograph_4713373%29.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Narrow_gauge_railway_at_Woodhorn_%28geograph_4713373%29.jpg/960px-Narrow_gauge_railway_at_Woodhorn_%28geograph_4713373%29.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Narrow_gauge_railway_at_Woodhorn_(geograph_4713373).jpg",
         "author": "Oliver Dixon",
         "license": "CC BY-SA 2.0"
@@ -55253,7 +56099,7 @@
       "official_url": "https://www.wookey.co.uk",
       "commission_url": "https://britishfilmcommission.org.uk/",
       "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Wookeyholevilage.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wookeyholevilage.jpg/960px-Wookeyholevilage.jpg",
         "file_page": "https://commons.wikimedia.org/wiki/File:Wookeyholevilage.jpg",
         "author": "Adrian and Janet Quantock",
         "license": "CC BY-SA 2.0"

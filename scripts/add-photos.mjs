@@ -7,13 +7,20 @@
 // Alleen vrije licenties (CC0, CC BY, CC BY-SA, publiek domein) worden overgenomen,
 // met maker en licentie erbij; niet-vrije bestanden worden overgeslagen.
 //
-//   node scripts/add-photos.mjs [bestand] [--km 3] [--limit 0] [--dry]
+//   node scripts/add-photos.mjs [bestand] [--km 3] [--limit 0] [--offset 0] [--dry]
 import fs from "node:fs";
 
 const args = process.argv.slice(2);
-const file = args.find((a) => !a.startsWith("--")) || "src/_data/filmlocations.json";
+// Het eerste losse woord is het bestand, maar de waarde achter --km, --limit,
+// --offset of --out is dat niet: zonder deze uitzondering leest het script
+// "3" als bestandsnaam zodra je --limit 3 meegeeft.
+const TAKES_VALUE = new Set(["--km", "--limit", "--offset", "--out"]);
+const file = args.find((a, i) => !a.startsWith("--") && !TAKES_VALUE.has(args[i - 1])) || "src/_data/filmlocations.json";
 const MAX_KM = Number(args[args.indexOf("--km") + 1]) || 3;
 const LIMIT = Number(args[args.indexOf("--limit") + 1]) || 0;
+// Met --offset kun je de lijst in blokken verdelen en die naast elkaar draaien.
+// Serieel duurt een volle ronde over duizend locaties ruim een uur.
+const OFFSET = Number(args[args.indexOf("--offset") + 1]) || 0;
 const dry = args.includes("--dry");
 // Met --out schrijft het script {id, photo}-patches in plaats van het databestand
 // zelf. Zo botst een lange fotoronde niet met andere bewerkingen aan de data.
@@ -46,9 +53,29 @@ const stripHtml = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g,
 
 // Bestanden die nooit een locatiefoto zijn.
 const BAD_FILE = /(^|[ _-])(map|karte|mapa|carte|locator|location|coat[ _]of[ _]arms|wappen|escudo|flag|flagge|bandera|logo|seal|emblem|blason|plan|diagram|chart|portrait|stamp)([ _-]|\.)/i;
+// Een tekening is geen foto van de plek: SVG's op Commons zijn logo's, wapens,
+// zegels of circuitkaarten. Het universiteitslogo van Santiago en de baankaart
+// van MotorLand Aragon kwamen zo als "foto" op een kaart terecht.
+const VECTOR = /\.svgz?$/i;
 // Woorden die niets zeggen over welke plek het is.
 const WEAK = new Set(["the", "of", "and", "de", "la", "le", "el", "du", "des", "van", "der", "die", "das", "il", "in", "at", "on", "a", "an", "old", "new", "national", "royal", "museum", "centre", "center", "park", "house", "hotel", "station", "theatre", "theater", "castle", "church", "city", "hall", "studio", "studios", "fort", "mine", "bridge", "tower", "factory", "works", "market", "school", "university", "hospital", "prison"]);
 const keyWords = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter((w) => w.length > 2 && !WEAK.has(w));
+// Zelfde opsplitsing maar met de gewone woorden erbij, om artikeltitel en
+// locatienaam als geheel te kunnen vergelijken.
+const allWords = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter((w) => w.length > 2);
+// Woorden waarmee een Wikipedia-titel zegt dat het over een plaats gaat.
+// Soorten gebouw uit de naam. Die tellen niet mee als kenmerkend woord (anders
+// zou "Kunsthaus Graz" op "haus" gaan matchen), maar ze moeten wel terugkomen
+// in de artikeltitel: zonder die eis kreeg "Cluj-Napoca City Hall" de foto van
+// het theater verderop, omdat alleen de stadsnaam overeenkwam.
+const TYPE = new Set(["museum", "centre", "center", "park", "house", "hotel", "station", "theatre", "theater", "castle", "church", "city", "hall", "studio", "studios", "fort", "mine", "bridge", "tower", "factory", "works", "market", "school", "university", "hospital", "prison"]);
+// Hoe ver het Wikipedia-artikel van de locatie mag liggen. Een gebouw hoort er
+// vrijwel bovenop te staan; een natuurgebied, een haven of een vliegveld is zelf
+// kilometers groot, dus daar mag het punt verder weg liggen. Zonder dit verschil
+// kreeg "Kraftwerk Zurich" de foto van Kraftwerk Letten, 1,6 km verderop.
+const WIDE = new Set(["Mountains & wilderness", "Forest & lake", "Coast & beach", "Village & countryside", "City & skyline", "Historic town & street", "Transport & infrastructure", "Castle & estate"]);
+const NEAR_KM = 0.8;
+const SETTLEMENT = new Set(["town", "city", "village", "municipality", "commune", "district", "borough", "suburb", "quarter", "stadt", "gemeinde", "ville", "comune", "ciudad", "miasto", "mesto", "obec"]);
 
 // Wikipedia van het land zelf: veel kleinere locaties hebben geen Engels
 // artikel, maar wel een Duits, Frans, Tsjechisch of Hongaars.
@@ -82,18 +109,39 @@ const findFile = async (loc) => {
     for (const p of pages) {
       const c = p.coordinates?.[0];
       const img = p.pageprops?.page_image_free;
-      if (!c || !img || BAD_FILE.test(img)) continue;
+      if (!c || !img || BAD_FILE.test(img) || VECTOR.test(img)) continue;
       const d = km(loc.lat, loc.lng, c.lat, c.lon);
-      if (d > MAX_KM) continue;
+      if (d > (WIDE.has(loc.type) ? MAX_KM : NEAR_KM)) continue;
       // Alle kenmerkende woorden uit de naam moeten in de artikeltitel staan.
       // Alleen de plaatsnaam laten meetellen is niet genoeg: "Kunsthaus Graz"
       // zou dan het artikel "Graz" pakken en een skylinefoto opleveren.
-      const title = keyWords(p.title);
+      //
+      // Wat achter de komma in een artikeltitel staat is de plaatsaanduiding,
+      // niet de naam: zonder die afkapping haalde "Camden Market" het artikel
+      // "The Hawley Arms, Camden" binnen, en dat is een cafe.
+      const title = keyWords(p.title.split(",")[0]);
       const hit = (w) => title.some((t) => t.startsWith(w) || w.startsWith(t));
       const distinctive = want.filter((w) => !place.has(w));
-      const need = distinctive.length ? distinctive : want;
-      if (!need.length || !need.every(hit)) continue;
-      scored.push({ file: img, article: p.title, distance: Math.round(d * 100) / 100, shared: need.length });
+      // Blijft er niets over dan de plaatsnaam, dan is er niets om op te matchen
+      // en levert doorzoeken het artikel over de plaats zelf op: "Cluj-Napoca
+      // City Hall" kreeg zo een foto van de stad. Dan liever geen foto.
+      if (!distinctive.length || !distinctive.every(hit)) continue;
+      // Twee vangnetten tegen het artikel over de plaats in plaats van over het
+      // gebouw, want dat levert een skylinefoto op bij een markt of een stadhuis.
+      const tWords = allWords(p.title.split(",")[0]);
+      const nWords = new Set(allWords(loc.name));
+      // 1. De titel noemt zichzelf een plaats en de locatienaam doet dat niet:
+      //    "Camden Market" haalde zo het artikel "Camden Town" binnen.
+      if (tWords.some((w) => SETTLEMENT.has(w) && !nWords.has(w))) continue;
+      // 2. De titel is een kortere versie van de naam, waarbij juist het soort
+      //    gebouw wegvalt: "Cluj-Napoca City Hall" kreeg het artikel
+      //    "Cluj-Napoca". Een titel die even lang is of iets toevoegt mag wel.
+      if (tWords.length < nWords.size && tWords.every((w) => nWords.has(w))) continue;
+      // 3. Staat het soort gebouw in de naam, dan hoort de titel dat ook te
+      //    noemen. Anders past elk gebouw in dezelfde straat.
+      const types = [...nWords].filter((w) => TYPE.has(w));
+      if (types.length && !types.some((w) => tWords.some((t) => t.startsWith(w) || w.startsWith(t)))) continue;
+      scored.push({ file: img, article: p.title, distance: Math.round(d * 100) / 100, shared: distinctive.length });
     }
     scored.sort((a, b) => b.shared - a.shared || a.distance - b.distance);
     if (scored.length) return scored[0];
@@ -128,8 +176,8 @@ const fileInfo = async (name) => {
 
 let found = 0, none = 0, rejected = 0;
 const patches = [];
-const todo = LIMIT ? locs.slice(0, LIMIT) : locs;
-console.log(`${todo.length} locations without a photo`);
+const todo = locs.slice(OFFSET, LIMIT ? OFFSET + LIMIT : undefined);
+console.log(`${locs.length} locations without a photo; working on ${todo.length} from position ${OFFSET}`);
 for (const loc of todo) {
   const hit = await findFile(loc);
   if (!hit) { none++; continue; }
