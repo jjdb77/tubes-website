@@ -11,19 +11,7 @@
       {% endfor %}
     </div>
   </div>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {% for item in section.items %}
-      {
-        "@type": "Question",
-        "name": {{ item.question | dump | safe }},
-        "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | md | striptags | trim | dump | safe }} }
-      }{% if not loop.last %},{% endif %}
-      {% endfor %}
-    ]
-  }
-  </script>
+  {#- Geen eigen FAQPage hier: de jsonld-filter in eleventy.config.js zet er al
+      een in de @graph van layout.njk, over alle faq-secties van de pagina
+      samen. Twee FAQPage-blokken op een pagina is dubbelop voor Google. -#}
 </section>
