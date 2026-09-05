@@ -82,6 +82,8 @@ for (const f of fs.readdirSync(outDir).filter((f) => f.endsWith(".json")).sort()
   console.log(`${f}: ${arr.length} entries`);
 }
 data.locations.sort((a, b) => a.country.localeCompare(b.country) || a.name.localeCompare(b.name));
-data.updated = "2026-09-03";
+// De datum onder de lijst zegt wanneer er voor het laatst naar gekeken is; die
+// hoort mee te lopen, anders staat er straks een datum van maanden terug.
+data.updated = (flags.find((f) => f.startsWith("--date=")) || "").slice(7) || new Date().toISOString().slice(0, 10);
 console.log(`added ${added}, skipped ${skippedDup} duplicates, patched ${patched} studios, total ${data.locations.length}`);
 if (!dry) fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n");

@@ -43,7 +43,7 @@ sections:
         url: /compare-film-incentives/
         link_label: Compare incentives
         text: |
-          Production incentives of 16 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
+          Production incentives of 32 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg/960px-Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg
         image_alt: "The open-air Piazza Grande screen and seats at the Locarno Film Festival"
         image_credit: "Photo: Kalai Ramu (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg)"

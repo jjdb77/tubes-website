@@ -2745,7 +2745,7 @@
         "https://www.rvstudio.be",
         "https://www.rvstudio.be/contact"
       ],
-      "official_url": "https://www.rvstudio.be",
+      "official_url": "https://www.rvstudio.be/en",
       "commission_url": "https://www.screenflanders.be"
     },
     {
@@ -3615,9 +3615,10 @@
         "https://jadran-film.eu/studio-4/",
         "https://jadran-film.eu/studio-6-7/",
         "https://jadran-film.eu/studio-9/",
-        "https://jadran-film.eu/production-hub/"
+        "https://jadran-film.eu/production-hub/",
+        "https://www.jadran-film.com/"
       ],
-      "official_url": "https://www.jadran-film.com/",
+      "official_url": "https://www.jadran-film.eu/",
       "commission_url": "https://filmingincroatia.hr/"
     },
     {
@@ -6501,23 +6502,6 @@
       ],
       "official_url": "https://filmbyaarhus.dk/",
       "commission_url": "https://www.dfi.dk/en"
-    },
-    {
-      "id": "dk-filmbyen-avedore",
-      "name": "Filmbyen",
-      "country": "Denmark",
-      "region": "Capital Region of Denmark",
-      "lat": 55.633,
-      "lng": 12.444,
-      "type": "Studio & backlot",
-      "setting": "A production complex of offices, sound stages, edit suites and filmmaker pavilions built inside a former military barracks in Avedore, headquarters of Zentropa and home to several other Danish production companies.",
-      "known_for": "Klovn, Dear Wendy, Dommeren",
-      "source_urls": [
-        "https://zentropa.dk",
-        "https://da.wikipedia.org/wiki/Filmbyen"
-      ],
-      "official_url": "https://zentropa.dk",
-      "commission_url": "https://www.dfi.dk"
     },
     {
       "id": "dk-gammel-estrup",
@@ -9539,7 +9523,7 @@
         "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
       ],
       "url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
-      "official_url": "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+      "official_url": "https://www.tsf.fr/studios/studios-bordeaux/",
       "commission_url": "https://alca-nouvelle-aquitaine.fr"
     },
     {
@@ -9769,29 +9753,6 @@
       ],
       "official_url": "https://www.uni-weimar.de/en/university/start/",
       "commission_url": "https://www.mdm-online.de/"
-    },
-    {
-      "id": "de-bavaria-filmstadt",
-      "name": "Bavaria Filmstadt",
-      "country": "Germany",
-      "region": "Bavaria",
-      "lat": 48.0492,
-      "lng": 11.5342,
-      "type": "Studio & backlot",
-      "setting": "Working film studio complex in Grünwald near Munich with sound stages, a backlot and standing sets used for German film and television production since the 1920s.",
-      "known_for": "Das Boot (1981), The NeverEnding Story (1984)",
-      "source_urls": [
-        "https://www.bavaria-filmstadt.de/en/",
-        "https://en.wikipedia.org/wiki/Bavaria_Film"
-      ],
-      "official_url": "https://www.filmstadt.de/",
-      "commission_url": "https://www.fff-bayern.de/en/film-commission-bavaria/",
-      "photo": {
-        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0d/M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchener_Lichtspielkunst_AG_1000_Mk_1920.jpg",
-        "author": "Unbekannte Autoren und Grafiker; Scan von Auktionshaus Vladimir Gutowski",
-        "license": "Public domain"
-      }
     },
     {
       "id": "de-bavaria-studios-koeln",

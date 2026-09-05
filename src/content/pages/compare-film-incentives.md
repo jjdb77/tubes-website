@@ -2,16 +2,16 @@
 layout: layout.njk
 title: Compare film & TV incentives
 seo_title: "Compare Film & TV Incentives in Europe (2026) | Tubes"
-description: "Compare European production incentives side by side: headline and net value, minimum spend, caps, funding risk and the budget template each fund asks for, across 22 countries and regions. Free tool, checked September 2026."
+description: "Compare European production incentives side by side: headline and net value, minimum spend, caps, funding risk and the budget template each fund asks for, across 32 countries and regions. Free tool, checked September 2026."
 permalink: /compare-film-incentives/
 sections:
   - type: hero
     kicker: Incentive comparison
     title: Compare film & TV *incentives* before you commit
     text: |
-      The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 22 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing, plus a link to the budget template each fund asks for.
+      The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 32 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing, plus a link to the budget template each fund asks for.
 
-      Open to everyone, no sign-up. Figures checked against the funds in September 2026. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
+      Open to everyone, no sign-up. Figures checked against the funds in September 2026, when Romania, Bulgaria, Serbia, Slovakia, the Baltic states, Slovenia, Luxembourg and Switzerland were added. Two of those have no rebate at all, and the table says so. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
     buttons_position: side
     tight: true
     buttons:

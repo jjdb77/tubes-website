@@ -59,7 +59,7 @@ sections:
           Not complete, and we do not pretend it is: the count above the list is the real number. Location databases with tens of thousands of entries exist, mostly for one country and often behind a login. This guide is smaller and open, spread across 21 countries, and every entry carries its source. If a search returns nothing, the location may well exist: suggest it and we add it.
       - question: What about the production incentive in each country?
         answer: |
-          Each location card names the incentive of its country, and the full schemes are side by side on the [incentive comparison](/compare-film-incentives/) page: headline and net rates, minimum spend, caps and funding risk for 16 European countries and regions.
+          Each location card names the incentive of its country, and the full schemes are side by side on the [incentive comparison](/compare-film-incentives/) page: headline and net rates, minimum spend, caps and funding risk for 32 European countries and regions.
   - type: cta
     title: Plan the shoot behind the location
     text: |
