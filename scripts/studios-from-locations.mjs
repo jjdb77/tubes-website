@@ -58,8 +58,8 @@ const CITY = {
   "uk-sky-studios-elstree": "Borehamwood", "uk-longcross-studios": "Chertsey", "uk-north-light-film-studios": "Huddersfield",
   "uk-shepperton-studios": "Shepperton", "uk-warner-bros-studios-leavesden": "Leavesden", "uk-dragon-studios": "Llanharan",
   "uk-studio-ulster": "Belfast", "uk-wardpark-studios": "Cumbernauld", "uk-cardington-studios": "Cardington",
-  "bg-ufo-film-studios": "Dolna Malina", "ee-bfm-film-studio-tallinn": "Tallinn", "ee-ida-hub-film-studios": "Johvi",
-  "ee-tallinnfilm-studio-paljassaare": "Tallinn", "lt-kino-manufaktura": "Vilnius", "lt-ks-independent-film-studio": "Bareikiskes",
+  "bg-ufo-film-studios": "Dolna Malina", "ee-bfm-film-studio-tallinn": "Tallinn", "ee-ida-hub-film-studios": "Jõhvi",
+  "ee-tallinnfilm-studio-paljassaare": "Tallinn", "lt-kino-manufaktura": "Vilnius", "lt-ks-independent-film-studio": "Bareikiškės",
   "lt-lithuanian-film-studio": "Vilnius", "lt-vilnius-film-cluster-green-screen-studio": "Vilnius",
   "ro-creic-film-studio-cluj": "Cluj-Napoca", "sk-a4-studio": "Bratislava", "sk-koliba-studios": "Bratislava",
   "sk-shining-studio": "Stupava", "uk-northern-studios-hartlepool": "Hartlepool",
@@ -117,7 +117,9 @@ const fromGuide = studios.map((l) => {
   const slug = l.id.replace(/^[a-z]{2}-/, "");
   const prev = prevByGuide[l.id];
   const o = OVERRIDE[l.id] || {};
-  const had = absorbed.get(`${iso}-${slug}`) || absorbed.get(`${l.country}|${norm(l.name)}`) || {};
+  // `prev` als terugval maakt dit herhaalbaar: wat een vorige ronde uit een
+  // handmatige entry overnam, blijft staan als die entry er niet meer is.
+  const had = absorbed.get(`${iso}-${slug}`) || absorbed.get(`${l.country}|${norm(l.name)}`) || prev || {};
   return {
     id: `${iso}-${slug}`,
     name: l.name,
