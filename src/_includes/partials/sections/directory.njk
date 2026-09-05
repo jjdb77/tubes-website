@@ -52,6 +52,7 @@
     <div class="guide-map" data-guide-map>
       <p class="guide-map-note">The map appears here and loads its tiles from OpenStreetMap.</p>
     </div>
+    <p class="guide-map-count" data-map-count hidden aria-live="polite"></p>
     {% endif %}
 
     <div class="guide-compare-out" data-guide-compare hidden aria-live="polite"></div>
@@ -230,17 +231,44 @@
 
     // Kaart (alleen als de sectie er een heeft en de items lat/lng hebben)
     const mapEl = root.querySelector("[data-guide-map]");
+    const mapCountEl = root.querySelector("[data-map-count]");
     let map = null, markerLayer = null, leafletLoading = false;
+    // Uitgezoomd over Europa vallen honderden stippen op elkaar: je ziet dan een
+    // teal vlek. Daarom tekent de kaart alleen wat in beeld valt, en hoogstens
+    // EEN marker per rastervakje van CELL pixels. Zoom je in, dan valt hetzelfde
+    // gebied over meer vakjes en verschijnt de rest vanzelf.
+    const CELL = 46;
     const updateMap = () => {
       if (!map || !markerLayer) return;
       markerLayer.clearLayers();
-      const ids = new Set(visibleIds());
+      const ids = matched;
+      const bounds = map.getBounds().pad(0.2);
+      const zoom = map.getZoom();
+      const taken = new Set();
+      let drawn = 0, inView = 0;
       for (const it of cfg.items) {
         if (!ids.has(it.id) || it.lat == null || it.lng == null) continue;
-        const m = L.circleMarker([it.lat, it.lng], { radius: 7, color: "#0E9C88", weight: 2, fillColor: "#0E9C88", fillOpacity: 0.55 });
+        const ll = L.latLng(it.lat, it.lng);
+        if (!bounds.contains(ll)) continue;
+        inView++;
+        const pt = map.project(ll, zoom);
+        const cell = Math.round(pt.x / CELL) + ":" + Math.round(pt.y / CELL);
+        if (taken.has(cell)) continue;
+        taken.add(cell);
+        const m = L.circleMarker(ll, { radius: 7, color: "#0E9C88", weight: 2, fillColor: "#0E9C88", fillOpacity: 0.55 });
         m.bindPopup(`<strong>${esc(it[cfg.title])}</strong><br>${esc(tpl(cfg.subtitle, it))}<br><a href="#dir-${esc(it.id)}" data-goto="${esc(it.id)}">Show details</a>`);
         markerLayer.addLayer(m);
+        drawn++;
       }
+      // Zeg hoeveel er in DIT kaartbeeld liggen, niet hoeveel er in totaal zijn:
+      // anders lijkt het alsof inzoomen niets oplevert.
+      if (!mapCountEl) return;
+      mapCountEl.hidden = ids.size === 0;
+      mapCountEl.textContent = drawn < inView
+        ? `Map shows ${drawn} of the ${inView} ${cfg.noun} in view, spread out so the pins stay readable. Zoom in to see the rest.`
+        : inView === 0
+          ? `No matching ${cfg.noun} in this part of the map. Zoom out or pan to find them.`
+          : `Map shows all ${inView} matching ${cfg.noun} in view.`;
     };
     const initMap = () => {
       if (!mapEl || map || leafletLoading) return;
@@ -253,6 +281,7 @@
         map = L.map(mapEl, { scrollWheelZoom: false }).setView([52, 12], 4);
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(map);
         markerLayer = L.layerGroup().addTo(map);
+        map.on("moveend zoomend", updateMap);
         updateMap();
       };
       document.head.appendChild(js);
