@@ -8111,6 +8111,28 @@
    "photo": null
   },
   {
+   "id": "mt-malta-film-service",
+   "name": "Malta Film Service",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Maltese production company founded in 2020 offering location scouting, production planning, government liaison and post-production support for feature films, series, documentaries and commercials.",
+   "services": "Location scouting, pre-production, production planning, accommodation and travel coordination, government liaison, financial and tax planning, post-production, co-production",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": 2020,
+   "official_url": "https://www.maltafilmservice.com/",
+   "source_urls": [
+    "https://www.maltafilmservice.com/",
+    "https://www.maltafilmservice.com/contact"
+   ],
+   "photo": null
+  },
+  {
    "id": "mt-malta-film-studios",
    "name": "Malta Film Studios",
    "city": "Kalkara",
@@ -8232,6 +8254,28 @@
    },
    "guide_id": "mt-popeye-village",
    "guide_url": "/compare-film-tv-locations/#loc-mt-popeye-village"
+  },
+  {
+   "id": "mt-roughcut-films",
+   "name": "Roughcut Films",
+   "city": "Valletta",
+   "country": "Malta",
+   "lat": 35.8989,
+   "lng": 14.5146,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "An independent Maltese film production studio producing original features and providing production and post-production services, including colour grading, for international co-productions.",
+   "services": "Production, post-production, colour grading, titling and subtitles, multi-format deliverables",
+   "credits": "Ciao Ciao, Whatever, Serena, The Home Straight",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.roughcut.mt/",
+   "source_urls": [
+    "https://www.roughcut.mt/",
+    "https://www.roughcut.mt/about"
+   ],
+   "photo": null
   },
   {
    "id": "mt-shadeena-entertainment",
@@ -8580,6 +8624,28 @@
    "guide_url": "/compare-film-tv-locations/#loc-nl-fotostudio-vk-pijnacker"
   },
   {
+   "id": "nl-fremantle-nederland",
+   "name": "Fremantle Nederland",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Dutch arm of Fremantle, creating and producing entertainment, drama series, films and documentaries through labels including Blue Circle, No Pictures Please, Fiction Valley and De Stroom.",
+   "services": "Entertainment and reality production, drama series, film, documentary, casting",
+   "credits": "RTL Boulevard, B&B Vol Liefde, Boer Zoekt Vrouw, Love is Blind: Nederland, Ik Weet Er Alles Van!",
+   "facilities": null,
+   "group": "Fremantle",
+   "founded": null,
+   "official_url": "https://fremantle.nl/",
+   "source_urls": [
+    "https://fremantle.nl/",
+    "https://fremantle.nl/contact/"
+   ],
+   "photo": null
+  },
+  {
    "id": "nl-hazazah",
    "name": "Hazazah",
    "city": "Amsterdam",
@@ -8639,6 +8705,28 @@
    "official_url": "https://illuster.nl/",
    "source_urls": [
     "https://illuster.nl/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "nl-itv-studios-nederland",
+   "name": "ITV Studios Nederland",
+   "city": "Hilversum",
+   "country": "Netherlands",
+   "lat": 52.2292,
+   "lng": 5.1669,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Dutch production arm of ITV Studios, making entertainment, reality and drama across genres and platforms, with a separate drama division in Amsterdam.",
+   "services": "Entertainment, reality and drama production, access to the ITV Studios catalogue",
+   "credits": "Het Perfecte Plaatje, Married at First Sight, Gooische Vrouwen, Oogappels, Zing!",
+   "facilities": null,
+   "group": "ITV Studios",
+   "founded": null,
+   "official_url": "https://itvstudios.nl/",
+   "source_urls": [
+    "https://itvstudios.nl/",
+    "https://itvstudios.nl/contact/"
    ],
    "photo": null
   },
@@ -8737,6 +8825,28 @@
    "guide_url": "/compare-film-tv-locations/#loc-media-park-hilversum"
   },
   {
+   "id": "nl-medialane",
+   "name": "MediaLane",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Independent Amsterdam company producing television, live events and theatre shows for broadcasters, venues, licence holders and brands, founded by Iris van den Ende.",
+   "services": "Television production, live event production, theatre production",
+   "credits": "Eva, Phantom of the Opera, Holland Zingt Hazes, Disney in Concert: Wonderful Worlds, Beestenboel op de boerderij",
+   "facilities": null,
+   "group": null,
+   "founded": 2014,
+   "official_url": "https://www.medialane.nl/",
+   "source_urls": [
+    "https://www.medialane.nl/",
+    "https://www.medialane.nl/contact"
+   ],
+   "photo": null
+  },
+  {
    "id": "nl-mediawan-skyhigh",
    "name": "Mediawan Skyhigh (Skyhigh TV)",
    "city": "Hilversum",
@@ -8830,6 +8940,28 @@
    "guide_url": "/compare-film-tv-locations/#loc-nl-nep-netherlands-hilversum"
   },
   {
+   "id": "nl-newbe",
+   "name": "NewBe",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Amsterdam production company making television formats, scripted series and documentaries for streaming platforms and broadcasters.",
+   "services": "Format and series production for streamers and broadcasters, documentary",
+   "credits": "Yolanthe, Misfit de serie, Ronnie: De Familie Flex, Singletown, Rico: Dream Big",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://newbe.nl/",
+   "source_urls": [
+    "https://newbe.nl/",
+    "https://newbe.nl/contact"
+   ],
+   "photo": null
+  },
+  {
    "id": "nl-nl-film",
    "name": "NL Film",
    "city": "Amsterdam",
@@ -8848,6 +8980,27 @@
    "source_urls": [
     "https://www.nlfilm.tv/",
     "https://www.banijaybenelux.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "nl-no-pictures-please",
+   "name": "No Pictures Please",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Amsterdam label within Fremantle making reality, factual entertainment and workplace reality for the Dutch market, alongside documentaries.",
+   "services": "Factual entertainment, reality and workplace reality production, documentary",
+   "credits": "Ex on the Beach: Double Dutch",
+   "facilities": null,
+   "group": "Fremantle",
+   "founded": null,
+   "official_url": "https://nopicturesplease.nl/",
+   "source_urls": [
+    "https://nopicturesplease.nl/"
    ],
    "photo": null
   },
@@ -9165,6 +9318,48 @@
     "https://www.topkapifilms.nl/",
     "https://www.topkapifilms.nl/contact",
     "https://www.banijaybenelux.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "nl-tuvalu-media",
+   "name": "Tuvalu Media",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Amsterdam production house creating and producing original formats for Dutch public and commercial broadcasters and for international streamers.",
+   "services": "Format development and production for broadcasters, streamers and platforms",
+   "credits": "Het Verhaal van Nederland: De Tweede Wereldoorlog, Maestro, Brugklas, Besties, Spelbrekers",
+   "facilities": null,
+   "group": "Tuvalu Media Group",
+   "founded": 2006,
+   "official_url": "https://tuvalu.nl/",
+   "source_urls": [
+    "https://tuvalu.nl/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "nl-vincent-tv-producties",
+   "name": "Vincent TV Producties",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "lat": 52.3676,
+   "lng": 4.9041,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Independent Amsterdam format producer making reality, documentary and factual entertainment series for Dutch and Belgian broadcasters, with a Belgian arm and a fiction label.",
+   "services": "Format development and production, reality and factual entertainment, documentary series",
+   "credits": "Chateau Meiland, Dropout Resort, Mr. Frank Visser doet uitspraak, Beau, Five Days Inside",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://vincenttvproducties.nl/",
+   "source_urls": [
+    "https://vincenttvproducties.nl/"
    ],
    "photo": null
   },
@@ -11311,6 +11506,49 @@
    "photo": null
   },
   {
+   "id": "sk-azylproduction",
+   "name": "Azyl Production",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava production company making feature films, documentaries and music videos, an early major producer of Slovak short films.",
+   "services": "Feature film, documentary, TV ad and music video production",
+   "credits": "Invalid, Amnestie, Zatopek, Kandidat, A Happy Man",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://azyl.sk/",
+   "source_urls": [
+    "http://azyl.sk/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-beetleproduction",
+   "name": "Beetle Production",
+   "city": "Marianka",
+   "country": "Slovakia",
+   "lat": 48.2333,
+   "lng": 17.0333,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Production company based in Marianka near Bratislava making TV series and documentaries for Slovak broadcasters.",
+   "services": "TV series and documentary production",
+   "credits": "Druha Sanca, Sestricky, Cervene pasky, Najhorsi tyzden mojho zivota",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.beetleproduction.com/",
+   "source_urls": [
+    "https://www.beetleproduction.com/",
+    "https://www.beetleproduction.com/index.php?route=information/contact"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-bfilm",
    "name": "BFILM",
    "city": "Bratislava",
@@ -11329,6 +11567,27 @@
    "source_urls": [
     "https://www.bfilm.sk",
     "https://www.bfilm.sk/kontakt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-cinetype",
+   "name": "Cinetype",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Bratislava production company behind an interactive documentary experience for schoolchildren about the life of Milan Rastislav Stefanik.",
+   "services": "Documentary and interactive narrative production",
+   "credits": "Mohyla - Ja som Stefanik",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://www.cinetype.sk",
+   "source_urls": [
+    "http://www.cinetype.sk"
    ],
    "photo": null
   },
@@ -11372,6 +11631,28 @@
    "source_urls": [
     "https://dnaproduction.sk/en",
     "https://dnaproduction.sk/en/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-ekran",
+   "name": "Ekran",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Bratislava post-production studio creating visual effects, animation, graphics and colour correction for film, TV and advertising.",
+   "services": "Visual effects, animation, graphics, colour correction, postproduction",
+   "credits": "Cuky Luky, Demitra, Styri, Mimi a Liza",
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://ekran.format.com/",
+   "source_urls": [
+    "https://ekran.format.com/",
+    "https://ekran.format.com/contact"
    ],
    "photo": null
   },
@@ -11464,6 +11745,28 @@
    "guide_url": "/compare-film-tv-locations/#loc-sk-koliba-studios"
   },
   {
+   "id": "sk-mirafox",
+   "name": "Mirafox",
+   "city": "Pezinok",
+   "country": "Slovakia",
+   "lat": 48.2833,
+   "lng": 17.2667,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Pezinok-based production company of director Mira Fornay, whose features have premiered at Venice and won the Hivos Tiger Award in Rotterdam.",
+   "services": "Feature film production, development",
+   "credits": "My Dog Killer, Foxes, Alzbeta, Small Untold Secrets",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.mirafox.sk",
+   "source_urls": [
+    "https://www.mirafox.sk/mira.php",
+    "https://www.mirafox.sk/contacts.php"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-mphilms",
    "name": "MPhilms",
    "city": "Bratislava",
@@ -11481,6 +11784,48 @@
    "official_url": "https://www.mphilms.sk",
    "source_urls": [
     "https://www.mphilms.sk"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-novinski",
+   "name": "Novinski",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Bratislava company combining animated film production with original film music composition.",
+   "services": "Animated film production, film music composition",
+   "credits": "Living Large, Tourists",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.novinski.sk/",
+   "source_urls": [
+    "https://www.novinski.sk/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-nutprodukcia",
+   "name": "Nutprodukcia",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava film production company and Slovak counterpart of the Czech Nutprodukce group.",
+   "services": "Film production",
+   "credits": "Karavan, Poberta, Free the Chickens, Letna skola 2001",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.nutprodukcia.sk",
+   "source_urls": [
+    "https://www.nutprodukcia.sk"
    ],
    "photo": null
   },
@@ -11527,6 +11872,28 @@
    "photo": null
   },
   {
+   "id": "sk-protosproductions",
+   "name": "Protos Productions",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Bratislava production company established in 1997 making TV commercials, photo shoots and its own short films, features and documentaries for Slovak clients.",
+   "services": "Full production services: TV commercials, photo shoots, short films, features, documentaries, music videos, animated films",
+   "credits": "CSOB, Kaufland, Lidl, O2, Orange",
+   "facilities": null,
+   "group": null,
+   "founded": 1997,
+   "official_url": "https://www.protos.sk",
+   "source_urls": [
+    "https://www.protos.sk/about/",
+    "https://www.protos.sk/contact/"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-pubres",
    "name": "PubRes",
    "city": "Bratislava",
@@ -11544,6 +11911,28 @@
    "official_url": "https://www.pubres.sk/",
    "source_urls": [
     "https://www.pubres.sk/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-punkchartfilms",
+   "name": "Punkchart Films",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bratislava production company behind Slovak and Central European arthouse features and documentaries, founded by scriptwriter Marek Lescak, editor Maros Slapeta and director Ivan Ostrochovsky.",
+   "services": "Film production, co-production, development",
+   "credits": "107 Mothers, Servants, Winter Flies, Koza, Bird Atlas",
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://www.punkchart.sk",
+   "source_urls": [
+    "https://www.punkchart.sk/about",
+    "https://www.punkchart.sk/contact"
    ],
    "photo": null
   },
@@ -11715,6 +12104,29 @@
    "official_url": "http://surosound.sk/home/surosound",
    "source_urls": [
     "http://surosound.sk/home/surosound"
+   ],
+   "photo": null
+  },
+  {
+   "id": "sk-virusfilm",
+   "name": "VIRUSfilm",
+   "city": "Bratislava",
+   "country": "Slovakia",
+   "lat": 48.1486,
+   "lng": 17.1077,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Bratislava production company founded by Zuzana Piussi and Vit Janecek as a platform for Slovak documentary and fiction projects with a strong social focus.",
+   "services": "Documentary and fiction film production, co-production",
+   "credits": "The State Capture, The Siege, University and Freedom, Housing Against Everyone",
+   "facilities": null,
+   "group": null,
+   "founded": 2019,
+   "official_url": "https://virusfilm.sk/en/index-en/",
+   "source_urls": [
+    "https://virusfilm.sk/en/about-us/",
+    "https://virusfilm.sk/en/contact/",
+    "https://virusfilm.sk/en/films/"
    ],
    "photo": null
   },
@@ -12748,9 +13160,10 @@
    "facilities": null,
    "group": null,
    "founded": 2001,
-   "official_url": "https://www.moriarti.com/",
+   "official_url": "https://moriarti.com/",
    "source_urls": [
-    "https://www.moriarti.com/nosotros"
+    "https://moriarti.com/",
+    "https://moriarti.com/es/"
    ],
    "photo": null
   },

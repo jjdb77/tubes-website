@@ -74,7 +74,8 @@ for (const [i, c] of items.entries()) {
   else if (typeof c.lat === "number" && !boxes.some(([a, b, x, y]) => c.lat >= a && c.lat <= b && c.lng >= x && c.lng <= y)) bad(`coordinates ${c.lat},${c.lng} outside ${c.country}`);
   if (c.summary && c.summary.length > 240) bad(`summary too long (${c.summary.length})`);
   for (const k of ["services", "credits", "facilities", "group"]) if (c[k] != null && typeof c[k] !== "string") bad(`${k} must be text, not ${Array.isArray(c[k]) ? "an array" : typeof c[k]}`);
-  if (c.summary && /award-winning|leading|world-class|premier|best-in-class/i.test(c.summary)) warn.push(`${tag}: marketing wording in summary`);
+  // Woordgrenzen, anders vlagt "premiered at Venice" op "premier".
+  if (c.summary && /\b(award-winning|leading|world-class|premier|best-in-class|cutting-edge|state-of-the-art|renowned)\b/i.test(c.summary)) warn.push(`${tag}: marketing wording in summary`);
   for (const s of strings(c)) if (s.includes("—")) { bad("em-dash in text"); break; }
   for (const k of ["official_url", "guide_url"]) if (c[k] != null && !(URL_OK(c[k]) || String(c[k]).startsWith("/"))) bad(`${k} is not a URL`);
   if (c.source_urls != null && !(Array.isArray(c.source_urls) && c.source_urls.every(URL_OK))) bad("source_urls must be an array of URLs");
