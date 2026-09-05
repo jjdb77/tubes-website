@@ -11,4 +11,5 @@ const load = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"))
 export default {
   filmfestivals: load("filmfestivals.json"),
   mediasoftware: load("mediasoftware.json"),
+  mediacompanies: load("mediacompanies.json"),
 };

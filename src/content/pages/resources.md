@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Free tools
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
-description: "Free tools for production teams: film and TV locations, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
+description: "Free tools for production teams: film and TV locations, studios and production companies, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
 permalink: /resources/
 sections:
   - type: hero
@@ -52,6 +52,14 @@ sections:
         link_label: Browse events
         text: |
           Film festivals, markets, series events and film & TV technology shows across Europe: dates, focus, industry programme and submissions, on a map and side by side.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg/960px-Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg
+        image_alt: "The central nave of the Cité du Cinéma studio complex in Saint-Denis, near Paris"
+        image_credit: "Photo: Iunity (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Cin%C3%A9ma_-_Nef.jpg)"
+        heading: Studios, production and post-production companies
+        url: /compare-media-production-companies/
+        link_label: Search companies
+        text: |
+          Hireable studios, production companies and post-production houses across Europe: specialism, services, facilities and credits, on a map and side by side. Find a co-producer, a service company or a grading suite.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Television_News_Control_Room.png/960px-Television_News_Control_Room.png
         image_alt: "A television production control room full of monitors"
         image_credit: "Photo: Asterzenback (CC0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Television_News_Control_Room.png)"

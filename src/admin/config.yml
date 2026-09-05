@@ -410,7 +410,7 @@ collections:
             label: "Zoek-en-vergelijklijst (festivals, software, ...)"
             summary: "{{fields.heading}}"
             fields:
-              - { label: Dataset, name: dataset, widget: select, options: [{label: "Festivals & events", value: filmfestivals}, {label: "Software voor mediabedrijven", value: mediasoftware}] }
+              - { label: Dataset, name: dataset, widget: select, options: [{label: "Festivals & events", value: filmfestivals}, {label: "Software voor mediabedrijven", value: mediasoftware}, {label: "Studio's, productie- en postproductiebedrijven", value: mediacompanies}] }
               - { label: "Woord voor de teller (bijv. events, products)", name: noun, widget: string, default: entries }
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
@@ -711,3 +711,49 @@ collections:
               - { label: "Opgericht (jaar)", name: founded, widget: number, value_type: int, required: false }
               - { label: "Website leverancier", name: official_url, widget: string }
               - { label: "Bron-URL's", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }
+
+  # Studio's, productie- en postproductiebedrijven (/compare-media-production-companies/)
+  - name: mediacompanies
+    label: "Studio's, productie- en postproductiebedrijven (lijst)"
+    icon: business
+    files:
+      - name: mediacompanies
+        label: "Bedrijven en studio's"
+        file: src/_data/mediacompanies.json
+        format: json
+        fields:
+          - { label: "Laatst gecontroleerd (JJJJ-MM-DD)", name: updated, widget: string }
+          - { label: Notitie, name: note, widget: text, required: false }
+          - label: Bedrijven
+            name: items
+            widget: list
+            summary: "{{fields.name}} ({{fields.city}}, {{fields.type}})"
+            fields:
+              - { label: ID, name: id, widget: string, hint: "landcode-naam, bijv. nl-filmmore" }
+              - { label: Naam, name: name, widget: string }
+              - { label: Stad, name: city, widget: string }
+              - { label: Land, name: country, widget: string }
+              - { label: Breedtegraad, name: lat, widget: number, value_type: float, required: false }
+              - { label: Lengtegraad, name: lng, widget: number, value_type: float, required: false }
+              - { label: Type, name: type, widget: select, options: ["Studio", "Production company", "Post-production"] }
+              - { label: Specialisme, name: specialism, widget: select, options: ["Sound stages & backlot", "Virtual production stage", "TV & broadcast studio", "Sound & music recording", "Feature film", "TV drama & series", "Documentary", "Commercials & branded content", "Animation", "Entertainment & unscripted", "Service production", "Picture post & colour", "VFX & animation", "Sound post & dubbing", "Full-service post"] }
+              - { label: "Wat ze doen (1 zin)", name: summary, widget: text }
+              - { label: "Diensten (zoals gepubliceerd)", name: services, widget: string, required: false }
+              - { label: "Credits (alleen als gepubliceerd)", name: credits, widget: string, required: false }
+              - { label: "Faciliteiten (alleen als gepubliceerd)", name: facilities, widget: text, required: false }
+              - { label: "Onderdeel van (groep)", name: group, widget: string, required: false }
+              - { label: "Opgericht (jaar)", name: founded, widget: number, value_type: int, required: false }
+              - { label: "Officiële website", name: official_url, widget: string }
+              - { label: "Bron-URL's", name: source_urls, widget: list, required: false, field: { label: URL, name: url, widget: string } }
+              - { label: "ID in de locatiegids (alleen bij studio's uit de gids)", name: guide_id, widget: string, required: false }
+              - { label: "Link naar de locatiegids", name: guide_url, widget: string, required: false }
+              - label: "Foto (Wikimedia Commons)"
+                name: photo
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Foto-URL (thumbnail)", name: thumb, widget: string }
+                  - { label: "Fotopagina", name: file_page, widget: string, required: false }
+                  - { label: Maker, name: author, widget: string }
+                  - { label: Licentie, name: license, widget: string }

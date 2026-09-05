@@ -516,17 +516,21 @@
     } else {
       initMap();
     }
+    // Naar een kaart springen (vanaf de kaart, of via een #loc-<id>-link zoals
+    // "In the locations guide" op de bedrijvenpagina): eerst tonen, dan scrollen.
+    const goTo = (id) => {
+      const card = document.getElementById("loc-" + id);
+      if (!card) return;
+      if (card.hidden && matched.has(id)) { limit = cards.length; applyFilters(true); }
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.classList.add("is-highlight");
+      setTimeout(() => card.classList.remove("is-highlight"), 2400);
+    };
     mapEl.addEventListener("click", (e) => {
       const link = e.target.closest("[data-goto]");
       if (!link) return;
       e.preventDefault();
-      const card = document.getElementById("loc-" + link.dataset.goto);
-      if (card && card.hidden && matched.has(link.dataset.goto)) { limit = cards.length; applyFilters(true); }
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-        card.classList.add("is-highlight");
-        setTimeout(() => card.classList.remove("is-highlight"), 2400);
-      }
+      goTo(link.dataset.goto);
     });
 
     // Vergelijken: A/B/C-paneel; knop pas actief vanaf twee locaties
@@ -642,6 +646,9 @@
     syncFavButtons();
     applyFilters();
     syncPanel();
+    const fromHash = () => { if (location.hash.startsWith("#loc-")) setTimeout(() => goTo(decodeURIComponent(location.hash.slice(5))), 50); };
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
   })();
   </script>
 </section>

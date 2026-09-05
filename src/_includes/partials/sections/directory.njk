@@ -58,7 +58,9 @@
           {%- set card = section.card -%}
           <article class="guide-card" id="dir-{{ it.id }}" data-id="{{ it.id }}"
                    {% for f in filters %}data-f-{{ f.key }}="{{ it[f.key] }}" {% endfor %}
-                   data-search="{{ (it | dump) | lower | replace('"', '') }}">
+                   {%- set hay = [] -%}
+                   {%- for k, v in it -%}{%- if v and (k not in ["id", "lat", "lng", "photo", "source_urls", "official_url", "guide_url", "guide_id"]) -%}{%- set hay = (hay.push(v), hay) -%}{%- endif -%}{%- endfor %}
+                   data-search="{{ hay | join(' ') | lower | replace('"', '') }}">
             {% if it.photo and it.photo.thumb %}
             <figure class="guide-photo">
               <img src="{{ it.photo.thumb }}" alt="{{ it[card.title] }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -75,7 +77,7 @@
               {% if card.text and it[card.text] %}<p class="guide-setting">{{ it[card.text] }}</p>{% endif %}
               {% for m in card.meta or [] %}{% if it[m.key] %}<p class="guide-known"><strong>{{ m.label }}:</strong> {{ it[m.key] }}</p>{% endif %}{% endfor %}
               <p class="guide-links">
-                {% for l in card.links or [] %}{% if it[l.key] %}<a href="{{ it[l.key] }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endif %}{% endfor %}
+                {% for l in card.links or [] %}{% if it[l.key] %}<a href="{{ it[l.key] }}"{% if it[l.key] | first == "/" %}{% else %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% endif %}{% endfor %}
               </p>
               <label class="guide-pick"><input type="checkbox" data-guide-check value="{{ it.id }}"> <span>Compare</span></label>
             </div>
@@ -283,7 +285,7 @@
         const cells = vals.map((v, i) => {
           let html;
           if (!filled(v)) html = '<span class="guide-dash">&ndash;</span>';
-          else if (r.link) html = `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(r.link_label || "Open")}</a>`;
+          else if (r.link) html = String(v).startsWith("/") ? `<a href="${esc(v)}">${esc(r.link_label || "Open")}</a>` : `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(r.link_label || "Open")}</a>`;
           else if (r.tag) html = `<span class="loc-tag">${esc(v)}</span>`;
           else if (Array.isArray(v)) html = v.map((x) => esc(x)).join("<br>");
           else html = esc(v);
