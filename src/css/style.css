@@ -1679,7 +1679,11 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .loc-filter-btn.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
 .loc-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); }
 .loc-table-wrap:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
-.loc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 1240px; }
+.loc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 1480px; }
+.loc-table td.loc-template { min-width: 280px; }
+.loc-template a { font-weight: 600; }
+.loc-template small { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+.loc-format { display: inline-block; margin-left: 6px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 .loc-table th, .loc-table td { text-align: left; vertical-align: top; padding: 14px; border-bottom: 1px solid var(--divider); }
 .loc-table thead th {
   background: var(--bg); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;

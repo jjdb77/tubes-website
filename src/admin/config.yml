@@ -549,6 +549,7 @@ collections:
                   - { label: Percentage, name: rate, widget: number, value_type: float }
                   - { label: Nettofactor, name: net_factor, widget: number, value_type: float, required: false }
                   - { label: "Max. budget (lokale valuta)", name: max_budget, widget: number, value_type: int }
+                  - { label: "Hoger tarief geldt tot dit bedrag aan uitgaven (lokale valuta, leeg = alles)", name: upto, widget: number, value_type: int, required: false, hint: "VK: 53% over de eerste £15m, daarboven het gewone tarief." }
                   - { label: Toelichting, name: label, widget: string }
               - label: "Hoger tarief boven een uitgavengrens"
                 name: spend_uplift
@@ -576,6 +577,17 @@ collections:
               - { label: Toelichting, name: notes, widget: text }
               - { label: "Bron (URL)", name: source, widget: string, required: false }
               - { label: Bronnaam, name: source_label, widget: string, required: false }
+              - label: "Budgetsjabloon van het fonds"
+                name: budget_template
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Link naar het begrotingsmodel of aanvraagformulier dat het fonds voorschrijft. Staat als kolom in de tabel en als rij in de vergelijking."
+                fields:
+                  - { label: "URL", name: url, widget: string }
+                  - { label: "Naam zoals getoond", name: label, widget: string, hint: "Bijv. 'Budget model (Excel), Netherlands Film Fund'" }
+                  - { label: Soort, name: format, widget: select, options: [{label: Excel, value: xlsx}, {label: ZIP, value: zip}, {label: PDF, value: pdf}, {label: Webpagina, value: page}], default: xlsx }
+                  - { label: "Toelichting (verplicht of niet, taal, wat erin zit)", name: note, widget: text, required: false }
 
   # De locatiegids zelf: plekken en studio's op /compare-film-tv-locations/
   - name: filmlocaties

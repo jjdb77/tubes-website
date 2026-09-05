@@ -3,6 +3,8 @@
     Staat helemaal los van de Tubes-app: alles rekent in de browser met de ingebedde data,
     zonder login. Het aanvraagformulier post naar hetzelfde /api/contact als de andere
     formulieren, met "Location request: ..." vooraan in het bericht (zichtbaar op /beheer). -#}
+{#- Sjabloonsoort zoals getoond achter de downloadlink (veld budget_template.format) -#}
+{%- set formatNames = { xlsx: "Excel", zip: "ZIP", pdf: "PDF", page: "Web page" } -%}
 {%- set regions = [] -%}
 {%- for loc in locations.locations -%}
   {%- if loc.region not in regions -%}{%- set regions = (regions.push(loc.region), regions) -%}{%- endif -%}
@@ -70,6 +72,7 @@
             <th scope="col">Cap per project</th>
             <th scope="col">Funding and payment</th>
             <th scope="col">Notes and source</th>
+            <th scope="col">Budget template</th>
           </tr>
         </thead>
         <tbody>
@@ -82,6 +85,7 @@
             <td>{{ loc.cap.label if loc.cap else loc.cap_label }}</td>
             <td class="loc-funding"><span class="loc-tag loc-tag-{{ loc.funding | lower | replace(' ', '-') }}">{{ loc.funding }}</span>{% if loc.funding_note %}<small>{{ loc.funding_note }}</small>{% endif %}<small><strong>Paid:</strong> {{ loc.paid }}</small>{% if loc.foreign_spend and loc.foreign_spend != "No" %}<small><strong>Foreign spend qualifies:</strong> {{ loc.foreign_spend | lower }}</small>{% endif %}</td>
             <td class="loc-notes">{{ loc.notes }}{% if loc.source %} <a href="{{ loc.source }}" target="_blank" rel="noopener">{{ loc.source_label or "Source" }}</a>{% endif %}</td>
+            <td class="loc-template">{% if loc.budget_template %}<a href="{{ loc.budget_template.url }}" target="_blank" rel="noopener">{{ loc.budget_template.label }}</a><span class="loc-format">{{ formatNames[loc.budget_template.format] or loc.budget_template.format }}</span>{% if loc.budget_template.note %}<small>{{ loc.budget_template.note }}</small>{% endif %}{% else %}<small>Not published</small>{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -170,7 +174,9 @@
       let netFactor = loc.net_factor || 1;
       let headline;
       if (type === "film" && loc.film_uplift && budget > 0 && budget * rate <= loc.film_uplift.max_budget) {
-        headline = base * loc.film_uplift.rate / 100;
+        headline = loc.film_uplift.upto
+          ? tiered([{ upto: loc.film_uplift.upto, rate: loc.film_uplift.rate }, { rate: loc.rate }], base)
+          : base * loc.film_uplift.rate / 100;
         netFactor = loc.film_uplift.net_factor || 1;
         notes.push(loc.film_uplift.label);
       } else if (loc.spend_uplift && local >= loc.spend_uplift.min_spend) {
@@ -236,6 +242,9 @@
             ${row("Foreign spend qualifies", (r) => esc(r.loc.foreign_spend || "No"))}
             ${row("Currency", (r) => esc(r.loc.currency))}
             ${row("Good to know", (r) => esc(r.loc.notes))}
+            ${row("Budget template", (r) => r.loc.budget_template
+              ? `<a href="${esc(r.loc.budget_template.url)}" target="_blank" rel="noopener">${esc(r.loc.budget_template.label)}</a>${r.loc.budget_template.note ? `<small>${esc(r.loc.budget_template.note)}</small>` : ""}`
+              : "<small>Not published</small>")}
             ${row("Source", (r) => r.loc.source ? `<a href="${esc(r.loc.source)}" target="_blank" rel="noopener">${esc(r.loc.source_label || "Source")}</a>` : "")}
           </tbody>
         </table>
