@@ -259,12 +259,14 @@
    "summary": "Two sound stages of 2,000 and 1,000 square metres with 12.5 metre ceilings at HQ7 Studios in Vienna-Simmering, built for international film and TV production including virtual production.",
    "services": null,
    "credits": null,
-   "facilities": "Stage 1: 2,000 m2, 12.5 m ceiling, full grid 72 x 28 m; Stage 2: 1,000 m2, 12.5 m ceiling, full grid 35 x 28 m. Both stages are fully soundproofed; the operator also offers virtual production services.",
+   "facilities": "Stage 1: 2,000 m2, 12.5 m height, full grid 72 x 28 m; Stage 2: 1,000 m2, 12.5 m height, full grid 35 x 28 m. Both stages are soundproof, have stage doors of 4.15 x 5 m and concrete floors. Ancillary space: 2,000 m2 of offices and workshops plus 600 m2 of flex space for costume and wardrobe, fixed sets (pathology, hospital unit, surgery room), parking, 24/7 access, wifi and optical internet.",
    "group": null,
    "founded": null,
    "official_url": "https://hq7studios.com/",
    "source_urls": [
-    "https://hq7studios.com/"
+    "https://hq7studios.com/",
+    "https://hq7studios.com/stages",
+    "https://hq7studios.com/services"
    ],
    "photo": null,
    "guide_id": "at-hq7-studios-wien",
@@ -280,7 +282,7 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "Four studios from 140 to 500 square metres at Interspot Film in Vienna's Liesing district, with a large control room and full production crew available on request.",
-   "services": null,
+   "services": "The studios are used for live TV recordings with and without a studio audience; production, makeup and wardrobe rooms are attached to the studio complex.",
    "credits": null,
    "facilities": "Four studios with usable areas from 140 to 500 m2, a large control room, complete production staff on request, and additional equipment rental.",
    "group": null,
@@ -766,7 +768,7 @@
    "summary": "Modern studio complex near Brussels with five stages, including Europe's largest heated indoor water tank for underwater filming.",
    "services": "Sound stages with high acoustic performance; the water stage is used for underwater and surface filming with a tilting, submersible platform and dual gantry cranes. The studio points to Belgium's 45 percent tax incentive.",
    "credits": "The Swarm, Comandante",
-   "facilities": "Five sound stages from 170 to 1,700 m2 (Stage 1: 1,250 m2, Stage 2: 1,700 m2) and a 1,450 m2 water stage with a 24 x 21 m deep section, up to 10.8 m depth with the floor flooded, 7 million litres kept at 30 to 32 C, a moveable pool floor rated for 20 tonnes of set and a 14.3 m grid height. Dressing rooms and an in-house camera rental department.",
+   "facilities": "Stage 1: 1,250 m2 (13,500 sq ft); Stage 2: 1,700 m2 (18,300 sq ft); Water Stage: 1,450 m2 (15,600 sq ft) with a 24 x 21 m deep section, up to 10.8 m depth with the floor flooded, 7 million litres kept at 30 to 32 C, a tilting platform (up to 50 degrees) that can sink to 8 m, a moveable pool floor rated for 20 tonnes of set and a 14.3 m grid height; Stage 4: 470 m2 (5,000 sq ft); Stage 5 (daylight): 170 m2 (1,800 sq ft); Stage 6: 220 m2 (2,350 sq ft). Dressing rooms and an in-house camera rental department.",
    "group": null,
    "founded": null,
    "official_url": "https://www.litesstudios.com/",
@@ -1137,25 +1139,56 @@
   {
    "id": "bg-nu-boyana-film-studios",
    "name": "Nu Boyana Film Studios",
-   "city": "Sofia",
+   "city": "Sofia City",
    "country": "Bulgaria",
-   "lat": 42.665,
-   "lng": 23.275,
+   "lat": 42.6402,
+   "lng": 23.2916,
    "type": "Studio",
    "specialism": "Sound stages & backlot",
-   "summary": "A film studio in the Boyana district of Sofia with sound stages, standing sets, a water tank and a motion capture stage, used for international feature films, TV series and commercials.",
+   "summary": "Studio lot of about 30 hectares with ten sound stages, a water tank with an underwater stage and standing backlot sets for New York, London and a Roman city.",
    "services": "Sound stage rental, standing sets, motion capture, equipment rental, set construction, props and costumes, location scouting, post production through affiliated companies",
-   "credits": null,
-   "facilities": "Sound stages and standing sets including a New York street backlot, an underwater tank stage, a motion capture stage and construction workshops",
+   "credits": "300: Rise of an Empire, The Expendables 3, London Has Fallen, Rambo: Last Blood",
+   "facilities": "Ten sound stages, water tank with underwater stage, motion capture stage, construction workshops, camera, lighting and grip rental, props, costumes and picture vehicles.",
    "group": "Nu Boyana Family",
    "founded": 2007,
-   "official_url": "https://www.nuboyana.com/",
+   "official_url": "https://nuboyana.com/",
    "source_urls": [
-    "https://www.nuboyana.com/",
-    "https://www.nuboyana.com/contact",
-    "https://www.nuboyana.com/history"
+    "https://nuboyana.com/",
+    "https://en.wikipedia.org/wiki/Nu_Boyana_Film_Studios",
+    "https://www.screendaily.com/production-bulgaria-footloose-and-fancy-free/4039636.article"
    ],
-   "photo": null
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nu_Boyana_Film_Studios.jpg/960px-Nu_Boyana_Film_Studios.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Nu_Boyana_Film_Studios.jpg",
+    "author": "Nu Boyana Film Studios",
+    "license": "Public domain"
+   },
+   "guide_id": "bg-nu-boyana-film-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-bg-nu-boyana-film-studios"
+  },
+  {
+   "id": "bg-primetime-studios",
+   "name": "PrimeTime Studios",
+   "city": "Sofia City",
+   "country": "Bulgaria",
+   "lat": 42.6226,
+   "lng": 23.4253,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Television and film pavilion complex on the Sofia ring road, with separate control rooms for each studio, camera cranes and modular video walls.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://primetimestudios.eu/en/",
+   "source_urls": [
+    "https://primetimestudios.eu/en/",
+    "https://www.bulgariafilmlocations.eu/sound-stages/"
+   ],
+   "photo": null,
+   "guide_id": "bg-primetime-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-bg-primetime-studios"
   },
   {
    "id": "bg-screening-emotions",
@@ -1177,6 +1210,31 @@
     "https://www.screeningemotions.com/"
    ],
    "photo": null
+  },
+  {
+   "id": "bg-ufo-film-studios",
+   "name": "UFO Film Studios",
+   "city": "Sofia Province",
+   "country": "Bulgaria",
+   "lat": 42.6773,
+   "lng": 23.6717,
+   "type": "Studio",
+   "specialism": "Virtual production stage",
+   "summary": "Four stage studio east of Sofia with a curved LED volume and a large backlot carrying standing sets for an American suburb, a western town, a Viking village and an Arctic station.",
+   "services": null,
+   "credits": null,
+   "facilities": "Stages of 1,680, 770, 510 and 480 square metres with 12 metre clear height, a 20 by 5 metre curved XR stage, green screen stage and over 56,000 square metres of backlot.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://ufofilmstudios.com/studios/",
+   "source_urls": [
+    "https://ufofilmstudios.com/studios/",
+    "http://ufofilm.com/studios-and-production-services",
+    "https://www.screendaily.com/production-bulgaria-footloose-and-fancy-free/4039636.article"
+   ],
+   "photo": null,
+   "guide_id": "bg-ufo-film-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-bg-ufo-film-studios"
   },
   {
    "id": "bg-worldwide-fx",
@@ -1409,13 +1467,14 @@
    "summary": "Croatia's veteran animation studio, producing shorts and features since 1953 across three Zagreb premises with artist studios, shooting equipment and a small theatre.",
    "services": null,
    "credits": "Surogat, Professor Balthazar",
-   "facilities": "Artist studios, shooting equipment, a small theatre, film storage and video duplication across three Zagreb locations.",
+   "facilities": "Stop-animation studio at Savska cesta 9-11 in central Zagreb with 452 m2 of working space for building sets, puppets and props, plus a separate shooting studio with a concrete floor, professional lighting, a DitoGear motion control system and green chroma-key backgrounds, and an in-house post-production department. The institution also holds an archive of more than 700 animated, 600 documentary and 14 feature films.",
    "group": null,
    "founded": null,
    "official_url": "https://zagrebfilm.hr/",
    "source_urls": [
     "https://en.wikipedia.org/wiki/Zagreb_Film",
-    "https://zagrebfilm.hr/"
+    "https://zagrebfilm.hr/",
+    "https://zagrebfilm.hr/sto-radimo/"
    ],
    "photo": null,
    "guide_id": "hr-zagreb-film",
@@ -1548,17 +1607,18 @@
    "lat": 50.134,
    "lng": 14.5198,
    "type": "Studio",
-   "specialism": "Sound stages & backlot",
+   "specialism": "Virtual production stage",
    "summary": "A large Prague production complex with nine sound stages, a 25-acre backlot and a dedicated water stage, used by international streaming and studio productions.",
    "services": null,
    "credits": "Foundation (Apple TV+)",
-   "facilities": "9 soundproof stages, 25-acre backlot, dedicated water stage. A HIVE complex under development adds 18,500m2 of stages, offices, workshops and storage.",
+   "facilities": "Nine stages: Stage 1 2,953 m2 (31,786 sq ft), Stage 2 2,531 m2 (27,243 sq ft), Stage 3 1,269 m2 (13,659 sq ft), Stage 4 1,269 m2, Stage 5-6 water tank 1,269 m2, Stage 7 1,235 m2 (13,293 sq ft, listed as best for virtual production), Stage 8 (HIVE) 1,908 m2 (20,538 sq ft) and Stage 9 (HIVE) 1,760 m2 (18,944 sq ft), with full rigging and a 25-acre backlot.",
    "group": null,
    "founded": null,
    "official_url": "https://www.praguestudios.com",
    "source_urls": [
     "https://www.praguestudios.com",
-    "https://filmcommission.gov.cz/en/stages-studios/"
+    "https://filmcommission.gov.cz/en/stages-studios/",
+    "https://www.praguestudios.com/stages"
    ],
    "photo": null,
    "guide_id": "cz-prague-studios",
@@ -1639,13 +1699,15 @@
    "summary": "Two sound stages in Prague's Jinonice district, about 1,200m2 and 270m2, used for film, television, commercials and photography since 2007.",
    "services": "Film and television productions, commercials, photography and presentation events.",
    "credits": null,
-   "facilities": "Studio 1: approx. 1,200m2, 10m height. Studio 2: 270m2. Make-up and costume rooms, offices, changing rooms and storage, both stages blackened and heated.",
+   "facilities": "Studio 1: 24 x 48 m, 10 m high, usable area almost 1,200 m2, 400 V / 300 A power, acoustic wall with SONIT cladding and 42 dB sound-insulating doors, 82 hanging eyes rated 200 kg each, blacked out and insulated for sync sound, with ventilation and heating independent of the support areas. Studio 2: 11.5 x 23.5 m, 4.5 m high, 270 m2, 400 V / 125 A, a cyclorama backing 10 m wide, 5 m high and 10 m deep, daylight possible and hanging bars under the ceiling. Equipped makeup rooms, wardrobe, offices, changing rooms and storage; the studio opened in 2007.",
    "group": null,
    "founded": null,
    "official_url": "https://www.studiojinonice.cz",
    "source_urls": [
     "https://www.studiojinonice.cz",
-    "https://filmcommission.gov.cz/en/stages-studios/"
+    "https://filmcommission.gov.cz/en/stages-studios/",
+    "https://www.studiojinonice.cz/technicke-informace/",
+    "https://www.studiojinonice.cz/"
    ],
    "photo": null,
    "guide_id": "cz-ttc-studio-jinonice",
@@ -1663,13 +1725,14 @@
    "summary": "Prague visual effects house offering virtual production services and a dedicated stage at its Milin studio outside the city.",
    "services": "Virtual production filming and VFX supervision.",
    "credits": null,
-   "facilities": null,
+   "facilities": "Milin Studio outside Prague: a motion capture stage of 405 sq m active floor with 108 Vicon cameras, able to hold more than 20 actors at once of whom 10 in full performance capture, Manus Quantum Metagloves for hand capture, stereo headcams for facial capture and a 27 sq m LED display wall with virtual camera hardware and video assist. A film stage and a VFX art department / miniatures department are listed as coming soon.",
    "group": null,
    "founded": null,
    "official_url": "https://www.upp.cz",
    "source_urls": [
     "https://www.upp.cz",
-    "https://filmcommission.gov.cz/en/stages-studios/"
+    "https://filmcommission.gov.cz/en/stages-studios/",
+    "https://www.upp.cz/milin-studio"
    ],
    "photo": null,
    "guide_id": "cz-upp",
@@ -1754,16 +1817,18 @@
    "lat": 56.151,
    "lng": 10.2142,
    "type": "Studio",
-   "specialism": "Sound stages & backlot",
+   "specialism": "Virtual production stage",
    "summary": "Creative business park in Aarhus's Sydhavnen district housing over 80 film, TV, gaming and animation companies, with production premises and an event bar for hire.",
    "services": null,
    "credits": null,
-   "facilities": "Rental of commercial premises and production facilities, event bar",
+   "facilities": "Two studios: Studio 1 of 576 m2 with 10.5 m clear height, a 137-line grid, a 4.8 m high studio door, internet and an optional 4 x 10 m LED screen for virtual production; Studio 2 of 267 m2 with 10.5 m clear height, a 60-line grid, a 4.8 m high door and a green cyclorama. Workshop, toilets and a laundry room with washing machine and dryer next to the studios, plus meeting and production rooms and a makeup room for hire.",
    "group": null,
    "founded": null,
    "official_url": "https://filmbyaarhus.dk/",
    "source_urls": [
-    "https://filmbyaarhus.dk/"
+    "https://filmbyaarhus.dk/",
+    "https://filmbyaarhus.dk/udlejning/studier/studie-1",
+    "https://filmbyaarhus.dk/udlejning/studier/studie-2"
    ],
    "photo": null,
    "guide_id": "dk-filmby-aarhus",
@@ -2078,6 +2143,56 @@
    "photo": null
   },
   {
+   "id": "ee-bfm-film-studio-tallinn",
+   "name": "BFM Film Studio, Tallinn University",
+   "city": "Harju County",
+   "country": "Estonia",
+   "lat": 59.439,
+   "lng": 24.771,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Teaching sound stage of 160 sq m at the Baltic Film and Media School, 13.5 by 11.85 m with a 6.5 m height, motorised lighting, black, white and green backgrounds and a television gallery.",
+   "services": "Also used for receptions, seminars and training events; rental terms through the school's head of production.",
+   "credits": null,
+   "facilities": "160 sq m stage, motorised lighting fixtures, dimmer and DMX cabling, 360 degree black drape, white and green screen, eight camera television setup, projector and screen, sound mixing and editing rooms in the same building.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.tlu.ee/en/bfm/bfm-production-centre/film-studio",
+   "source_urls": [
+    "https://www.tlu.ee/en/bfm/bfm-production-centre/film-studio",
+    "https://www.tlu.ee/en/bfm"
+   ],
+   "photo": null,
+   "guide_id": "ee-bfm-film-studio-tallinn",
+   "guide_url": "/compare-film-tv-locations/#loc-ee-bfm-film-studio-tallinn"
+  },
+  {
+   "id": "ee-ida-hub-film-studios",
+   "name": "Ida Hub Film Studios",
+   "city": "Ida-Viru County",
+   "country": "Estonia",
+   "lat": 59.3527,
+   "lng": 27.4134,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Purpose built studio complex at Johvi Business Park with a 2,000 sq m stage up to 20 m high, a 1,200 sq m multifunction stage, workshops, wardrobe, SFX rooms and post production floors.",
+   "services": null,
+   "credits": null,
+   "facilities": "Two sound stages of 2,000 sq m and 1,200 sq m, soundproof walls and doors, heavy vehicle entrances, four storage rooms of 176 to 537 sq m, make-up and costume rooms with laundry, SFX rooms, ten editing rooms, sound studio, screening room, production offices.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://idahub.ee/en/studio-complex/",
+   "source_urls": [
+    "https://idahub.ee/en/studio-complex/",
+    "https://idahub.ee/en/",
+    "https://idahub.ee/en/about-us/",
+    "https://vff.ee/film_fund/"
+   ],
+   "photo": null,
+   "guide_id": "ee-ida-hub-film-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-ee-ida-hub-film-studios"
+  },
+  {
    "id": "ee-nafta-films",
    "name": "Nafta Films",
    "city": "Tallinn",
@@ -2119,6 +2234,31 @@
     "https://www.stellar.ee/"
    ],
    "photo": null
+  },
+  {
+   "id": "ee-tallinnfilm-studio-paljassaare",
+   "name": "Tallinnfilm Studio (Tallinn Film Wonderland)",
+   "city": "Harju County",
+   "country": "Estonia",
+   "lat": 59.4538,
+   "lng": 24.703,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio complex under construction on the Paljassaare peninsula for the Estonian Film Institute, planned as three sound stages of about 3,500 sq m together, the largest 1,200 sq m with a 14 m ceiling.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://filmi.ee/en/",
+   "source_urls": [
+    "https://filmi.ee/en/",
+    "https://www.screendaily.com/news/tallinn-film-wonderland-studios-to-open-in-2022/5145079.article",
+    "https://variety.com/2026/film/global/estonia-film-industry-triple-sound-stages-cannes-1236754872/"
+   ],
+   "photo": null,
+   "guide_id": "ee-tallinnfilm-studio-paljassaare",
+   "guide_url": "/compare-film-tv-locations/#loc-ee-tallinnfilm-studio-paljassaare"
   },
   {
    "id": "ee-taska-film",
@@ -2422,6 +2562,29 @@
     "https://www.carnages.fr/"
    ],
    "photo": null
+  },
+  {
+   "id": "fr-ciclic-animation-vendome",
+   "name": "Ciclic Animation",
+   "city": "Loir-et-Cher, Centre-Val de Loire",
+   "country": "France",
+   "lat": 47.7905,
+   "lng": 1.0709,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Animation studio and residency centre run by the regional film agency at Vendome, with shooting rooms for stop motion and drawn animation and post-production facilities.",
+   "services": "Operated by Ciclic Centre-Val de Loire, the regional agency that also runs the location and filming service for the region.",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.ciclic.fr/ciclic-animation",
+   "source_urls": [
+    "https://www.ciclic.fr/ciclic-animation"
+   ],
+   "photo": null,
+   "guide_id": "fr-ciclic-animation-vendome",
+   "guide_url": "/compare-film-tv-locations/#loc-fr-ciclic-animation-vendome"
   },
   {
    "id": "fr-cite-du-cinema",
@@ -2765,7 +2928,7 @@
    "summary": "A former chocolate factory in Marseille's Saint-Menet district converted into roughly 30,000 square metres of sound stages, office space and three usable rooftop terraces across three buildings.",
    "services": "Sound stages and office space for film and TV production",
    "credits": null,
-   "facilities": "Private parking for over 200 vehicles, ready-to-shoot sets, three practicable roof terraces, a green-screen studio",
+   "facilities": "A former chocolate factory offering close to 30,000 m2 of floor area over several levels: building A, the former production hall, 21,700 m2 over 4 levels; building D, the former administration block, 4,700 m2 usable as production offices; building E, a multi-purpose space of 3,000 m2. Ready-to-shoot sets, three fully practicable roof terraces and a green screen studio for effects work.",
    "group": null,
    "founded": null,
    "official_url": "https://cinema.marseille.fr/pages/les-studios-de-saint-menet",
@@ -3023,13 +3186,15 @@
    "summary": "A studio complex on 22 hectares near Martigues with sixteen sound stages up to 2,400 square metres, two 18,000 square metre backlots and ready-built prison, police station and courtroom sets.",
    "services": "Ready-built prison, police station, morgue, hospital room and courtroom sets, plus two exterior backlots",
    "credits": "Titane, The Serpent Queen, Gaston Lagaffe",
-   "facilities": "1,000 sqm of production offices, 8,000 sqm of workshops and joinery, dressing rooms, a virtual production LED stage of 14 by 14 metres",
+   "facilities": "Over 15 stages across 26,000 m2 of studio space on a 22-hectare site, listed as 17 modular stages. Studio M07 2,450 m2 (49.51 x 33.10 m, 9.20 m ceiling); Studio M01 1,000 m2 (50 x 20 m, 15 m ceiling); M06 950 m2 and M05 900 m2 (39.77 m long, 9.20 m ceiling); M04 680 m2 (9.20 m); M02 400 m2 (4.90 m); M03 250 m2 (5.30 m). Also green screens, an underwater tank, backlots for exterior sets and stunts, ready-to-shoot standing sets, a virtual production LED stage of 14 by 14 metres, 1,000 m2 of production offices and 8,000 m2 of workshops and joinery.",
    "group": null,
    "founded": null,
    "official_url": "https://www.provence-studios.com/",
    "source_urls": [
     "https://www.provence-studios.com/",
-    "https://cinema.marseille.fr/pages/provence-studios"
+    "https://cinema.marseille.fr/pages/provence-studios",
+    "https://www.provence-studios.com/en-us/studios",
+    "https://www.provence-studios.com/en-us/contact"
    ],
    "photo": null,
    "guide_id": "fr-provence-studios",
@@ -3099,6 +3264,30 @@
    "photo": null
   },
   {
+   "id": "fr-studio-24-villeurbanne",
+   "name": "Studio 24",
+   "city": "Rhone, Auvergne-Rhone-Alpes",
+   "country": "France",
+   "lat": 45.7579,
+   "lng": 4.8989,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Shooting and rehearsal stage in Villeurbanne used for film and television work, also hired for rehearsals and live performances, on the eastern edge of Lyon.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.studio24.fr/",
+   "source_urls": [
+    "https://www.studio24.fr/",
+    "https://fr.wikipedia.org/wiki/Studio_24"
+   ],
+   "photo": null,
+   "guide_id": "fr-studio-24-villeurbanne",
+   "guide_url": "/compare-film-tv-locations/#loc-fr-studio-24-villeurbanne"
+  },
+  {
    "id": "fr-studio-tourcoing",
    "name": "Studio de Tourcoing",
    "city": "Tourcoing",
@@ -3115,7 +3304,8 @@
    "founded": null,
    "official_url": "https://www.transpastudio.com/",
    "source_urls": [
-    "https://www.transpastudio.com/"
+    "https://www.transpastudio.com/",
+    "https://www.transpastudio.com/studio-de-tourcoing/"
    ],
    "photo": null,
    "guide_id": "fr-studio-tourcoing",
@@ -3181,16 +3371,47 @@
    "summary": "A television production group operating soundstages at three sites in Paris and Saint-Denis, used for game shows, entertainment formats and drama for French broadcasters.",
    "services": null,
    "credits": "Star Academy, La France a un Incroyable Talent",
-   "facilities": "Three sites: Studios Rive Gauche (85 quai André Citroën, Paris 15th) with Studios Rive Gauche and Smart Studio stages; Parc des Portes de Paris (32 rue Proudhon, Saint-Denis) with Studios 107, 128, 130, 210, 217 and 224; Studios du Lendit (16 rue André Campra, Saint-Denis).",
+   "facilities": "Stages across three Paris sites, listed from 135 m2 to 2,000 m2: Studio 217 is 2,000 m2 (35.40 x 54.30 m, 14 m usable height, ERP audience limit 2,000); Lendit L1 1,323 m2 (32.20 x 41.10 m, 13 m); Studio 128 1,200 m2 (28.65 x 42 m, 12.50 m); Lendit L5 1,079 m2 (30.50 x 35.40 m, 12 m); Studios 130 Plateau 1 932 m2 and Plateau 2 924 m2 (10.33 m); Studios 107 Plateau 1 900 m2 (10 m); Studios 210 Plateaux 1 and 2 815 m2 each (10 m). Every stage is listed as soundproofed and air-conditioned, most with fibre in and out, motorised or fixed rigging and traditional lighting; published ERP audience limits run from 150 to 2,000 places.",
    "group": null,
    "founded": null,
    "official_url": "https://www.studiosdefrance.tv/",
    "source_urls": [
-    "https://www.studiosdefrance.tv/"
+    "https://www.studiosdefrance.tv/",
+    "https://www.studiosdefrance.tv/plateaux-par-taille/",
+    "https://www.studiosdefrance.tv/disponibilites-et-tarifs/"
    ],
    "photo": null,
    "guide_id": "fr-studios-de-france",
    "guide_url": "/compare-film-tv-locations/#loc-fr-studios-de-france"
+  },
+  {
+   "id": "fr-studios-de-la-victorine",
+   "name": "Studios de la Victorine",
+   "city": "Alpes-Maritimes, Provence-Alpes-Cote d'Azur",
+   "country": "France",
+   "lat": 43.6739,
+   "lng": 7.2175,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Film studios founded in 1919 in a walled park in Nice and run directly by the city since 2017, with eleven stages, workshops and an outdoor lot.",
+   "services": null,
+   "credits": "Les Enfants du Paradis, Day for Night",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.nice.fr/",
+   "source_urls": [
+    "https://www.nice.fr/",
+    "https://fr.wikipedia.org/wiki/Studios_de_la_Victorine"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Entr%C3%A9e_des_studios_de_la_Victorine_%28septembre_2023%29.jpg/960px-Entr%C3%A9e_des_studios_de_la_Victorine_%28septembre_2023%29.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_des_studios_de_la_Victorine_(septembre_2023).jpg",
+    "author": "Jpchevreau",
+    "license": "CC BY-SA 4.0"
+   },
+   "guide_id": "fr-studios-de-la-victorine",
+   "guide_url": "/compare-film-tv-locations/#loc-fr-studios-de-la-victorine"
   },
   {
    "id": "fr-sets-studios",
@@ -3249,12 +3470,13 @@
    "summary": "A 400 square metre studio building run by a film equipment rental company in Bègles, in the Bordeaux metropolitan area, listed by the regional film commission for shoots needing a single controllable space.",
    "services": null,
    "credits": null,
-   "facilities": "One building of 400 square metres",
+   "facilities": "A 400 m2 stage (Plateau 400) with a three-sided cyclorama and a motorised grid, plus a set-design workshop, actors' dressing rooms, production offices and an on-site TSF lighting and grip equipment store.",
    "group": null,
    "founded": null,
    "official_url": "https://www.tsf.fr/studios/studios-bordeaux/",
    "source_urls": [
-    "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf"
+    "https://alca-nouvelle-aquitaine.fr/sites/default/files/alca/fichiers/brochure_decors_de_tournage_en_nouvelle_aquitaine_2020_0_0.pdf",
+    "https://www.tsf.fr/studios/studios-bordeaux/"
    ],
    "photo": null,
    "guide_id": "fr-tsf-studios-aquitaine",
@@ -3314,13 +3536,14 @@
    "summary": "A large rental film and photo studio in Frankfurt, about nine minutes from the airport, equipped with a robotic camera rig and rail system plus extensive lighting gear.",
    "services": null,
    "credits": null,
-   "facilities": null,
+   "facilities": "300 m2 studio floor with a 5 m ceiling and a 22 m drivable cyclorama, entrance height 2.40 m, 63 A three-phase power, business fibre with synchronous upload and download, ceiling truss and ceiling sail, green and blue screen, ARRI lighting and 4K camera equipment, sound recording possible, changing room and make-up, a lounge area and catering on request. A floor plan is published as a PDF.",
    "group": null,
    "founded": null,
    "official_url": "https://www.069westside.studio/",
    "source_urls": [
     "http://westside-studios.eu",
-    "https://www.hessenfilm.de/location-details/75"
+    "https://www.hessenfilm.de/location-details/75",
+    "https://www.069westside.studio/"
    ],
    "photo": null,
    "guide_id": "de-westside-studios-frankfurt",
@@ -3338,13 +3561,15 @@
    "summary": "A rental photo and film studio in Frankfurt's Eschersheim district, with blackout windows and roller shutters, a make-up room with shower, a kitchen and on-site parking.",
    "services": null,
    "credits": null,
-   "facilities": null,
+   "facilities": "Three hire studios in Frankfurt-Eschersheim: Studio 101, 105 sqm, one large room with an open side room, makeup room with shower, 4 to 6 m ceiling and two background systems up to 3.55 m wide; Studio 102, 80 sqm in two rooms (60 sqm and 20 sqm) with a 2.72 m background system; Studio D16, 110 sqm in three rooms in industrial style with a 2.72 m background system on six rolls. A 24 sqm kitchen shared by Studios 101 and 102 can also be used for shoots.",
    "group": null,
    "founded": null,
    "official_url": "https://101film.de",
    "source_urls": [
     "https://101film.de",
-    "https://www.hessenfilm.de/location-details/133"
+    "https://www.hessenfilm.de/location-details/133",
+    "https://studio-frankfurt.com/",
+    "https://studio-frankfurt.com/preise.html"
    ],
    "photo": null,
    "guide_id": "de-101-studios-frankfurt",
@@ -3448,12 +3673,14 @@
    "summary": "Twelve sound stages from 150 to 3,150 square metres at the Bavaria Filmplatz in Grunwald near Munich, including the large Wolfgang Petersen hall, for film, TV and commercial shoots.",
    "services": null,
    "credits": null,
-   "facilities": "Studio 1: 550 m2, Studio 2: 875 m2, Studio 3: 875 m2, Studio 4/5: 2,100 m2, Studio 6: 750 m2, Studio 7: 750 m2, Studio 8: 300 m2, Studio 9 (Wolfgang Petersen Halle): 2,400 m2, Studio 11: 150 m2, Studio 12: 3,150 m2, Studio 14: 1,050 m2.",
+   "facilities": "Studio 1: 550 m2; Studio 2: 875 m2; Studio 3: 875 m2; Studio 4/5: 2,100 m2; Studio 6: 750 m2; Studio 7: 750 m2; Studio 8: 300 m2; Studio 9 (Wolfgang Petersen Halle): 2,400 m2, 58.0 x 44.5 x 15.0 m, lighting walkways at 12.8 m, 50 movable lighting hoists with a white-light base package and air conditioning, a VIP foyer with limousine drop-off, an audience foyer and an annex with 34 side rooms, 2 makeup rooms and 2 VIP lounges; Studio 11: 50 m2; Studio 12: 3,150 m2, 69.0 x 46.0 x 14.0 m, column-free, total power feed 2,340 kW of which 1,800 kW for filming light (571 W/m2), a 2,000 kVA transformer and 400 V CEE outlets, with 16 dressing rooms or offices, 3 VIP dressing rooms, 2 makeup rooms, 5 technical rooms, a catering room and a roof terrace; Studio 14: 1,050 m2. Studios 9 and 12 can be linked to the audience foyer and are used for TV productions with audiences of up to 1,500 people.",
    "group": null,
    "founded": null,
    "official_url": "https://www.bavaria-studios.de/de/muenchen/",
    "source_urls": [
-    "https://www.bavaria-studios.de/de/muenchen/"
+    "https://www.bavaria-studios.de/de/muenchen/",
+    "https://www.bavaria-studios.de/de/muenchen/gg09/",
+    "https://www.bavaria-studios.de/de/muenchen/gg12/"
    ],
    "photo": null,
    "guide_id": "de-bavaria-studios-muenchen",
@@ -3479,6 +3706,30 @@
     "https://www.btf.de/"
    ],
    "photo": null
+  },
+  {
+   "id": "de-black-forest-studios-kirchzarten",
+   "name": "Black Forest Studios",
+   "city": "Baden-Wurttemberg",
+   "country": "Germany",
+   "lat": 47.9612,
+   "lng": 7.95,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Film and photo studio complex at Kirchzarten near Freiburg, with stages, a cyclorama and production rooms at the edge of the Black Forest.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.blackforest-studios.com/",
+   "source_urls": [
+    "https://www.blackforest-studios.com/",
+    "https://www.film-bw.de/location/black-forest-studios"
+   ],
+   "photo": null,
+   "guide_id": "de-black-forest-studios-kirchzarten",
+   "guide_url": "/compare-film-tv-locations/#loc-de-black-forest-studios-kirchzarten"
   },
   {
    "id": "de-broadview-tv",
@@ -3736,13 +3987,14 @@
    "summary": "The largest rental studio in Wiesbaden, combining older building character with modern technical fit-out for photo and film production in the Rhine-Main area.",
    "services": null,
    "credits": null,
-   "facilities": null,
+   "facilities": "Studio for photography, film and events with a 180 degree cyclorama rounded at top and bottom, 14 metres in diameter and 5 metres high, and a camera distance of 17 metres. Equipment includes a 9 x 7 m remote-controlled ceiling sail, a movable light wall, a topshot rig, a black curtain running all the way round, a green screen, ARRI, Dedo and Kino Flo lighting, a goods lift, a make-up room, a meeting room and a lighting store. Floor plan and equipment list are published as PDFs.",
    "group": null,
    "founded": null,
    "official_url": "https://www.hinterbergwerk.com/",
    "source_urls": [
     "https://www.hinterbergwerk.com/",
-    "https://www.hessenfilm.de/location-details/78"
+    "https://www.hessenfilm.de/location-details/78",
+    "https://www.hinterbergwerk.com/facts/"
    ],
    "photo": null,
    "guide_id": "de-hinterbergwerk-wiesbaden",
@@ -3813,6 +4065,29 @@
    "photo": null
   },
   {
+   "id": "de-ledcave-mannheim",
+   "name": "LEDcave Mannheim",
+   "city": "Baden-Wurttemberg",
+   "country": "Germany",
+   "lat": 49.5131,
+   "lng": 8.5525,
+   "type": "Studio",
+   "specialism": "Virtual production stage",
+   "summary": "Virtual production stage in Mannheim built around an LED volume with camera tracking, used for in camera visual effects work.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.film-bw.de/location/ledcave-enter-future-media-production",
+   "source_urls": [
+    "https://www.film-bw.de/location/ledcave-enter-future-media-production"
+   ],
+   "photo": null,
+   "guide_id": "de-ledcave-mannheim",
+   "guide_url": "/compare-film-tv-locations/#loc-de-ledcave-mannheim"
+  },
+  {
    "id": "de-letterbox-filmproduktion",
    "name": "Letterbox Filmproduktion",
    "city": "Hamburg",
@@ -3868,13 +4143,15 @@
    "summary": "A rental film and television studio in Dreieich near Frankfurt, used for image films, commercials, product videos, livestream productions and photo shoots.",
    "services": null,
    "credits": null,
-   "facilities": null,
+   "facilities": "225 m2 column-free studio floor of 15 x 15 m with a 3.80 m ceiling, a truss system, three-phase power connections and full blackout; 32 m2 of green screen (green screen 15 x 3 m), a separate 125 m2 control room, make-up room, lounge, coffee kitchen and air conditioning. Internet is 300 Mbit upload over fibre, with DSL, LTE on two networks and Starlink as fallbacks.",
    "group": null,
    "founded": null,
    "official_url": "https://www.mainstudio.tv",
    "source_urls": [
     "https://www.mainstudio.tv",
-    "https://www.hessenfilm.de/location-details/137"
+    "https://www.hessenfilm.de/location-details/137",
+    "https://mainstudio.tv/",
+    "https://mainstudio.tv/preise.html"
    ],
    "photo": null,
    "guide_id": "de-mainstudio-tv-dreieich",
@@ -3888,17 +4165,20 @@
    "lat": 51.3181,
    "lng": 12.3835,
    "type": "Studio",
-   "specialism": "TV & broadcast studio",
+   "specialism": "Sound stages & backlot",
    "summary": "Five studios from about 50 to 1,500 square metres, including a greenscreen stage and a daylight glass hall, at Media City Atelier on a former slaughterhouse site in Leipzig.",
    "services": null,
    "credits": "In aller Freundschaft",
-   "facilities": "Studios 1 and 2 (used for the ARD series In aller Freundschaft), Studio 3 for small to large TV productions, Studio 4 as a small greenscreen studio, Studio 5 for advertising, streaming and hybrid events, and the daylight glass hall Mediengarten; per Wikipedia the site's four main studios range from 50 to 1,500 m2 across five four-storey office buildings totalling 13,000 m2 of media space.",
+   "facilities": "Studio 3 combines a 420 m2 event area with the 384 m2 standing Riverboat set at 8 m height, in a hall with a gross area of 1,575 m2, a floor rated 20 kN/m2 for trucks and forklifts, a cyclorama rail at 8 m running 156 m all round with lowering gear, a total power supply of 1,080 kW with 360 analogue 2.5 kW dimmers and 43 analogue 5.0 kW dimmers, and 550 kW of cooling. Studio 5 is 484 m2 at 4.75 m height with an 8.00 x 4.00 x 0.40 m stage, 80 kW of power, base lighting of 18 x 1 kW and a 3 x 4 m door with direct street access. The daylight studio in the inner courtyard is 576 m2 at 6 m height. Studios 1 and 2 are used for the ARD series In aller Freundschaft and Studio 4 is a green box studio.",
    "group": null,
    "founded": null,
    "official_url": "https://mca.de/",
    "source_urls": [
     "https://mca.de/",
-    "https://de.wikipedia.org/wiki/Media_City_Leipzig"
+    "https://de.wikipedia.org/wiki/Media_City_Leipzig",
+    "https://mca.de/studio-3/",
+    "https://mca.de/studio-5/",
+    "https://mca.de/tageslichtstudio-innenhof/"
    ],
    "photo": null,
    "guide_id": "de-media-city-atelier-leipzig",
@@ -3916,7 +4196,7 @@
    "summary": "A 3,034 square metre television studio hall with an 11 metre ceiling at Filmpark Babelsberg in Potsdam, dividable into two halls and used for TV production and corporate events.",
    "services": "Described by the venue as a television-suitable multi-function studio; TV production and filming are listed among its uses alongside corporate events, conferences and galas.",
    "credits": null,
-   "facilities": "3,034 m2 hall with 11 m ceiling height (Studio Ost and West), divisible by sound-isolating walls, plus a 956 m2 foyer and several multipurpose rooms.",
+   "facilities": "3,034 m2 hall with 11 m clear height, divisible into Studio Ost (about 1,600 m2) and Studio West (about 1,400 m2) by a sound-insulating partition wall, plus a 956 m2 glazed foyer, three 120 m2 and three 50 m2 multipurpose rooms. Floor loading is 4 t/m2, there are two hall entrances with 4 m clear height, a grid of 105 ceiling points rated 450 to 950 kg each, WLAN, ISDN and CAT7 patch panels, a service corridor running all round, and catering areas with cooling and storage space. The hall is barrier-free and opened in 2008 as a television-capable multipurpose studio.",
    "group": null,
    "founded": null,
    "official_url": "https://www.metropolis-halle.de/",
@@ -3964,14 +4244,15 @@
    "summary": "Twenty film and TV studios on a 157,000 square metre former airfield site at MMC's Coloneum in Cologne-Ossendorf, including a daylight studio and set-building workshops.",
    "services": null,
    "credits": null,
-   "facilities": "20 film and TV studios on a 157,000 m2 site on the former Butzweilerhof airfield, including what MMC describes as Europe's largest daylight studio, plus Studio 50 (668 m2, 39.55 x 24.00 m) for events, and on-site set-design and set-building workshops.",
+   "facilities": "MMC's own studio factsheet gives dimensions for 19 stages at the Coloneum, Am Coloneum 1, Cologne: Studio 30/31 2,565.00 m2 (scene area 2,117.92 m2) at 11.00 m to the roof truss, Studios 52 and 53 1,977.80 m2 each at 26.00 m, Studio 32 1,974.00 m2 at 11.00 m, Studio 36 1,581.40 m2 at 11.00 m, Studios 37 and 38 1,222.80 m2 each at 8.80 m, Studios 39, 40 and 41 about 1,000 m2 each at 8.80 m, Studio 50 938.50 m2 at 11.50 m, Studio 35 945.70 m2 at 9.00 m, and smaller stages down to 174.30 m2 at 6.00 m. The factsheet lists studio and scene area, roof truss, lighting grid and curtain track height per stage. The site covers 157,000 m2 on the former Butzweilerhof airfield.",
    "group": null,
    "founded": null,
    "official_url": "https://mmc.de/coloneum/",
    "source_urls": [
     "https://mmc.de/coloneum/",
     "https://mmc.de/event/studio-50/",
-    "https://mmc.de/art-department/set-bau/"
+    "https://mmc.de/art-department/set-bau/",
+    "https://mmc.de/wp-content/uploads/Factsheet_Studios.pdf"
    ],
    "photo": null,
    "guide_id": "de-mmc-studios-koeln",
@@ -4340,6 +4621,29 @@
    "guide_url": "/compare-film-tv-locations/#loc-studio-babelsberg"
   },
   {
+   "id": "de-studio-balan-muenchen",
+   "name": "Studio Balan",
+   "city": "Bavaria",
+   "country": "Germany",
+   "lat": 48.1863,
+   "lng": 11.5447,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Munich rental stage of 320 sq m with a cyclorama 7 metres high, wide and deep, a full height window wall for daylight work, full blackout and level drive in access for vehicles.",
+   "services": null,
+   "credits": null,
+   "facilities": "320 sq m stage, 7 m cyclorama, open kitchen and catering area, public car park opposite, 16 A, 32 A and 64 A power",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filmlocations-bayern.de/Motivsuche/Studio-Balan/",
+   "source_urls": [
+    "https://www.filmlocations-bayern.de/Motivsuche/Studio-Balan/"
+   ],
+   "photo": null,
+   "guide_id": "de-studio-balan-muenchen",
+   "guide_url": "/compare-film-tv-locations/#loc-de-studio-balan-muenchen"
+  },
+  {
    "id": "de-studio-berlin-adlershof",
    "name": "Studio Berlin Adlershof",
    "city": "Berlin",
@@ -4627,6 +4931,30 @@
     "https://wave-line.de/ueber-uns"
    ],
    "photo": null
+  },
+  {
+   "id": "de-westerham-factory",
+   "name": "Westerham Factory",
+   "city": "Bavaria",
+   "country": "Germany",
+   "lat": 47.8994,
+   "lng": 11.8326,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Loft studio in a former paper mill south east of Munich, with a column free hall, exposed concrete floor and a glazed gallery at 4 metres.",
+   "services": null,
+   "credits": null,
+   "facilities": "250 sq m ground floor plus 50 sq m gallery, parking in front of the hall, lorry access to the hall, 16 A and 32 A power",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.munichstudios.com/mietstudios/westerham",
+   "source_urls": [
+    "https://www.munichstudios.com/mietstudios/westerham",
+    "https://www.filmlocations-bayern.de/Motivsuche/Westerham-Factory/"
+   ],
+   "photo": null,
+   "guide_id": "de-westerham-factory",
+   "guide_url": "/compare-film-tv-locations/#loc-de-westerham-factory"
   },
   {
    "id": "de-x-filme",
@@ -5012,7 +5340,8 @@
     "https://kapastudios.com/sound-stages/",
     "https://kapastudios.com/backlot/",
     "https://kapastudios.com/our-productions/",
-    "https://filmcommission.gr/production-company/kapa-studios/"
+    "https://filmcommission.gr/production-company/kapa-studios/",
+    "https://kapastudios.com/contact/"
    ],
    "photo": null,
    "guide_id": "gr-kapa-studios",
@@ -5235,13 +5564,14 @@
    "summary": "A 2,500 square-metre costume store run by the National Film Institute near Fót, holding about 130,000 costumes and accessories from medieval dress to 20th-century uniforms for hire to productions.",
    "services": "Costume hire for film shoots, theatrical productions, museum exhibitions and themed events",
    "credits": "Rise of the Raven, Fairy Garden, Son of Saul, Hadik",
-   "facilities": null,
+   "facilities": "Warehouse of more than 2,500 square metres holding close to 130,000 costumes, with garments and accessories from medieval outfits to 20th century uniforms, including period costumes from productions such as Hunyadi - Rise of the Raven, Fairyland, Son of Saul, Sunset, Bet on Revenge and Robin Hood. Costumes are hired out for films and commercials, for theatre performances and for private events. The warehouse was renewed in 2025 with a new rental system and updated storage conditions.",
    "group": null,
    "founded": null,
    "official_url": "https://nfi.hu/en/costume",
    "source_urls": [
     "https://nfi.hu/en/costume",
-    "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf"
+    "https://nfi.hu/file/documents/3/3241/filmes_turisztikai_kiadvany_online_2026_04_13_v2.pdf",
+    "https://nfi.hu/en/nfi-costume-warehouse"
    ],
    "photo": null,
    "guide_id": "hu-nfi-costume-warehouse",
@@ -5574,13 +5904,15 @@
    "summary": "A film and TV production studio at Ballyhenry near Ashford in County Wicklow, about 40 minutes from Dublin, offering sound stages and access to surrounding countryside locations; its backlot has stood in for the.",
    "services": null,
    "credits": "Vikings",
-   "facilities": null,
+   "facilities": "Four stages: Gasworks Stage 30,000 sq ft (156 ft long plus a 55 ft annex, 160 ft wide plus an 80 ft annex, 40 ft working height), Box Stage 14,400 sq ft (180 x 80 ft, 40 ft), Christmas Tree Stage 12,600 sq ft (180 x 70 ft, 40 ft) and Dairy Stage 6,500 sq ft (121 x 54 ft, 20 ft). Existing stage space totals 55,000 sq ft with 88,000 sq ft of support space; a further 170,000 sq ft of stage space and 523,000 sq ft of support space are listed as under construction, with stages dividable and working heights up to 60 ft.",
    "group": null,
    "founded": null,
    "official_url": "https://www.ashfordstudios.com/",
    "source_urls": [
     "https://www.screenireland.ie/locations/studio-sets",
-    "https://www.ashfordstudios.com/"
+    "https://www.ashfordstudios.com/",
+    "https://www.ashfordstudios.com/stages",
+    "https://www.ashfordstudios.com/facilities"
    ],
    "photo": null,
    "guide_id": "ie-ashford-studios",
@@ -5904,7 +6236,7 @@
    "summary": "A four-stage, 100,000-square-foot film and TV studio complex at the National Technology Park in Castletroy, Limerick, with a 5-acre backlot and on-site parking for large productions.",
    "services": null,
    "credits": "Nightflyers, Foundation",
-   "facilities": "Four sound stages plus T stage totalling around 100,000 sq ft of stage space, 350,000 sq ft under one roof, 5-acre backlot, parking for 623 cars and 30 trucks",
+   "facilities": "Five stages, all 43 ft to the grid with a further 12 ft to the gantry except T Stage: A Stage 30,814 sq ft (2,863 sq m), B Stage 17,685 sq ft (1,642 sq m), C Stage 17,921 sq ft (1,665 sq m), D Stage 32,668 sq ft (3,035 sq m) and T Stage 5,042 sq ft (468.5 sq m) at 32 ft to the roof. The 26-acre site holds 100,000 sq ft of stage space within 350,000 sq ft under one roof, plus a 5-acre backlot.",
    "group": null,
    "founded": null,
    "official_url": "https://troystudios.ie/",
@@ -5953,7 +6285,7 @@
    "summary": "A multi-studio complex in Milan's Navigli district with several naturally lit photo and video studios for advertising and events, listed by Lombardy's film commission since 2004.",
    "services": "Advertised for advertising photo and video production as well as corporate events; spaces are furnished and technically equipped and can be booked for production or events.",
    "credits": "Trivago, Kinley, Banca Mediolanum",
-   "facilities": "Six named studio spaces (Light, Color, Lounge, Yori, Acqua e Gym, and an outdoor area); the Spazio/Studio Light room measures about 200 square metres with a ceiling up to 6.10 metres, 30 kW of power and full blackout capability.",
+   "facilities": "Six spaces with published specifications: Spazio Light 200 mq, ceiling up to 6.10 m, 30 kW three-phase and single-phase power; Spazio Color 245 mq plus a 25 mq mezzanine, up to 6.10 m, 30 kW and four ethernet ports; Spazio Yori Studio 220 mq, up to 6.10 m, 25 kW; Spazio Lounge 75 mq, up to 6.10 m, sharing the 30 kW supply with Light; Spazio Acqua & Gym 75 mq, up to 3.50 m, 2 x 32 A single phase; and a 60 mq outdoor area with perimeter 1 x 16 A sockets. All indoor spaces are daylit and can be partially or fully blacked out, with WiFi up to 1000/300 Mb on two lines and audio, video and lighting available.",
    "group": null,
    "founded": null,
    "official_url": "https://www.10wattlocation.com/",
@@ -6086,7 +6418,7 @@
    "summary": "The Sicilian branch of Italy's national film school, housed in the Cantieri Culturali alla Zisa cultural complex in Palermo, with a 250 square metre sound stage and audio and color grading suites.",
    "services": "Mainly used for the film school's own training and student productions; the page does not publish hire terms for outside productions, so external availability should be confirmed directly with the school or Sicilia Film Commission.",
    "credits": null,
-   "facilities": "A 250 sqm sound stage (teatro di posa), plus audio post-production and color-correction booths and editing bays.",
+   "facilities": "Housed in pavilion 6 of the Cantieri culturali alla Zisa in Palermo, with 1,800 square metres of covered space: an events area with a 100-seat auditorium (sala Bianca), an 80-seat cinema (sala Blu), a 250 square metre sound stage (teatro di posa), audio post-production and colour-correction booths and four teaching rooms equipped with editing technology.",
    "group": null,
    "founded": null,
    "official_url": "https://www.siciliafilmcommission.org/centro-sperimentale-di-cinematografia-sede-sicilia/",
@@ -6190,7 +6522,8 @@
    "founded": null,
    "official_url": "https://www.apuliafilmcommission.it/cineporti/cineporto-di-bari/",
    "source_urls": [
-    "https://www.apuliafilmcommission.it/cineporti/cineporto-di-bari/"
+    "https://www.apuliafilmcommission.it/cineporti/cineporto-di-bari/",
+    "https://www.apuliafilmcommission.it/wp-content/uploads/2022/05/Regolamento-Cineporti-di-Puglia-aprile-2022.pdf"
    ],
    "photo": null,
    "guide_id": "it-cineporto-bari",
@@ -6488,15 +6821,16 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "A production support centre run by Toscana Film Commission in Prato, offering infrastructure for audiovisual productions alongside a tailoring workshop and a theatre nearby in the same district.",
-   "services": null,
+   "services": "Spaces are assigned by Toscana Film Commission against an expense reimbursement, with priority set by the type of production, the budget spent in Tuscany and calendar availability.",
    "credits": null,
-   "facilities": "Cineporto-style production support infrastructure at Via Dolce de' Mazzamuti 1; a separate costume/tailoring workshop at Via Santa Caterina 13; the Teatro Francesco Nuti at Via Santa Caterina 11.",
+   "facilities": "Cineporto with three furnished temporary production offices with fast internet, a casting room with waiting area, a make-up and hairdressing room and a costume room with dressing rooms; the Teatro Francesco Nuti is a 240 mq multipurpose hall with 90 seats used for streaming and TV broadcasts, web and TV formats and small film sets; an external courtyard of 700 mq.",
    "group": null,
    "founded": null,
    "official_url": "https://www.manifatturedigitalicinema.it/",
    "source_urls": [
     "https://www.manifatturedigitalicinema.it/",
-    "https://www.toscanafilmcommission.it/"
+    "https://www.toscanafilmcommission.it/",
+    "https://www.manifatturedigitalicinema.it/cineporto/"
    ],
    "photo": null,
    "guide_id": "it-manifatture-digitali-cinema-prato",
@@ -6751,13 +7085,15 @@
    "summary": "A production studio in Milan offering sound-stage space for advertising, fashion and television shoots alongside its own set-design, scenography and costume workshops, operating since 1984.",
    "services": "Listed by Lombardy's film commission under sound stages/photo studios (studi/fotografici/teatri di posa), with in-house scenography, costume and make-up services.",
    "credits": "Lavazza, Prada, Maserati, Vodafone",
-   "facilities": null,
+   "facilities": "Three stages: Teatro Grande 646,35 mq, Teatro Medio 240,75 mq and Teatro Piccolo 110 mq, with floor plans published as PDF and DWG. On site: canteen, dressing rooms, meeting room, paint booth, carpentry workshop and electrical store.",
    "group": null,
    "founded": null,
    "official_url": "https://teatrotre.com/",
    "source_urls": [
     "https://teatrotre.com/",
-    "https://www.filmcomlombardia.it/guida_alla_produzione/dettaglio_aziende_ajax.php?id=502"
+    "https://www.filmcomlombardia.it/guida_alla_produzione/dettaglio_aziende_ajax.php?id=502",
+    "https://teatrotre.com/ambienti/teatri/",
+    "https://teatrotre.com/wp-content/uploads/2021/07/1_PLANIMETRIA-GENERALE-TEATRO-TRE.pdf"
    ],
    "photo": null,
    "guide_id": "it-teatro-tre-milano",
@@ -6819,12 +7155,14 @@
    "summary": "A production support centre run by Genova-Liguria Film Commission inside Villa Durazzo Bombrini in Cornigliano, Genoa, with a sound stage, guest accommodation and workshop space for visiting productions.",
    "services": "Advertised by the film commission as available for hire to local, national and international productions.",
    "credits": null,
-   "facilities": "A sound stage (sala di posa), production offices, dressing rooms, laboratory/workshop space, and on-site guest accommodation (foresteria).",
+   "facilities": "Sound stage with a perimeter cyclorama rail at 5 m, fixed and mobile overhead rails with pantographs for lighting at 7 m, a green screen limbo 5 m high and 10 m long in the centre section (8 m left, 4 m right), lighting load up to 35 kW. Furnished temporary production offices with fast internet, 4 dressing rooms (10 positions) with toilets and showers, a costume/tailoring room, a carpentry and set workshop, and guest accommodation (foresteria).",
    "group": null,
    "founded": null,
    "official_url": "https://www.glfc.it/videoporto-genova/",
    "source_urls": [
-    "https://www.glfc.it/videoporto-genova/"
+    "https://www.glfc.it/videoporto-genova/",
+    "https://www.glfc.it/videoporto-genova/sala-di-posa/",
+    "https://www.glfc.it/videoporto-genova/servizi/"
    ],
    "photo": null,
    "guide_id": "it-videoporto-genova",
@@ -6905,7 +7243,7 @@
    "summary": "An underwater filming tank inside the Hotel Terme Millepini in Montegrotto Terme, with thermal water down to 42 metres, used for underwater photo and video shoots and advertising campaigns.",
    "services": "Advertised for underwater photo shoots, video and advertising campaigns, with underwater DoP supervision, professional divers, lighting, backdrop installation and make-up/wardrobe support on site.",
    "credits": null,
-   "facilities": "4,300 cubic metres of thermal water at 32-34 degrees C; underwater platforms from -1.3m to -42.15m; a 60-metre underwater cave system; a 13-metre transparent tunnel; two 30-metre ceiling rigging beams rated to 1 tonne per metre; adjustable underwater and surface lighting and audio, with full blackout possible.",
+   "facilities": "Pool of 21 m x 18 m holding 4,300 cubic metres of thermal water at 32-34 degrees C. Platforms at -1.3 m (18 x 5 m), -5 m, -6 m and -8 m (5 x 4 m each), -10 m (14 x 9 m), -12 m (6 x 4 m), -15 m (7 x 7 m) and a -42.15 m cylinder of 6 m diameter; 60 m of underwater caves between -8 and -10 m; a 13 m transparent tunnel between -2.5 and -5 m with 4 windows of 3 x 1.6 m and 5 of 1 x 1.6 m at -4 m. Ceiling 5 m above the water with two 30 m beams rated 1 t/m for trusses and lights; underwater anchor points along the walls; full blackout of the 40 m glass wall and windows is possible. Rooms on the pool deck and ground floor for production offices, make-up, hair and wardrobe.",
    "group": null,
    "founded": null,
    "official_url": "https://www.y-40.com/en/y-40-studios-about/",
@@ -6922,6 +7260,54 @@
    },
    "guide_id": "it-y40-studios-montegrotto",
    "guide_url": "/compare-film-tv-locations/#loc-it-y40-studios-montegrotto"
+  },
+  {
+   "id": "lv-aerodium-sigulda",
+   "name": "Aerodium Vertical Wind Tunnel",
+   "city": "Vidzeme",
+   "country": "Latvia",
+   "lat": 57.1335,
+   "lng": 24.7863,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Open vertical wind tunnel beside the Riga to Sigulda road, used for free-fall and flying shots with performers held in a controlled air column.",
+   "services": "Listed by the Riga film office among production facilities for skydiving and free-fall cinematography",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.aerodium.lv/en/about-aerodium",
+   "source_urls": [
+    "https://www.aerodium.lv/en/about-aerodium",
+    "https://www.liveriga.com/en/invest/film-in-riga/facilities-services"
+   ],
+   "photo": null,
+   "guide_id": "lv-aerodium-sigulda",
+   "guide_url": "/compare-film-tv-locations/#loc-lv-aerodium-sigulda"
+  },
+  {
+   "id": "lv-baltic-sound-stage",
+   "name": "Baltic Sound Stage",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.9839,
+   "lng": 24.1238,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Single-stage rental facility in a Riga industrial area: a clear floor of 48 by 24 metres with a 7 metre working height, blackout, heating and four make-up rooms.",
+   "services": null,
+   "credits": null,
+   "facilities": "Stage 48 x 24 m (1,150 sq m) inside a 1,500 sq m building, working height 7 m, two 3.5 x 5 m gates, 300 kW power, smoke extraction, heating, prop and costume store, four make-up rooms, production office and client lounge, in-house catering",
+   "group": null,
+   "founded": null,
+   "official_url": "https://soundstage.lv/",
+   "source_urls": [
+    "https://soundstage.lv/",
+    "https://soundstage.lv/wp-json/wp/v2/pages"
+   ],
+   "photo": null,
+   "guide_id": "lv-baltic-sound-stage",
+   "guide_url": "/compare-film-tv-locations/#loc-lv-baltic-sound-stage"
   },
   {
    "id": "lv-cinevilla-studio",
@@ -6944,6 +7330,36 @@
     "https://en.wikipedia.org/wiki/Cinevilla"
    ],
    "photo": null
+  },
+  {
+   "id": "lv-cinevilla",
+   "name": "Cinevilla Studio Backlot",
+   "city": "Tukums Municipality",
+   "country": "Latvia",
+   "lat": 56.879,
+   "lng": 23.221,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Outdoor backlot of about 150 hectares in flat farmland, with medieval and 19th century streets, a railway platform and tram, prison, church, ship and metro sets, plus five pavilions.",
+   "services": null,
+   "credits": "Defenders of Riga, Blizzard of Souls, Sisi, Raven's Hollow",
+   "facilities": "Five pavilions, make-up and dressing rooms, green screen, cinema, cafe, on-site hotel and camping",
+   "group": null,
+   "founded": null,
+   "official_url": "https://cinevillastudios.com/cinevilla/",
+   "source_urls": [
+    "https://cinevillastudios.com/cinevilla/",
+    "https://en.wikipedia.org/wiki/Cinevilla",
+    "https://www.latvia.travel/en/sight/cinevilla-studio-backlot"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Skats_cinevilla.jpg/960px-Skats_cinevilla.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Skats_cinevilla.jpg",
+    "author": "Modris Frikmanis",
+    "license": "CC BY-SA 3.0"
+   },
+   "guide_id": "lv-cinevilla",
+   "guide_url": "/compare-film-tv-locations/#loc-lv-cinevilla"
   },
   {
    "id": "lv-ego-media",
@@ -7009,6 +7425,36 @@
     "https://mistrusmedia.lv/en/contacts"
    ],
    "photo": null
+  },
+  {
+   "id": "lv-riga-film-studio",
+   "name": "Riga Film Studio",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.9803,
+   "lng": 24.2093,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Latvia's oldest studio, with three sound stages of 1,248, 1,067 and 223 square metres, working heights of 12, 9 and 5 metres, a water tank, workshops and a costume and prop store.",
+   "services": "Stages are also hired for television production and events; guided tours run on the site.",
+   "credits": null,
+   "facilities": "Stage 1: 42 x 29.7 m, height 12 m, with water tank. Stage 2: 35.94 x 29.68 m, height 9 m, green screen. Stage 3: 17.43 x 12.81 m, height 5 m. Workshops, production offices, costume and prop hire.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.studio.lv/lv/pakalpojumi/filmesanas-paviljoni/",
+   "source_urls": [
+    "https://www.studio.lv/lv/pakalpojumi/filmesanas-paviljoni/",
+    "https://www.liveriga.com/en/invest/film-in-riga/facilities-services",
+    "https://lv.wikipedia.org/wiki/R%C4%ABgas_Kinostudija"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/R%C4%ABgas_kinostudijas_%C4%93ka.jpg/960px-R%C4%ABgas_kinostudijas_%C4%93ka.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:R%C4%ABgas_kinostudijas_%C4%93ka.jpg",
+    "author": "J. Sedols",
+    "license": "CC BY 3.0"
+   },
+   "guide_id": "lv-riga-film-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-lv-riga-film-studio"
   },
   {
    "id": "lv-studio-locomotive",
@@ -7117,6 +7563,78 @@
    "photo": null
   },
   {
+   "id": "lt-kino-manufaktura",
+   "name": "Kino Manufaktura",
+   "city": "Vilnius County",
+   "country": "Lithuania",
+   "lat": 54.6779,
+   "lng": 25.3159,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio space in the former industrial quarter on Manufakturu street, listed by the Vilnius Film Office among the city studios available for hire.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://filmvilnius.com/film-studios/",
+   "source_urls": [
+    "https://filmvilnius.com/film-studios/"
+   ],
+   "photo": null,
+   "guide_id": "lt-kino-manufaktura",
+   "guide_url": "/compare-film-tv-locations/#loc-lt-kino-manufaktura"
+  },
+  {
+   "id": "lt-ks-independent-film-studio",
+   "name": "KS Independent Film Studio",
+   "city": "Vilnius County",
+   "country": "Lithuania",
+   "lat": 54.6166,
+   "lng": 25.4634,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Independent studio on the old Minsk road outside Vilnius offering stage space and production facilities in a rural setting with room for exterior sets and unit parking.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://kinostudija.eu/",
+   "source_urls": [
+    "https://kinostudija.eu/",
+    "https://filmvilnius.com/film-studios/"
+   ],
+   "photo": null,
+   "guide_id": "lt-ks-independent-film-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-lt-ks-independent-film-studio"
+  },
+  {
+   "id": "lt-lithuanian-film-studio",
+   "name": "Lithuanian Film Studio",
+   "city": "Vilnius County",
+   "country": "Lithuania",
+   "lat": 54.6778,
+   "lng": 25.2499,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Working studio complex founded in 1940 that rents out stages, production offices and technical services for feature, television and commercial shoots in Vilnius.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.lfs.lt/",
+   "source_urls": [
+    "https://www.lfs.lt/",
+    "https://en.wikipedia.org/wiki/Lithuanian_Film_Studios",
+    "https://filmvilnius.com/film-studios/"
+   ],
+   "photo": null,
+   "guide_id": "lt-lithuanian-film-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-lt-lithuanian-film-studio"
+  },
+  {
    "id": "lt-studio-nominum",
    "name": "Studio Nominum",
    "city": "Vilnius",
@@ -7160,6 +7678,30 @@
    "photo": null
   },
   {
+   "id": "lt-vilnius-film-cluster-green-screen-studio",
+   "name": "Vilnius Film Cluster Green Screen Studio",
+   "city": "Vilnius County",
+   "country": "Lithuania",
+   "lat": 54.6306,
+   "lng": 25.2568,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Converted Soviet sports hall on Meistru street holding a sound stage of about 1,100 square metres with a large green screen, set up for small and mid-size film, TV and commercial work.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://filmvilnius.com/film-studios/",
+   "source_urls": [
+    "https://filmvilnius.com/film-studios/",
+    "https://hollywoodreporter.com/news/new-studio-sound-stage-opens-694511"
+   ],
+   "photo": null,
+   "guide_id": "lt-vilnius-film-cluster-green-screen-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-lt-vilnius-film-cluster-green-screen-studio"
+  },
+  {
    "id": "lu-amour-fou-luxembourg",
    "name": "Amour Fou Luxembourg",
    "city": "Ettelbruck",
@@ -7179,6 +7721,60 @@
     "https://www.amourfoufilm.com/"
    ],
    "photo": null
+  },
+  {
+   "id": "lu-cna-dudelange",
+   "name": "Centre national de l'audiovisuel (CNA)",
+   "city": "Canton of Esch-sur-Alzette",
+   "country": "Luxembourg",
+   "lat": 49.4747,
+   "lng": 6.0829,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "National audiovisual centre in Dudelange with a shooting studio, the Cine Starlight auditorium, exhibition halls and the national film and photography archive, listed by Film Fund Luxembourg as production infrastructure.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://cna.public.lu/fr.html",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+    "https://cna.public.lu/fr.html",
+    "https://en.wikipedia.org/wiki/National_Audiovisual_Centre"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/CNA_Dudelange.JPG/960px-CNA_Dudelange.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:CNA_Dudelange.JPG",
+    "author": "François Besch",
+    "license": "CC BY-SA 3.0"
+   },
+   "guide_id": "lu-cna-dudelange",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-cna-dudelange"
+  },
+  {
+   "id": "lu-dstudio-freelens-howald",
+   "name": "D'Studio by Freelens Media",
+   "city": "Canton of Luxembourg",
+   "country": "Luxembourg",
+   "lat": 49.5767,
+   "lng": 6.1333,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Television and commercial studio in the Howald business area south of Luxembourg City, listed by Film Fund Luxembourg among the national shooting stages.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.freelenstv.com/",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+    "https://www.freelenstv.com/"
+   ],
+   "photo": null,
+   "guide_id": "lu-dstudio-freelens-howald",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-dstudio-freelens-howald"
   },
   {
    "id": "lu-deal-productions",
@@ -7201,6 +7797,30 @@
     "https://www.dealproductions.com/about"
    ],
    "photo": null
+  },
+  {
+   "id": "lu-doghouse-studio-differdange",
+   "name": "Doghouse Studio",
+   "city": "Canton of Esch-sur-Alzette",
+   "country": "Luxembourg",
+   "lat": 49.5226,
+   "lng": 5.8999,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Shooting stage and production base in the converted steelworks buildings of the 1535 Creative Hub in Differdange, listed by Film Fund Luxembourg as a studio facility.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://doghousefilms.eu/",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+    "https://doghousefilms.eu/"
+   ],
+   "photo": null,
+   "guide_id": "lu-doghouse-studio-differdange",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-doghouse-studio-differdange"
   },
   {
    "id": "lu-espera-productions",
@@ -7245,6 +7865,30 @@
    "photo": null
   },
   {
+   "id": "lu-filmland-studios-kehlen",
+   "name": "Filmland Studios Kehlen",
+   "city": "Canton of Capellen",
+   "country": "Luxembourg",
+   "lat": 49.6621,
+   "lng": 6.0142,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Purpose built studio complex on the Kehlen industrial estate with around 4,000 square metres of stages, construction workshops and production offices; the operating company announced it stopped trading on 31 July 2026.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://filmland.lu/",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+    "https://filmland.lu/"
+   ],
+   "photo": null,
+   "guide_id": "lu-filmland-studios-kehlen",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-filmland-studios-kehlen"
+  },
+  {
    "id": "lu-les-films-fauves",
    "name": "Les Films Fauves",
    "city": "Luxembourg",
@@ -7265,6 +7909,29 @@
     "https://www.lesfilmsfauves.com/contact"
    ],
    "photo": null
+  },
+  {
+   "id": "lu-melusine-studio-contern",
+   "name": "Melusine Studio (Studio 352)",
+   "city": "Canton of Luxembourg",
+   "country": "Luxembourg",
+   "lat": 49.5964,
+   "lng": 6.2148,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Animation and production studio in the Contern business park, listed by Film Fund Luxembourg among the national animation stages, with animation floors, editing and recording rooms.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/"
+   ],
+   "photo": null,
+   "guide_id": "lu-melusine-studio-contern",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-melusine-studio-contern"
   },
   {
    "id": "lu-paul-thiltges-distributions",
@@ -7331,15 +7998,39 @@
    "photo": null
   },
   {
-   "id": "lu-zeilt-productions",
-   "name": "Zeilt Productions",
-   "city": "Foetz",
+   "id": "lu-picture-factory-differdange",
+   "name": "The Picture Factory (Fabrique d'Images)",
+   "city": "Canton of Esch-sur-Alzette",
    "country": "Luxembourg",
-   "lat": 49.5192,
-   "lng": 6.0009,
-   "type": "Production company",
-   "specialism": "Animation",
-   "summary": "Luxembourg animation group producing and co-producing CG animated series, features and VR projects, founded by Academy Award winning director Laurent Witz.",
+   "lat": 49.5226,
+   "lng": 5.8999,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Animation studio in the 1535 Creative Hub in Differdange, with animation and computer graphics floors, sound rooms and offices inside a former factory building.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.fabrique-d-images.com/",
+   "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
+    "https://www.fabrique-d-images.com/"
+   ],
+   "photo": null,
+   "guide_id": "lu-picture-factory-differdange",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-picture-factory-differdange"
+  },
+  {
+   "id": "lu-zeilt-studio-foetz",
+   "name": "Zeilt Studio",
+   "city": "Canton of Esch-sur-Alzette",
+   "country": "Luxembourg",
+   "lat": 49.522,
+   "lng": 6.0104,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Animation studio in a light industrial unit on the Foetz estate in the south of the country, listed by Film Fund Luxembourg among the national animation stages.",
    "services": "CG animation production and co-production for cinema, TV and VR",
    "credits": null,
    "facilities": null,
@@ -7347,9 +8038,12 @@
    "founded": 2007,
    "official_url": "https://www.zeiltproductions.com/",
    "source_urls": [
+    "https://filmfund.lu/en/industry-guide/filming-locations-in-luxembourg/",
     "https://www.zeiltproductions.com/"
    ],
-   "photo": null
+   "photo": null,
+   "guide_id": "lu-zeilt-studio-foetz",
+   "guide_url": "/compare-film-tv-locations/#loc-lu-zeilt-studio-foetz"
   },
   {
    "id": "mt-malta-film-studios",
@@ -7391,13 +8085,15 @@
    "summary": "Wooden waterfront village built as the full-scale set for the 1980 Popeye musical, kept afterwards on Anchor Bay as a walk-through attraction.",
    "services": null,
    "credits": "Popeye (1980)",
-   "facilities": null,
+   "facilities": "The original 1980 Popeye film set overlooking Anchor Bay. Open daily 09:30 to 18:00 in high season, 09:30 to 17:30 in mid season and 09:30 to 17:00 in low season.",
    "group": null,
    "founded": null,
    "official_url": "https://popeyemalta.com/",
    "source_urls": [
     "https://popeyemalta.com/",
-    "https://en.wikipedia.org/wiki/Popeye_Village"
+    "https://en.wikipedia.org/wiki/Popeye_Village",
+    "https://www.popeyemalta.com/",
+    "https://www.popeyemalta.com/packages/high-season-2026"
    ],
    "photo": {
     "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pueblo_de_Popeye%2C_Mellie%C4%A7a%2C_isla_de_Malta%2C_Malta%2C_2021-08-24%2C_DD_02-03_PAN.jpg/960px-Pueblo_de_Popeye%2C_Mellie%C4%A7a%2C_isla_de_Malta%2C_Malta%2C_2021-08-24%2C_DD_02-03_PAN.jpg",
@@ -7460,14 +8156,16 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "A multi-location photo and film studio rental company in Amsterdam, with its largest hall on Nieuwe Hemweg offering several connecting soundstages for advertising, TV and film production.",
-   "services": null,
+   "services": "All studios can be fully blacked out, including the daylight studios. A studio hire day runs from 07:00 to 19:00; other hours by arrangement. Studio support staff are charged by the hour.",
    "credits": null,
    "facilities": "Nieuwe Hemweg location: Studio 1A 25x20m (500 sqm), Studio 1B 25x20m (500 sqm), Studio 1C 20x17m (340 sqm), Studio 1D 20x17m (340 sqm), Studio 2 11x10m (110 sqm), Studio 3 11x11m (121 sqm, daylight), Studio 5 20x22m (440 sqm). Separate Amsterdam Oost location with Studio 1 34x18m (612 sqm) and Studio 2 26x15m (390 sqm), plus smaller Studio Jacob and Studio Erwin Olaf locations. Facilities include green screens, projection backgrounds, props, catering and makeup rooms, with connecting doors between some studios for simultaneous productions.",
    "group": null,
    "founded": null,
    "official_url": "https://allardstudios.nl/studios-rental/",
    "source_urls": [
-    "https://allardstudios.nl/studios-rental/"
+    "https://allardstudios.nl/studios-rental/",
+    "https://allardstudios.nl/bereikbaarheid/",
+    "https://allardstudios.nl/faq/"
    ],
    "photo": null,
    "guide_id": "nl-allard-studios-amsterdam",
@@ -7942,13 +8640,17 @@
    "summary": "A broadcast facilities company operating multiple television studios on Media Park Hilversum, including one of Europe's largest TV studios used for large-scale entertainment and game shows.",
    "services": "Turnkey-equipped studios for short-term productions: Studio 22 for large game and entertainment shows, Studio 20 for talk shows and quiz productions.",
    "credits": null,
-   "facilities": "Eight studios for rent on Media Park Hilversum (Studio 1, 2, 3, 4, 20, 22, 24 and 47/Mussenstraat) ranging from roughly 100 sqm to about 2,500 sqm. Studio 22 is described by NEP as Europe's largest TV studio. All studios connect to NEP's fiber-optic network and LiveCenter.",
+   "facilities": "Studio 22: 56 x 51 m, 2,500 m2 effective floor, 9.80 m free height, decor doors 4.0 x 5.5 m, floor load 1,000 kg/m2, power on the floor 12 x 125A, 5 x 63A and 8 x 32A plus 1 x 125A and 13 x 32A in the grid, OBV position next to the studio, 15 dressing rooms and a 10-position make-up room. Studios 1 and 2: 30 x 20 m, 600 m2, 8.85 m free height, decor doors 5.00 x 3.70 m, floor load 800 kg/m2. Studio 20: 27 x 20 m, 540 m2, 5.15 m free height, 288 fixed 2 kW dimmers. All have air conditioning, a water point and drainage, and connect to NEP's LiveCenter and post-production platform. Factsheets for Studios 3, 4 and 47 (Mussenstraat) are also published.",
    "group": null,
    "founded": null,
    "official_url": "https://www.nepgroup.nl/broadcast-services/studioverhuur",
    "source_urls": [
     "https://www.nepgroup.nl/broadcast-services/studioverhuur",
-    "https://www.nepgroup.nl/contact-us"
+    "https://www.nepgroup.nl/contact-us",
+    "https://cdn.prod.website-files.com/66227fb5bb5b17816f9653a5/66227fb5bb5b17816f9657fc_NEP-Factsheet-STUDIO-22_liggend-RGB_v2-1.pdf",
+    "https://cdn.prod.website-files.com/66227fb5bb5b17816f9653a5/66227fb5bb5b17816f9657f4_NEP-Factsheet-STUDIO-1_liggend-RGB.pdf",
+    "https://cdn.prod.website-files.com/66227fb5bb5b17816f9653a5/66227fb5bb5b17816f9657f5_NEP-Factsheet-studio-2_liggend-RGB.pdf",
+    "https://cdn.prod.website-files.com/66227fb5bb5b17816f9653a5/66227fb5bb5b17816f9657f8_NEP-Factsheet-STUDIO-20_liggend-RGB_v2.pdf"
    ],
    "photo": null,
    "guide_id": "nl-nep-netherlands-hilversum",
@@ -8099,7 +8801,9 @@
    "founded": null,
    "official_url": "https://studio8amsterdam.nl",
    "source_urls": [
-    "https://studio8amsterdam.nl"
+    "https://studio8amsterdam.nl",
+    "https://studio8amsterdam.nl/studio/1",
+    "https://studio8amsterdam.nl/"
    ],
    "photo": null,
    "guide_id": "nl-studio-8-amsterdam",
@@ -8170,7 +8874,9 @@
    "founded": null,
    "official_url": "https://studionoorderfabriek.nl",
    "source_urls": [
-    "https://studionoorderfabriek.nl"
+    "https://studionoorderfabriek.nl",
+    "https://studionoorderfabriek.nl/tarieven/fotografie-film/",
+    "https://studionoorderfabriek.nl/"
    ],
    "photo": null,
    "guide_id": "nl-studio-noorderfabriek-amsterdam",
@@ -8194,7 +8900,8 @@
    "official_url": "https://eventstudiosaalsmeer.nl",
    "source_urls": [
     "https://eventstudiosaalsmeer.nl",
-    "https://nl.wikipedia.org/wiki/Studio%27s_Aalsmeer"
+    "https://nl.wikipedia.org/wiki/Studio%27s_Aalsmeer",
+    "https://eventstudiosaalsmeer.nl/"
    ],
    "photo": null,
    "guide_id": "nl-studios-aalsmeer",
@@ -8363,13 +9070,18 @@
    "summary": "Five purpose-built stages from 81 to 500 square metres in Nydalen, Oslo, with lighting and grip rental, workshops, props storage and costume and makeup rooms in the same building.",
    "services": "Studios and equipment are rented for any media and film production, with 24-hour equipment delivery; part of Oslo Film Studios.",
    "credits": "Amundsen (2019)",
-   "facilities": "Five studios of 500, 211, 137, 124 and 81 m2 with shared makeup and costume fitting areas, showers, a dining space for 30, art department and props storage, a carpentry workshop and production offices; lighting, camera, generator and truck rental in the same building.",
+   "facilities": "Studio 1: 500 m2, 28 x 18 m, 9.7 m high, white molton and chroma key wall curtains, acoustically adapted for sound recording. Studio 2: 211 m2, 17.6 x 11.9 m, 5.5 m high, cove with a 100 cm radius. Studio 3: 137 m2, 11 x 12 m. Studio 4: 124 m2, 12 x 10 m. Studio 5: 81 m2, 10 x 8 m, soundproofed. Shared make-up and costume fitting areas, showers, a dining space for 30, art department and props storage, a carpentry workshop and production offices; lighting, camera, generator and truck rental in the same building.",
    "group": null,
    "founded": null,
    "official_url": "https://www.dagslys.no/en/",
    "source_urls": [
     "https://www.dagslys.no/en/",
-    "https://www.dagslys.no/en/our-studios/"
+    "https://www.dagslys.no/en/our-studios/",
+    "https://www.dagslys.no/en/studio-1/",
+    "https://www.dagslys.no/en/studio-2/",
+    "https://www.dagslys.no/en/studio-3/",
+    "https://www.dagslys.no/en/studio-4/",
+    "https://www.dagslys.no/en/studio-5/"
    ],
    "photo": null,
    "guide_id": "dagslys-studios-oslo",
@@ -8408,13 +9120,16 @@
    "summary": "A production hub in a former military base at Overbygd in Malselv, with sound stages, offices, accommodation and catering used as a base for shoots across the Arctic landscape of Troms.",
    "services": null,
    "credits": "The River (2017), Outlier (2020)",
-   "facilities": "Three main studios plus one smaller studio with wooden floors, two soundproofed studios, offices, meeting rooms, accommodation, catering and a pub",
+   "facilities": "Studio building of 1,750 m2 in total. The soundproofed part measures 29 x 26.5 m, 780 m2, with a soundproofed floor and ceiling and molton on all sides, and a 60 m long greenscreen. The layout allows one large set or several smaller sets at the same time, and lighting and camera vehicles can drive in. A large backlot adjoins the studio, bordered by the Fjellfroskelva river. Also on site: hotel accommodation, a make-up and costume building, an office building, meeting rooms, a restaurant and a pub.",
    "group": null,
    "founded": null,
    "official_url": "https://filmcamp.no",
    "source_urls": [
     "https://filmcamp.no",
-    "https://en.wikipedia.org/wiki/M%C3%A5lselv_Municipality"
+    "https://en.wikipedia.org/wiki/M%C3%A5lselv_Municipality",
+    "https://filmcamp.no/fasiliteter/studio/",
+    "https://filmcamp.no/fasiliteter/",
+    "https://filmcamp.no/"
    ],
    "photo": null,
    "guide_id": "no-filmcamp",
@@ -8432,13 +9147,14 @@
    "summary": "A film and TV production site in Jar outside Oslo that has hosted continuous film production since 1935, with three sound stages, a smaller studio and a costume rental department.",
    "services": null,
    "credits": null,
-   "facilities": "Three main studios plus one smaller studio with wooden floors, two soundproofed studios, costume rental with wardrobe staff",
+   "facilities": "Three large studios plus one smaller studio, two of them fully soundproofed. Studio A has 23 lighting hoists and a pool of 4 x 6 m and 1.8 m deep that can be opened up, on a paintable wooden floor. Studio B has a paintable cyclorama of 12 x 4.8 m and a rod rigging system. Studio C has 12 lighting hoists, a paintable concrete floor, a large drive-in door with no steps and parking next to it. Support rooms include production offices, dressing rooms, wardrobe, rehearsal rooms, prop offices and storage, a prop kitchen and camera storage, plus costume rental with wardrobe staff.",
    "group": null,
    "founded": null,
    "official_url": "https://www.filmparken.no/filmparken",
    "source_urls": [
     "https://www.filmparken.no/filmparken",
-    "https://www.filmparken.no/kontakt"
+    "https://www.filmparken.no/kontakt",
+    "https://www.filmparken.no/vare-studioer"
    ],
    "photo": null,
    "guide_id": "no-filmparken",
@@ -8692,13 +9408,14 @@
    "summary": "A domed studio complex near Krakow with multiple sound stages and a large blue-screen hall, built on a former limestone quarry site 18 kilometres from Krakow Airport.",
    "services": null,
    "credits": "Arbitrage (2012), Vamps (2012), Essential Killing (2010)",
-   "facilities": "Facilities include a recording studio, photography studios (K-03, K-04, K-05), colour correction suites including a 4K colour correction room, a motion capture and rehearsal space, sound and image post-production suites, and production offices.",
+   "facilities": "Sound stage K03: 2,000 m2 (about 21,505 sq ft), 14.5 m high, with a spherical shadeless 180 degree blue screen of 80 x 15 m, depth of field up to 50 m, 250 kW of blue screen lighting at 3200 K, 650 kW frontline and backline lighting and up to 1 MW available. Sound stage K04: 2,000 m2, 14.5 m high, artificial sky-dome with 255 spacelights up to 1.8 MW, lights adjustable from 2 to 16 m, 650 kW frontline and backline, up to 1.4 MW available, plus a 350 m2 workshop. Sound stage K05: 124 m2, 6 m high, 180 degree shadeless green screen of 12 x 7 m, depth of field up to 8 m, up to 40 kW. Casting, rehearsal and motion capture studio K10: 700 m2 with a 24 camera Vicon MX T160 system. Also a recording studio, colour correction suites and post-production sound rooms. Address Nieporaz, ul. Ferdynanda Wspanialego 1, 32-566 Alwernia.",
    "group": null,
    "founded": null,
    "official_url": "https://www.alvernia.com/en/",
    "source_urls": [
     "https://www.alvernia.com/en/",
-    "https://en.wikipedia.org/wiki/Alvernia_Studios"
+    "https://en.wikipedia.org/wiki/Alvernia_Studios",
+    "https://www.alvernia.com/en/film/production/sound-stages/"
    ],
    "photo": {
     "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Alvernia_Studios_1.jpg/960px-Alvernia_Studios_1.jpg",
@@ -8765,7 +9482,7 @@
    "summary": "Film and television production centre of around 14,000 square metres in Warsaw's Wawer district, with multiple soundstages, TV studios, production offices and post-production facilities.",
    "services": "Offers set design and construction, lighting and sound, post-production and VFX, costume and prop rental, OB vans and a virtual studio; two 4 MVA transformer stations, per-hall power connections from 16 A to 400 A, fibre links for nationwide TV transmission and silent ventilation for sound recording. Quotes on request.",
    "credits": "The Voice of Poland, Dancing with the Stars: Taniec z gwiazdami",
-   "facilities": "Six halls totalling 5,200 m2: Hall A 1,500 m2 (45 x 34 m, 12 m high), Halls B to E 800 m2 each (32 x 25 m, 6 to 7 m high) and Hall F 500 m2; 14 dressing rooms of 34 m2 and two VIP dressing rooms of 60 m2, eight makeup rooms, scenic warehouses of 110 to 440 m2, a 3,900 kg cargo lift, catering and conference rooms on a 14,000 m2 site.",
+   "facilities": "Hall A 1,500 m2 (45 x 34 x 12 m) with a polished concrete floor rated 1 t/m2 and power connections 5 x 16A, 2 x 32A, 1 x 63A, 4 x 125A and 2 x 400A Power Lock plus a 400A Power Lock for an external generator; Halls B and C 800 m2 (32 x 25 x 7 m) with the same floor and 2 x 125A; Halls D and E 800 m2 (32 x 25 x 6 m) and Hall F 500 m2 (25 x 20 x 6 m) with three-layer wooden floors rated 500 kg/m2; technical grids in Halls B to F. 14 standard dressing rooms of 34 m2 and 2 VIP dressing rooms of 60 m2; set warehouses 7 m high from 110 to 440 m2 opening directly onto the halls, with a loading ramp and an 8 x 4 m gate; a virtual studio; costume and prop rental; a reception hall with WiFi and cloakrooms for audiences and extras; three separate car parks on a 14,000 m2 site.",
    "group": null,
    "founded": null,
    "official_url": "https://www.atmstudio.eu/",
@@ -9158,13 +9875,15 @@
    "summary": "Warsaw production complex dating to 1949, with two sound stages added in 1960 for feature films, historically used by directors including Andrzej Wajda and Krzysztof Kieslowski.",
    "services": null,
    "credits": null,
-   "facilities": null,
+   "facilities": "Two shooting halls of 600 m2 each with 8.5 m working height and air conditioning; a studio of 450 m2 with 4.3 m working height; a studio of 220 m2 with 5.8 m working height and air conditioning; two casting studios of 100 m2 each with 4.5 m working height and air conditioning. Make-up rooms for 1, 2 and 4 positions plus mobile stations, dressing rooms of 10 to 80 m2, prop rooms of 15 to 80 m2, about 2,500 m2 of offices, a conference room, 900 m2 of production space and 750 m2 of storage. Address ul. Chelmska 21, Warsaw.",
    "group": null,
    "founded": null,
    "official_url": "https://wfdif.pl/",
    "source_urls": [
     "https://pl.wikipedia.org/wiki/Wytw%C3%B3rnia_Film%C3%B3w_Dokumentalnych_i_Fabularnych",
-    "https://wfdif.pl/"
+    "https://wfdif.pl/",
+    "https://wfdif.pl/pl/uslugi-filmowe/hale-i-studia",
+    "http://www.wfdif.pl/pl/uslugi-filmowe"
    ],
    "photo": null,
    "guide_id": "pl-wfdif",
@@ -9182,13 +9901,14 @@
    "summary": "Multimedia content studio in central Faro offering studio space, equipment rental and production crew for video and photo shoots in the Algarve.",
    "services": "Equipment rental, production crew (camera operators, cinematographers, drone operators, producers), lighting and casting.",
    "credits": null,
-   "facilities": null,
+   "facilities": "Espaco 1 of 25 m2 usable with a 55 inch screen and HDMI, meeting table and lounge area; Espaco 2 of 115 m2 usable on level -1 with a 3.37 m ceiling, air conditioning and blackout, suitable for larger set builds; a separate 25 m2 meeting room. Male and female toilets, kitchen facilities (microwave, coffee machine, fridge) and floor plans published per space.",
    "group": null,
    "founded": null,
    "official_url": "https://algarvestudios.com/",
    "source_urls": [
     "https://algarvestudios.com/",
-    "https://portugalfilmcommission.com/entidades/algarve-studios/"
+    "https://portugalfilmcommission.com/entidades/algarve-studios/",
+    "https://algarvestudios.com/espacos/"
    ],
    "photo": null,
    "guide_id": "pt-algarve-studios",
@@ -9248,13 +9968,16 @@
    "summary": "Multifunctional video and photo studio in the Lisbon area with two sound stages for commercials, music videos, interviews and online video production.",
    "services": "Studio hire for producers, independent filmmakers, photographers, advertising and digital agencies and music video companies; equipment rental covers HD, 4K and 6K cameras, lighting, a Blackmagic ATEM multi-camera system, audio gear and a teleprompter.",
    "credits": null,
-   "facilities": "2 studios totalling approx. 400 sqm, with a white cyclorama and a chroma-key cyclorama, production areas, hair and make-up rooms, green room and equipped kitchen",
+   "facilities": "Two studios of 200 m2 each, both 10.00 m wide x 14.00 m deep (20.00 m in total) x 7.60 m high, with 5.00 m to the lighting grid (Prolyte X30D truss). Studio A has a permanent three-wall white U-shaped cyclorama of 10.00 x 8.50 x 4.20 m, repaintable in any colour, base pre-lighting on dimmers and a sliding vehicle gate of 3.40 m wide x 3.20 m high for cars and vans. Studio B has a permanent three-wall chroma green or blue U-shaped cyclorama of 10.00 x 7.50 x 4.20 m with base pre-lighting on dimmers. Both can be draped in black flannel as a black box. Also two hair and make-up rooms, a green room and an equipped kitchen.",
    "group": null,
    "founded": null,
    "official_url": "https://www.estudiodafabrica.pt",
    "source_urls": [
     "https://www.estudiodafabrica.pt",
-    "https://portugalfilmcommission.com/entidades/estudio-da-fabrica/"
+    "https://portugalfilmcommission.com/entidades/estudio-da-fabrica/",
+    "https://www.estudiodafabrica.pt/studioa/",
+    "https://www.estudiodafabrica.pt/studio-b/",
+    "https://www.estudiodafabrica.pt/"
    ],
    "photo": null,
    "guide_id": "pt-estudio-da-fabrica",
@@ -9272,7 +9995,7 @@
    "summary": "Television studio complex in Paco de Arcos with six sound stages used for national broadcasts, music recording and the Portuguese Eurovision selection show.",
    "services": "Music recording in the soundproofed Studio 1, and national TV broadcasts including the RTP Festival da Cancao.",
    "credits": "Festival RTP da Cancao",
-   "facilities": "6 studios: Studio 1, 176 sqm (16x11m, 6.5m ceiling); Studio 2, 450 sqm, 350 kW installed lighting; Studio 2B, 230 sqm; Studio 3, 1500 sqm stage plus 600 sqm warehouse, 13m ceiling, lighting grid at 10m, up to 12 cameras, 98-channel digital sound control room; Studio 4, 144 sqm; Studio 5, 216 sqm; Studio 6, 216 sqm",
+   "facilities": "Six studios. Studio 1: 176 m2 (16 x 11 m, 6.5 m ceiling) with 2 dressing rooms with shower, a make-up room and a meeting room. Studio 2: 450 m2 with 350 kW of installed lighting capacity, 8 dressing rooms (one with a private bathroom), two make-up rooms, a production room and reception areas. Studio 2B: 230 m2. Studio 3: a 1,500 m2 stage plus a 600 m2 warehouse, 13 m ceiling, lighting grid at 10 m, up to 12 cameras, a 98 channel digital sound control room, its own 1,100 kVA generator, dressing rooms, production and technical support rooms, a refectory and an 1,100 m2 support zone. Studios 4, 5 and 6: 144 m2, 216 m2 and 216 m2.",
    "group": null,
    "founded": null,
    "official_url": "https://valentim.pt/conteudos/estudios-televisao",
@@ -9809,6 +10532,31 @@
    "photo": null
   },
   {
+   "id": "ro-bucharest-film-studios-buftea",
+   "name": "Bucharest Film Studios (Buftea)",
+   "city": "Ilfov",
+   "country": "Romania",
+   "lat": 44.572,
+   "lng": 25.934,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio complex north west of Bucharest with 19 sound stages, four indoor water tanks, a large backlot for standing sets, costume and prop stores and construction workshops.",
+   "services": null,
+   "credits": "Wednesday",
+   "facilities": "19 sound stages, four indoor water tanks for underwater work, construction and props departments, over 30,000 costumes, armoury, picture vehicles, make up and dressing rooms",
+   "group": null,
+   "founded": null,
+   "official_url": "https://studiourilebuftea.ro/",
+   "source_urls": [
+    "https://studiourilebuftea.ro/",
+    "https://en.wikipedia.org/wiki/List_of_films_shot_in_Romania",
+    "https://en.wikipedia.org/wiki/Buftea_Studios"
+   ],
+   "photo": null,
+   "guide_id": "ro-bucharest-film-studios-buftea",
+   "guide_url": "/compare-film-tv-locations/#loc-ro-bucharest-film-studios-buftea"
+  },
+  {
    "id": "ro-buftea-studios",
    "name": "Buftea Studios",
    "city": "Buftea",
@@ -9832,25 +10580,27 @@
   {
    "id": "ro-castel-film-studios",
    "name": "Castel Film Studios",
-   "city": "Ciolpani",
+   "city": "Ilfov",
    "country": "Romania",
-   "lat": 44.7167,
-   "lng": 26.0167,
+   "lat": 44.6982,
+   "lng": 26.1303,
    "type": "Studio",
    "specialism": "Sound stages & backlot",
-   "summary": "A film studio near Bucharest with nine sound stages and a large forested backlot, used for Romanian and international feature films, TV series and commercials.",
+   "summary": "Studio at Izvorani with ten sound stages, an underwater tank stage, a 25 hectare backlot carrying western, urban and gothic standing sets, plus forest and lake frontage.",
    "services": "Sound stage rental, set construction, production services, location scouting, catering and craft services",
    "credits": "Cold Mountain, Ghost Rider: Spirit of Vengeance, What Happened to Monday?, The Gray House",
-   "facilities": "9 sound stages, one of the largest in Continental Europe, plus a 37 hectare backlot including 15 hectares of forest and a lake",
+   "facilities": "Ten sound stages from about 216 to 3,344 sq m, underwater tank stage with viewing windows, one floatable stage, 25 ha backlot, 44 dressing rooms, standing sets",
    "group": null,
    "founded": 1990,
-   "official_url": "https://castelfilm.ro/",
+   "official_url": "https://castelfilm.ro/facilities/",
    "source_urls": [
-    "https://castelfilm.ro/",
-    "https://castelfilm.ro/about",
-    "https://castelfilm.ro/contact"
+    "https://castelfilm.ro/facilities/",
+    "https://castelfilm.ro/contact/",
+    "https://castelfilm.ro/about/"
    ],
-   "photo": null
+   "photo": null,
+   "guide_id": "ro-castel-film-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-ro-castel-film-studios"
   },
   {
    "id": "ro-chainsaw-europe",
@@ -9872,6 +10622,30 @@
     "https://www.chainsaweurope.com/"
    ],
    "photo": null
+  },
+  {
+   "id": "ro-creic-film-studio-cluj",
+   "name": "CREIC Film Studio, Cluj-Napoca",
+   "city": "Cluj County",
+   "country": "Romania",
+   "lat": 46.8209,
+   "lng": 23.5797,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Soundproofed stage of about 630 sq m inside the Cluj regional centre for creative industries, with screening room, production offices and technical rooms in the same building.",
+   "services": null,
+   "credits": null,
+   "facilities": "Stage of about 630 sq m with internal access, screening room of about 143 sq m, production offices, technical rooms and a meeting room",
+   "group": null,
+   "founded": null,
+   "official_url": "https://clujinnovationpark.ro/studio-de-film/",
+   "source_urls": [
+    "https://clujinnovationpark.ro/studio-de-film/",
+    "https://clujinnovationpark.ro/"
+   ],
+   "photo": null,
+   "guide_id": "ro-creic-film-studio-cluj",
+   "guide_url": "/compare-film-tv-locations/#loc-ro-creic-film-studio-cluj"
   },
   {
    "id": "ro-frame-film",
@@ -9981,6 +10755,31 @@
    "photo": null
   },
   {
+   "id": "rs-avala-studios-belgrade",
+   "name": "Avala Studios",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.757,
+   "lng": 20.4328,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "The oldest studio complex in the country, set in Kosutnjak park, with four soundproof stages, two indoor water tanks in the largest stage and a backlot of about 9,850 square metres.",
+   "services": null,
+   "credits": null,
+   "facilities": "Stage 1 of 48 x 30 m and 16 m high with two indoor water tanks, stages of 40 x 14 m, 32 x 13 m and 24 x 15 m, backlot of 9,850 sq m, offices, vehicle storage, apartments for cast",
+   "group": null,
+   "founded": null,
+   "official_url": "https://avalastudios.com/",
+   "source_urls": [
+    "https://avalastudios.com/",
+    "https://www.filminserbia.com/production_directory/avala-studios/?pid=720",
+    "https://avalafilm.com/"
+   ],
+   "photo": null,
+   "guide_id": "rs-avala-studios-belgrade",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-avala-studios-belgrade"
+  },
+  {
    "id": "rs-balkanic-media",
    "name": "Balkanic Media",
    "city": "Belgrade",
@@ -10023,6 +10822,29 @@
     "https://www.filminserbia.com/production_directory/bas-celik-2/?pid=708"
    ],
    "photo": null
+  },
+  {
+   "id": "rs-citystudio-belgrade",
+   "name": "CityStudio Belgrade",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8163,
+   "lng": 20.4566,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Production base in the Obilicev Venac pedestrian zone used for castings, creative meetings, pre-production, rehearsals and recordings, a short walk from Knez Mihailova Street.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filminserbia.com/location/citystudio/",
+   "source_urls": [
+    "https://www.filminserbia.com/location/citystudio/"
+   ],
+   "photo": null,
+   "guide_id": "rs-citystudio-belgrade",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-citystudio-belgrade"
   },
   {
    "id": "rs-clockwork-film-production",
@@ -10112,26 +10934,75 @@
    "photo": null
   },
   {
-   "id": "rs-firefly-productions",
-   "name": "Firefly Productions",
-   "city": "Belgrade",
+   "id": "rs-firefly-studios-pancevo",
+   "name": "Firefly Studios",
+   "city": "Vojvodina",
    "country": "Serbia",
-   "lat": 44.8125,
-   "lng": 20.4612,
-   "type": "Production company",
-   "specialism": "TV drama & series",
-   "summary": "Belgrade TV drama company launched in 2018 by former BBC producer Ivana Mikovic, developing original series and book adaptations and building its own studio.",
+   "lat": 44.867,
+   "lng": 20.6711,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio complex at Pancevo with three stages, a water tank inside the largest stage and a standing backlot built as a Serbian town of the Second World War period.",
    "services": "TV series development and production, script development, book adaptations, production training",
    "credits": "Tycoon, Underneath, The Clan, No Trespassing, Black Wedding",
-   "facilities": null,
+   "facilities": "Two stages of 2,000 sq m at 15 m high and one of 760 sq m at 12 m high, 15 x 10 m water tank 3.5 m deep, 2 ha built backlot plus 2 ha open backlot, 4,500 sq m production accommodation, 2,000 sq m workshops",
    "group": null,
    "founded": 2018,
-   "official_url": "https://www.firefly.rs/",
+   "official_url": "https://fireflystudios.rs/",
    "source_urls": [
-    "https://www.firefly.rs/",
-    "https://www.filminserbia.com/production_directory/firefly-productions/?pid=708"
+    "https://fireflystudios.rs/",
+    "https://www.filminserbia.com/production_directory/firefly-studios/?pid=720"
    ],
-   "photo": null
+   "photo": null,
+   "guide_id": "rs-firefly-studios-pancevo",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-firefly-studios-pancevo"
+  },
+  {
+   "id": "rs-pfi-studios-simanovci",
+   "name": "PFI Studios",
+   "city": "Vojvodina",
+   "country": "Serbia",
+   "lat": 44.8761,
+   "lng": 20.1158,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Purpose built studio complex 28 km west of Belgrade with eight sound stages from 600 to 1,800 square metres, each with attached production offices and workshops.",
+   "services": null,
+   "credits": "The Outpost, Lockout, The Raven, In Secret",
+   "facilities": "Eight sound stages of 600 to 1,800 square metres, attached production offices and workshops, backlot",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filminserbia.com/production_directory/pfi-studios-2/?pid=720",
+   "source_urls": [
+    "https://www.filminserbia.com/production_directory/pfi-studios-2/?pid=720",
+    "https://www.filminserbia.com/filming-in-serbia/production-directory/studios-rentals/stagesstudios/"
+   ],
+   "photo": null,
+   "guide_id": "rs-pfi-studios-simanovci",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-pfi-studios-simanovci"
+  },
+  {
+   "id": "rs-studio-d86-belgrade",
+   "name": "Studio D86",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8208,
+   "lng": 20.4893,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Photo and video studio of 250 square metres with a 42 square metre cyclorama, several shooting positions and lighting stock, reached by two four tonne freight lifts.",
+   "services": null,
+   "credits": null,
+   "facilities": "42 sq m cyclorama, two 4 tonne freight lifts, parking around the building, lighting and haze equipment",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filminserbia.com/location/d86-studio/",
+   "source_urls": [
+    "https://www.filminserbia.com/location/d86-studio/"
+   ],
+   "photo": null,
+   "guide_id": "rs-studio-d86-belgrade",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-studio-d86-belgrade"
   },
   {
    "id": "rs-this-and-that-productions",
@@ -10155,6 +11026,54 @@
    "photo": null
   },
   {
+   "id": "rs-vision-team-studios-belgrade",
+   "name": "Vision Team Studios",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.7977,
+   "lng": 20.4769,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Three television and film stages in Belgrade, used for panel and quiz shows, live broadcasts and sitcoms, each with its own service and production offices.",
+   "services": null,
+   "credits": "The Trap, Besa, Absolute 100",
+   "facilities": "Stage 1 of 600 sq m at 6.3 m, stage 2 of 1,055 sq m at 6.3 m, stage 3 of 1,300 sq m at 7 m, service and office areas, wardrobe and make-up rooms, catering, private parking",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.visionteam.rs/",
+   "source_urls": [
+    "https://www.visionteam.rs/",
+    "https://www.filminserbia.com/production_directory/13460/?pid=720"
+   ],
+   "photo": null,
+   "guide_id": "rs-vision-team-studios-belgrade",
+   "guide_url": "/compare-film-tv-locations/#loc-rs-vision-team-studios-belgrade"
+  },
+  {
+   "id": "sk-a4-studio",
+   "name": "A4 Studio",
+   "city": "Bratislava Region",
+   "country": "Slovakia",
+   "lat": 48.1635,
+   "lng": 17.1443,
+   "type": "Studio",
+   "specialism": "Virtual production stage",
+   "summary": "Film and television stage of 70 by 30 metres and 9.5 metres high, about 2,100 square metres in total, with LED video walls, an Unreal Engine wall, Spidercam rig and parking for 600 cars.",
+   "services": "Film and TV studio and event house, virtual production with an Unreal Engine wall.",
+   "credits": null,
+   "facilities": "Stage 70 x 30 m, 9.5 m height, 2100 sq m plus support areas, LED video walls, studio lighting, sound, Spidercam, hotel and restaurants nearby, parking for 600 cars.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.a4studio.sk/",
+   "source_urls": [
+    "https://www.a4studio.sk/",
+    "https://www.filmcommission.sk/1006-en/a4-studio/"
+   ],
+   "photo": null,
+   "guide_id": "sk-a4-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-sk-a4-studio"
+  },
+  {
    "id": "sk-hitchhiker-cinema",
    "name": "Hitchhiker Cinema",
    "city": "Bratislava",
@@ -10176,6 +11095,29 @@
    "photo": null
   },
   {
+   "id": "sk-koliba-studios",
+   "name": "Koliba Studios",
+   "city": "Bratislava Region",
+   "country": "Slovakia",
+   "lat": 48.1712,
+   "lng": 17.0995,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Slovakia's largest studio complex at the foot of the Small Carpathians, with sound stages, technical buildings, stores and 87,000 square metres of grounds used by broadcasters and production companies.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://d-fs.sk/en/koliba-studio/",
+   "source_urls": [
+    "https://d-fs.sk/en/koliba-studio/"
+   ],
+   "photo": null,
+   "guide_id": "sk-koliba-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-sk-koliba-studios"
+  },
+  {
    "id": "sk-pubres",
    "name": "PubRes",
    "city": "Bratislava",
@@ -10195,6 +11137,29 @@
     "https://www.pubres.sk/"
    ],
    "photo": null
+  },
+  {
+   "id": "sk-shining-studio",
+   "name": "Shining Studio",
+   "city": "Bratislava Region",
+   "country": "Slovakia",
+   "lat": 48.2744,
+   "lng": 17.0207,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio and lighting rental base in Stupava north of Bratislava, listed by the Slovak Film Commission under studios and equipment rental.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filmcommission.sk/503-en/shining-studio/",
+   "source_urls": [
+    "https://www.filmcommission.sk/503-en/shining-studio/"
+   ],
+   "photo": null,
+   "guide_id": "sk-shining-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-sk-shining-studio"
   },
   {
    "id": "si-bela-film",
@@ -10261,6 +11226,30 @@
    "photo": null
   },
   {
+   "id": "si-rtv-slovenija-television-centre",
+   "name": "RTV Slovenija Television Centre",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0541,
+   "lng": 14.5086,
+   "type": "Studio",
+   "specialism": "TV & broadcast studio",
+   "summary": "Headquarters of the national public broadcaster on Kolodvorska ulica, holding multi camera television studios, control rooms, radio recording rooms and scenery workshops.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.rtvslo.si/rtv",
+   "source_urls": [
+    "https://www.rtvslo.si/rtv",
+    "https://www.rtvslo.si/rtv/kdo-smo"
+   ],
+   "photo": null,
+   "guide_id": "si-rtv-slovenija-television-centre",
+   "guide_url": "/compare-film-tv-locations/#loc-si-rtv-slovenija-television-centre"
+  },
+  {
    "id": "si-staragara",
    "name": "Staragara",
    "city": "Ljubljana",
@@ -10280,6 +11269,29 @@
     "https://staragara.com"
    ],
    "photo": null
+  },
+  {
+   "id": "si-studio-303",
+   "name": "Studio 303",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0967,
+   "lng": 14.5269,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Shared production space at Cesta 24. junija in the Crnuce district, built as one open multi purpose room with an infinity wall for video, photo and audio work by small crews.",
+   "services": "Studio rental for video, photo and podcast production, with equipment rental and crew for hire.",
+   "credits": null,
+   "facilities": "Infinity wall shooting set, sound design and voice recording room, video editing and colour grading, camera and lighting rental.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://studio303.si/",
+   "source_urls": [
+    "https://studio303.si/"
+   ],
+   "photo": null,
+   "guide_id": "si-studio-303",
+   "guide_url": "/compare-film-tv-locations/#loc-si-studio-303"
   },
   {
    "id": "si-vertigo",
@@ -10303,6 +11315,31 @@
    "photo": null
   },
   {
+   "id": "si-viba-film-studio",
+   "name": "Viba Film Studio",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0824,
+   "lng": 14.4859,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "State run national film base in the Stegne industrial zone of Ljubljana, with two sound stages of about 665 and 476 square metres plus set building, wardrobe and prop departments.",
+   "services": "Studio space, technical equipment, props and wardrobe, plus picture and sound post production, offered to domestic and foreign productions.",
+   "credits": null,
+   "facilities": "Two stages of 665 m2 and 476 m2, set construction and paint shops, wardrobe and prop stores, four audio suites, video mixing room, 45 seat screening room, lighting and grip rental.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.vibafilm.si/o-nas/predstavitev",
+   "source_urls": [
+    "https://www.vibafilm.si/o-nas/predstavitev",
+    "https://www.vibafilm.si/",
+    "https://filminslovenia.si/"
+   ],
+   "photo": null,
+   "guide_id": "si-viba-film-studio",
+   "guide_url": "/compare-film-tv-locations/#loc-si-viba-film-studio"
+  },
+  {
    "id": "es-297-studio",
    "name": "297Studio",
    "city": "Leganés",
@@ -10312,7 +11349,7 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "A column free 700 sqm sound stage in Leganes, south of Madrid, with a large cyclorama, dressing rooms and direct street level vehicle access for series, commercials and photo shoots.",
-   "services": null,
+   "services": "The stage is available 24 hours; night and weekend shoots may carry a surcharge. A stage manager is included in every rental to coordinate the set and supervise safety; equipment is not included by default, but a basic support kit and technical crew (gaffer, sound, camera) can be added on request. Volume discounts apply when several services are combined, and weekly or monthly package prices exist.",
    "credits": null,
    "facilities": "Column-free main stage 21.8 x 30.6 m x 5.0 m high (about 700 sqm); cyclorama 11.55 m wide x 5.4 m deep x 3.9 m high; four dressing rooms with showers; 26 private parking spaces plus adjacent public parking; direct street access with a goods lift rated to 2 tonnes.",
    "group": null,
@@ -10325,6 +11362,30 @@
    "photo": null,
    "guide_id": "es-297-studio",
    "guide_url": "/compare-film-tv-locations/#loc-es-297-studio"
+  },
+  {
+   "id": "es-a-punt-studios-burjassot",
+   "name": "A Punt Media Studios",
+   "city": "Valencia, Valencian Community",
+   "country": "Spain",
+   "lat": 39.5122,
+   "lng": -0.4247,
+   "type": "Studio",
+   "specialism": "TV & broadcast studio",
+   "summary": "Broadcast centre of the Valencian public media corporation at Burjassot, with television studios, news and drama sets, control galleries and technical support areas.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.apuntmedia.es/",
+   "source_urls": [
+    "https://www.apuntmedia.es/",
+    "https://en.wikipedia.org/wiki/%C3%80_Punt"
+   ],
+   "photo": null,
+   "guide_id": "es-a-punt-studios-burjassot",
+   "guide_url": "/compare-film-tv-locations/#loc-es-a-punt-studios-burjassot"
   },
   {
    "id": "es-antavianafilms",
@@ -10472,7 +11533,10 @@
    "official_url": "https://www.banzaistudio.tv",
    "source_urls": [
     "https://www.banzaistudio.tv",
-    "https://www.bcncatfilmcommission.com/ca/companies/?f%5B0%5D=im_field_company_tags%3A1308"
+    "https://www.bcncatfilmcommission.com/ca/companies/?f%5B0%5D=im_field_company_tags%3A1308",
+    "https://www.banzaistudio.tv/producto/pack-1-plato-camara-luces/",
+    "https://www.banzaistudio.tv/producto/pack-3-pack-tungsteno/",
+    "https://www.banzaistudio.tv/producto/pack-2-plato-decorado/"
    ],
    "photo": null,
    "guide_id": "es-banzai-studio",
@@ -10555,6 +11619,30 @@
    },
    "guide_id": "ciudad-de-la-luz",
    "guide_url": "/compare-film-tv-locations/#loc-ciudad-de-la-luz"
+  },
+  {
+   "id": "es-crtvg-san-marcos-studios",
+   "name": "CRTVG San Marcos Studios",
+   "city": "A Coruna, Galicia",
+   "country": "Spain",
+   "lat": 42.8911,
+   "lng": -8.4775,
+   "type": "Studio",
+   "specialism": "TV & broadcast studio",
+   "summary": "Broadcast centre of the Galician public media company at San Marcos, Santiago, with television studios, news and drama sets, control rooms and technical areas.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.crtvg.gal/crtvg",
+   "source_urls": [
+    "https://www.crtvg.gal/crtvg",
+    "https://en.wikipedia.org/wiki/Televisi%C3%B3n_de_Galicia"
+   ],
+   "photo": null,
+   "guide_id": "es-crtvg-san-marcos-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-es-crtvg-san-marcos-studios"
   },
   {
    "id": "es-deluxe-spain",
@@ -10693,14 +11781,16 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "A permanent western style backlot in the Tabernas desert with a saloon, jail, church and ranch buildings, built for spaghetti westerns and still used for filming and photography.",
-   "services": null,
+   "services": "Open daily 09:00 to 18:00, with closing moved to 19:00 from 29 March; the site stays open to visitors and states more than 300 productions have shot there.",
    "credits": "The Good, the Bad and the Ugly, The Sisters Brothers, That Dirty Black Bag",
    "facilities": "Western town backlot with saloon, jail, church, ranch houses and stables; horse-drawn carriages and livestock on site; on-site restaurant/bar and swimming pool.",
    "group": null,
    "founded": null,
    "official_url": "https://fortbravo.org",
    "source_urls": [
-    "https://fortbravo.org"
+    "https://fortbravo.org",
+    "https://fortbravo.org/entradas/",
+    "https://fortbravo.org/"
    ],
    "photo": null,
    "guide_id": "es-fort-bravo",
@@ -11030,12 +12120,13 @@
    "summary": "A preserved western film set in the Tabernas desert built for 1960s Spaghetti Westerns, with a saloon, jail and main street still used for stunt shows and shoots.",
    "services": null,
    "credits": "A Fistful of Dollars (1964), For a Few Dollars More (1965)",
-   "facilities": null,
+   "facilities": "Western town set with saloon, stables, an Indian encampment and a photo studio with period costumes; a zoo reserve with more than 800 animals, an aquatic zone with pool and water slides, museums of cinema, cars and carriages, and five catering outlets (Restaurante Arizona, Grill Mirador Okavango, Chiringuito Africa Snack, Heladeria-Bocateria La Reserva and Saloon The Yellow Rose). Located in the Tabernas desert, Almeria.",
    "group": null,
    "founded": null,
    "official_url": "https://minihollywoodoasys.com/",
    "source_urls": [
-    "https://www.miniHollywood.com/"
+    "https://www.miniHollywood.com/",
+    "https://minihollywoodoasys.com/"
    ],
    "photo": null,
    "guide_id": "es-mini-hollywood-oasys",
@@ -11723,6 +12814,30 @@
    "guide_url": "/compare-film-tv-locations/#loc-se-ystad-studios"
   },
   {
+   "id": "ch-1291-productions-studios",
+   "name": "1291 Productions Studios",
+   "city": "Thurgau",
+   "country": "Switzerland",
+   "lat": 47.5485,
+   "lng": 9.1598,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Two adjoining sound stages at Burglen in Thurgau that can be run as one space or divided by soundproof walls, hired by the hour, day or week.",
+   "services": null,
+   "credits": null,
+   "facilities": "Two connected soundstages, soundproof dividing walls, in-house production services",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.1291productions.ch/en/studios-1",
+   "source_urls": [
+    "https://www.1291productions.ch/en/studios-1",
+    "https://switzerlandfilmcommission.ch/studios/"
+   ],
+   "photo": null,
+   "guide_id": "ch-1291-productions-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-1291-productions-studios"
+  },
+  {
    "id": "ch-akka-films",
    "name": "Akka Films",
    "city": "Geneva",
@@ -11786,6 +12901,30 @@
    "photo": null
   },
   {
+   "id": "ch-content-park-operations",
+   "name": "Content Park Operations",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3988,
+   "lng": 8.4555,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Private studio group in Schlieren west of Zurich, with sound stages up to about 400 square metres and 7.5 metres clear height plus a fully rigged TV studio.",
+   "services": null,
+   "credits": null,
+   "facilities": "Several rental sound stages and a TV studio across sites in Zurich and Schlieren, about 3,000 square metres in total",
+   "group": null,
+   "founded": null,
+   "official_url": "https://cpoag.ch/studios/",
+   "source_urls": [
+    "https://cpoag.ch/studios/",
+    "https://switzerlandfilmcommission.ch/studios/"
+   ],
+   "photo": null,
+   "guide_id": "ch-content-park-operations",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-content-park-operations"
+  },
+  {
    "id": "ch-contrast-film",
    "name": "Contrast Film",
    "city": "Zurich",
@@ -11826,6 +12965,29 @@
     "https://www.dschointventschr.ch/"
    ],
    "photo": null
+  },
+  {
+   "id": "ch-fotohalle-schlieren",
+   "name": "Fotohalle",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.399,
+   "lng": 8.4551,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Column free hall of about 420 square metres at Schlieren used as a photo, film and event studio, with a drive in entrance and blackout capability.",
+   "services": null,
+   "credits": null,
+   "facilities": "About 420 square metres of studio floor, blackout curtains, vehicle access",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.fotohalle.ch/",
+   "source_urls": [
+    "https://www.fotohalle.ch/"
+   ],
+   "photo": null,
+   "guide_id": "ch-fotohalle-schlieren",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-fotohalle-schlieren"
   },
   {
    "id": "ch-hugofilm",
@@ -11872,6 +13034,30 @@
    "photo": null
   },
   {
+   "id": "ch-nebel-studios",
+   "name": "Nebel Studios",
+   "city": "Ticino",
+   "country": "Switzerland",
+   "lat": 45.9666,
+   "lng": 8.9223,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Production studio at Grancia south of Lugano, listed by the national film commission as one of the studio facilities available to visiting productions in Italian speaking Switzerland.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://nebelproductions.com/studios/",
+   "source_urls": [
+    "https://nebelproductions.com/studios/",
+    "https://switzerlandfilmcommission.ch/studios/"
+   ],
+   "photo": null,
+   "guide_id": "ch-nebel-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-nebel-studios"
+  },
+  {
    "id": "ch-point-prod",
    "name": "Point Prod",
    "city": "Geneva",
@@ -11892,6 +13078,30 @@
     "https://www.pointprod.ch/contact"
    ],
    "photo": null
+  },
+  {
+   "id": "ch-redfox-studio-ursy",
+   "name": "REDFOX Studio",
+   "city": "Fribourg",
+   "country": "Switzerland",
+   "lat": 46.6288,
+   "lng": 6.8427,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio at Ursy in the Fribourg countryside between Lausanne and Bern, listed by the national film commission among the production studios open to hire.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://redfox-studio.ch/",
+   "source_urls": [
+    "https://redfox-studio.ch/",
+    "https://switzerlandfilmcommission.ch/studios/"
+   ],
+   "photo": null,
+   "guide_id": "ch-redfox-studio-ursy",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-redfox-studio-ursy"
   },
   {
    "id": "ch-redspace",
@@ -11935,6 +13145,159 @@
     "https://www.ritaproductions.com/contact"
    ],
    "photo": null
+  },
+  {
+   "id": "ch-rsi-studios-comano",
+   "name": "RSI Studios Comano",
+   "city": "Ticino",
+   "country": "Switzerland",
+   "lat": 46.0381,
+   "lng": 8.9533,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Television and multimedia base of Italian speaking Swiss public broadcasting on the hill above Lugano, with production studios, control rooms and technical halls.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.rsi.ch/",
+   "source_urls": [
+    "https://www.rsi.ch/",
+    "https://www.srgssr.ch/en/contact/enterprise-units-and-national-programmes/"
+   ],
+   "photo": null,
+   "guide_id": "ch-rsi-studios-comano",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-rsi-studios-comano"
+  },
+  {
+   "id": "ch-rts-studios-geneva",
+   "name": "RTS Studios Geneva",
+   "city": "Geneva",
+   "country": "Switzerland",
+   "lat": 46.196,
+   "lng": 6.1359,
+   "type": "Studio",
+   "specialism": "TV & broadcast studio",
+   "summary": "Broadcast centre of French speaking Swiss public television on Quai Ernest-Ansermet in Geneva, with news and talk studios and 1970s broadcast architecture.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.rts.ch/",
+   "source_urls": [
+    "https://www.rts.ch/",
+    "https://www.srgssr.ch/en/contact/enterprise-units-and-national-programmes/"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Gen%C3%A8ve_-_Tour_RTS_%28ao%C3%BBt_2018%29.jpg/960px-Gen%C3%A8ve_-_Tour_RTS_%28ao%C3%BBt_2018%29.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Gen%C3%A8ve_-_Tour_RTS_(ao%C3%BBt_2018).jpg",
+    "author": "Benoît Prieur",
+    "license": "CC0"
+   },
+   "guide_id": "ch-rts-studios-geneva",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-rts-studios-geneva"
+  },
+  {
+   "id": "ch-soundville-media-studios",
+   "name": "Soundville Media Studios",
+   "city": "Lucerne",
+   "country": "Switzerland",
+   "lat": 47.0429,
+   "lng": 8.3128,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Combined sound and film studio complex in Lucerne, in operation since 1980, offering a film stage alongside recording and post production rooms.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.soundville.ch/en/studio/filmstudio",
+   "source_urls": [
+    "https://www.soundville.ch/en/studio/filmstudio",
+    "https://www.soundville.ch/en/kontakt"
+   ],
+   "photo": null,
+   "guide_id": "ch-soundville-media-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-soundville-media-studios"
+  },
+  {
+   "id": "ch-srf-studio-leutschenbach",
+   "name": "SRF Studio Zurich Leutschenbach",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.4172,
+   "lng": 8.561,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Headquarters and broadcast complex of Swiss German public television in north Zurich, with news, sport and talk studios, galleries, newsroom floors and a 1970s office block.",
+   "services": null,
+   "credits": "Tagesschau, Arena",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.srf.ch/unternehmen/standorte/unternehmenssitz-studio-zuerich-leutschenbach",
+   "source_urls": [
+    "https://www.srf.ch/unternehmen/standorte/unternehmenssitz-studio-zuerich-leutschenbach",
+    "https://www.srf.ch/sendungen/hallosrf/fuehrungen/der-klassiker-in-zuerich-rundgang-durch-die-radio-und-tv-studios-am-leutschenbach"
+   ],
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/SRF_Studio_Zurich_Leutschenbach_Ank_Kumar_Infosys_Limited_02.jpg/960px-SRF_Studio_Zurich_Leutschenbach_Ank_Kumar_Infosys_Limited_02.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:SRF_Studio_Zurich_Leutschenbach_Ank_Kumar_Infosys_Limited_02.jpg",
+    "author": "Ank Kumar",
+    "license": "CC BY-SA 4.0"
+   },
+   "guide_id": "ch-srf-studio-leutschenbach",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-srf-studio-leutschenbach"
+  },
+  {
+   "id": "ch-studio-13-sion",
+   "name": "Studio 13",
+   "city": "Valais",
+   "country": "Switzerland",
+   "lat": 46.2215,
+   "lng": 7.368,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Film and photo studio on Route de Riddes in Sion, the studio the Valais film commission and the national commission point productions to for interior work in the Rhone valley.",
+   "services": null,
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://studio-13.ch/",
+   "source_urls": [
+    "https://studio-13.ch/",
+    "https://switzerlandfilmcommission.ch/studios/"
+   ],
+   "photo": null,
+   "guide_id": "ch-studio-13-sion",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-studio-13-sion"
+  },
+  {
+   "id": "ch-studio-gutenswil",
+   "name": "StudioGutenswil",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3854,
+   "lng": 8.7181,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Rental studio in the village of Gutenswil east of Zurich, in use since the 1960s and quiet enough for live sound recording during filming.",
+   "services": "Quiet enough for original sound recording, used for film productions and photo shoots",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.studiogutenswil.ch/",
+   "source_urls": [
+    "https://www.studiogutenswil.ch/"
+   ],
+   "photo": null,
+   "guide_id": "ch-studio-gutenswil",
+   "guide_url": "/compare-film-tv-locations/#loc-ch-studio-gutenswil"
   },
   {
    "id": "ch-tellfilm",
@@ -12368,6 +13731,30 @@
    "photo": null
   },
   {
+   "id": "uk-bovingdon-airfield-studios",
+   "name": "Bovingdon Airfield Studios",
+   "city": "Hertfordshire",
+   "country": "United Kingdom",
+   "lat": 51.7263,
+   "lng": -0.5432,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "Studio complex on a former RAF airfield near Hemel Hempstead with sound stages, workshops, offices and large open backlots on the runway and taxiways.",
+   "services": null,
+   "credits": "1917, Fury, Bohemian Rhapsody, Fast & Furious 6",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://bovingdonairfieldstudios.com/",
+   "source_urls": [
+    "https://bovingdonairfieldstudios.com/",
+    "https://en.wikipedia.org/wiki/RAF_Bovingdon"
+   ],
+   "photo": null,
+   "guide_id": "uk-bovingdon-airfield-studios",
+   "guide_url": "/compare-film-tv-locations/#loc-uk-bovingdon-airfield-studios"
+  },
+  {
    "id": "uk-bray-studios",
    "name": "Bray Studios",
    "city": "Bray",
@@ -12708,13 +14095,14 @@
    "summary": "Film and television studio complex at Borehamwood with several sound stages, dating back to the 1920s and long used for major British productions.",
    "services": null,
    "credits": "Star Wars, Indiana Jones and the Last Crusade",
-   "facilities": null,
+   "facilities": "9 film and TV stages with over 90,000 sq ft of filming space plus a backlot. The two George Lucas stages are 15,770 sq ft each with a height of 50 ft; the Platinum Stages (3 and 4) add 34,000 sq ft. On-site Production Village, workshops, production offices, dressing rooms and make-up rooms.",
    "group": null,
    "founded": null,
    "official_url": "https://elstreestudios.co.uk/",
    "source_urls": [
     "https://elstreestudios.co.uk/",
-    "https://en.wikipedia.org/wiki/Elstree_Studios"
+    "https://en.wikipedia.org/wiki/Elstree_Studios",
+    "https://elstreestudios.co.uk/studios/"
    ],
    "photo": {
     "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Elstree_Studios_-_geograph.org.uk_-_1882776.jpg/960px-Elstree_Studios_-_geograph.org.uk_-_1882776.jpg",
@@ -13493,13 +14881,14 @@
    "summary": "Film and TV production hub in Leeds with several sound stages, warehouse space, production offices and an on-site cinema, also home to a film school.",
    "services": null,
    "credits": "Bank of Dave, The ABC Murders, Girlfriends, The Duke",
-   "facilities": null,
+   "facilities": "Studio 01: 2,394 sq ft (222.22 m2), 17 ft 4 in (5.30 m) high, drive-in access 15 ft 3 in (4.66 m), with an infinity cove. Studio 03: 1,100 sq ft with a 428 sq ft infinity wall, 12 ft 8 in (3.90 m) high, changing and dressing rooms with en-suite shower, Sony 4K and Dolby Atmos enabled cinema. Also office space on site and the Archive coffee house, bar and event space.",
    "group": null,
    "founded": null,
    "official_url": "https://primestudios.co.uk",
    "source_urls": [
     "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/prime-studios/",
-    "https://primestudios.co.uk"
+    "https://primestudios.co.uk",
+    "https://primestudios.co.uk/studios/"
    ],
    "photo": null,
    "guide_id": "uk-prime-studios-leeds",
@@ -13915,15 +15304,16 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "Purpose-built film and TV production complex in Beswick, Manchester, with 760,000 sq ft of space including a 30,000 sq ft main stage, offices, workshops and unit base parking.",
-   "services": null,
+   "services": "Stages are let dry hire and were purpose-built for film, high-end TV and commercial filming. Support space is also dry hire and can be used as offices, workshops, costume, supporting-artist holding or prop storage.",
    "credits": null,
-   "facilities": null,
+   "facilities": "Six dry-hire stages: Stage 1 11,194 sq ft (30 ft), Stage 2 10,669 sq ft (30 ft), Stage 3 10,096 sq ft (21.9 ft), Stage 4 10,150 sq ft (21.9 ft), Stage 5 8,991 sq ft (21.9 ft), Stage 6 29,892 sq ft (40 ft). 760,000 sq ft of production space in total, 158,000 sq ft of unit base parking, plus production offices, workshops, prop stores and dressing rooms.",
    "group": null,
    "founded": null,
    "official_url": "https://www.spacestudiosmanchester.co.uk",
    "source_urls": [
     "https://www.spacestudiosmanchester.co.uk",
-    "https://screenmanchester.com/facilities/space-studios-manchester/"
+    "https://screenmanchester.com/facilities/space-studios-manchester/",
+    "https://www.spacestudiosmanchester.co.uk/facilities"
    ],
    "photo": null,
    "guide_id": "uk-space-studios-manchester",
@@ -14050,15 +15440,17 @@
    "type": "Studio",
    "specialism": "Sound stages & backlot",
    "summary": "Council-run studio complex on the site of a former sherry bottling plant in south Bristol, with eleven sound stages across two sites and a rooftop solar array.",
-   "services": null,
+   "services": "All 11 stages are BAFTA albert-accredited and available for long and short term hire.",
    "credits": "Poldark, Wolf Hall, Broadchurch series 3, The Pale Horse, Rivals, Hellboy",
-   "facilities": "Eleven stages across two sites (TBY2 stages of 20,000, 16,500 and 7,000 sq ft)",
+   "facilities": "11 BAFTA albert-accredited stages over two sites. Studios 1-8 at the original TBY1 site range up to 22,000 sq ft and include a 5,000 sq ft green screen studio. TBY2 premium soundstages: Studio 9 20,000 sq ft, Studio 10 16,500 sq ft, Studio 11 7,000 sq ft, fully soundproofed with clear-span build space. Production Village with 17 artist dressing and green rooms, furnished make-up and wardrobe facilities and a supporting artist holding room; production offices; site-wide 3GB internet with free guest wifi and structured cabling in all offices.",
    "group": null,
    "founded": null,
    "official_url": "https://www.thebottleyard.com",
    "source_urls": [
     "https://en.wikipedia.org/wiki/The_Bottle_Yard_Studios",
-    "https://www.thebottleyard.com"
+    "https://www.thebottleyard.com",
+    "https://www.thebottleyard.com/space/stages/",
+    "https://www.thebottleyard.com/space/what-you-need-to-know/"
    ],
    "photo": null,
    "guide_id": "uk-bottle-yard-studios",
@@ -14076,7 +15468,7 @@
    "summary": "Purpose-built studio at Liverpool Innovation Park with two 20,000 sq ft stages, production offices, workshops and a 1.7-acre unit base with parking for 200 vehicles.",
    "services": null,
    "credits": "Hollyoaks, The Batman, Fantastic Beasts, Peaky Blinders, House of Guinness",
-   "facilities": "Two stages (39ft high, 195ft x 96ft), 400 amps power per stage, on-site production offices, cafe and gym, parking for 200 vehicles",
+   "facilities": "Two purpose-built stages, Depot 01 and Depot 02, each 20,000 sq ft, 195 ft (60 m) long by 96 ft (30 m) wide and 39 ft (12 m) high, with 400 amps of power in three power clusters including SP&N, acoustic ratings of 48 dB (ceiling) and 42 dB (walls), two 5 x 4 m roller shutters and six acoustically treated doors each. Over 300,000 sq ft of production space in total including offices, boardrooms and workshops. Production offices at the adjacent Liverpool Innovation Park range up to 25,000 sq ft with broadband up to 1 GB/s, a cafe and a gym.",
    "group": null,
    "founded": null,
    "official_url": "https://liverpoolfilmoffice.tv/the-depot/",
@@ -14086,6 +15478,30 @@
    "photo": null,
    "guide_id": "uk-the-depot-liverpool",
    "guide_url": "/compare-film-tv-locations/#loc-uk-the-depot-liverpool"
+  },
+  {
+   "id": "uk-northern-studios-hartlepool",
+   "name": "The Northern Studios",
+   "city": "County Durham",
+   "country": "United Kingdom",
+   "lat": 54.6857,
+   "lng": -1.2041,
+   "type": "Studio",
+   "specialism": "Virtual production stage",
+   "summary": "Teesside University production facility in Hartlepool with a sound stage, green screen, virtual production volume, edit suites and workshop space.",
+   "services": "The studios take bookings from productions for stage, virtual production and post facilities.",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.northernstudios.co.uk/",
+   "source_urls": [
+    "https://www.northernstudios.co.uk/",
+    "https://northeastscreen.org/"
+   ],
+   "photo": null,
+   "guide_id": "uk-northern-studios-hartlepool",
+   "guide_url": "/compare-film-tv-locations/#loc-uk-northern-studios-hartlepool"
   },
   {
    "id": "uk-sharp-project",
@@ -14099,13 +15515,14 @@
    "summary": "A converted industrial estate in north Manchester built as television and digital production studios, with offices, a yard and outdoor space for crews and vehicles.",
    "services": null,
    "credits": null,
-   "facilities": "200,000 sq ft refurbished warehouse, home to more than 60 companies; the site is promoted for space, power and connectivity for digital content, media and TV/film production.",
+   "facilities": "200,000 sq ft refurbished warehouse campus. Stage One is a 3,700 sq ft production space with room for up to 110 people in theatre-style seating, wifi, a green room and 3-phase power. The Campus, the central communal space, seats up to 200 and has a licensed bar, wifi and 3-phase power. Meeting rooms (boardroom up to 20, theatre up to 20), in-house catering team and on-site tenants.",
    "group": null,
    "founded": null,
    "official_url": "https://thesharpproject.co.uk",
    "source_urls": [
     "https://thesharpproject.co.uk",
-    "https://screenmanchester.com/"
+    "https://screenmanchester.com/",
+    "https://www.thesharpproject.co.uk/room-hire-and-event-space/"
    ],
    "photo": null,
    "guide_id": "uk-sharp-project",
@@ -14280,13 +15697,14 @@
    "summary": "Multi-stage production facility on Whitehall Road, Leeds, opened 2020, with four stages up to 27,000 sq ft, production offices, workshops and on-site parking.",
    "services": null,
    "credits": "Bodies, Boat Story, Platform 7, Marvel's Secret Invasion",
-   "facilities": "Four stages from 10,500 to 27,000 sq ft, prop stores, workshops, wardrobe, hair/makeup studio, green room, two car parks with EV charging",
+   "facilities": "Over 140,000 sq ft of production space with four sound stages: Stage 1 1,487 sq m (16,004 sq ft), 8.496 m (27.87 ft) high; Stage 2 1,167 sq m (12,558 sq ft), 8.258 m (27.09 ft); Stage 3 972 sq m (10,461.5 sq ft), 8.141 m (26.70 ft); Stage 4 2,523 sq m (27,162 sq ft), 8.276 m (27.15 ft). Backlot, workshops, production office space and car parking on site.",
    "group": null,
    "founded": null,
    "official_url": "https://www.versastudios.com",
    "source_urls": [
     "https://www.screenyorkshire.co.uk/filming-in-yorkshire/locations-production/studio/versa-leeds-studios/",
-    "https://www.versastudios.com"
+    "https://www.versastudios.com",
+    "https://www.versastudios.com/leeds-studios"
    ],
    "photo": null,
    "guide_id": "uk-versa-leeds-studios",
@@ -14397,12 +15815,13 @@
    "summary": "A two-site studio complex in Hayes with ten stages in total, including the UK's only permanent standing hospital set.",
    "services": null,
    "credits": "Ted Lasso, Killing Eve, The Father, Venom: The Last Dance, Good Omens, Bohemian Rhapsody, The Imitation Game",
-   "facilities": "Springfield site: 6 sound stages, over 40,000 sq ft of stage space, 70+ production/office rooms, on-site cafeteria for 300+ crew. Parkside site: 4 stages, Stages 7 and 10 over 13,000 sq ft each with 38 ft ceiling height, Stages 8 and 9 over 11,000 sq ft each. 85,000 sq ft of soundproof stage space in total across both sites, 77+ office rooms, a permanent hospital set standing on site.",
+   "facilities": "10 stages across two sites, all with drive-in access. Springfield Road: Stage 1 6,240 sq ft, Stage 2 5,300 sq ft, Stage 3 7,100 sq ft, Stage 5 7,100 sq ft, Stage 6 9,400 sq ft (all 24 ft high), Stages 4A 1,291 sq ft, 4B 1,300 sq ft and 4C 1,700 sq ft (20 ft high). Parkside: Stages 7 and 9 13,605 sq ft each, Stages 8 and 10 11,302 sq ft each, all 40 ft high. Over 70 office rooms, a meeting/conference room seating up to 60, canteen seating up to 100, laundry room, post room, scissor lift on request and site-wide wifi.",
    "group": null,
    "founded": null,
    "official_url": "https://www.westlondonfilmstudios.com/",
    "source_urls": [
-    "https://www.westlondonfilmstudios.com/"
+    "https://www.westlondonfilmstudios.com/",
+    "https://www.westlondonfilmstudios.com/stages"
    ],
    "photo": null,
    "guide_id": "uk-west-london-film-studios",

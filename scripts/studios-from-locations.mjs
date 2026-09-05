@@ -86,13 +86,33 @@ const SERVICES = {
 };
 
 const existing = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { updated: "", note: "", items: [] };
-const keep = existing.items.filter((it) => !it.guide_id);
+// Een studio die eerder met de hand is toegevoegd en later ook in de gids
+// belandt, zou dubbel komen te staan. De gids wint (die heeft de locatiegegevens
+// en de link terug), dus zo'n handmatige entry valt hier af.
+const norm = (s) => String(s || "").toLowerCase()
+  .replace(/\b(gmbh|ag|bv|nv|ltd|limited|llc|sro|s r o|kft|zrt|aps|a\/s|ab|as|oy|d o o|doo|studios?|films?|film|productions?|pictures|media|group|the)\b/g, " ")
+  .replace(/[^a-z0-9]+/g, " ").trim();
+const fromGuideKeys = new Set(studios.flatMap((l) => {
+  const iso = ISO[l.country] || "xx";
+  return [`${iso}-${l.id.replace(/^[a-z]{2}-/, "")}`, `${l.country}|${norm(l.name)}`];
+}));
+// Zo'n handmatige entry gaat niet verloren: wat de gids niet weet (diensten,
+// credits, oprichtingsjaar, moederbedrijf) wordt hieronder overgenomen.
+const absorbed = new Map();
+const keep = existing.items.filter((it) => {
+  if (it.guide_id) return false;
+  for (const k of [it.id, `${it.country}|${norm(it.name)}`]) {
+    if (fromGuideKeys.has(k)) { absorbed.set(k, it); return false; }
+  }
+  return true;
+});
 const prevByGuide = Object.fromEntries(existing.items.filter((it) => it.guide_id).map((it) => [it.guide_id, it]));
 const fromGuide = studios.map((l) => {
   const iso = ISO[l.country] || "xx";
   const slug = l.id.replace(/^[a-z]{2}-/, "");
   const prev = prevByGuide[l.id];
   const o = OVERRIDE[l.id] || {};
+  const had = absorbed.get(`${iso}-${slug}`) || absorbed.get(`${l.country}|${norm(l.name)}`) || {};
   return {
     id: `${iso}-${slug}`,
     name: l.name,
@@ -103,11 +123,11 @@ const fromGuide = studios.map((l) => {
     type: o.type || "Studio",
     specialism: o.specialism || specialism(l),
     summary: clip(l.setting, 220),
-    services: SERVICES[l.id] || l.suitability || null,
-    credits: l.known_for || null,
-    facilities: l.facilities || null,
-    group: null,
-    founded: null,
+    services: SERVICES[l.id] || l.suitability || had.services || null,
+    credits: l.known_for || had.credits || null,
+    facilities: l.facilities || had.facilities || null,
+    group: had.group || null,
+    founded: had.founded || null,
     official_url: l.official_url,
     source_urls: l.source_urls || [l.official_url],
     photo: l.photo || null,
@@ -125,4 +145,5 @@ fs.writeFileSync(OUT, JSON.stringify(out, null, 1) + "\n");
 const spec = {};
 for (const s of fromGuide) spec[s.specialism] = (spec[s.specialism] || 0) + 1;
 console.log(`${fromGuide.length} studios from the guide, ${keep.length} kept, ${items.length} total`);
+if (absorbed.size) console.log(`absorbed into the guide entry: ${[...absorbed.values()].map((i) => i.id).join(", ")}`);
 console.log(spec);
