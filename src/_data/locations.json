@@ -853,7 +853,7 @@
       "budget_template": {
         "url": "https://filmestonia.eu/wp-content/uploads/Taotlusvorm-FilmEstonia_2026-1.doc",
         "label": "Film Estonia application form (Word), Estonian Film Institute",
-        "format": "docx",
+        "format": "doc",
         "note": "Estonian-language form whose budget section asks for the overall budget, the Estonian production stage budget, the eligible cost budget, the labour share and the rate claimed (30 or 40%). It is digitally signed and sent to the Institute, and separate interim and final report forms set actual costs against this budget before the audited cost report is approved."
       }
     },
