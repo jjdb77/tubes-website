@@ -3,6 +3,48 @@
  "note": "Only what a company publishes itself (or Wikipedia states). Summaries in our own words; credits, facilities and founding years only as published, otherwise null. Studios marked with guide_id come from the locations guide and are refreshed by scripts/studios-from-locations.mjs.",
  "items": [
   {
+   "id": "at-allegro-film",
+   "name": "Allegro Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1958,
+   "lng": 16.3853,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Vienna production company making feature films, documentaries and TV drama and crime series, with several documentaries released internationally.",
+   "services": "Feature film production, documentary production, TV drama and crime series, green producing",
+   "credits": "We Feed the World, Let's Make Money, More Than Honey, Das finstere Tal, Love Machine",
+   "facilities": null,
+   "group": null,
+   "founded": 1989,
+   "official_url": "https://www.allegrofilm.at/",
+   "source_urls": [
+    "https://www.allegrofilm.at/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-amour-fou-vienna",
+   "name": "Amour Fou Vienna",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.199,
+   "lng": 16.352,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna office of the Amour Fou group, established in 2001 to develop and produce international feature films and documentaries.",
+   "services": "Feature film development and production, documentary production, international co-production and financing",
+   "credits": "Ingeborg Bachmann: Journey into the Desert, The Blood Countess, La Mort Viendra, Women as Lovers, Roya",
+   "facilities": null,
+   "group": "Amour Fou",
+   "founded": 2001,
+   "official_url": "https://www.amourfoufilm.com/",
+   "source_urls": [
+    "https://www.amourfoufilm.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "at-avbaby-studio-graz",
    "name": "AVbaby Motion Pictures Studio",
    "city": "Graz",
@@ -27,6 +69,93 @@
    "guide_url": "/compare-film-tv-locations/#loc-at-avbaby-studio-graz"
   },
   {
+   "id": "at-blautoene",
+   "name": "Blautoene",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1972,
+   "lng": 16.3555,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Vienna audio post-production studio for cinema, TV, commercials and music, operating six studios including a Dolby Atmos cinema mixing stage.",
+   "services": "Sound mixing, Dolby Atmos mastering, foley recording, sound design for film, TV and advertising",
+   "credits": "Yanuni, Aufputzt is', Der Pate (Sky), Erste Bank campaign",
+   "facilities": "6 studios (studio 1 to 6), Dolby Atmos cinema mixing stage, Dolby Atmos home mixing stage, Foley stage",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.blautoene.at/",
+   "source_urls": [
+    "https://www.blautoene.at/impressum"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-coop99",
+   "name": "Coop99",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.216,
+   "lng": 16.36,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna feature film production company founded by four filmmakers in 1999, producing arthouse cinema regularly selected for Cannes, Venice and Berlinale.",
+   "services": "Feature film development and production, international co-production",
+   "credits": "Quo Vadis Aida, Toni Erdmann, Club Zero, Little Joe, Western",
+   "facilities": null,
+   "group": null,
+   "founded": 1999,
+   "official_url": "https://www.coop99.at/",
+   "source_urls": [
+    "https://www.coop99.at/wp/profil/",
+    "https://www.coop99.at/wp/impressum/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-dor-film",
+   "name": "Dor Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.228,
+   "lng": 16.32,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna production company founded in 1988, making feature films and TV films including the Woodwalkers franchise and Schachnovelle.",
+   "services": "Feature film production, TV film production",
+   "credits": "Woodwalkers, Woodwalkers 2, Schachnovelle, Stella. Ein Leben, Sisi & Ich",
+   "facilities": null,
+   "group": null,
+   "founded": 1988,
+   "official_url": "https://www.dor-film.com/",
+   "source_urls": [
+    "https://www.dor-film.com/ueber-uns",
+    "https://www.dor-film.com/kontakt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-epo-film",
+   "name": "Epo-Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.179,
+   "lng": 16.34,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Vienna production company making TV documentaries, docudramas and feature films, working as a co-production partner with ORF, ZDF and Ceska televize.",
+   "services": "TV documentary production, docudrama production, feature film co-production, animation and VFX",
+   "credits": "Der Untergang der Habsburger, Bibi Blocksberg: Das grosse Hexentreffen, Die Nichte des Polizisten, Oesterreich-Bild, Army of Lovers",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.epofilm.com/",
+   "source_urls": [
+    "https://www.epofilm.com/",
+    "https://www.epofilm.com/impressum"
+   ],
+   "photo": null
+  },
+  {
    "id": "at-frames-virtual-production-studio",
    "name": "Frames Virtual Production Studio",
    "city": "Vienna",
@@ -49,6 +178,49 @@
    "photo": null,
    "guide_id": "at-frames-virtual-production-studio",
    "guide_url": "/compare-film-tv-locations/#loc-at-frames-virtual-production-studio"
+  },
+  {
+   "id": "at-freibeuterfilm",
+   "name": "FreibeuterFilm",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.192,
+   "lng": 16.35,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna feature film and documentary production company led by producer Oliver Neumann, with recent titles nominated for Austrian and German film awards.",
+   "services": "Feature film production, documentary production, theatrical and VOD release support",
+   "credits": "Mother's Baby, Grosse Freiheit, Soldat, To the Night, Eine Million Lichtjahre von Zuhause",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.freibeuterfilm.com/",
+   "source_urls": [
+    "https://www.freibeuterfilm.com/",
+    "https://www.freibeuterfilm.com/impressum"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-golden-girls-filmproduktion",
+   "name": "Golden Girls Filmproduktion",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1995,
+   "lng": 16.348,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Vienna production company making fiction and documentary films, with pre-production through post-production and graphics handled in house.",
+   "services": "Feature film production, documentary production, post-production, graphics and special effects",
+   "credits": "The Witness (Shahed), Girls & Gods, The Last Ambassador, Perla, Eismayer",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.goldengirls.at/",
+   "source_urls": [
+    "https://www.goldengirls.at/about"
+   ],
+   "photo": null
   },
   {
    "id": "at-grandurfilmstudio-klagenfurt",
@@ -123,6 +295,71 @@
    "guide_url": "/compare-film-tv-locations/#loc-at-interspot-film-wien"
   },
   {
+   "id": "at-listo",
+   "name": "LISTO",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.2082,
+   "lng": 16.3738,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Full-service post-production house for film, TV and video, providing picture and sound post for Austrian and international feature films.",
+   "services": "Colour grading, VFX and titles, TV and cinema mastering, sound post",
+   "credits": "Amour, Das weisse Band, Funny Games U.S., Revanche, Theeb",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://listo.at/",
+   "source_urls": [
+    "https://listo.at/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-lotus-film",
+   "name": "Lotus Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1855,
+   "lng": 16.345,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna production company making feature films, TV films and documentaries since 1990, led by managing partner Tommy Pridnig since 2023.",
+   "services": "Feature film production, TV film production, documentary production, green producing",
+   "credits": "Narziss und Goldmund, Der Fuchs, Welcome Home Baby, SAFE, Die Faelle der Gerti B.",
+   "facilities": null,
+   "group": null,
+   "founded": 1990,
+   "official_url": "https://www.lotus-film.at/",
+   "source_urls": [
+    "https://www.lotus-film.at/ueber-uns",
+    "https://www.lotus-film.at/kontakt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-nikolaus-geyrhalter-filmproduktion",
+   "name": "Nikolaus Geyrhalter Filmproduktion",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.234,
+   "lng": 16.328,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Vienna documentary production company built around director Nikolaus Geyrhalter, producing observational cinema documentaries and TV documentaries.",
+   "services": "Documentary film production, TV documentary production",
+   "credits": "MELT, Wise Women, So funktioniert Oesterreich, Pfau: Bin ich echt?, Quo Vadis Aida: The Missing Part",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.geyrhalterfilm.com/",
+   "source_urls": [
+    "https://www.geyrhalterfilm.com/",
+    "https://www.geyrhalterfilm.com/impressum"
+   ],
+   "photo": null
+  },
+  {
    "id": "at-post-haus",
    "name": "post.haus",
    "city": "Vienna",
@@ -140,6 +377,49 @@
    "official_url": "https://post.haus/",
    "source_urls": [
     "https://post.haus/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-prisma-film",
+   "name": "Prisma Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.2105,
+   "lng": 16.3565,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Vienna production company making TV series and TV films for Austrian broadcaster ORF, including the Vienna edition of the Tatort crime series.",
+   "services": "TV series production, TV film production, festival and VOD distribution",
+   "credits": "Tatort, Pflegeleicht, Mermaids Don't Cry, Heimsuchung, Planet Ottakring",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://prismafilm.at/",
+   "source_urls": [
+    "https://prismafilm.at/",
+    "https://prismafilm.at/impressum"
+   ],
+   "photo": null
+  },
+  {
+   "id": "at-superfilm",
+   "name": "Superfilm",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1985,
+   "lng": 16.3505,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Vienna and Munich production company making TV drama series, TV films and cinema features, with a stated focus on climate neutral production.",
+   "services": "TV series production, TV film production, feature film production, green producing",
+   "credits": "Braunschlag, Kafka, School of Champions, Element of Crime, Willkommen Oesterreich",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.superfilm.at/",
+   "source_urls": [
+    "https://www.superfilm.at/"
    ],
    "photo": null
   },
@@ -167,6 +447,28 @@
    "photo": null,
    "guide_id": "at-synchron-stage-vienna",
    "guide_url": "/compare-film-tv-locations/#loc-at-synchron-stage-vienna"
+  },
+  {
+   "id": "at-wega-film",
+   "name": "Wega Film",
+   "city": "Vienna",
+   "country": "Austria",
+   "lat": 48.1965,
+   "lng": 16.286,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vienna production company founded in 1980, making cinema features, TV films and documentaries, producer of Michael Haneke's Oscar winning film Amour.",
+   "services": "Feature film production, TV film production, documentary production, green production",
+   "credits": "Amour, Mueller's Buero, Oase, Sieben Tage Februar, Ich ist ein Anderer",
+   "facilities": null,
+   "group": null,
+   "founded": 1980,
+   "official_url": "https://www.wega-film.at/",
+   "source_urls": [
+    "https://www.wega-film.at/historie",
+    "https://www.wega-film.at/impressum"
+   ],
+   "photo": null
   },
   {
    "id": "be-aed-studios",
@@ -323,6 +625,203 @@
    "guide_url": "/compare-film-tv-locations/#loc-be-rv-studio"
   },
   {
+   "id": "bg-miramar-film",
+   "name": "Miramar Film",
+   "city": "Sofia",
+   "country": "Bulgaria",
+   "lat": 42.6853,
+   "lng": 23.3186,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "A Sofia production company making TV commercials, feature, documentary and animated films, concerts and corporate events, plus set design and visual effects.",
+   "services": "Advertisement production, feature, documentary and animated film production, concert and corporate event production, set design and construction, visual effects and post-production",
+   "credits": [
+    "Kom-Emine"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://miramarfilm.com/",
+   "source_urls": [
+    "https://miramarfilm.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "bg-nu-boyana-film-studios",
+   "name": "Nu Boyana Film Studios",
+   "city": "Sofia",
+   "country": "Bulgaria",
+   "lat": 42.665,
+   "lng": 23.275,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "A film studio in the Boyana district of Sofia with sound stages, standing sets, a water tank and a motion capture stage, used for international feature films, TV series and commercials.",
+   "services": "Sound stage rental, standing sets, motion capture, equipment rental, set construction, props and costumes, location scouting, post production through affiliated companies",
+   "credits": null,
+   "facilities": "Sound stages and standing sets including a New York street backlot, an underwater tank stage, a motion capture stage and construction workshops",
+   "group": "Nu Boyana Family",
+   "founded": 2007,
+   "official_url": "https://www.nuboyana.com/",
+   "source_urls": [
+    "https://www.nuboyana.com/",
+    "https://www.nuboyana.com/contact",
+    "https://www.nuboyana.com/history"
+   ],
+   "photo": null
+  },
+  {
+   "id": "bg-worldwide-fx",
+   "name": "Worldwide FX",
+   "city": "Sofia",
+   "country": "Bulgaria",
+   "lat": 42.665,
+   "lng": 23.275,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "A visual effects studio at Nu Boyana Film Studios in Sofia providing 3D animation, compositing, motion capture and previsualisation for international feature films.",
+   "services": "3D animation, 2D compositing, character animation, motion capture, previsualisation and animatics",
+   "credits": [
+    "Olympus Has Fallen",
+    "The Expendables",
+    "Conan"
+   ],
+   "facilities": "A motion capture stage, three editing suites and a dedicated art department",
+   "group": "Nu Boyana Film Studios",
+   "founded": 2001,
+   "official_url": "https://nuboyana.com/wwfx/",
+   "source_urls": [
+    "https://nuboyana.com/wwfx/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-4film",
+   "name": "4Film",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zagreb feature film production company behind internationally distributed Croatian films and European co-productions.",
+   "services": "Feature film production, documentary production, TV mini-series production, European co-production",
+   "credits": "Infinity Pool, Burning Days, Butterfly Vision, You Carry Me",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.4film.hr/",
+   "source_urls": [
+    "https://www.4film.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-antitalent",
+   "name": "Antitalent",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Croatian production company making feature films and shorts, alongside commercial, service production and virtual production work.",
+   "services": "Feature film production, commercial production, service production, virtual production, video on demand distribution",
+   "credits": "The Man Who Could Not Remain Silent, Murina, The Real Truth About the Fight, The Highlands",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.antitalent.hr/",
+   "source_urls": [
+    "https://www.antitalent.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-bonobostudio",
+   "name": "Bonobostudio",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Zagreb animation studio founded in 2008 producing and distributing animated and experimental short films for international festivals.",
+   "services": "Animated film production, distribution, festival packaging",
+   "credits": "Facuk, Cetiri, Simbionti, Okus kruha od ananasa",
+   "facilities": null,
+   "group": null,
+   "founded": 2008,
+   "official_url": "https://www.bonobostudio.hr/",
+   "source_urls": [
+    "https://www.bonobostudio.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-drugi-plan",
+   "name": "Drugi Plan",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Zagreb television production company founded in 2004 making drama series, reality and culinary formats for Croatian and regional broadcasters.",
+   "services": "TV drama series production, reality and docu-reality production, culinary programming, distribution",
+   "credits": "Novine, Uspjeh, Loza, Seoska gozba",
+   "facilities": null,
+   "group": null,
+   "founded": 2004,
+   "official_url": "https://www.drugiplan.hr/",
+   "source_urls": [
+    "https://www.drugiplan.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-fade-in",
+   "name": "Fade In",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Zagreb production company making documentaries and documentary series, alongside media literacy programmes and a personal stories museum project.",
+   "services": "Documentary production, documentary series, media literacy workshops",
+   "credits": "Joso, Eliksir",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.fadein.hr/",
+   "source_urls": [
+    "https://www.fadein.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-interfilm",
+   "name": "Interfilm",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Zagreb production company offering film and television production services and equipment for local and international shoots.",
+   "services": "Film production, television production, production services, equipment",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.interfilm.hr/",
+   "source_urls": [
+    "https://www.interfilm.hr/"
+   ],
+   "photo": null
+  },
+  {
    "id": "hr-jadran-film",
    "name": "Jadran Film",
    "city": "Zagreb",
@@ -349,6 +848,49 @@
    "photo": null,
    "guide_id": "jadran-film",
    "guide_url": "/compare-film-tv-locations/#loc-jadran-film"
+  },
+  {
+   "id": "hr-kinorama",
+   "name": "Kinorama",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zagreb production company founded in 2003 producing feature films, TV drama and short films, mostly as lead producer on international co-productions.",
+   "services": "Feature film production, TV drama series production, short film production, co-production packaging",
+   "credits": "Bog nece pomoci",
+   "facilities": null,
+   "group": null,
+   "founded": 2003,
+   "official_url": "https://www.kinorama.hr/",
+   "source_urls": [
+    "https://www.kinorama.hr/o-nama/",
+    "https://havc.hr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "hr-pakt-media",
+   "name": "Pakt Media",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "lat": 45.815,
+   "lng": 15.9819,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Production services company based in Zagreb and Ljubljana handling international film and TV shoots in Croatia and Slovenia, including location, crew and incentive support.",
+   "services": "Location scouting, crew and talent coordination, production logistics, film finance consulting, incentive guidance",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.paktmedia.com/",
+   "source_urls": [
+    "https://www.paktmedia.com/"
+   ],
+   "photo": null
   },
   {
    "id": "hr-zagreb-film",
@@ -757,6 +1299,127 @@
    },
    "guide_id": "nordisk-film-studios-valby",
    "guide_url": "/compare-film-tv-locations/#loc-nordisk-film-studios-valby"
+  },
+  {
+   "id": "ee-allfilm",
+   "name": "Allfilm",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "lat": 59.4285,
+   "lng": 24.7186,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Tallinn production company making Estonian fiction films, documentaries and production services for foreign productions, and an Academy Award and Golden Globe nominee.",
+   "services": "Fiction film production, documentary production, production services for foreign productions",
+   "credits": [
+    "Truth and Justice",
+    "Kalev",
+    "Frank",
+    "Lioness",
+    "8 Views of Lake Biwa"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 1995,
+   "official_url": "https://www.allfilm.ee/",
+   "source_urls": [
+    "https://www.allfilm.ee/",
+    "https://allfilm.ee/work/type/fiction/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ee-amrion",
+   "name": "Amrion",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "lat": 59.437,
+   "lng": 24.7536,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "An Estonian production company, registered as Amrion OU, credited with film projects such as The Black Hole.",
+   "services": "Film production",
+   "credits": [
+    "The Black Hole"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://amrion.ee/",
+   "source_urls": [
+    "https://amrion.ee/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ee-nafta-films",
+   "name": "Nafta Films",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "lat": 59.4372,
+   "lng": 24.7454,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A full-service production company with a Tallinn office offering film, TV series and commercial production, plus location services across Estonia, Latvia, Lithuania and Finland.",
+   "services": "Film production, TV series production, commercial production, location services, production services",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://nafta.tv/",
+   "source_urls": [
+    "https://nafta.tv/",
+    "https://nafta.tv/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ee-stellar-film",
+   "name": "Stellar Film",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "lat": 59.4335,
+   "lng": 24.753,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A Tallinn production company making fiction films, TV series, shorts and documentaries, founded by producers Evelin Penttila and Johanna Maria Tamm.",
+   "services": "Feature film production, TV series production, short film production, documentary production",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.stellar.ee/",
+   "source_urls": [
+    "https://www.stellar.ee/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ee-taska-film",
+   "name": "Taska Film",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "lat": 59.437,
+   "lng": 24.7536,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A production company led by producer Kristian Taska, behind Estonian films and series including 1944, Melchior the Apothecary and Names in Marble.",
+   "services": "Feature film production, TV series production, production services",
+   "credits": [
+    "1944",
+    "Melchior the Apothecary",
+    "Names in Marble",
+    "Class Reunion",
+    "The Suitors"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.taska.ee/",
+   "source_urls": [
+    "https://www.taska.ee/"
+   ],
+   "photo": null
   },
   {
    "id": "fi-mediapolis-tampere",
@@ -2782,6 +3445,263 @@
    "photo": null
   },
   {
+   "id": "gr-anemon",
+   "name": "Anemon Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9838,
+   "lng": 23.7275,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Athens-based documentary production company that makes and distributes socially themed documentaries and educational content, including through its CineDoc initiative.",
+   "services": "Documentary production, educational programming, cross-media projects and exhibitions, documentary distribution (CineDoc)",
+   "credits": "Army of Lovers, Bugboy, Athens: Birth of Democracy, Braided, Foodprint",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.anemon.gr/",
+   "source_urls": [
+    "https://www.anemon.gr/",
+    "https://www.anemon.gr/about/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-authorwave",
+   "name": "Authorwave",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9603,
+   "lng": 23.7473,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Athens-based post-production house providing colour grading, sound mixing and design, DCP creation and localisation services such as subtitling and dubbing.",
+   "services": "Colour grading, sound mixing and design, DCP creation, subtitling and dubbing, deliverables",
+   "credits": "The Other Me, Miss Violence, Still River, The Distance Between Us and the Sky, The Balcony: Memories of Occupation",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://authorwave.com/",
+   "source_urls": [
+    "https://authorwave.com/",
+    "https://authorwave.com/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-blonde",
+   "name": "Blonde Audiovisual Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 38.0227,
+   "lng": 23.7973,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Athens-based production company that provides production services in Greece for international film and TV productions and produces its own audiovisual content.",
+   "services": "Production services, audiovisual production and distribution",
+   "credits": "Tehran, Kabul, Jack Ryan (Season 3), Treadstone, Greek Salad",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.blonde.gr/",
+   "source_urls": [
+    "https://www.blonde.gr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-boo-productions",
+   "name": "Boo Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 38.0505,
+   "lng": 23.8078,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Athens-based production company making TV commercials for domestic and international brands, alongside feature films and international production services.",
+   "services": "TV commercials, feature film production, international production services",
+   "credits": "Dogtooth, Attenberg, Apples, Piraeus Bank, Alpha Bank",
+   "facilities": null,
+   "group": null,
+   "founded": 2007,
+   "official_url": "https://www.booproductions.gr/",
+   "source_urls": [
+    "https://www.booproductions.gr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-cl-productions",
+   "name": "CL Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9975,
+   "lng": 23.7333,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Athens-based production company providing executive production, location management, casting and scenery construction services for film and TV productions in Greece.",
+   "services": "Executive production, location management, casting services, scenery construction, banking facilitation",
+   "credits": "Athens 2004 Olympic Games ceremonies",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.clproductions.gr/",
+   "source_urls": [
+    "https://www.clproductions.gr/",
+    "https://www.clproductions.gr/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-faliro-house",
+   "name": "Faliro House Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9364,
+   "lng": 23.7003,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Athens-based production company that produces and co-produces feature films and TV series and offers production services, location scouting and crew support for international shoots in Greece.",
+   "services": "Production services, location scouting and management, film crew support, access to cash rebate incentives",
+   "credits": "Before Midnight, The Little Drummer Girl, Glass Onion: A Knives Out Mystery, The Lost Daughter, Beckett",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.falirohouse.com/",
+   "source_urls": [
+    "https://www.falirohouse.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-filmiki",
+   "name": "Filmiki",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 38.0086,
+   "lng": 23.7659,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Athens-based production house making commercials, feature films, documentaries and music videos, with in-house post-production including colour grading and compositing.",
+   "services": "Commercial production, feature film production, documentary filmmaking, music video production, post-production, production management and location services",
+   "credits": "Maya & Samar, 100 Chronia Olympiakos, Vodafone, Coca-Cola, Coldplay",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.filmiki.gr/",
+   "source_urls": [
+    "https://www.filmiki.gr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-foss-productions",
+   "name": "Foss Productions",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 38.017,
+   "lng": 23.8508,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Production company near Athens offering studio rental, production services and its own commercial, film and TV productions, with access to Greece's cash rebate scheme.",
+   "services": "TV commercials and digital advertising, short and feature films, TV shows and documentaries, studio rental, production services, VFX outsourcing",
+   "credits": "Suntan, Pity, Echoes of the Past, Toyota",
+   "facilities": null,
+   "group": null,
+   "founded": 1991,
+   "official_url": "https://fossproductions.gr/",
+   "source_urls": [
+    "https://fossproductions.gr/about-us",
+    "https://fossproductions.gr/our-work"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-graal",
+   "name": "Graal",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9795,
+   "lng": 23.7325,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Athens-based film production company, active for over 25 years, that produces and co-produces feature films and documentaries and supports international productions shooting in Greece.",
+   "services": "Film production and co-production, in-house post-production for image and sound, location scouting and local production support",
+   "credits": "Black Money for White Nights, Hold Onto Me, Maysoon, Triumph",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.graal.gr/",
+   "source_urls": [
+    "https://www.graal.gr/",
+    "https://www.graal.gr/about"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-green-olive-films",
+   "name": "Green Olive Films",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.8891,
+   "lng": 23.7568,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Production services company based in Glyfada, Athens, supporting international commercials, films and scripted and unscripted series shot in Greece and Cyprus.",
+   "services": "Commercials production, film and TV production, long-form content, multi-platform media content",
+   "credits": "Heinz, Trainline, Dior",
+   "facilities": null,
+   "group": null,
+   "founded": 1996,
+   "official_url": "https://www.greenolivefilms.com/",
+   "source_urls": [
+    "https://www.greenolivefilms.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-heretic",
+   "name": "Heretic",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9762,
+   "lng": 23.758,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Athens-based film production company that produces auteur feature films and represents its catalogue for international sales and festival distribution.",
+   "services": "Film production, international sales and distribution, film catalogue management",
+   "credits": "Forever Your Maternal Animal, Trial of Hein, Little Trouble Girls, The Birthday Party, Twice Over",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.heretic.gr/",
+   "source_urls": [
+    "https://www.heretic.gr/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "gr-homemade-films",
+   "name": "Homemade Films",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9838,
+   "lng": 23.7275,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Athens-based film production and distribution company, founded by producer Maria Drandaki, that produces and co-produces feature films for international festivals.",
+   "services": "Film production and co-production, film distribution, production services for international producers in Greece, co-development partnerships",
+   "credits": "Homeland, A Blast, Limbo, The Miracle of the Sargasso Sea, To A Land Unknown",
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://www.homemadefilms.gr/",
+   "source_urls": [
+    "https://www.homemadefilms.gr/about"
+   ],
+   "photo": null
+  },
+  {
    "id": "gr-kapa-studios",
    "name": "Kapa Studios",
    "city": "Spata",
@@ -2807,6 +3727,28 @@
    "photo": null,
    "guide_id": "gr-kapa-studios",
    "guide_url": "/compare-film-tv-locations/#loc-gr-kapa-studios"
+  },
+  {
+   "id": "gr-neda-film",
+   "name": "Neda Film",
+   "city": "Athens",
+   "country": "Greece",
+   "lat": 37.9838,
+   "lng": 23.7275,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Athens-based production company, founded by producer Amanda Livanou, that makes feature and documentary films, TV programmes and international co-productions filmed in Greece.",
+   "services": "Feature film production, documentary filmmaking, television programming, international co-productions, commercial and corporate video production",
+   "credits": "Yerma, Hot Spot, Stand Up, Highway!, Mister Paper",
+   "facilities": null,
+   "group": null,
+   "founded": 2014,
+   "official_url": "https://www.nedafilm.gr/",
+   "source_urls": [
+    "https://www.nedafilm.gr/",
+    "https://www.nedafilm.gr/about"
+   ],
+   "photo": null
   },
   {
    "id": "gr-boyana-hellenic",
@@ -3758,6 +4700,91 @@
    "guide_url": "/compare-film-tv-locations/#loc-it-arca-studios-turin"
   },
   {
+   "id": "it-augustus-color",
+   "name": "Augustus Color",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Rome-based post-production and film laboratory offering film development, restoration, editing, VFX, colour grading and production studio space.",
+   "services": "Film development and printing, restoration and remastering, editing, VFX, colour grading, audio design, 4K scanning, LTO archiving",
+   "credits": null,
+   "facilities": "Production studios with green screen and LED wall",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.augustuscolor.com",
+   "source_urls": [
+    "https://www.augustuscolor.com"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-banijay-italia",
+   "name": "Banijay Italia",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Milan-based television production company formed in 2019 from the merger of Magnolia and Dry Media, making entertainment formats and drama for Italian broadcasters and streamers.",
+   "services": "TV format and drama production, branded content",
+   "credits": "L'Isola dei Famosi, Il Collegio, L'Eredita, Pechino Express, Bake Off Italia",
+   "facilities": null,
+   "group": "Banijay",
+   "founded": 2019,
+   "official_url": "https://www.banijayitalia.it/",
+   "source_urls": [
+    "https://www.banijayitalia.it/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-bumblebee-studios",
+   "name": "Bumblebee Studios",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Milan-based dubbing and audio post-production company handling localisation, voice direction, sound editing and mixing for TV and games.",
+   "services": "Localisation, translation, dialogue adaptation, voice direction, sound editing, mixing, mastering",
+   "credits": "How I Met Your Mother, Danmachi, Hell's Kitchen USA, Ally McBeal",
+   "facilities": "Four recording studios",
+   "group": null,
+   "founded": 1979,
+   "official_url": "https://www.bumblebee-studios.com",
+   "source_urls": [
+    "https://www.bumblebee-studios.com"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-cattleya",
+   "name": "Cattleya",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Rome-based production company making feature films and television drama series, founded in 1997 and majority owned by ITV Studios since 2017.",
+   "services": "Feature film and television drama series development and production",
+   "credits": "Gomorra, Suburra, Petra, Romanzo Criminale, Benvenuti al Sud",
+   "facilities": null,
+   "group": "ITV Studios",
+   "founded": 1997,
+   "official_url": "https://www.cattleya.it/",
+   "source_urls": [
+    "https://www.cattleya.it/",
+    "https://en.wikipedia.org/wiki/Cattleya_(company)"
+   ],
+   "photo": null
+  },
+  {
    "id": "it-csc-sicilia-palermo",
    "name": "Centro Sperimentale di Cinematografia - Sicilia",
    "city": "Palermo",
@@ -3779,6 +4806,27 @@
    "photo": null,
    "guide_id": "it-csc-sicilia-palermo",
    "guide_url": "/compare-film-tv-locations/#loc-it-csc-sicilia-palermo"
+  },
+  {
+   "id": "it-chromatica",
+   "name": "Chromatica",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Visual effects studio in Rome providing compositing, CG and colour grading for Italian film and television productions.",
+   "services": "2D compositing, CG, colour grading, set extensions, fire and smoke effects, water effects, crowd simulation",
+   "credits": "Indigo Film, Palomar, Wildside, HT Film, Bibi Film",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.chromatica.it",
+   "source_urls": [
+    "https://www.chromatica.it"
+   ],
+   "photo": null
   },
   {
    "id": "it-cinecitta",
@@ -3859,6 +4907,29 @@
    "guide_url": "/compare-film-tv-locations/#loc-it-cineporto-bari"
   },
   {
+   "id": "it-dinamo-film",
+   "name": "Dinamo Film",
+   "city": "Bari",
+   "country": "Italy",
+   "lat": 41.1171,
+   "lng": 16.8719,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Bari-based production company with an additional office in Turin, offering original film production, executive production services for visiting productions, and branded content.",
+   "services": "Original production, executive production services, branded content",
+   "credits": "The Spiral, Stolen Girl, Close, Lady Revolver, Mare Contro",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://dinamofilm.com/",
+   "source_urls": [
+    "https://dinamofilm.com/",
+    "https://dinamofilm.com/contacts",
+    "https://dinamofilm.com/productions"
+   ],
+   "photo": null
+  },
+  {
    "id": "it-distretto-campano-audiovisivo",
    "name": "Distretto Campano dell'Audiovisivo",
    "city": "Naples",
@@ -3882,6 +4953,219 @@
    "photo": null,
    "guide_id": "it-distretto-campano-audiovisivo",
    "guide_url": "/compare-film-tv-locations/#loc-it-distretto-campano-audiovisivo"
+  },
+  {
+   "id": "it-edi-effetti-digitali-italiani",
+   "name": "EDI Effetti Digitali Italiani",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Visual effects and virtual production studio in Milan making VFX for feature films, TV series and advertising for major international studios and streamers.",
+   "services": "Visual effects, virtual production, production services",
+   "credits": "Thor: Love and Thunder, Black Adam, Daredevil: Born Again, Ripley",
+   "facilities": null,
+   "group": null,
+   "founded": 2001,
+   "official_url": "https://www.effettidigitali.it",
+   "source_urls": [
+    "https://www.effettidigitali.it"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-fandango",
+   "name": "Fandango",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Rome-based company founded in 1989 that produces and distributes feature films and TV series, and also runs a publishing house and a music label.",
+   "services": "Feature film and TV series production, film distribution, publishing, music label",
+   "credits": "Gioia Mia, La storia del Frank e della Nina, Fuochi d'Artificio, Vittorio De Sica - La Vita in Scena",
+   "facilities": null,
+   "group": null,
+   "founded": 1989,
+   "official_url": "https://www.fandango.it/",
+   "source_urls": [
+    "https://www.fandango.it/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-filmmaster",
+   "name": "Filmmaster",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Milan-based company active since 1976, producing commercials, branded content and large-scale live events and ceremonies for international clients.",
+   "services": "Commercial production, branded content, live events and ceremonies",
+   "credits": "Iveco - Spirito in Movimento, Giro d'Italia, CONMEBOL Copa America opening and closing ceremonies, Noor Riyadh, Saudi Film Festival",
+   "facilities": null,
+   "group": "Italian Entertainment Network (IEN)",
+   "founded": 1976,
+   "official_url": "https://www.filmmaster.com/",
+   "source_urls": [
+    "https://www.filmmaster.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-frame-by-frame",
+   "name": "Frame by Frame",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Rome-based VFX and post-production house operating four studios for visual effects, editing, colour grading and sound on film and streaming productions.",
+   "services": "VFX, CGI, animation, colour correction, editing, sound, branded entertainment, AI-driven production",
+   "credits": "Netflix, Amazon, Disney, Marvel, HBO",
+   "facilities": "Four studios in Rome with 15 editing suites, 2 grading theatres and 2 HDR 4K grading suites",
+   "group": null,
+   "founded": 1990,
+   "official_url": "https://www.frame.it",
+   "source_urls": [
+    "https://www.frame.it"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-indiana-production",
+   "name": "Indiana Production",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Milan-based production company founded in 2005 by Fabrizio Donvito and Marco Cohen, making feature films, commercials and branded content, with a Rome subsidiary.",
+   "services": "Feature film, commercial, digital and branded content production",
+   "credits": "The First Beautiful Thing, Human Capital, The Leisure Seeker, Italy in a Day",
+   "facilities": null,
+   "group": "Vuelta Group",
+   "founded": 2005,
+   "official_url": "https://indianaproduction.com/",
+   "source_urls": [
+    "https://indianaproduction.com/",
+    "https://en.wikipedia.org/wiki/Indiana_Production"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-indigo-film",
+   "name": "Indigo Film",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Rome-based production company founded in 1994 by Nicola Giuliano, Francesca Cima and Carlotta Calori, making feature films, drama series and documentaries.",
+   "services": "Feature film, television series and documentary production",
+   "credits": "Comandante, Iddu, The Bad Guy, Qui Rido Io, La Terra dei Figli",
+   "facilities": null,
+   "group": null,
+   "founded": 1994,
+   "official_url": "https://www.indigofilm.it/",
+   "source_urls": [
+    "https://www.indigofilm.it/",
+    "https://en.wikipedia.org/wiki/Indigo_Film"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-la-bottega-dell-immagine",
+   "name": "La Bottega dell'Immagine",
+   "city": "Turin",
+   "country": "Italy",
+   "lat": 45.0703,
+   "lng": 7.6869,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Turin post-production facility since 1997 offering offline editing, colour grading, VFX, audio mixing, subtitling and mastering for TV and film deliveries.",
+   "services": "Dailies, offline editing, colour grading, visual effects, audio mixing, subtitling, LTO archiving, quality control, mastering, deliveries",
+   "credits": "La Legge di Lidia Poet, Imma Tataranni, Halt and Catch Fire, The Rookie, South Park",
+   "facilities": null,
+   "group": null,
+   "founded": 1997,
+   "official_url": "https://www.labottega.it",
+   "source_urls": [
+    "https://www.labottega.it"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-laserfilm",
+   "name": "LaserFilm",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Rome-based post-production house handling editing, colour correction, VFX, dubbing, subtitling and restoration for film and streaming deliveries.",
+   "services": "Video editing, audio post, dubbing, subtitling, restoration, VFX, colour correction, mastering",
+   "credits": "Warner Bros, Amazon Studios, Universal Pictures, Netflix, Disney",
+   "facilities": null,
+   "group": null,
+   "founded": 2001,
+   "official_url": "https://laserfilm.it",
+   "source_urls": [
+    "https://laserfilm.it"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-lux-vide",
+   "name": "Lux Vide",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Rome-based television production company founded in 1992, making prime-time drama series, mini-series, TV movies, cinema and children's content for Italian and international broadcasters.",
+   "services": "TV series, mini-series, TV movie, cinema, kids and teens content, and documentary production",
+   "credits": "Don Matteo, Sandokan, Blanca, Hotel Costiera, Che Dio ci aiuti",
+   "facilities": null,
+   "group": "Fremantle",
+   "founded": 1992,
+   "official_url": "https://www.luxvide.it/",
+   "source_urls": [
+    "https://www.luxvide.it/",
+    "https://en.wikipedia.org/wiki/Lux_Vide"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-mad-entertainment",
+   "name": "Mad Entertainment",
+   "city": "Naples",
+   "country": "Italy",
+   "lat": 40.8518,
+   "lng": 14.2681,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Naples-based production company founded in 2010, making documentaries, fiction series and animated films rooted in the city's history and culture.",
+   "services": "Documentary, fiction and animation production",
+   "credits": "Nino. 18 Giorni, Nostalgia, Noi del Rione Sanita, Gatta Cenerentola, Yaya e Lennie - The Walking Liberty",
+   "facilities": null,
+   "group": null,
+   "founded": 2010,
+   "official_url": "https://www.madentertainment.it/",
+   "source_urls": [
+    "https://www.madentertainment.it/"
+   ],
+   "photo": null
   },
   {
    "id": "it-manifatture-digitali-cinema-prato",
@@ -3908,6 +5192,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-it-manifatture-digitali-cinema-prato"
   },
   {
+   "id": "it-ods-operatori-doppiaggio-e-spettacolo",
+   "name": "O.D.S. (Operatori Doppiaggio e Spettacolo)",
+   "city": "Turin",
+   "country": "Italy",
+   "lat": 45.0703,
+   "lng": 7.6869,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Turin dubbing and sound post-production company handling dialogue recording, sound design and localisation for film, TV series and documentaries since 1983.",
+   "services": "Dubbing, sound design, audio post-production, audiobook production, voice training",
+   "credits": "Netflix, Amazon Prime Video, RAI, Mediaset, Audible",
+   "facilities": null,
+   "group": null,
+   "founded": 1983,
+   "official_url": "https://www.odsweb.it",
+   "source_urls": [
+    "https://www.odsweb.it"
+   ],
+   "photo": null
+  },
+  {
    "id": "it-on-air-milano",
    "name": "On Air Milano",
    "city": "Milan",
@@ -3930,6 +5235,176 @@
    "photo": null,
    "guide_id": "it-on-air-milano",
    "guide_url": "/compare-film-tv-locations/#loc-it-on-air-milano"
+  },
+  {
+   "id": "it-palomar",
+   "name": "Palomar",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Rome-based film and TV production house founded in 1986, making drama series, documentaries and films, and a Mediawan group company since 2019.",
+   "services": "Film, TV drama and documentary production, European co-productions",
+   "credits": "Vespucci - Il viaggio piu lungo, Buonvino - Misteri a Villa Borghese, Vanina - Un Vicequestore a Catania, Storia della mia famiglia, Super Santos",
+   "facilities": null,
+   "group": "Mediawan",
+   "founded": 1986,
+   "official_url": "https://www.palomaronline.com/",
+   "source_urls": [
+    "https://www.palomaronline.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-picomedia",
+   "name": "Picomedia",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Rome-based television and film production company founded in 2009 by Roberto Sessa, part of the Asacha Media Group.",
+   "services": "Film and television series production",
+   "credits": "Mare Fuori, Tutto Chiede Salvezza, Nostalgia, La Scuola Cattolica, Criature",
+   "facilities": null,
+   "group": "Asacha Media Group",
+   "founded": 2009,
+   "official_url": "https://picomedia.it/",
+   "source_urls": [
+    "https://picomedia.it/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-proxima-milano",
+   "name": "Proxima Milano",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "VFX and CGI studio in Milan producing visual effects for film, advertising and episodic content, with a research unit exploring generative AI tools.",
+   "services": "VFX, CGI, post-production, on-set supervision, GenAI content creation",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": 2003,
+   "official_url": "https://proximamilano.com",
+   "source_urls": [
+    "https://proximamilano.com"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-rainbow",
+   "name": "Rainbow S.p.A.",
+   "city": "Loreto",
+   "country": "Italy",
+   "lat": 43.4391,
+   "lng": 13.6103,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Animation and live-action studio based in Loreto, Marche, founded in 1995, known for the Winx Club franchise and other children's and young-adult television series and films.",
+   "services": "Animated and live-action TV series and film production",
+   "credits": "Winx Club, 44 Cats, Mia and Me, Fate - The Winx Saga, Maggie & Bianca Fashion Friends",
+   "facilities": null,
+   "group": null,
+   "founded": 1995,
+   "official_url": "https://www.rbw.it/",
+   "source_urls": [
+    "https://www.rbw.it/",
+    "https://en.wikipedia.org/wiki/Rainbow_S.p.A."
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-rodeo-drive",
+   "name": "Rodeo Drive",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Rome-based film and television production company founded in 1991, making feature films, comedies and TV drama series.",
+   "services": "Feature film and television series production",
+   "credits": "Sopravvissuti, Crimini, La svolta, A Prova d'Amore, Tre uomini e una gamba",
+   "facilities": null,
+   "group": null,
+   "founded": 1991,
+   "official_url": "https://www.rodeodrivesrl.com/",
+   "source_urls": [
+    "https://www.rodeodrivesrl.com/",
+    "https://it.wikipedia.org/wiki/Rodeo_Drive_(azienda)"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-square-post-production",
+   "name": "Square Post Production",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Post-production house in Milan offering dubbing, editing, colour grading, VFX and audio mastering, with sister offices in Rome and London.",
+   "services": "Voiceover and dubbing, video editing, colour grading, VFX, animation, audio mastering",
+   "credits": "Suzuki, Continental, Amplifon, Uriage, Bosch",
+   "facilities": "Over 1,000 sqm Milan facility with 24 editing workstations, DaVinci and Flame suites, 2 daylight sets, 3 Pro Tools audio studios",
+   "group": "xG Group",
+   "founded": 2006,
+   "official_url": "https://www.squarepostproduction.com",
+   "source_urls": [
+    "https://www.squarepostproduction.com"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-stefilm",
+   "name": "Stefilm",
+   "city": "Turin",
+   "country": "Italy",
+   "lat": 45.0703,
+   "lng": 7.6869,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Turin-based company producing and distributing independent documentaries, acting as international sales agent and running workshops on writing and production.",
+   "services": "Documentary production, distribution, international sales, training workshops, project consulting",
+   "credits": "Honeyland, Queen Lear, Gelato, Leonardo Da Vinci, Guernica - la morte dal cielo",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://stefilm.it/",
+   "source_urls": [
+    "https://stefilm.it/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-studio-emme",
+   "name": "Studio Emme",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Rome-based dubbing and audio post-production facility handling localisation, mixing and post-production for international streaming and broadcast clients.",
+   "services": "Dubbing, mixing, post-production",
+   "credits": "Netflix, Prime Video, Sky, HBO, RAI",
+   "facilities": null,
+   "group": null,
+   "founded": 1982,
+   "official_url": "https://www.studio-emme.tv",
+   "source_urls": [
+    "https://www.studio-emme.tv"
+   ],
+   "photo": null
   },
   {
    "id": "it-teatro-tre-milano",
@@ -3956,6 +5431,50 @@
    "guide_url": "/compare-film-tv-locations/#loc-it-teatro-tre-milano"
   },
   {
+   "id": "it-tempesta",
+   "name": "Tempesta",
+   "city": "Bologna",
+   "country": "Italy",
+   "lat": 44.4949,
+   "lng": 11.3426,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Bologna-based film production company founded in 2009 by Carlo Cresto-Dina, producing arthouse feature films with emerging European directors.",
+   "services": "Feature film production, TV series and crossmedia project development",
+   "credits": "La Chimera, Lazzaro Felice, Le Meraviglie, Ariaferma, Le Pupille",
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://www.tempestafilm.it/",
+   "source_urls": [
+    "https://www.tempestafilm.it/",
+    "https://it.wikipedia.org/wiki/Tempesta_(casa_di_produzione)"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-the-apartment",
+   "name": "The Apartment",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Rome-based film and television production company within the Fremantle group, established in 2019, making feature films and drama series with major Italian and international directors.",
+   "services": "Feature film and television series production",
+   "credits": "E stata la mano di Dio, Bones and All, Priscilla, Parthenope, Queer",
+   "facilities": null,
+   "group": "Fremantle",
+   "founded": 2019,
+   "official_url": "https://www.theapartment.it/",
+   "source_urls": [
+    "https://www.theapartment.it/",
+    "https://en.wikipedia.org/wiki/Fremantle_(company)"
+   ],
+   "photo": null
+  },
+  {
    "id": "it-videoporto-genova",
    "name": "Videoporto Genova",
    "city": "Genoa",
@@ -3977,6 +5496,69 @@
    "photo": null,
    "guide_id": "it-videoporto-genova",
    "guide_url": "/compare-film-tv-locations/#loc-it-videoporto-genova"
+  },
+  {
+   "id": "it-videozone",
+   "name": "Videozone",
+   "city": "Milan",
+   "country": "Italy",
+   "lat": 45.4642,
+   "lng": 9.19,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Milan production and post-production facility offering editing, motion graphics, VFX, 3D and colour grading alongside studio production services.",
+   "services": "Offline and online editing, motion graphics, visual effects, 3D, colour grading, finishing, digital data management",
+   "credits": "Pirelli, Mediaset, Decathlon, Facile.it, Emmentaler",
+   "facilities": "4 offline/online editing suites and 1 colour correction suite",
+   "group": null,
+   "founded": 2007,
+   "official_url": "https://www.videozone.it",
+   "source_urls": [
+    "https://www.videozone.it"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-vivo-film",
+   "name": "Vivo Film",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Rome-based independent company producing and distributing feature films and documentaries for Italian and international festivals.",
+   "services": "Film production, distribution and development",
+   "credits": "Grand Tour, Berlinguer - La Grande Ambizione, Le Citta di Pianura, La Ragazza con la Leica, Gli Occhi degli Altri",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://vivofilm.it/",
+   "source_urls": [
+    "https://vivofilm.it/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "it-wildside",
+   "name": "Wildside",
+   "city": "Rome",
+   "country": "Italy",
+   "lat": 41.9028,
+   "lng": 12.4964,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Rome-based film and television production company founded in 2009 and part of the Fremantle group, producing feature films and drama series with Italian and international directors.",
+   "services": "Feature film and television series production",
+   "credits": "Benvenuti in Campagna, Gli occhi degli altri, Prima di noi, Una famiglia sottosopra, Antartica - Quasi una fiaba",
+   "facilities": null,
+   "group": "Fremantle",
+   "founded": 2009,
+   "official_url": "https://www.wildside.it/",
+   "source_urls": [
+    "https://www.wildside.it/"
+   ],
+   "photo": null
   },
   {
    "id": "it-y40-studios-montegrotto",
@@ -4007,6 +5589,289 @@
    },
    "guide_id": "it-y40-studios-montegrotto",
    "guide_url": "/compare-film-tv-locations/#loc-it-y40-studios-montegrotto"
+  },
+  {
+   "id": "lv-cinevilla-studio",
+   "name": "Cinevilla Studio",
+   "city": "Tukums",
+   "country": "Latvia",
+   "lat": 56.8833,
+   "lng": 22.9667,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "An outdoor backlot of about 150 hectares in Tukums Municipality with reconstructed historic Riga streets, a village and prehistoric sets, built originally for Defenders of Riga.",
+   "services": "Backlot and set rental for filming, location hosting, events",
+   "credits": [
+    "Defenders of Riga",
+    "Blizzard of Souls",
+    "Rudolf's Gold",
+    "Sisi"
+   ],
+   "facilities": "About 150 hectares of outdoor backlot with a reconstructed historic Riga streetscape, a village and a prehistoric settlement",
+   "group": null,
+   "founded": 2004,
+   "official_url": "https://www.cinevilla.lv/",
+   "source_urls": [
+    "https://www.cinevilla.lv/",
+    "https://en.wikipedia.org/wiki/Cinevilla"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lv-ego-media",
+   "name": "Ego Media",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.958,
+   "lng": 24.112,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "A Riga production company making Latvian fiction films and documentaries, including My Favorite War and The Sign Painter.",
+   "services": "Feature film production, documentary production, production services",
+   "credits": [
+    "My Favorite War",
+    "The Sign Painter",
+    "Ulya",
+    "The Wedding Day",
+    "Black Velvet"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.egomedia.lv/",
+   "source_urls": [
+    "https://www.egomedia.lv/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lv-forma-pro-films",
+   "name": "Forma Pro Films",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.9478,
+   "lng": 24.1038,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A production services company with a Riga office helping international film and TV productions shoot in Latvia, alongside a sister office in Malta.",
+   "services": "Production services, line producing, casting, location scouting, development and bidding support",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://formaprofilms.com/",
+   "source_urls": [
+    "https://formaprofilms.com/",
+    "https://formaprofilms.com/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lv-mistrus-media",
+   "name": "Mistrus Media",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.9496,
+   "lng": 24.1052,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A Riga production company behind Latvian feature films, TV series and documentaries, including January and Maria's Silence, also offering cash rebate assistance to co-productions.",
+   "services": "Feature film production, TV series production, documentary production, co-production, cash rebate assistance",
+   "credits": [
+    "The Bog",
+    "January",
+    "Maria's Silence",
+    "Solomamma",
+    "Newsroom"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://mistrusmedia.lv/",
+   "source_urls": [
+    "https://mistrusmedia.lv/",
+    "https://mistrusmedia.lv/en/contacts"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lv-studio-locomotive",
+   "name": "Studio Locomotive",
+   "city": "Riga",
+   "country": "Latvia",
+   "lat": 56.9496,
+   "lng": 24.1052,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "A Latvian company combining Studio Locomotive, a film and animation production unit, with Locomotive Classics, a film digitisation and restoration service.",
+   "services": "Animation production, film production, film digitisation and restoration",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.locomotive.lv/",
+   "source_urls": [
+    "https://www.locomotive.lv/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-ahil",
+   "name": "Ahil",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Lithuanian production house offering full production services for international fiction, TV film, documentary and animation projects shooting in Lithuania and Europe.",
+   "services": "Production services, fiction film, TV film, documentary and animation production",
+   "credits": [
+    "The Playlist",
+    "Three Wishes for Cinderella",
+    "Young Wallander",
+    "Occupied",
+    "Out Stealing Horses"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.ahil.lt",
+   "source_urls": [
+    "https://www.ahil.lt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-artbox",
+   "name": "Artbox",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Lithuanian production house making commercials and films and providing production services for foreign productions shooting in the Baltics.",
+   "services": "Commercial production, film production, production services",
+   "credits": [
+    "A Mouse Hunt for Christmas",
+    "The Swan Song of Fedor Ozerov",
+    "Zero Zone",
+    "There's Something in the Barn",
+    "Nr. 24"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2003,
+   "official_url": "https://www.artbox.lt",
+   "source_urls": [
+    "https://www.artbox.lt",
+    "https://www.linkedin.com/company/artbox-production-house"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-baltic-film-services",
+   "name": "Baltic Film Services",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Production services company handling international film and TV shoots in Lithuania, covering crewing, logistics, locations and tax incentive support.",
+   "services": "Production management, crewing, transport, location scouting, tax credit and budgeting support, office and stage hire",
+   "credits": [
+    "Stranger Things 4",
+    "Chernobyl",
+    "War & Peace",
+    "Catherine the Great",
+    "Defiance"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.balticfilmservices.lt",
+   "source_urls": [
+    "https://www.balticfilmservices.lt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-just-a-moment",
+   "name": "Just a Moment",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Vilnius production company making auteur feature films and artistic television projects with an experimental aesthetic.",
+   "services": "Feature film and TV production",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://justamoment.lt",
+   "source_urls": [
+    "https://justamoment.lt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-studio-nominum",
+   "name": "Studio Nominum",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Independent Lithuanian production company founded by Arūnas Matelis making author-driven documentary films for international festivals.",
+   "services": "Documentary film production",
+   "credits": [
+    "Karta.EU",
+    "Mamutų medžioklė",
+    "Domingo Domingo",
+    "Plaukikas",
+    "Ayena"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://arunasmatelis.com/",
+   "source_urls": [
+    "http://arunasmatelis.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "lt-tremora",
+   "name": "Tremora",
+   "city": "Vilnius",
+   "country": "Lithuania",
+   "lat": 54.6872,
+   "lng": 25.2797,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lithuanian production company making feature and short films by young authors, often as international co-productions.",
+   "services": "Feature film production, short film production, international co-production",
+   "credits": [
+    "Vanishing Waves",
+    "Oblivion",
+    "Citrinos",
+    "Traces",
+    "Drawing Lots"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2005,
+   "official_url": "https://tremora.com",
+   "source_urls": [
+    "https://tremora.com",
+    "https://tremora.com/contact"
+   ],
+   "photo": null
   },
   {
    "id": "mt-malta-film-studios",
@@ -5640,6 +7505,33 @@
    "guide_url": "/compare-film-tv-locations/#loc-pt-algarve-studios"
   },
   {
+   "id": "pt-coraleuropa",
+   "name": "Coral Europa",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Lisbon television production company making talk shows, entertainment formats and scripted drama series for Portuguese broadcasters.",
+   "services": "TV format development and production, talk shows, drama series",
+   "credits": [
+    "Casa Feliz",
+    "Goucha",
+    "Marco Paulo",
+    "A Generala",
+    "O Atentado"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://coraleuropa.pt/",
+   "source_urls": [
+    "https://coraleuropa.pt/"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-estudio-da-fabrica",
    "name": "Estudio da Fabrica",
    "city": "Lisbon",
@@ -5692,6 +7584,33 @@
    },
    "guide_id": "pt-valentim-de-carvalho",
    "guide_url": "/compare-film-tv-locations/#loc-pt-valentim-de-carvalho"
+  },
+  {
+   "id": "pt-fadofilmes",
+   "name": "Fado Filmes",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7369,
+   "lng": -9.15,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lisbon production company making feature films and TV series, with over 40 features produced and international co-productions across Europe, the UK and Latin America.",
+   "services": "Feature film production, TV series and miniseries production, international co-production",
+   "credits": [
+    "Fados",
+    "Casa-Abrigo",
+    "Manas",
+    "Os Enforcados",
+    "Deserto Particular"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 1997,
+   "official_url": "https://www.fadofilmes.pt/",
+   "source_urls": [
+    "https://www.fadofilmes.pt/"
+   ],
+   "photo": null
   },
   {
    "id": "pt-ingreme",
@@ -5781,6 +7700,30 @@
    "guide_url": "/compare-film-tv-locations/#loc-pt-moviebox-studios-algarve"
   },
   {
+   "id": "pt-pluralentertainment",
+   "name": "Plural Entertainment Portugal",
+   "city": "Loures",
+   "country": "Portugal",
+   "lat": 38.8858,
+   "lng": -9.1533,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Portuguese television production studio near Lisbon making telenovelas, drama series and entertainment formats, mainly for broadcaster TVI.",
+   "services": "Telenovela production, drama series and film production, entertainment and factual programming",
+   "credits": [
+    "TVI"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 1992,
+   "official_url": "https://www.pluralentertainment.com/",
+   "source_urls": [
+    "https://www.pluralentertainment.com/",
+    "https://www.pluralentertainment.com/en/about-us"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-ready-to-shoot",
    "name": "Ready to Shoot",
    "city": "Lisbon",
@@ -5802,6 +7745,33 @@
    "photo": null
   },
   {
+   "id": "pt-rosafilmes",
+   "name": "Rosa Filmes",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lisbon production and distribution company focused on art house and festival cinema, working with international directors and producing exhibitions and curatorial projects.",
+   "services": "Film production, film distribution, exhibition and installation curation, archival projects",
+   "credits": [
+    "Les Roches Rouges",
+    "L'Empire",
+    "Magalhaes",
+    "Pacifiction",
+    "Misericordia"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.rosafilmes.com/",
+   "source_urls": [
+    "https://www.rosafilmes.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "pt-terratreme",
    "name": "Terratreme Filmes",
    "city": "Lisbon",
@@ -5819,6 +7789,34 @@
    "official_url": "https://terratreme.pt/",
    "source_urls": [
     "https://terratreme.pt/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "pt-ukbarfilmes",
+   "name": "Ukbar Filmes",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "lat": 38.7223,
+   "lng": -9.1393,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Lisbon production company that develops and produces feature films, documentaries and TV series, often as co-productions with broadcasters and streaming platforms.",
+   "services": "Film and TV development, production, international co-production",
+   "credits": [
+    "Rabo de Peixe (Turn of the Tide)",
+    "Ponto Nemo",
+    "Mestre Candido",
+    "A Espia"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://ukbarfilmes.com/",
+   "source_urls": [
+    "https://ukbarfilmes.com/en/ukbar-en/",
+    "https://ukbarfilmes.com/hoje/",
+    "https://ukbarfilmes.com/contactos/"
    ],
    "photo": null
   },
@@ -5867,6 +7865,336 @@
    "guide_url": "/compare-film-tv-locations/#loc-pt-vlc-studios"
   },
   {
+   "id": "ro-abis-studio",
+   "name": "Abis Studio",
+   "city": "Bucharest",
+   "country": "Romania",
+   "lat": 44.4268,
+   "lng": 26.1025,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "A Bucharest production and post-production house that films and finishes commercials for brands, handling shooting and post work in house.",
+   "services": "Commercial production, filming, post-production",
+   "credits": [
+    "Medlife",
+    "ING",
+    "McDonald's",
+    "Garnier",
+    "Raiffeisen"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://abisstudio.ro/",
+   "source_urls": [
+    "https://abisstudio.ro/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ro-buftea-studios",
+   "name": "Buftea Studios",
+   "city": "Buftea",
+   "country": "Romania",
+   "lat": 44.5597,
+   "lng": 25.9494,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "A large studio complex near Bucharest with soundstages, indoor water tanks and set construction, costume and props inventories, used for international film and TV productions.",
+   "services": "Soundstage rental, set construction, costume and props inventory, special effects, hospitality and training facilities",
+   "credits": [
+    "Wednesday"
+   ],
+   "facilities": "19 soundstages with 4 indoor water tanks, costume inventory of over 30,000 pieces",
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.studiourilebuftea.ro/",
+   "source_urls": [
+    "https://www.studiourilebuftea.ro/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ro-castel-film-studios",
+   "name": "Castel Film Studios",
+   "city": "Ciolpani",
+   "country": "Romania",
+   "lat": 44.7167,
+   "lng": 26.0167,
+   "type": "Studio",
+   "specialism": "Sound stages & backlot",
+   "summary": "A film studio near Bucharest with nine sound stages and a large forested backlot, used for Romanian and international feature films, TV series and commercials.",
+   "services": "Sound stage rental, set construction, production services, location scouting, catering and craft services",
+   "credits": [
+    "Cold Mountain",
+    "Ghost Rider: Spirit of Vengeance",
+    "What Happened to Monday?",
+    "The Gray House"
+   ],
+   "facilities": "9 sound stages, one of the largest in Continental Europe, plus a 37 hectare backlot including 15 hectares of forest and a lake",
+   "group": null,
+   "founded": 1990,
+   "official_url": "https://castelfilm.ro/",
+   "source_urls": [
+    "https://castelfilm.ro/",
+    "https://castelfilm.ro/about",
+    "https://castelfilm.ro/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ro-frame-film",
+   "name": "Frame Film",
+   "city": "Bucharest",
+   "country": "Romania",
+   "lat": 44.4268,
+   "lng": 26.1025,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Bucharest production company handling location scouting, permits and turn key production services for international film, TV and commercial shoots, alongside its own series.",
+   "services": "Location scouting, permits and filming coordination, production services, film, TV and commercial production",
+   "credits": [
+    "Las Fierbinti",
+    "Dracula",
+    "Van Helsing",
+    "Hanna",
+    "The Performance"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2013,
+   "official_url": "https://www.framefilm.ro/",
+   "source_urls": [
+    "https://www.framefilm.ro/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ro-hi-film",
+   "name": "Hi Film Productions",
+   "city": "Bucharest",
+   "country": "Romania",
+   "lat": 44.4268,
+   "lng": 26.1025,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "A Bucharest production company led by producer Ada Solomon that makes auteur feature films, documentaries and shorts, including award winning Romanian arthouse titles.",
+   "services": "Feature film production, documentary production, short films, commercials, production services for international films",
+   "credits": [
+    "Aferim!",
+    "Toni Erdmann"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://hifilm.ro/",
+   "source_urls": [
+    "https://hifilm.ro/",
+    "https://hifilm.ro/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ro-icon-films-romania",
+   "name": "Icon Films Romania",
+   "city": "Bucharest",
+   "country": "Romania",
+   "lat": 44.4268,
+   "lng": 26.1025,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "A Romanian production and service company handling commercials, film and TV shoots for international brands and studios, with location, casting and set build support.",
+   "services": "Commercial production, film and TV production, location scouting, casting, set construction, cash rebate assistance",
+   "credits": [
+    "Wednesday",
+    "The Romanoffs",
+    "War Dogs",
+    "Voyagers"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.iconfilms.ro/",
+   "source_urls": [
+    "https://www.iconfilms.ro/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-balkanic-media",
+   "name": "Balkanic Media",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Belgrade production company handling bespoke feature film, TV series and commercial production services for international clients.",
+   "services": "Feature film production, TV series production, commercial production, production services",
+   "credits": "The Outpost, SEAL Team, The Deal, A.I. Rising, Ederlezi Rising",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.balkanicmedia.com/",
+   "source_urls": [
+    "https://www.balkanicmedia.com/",
+    "https://www.filminserbia.com/production_directory/balkanic-media-2-3/?pid=708"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-bas-celik",
+   "name": "Bas Celik",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Belgrade feature film production company founded in 1998, also making documentaries, shorts, commercials and music videos.",
+   "services": "Feature film production, documentary production, short films, commercials, music videos",
+   "credits": "The Trap, Clip, Circles, Rabbitland",
+   "facilities": null,
+   "group": null,
+   "founded": 1998,
+   "official_url": "https://www.bascelik.net/",
+   "source_urls": [
+    "https://www.bascelik.net/",
+    "https://www.filminserbia.com/production_directory/bas-celik-2/?pid=708"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-clockwork-film-production",
+   "name": "Clockwork Film Production",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Belgrade production services company handling line production and location management for foreign film, web series and TV shoots across the Balkans.",
+   "services": "Line production, location management, set management, crew hire, post-production coordination",
+   "credits": "Thug Life, Citadel: Honey Bunny, Rocketry: The Nambi Effect, Uri: The Surgical Strike, Baaghi 3",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.clockworkfilm.com/",
+   "source_urls": [
+    "https://www.clockworkfilm.com/",
+    "https://www.filminserbia.com/production_directory/clockwork-2/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-contrast-studios",
+   "name": "Contrast Studios",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Belgrade production company founded in 2005 making television drama series and feature films, handling production from casting through post-production.",
+   "services": "Location scouting, casting, production design, equipment rental, video editing, sound design",
+   "credits": "Selo gori a baba se ceslja, Sifra Despot, Ravna gora",
+   "facilities": null,
+   "group": null,
+   "founded": 2005,
+   "official_url": "https://www.contraststudios.rs/",
+   "source_urls": [
+    "https://www.contraststudios.rs/",
+    "https://www.filminserbia.com/production_directory/contrast-studios-ltd/?pid=708"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-crater-studio",
+   "name": "Crater Studio",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Belgrade visual effects studio creating VFX, animation and world building work for film, TV and advertising clients.",
+   "services": "Visual effects, animation, compositing, commercial VFX",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://craterstudio.com/",
+   "source_urls": [
+    "https://craterstudio.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-emote-films",
+   "name": "Emote Films",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Belgrade production company founded in 2002 making commercials and music videos for international brands, directors and platforms.",
+   "services": "Commercial production, music video production, director representation, location scouting, casting",
+   "credits": "The Belgrade Phantom, Telenor, MTV Adria, HBO Max, Pokerstars",
+   "facilities": null,
+   "group": null,
+   "founded": 2002,
+   "official_url": "https://www.emotefilms.com/",
+   "source_urls": [
+    "https://www.emotefilms.com/",
+    "https://www.filminserbia.com/production_directory/emote-films/?pid=708"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-firefly-productions",
+   "name": "Firefly Productions",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Belgrade TV drama company launched in 2018 by former BBC producer Ivana Mikovic, developing original series and book adaptations and building its own studio.",
+   "services": "TV series development and production, script development, book adaptations, production training",
+   "credits": "Tycoon, Underneath, The Clan, No Trespassing, Black Wedding",
+   "facilities": null,
+   "group": null,
+   "founded": 2018,
+   "official_url": "https://www.firefly.rs/",
+   "source_urls": [
+    "https://www.firefly.rs/",
+    "https://www.filminserbia.com/production_directory/firefly-productions/?pid=708"
+   ],
+   "photo": null
+  },
+  {
+   "id": "rs-this-and-that-productions",
+   "name": "This and That Productions",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "lat": 44.8125,
+   "lng": 20.4612,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Belgrade production company founded in 2008 making character-driven feature films, documentaries and TV series with a focus on socially engaged stories.",
+   "services": "Feature film production, documentary production, TV series production, script development",
+   "credits": "Operation Sabre, Mother Mara, 3 Weeks After",
+   "facilities": null,
+   "group": null,
+   "founded": 2008,
+   "official_url": "https://www.thisandthat.rs/",
+   "source_urls": [
+    "https://www.thisandthat.rs/"
+   ],
+   "photo": null
+  },
+  {
    "id": "sk-hitchhiker-cinema",
    "name": "Hitchhiker Cinema",
    "city": "Bratislava",
@@ -5909,6 +8237,135 @@
    "photo": null
   },
   {
+   "id": "si-bela-film",
+   "name": "Bela Film",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0569,
+   "lng": 14.5058,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Slovenian production company founded by Maja Weiss and Ida Weiss making feature films, documentaries and short films, with more than thirty completed titles.",
+   "services": "Feature film, documentary and short film production",
+   "credits": [
+    "Tiha milost",
+    "Zajeti v izviru, slovenski otroci Lebensborna",
+    "Za vogalom",
+    "Beli bojevnik v črni obleki"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 1998,
+   "official_url": "https://www.belafilm.si",
+   "source_urls": [
+    "https://www.belafilm.si"
+   ],
+   "photo": null
+  },
+  {
+   "id": "si-nora-production-group",
+   "name": "Nora Production Group",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0569,
+   "lng": 14.5058,
+   "type": "Production company",
+   "specialism": "Commercials & branded content",
+   "summary": "Slovenian production company making advertising films and branded content for international brands and agencies, from concept to final delivery.",
+   "services": "Commercial and branded content production, film trailers, cinematography, directing",
+   "credits": [
+    "Telekom Slovenije",
+    "Amazon Ring",
+    "Radenska Naturelle",
+    "Telemach",
+    "McDonald's"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "http://nora-pg.si",
+   "source_urls": [
+    "http://nora-pg.si",
+    "https://www.linkedin.com/company/nora-production-group"
+   ],
+   "photo": null
+  },
+  {
+   "id": "si-perfo",
+   "name": "Perfo",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0569,
+   "lng": 14.5058,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Slovenian audiovisual production house making television commercials, TV series and feature films, largely through international co-production.",
+   "services": "TV commercial production, TV series production, feature film production, international co-production",
+   "credits": [
+    "Wild Urge",
+    "Ashkal",
+    "Območje brez signala",
+    "Sadeži pozabe",
+    "Sence nad Balkanom"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2005,
+   "official_url": "https://perfo.si",
+   "source_urls": [
+    "https://perfo.si"
+   ],
+   "photo": null
+  },
+  {
+   "id": "si-staragara",
+   "name": "Staragara",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0569,
+   "lng": 14.5058,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Slovenian production company that develops, finances and produces feature films for the international market, with linked offices in Italy and elsewhere in Slovenia.",
+   "services": "Film development, financing, production, production services",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": 2003,
+   "official_url": "https://staragara.com",
+   "source_urls": [
+    "https://staragara.com"
+   ],
+   "photo": null
+  },
+  {
+   "id": "si-vertigo",
+   "name": "Vertigo",
+   "city": "Ljubljana",
+   "country": "Slovenia",
+   "lat": 46.0569,
+   "lng": 14.5058,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Slovenian production company and cultural institute that develops and produces feature films, documentaries and shorts, often as international co-productions.",
+   "services": "Film production, development, distribution",
+   "credits": [
+    "Bog obstaja, ime ji je Petrunija",
+    "Jaz sem Frenk",
+    "Najsrečnejši človek na svetu",
+    "Izginjanje",
+    "Pero"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://vertigo.si",
+   "source_urls": [
+    "https://vertigo.si"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-297-studio",
    "name": "297Studio",
    "city": "Leganés",
@@ -5933,6 +8390,28 @@
    "guide_url": "/compare-film-tv-locations/#loc-es-297-studio"
   },
   {
+   "id": "es-antavianafilms",
+   "name": "Antaviana Films",
+   "city": "Barcelona",
+   "country": "Spain",
+   "lat": 41.3874,
+   "lng": 2.1686,
+   "type": "Post-production",
+   "specialism": "Full-service post",
+   "summary": "Barcelona post-production house handling editing, sound design and mixing, colour correction, VFX and title sequences for film and TV.",
+   "services": "Editing, sound design and mixing, digital lab, colour correction, title sequences and motion graphics, VFX and CGI, previsualization",
+   "credits": "Balandrau vent salvatge, Olivia y el terremoto invisible, El tresor de Barracuda, Euforia dance",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://antavianafilms.com/",
+   "source_urls": [
+    "https://antavianafilms.com/",
+    "https://antavianafilms.com/contacte/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-arcadia-motion-pictures",
    "name": "Arcadia Motion Pictures",
    "city": "Barcelona",
@@ -5950,6 +8429,60 @@
    "official_url": "https://www.arcadiamotionpictures.com/",
    "source_urls": [
     "https://www.arcadiamotionpictures.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-atipica-films",
+   "name": "Atipica Films",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Madrid production company making Spanish feature films and television drama series, including La Isla Minima, Modelo 77 and La Peste.",
+   "services": "Film and television production",
+   "credits": [
+    "La Chica de Nieve",
+    "La Peste",
+    "Modelo 77",
+    "La Isla Minima",
+    "Grupo 7"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2009,
+   "official_url": "https://www.atipicafilms.com/",
+   "source_urls": [
+    "https://www.atipicafilms.com/",
+    "https://www.atipicafilms.com/contacto"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-baleuko",
+   "name": "Baleuko",
+   "city": "Durango",
+   "country": "Spain",
+   "lat": 43.1701,
+   "lng": -2.6357,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Basque production company in Durango making animated series, fiction, documentaries and television programmes.",
+   "services": "Animated film and series production, fiction, documentary and television production",
+   "credits": [
+    "Iratxoak",
+    "Momonsters",
+    "Ur Handitan",
+    "Krimenak. Gure Kronika Beltza"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 1993,
+   "official_url": "https://www.baleuko.com/",
+   "source_urls": [
+    "https://www.baleuko.com/"
    ],
    "photo": null
   },
@@ -6098,6 +8631,28 @@
    "photo": null
   },
   {
+   "id": "es-elcolorado",
+   "name": "El Colorado",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Post-production",
+   "specialism": "Picture post & colour",
+   "summary": "Madrid colour grading studio working on feature films, TV series, commercials and music videos.",
+   "services": "Colour grading for cinema, series, TV, advertising and music videos",
+   "credits": "Black Water, Blancanieves, Nos Vemos En La Otra Vida, Atasco T2, El Inmortal",
+   "facilities": null,
+   "group": null,
+   "founded": 2008,
+   "official_url": "https://www.elcolorado.es/",
+   "source_urls": [
+    "https://www.elcolorado.es/",
+    "https://www.elcolorado.es/contacto"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-el-ranchito",
    "name": "El Ranchito",
    "city": "Madrid",
@@ -6115,6 +8670,27 @@
    "official_url": "https://elranchito.es/",
    "source_urls": [
     "https://elranchito.es/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-entropystudio",
+   "name": "Entropy Studio",
+   "city": "Zaragoza",
+   "country": "Spain",
+   "lat": 41.6488,
+   "lng": -0.8891,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Visual effects studio with offices in Zaragoza and Madrid making VFX shots, 3D and motion graphics for film, series and advertising.",
+   "services": "VFX consulting and design, 3D and CGI creation, compositing, matte painting, motion graphics, post-production",
+   "credits": "Aquel, Titanic Ocean, Reina Roja T2",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.entropystudio.es/",
+   "source_urls": [
+    "https://www.entropystudio.es/"
    ],
    "photo": null
   },
@@ -6235,6 +8811,30 @@
    "guide_url": "/compare-film-tv-locations/#loc-es-gran-canaria-platos"
   },
   {
+   "id": "es-hampa-studio",
+   "name": "Hampa Studio",
+   "city": "Valencia",
+   "country": "Spain",
+   "lat": 39.4699,
+   "lng": -0.3763,
+   "type": "Production company",
+   "specialism": "Animation",
+   "summary": "Animation studio in Valencia producing original and co-produced 2D and 3D animated films, series and shorts for streaming platforms and broadcasters.",
+   "services": "Animation production, series development, co-production, film and short film production",
+   "credits": [
+    "Chica y Lobo",
+    "La Venganza"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2006,
+   "official_url": "https://www.hampastudio.com/",
+   "source_urls": [
+    "https://www.hampastudio.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-ikiru-films",
    "name": "Ikiru Films",
    "city": "Barcelona",
@@ -6274,6 +8874,30 @@
    "source_urls": [
     "https://irusoin.com/en/who-we-are/",
     "https://en.wikipedia.org/wiki/Loreak"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-la-claqueta-pc",
+   "name": "La Claqueta PC",
+   "city": "Seville",
+   "country": "Spain",
+   "lat": 37.3891,
+   "lng": -5.9845,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Production company based in Seville making Spanish feature films and documentaries, including La Trinchera Infinita, Spain's submission for the Academy Awards.",
+   "services": "Film and television production",
+   "credits": [
+    "La Trinchera Infinita",
+    "10 Años con Bebe"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.laclaqueta.com/",
+   "source_urls": [
+    "https://www.laclaqueta.com/"
    ],
    "photo": null
   },
@@ -6349,6 +8973,27 @@
    "guide_url": "/compare-film-tv-locations/#loc-es-mini-hollywood-oasys"
   },
   {
+   "id": "es-moriarti-produkzioak",
+   "name": "Moriarti Produkzioak",
+   "city": "San Sebastian",
+   "country": "Spain",
+   "lat": 43.3183,
+   "lng": -1.9812,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Basque production company in San Sebastian making feature films, documentaries, shorts and television series, founded and run by five partners.",
+   "services": "Feature film, documentary, short film and television series production",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": 2001,
+   "official_url": "https://www.moriarti.com/",
+   "source_urls": [
+    "https://www.moriarti.com/nosotros"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-nostromo-pictures",
    "name": "Nostromo Pictures",
    "city": "Barcelona",
@@ -6418,6 +9063,32 @@
    "photo": null,
    "guide_id": "es-parc-audiovisual-catalunya",
    "guide_url": "/compare-film-tv-locations/#loc-es-parc-audiovisual-catalunya"
+  },
+  {
+   "id": "es-portocabo",
+   "name": "Portocabo",
+   "city": "A Coruna",
+   "country": "Spain",
+   "lat": 43.3623,
+   "lng": -8.4115,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Production company in A Coruna making internationally co-produced fiction series and feature films for European broadcasters and streaming platforms.",
+   "services": "International co-production, television series and feature film production",
+   "credits": [
+    "Rapa",
+    "Hierro",
+    "Weiss y Morales",
+    "Cunados"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.portocabo.com/",
+   "source_urls": [
+    "https://www.portocabo.com/"
+   ],
+   "photo": null
   },
   {
    "id": "es-proima-zebra-astur",
@@ -6490,6 +9161,32 @@
    "photo": null
   },
   {
+   "id": "es-set-magic",
+   "name": "Set Magic",
+   "city": "Barcelona",
+   "country": "Spain",
+   "lat": 41.3851,
+   "lng": 2.1734,
+   "type": "Production company",
+   "specialism": "Service production",
+   "summary": "Barcelona production company offering line producing and production management for Spanish and international film, television and series projects.",
+   "services": "Production management, line producing, feature film and series production",
+   "credits": [
+    "Vicky Cristina Barcelona",
+    "Dieciocho",
+    "Gente Hablando",
+    "Black is Beltza"
+   ],
+   "facilities": null,
+   "group": null,
+   "founded": 2007,
+   "official_url": "https://www.setmagic.com/",
+   "source_urls": [
+    "https://www.setmagic.com/"
+   ],
+   "photo": null
+  },
+  {
    "id": "es-skydance-animation-madrid",
    "name": "Skydance Animation Madrid",
    "city": "Las Rozas de Madrid",
@@ -6550,6 +9247,28 @@
    "official_url": "https://twentyfourseven.xyz/",
    "source_urls": [
     "https://twentyfourseven.xyz/offices/spain/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "es-twinpines",
+   "name": "Twin Pines",
+   "city": "Madrid",
+   "country": "Spain",
+   "lat": 40.4168,
+   "lng": -3.7038,
+   "type": "Post-production",
+   "specialism": "VFX & animation",
+   "summary": "Madrid visual effects company producing VFX shots for feature films and TV drama series.",
+   "services": "Visual effects, compositing",
+   "credits": "See, La virgen roja, El campeon, La sociedad de la nieve, Los Farad",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.twinpines.es/",
+   "source_urls": [
+    "https://www.twinpines.es/",
+    "https://www.twinpines.es/contacto"
    ],
    "photo": null
   },
@@ -6627,6 +9346,177 @@
    "guide_url": "/compare-film-tv-locations/#loc-se-ystad-studios"
   },
   {
+   "id": "ch-akka-films",
+   "name": "Akka Films",
+   "city": "Geneva",
+   "country": "Switzerland",
+   "lat": 46.2044,
+   "lng": 6.1432,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Geneva production company making documentaries, fiction features, series and short films, often co-produced with Swiss public broadcaster RTS.",
+   "services": "Documentary production, fiction feature production, series and short film production",
+   "credits": "Laundry, Qui Vit Encore, Intracables, Renaissance, The Shameless",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.akkafilms.ch/",
+   "source_urls": [
+    "https://www.akkafilms.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-c-films",
+   "name": "C-Films AG",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zurich production company developing and producing feature films, TV series, TV movies and documentaries for the Swiss and international market.",
+   "services": "Feature film production, TV drama series, TV movies, documentary production",
+   "credits": "A Happy Family, Hello Betty, I'm Not Stiller, Maloney, Wilder",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.c-films.com/",
+   "source_urls": [
+    "https://www.c-films.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-cinegrell",
+   "name": "Cinegrell",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Post-production",
+   "specialism": "Picture post & colour",
+   "summary": "Zurich post-production and film restoration company offering conforming, colour grading, VFX and deliveries, plus a separate camera rental division near Zurich.",
+   "services": "Conforming, colour grading, VFX, deliveries, film restoration, digitization, camera rental",
+   "credits": "Maloney, Unsere kleine Botschaft, Heldin, Early Birds",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.cinegrell.ch/",
+   "source_urls": [
+    "https://www.cinegrell.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-contrast-film",
+   "name": "Contrast Film",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Zurich production company making films and TV drama, including episodes of the Swiss Tatort crime series, combining artistic ambition with audience appeal.",
+   "services": "TV and film production, drama development",
+   "credits": "Tatort: Kings of the Night",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.contrastfilm.ch/",
+   "source_urls": [
+    "https://www.contrastfilm.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-dschoint-ventschr",
+   "name": "Dschoint Ventschr Filmproduktion",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Zurich production and distribution company making fiction films, documentaries, shorts and TV films, handling development through distribution in house.",
+   "services": "Documentary production, fiction film production, TV film production, distribution",
+   "credits": "Siri Hustvedt: Dance Around the Self, Bagger Drama, Hirschfeld: Unbekannter Bekannter, Solidarity, Memory of Princess Mumbi",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.dschointventschr.ch/",
+   "source_urls": [
+    "https://www.dschointventschr.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-hugofilm",
+   "name": "Hugofilm",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zurich production company founded in 1999, producing Swiss feature films, documentaries and series, including the internationally released film Vitus.",
+   "services": "Feature film production, documentary production, series production, production services",
+   "credits": "Vitus, Erinnerung, Tristan Forever",
+   "facilities": null,
+   "group": null,
+   "founded": 1999,
+   "official_url": "https://www.hugofilm.ch/",
+   "source_urls": [
+    "https://www.hugofilm.ch/",
+    "https://www.hugofilm.ch/6509127/about",
+    "https://www.hugofilm.ch/6465954/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-jingle-jungle",
+   "name": "Jingle Jungle",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Post-production",
+   "specialism": "Sound post & dubbing",
+   "summary": "Zurich audio post-production studio providing sound design, foley, voice recording, composition and mixing for advertising, film, games and interactive media.",
+   "services": "Sound design, foley, voice recording, composition, mixing, voice casting",
+   "credits": null,
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://jinglejungle.ch/",
+   "source_urls": [
+    "https://jinglejungle.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-point-prod",
+   "name": "Point Prod",
+   "city": "Geneva",
+   "country": "Switzerland",
+   "lat": 46.2044,
+   "lng": 6.1432,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Geneva area audiovisual production company making TV drama, documentaries and digital content, part of the Point Prod Actua group.",
+   "services": "TV drama production, documentary production, digital content, audiovisual event design",
+   "credits": "Winter Palace, Cellules souches: le business de l'espoir, Dans la jungle d'Emilienne",
+   "facilities": null,
+   "group": "Point Prod Actua",
+   "founded": null,
+   "official_url": "https://www.pointprod.ch/",
+   "source_urls": [
+    "https://www.pointprod.ch/",
+    "https://www.pointprod.ch/contact"
+   ],
+   "photo": null
+  },
+  {
    "id": "ch-redspace",
    "name": "Redspace",
    "city": "Zurich",
@@ -6644,6 +9534,94 @@
    "official_url": "https://redspace.ch/",
    "source_urls": [
     "https://redspace.ch/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-rita-productions",
+   "name": "RITA Productions",
+   "city": "Geneva",
+   "country": "Switzerland",
+   "lat": 46.2044,
+   "lng": 6.1432,
+   "type": "Production company",
+   "specialism": "Documentary",
+   "summary": "Geneva production company making documentaries, feature films, TV films, series and short films, mainly for French speaking Switzerland.",
+   "services": "Documentary production, feature film production, series and short film production",
+   "credits": "De Humani Corporis Fabrica, Gabin, To the Moon and Back, Placee, La Derive des Continents",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.ritaproductions.com/",
+   "source_urls": [
+    "https://www.ritaproductions.com/",
+    "https://www.ritaproductions.com/contact"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-tellfilm",
+   "name": "Tellfilm",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zurich production company making Swiss feature films and documentaries for cinema and television.",
+   "services": "Feature film production, documentary production",
+   "credits": "Blue My Mind, Gloria!, Der Engelmacher, Mother's Baby, Dynastie Knie: 100 Jahre Nationalcircus",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.tellfilm.ch/",
+   "source_urls": [
+    "https://www.tellfilm.ch/",
+    "https://www.tellfilm.ch/kontakt"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-turnus-film",
+   "name": "Turnus Film",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "Feature film",
+   "summary": "Zurich production company making Swiss feature films and TV drama, with credits by directors Michael Steiner and Sabine Boss.",
+   "services": "Feature film production, TV drama series production",
+   "credits": "Wolkenbruch, Der Goalie bin Ig, Jagdzeit, Die Beschatter, Tatort: Kammerflimmern",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.turnusfilm.com/",
+   "source_urls": [
+    "https://www.turnusfilm.com/"
+   ],
+   "photo": null
+  },
+  {
+   "id": "ch-zodiac-pictures",
+   "name": "Zodiac Pictures",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lng": 8.5417,
+   "type": "Production company",
+   "specialism": "TV drama & series",
+   "summary": "Swiss production company with offices in Zurich and Lucerne, producing TV drama series, Tatort crime episodes and feature films for Swiss and German-language broadcasters.",
+   "services": "TV drama series production, feature film production",
+   "credits": "Tatort, Neumatt, Heldin, De Raeuber Hotzenplotz, Ewigi Liebi",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.zodiacpictures.com/",
+   "source_urls": [
+    "https://www.zodiacpictures.com/",
+    "https://www.zodiacpictures.com/kontakt",
+    "https://www.zodiacpictures.com/projekte"
    ],
    "photo": null
   },
