@@ -4,7 +4,7 @@
     zonder login. Het aanvraagformulier post naar hetzelfde /api/contact als de andere
     formulieren, met "Location request: ..." vooraan in het bericht (zichtbaar op /beheer). -#}
 {#- Sjabloonsoort zoals getoond achter de downloadlink (veld budget_template.format) -#}
-{%- set formatNames = { xlsx: "Excel", zip: "ZIP", pdf: "PDF", page: "Web page" } -%}
+{%- set formatNames = { xlsx: "Excel", docx: "Word", doc: "Word", zip: "ZIP", pdf: "PDF", page: "Web page" } -%}
 {%- set regions = [] -%}
 {%- for loc in locations.locations -%}
   {%- if loc.region not in regions -%}{%- set regions = (regions.push(loc.region), regions) -%}{%- endif -%}

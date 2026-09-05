@@ -704,7 +704,13 @@
       "paid": "Into a Romanian Treasury account within 120 days of the Film Commission approving the payment request",
       "notes": "Only spend incurred after the registration request counts, so register before you commit anything in Romania. Applications go through a Romanian-registered company and must pass a cultural test with at least 18 points. The published 2024 procedure lets OFIC sign financing agreements until 31 December 2026 and pay until 2028; a three-year extension was announced by the Culture Ministry on 4 May 2026 but the procedure on the OFIC site has not been reissued, so confirm the window before you plan. Payment requests approved after the year's budget is used up move to the next budget year.",
       "source": "https://ofic.ro/en/cash-rebate/",
-      "source_label": "OFIC (Romanian Film and Cultural Investment Office)"
+      "source_label": "OFIC (Romanian Film and Cultural Investment Office)",
+      "budget_template": {
+        "url": "https://ofic.ro/wp-content/uploads/2025/07/DECIZIE-nr-659-din-1-iulie-2024-consolidat-01-07.docx",
+        "label": "Procedure 659/2024 with the application annexes (Word), OFIC",
+        "format": "docx",
+        "note": "Holds the forms a producer actually files: registration request (annex 1.1), financing request (2.1) and payment request (3.1), with the indicative budget structure by cost category in annex 1.2 point B. Everything goes in Romanian through the OFIC platform at app.ofic.ro, and the claim needs an ISRS 4400 audit report plus a summary of Romanian spend delivered in Excel and as a PDF signed by the auditor."
+      }
     },
     {
       "id": "bulgaria",
@@ -729,7 +735,13 @@
       "paid": "After completion and verification; if the annual budget is exhausted the payment moves to the next calendar year",
       "notes": "Eligible costs may not exceed 80% of the total production budget, so the rebate is worth at most 20% of a fully local budget. The applicant must be entered in the National Film Centre's public register, and a foreign company must have been registered as a film company for at least two years before applying. Everything is filed in Bulgarian, script included, and the project must pass a cultural test. The Centre now publishes the cap in euro, while its older English guidelines still quote the previous BGN 2m limit.",
       "source": "https://www.nfc.bg/en/cash-rebate/",
-      "source_label": "Bulgarian National Film Centre"
+      "source_label": "Bulgarian National Film Centre",
+      "budget_template": {
+        "url": "https://www.nfc.bg/wp-content/uploads/2021/09/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-16%D0%B0-%D0%BA%D1%8A%D0%BC-%D1%87%D0%BB.-57-%D0%B0%D0%BB.-2.docx",
+        "label": "Annex 16a, application to approve the costs to be reimbursed (Word), National Film Centre",
+        "format": "docx",
+        "note": "The form on which the rebate amount is fixed before the shoot, asking for the total project budget, a detailed list of planned eligible and ineligible Bulgarian costs, a financing plan and proof that 75% of the Bulgarian production costs are covered. Filed in Bulgarian, with a sworn translation of every foreign-language document."
+      }
     },
     {
       "id": "serbia",
@@ -755,7 +767,13 @@
       "paid": "Within 60 days of final approval, after an audit filed within 45 days of completion",
       "notes": "The applicant must be a Serbian legal entity or a special purpose vehicle, and the application has to be in before production starts in Serbia. All documents go in in Serbian, in Cyrillic script. The Ministry of Culture adopted a new incentive regulation on 21 March 2026, so use the current rulebook rather than older summaries. Commercials get 20%, VAT never qualifies, and the money lands in a Treasury account that the applicant must pass to the investor within 10 days.",
       "source": "https://filminserbia.com/incentives/",
-      "source_label": "Serbia Film Commission"
+      "source_label": "Serbia Film Commission",
+      "budget_template": {
+        "url": "https://www.filminserbia.com/wp-content/uploads/2015/06/Prilog-1-Zahtev-za-dodelu.pdf",
+        "label": "Annex 1, request for incentive funds (PDF), Film Center Serbia",
+        "format": "pdf",
+        "note": "The pre-production application, which asks for the production budget with the Serbian part shown separately. The money is claimed later on annex 2, which must carry an independent auditor's report covering every qualifying cost because sampling is not allowed, and both forms are completed in Serbian."
+      }
     },
     {
       "id": "lithuania",
@@ -777,7 +795,13 @@
       "paid": "During production, as soon as a Lithuanian donor is signed up; the investment is not repayable",
       "notes": "This is private money, not a rebate: a Lithuanian production company applies on your behalf and has to find a local donor, so the benefit is never guaranteed. The project must meet at least two of eight cultural criteria and at least 51% of the crew hired by the Lithuanian company must be Lithuanian or EEA nationals. Cast fees above 4% of production costs do not qualify, and development, marketing and distribution costs are excluded. The measure runs to 31 December 2028.",
       "source": "https://www.lkc.lt/en/tax-incentives",
-      "source_label": "Lithuanian Film Centre"
+      "source_label": "Lithuanian Film Centre",
+      "budget_template": {
+        "url": "https://www.lkc.lt/docs/Lengvata/Filmo%20gamybos%20i%C5%A1laid%C5%B3%20s%C4%85matos%20forma%20-%20pataisyta.xlsx",
+        "label": "Film production cost estimate form (Excel), Lithuanian Film Centre",
+        "format": "xlsx",
+        "note": "The compulsory cost estimate filed by the Lithuanian producer with the cultural content application; the cost line names are fixed and may not be changed. The application is in Lithuanian and is emailed to the LFC as one signed PDF or ADOC file, and a matching Excel report of actual costs is used for the investment certificate."
+      }
     },
     {
       "id": "latvia",
@@ -798,7 +822,13 @@
       "paid": "After the work in Latvia is finished and the eligible costs are approved; the decision on the application takes about a month",
       "notes": "The applicant is a Latvian company working under an agreement with the foreign producer, and shooting must not start before the application goes in. The foreign producer needs at least 50% of total filming costs in place and foreign funding at least equal to the Latvian eligible costs, and VAT paid into the state budget must be at least half of the co-financing. Rounds close once the money is committed, so the calendar matters more than the paperwork. On top of this the Riga Film Fund adds a regional 20 to 25% rebate from an €800,000 annual budget for work shot in or set in Riga.",
       "source": "https://www.nkc.gov.lv/en/cash-rebates",
-      "source_label": "National Film Centre of Latvia"
+      "source_label": "National Film Centre of Latvia",
+      "budget_template": {
+        "url": "https://s3.storage.pub.lvdc.gov.lv/liaa-bucket/shared/business.gov.lv/eiis-files/cms_uploads/Filmas%26Dizpasakumi/5.pielikums_filmas.xlsx",
+        "label": "Annex 5, eligible cost estimate (Excel), Investment and Development Agency of Latvia",
+        "format": "xlsx",
+        "note": "The cost estimate required with the application, in euro and excluding VAT, on fixed cost positions with the support of up to 30% calculated per line. The Latvian company uploads it in the liaa.business.gov.lv portal in Latvian, together with the signed overall production budget and the financing plan."
+      }
     },
     {
       "id": "estonia",
@@ -819,7 +849,13 @@
       "paid": "Costs audited within 30 days of filing, payment within 10 days of approval",
       "notes": "The base rate is 30% of eligible Estonian spend and it rises to 40% when at least two creative crew members are Estonian tax residents, so budget on 30% unless you are sure of the local hires. New conditions have applied since 20 April 2026. Only costs paid to parties subject to Estonian taxation count. The applicant is an Estonian-registered company or an Estonian branch or subsidiary, the money is paid to the foreign company, 70% of the financing must be in place including this support, and a decision takes up to 40 days.",
       "source": "https://filmestonia.eu/film-estonia-funding/guidelines-and-how-to-apply/",
-      "source_label": "Film Estonia (Estonian Film Institute)"
+      "source_label": "Film Estonia (Estonian Film Institute)",
+      "budget_template": {
+        "url": "https://filmestonia.eu/wp-content/uploads/Taotlusvorm-FilmEstonia_2026-1.doc",
+        "label": "Film Estonia application form (Word), Estonian Film Institute",
+        "format": "docx",
+        "note": "Estonian-language form whose budget section asks for the overall budget, the Estonian production stage budget, the eligible cost budget, the labour share and the rate claimed (30 or 40%). It is digitally signed and sent to the Institute, and separate interim and final report forms set actual costs against this budget before the audited cost report is approved."
+      }
     },
     {
       "id": "slovakia",
@@ -840,7 +876,13 @@
       "paid": "After all eligible costs are paid and the final balance sheet and auditor's report are delivered",
       "notes": "Registration costs €1,000 and is valid for three years, and only spend after the registration certificate counts. The cultural test needs 24 of 48 points and is filed in Slovak. Fees to foreign freelancers who stay tax resident at home get 14% instead of 33% and are capped at 10% of approved eligible costs, so a heavily imported crew lowers the average. The Fund checks a complete claim within 30 days and can ask for another 30 days of documents.",
       "source": "https://www.filmcommission.sk/cash-rebate/",
-      "source_label": "Slovak Film Commission (Slovak Audiovisual Fund)"
+      "source_label": "Slovak Film Commission (Slovak Audiovisual Fund)",
+      "budget_template": {
+        "url": "https://www.avf.sk/Libraries/dok_prog_5/vzor_spravy_odsuhlasenych_postupov.sflb.ashx",
+        "label": "Model agreed-upon-procedures report on eligible costs (PDF), Slovak Audiovisual Fund",
+        "format": "pdf",
+        "note": "The Fund prescribes the wording of this ISRS 4400 auditor report, and the detailed list of eligible expenditure in the prescribed table form is an inseparable part of it. The report must be in Slovak, and registration and the payment request themselves are filed through the Fund's system at registracia.avf.sk."
+      }
     },
     {
       "id": "slovenia",
@@ -861,7 +903,13 @@
       "paid": "After production or post-production in Slovenia ends, on a final report and audited statement",
       "notes": "The pot is small, so the practical limit is the call and not the rate: the current call runs until the funds are gone and at the latest to 25 September 2026, and the aid scheme itself is approved to 31 December 2026. The applicant is a Slovenian producer, co-producer or service company that has delivered at least one publicly shown work in the last three years, and the project must reach half of the cultural test points. VAT is excluded from the base, and total state aid may not exceed 50% of production costs, or 60% for cross-border EU co-productions and 80% for low-budget or difficult works. A rebate of €1m or more also requires at least one Slovenian national in each of the listed departments.",
       "source": "https://www.filminslovenia.si/en/incentives/",
-      "source_label": "Film in Slovenia (Slovenian Film Centre)"
+      "source_label": "Film in Slovenia (Slovenian Film Centre)",
+      "budget_template": {
+        "url": "https://www.sfc.si/documents/21192/Kopija_datoteke_Obrazec_%C5%A1t._3_-_Predra%C4%8Dun_projekta.xlsx",
+        "label": "Form 3, project cost estimate (Excel), Slovenian Film Centre",
+        "format": "xlsx",
+        "note": "Compulsory annex to the cash rebate call, with one column for the amount budgeted at application and one for the amount actually spent, on the Centre's own fixed cost categories. It goes in in Slovenian with the application form and declarations, and VAT stays outside the eligible base."
+      }
     },
     {
       "id": "luxembourg",
@@ -885,7 +933,13 @@
       "paid": "In instalments under a contract with the Fund; the AFS is an advance on receipts and is repayable from the first euro",
       "notes": "Luxembourg has no cash rebate and no tax credit: the only national money is this selective co-production aid, so there is nothing to claim on a straight service shoot. Only a Luxembourg capital company can apply, which means an international project needs a Luxembourg co-producer who puts in at least 10% of the financing and takes on the application. Half the budget must be confirmed at submission, at least 25% of the award (40% for animation) has to go on Luxembourg social charges, and features or series over €10m require the Luxembourg company to hold 20% (10% for series) of worldwide rights. Because it is a repayable advance on receipts, it is financing rather than a subsidy.",
       "source": "https://filmfund.lu/financement/aide-financiere-selective-a-la-production-projet-dun-realisateur-non-repertorie/",
-      "source_label": "Film Fund Luxembourg"
+      "source_label": "Film Fund Luxembourg",
+      "budget_template": {
+        "url": "https://filmfund.lu/wp-content/uploads/2024/07/Section1DocumentationAFSNeoV5.pdf",
+        "label": "AFS rules, section 1 (V5) with the prescribed budget structure (PDF), Film Fund Luxembourg",
+        "format": "pdf",
+        "note": "No budget spreadsheet is published: the Luxembourg company enters the figures in the eFilmfund portal, following the budget structure and the detailed Luxembourg cost breakdown set out in point 5 of these rules. The same structure carries both the cost estimate and the final cost statement, and the documents are in French."
+      }
     },
     {
       "id": "switzerland",
@@ -909,7 +963,13 @@
       "paid": "60% of the committed amount at the start of shooting, the balance on the final statement",
       "notes": "Switzerland has no national cash rebate for incoming productions: FiSS is location support for recognised official co-productions, only a Swiss production company can apply, and a pure foreign service shoot gets nothing at federal level. The film must already be 75% financed without FiSS and a fiction feature needs at least five shooting days in Switzerland. The rate is 20% of eligible Swiss costs, 40% for minority co-productions and for technical costs, and 50% for film-technical services on majority co-productions, all inside the CHF 600,000 ceiling. Most location money in practice sits with the regional funds (Zurich Film Foundation, Cinéforom, Bern, Ticino), and the FiSS statement has to be in by 30 September to count in the current year.",
       "source": "https://www.bak.admin.ch/de/fiss",
-      "source_label": "Swiss Federal Office of Culture (BAK)"
+      "source_label": "Swiss Federal Office of Culture (BAK)",
+      "budget_template": {
+        "url": "https://www.bak.admin.ch/dam/de/sd-web/E4KeIMVjKBQ5/FiSS%20Praktische%20Hinweise_2026.pdf",
+        "label": "Praktische Hinweise zur Filmstandortförderung FiSS (PDF), Federal Office of Culture",
+        "format": "pdf",
+        "note": "There is no downloadable template: the application form, the budget form with its three columns (Swiss spend, FiSS at 20% and at 40 or 50%), the expenditure list and the final settlement form all sit inside the federal grant portal, which is moving from FPF to esub.admin.ch. Only a Swiss production company can file, in German or French, and the settlement must be checked by an external auditor before it goes to the BAK."
+      }
     }
   ],
   "labour_share": 0.5,

@@ -586,7 +586,7 @@ collections:
                 fields:
                   - { label: "URL", name: url, widget: string }
                   - { label: "Naam zoals getoond", name: label, widget: string, hint: "Bijv. 'Budget model (Excel), Netherlands Film Fund'" }
-                  - { label: Soort, name: format, widget: select, options: [{label: Excel, value: xlsx}, {label: ZIP, value: zip}, {label: PDF, value: pdf}, {label: Webpagina, value: page}], default: xlsx }
+                  - { label: Soort, name: format, widget: select, options: [{label: Excel, value: xlsx}, {label: Word, value: docx}, {label: PDF, value: pdf}, {label: ZIP, value: zip}, {label: Webpagina, value: page}], default: xlsx }
                   - { label: "Toelichting (verplicht of niet, taal, wat erin zit)", name: note, widget: text, required: false }
 
   # De locatiegids zelf: plekken en studio's op /compare-film-tv-locations/
