@@ -1,0 +1,106 @@
+---
+pagination:
+  data: companyIndex.companies
+  size: 1
+  alias: c
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de honderden in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "/companies/{{ c.id }}/"
+layout: layout.njk
+excludeFromLlms: true
+eleventyComputed:
+  title: "{{ c.name }}"
+  seo_title: "{{ c.name }}, {{ c.city }}: {{ c.type | lower }} in {{ c.inCountry }} | Tubes"
+  description: "{{ c.name }} in {{ c.city }}, {{ c.country }}. {{ c.summary }}"
+---
+{#- Een eigen pagina per bedrijf. De zoekpagina zet alle bedrijven wel in de
+    HTML, maar dat is een URL: daarmee kan er ook maar een ranken, terwijl het
+    profiel (diensten, credits, faciliteiten) juist is waar mensen op zoeken.
+    Alles hier komt uit de dataset, dus uit wat het bedrijf zelf publiceert;
+    er wordt geen tekst bijverzonnen. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
+      <a href="{{ c.countryUrl }}">{{ c.country }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ c.name }}</span>
+    </nav>
+
+    <header class="company-head">
+      <p class="company-kicker"><a href="{{ c.typeUrl }}">{{ c.typeLabel.plural }}</a></p>
+      <h1>{{ c.name }}</h1>
+      <p class="company-where">
+        {% if c.cityUrl %}<a href="{{ c.cityUrl }}">{{ c.city }}</a>{% else %}{{ c.city }}{% endif -%}
+        <span>,</span> <a href="{{ c.countryUrl }}">{{ c.country }}</a>
+        <span class="loc-tag">{{ c.specialism }}</span>
+      </p>
+      <p class="company-summary">{{ c.summary }}</p>
+      <p class="company-actions">
+        <a class="button button-primary" href="{{ c.official_url }}" target="_blank" rel="noopener nofollow">Visit {{ c.name }}</a>
+        {%- if c.guide_url %}<a class="button button-secondary" href="{{ c.guide_url }}">See it in the locations guide</a>{% endif %}
+      </p>
+    </header>
+
+    <h2>What they do</h2>
+    <table class="company-facts">
+      <tbody>
+        <tr><th scope="row">Type</th><td><a href="{{ c.typeUrl }}">{{ c.type }}</a></td></tr>
+        <tr><th scope="row">Specialism</th><td>{{ c.specialism }}</td></tr>
+        <tr><th scope="row">Based in</th><td>{{ c.city }}, {{ c.country }}</td></tr>
+        {%- if c.services %}<tr><th scope="row">Services</th><td>{{ c.services }}</td></tr>{% endif %}
+        {%- if c.credits %}<tr><th scope="row">Work includes</th><td>{{ c.credits }}</td></tr>{% endif %}
+        {%- if c.facilities %}<tr><th scope="row">Facilities</th><td>{{ c.facilities }}</td></tr>{% endif %}
+        {%- if c.group %}<tr><th scope="row">Part of</th><td>{{ c.group }}</td></tr>{% endif %}
+        {%- if c.founded %}<tr><th scope="row">Founded</th><td>{{ c.founded }}</td></tr>{% endif %}
+        <tr><th scope="row">Website</th><td><a href="{{ c.official_url }}" target="_blank" rel="noopener nofollow">{{ c.official_url | replace("https://", "") | replace("http://", "") }}</a></td></tr>
+      </tbody>
+    </table>
+    <p class="company-note">Only what {{ c.name }} publishes itself is listed here, checked on {{ companyIndex.updated }}. Empty fields mean the company does not publish that, not that the answer is zero. {{ c.name }} is not affiliated with Tubes.</p>
+
+    {%- if c.incentive %}
+    <h2>Shooting in {{ c.inCountry }}</h2>
+    <p>
+      {{ c.inCountry | capitalize_first }} runs the {{ c.incentive.scheme }}{% if c.incentive.rate_label %}, worth {{ c.incentive.rate_label }}{% endif %}{% if c.incentive.mechanism %} as a {{ c.incentive.mechanism | lower }}{% endif %}.
+      Work out what that is on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>, and find places to shoot in the <a href="/compare-film-tv-locations/">locations guide</a>.
+    </p>
+    {%- endif %}
+
+    {%- if c.similar.length %}
+    <h2>Companies like {{ c.name }}</h2>
+    <p>Also working in {{ c.specialism | lower }}{% if c.typeCountryUrl %}, starting with <a href="{{ c.typeCountryUrl }}">{{ c.typeLabel.plural | lower }} in {{ c.inCountry }}</a>{% endif %}.</p>
+    {% set lijst = c.similar %}{% set toonLand = true %}{% set meer = 0 %}
+    {% include "partials/company-links.njk" %}
+    {%- endif %}
+
+    {%- if c.sameCity.length %}
+    <h2>Other companies in {{ c.city }}</h2>
+    {% set lijst = c.sameCity %}{% set toonLand = false %}{% set toonSpecialisme = true %}
+    {% set meer = c.sameCityMore %}{% set meerUrl = c.cityUrl %}{% set meerLabel = "All companies in " + c.city %}
+    {% include "partials/company-links.njk" %}
+    {%- endif %}
+
+    {%- if c.sameTypeCountry.length %}
+    <h2>Other {{ c.typeLabel.plural | lower }} in {{ c.inCountry }}</h2>
+    {% set lijst = c.sameTypeCountry %}{% set toonLand = false %}{% set toonSpecialisme = true %}
+    {% set meer = c.sameTypeCountryMore %}{% set meerUrl = c.typeCountryUrl or c.countryUrl %}
+    {% set meerLabel = "All " + c.typeLabel.plural | lower + " in " + c.inCountry %}
+    {% include "partials/company-links.njk" %}
+    {%- endif %}
+
+    <p class="company-back">
+      <a href="{{ c.countryUrl }}">All companies in {{ c.inCountry }}</a> &middot;
+      <a href="{{ c.typeUrl }}">All {{ c.typeLabel.plural | lower }} in Europe</a> &middot;
+      <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Working in production?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so the studio, co-producer or post house you pick becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a> <a class="button button-secondary" href="/compare-media-production-companies/">Back to the search</a></p>
+  </div>
+</section>

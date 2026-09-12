@@ -43,6 +43,7 @@ sections:
         - { label: Services, key: services }
         - { label: Credits, key: credits }
       links:
+        - { label: Full profile, key: page_url }
         - { label: Official site, key: official_url }
         - { label: In the locations guide, key: guide_url }
     compare_rows:
@@ -55,6 +56,7 @@ sections:
       - { label: Part of, key: group }
       - { label: Founded, key: founded }
       - { label: Official site, key: official_url, link: true, link_label: Open }
+      - { label: Full profile, key: page_url, link: true, link_label: Open }
       - { label: Locations guide, key: guide_url, link: true, link_label: Show location }
     request_heading: Missing a company? Suggest it
     request_text: |

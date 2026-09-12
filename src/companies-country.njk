@@ -1,0 +1,65 @@
+---
+pagination:
+  data: companyIndex.countries
+  size: 1
+  alias: land
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de honderden in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "{{ land.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film and TV companies in {{ land.inName }}"
+  seo_title: "Film, TV and Media Companies in {{ land.inName }}: {{ land.count }} Studios, Producers and Post Houses | Tubes"
+  description: "{{ land.count }} film, TV and media companies in {{ land.inName }}: studios, production companies and post-production houses, with services, credits and links to their own sites."
+---
+{#- Landpagina: alles in een land, gegroepeerd per type. Dit is wat iemand
+    zoekt met "production companies in Portugal", en tegelijk de route waarlangs
+    Google de bedrijfspagina's van dat land bereikt. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ land.name }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/companies/">Directory</a></p>
+      <h1>Film, TV and media companies in {{ land.inName }}</h1>
+      <p class="company-summary">
+        {{ land.count }} companies in {{ land.inName }}:
+        {%- for g in land.byType %} {{ g.count }} {{ g.label.plural | lower }}{% if not loop.last %},{% endif %}{% endfor %}.
+        Each one checked on its own website. Filter and compare them in the
+        <a href="/compare-media-production-companies/">search tool</a>.
+      </p>
+    </header>
+
+    {%- if land.incentive %}
+    <h2>What {{ land.inName }} pays back</h2>
+    <p>
+      {{ land.inName | capitalize_first }} runs the {{ land.incentive.scheme }}{% if land.incentive.rate_label %}, worth {{ land.incentive.rate_label }}{% endif %}{% if land.incentive.mechanism %} as a {{ land.incentive.mechanism | lower }}{% endif %}.
+      Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>, and find places to shoot in the <a href="/compare-film-tv-locations/">locations guide</a>.
+    </p>
+    {%- endif %}
+
+    {%- for g in land.byType %}
+    <h2>{{ g.label.plural }} in {{ land.inName }} <span class="company-count">{{ g.count }}</span></h2>
+    <p>{{ g.label.blurb }}</p>
+    {% set lijst = g.companies %}{% set toonLand = false %}{% set toonSpecialisme = true %}{% set meer = 0 %}
+    {% include "partials/company-links.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/companies/">All countries</a> &middot;
+      <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Producing in {{ land.inName }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a co-production or a service shoot becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

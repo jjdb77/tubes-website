@@ -145,6 +145,26 @@ export default function (eleventyConfig) {
   const sectionsOfType = (sections, type) =>
     (Array.isArray(sections) ? sections : []).filter((s) => s && s.type === type);
 
+  // Landen, steden en types worden URL's in de bedrijvengids: "Czech Republic"
+  // wordt "czech-republic", "Ta' Xbiex" wordt "ta-xbiex". Accenten eerst
+  // wegvouwen, anders krijgt Kosice een andere URL dan Kosice met streepje.
+  eleventyConfig.addFilter("slug", (value) =>
+    String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+  );
+
+  // "the Netherlands" hoort midden in een zin klein, aan het begin van een zin
+  // of in een titel met een hoofdletter. Alleen de eerste letter, want de rest
+  // van de naam heeft zijn eigen hoofdletters.
+  eleventyConfig.addFilter("capitalize_first", (v) => {
+    const s = String(v || "");
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  });
+
   eleventyConfig.addFilter("jsonld", (data) => {
     const { settings = {}, url = "/", title, seoTitle, description, sections = [] } = data || {};
     const base = String(settings.site_url || "").replace(/\/$/, "");
@@ -207,7 +227,7 @@ export default function (eleventyConfig) {
       name: pageTitle,
       description: toPlainText(pageDescription),
       isPartOf: { "@id": siteId },
-      about: { "@id": softwareId },
+      about: { "@id": data.company ? abs(url) + "#listed" : softwareId },
       inLanguage: "en",
       primaryImageOfPage: abs("/assets/images/og-image.png"),
     };
@@ -218,6 +238,10 @@ export default function (eleventyConfig) {
       const trail = [{ "@type": "ListItem", position: 1, name: "Home", item: base + "/" }];
       if (data.article) {
         trail.push({ "@type": "ListItem", position: 2, name: "Insights", item: base + "/insights/" });
+      }
+      // Bedrijvengids: Home > Companies > Land > Bedrijf
+      for (const crumb of data.crumbs || []) {
+        trail.push({ "@type": "ListItem", position: trail.length + 1, name: crumb.name, item: abs(crumb.url) });
       }
       trail.push({ "@type": "ListItem", position: trail.length + 1, name: title, item: abs(url) });
       webPage.breadcrumb = { "@id": crumbId };
@@ -302,6 +326,29 @@ export default function (eleventyConfig) {
       });
     }
 
+    // Bedrijvengids: het bedrijf waar de pagina over gaat. Bewust een aparte
+    // Organization met een eigen @id, los van Tubes zelf, zodat Google ziet dat
+    // de pagina een vermelding is en geen eigen vestiging.
+    if (data.company) {
+      const c = data.company;
+      graph.push({
+        "@type": "Organization",
+        "@id": abs(url) + "#listed",
+        name: c.name,
+        description: toPlainText(c.summary),
+        url: c.official_url,
+        mainEntityOfPage: { "@id": pageId },
+        address: { "@type": "PostalAddress", addressLocality: c.city, addressCountry: c.country },
+        ...(c.lat != null && c.lng != null
+          ? { location: { "@type": "Place", geo: { "@type": "GeoCoordinates", latitude: c.lat, longitude: c.lng } } }
+          : {}),
+        ...(c.founded ? { foundingDate: String(c.founded) } : {}),
+        ...(c.group ? { parentOrganization: { "@type": "Organization", name: c.group } } : {}),
+        ...(c.services ? { knowsAbout: String(c.services).split(/,\s*/).filter(Boolean) } : {}),
+        ...(Array.isArray(c.source_urls) && c.source_urls.length ? { sameAs: c.source_urls } : {}),
+      });
+    }
+
     // Overzichtspagina met artikelen
     if (Array.isArray(data.itemList) && data.itemList.length) {
       graph.push({
@@ -311,7 +358,7 @@ export default function (eleventyConfig) {
           "@type": "ListItem",
           position: i + 1,
           url: abs(item.url),
-          name: item.data?.title,
+          name: item.data?.title || item.name,
         })),
       });
     }

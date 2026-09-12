@@ -15,8 +15,14 @@
   {%- endif %}
   <link rel="stylesheet" href="/assets/fonts/mulish.css">
   <link rel="stylesheet" href="{{ assets.css }}">
+  {#- Bedrijvengids: het bedrijf van deze pagina komt uit de index op URL. Zo
+      krijgt de jsonld-filter een echt object; via de front matter zou het een
+      string zijn en bleef de Organization leeg. -#}
+  {%- set bedrijf = companyIndex.byUrl[page.url] -%}
+  {%- set pad = crumbs -%}
+  {%- if bedrijf -%}{%- set pad = [{ name: "Companies", url: "/companies/" }, { name: bedrijf.country, url: bedrijf.countryUrl }] -%}{%- endif -%}
   <script type="application/ld+json">
-{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: sections, schemaSoftware: schema_software } | jsonld | safe }}
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: sections, schemaSoftware: schema_software, company: bedrijf, crumbs: pad, itemList: itemList } | jsonld | safe }}
   </script>
 </head>
 <body>

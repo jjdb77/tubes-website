@@ -1,0 +1,59 @@
+---
+pagination:
+  data: companyIndex.cities
+  size: 1
+  alias: stad
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de honderden in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "{{ stad.url }}"
+layout: layout.njk
+# llms.txt is een samenvatting, geen sitemap: de combinatie- en stadspagina's
+# blijven eruit, de hub, de drie types en de landen staan er wel in.
+excludeFromLlms: true
+eleventyComputed:
+  title: "Film and TV companies in {{ stad.city }}"
+  seo_title: "Film, TV and Media Companies in {{ stad.city }}: {{ stad.count }} Listed | Tubes"
+  description: "{{ stad.count }} studios, production companies and post-production houses in {{ stad.city }}, {{ stad.country }}, with services, credits and links to their own sites."
+---
+{#- Stadspagina. Alleen vanaf companyIndex.minCity bedrijven, anders is er te
+    weinig te zien om een eigen pagina te rechtvaardigen. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
+      <a href="/companies/country/{{ stad.country | slug }}/">{{ stad.country }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ stad.city }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/companies/country/{{ stad.country | slug }}/">{{ stad.country }}</a></p>
+      <h1>Film, TV and media companies in {{ stad.city }}</h1>
+      <p class="company-summary">
+        {{ stad.count }} companies based in {{ stad.city }}:
+        {%- for g in stad.byType %} {{ g.count }} {{ g.label.plural | lower }}{% if not loop.last %},{% endif %}{% endfor %}.
+        Each one checked on its own website.
+      </p>
+    </header>
+
+    {%- for g in stad.byType %}
+    <h2>{{ g.label.plural }} in {{ stad.city }} <span class="company-count">{{ g.count }}</span></h2>
+    {% set lijst = g.companies %}{% set toonLand = false %}{% set toonSpecialisme = true %}{% set meer = 0 %}
+    {% include "partials/company-links.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/companies/country/{{ stad.country | slug }}/">All companies in {{ stad.inCountry }}</a> &middot;
+      <a href="/companies/">Directory</a> &middot;
+      <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Producing in {{ stad.city }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so the studio, crew or post house you pick becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

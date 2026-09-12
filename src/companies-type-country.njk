@@ -1,0 +1,52 @@
+---
+pagination:
+  data: companyIndex.typeCountries
+  size: 1
+  alias: tc
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de honderden in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "{{ tc.url }}"
+layout: layout.njk
+# llms.txt is een samenvatting, geen sitemap: de combinatie- en stadspagina's
+# blijven eruit, de hub, de drie types en de landen staan er wel in.
+excludeFromLlms: true
+eleventyComputed:
+  title: "{{ tc.label }} in {{ tc.inCountry }}"
+  seo_title: "{{ tc.label }} in {{ tc.inCountry }}: {{ tc.count }} Listed | Tubes"
+  description: "{{ tc.count }} {{ tc.label | lower }} in {{ tc.inCountry }}, each verified on its own website, with services, credits and facilities as published."
+---
+{#- Combinatiepagina "type in land". Alleen gemaakt vanaf companyIndex.minCombo
+    bedrijven: met een of twee is zo'n pagina te dun om te laten indexeren. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
+      <a href="{{ tc.typeUrl }}">{{ tc.label }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ tc.country }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="{{ tc.typeUrl }}">{{ tc.label }}</a></p>
+      <h1>{{ tc.label }} in {{ tc.inCountry }}</h1>
+      <p class="company-summary">{{ tc.count }} listed in {{ tc.inCountry }}, each checked on its own website. See <a href="{{ tc.countryUrl }}">every kind of company in {{ tc.inCountry }}</a>, or filter and compare in the <a href="/compare-media-production-companies/">search tool</a>.</p>
+    </header>
+
+    {% set lijst = tc.companies %}{% set toonLand = false %}{% set toonSpecialisme = true %}{% set meer = 0 %}
+    {% include "partials/company-links.njk" %}
+
+    <p class="company-back">
+      <a href="{{ tc.countryUrl }}">All companies in {{ tc.inCountry }}</a> &middot;
+      <a href="{{ tc.typeUrl }}">All {{ tc.label | lower }} in Europe</a> &middot;
+      <a href="/companies/">Directory</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Producing in {{ tc.inCountry }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a co-production or a service shoot becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

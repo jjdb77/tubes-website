@@ -1,0 +1,72 @@
+---
+permalink: /companies/
+layout: layout.njk
+title: Companies
+seo_title: "Film, TV and Media Companies in Europe: Directory by Country and Type | Tubes"
+description: "Directory of European studios, production companies and post-production houses: browse by country, city or specialism, or open a company for its services, credits and facilities."
+---
+{#- De hub van de bedrijvengids: vanaf hier is elke bedrijfspagina met gewone
+    links bereikbaar, via land, type of stad. De zoekpagina blijft er voor de
+    bezoeker; deze kant is voor doorbladeren en voor zoekmachines. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Companies</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker">Directory</p>
+      <h1>Film, TV and media companies in Europe</h1>
+      <p class="company-summary">
+        {{ companyIndex.total }} studios, production companies and post-production houses in {{ companyIndex.countries | length }} countries, each verified on the company's own website. Browse by country, type or city below, or use the
+        <a href="/compare-media-production-companies/">search and comparison tool</a> to filter and put three side by side.
+      </p>
+    </header>
+
+    <h2>By type</h2>
+    <ul class="company-tiles">
+      {%- for t in companyIndex.types %}
+      <li>
+        <a href="{{ t.url }}"><strong>{{ t.plural }}</strong> <span>{{ t.count }}</span></a>
+        <p>{{ t.blurb }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By country</h2>
+    <ul class="company-chips">
+      {%- for c in companyIndex.countries %}
+      <li><a href="{{ c.url }}">{{ c.name }} <span>{{ c.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By city</h2>
+    <p>Cities with at least {{ companyIndex.minCity }} companies.</p>
+    <ul class="company-chips">
+      {%- for c in companyIndex.cities %}
+      <li><a href="{{ c.url }}">{{ c.city }} <span>{{ c.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By type and country</h2>
+    <ul class="company-chips">
+      {%- for t in companyIndex.typeCountries %}
+      <li><a href="{{ t.url }}">{{ t.label }} in {{ t.country }} <span>{{ t.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>How this directory works</h2>
+    <div class="rich-text">
+      <p>Every entry was checked against the company's own website before it went in. Services, credits, facilities and founding years are copied as the company publishes them, or left empty. Nothing is estimated: an empty field means the company does not publish that, not that the answer is zero.</p>
+      <p>Studios that you can hire also appear in the <a href="/compare-film-tv-locations/">locations guide</a>, where you find them on the map next to real places to shoot. Looking at a country on cost instead? See the <a href="/compare-film-incentives/">incentive comparison</a>. Missing a company? <a href="/compare-media-production-companies/#request-entry">Suggest it</a> and we add it with verified details.</p>
+    </div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Working in production?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so the studio, co-producer or post house you pick becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

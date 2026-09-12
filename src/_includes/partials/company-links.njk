@@ -1,0 +1,15 @@
+{#- Lijstje met links naar bedrijfspagina's. Gebruikt door de bedrijfspagina
+    zelf (buren, vergelijkbare bedrijven) en door de overzichtspagina's.
+    Verwacht `lijst` (array bedrijven) en optioneel `meer` (aantal dat niet
+    getoond wordt) plus `meerUrl`/`meerLabel` voor de link daarheen. -#}
+<ul class="company-links">
+  {%- for c in lijst %}
+  <li>
+    <a href="/companies/{{ c.id }}/">{{ c.name }}</a>
+    <span class="company-links-meta">{{ c.city }}{% if toonLand %}, {{ c.country }}{% endif %}{% if toonSpecialisme %} &middot; {{ c.specialism }}{% endif %}</span>
+  </li>
+  {%- endfor %}
+</ul>
+{%- if meer and meer > 0 and meerUrl %}
+<p class="company-links-more"><a href="{{ meerUrl }}">{{ meerLabel or ("All " + (meer + lijst.length) + " of them") }}</a></p>
+{%- endif %}

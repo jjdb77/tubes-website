@@ -11,5 +11,10 @@ const load = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"))
 export default {
   filmfestivals: load("filmfestivals.json"),
   mediasoftware: load("mediasoftware.json"),
-  mediacompanies: load("mediacompanies.json"),
+  // Elk bedrijf heeft ook een eigen pagina (/companies/<id>/); die link komt
+  // hier als `page_url` bij, zodat de kaarten in de zoekpagina ernaartoe wijzen.
+  mediacompanies: (() => {
+    const d = load("mediacompanies.json");
+    return { ...d, items: d.items.map((c) => ({ ...c, page_url: `/companies/${c.id}/` })) };
+  })(),
 };

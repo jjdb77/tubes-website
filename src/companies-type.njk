@@ -1,0 +1,65 @@
+---
+pagination:
+  data: companyIndex.types
+  size: 1
+  alias: t
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de honderden in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "{{ t.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "{{ t.plural }} in Europe"
+  seo_title: "{{ t.plural }} in Europe: {{ t.count }} Listed by Country | Tubes"
+  description: "{{ t.count }} {{ t.plural | lower }} across Europe, grouped by country: {{ t.blurb }}"
+---
+{#- Typepagina: alle studio's, alle productiebedrijven of alle postproductie,
+    gegroepeerd per land. Mikt op "film studios in Europe" en leidt door naar de
+    land- en bedrijfspagina's. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ t.plural }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/companies/">Directory</a></p>
+      <h1>{{ t.plural }} in Europe</h1>
+      <p class="company-summary">{{ t.count }} listed in {{ t.byCountry | length }} countries. {{ t.blurb }} Filter and put three side by side in the <a href="/compare-media-production-companies/">search tool</a>.</p>
+    </header>
+
+    <h2>What they specialise in</h2>
+    <ul class="company-chips">
+      {%- for s in t.bySpecialism %}
+      <li><span class="company-chip-flat">{{ s.specialism }} <span>{{ s.count }}</span></span></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By country</h2>
+    <ul class="company-chips">
+      {%- for c in t.byCountry %}
+      <li><a href="{% if c.count >= companyIndex.minCombo %}/companies/{{ t.slug }}/{{ c.slug }}/{% else %}/companies/country/{{ c.slug }}/{% endif %}">{{ c.country }} <span>{{ c.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    {%- for c in t.byCountry %}
+    <h2>{{ t.plural }} in {{ c.country }} <span class="company-count">{{ c.count }}</span></h2>
+    {% set lijst = c.companies %}{% set toonLand = false %}{% set toonSpecialisme = true %}{% set meer = 0 %}
+    {% include "partials/company-links.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/companies/">All types and countries</a> &middot;
+      <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Working in production?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so the partner you pick becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>
