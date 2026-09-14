@@ -31,6 +31,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
   2. **Willekeurige naam**: drie of meer wissels klein→hoofdletter in één woord van de voor- of achternaam (`YMozIQQXxkjGsEEVclE`). Echte namen (McDonald, DiCaprio) komen niet verder dan één of twee.
   3. **Honeypot** `company_website` (display:none plus negeer-attributen voor wachtwoordmanagers, in alle zes formulieren) en een rate-limit van 5 per 10 minuten per IP.
   - Beleid: te snel of willekeurige naam → bewaard met `spam: true` en `spam_reason`, **niet gemaild**, te zien op /beheer?spam=1 (de tag noemt de reden). Honeypot → wél gemaild met "Mogelijk spam:" in het onderwerp, want dat kan een wachtwoordmanager zijn geweest. De Health Check-formulieren doen alleen de honeypot; de timing-check is daar niet aangesloten (stap 1 is één e-mailveld, met autofill haalbaar binnen 3 s).
+  - Live gecontroleerd op 14-9-2026: `/api/contact/token` geeft een token, en een rechtstreekse POST zonder token (wat die bot doet) krijgt 400. Het echte formulier is lokaal in Chrome getest, ook het herstelpad met een verlopen token. Wie hieraan sleutelt: `node server.js` lokaal met `RAILWAY_VOLUME_MOUNT_PATH` naar een tijdelijke map, dan curl met en zonder `form_token`.
 - Berichten: JSONL op de Railway-volume (`RAILWAY_VOLUME_MOUNT_PATH`), te lezen op **/beheer** (Basic Auth, wachtwoord = env `ADMIN_PASSWORD`, gebruikersnaam leeg). CSV-export op /beheer/export.csv.
 - Het **volume staat er** (20-8-2026): `tubes-website-volume` op mount /data, dus de berichten overleven een deploy (`data in /data/submissions.jsonl` in de opstartlog). ⚠️ Nog nodig: `ADMIN_PASSWORD` op diezelfde service, anders geeft /beheer 503. Inloggen doe je met een **lege gebruikersnaam** en dat wachtwoord.
 
@@ -343,6 +344,7 @@ Dataregio's, regel voor de organisatie-eenheid.
 
 ## Openstaand
 
+- [ ] Spam: na 14-9-2026 in de gaten houden of de "products suggestion"-mails met willekeurige lettergrepen wegblijven. Komen ze toch door, kijk dan op /beheer?spam=1 (vereist ADMIN_PASSWORD) welke laag ze passeren; volgende stap zou de timing-check op de Health Check-formulieren zijn.
 - [ ] Railway: `ADMIN_PASSWORD` op tubes-website zetten (het volume staat er sinds 20-8-2026); daarmee werkt /beheer. In Railway kun je Variables > New Variable gebruiken en als waarde `${{ secret(28) }}` invullen, dan genereert Railway er zelf een.
 - [x] **4Relations staat aan** (20-8-2026): de vier `CRM_*`-variabelen staan op de Railway-service tubes-website, `CRM_TOKEN` als verwijzing `${{authentic-nurturing.ASSESSMENT_TOKEN}}` zodat de sleutel maar op één plek staat. Getest met een echte aanvraag: die staat als assessment in 4RelationTubes, met relatie Appsolutions en contactpersoon eraan gekoppeld.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
