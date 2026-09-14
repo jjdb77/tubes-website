@@ -86,16 +86,28 @@ export default function (eleventyConfig) {
   // Tweede stroom op /news/: posts uit de branche die we op LinkedIn
   // tegenkwamen. Aparte map, want ze hebben andere velden (bron, onderwerp,
   // link naar de post) en een eigen opmaak. Ook zonder eigen pagina.
-  // De datum bepaalt alleen de volgorde en de maandkop: van een gevonden post
+  // De datum bepaalt alleen de volgorde en de weekkop: van een gevonden post
   // kennen we de exacte plaatsingsdatum meestal niet.
   eleventyConfig.addCollection("linkedin", (collectionApi) =>
     collectionApi.getFilteredByGlob("src/content/linkedin/*.md").sort((a, b) => b.date - a.date)
   );
 
-  // "August 2026" — maand en jaar, zonder dag
-  eleventyConfig.addFilter("monthYear", (value) =>
-    new Date(value).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
-  );
+  // "8 to 14 September 2026": de week (maandag t/m zondag) waarin de datum valt.
+  // Over een maandgrens heen wordt het "31 August to 6 September 2026".
+  eleventyConfig.addFilter("weekRange", (value) => {
+    const d = new Date(value);
+    const start = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+    start.setUTCDate(start.getUTCDate() - ((start.getUTCDay() + 6) % 7)); // terug naar maandag
+    const end = new Date(start);
+    end.setUTCDate(start.getUTCDate() + 6);
+    const fmt = (date, opts) => date.toLocaleDateString("en-GB", { ...opts, timeZone: "UTC" });
+    const sameYear = start.getUTCFullYear() === end.getUTCFullYear();
+    const sameMonth = sameYear && start.getUTCMonth() === end.getUTCMonth();
+    const from = sameMonth ? fmt(start, { day: "numeric" })
+      : sameYear ? fmt(start, { day: "numeric", month: "long" })
+      : fmt(start, { day: "numeric", month: "long", year: "numeric" });
+    return `${from} to ${fmt(end, { day: "numeric", month: "long", year: "numeric" })}`;
+  });
 
   // "Katya Alexander's", maar "Glassriver Films'" bij een naam op een s
   eleventyConfig.addFilter("possessive", (name) => {

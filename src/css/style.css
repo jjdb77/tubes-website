@@ -970,14 +970,14 @@ a:hover { color: var(--action); }
 #whats-new, #from-the-industry { scroll-margin-top: 96px; }
 .jump-link span { font-weight: 700; margin-left: 4px; }
 
-.feed-month {
+.feed-week {
   display: flex; align-items: center; gap: 16px;
   font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
   color: var(--muted);
   margin: 44px 0 20px;
 }
-.feed-month:first-of-type { margin-top: 0; }
-.feed-month::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.feed-week:first-of-type { margin-top: 0; }
+.feed-week::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
 .feed-list {
   list-style: none; margin: 0 0 4px; padding: 0;

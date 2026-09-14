@@ -83,10 +83,10 @@ description: "New tools, guides and product updates from Tubes, plus the film an
           <p>Interesting public posts we come across on LinkedIn, briefly summarised in our own words. The views and ideas belong to the original authors. Read the original post on LinkedIn for the full picture.</p>
         </div>
         {%- for item in collections.linkedin %}
-        {%- set month = item.date | monthYear %}
-        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | monthYear) != month %}
+        {%- set week = item.date | weekRange %}
+        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | weekRange) != week %}
         {%- if not loop.first %}</ul>{% endif %}
-        <h3 class="feed-month">{{ month }}</h3>
+        <h3 class="feed-week">{{ week }}</h3>
         <ul class="feed-list">
         {%- endif %}
           <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">

@@ -136,7 +136,7 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - **Losse post-URL's zijn niet te googelen**: LinkedIn zet de feed achter een login. Ze komen alleen van Joachim zelf, via de drie puntjes bij de post en "Copy link to post". Zolang die er niet is, wijst de link naar het berichtenoverzicht van de auteur; nooit een post-URL gokken.
 
 - `topic` bepaalt de kleur van het chipje: Budgeting = teal, Financing = mint, AI in production = lavendel, Festivals = blauw.
-- Bij het branchenieuws bepaalt de **datum alleen de volgorde en de maandkop**; op de pagina staat alleen "August 2026". Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.
+- Bij het branchenieuws bepaalt de **datum alleen de volgorde en de weekkop**; op de pagina staat alleen de week, "8 to 14 September 2026" (maandag t/m zondag, filter `weekRange`). Van een gevonden LinkedIn-post kennen we de exacte plaatsingsdatum meestal niet, dus een dagdatum zou schijnprecisie zijn.
 - `link` mag leeg blijven (LinkedIn geeft niet altijd een directe post-URL). De kaart toont dan "Shared on LinkedIn by ..." zonder knop en is niet klikbaar.
 - Samenvatten in twee of drie zinnen, in het Engels, met de bron erbij. De sectie-intro zegt expliciet dat de meningen van de schrijvers zijn, niet van Tubes.
 - CSS: de eigen berichten gebruiken `.news-list`/`.news-item`, de LinkedIn-kaarten `.feed-*`. Bewust twee naamruimtes, ze zijn los van elkaar ontstaan.
