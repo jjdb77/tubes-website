@@ -19,7 +19,6 @@ sections:
       - label: Suggest a product
         url: "#request-entry"
     promo:
-      label: Our own software
       heading: Budgeting, planning and cost control in one platform
       text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
       chips:
@@ -77,7 +76,6 @@ sections:
     request_placeholder: "For example: Yamdu, by Yamdu GmbH"
     promo_inline: false
     promo:
-      label: Our own software
       heading: Budgeting, planning and cost control in one platform
       text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
       chips:

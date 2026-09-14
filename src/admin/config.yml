@@ -20,7 +20,7 @@ _button_fields: &button_fields
 
 # Reclameblok voor Tubes (partials/directory-promo.njk), op hero en zoeklijst
 _promo_fields: &promo_fields
-  - { label: "Labeltje erboven", name: label, widget: string, required: false, default: Our own software }
+  - { label: "Labeltje erboven (leeg = geen)", name: label, widget: string, required: false }
   - { label: Kop, name: heading, widget: string }
   - { label: Tekst, name: text, widget: text, required: false }
   - label: Chips

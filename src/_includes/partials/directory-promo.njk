@@ -10,8 +10,8 @@
       bijvoorbeeld als de hero er al een heeft).
     De CSS toont van aside/inline altijd maar een van beide. -#}
 {%- set promo = section.promo -%}
-<aside class="guide-promo guide-promo-{{ promoVariant }}" aria-label="{{ promo.label or 'Our own software' }}">
-  <p class="guide-promo-label">{{ promo.label or "Our own software" }}</p>
+<aside class="guide-promo guide-promo-{{ promoVariant }}" aria-label="{{ promo.label or 'Tubes' }}">
+  {% if promo.label %}<p class="guide-promo-label">{{ promo.label }}</p>{% endif %}
   <div class="guide-promo-body">
     <div class="guide-promo-text">
       <img class="guide-promo-logo" src="{{ '/assets/images/logo-tubes.png' | imgSrc }}" alt="Tubes" width="114" height="40" loading="lazy" decoding="async">
