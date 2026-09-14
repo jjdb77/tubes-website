@@ -1,0 +1,28 @@
+{#- Reclameblok voor Tubes zelf in een zoek-en-vergelijklijst (sectie
+    "directory", veld `promo`). Wie via Google in zo'n lijst landt, scrolt
+    zelden door tot het "Where Tubes fits"-blok onderaan; dit blok staat
+    daarom bij de kaarten zelf. Het wordt twee keer gerenderd: in de zijkolom
+    (variant "aside", plakt mee tijdens het scrollen op brede schermen) en
+    boven de kaarten (variant "inline", voor smalle schermen waar die zijkolom
+    niet bestaat). De CSS toont er altijd maar een van. -#}
+{%- set promo = section.promo -%}
+<aside class="guide-promo guide-promo-{{ promoVariant }}" aria-label="{{ promo.label or 'Our own software' }}">
+  <p class="guide-promo-label">{{ promo.label or "Our own software" }}</p>
+  <div class="guide-promo-body">
+    <div class="guide-promo-text">
+      <img class="guide-promo-logo" src="{{ '/assets/images/logo-tubes.png' | imgSrc }}" alt="Tubes" width="114" height="40" loading="lazy" decoding="async">
+      <h3>{{ promo.heading }}</h3>
+      {% if promo.text %}<p>{{ promo.text }}</p>{% endif %}
+      {% if promo.chips %}
+      <ul class="chip-row guide-promo-chips" aria-label="What Tubes covers">
+        {% for chip in promo.chips %}<li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="guide-promo-actions">
+      {% if promo.price %}<p class="guide-promo-price">{{ promo.price }}</p>{% endif %}
+      {% if promo.button %}<a class="button button-primary" href="{{ promo.button.url }}">{{ promo.button.label }}</a>{% endif %}
+      {% if promo.link %}<a class="guide-promo-link" href="{{ promo.link.url }}">{{ promo.link.label }}</a>{% endif %}
+    </div>
+  </div>
+</aside>

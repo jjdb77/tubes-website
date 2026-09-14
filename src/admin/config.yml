@@ -461,6 +461,27 @@ collections:
               - { label: "Tekst bij het suggestieformulier", name: request_text, widget: markdown, required: false }
               - { label: "Label van het suggestieveld", name: request_field_label, widget: string, required: false }
               - { label: "Placeholder van het suggestieveld", name: request_placeholder, widget: string, required: false }
+              - label: "Reclameblok voor Tubes (leeg = niet tonen)"
+                name: promo
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Staat in de zijkolom naast de kaarten (blijft plakken bij scrollen) en op smalle schermen boven de kaarten."
+                fields:
+                  - { label: "Labeltje erboven", name: label, widget: string, required: false, default: Our own software }
+                  - { label: Kop, name: heading, widget: string }
+                  - { label: Tekst, name: text, widget: text, required: false }
+                  - label: Chips
+                    name: chips
+                    widget: list
+                    required: false
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: Tekst, name: label, widget: string }
+                      - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
+                  - { label: "Prijsregel (bijv. From € 49 per month)", name: price, widget: string, required: false }
+                  - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+                  - { label: "Tekstlink onder de knop", name: link, widget: object, required: false, fields: *button_fields }
           - name: locationguide
             label: "Locatiegids (zoeken + kaart + vergelijken)"
             summary: "{{fields.heading}}"

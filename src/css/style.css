@@ -2729,9 +2729,50 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 
 .loc-compare td.is-top { background: rgba(219, 243, 238, 0.45); }
 
+/* ---------- Reclameblok voor Tubes in de zoeklijsten (partials/directory-promo.njk) ---------- */
+
+/* In de zoeklijsten (sectie "directory") plakt de wrapper om paneel en
+   reclameblok, niet het paneel zelf; de locatiegids heeft geen wrapper en
+   houdt de sticky op .guide-aside. */
+.guide-side { position: sticky; top: 90px; }
+.guide-side .guide-aside { position: static; }
+.guide-promo-aside { margin-top: 16px; }
+/* Boven de kaarten alleen op schermen zonder zijkolom (zie media query). */
+.guide-promo-inline { display: none; margin-bottom: 22px; }
+
+.guide-promo {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(360px 240px at 100% 0%, rgba(14, 156, 136, 0.18), transparent 64%),
+    radial-gradient(260px 180px at 0% 100%, rgba(214, 163, 57, 0.16), transparent 62%),
+    #EAF1FC;
+  border: 1px solid rgba(45, 108, 196, 0.18);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 18px 22px 22px;
+}
+.guide-promo-label {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 14px;
+  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--status-blue-ink);
+}
+.guide-promo-label::before { content: ""; flex: none; width: 22px; height: 3px; border-radius: 2px; background: #E6C263; }
+.guide-promo-logo { width: 114px; height: auto; margin: 0 0 12px; }
+.guide-promo h3 { font-size: 1.12rem; line-height: 1.25; margin: 0 0 8px; }
+.guide-promo-text > p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--ink-soft); }
+.guide-promo-chips { margin: 12px 0 0; gap: 6px; }
+.guide-promo-chips .chip { font-size: 0.72rem; padding: 6px 10px; }
+.guide-promo-actions { margin-top: 16px; display: grid; gap: 8px; }
+.guide-promo-price { margin: 0; font-size: 0.86rem; font-weight: 700; color: var(--ink); }
+.guide-promo .button { width: 100%; display: inline-flex; justify-content: center; }
+.guide-promo-link { font-size: 0.86rem; font-weight: 700; color: var(--action-soft-ink); text-align: center; }
+
 @media (max-width: 1180px) {
   .guide-layout { display: block; }
-  .guide-aside { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; display: none; padding: 14px 16px; box-shadow: var(--shadow-raise); }
+  .guide-side { position: static; }
+  /* top: auto, anders erft de balk top: 90px van de sticky-regel en rekt hij
+     tot bijna schermvullend */
+  .guide-aside, .guide-side .guide-aside { position: fixed; top: auto; left: 12px; right: 12px; bottom: 12px; z-index: 30; display: none; padding: 14px 16px; box-shadow: var(--shadow-raise); }
   .guide-aside.has-picks { display: block; }
   .guide-aside h3, .guide-aside-note { display: none; }
   .guide-slots { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
@@ -2740,6 +2781,15 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .guide-aside .button { width: auto; }
   .guide-aside .button + .button { margin: 0 0 0 8px; }
   .guide-grid.is-list .guide-photo { width: 150px; }
+  /* Zonder zijkolom: reclameblok boven de kaarten, tekst links en knop rechts */
+  .guide-promo-aside { display: none; }
+  .guide-promo-inline { display: block; }
+  .guide-promo-inline .guide-promo-body { display: grid; grid-template-columns: minmax(0, 1fr) 224px; gap: 16px 32px; align-items: end; }
+  .guide-promo-inline .guide-promo-actions { margin-top: 0; text-align: center; }
+}
+@media (max-width: 700px) {
+  .guide-promo-inline .guide-promo-body { grid-template-columns: 1fr; }
+  .guide-promo-inline .guide-promo-actions { margin-top: 14px; }
 }
 
 /* ---------- Locatiegids: AI-zoeken ---------- */
