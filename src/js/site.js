@@ -70,9 +70,28 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
   }
 }
 
+// Timing-check tegen bots: bij het laden halen we een getekende tijdstempel op
+// die als form_token meegaat. De server neemt een bericht pas aan als dat
+// token minstens drie seconden oud is (zie server.js). Antwoordt de server
+// met "token" (ontbrekend of verlopen, bijvoorbeeld omdat de pagina openstond
+// tijdens een deploy), dan halen we een verse en proberen we nog één keer.
+const contactForms = document.querySelectorAll(".contact-form");
+const contactEndpoint = contactForms.length ? contactForms[0].dataset.endpoint : "";
+let formToken = "";
+async function haalFormToken() {
+  if (!contactEndpoint) return;
+  try {
+    const res = await fetch(contactEndpoint + "/token", { cache: "no-store" });
+    formToken = (await res.json()).token || "";
+  } catch (err) {
+    // Zonder token probeert het formulier het bij het versturen alsnog.
+  }
+}
+haalFormToken();
+
 // Contactformulier: verstuurt naar form_endpoint (bijv. Formspree/Web3Forms).
 // Zonder endpoint valt het terug op een mailto-link.
-for (const form of document.querySelectorAll(".contact-form")) {
+for (const form of contactForms) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = form.querySelector(".form-status");
@@ -94,12 +113,21 @@ for (const form of document.querySelectorAll(".contact-form")) {
     status.textContent = "Sending…";
     status.className = "form-status";
     data.set("page", location.pathname);
-    try {
-      const res = await fetch(endpoint, {
+    const verstuur = () => {
+      data.set("form_token", formToken);
+      return fetch(endpoint, {
         method: "POST",
         body: new URLSearchParams(data),
         headers: { Accept: "application/json" }
       });
+    };
+    try {
+      let res = await verstuur();
+      if (res.status === 400 && (await res.json().catch(() => ({}))).error === "token") {
+        await haalFormToken();
+        await new Promise((klaar) => setTimeout(klaar, 3500));
+        res = await verstuur();
+      }
       if (res.ok) {
         form.reset();
         status.textContent = "Thank you! We'll get back to you shortly.";

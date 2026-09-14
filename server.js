@@ -88,6 +88,76 @@ function rateLimited(req, max) {
   return false;
 }
 
+// ---------- Timing-check tegen bots ----------
+//
+// Bij het laden van een pagina haalt site.js een getekende tijdstempel op
+// (GET /api/contact/token) en stuurt die als form_token mee. Een mens heeft
+// minstens een paar seconden nodig om een formulier in te vullen; een spambot
+// post binnen een seconde, of post rechtstreeks zonder ooit de pagina te
+// laden. De handtekening (HMAC met een geheim) maakt de tijdstempel
+// onvervalsbaar: een bot kan er niet zelf een oudere maken.
+//
+// Het geheim komt uit FORM_SECRET of wordt eenmalig aangemaakt en op de
+// volume bewaard, zodat het een deploy overleeft. Anders zou een pagina die
+// tijdens een deploy openstond een token dragen dat de nieuwe server niet
+// meer herkent. Gebeurt dat toch (geen volume), dan vangt site.js het op:
+// vers token halen, drie seconden wachten, nog één keer sturen.
+const FORM_SECRET = process.env.FORM_SECRET || laadOfMaakGeheim();
+const TOKEN_MIN_AGE = 3 * 1000;
+const TOKEN_MAX_AGE = 24 * 60 * 60 * 1000;
+
+function laadOfMaakGeheim() {
+  const bestand = path.join(DATA_DIR, "form-secret");
+  try {
+    const bewaard = fs.readFileSync(bestand, "utf8").trim();
+    if (bewaard.length >= 32) return bewaard;
+  } catch { /* nog niet aangemaakt */ }
+  const nieuw = crypto.randomBytes(32).toString("hex");
+  try {
+    fs.writeFileSync(bestand, nieuw, { mode: 0o600 });
+  } catch (err) {
+    console.warn("[token] geheim niet kunnen bewaren, geldt tot de volgende herstart:", err.message);
+  }
+  return nieuw;
+}
+
+function tekenTijd(ts) {
+  return crypto.createHmac("sha256", FORM_SECRET).update(String(ts)).digest("base64url");
+}
+
+// Leeftijd van het token in milliseconden, of null als het ontbreekt of vervalst is.
+function tokenLeeftijd(token) {
+  const [ts, sig = ""] = String(token || "").split(".");
+  if (!/^\d{12,14}$/.test(ts)) return null;
+  const a = Buffer.from(sig);
+  const b = Buffer.from(tekenTijd(ts));
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return null;
+  return Date.now() - Number(ts);
+}
+
+app.get("/api/contact/token", (req, res) => {
+  const ts = Date.now();
+  res.set("Cache-Control", "no-store");
+  res.json({ token: `${ts}.${tekenTijd(ts)}` });
+});
+
+// Willekeurige lettergrepen als "YMozIQQXxkjGsEEVclE": zo vult de spambot die
+// formulieren aftast alle velden. Echte namen wisselen hooguit één of twee keer
+// van kleine letter naar hoofdletter binnen een woord (McDonald, DiCaprio);
+// drie of meer wissels komt in de praktijk niet voor.
+function lijktWillekeurig(tekst) {
+  return String(tekst || "")
+    .split(/\s+/)
+    .some((woord) => (woord.match(/[a-z][A-Z]/g) || []).length >= 3);
+}
+
+// Waarom een bericht als spam is gemarkeerd, voor de tag op /beheer.
+const SPAM_REDENEN = {
+  honeypot: "verborgen veld ingevuld",
+  timing: "binnen 3 seconden na laden verstuurd",
+  gibberish: "willekeurige lettergrepen als naam",
+};
+
 app.post("/api/contact", (req, res) => {
   if (rateLimited(req, 5)) {
     return res.status(429).json({ ok: false, error: "Too many requests" });
@@ -95,11 +165,14 @@ app.post("/api/contact", (req, res) => {
 
   const b = req.body || {};
 
-  // Honeypot: dit veld staat op display:none, dus alleen bots vullen het in.
-  // We gooien zo'n bericht niet weg maar merken het: een wachtwoordmanager die
-  // het tóch invult mag nooit een echte aanvraag laten verdwijnen. Op /beheer
-  // staan gemarkeerde berichten apart.
-  const flagged = Boolean(String(b.company_website || "").trim());
+  // Zonder geldig token geen bericht: dat is een bot die rechtstreeks post, of
+  // een pagina met een verlopen token. De foutcode "token" laat site.js een
+  // vers token halen en het nog één keer proberen, dus een echte bezoeker
+  // merkt er hooguit een paar seconden van.
+  const leeftijd = tokenLeeftijd(b.form_token);
+  if (leeftijd === null || leeftijd > TOKEN_MAX_AGE) {
+    return res.status(400).json({ ok: false, error: "token" });
+  }
 
   const first = String(b.first_name || "").trim().slice(0, 100);
   const last = String(b.last_name || "").trim().slice(0, 100);
@@ -111,6 +184,17 @@ app.post("/api/contact", (req, res) => {
     return res.status(400).json({ ok: false, error: "Missing fields" });
   }
 
+  // Verdachte berichten gooien we niet weg maar merken we; op /beheer staan ze
+  // apart (?spam=1). Te snel verstuurd of een willekeurige naam is met
+  // zekerheid een bot, dus die gaan niet per mail door. Het honeypot-veld
+  // (display:none, dus onzichtbaar) vult soms een wachtwoordmanager tóch in;
+  // zo'n bericht gaat wel door, gemarkeerd, want een echte aanvraag mag nooit
+  // stil verdwijnen.
+  const spamReden = leeftijd < TOKEN_MIN_AGE ? "timing"
+    : lijktWillekeurig(`${first} ${last}`) ? "gibberish"
+    : String(b.company_website || "").trim() ? "honeypot"
+    : "";
+
   const entry = {
     id: crypto.randomUUID(),
     at: new Date().toISOString(),
@@ -120,16 +204,19 @@ app.post("/api/contact", (req, res) => {
     phone,
     message,
     page: String(b.page || "").slice(0, 200),
-    ...(flagged ? { spam: true } : {}),
+    ...(spamReden ? { spam: true, spam_reason: spamReden } : {}),
   };
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
   res.json({ ok: true });
 
+  if (spamReden && spamReden !== "honeypot") {
+    console.log(`[contact] als spam bewaard (${SPAM_REDENEN[spamReden]}): ${email}`);
+    return;
+  }
+
   // Alles gaat per mail door. Een suggestie voor een van de lijsten krijgt zijn
   // eigen opmaak en onderwerp; al het andere gaat als contactbericht naar
-  // CONTACT_EMAIL. Ook een bericht met het honeypot-veld ingevuld sturen we
-  // door, gemarkeerd: dat kan een wachtwoordmanager zijn geweest en een echte
-  // aanvraag mag nooit stil verdwijnen.
+  // CONTACT_EMAIL.
   if (LOCATIE_PREFIX.test(String(entry.message || ""))) {
     meldLocatieSuggestie(entry).catch((err) => console.error("[mail] locatiesuggestie:", err.message));
   } else {
@@ -233,7 +320,7 @@ app.post("/api/health-check", (req, res) => {
     email,
     free_email: FREE_EMAIL_DOMAINS.has(email.split("@")[1].toLowerCase()),
     page: String(b.page || "").slice(0, 200),
-    ...(flagged ? { spam: true } : {}),
+    ...(flagged ? { spam: true, spam_reason: "honeypot" } : {}),
   };
 
   // De ingevulde vragenlijst: wie je bent plus de antwoorden. Alleen bekende
@@ -528,10 +615,11 @@ async function meldLocatieSuggestie(entry) {
     <p><a href="mailto:${esc(entry.email)}">${esc(entry.email)}</a>${entry.phone ? ` &middot; ${esc(entry.phone)}` : ""} &middot; ${esc(stamp(entry.at))}</p>
     ${toelichting ? `<p style="background:#F6F7F9;padding:12px;border-radius:8px;white-space:pre-line"><em>Toelichting:</em><br>${esc(toelichting)}</p>` : "<p>Geen toelichting meegegeven.</p>"}
     <p>Toevoegen of corrigeren kan in het CMS (Filmlocaties, Festivals & events, Software).</p>
+    ${entry.spam ? '<p style="color:#8a6d3b"><em>Let op: het verborgen veld was ingevuld. Meestal een bot, maar soms een wachtwoordmanager, dus deze suggestie kan echt zijn.</em></p>' : ""}
     <p><a href="https://www.tubes.media${esc(entry.page || "/resources/")}">De pagina</a> &middot; <a href="https://www.tubes.media/beheer">Alle berichten op /beheer</a></p>
   </div>`;
 
-  await stuurMail(LOCATION_EMAIL, `${soort} suggestion: ${locatie} (${naam})`, html);
+  await stuurMail(LOCATION_EMAIL, `${entry.spam ? "Mogelijk spam: " : ""}${soort} suggestion: ${locatie} (${naam})`, html);
 }
 
 // Elk gewoon contact- of demobericht gaat meteen per mail door. Eerder stonden
@@ -905,11 +993,17 @@ function crmTag(entry) {
   return ' <span class="tag tag-open">nog niet doorgezet</span>';
 }
 
+function spamTag(s) {
+  if (!s.spam) return "";
+  const reden = SPAM_REDENEN[s.spam_reason] || s.spam_reason;
+  return `<span class="tag tag-warn">als spam gemarkeerd${reden ? `: ${esc(reden)}` : ""}</span>`;
+}
+
 function contactCard(s) {
   return `<article class="msg">
         <header><strong>${esc(s.first_name)} ${esc(s.last_name)}</strong>
           <span>${stamp(s.at)}</span></header>
-        <p class="meta">${s.spam ? '<span class="tag tag-warn">als spam gemarkeerd</span> ' : ""}<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
+        <p class="meta">${s.spam ? spamTag(s) + " " : ""}<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
         <p class="body">${esc(s.message)}</p>
       </article>`;
 }
@@ -943,7 +1037,7 @@ function healthCheckCard(s) {
           <span>${stamp(s.at)}</span></header>
         <p class="meta">
           <span class="tag${partial ? " tag-open" : ""}">${label}</span>
-          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? ' <span class="tag tag-warn">als spam gemarkeerd</span>' : ""}${crmTag(s)}
+          <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.free_email ? ' <span class="tag tag-warn">geen zakelijk domein</span>' : ""}${s.spam ? " " + spamTag(s) : ""}${crmTag(s)}
         </p>
         ${details ? `<p class="body">${details}</p>` : ""}
         ${selfView}

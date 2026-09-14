@@ -99,7 +99,7 @@
         <div class="rich-text">{{ (section.request_text or "Own or manage a location or studio, or missing a place you have shot at? Tell us what and where it is, add a link, and we list it for free with verified details. We only publish what a venue itself publishes, with the source; photos must be yours or carry a licence we can honour, with the photographer credited.") | md | safe }}</div>
       </div>
       <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
-        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
         <div class="form-row">
           <label>First name <span class="req">(required)</span>
             <input type="text" name="first_name" autocomplete="given-name" required>

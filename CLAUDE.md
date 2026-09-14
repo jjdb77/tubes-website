@@ -25,7 +25,12 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Formulier & beheerpagina
 
-- Formulieren (popup bij "Request a Demo" + contactpagina) posten urlencoded naar **/api/contact** (zie server.js). Spam: honeypot-veld `company_website` + rate-limit.
+- Formulieren (popup bij "Request a Demo", contactpagina en de suggestieformulieren van locatie-, bedrijven- en incentivegids) posten urlencoded naar **/api/contact** (zie server.js).
+- **Spam, drie lagen** (sinds 14-9-2026, na een golf "products suggestion"-mails met willekeurige lettergrepen in elk veld):
+  1. **Timing-check**: site.js haalt bij het laden een getekende tijdstempel op (`GET /api/contact/token`, HMAC) en stuurt die als `form_token` mee. Verstuurd binnen 3 seconden na dat token = bot. Zonder of met een vervalst token geeft de server 400 `error: "token"`; site.js haalt dan een vers token, wacht 3,5 s en probeert nog één keer, dus een pagina die openstond tijdens een deploy werkt gewoon. Het geheim: env `FORM_SECRET`, anders het bestand `form-secret` op de volume (eenmalig aangemaakt, overleeft een deploy).
+  2. **Willekeurige naam**: drie of meer wissels klein→hoofdletter in één woord van de voor- of achternaam (`YMozIQQXxkjGsEEVclE`). Echte namen (McDonald, DiCaprio) komen niet verder dan één of twee.
+  3. **Honeypot** `company_website` (display:none plus negeer-attributen voor wachtwoordmanagers, in alle zes formulieren) en een rate-limit van 5 per 10 minuten per IP.
+  - Beleid: te snel of willekeurige naam → bewaard met `spam: true` en `spam_reason`, **niet gemaild**, te zien op /beheer?spam=1 (de tag noemt de reden). Honeypot → wél gemaild met "Mogelijk spam:" in het onderwerp, want dat kan een wachtwoordmanager zijn geweest. De Health Check-formulieren doen alleen de honeypot; de timing-check is daar niet aangesloten (stap 1 is één e-mailveld, met autofill haalbaar binnen 3 s).
 - Berichten: JSONL op de Railway-volume (`RAILWAY_VOLUME_MOUNT_PATH`), te lezen op **/beheer** (Basic Auth, wachtwoord = env `ADMIN_PASSWORD`, gebruikersnaam leeg). CSV-export op /beheer/export.csv.
 - Het **volume staat er** (20-8-2026): `tubes-website-volume` op mount /data, dus de berichten overleven een deploy (`data in /data/submissions.jsonl` in de opstartlog). ⚠️ Nog nodig: `ADMIN_PASSWORD` op diezelfde service, anders geeft /beheer 503. Inloggen doe je met een **lege gebruikersnaam** en dat wachtwoord.
 

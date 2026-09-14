@@ -110,7 +110,7 @@
         <div class="rich-text">{{ (section.request_text or "Tell us what is missing or wrong, add a link, and we add or correct it with verified details. We only publish what an organisation itself publishes, with the source.") | md | safe }}</div>
       </div>
       <form class="contact-form loc-request-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}" data-noun="{{ section.noun or 'Entry' }}">
-        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
         <div class="form-row">
           <label>First name <span class="req">(required)</span><input type="text" name="first_name" autocomplete="given-name" required></label>
           <label>Last name <span class="req">(required)</span><input type="text" name="last_name" autocomplete="family-name" required></label>
