@@ -1,0 +1,48 @@
+---
+pagination:
+  data: softwareIndex.countryPages
+  size: 1
+  alias: land
+  addAllPagesToCollections: true
+permalink: "{{ land.url }}"
+layout: layout.njk
+excludeFromLlms: true
+eleventyComputed:
+  title: "Production software from {{ land.inName }}"
+  seo_title: "Film and TV Production Software from {{ land.inName }}: {{ land.count }} Products | Tubes"
+  description: "{{ land.count }} software products for film, TV and media production built by vendors in {{ land.inName }}, with what each does and what the vendor publishes about pricing."
+---
+{#- Landpagina van de softwarelijst: waar de leverancier zit. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/software/">Software</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ land.name }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/software/">Directory</a></p>
+      <h1>Production software from {{ land.inName }}</h1>
+      <p class="company-summary">{{ land.count }} products for film, TV and media production from vendors based in {{ land.inName }}, across {{ land.byCategory | length }} categories. Each one recorded from what the vendor publishes itself.</p>
+    </header>
+
+    {%- for g in land.byCategory %}
+    <h2>{{ g.category }} <span class="company-count">{{ g.count }}</span></h2>
+    {% set lijst = g.products %}{% set toonCategorie = false %}{% set toonDeployment = true %}{% set meer = 0 %}
+    {% include "partials/software-links.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/software/">All vendor countries</a> &middot;
+      <a href="/compare-media-software/">Search all {{ softwareIndex.total }} products</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Working in production?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, connected to the accounting system you already use.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

@@ -41,6 +41,7 @@ sections:
         - { label: For, key: for_whom }
         - { label: Pricing, key: pricing_model }
       links:
+        - { label: Full profile, key: page_url }
         - { label: Vendor site, key: official_url }
     compare_rows:
       - { label: Category, key: category, tag: true }
@@ -53,6 +54,7 @@ sections:
       - { label: Vendor, key: vendor }
       - { label: Founded, key: founded }
       - { label: Vendor site, key: official_url, link: true, link_label: Open }
+      - { label: Full profile, key: page_url, link: true, link_label: Open }
     request_heading: Missing a product? Suggest it
     request_text: |
       Vendor or user of a tool that belongs here? Tell us the product and the official link, and we add it with verified details. We publish only what the vendor publishes, including pricing; a "Not published" is better than a guess.

@@ -227,7 +227,7 @@ export default function (eleventyConfig) {
       name: pageTitle,
       description: toPlainText(pageDescription),
       isPartOf: { "@id": siteId },
-      about: { "@id": data.company ? abs(url) + "#listed" : softwareId },
+      about: { "@id": data.company || data.product ? abs(url) + "#listed" : softwareId },
       inLanguage: "en",
       primaryImageOfPage: abs("/assets/images/og-image.png"),
     };
@@ -346,6 +346,45 @@ export default function (eleventyConfig) {
         ...(c.group ? { parentOrganization: { "@type": "Organization", name: c.group } } : {}),
         ...(c.services ? { knowsAbout: String(c.services).split(/,\s*/).filter(Boolean) } : {}),
         ...(Array.isArray(c.source_urls) && c.source_urls.length ? { sameAs: c.source_urls } : {}),
+      });
+    }
+
+    // Softwarelijst: het product waar de pagina over gaat. Eigen @id, los van
+    // Tubes' eigen SoftwareApplication, zodat een vermelding niet als ons eigen
+    // product wordt gelezen. De prijs gaat er alleen in als de leverancier een
+    // bedrag publiceert; "quote on request" levert geen Offer op.
+    if (data.product) {
+      const p = data.product;
+      const priceText = String(p.pricing_model || "");
+      const m = priceText.match(/(EUR|USD|GBP)\s*([\d.,]+)/i) || priceText.match(/([\u20ac$\u00a3])\s*([\d.,]+)/);
+      const currency = m ? { "\u20ac": "EUR", $: "USD", "\u00a3": "GBP" }[m[1]] || m[1].toUpperCase() : null;
+      const amount = m ? m[2].replace(/\.(?=\d{3}\b)/g, "").replace(",", ".") : null;
+      // Gratis en open source is een echt, controleerbaar bedrag.
+      const isFree = !m && /^free\b/i.test(priceText.trim());
+      // Een bedrag in een prijsmodel is bijna altijd de ONDERGRENS van een reeks
+      // tarieven ("from EUR 49", een instaptier). Dat als vaste prijs opgeven zou
+      // meer beweren dan de leverancier publiceert, dus het gaat als lowPrice in
+      // een AggregateOffer.
+      const offer = isFree
+        ? { "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url: p.official_url }
+        : amount && currency
+          ? { "@type": "AggregateOffer", lowPrice: amount, priceCurrency: currency, availability: "https://schema.org/InStock", url: p.official_url }
+          : null;
+      graph.push({
+        "@type": "SoftwareApplication",
+        "@id": abs(url) + "#listed",
+        name: p.name,
+        description: toPlainText(p.summary),
+        applicationCategory: "BusinessApplication",
+        applicationSubCategory: p.category,
+        url: p.official_url,
+        mainEntityOfPage: { "@id": pageId },
+        ...(p.platforms ? { operatingSystem: p.platforms } : {}),
+        ...(p.vendor
+          ? { publisher: { "@type": "Organization", name: p.vendor, ...(p.vendor_country ? { address: { "@type": "PostalAddress", addressCountry: p.vendor_country } } : {}) } }
+          : {}),
+        ...(Array.isArray(p.source_urls) && p.source_urls.length ? { sameAs: p.source_urls } : {}),
+        ...(offer ? { offers: offer } : {}),
       });
     }
 

@@ -1,0 +1,91 @@
+---
+pagination:
+  data: softwareIndex.products
+  size: 1
+  alias: p
+  # Zonder dit komt alleen de eerste pagina van de reeks in collections.all,
+  # en dus maar een van de 72 in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "/software/{{ p.id }}/"
+layout: layout.njk
+excludeFromLlms: true
+eleventyComputed:
+  title: "{{ p.name }}"
+  seo_title: "{{ p.name }}: What It Does, Pricing and Alternatives | Tubes"
+  description: "{{ p.name }} by {{ p.vendor }}. {{ p.summary }}"
+---
+{#- Een eigen pagina per softwareproduct. Alles komt uit wat de leverancier zelf
+    publiceert; prijzen staan er zoals gepubliceerd of helemaal niet. Tubes staat
+    er als gewoon product tussen, met dezelfde velden als de rest. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/software/">Software</a> <span aria-hidden="true">/</span>
+      <a href="{{ p.categoryUrl }}">{{ p.category }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ p.name }}</span>
+    </nav>
+
+    <header class="company-head">
+      <p class="company-kicker"><a href="{{ p.categoryUrl }}">{{ p.category }}</a></p>
+      <h1>{{ p.name }}</h1>
+      <p class="company-where">
+        {{ p.vendor }}{% if p.vendor_country %}<span>,</span> {% if p.countryUrl %}<a href="{{ p.countryUrl }}">{{ p.vendor_country }}</a>{% else %}{{ p.vendor_country }}{% endif %}{% endif %}
+        <span class="loc-tag">{{ p.deployment }}</span>
+      </p>
+      <p class="company-summary">{{ p.summary }}</p>
+      <p class="company-actions">
+        <a class="button button-primary" href="{{ p.official_url }}" target="_blank" rel="noopener nofollow">Visit {{ p.name }}</a>
+        <a class="button button-secondary" href="/compare-media-software/">Compare with others</a>
+      </p>
+    </header>
+
+    <h2>What {{ p.name }} does</h2>
+    <table class="company-facts">
+      <tbody>
+        <tr><th scope="row">Category</th><td><a href="{{ p.categoryUrl }}">{{ p.category }}</a></td></tr>
+        {%- if p.for_whom %}<tr><th scope="row">Built for</th><td>{{ p.for_whom | capitalize_first }}</td></tr>{% endif %}
+        <tr><th scope="row">Pricing</th><td>{{ p.pricing_model }}</td></tr>
+        <tr><th scope="row">Deployment</th><td>{{ p.deployment }}</td></tr>
+        {%- if p.platforms %}<tr><th scope="row">Platforms</th><td>{{ p.platforms }}</td></tr>{% endif %}
+        {%- if p.integrations %}<tr><th scope="row">Integrations</th><td>{{ p.integrations }}</td></tr>{% endif %}
+        <tr><th scope="row">Vendor</th><td>{{ p.vendor }}{% if p.vendor_country %}, {{ p.vendor_country }}{% endif %}</td></tr>
+        {%- if p.founded %}<tr><th scope="row">Released</th><td>{{ p.founded }}</td></tr>{% endif %}
+        <tr><th scope="row">Website</th><td><a href="{{ p.official_url }}" target="_blank" rel="noopener nofollow">{{ p.official_url | replace("https://", "") | replace("http://", "") }}</a></td></tr>
+      </tbody>
+    </table>
+    <p class="company-note">
+      Only what {{ p.vendor }} publishes itself is listed here, checked on {{ softwareIndex.updated }}. Pricing is quoted as published; where a vendor does not publish a price, it says so. This directory is published by Tubes, which is
+      {% if p.isTubes %}the maker of this product{% else %}listed in it as well, under <a href="/software/tubes/">Tubes</a>{% endif %}.
+    </p>
+
+    {%- if p.sameVendor.length %}
+    <h2>Also from {{ p.vendor }}</h2>
+    {% set lijst = p.sameVendor %}{% set toonCategorie = true %}{% set meer = 0 %}
+    {% include "partials/software-links.njk" %}
+    {%- endif %}
+
+    {%- if p.alternatives.length %}
+    <h2>Alternatives to {{ p.name }}</h2>
+    <p>Other software in {{ p.category | lower }}. {{ p.categoryBlurb }} Put three of them side by side in the <a href="/compare-media-software/">comparison tool</a>.</p>
+    {% set lijst = p.alternatives %}{% set toonCategorie = false %}{% set toonDeployment = true %}
+    {% set meer = p.alternativesMore %}{% set meerUrl = p.categoryUrl %}
+    {% set meerLabel = "All " + p.category | lower + " software" %}
+    {% include "partials/software-links.njk" %}
+    {%- endif %}
+
+    <p class="company-back">
+      <a href="{{ p.categoryUrl }}">All {{ p.category | lower }} software</a> &middot;
+      <a href="/software/">Software directory</a> &middot;
+      <a href="/compare-media-software/">Search all {{ softwareIndex.total }} products</a>
+    </p>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>{% if p.isTubes %}See Tubes in your own production{% else %}Working in production?{% endif %}</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, connected to the accounting system you already use.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a> <a class="button button-secondary" href="/compare-media-software/">Back to the search</a></p>
+  </div>
+</section>

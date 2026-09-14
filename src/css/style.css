@@ -3134,3 +3134,16 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .company-facts th { width: 40%; }
   .company-links { grid-template-columns: 1fr; }
 }
+
+/* Softwarelijst: kaarten op de categoriepagina, en een categorie zonder eigen
+   pagina (te weinig producten) in de hub. */
+.software-cards { display: grid; gap: 16px; }
+.software-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+.software-card h3 { margin: 0 0 4px; font-size: 1.08rem; }
+.software-card p { margin: 0 0 10px; font-size: 0.94rem; line-height: 1.6; color: var(--ink-soft); }
+.software-card p:last-child { margin-bottom: 0; }
+.software-card-vendor { color: var(--muted) !important; font-size: 0.86rem !important; }
+.software-card-meta { font-size: 0.88rem !important; }
+.software-card-meta strong { color: var(--ink-soft); }
+.company-tile-flat { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; font-size: 1.02rem; margin: 0 !important; color: var(--ink) !important; }
+.company-tile-flat span { color: var(--muted); font-weight: 600; font-size: 0.88rem; }

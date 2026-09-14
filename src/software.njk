@@ -1,0 +1,71 @@
+---
+permalink: /software/
+layout: layout.njk
+title: Software
+seo_title: "Software for Film, TV and Media Production: Directory by Category | Tubes"
+description: "Directory of production management, budgeting, scheduling, accounting, asset management and post-production software: browse by category or vendor country, or open a product for what it does, its pricing and its alternatives."
+---
+{#- Hub van de softwarelijst: vanaf hier is elke productpagina met gewone links
+    bereikbaar. De zoekpagina blijft er voor filteren en vergelijken. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Software</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker">Directory</p>
+      <h1>Software for film, TV and media production</h1>
+      <p class="company-summary">
+        {{ softwareIndex.total }} products in {{ softwareIndex.categories | length }} categories, from budgeting and scheduling to asset management and post. Each one recorded from what the vendor publishes itself, pricing included. Browse below, or filter and put three side by side in the
+        <a href="/compare-media-software/">comparison tool</a>.
+      </p>
+    </header>
+
+    <h2>By category</h2>
+    <ul class="company-tiles">
+      {%- for c in softwareIndex.categories %}
+      <li>
+        {%- if c.count >= softwareIndex.minGroup %}
+        <a href="{{ c.url }}"><strong>{{ c.name }}</strong> <span>{{ c.count }}</span></a>
+        {%- else %}
+        <p class="company-tile-flat"><strong>{{ c.name }}</strong> <span>{{ c.count }}</span></p>
+        {%- endif %}
+        <p>{{ c.blurb }}</p>
+        {%- if c.count < softwareIndex.minGroup %}
+        {% set lijst = c.products %}{% set toonCategorie = false %}{% set meer = 0 %}
+        {% include "partials/software-links.njk" %}
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By vendor country</h2>
+    <ul class="company-chips">
+      {%- for c in softwareIndex.countries %}
+      <li>
+        {%- if c.count >= softwareIndex.minGroup %}<a href="{{ c.url }}">{{ c.name }} <span>{{ c.count }}</span></a>
+        {%- else %}<span class="company-chip-flat">{{ c.name }} <span>{{ c.count }}</span></span>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2>Every product</h2>
+    {% set lijst = softwareIndex.products %}{% set toonCategorie = true %}{% set toonDeployment = false %}{% set meer = 0 %}
+    {% include "partials/software-links.njk" %}
+
+    <h2>How this directory works</h2>
+    <div class="rich-text">
+      <p>{{ softwareIndex.note }}</p>
+      <p>Looking for a studio, a co-producer or a post house instead of software? See the <a href="/companies/">company directory</a>. Missing a product? <a href="/compare-media-software/#request-entry">Suggest it</a> and we add it with verified details.</p>
+    </div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Working in production?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, connected to the accounting system you already use.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{#- Lijstje met links naar productpagina's. Verwacht `lijst` (array producten),
+    optioneel `toonCategorie` en `meer`/`meerUrl`/`meerLabel`. -#}
+<ul class="company-links">
+  {%- for p in lijst %}
+  <li>
+    <a href="/software/{{ p.id }}/">{{ p.name }}</a>
+    <span class="company-links-meta">{{ p.vendor }}{% if toonCategorie %} &middot; {{ p.category }}{% endif %}{% if toonDeployment %} &middot; {{ p.deployment }}{% endif %}</span>
+  </li>
+  {%- endfor %}
+</ul>
+{%- if meer and meer > 0 and meerUrl %}
+<p class="company-links-more"><a href="{{ meerUrl }}">{{ meerLabel or ("All " + (meer + lijst.length) + " of them") }}</a></p>
+{%- endif %}

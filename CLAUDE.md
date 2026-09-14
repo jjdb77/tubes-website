@@ -278,6 +278,15 @@ Vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tubes w
 - ⚠️ De afzender is `MAIL_FROM`, standaard **`Tubes site <info@appsolutions.nl>`**, want dat domein is in Resend geverifieerd en tubes.media niet. Mail van een ander domein dan de ontvanger komt eerder in de spam; dat verklaart een gemiste overzichtsmail.
 - De **opstartlog** meldt nu hoeveel berichten er bewaard staan, of de mail aanstaat en naar welk adres, en of /beheer bereikbaar is. Zonder `ADMIN_PASSWORD` is dat de enige manier om te zien of er iets ligt.
 
+### Softwaregids: /software/
+
+- Zelfde aanpak als de bedrijvengids, op `src/_data/mediasoftware.json` (72 producten). Sinds 14-9-2026: een eigen pagina per product op `/software/<id>/`, plus `/software/` als hub, `/software/category/<slug>/` (9) en `/software/country/<slug>/` (7). Samen 89 pagina's.
+- Indeling in `src/_data/softwareIndex.js`; templates `software-product.njk`, `software.njk`, `software-category.njk`, `software-country.njk`.
+- **"Alternatives to X" staat op de productpagina zelf**, niet op een eigen URL. Producten in dezelfde categorie zijn de alternatieven. Een losse pagina per product daarvoor zou 72 dunne pagina's opleveren; als sectie rankt de productpagina op diezelfde zoekvraag.
+- Drempel `MIN_GROUP` = 3 producten voor een categorie- of landpagina. "Business & CRM" (2) heeft er daarom geen en staat uitgeklapt op de hub.
+- **Prijs in de structured data is bewust voorzichtig**: een bedrag uit `pricing_model` is bijna altijd een instaptarief, dus het gaat als `lowPrice` in een AggregateOffer, niet als vaste prijs. "Free, open source" levert een Offer met prijs 0 op; publiceert een leverancier niets, dan staat er geen Offer.
+- Tubes staat er als gewoon product tussen, met dezelfde velden. Op elke productpagina staat in de voetnoot dat Tubes de gids publiceert en er zelf in staat. Let op: Tubes zit in "Production management", dus het verschijnt niet in de alternatievenlijst van budgetteringssoftware zoals Movie Magic Budgeting. Dat klopt met de indeling; verplaats het niet om Tubes bij concurrenten in beeld te krijgen.
+
 ### Incentive-vergelijking: /compare-film-incentives/
 
 - Landen/regelingen vergelijken op geld; "opzich grappig, laat maar staan" (Joachim), maar secundair aan de gids.
