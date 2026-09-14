@@ -14,12 +14,11 @@
   {% if promo.label %}<p class="guide-promo-label">{{ promo.label }}</p>{% endif %}
   <div class="guide-promo-body">
     <div class="guide-promo-text">
-      <img class="guide-promo-logo" src="{{ '/assets/images/logo-tubes.png' | imgSrc }}" alt="Tubes" width="114" height="40" loading="lazy" decoding="async">
       <h3>{{ promo.heading }}</h3>
       {% if promo.text %}<p>{{ promo.text }}</p>{% endif %}
       {% if promo.chips %}
       <ul class="chip-row guide-promo-chips" aria-label="What Tubes covers">
-        {% for chip in promo.chips %}<li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>{% endfor %}
+        {% for chip in promo.chips %}<li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>{% if not loop.last %}<li class="chip-sep" aria-hidden="true">→</li>{% endif %}{% endfor %}
       </ul>
       {% endif %}
     </div>

@@ -2761,11 +2761,11 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   color: var(--status-blue-ink);
 }
 .guide-promo-label::before { content: ""; flex: none; width: 22px; height: 3px; border-radius: 2px; background: #E6C263; }
-.guide-promo-logo { width: 114px; height: auto; margin: 0 0 12px; }
 .guide-promo h3 { font-size: 1.12rem; line-height: 1.25; margin: 0 0 8px; }
 .guide-promo-text > p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--ink-soft); }
 .guide-promo-chips { margin: 12px 0 0; gap: 6px; }
 .guide-promo-chips .chip { font-size: 0.72rem; padding: 6px 10px; }
+.guide-promo-chips .chip-sep { font-size: 0.8rem; }
 .guide-promo-actions { margin-top: 16px; display: grid; gap: 8px; }
 .guide-promo-price { margin: 0; font-size: 0.86rem; font-weight: 700; color: var(--ink); }
 .guide-promo .button { width: 100%; display: inline-flex; justify-content: center; }

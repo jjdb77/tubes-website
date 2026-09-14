@@ -22,10 +22,9 @@ sections:
       heading: Budgeting, planning and cost control in one platform
       text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
       chips:
-        - { label: Budgeting, tone: blue }
-        - { label: Planning, tone: amber }
-        - { label: Cost control, tone: teal }
-        - { label: Xero, tone: mint }
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
       price: From € 49 per month
       button:
         label: Request a Demo
@@ -79,10 +78,9 @@ sections:
       heading: Budgeting, planning and cost control in one platform
       text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
       chips:
-        - { label: Budgeting, tone: blue }
-        - { label: Planning, tone: amber }
-        - { label: Cost control, tone: teal }
-        - { label: Xero, tone: mint }
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
       price: From € 49 per month
       button:
         label: Request a Demo
