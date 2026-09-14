@@ -59,7 +59,7 @@
 
     <div class="guide-layout">
       <div class="guide-main">
-        {% if section.promo %}{% set promoVariant = "inline" %}{% include "partials/directory-promo.njk" %}{% endif %}
+        {% if section.promo and section.promo_inline != false %}{% set promoVariant = "inline" %}{% include "partials/directory-promo.njk" %}{% endif %}
         <div class="guide-grid" data-guide-grid>
           {% for it in items %}
           {%- set card = section.card -%}

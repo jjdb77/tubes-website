@@ -1,5 +1,5 @@
 <section class="section section-hero theme-{{ section.theme or 'light' }}{% if section.tight %} hero-tight{% endif %}">
-  <div class="container hero-grid{% if not section.image and not section.video and not (section.buttons and section.buttons_position == 'side') %} hero-single{% endif %}{% if section.media_below %} hero-stacked{% endif %}">
+  <div class="container hero-grid{% if not section.image and not section.video and not section.promo and not (section.buttons and section.buttons_position == 'side') %} hero-single{% endif %}{% if section.media_below %} hero-stacked{% endif %}">
     <div class="hero-text">
       {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
       <h1>{{ section.title | mdInline | safe }}</h1>
@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
       {% endif %}
-      {% if section.buttons and section.buttons_position != 'side' %}
+      {% if section.buttons and (section.buttons_position != 'side' or section.promo) %}
       <div class="button-row">
         {% for btn in section.buttons %}
         <a class="button {% if loop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ btn.url }}">{{ btn.label }}</a>
@@ -30,6 +30,10 @@
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
       <span class="viewfinder" aria-hidden="true"></span>
     </div>
+    {% elif section.promo %}
+    {#- Reclameblok voor Tubes in de rechterkolom (zie partials/directory-promo.njk);
+        de knoppen van de hero staan dan onder de tekst. -#}
+    {% set promoVariant = "hero" %}{% include "partials/directory-promo.njk" %}
     {% elif section.buttons and section.buttons_position == 'side' %}
     <div class="hero-actions-side">
       {% for btn in section.buttons %}

@@ -12,13 +12,28 @@ sections:
       Production management, budgeting and cost control, scheduling, accounting and payroll, asset management, post-production, rights: search by need, filter by category, and put up to three products side by side.
 
       Free and open to everyone. We list only what a vendor publishes itself, pricing included, and Tubes is listed like any other product. Missing one? Suggest it below.
-    buttons_position: side
     tight: true
     buttons:
       - label: Browse software
         url: "#directory"
       - label: Suggest a product
         url: "#request-entry"
+    promo:
+      label: Our own software
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budgeting, tone: blue }
+        - { label: Planning, tone: amber }
+        - { label: Cost control, tone: teal }
+        - { label: Xero, tone: mint }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
+      link:
+        label: See how Tubes compares
+        url: /software/tubes/
   - type: directory
     dataset: mediasoftware
     noun: products
@@ -60,6 +75,7 @@ sections:
       Vendor or user of a tool that belongs here? Tell us the product and the official link, and we add it with verified details. We publish only what the vendor publishes, including pricing; a "Not published" is better than a guess.
     request_field_label: Product and vendor
     request_placeholder: "For example: Yamdu, by Yamdu GmbH"
+    promo_inline: false
     promo:
       label: Our own software
       heading: Budgeting, planning and cost control in one platform

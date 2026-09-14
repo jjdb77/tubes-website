@@ -2739,6 +2739,10 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .guide-promo-aside { margin-top: 16px; }
 /* Boven de kaarten alleen op schermen zonder zijkolom (zie media query). */
 .guide-promo-inline { display: none; margin-bottom: 22px; }
+/* In de hero: rechterkolom, op de plek van de losse knoppen */
+.guide-promo-hero { justify-self: end; width: 100%; max-width: 420px; padding: 22px 26px 26px; }
+.guide-promo-hero h3 { font-size: 1.3rem; }
+.guide-promo-hero .guide-promo-text > p { font-size: 0.95rem; }
 
 .guide-promo {
   position: relative; overflow: hidden;
@@ -2787,9 +2791,15 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .guide-promo-inline .guide-promo-body { display: grid; grid-template-columns: minmax(0, 1fr) 224px; gap: 16px 32px; align-items: end; }
   .guide-promo-inline .guide-promo-actions { margin-top: 0; text-align: center; }
 }
+@media (max-width: 980px) {
+  /* Hero in een kolom: blok onder de tekst, zelfde brede opmaak als inline */
+  .guide-promo-hero { max-width: none; justify-self: stretch; }
+  .guide-promo-hero .guide-promo-body { display: grid; grid-template-columns: minmax(0, 1fr) 224px; gap: 16px 32px; align-items: end; }
+  .guide-promo-hero .guide-promo-actions { margin-top: 0; text-align: center; }
+}
 @media (max-width: 700px) {
-  .guide-promo-inline .guide-promo-body { grid-template-columns: 1fr; }
-  .guide-promo-inline .guide-promo-actions { margin-top: 14px; }
+  .guide-promo-inline .guide-promo-body, .guide-promo-hero .guide-promo-body { grid-template-columns: 1fr; }
+  .guide-promo-inline .guide-promo-actions, .guide-promo-hero .guide-promo-actions { margin-top: 14px; }
 }
 
 /* ---------- Locatiegids: AI-zoeken ---------- */

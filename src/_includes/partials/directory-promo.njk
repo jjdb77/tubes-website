@@ -1,10 +1,14 @@
-{#- Reclameblok voor Tubes zelf in een zoek-en-vergelijklijst (sectie
-    "directory", veld `promo`). Wie via Google in zo'n lijst landt, scrolt
-    zelden door tot het "Where Tubes fits"-blok onderaan; dit blok staat
-    daarom bij de kaarten zelf. Het wordt twee keer gerenderd: in de zijkolom
-    (variant "aside", plakt mee tijdens het scrollen op brede schermen) en
-    boven de kaarten (variant "inline", voor smalle schermen waar die zijkolom
-    niet bestaat). De CSS toont er altijd maar een van. -#}
+{#- Reclameblok voor Tubes zelf (veld `promo` op een sectie). Wie via Google
+    in een zoek-en-vergelijklijst landt, scrolt zelden door tot het "Where
+    Tubes fits"-blok onderaan; dit blok staat daarom bovenin en bij de
+    kaarten. Varianten (promoVariant):
+    - "hero": in de rechterkolom van de hero, naast de titel;
+    - "aside": in de zijkolom van een directory-sectie, plakt mee tijdens
+      het scrollen op brede schermen;
+    - "inline": boven de kaarten, alleen op smalle schermen waar die zijkolom
+      niet bestaat (uit te zetten met promo_inline: false op de sectie,
+      bijvoorbeeld als de hero er al een heeft).
+    De CSS toont van aside/inline altijd maar een van beide. -#}
 {%- set promo = section.promo -%}
 <aside class="guide-promo guide-promo-{{ promoVariant }}" aria-label="{{ promo.label or 'Our own software' }}">
   <p class="guide-promo-label">{{ promo.label or "Our own software" }}</p>

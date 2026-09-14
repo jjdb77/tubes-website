@@ -18,6 +18,23 @@ _button_fields: &button_fields
   - { label: Knoptekst, name: label, widget: string }
   - { label: Link (URL), name: url, widget: string }
 
+# Reclameblok voor Tubes (partials/directory-promo.njk), op hero en zoeklijst
+_promo_fields: &promo_fields
+  - { label: "Labeltje erboven", name: label, widget: string, required: false, default: Our own software }
+  - { label: Kop, name: heading, widget: string }
+  - { label: Tekst, name: text, widget: text, required: false }
+  - label: Chips
+    name: chips
+    widget: list
+    required: false
+    summary: "{{fields.label}}"
+    fields:
+      - { label: Tekst, name: label, widget: string }
+      - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
+  - { label: "Prijsregel (bijv. From € 49 per month)", name: price, widget: string, required: false }
+  - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+  - { label: "Tekstlink onder de knop", name: link, widget: object, required: false, fields: *button_fields }
+
 collections:
   - name: instellingen
     label: Site-instellingen
@@ -245,6 +262,13 @@ collections:
                 required: false
                 summary: "{{fields.label}}"
                 fields: *button_fields
+              - label: "Reclameblok voor Tubes rechts naast de tekst (leeg = niet tonen)"
+                name: promo
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Alleen zonder afbeelding of video; de knoppen komen dan onder de tekst."
+                fields: *promo_fields
               - { label: Afbeelding, name: image, widget: image, required: false }
               - { label: "Afbeelding: alt-tekst", name: image_alt, widget: string, required: false }
               - { label: "Video (mp4)", name: video, widget: file, required: false }
@@ -467,21 +491,8 @@ collections:
                 required: false
                 collapsed: true
                 hint: "Staat in de zijkolom naast de kaarten (blijft plakken bij scrollen) en op smalle schermen boven de kaarten."
-                fields:
-                  - { label: "Labeltje erboven", name: label, widget: string, required: false, default: Our own software }
-                  - { label: Kop, name: heading, widget: string }
-                  - { label: Tekst, name: text, widget: text, required: false }
-                  - label: Chips
-                    name: chips
-                    widget: list
-                    required: false
-                    summary: "{{fields.label}}"
-                    fields:
-                      - { label: Tekst, name: label, widget: string }
-                      - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
-                  - { label: "Prijsregel (bijv. From € 49 per month)", name: price, widget: string, required: false }
-                  - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
-                  - { label: "Tekstlink onder de knop", name: link, widget: object, required: false, fields: *button_fields }
+                fields: *promo_fields
+              - { label: "Reclameblok op smalle schermen ook boven de kaarten", name: promo_inline, widget: boolean, required: false, default: true, hint: "Uitzetten als de hero van de pagina al een reclameblok heeft." }
           - name: locationguide
             label: "Locatiegids (zoeken + kaart + vergelijken)"
             summary: "{{fields.heading}}"
