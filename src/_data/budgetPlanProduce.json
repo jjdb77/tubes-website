@@ -91,8 +91,7 @@
         "plan": [
           "Schedule",
           "Call sheets",
-          "Crew",
-          "Cast",
+          "Cast & crew",
           "Locations",
           "Equipment",
           "Logistics"
@@ -189,8 +188,7 @@
         "plan": [
           "Schedule",
           "Call sheets",
-          "Crew",
-          "Cast",
+          "Cast & crew",
           "Locations",
           "Equipment",
           "Logistics"
@@ -286,8 +284,7 @@
         "plan": [
           "Schedule",
           "Call sheets",
-          "Crew",
-          "Cast",
+          "Cast & crew",
           "Locations",
           "Equipment",
           "Logistics"
@@ -382,7 +379,7 @@
         ],
         "plan": [
           "Schedule",
-          "Crew",
+          "Cast & crew",
           "Contributors",
           "Locations",
           "Equipment",
@@ -479,8 +476,7 @@
         "plan": [
           "Schedule",
           "Call sheets",
-          "Crew",
-          "Cast",
+          "Cast & crew",
           "Locations",
           "Equipment"
         ],
@@ -572,7 +568,7 @@
         "plan": [
           "Schedule",
           "Call sheets",
-          "Crew",
+          "Cast & crew",
           "Locations",
           "Client approvals"
         ],
@@ -666,7 +662,7 @@
           "Recurring schedule",
           "Running order",
           "Call sheets",
-          "Crew",
+          "Cast & crew",
           "Guests",
           "Studio & equipment"
         ],
@@ -759,7 +755,7 @@
         "plan": [
           "Rehearsal schedule",
           "Tour schedule",
-          "Company & crew",
+          "Cast & crew",
           "Venues & get-ins",
           "Travel & accommodation",
           "Technical riders"
