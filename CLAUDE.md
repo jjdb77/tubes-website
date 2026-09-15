@@ -202,6 +202,14 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - **Schrijfregels voor deze pagina** (brief Joachim 3-9-2026): schrijf vanuit de producent, niet vanuit de software. Geen JSON, formules, kolomstructuren of "secties/regels" in hoofdteksten; op de pagina heten die "areas" en "costs". Technische details alleen achter `<details>`-uitklappers (Import details, Excel details) of in de FAQ. Movie Magic alleen als sjabloonnaam, in de importdetails en in de FAQ, nooit in intro- of begeleidende teksten of op de tegel. Een .json-back-up heet "Tubes budget file". Knoppen: Start with a template · Import budget · Download · Save; Feedback en versies zijn nevenacties.
 - De privacyverklaring (/privacy/, hoofdstuk 14) beschrijft de opslag; hou die tekst gelijk aan wat de tool echt doet.
 
+## Budget · Plan · Produce (/budget-plan-produce/)
+
+- Proces-overzicht uit de Claude Design-handoff "Tubes media review" (15-9-2026, Concept A: kolommen): Budget → Plan → Produce, met tabs voor acht productietypes, drie kolommen, een "How it flows"-kaart en een donker verhaalpaneel (probleem → oplossing). **Voorlopig een losse pagina om aan collega's te laten zien** (verzoek Joachim): niet in menu of footer, `noindex: true`, dus ook niet in sitemap.xml en llms.txt. Publiek maken = noindex weghalen en in de Explore-footer zetten; dan ook beslissen of hij de sitekop en -voettekst krijgt (nu heeft hij een eigen kop met logo en de drie woorden, dat is onderdeel van het concept).
+- Eigen template `src/budget-plan-produce.njk` (los van layout.njk), opmaak `src/css/budget-plan-produce.css` (klassen `bpp-`), script `src/js/budget-plan-produce.js`, allebei met een eigen `?v=`-hash via `assets` in eleventy.config.js. Alle teksten staan in `src/_data/budgetPlanProduce.json` (niet in het CMS).
+- Alle varianten (8 producties × 3 stappen) staan voorgerenderd in de HTML; het script zet alleen `hidden` en `data-cur`, dus de opmaak staat maar op één plek. Hover op een kolom toont die stap, klik zet hem vast (15 s pauze), anders loopt hij elke 10 s vanzelf door; `data-autoloop="false"` op de wortel zet dat uit. `[hidden]` staat in die CSS met `!important`, want de varianten hebben display: grid/flex.
+- Twee afwijkingen van het ontwerp op verzoek van Joachim: de vullingen (vormen, nummers, actieve kolom) zijn **pastel** (`--*-soft`), de volle stapkleur blijft voor lijnen, tekst en de kleine vormen; en **EFC staat overal voluit** als "EFC (estimate for completion)".
+- De vormen ● ⬢ ▶ zijn SVG-symbolen, ook waar ze in de verhaaltekst staan (macro `rich`), zodat ze niet van het lettertype afhangen.
+
 ## Besloten klantpagina's: /mmg/ (Motion Media Group)
 
 - `src/mmg/` bevat een sales-pitch voor Motion Media Group (Canadees media-investeringsbedrijf, contact Martin Waterman): `onepager.html`, `proposal.html` en de bijbehorende PDF's `Tubes-MMG-Onepager.pdf` / `Tubes-MMG-Proposal.pdf`. Live op https://www.tubes.media/mmg/onepager.html en /mmg/proposal.html.
@@ -372,3 +380,4 @@ Dataregio's, regel voor de organisatie-eenheid.
 - [ ] Academy-video's: nieuwe plek kiezen ("Access all videos"-knop staat verborgen)
 - [ ] Bedrijvengids uitbreiden: IJsland (7), Bulgarije, Estland en Slovenie (8) zijn nu het dunst, en een lijst bekende bedrijven viel af omdat hun domein onbereikbaar was (zie het blok "Bedrijvengids"). Doe die ronde met de zoeklimiet omhoog.
 - [ ] Optioneel: GoatCounter-code voor statistieken (veld bestaat in CMS)
+- [ ] Budget · Plan · Produce (/budget-plan-produce/): na de reactie van collega's beslissen of hij publiek gaat (noindex weg, Explore-footer, sitekop/voettekst) of in het menu komt.

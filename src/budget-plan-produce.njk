@@ -1,0 +1,182 @@
+---
+title: Budget, Plan, Produce
+seo_title: "Budget, Plan, Produce | Tubes"
+description: "How Tubes works in three steps, Budget, Plan and Produce, shown for eight kinds of production."
+permalink: /budget-plan-produce/
+# Voorlopig een losse pagina om aan collega's te laten zien: niet in het menu,
+# niet in de footer, niet in sitemap.xml of llms.txt. Gaat hij ooit publiek,
+# dan noindex weghalen en de Explore-footer erbij.
+noindex: true
+---
+{#- "Budget · Plan · Produce": het proces-overzicht uit de Claude Design-handoff
+    (Concept A, kolommen). Eigen opmaak en eigen kop, los van layout.njk, want
+    het is een schermontwerp op zich: logo plus de drie woorden in de kop is
+    onderdeel van het concept ("three words in the navigation").
+
+    Alle teksten staan in src/_data/budgetPlanProduce.json. Elke variant (8
+    producties, 3 stappen, 24 verhalen) wordt hier voorgerenderd; het script
+    (js/budget-plan-produce.js) zet alleen `hidden` en `data-cur`. Zo staat de
+    opmaak maar op één plek. Opmaak: css/budget-plan-produce.css (klassen bpp-).
+
+    Let op: [hidden] wordt daar met !important afgedwongen, anders wint de
+    display: grid/flex van de varianten van het attribuut. -#}
+{%- set d = budgetPlanProduce -%}
+{%- set first = d.productions[0] -%}
+
+{#- Kleine vorm (cirkel, zeshoek, driehoek) in de kleur van de stap. -#}
+{%- macro glyph(key) -%}
+<svg class="bpp-glyph" aria-hidden="true" focusable="false"><use href="#bpp-g-{{ key }}"></use></svg>
+{%- endmacro -%}
+
+{#- In de verhalen staan de vormen als tekens in de tekst ("flag the ● instantly").
+    Die worden hier dezelfde SVG's, zodat ze in elke browser hetzelfde ogen. -#}
+{%- macro rich(text) -%}
+{%- set b = '<span class="bpp-inline-glyph bpp-k-budget">' + glyph("budget") + '</span>' -%}
+{%- set p = '<span class="bpp-inline-glyph bpp-k-plan">' + glyph("plan") + '</span>' -%}
+{%- set r = '<span class="bpp-inline-glyph bpp-k-produce">' + glyph("produce") + '</span>' -%}
+{{ text | escape | replace("●", b) | replace("⬢", p) | replace("▶", r) | safe }}
+{%- endmacro -%}
+
+{%- macro arrow(size) -%}
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12 H19" fill="none" stroke="#D6A339" stroke-width="2.4" stroke-linecap="round"></path><path d="M13 6 L19.5 12 L13 18" fill="none" stroke="#D6A339" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+{%- endmacro -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.budgetPlanProduceCss }}">
+</head>
+<body class="bpp-body">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="bpp-g-budget" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"></circle></symbol>
+  <symbol id="bpp-g-plan" viewBox="0 0 30 30"><path d="M15 2.5 L26 9 L26 21 L15 27.5 L4 21 L4 9 Z"></path></symbol>
+  <symbol id="bpp-g-produce" viewBox="0 0 30 30"><path d="M7 4 L27 15 L7 26 Z"></path></symbol>
+</svg>
+<div class="bpp" data-bpp data-prod="{{ first.id }}" data-cur="budget">
+  <header class="bpp-header">
+    <div class="bpp-header-inner">
+      <a class="bpp-logo" href="/" aria-label="{{ settings.site_name }}, home">
+        <img src="{{ settings.logo | imgSrc }}" alt="{{ settings.site_name }}" {{ settings.logo | imgSize }}>
+      </a>
+      <nav class="bpp-steps" aria-label="The three steps">
+        {%- for s in d.steps %}
+        <span class="bpp-step-word bpp-k-{{ s.key }}">{{ glyph(s.key) }}{{ s.name }}</span>
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="bpp-main" id="main">
+    <div class="bpp-tabs" aria-label="Kind of production">
+      {%- for p in d.productions %}
+      <button type="button" class="bpp-tab" data-prod-tab="{{ p.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ p.kind }}</button>
+      {%- endfor %}
+    </div>
+
+    {#- Per productie: titelblok en de drie kolommen. -#}
+    {%- for p in d.productions %}
+    <section class="bpp-prod" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %} aria-labelledby="bpp-title-{{ p.id }}">
+      <div class="bpp-head">
+        <div>
+          <p class="bpp-kicker"><span class="bpp-kicker-bar"></span>{{ p.meta }}</p>
+          <h1 class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</h1>
+        </div>
+        <span class="bpp-phase bpp-phase-{{ p.phase | lower }}"><span class="bpp-phase-dot"></span>{{ p.phase }}</span>
+      </div>
+
+      <div class="bpp-columns">
+        {%- for s in d.steps %}
+        {%- set k = s.key %}
+        {%- set st = p.stages[k] %}
+        <div class="bpp-col bpp-col-{{ k }} bpp-k-{{ k }}" data-step="{{ k }}">
+          {%- if not loop.last %}
+          <span class="bpp-col-arrow" aria-hidden="true">{{ arrow(22) }}</span>
+          {%- endif %}
+          <button type="button" class="bpp-col-head" title="{{ s.name }} · {{ d.statuses[st] }}">
+            <span class="bpp-shape bpp-shape-{{ s.shape }}{% if st != 'notstarted' %} is-filled{% endif %}"><svg aria-hidden="true" focusable="false"><use href="#bpp-g-{{ k }}"></use></svg></span>
+            <span class="bpp-col-text">
+              <span class="bpp-col-name">{{ s.name }}</span>
+              <span class="bpp-status bpp-status-{{ st }}">{{ d.statuses[st] }}</span>
+            </span>
+          </button>
+          <p class="bpp-question">{{ d.questions[k] }}</p>
+          <p class="bpp-label">Underneath</p>
+          <ul class="bpp-items">
+            {%- for it in p.items[k] %}
+            <li>{{ glyph(k) }}{{ it }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endfor %}
+
+    {#- "How it flows" hangt alleen van de stap af, niet van de productie. -#}
+    <section class="bpp-flow" aria-label="How it flows">
+      <div class="bpp-flow-head">
+        <span class="bpp-label">How it flows</span>
+        {%- for s in d.steps %}
+        <span class="bpp-flow-current bpp-k-{{ s.key }}" data-for-step="{{ s.key }}"{% if not loop.first %} hidden{% endif %}>{{ glyph(s.key) }}{{ s.name }}</span>
+        {%- endfor %}
+      </div>
+      {%- for s in d.steps %}
+      <div class="bpp-flow-steps bpp-k-{{ s.key }}" data-for-step="{{ s.key }}"{% if not loop.first %} hidden{% endif %}>
+        {%- for f in d.flows[s.key] %}
+        <div class="bpp-flow-step">
+          <span class="bpp-flow-num">{{ loop.index }}</span>
+          <span class="bpp-flow-title">{{ f.title }}</span>
+          <span class="bpp-flow-text">{{ f.text }}</span>
+        </div>
+        {%- if not loop.last %}
+        <span class="bpp-flow-arrow" aria-hidden="true">{{ arrow(26) }}</span>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+    </section>
+
+    {#- Het verhaal: per productie én per stap. -#}
+    <section class="bpp-story" aria-label="The problem and the fix">
+      {%- for p in d.productions %}
+      {%- set firstProd = loop.first %}
+      {%- for s in d.steps %}
+      {%- set st = p.story[s.key] %}
+      <div class="bpp-story-inner bpp-k-{{ s.key }}" data-for-prod="{{ p.id }}" data-for-step="{{ s.key }}"{% if not (firstProd and loop.first) %} hidden{% endif %}>
+        <div class="bpp-story-main">
+          <div class="bpp-story-meta">
+            <span class="bpp-story-icon">{{ glyph(s.key) }}</span>
+            <span class="bpp-story-name">{{ s.name }}</span>
+            <span class="bpp-story-n">{{ loop.index }} / 3</span>
+          </div>
+          <h2 class="bpp-story-headline">{{ rich(st.headline) }}</h2>
+          <p class="bpp-story-text">{{ rich(st.text) }}</p>
+        </div>
+        <div class="bpp-story-beats">
+          <p class="bpp-story-aside">{{ d.aside }}</p>
+          {%- for b in st.beats %}
+          <div class="bpp-beat">
+            <span class="bpp-beat-num">{{ loop.index }}</span>
+            <div class="bpp-beat-body">
+              <p class="bpp-beat-title">{{ b.title }}</p>
+              <p class="bpp-beat-text">{{ rich(b.text) }}</p>
+            </div>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endfor %}
+      {%- endfor %}
+    </section>
+  </main>
+</div>
+<script src="{{ assets.budgetPlanProduceJs }}" defer></script>
+</body>
+</html>

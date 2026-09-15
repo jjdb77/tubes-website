@@ -1,0 +1,841 @@
+{
+  "steps": [
+    {
+      "key": "budget",
+      "name": "Budget",
+      "shape": "circle"
+    },
+    {
+      "key": "plan",
+      "name": "Plan",
+      "shape": "hexagon"
+    },
+    {
+      "key": "produce",
+      "name": "Produce",
+      "shape": "play"
+    }
+  ],
+  "statuses": {
+    "complete": "Complete",
+    "active": "Active now",
+    "attention": "Needs attention",
+    "notstarted": "Not started"
+  },
+  "questions": {
+    "budget": "What are we allowed to spend, and where is the money going?",
+    "plan": "What are we going to do, when, and with whom?",
+    "produce": "What is actually happening, and are we delivering against plan and budget?"
+  },
+  "flows": {
+    "budget": [
+      {
+        "title": "Budget",
+        "text": "Build and version the budget; compare drafts side by side."
+      },
+      {
+        "title": "Documents",
+        "text": "Quotation, funding plan or incentive file generated from the budget."
+      },
+      {
+        "title": "Approve",
+        "text": "Client or funder signs; the working budget locks."
+      }
+    ],
+    "plan": [
+      {
+        "title": "Plan",
+        "text": "Crew, cast, locations and equipment set against the budget."
+      },
+      {
+        "title": "Schedule",
+        "text": "Shoot days and prep on one timeline."
+      },
+      {
+        "title": "Call sheets",
+        "text": "Daily call sheets shared to every phone."
+      }
+    ],
+    "produce": [
+      {
+        "title": "Costs",
+        "text": "Timesheets, purchases and invoices land as they happen."
+      },
+      {
+        "title": "Control",
+        "text": "Approve, match to budget lines and update the forecast, the EFC (estimate for completion)."
+      },
+      {
+        "title": "Export",
+        "text": "Approved costs go to Xero or other accounting software."
+      }
+    ]
+  },
+  "aside": "The problem → the fix",
+  "productions": [
+    {
+      "id": "night",
+      "kind": "Film",
+      "title": "NIGHT SHIFT",
+      "meta": "Documentary · Feature",
+      "phase": "Planning",
+      "stages": {
+        "budget": "complete",
+        "plan": "attention",
+        "produce": "notstarted"
+      },
+      "items": {
+        "budget": [
+          "Budget & estimates",
+          "Versions & compare",
+          "Funding plan",
+          "Incentive · eligible spend",
+          "Commitments",
+          "Approvals",
+          "Reporting"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Crew",
+          "Cast",
+          "Locations",
+          "Equipment",
+          "Logistics"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Daily production",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Incentive claim report",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "A € 860,000 film, financed by funds and a cash rebate.",
+          "text": "The incentive only pays out on eligible spend. The budget has to prove it from day one.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Eligible and non-eligible costs get mixed up; the rebate claim falls short."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Funding and incentive lines live inside the budget. Eligible spend is tagged per cost line."
+            },
+            {
+              "title": "Result",
+              "text": "Green ●. 100% financed, and the rebate report writes itself."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "Three weeks to Day 1. Two crew contracts missing.",
+          "text": "Normally you find out on set. Here the hexagon turned amber this morning.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "42/48 days placed, but contracts and the Day 1 call sheet lag behind."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Any mismatch between schedule, contracts and call sheets flags the ⬢."
+            },
+            {
+              "title": "Result",
+              "text": "Fixed before lunch. Shoot starts 5 Oct as planned."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Not rolling yet. The ▶ is still hollow.",
+          "text": "On 5 October it wakes up by itself: cost control opens on the first shoot day.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Incentive claims are rebuilt after wrap from a shoebox of invoices."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Every cost is tagged eligible or not as it lands. Forecast preset to € 860,000."
+            },
+            {
+              "title": "Result",
+              "text": "The rebate claim is ready the day the shoot ends."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "harbour",
+      "kind": "TV",
+      "title": "HARBOUR LIGHTS",
+      "meta": "Comedy · Series 2",
+      "phase": "Development",
+      "stages": {
+        "budget": "attention",
+        "plan": "notstarted",
+        "produce": "notstarted"
+      },
+      "items": {
+        "budget": [
+          "Budget & estimates",
+          "Versions & compare",
+          "Quotation",
+          "Costs & actuals",
+          "Commitments",
+          "Approvals",
+          "Reporting"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Crew",
+          "Cast",
+          "Locations",
+          "Equipment",
+          "Logistics"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Daily production",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Harbour Lights spent € 12,400 before the quotation was signed.",
+          "text": "Nobody noticed until the broadcaster asked. In Tubes the “!” sits on the circle the same morning.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Development costs against a draft quote, found a week too late."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Unapproved costs flag the ● instantly. Fix the draft, send the quotation, get it signed."
+            },
+            {
+              "title": "Result",
+              "text": "The circle turns solid. Series 2 starts on a quote everyone agreed to."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "60 shoot days pencilled in. Nothing booked yet.",
+          "text": "The hexagon stays hollow until the budget is approved. On purpose.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Planning against a number that may change is how shows go wrong."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Plan unlocks the moment the ● turns green."
+            },
+            {
+              "title": "Result",
+              "text": "No rework. The schedule inherits the approved budget."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Not started. And that is the right status.",
+          "text": "Produce waits for Plan, Plan waits for Budget. The order is the point.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Shows that start shooting before the plan is locked."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Three steps, one direction. Each unlocks the next."
+            },
+            {
+              "title": "Result",
+              "text": "A hollow ▶ that everyone understands."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "crown",
+      "kind": "Serie",
+      "title": "THE CROWN",
+      "meta": "Drama · Series 1",
+      "phase": "Production",
+      "stages": {
+        "budget": "complete",
+        "plan": "complete",
+        "produce": "active"
+      },
+      "items": {
+        "budget": [
+          "Budget per episode",
+          "Versions & compare",
+          "Quotation",
+          "Costs & actuals",
+          "Commitments",
+          "Approvals",
+          "Reporting"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Crew",
+          "Cast",
+          "Locations",
+          "Equipment",
+          "Logistics"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Daily production",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Six episodes, one quotation: € 1,240,000.",
+          "text": "Three budget versions compared, the broadcaster signed the quotation on v3 via DocuSign.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "The quote and the working budget drift apart per episode."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Budget and quotation are the same document. Sign it, and it locks."
+            },
+            {
+              "title": "Result",
+              "text": "Solid green ●. Every cost is measured against what was quoted."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "48 shoot days, 62 people, 14 locations. All confirmed.",
+          "text": "Call sheets shared through Day 21, straight to every phone.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Long shoots: the schedule and the crew list stop agreeing."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Days, crew, cast and locations planned against the budget."
+            },
+            {
+              "title": "Result",
+              "text": "Plan and budget agree. The ⬢ stays green."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Day 17. “Are we still on budget?”",
+          "text": "The answer is on screen: forecast € 1,228,400, under budget.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "The forecast used to be a week behind."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Timesheets and purchases land daily; forecast updates itself."
+            },
+            {
+              "title": "Result",
+              "text": "7 invoices in the queue, the rest already in Xero."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "island",
+      "kind": "Unscripted",
+      "title": "THE ISLAND",
+      "meta": "Reality · Series 3",
+      "phase": "Production",
+      "stages": {
+        "budget": "complete",
+        "plan": "active",
+        "produce": "active"
+      },
+      "items": {
+        "budget": [
+          "Budget & estimates",
+          "Versions & compare",
+          "Quotation",
+          "Contingency",
+          "Costs & actuals",
+          "Commitments",
+          "Approvals"
+        ],
+        "plan": [
+          "Schedule",
+          "Crew",
+          "Contributors",
+          "Locations",
+          "Equipment",
+          "Travel & logistics"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Daily production",
+          "Timesheets & overtime",
+          "Per diems",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Eight weeks on an island. € 1,780,000. No script.",
+          "text": "Unscripted means the budget has to bend without breaking.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Contingency gets spent in week 2 and nobody sees it coming."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Contingency is its own line. Every reallocation is a version, visible to the network."
+            },
+            {
+              "title": "Result",
+              "text": "Green ●. v2 signed, and the network trusts the reshuffles."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "The schedule changes every day. That is the format.",
+          "text": "Week 5 of 8. The hexagon is blue because planning never really stops.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Daily changes to crew and locations never reach everyone in time."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Change the schedule once; tomorrow’s plan updates on every phone."
+            },
+            {
+              "title": "Result",
+              "text": "Active ⬢. 140 people, one plan, refreshed nightly."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "312 timesheets this week. Forecast: € 1,802,000. Watch.",
+          "text": "Over by € 22,000 and rising. The ▶ says so tonight, not at wrap.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Big crews, daily overtime. The overrun surfaces months later."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Timesheets and per diems land daily against the budget lines."
+            },
+            {
+              "title": "Result",
+              "text": "Producer cuts two boat days in week 6. Back inside the number."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "late",
+      "kind": "Commercial",
+      "title": "LATE SHIFT",
+      "meta": "Entertainment · Special",
+      "phase": "Wrap",
+      "stages": {
+        "budget": "complete",
+        "plan": "complete",
+        "produce": "complete"
+      },
+      "items": {
+        "budget": [
+          "Budget & estimates",
+          "Quote versions",
+          "Quotation",
+          "Margin",
+          "Commitments",
+          "Approvals"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Crew",
+          "Cast",
+          "Locations",
+          "Equipment"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Final cost report",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "A commercial: € 310,000, four quotes, one week.",
+          "text": "Agency changes came fast. Each one became a new version of the quotation, not a new spreadsheet.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Agency and client change daily; the quote rarely keeps up."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Quote versions compared side by side. v4 signed, the rest kept for the record."
+            },
+            {
+              "title": "Result",
+              "text": "Wrapped € 7,850 under. Margin visible from the first quote."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "24 shoot days, 3 locations, one crew.",
+          "text": "Every call sheet shared via the app. Nobody asked where to be.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Short shoots leave no room for a missed call time."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Crew, cast and locations confirmed against the budget; call sheets pushed out."
+            },
+            {
+              "title": "Result",
+              "text": "24/24 days delivered. Solid ⬢."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Wrap party and final cost report on the same day.",
+          "text": "148 of 148 invoices approved. Every cost in Xero on 28 August.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Closing the books used to take six weeks after wrap."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Invoices approved as they arrive; approved costs export to Xero automatically."
+            },
+            {
+              "title": "Result",
+              "text": "Books closed on wrap day. Margin known: 12.4%."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "brand",
+      "kind": "Branded content",
+      "title": "NORTHWIND",
+      "meta": "6 × 4 min · client series",
+      "phase": "Planning",
+      "stages": {
+        "budget": "complete",
+        "plan": "complete",
+        "produce": "notstarted"
+      },
+      "items": {
+        "budget": [
+          "Budget per deliverable",
+          "Quotation",
+          "Margin",
+          "Client approvals"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Crew",
+          "Locations",
+          "Client approvals"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Six films for one client. One quote, three deliverables.",
+          "text": "€ 145,000, signed. Margin visible before the first shoot day.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Branded work gets quoted per deliverable; the total margin is a guess."
+            },
+            {
+              "title": "In Tubes",
+              "text": "One budget, one quotation, deliverables as lines. Client signs once."
+            },
+            {
+              "title": "Result",
+              "text": "Green ●. Agency and client see the same number."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "Six shoot days, four locations, booked in a week.",
+          "text": "The hexagon went green fast. Small productions move at agency speed.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Fast turnarounds skip the plan; the shoot day becomes the plan."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Locations, crew and call sheets set against the quote in one pass."
+            },
+            {
+              "title": "Result",
+              "text": "6/6 days planned. Client approvals logged in Plan."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Shoot starts 22 September. The ▶ is waiting.",
+          "text": "Every deliverable already has its cost lines. Day 1 lands in a live forecast.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Small jobs skip cost control; the margin is found at invoicing."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Produce opens on Day 1. Purchases and expenses land per deliverable."
+            },
+            {
+              "title": "Result",
+              "text": "Margin per film known at wrap, not at year end."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "show",
+      "kind": "Show",
+      "title": "SATURDAY LIVE",
+      "meta": "Studio show · 12 episodes",
+      "phase": "Production",
+      "stages": {
+        "budget": "complete",
+        "plan": "complete",
+        "produce": "attention"
+      },
+      "items": {
+        "budget": [
+          "Episode template budget",
+          "Series budget",
+          "Versions & compare",
+          "Quotation",
+          "Commitments",
+          "Approvals"
+        ],
+        "plan": [
+          "Recurring schedule",
+          "Running order",
+          "Call sheets",
+          "Crew",
+          "Guests",
+          "Studio & equipment"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Timesheets & overtime",
+          "Purchases & expenses",
+          "Forecast per episode · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Twelve episodes, € 200,000 each. The same show, every week.",
+          "text": "A studio show is a template budget run twelve times. Tubes treats it that way.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Episode budgets are copied by hand; a change in ep 3 never reaches ep 9."
+            },
+            {
+              "title": "In Tubes",
+              "text": "One episode template, twelve instances. Change the template once."
+            },
+            {
+              "title": "Result",
+              "text": "Green ●. € 2,400,000 quoted, per-episode margin visible."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "Same studio, same crew, every Saturday.",
+          "text": "The hexagon went green once and stayed there. Recurring plans should be boring.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Weekly call sheets rebuilt from scratch, with the same mistakes."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Recurring schedule; only guests and running order change per week."
+            },
+            {
+              "title": "Result",
+              "text": "12/12 studio days. Call sheet out every Thursday, automatically."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Episode 7 ran long. Overtime: € 9,800 over.",
+          "text": "The ▶ carries a “!” tonight. Five episodes left to make it back.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Live shows overrun; the cost shows up in the crew invoices weeks later."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Timesheets post per episode the same night. Forecast per episode and per series."
+            },
+            {
+              "title": "Result",
+              "text": "Producer trims the ep 8 rehearsal. Series forecast back on budget."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "stage",
+      "kind": "Theatre",
+      "title": "THE LAST FERRY",
+      "meta": "Stage play · 40-show tour",
+      "phase": "Production",
+      "stages": {
+        "budget": "complete",
+        "plan": "complete",
+        "produce": "active"
+      },
+      "items": {
+        "budget": [
+          "Rehearsal budget",
+          "Tour budget",
+          "Per-venue fees & guarantees",
+          "Funding & box-office share",
+          "Commitments",
+          "Approvals"
+        ],
+        "plan": [
+          "Rehearsal schedule",
+          "Tour schedule",
+          "Company & crew",
+          "Venues & get-ins",
+          "Travel & accommodation",
+          "Technical riders"
+        ],
+        "produce": [
+          "Tour dashboard",
+          "Per-show costs",
+          "Venue settlements",
+          "Per diems & travel",
+          "Forecast per venue · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Six weeks of rehearsal, forty shows, twelve venues. € 620,000.",
+          "text": "A theatre budget has two lives: the rehearsal period and the tour. Tubes keeps them in one place.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Rehearsal costs and touring costs sit in separate sheets; venue fees change per stop."
+            },
+            {
+              "title": "In Tubes",
+              "text": "One budget with rehearsal and tour as sections; per-venue lines for fees and travel."
+            },
+            {
+              "title": "Result",
+              "text": "Green ●. Funding, guarantees and box-office share visible in one number."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "Forty shows in twelve cities. One schedule.",
+          "text": "Rehearsals, get-ins, performances and travel days on one timeline. The hexagon is green.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Tour schedules live with the tour manager; the company finds out by email."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Company, crew, venues and travel planned together; the daily schedule reaches every phone."
+            },
+            {
+              "title": "Result",
+              "text": "40/40 shows scheduled. Get-in times confirmed with every venue."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Show 14 of 40. Box office is tracking ahead of the guarantee.",
+          "text": "Per-show costs and settlements land the same night. The ▶ is blue.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Venue settlements arrive weeks later; nobody knows the tour result until it ends."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Settlements, per diems and travel post per show against the budget line."
+            },
+            {
+              "title": "Result",
+              "text": "Forecast per venue and for the whole tour, updated nightly."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

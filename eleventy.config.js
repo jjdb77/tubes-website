@@ -33,6 +33,9 @@ export default function (eleventyConfig) {
     budgetCompare: "/js/budget-compare.js?v=" + fileHash("src/js/budget-compare.js"),
     budgetBuilder: "/js/budget-builder.js?v=" + fileHash("src/js/budget-builder.js"),
     budgetTemplates: "/js/budget-templates.js?v=" + fileHash("src/js/budget-templates.js"),
+    // Alleen op /budget-plan-produce/ (eigen pagina, los van layout.njk).
+    budgetPlanProduceCss: "/css/budget-plan-produce.css?v=" + fileHash("src/css/budget-plan-produce.css"),
+    budgetPlanProduceJs: "/js/budget-plan-produce.js?v=" + fileHash("src/js/budget-plan-produce.js"),
   });
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 
