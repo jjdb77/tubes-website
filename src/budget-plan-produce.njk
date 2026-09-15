@@ -74,11 +74,18 @@ noindex: true
   </header>
 
   <main class="bpp-main" id="main">
-    <div class="bpp-tabs" aria-label="Kind of production">
-      {%- for p in d.productions %}
-      <button type="button" class="bpp-tab" data-prod-tab="{{ p.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ p.kind }}</button>
-      {%- endfor %}
-    </div>
+    {#- Productietypes als lijst in de zijkant (verzoek Joachim 15-9-2026, in het
+        ontwerp een rij tabs bovenaan); onder 900px wordt het weer die rij. -#}
+    <nav class="bpp-side" aria-label="Kind of production">
+      <p class="bpp-label bpp-side-label">Production type</p>
+      <div class="bpp-tabs">
+        {%- for p in d.productions %}
+        <button type="button" class="bpp-tab" data-prod-tab="{{ p.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ p.kind }}</button>
+        {%- endfor %}
+      </div>
+    </nav>
+
+    <div class="bpp-content">
 
     {#- Per productie: titelblok en de drie kolommen. -#}
     {%- for p in d.productions %}
@@ -103,7 +110,11 @@ noindex: true
             <span class="bpp-shape bpp-shape-{{ s.shape }}{% if st != 'notstarted' %} is-filled{% endif %}"><svg aria-hidden="true" focusable="false"><use href="#bpp-g-{{ k }}"></use></svg></span>
             <span class="bpp-col-text">
               <span class="bpp-col-name">{{ s.name }}</span>
+              {#- Een afgeronde stap krijgt geen statuswoord (verzoek Joachim 15-9-2026):
+                  de gevulde vorm zegt het al. De andere drie statussen blijven staan. -#}
+              {%- if st != "complete" %}
               <span class="bpp-status bpp-status-{{ st }}">{{ d.statuses[st] }}</span>
+              {%- endif %}
             </span>
           </button>
           <p class="bpp-question">{{ d.questions[k] }}</p>
@@ -175,6 +186,7 @@ noindex: true
       {%- endfor %}
       {%- endfor %}
     </section>
+    </div>
   </main>
 </div>
 <script src="{{ assets.budgetPlanProduceJs }}" defer></script>

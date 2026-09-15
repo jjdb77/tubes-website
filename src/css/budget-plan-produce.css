@@ -60,7 +60,7 @@
   border-bottom: 1px solid var(--bpp-border);
 }
 .bpp-header-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   min-height: 68px;
@@ -88,40 +88,50 @@
 
 /* ---------- Hoofddeel ---------- */
 
+/* Zijkolom met de productietypes links, de inhoud rechts. De container is
+   breder dan de 1200px uit het ontwerp, zodat de drie kolommen hun ruimte houden. */
 .bpp-main {
   flex: 1;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 48px 40px 80px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
 }
-
+.bpp-side {
+  position: sticky;
+  top: 24px;
+}
+.bpp-side-label { margin: 0 0 10px 14px; }
 .bpp-tabs {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 6px 36px;
-  border-bottom: 1px solid var(--bpp-border);
-  margin-bottom: 40px;
+  flex-direction: column;
+  border-left: 1px solid var(--bpp-border);
 }
 .bpp-tab {
   background: none;
   border: 0;
-  padding: 0 0 16px;
-  margin-bottom: -1px;
+  border-left: 3px solid transparent;
+  margin-left: -1px;
+  padding: 9px 0 9px 12px;
   cursor: pointer;
   font: inherit;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-align: left;
   color: var(--bpp-muted);
-  border-bottom: 3px solid transparent;
   transition: color 0.15s ease;
 }
 .bpp-tab:hover,
 .bpp-tab[aria-pressed="true"] { color: var(--bpp-ink); }
-.bpp-tab[aria-pressed="true"] { border-bottom-color: var(--bpp-gold); }
+.bpp-tab[aria-pressed="true"] { border-left-color: var(--bpp-gold); }
+.bpp-content { min-width: 0; }
 .bpp-tab:focus-visible,
 .bpp-col-head:focus-visible { outline: 2px solid var(--bpp-gold); outline-offset: 4px; border-radius: 4px; }
 
@@ -151,13 +161,14 @@
   vertical-align: 2px;
   margin-right: 10px;
 }
+/* Kleiner dan in het ontwerp (clamp(2.4rem, 4.5vw, 3.6rem)), verzoek Joachim 15-9-2026. */
 .bpp-title {
   margin: 0;
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   color: var(--bpp-ink);
-  line-height: 1.02;
+  line-height: 1.05;
 }
 .bpp-title-prefix { font-weight: 600; color: var(--bpp-muted); }
 
@@ -487,9 +498,13 @@
 
 @media (max-width: 900px) {
   .bpp-header-inner, .bpp-main { padding-left: 20px; padding-right: 20px; }
-  .bpp-main { padding-top: 32px; padding-bottom: 56px; }
-  .bpp-tabs { gap: 4px 22px; margin-bottom: 32px; }
-  .bpp-tab { font-size: 1rem; padding-bottom: 12px; }
+  .bpp-main { padding-top: 32px; padding-bottom: 56px; display: block; }
+  /* Terug naar de rij tabs bovenaan, zoals in het ontwerp. */
+  .bpp-side { position: static; margin-bottom: 32px; }
+  .bpp-side-label { display: none; }
+  .bpp-tabs { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 22px; border-left: 0; border-bottom: 1px solid var(--bpp-border); }
+  .bpp-tab { border-left: 0; border-bottom: 3px solid transparent; margin: 0 0 -1px; padding: 0 0 12px; font-size: 1rem; }
+  .bpp-tab[aria-pressed="true"] { border-bottom-color: var(--bpp-gold); }
   .bpp-head { margin-bottom: 28px; }
   .bpp-columns { grid-template-columns: minmax(0, 1fr); }
   .bpp-col { border-left: 0; border-top: 1px solid var(--bpp-hairline); padding: 28px 24px; }
