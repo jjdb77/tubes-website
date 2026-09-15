@@ -43,6 +43,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("md", (value) => (value ? md.render(String(value)) : ""));
   eleventyConfig.addFilter("mdInline", (value) => (value ? md.renderInline(String(value)) : ""));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  // Heeft deze pagina een sectie van dit type? Voor CSS en JS die alleen op
+  // pagina's met zo'n sectie geladen hoeven te worden (layout.njk).
+  eleventyConfig.addFilter("hasSection", (sections, type) => Array.isArray(sections) && sections.some((s) => s && s.type === type));
   // "{city}, {country}" invullen met velden van een item (generieke lijsten)
   eleventyConfig.addFilter("tpl", (template, item) => String(template || "").replace(/\{(\w+)\}/g, (_, k) => (item && item[k] != null ? item[k] : "")));
 

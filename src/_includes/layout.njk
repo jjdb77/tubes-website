@@ -15,6 +15,11 @@
   {%- endif %}
   <link rel="stylesheet" href="/assets/fonts/mulish.css">
   <link rel="stylesheet" href="{{ assets.css }}">
+  {#- Budget · Plan · Produce heeft eigen opmaak en script; alleen laden op
+      pagina's met dat sectietype (nu: /solutions/). -#}
+  {%- if sections | hasSection("processoverview") %}
+  <link rel="stylesheet" href="{{ assets.budgetPlanProduceCss }}">
+  {%- endif %}
   {#- Bedrijvengids: het bedrijf van deze pagina komt uit de index op URL. Zo
       krijgt de jsonld-filter een echt object; via de front matter zou het een
       string zijn en bleef de Organization leeg. -#}
@@ -43,6 +48,9 @@
       /contact/) en geen statistiek-script. -#}
   {% if not browser_only %}{% include "partials/demo-modal.njk" %}{% endif %}
   <script src="{{ assets.js }}" defer></script>
+  {%- if sections | hasSection("processoverview") %}
+  <script src="{{ assets.budgetPlanProduceJs }}" defer></script>
+  {%- endif %}
   {% if not browser_only %}{% include "partials/analytics.njk" %}{% endif %}
 </body>
 </html>

@@ -15,6 +15,10 @@ sections:
         url: /production-finance-health-check/
     image: /assets/images/solutions-roles.jpeg
     image_alt: Different roles collaborating on a production
+  - type: processoverview
+    theme: light
+    heading: Budget, plan, produce
+    lead: Pick a kind of production and see what Tubes does in each of the three steps. Hover a step for the story behind it, click to keep it there.
   - type: cards
     theme: teal
     heading: What Tubes Covers

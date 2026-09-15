@@ -383,6 +383,14 @@ collections:
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [light, white, teal], default: white, required: false }
             hint: "De teksten van dit blok staan onder Health Check-vragenlijst, niet hier."
+          - name: processoverview
+            label: "Budget · Plan · Produce (proces-overzicht)"
+            summary: "Budget · Plan · Produce"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [light, white], default: light, required: false }
+              - { label: Kop, name: heading, widget: string, required: false }
+              - { label: Introzin, name: lead, widget: string, required: false }
+            hint: "De inhoud van het overzicht (productietypes, stappen, verhalen) staat in src/_data/budgetPlanProduce.json, niet hier."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"

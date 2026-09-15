@@ -1,0 +1,13 @@
+{#- Budget · Plan · Produce als sectie op een gewone pagina (nu: /solutions/,
+    onder de hero). Zelfde partial als de losse pagina /budget-plan-produce/,
+    dus de teksten lopen nooit uiteen. In het CMS: sectietype "Budget · Plan ·
+    Produce (proces-overzicht)". layout.njk laadt de eigen CSS en het script
+    zodra een pagina deze sectie heeft (filter hasSection). -#}
+<section class="section theme-{{ section.theme or 'light' }} bpp-section">
+  <div class="container">
+    {%- if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
+    {%- if section.lead %}<p class="col-lead bpp-section-lead">{{ section.lead }}</p>{% endif %}
+    {%- set bppEmbed = true %}
+    {% include "partials/budget-plan-produce.njk" %}
+  </div>
+</section>

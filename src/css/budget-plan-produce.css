@@ -7,13 +7,17 @@
    volle kleur blijft voor lijnen, tekst en de kleine vormen.
    ============================================================ */
 
+/* De losse pagina: kop bovenaan, overzicht eronder. */
 .bpp-body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: #F6F7F9;
   font-family: "Mulish", "Nunito", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
-  color: #5C5750;
   -webkit-font-smoothing: antialiased;
 }
+.bpp-page { flex: 1; }
 
 .bpp {
   --bpp-budget: #2D6CC4;  --bpp-budget-soft: #C9DBF6;
@@ -26,9 +30,7 @@
   --bpp-hairline: #ECEEF1;
   --bpp-gold: #D6A339;
   --bpp-card-shadow: 0px 1px 2px -1px rgba(0,0,0,0.1), 0px 1px 3px 0px rgba(0,0,0,0.1);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  color: var(--bpp-body);
 }
 
 /* Elke stap krijgt zijn kleuren via --c (vol) en --soft (pastel). */
@@ -91,7 +93,6 @@
 /* Zijkolom met de productietypes links, de inhoud rechts. De container is
    breder dan de 1200px uit het ontwerp, zodat de drie kolommen hun ruimte houden. */
 .bpp-main {
-  flex: 1;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -493,6 +494,17 @@
 .bpp-beat-body { min-width: 0; }
 .bpp-beat-title { margin: 0; font-size: 0.92rem; font-weight: 800; color: #FFFFFF; }
 .bpp-beat-text { margin: 2px 0 0; font-size: 0.86rem; line-height: 1.5; color: rgba(231,230,227,0.68); }
+
+/* ---------- Als sectie op een gewone pagina (.bpp-embed) ---------- */
+
+/* De container van de site geeft al de zijmarges; de sitekop is sticky, dus
+   de zijkolom blijft daaronder hangen. Iets minder ruimte in de kolommen,
+   want de container is smaller (1240px) dan de losse pagina (1400px). */
+.bpp-section-lead { margin-bottom: 2rem; }
+.bpp-embed .bpp-main { max-width: none; padding: 0; }
+.bpp-embed .bpp-side { top: 96px; }
+.bpp-embed .bpp-col { padding: 32px 28px 28px; }
+.bpp-embed .bpp-title { margin: 0; }
 
 /* ---------- Smal scherm ---------- */
 
