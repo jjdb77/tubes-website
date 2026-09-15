@@ -163,100 +163,6 @@
       }
     },
     {
-      "id": "harbour",
-      "kind": "Documentary",
-      "title": "HARBOUR LIGHTS",
-      "stages": {
-        "budget": "attention",
-        "plan": "notstarted",
-        "produce": "notstarted"
-      },
-      "items": {
-        "budget": [
-          "Budget & estimates",
-          "Versions & compare",
-          "Quotation",
-          "Costs & actuals",
-          "Commitments",
-          "Approvals",
-          "Reporting"
-        ],
-        "plan": [
-          "Schedule",
-          "Call sheets",
-          "Cast & crew",
-          "Locations",
-          "Equipment",
-          "Logistics"
-        ],
-        "produce": [
-          "Production dashboard",
-          "Daily production",
-          "Timesheets",
-          "Purchases & expenses",
-          "Forecast · EFC (estimate for completion)",
-          "Invoices & approvals",
-          "Export to Xero or other accounting software"
-        ]
-      },
-      "story": {
-        "budget": {
-          "headline": "Harbour Lights spent € 12,400 before the quotation was signed.",
-          "text": "Nobody noticed until the broadcaster asked. In Tubes the “!” sits on the circle the same morning.",
-          "beats": [
-            {
-              "title": "Problem",
-              "text": "Development costs against a draft quote, found a week too late."
-            },
-            {
-              "title": "In Tubes",
-              "text": "Unapproved costs flag the ● instantly. Fix the draft, send the quotation, get it signed."
-            },
-            {
-              "title": "Result",
-              "text": "The circle turns solid. Series 2 starts on a quote everyone agreed to."
-            }
-          ]
-        },
-        "plan": {
-          "headline": "60 shoot days pencilled in. Nothing booked yet.",
-          "text": "The hexagon stays hollow until the budget is approved. On purpose.",
-          "beats": [
-            {
-              "title": "Problem",
-              "text": "Planning against a number that may change is how shows go wrong."
-            },
-            {
-              "title": "In Tubes",
-              "text": "Plan unlocks the moment the ● turns green."
-            },
-            {
-              "title": "Result",
-              "text": "No rework. The schedule inherits the approved budget."
-            }
-          ]
-        },
-        "produce": {
-          "headline": "Not started. And that is the right status.",
-          "text": "Produce waits for Plan, Plan waits for Budget. The order is the point.",
-          "beats": [
-            {
-              "title": "Problem",
-              "text": "Shows that start shooting before the plan is locked."
-            },
-            {
-              "title": "In Tubes",
-              "text": "Three steps, one direction. Each unlocks the next."
-            },
-            {
-              "title": "Result",
-              "text": "A hollow ▶ that everyone understands."
-            }
-          ]
-        }
-      }
-    },
-    {
       "id": "kestrel",
       "kind": "Series",
       "title": "KESTREL",
@@ -345,6 +251,100 @@
             {
               "title": "Result",
               "text": "7 invoices in the queue, the rest already in Xero."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "harbour",
+      "kind": "Documentary",
+      "title": "HARBOUR LIGHTS",
+      "stages": {
+        "budget": "attention",
+        "plan": "notstarted",
+        "produce": "notstarted"
+      },
+      "items": {
+        "budget": [
+          "Budget & estimates",
+          "Versions & compare",
+          "Quotation",
+          "Costs & actuals",
+          "Commitments",
+          "Approvals",
+          "Reporting"
+        ],
+        "plan": [
+          "Schedule",
+          "Call sheets",
+          "Cast & crew",
+          "Locations",
+          "Equipment",
+          "Logistics"
+        ],
+        "produce": [
+          "Production dashboard",
+          "Daily production",
+          "Timesheets",
+          "Purchases & expenses",
+          "Forecast · EFC (estimate for completion)",
+          "Invoices & approvals",
+          "Export to Xero or other accounting software"
+        ]
+      },
+      "story": {
+        "budget": {
+          "headline": "Harbour Lights spent € 12,400 before the quotation was signed.",
+          "text": "Nobody noticed until the broadcaster asked. In Tubes the “!” sits on the circle the same morning.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Development costs against a draft quote, found a week too late."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Unapproved costs flag the ● instantly. Fix the draft, send the quotation, get it signed."
+            },
+            {
+              "title": "Result",
+              "text": "The circle turns solid. Series 2 starts on a quote everyone agreed to."
+            }
+          ]
+        },
+        "plan": {
+          "headline": "60 shoot days pencilled in. Nothing booked yet.",
+          "text": "The hexagon stays hollow until the budget is approved. On purpose.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Planning against a number that may change is how shows go wrong."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Plan unlocks the moment the ● turns green."
+            },
+            {
+              "title": "Result",
+              "text": "No rework. The schedule inherits the approved budget."
+            }
+          ]
+        },
+        "produce": {
+          "headline": "Not started. And that is the right status.",
+          "text": "Produce waits for Plan, Plan waits for Budget. The order is the point.",
+          "beats": [
+            {
+              "title": "Problem",
+              "text": "Shows that start shooting before the plan is locked."
+            },
+            {
+              "title": "In Tubes",
+              "text": "Three steps, one direction. Each unlocks the next."
+            },
+            {
+              "title": "Result",
+              "text": "A hollow ▶ that everyone understands."
             }
           ]
         }
