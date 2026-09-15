@@ -161,23 +161,6 @@
   gap: 16px 32px;
   margin-bottom: 36px;
 }
-.bpp-kicker {
-  margin: 0 0 12px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--bpp-muted);
-}
-.bpp-kicker-bar {
-  display: inline-block;
-  width: 26px;
-  height: 3px;
-  border-radius: 2px;
-  background: #E6C263;
-  vertical-align: 2px;
-  margin-right: 10px;
-}
 /* Kleiner dan in het ontwerp (clamp(2.4rem, 4.5vw, 3.6rem)), verzoek Joachim 15-9-2026. */
 .bpp-title {
   margin: 0;

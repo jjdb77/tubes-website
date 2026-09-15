@@ -71,7 +71,6 @@
       "id": "night",
       "kind": "Film",
       "title": "NIGHT SHIFT",
-      "meta": "Documentary · Feature",
       "phase": "Planning",
       "stages": {
         "budget": "complete",
@@ -168,7 +167,6 @@
       "id": "harbour",
       "kind": "Comedy series",
       "title": "HARBOUR LIGHTS",
-      "meta": "Comedy · Series 2",
       "phase": "Development",
       "stages": {
         "budget": "attention",
@@ -264,7 +262,6 @@
       "id": "kestrel",
       "kind": "Drama series",
       "title": "KESTREL",
-      "meta": "Drama · Series 1",
       "phase": "Production",
       "stages": {
         "budget": "complete",
@@ -360,7 +357,6 @@
       "id": "island",
       "kind": "Unscripted",
       "title": "THE ISLAND",
-      "meta": "Reality · Series 3",
       "phase": "Production",
       "stages": {
         "budget": "complete",
@@ -457,7 +453,6 @@
       "id": "late",
       "kind": "Commercial",
       "title": "LATE SHIFT",
-      "meta": "Entertainment · Special",
       "phase": "Wrap",
       "stages": {
         "budget": "complete",
@@ -551,7 +546,6 @@
       "id": "brand",
       "kind": "Branded content",
       "title": "NORTHWIND",
-      "meta": "6 × 4 min · client series",
       "phase": "Planning",
       "stages": {
         "budget": "complete",
@@ -642,7 +636,6 @@
       "id": "show",
       "kind": "Show",
       "title": "SATURDAY LIVE",
-      "meta": "Studio show · 12 episodes",
       "phase": "Production",
       "stages": {
         "budget": "complete",
@@ -736,7 +729,6 @@
       "id": "stage",
       "kind": "Theatre",
       "title": "THE LAST FERRY",
-      "meta": "Stage play · 40-show tour",
       "phase": "Production",
       "stages": {
         "budget": "complete",

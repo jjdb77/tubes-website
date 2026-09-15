@@ -49,10 +49,7 @@
     <div class="bpp-heads">
       {%- for p in d.productions %}
       <div class="bpp-head" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %}>
-        <div>
-          <p class="bpp-kicker"><span class="bpp-kicker-bar"></span>{{ p.meta }}</p>
-          <{{ hTitle }} class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</{{ hTitle }}>
-        </div>
+        <{{ hTitle }} class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</{{ hTitle }}>
         <span class="bpp-phase bpp-phase-{{ p.phase | lower }}"><span class="bpp-phase-dot"></span>{{ p.phase }}</span>
       </div>
       {%- endfor %}
