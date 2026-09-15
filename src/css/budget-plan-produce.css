@@ -280,7 +280,6 @@
 .bpp-shape-hexagon svg { width: 58px; height: 58px; }
 .bpp-shape-play svg    { width: 60px; height: 60px; }
 
-.bpp-col-text { display: flex; flex-direction: column; gap: 4px; }
 .bpp-col-name {
   font-size: 1.5rem;
   font-weight: 800;
@@ -288,12 +287,6 @@
   color: var(--bpp-ink);
   line-height: 1;
 }
-.bpp-status { font-size: 0.78rem; font-weight: 700; }
-.bpp-status-complete   { color: #1F8A4C; }
-.bpp-status-active     { color: #2D6CC4; }
-.bpp-status-attention  { color: #977414; }
-.bpp-status-notstarted { color: #8B8E94; }
-
 .bpp-question {
   margin: 22px 0 0;
   font-size: 1rem;

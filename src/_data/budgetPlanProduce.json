@@ -16,12 +16,6 @@
       "shape": "play"
     }
   ],
-  "statuses": {
-    "complete": "Complete",
-    "active": "Active now",
-    "attention": "Needs attention",
-    "notstarted": "Not started"
-  },
   "questions": {
     "budget": "What are we allowed to spend, and where is the money going?",
     "plan": "What are we going to do, when, and with whom?",
