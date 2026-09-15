@@ -118,7 +118,7 @@ noindex: true
             </span>
           </button>
           <p class="bpp-question">{{ d.questions[k] }}</p>
-          <p class="bpp-label">Underneath</p>
+          {#- Het kopje "Underneath" uit het ontwerp is weg (verzoek Joachim 15-9-2026). -#}
           <ul class="bpp-items">
             {%- for it in p.items[k] %}
             <li>{{ glyph(k) }}{{ it }}</li>
