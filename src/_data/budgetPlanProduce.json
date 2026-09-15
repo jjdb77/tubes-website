@@ -261,7 +261,7 @@
       "kind": "Documentary",
       "title": "HARBOUR LIGHTS",
       "stages": {
-        "budget": "notstarted",
+        "budget": "attention",
         "plan": "notstarted",
         "produce": "notstarted"
       },
@@ -542,8 +542,8 @@
       "kind": "Branded content",
       "title": "NORTHWIND",
       "stages": {
-        "budget": "complete",
-        "plan": "complete",
+        "budget": "notstarted",
+        "plan": "notstarted",
         "produce": "notstarted"
       },
       "items": {
