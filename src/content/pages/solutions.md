@@ -18,7 +18,10 @@ sections:
   - type: processoverview
     theme: light
     heading: Budget, Plan, Produce
-    lead: Eight fictional productions show what Tubes does in each of the three steps. Pick a kind of production, then choose a step for the story behind it.
+    lead: |
+      Eight fictional productions show what Tubes does in each of the three steps.
+
+      Pick a kind of production, then choose a step for the story behind it.
   - type: cards
     theme: teal
     heading: What Tubes Covers

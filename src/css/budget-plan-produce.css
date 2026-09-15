@@ -109,21 +109,13 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 172px minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
   gap: 0 40px;
   align-items: start;
 }
-/* Titelblok over de volle breedte bovenaan (dus links uitgelijnd met de kop);
-   zijkolom en inhoud eronder, zodat de lijst op de hoogte van de kolommenkaart
-   begint (verzoek Joachim 15-9-2026). */
-.bpp-heads { grid-column: 1 / -1; grid-row: 1; }
 .bpp-side {
-  grid-column: 1;
-  grid-row: 2;
   position: sticky;
   top: 24px;
 }
-.bpp-content { grid-column: 2; grid-row: 2; }
 .bpp-side-label { margin: 0 0 10px 14px; }
 .bpp-tabs {
   display: flex;
@@ -152,43 +144,6 @@
 .bpp-content { min-width: 0; }
 .bpp-tab:focus-visible,
 .bpp-col-head:focus-visible { outline: 2px solid var(--bpp-gold); outline-offset: 4px; border-radius: 4px; }
-
-/* Titelblok */
-.bpp-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px 32px;
-  margin-bottom: 36px;
-}
-/* Veel kleiner dan in het ontwerp (clamp(2.4rem, 4.5vw, 3.6rem)) en "Production:"
-   even zwaar als de naam, alleen grijs (verzoek Joachim 15-9-2026). */
-.bpp-title {
-  margin: 0;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--bpp-ink);
-  line-height: 1.15;
-}
-.bpp-title-prefix { color: var(--bpp-muted); }
-
-.bpp-phase {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1;
-  padding: 8px 13px;
-  border-radius: 8px;
-}
-.bpp-phase-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
-.bpp-phase-development { background: #E2EEFC; color: #2D6CC4; }
-.bpp-phase-planning    { background: #FBF0CE; color: #977414; }
-.bpp-phase-production  { background: #DBF3EE; color: #0E8C77; }
-.bpp-phase-wrap        { background: #DCF5E3; color: #1F8A4C; }
 
 /* ---------- De drie kolommen ---------- */
 
@@ -495,6 +450,8 @@
    de zijkolom blijft daaronder hangen. Iets minder ruimte in de kolommen,
    want de container is smaller (1240px) dan de losse pagina (1400px). */
 .bpp-section-lead { margin-bottom: 2rem; }
+.bpp-section-lead p { margin-bottom: 0.35em; }
+.bpp-section-lead p:last-child { margin-bottom: 0; }
 /* Dicht onder de hero: minder lege ruimte dan de gewone sectieafstand
    (verzoek Joachim 15-9-2026). Staat de sectie ooit ergens anders, dan hier
    de gewone padding terugzetten. */
@@ -502,7 +459,6 @@
 .bpp-embed .bpp-main { max-width: none; padding: 0; }
 .bpp-embed .bpp-side { top: 96px; }
 .bpp-embed .bpp-col { padding: 32px 28px 28px; }
-.bpp-embed .bpp-title { margin: 0; }
 
 /* ---------- Smal scherm ---------- */
 
@@ -515,7 +471,6 @@
   .bpp-tabs { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 22px; border-left: 0; border-bottom: 1px solid var(--bpp-border); }
   .bpp-tab { border-left: 0; border-bottom: 3px solid transparent; margin: 0 0 -1px; padding: 0 0 12px; font-size: 1rem; }
   .bpp-tab[aria-pressed="true"] { border-bottom-color: var(--bpp-gold); }
-  .bpp-head { margin-bottom: 28px; }
   .bpp-columns { grid-template-columns: minmax(0, 1fr); }
   .bpp-col { border-left: 0; border-top: 1px solid var(--bpp-hairline); padding: 28px 24px; }
   .bpp-col:first-child { border-top: 0; border-radius: 20px 20px 0 0; }

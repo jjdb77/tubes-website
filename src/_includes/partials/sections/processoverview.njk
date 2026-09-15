@@ -6,7 +6,7 @@
 <section class="section theme-{{ section.theme or 'light' }} bpp-section">
   <div class="container">
     {%- if section.heading %}<h2 class="section-heading">{{ section.heading }}</h2>{% endif %}
-    {%- if section.lead %}<p class="col-lead bpp-section-lead">{{ section.lead }}</p>{% endif %}
+    {%- if section.lead %}<div class="col-lead bpp-section-lead">{{ section.lead | md | safe }}</div>{% endif %}
     {%- set bppEmbed = true %}
     {% include "partials/budget-plan-produce.njk" %}
   </div>

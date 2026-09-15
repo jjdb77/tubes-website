@@ -71,7 +71,6 @@
       "id": "night",
       "kind": "Film",
       "title": "NIGHT SHIFT",
-      "phase": "Planning",
       "stages": {
         "budget": "complete",
         "plan": "attention",
@@ -167,7 +166,6 @@
       "id": "harbour",
       "kind": "Comedy series",
       "title": "HARBOUR LIGHTS",
-      "phase": "Development",
       "stages": {
         "budget": "attention",
         "plan": "notstarted",
@@ -262,7 +260,6 @@
       "id": "kestrel",
       "kind": "Drama series",
       "title": "KESTREL",
-      "phase": "Production",
       "stages": {
         "budget": "complete",
         "plan": "complete",
@@ -357,7 +354,6 @@
       "id": "island",
       "kind": "Unscripted",
       "title": "THE ISLAND",
-      "phase": "Production",
       "stages": {
         "budget": "complete",
         "plan": "active",
@@ -453,7 +449,6 @@
       "id": "late",
       "kind": "Commercial",
       "title": "LATE SHIFT",
-      "phase": "Wrap",
       "stages": {
         "budget": "complete",
         "plan": "complete",
@@ -546,7 +541,6 @@
       "id": "brand",
       "kind": "Branded content",
       "title": "NORTHWIND",
-      "phase": "Planning",
       "stages": {
         "budget": "complete",
         "plan": "complete",
@@ -636,7 +630,6 @@
       "id": "show",
       "kind": "Show",
       "title": "SATURDAY LIVE",
-      "phase": "Production",
       "stages": {
         "budget": "complete",
         "plan": "complete",
@@ -729,7 +722,6 @@
       "id": "stage",
       "kind": "Theatre",
       "title": "THE LAST FERRY",
-      "phase": "Production",
       "stages": {
         "budget": "complete",
         "plan": "complete",

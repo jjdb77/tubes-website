@@ -8,14 +8,14 @@
     (js/budget-plan-produce.js) zet alleen `hidden` en `data-cur`. Opmaak:
     css/budget-plan-produce.css (klassen bpp-).
 
-    `bppEmbed` (gezet door de sectie) maakt de productietitel en de verhaalkop
-    een <p>: op een gewone pagina heeft de sectie zelf al een h2, en 24
-    verborgen verhaalkoppen zouden anders de koppenstructuur van die pagina
-    vervuilen. Ook staat de automatische wissel (elke 10 s) daar uit: tekst die
+    `bppEmbed` (gezet door de sectie) maakt de verhaalkop een <p>: op een
+    gewone pagina heeft de sectie zelf al een h2, en 24 verborgen
+    verhaalkoppen zouden anders de koppenstructuur van die pagina vervuilen.
+    De productietitel ("Production: NIGHT SHIFT") en de fasechip zijn op
+    verzoek weg; de naam zit alleen nog in het aria-label van de sectie. Ook staat de automatische wissel (elke 10 s) daar uit: tekst die
     vanzelf verandert terwijl iemand leest, hoort niet op een publieke pagina. -#}
 {%- set d = budgetPlanProduce -%}
 {%- set first = d.productions[0] -%}
-{%- set hTitle = "p" if bppEmbed else "h1" -%}
 {%- set hStory = "p" if bppEmbed else "h2" -%}
 
 {#- Kleine vorm (cirkel, zeshoek, driehoek) in de kleur van de stap. -#}
@@ -44,17 +44,6 @@
 </svg>
 <div class="bpp{% if bppEmbed %} bpp-embed{% endif %}" data-bpp data-prod="{{ first.id }}" data-cur="budget" data-autoloop="{{ 'false' if bppEmbed else 'true' }}">
   <div class="bpp-main">
-    {#- Titelblok per productie, boven de inhoud. Staat los van de kolommen,
-        zodat de zijkolom links pas op de hoogte van de kolommenkaart begint. -#}
-    <div class="bpp-heads">
-      {%- for p in d.productions %}
-      <div class="bpp-head" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %}>
-        <{{ hTitle }} class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</{{ hTitle }}>
-        <span class="bpp-phase bpp-phase-{{ p.phase | lower }}"><span class="bpp-phase-dot"></span>{{ p.phase }}</span>
-      </div>
-      {%- endfor %}
-    </div>
-
     {#- Productietypes als lijst in de zijkant (verzoek Joachim 15-9-2026, in het
         ontwerp een rij tabs bovenaan); onder 900px wordt het weer die rij, boven
         het titelblok. -#}
@@ -71,7 +60,7 @@
 
     {#- Per productie: de drie kolommen. -#}
     {%- for p in d.productions %}
-    <section class="bpp-prod" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %} aria-labelledby="bpp-title-{{ p.id }}">
+    <section class="bpp-prod" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %} aria-label="{{ p.kind }}: {{ p.title | title }}">
       <div class="bpp-columns">
         {%- for s in d.steps %}
         {%- set k = s.key %}

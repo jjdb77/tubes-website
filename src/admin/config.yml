@@ -389,7 +389,7 @@ collections:
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [light, white], default: light, required: false }
               - { label: Kop, name: heading, widget: string, required: false }
-              - { label: Introzin, name: lead, widget: string, required: false }
+              - { label: Introtekst, name: lead, widget: text, required: false, hint: "Een lege regel ertussen zet zinnen onder elkaar." }
             hint: "De inhoud van het overzicht (productietypes, stappen, verhalen) staat in src/_data/budgetPlanProduce.json, niet hier."
           - name: contactform
             label: Contactformulier
