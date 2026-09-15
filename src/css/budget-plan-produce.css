@@ -113,9 +113,10 @@
   gap: 0 40px;
   align-items: start;
 }
-/* Titelblok rechtsboven; zijkolom en inhoud eronder, zodat de lijst op de
-   hoogte van de kolommenkaart begint (verzoek Joachim 15-9-2026). */
-.bpp-heads { grid-column: 2; grid-row: 1; }
+/* Titelblok over de volle breedte bovenaan (dus links uitgelijnd met de kop);
+   zijkolom en inhoud eronder, zodat de lijst op de hoogte van de kolommenkaart
+   begint (verzoek Joachim 15-9-2026). */
+.bpp-heads { grid-column: 1 / -1; grid-row: 1; }
 .bpp-side {
   grid-column: 1;
   grid-row: 2;
@@ -494,12 +495,10 @@
    de zijkolom blijft daaronder hangen. Iets minder ruimte in de kolommen,
    want de container is smaller (1240px) dan de losse pagina (1400px). */
 .bpp-section-lead { margin-bottom: 2rem; }
-/* Kop en intro van de sectie op één lijn met het overzicht (rechts van de
-   zijkolom), anders springt de titel van de productie in ten opzichte van de kop. */
-@media (min-width: 901px) {
-  .bpp-section .section-heading,
-  .bpp-section .bpp-section-lead { margin-left: 212px; }
-}
+/* Dicht onder de hero: minder lege ruimte dan de gewone sectieafstand
+   (verzoek Joachim 15-9-2026). Staat de sectie ooit ergens anders, dan hier
+   de gewone padding terugzetten. */
+.bpp-section { padding-top: 0; margin-top: clamp(-56px, -4vw, -24px); }
 .bpp-embed .bpp-main { max-width: none; padding: 0; }
 .bpp-embed .bpp-side { top: 96px; }
 .bpp-embed .bpp-col { padding: 32px 28px 28px; }
