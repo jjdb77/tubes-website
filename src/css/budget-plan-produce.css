@@ -455,7 +455,7 @@
 /* Dicht onder de hero: minder lege ruimte dan de gewone sectieafstand
    (verzoek Joachim 15-9-2026). Staat de sectie ooit ergens anders, dan hier
    de gewone padding terugzetten. */
-.bpp-section { padding-top: 0; margin-top: clamp(-56px, -4vw, -24px); }
+.bpp-section { padding-top: 25px; margin-top: clamp(-56px, -4vw, -24px); }
 .bpp-embed .bpp-main { max-width: none; padding: 0; }
 .bpp-embed .bpp-side { top: 96px; }
 .bpp-embed .bpp-col { padding: 32px 28px 28px; }
