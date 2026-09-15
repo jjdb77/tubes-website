@@ -164,7 +164,7 @@
     },
     {
       "id": "harbour",
-      "kind": "Comedy series",
+      "kind": "Documentary",
       "title": "HARBOUR LIGHTS",
       "stages": {
         "budget": "attention",
@@ -258,7 +258,7 @@
     },
     {
       "id": "kestrel",
-      "kind": "Drama series",
+      "kind": "Series",
       "title": "KESTREL",
       "stages": {
         "budget": "complete",
