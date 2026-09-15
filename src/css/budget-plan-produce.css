@@ -161,16 +161,17 @@
   gap: 16px 32px;
   margin-bottom: 36px;
 }
-/* Kleiner dan in het ontwerp (clamp(2.4rem, 4.5vw, 3.6rem)), verzoek Joachim 15-9-2026. */
+/* Veel kleiner dan in het ontwerp (clamp(2.4rem, 4.5vw, 3.6rem)) en "Production:"
+   even zwaar als de naam, alleen grijs (verzoek Joachim 15-9-2026). */
 .bpp-title {
   margin: 0;
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--bpp-ink);
-  line-height: 1.05;
+  line-height: 1.15;
 }
-.bpp-title-prefix { font-weight: 600; color: var(--bpp-muted); }
+.bpp-title-prefix { color: var(--bpp-muted); }
 
 .bpp-phase {
   display: inline-flex;
