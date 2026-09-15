@@ -74,8 +74,23 @@ noindex: true
   </header>
 
   <main class="bpp-main" id="main">
+    {#- Titelblok per productie, boven de inhoud. Staat los van de kolommen,
+        zodat de zijkolom links pas op de hoogte van de kolommenkaart begint. -#}
+    <div class="bpp-heads">
+      {%- for p in d.productions %}
+      <div class="bpp-head" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %}>
+        <div>
+          <p class="bpp-kicker"><span class="bpp-kicker-bar"></span>{{ p.meta }}</p>
+          <h1 class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</h1>
+        </div>
+        <span class="bpp-phase bpp-phase-{{ p.phase | lower }}"><span class="bpp-phase-dot"></span>{{ p.phase }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+
     {#- Productietypes als lijst in de zijkant (verzoek Joachim 15-9-2026, in het
-        ontwerp een rij tabs bovenaan); onder 900px wordt het weer die rij. -#}
+        ontwerp een rij tabs bovenaan); onder 900px wordt het weer die rij, boven
+        het titelblok. -#}
     <nav class="bpp-side" aria-label="Kind of production">
       <p class="bpp-label bpp-side-label">Production type</p>
       <div class="bpp-tabs">
@@ -87,17 +102,9 @@ noindex: true
 
     <div class="bpp-content">
 
-    {#- Per productie: titelblok en de drie kolommen. -#}
+    {#- Per productie: de drie kolommen. -#}
     {%- for p in d.productions %}
     <section class="bpp-prod" data-for-prod="{{ p.id }}"{% if not loop.first %} hidden{% endif %} aria-labelledby="bpp-title-{{ p.id }}">
-      <div class="bpp-head">
-        <div>
-          <p class="bpp-kicker"><span class="bpp-kicker-bar"></span>{{ p.meta }}</p>
-          <h1 class="bpp-title" id="bpp-title-{{ p.id }}"><span class="bpp-title-prefix">Production: </span>{{ p.title }}</h1>
-        </div>
-        <span class="bpp-phase bpp-phase-{{ p.phase | lower }}"><span class="bpp-phase-dot"></span>{{ p.phase }}</span>
-      </div>
-
       <div class="bpp-columns">
         {%- for s in d.steps %}
         {%- set k = s.key %}

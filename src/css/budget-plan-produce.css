@@ -99,13 +99,20 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 172px minmax(0, 1fr);
-  gap: 40px;
+  grid-template-rows: auto 1fr;
+  gap: 0 40px;
   align-items: start;
 }
+/* Titelblok rechtsboven; zijkolom en inhoud eronder, zodat de lijst op de
+   hoogte van de kolommenkaart begint (verzoek Joachim 15-9-2026). */
+.bpp-heads { grid-column: 2; grid-row: 1; }
 .bpp-side {
+  grid-column: 1;
+  grid-row: 2;
   position: sticky;
   top: 24px;
 }
+.bpp-content { grid-column: 2; grid-row: 2; }
 .bpp-side-label { margin: 0 0 10px 14px; }
 .bpp-tabs {
   display: flex;
@@ -498,9 +505,9 @@
 
 @media (max-width: 900px) {
   .bpp-header-inner, .bpp-main { padding-left: 20px; padding-right: 20px; }
-  .bpp-main { padding-top: 32px; padding-bottom: 56px; display: block; }
+  .bpp-main { padding-top: 32px; padding-bottom: 56px; display: flex; flex-direction: column; }
   /* Terug naar de rij tabs bovenaan, zoals in het ontwerp. */
-  .bpp-side { position: static; margin-bottom: 32px; }
+  .bpp-side { position: static; order: -1; margin-bottom: 32px; }
   .bpp-side-label { display: none; }
   .bpp-tabs { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 22px; border-left: 0; border-bottom: 1px solid var(--bpp-border); }
   .bpp-tab { border-left: 0; border-bottom: 3px solid transparent; margin: 0 0 -1px; padding: 0 0 12px; font-size: 1rem; }
