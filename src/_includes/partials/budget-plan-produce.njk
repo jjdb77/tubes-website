@@ -112,7 +112,9 @@
       {%- endfor %}
     </section>
 
-    {#- Het verhaal: per productie én per stap. -#}
+    {#- Het verhaal: per productie én per stap. Niet in de sectie op een gewone
+        pagina (verzoek Joachim 15-9-2026), alleen nog op de losse pagina. -#}
+    {%- if not bppEmbed %}
     <section class="bpp-story" aria-label="The problem and the fix">
       {%- for p in d.productions %}
       {%- set firstProd = loop.first %}
@@ -144,6 +146,7 @@
       {%- endfor %}
       {%- endfor %}
     </section>
+    {%- endif %}
     </div>
   </div>
 </div>

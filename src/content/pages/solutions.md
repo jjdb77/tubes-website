@@ -21,7 +21,7 @@ sections:
     lead: |
       Eight fictional productions show what Tubes does in each of the three steps.
 
-      Pick a kind of production, then choose a step for the story behind it.
+      Pick a kind of production, then choose a step to see how it flows.
   - type: cards
     theme: teal
     heading: What Tubes Covers
