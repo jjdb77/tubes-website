@@ -8,12 +8,15 @@
     (js/budget-plan-produce.js) zet alleen `hidden` en `data-cur`. Opmaak:
     css/budget-plan-produce.css (klassen bpp-).
 
-    `bppEmbed` (gezet door de sectie) maakt de productietitel een <p> en de
-    verhaalkop een <h3>: op een gewone pagina heeft de sectie zelf al een h2. -#}
+    `bppEmbed` (gezet door de sectie) maakt de productietitel en de verhaalkop
+    een <p>: op een gewone pagina heeft de sectie zelf al een h2, en 24
+    verborgen verhaalkoppen zouden anders de koppenstructuur van die pagina
+    vervuilen. Ook staat de automatische wissel (elke 10 s) daar uit: tekst die
+    vanzelf verandert terwijl iemand leest, hoort niet op een publieke pagina. -#}
 {%- set d = budgetPlanProduce -%}
 {%- set first = d.productions[0] -%}
 {%- set hTitle = "p" if bppEmbed else "h1" -%}
-{%- set hStory = "h3" if bppEmbed else "h2" -%}
+{%- set hStory = "p" if bppEmbed else "h2" -%}
 
 {#- Kleine vorm (cirkel, zeshoek, driehoek) in de kleur van de stap. -#}
 {%- macro glyph(key) -%}
@@ -21,11 +24,12 @@
 {%- endmacro -%}
 
 {#- In de verhalen staan de vormen als tekens in de tekst ("flag the ● instantly").
-    Die worden hier dezelfde SVG's, zodat ze in elke browser hetzelfde ogen. -#}
+    Die worden hier dezelfde SVG's, zodat ze in elke browser hetzelfde ogen, met
+    een verborgen naam erbij voor schermlezers ("the Produce triangle"). -#}
 {%- macro rich(text) -%}
-{%- set b = '<span class="bpp-inline-glyph bpp-k-budget">' + glyph("budget") + '</span>' -%}
-{%- set p = '<span class="bpp-inline-glyph bpp-k-plan">' + glyph("plan") + '</span>' -%}
-{%- set r = '<span class="bpp-inline-glyph bpp-k-produce">' + glyph("produce") + '</span>' -%}
+{%- set b = '<span class="bpp-inline-glyph bpp-k-budget">' + glyph("budget") + '<span class="bpp-sr">Budget circle</span></span>' -%}
+{%- set p = '<span class="bpp-inline-glyph bpp-k-plan">' + glyph("plan") + '<span class="bpp-sr">Plan hexagon</span></span>' -%}
+{%- set r = '<span class="bpp-inline-glyph bpp-k-produce">' + glyph("produce") + '<span class="bpp-sr">Produce triangle</span></span>' -%}
 {{ text | escape | replace("●", b) | replace("⬢", p) | replace("▶", r) | safe }}
 {%- endmacro -%}
 
@@ -38,7 +42,7 @@
   <symbol id="bpp-g-plan" viewBox="0 0 30 30"><path d="M15 2.5 L26 9 L26 21 L15 27.5 L4 21 L4 9 Z"></path></symbol>
   <symbol id="bpp-g-produce" viewBox="0 0 30 30"><path d="M7 4 L27 15 L7 26 Z"></path></symbol>
 </svg>
-<div class="bpp{% if bppEmbed %} bpp-embed{% endif %}" data-bpp data-prod="{{ first.id }}" data-cur="budget">
+<div class="bpp{% if bppEmbed %} bpp-embed{% endif %}" data-bpp data-prod="{{ first.id }}" data-cur="budget" data-autoloop="{{ 'false' if bppEmbed else 'true' }}">
   <div class="bpp-main">
     {#- Titelblok per productie, boven de inhoud. Staat los van de kolommen,
         zodat de zijkolom links pas op de hoogte van de kolommenkaart begint. -#}

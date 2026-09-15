@@ -54,6 +54,15 @@
   display: inline-block;
   padding: 0 0.05em;
 }
+/* Alleen voor schermlezers (de naam bij een vorm-icoontje in de tekst). */
+.bpp-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* ---------- Kop ---------- */
 
@@ -501,6 +510,12 @@
    de zijkolom blijft daaronder hangen. Iets minder ruimte in de kolommen,
    want de container is smaller (1240px) dan de losse pagina (1400px). */
 .bpp-section-lead { margin-bottom: 2rem; }
+/* Kop en intro van de sectie op één lijn met het overzicht (rechts van de
+   zijkolom), anders springt de titel van de productie in ten opzichte van de kop. */
+@media (min-width: 901px) {
+  .bpp-section .section-heading,
+  .bpp-section .bpp-section-lead { margin-left: 212px; }
+}
 .bpp-embed .bpp-main { max-width: none; padding: 0; }
 .bpp-embed .bpp-side { top: 96px; }
 .bpp-embed .bpp-col { padding: 32px 28px 28px; }

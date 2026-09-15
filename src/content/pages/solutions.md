@@ -17,8 +17,8 @@ sections:
     image_alt: Different roles collaborating on a production
   - type: processoverview
     theme: light
-    heading: Budget, plan, produce
-    lead: Pick a kind of production and see what Tubes does in each of the three steps. Hover a step for the story behind it, click to keep it there.
+    heading: Budget, Plan, Produce
+    lead: Eight fictional productions show what Tubes does in each of the three steps. Pick a kind of production, then choose a step for the story behind it.
   - type: cards
     theme: teal
     heading: What Tubes Covers

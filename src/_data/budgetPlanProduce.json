@@ -166,7 +166,7 @@
     },
     {
       "id": "harbour",
-      "kind": "TV",
+      "kind": "Comedy series",
       "title": "HARBOUR LIGHTS",
       "meta": "Comedy · Series 2",
       "phase": "Development",
@@ -261,9 +261,9 @@
       }
     },
     {
-      "id": "crown",
-      "kind": "Serie",
-      "title": "THE CROWN",
+      "id": "kestrel",
+      "kind": "Drama series",
+      "title": "KESTREL",
       "meta": "Drama · Series 1",
       "phase": "Production",
       "stages": {
