@@ -137,7 +137,9 @@ sections:
 
       ### 10. Cookies and analytics
 
-      The Health Check pages do not use tracking or advertising cookies, and we do not run an analytics platform on them. Your browser stores nothing about you beyond what a page needs to work.
+      This website, including the Health Check pages, does not use tracking or advertising cookies.
+
+      We count visits with GoatCounter, a privacy-friendly analytics service. It records which pages are viewed, when, from which country and via which referring site, and the type of browser and screen size. It does not set cookies, does not store your IP address and does not build a profile of you, so it cannot tell us who you are. This counting takes place under our legitimate interest in understanding how the site is used. GoatCounter is operated from the Netherlands and its data stays within the EU.
 
       Elsewhere on this website, the pricing cards ask an external service (ipapi.co) which country you are in, based on your IP address, so that prices can be shown in your own currency. Your choice of currency is stored in your own browser.
 

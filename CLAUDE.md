@@ -162,7 +162,7 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - **Google Analytics zet cookies**, dus dat gaat via toestemming. `partials/cookie-banner.njk` verschijnt alleen als `google_analytics` is ingevuld, en het script van Google wordt **hard geblokkeerd**: `site.js` haalt gtag.js pas op nadat de bezoeker op Accept klikt. Zolang dat niet gebeurt gaat er geen enkel gegeven naar Google. De keuze staat in `localStorage` (`tubes-analytics-consent`), niet in een cookie.
 - Accepteren en weigeren zijn allebei één klik op hetzelfde niveau, zoals de Autoriteit Persoonsgegevens eist. Herzien kan via "Cookie settings" in de footer, die link staat er ook alleen als GA is ingesteld.
 - `track()` in site.js meldt gebeurtenissen aan GoatCounter, `dataLayer` en (na toestemming) `gtag`. De Health Check-trechter gebruikt dat al.
-- ⚠️ **Hoofdstuk 10 van `/privacy/`** zegt op dit moment dat er geen analytics draait. Zodra er wel iets draait, moet die tekst mee, anders staat er een onwaarheid in de privacyverklaring.
+- **Hoofdstuk 10 van `/privacy/`** beschrijft wat er draait (nu: GoatCounter, cookieloos). Zet je GA4 aan, dan moet die tekst mee (cookies, toestemming, Google als ontvanger), anders staat er een onwaarheid in de privacyverklaring.
 - Wat statistieken je wél en niet vertellen: aantallen, pagina's, bronnen en tijdstippen. **Niet wie er langskwam.** Voor bedrijfsnamen bij bezoeken heb je een aparte dienst nodig (Leadfeeder, Albacross en dergelijke), die IP-adressen aan bedrijven koppelt en een eigen privacy- en toestemmingsverhaal heeft.
 
 ## Doorverwijzingen (301)
@@ -381,5 +381,6 @@ Dataregio's, regel voor de organisatie-eenheid.
 - [ ] Etappe 2: Workspace-facturering checken → domein naar TransIP → Squarespace opzeggen (+ SPF/DKIM toevoegen bij TransIP)
 - [ ] Academy-video's: nieuwe plek kiezen ("Access all videos"-knop staat verborgen)
 - [ ] Bedrijvengids uitbreiden: IJsland (7), Bulgarije, Estland en Slovenie (8) zijn nu het dunst, en een lijst bekende bedrijven viel af omdat hun domein onbereikbaar was (zie het blok "Bedrijvengids"). Doe die ronde met de zoeklimiet omhoog.
-- [ ] Optioneel: GoatCounter-code voor statistieken (veld bestaat in CMS)
+- [x] GoatCounter aan sinds 15-9-2026 (code `joachim77`, dashboard https://joachim77.goatcounter.com). Hoofdstuk 10 van /privacy/ is meegegaan.
+- [ ] Google Analytics 4: alles staat klaar (banner, blokkade tot Accept), alleen het meet-ID `G-...` ontbreekt nog in settings.json. Bij invullen hoofdstuk 10 van /privacy/ opnieuw aanpassen (cookies, toestemming, Google als ontvanger).
 - [ ] Budget · Plan · Produce: staat als sectie op /solutions/; beslissen of de losse pagina /budget-plan-produce/ nog nodig is (nu noindex) of weg kan.
