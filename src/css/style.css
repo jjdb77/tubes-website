@@ -685,6 +685,33 @@ a:hover { color: var(--action); }
 .pricing-footnote { margin-top: 36px; font-size: 0.95rem; color: var(--muted); }
 .pricing-footnote strong { color: var(--ink-soft); }
 
+/* Derde blok onder de abonnementen ("Per production"): geen prijs, wel de
+   contactkanalen. Even breed als de twee kaarten erboven (2 x 480 + 24). */
+.plan-extra {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px; align-items: center;
+  margin: 24px auto 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px 36px;
+  box-shadow: var(--shadow-card);
+}
+.pricing-2 + .plan-extra { max-width: 984px; }
+.plan-extra h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.plan-extra .rich-text { font-size: 0.95rem; }
+.plan-extra .rich-text p:last-child { margin-bottom: 0; }
+.plan-extra-contact .button-row { margin-top: 0; }
+.plan-extra-button { display: inline-flex; align-items: center; gap: 10px; }
+.plan-extra-button i {
+  flex: none; display: inline-block; width: 18px; height: 18px;
+  background: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+.plan-extra-more { margin: 14px 0 0; font-size: 0.9rem; color: var(--muted); }
+.plan-extra-more a { color: var(--action-soft-ink); }
+
 /* ---------- CTA: donker inzetpaneel op crème ---------- */
 
 .section-cta { background: var(--bg); padding: clamp(40px, 6vw, 72px) 0; }
@@ -1125,6 +1152,7 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 @media (max-width: 700px) {
   .cards-3, .cards-2, .images-2, .images-3,
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr; }
+  .plan-extra { grid-template-columns: 1fr; gap: 20px; padding: 28px 24px; }
   .explore-footer-grid, .footer-grid { grid-template-columns: 1fr; }
   /* Brede tabellen in artikelen apart laten scrollen, de pagina zelf niet */
   .article-body table { display: block; overflow-x: auto; white-space: nowrap; }

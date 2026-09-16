@@ -35,6 +35,28 @@
       </div>
       {% endfor %}
     </div>
+    {# Derde blok onder de kaarten: per productie geen prijs maar contact.
+       De contactgegevens komen uit settings.json, dus dit blok en de
+       contactpagina lopen nooit uiteen. #}
+    {% if section.per_production and section.per_production.name %}
+    {% set pp = section.per_production %}
+    {% set whatsapp = settings.contact.whatsapp | replace(' ', '') | replace('+', '') %}
+    <div class="plan-extra">
+      <div class="plan-extra-text">
+        <h3>{{ pp.name }}</h3>
+        {% if pp.text %}<div class="rich-text">{{ pp.text | md | safe }}</div>{% endif %}
+      </div>
+      <div class="plan-extra-contact">
+        <div class="button-row">
+          {% if whatsapp %}
+          <a class="button button-secondary plan-extra-button" href="https://wa.me/{{ whatsapp }}{% if pp.whatsapp_text %}?text={{ pp.whatsapp_text | urlencode }}{% endif %}" target="_blank" rel="noopener"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/whatsapp.svg' | htmlBaseUrl }}')"></i>WhatsApp us</a>
+          {% endif %}
+          <a class="button button-secondary plan-extra-button" href="mailto:{{ settings.contact.email }}"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/envelope.svg' | htmlBaseUrl }}')"></i>Email us</a>
+        </div>
+        <p class="plan-extra-more">Or use the <a href="/contact/#contact-form">contact form</a>, or call <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>.</p>
+      </div>
+    </div>
+    {% endif %}
     {% if section.footnote %}<div class="rich-text pricing-footnote centered">{{ section.footnote | md | safe }}</div>{% endif %}
   </div>
 </section>

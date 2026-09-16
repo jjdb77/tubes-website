@@ -70,6 +70,7 @@ collections:
             fields:
               - { label: E-mailadres, name: email, widget: string }
               - { label: Telefoonnummer, name: phone, widget: string }
+              - { label: "WhatsApp-nummer (leeg = geen WhatsApp-knop)", name: whatsapp, widget: string, required: false, hint: "Het WhatsApp Business-nummer, met landcode. Wordt een wa.me-link in het blok 'Per production' onder de abonnementen." }
               - { label: Adresregels, name: address_lines, widget: list, field: { label: Regel, name: line, widget: string } }
           - label: Bedrijfsgegevens (footer "Legal")
             name: legal
@@ -369,6 +370,16 @@ collections:
                   - { label: "Extra prijsinfo", name: price_detail, widget: markdown, required: false }
                   - { label: "Kenmerken (opsomming met -)", name: features, widget: markdown, required: false }
                   - { label: Knop, name: button, widget: object, required: false, fields: *button_fields }
+              - label: "Blok onder de abonnementen (bijv. Per production: neem contact op)"
+                name: per_production
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Een breed blok onder de kaarten, zonder prijs maar met WhatsApp, e-mail, contactformulier en telefoon. De nummers en het e-mailadres komen uit Site-instellingen > Contactgegevens. Leeg laten = geen blok."
+                fields:
+                  - { label: Naam, name: name, widget: string, required: false }
+                  - { label: Omschrijving, name: text, widget: markdown, required: false }
+                  - { label: "Vooringevuld WhatsApp-bericht", name: whatsapp_text, widget: string, required: false, hint: "Staat alvast in het berichtvak als iemand op de WhatsApp-knop klikt." }
               - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
           - name: cta
             label: "Donkerblauwe call-to-action"

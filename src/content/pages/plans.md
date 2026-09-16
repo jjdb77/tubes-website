@@ -53,8 +53,13 @@ sections:
         button:
           label: Book a call
           url: /book-a-call/enterprise/
+    per_production:
+      name: Per production
+      text: |
+        For independent producers who want to use Tubes for a single production, 5 users included. Get in touch on WhatsApp or by email and we'll set it up with you.
+      whatsapp_text: "Hi Tubes, I would like to use Tubes for a single production."
     footnote: |
-      Running a single project, or a production company with multiple projects? Ask us about **Tubes Projects** (per production, includes 5 users) and **Tubes for Companies**? [Get in touch](/contact/).
+      Running a production company with multiple projects? Ask us about **Tubes for Companies**. [Get in touch](/contact/).
   - type: cta
     title: Not sure which plan fits?
     text: |

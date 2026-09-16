@@ -98,8 +98,13 @@ sections:
         button:
           label: Book a call
           url: /book-a-call/enterprise/
+    per_production:
+      name: Per production
+      text: |
+        For independent producers who want to use Tubes for a single production, 5 users included. Get in touch on WhatsApp or by email and we'll set it up with you.
+      whatsapp_text: "Hi Tubes, I would like to use Tubes for a single production."
     footnote: |
-      Questions, or curious about **Tubes Projects** and **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
+      Questions, or curious about **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
   - type: compare
     theme: white
     heading: When planning, finance and execution are disconnected, control is lost
