@@ -19,40 +19,6 @@ sections:
     theme: light
     heading: Budget, Plan, Produce
     lead: Pick a kind of production, then choose a step to see how it flows.
-  - type: cards
-    theme: teal
-    heading: What Tubes Covers
-    columns: 3
-    cards:
-      - icon: /assets/icons/calculator.svg
-        heading: Planning & Budgeting
-        text: |
-          Create structured budgets and schedules with full version control and scenario comparison. Explore alternatives and instantly see financial and operational impact before committing decisions.
-      - icon: /assets/icons/tuning.svg
-        heading: Execution & Cost Control
-        text: |
-          Track actuals, commitments and forecasts in real time. Changes are reflected instantly across budgets, schedules and reports. Production costs are captured, validated, approved and processed within the financial workflow before being transferred to your ledger accounting system.
-      - icon: /assets/icons/chart-pie.svg
-        heading: Reporting & Transparency
-        text: |
-          Provide stakeholders with clear, role-based insight into performance, risks and outcomes, without manual reconciliation.
-  - type: cards
-    theme: white
-    heading: By Role
-    columns: 3
-    cards:
-      - icon: /assets/icons/video-camera.svg
-        heading: Producers
-        text: |
-          Maintain oversight without limiting creative flexibility. Respond quickly to changes and keep productions aligned.
-      - icon: /assets/icons/currency-dollar.svg
-        heading: Finance & Controllers
-        text: |
-          Gain real-time visibility into costs, forecasts and risks with standardized workflows and audit-ready data.
-      - icon: /assets/icons/station.svg
-        heading: Executives, Broadcasters & Partners
-        text: |
-          Access reliable reporting, early warning signals and transparent insight into production performance.
   - type: feature
     theme: light
     heading: Who is Tubes for?
@@ -80,6 +46,23 @@ sections:
     video: /assets/videos/home-who-is-tubes-for.mp4
     poster: /assets/images/video-poster-home.jpg
     ambient: true
+  - type: cards
+    theme: white
+    heading: By Role
+    columns: 3
+    cards:
+      - icon: /assets/icons/video-camera.svg
+        heading: Producers
+        text: |
+          Maintain oversight without limiting creative flexibility. Respond quickly to changes and keep productions aligned.
+      - icon: /assets/icons/currency-dollar.svg
+        heading: Finance & Controllers
+        text: |
+          Gain real-time visibility into costs, forecasts and risks with standardized workflows and audit-ready data.
+      - icon: /assets/icons/station.svg
+        heading: Executives, Broadcasters & Partners
+        text: |
+          Access reliable reporting, early warning signals and transparent insight into production performance.
   - type: textblock
     theme: teal
     heading: By Production Type
