@@ -31,7 +31,7 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ARRI_%2826629292689%29.jpg/960px-ARRI_%2826629292689%29.jpg
         image_alt: "Two ARRI film lights on stands in front of equipment rental trucks in a New York street"
         image_credit: "Photo: Billie Grace Ward (CC BY 2.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ARRI_(26629292689).jpg)"
-        heading: Free Production Budget Comparison Tool
+        heading: Production Budget Comparison Tool
         url: /tools/budget-compare/
         link_label: Compare two versions
         text: |
