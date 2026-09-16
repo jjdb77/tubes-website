@@ -112,7 +112,7 @@ for (const form of contactForms) {
 
     status.textContent = "Sending…";
     status.className = "form-status";
-    data.set("page", location.pathname);
+    data.set("page", new URLSearchParams(location.search).get("from") || location.pathname);
     const verstuur = () => {
       data.set("form_token", formToken);
       return fetch(endpoint, {
@@ -231,16 +231,35 @@ for (const form of contactForms) {
 // Demo-popup: knoppen naar /contact/ openen het formulier als popup
 const demoModal = document.getElementById("demo-modal");
 if (demoModal && typeof demoModal.showModal === "function") {
+  // Op de gratis tools staat het formulier in een iframe (/demo/embed/), want
+  // de CSP daar verbiedt elk formulier op de pagina zelf. De src gaat er pas
+  // in bij het openen, en de ingesloten pagina meldt haar hoogte.
+  const demoFrame = demoModal.querySelector("iframe[data-src]");
   for (const link of document.querySelectorAll('a.button[href$="/contact/"]')) {
     link.addEventListener("click", (e) => {
       e.preventDefault();
+      if (demoFrame && !demoFrame.src) demoFrame.src = demoFrame.dataset.src;
       demoModal.showModal();
+    });
+  }
+  if (demoFrame) {
+    window.addEventListener("message", (e) => {
+      if (e.origin !== location.origin || !e.data || typeof e.data.demoEmbedHeight !== "number") return;
+      demoFrame.style.height = Math.ceil(e.data.demoEmbedHeight) + "px";
     });
   }
   demoModal.querySelector(".demo-modal-close").addEventListener("click", () => demoModal.close());
   demoModal.addEventListener("click", (e) => {
     if (e.target === demoModal) demoModal.close();
   });
+}
+
+// De ingesloten formulierpagina (/demo/embed/) geeft haar hoogte door aan de
+// popup die haar toont, zodat er geen tweede schuifbalk in het iframe komt.
+if (document.body.classList.contains("demo-embed") && window.parent !== window) {
+  const meldHoogte = () => window.parent.postMessage({ demoEmbedHeight: document.documentElement.scrollHeight }, location.origin);
+  new ResizeObserver(meldHoogte).observe(document.body);
+  meldHoogte();
 }
 
 // E-mailpopover bij het blok "Per production" onder de prijzen. Een kale

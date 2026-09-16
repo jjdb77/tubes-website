@@ -817,6 +817,13 @@ a:hover { color: var(--action); }
   border-top: 1px solid var(--divider);
   font-size: 0.9rem; color: var(--muted);
 }
+/* Popup op de gratis tools: het formulier zit in een iframe (/demo/embed/),
+   zie demo-modal-frame.njk. De ingesloten pagina draagt zelf de binnenmarge. */
+.demo-modal-frame { padding: 0; overflow: auto; }
+.demo-modal-frame iframe { display: block; width: 100%; height: min(680px, calc(100vh - 48px)); border: 0; }
+.demo-embed { margin: 0; background: var(--surface); color: var(--ink-soft); }
+.demo-embed-body { padding: clamp(28px, 4vw, 44px); }
+.demo-embed-body h2 { font-size: 1.7rem; margin-bottom: 0.3em; }
 
 /* ---------- Footer ---------- */
 

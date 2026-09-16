@@ -1,0 +1,11 @@
+{#- Demo-popup voor de gratis tools (browser_only). De CSP op /tools/* verbiedt
+    elk formulier en elke fetch op de pagina zelf, en dat moet zo blijven: dat
+    is de privacybelofte van de tool. Daarom laadt de popup het formulier als
+    eigen pagina (/demo/embed/, buiten /tools/) in een iframe. Die pagina mag
+    wel versturen, maar kan niet bij de budgetten op de tool-pagina komen.
+    site.js zet de src pas bij het openen, en past de hoogte aan op wat de
+    ingesloten pagina meldt. -#}
+<dialog id="demo-modal" class="demo-modal demo-modal-frame">
+  <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
+  <iframe data-src="/demo/embed/?from={{ page.url | urlencode }}" title="Request a Demo" loading="lazy"></iframe>
+</dialog>
