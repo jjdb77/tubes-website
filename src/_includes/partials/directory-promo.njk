@@ -24,7 +24,11 @@
     </div>
     <div class="guide-promo-actions">
       {% if promo.price %}<p class="guide-promo-price">{{ promo.price }}</p>{% endif %}
-      {% if promo.button %}<a class="button button-primary" href="{{ promo.button.url }}">{{ promo.button.label }}</a>{% endif %}
+      {#- De knop wijst naar /contact/ en site.js opent daar de demo-popup voor.
+          Op een browser_only-pagina (/tools/budget-compare/) is er geen popup,
+          want de CSP blokkeert er elk formulier; dan een nieuw tabblad, zodat
+          de geladen budgetten niet verloren gaan. -#}
+      {% if promo.button %}<a class="button button-primary" href="{{ promo.button.url }}"{% if browser_only %} target="_blank" rel="noopener"{% endif %}>{{ promo.button.label }}</a>{% endif %}
       {% if promo.link %}<a class="guide-promo-link" href="{{ promo.link.url }}">{{ promo.link.label }}</a>{% endif %}
     </div>
   </div>
