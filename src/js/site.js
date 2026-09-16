@@ -243,6 +243,23 @@ if (demoModal && typeof demoModal.showModal === "function") {
   });
 }
 
+// E-mailpopover bij het blok "Per production" onder de prijzen. Een kale
+// mailto-link doet niets op een computer zonder mailprogramma, dus de knop
+// opent een kort formulier; de mailto staat daarin als tweede weg.
+const emailModal = document.getElementById("email-modal");
+if (emailModal && typeof emailModal.showModal === "function") {
+  for (const link of document.querySelectorAll("[data-email-open]")) {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      emailModal.showModal();
+    });
+  }
+  emailModal.querySelector(".demo-modal-close").addEventListener("click", () => emailModal.close());
+  emailModal.addEventListener("click", (e) => {
+    if (e.target === emailModal) emailModal.close();
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Gebeurtenissen doorgeven aan de statistieken.
 //

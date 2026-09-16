@@ -56,8 +56,9 @@ sections:
     per_production:
       name: Per production
       text: |
-        For independent producers who want to use Tubes for a single production, 5 users included. Get in touch on WhatsApp or by email and we'll set it up with you.
+        For independent producers who want to use Tubes for a single production. Get in touch on WhatsApp or by email and we'll set it up with you.
       whatsapp_text: "Hi Tubes, I would like to use Tubes for a single production."
+      email_text: "I would like to use Tubes for a single production."
     footnote: |
       Running a production company with multiple projects? Ask us about **Tubes for Companies**. [Get in touch](/contact/).
   - type: cta

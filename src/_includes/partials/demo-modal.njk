@@ -24,5 +24,5 @@
     <button type="submit" class="button button-primary">Send</button>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
-  <p class="demo-modal-direct">Or contact us directly: <a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a> &middot; <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a></p>
+  <p class="demo-modal-direct">Or contact us directly: <a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a> &middot; <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>{% if settings.contact.whatsapp %} &middot; <a href="https://wa.me/{{ settings.contact.whatsapp | replace(' ', '') | replace('+', '') }}" target="_blank" rel="noopener">WhatsApp</a>{% endif %}</p>
 </dialog>

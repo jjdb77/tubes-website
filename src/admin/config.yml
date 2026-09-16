@@ -380,6 +380,7 @@ collections:
                   - { label: Naam, name: name, widget: string, required: false }
                   - { label: Omschrijving, name: text, widget: markdown, required: false }
                   - { label: "Vooringevuld WhatsApp-bericht", name: whatsapp_text, widget: string, required: false, hint: "Staat alvast in het berichtvak als iemand op de WhatsApp-knop klikt." }
+                  - { label: "Vooringevuld e-mailbericht", name: email_text, widget: string, required: false, hint: "Staat alvast in het berichtvak van de popover achter de knop Email us." }
               - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
           - name: cta
             label: "Donkerblauwe call-to-action"

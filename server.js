@@ -179,6 +179,9 @@ app.post("/api/contact", (req, res) => {
   const email = String(b.email || "").trim().slice(0, 200);
   const phone = String(b.phone || "").trim().slice(0, 50);
   const message = String(b.message || "").trim().slice(0, 5000);
+  // Waar het formulier voor dient; bepaalt naar wie de mail gaat. Alleen
+  // bekende waarden, anders leeg.
+  const topic = ["per-production"].includes(b.topic) ? b.topic : "";
 
   if (!first || !last || !email || !message || !email.includes("@")) {
     return res.status(400).json({ ok: false, error: "Missing fields" });
@@ -204,6 +207,7 @@ app.post("/api/contact", (req, res) => {
     phone,
     message,
     page: String(b.page || "").slice(0, 200),
+    ...(topic ? { topic } : {}),
     ...(spamReden ? { spam: true, spam_reason: spamReden } : {}),
   };
   fs.appendFileSync(DATA_FILE, JSON.stringify(entry) + "\n");
@@ -215,10 +219,13 @@ app.post("/api/contact", (req, res) => {
   }
 
   // Alles gaat per mail door. Een suggestie voor een van de lijsten krijgt zijn
-  // eigen opmaak en onderwerp; al het andere gaat als contactbericht naar
+  // eigen opmaak en onderwerp, een bericht uit het blok "Per production" gaat
+  // naar de sales-adressen; al het andere gaat als contactbericht naar
   // CONTACT_EMAIL.
   if (LOCATIE_PREFIX.test(String(entry.message || ""))) {
     meldLocatieSuggestie(entry).catch((err) => console.error("[mail] locatiesuggestie:", err.message));
+  } else if (entry.topic === "per-production") {
+    meldPerProductie(entry).catch((err) => console.error("[mail] per production:", err.message));
   } else {
     meldContactbericht(entry).catch((err) => console.error("[mail] contactbericht:", err.message));
   }
@@ -526,8 +533,9 @@ async function verstuurWachtenden({ alles = false } = {}) {
   return wachtenden.length;
 }
 
-async function stuurMail(naar, onderwerp, html, antwoordNaar) {
+async function stuurMail(naar, onderwerp, html, antwoordNaar, cc) {
   const ontvangers = adressen(naar);
+  const kopie = adressen(cc || "");
   if (!MAIL_KEY || !ontvangers.length) {
     console.warn("[mail] geen sleutel of geen ontvanger, mail niet verstuurd:", onderwerp);
     return false;
@@ -542,6 +550,7 @@ async function stuurMail(naar, onderwerp, html, antwoordNaar) {
       body: JSON.stringify({
         from: MAIL_FROM,
         to: ontvangers,
+        ...(kopie.length ? { cc: kopie } : {}),
         subject: onderwerp,
         html,
         // Antwoorden gaat zo rechtstreeks naar de afzender van het formulier.
@@ -640,6 +649,28 @@ async function meldContactbericht(entry) {
   </div>`;
   const onderwerp = `${entry.spam ? "Mogelijk spam: " : ""}Contactformulier: ${naam}`;
   await stuurMail(CONTACT_EMAIL, onderwerp, html, entry.email);
+}
+
+// Het blok "Per production" onder de prijzen (Home en /plans/): een
+// onafhankelijke producent die Tubes voor één productie wil. Dat is een
+// verkoopvraag, dus die gaat naar contact@ met Chris in de cc (verzoek Joachim
+// 16-9-2026), niet naar het gewone contactadres.
+const PER_PRODUCTION_EMAIL = process.env.PER_PRODUCTION_EMAIL || "contact@tubes.media";
+const PER_PRODUCTION_CC = process.env.PER_PRODUCTION_CC || "chris.arboit@tubes.media";
+
+async function meldPerProductie(entry) {
+  if (!MAIL_KEY) return;
+  const naam = `${entry.first_name} ${entry.last_name}`.trim();
+  const vanaf = entry.page ? `https://www.tubes.media${entry.page}` : "https://www.tubes.media/plans/";
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1C2B33;line-height:1.6">
+    <p><strong>${esc(naam)}</strong> wil Tubes voor één productie gebruiken (knop "Email us" onder de prijzen).</p>
+    <p><a href="mailto:${esc(entry.email)}">${esc(entry.email)}</a> &middot; ${esc(stamp(entry.at))}</p>
+    <p style="background:#F6F7F9;padding:12px;border-radius:8px;white-space:pre-line">${esc(entry.message)}</p>
+    ${entry.spam ? '<p style="color:#8a6d3b"><em>Let op: het verborgen veld was ingevuld. Meestal een bot, maar soms een wachtwoordmanager, dus dit bericht kan echt zijn.</em></p>' : ""}
+    <p><a href="${esc(vanaf)}">De pagina waar het vandaan komt</a> &middot; <a href="https://www.tubes.media/beheer">Alle berichten op /beheer</a></p>
+  </div>`;
+  const onderwerp = `${entry.spam ? "Mogelijk spam: " : ""}Per production: ${naam}`;
+  await stuurMail(PER_PRODUCTION_EMAIL, onderwerp, html, entry.email, PER_PRODUCTION_CC);
 }
 
 // Eenmalige inhaalslag. Tot 4-9-2026 werden gewone contactberichten alleen naar
@@ -1003,7 +1034,7 @@ function contactCard(s) {
   return `<article class="msg">
         <header><strong>${esc(s.first_name)} ${esc(s.last_name)}</strong>
           <span>${stamp(s.at)}</span></header>
-        <p class="meta">${s.spam ? spamTag(s) + " " : ""}<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
+        <p class="meta">${s.topic === "per-production" ? '<span class="tag">Per production</span> ' : ""}${s.spam ? spamTag(s) + " " : ""}<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.phone ? " &middot; " + esc(s.phone) : ""}${s.page ? " &middot; via " + esc(s.page) : ""}</p>
         <p class="body">${esc(s.message)}</p>
       </article>`;
 }

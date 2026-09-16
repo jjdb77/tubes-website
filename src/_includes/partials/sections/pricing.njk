@@ -51,11 +51,40 @@
           {% if whatsapp %}
           <a class="button button-secondary plan-extra-button" href="https://wa.me/{{ whatsapp }}{% if pp.whatsapp_text %}?text={{ pp.whatsapp_text | urlencode }}{% endif %}" target="_blank" rel="noopener"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/whatsapp.svg' | htmlBaseUrl }}')"></i>WhatsApp us</a>
           {% endif %}
-          <a class="button button-secondary plan-extra-button" href="mailto:{{ settings.contact.email }}"><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/envelope.svg' | htmlBaseUrl }}')"></i>Email us</a>
+          {# Geen mailto: die doet niets op een computer zonder mailprogramma.
+             De knop opent een popover met een kort formulier; de mailto staat
+             daarin als tweede weg. #}
+          <a class="button button-secondary plan-extra-button" href="mailto:{{ settings.contact.email }}" data-email-open><i aria-hidden="true" style="--icon: url('{{ '/assets/icons/envelope.svg' | htmlBaseUrl }}')"></i>Email us</a>
         </div>
         <p class="plan-extra-more">Or use the <a href="/contact/#contact-form">contact form</a>, or call <a href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>.</p>
       </div>
     </div>
+    <dialog id="email-modal" class="demo-modal">
+      <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
+      <h2>Email us</h2>
+      <p class="demo-modal-intro">Tell us a little about your production and we'll get back to you by email.</p>
+      <form class="contact-form" method="POST" action="{{ settings.form_endpoint }}" data-endpoint="{{ settings.form_endpoint }}" data-email="{{ settings.contact.email }}">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
+        <input type="hidden" name="topic" value="per-production">
+        <div class="form-row">
+          <label>First name <span class="req">(required)</span>
+            <input type="text" name="first_name" autocomplete="given-name" required>
+          </label>
+          <label>Last name <span class="req">(required)</span>
+            <input type="text" name="last_name" autocomplete="family-name" required>
+          </label>
+        </div>
+        <label>Email <span class="req">(required)</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>Message <span class="req">(required)</span>
+          <textarea name="message" rows="4" required>{{ pp.email_text or "I would like to use Tubes for a single production." }}</textarea>
+        </label>
+        <button type="submit" class="button button-primary">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="demo-modal-direct">Or email us directly: <a href="mailto:{{ settings.contact.email }}?subject={{ 'Tubes for a single production' | urlencode }}">{{ settings.contact.email }}</a>{% if whatsapp %} &middot; <a href="https://wa.me/{{ whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>{% endif %}</p>
+    </dialog>
     {% endif %}
     {% if section.footnote %}<div class="rich-text pricing-footnote centered">{{ section.footnote | md | safe }}</div>{% endif %}
   </div>
