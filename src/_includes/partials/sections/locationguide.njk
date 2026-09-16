@@ -69,6 +69,7 @@
     <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><symbol id="guide-heart" viewBox="0 0 16 16"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol></svg>
     <div class="guide-layout">
       <div class="guide-main">
+        {% if section.promo and section.promo_inline != false %}{% set promoVariant = "inline" %}{% include "partials/directory-promo.njk" %}{% endif %}
         <div class="guide-grid" data-guide-grid>
           {% for loc in filmlocations.locations %}
           {#- De zoektekst staat bewust NIET als attribuut in de kaart: met honderden
@@ -84,13 +85,18 @@
         <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-location">suggest a location</a>.</p>
       </div>
 
-      <aside class="guide-aside" data-guide-aside aria-label="Your comparison">
-        <h3>Side by side</h3>
-        <ol class="guide-slots" data-guide-slots></ol>
-        <button type="button" class="button button-primary" data-guide-compare-btn disabled>Compare side by side</button>
-        <button type="button" class="button button-secondary" data-guide-clear hidden>Clear</button>
-        <p class="guide-aside-note">Pick two or three locations with the Compare button on a card.</p>
-      </aside>
+      {#- Zelfde opzet als directory.njk: de wrapper plakt (sticky), niet het
+          paneel zelf, zodat het reclameblok eronder meeschuift. -#}
+      <div class="guide-side">
+        <aside class="guide-aside" data-guide-aside aria-label="Your comparison">
+          <h3>Side by side</h3>
+          <ol class="guide-slots" data-guide-slots></ol>
+          <button type="button" class="button button-primary" data-guide-compare-btn disabled>Compare side by side</button>
+          <button type="button" class="button button-secondary" data-guide-clear hidden>Clear</button>
+          <p class="guide-aside-note">Pick two or three locations with the Compare button on a card.</p>
+        </aside>
+        {% if section.promo %}{% set promoVariant = "aside" %}{% include "partials/directory-promo.njk" %}{% endif %}
+      </div>
     </div>
 
     <div class="loc-request" id="request-location">

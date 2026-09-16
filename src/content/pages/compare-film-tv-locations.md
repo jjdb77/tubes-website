@@ -12,18 +12,40 @@ sections:
       Places to shoot and studios to hire: factories and hospitals, hotels and houses, streets and villages, coastlines and mountains, sound stages and backlots. Search within a country or region, see everything on the map, open the official links, and put up to three locations side by side on practical facts.
 
       Free and open to everyone, no sign-up. Every entry links to the venue's own page and to the film commission, and we list only what a venue publishes itself. Is your location missing? Suggest it below and we add it with verified details. Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
-    buttons_position: side
     tight: true
     buttons:
       - label: Browse locations
         url: "#locations"
       - label: Suggest a location
         url: "#request-location"
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: locationguide
     theme: light
     heading: Search locations and studios
     intro: |
       A disused hospital, a factory floor, a hotel lobby, a 1970s housing estate, a mountain village, a sound stage with a water tank: type what you need, filter by country or type, and select up to three locations to compare them side by side on what each venue publishes (facilities, capacity, permits, published rates). Every entry links to the official site and the film commission, and each card shows the production incentive that applies in that country.
+    promo_inline: false
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: feature
     theme: teal
     heading: From location shortlist to production plan

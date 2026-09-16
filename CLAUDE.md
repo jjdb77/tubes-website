@@ -297,6 +297,12 @@ Vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tubes w
 - **Prijs in de structured data is bewust voorzichtig**: een bedrag uit `pricing_model` is bijna altijd een instaptarief, dus het gaat als `lowPrice` in een AggregateOffer, niet als vaste prijs. "Free, open source" levert een Offer met prijs 0 op; publiceert een leverancier niets, dan staat er geen Offer.
 - Tubes staat er als gewoon product tussen, met dezelfde velden. Op elke productpagina staat in de voetnoot dat Tubes de gids publiceert en er zelf in staat. Let op: Tubes zit in "Production management", dus het verschijnt niet in de alternatievenlijst van budgetteringssoftware zoals Movie Magic Budgeting. Dat klopt met de indeling; verplaats het niet om Tubes bij concurrenten in beeld te krijgen.
 
+### Reclameblok voor Tubes op de gratis tools
+
+- Het blok "Budgeting, planning and cost control in one platform" (chips Budget → Plan → Produce, "From € 49 per month", knop Request a Demo) staat **sinds 16-9-2026 op alle gratis tools** behalve /resources/ zelf en de Health Check-landingspagina (die heeft zijn eigen knop; een demo-knop ernaast zou ermee concurreren). Partial: `partials/directory-promo.njk`, drie varianten (hero / aside / inline), CSS onder "Reclameblok voor Tubes" in style.css.
+- Waar het staat: in de **hero** (rechterkolom, knoppen van de hero gaan dan onder de tekst) van de locatiegids, bedrijvengids, festivals, software, incentives en /tools/budget-compare/; bij de vier zoeklijsten (`directory` en `locationguide`) ook in de **zijkolom** onder "Side by side" (plakt mee), met `promo_inline: false` omdat de hero het al toont. Op /news/ staat het blok in de template zelf (`src/news.njk`), want die pagina heeft geen secties.
+- **De tekst staat per pagina in de front matter** (veld `promo` op de hero- en lijstsectie, in het CMS "Reclameblok voor Tubes"), dus twaalf kopieën. Wijzig je de tekst, doe dat dan overal tegelijk (grep op "Budgeting, planning and cost control in one platform"). Niet op de bedrijfs-, software- en landpagina's (/companies/..., /software/...); dat kan later, zie de opmerking bovenin de partial waarom het blok bovenin hoort.
+
 ### Incentive-vergelijking: /compare-film-incentives/
 
 - Landen/regelingen vergelijken op geld; "opzich grappig, laat maar staan" (Joachim), maar secundair aan de gids.

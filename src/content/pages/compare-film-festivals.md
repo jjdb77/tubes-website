@@ -12,13 +12,23 @@ sections:
       From Berlinale and the Marché du Film to series markets, industry conferences and broadcast technology shows: search by type, country or month, see the calendar on a map, and put up to three events side by side to decide where to premiere, sell, pitch or shop for kit.
 
       Free and open to everyone. Only what an event publishes itself is listed; missing one? Suggest it below. Looking for places to shoot? See the [locations guide](/compare-film-tv-locations/).
-    buttons_position: side
     tight: true
     buttons:
       - label: Browse events
         url: "#directory"
       - label: Suggest an event
         url: "#request-entry"
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: directory
     dataset: filmfestivals
     noun: events
@@ -58,6 +68,18 @@ sections:
       Festival, market, series event or trade show not listed, or a date that changed? Tell us which one, add the official link, and we add or correct it. We only publish dates and details the event itself publishes.
     request_field_label: Event and place
     request_placeholder: "For example: Cinekid, Amsterdam"
+    promo_inline: false
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: feature
     theme: teal
     heading: From festival calendar to production plan

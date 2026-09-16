@@ -38,8 +38,24 @@ description: "New tools, guides and product updates from Tubes, plus the film an
   <a class="skip-link" href="#main">Skip to content</a>
   {% include "partials/header.njk" %}
   <main id="main">
+    {#- Zelfde reclameblok als op de andere gratis tools (zie
+        partials/directory-promo.njk); de tekst staat daar per pagina in de
+        front matter, hier in de template omdat deze pagina geen secties heeft. -#}
+    {% set section = {
+      promo: {
+        heading: "Budgeting, planning and cost control in one platform",
+        text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero.",
+        chips: [
+          { label: "Budget", tone: "blue" },
+          { label: "Plan", tone: "amber" },
+          { label: "Produce", tone: "teal" }
+        ],
+        price: "From € 49 per month",
+        button: { label: "Request a Demo", url: "/contact/" }
+      }
+    } %}
     <section class="section section-hero">
-      <div class="container hero-grid hero-single">
+      <div class="container hero-grid">
         <div class="hero-text">
           <span class="kicker">News</span>
           <h1>News for <em>production</em> teams</h1>
@@ -56,6 +72,7 @@ description: "New tools, guides and product updates from Tubes, plus the film an
             <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
           </div>
         </div>
+        {% set promoVariant = "hero" %}{% include "partials/directory-promo.njk" %}
       </div>
     </section>
 

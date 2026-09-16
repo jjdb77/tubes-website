@@ -522,6 +522,14 @@ collections:
               - { label: Introtekst, name: intro, widget: markdown, required: false, hint: "De locaties zelf staan onder 'Filmlocaties (locatiegids)'." }
               - { label: "Kop bij het suggestieformulier", name: request_heading, widget: string, required: false, default: "Is your location not listed? Suggest it" }
               - { label: "Tekst bij het suggestieformulier", name: request_text, widget: markdown, required: false }
+              - label: "Reclameblok voor Tubes (leeg = niet tonen)"
+                name: promo
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Staat in de zijkolom naast de kaarten (blijft plakken bij scrollen) en op smalle schermen boven de kaarten."
+                fields: *promo_fields
+              - { label: "Reclameblok op smalle schermen ook boven de kaarten", name: promo_inline, widget: boolean, required: false, default: true, hint: "Uitzetten als de hero van de pagina al een reclameblok heeft." }
           - name: locations
             label: "Incentive-vergelijking (tool + tabel + aanvraagformulier)"
             summary: "{{fields.heading}}"

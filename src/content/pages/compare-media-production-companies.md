@@ -12,13 +12,23 @@ sections:
       Looking for a co-producer in Poland, a service production company in Portugal, a sound stage near Berlin or a grading suite in Lisbon? Search by what you need, filter by country, type and specialism, see everyone on a map, and put up to three companies side by side.
 
       Free and open to everyone. Only what a company publishes itself is listed; missing one? Suggest it below. Looking for places to shoot? See the [locations guide](/compare-film-tv-locations/).
-    buttons_position: side
     tight: true
     buttons:
       - label: Browse companies
         url: "#directory"
       - label: Suggest a company
         url: "#request-entry"
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: directory
     dataset: mediacompanies
     noun: companies
@@ -63,6 +73,18 @@ sections:
       Studio, production company or post-production house not listed, or a detail that changed? Tell us which one, add the official link, and we add or correct it. We only publish what a company itself publishes; credits, facilities and founding years stay empty rather than guessed.
     request_field_label: Company and place
     request_placeholder: "For example: Filmmore, Amsterdam"
+    promo_inline: false
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: feature
     theme: teal
     heading: From partner list to production plan

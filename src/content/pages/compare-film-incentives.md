@@ -12,13 +12,23 @@ sections:
       The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 32 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing, plus a link to the budget template each fund asks for.
 
       Open to everyone, no sign-up. Figures checked against the funds in September 2026, when Romania, Bulgaria, Serbia, Slovakia, the Baltic states, Slovenia, Luxembourg and Switzerland were added. Two of those have no rebate at all, and the table says so. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
-    buttons_position: side
     tight: true
     buttons:
       - label: Compare incentives
         url: "#compare"
       - label: Suggest a location or scheme
         url: "#request-location"
+    promo:
+      heading: Budgeting, planning and cost control in one platform
+      text: "One workspace for budget, schedule, purchase orders and actual costs, with approvals and reporting on top and a direct link to Xero."
+      chips:
+        - { label: Budget, tone: blue }
+        - { label: Plan, tone: amber }
+        - { label: Produce, tone: teal }
+      price: From € 49 per month
+      button:
+        label: Request a Demo
+        url: /contact/
   - type: locations
     theme: light
     heading: Compare incentives side by side

@@ -2759,9 +2759,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 
 /* ---------- Reclameblok voor Tubes in de zoeklijsten (partials/directory-promo.njk) ---------- */
 
-/* In de zoeklijsten (sectie "directory") plakt de wrapper om paneel en
-   reclameblok, niet het paneel zelf; de locatiegids heeft geen wrapper en
-   houdt de sticky op .guide-aside. */
+/* In de zoeklijsten (secties "directory" en "locationguide") plakt de wrapper
+   om paneel en reclameblok, niet het paneel zelf. */
 .guide-side { position: sticky; top: 90px; }
 .guide-side .guide-aside { position: static; }
 .guide-promo-aside { margin-top: 16px; }
