@@ -1220,6 +1220,28 @@
       "photo": null
     },
     {
+      "id": "gorilla-budgeting",
+      "name": "Gorilla Budgeting",
+      "vendor": "Jungle Software",
+      "vendor_country": "United States",
+      "category": "Budgeting & cost control",
+      "summary": "Film and television budgeting application with accounts, globals, fringes, tax incentive modelling, multiple currencies, expense tracking and reports for producers and financiers, as a Mac/Windows desktop app and as the browser-based Gorilla Budgeting Online with built-in access to the Gorilla Ratebook of union rates.",
+      "for_whom": "producers, line producers, production teams and film schools",
+      "pricing_model": "Desktop subscription USD 24.99 per month, USD 64.99 per quarter or USD 199 per year; Combo Pack with Gorilla Scheduling USD 39.99 per month or USD 369 per year; Combo Premium with Breakdown Assistant AI USD 49.99 per month or USD 449 per year; academic licences USD 109 (single) or USD 209 (Combo) per year; online edition priced in a separate portal, amounts not shown; free demo download (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "Web, macOS, Windows",
+      "integrations": "Gorilla Scheduling, Gorilla Ratebook (union rates), Koala Call Sheets",
+      "founded": 2002,
+      "official_url": "https://www.junglesoftware.com",
+      "source_urls": [
+        "https://junglesoftware.com/gorilla-budgeting/",
+        "https://junglesoftware.com/subscription-pricing/",
+        "https://junglesoftware.com/gorilla-budgeting-online/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "hot-budget",
       "name": "Hot Budget",
       "vendor": "Hot Bricks, LLC",
