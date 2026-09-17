@@ -17,7 +17,8 @@ eleventyComputed:
     gegroepeerd per land. Mikt op "film studios in Europe" en leidt door naar de
     land- en bedrijfspagina's. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
@@ -28,6 +29,8 @@ eleventyComputed:
       <h1>{{ t.plural }} in Europe</h1>
       <p class="company-summary">{{ t.count }} listed in {{ t.byCountry | length }} countries. {{ t.blurb }} Filter and put three side by side in the <a href="/compare-media-production-companies/">search tool</a>.</p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>What they specialise in</h2>
     <ul class="company-chips">
@@ -53,6 +56,8 @@ eleventyComputed:
       <a href="/companies/">All types and countries</a> &middot;
       <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

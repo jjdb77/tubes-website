@@ -19,7 +19,8 @@ eleventyComputed:
 {#- Stadspagina. Alleen vanaf companyIndex.minCity bedrijven, anders is er te
     weinig te zien om een eigen pagina te rechtvaardigen. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
@@ -35,6 +36,8 @@ eleventyComputed:
         Each one checked on its own website.
       </p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     {%- for g in stad.byType %}
     <h2>{{ g.label.plural }} in {{ stad.city }} <span class="company-count">{{ g.count }}</span></h2>
@@ -47,6 +50,8 @@ eleventyComputed:
       <a href="/companies/">Directory</a> &middot;
       <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

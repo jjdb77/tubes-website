@@ -8,7 +8,8 @@ description: "Directory of production management, budgeting, scheduling, account
 {#- Hub van de softwarelijst: vanaf hier is elke productpagina met gewone links
     bereikbaar. De zoekpagina blijft er voor filteren en vergelijken. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <span aria-current="page">Software</span>
@@ -21,6 +22,8 @@ description: "Directory of production management, budgeting, scheduling, account
         <a href="/compare-media-software/">comparison tool</a>.
       </p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>By category</h2>
     <ul class="company-tiles">
@@ -59,6 +62,8 @@ description: "Directory of production management, budgeting, scheduling, account
       <p>{{ softwareIndex.note }}</p>
       <p>Looking for a studio, a co-producer or a post house instead of software? See the <a href="/companies/">company directory</a>. Missing a product? <a href="/compare-media-software/#request-entry">Suggest it</a> and we add it with verified details.</p>
     </div>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

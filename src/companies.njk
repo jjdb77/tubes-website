@@ -9,7 +9,8 @@ description: "Directory of European studios, production companies and post-produ
     links bereikbaar, via land, type of stad. De zoekpagina blijft er voor de
     bezoeker; deze kant is voor doorbladeren en voor zoekmachines. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <span aria-current="page">Companies</span>
@@ -22,6 +23,8 @@ description: "Directory of European studios, production companies and post-produ
         <a href="/compare-media-production-companies/">search and comparison tool</a> to filter and put three side by side.
       </p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>By type</h2>
     <ul class="company-tiles">
@@ -60,6 +63,8 @@ description: "Directory of European studios, production companies and post-produ
       <p>Every entry was checked against the company's own website before it went in. Services, credits, facilities and founding years are copied as the company publishes them, or left empty. Nothing is estimated: an empty field means the company does not publish that, not that the answer is zero.</p>
       <p>Studios that you can hire also appear in the <a href="/compare-film-tv-locations/">locations guide</a>, where you find them on the map next to real places to shoot. Looking at a country on cost instead? See the <a href="/compare-film-incentives/">incentive comparison</a>. Missing a company? <a href="/compare-media-production-companies/#request-entry">Suggest it</a> and we add it with verified details.</p>
     </div>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

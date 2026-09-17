@@ -19,7 +19,8 @@ eleventyComputed:
 {#- Combinatiepagina "type in land". Alleen gemaakt vanaf companyIndex.minCombo
     bedrijven: met een of twee is zo'n pagina te dun om te laten indexeren. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
@@ -31,6 +32,8 @@ eleventyComputed:
       <h1>{{ tc.label }} in {{ tc.inCountry }}</h1>
       <p class="company-summary">{{ tc.count }} listed in {{ tc.inCountry }}, each checked on its own website. See <a href="{{ tc.countryUrl }}">every kind of company in {{ tc.inCountry }}</a>, or filter and compare in the <a href="/compare-media-production-companies/">search tool</a>.</p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     {% set lijst = tc.companies %}{% set toonLand = false %}{% set toonSpecialisme = true %}{% set meer = 0 %}
     {% include "partials/company-links.njk" %}
@@ -40,6 +43,8 @@ eleventyComputed:
       <a href="{{ tc.typeUrl }}">All {{ tc.label | lower }} in Europe</a> &middot;
       <a href="/companies/">Directory</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

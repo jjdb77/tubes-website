@@ -14,7 +14,8 @@ eleventyComputed:
 ---
 {#- Landpagina van de softwarelijst: waar de leverancier zit. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/software/">Software</a> <span aria-hidden="true">/</span>
@@ -25,6 +26,8 @@ eleventyComputed:
       <h1>Production software from {{ land.inName }}</h1>
       <p class="company-summary">{{ land.count }} products for film, TV and media production from vendors based in {{ land.inName }}, across {{ land.byCategory | length }} categories. Each one recorded from what the vendor publishes itself.</p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     {%- for g in land.byCategory %}
     <h2>{{ g.category }} <span class="company-count">{{ g.count }}</span></h2>
@@ -36,6 +39,8 @@ eleventyComputed:
       <a href="/software/">All vendor countries</a> &middot;
       <a href="/compare-media-software/">Search all {{ softwareIndex.total }} products</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

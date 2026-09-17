@@ -18,7 +18,8 @@ eleventyComputed:
     publiceert; prijzen staan er zoals gepubliceerd of helemaal niet. Tubes staat
     er als gewoon product tussen, met dezelfde velden als de rest. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/software/">Software</a> <span aria-hidden="true">/</span>
@@ -39,6 +40,8 @@ eleventyComputed:
         <a class="button button-secondary" href="/compare-media-software/">Compare with others</a>
       </p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>What {{ p.name }} does</h2>
     <table class="company-facts">
@@ -79,6 +82,8 @@ eleventyComputed:
       <a href="/software/">Software directory</a> &middot;
       <a href="/compare-media-software/">Search all {{ softwareIndex.total }} products</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

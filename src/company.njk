@@ -20,7 +20,8 @@ eleventyComputed:
     Alles hier komt uit de dataset, dus uit wat het bedrijf zelf publiceert;
     er wordt geen tekst bijverzonnen. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/companies/">Companies</a> <span aria-hidden="true">/</span>
@@ -42,6 +43,8 @@ eleventyComputed:
         {%- if c.guide_url %}<a class="button button-secondary" href="{{ c.guide_url }}">See it in the locations guide</a>{% endif %}
       </p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>What they do</h2>
     <table class="company-facts">
@@ -94,6 +97,8 @@ eleventyComputed:
       <a href="{{ c.typeUrl }}">All {{ c.typeLabel.plural | lower }} in Europe</a> &middot;
       <a href="/compare-media-production-companies/">Search all {{ companyIndex.total }} companies</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

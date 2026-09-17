@@ -1,0 +1,7 @@
+{#- Reclameblok voor Tubes op de bedrijfs- en softwarepagina's (en /news/):
+    zelfde blok als op de zoeklijsten (partials/directory-promo.njk), maar de
+    tekst komt uit src/_data/tubesPromo.json, want deze pagina's hebben geen
+    front matter in het CMS. Zet promoVariant ("aside" of "inline") vóór het
+    insluiten. -#}
+{%- set section = { promo: tubesPromo } -%}
+{% include "partials/directory-promo.njk" %}

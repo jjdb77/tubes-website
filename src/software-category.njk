@@ -14,7 +14,8 @@ eleventyComputed:
 {#- Categoriepagina. Mikt op zoekvragen als "production accounting software" en
     leidt door naar de productpagina's. -#}
 <article class="section theme-light company-page">
-  <div class="container company-inner">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span aria-hidden="true">/</span>
       <a href="/software/">Software</a> <span aria-hidden="true">/</span>
@@ -25,6 +26,8 @@ eleventyComputed:
       <h1>{{ cat.name }} software for film and TV</h1>
       <p class="company-summary">{{ cat.blurb }} {{ cat.count }} products listed, each recorded from what the vendor publishes itself. Filter and put three side by side in the <a href="/compare-media-software/">comparison tool</a>.</p>
     </header>
+    {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
 
     <h2>How they are delivered</h2>
     <ul class="company-chips">
@@ -51,6 +54,8 @@ eleventyComputed:
       <a href="/compare-media-software/">Search all {{ softwareIndex.total }} products</a> &middot;
       <a href="/companies/">Company directory</a>
     </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
   </div>
 </article>
 

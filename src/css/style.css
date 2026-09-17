@@ -3179,6 +3179,15 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 
 /* ---------- Bedrijvengids: pagina per bedrijf, land, type en stad ---------- */
 .company-inner { max-width: 820px; }
+/* Reclameblok voor Tubes (partials/company-promo.njk): rechts naast de tekst,
+   plakt mee via .guide-side; onder 1180px verdwijnt die kolom en toont de
+   media query van de zoeklijsten de inline-variant onder de kop. */
+.company-inner.has-promo { max-width: 1126px; display: grid; grid-template-columns: minmax(0, 820px) 280px; gap: 26px; align-items: start; }
+.company-main { min-width: 0; }
+.company-inner .guide-promo-aside { margin-top: 0; }
+@media (max-width: 1180px) {
+  .company-inner.has-promo { display: block; max-width: 820px; }
+}
 .company-head { margin-bottom: 40px; }
 .company-kicker { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
 .company-kicker a { color: var(--action-soft-ink); }
