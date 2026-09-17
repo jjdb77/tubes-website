@@ -197,6 +197,7 @@
         if (score > best) best = score;
         pool.push({ card, score });
       }
+      pool.sort((a, b) => (b.card.dataset.pin ? 1 : 0) - (a.card.dataset.pin ? 1 : 0));
       for (const item of pool) {
         const ok = item.score === best;
         if (ok) matched.add(item.card.dataset.id);
@@ -207,8 +208,9 @@
         if (show) shown++;
       }
       // Kaarten met een vaste positie (data-pin, bijv. Tubes op 2 in de
-      // softwarelijst) schuiven na elke filterbeurt naar die plek tussen de
-      // zichtbare kaarten; de rest houdt zijn volgorde.
+      // softwarelijst) schuiven na elke filter- of zoekbeurt naar die plek
+      // tussen de zichtbare kaarten; de rest houdt zijn volgorde. Een kaart die
+      // door het filter verborgen is blijft gewoon verborgen.
       for (const pinned of pinnedCards) {
         if (pinned.hidden) continue;
         const rest = [...grid.children].filter((c) => c !== pinned && !c.hidden);

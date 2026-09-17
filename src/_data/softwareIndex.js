@@ -42,10 +42,12 @@ const CATEGORY_BLURB = {
 
 const items = data.items;
 const sortByName = (a, b) => a.name.localeCompare(b.name);
-// Elke productlijst is alfabetisch, met Tubes op de tweede plek (verzoek
-// Joachim, 17-9-2026): zichtbaar zonder bovenaan te dringen. Geldt voor de
-// alternatieven, de categorie-, land- en hubpagina's; de zoekpagina doet
-// hetzelfde via `pin` in directories.js.
+// Elke productlijst waarin Tubes voorkomt is alfabetisch met Tubes op de
+// tweede plek (verzoek Joachim, 17-9-2026): zichtbaar zonder bovenaan te
+// dringen, en nooit onderaan bij de T. Geldt voor de alternatieven en de
+// categorie-, land- en hubpagina's; de zoekpagina doet hetzelfde via `pin`
+// in directories.js. Tubes hoort alleen in de categorieën waar het echt in
+// past (catsOf), dus in een lijst voor editing of payroll staat het niet.
 const TUBES_POSITION = 2;
 const sortProducts = (list) => {
   const s = [...list].sort(sortByName);

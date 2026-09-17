@@ -24,8 +24,10 @@ export default {
         return { ...p, categories, category_label: categories.join(" · "), page_url: `/software/${p.id}/` };
       })
       .sort((a, b) => a.name.localeCompare(b.name));
-    // Tubes op de tweede plek, ook na filteren of zoeken: `pin` zet de kaart
-    // in de browser op die positie tussen de zichtbare kaarten (directory.njk).
+    // Tubes op de tweede plek zodra het in de (gefilterde of doorzochte) lijst
+    // voorkomt, nooit onderaan bij de T: `pin` zet de kaart in de browser op
+    // die positie tussen de zichtbare kaarten (directory.njk). Waar Tubes niet
+    // bij past (editing, post, payroll) komt het door het filter niet in beeld.
     const i = items.findIndex((p) => p.id === "tubes");
     if (i > 1) items.splice(1, 0, ...items.splice(i, 1));
     if (i >= 0) items[1].pin = 2;
