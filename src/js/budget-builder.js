@@ -84,14 +84,15 @@
 
   // Stijlen: 0 standaard, 1 titel, 2 info, 3 samenvattingslabel, 4 samenvattingswaarde,
   // 5 tabelkop midden, 6 tabelkop links, 7 categorie, 8 tekst, 9 getal, 10 bedrag,
-  // 11 midden, 12 voetlabel, 13 voetwaarde (zelfde opzet als de export van Tubes)
+  // 11 midden, 12 voetlabel, 13 voetwaarde (zelfde opzet als de export van Tubes),
+  // 14 invulbaar percentage in de voet, 15 percentage op het categorieblad
   const STYLES_XML = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
 <fonts count="5"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="16"/><name val="Calibri"/></font><font><sz val="10"/><color rgb="FF666666"/><name val="Calibri"/></font><font><b/><sz val="12"/><name val="Calibri"/></font></fonts>
 <fills count="5"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFF3F4F6"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFF9FAFB"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFE5E7EB"/><bgColor indexed="64"/></patternFill></fill></fills>
 <borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border><border><left style="thin"><color rgb="FFE5E7EB"/></left><right style="thin"><color rgb="FFE5E7EB"/></right><top style="thin"><color rgb="FFE5E7EB"/></top><bottom style="thin"><color rgb="FFE5E7EB"/></bottom><diagonal/></border></borders>
 <cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
-<cellXfs count="14">
+<cellXfs count="16">
 <xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
 <xf numFmtId="0" fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>
 <xf numFmtId="0" fontId="3" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>
@@ -106,6 +107,8 @@
 <xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>
 <xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>
 <xf numFmtId="4" fontId="1" fillId="2" borderId="1" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+<xf numFmtId="10" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
 </cellXfs>
 <cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>
 </styleSheet>`;
@@ -151,25 +154,36 @@
     info.push(`Date: ${dateLabel(b.date || today())}`);
     rows.push(info.map((x) => S(x, 2)));
     rows.push(blankRow());
+    // Geen btw-regels als er geen btw-percentage is (leeg veld, of het
+    // sjabloon voor download): dan is het totaal gewoon het totaal.
+    const hasVat = b.vat !== null && b.vat !== undefined && b.vat !== "";
+    // De samenvatting bovenaan verwijst met formules naar de totaalregels
+    // onderaan, zodat een leeg sjabloon dat je zelf invult ook bovenaan
+    // meetelt. De rijen worden eerst met de waarde gezet en krijgen de
+    // formule zodra bekend is op welke rij het totaal terechtkomt.
     rows.push([S("BUDGET SUMMARY", 1)]);
-    rows.push([S("Budget Total", 3), N(t.subtotal, 4)]);
-    for (const a of t.additionals) rows.push([S(`${a.name} ${parseNum(a.percent)}%`, 3), N(a.amount, 4)]);
-    if (t.additionals.length) rows.push([S("Total incl. additional costs", 3), N(t.totalExcl, 4)]);
-    rows.push([S(`VAT ${parseNum(b.vat)}%`, 3), N(t.vat, 4)]);
-    rows.push([S("Total incl. VAT", 3), N(t.totalIncl, 4)]);
+    const summaryRows = [];
+    const addSummary = (label, value) => { rows.push([S(label, 3), N(value, 4)]); summaryRows.push(rows.length - 1); };
+    addSummary("Budget Total", t.subtotal);
+    for (const a of t.additionals) addSummary(a.name, a.amount);
+    if (t.additionals.length) addSummary("Total incl. additional costs", t.totalExcl);
+    if (hasVat) { addSummary("VAT", t.vat); addSummary("Total incl. VAT", t.totalIncl); }
     rows.push(blankRow());
     rows.push(blankRow());
     rows.push([S("Type", 6), S("Description", 6), S("Remarks", 6), S("Qty", 5), S("Unit", 5), S("Price/Unit", 5), S("Budget Total", 5)]);
     let dataStart = null;
+    const sectionRows = []; // eerste en laatste regel per sectie, voor het categorieblad
     for (const s of b.sections) {
       const label = `${s.number || "00"} - ${s.name || "Uncategorized"}`;
       rows.push(styledRow(7, label));
       merges.push(`A${rows.length}:${colRef(W - 1)}${rows.length}`);
+      const first = rows.length + 1;
       for (const l of s.lines) {
         const r = rows.length + 1;
         if (dataStart === null) dataStart = r;
         rows.push([S(l.code || "-", 11), S(l.description, 8), S(l.remarks, 8), N(parseNum(l.qty), 9), S(l.unit, 11), N(parseNum(l.rate), 10), F(`ROUND(D${r}*F${r},2)`, lineTotal(l), 10)]);
       }
+      sectionRows.push(s.lines.length ? { first, last: rows.length } : null);
     }
     const dataEnd = rows.length;
     rows.push(blankRow());
@@ -177,32 +191,47 @@
     const sumFormula = dataStart ? `SUM(G${dataStart}:G${dataEnd})` : "0";
     rows.push([null, null, null, null, S("Total (excl. VAT)", 12), E(12), F(sumFormula, t.subtotal, 13)]);
     merges.push(`E${footRow}:F${footRow}`);
+    const footRefs = [footRow]; // dezelfde volgorde als de samenvatting bovenaan
     let lastTotalRow = footRow;
+    // Percentages (contingency, production fee, btw) staan als invulbaar
+    // getal in kolom F, met de formule ernaast: wie het sjabloon in Excel
+    // gebruikt, past het percentage aan en de rest rekent mee.
+    const percentRow = (label, percent, baseRow, amount) => {
+      const r = rows.length + 1;
+      rows.push([null, null, null, null, S(`${label} (%)`, 12), N(parseNum(percent), 14), F(`ROUND(G${baseRow}*F${r}/100,2)`, amount, 13)]);
+      footRefs.push(r);
+      return r;
+    };
     if (t.additionals.length) {
-      const addRows = [];
-      for (const a of t.additionals) {
-        rows.push([null, null, null, null, S(`${a.name} ${parseNum(a.percent)}%`, 12), E(12), F(`ROUND(G${footRow}*${parseNum(a.percent)}/100,2)`, a.amount, 13)]);
-        merges.push(`E${rows.length}:F${rows.length}`);
-        addRows.push(rows.length);
-      }
+      const addRows = t.additionals.map((a) => percentRow(a.name, a.percent, footRow, a.amount));
       rows.push([null, null, null, null, S("Total incl. additional costs", 12), E(12), F(`G${footRow}+${addRows.map((r) => `G${r}`).join("+")}`, t.totalExcl, 13)]);
       merges.push(`E${rows.length}:F${rows.length}`);
       lastTotalRow = rows.length;
+      footRefs.push(lastTotalRow);
     }
-    rows.push([null, null, null, null, S(`VAT ${parseNum(b.vat)}%`, 12), E(12), F(`ROUND(G${lastTotalRow}*${parseNum(b.vat)}/100,2)`, t.vat, 13)]);
-    merges.push(`E${rows.length}:F${rows.length}`);
-    rows.push([null, null, null, null, S("Total incl. VAT", 12), E(12), F(`G${lastTotalRow}+G${rows.length}`, t.totalIncl, 13)]);
-    merges.push(`E${rows.length}:F${rows.length}`);
+    if (hasVat) {
+      const vatRow = percentRow("VAT", b.vat, lastTotalRow, t.vat);
+      rows.push([null, null, null, null, S("Total incl. VAT", 12), E(12), F(`G${lastTotalRow}+G${vatRow}`, t.totalIncl, 13)]);
+      merges.push(`E${rows.length}:F${rows.length}`);
+      footRefs.push(rows.length);
+    }
+    summaryRows.forEach((idx, i) => { rows[idx][1] = F(`G${footRefs[i]}`, rows[idx][1].v, 4); });
     const sheet1 = sheetXml(rows, [8, 30, 25, 8, 10, 12, 15], merges);
 
-    // Blad 2: Summary by Category
+    // Blad 2: Summary by Category, met formules naar het budgetblad
     const rows2 = [[S("Category Summary", 1)], [S(`Generated: ${dateLabel(today())}`, 2)], blankRow(), [S("Category", 6), S("# Items", 6), S("Budget Total", 6), S("% of Budget", 6)]];
-    for (const s of b.sections) {
+    const catFirst = rows2.length + 1;
+    const catTotalRow = catFirst + b.sections.length + 1;
+    b.sections.forEach((s, i) => {
       const st = sectionTotal(s);
-      rows2.push([S(`${s.number || "00"} - ${s.name || "Uncategorized"}`, 8), N(s.lines.length, 9), N(st, 10), S(t.subtotal ? `${((st / t.subtotal) * 100).toFixed(1)}%` : "0%", 11)]);
-    }
+      const r = rows2.length + 1;
+      const range = sectionRows[i];
+      const sum = range ? F(`SUM(Budget!G${range.first}:G${range.last})`, st, 10) : N(0, 10);
+      rows2.push([S(`${s.number || "00"} - ${s.name || "Uncategorized"}`, 8), N(s.lines.length, 9), sum, F(`IF($C$${catTotalRow}=0,0,C${r}/$C$${catTotalRow})`, t.subtotal ? st / t.subtotal : 0, 15)]);
+    });
     rows2.push(blankRow());
-    rows2.push([S("TOTAL", 12), N(lineCountOf(b), 13), N(t.subtotal, 13), S("100%", 12)]);
+    const catLast = catFirst + b.sections.length - 1;
+    rows2.push([S("TOTAL", 12), N(lineCountOf(b), 13), b.sections.length ? F(`SUM(C${catFirst}:C${catLast})`, t.subtotal, 13) : N(0, 13), F(`IF($C$${catTotalRow}=0,0,1)`, t.subtotal ? 1 : 0, 15)]);
     const sheet2 = sheetXml(rows2, [40, 10, 16, 12], []);
 
     const files = [

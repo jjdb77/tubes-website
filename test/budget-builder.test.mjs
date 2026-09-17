@@ -64,7 +64,9 @@ await (async () => {
     assert.deepEqual(rows[0], ["Draft 1"]);
     assert.ok(rows[1].includes("Project: Test") && rows[1].includes("Currency: EUR"));
     assert.deepEqual(rows[2], ["BUDGET SUMMARY"]);
-    assert.deepEqual(rows[3], ["Budget Total", 63469.12]);
+    assert.deepEqual(rows[3], ["Budget Total", 63469.12], "samenvatting bovenaan: formule met gecachete waarde");
+    assert.deepEqual(rows[4], ["Contingency", 6346.91]);
+    assert.deepEqual(rows[6], ["VAT", 14661.37]);
     const hi = BC.findHeaderIndex(rows);
     assert.deepEqual(rows[hi], ["Type", "Description", "Remarks", "Qty", "Unit", "Price/Unit", "Budget Total"]);
     assert.equal(rows[hi + 1][0], "1100 - Development", "categorieregel");
@@ -72,6 +74,9 @@ await (async () => {
     assert.equal(rows[hi + 3][6], 2469.12);
     const foot = rows.find((r) => r[4] === "Total (excl. VAT)");
     assert.equal(foot[6], 63469.12);
+    const pct = rows.find((r) => r[4] === "Contingency (%)");
+    assert.deepEqual(pct.slice(4), ["Contingency (%)", 10, 6346.91], "percentage als invulbaar getal naast de formule");
+    assert.deepEqual(rows.at(-2).slice(4), ["VAT (%)", 21, 14661.37]);
     assert.equal(rows.at(-1)[4], "Total incl. VAT");
     assert.equal(rows.at(-1)[6], 84477.4);
     // De vergelijkingstool leest hem als budget: 3 regels, 2 secties, totalen overgeslagen
@@ -82,7 +87,22 @@ await (async () => {
     assert.deepEqual([...new Set(lines.map((l) => l.group))], ["1100 - Development", "2000 - Staff"]);
     const s2 = sheets[1].rows;
     assert.deepEqual(s2[2], ["Category", "# Items", "Budget Total", "% of Budget"]);
-    assert.deepEqual(s2.at(-1), ["TOTAL", 3, 63469.12, "100%"]);
+    assert.deepEqual(s2[3], ["1100 - Development", 2, 62469.12, 62469.12 / 63469.12], "categorieblad: som en aandeel als formule");
+    assert.deepEqual(s2.at(-1), ["TOTAL", 3, 63469.12, 1]);
   });
 })();
+await (async () => {
+  // Zonder btw (leeg veld, of het sjabloon voor download) geen btw-regels.
+  const noVat = { ...budget, vat: null, additionals: [] };
+  const sheets = await BC.parseXlsx(await C.buildXlsxFor(noVat).arrayBuffer());
+  t("Excel-export zonder btw: geen btw-regels, totaal is het totaal", () => {
+    const rows = sheets[0].rows;
+    assert.deepEqual(rows[3], ["Budget Total", 63469.12]);
+    assert.equal(rows[4][0], "Type", "geen tweede samenvattingsregel, meteen de tabelkop");
+    assert.equal(rows.at(-1)[4], "Total (excl. VAT)");
+    assert.equal(rows.at(-1)[6], 63469.12);
+    assert.ok(!rows.some((r) => String(r[4] || "").startsWith("VAT")));
+  });
+})();
+
 console.log(`${n} tests, exit ${process.exitCode || 0}`);
