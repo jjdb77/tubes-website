@@ -42,6 +42,17 @@ const CATEGORY_BLURB = {
 
 const items = data.items;
 const sortByName = (a, b) => a.name.localeCompare(b.name);
+// Elke productlijst is alfabetisch, met Tubes op de tweede plek (verzoek
+// Joachim, 17-9-2026): zichtbaar zonder bovenaan te dringen. Geldt voor de
+// alternatieven, de categorie-, land- en hubpagina's; de zoekpagina doet
+// hetzelfde via `pin` in directories.js.
+const TUBES_POSITION = 2;
+const sortProducts = (list) => {
+  const s = [...list].sort(sortByName);
+  const i = s.findIndex((p) => p.id === "tubes");
+  if (i >= 0 && s.length >= TUBES_POSITION && i !== TUBES_POSITION - 1) s.splice(TUBES_POSITION - 1, 0, ...s.splice(i, 1));
+  return s;
+};
 // Een product heeft een hoofdcategorie (`category`) en kan daarnaast in andere
 // categorieën staan (`also_in`, lijst). Tubes staat zo in "Production
 // management" én in "Budgeting & cost control": het hoort in de lijst van
@@ -68,7 +79,7 @@ const categories = [...byGroup(items, catsOf).entries()]
     url: `/software/category/${slug(name)}/`,
     blurb: CATEGORY_BLURB[name] || "",
     count: list.length,
-    products: [...list].sort(sortByName),
+    products: sortProducts(list),
     byDeployment: [...byGroup(list, (i) => i.deployment).entries()]
       .sort((a, b) => b[1].length - a[1].length)
       .map(([deployment, l]) => ({ deployment, count: l.length })),
@@ -82,24 +93,22 @@ const countries = [...byGroup(items, (i) => i.vendor_country).entries()]
     slug: slug(name),
     url: `/software/country/${slug(name)}/`,
     count: list.length,
-    products: [...list].sort(sortByName),
+    products: sortProducts(list),
     byCategory: [...byGroup(list, catsOf).entries()]
       .sort((a, b) => b[1].length - a[1].length)
-      .map(([category, l]) => ({ category, slug: slug(category), count: l.length, products: [...l].sort(sortByName) })),
+      .map(([category, l]) => ({ category, slug: slug(category), count: l.length, products: sortProducts(l) })),
   }))
   .sort((a, b) => b.count - a.count);
 
 const categoryUrl = new Map(categories.filter((c) => c.count >= MIN_GROUP).map((c) => [c.name, c.url]));
 const countryUrl = new Map(countries.filter((c) => c.count >= MIN_GROUP).map((c) => [c.name, c.url]));
 
-const products = items.map((p) => {
+const products = sortProducts(items).map((p) => {
   // "Alternatives to X": hetzelfde doel, dus een gedeelde categorie. Dat is
   // precies waar iemand op zoekt die al een product kent en wil vergelijken.
   const cats = catsOf(p);
-  const alternatives = items
-    .filter((o) => o.id !== p.id && catsOf(o).some((c) => cats.includes(c)))
-    .sort(sortByName);
-  const sameVendor = items.filter((o) => o.id !== p.id && o.vendor === p.vendor).sort(sortByName);
+  const alternatives = sortProducts(items.filter((o) => o.id !== p.id && catsOf(o).some((c) => cats.includes(c))));
+  const sameVendor = sortProducts(items.filter((o) => o.id !== p.id && o.vendor === p.vendor));
   return {
     ...p,
     url: `/software/${p.id}/`,

@@ -64,7 +64,7 @@
         <div class="guide-grid" data-guide-grid>
           {% for it in items %}
           {%- set card = section.card -%}
-          <article class="guide-card" id="dir-{{ it.id }}" data-id="{{ it.id }}"
+          <article class="guide-card" id="dir-{{ it.id }}" data-id="{{ it.id }}"{% if it.pin %} data-pin="{{ it.pin }}"{% endif %}
                    {% for f in filters %}data-f-{{ f.key }}="{{ it[f.key] if (it[f.key] is string) else (it[f.key] or []) | join('|') }}" {% endfor %}
                    {%- set hay = [] -%}
                    {%- for k, v in it -%}{%- if v and (k not in ["id", "lat", "lng", "photo", "source_urls", "official_url", "guide_url", "guide_id"]) -%}{%- set hay = (hay.push(v), hay) -%}{%- endif -%}{%- endfor %}
@@ -150,6 +150,7 @@
     const q = root.querySelector("#dir-search");
     const selects = [...root.querySelectorAll("[data-dir-filter]")];
     const cards = [...root.querySelectorAll(".guide-card")];
+    const pinnedCards = cards.filter((c) => c.dataset.pin);
     const countEl = root.querySelector("[data-guide-count]");
     const favCountEl = root.querySelector("[data-fav-count]");
     const noneEl = root.querySelector(".guide-none");
@@ -204,6 +205,16 @@
         // kaarten kost per toetsaanslag merkbaar veel herberekening.
         if (item.card.hidden === show) item.card.hidden = !show;
         if (show) shown++;
+      }
+      // Kaarten met een vaste positie (data-pin, bijv. Tubes op 2 in de
+      // softwarelijst) schuiven na elke filterbeurt naar die plek tussen de
+      // zichtbare kaarten; de rest houdt zijn volgorde.
+      for (const pinned of pinnedCards) {
+        if (pinned.hidden) continue;
+        const rest = [...grid.children].filter((c) => c !== pinned && !c.hidden);
+        const target = rest[Number(pinned.dataset.pin) - 1];
+        if (target) { if (target.previousElementSibling !== pinned) grid.insertBefore(pinned, target); }
+        else if (grid.lastElementChild !== pinned) grid.appendChild(pinned);
       }
       const left = matched.size - shown;
       countEl.textContent = matched.size + " of " + cards.length + " " + cfg.noun;

@@ -18,13 +18,18 @@ export default {
   // vergelijking ("Production management · Budgeting & cost control").
   mediasoftware: (() => {
     const d = load("mediasoftware.json");
-    return {
-      ...d,
-      items: d.items.map((p) => {
+    const items = d.items
+      .map((p) => {
         const categories = [p.category, ...(Array.isArray(p.also_in) ? p.also_in : [])].filter(Boolean);
         return { ...p, categories, category_label: categories.join(" · "), page_url: `/software/${p.id}/` };
-      }),
-    };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+    // Tubes op de tweede plek, ook na filteren of zoeken: `pin` zet de kaart
+    // in de browser op die positie tussen de zichtbare kaarten (directory.njk).
+    const i = items.findIndex((p) => p.id === "tubes");
+    if (i > 1) items.splice(1, 0, ...items.splice(i, 1));
+    if (i >= 0) items[1].pin = 2;
+    return { ...d, items };
   })(),
   // Elk bedrijf heeft ook een eigen pagina (/companies/<id>/); die link komt
   // hier als `page_url` bij, zodat de kaarten in de zoekpagina ernaartoe wijzen.
