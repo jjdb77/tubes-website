@@ -482,6 +482,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "src/mmg": "mmg" });
+  // Gratis downloads (het Excel-sjabloon van /film-budget-template/, gemaakt
+  // met scripts/gen-film-budget-template.mjs).
+  eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   // /admin alleen als statische kopie meenemen (niet als pagina, niet in de sitemap)

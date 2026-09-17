@@ -326,7 +326,7 @@ a:hover { color: var(--action); }
 .theme-dark .col-lead { color: #fff; }
 .theme-dark .kicker { color: rgba(231, 230, 227, 0.55); }
 .theme-dark .rich-text strong { color: #fff; }
-.theme-dark .rich-text li::before { border-color: #0FB6A2; }
+.theme-dark .rich-text ul > li::before { border-color: #0FB6A2; }
 .theme-dark a { color: #7BD9CC; }
 .theme-dark .button.button-secondary { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
 .theme-dark .button.button-secondary:hover { border-color: #fff; color: #fff; }
@@ -439,8 +439,13 @@ a:hover { color: var(--action); }
 /* ---------- Rich text ---------- */
 
 .rich-text ul { padding-left: 0; margin: 0 0 1em; list-style: none; }
-.rich-text li { margin-bottom: 0.55em; padding-left: 26px; position: relative; }
-.rich-text li::before {
+.rich-text li { margin-bottom: 0.55em; position: relative; }
+/* Het teal vinkje hoort alleen bij een opsomming; een genummerde lijst
+   (stappen) houdt zijn nummers, anders staan nummer en vinkje naast elkaar. */
+.rich-text ol { padding-left: 22px; margin: 0 0 1em; }
+.rich-text ol li { padding-left: 4px; }
+.rich-text ul > li { padding-left: 26px; }
+.rich-text ul > li::before {
   content: ""; position: absolute; left: 2px; top: 0.6em;
   width: 12px; height: 7px;
   border-left: 2.5px solid var(--action);
