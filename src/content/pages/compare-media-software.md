@@ -29,6 +29,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: directory
     dataset: mediasoftware
     noun: products
@@ -82,6 +85,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: feature
     theme: teal
     heading: Where Tubes fits

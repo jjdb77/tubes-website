@@ -19,5 +19,9 @@
   "button": {
     "label": "Request a Demo",
     "url": "/contact/"
+  },
+  "link": {
+    "label": "More about Tubes",
+    "url": "/"
   }
 }

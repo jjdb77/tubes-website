@@ -29,6 +29,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: directory
     dataset: filmfestivals
     noun: events
@@ -80,6 +83,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: feature
     theme: teal
     heading: From festival calendar to production plan

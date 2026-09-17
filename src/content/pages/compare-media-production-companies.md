@@ -29,6 +29,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: directory
     dataset: mediacompanies
     noun: companies
@@ -85,6 +88,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: feature
     theme: teal
     heading: From partner list to production plan

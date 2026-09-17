@@ -29,6 +29,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: locations
     theme: light
     heading: Compare incentives side by side

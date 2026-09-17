@@ -29,6 +29,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: locationguide
     theme: light
     heading: Search locations and studios
@@ -46,6 +49,9 @@ sections:
       button:
         label: Request a Demo
         url: /contact/
+      link:
+        label: More about Tubes
+        url: /
   - type: feature
     theme: teal
     heading: From location shortlist to production plan
