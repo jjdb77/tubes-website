@@ -46,7 +46,7 @@ eleventyComputed:
     <h2>What {{ p.name }} does</h2>
     <table class="company-facts">
       <tbody>
-        <tr><th scope="row">Category</th><td><a href="{{ p.categoryUrl }}">{{ p.category }}</a></td></tr>
+        <tr><th scope="row">Category</th><td><a href="{{ p.categoryUrl }}">{{ p.category }}</a>{% for a in p.alsoIn %}{% if loop.first %}, also listed in {% else %} and {% endif %}<a href="{{ a.url }}">{{ a.name | lower }}</a>{% endfor %}</td></tr>
         {%- if p.for_whom %}<tr><th scope="row">Built for</th><td>{{ p.for_whom | capitalize_first }}</td></tr>{% endif %}
         <tr><th scope="row">Pricing</th><td>{{ p.pricing_model }}</td></tr>
         <tr><th scope="row">Deployment</th><td>{{ p.deployment }}</td></tr>
@@ -70,7 +70,7 @@ eleventyComputed:
 
     {%- if p.alternatives.length %}
     <h2>Alternatives to {{ p.name }}</h2>
-    <p>Other software in {{ p.category | lower }}. {{ p.categoryBlurb }} Put three of them side by side in the <a href="/compare-media-software/">comparison tool</a>.</p>
+    <p>Other software in {{ p.categoriesText }}. {{ p.categoryBlurb }} Put three of them side by side in the <a href="/compare-media-software/">comparison tool</a>.</p>
     {% set lijst = p.alternatives %}{% set toonCategorie = false %}{% set toonDeployment = true %}
     {% set meer = p.alternativesMore %}{% set meerUrl = p.categoryUrl %}
     {% set meerLabel = "All " + p.category | lower + " software" %}

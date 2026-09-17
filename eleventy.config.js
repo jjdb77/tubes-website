@@ -394,7 +394,7 @@ export default function (eleventyConfig) {
         name: p.name,
         description: toPlainText(p.summary),
         applicationCategory: "BusinessApplication",
-        applicationSubCategory: p.category,
+        applicationSubCategory: Array.isArray(p.categories) && p.categories.length > 1 ? p.categories : p.category,
         url: p.official_url,
         mainEntityOfPage: { "@id": pageId },
         ...(p.platforms ? { operatingSystem: p.platforms } : {}),

@@ -1477,6 +1477,9 @@
       "vendor": "Appsolutions",
       "vendor_country": "Netherlands",
       "category": "Production management",
+      "also_in": [
+        "Budgeting & cost control"
+      ],
       "summary": "Cloud platform that combines budgeting, scheduling, cost control, forecasting and financial reporting for film, TV, commercial and other media productions, with a direct connection to Xero accounting.",
       "for_whom": "producers, production managers and finance teams at production companies and enterprises",
       "pricing_model": "Subscription from EUR 49 per month (Producer Pro, includes 2 users and up to 3 active projects; EUR 25 per month per additional user up to 10 users); Enterprise on request (published)",

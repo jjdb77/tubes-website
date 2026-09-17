@@ -12,9 +12,19 @@ export default {
   filmfestivals: load("filmfestivals.json"),
   // Elk product heeft ook een eigen pagina (/software/<id>/); die link komt hier
   // als `page_url` bij, zodat de kaarten in de zoekpagina ernaartoe wijzen.
+  // Software: een product kan naast zijn hoofdcategorie in andere categorieën
+  // staan (`also_in`, zie softwareIndex.js). `categories` (lijst) is het
+  // filterveld op de zoekpagina, `category_label` de tekst op kaart en in de
+  // vergelijking ("Production management · Budgeting & cost control").
   mediasoftware: (() => {
     const d = load("mediasoftware.json");
-    return { ...d, items: d.items.map((p) => ({ ...p, page_url: `/software/${p.id}/` })) };
+    return {
+      ...d,
+      items: d.items.map((p) => {
+        const categories = [p.category, ...(Array.isArray(p.also_in) ? p.also_in : [])].filter(Boolean);
+        return { ...p, categories, category_label: categories.join(" · "), page_url: `/software/${p.id}/` };
+      }),
+    };
   })(),
   // Elk bedrijf heeft ook een eigen pagina (/companies/<id>/); die link komt
   // hier als `page_url` bij, zodat de kaarten in de zoekpagina ernaartoe wijzen.

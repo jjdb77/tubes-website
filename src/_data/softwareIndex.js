@@ -42,18 +42,26 @@ const CATEGORY_BLURB = {
 
 const items = data.items;
 const sortByName = (a, b) => a.name.localeCompare(b.name);
+// Een product heeft een hoofdcategorie (`category`) en kan daarnaast in andere
+// categorieën staan (`also_in`, lijst). Tubes staat zo in "Production
+// management" én in "Budgeting & cost control": het hoort in de lijst van
+// budgetteringssoftware, want dat is wat het doet, zonder dat de hoofdindeling
+// verschuift. Overal waar op categorie gegroepeerd wordt telt de hele lijst.
+const catsOf = (p) => [p.category, ...(Array.isArray(p.also_in) ? p.also_in : [])].filter(Boolean);
 const byGroup = (list, key) => {
   const out = new Map();
   for (const it of list) {
-    const k = key(it);
-    if (!k) continue;
-    if (!out.has(k)) out.set(k, []);
-    out.get(k).push(it);
+    const ks = key(it);
+    for (const k of Array.isArray(ks) ? ks : [ks]) {
+      if (!k) continue;
+      if (!out.has(k)) out.set(k, []);
+      out.get(k).push(it);
+    }
   }
   return out;
 };
 
-const categories = [...byGroup(items, (i) => i.category).entries()]
+const categories = [...byGroup(items, catsOf).entries()]
   .map(([name, list]) => ({
     name,
     slug: slug(name),
@@ -75,7 +83,7 @@ const countries = [...byGroup(items, (i) => i.vendor_country).entries()]
     url: `/software/country/${slug(name)}/`,
     count: list.length,
     products: [...list].sort(sortByName),
-    byCategory: [...byGroup(list, (i) => i.category).entries()]
+    byCategory: [...byGroup(list, catsOf).entries()]
       .sort((a, b) => b[1].length - a[1].length)
       .map(([category, l]) => ({ category, slug: slug(category), count: l.length, products: [...l].sort(sortByName) })),
   }))
@@ -85,15 +93,20 @@ const categoryUrl = new Map(categories.filter((c) => c.count >= MIN_GROUP).map((
 const countryUrl = new Map(countries.filter((c) => c.count >= MIN_GROUP).map((c) => [c.name, c.url]));
 
 const products = items.map((p) => {
-  // "Alternatives to X": hetzelfde doel, dus dezelfde categorie. Dat is precies
-  // waar iemand op zoekt die al een product kent en wil vergelijken.
+  // "Alternatives to X": hetzelfde doel, dus een gedeelde categorie. Dat is
+  // precies waar iemand op zoekt die al een product kent en wil vergelijken.
+  const cats = catsOf(p);
   const alternatives = items
-    .filter((o) => o.id !== p.id && o.category === p.category)
+    .filter((o) => o.id !== p.id && catsOf(o).some((c) => cats.includes(c)))
     .sort(sortByName);
   const sameVendor = items.filter((o) => o.id !== p.id && o.vendor === p.vendor).sort(sortByName);
   return {
     ...p,
     url: `/software/${p.id}/`,
+    categories: cats,
+    // Voor lopende tekst: "production management and budgeting & cost control"
+    categoriesText: cats.map((c) => c.toLowerCase()).join(" and "),
+    alsoIn: cats.slice(1).map((c) => ({ name: c, url: categoryUrl.get(c) || "/software/" })),
     categorySlug: slug(p.category),
     categoryUrl: categoryUrl.get(p.category) || "/software/",
     categoryBlurb: CATEGORY_BLURB[p.category] || "",

@@ -41,14 +41,14 @@ sections:
       Type a task ("call sheets", "cost report", "review and approval"), filter by category, deployment or vendor country, and select up to three products to compare what they do, who they are for, how they are priced and what they connect to.
     search_placeholder: "Call sheets, cost report, review and approval, payroll ..."
     filters:
-      - { key: category, label: Category }
+      - { key: categories, label: Category }
       - { key: deployment, label: Deployment }
       - { key: vendor_country, label: Vendor country }
     map: false
     card:
       title: name
       subtitle: "{vendor}, {vendor_country}"
-      tag: category
+      tag: category_label
       text: summary
       meta:
         - { label: For, key: for_whom }
@@ -57,7 +57,7 @@ sections:
         - { label: Full profile, key: page_url }
         - { label: Vendor site, key: official_url }
     compare_rows:
-      - { label: Category, key: category, tag: true }
+      - { label: Category, key: category_label, tag: true }
       - { label: What it does, key: summary }
       - { label: For whom, key: for_whom }
       - { label: Pricing (as published), key: pricing_model }

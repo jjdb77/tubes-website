@@ -26,7 +26,8 @@
       </div>
       {% for f in filters %}
       {%- set values = [] -%}
-      {%- for it in items -%}{%- if it[f.key] and (it[f.key] not in values) -%}{%- set values = (values.push(it[f.key]), values) -%}{%- endif -%}{%- endfor -%}
+      {#- Een filterveld mag een lijst zijn (software in meer dan een categorie): elke waarde wordt een optie. -#}
+      {%- for it in items -%}{%- set vs = [it[f.key]] if (it[f.key] is string) else (it[f.key] or []) -%}{%- for v in vs -%}{%- if v and (v not in values) -%}{%- set values = (values.push(v), values) -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
       <label class="loc-field" for="dir-filter-{{ f.key }}">{{ f.label }}
         <select id="dir-filter-{{ f.key }}" class="guide-select" data-dir-filter="{{ f.key }}">
           <option value="">All</option>
@@ -64,7 +65,7 @@
           {% for it in items %}
           {%- set card = section.card -%}
           <article class="guide-card" id="dir-{{ it.id }}" data-id="{{ it.id }}"
-                   {% for f in filters %}data-f-{{ f.key }}="{{ it[f.key] }}" {% endfor %}
+                   {% for f in filters %}data-f-{{ f.key }}="{{ it[f.key] if (it[f.key] is string) else (it[f.key] or []) | join('|') }}" {% endfor %}
                    {%- set hay = [] -%}
                    {%- for k, v in it -%}{%- if v and (k not in ["id", "lat", "lng", "photo", "source_urls", "official_url", "guide_url", "guide_id"]) -%}{%- set hay = (hay.push(v), hay) -%}{%- endif -%}{%- endfor %}
                    data-search="{{ hay | join(' ') | lower | replace('"', '') }}">
@@ -186,7 +187,8 @@
       let best = 0;
       for (const card of cards) {
         let hard = listMode === "all" || favs.has(card.dataset.id);
-        for (const s of selects) if (hard && s.value && card.dataset["f" + s.dataset.dirFilter.charAt(0).toUpperCase() + s.dataset.dirFilter.slice(1)] !== s.value) hard = false;
+        // Een kaart kan meer waarden per filter dragen, gescheiden door |
+        for (const s of selects) if (hard && s.value && !(card.dataset["f" + s.dataset.dirFilter.charAt(0).toUpperCase() + s.dataset.dirFilter.slice(1)] || "").split("|").includes(s.value)) hard = false;
         if (!hard) { if (!card.hidden) card.hidden = true; continue; }
         const hay = card.dataset.search;
         const score = needles.reduce((n, w) => n + (hay.includes(w) ? 1 : 0), 0);

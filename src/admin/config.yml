@@ -763,6 +763,7 @@ collections:
               - { label: Leverancier, name: vendor, widget: string }
               - { label: "Land leverancier", name: vendor_country, widget: string, required: false }
               - { label: Categorie, name: category, widget: select, options: ["Production management", "Budgeting & cost control", "Scheduling & call sheets", "Production accounting & payroll", "Script & pre-production", "Location & crew sourcing", "Asset & media management", "Post-production & VFX", "Rights & distribution", "Business & CRM"] }
+              - { label: "Ook in deze categorieën (optioneel)", name: also_in, widget: select, multiple: true, required: false, hint: "Het product telt dan ook mee in die categoriepagina's, alternatievenlijsten en het zoekfilter.", options: ["Production management", "Budgeting & cost control", "Scheduling & call sheets", "Production accounting & payroll", "Script & pre-production", "Location & crew sourcing", "Asset & media management", "Post-production & VFX", "Rights & distribution", "Business & CRM"] }
               - { label: "Wat het doet (1 zin)", name: summary, widget: text }
               - { label: "Voor wie", name: for_whom, widget: string, required: false }
               - { label: "Prijsmodel (alleen zoals gepubliceerd, anders 'Not published')", name: pricing_model, widget: string }
