@@ -2771,11 +2771,13 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 
 /* ---------- Reclameblok voor Tubes in de zoeklijsten (partials/directory-promo.njk) ---------- */
 
-/* In de zoeklijsten (secties "directory" en "locationguide") plakt de wrapper
-   om paneel en reclameblok, niet het paneel zelf. */
-.guide-side { position: sticky; top: 90px; }
-.guide-side .guide-aside { position: static; }
-.guide-promo-aside { margin-top: 16px; }
+/* In de zoeklijsten (secties "directory" en "locationguide") staat het
+   reclameblok boven het Side by side-paneel. Het blok scrolt gewoon mee weg
+   (verzoek Joachim 17-9-2026: niet laten meeschuiven), het paneel plakt via
+   .guide-aside. De wrapper rekt zich uit tot de rijhoogte, anders heeft het
+   paneel geen ruimte om in te plakken. */
+.guide-side { align-self: stretch; }
+.guide-promo-aside { margin-bottom: 16px; }
 /* Boven de kaarten alleen op schermen zonder zijkolom (zie media query). */
 .guide-promo-inline { display: none; margin-bottom: 22px; }
 /* In de hero: rechterkolom, op de plek van de losse knoppen */
@@ -3185,11 +3187,11 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 /* ---------- Bedrijvengids: pagina per bedrijf, land, type en stad ---------- */
 .company-inner { max-width: 820px; }
 /* Reclameblok voor Tubes (partials/company-promo.njk): rechts naast de tekst,
-   plakt mee via .guide-side; onder 1180px verdwijnt die kolom en toont de
+   scrolt gewoon mee; onder 1180px verdwijnt die kolom en toont de
    media query van de zoeklijsten de inline-variant onder de kop. */
 .company-inner.has-promo { max-width: 1126px; display: grid; grid-template-columns: minmax(0, 820px) 280px; gap: 26px; align-items: start; }
 .company-main { min-width: 0; }
-.company-inner .guide-promo-aside { margin-top: 0; }
+.company-inner .guide-promo-aside { margin-bottom: 0; }
 @media (max-width: 1180px) {
   .company-inner.has-promo { display: block; max-width: 820px; }
 }

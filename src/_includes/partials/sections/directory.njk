@@ -97,9 +97,10 @@
         <p class="loc-empty guide-none" hidden>Nothing matches. Try fewer filters, or <a href="#request-entry">suggest one</a>.</p>
       </div>
 
-      {#- De wrapper plakt (sticky), niet het paneel zelf: zo schuift het
-          reclameblok eronder mee. De locatiegids doet hetzelfde. -#}
+      {#- Reclameblok boven het paneel: het blok scrolt mee weg, het paneel
+          plakt (sticky op .guide-aside). De locatiegids doet hetzelfde. -#}
       <div class="guide-side">
+        {% if section.promo %}{% set promoVariant = "aside" %}{% include "partials/directory-promo.njk" %}{% endif %}
         <aside class="guide-aside" data-guide-aside aria-label="Your comparison">
           <h3>Side by side</h3>
           <ol class="guide-slots" data-guide-slots></ol>
@@ -107,7 +108,6 @@
           <button type="button" class="button button-secondary" data-guide-clear hidden>Clear</button>
           <p class="guide-aside-note">Pick two or three with the Compare button on a card.</p>
         </aside>
-        {% if section.promo %}{% set promoVariant = "aside" %}{% include "partials/directory-promo.njk" %}{% endif %}
       </div>
     </div>
 
