@@ -3,13 +3,15 @@
 //
 // Opslag: JSON-lines in een bestand op de Railway-volume
 // (RAILWAY_VOLUME_MOUNT_PATH). Beveiliging beheerpagina: Basic Auth
-// met het wachtwoord uit de env-variabele ADMIN_PASSWORD.
+// met het wachtwoord uit de env-variabele ADMIN_PASSWORD, en daarvoor nog
+// een IP-toegangslijst uit ADMIN_ALLOWED_IPS (zie "Beheerpagina").
 
 import express from "express";
 import compression from "compression";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import net from "node:net";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -76,10 +78,22 @@ app.use(express.urlencoded({ extended: false, limit: "64kb" }));
 
 const recent = new Map(); // simpele rate-limit per IP
 
+// Het adres van de bezoeker. Railway zet het in X-Forwarded-For; we nemen
+// het LAATSTE adres in die lijst, want dat is wat de proxy van Railway er
+// zelf achter zet. Het eerste adres kan een bezoeker in zijn eigen verzoek
+// meesturen en is dus te vervalsen; voor de IP-toegangslijst van /beheer
+// zou dat precies verkeerd uitpakken. Lokaal (geen proxy) is het het adres
+// van de verbinding zelf. IPv4 komt soms als "::ffff:1.2.3.4" binnen.
+function clientIp(req) {
+  const xff = String(req.headers["x-forwarded-for"] || "");
+  const ip = xff ? xff.split(",").pop().trim() : String(req.socket?.remoteAddress || "");
+  return ip.startsWith("::ffff:") ? ip.slice(7) : ip;
+}
+
 // Max <max> inzendingen per 10 minuten per IP. De Health Check stuurt twee
 // keer (stap 1 en stap 2) en krijgt daarom een ruimere marge.
 function rateLimited(req, max) {
-  const ip = req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.ip;
+  const ip = clientIp(req);
   const now = Date.now();
   const hits = (recent.get(ip) || []).filter((t) => now - t < 10 * 60 * 1000);
   if (hits.length >= max) return true;
@@ -903,8 +917,55 @@ app.post("/api/location-search", async (req, res) => {
 });
 
 // ---------- Beheerpagina ----------
+//
+// Twee drempels, in deze volgorde: eerst het IP-adres, dan het wachtwoord.
+//
+// ADMIN_ALLOWED_IPS: komma-gescheiden adressen of reeksen (CIDR), IPv4 en
+// IPv6 door elkaar, bijvoorbeeld "203.0.113.7, 2001:db8:1::/64". Staat de
+// lijst er, dan krijgt elk ander adres een 403 vóór het wachtwoord gevraagd
+// wordt; raden op het wachtwoord kan dan alleen nog vanaf die adressen. Leeg
+// = geen IP-check, alleen het wachtwoord (zo werkt het lokaal en zo werkte
+// het tot 17-9-2026). Het geweigerde adres staat in het antwoord én in de
+// log, zodat je bij een nieuw adres (ander netwerk, telefoon) meteen ziet
+// wat je aan de lijst moet toevoegen. Een ongeldige regel wordt overgeslagen
+// met een melding; is er daardoor niets over, dan komt niemand erin, want
+// een typfout mag de pagina niet stilletjes openzetten.
+
+const ADMIN_ALLOWED = (() => {
+  const regels = String(process.env.ADMIN_ALLOWED_IPS || "").split(",").map((s) => s.trim()).filter(Boolean);
+  if (!regels.length) return null;
+  const lijst = new net.BlockList();
+  let aantal = 0;
+  for (const regel of regels) {
+    const [adres, bits] = regel.split("/");
+    const soort = net.isIP(adres) === 6 ? "ipv6" : net.isIP(adres) === 4 ? "ipv4" : null;
+    try {
+      if (!soort) throw new Error("geen IP-adres");
+      if (bits === undefined) lijst.addAddress(adres, soort);
+      else lijst.addSubnet(adres, Number(bits), soort);
+      aantal++;
+    } catch (err) {
+      console.warn(`[beheer] ADMIN_ALLOWED_IPS: "${regel}" overgeslagen (${err.message})`);
+    }
+  }
+  if (!aantal) console.error("[beheer] ADMIN_ALLOWED_IPS bevat geen geldig adres: /beheer is voor niemand bereikbaar");
+  return { lijst, aantal };
+})();
+
+function ipToegestaan(ip) {
+  if (!ADMIN_ALLOWED) return true;
+  const versie = net.isIP(ip);
+  if (!versie) return false;
+  return ADMIN_ALLOWED.lijst.check(ip, versie === 6 ? "ipv6" : "ipv4");
+}
 
 function checkAuth(req, res) {
+  const ip = clientIp(req);
+  if (!ipToegestaan(ip)) {
+    console.warn(`[beheer] geweigerd voor ${ip || "onbekend adres"}: staat niet in ADMIN_ALLOWED_IPS (${req.method} ${req.originalUrl})`);
+    res.status(403).type("text/plain").send(`Deze pagina is niet beschikbaar vanaf dit adres (${ip || "onbekend"}).`);
+    return false;
+  }
   const wanted = process.env.ADMIN_PASSWORD;
   if (!wanted) {
     res.status(503).send("Stel eerst de env-variabele ADMIN_PASSWORD in op Railway.");
@@ -1541,11 +1602,13 @@ app.listen(PORT, "0.0.0.0", () => {
   // Tel de bewaarde berichten en meld of de mail aanstaat. Zonder
   // ADMIN_PASSWORD geeft /beheer een 503 en is het bestand onleesbaar; dan is
   // deze regel in de opstartlog de enige manier om te zien of er iets ligt.
+  const mail = MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)";
+  const beheer = `/beheer ${process.env.ADMIN_PASSWORD ? "beschikbaar" : "geeft 503 (geen ADMIN_PASSWORD)"}, ${ADMIN_ALLOWED ? `alleen vanaf ${ADMIN_ALLOWED.aantal} adres${ADMIN_ALLOWED.aantal === 1 ? "" : "sen"} uit ADMIN_ALLOWED_IPS` : "zonder IP-toegangslijst (ADMIN_ALLOWED_IPS leeg)"}`;
   try {
     const regels = fs.readFileSync(DATA_FILE, "utf8").split("\n").filter(Boolean).length;
-    console.log(`[start] ${regels} bewaarde berichten; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}; /beheer ${process.env.ADMIN_PASSWORD ? "beschikbaar" : "geeft 503 (geen ADMIN_PASSWORD)"}`);
+    console.log(`[start] ${regels} bewaarde berichten; mail ${mail}; ${beheer}`);
   } catch {
-    console.log(`[start] nog geen berichtenbestand; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}`);
+    console.log(`[start] nog geen berichtenbestand; mail ${mail}; ${beheer}`);
   }
   stuurAchterstandNa().catch((err) => console.error("[start] inhaalslag mislukt:", err.message));
 });
