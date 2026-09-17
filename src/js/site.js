@@ -55,7 +55,9 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
   // De locatiegids en de incentivetabel zijn functionele, heel hoge secties:
   // die doen niet mee met de fade (een sectie van 10.000+ px haalt een
   // zichtbaarheidsdrempel nooit en bleef dan onzichtbaar na een ankerklik).
-  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations) .container");
+  // Het helpcentrum ook niet: de zoekresultaten vervangen de kaarten of de
+  // lijst in dezelfde container, en die moeten er meteen staan.
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -696,5 +698,131 @@ if (cookieBanner) {
       cookieBanner.hidden = false;
       accept.focus();
     });
+  }
+}
+
+// ---------- Helpcentrum: zoeken in de artikelen ----------
+//
+// De index (/help/search.json: titel, categorie, samenvatting, kale tekst) wordt
+// pas opgehaald zodra het veld focus krijgt. Zoeken op losse woorden: elk woord
+// moet ergens voorkomen; een treffer in de titel weegt zwaarder dan een in de
+// tekst. De resultaten vervangen de kaarten of de lijst eronder; leegmaken
+// zet die weer terug. Zonder JavaScript is het veld gewoon een formulier dat
+// naar /help/?q=... gaat, en die pagina zoekt dan alsnog zodra het script laadt.
+const helpSearch = document.querySelector("[data-help-search]");
+if (helpSearch) {
+  const input = helpSearch.querySelector("input");
+  const results = document.getElementById("help-results");
+  const note = document.getElementById("help-results-note");
+  const browse = document.querySelector("[data-help-browse]");
+  let index = null;
+  let loading = null;
+  let timer = 0;
+
+  const fold = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+  function loadIndex() {
+    if (!loading) {
+      loading = fetch("/help/search.json")
+        .then((r) => r.json())
+        .then((items) => {
+          index = items.map((item) => ({ ...item, _title: fold(item.title), _summary: fold(item.summary), _text: fold(item.text) }));
+          return index;
+        })
+        .catch(() => (index = []));
+    }
+    return loading;
+  }
+
+  // Zin uit de tekst rond het eerste zoekwoord, met de woorden gemarkeerd.
+  function snippet(item, words) {
+    const text = item.text || "";
+    const lower = item._text;
+    let pos = -1;
+    for (const w of words) {
+      pos = lower.indexOf(w);
+      if (pos >= 0) break;
+    }
+    let out;
+    if (pos < 0) out = item.summary || text.slice(0, 160);
+    else {
+      // Begin bij het begin van de zin waarin het woord staat, maar niet meer
+      // dan 90 tekens ervoor, anders staat het woord buiten het fragment.
+      const dot = lower.lastIndexOf(". ", pos);
+      const start = Math.max(dot < 0 ? 0 : dot + 2, pos - 90);
+      out = text.slice(start, start + 180).trim();
+      if (text.length > start + 180) out += "…";
+    }
+    let html = escapeHtml(out);
+    for (const w of words) {
+      const re = new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
+      html = html.replace(re, "<mark>$1</mark>");
+    }
+    return html;
+  }
+
+  function score(item, words) {
+    let total = 0;
+    for (const w of words) {
+      const inTitle = item._title.includes(w);
+      const inSummary = item._summary.includes(w);
+      const inText = item._text.includes(w);
+      if (!inTitle && !inSummary && !inText) return 0;
+      total += (inTitle ? 6 : 0) + (inSummary ? 3 : 0) + (inText ? 1 : 0);
+    }
+    return total;
+  }
+
+  function render(query) {
+    const words = fold(query).split(/\s+/).filter((w) => w.length > 1);
+    if (!words.length) {
+      results.hidden = true;
+      results.innerHTML = "";
+      note.textContent = "";
+      if (browse) browse.hidden = false;
+      return;
+    }
+    const hits = index
+      .map((item) => ({ item, s: score(item, words) }))
+      .filter((h) => h.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 10);
+    results.innerHTML = hits
+      .map(
+        (h) =>
+          `<li><a href="${h.item.url}"><span class="help-results-col">${escapeHtml(h.item.collection)}</span><span class="help-results-title">${escapeHtml(h.item.title)}</span><span class="help-results-snippet">${snippet(h.item, words)}</span></a></li>`
+      )
+      .join("");
+    results.hidden = false;
+    if (browse) browse.hidden = true;
+    note.textContent = hits.length
+      ? `${hits.length} article${hits.length === 1 ? "" : "s"} for “${query.trim()}”`
+      : `Nothing matches “${query.trim()}”. Try another word, or browse the collections below.`;
+    if (!hits.length && browse) browse.hidden = false;
+    track("help-search", { query: query.trim(), hits: hits.length });
+  }
+
+  function search() {
+    const query = input.value;
+    loadIndex().then(() => render(query));
+  }
+
+  input.addEventListener("focus", loadIndex, { once: true });
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(search, 160);
+  });
+  helpSearch.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearTimeout(timer);
+    search();
+  });
+
+  // Van een andere pagina hierheen gestuurd met ?q=...
+  const initial = new URLSearchParams(location.search).get("q");
+  if (initial) {
+    input.value = initial;
+    search();
   }
 }

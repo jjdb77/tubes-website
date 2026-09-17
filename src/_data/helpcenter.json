@@ -1,0 +1,86 @@
+{
+  "kicker": "Help Center",
+  "title": "How can we *help*?",
+  "tagline": "Guides and answers for everyone who works with Tubes: from your first login to approvals, forecasts and exports.",
+  "search_placeholder": "Search for articles, e.g. approve an invoice, import a budget, add a user",
+  "contact": {
+    "heading": "Can't find what you need?",
+    "text": "Email us and a member of the Tubes team will get back to you, usually within one working day. Screenshots help.",
+    "button": "Email support"
+  },
+  "collections": [
+    {
+      "slug": "getting-started",
+      "name": "Getting started",
+      "description": "Signing in, finding your way around and setting up your first production.",
+      "icon": "/assets/icons/light-bulb.svg"
+    },
+    {
+      "slug": "budgeting",
+      "name": "Budgeting",
+      "description": "From a first draft to an approved budget: templates, formulas, versions and comparisons.",
+      "icon": "/assets/icons/calculator.svg"
+    },
+    {
+      "slug": "planning",
+      "name": "Planning & scheduling",
+      "description": "Scenes, cast, crew, locations, the calendar and call sheets.",
+      "icon": "/assets/icons/calendar.svg"
+    },
+    {
+      "slug": "cost-control",
+      "name": "Cost control",
+      "description": "Invoices, purchase orders, actuals and commitments against the budget.",
+      "icon": "/assets/icons/tuning.svg"
+    },
+    {
+      "slug": "approvals",
+      "name": "Approvals & workflows",
+      "description": "Who approves what, and how a document moves from received to booked.",
+      "icon": "/assets/icons/check-circle.svg"
+    },
+    {
+      "slug": "reporting",
+      "name": "Forecasting & reporting",
+      "description": "Estimate to complete, expected final cost, dashboards and reports.",
+      "icon": "/assets/icons/chart-pie.svg"
+    },
+    {
+      "slug": "relations",
+      "name": "Relations & funding",
+      "description": "Clients, suppliers, funders and the funding behind a production.",
+      "icon": "/assets/icons/users.svg"
+    },
+    {
+      "slug": "portal",
+      "name": "Client portal & signing",
+      "description": "Giving clients and co-producers their own access, and signing documents.",
+      "icon": "/assets/icons/signature.svg"
+    },
+    {
+      "slug": "imports-exports",
+      "name": "Imports, exports & integrations",
+      "description": "Movie Magic, Excel, your accounting system, Slack and your own AI assistant.",
+      "icon": "/assets/icons/arrows.svg"
+    },
+    {
+      "slug": "settings",
+      "name": "Settings & users",
+      "description": "Users, roles, companies, currencies, VAT and your own preferences.",
+      "icon": "/assets/icons/cog.svg"
+    },
+    {
+      "slug": "billing",
+      "name": "Plans & billing",
+      "description": "Subscriptions, users, projects and invoices from Tubes.",
+      "icon": "/assets/icons/currency-dollar.svg"
+    },
+    {
+      "slug": "faq",
+      "name": "FAQs",
+      "description": "Short answers to the questions we hear most.",
+      "icon": "/assets/icons/question.svg"
+    }
+  ],
+  "noindex": true
+}

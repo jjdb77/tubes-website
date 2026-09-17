@@ -3250,3 +3250,124 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .software-card-meta strong { color: var(--ink-soft); }
 .company-tile-flat { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; font-size: 1.02rem; margin: 0 !important; color: var(--ink) !important; }
 .company-tile-flat span { color: var(--muted); font-weight: 600; font-size: 0.88rem; }
+
+/* ---------- Helpcentrum (/help/): hub, categorieën, artikelen, zoeken ---------- */
+
+.help-hero { padding-bottom: clamp(36px, 5vw, 64px); }
+.help-hero-inner { text-align: center; max-width: 780px; }
+.help-hero-inner .kicker { justify-content: center; }
+.help-hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); margin-bottom: 0.4em; }
+.help-hero .lead { max-width: 60ch; margin: 0 auto; }
+
+.help-search { margin: 28px auto 0; max-width: 680px; text-align: left; }
+.help-search-wrap { position: relative; }
+.help-search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.help-search input {
+  display: block; width: 100%;
+  font-family: var(--font-sans); font-size: 1.05rem; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 16px 18px 16px 48px;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.help-search input::placeholder { color: var(--muted); font-weight: 400; }
+.help-search input:focus { outline: none; border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft); }
+.help-search input::-webkit-search-cancel-button { cursor: pointer; }
+.help-results-note { margin: 12px 0 0; font-size: 0.9rem; color: var(--muted); text-align: center; min-height: 1.3em; }
+.help-results-note:empty { display: none; }
+.help-results { list-style: none; margin: 18px auto 0; padding: 0; max-width: 680px; display: grid; gap: 10px; text-align: left; }
+.help-results li a {
+  display: block; padding: 16px 20px; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-wash);
+  color: var(--ink); transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.help-results li a:hover { border-color: var(--action); box-shadow: var(--shadow-raise); text-decoration: none; }
+.help-results-col { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--action-soft-ink); margin-bottom: 4px; }
+.help-results-title { display: block; font-weight: 700; font-size: 1.05rem; }
+.help-results-snippet { display: block; margin-top: 4px; font-size: 0.93rem; color: var(--ink-soft); line-height: 1.5; }
+.help-results-snippet mark { background: var(--status-amber-bg); color: inherit; border-radius: 3px; padding: 0 2px; }
+
+.help-collections-section { padding-top: clamp(28px, 4vw, 48px); }
+.help-collections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.help-collection {
+  display: flex; flex-direction: column;
+  padding: 30px 28px 26px;
+  background: var(--bg); border: 1px solid var(--divider); border-radius: 20px;
+  color: inherit; text-decoration: none; transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.help-collection:hover { text-decoration: none; }
+.help-collection:nth-child(4n+1) { background: #F0EDFC; }
+.help-collection:nth-child(4n+2) { background: #F8F1DC; }
+.help-collection:nth-child(4n+3) { background: #E6EEFC; }
+.help-collection:nth-child(4n+4) { background: #E4F3EA; }
+.help-collection:hover { box-shadow: var(--shadow-raise); transform: translateY(-2px); border-color: transparent; }
+.help-collection .icon-tile { background: rgba(255, 255, 255, 0.85); }
+.help-collection .icon-tile i { background: var(--ink-soft); }
+.help-collection h2 { font-size: 1.2rem; margin-bottom: 0.35em; }
+.help-collection h2 { color: var(--ink); }
+.help-collection p { margin: 0 0 14px; font-size: 0.97rem; color: var(--ink-soft); line-height: 1.55; flex: 1; }
+.help-count { font-size: 0.85rem; font-weight: 700; color: var(--muted); }
+
+.help-narrow { max-width: 860px; }
+.help-collection-head { padding-bottom: clamp(24px, 3vw, 40px); }
+.help-collection-title { display: flex; gap: 22px; align-items: flex-start; }
+.help-collection-title .icon-tile { flex: none; width: 56px; height: 56px; margin: 4px 0 0; }
+.help-collection-title .icon-tile i { width: 26px; height: 26px; }
+.help-collection-title h1 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom: 0.3em; }
+.help-collection-title .lead { margin: 0 0 8px; }
+.help-collection-title .help-count { margin: 0; }
+.help-collection-head .help-search { margin-left: 0; margin-right: 0; max-width: none; }
+.help-collection-head .help-results-note { text-align: left; }
+.help-collection-head .help-results { margin-left: 0; margin-right: 0; max-width: none; }
+
+.help-list-section { padding-top: clamp(24px, 3vw, 40px); }
+.help-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.help-list-item a {
+  display: block; padding: 20px 24px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card);
+  color: var(--ink); text-decoration: none; box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.help-list-item a:hover { border-color: var(--action); box-shadow: var(--shadow-raise); text-decoration: none; }
+.help-list-title { display: block; font-weight: 700; font-size: 1.08rem; letter-spacing: -0.01em; }
+.help-list-summary { display: block; margin-top: 4px; color: var(--ink-soft); font-size: 0.95rem; line-height: 1.5; }
+.help-list-compact .help-list-item a { padding: 14px 18px; box-shadow: none; }
+.help-list-compact .help-list-title { font-size: 1rem; }
+.help-list-compact .help-list-summary { font-size: 0.9rem; }
+.help-back { margin: 26px 0 0; font-size: 0.92rem; font-weight: 700; }
+.help-back a { color: var(--action-soft-ink); }
+.help-back span { margin: 0 8px; color: var(--muted); }
+
+.help-body h2 { font-size: 1.4rem; }
+.help-body h3 { font-size: 1.08rem; }
+.help-body img { border: 1px solid var(--border); border-radius: var(--radius-wash); margin: 1.2em 0; box-shadow: var(--shadow-card); }
+.help-body kbd {
+  font-family: var(--font-sans); font-size: 0.86em; font-weight: 700;
+  padding: 1px 7px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 6px;
+  background: var(--surface); color: var(--ink);
+}
+/* Tip- of let-op-blok: een blockquote die met **Tip:** of **Note:** begint */
+.help-body blockquote {
+  margin: 1.4em 0; padding: 14px 18px 14px 20px;
+  border-left: 4px solid var(--action); border-radius: 0 var(--radius-wash) var(--radius-wash) 0;
+  background: var(--action-soft); color: var(--ink);
+}
+.help-body blockquote p { margin: 0; line-height: 1.6; }
+.help-body blockquote p + p { margin-top: 0.6em; }
+.help-body blockquote strong:first-child { color: var(--action-soft-ink); }
+
+.help-contact-inner { display: flex; gap: 32px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.help-contact h2 { font-size: 1.5rem; margin-bottom: 0.3em; }
+.help-contact p { margin: 0; max-width: 56ch; }
+.help-contact-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.help-contact-phone { font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .help-collections { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .help-collections { grid-template-columns: 1fr; }
+  .help-collection-title { gap: 14px; }
+  .help-collection-title .icon-tile { width: 44px; height: 44px; }
+  .help-search input { font-size: 1rem; padding: 14px 14px 14px 44px; }
+}

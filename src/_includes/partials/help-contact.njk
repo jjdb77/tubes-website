@@ -1,0 +1,14 @@
+{#- Slotblok van elke helppagina: nog vragen? Zelfde adressen als de rest van
+    de site (settings.json). -#}
+<section class="section theme-teal help-contact">
+  <div class="container help-contact-inner">
+    <div>
+      <h2>{{ helpcenter.contact.heading }}</h2>
+      <p>{{ helpcenter.contact.text }}</p>
+    </div>
+    <div class="help-contact-actions">
+      <a class="button button-primary" href="mailto:{{ settings.contact.email }}?subject=Tubes%20support">{{ helpcenter.contact.button }}</a>
+      <a class="help-contact-phone" href="tel:{{ settings.contact.phone | replace(' ', '') }}">{{ settings.contact.phone }}</a>
+    </div>
+  </div>
+</section>

@@ -102,6 +102,16 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - **Achtervang plus mail**: mislukte doorzendingen gaan elke tien minuten vanzelf opnieuw de deur uit, en elke aanvraag levert een mailtje op. Zie de sectie "Mail bij een aanvraag (en als het misgaat)".
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
+## Helpcentrum (/help/)
+
+- Naar het voorbeeld van support.saturation.io (verzoek Joachim 17-9-2026): hub met zoekveld en 12 categoriekaarten, een pagina per categorie, een pagina per artikel. Sinds 17-9-2026, 67 artikelen bij de start.
+- **Content**: `src/content/help/*.md`, platte map, categorie in de front matter (`collection: <slug>`), URL wordt `/help/<collection>/<bestandsnaam>/` (`help.11tydata.js`). Velden: `title`, `summary`, `order`, `date`, `updated`, plus SEO-velden. CMS-collectie "Helpcentrum (/help/)". De categorieën (slug, naam, omschrijving, icoon) en de hubteksten staan in `src/_data/helpcenter.json` (CMS: "Helpcentrum: categorieën en teksten"). Nieuwe categorie = regel in dat bestand **én** in de keuzelijst van de CMS-collectie in `config.yml`.
+- **Templates**: `src/help.njk` (hub), `src/help-collection.njk` + `help-collection.11tydata.js` (categoriepagina's; alleen categorieën met artikelen, slugs uit de bestanden gelezen want in `pagination.before` zijn de collecties nog niet beschikbaar; de berekende titels staan daar als functies, anders wordt "Planning & scheduling" dubbel ge-escaped in `<title>`), `src/_includes/help-article.njk` (artikel, `TechArticle` in de structured data), partials `help-search.njk` en `help-contact.njk`. Opmaak onderaan `style.css` (klassen `help-`), zoeklogica onderaan `site.js`.
+- **Zoeken** is client-side: `src/help-search.njk` schrijft `/help/search.json` (titel, categorie, samenvatting, kale tekst); site.js haalt dat pas op bij focus op het veld, zoekt op losse woorden (titel weegt zwaarder) en zet de resultaten in plaats van de kaarten of lijst. Een blockquote die met `**Tip:**` of `**Note:**` begint wordt een gekleurd kader.
+- ⚠️ **Hele helpcentrum staat op noindex** (`"noindex": true` in helpcenter.json, ook als CMS-vinkje): de klikpaden zijn afgeleid uit de code en de en.yml van de Tubes-app (`~/Documents/CloudTubes/tubes`), niet nagelopen in de draaiende app. Zodra de artikelen zijn nagekeken: schakelaar uit, dan komen alle pagina's in sitemap.xml en de hub plus categorieën in llms.txt (artikelen blijven via `excludeFromLlms` uit llms.txt). Staat wel al in de Explore-footer (kolom Company, naast Academy); `softwareHelp` in de structured data wijst nu naar /help/.
+- Schermafbeeldingen: er zijn geen echte app-screenshots per scherm; een paar artikelen gebruiken de bestaande marketingbeelden (`app-*.jpg`, `tubes-*.png`). Echte schermafbeeldingen per artikel zijn de grootste volgende verbetering.
+- De helpsecties doen bewust **niet** mee met de scroll-reveal in site.js: de zoekresultaten vervangen de kaarten in dezelfde container en moeten er meteen staan.
+
 ## Boekingen (Book a call)
 
 - Knoppen op de abonnementskaarten → `/book-a-call/producer-pro/` en `/book-a-call/enterprise/` (doorstuurpagina's uit `src/book-a-call.njk`, gepagineerd over `settings.booking_plans`).

@@ -154,6 +154,70 @@ collections:
               - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
               - { label: "Slotzin rechts", name: note, widget: text }
 
+      - name: helpcenter
+        label: "Helpcentrum: categorieën en teksten"
+        file: src/_data/helpcenter.json
+        description: "De categorieën op /help/. LET OP: de slug van een categorie staat ook in elk artikel (veld Categorie) en in de keuzelijst van de collectie Helpcentrum in config.yml; verander een slug dus niet zomaar."
+        fields:
+          - { label: Labeltje boven de kop, name: kicker, widget: string }
+          - { label: Kop, name: title, widget: string, hint: "Een woord tussen sterretjes wordt teal, bijv. How can we *help*?" }
+          - { label: Introzin, name: tagline, widget: text }
+          - { label: Placeholder in het zoekveld, name: search_placeholder, widget: string }
+          - { label: "Uit Google houden (hele helpcentrum)", name: noindex, widget: boolean, default: false, hint: "Aan = alle helppagina's krijgen noindex en vallen buiten sitemap.xml en llms.txt. Uitzetten zodra de artikelen tegen de app zijn nagekeken." }
+          - label: Contactblok onderaan
+            name: contact
+            widget: object
+            fields:
+              - { label: Kop, name: heading, widget: string }
+              - { label: Tekst, name: text, widget: text }
+              - { label: Knoptekst, name: button, widget: string }
+          - label: Categorieën
+            name: collections
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Slug (in de URL, niet meer wijzigen)", name: slug, widget: string, pattern: ["^[a-z0-9-]+$", "Alleen kleine letters, cijfers en streepjes"] }
+              - { label: Naam, name: name, widget: string }
+              - { label: Omschrijving (één zin), name: description, widget: string }
+              - { label: Icoon, name: icon, widget: string, hint: "Pad in /assets/icons/, bijv. /assets/icons/calculator.svg" }
+
+  - name: helpartikelen
+    label: "Helpcentrum (/help/)"
+    icon: help
+    folder: src/content/help
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [collection, order, title, updated]
+    fields:
+      - { label: Titel, name: title, widget: string, hint: "Formuleer als taak of vraag: 'Approve an invoice', 'How do I add a user?'" }
+      - label: Categorie
+        name: collection
+        widget: select
+        hint: "Bepaalt de URL: /help/<categorie>/<bestandsnaam>/. Zelfde lijst als in Helpcentrum: categorieën."
+        options:
+          - { label: Getting started, value: getting-started }
+          - { label: Budgeting, value: budgeting }
+          - { label: Planning & scheduling, value: planning }
+          - { label: Cost control, value: cost-control }
+          - { label: Approvals & workflows, value: approvals }
+          - { label: Forecasting & reporting, value: reporting }
+          - { label: Relations & funding, value: relations }
+          - { label: Client portal & signing, value: portal }
+          - { label: "Imports, exports & integrations", value: imports-exports }
+          - { label: Settings & users, value: settings }
+          - { label: Plans & billing, value: billing }
+          - { label: FAQs, value: faq }
+      - { label: Samenvatting, name: summary, widget: text, hint: "Eén of twee zinnen; staat onder de titel en in de lijst." }
+      - { label: Volgorde binnen de categorie, name: order, widget: number, value_type: int, default: 10, hint: "Laag nummer eerst." }
+      - { label: Publicatiedatum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: Laatst bijgewerkt, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false, hint: "Staat als 'Updated ...' boven het artikel. Leeg = publicatiedatum." }
+      - { label: Artikel, name: body, widget: markdown, hint: "Gebruik ## voor stappen of onderdelen, genummerde lijsten voor klikpaden. Een citaatblok dat met **Tip:** of **Note:** begint wordt een gekleurd kader. Geen em-dashes (—)." }
+      - { label: "SEO: titel in Google", name: seo_title, widget: string, required: false, hint: "Leeg = 'Titel | Tubes'." }
+      - { label: "SEO: omschrijving in Google", name: description, widget: text, required: false, hint: "Leeg = de samenvatting." }
+      - { label: "SEO: artikel uit Google houden", name: noindex, widget: boolean, default: false, required: false }
+
   - name: artikelen
     label: "Artikelen (Insights)"
     icon: draft

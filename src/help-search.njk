@@ -1,0 +1,12 @@
+---
+permalink: /help/search.json
+eleventyExcludeFromCollections: true
+---
+{#- Zoekindex van het helpcentrum: titel, samenvatting en de kale tekst van elk
+    artikel. site.js haalt dit op zodra iemand in het zoekveld klikt. -#}
+{%- set items = [] -%}
+{%- for item in collections.help -%}
+{%- set col = helpcenter.collections | helpCollection(item.data.collection) -%}
+{%- set items = (items.push({ title: item.data.title, url: item.url, collection: col.name, summary: item.data.summary, text: item.templateContent | plain }), items) -%}
+{%- endfor -%}
+{{ items | dump | safe }}

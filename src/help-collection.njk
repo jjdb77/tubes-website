@@ -1,0 +1,74 @@
+---
+pagination:
+  data: helpcenter.collections
+  size: 1
+  alias: col
+  addAllPagesToCollections: true
+permalink: "/help/{{ col.slug }}/"
+tags: [helpCollections]
+---
+{#- Titel, omschrijving, noindex en kruimelpad staan in help-collection.11tydata.js
+    (als functies, zodat "Planning & scheduling" niet dubbel ge-escaped raakt). -#}
+{%- set articles = collections.help | helpIn(col.slug) -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, crumbs: crumbs, itemList: articles } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section help-collection-head">
+      <div class="container help-narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/help/">Help Center</a> <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ col.name }}</span>
+        </nav>
+        <div class="help-collection-title">
+          <span class="icon-tile" aria-hidden="true"><i style="--icon: url('{{ col.icon | htmlBaseUrl }}')"></i></span>
+          <div>
+            <h1>{{ col.name }}</h1>
+            <p class="lead">{{ col.description }}</p>
+            <p class="help-count">{{ articles.length }} article{% if articles.length != 1 %}s{% endif %}</p>
+          </div>
+        </div>
+        {% include "partials/help-search.njk" %}
+      </div>
+    </section>
+
+    <section class="section theme-white help-list-section">
+      <div class="container help-narrow">
+        <ul class="help-list" data-help-browse>
+          {%- for item in articles %}
+          <li class="help-list-item">
+            <a href="{{ item.url }}">
+              <span class="help-list-title">{{ item.data.title }}</span>
+              <span class="help-list-summary">{{ item.data.summary }}</span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+        <p class="help-back"><a href="/help/">&larr; All collections</a></p>
+      </div>
+    </section>
+
+    {% include "partials/help-contact.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

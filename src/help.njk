@@ -1,0 +1,61 @@
+---
+permalink: /help/
+title: Help Center
+seo_title: "Tubes Help Center | Guides and answers for Tubes users"
+description: "How to work with Tubes: getting started, budgeting, planning, cost control, approvals, reporting, settings and billing. Step-by-step guides and answers."
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, itemList: collections.helpCollections } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section section-hero help-hero">
+      <div class="container help-hero-inner">
+        <span class="kicker">{{ helpcenter.kicker }}</span>
+        <h1>{{ helpcenter.title | mdInline | safe }}</h1>
+        <p class="lead">{{ helpcenter.tagline }}</p>
+        {% include "partials/help-search.njk" %}
+      </div>
+    </section>
+
+    <section class="section theme-white help-collections-section">
+      <div class="container">
+        <div class="help-collections" data-help-browse>
+          {%- for col in helpcenter.collections %}
+          {%- set articles = collections.help | helpIn(col.slug) %}
+          {%- if articles.length %}
+          <a class="help-collection" href="/help/{{ col.slug }}/">
+            <span class="icon-tile" aria-hidden="true"><i style="--icon: url('{{ col.icon | htmlBaseUrl }}')"></i></span>
+            <h2>{{ col.name }}</h2>
+            <p>{{ col.description }}</p>
+            <span class="help-count">{{ articles.length }} article{% if articles.length != 1 %}s{% endif %}</span>
+          </a>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% include "partials/help-contact.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

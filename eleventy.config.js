@@ -83,6 +83,25 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/insights/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // ---------- Helpcentrum (/help/) ----------
+  //
+  // Artikelen in src/content/help/*.md, categorie in de front matter
+  // (`collection`, een slug uit src/_data/helpcenter.json). Volgorde binnen een
+  // categorie: `order` (laag eerst), daarna titel.
+  eleventyConfig.addCollection("help", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/help/*.md").sort((a, b) => {
+      const oa = a.data.order ?? 999;
+      const ob = b.data.order ?? 999;
+      return oa - ob || String(a.data.title).localeCompare(String(b.data.title));
+    })
+  );
+  // De artikelen van een categorie
+  eleventyConfig.addFilter("helpIn", (items, slug) => (items || []).filter((item) => item.data.collection === slug));
+  // De categorie bij een slug (naam, omschrijving, icoon)
+  eleventyConfig.addFilter("helpCollection", (cols, slug) =>
+    (cols || []).find((c) => c.slug === slug) || { slug, name: slug, description: "", icon: "" }
+  );
+
   // Nieuwsberichten (/news/): korte items met datum, samenvatting en link,
   // zonder eigen pagina (permalink: false in het bericht). Nieuwste bovenaan.
   eleventyConfig.addCollection("news", (collectionApi) =>
@@ -254,7 +273,7 @@ export default function (eleventyConfig) {
     if (!isHome && title) {
       const crumbId = abs(url) + "#breadcrumb";
       const trail = [{ "@type": "ListItem", position: 1, name: "Home", item: base + "/" }];
-      if (data.article) {
+      if (data.article && !data.crumbs) {
         trail.push({ "@type": "ListItem", position: 2, name: "Insights", item: base + "/insights/" });
       }
       // Bedrijvengids: Home > Companies > Land > Bedrijf
@@ -270,7 +289,8 @@ export default function (eleventyConfig) {
     if (data.article) {
       webPage["@type"] = "WebPage";
       graph.push({
-        "@type": "Article",
+        // Helpartikelen zijn handleidingen: TechArticle, de Insights gewone Article
+        "@type": data.article.help ? "TechArticle" : "Article",
         "@id": abs(url) + "#article",
         headline: data.article.headline,
         description: toPlainText(pageDescription),
@@ -329,7 +349,7 @@ export default function (eleventyConfig) {
         url: base + "/platform/",
         description: toPlainText(settings.footer_text),
         image: abs("/assets/images/og-image.png"),
-        softwareHelp: base + "/academy/",
+        softwareHelp: base + "/help/",
         featureList: [
           "Production budgeting",
           "Production scheduling and planning",

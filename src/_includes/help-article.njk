@@ -1,0 +1,71 @@
+{#- Artikel in het helpcentrum. Kruimelpad Help Center > categorie > artikel,
+    tekst uit de markdown, daaronder de andere artikelen van dezelfde categorie
+    en het contactblok. -#}
+{%- set col = helpcenter.collections | helpCollection(collection) -%}
+{%- set siblings = collections.help | helpIn(collection) -%}
+{%- set crumbs = [{ name: "Help Center", url: "/help/" }, { name: col.name, url: "/help/" + col.slug + "/" }] -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, crumbs: crumbs, article: { headline: title, date: page.date, updated: updated, words: content | wordCount, help: true } } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <article class="section article help-article">
+      <div class="container article-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/help/">Help Center</a> <span aria-hidden="true">/</span>
+          <a href="/help/{{ col.slug }}/">{{ col.name }}</a> <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ title }}</span>
+        </nav>
+        <h1>{{ title }}</h1>
+        {% if summary %}<p class="article-standfirst">{{ summary }}</p>{% endif %}
+        <p class="article-meta">Updated <time datetime="{{ (updated or page.date) | isoDate }}">{{ (updated or page.date) | readableDate }}</time></p>
+        <div class="rich-text article-body help-body">
+          {{ content | safe }}
+        </div>
+      </div>
+    </article>
+
+    {%- if siblings.length > 1 %}
+    <section class="section theme-light">
+      <div class="container article-inner">
+        <h2 class="article-related-heading">More in {{ col.name }}</h2>
+        <ul class="help-list help-list-compact">
+          {%- for item in siblings -%}
+          {%- if item.url != page.url %}
+          <li class="help-list-item">
+            <a href="{{ item.url }}">
+              <span class="help-list-title">{{ item.data.title }}</span>
+              <span class="help-list-summary">{{ item.data.summary }}</span>
+            </a>
+          </li>
+          {%- endif -%}
+          {%- endfor %}
+        </ul>
+        <p class="help-back"><a href="/help/{{ col.slug }}/">&larr; All articles in {{ col.name }}</a> <span aria-hidden="true">·</span> <a href="/help/">Help Center home</a></p>
+      </div>
+    </section>
+    {%- endif %}
+
+    {% include "partials/help-contact.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

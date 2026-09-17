@@ -1,0 +1,12 @@
+{#- Zoekveld van het helpcentrum. De index (/help/search.json) wordt pas
+    opgehaald zodra het veld focus krijgt; de resultaten komen eronder in
+    plaats van de kaarten of lijst (site.js, blok "Helpcentrum"). -#}
+<form class="help-search" role="search" action="/help/" data-help-search>
+  <label class="visually-hidden" for="help-search">Search the help center</label>
+  <div class="help-search-wrap">
+    <svg class="help-search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m17 17-4.3-4.3"/></svg>
+    <input type="search" id="help-search" name="q" placeholder="{{ helpcenter.search_placeholder }}" autocomplete="off" aria-controls="help-results" aria-describedby="help-results-note">
+  </div>
+</form>
+<p class="help-results-note" id="help-results-note" aria-live="polite"></p>
+<ul class="help-results" id="help-results" hidden></ul>
