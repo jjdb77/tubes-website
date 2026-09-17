@@ -116,8 +116,16 @@
       "url": "/compare-media-production-companies/"
     },
     {
-      "label": "Production Budget Comparison Tool",
+      "label": "Film & TV Budget Comparison Tool",
       "url": "/tools/budget-compare/"
+    },
+    {
+      "label": "Film Budget Builder",
+      "url": "/tools/budget-builder/"
+    },
+    {
+      "label": "Film budget template (Excel)",
+      "url": "/film-budget-template/"
     },
     {
       "label": "Contact",

@@ -21,6 +21,14 @@ sections:
         link_label: Book your free Health Check
         text: |
           A free 45 minute review of how your production company handles budgets, actuals, forecasting, approvals and reporting. Practical findings and three concrete improvements, no sales pitch.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Clapboard_%28191836749%29.jpeg/960px-Clapboard_%28191836749%29.jpeg
+        image_alt: "A blank clapperboard under studio lights"
+        image_credit: "Image: Thomas Marlowe (CC0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Clapboard_(191836749).jpeg)"
+        heading: Film Budget Builder
+        url: /tools/budget-builder/
+        link_label: Build a budget
+        text: |
+          Free film budgeting software in your browser: start with a template, import an existing budget or start from scratch. Add your costs and the totals stay up to date. Download as Excel, CSV or PDF. No account needed. Prefer a spreadsheet? Get the [free film budget template](/film-budget-template/).
       - image: /assets/images/locations-toledo.jpg
         image_alt: "Toledo, Spain: the old town with the cathedral and the Alcázar above the Tagus valley"
         heading: Film & TV locations in Europe
@@ -31,7 +39,7 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ARRI_%2826629292689%29.jpg/960px-ARRI_%2826629292689%29.jpg
         image_alt: "Two ARRI film lights on stands in front of equipment rental trucks in a New York street"
         image_credit: "Photo: Billie Grace Ward (CC BY 2.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ARRI_(26629292689).jpg)"
-        heading: Production Budget Comparison Tool
+        heading: Film & TV budget comparison tool
         url: /tools/budget-compare/
         link_label: Compare two versions
         text: |

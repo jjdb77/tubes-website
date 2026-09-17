@@ -7,12 +7,13 @@ pagination:
 permalink: "{{ cat.url }}"
 layout: layout.njk
 eleventyComputed:
-  title: "{{ cat.name | safe }} software"
-  seo_title: "{{ cat.name | safe }} Software for Film and TV: {{ cat.count }} Compared | Tubes"
+  title: "{{ cat.headline | safe }}"
+  seo_title: "{{ cat.seoTitle | safe }} | Tubes"
   description: "{{ cat.count }} {{ cat.name | lower | safe }} products for film, TV and media production, with what each one does, who it is for and what the vendor publishes about pricing."
 ---
-{#- Categoriepagina. Mikt op zoekvragen als "production accounting software" en
-    leidt door naar de productpagina's. -#}
+{#- Categoriepagina. Mikt op zoekvragen als "film budgeting software" en
+    "production accounting software" (kop en intro per categorie in
+    softwareIndex.js) en leidt door naar de productpagina's. -#}
 <article class="section theme-light company-page">
   <div class="container company-inner has-promo">
     <div class="company-main">
@@ -23,8 +24,11 @@ eleventyComputed:
     </nav>
     <header class="company-head">
       <p class="company-kicker"><a href="/software/">Directory</a></p>
-      <h1>{{ cat.name }} software for film and TV</h1>
+      <h1>{{ cat.headline }}</h1>
       <p class="company-summary">{{ cat.blurb }} {{ cat.count }} products listed, each recorded from what the vendor publishes itself. Filter and put three side by side in the <a href="/compare-media-software/">comparison tool</a>.</p>
+      {%- if cat.intro %}
+      <p class="company-summary">{{ cat.intro }} Listed here: {% for p in cat.products %}<a href="/software/{{ p.id }}/">{{ p.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+      {%- endif %}
     </header>
     {#- Reclameblok: op smalle schermen hier, anders in de zijkolom onderaan. -#}
     {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}

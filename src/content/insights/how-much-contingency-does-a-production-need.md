@@ -1,12 +1,11 @@
 ---
 layout: article.njk
-title: "How Much Contingency Does a Production Need?"
+title: "How Much Contingency Does a Film Production Need?"
 seo_title: "Film Budget Contingency: How Much Do You Need? | Tubes"
 description: "Why most productions carry 5 to 10% contingency, what it is allowed to cover, who gets to release it, and why an untouched contingency is not automatically good news."
 standfirst: "The percentage is the least interesting part of the question. What matters is what contingency is allowed to cover and who is allowed to spend it."
 date: 2026-07-18
 permalink: /insights/how-much-contingency-does-a-production-need/
-noindex: true
 ---
 
 Ask around and you will get the same answer: contingency runs at about 10%. It is the number in most textbooks, most templates and most financiers' expectations, and as a starting position it is fine.

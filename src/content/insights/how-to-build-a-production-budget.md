@@ -1,12 +1,11 @@
 ---
 layout: article.njk
-title: "How to Build a Production Budget"
-seo_title: "How to Build a Production Budget: A Practical Guide | Tubes"
-description: "How a production budget is actually built: the topsheet, the chart of accounts, above and below the line, fringes and contingency, plus the mistakes that cost money later."
+title: "How to Build a Film Production Budget"
+seo_title: "How to Build a Film Production Budget: A Practical Guide | Tubes"
+description: "How a film or TV production budget is actually built: the topsheet, the chart of accounts, above and below the line, fringes and contingency, plus the mistakes that cost money later."
 standfirst: "A budget is not a wish list with a total at the bottom. It is a model of how a production will be made, priced line by line, and it only works if it is built in the right order."
 date: 2026-08-01
 permalink: /insights/how-to-build-a-production-budget/
-noindex: true
 ---
 
 Most budgets that go wrong were wrong on day one. Not because someone typed the wrong rate, but because the budget was written before anyone knew what was actually being shot. The numbers were plausible, the topsheet added up, and none of it described the production that eventually turned up on set.
@@ -57,6 +56,8 @@ A chart of accounts does three things:
 - It makes the cost report possible at all. If invoices cannot be coded to a budget line, nobody can tell you where you stand.
 
 Whether you follow a broadcaster's scheme, a national film fund's, or your own house standard matters far less than following one consistently. What kills you is a chart of accounts that changes shape between the budget, the ledger and the cost report, because then somebody spends every Friday reconciling three documents that should have been one.
+
+If you do not have a house standard yet, start from one that production accountants already know: the [free film budget template](/film-budget-template/) is an Excel file with 39 areas and 335 lines in the numbering most schemes are derived from.
 
 ## Above the line
 
@@ -111,7 +112,7 @@ A workable rule: **detail follows risk and size**. A line that is large, volatil
 
 A production budget is never approved on the first pass. It goes out, comes back with a target, and has to be rebuilt around a different shoot length, a different location, a different episode count.
 
-The teams who handle this well keep scenario versions side by side, so the conversation is "here is the same production at 34 days and at 30, and here is exactly what falls away" rather than "give us a week and we will rebuild it". The teams who handle it badly end up with `budget_v7_FINAL_rev3_JB.xlsx` and no reliable way to explain what changed between versions.
+The teams who handle this well keep scenario versions side by side, so the conversation is "here is the same production at 34 days and at 30, and here is exactly what falls away" rather than "give us a week and we will rebuild it". The teams who handle it badly end up with `budget_v7_FINAL_rev3_JB.xlsx` and no reliable way to explain what changed between versions. (If that is where you are today, the [budget comparison tool](/tools/budget-compare/) will at least tell you what changed between two of those files.)
 
 Version control is not administrative tidiness. It is what lets you answer a financier in an hour instead of a week.
 

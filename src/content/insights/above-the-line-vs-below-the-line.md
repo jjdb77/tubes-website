@@ -1,12 +1,11 @@
 ---
 layout: article.njk
-title: "Above the Line vs Below the Line"
-seo_title: "Above the Line vs Below the Line Costs Explained | Tubes"
+title: "Above the Line vs Below the Line in a Film Budget"
+seo_title: "Above the Line vs Below the Line Film Costs Explained | Tubes"
 description: "What actually goes above the line and what goes below it, why the split exists, where the grey areas are, and why the distinction still matters on a modern production."
 standfirst: "The line is an accounting convention with a hundred years of habit behind it. It still tells you something useful, as long as you know what it was designed to separate."
 date: 2026-07-30
 permalink: /insights/above-the-line-vs-below-the-line/
-noindex: true
 ---
 
 There is a literal line. On old studio budget forms, a horizontal rule ran across the topsheet separating the costs that were negotiated before production from the costs of physically making the thing. Everything above that rule was above the line. Everything under it was below.

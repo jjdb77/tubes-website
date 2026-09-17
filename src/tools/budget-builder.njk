@@ -1,18 +1,17 @@
 ---
 layout: layout.njk
-title: Budget Builder
-seo_title: "Free Film & TV Production Budget Builder | Tubes"
-description: "Build a film or TV production budget online: start with a template, import an existing budget or start from scratch. Totals update automatically. Download as Excel, CSV or PDF. No account needed."
+title: Film Budget Builder
+seo_title: "Film Budget Builder: Free Film Budgeting Software in Your Browser | Tubes"
+description: "Free film budgeting software that runs in your browser: start with a template, import an existing budget or start from scratch. Totals update automatically. Download as Excel, CSV or PDF. No account needed."
 permalink: /tools/budget-builder/
 # Geen demo-popup en geen statistiek-script (zie "Gratis tools" in CLAUDE.md).
 # Deze tool praat met de eigen server voor de feedbackknop (en, als de
 # account-variant aanstaat, voor accounts en versies); server.js geeft
 # /tools/budget-builder/ daarom een CSP met connect-src 'self'.
 browser_only: true
-# Tijdelijk van de site gehaald (3-9-2026, verzoek Joachim): niet op /resources/,
-# niet in de footer, en noindex zodat hij ook uit sitemap en llms.txt blijft.
-# De URL blijft gewoon werken. Zie "Budget Builder" in CLAUDE.md om hem terug te zetten.
-noindex: true
+# Van 3-9 tot 17-9-2026 stond deze pagina op noindex en was hij nergens gelinkt;
+# sinds 17-9 staat hij weer op /resources/, in de footer en in de sitemap, als
+# antwoord op de zoekvraag "free film budgeting software".
 sections:
   - type: hero
     kicker: Free tool
@@ -20,7 +19,7 @@ sections:
     text: |
       Start with a template, import an existing budget or build one from scratch. Add your expected costs and Tubes keeps the totals up to date automatically.
 
-      When you are ready, download your budget as Excel, CSV or PDF.
+      When you are ready, download your budget as Excel, CSV or PDF. Prefer to start in a spreadsheet? Download the [free film budget template](/film-budget-template/) instead.
 
       No account needed. Your budget is stored only in this browser and nothing is uploaded to Tubes.
 ---

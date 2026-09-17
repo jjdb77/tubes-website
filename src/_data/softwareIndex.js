@@ -40,6 +40,28 @@ const CATEGORY_BLURB = {
   "Business & CRM": "The company around the productions: sales, contacts, contracts and business administration.",
 };
 
+// De kop en <title> van een categoriepagina volgen de zoekvraag, niet onze
+// indeling: niemand zoekt op "budgeting & cost control software", wel op
+// "film budgeting software" (Google, 17-9-2026: naast Movie Magic, Showbiz en
+// Hot Budget als merknamen). Zonder regel hier wordt het "<naam> software for
+// film and TV". De intro noemt wat zo'n pagina moet beantwoorden; de
+// productnamen komen er in de template automatisch achter.
+const CATEGORY_HEADLINE = {
+  "Budgeting & cost control": "Film budgeting software",
+  "Scheduling & call sheets": "Film scheduling software",
+  "Production accounting & payroll": "Production accounting software",
+};
+const CATEGORY_INTRO = {
+  "Budgeting & cost control":
+    "Film budgeting software builds the topsheet and the detail accounts, applies fringes and globals, keeps versions and, in the tools that go further, tracks actual costs against the budget. Some are desktop licences, some run in the browser, and pricing ranges from a free plan to a yearly licence per computer.",
+  "Scheduling & call sheets":
+    "Scheduling software turns a script breakdown into a stripboard, a shooting schedule and a day out of days, and produces the call sheets that follow from it.",
+};
+
+// Voor de <title>: elk woord met een hoofdletter, behalve de kleine.
+const SMALL = new Set(["and", "for", "of", "in", "&"]);
+const titleCase = (s) => s.split(" ").map((w, i) => (i && SMALL.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join(" ");
+
 const items = data.items;
 const sortByName = (a, b) => a.name.localeCompare(b.name);
 // Elke productlijst waarin Tubes voorkomt is alfabetisch met Tubes op de
@@ -80,6 +102,9 @@ const categories = [...byGroup(items, catsOf).entries()]
     slug: slug(name),
     url: `/software/category/${slug(name)}/`,
     blurb: CATEGORY_BLURB[name] || "",
+    headline: CATEGORY_HEADLINE[name] || `${name} software for film and TV`,
+    seoTitle: titleCase(CATEGORY_HEADLINE[name] ? `${CATEGORY_HEADLINE[name]}: ${list.length} tools compared` : `${name} software for film and TV: ${list.length} compared`),
+    intro: CATEGORY_INTRO[name] || "",
     count: list.length,
     products: sortProducts(list),
     byDeployment: [...byGroup(list, (i) => i.deployment).entries()]
