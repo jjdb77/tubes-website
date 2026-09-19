@@ -15,6 +15,8 @@ sections:
       Tubes grows with your team, from freelancers to large studios. Choose the option that fits your goals and continue with confidence, wherever you're headed next.
   - type: pricing
     theme: teal
+    intro: |
+      **Software, plus the people to implement it.** Whichever plan you choose, we help you set up Tubes, connect your systems, bring in your existing budgets and train your team. And we stay available once you are up and running.
     plans:
       - name: Producer Pro
         badge: Most popular

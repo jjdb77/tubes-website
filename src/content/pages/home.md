@@ -60,6 +60,8 @@ sections:
   - type: pricing
     theme: light
     heading: Choose your plan
+    intro: |
+      **Software, plus the people to implement it.** Whichever plan you choose, we help you set up Tubes, connect your systems, bring in your existing budgets and train your team. And we stay available once you are up and running.
     plans:
       - name: Producer Pro
         badge: Most popular
