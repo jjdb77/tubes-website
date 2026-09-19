@@ -1,0 +1,59 @@
+---
+pagination:
+  data: festivalIndex.typePages
+  size: 1
+  alias: soort
+  addAllPagesToCollections: true
+permalink: "{{ soort.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "{{ soort.plural }} in Europe"
+  seo_title: "{{ soort.pluralTitle }} in Europe: {{ soort.count }} Events Compared | Tubes"
+  description: "{{ soort.count }} European {{ soort.lower }}: what each one is for, when it runs, what the industry programme offers and where to apply."
+---
+{#- Pagina per soort evenement: "film markets in Europe", "broadcast trade
+    shows". Gewone festivals krijgen er geen, die 26 staan op de hub zelf en
+    dat zou dezelfde lijst nog eens zijn. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-festivals/">Film festivals and events</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ soort.plural }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-festivals/">Directory</a></p>
+      <h1>{{ soort.plural }} in Europe</h1>
+      <p class="company-summary">{{ soort.blurb }}</p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    {% set lijst = soort.festivals %}{% set toonType = false %}
+    {% include "partials/festival-cards.njk" %}
+
+    <h2>Other kinds of event</h2>
+    <ul class="company-chips">
+      {%- for t in festivalIndex.typePages %}
+      {%- if t.type != soort.type %}
+      <li><a href="{{ t.url }}">{{ t.plural }} <span>{{ t.count }}</span></a></li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+
+    <p class="company-back">
+      <a href="/film-festivals/">The whole calendar</a> &middot;
+      <a href="/compare-film-festivals/">Search and compare all {{ festivalIndex.total }}</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Budgeting for markets and festivals?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so accreditation, travel and deliverables sit in the budget instead of next to it.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

@@ -11,7 +11,7 @@ sections:
     text: |
       From Berlinale and the Marché du Film to series markets, industry conferences and broadcast technology shows: search by type, country or month, see the calendar on a map, and put up to three events side by side to decide where to premiere, sell, pitch or shop for kit.
 
-      Free and open to everyone. Only what an event publishes itself is listed; missing one? Suggest it below. Looking for places to shoot? See the [locations guide](/compare-film-tv-locations/).
+      Free and open to everyone. Only what an event publishes itself is listed; missing one? Suggest it below. Rather see what runs in a given month? Use the [festival calendar](/film-festivals/). Looking for places to shoot? See the [locations guide](/compare-film-tv-locations/).
     tight: true
     buttons:
       - label: Browse events

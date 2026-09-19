@@ -1,0 +1,77 @@
+---
+permalink: /film-festivals/
+layout: layout.njk
+title: Film festivals and events
+seo_title: "Film Festivals, Markets and Trade Shows in Europe: 50 Events | Tubes"
+description: "Every European film festival, market, series event and trade show we track, by month, country and kind of event, with dates, industry programme and how to submit."
+---
+{#- Hub van de festivalpagina's. Het zoekscherm blijft op
+    /compare-film-festivals/; deze kant is om te bladeren, en om een kalender
+    te hebben ("film festivals in October") waar onze lijst het antwoord is.
+
+    Bewust geen pagina per festival: zie de toelichting bovenin
+    src/_data/festivalIndex.js. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Film festivals and events</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker">Directory</p>
+      <h1>Film festivals, markets and events in Europe</h1>
+      <p class="company-summary">
+        {{ festivalIndex.total }} events in {{ festivalIndex.countries | length }} countries: festivals with an industry strand, co-production markets, series events, trade shows and conferences. Browse the calendar below, or search and put three side by side in the
+        <a href="/compare-film-festivals/">festival comparison</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <h2>By month</h2>
+    <p>An event that runs across two months appears in both.</p>
+    <ul class="company-chips">
+      {%- for m in festivalIndex.months %}
+      <li>{% if m.hasPage %}<a href="{{ m.url }}">{{ m.name }} <span>{{ m.count }}</span></a>{% else %}<span class="company-chip-flat">{{ m.name }} <span>{{ m.count }}</span></span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By kind of event</h2>
+    <ul class="company-tiles">
+      {%- for t in festivalIndex.types %}
+      <li>
+        {% if t.hasPage %}<a href="{{ t.url }}"><strong>{{ t.plural }}</strong> <span>{{ t.count }}</span></a>{% else %}<p class="company-tile-flat"><strong>{{ t.plural }}</strong> <span>{{ t.count }}</span></p>{% endif %}
+        <p>{{ t.blurb }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By country</h2>
+    <p>Countries with at least {{ festivalIndex.minCountry }} events have their own page.</p>
+    <ul class="company-chips">
+      {%- for c in festivalIndex.countries %}
+      <li>{% if c.hasPage %}<a href="{{ c.url }}">{{ c.country }} <span>{{ c.count }}</span></a>{% else %}<span class="company-chip-flat">{{ c.country }} <span>{{ c.count }}</span></span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+
+    <h2>All {{ festivalIndex.total }} events</h2>
+    {% set lijst = festivalIndex.festivals %}{% set toonType = true %}
+    {% include "partials/festival-cards.njk" %}
+
+    <h2>How this list works</h2>
+    <div class="rich-text">
+      <p>Dates, industry programmes and submission routes come from the event's own site, and the field stays empty when an organiser has not published it yet. Next editions move: check the official site before you book anything. The point of this list is the overview, so for one event you are better off on the organiser's own page, which is where every card links to.</p>
+      <p>Planning a festival run costs money: accreditation, travel, prints and deliverables, a stand at a market. That belongs in the budget from the start, not in the last column of a spreadsheet. Missing an event? <a href="/compare-film-festivals/#request-entry">Suggest it</a> and we add it with a source.</p>
+    </div>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Budgeting a festival run?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so accreditation, travel and deliverables sit in the budget instead of next to it.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

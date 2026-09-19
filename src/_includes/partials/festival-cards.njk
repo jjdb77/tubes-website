@@ -1,0 +1,13 @@
+{#- Kaarten met festivals en evenementen op de overzichtspagina's van
+    /film-festivals/. Verwacht `lijst` (array evenementen) en optioneel
+    `toonType` (het soort als tag erbij).
+
+    Zelfde opmaak als de locatiekaarten (.guide-card), zonder hartje en zonder
+    Compare-vinkje: die horen bij het zoekscherm en hebben script nodig.
+    Fotobijschrift blijft staan, want een Wikimedia-thumbnail mag alleen met
+    maker en licentie in beeld gehotlinkt worden. -#}
+<div class="guide-grid">
+  {%- for f in lijst %}
+<article class="guide-card">{% if f.photo and f.photo.thumb %}<figure class="guide-photo"><img src="{{ f.photo.thumb }}" alt="{{ f.name }}, {{ f.city }}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: {{ f.photo.author }} ({{ f.photo.license }}), <a href="{{ f.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>{% else %}<div class="guide-photo guide-photo-empty"><span>{{ f.type }}</span></div>{% endif %}<div class="guide-card-body"><h3>{{ f.name }}</h3><p class="guide-meta">{{ f.city }}, {{ f.country }} &middot; {{ f.month }}</p>{% if toonType %}<p><span class="loc-tag guide-type-tag">{{ f.type }}</span></p>{% endif %}<p class="guide-setting">{{ f.focus }}</p>{% if f.next_dates %}<p class="guide-known"><strong>Next edition:</strong> {{ f.next_dates }}</p>{% endif %}{% if f.industry %}<p class="guide-known"><strong>For the industry:</strong> {{ f.industry }}</p>{% endif %}{% if f.submissions %}<p class="guide-known"><strong>Submissions:</strong> {{ f.submissions }}{% if f.submission_deadline_note %} &middot; {{ f.submission_deadline_note }}{% endif %}</p>{% endif %}<p class="guide-links"><a href="{{ f.official_url }}" target="_blank" rel="noopener">Official site</a><a href="/compare-film-festivals/#dir-{{ f.id }}">Compare this one</a></p></div></article>
+  {%- endfor %}
+</div>

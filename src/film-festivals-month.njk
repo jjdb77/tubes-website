@@ -1,0 +1,61 @@
+---
+pagination:
+  data: festivalIndex.monthPages
+  size: 1
+  alias: maand
+  addAllPagesToCollections: true
+permalink: "{{ maand.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film festivals in {{ maand.name }}"
+  seo_title: "Film Festivals and Markets in {{ maand.name }}: {{ maand.count }} European Events | Tubes"
+  description: "The {{ maand.count }} European film festivals, markets and industry events that take place in {{ maand.name }}, with dates, industry programme and how to submit."
+  excludeFromLlms: true
+---
+{#- Kalenderpagina. Hier is onze lijst wel het antwoord: wie wil weten wat er
+    in oktober speelt, heeft een overzicht nodig en niet de site van een enkel
+    festival. Een evenement dat over twee maanden loopt staat in allebei. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-festivals/">Film festivals and events</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ maand.name }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-festivals/">Calendar</a></p>
+      <h1>Film festivals and industry events in {{ maand.name }}</h1>
+      <p class="company-summary">
+        {{ maand.count }} European events run in {{ maand.name }}, from festivals with an industry strand to co-production markets and trade shows. Dates move between editions, so confirm on the organiser's own site before booking travel.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    {% set lijst = maand.festivals %}{% set toonType = true %}
+    {% include "partials/festival-cards.njk" %}
+
+    <h2>The months around it</h2>
+    <ul class="company-chips">
+      {%- for m in festivalIndex.monthPages %}
+      <li><a href="{{ m.url }}">{{ m.name }} <span>{{ m.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <p class="company-back">
+      <a href="{{ maand.prev.url }}">{{ maand.prev.name }}</a> &middot;
+      <a href="/film-festivals/">The whole calendar</a> &middot;
+      <a href="{{ maand.next.url }}">{{ maand.next.name }}</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Budgeting a festival run?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so accreditation, travel and deliverables sit in the budget instead of next to it.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

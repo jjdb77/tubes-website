@@ -1,0 +1,63 @@
+---
+pagination:
+  data: festivalIndex.countryPages
+  size: 1
+  alias: land
+  addAllPagesToCollections: true
+permalink: "{{ land.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film festivals in {{ land.inCountry }}"
+  seo_title: "Film Festivals and Events in {{ land.country }}: {{ land.count }} in the Calendar | Tubes"
+  description: "The {{ land.count }} film festivals, markets and industry events we track in {{ land.inCountry }}, with dates, industry programme and how to submit."
+  excludeFromLlms: true
+---
+{#- Landpagina, vanaf MIN_COUNTRY evenementen. Daaronder staat het land als
+    chip op de hub, zonder eigen pagina. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-festivals/">Film festivals and events</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ land.country }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-festivals/">Directory</a></p>
+      <h1>Film festivals and industry events in {{ land.inCountry }}</h1>
+      <p class="company-summary">
+        {{ land.count }} events:
+        {%- for g in land.byType %} {{ g.count }} {{ g.lower }}{% if not loop.last %},{% endif %}{% endfor %}.
+        Shooting there too? See the <a href="/film-locations/country/{{ land.slug }}/">locations</a> and the <a href="/film-incentives/">incentive that applies</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    {% set lijst = land.festivals %}{% set toonType = true %}
+    {% include "partials/festival-cards.njk" %}
+
+    <h2>Other countries</h2>
+    <ul class="company-chips">
+      {%- for c in festivalIndex.countryPages %}
+      {%- if c.country != land.country %}
+      <li><a href="{{ c.url }}">{{ c.country }} <span>{{ c.count }}</span></a></li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+
+    <p class="company-back">
+      <a href="/film-festivals/">The whole calendar</a> &middot;
+      <a href="/compare-film-festivals/">Search and compare all {{ festivalIndex.total }}</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Producing in {{ land.inCountry }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a festival run and the production behind it stay in one budget.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>
