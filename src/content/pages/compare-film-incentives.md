@@ -11,7 +11,7 @@ sections:
     text: |
       The incentive decides a large part of where a production can afford to shoot. This free comparison puts the schemes of 32 European countries and regions side by side, with the fine print that changes the outcome: net value, caps, funding risk and timing, plus a link to the budget template each fund asks for.
 
-      Open to everyone, no sign-up. Figures checked against the funds in September 2026, when Romania, Bulgaria, Serbia, Slovakia, the Baltic states, Slovenia, Luxembourg and Switzerland were added. Two of those have no rebate at all, and the table says so. Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
+      Open to everyone, no sign-up. Figures checked against the funds in September 2026, when Romania, Bulgaria, Serbia, Slovakia, the Baltic states, Slovenia, Luxembourg and Switzerland were added. Two of those have no rebate at all, and the table says so. Want the detail on one country instead of the calculator? Every scheme has its own page in the [incentive guide](/film-incentives/). Looking for the places themselves? See our [film & TV locations guide](/compare-film-tv-locations/).
     tight: true
     buttons:
       - label: Compare incentives

@@ -49,7 +49,7 @@ eleventyComputed:
     {%- if streek.incentive %}
     <h2>What {{ streek.inCountry }} pays back</h2>
     <p>
-      {{ streek.inCountry | capitalize_first }} runs the {{ streek.incentive.scheme }}{% if streek.incentive.rate_label %}, worth {{ streek.incentive.rate_label }}{% endif %}. Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
+      {{ streek.inCountry | capitalize_first }} runs the <a href="/film-incentives/{{ streek.incentive.id }}/">{{ streek.incentive.scheme }}</a>{% if streek.incentive.rate_label %}, worth {{ streek.incentive.rate_label }}{% endif %}. Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
     </p>
     {%- endif %}
 

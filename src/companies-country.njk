@@ -40,7 +40,7 @@ eleventyComputed:
     {%- if land.incentive %}
     <h2>What {{ land.inName }} pays back</h2>
     <p>
-      {{ land.inName | capitalize_first }} runs the {{ land.incentive.scheme }}{% if land.incentive.rate_label %}, worth {{ land.incentive.rate_label }}{% endif %}{% if land.incentive.mechanism %} as a {{ land.incentive.mechanism | lower }}{% endif %}.
+      {{ land.inName | capitalize_first }} runs the <a href="/film-incentives/{{ land.incentive.id }}/">{{ land.incentive.scheme }}</a>{% if land.incentive.rate_label %}, worth {{ land.incentive.rate_label }}{% endif %}{% if land.incentive.mechanism %} as a {{ land.incentive.mechanism | lower }}{% endif %}.
       Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>, and find places to shoot in the <a href="/compare-film-tv-locations/">locations guide</a>.
     </p>
     {%- endif %}

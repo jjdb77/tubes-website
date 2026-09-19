@@ -40,7 +40,7 @@ eleventyComputed:
 
     {%- if combi.incentive %}
     <p class="company-summary">
-      Shooting in {{ combi.inCountry }} pays back through the {{ combi.incentive.scheme }}{% if combi.incentive.rate_label %} ({{ combi.incentive.rate_label }}){% endif %}: work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
+      Shooting in {{ combi.inCountry }} pays back through the <a href="/film-incentives/{{ combi.incentive.id }}/">{{ combi.incentive.scheme }}</a>{% if combi.incentive.rate_label %} ({{ combi.incentive.rate_label }}){% endif %}: work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
     </p>
     {%- endif %}
 

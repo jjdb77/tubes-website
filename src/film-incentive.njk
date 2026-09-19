@@ -1,0 +1,143 @@
+---
+pagination:
+  data: incentiveIndex.incentives
+  size: 1
+  alias: inc
+  addAllPagesToCollections: true
+permalink: "{{ inc.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film incentive in {{ inc.name }}"
+  seo_title: "{{ inc.name }} Film Tax Incentive {{ inc.shortRate }}: {{ inc.shortScheme }} | Tubes"
+  description: "How the {{ inc.scheme }} works: {{ inc.rate_label }} {{ inc.mechanism | lower }}, minimum spend, cap, when it pays out and what it is worth net. Checked against the source on {{ incentiveIndex.updated }}."
+---
+{#- Pagina per regeling. De vergelijkingstool op /compare-film-incentives/
+    rekent; deze pagina legt uit. Alle cijfers komen uit locations.json, zodat
+    de tool en deze pagina nooit uiteen kunnen lopen, en elke pagina noemt de
+    bron en de datum waarop we die bron gelezen hebben.
+
+    Niets wordt hier geschat: staat er een veld leeg in de data, dan staat het
+    er niet. Een verzonnen plafond gaat een producent gebruiken om te plannen. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-incentives/">Film incentives</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ inc.name }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-incentives/">Incentives</a></p>
+      <h1>Film and TV incentive in {{ inc.inName }}</h1>
+      <p class="company-summary">
+        {{ inc.inName | capitalize_first }} runs the {{ inc.scheme }}: a {{ inc.mechanism | lower }} worth {{ inc.rate_label }}{% if inc.net_label %}, {{ inc.net_label }}{% endif %}.
+        {{ inc.mechanismNote }}
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <h2>The numbers</h2>
+    <dl class="inc-facts">
+      <div><dt>Scheme</dt><dd>{{ inc.scheme }}</dd></div>
+      <div><dt>Type</dt><dd><span class="loc-tag loc-tag-{{ inc.mechanism | lower | replace(' ', '-') }}">{{ inc.mechanism }}</span></dd></div>
+      <div><dt>Headline rate</dt><dd>{{ inc.rate_label }}{% if inc.net_label %} <small>({{ inc.net_label }})</small>{% endif %}</dd></div>
+      <div><dt>Minimum local spend</dt><dd>{{ inc.min_spend }}</dd></div>
+      <div><dt>Cap per project</dt><dd>{{ inc.cap_label or "No cap" }}</dd></div>
+      <div><dt>Funding</dt><dd><span class="loc-tag loc-tag-{{ inc.funding | lower | replace(' ', '-') }}">{{ inc.funding }}</span>{% if inc.funding_note %} <small>{{ inc.funding_note }}</small>{% endif %}</dd></div>
+      <div><dt>Paid</dt><dd>{{ inc.paid }}</dd></div>
+      <div><dt>Foreign spend qualifies</dt><dd>{{ inc.foreign_spend }}</dd></div>
+      <div><dt>Currency</dt><dd>{{ inc.currency }}</dd></div>
+    </dl>
+
+    {%- if inc.extras.length %}
+    <h2>Higher rates and tiers</h2>
+    <ul class="company-links">
+      {%- for e in inc.extras %}
+      <li>{{ e }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <h2>What this means for the cashflow</h2>
+    <div class="rich-text">
+      <p>{{ inc.fundingNote }} The production carries the gap until the money arrives, and that is a financing question rather than a budget line.</p>
+      <p><strong>When it pays:</strong> {{ inc.paid }}.</p>
+      {%- if inc.assumption %}
+      <p><strong>Our assumption in the comparison:</strong> {{ inc.assumption }}</p>
+      {%- endif %}
+    </div>
+
+    {%- if inc.notes %}
+    <h2>The detail</h2>
+    <div class="rich-text"><p>{{ inc.notes }}</p></div>
+    {%- endif %}
+
+    {%- if inc.budget_template %}
+    <h2>What you have to submit</h2>
+    <div class="rich-text">
+      <p><a href="{{ inc.budget_template.url }}" target="_blank" rel="noopener">{{ inc.budget_template.label }}</a>{% if inc.budget_template.note %}. {{ inc.budget_template.note }}{% endif %}</p>
+      <p>Building the budget first? Use the <a href="/film-budget-template/">free film budget template</a> or the <a href="/tools/budget-builder/">Budget Builder</a>, then map it onto whatever the fund asks for.</p>
+    </div>
+    {%- endif %}
+
+    <h2>How it compares</h2>
+    <p>
+      Counted on the best rate a production can reach after tax, {{ inc.name }} sits at number {{ inc.rank }} of the {{ incentiveIndex.total }} European schemes we track ({{ inc.topRate }}%).
+      Work out the net value on your own spend, side by side with up to two other countries, in the <a href="/compare-film-incentives/">incentive comparison</a>.
+    </p>
+    {%- if inc.higher.length %}
+    <h3>Pays more</h3>
+    <ul class="company-chips">
+      {%- for o in inc.higher %}
+      <li><a href="{{ o.url }}">{{ o.name }} <span>{{ o.rate_label }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if inc.lower.length %}
+    <h3>Pays less</h3>
+    <ul class="company-chips">
+      {%- for o in inc.lower %}
+      <li><a href="{{ o.url }}">{{ o.name }} <span>{{ o.rate_label }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if inc.sameMechanism.length %}
+    <h3>Other {{ inc.mechanism | lower }} schemes</h3>
+    <ul class="company-chips">
+      {%- for o in inc.sameMechanism %}
+      <li><a href="{{ o.url }}">{{ o.name }} <span>{{ o.rate_label }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- if inc.guide.locations or inc.guide.companies %}
+    <h2>Shooting there</h2>
+    <p>
+      {%- if inc.guide.locations %} We list <a href="{{ inc.guide.locationsUrl }}">{{ inc.guide.locations }} places to shoot in {{ inc.guide.country }}</a>{% endif %}
+      {%- if inc.guide.locations and inc.guide.companies %} and{% endif %}
+      {%- if inc.guide.companies %} <a href="{{ inc.guide.companiesUrl }}">{{ inc.guide.companies }} studios, production companies and post houses</a>{% endif %}, each checked on its own site.
+    </p>
+    {%- endif %}
+
+    <h2>Source</h2>
+    <p class="company-summary">
+      Figures taken from <a href="{{ inc.source }}" target="_blank" rel="noopener">{{ inc.source_label }}</a> and checked on {{ incentiveIndex.updated }}. Incentives change: confirm the current terms with the fund before you commit a budget to them.
+    </p>
+
+    <p class="company-back">
+      <a href="/film-incentives/">All {{ incentiveIndex.total }} incentives</a> &middot;
+      <a href="/compare-film-incentives/">Compare them on your own spend</a> &middot;
+      <a href="/film-locations/">Locations by country</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Turning an incentive into a budget?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so qualifying spend, the gap until payout and the rest of the finance plan stay in one place.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

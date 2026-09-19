@@ -3378,3 +3378,14 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .help-collection-title .icon-tile { width: 44px; height: 44px; }
   .help-search input { font-size: 1rem; padding: 14px 14px 14px 44px; }
 }
+
+/* ---------- Incentivepagina per land (/film-incentives/<id>/) ----------
+   Feitenlijst: label boven waarde, twee kolommen zolang het past. Losse
+   klassen, want de tabel op /compare-film-incentives/ is een echte tabel en
+   die opmaak (.loc-*) past hier niet. De tags (.loc-tag-*) zijn wel dezelfde,
+   zodat "Cash rebate" op beide plekken dezelfde kleur heeft. */
+.inc-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; margin: 18px 0 8px; padding: 0; }
+.inc-facts > div { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin: 0 0 8px; }
+.inc-facts dt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+.inc-facts dd { margin: 6px 0 0; font-size: 0.98rem; color: var(--ink); }
+.inc-facts dd small { display: block; margin-top: 4px; font-size: 0.84rem; color: var(--ink-soft); font-weight: 400; }

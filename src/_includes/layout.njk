@@ -32,6 +32,7 @@
       zou een genest lijstje in eleventyComputed maar een keer uitgerekend
       worden en op alle 213 pagina's hetzelfde zijn. -#}
   {%- if locationIndex.crumbsByUrl[page.url] -%}{%- set pad = locationIndex.crumbsByUrl[page.url] -%}{%- endif -%}
+  {%- if incentiveIndex.crumbsByUrl[page.url] -%}{%- set pad = incentiveIndex.crumbsByUrl[page.url] -%}{%- endif -%}
   <script type="application/ld+json">
 {{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: sections, schemaSoftware: schema_software, company: bedrijf, product: product, crumbs: pad, itemList: itemList } | jsonld | safe }}
   </script>

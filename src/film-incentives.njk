@@ -1,0 +1,65 @@
+---
+permalink: /film-incentives/
+layout: layout.njk
+title: Film incentives
+seo_title: "Film Tax Incentives in Europe: All 32 Schemes by Country | Tubes"
+description: "Every European film and TV incentive on one page: rate, minimum spend, cap, funding type and when it pays out, with a page per country and a calculator for your own spend."
+---
+{#- Hub van de incentivepagina's. De rekentool blijft op
+    /compare-film-incentives/; deze kant is om te bladeren en om per land een
+    pagina te hebben die "film tax incentive <land>" beantwoordt. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Film incentives</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker">Directory</p>
+      <h1>Film and TV incentives in Europe</h1>
+      <p class="company-summary">
+        {{ incentiveIndex.total }} schemes, each read from the fund's own published terms and checked on {{ incentiveIndex.updated }}. Open a country for how its scheme works, what it is worth after tax and when it actually pays, or work out the net value on your own spend in the
+        <a href="/compare-film-incentives/">incentive comparison</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <h2>Ranked by what a production can reach</h2>
+    <p>Best rate after tax, before caps and before the assumptions that depend on your production. The comparison tool does the rest.</p>
+    <ul class="company-chips">
+      {%- for i in incentiveIndex.ranked %}
+      <li><a href="{{ i.url }}">{{ i.name }} <span>{{ i.rate_label }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    {%- for m in incentiveIndex.byMechanism %}
+    <h2>{{ m.mechanism }} <span class="company-count">{{ m.count }}</span></h2>
+    <p>{{ m.note }}</p>
+    <ul class="company-links">
+      {%- for i in m.incentives %}
+      <li>
+        <a href="{{ i.url }}">{{ i.name }}</a>
+        <span class="company-links-meta">{{ i.scheme }} &middot; {{ i.rate_label }} &middot; Paid: {{ i.paid }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endfor %}
+
+    <h2>How to read these numbers</h2>
+    <div class="rich-text">
+      <p>A headline percentage is not what lands in the budget. Three things change it: tax (a credit that is itself taxable is worth less than it looks), the base it is calculated on (local spend, total budget, or labour only), and the wait (an entitlement pays after the return, a budget-limited rebate pays when the round comes round). Every page below states all three, and says where the figure came from.</p>
+      <p>Where a fund publishes nothing, the field stays empty rather than being estimated, because an invented cap is something a producer will plan around. Europe only for now, without Russia and Belarus. Missing a country? <a href="/compare-film-incentives/#request-location">Tell us</a> and we add it with a source.</p>
+    </div>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Building the budget behind the incentive?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so qualifying spend and the gap until payout stay visible next to everything else.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>
