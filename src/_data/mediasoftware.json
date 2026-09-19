@@ -1,7 +1,70 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-19",
   "note": "Only what a vendor publishes itself. Pricing is quoted as published or marked 'Not published'; never estimated. Tubes is listed like any other product.",
   "items": [
+    {
+      "id": "adobe-after-effects",
+      "name": "Adobe After Effects",
+      "vendor": "Adobe Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Motion design and visual effects software from Adobe (San Jose) for animating titles, graphics and illustrations and compositing visual effects for film, TV, video and web. Compositions can be sent to Adobe Premiere without rendering via Dynamic Link.",
+      "for_whom": "Motion designers, VFX artists and video professionals, from individual creators to teams and enterprises",
+      "pricing_model": "Subscription: After Effects single app US$22.99 per month (annual plan, billed monthly); Creative Cloud Pro US$69.99 per month (US$34.99 for the first 3 months); After Effects for teams US$37.99 per month per license; student and teacher plan US$19.99 per month the first year. 7-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "Adobe Premiere (Dynamic Link), Photoshop, Adobe Media Encoder, Creative Cloud apps",
+      "founded": null,
+      "official_url": "https://www.adobe.com/products/aftereffects.html",
+      "source_urls": [
+        "https://www.adobe.com/products/aftereffects.html",
+        "https://helpx.adobe.com/after-effects/system-requirements.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "adobe-animate",
+      "name": "Adobe Animate",
+      "vendor": "Adobe Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "2D animation software from Adobe (San Jose, California) for cartoons, banners, games and the web, with vector drawing and character animation, published to HTML5, WebGL and Adobe AIR. Adobe states it is in maintenance mode: security and bug fixes continue, no new features are planned, no plans to discontinue it.",
+      "for_whom": "Animators, game developers, content creators and educators",
+      "pricing_model": "Subscription: USD 22.99 per month on an annual plan billed monthly for the single app; also included in Creative Cloud Pro (USD 34.99 per month introductory price shown) and business licences at USD 99.99 per month per licence. Free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "Adobe Creative Cloud apps; HTML5 Canvas, WebGL and Adobe AIR publishing",
+      "founded": null,
+      "official_url": "https://www.adobe.com/products/animate.html",
+      "source_urls": [
+        "https://www.adobe.com/products/animate.html",
+        "https://helpx.adobe.com/animate/system-requirements.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "adobe-audition",
+      "name": "Adobe Audition",
+      "vendor": "Adobe Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Digital audio workstation from Adobe for recording, mixing, editing and restoring audio, with multitrack and waveform editing, spectral display and noise reduction. Works with Premiere Pro and After Effects for sound on video projects.",
+      "for_whom": "Video producers, podcasters, sound designers and audio professionals",
+      "pricing_model": "Subscription: Audition single app US$22.99 per month (annual plan, billed monthly); Creative Cloud Pro (20+ apps) US$34.99 per month for the first 3 months, then the regular price; students and teachers US$19.99 per month; business US$99.99 per month per license (Creative Cloud Pro for teams). Free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "Adobe Premiere Pro, After Effects, Adobe Stock",
+      "founded": null,
+      "official_url": "https://www.adobe.com/products/audition.html",
+      "source_urls": [
+        "https://www.adobe.com/products/audition.html",
+        "https://helpx.adobe.com/audition/system-requirements.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
     {
       "id": "adobe-premiere",
       "name": "Adobe Premiere",
@@ -19,6 +82,28 @@
       "source_urls": [
         "https://www.adobe.com/products/premiere.html",
         "https://www.adobe.com/products/premiere/plans.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "autodesk-3ds-max",
+      "name": "Autodesk 3ds Max",
+      "vendor": "Autodesk, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "3D modelling, rendering and animation software from Autodesk (San Francisco) for environments, props, characters and effects, with procedural workflows, built-in CAT and Biped rigging, the Arnold renderer and OpenUSD support. Part of the Media & Entertainment Collection with Maya, Arnold and MotionBuilder.",
+      "for_whom": "3D artists in film, TV, games and design visualisation studios",
+      "pricing_model": "Subscription, EU store prices including VAT: EUR 2,112 per year for one user (EUR 176 per month paid annually), EUR 267 per month paid monthly, or Flex tokens from EUR 104 for 33 tokens at 6 tokens per day; 3-year term available; 30-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows 10 and 11",
+      "integrations": "Arnold; OpenUSD and glTF; plugins such as tyFlow, thinkingParticles and ForestPack; Autodesk Flow Retopology and Flow Studio",
+      "founded": null,
+      "official_url": "https://www.autodesk.com/products/3ds-max/overview",
+      "source_urls": [
+        "https://www.autodesk.com/eu/products/3ds-max/overview",
+        "https://www.autodesk.com/products/3ds-max/overview",
+        "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-3ds-Max-2026.html"
       ],
       "logo": null,
       "photo": null
@@ -45,6 +130,73 @@
       "photo": null
     },
     {
+      "id": "aws-deadline-cloud",
+      "name": "AWS Deadline Cloud",
+      "vendor": "Amazon Web Services, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Managed render farm service from AWS: farms, queues and fleets for 3D rendering and VFX on EC2 instances or your own machines, usage-based licensing for renderers, per-project budgets and a monitor in the browser or as a desktop app. Successor to the free Thinkbox Deadline 10, in maintenance mode since 7 November 2025.",
+      "for_whom": "Animation, VFX and media studios and their pipeline teams",
+      "pricing_model": "Pay as you go, no upfront commitment or minimum fee: compute billed as EC2 instances and EBS volumes for service-managed fleets, USD 0.015 per hour per connected worker for customer-managed fleets, plus usage-based licensing per renderer (for example Arnold USD 0.66 per hour). AWS Thinkbox Deadline 10 is free of charge (published)",
+      "deployment": "Cloud",
+      "platforms": "Web console; Deadline Cloud monitor in the browser or as a desktop application; command line and API",
+      "integrations": "Maya, Arnold, 3ds Max, Nuke, Houdini, V-Ray, Blender, KeyShot, Unreal Engine; Amazon EC2, S3, CloudWatch, IAM Identity Center",
+      "founded": null,
+      "official_url": "https://aws.amazon.com/deadline-cloud/",
+      "source_urls": [
+        "https://aws.amazon.com/deadline-cloud/",
+        "https://aws.amazon.com/deadline-cloud/pricing/",
+        "https://aws.amazon.com/media-services/thinkbox/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "aximmetry",
+      "name": "Aximmetry",
+      "vendor": "Aximmetry Technologies Ltd.",
+      "vendor_country": "Hungary",
+      "category": "Post-production & VFX",
+      "summary": "Virtual production software from Budapest for green-screen virtual studios, augmented reality and LED-wall XR, with a node-based editor and a choice of its own render engine or Unreal Engine. Editions: the free Studio Limited, Studio, and Broadcast & Film with unlimited SDI, NDI and SMPTE 2110 ports.",
+      "for_whom": "Broadcasters, film and entertainment productions, corporate video creators, cinematographers, esports broadcasters, streamers and vloggers",
+      "pricing_model": "Studio Limited free (1 NDI port, basic tracking, no watermark). Broadcast & Film lifetime licence EUR 4,990, or subscription EUR 399 per month; Studio subscription EUR 159 per month; Maintenance+ plan for updates EUR 99 per month or EUR 1,090 per year; prices exclude VAT. Free trial and student licences (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows 10, Windows 11, Windows Server 2019 or later",
+      "integrations": "Unreal Engine 5; NDI, SDI, SMPTE 2110 (NMOS), SRT; camera tracking (Antilatency, OptiTrack, Qualisys, HTC Vive, professional tracking systems); MOS newsroom integration; GPIO, OSC, MIDI, DMX/ArtNet; RTMP streaming; COLLADA and FBX import; Pomfort LUTs",
+      "founded": 2009,
+      "official_url": "https://aximmetry.com",
+      "source_urls": [
+        "https://aximmetry.com/",
+        "https://aximmetry.com/products",
+        "https://aximmetry.com/aboutus"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "baselight",
+      "name": "Baselight",
+      "vendor": "FilmLight Ltd",
+      "vendor_country": "United Kingdom",
+      "category": "Post-production & VFX",
+      "summary": "Colour grading and finishing system from London-based FilmLight for film, TV, commercials and broadcast, sold as turnkey systems (Baselight ONE, TWO and X), as Baselight for macOS, and as Baselight Editions plug-ins that bring the same grades into Avid, Nuke and Flame.",
+      "for_whom": "Colourists and finishing facilities; Editions for editors and VFX artists",
+      "pricing_model": "Turnkey Baselight systems: Not published. Baselight for macOS by subscription: Baselight M from EUR 6,820 per year or EUR 2,270 per quarter, custom durations up to 365 days from EUR 80; example for Baselight S in USD: 1 day $90, 10 days $510, 100 days $2,850. 14-day trial of Baselight M; Baselight LOOK free (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS (Baselight for macOS, Intel or Apple silicon); Baselight ONE, TWO and X are turnkey systems",
+      "integrations": "Avid Media Composer, Nuke and Flame (Baselight Editions, BLG for Flame), OFX plugins, FilmLight Daylight and FLUX Store, grading control panels",
+      "founded": 2002,
+      "official_url": "https://www.filmlight.ltd.uk/",
+      "source_urls": [
+        "https://baselight.filmlight.ltd.uk/",
+        "https://www.filmlight.ltd.uk/store/fl_product/baselight-for-macos/",
+        "https://www.filmlight.ltd.uk/contacts/locations/locations.php",
+        "https://www.filmlight.ltd.uk/contacts/history/history.php"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "blender",
       "name": "Blender",
       "vendor": "Blender Foundation",
@@ -61,6 +213,31 @@
       "source_urls": [
         "https://projects.blender.org/blender/blender/raw/branch/main/README.md",
         "https://builder.blender.org/download/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cinegy-air",
+      "name": "Cinegy Air",
+      "vendor": "Cinegy GmbH / Cinegy LLC",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "also_in": [
+        "Asset & media management"
+      ],
+      "summary": "Multi-channel playout server and broadcast automation software from Cinegy (Munich and Washington, DC): automation, video server and branding in one Windows application, from SD to 8K, with logo insertion, subtitles and live control. Runs on standard servers, virtual machines or AWS; Cinegy Archive is the sister MAM.",
+      "for_whom": "Broadcasters, news and sports operations, live event producers and channel operators",
+      "pricing_model": "Perpetual licence from EUR 2,995 (Cinegy Air); Cinegy Air PRO includes Cinegy Title, Cinegy Air ULTIMATE adds one subtitle channel (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Windows",
+      "integrations": "MOS newsroom systems (ENPS, Avid iNews, Octopus), traffic and MAM systems, SDI routers, Cavena and Screen subtitling, Cinegy Archive, Title and Capture, Blackmagic",
+      "founded": null,
+      "official_url": "https://www.cinegy.com/products/cinegy_air/",
+      "source_urls": [
+        "https://www.cinegy.com/",
+        "https://www.cinegy.com/products/cinegy_air/",
+        "https://www.cinegy.com/about/"
       ],
       "logo": null,
       "photo": null
@@ -129,6 +306,28 @@
       "photo": null
     },
     {
+      "id": "dragonframe",
+      "name": "Dragonframe",
+      "vendor": "DZED Systems LLC",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Stop motion animation software from DZED Systems in Ojai, California: camera control, live view, frame-by-frame animation tools, motion control and lighting, used on feature films and by independent filmmakers.",
+      "for_whom": "Stop motion animators, from feature film studios to independent filmmakers and students",
+      "pricing_model": "One-time purchase, digital download with licence key: Dragonframe 2026 EUR 310 including VAT as shown in the vendor's store, upgrade EUR 100, student version EUR 205; educational and reseller pricing on request; free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.dragonframe.com",
+      "source_urls": [
+        "https://www.dragonframe.com/",
+        "https://www.dragonframe.com/store/",
+        "https://www.dragonframe.com/terms-and-conditions/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "eztitles",
       "name": "EZTitles",
       "vendor": "EZTitles Development Studio Ltd.",
@@ -166,6 +365,28 @@
       "source_urls": [
         "https://www.apple.com/final-cut-pro/",
         "https://www.apple.com/final-cut-pro/specs/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "autodesk-flame",
+      "name": "Flame",
+      "vendor": "Autodesk, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Finishing and visual effects software from Autodesk (San Francisco) that combines timeline editing, node-based 3D compositing and colour grading in one environment, with machine-learning keyers for skies, bodies and faces. Used to deliver commercials, TV episodes and films.",
+      "for_whom": "VFX and finishing artists at post-production studios working on commercials, TV and film",
+      "pricing_model": "Subscription (US site): $5,215 per year for 1 user (shown as $435 per month, paid annually), $650 per month paid monthly, or Flex tokens at $99 per 33 tokens (18 tokens per day for Flame); 30-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Linux (Rocky Linux), macOS",
+      "integrations": "Colorist control panels; companion products Flare, Flame Assist and Lustre",
+      "founded": null,
+      "official_url": "https://www.autodesk.com/products/flame/overview",
+      "source_urls": [
+        "https://www.autodesk.com/products/flame/overview",
+        "https://www.autodesk.com/products/flame/buy",
+        "https://www.autodesk.com/products/flame/product-details#system-requirements"
       ],
       "logo": null,
       "photo": null
@@ -213,6 +434,48 @@
       "photo": null
     },
     {
+      "id": "fusion-studio",
+      "name": "Fusion Studio",
+      "vendor": "Blackmagic Design Pty Ltd",
+      "vendor_country": "Australia",
+      "category": "Post-production & VFX",
+      "summary": "Node-based compositing and visual effects software from Blackmagic Design for 2D and 3D compositing, motion graphics and animation, with GPU acceleration and unlimited network rendering without per-node fees. The same Fusion page is built into DaVinci Resolve; Fusion Studio is the standalone application.",
+      "for_whom": "Visual effects artists, broadcast and motion graphics designers and 3D animators",
+      "pricing_model": "Fusion Studio $295 one-time purchase; Fusion is also included free in DaVinci Resolve (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "DaVinci Resolve (Fusion Connect), Avid Media Composer, OpenFX, models from Maya, 3ds Max and Cinema 4D, Lua and Python scripting, OpenEXR",
+      "founded": null,
+      "official_url": "https://www.blackmagicdesign.com/products/fusion",
+      "source_urls": [
+        "https://www.blackmagicdesign.com/products/fusion"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "hindenburg-pro",
+      "name": "Hindenburg PRO",
+      "vendor": "Hindenburg Systems ApS",
+      "vendor_country": "Denmark",
+      "category": "Post-production & VFX",
+      "summary": "Spoken-word audio editor from Copenhagen-based Hindenburg Systems for recording, transcribing, editing, mixing and publishing radio, podcast and documentary audio, with editing by transcript, clipboards for organising material and loudness normalisation to broadcast standards.",
+      "for_whom": "Radio journalists, podcasters, broadcasters and audio storytellers, not musicians or engineers",
+      "pricing_model": "Subscription in three tiers, prices excl. VAT: Bronze EUR 19 per month (EUR 15.83 per month billed yearly), Silver EUR 34 per month (EUR 28.33 yearly) with 75 hours of transcription, Gold EUR 43 per month (EUR 35.83 yearly) with 100 hours; quotes for businesses needing multiple licences; free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "VST3 plug-ins (Windows), AU plug-ins (macOS), Soundly sound library, call recording from Zoom and Google Meet",
+      "founded": 2008,
+      "official_url": "https://hindenburg.com/",
+      "source_urls": [
+        "https://hindenburg.com/products/radio-podcast/",
+        "https://hindenburg.com/products/radio-podcast/specs/",
+        "https://hindenburg.com/about/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "houdini",
       "name": "Houdini",
       "vendor": "SideFX",
@@ -250,6 +513,28 @@
       "source_urls": [
         "https://www.izotope.com/en/products/rx.html",
         "https://www.izotope.com/en/company.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "vendor": "The Foundry Visionmongers Limited",
+      "vendor_country": "United Kingdom",
+      "category": "Post-production & VFX",
+      "summary": "Look development and lighting software from London-based Foundry for CG rendering pipelines, built around USD with Hydra-powered viewports, and connecting to renderers such as 3Delight (included) and other commercial renderers.",
+      "for_whom": "Lighting and look development artists and pipeline teams at VFX and animation studios",
+      "pricing_model": "Annual subscription (shown in EUR): Team edition for up to 10 seats, interactive licence EUR 2,289 per year and rendering licence (Foresight) EUR 354 per year; Enterprise edition (10+ seats) interactive licence EUR 4,459 per year; 30-day free trial, extendable to 60 days; education licences (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows 11, Linux (Rocky Linux 9)",
+      "integrations": "3Delight, Hydra render delegates from third-party render vendors, USD, other Foundry applications",
+      "founded": null,
+      "official_url": "https://www.foundry.com/products/katana",
+      "source_urls": [
+        "https://www.foundry.com/products/katana",
+        "https://www.foundry.com/products/katana/requirements",
+        "https://www.foundry.com/about-us"
       ],
       "logo": null,
       "photo": null
@@ -318,6 +603,134 @@
       "photo": null
     },
     {
+      "id": "logic-pro",
+      "name": "Logic Pro",
+      "vendor": "Apple Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Apple's music production and audio editing application for Mac and iPad, with tools for recording, beat-making, songwriting, scoring and mixing, including Spatial Audio mixing in Dolby Atmos. Works alongside Final Cut Pro for scoring to picture.",
+      "for_whom": "Music creators, composers and producers on Mac and iPad",
+      "pricing_model": "Apple Creator Studio subscription (Logic Pro with Final Cut Pro, Motion, Compressor and Pixelmator Pro) $12.99 per month or $129 per year, education $2.99 per month or $29.99 per year, 30-day free trial; standalone Mac app $199.99 one-time (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS (Apple silicon), iPadOS",
+      "integrations": "Final Cut Pro, Dolby Atmos, Audio Units plug-ins, GarageBand, Logic Remote, Voice Memos",
+      "founded": null,
+      "official_url": "https://www.apple.com/logic-pro/",
+      "source_urls": [
+        "https://www.apple.com/logic-pro/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "autodesk-maya",
+      "name": "Maya",
+      "vendor": "Autodesk, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "3D animation and VFX software from Autodesk for modelling, rigging, animation, effects (Bifrost), look development and rendering, with OpenUSD support and scripting in MEL and Python. Used by film, TV and game studios; also sold as part of the Media & Entertainment Collection.",
+      "for_whom": "Animation and VFX teams of every size at film, TV and game studios",
+      "pricing_model": "Subscription (US site): $2,010 per year for 1 user (shown as $168 per month, paid annually), $255 per month paid monthly, or Flex tokens at $99 per 33 tokens (6 tokens per day for Maya); 30-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows 11, macOS, Linux (Red Hat Enterprise Linux, Rocky Linux)",
+      "integrations": "Bifrost, LookdevX, OpenUSD, Autodesk Flow, Flow Studio, Golaem (in the M&E Collection), MEL and Python APIs",
+      "founded": null,
+      "official_url": "https://www.autodesk.com/products/maya/overview",
+      "source_urls": [
+        "https://www.autodesk.com/products/maya/overview",
+        "https://www.autodesk.com/products/maya/buy",
+        "https://www.autodesk.com/products/maya/product-details#system-requirements"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "mistika-boutique",
+      "name": "Mistika Boutique",
+      "vendor": "SGO",
+      "vendor_country": "Spain",
+      "category": "Post-production & VFX",
+      "summary": "Software-only finishing system from Madrid-based SGO that combines conforming, VFX, colour grading, stereo 3D and VR/360 in one timeline, with HDR and SDR workflows and Dolby Vision support. Its sibling Mistika Ultima is the turnkey Linux version for 8K real-time finishing.",
+      "for_whom": "Colourists, VFX artists and immersive content creators at post-production facilities and freelancers",
+      "pricing_model": "Subscription: Personal EUR 99 per month or EUR 990 per year; Professional EUR 199 per month or EUR 1,990 per year; Immersive EUR 199 per month or EUR 1,990 per year; Professional Immersive EUR 299 per month or EUR 2,990 per year; single-use 30-day and 1-year licences; free educational version with H.264 rendering only (published). Mistika Ultima (turnkey system): Not published",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS (Mistika Ultima: Linux)",
+      "integrations": "OFX plugins, Tangent panels, Dolby Vision, ProRes, EXR, H.265; Mistika VR and Mistika Workflows from the same vendor",
+      "founded": null,
+      "official_url": "https://www.sgo.es/mistika-boutique/",
+      "source_urls": [
+        "https://www.sgo.es/mistika-boutique/",
+        "https://www.sgo.es/mistika-ultima/",
+        "https://www.sgo.es/contact/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "mocha-pro",
+      "name": "Mocha Pro",
+      "vendor": "Boris FX, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Planar tracking and VFX software from Boris FX for motion tracking, rotoscoping, object removal, stabilisation, PowerMesh warp tracking and 3D camera solving, with machine-learning masking tools. Runs standalone or as a plug-in inside editing, compositing and finishing hosts.",
+      "for_whom": "VFX artists, compositors and post-production facilities on film, TV and video",
+      "pricing_model": "Plug-in or standalone: $37 per month, $295 per year, or perpetual $695 (with one year of upgrades and support); multi-host licence $75 per month, $595 per year or perpetual $1,495. 14-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "Adobe After Effects, Premiere Pro, Avid Media Composer, Autodesk Flame, Foundry Nuke, Blackmagic Fusion, Vegas Pro, Boris FX Silhouette, SGO Mistika (OFX)",
+      "founded": null,
+      "official_url": "https://borisfx.com/products/mocha-pro/",
+      "source_urls": [
+        "https://borisfx.com/products/mocha-pro/",
+        "https://borisfx.com/company/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "moho",
+      "name": "Moho",
+      "vendor": "Lost Marble LLC",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "2D animation software from Lost Marble (Danville, California) with vector drawing tools, a bone rigging system, inverse kinematics, physics, distortion meshes and a graph editor, and import of layered SVG and PSD files. Two editions: Moho Debut for beginners and Moho Pro for professionals.",
+      "for_whom": "Professional animators and animation studios (Moho Pro), hobbyists and first-time animators (Moho Debut)",
+      "pricing_model": "One-time purchase, perpetual licence: Moho Pro 14 USD 399.99, Moho Debut 14 USD 59.99; upgrade prices from earlier versions listed; free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "SVG and PSD import",
+      "founded": null,
+      "official_url": "https://moho.lostmarble.com",
+      "source_urls": [
+        "https://moho.lostmarble.com/",
+        "https://moho.lostmarble.com/pages/buy",
+        "https://moho.lostmarble.com/pages/terms-of-service"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "nuendo",
+      "name": "Nuendo",
+      "vendor": "Steinberg Media Technologies GmbH",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "summary": "Audio post-production workstation from Hamburg-based Steinberg for film, TV, game audio and immersive sound, with tools for editing, sound design and mixing, including Dolby Atmos and MPEG-H authoring inside the program.",
+      "for_whom": "Audio post-production, game audio, dubbing and immersive sound professionals",
+      "pricing_model": "One-time purchase: Nuendo 15 full version EUR 999.00 including 21% VAT; crossgrade from other DAWs (Pro Tools, Logic, Reaper and others) EUR 799.00; free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows 10/11, macOS",
+      "integrations": "Dolby Atmos renderer, MPEG-H Audio",
+      "founded": null,
+      "official_url": "https://www.steinberg.net/nuendo/",
+      "source_urls": [
+        "https://www.steinberg.net/nuendo/",
+        "https://www.steinberg.net/system-requirements/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "nuke",
       "name": "Nuke",
       "vendor": "Foundry",
@@ -334,6 +747,115 @@
       "source_urls": [
         "https://www.foundry.com/products/nuke-family/nuke",
         "https://www.foundry.com/products/nuke-family/nuke/features"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "vendor": "Wizards of OBS LLC (OBS Project)",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Free and open source software for video recording and live streaming: capture and mix video and audio in real time, build scenes with transitions, and stream to streaming platforms. Maintained by the OBS Project and community contributors.",
+      "for_whom": "Streamers, content creators and broadcasters of all levels",
+      "pricing_model": "Free, open source (GPL) (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": null,
+      "founded": 2012,
+      "official_url": "https://obsproject.com",
+      "source_urls": [
+        "https://obsproject.com/",
+        "https://obsproject.com/privacy-policy",
+        "https://en.wikipedia.org/wiki/OBS_Studio"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "ooona",
+      "name": "OOONA",
+      "vendor": "Oona.Net Ltd.",
+      "vendor_country": "Israel",
+      "category": "Post-production & VFX",
+      "also_in": [
+        "Rights & distribution"
+      ],
+      "summary": "Cloud-based toolkit for subtitling, captioning and media localisation: online tools to create, translate, review, transcribe, convert, QC and burn in subtitles, plus audio description, and OOONA Integrated and OOONA GO for managing localisation workflows and vendors. Subject to Israeli law; sells worldwide.",
+      "for_whom": "Subtitlers and translators, localisation vendors and broadcasters managing translation and accessibility work",
+      "pricing_model": "Per tool, by duration (1 week, 1 month, 6 months, 1 year): Create + Translate Standard $30.00 per month or $300.00 per year, Pro $600.00 per year ($50.00 per month); bundles and Pick & Mix toolsets; free trial. OOONA Integrated: Quote on request (published)",
+      "deployment": "Cloud",
+      "platforms": "Web (any operating system)",
+      "integrations": "OOONA APIs; import and export of industry-standard subtitle and caption formats; image-based subtitles for DVD and Blu-ray; MP4/MOV and ProRes rendering",
+      "founded": null,
+      "official_url": "https://www.ooona.net/",
+      "source_urls": [
+        "https://www.ooona.net/ooona-tools/",
+        "https://www.ooona.net/product/create/",
+        "https://www.ooona.net/legal-notice/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "opentoonz",
+      "name": "OpenToonz",
+      "vendor": "OpenToonz project (Dwango, with Digital Video and Studio Ghibli)",
+      "vendor_country": "Japan",
+      "category": "Post-production & VFX",
+      "summary": "Open source software for the production of 2D animation: ink and paint, colour design and digital composition from scanned drawings to final footage. Based on Toonz, the software developed by Digital Video in Italy and customised by Studio Ghibli; the project was launched by Dwango.",
+      "for_whom": "Professional and amateur animation production and school education, for commercial and non-commercial projects",
+      "pricing_model": "Free of charge for commercial and non-commercial projects; source code under the New BSD License (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://opentoonz.github.io/e/",
+      "source_urls": [
+        "https://opentoonz.github.io/e/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "pixotope",
+      "name": "Pixotope",
+      "vendor": "Pixotope Technologies AS",
+      "vendor_country": "Norway",
+      "category": "Post-production & VFX",
+      "summary": "Real-time virtual production platform from Oslo, built on Unreal Engine: virtual studios in place of green screens, augmented reality graphics over live footage and extended reality on LED walls, with its own camera and talent tracking products. Render engines can also run on virtual machines for remote production.",
+      "for_whom": "Broadcasters, sports and esports productions, corporate communications and advertising",
+      "pricing_model": "Quote on request",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Unreal Engine; AJA and Blackmagic Design video cards; SDI and SMPTE 2110; camera tracking systems (Pixotope Fly, Vision, Marker and other industry standard systems); Erizos Studio via MOS; Stream Deck and X-keys",
+      "founded": null,
+      "official_url": "https://www.pixotope.com",
+      "source_urls": [
+        "https://www.pixotope.com/",
+        "https://www.pixotope.com/products/pixotope-graphics-vs-ar",
+        "https://www.pixotope.com/about-pixotope"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "pro-tools",
+      "name": "Pro Tools",
+      "vendor": "Avid Technology, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Digital audio workstation from Avid (Burlington, Massachusetts) for recording, editing and mixing audio, from music to film and TV sound. The Ultimate tier adds full audio post workflows, 64 video tracks and immersive Dolby Atmos mixing.",
+      "for_whom": "Studios, producers, mix engineers and audio post teams for music, film and TV",
+      "pricing_model": "Subscription, prices shown excl. VAT: Artist EUR 99 per year (32 audio tracks), Studio EUR 289 per year (512 audio tracks, immersive mixing, 1 video track), Ultimate EUR 589 per year (2,048 audio tracks, 64 video tracks, full audio post workflows); monthly plans also offered. Pro Tools Intro is free; perpetual licences and academic pricing available (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS, Windows",
+      "integrations": "Dolby Atmos, ARA 2, third-party plugins and hardware, Avid control surfaces and audio interfaces",
+      "founded": null,
+      "official_url": "https://www.avid.com/pro-tools",
+      "source_urls": [
+        "https://www.avid.com/pro-tools"
       ],
       "logo": null,
       "photo": null
@@ -360,6 +882,74 @@
       "photo": null
     },
     {
+      "id": "maxon-redshift",
+      "name": "Redshift",
+      "vendor": "Maxon Computer GmbH",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "summary": "GPU-accelerated biased 3D renderer from Maxon (Bad Homburg, Germany) that turns 3D scenes into production images and animations with interactive feedback. Native in Cinema 4D and available as plugins for other 3D applications under one subscription; CPU rendering is supported too.",
+      "for_whom": "3D artists and studios rendering animation, motion graphics and VFX",
+      "pricing_model": "Subscription: EUR 25.52 per month billed annually (EUR 306.27 per year), stated as inclusive of the highest potential VAT rate; monthly billing also offered; included with every Cinema 4D subscription and in Maxon One (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux (NVIDIA, AMD and Apple M-series GPUs)",
+      "integrations": "Cinema 4D, Maya, 3ds Max, Houdini, Katana, ZBrush, Vectorworks, Revit",
+      "founded": null,
+      "official_url": "https://www.maxon.net/en/redshift",
+      "source_urls": [
+        "https://www.maxon.net/en/redshift",
+        "https://www.maxon.net/en/buy",
+        "https://www.maxon.net/en/legal"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "scratch",
+      "name": "SCRATCH",
+      "vendor": "Assimilate Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "also_in": [
+        "Asset & media management"
+      ],
+      "summary": "Colour grading, dailies and finishing software from Assimilate (San Jose, California) covering the camera-to-post workflow: live grading, offload and backup, dailies transcoding, conform, grading and delivery in formats such as DNx MXF, ProRes, OpenEXR and H.264.",
+      "for_whom": "DITs, colourists and post-production facilities on film and TV productions",
+      "pricing_model": "SCRATCH: monthly subscription $99.00, 1-year licence $795.00, permanent licence $995.00 (includes 1 year of support and updates). DIT Pack+ (live grading, offload, dailies): $149 per month, $899 per year, permanent $1,499, support renewal $699 per year. Free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "Hedge OffShoot, Avid and Tangent grading panels, NDI, OFX plugins, Matchbox shaders, RTMP/NDI streaming, Assimilate Dailies Online, COPRA",
+      "founded": null,
+      "official_url": "https://www.assimilateinc.com/",
+      "source_urls": [
+        "https://www.assimilateinc.com/products/scratch/",
+        "https://store2.assimilateinc.com/product/scratch/",
+        "https://store2.assimilateinc.com/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "silhouette",
+      "name": "Silhouette",
+      "vendor": "Boris FX, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Rotoscoping, paint and node-based compositing application from Boris FX, GPU-accelerated, with over 400 nodes, non-destructive paint, integrated Mocha planar tracking and machine-learning tools. Available standalone or as a plug-in for editing and compositing hosts.",
+      "for_whom": "VFX artists and studios working on feature films and television",
+      "pricing_model": "Plug-in for Adobe and OFX hosts (prices shown in EUR on the site): EUR 91.00 per month, annual subscription EUR 40.00 per month, permanent licence EUR 1,055.00; Silhouette Standalone EUR 145.00 per month, annual EUR 64.58 per month, permanent EUR 1,940.00; also in the Boris FX Suite. 14-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "Adobe After Effects, Premiere Pro, Foundry Nuke, Blackmagic Fusion, DaVinci Resolve, Autodesk Flame; bundles Sapphire, Mocha Pro and Particle Illusion",
+      "founded": null,
+      "official_url": "https://borisfx.com/products/silhouette/",
+      "source_urls": [
+        "https://borisfx.com/products/silhouette/",
+        "https://borisfx.com/company/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "subtitle-edit",
       "name": "Subtitle Edit",
       "vendor": "Nikolaj Lynge Olsson (nikse.dk)",
@@ -376,6 +966,210 @@
       "source_urls": [
         "https://github.com/SubtitleEdit/subtitleedit",
         "https://github.com/niksedk"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "toon-boom-harmony",
+      "name": "Toon Boom Harmony",
+      "vendor": "Toon Boom Animation Inc.",
+      "vendor_country": "Canada",
+      "category": "Post-production & VFX",
+      "summary": "2D animation software from Montreal-based Toon Boom for hand-drawn and cut-out animation, from rough drawings to character rigging and compositing. Sold in three editions: Essentials, Advanced and Premium.",
+      "for_whom": "Enthusiasts, students, professional animators, freelancers, animation studios and educational institutions",
+      "pricing_model": "Subscription, priced in the vendor's shop: Harmony Essentials EUR 33 per month or EUR 273 per year; Harmony Advanced EUR 83 per month or EUR 640 per year; Harmony Premium EUR 151 per month or EUR 1,225 per year; three-year terms and student prices also listed. 14-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.toonboom.com/products/harmony",
+      "source_urls": [
+        "https://www.toonboom.com/products/harmony",
+        "https://shop.toonboom.com/en/subscriptions/harmony-premium",
+        "https://shop.toonboom.com/en/subscriptions/harmony-essentials"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "colorfront-transkoder",
+      "name": "Transkoder",
+      "vendor": "Colorfront",
+      "vendor_country": "Hungary",
+      "category": "Post-production & VFX",
+      "also_in": [
+        "Rights & distribution"
+      ],
+      "summary": "Mastering, transcoding and delivery system from Budapest-based Colorfront for DCP and IMF authoring, Dolby Vision and HDR conversion and faster-than-real-time transcoding on multi-GPU hardware, with REST API automation. Colorfront also makes On-Set Dailies and Express Dailies for graded, synced dailies.",
+      "for_whom": "Post-production facilities, studios and broadcasters delivering to cinema, broadcast and streaming",
+      "pricing_model": "Quote on request",
+      "deployment": "Desktop",
+      "platforms": "On-Set Dailies: Windows, macOS (Apple silicon); Transkoder: not stated",
+      "integrations": "Dolby Vision, HDR10+, Dolby Atmos, IMF, DCP, JPEG 2000, ProRes, ACES, AJA and Blackmagic video I/O, Colorfront Streaming Server, REST API and CLI",
+      "founded": null,
+      "official_url": "https://colorfront.com/",
+      "source_urls": [
+        "https://colorfront.com/software/transkoder",
+        "https://colorfront.com/software/on-set-dailies",
+        "https://colorfront.com/",
+        "https://engine.colorfront.cloud/about-colorfront"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "tvpaint-animation",
+      "name": "TVPaint Animation",
+      "vendor": "TV Paint Développement SARL",
+      "vendor_country": "France",
+      "category": "Post-production & VFX",
+      "summary": "2D animation software from Metz, France, built on bitmap technology to reproduce paper-based drawing with digital tools. Two editions: Standard, and Professional with storyboarding tools, bitmap rigging and a 2D camera.",
+      "for_whom": "Professional animators, animation studios and animation schools and students",
+      "pricing_model": "One-time purchase (perpetual licence) with free technical support. Prices shown after choosing a country: TVPaint Animation 12 Standard EUR 650 and Professional EUR 1,600, excluding tax; student prices EUR 325 and EUR 650; upgrades from version 11 also listed (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.tvpaint.com/en",
+      "source_urls": [
+        "https://www.tvpaint.com/en",
+        "https://www.tvpaint.com/en/products/prices",
+        "https://www.tvpaint.com/fr/mention-legale"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "unreal-engine",
+      "name": "Unreal Engine",
+      "vendor": "Epic Games, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "also_in": [
+        "Script & pre-production"
+      ],
+      "summary": "Real-time 3D engine from Epic Games (Cary, North Carolina) used in film and TV for virtual production, in-camera VFX on LED stages, previs and animation. Sequencer for per-shot editing, Control Rig for rigging and animation, Live Link for streaming mocap and Maya data, MetaHuman characters.",
+      "for_whom": "Film and TV studios, virtual production teams, animation and VFX studios, previs and broadcast teams",
+      "pricing_model": "Free for individuals and businesses under USD 1 million in annual gross revenue, and for educators and schools. Above that, non-game uses such as film, TV and linear content need a seat licence at USD 1,850 per seat per year (30-day trial); games and applications that ship engine code pay a 5% royalty on gross revenue above USD 1 million instead (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS, Linux",
+      "integrations": "Alembic, USD, FBX; Live Link for mocap and Maya; MetaHuman",
+      "founded": null,
+      "official_url": "https://www.unrealengine.com/en-US/solutions/film-television",
+      "source_urls": [
+        "https://www.unrealengine.com/en-US/license",
+        "https://www.unrealengine.com/en-US/solutions/film-television"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "viz-engine",
+      "name": "Viz Engine",
+      "vendor": "Vizrt",
+      "vendor_country": "Norway",
+      "category": "Post-production & VFX",
+      "summary": "Real-time 3D graphics rendering and compositing engine from Vizrt (Bergen, Norway) for virtual sets, augmented reality graphics, data-driven overlays, video walls and video playout in broadcast and digital production. Runs virtualised and in the cloud as well as on premise, with Unreal Engine integration.",
+      "for_whom": "Broadcasters, newsrooms, sports organisations and content creators producing for linear, digital and OTT output",
+      "pricing_model": "Quote on request",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Unreal Engine; NDI",
+      "founded": null,
+      "official_url": "https://www.vizrt.com/products/viz-engine/",
+      "source_urls": [
+        "https://www.vizrt.com/products/viz-engine/",
+        "https://www.vizrt.com/about/",
+        "https://www.vizrt.com/legal/privacy-policy/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "vmix",
+      "name": "vMix",
+      "vendor": "StudioCoast Pty Ltd",
+      "vendor_country": "Australia",
+      "category": "Post-production & VFX",
+      "summary": "Live video production and streaming software for Windows from StudioCoast in Robina, Queensland: mix and switch cameras, IP cameras, video files, NDI feeds and virtual sets, record, and stream to several destinations at once. vMix Call brings in remote guests and vMix Replay adds instant replay.",
+      "for_whom": "Live event, sports, church, education, gaming, podcast and presentation producers",
+      "pricing_model": "One-time lifetime licences: Basic HD USD 60, HD USD 350, 4K USD 700, Pro USD 1,200, with free updates for the first 12 months; or vMix MAX subscription at USD 50 per month. Free 60-day trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows",
+      "integrations": "NDI, SRT; streaming to Facebook, YouTube, Twitch and Vimeo; PTZ camera control",
+      "founded": null,
+      "official_url": "https://www.vmix.com",
+      "source_urls": [
+        "https://www.vmix.com/",
+        "https://www.vmix.com/purchase/",
+        "https://www.vmix.com/privacy-policy.aspx"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "wirecast",
+      "name": "Wirecast",
+      "vendor": "Telestream, Inc.",
+      "vendor_country": "United States",
+      "category": "Post-production & VFX",
+      "summary": "Live video production and streaming software from Telestream (Nevada City, California): capture unlimited cameras, bring in remote guests, add overlays and stream to several destinations at the same time. Two editions, Studio and Pro; Pro adds NDI output, ISO recording, PTZ control and sports production tools.",
+      "for_whom": "Content creators, churches, sports organisations, corporate communications, education, government and TV broadcasters",
+      "pricing_model": "Subscription: Wirecast Studio USD 59 per month or USD 34 per month billed yearly; Wirecast Pro USD 79 per month or USD 42 per month billed yearly. Fully functional free trial with no time limit (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "NDI (input in Studio, input and output in Pro); IP and PTZ cameras; Rendezvous remote guests; cloud multistreaming",
+      "founded": null,
+      "official_url": "https://www.wirecast.io",
+      "source_urls": [
+        "https://www.wirecast.io/",
+        "https://www.wirecast.io/pricing",
+        "https://en.wikipedia.org/wiki/Telestream"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "maxon-zbrush",
+      "name": "ZBrush",
+      "vendor": "Maxon Computer GmbH",
+      "vendor_country": "Germany",
+      "category": "Post-production & VFX",
+      "summary": "Digital sculpting and painting software from Maxon (Bad Homburg, Germany): shape models with brush tools as if working in clay, handling millions of polygons in real time. Desktop versions for Windows and macOS, with ZBrush for iPad included in the subscription.",
+      "for_whom": "Character and creature artists, digital sculptors, concept artists and film, VFX and game studios",
+      "pricing_model": "Subscription: EUR 36.79 per month billed annually (EUR 441.57 per year), stated as inclusive of the highest potential VAT rate; monthly billing also offered; included in Maxon One (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows (including Windows on Arm), macOS, iPad",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.maxon.net/en/zbrush",
+      "source_urls": [
+        "https://www.maxon.net/en/zbrush",
+        "https://www.maxon.net/en/buy",
+        "https://www.maxon.net/en/legal"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "zero-density-reality",
+      "name": "Zero Density Reality",
+      "vendor": "Zero Density Yazılım Anonim Şirketi",
+      "vendor_country": "Turkey",
+      "category": "Post-production & VFX",
+      "summary": "Real-time graphics platform from Izmir, Turkey, for virtual studios, augmented reality, XR, on-air graphics and videowall production. Built from a Zero Density version of Unreal Engine, the node-based compositor NODOS and the browser-based control layer Reality Hub, with the Traxis camera tracking products alongside.",
+      "for_whom": "Broadcasters, news and sports productions, live events, esports, corporate video and education",
+      "pricing_model": "Quote on request",
+      "deployment": "On-premise + cloud",
+      "platforms": "Reality Hub in a web browser; rendering on GPU workstations or the vendor's EVO engines",
+      "integrations": "Unreal Engine; camera tracking systems; newsroom systems (NRCS) and automation; SDI and IP video; APIs and external data",
+      "founded": 2014,
+      "official_url": "https://www.zerodensity.io",
+      "source_urls": [
+        "https://www.zerodensity.io/",
+        "https://www.zerodensity.io/platforms/reality/",
+        "https://www.zerodensity.io/privacy-policy/"
       ],
       "logo": null,
       "photo": null
@@ -443,6 +1237,28 @@
       "photo": null
     },
     {
+      "id": "axle-ai",
+      "name": "axle ai",
+      "vendor": "Axle AI, Inc.",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Boston-based media asset management with AI search: transcription, scene and face tagging, logo and object recognition over media on existing NAS, SAN, cloud or LTO storage, with selections sent into editing timelines. Sold as on-premise MAM, a cloud edition and a tagging API.",
+      "for_whom": "Broadcasters, news, production companies, sports leagues, schools and content creators with large video libraries",
+      "pricing_model": "axle ai MAM (on-premise) from USD 2,995; axle ai Cloud USD 20 per TB per month including transcription, AI tagging and review and approval; axle ai Tags from USD 200 per month (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web",
+      "integrations": "Adobe Premiere Pro, Avid Media Composer, DaVinci Resolve, Backblaze",
+      "founded": null,
+      "official_url": "https://axle.ai/",
+      "source_urls": [
+        "https://axle.ai/",
+        "https://axle.ai/axle-mam",
+        "https://axle.ai/axle-ai-cloud"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "cantemo",
       "name": "Cantemo",
       "vendor": "Codemill AB",
@@ -485,6 +1301,28 @@
       "photo": null
     },
     {
+      "id": "ci-media-cloud",
+      "name": "Ci Media Cloud",
+      "vendor": "Sony Media Cloud Services LLC",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Sony's cloud platform (San Diego) to store, share, review and process media in the browser or mobile app, with support for camera RAW formats, real-time collaboration and workspaces for teams, from a free tier up to enterprise plans.",
+      "for_whom": "Content creators, production companies, studios, broadcasters, sports organisations and post-production teams",
+      "pricing_model": "Free plan USD 0 per month (10 GB, 1 member); Pro USD 15 per month (2 TB, 1 member); Team USD 49 per month (3 TB, unlimited members); Business USD 249 per month (6 TB, unlimited members and workspaces); Enterprise on request from 12 TB; discounts for annual renewals (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, mobile apps",
+      "integrations": "Adobe Premiere Pro, DaVinci Resolve Studio, Avid (via Marquis Medway), Pomfort Silverstack Lab, Adobe Express, Sony Creators' App",
+      "founded": null,
+      "official_url": "https://www.cimediacloud.com/",
+      "source_urls": [
+        "https://www.cimediacloud.com/",
+        "https://www.cimediacloud.com/pricing/",
+        "https://www.cimediacloud.com/terms/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "dalet-flex",
       "name": "Dalet Flex",
       "vendor": "Dalet",
@@ -501,6 +1339,71 @@
       "source_urls": [
         "https://www.dalet.com/products/flex/",
         "https://www.dalet.com/offices/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "digital-pigeon",
+      "name": "Digital Pigeon",
+      "vendor": "Digi Pigi, LLC (Digital Pigeon)",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Large file sending and receiving (files up to 5 TB) with branded delivery pages, recipient tracking and notifications, media preview and streaming, timestamped annotation and feedback, and access controls. Headquartered in Herriman, Utah, with an office in Australia.",
+      "for_whom": "Advertising agencies, post-production studios, film and television companies, photographers, audio studios and marketing teams",
+      "pricing_model": "Freelancer USD 29 (AUD 38) per month, 1 user, 200 GB storage, files up to 50 GB; Professional USD 89 (AUD 115) per month, 10 users; Business USD 249 (AUD 320) per month, 20 users, custom domain and SSO; extra users USD 10 to 20 per month; extra downloads and storage per GB; 14-day free trial (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "Web, desktop and mobile apps",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.digitalpigeon.com/",
+      "source_urls": [
+        "https://www.digitalpigeon.com/",
+        "https://www.digitalpigeon.com/our-plans/",
+        "https://www.digitalpigeon.com/contact-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "editshare-flow",
+      "name": "EditShare FLOW",
+      "vendor": "EditShare",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Media management and workflow platform from Watertown, Massachusetts: log, search, organise and share work-in-progress content, with capture and ingest of live feeds, AI analysis and automation of transcoding and asset organisation, on-premise, in the cloud or hybrid.",
+      "for_whom": "Creative teams in advertising, broadcast, post-production, sports, news and education",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, Avid",
+      "founded": null,
+      "official_url": "https://www.editshare.com/flow/",
+      "source_urls": [
+        "https://www.editshare.com/flow/",
+        "https://www.editshare.com/about-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "elements-media-library",
+      "name": "ELEMENTS Media Library",
+      "vendor": "syslink GmbH (ELEMENTS)",
+      "vendor_country": "Germany",
+      "category": "Asset & media management",
+      "summary": "Browser-based media asset management from Düsseldorf to organise, rough-cut, share and automate footage, with editing integrations. Runs on the vendor's own storage systems, on qualified third-party storage through ELEMENTS GATEWAY, or deployed in the cloud, without per-user licensing.",
+      "for_whom": "Post-production facilities and broadcasters, from small facilities to large networks",
+      "pricing_model": "Quote on request",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web",
+      "integrations": "Adobe Premiere Pro, Avid Media Composer, DaVinci Resolve, Final Cut Pro",
+      "founded": 2011,
+      "official_url": "https://elements.tv/media-library/",
+      "source_urls": [
+        "https://elements.tv/",
+        "https://elements.tv/media-library/overview/",
+        "https://elements.tv/impressum/"
       ],
       "logo": null,
       "photo": null
@@ -527,6 +1430,28 @@
       "photo": null
     },
     {
+      "id": "ibm-aspera",
+      "name": "IBM Aspera",
+      "vendor": "IBM",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "High-speed file transfer built on the FASP protocol for moving large media between sites and clouds, with governance and automated workflows. Available as the Aspera on Cloud service, as self-managed on-premise editions and as hybrid combinations. Aspera was founded in 2004 and has been part of IBM since 2014.",
+      "for_whom": "Mid-sized to enterprise organisations in media and entertainment, healthcare and manufacturing",
+      "pricing_model": "Aspera on Cloud: pay as you go from USD 1.07 per GB transferred per month; Essentials from USD 22.10 per month with 1 TB per year; Standard Plus from USD 660 per month with 6 TB per year; self-managed Lite from USD 11,916 per licence per year; 14-day free trial with 50 GB (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": null,
+      "integrations": "AWS, Oracle Cloud Infrastructure",
+      "founded": null,
+      "official_url": "https://www.ibm.com/products/aspera",
+      "source_urls": [
+        "https://www.ibm.com/products/aspera",
+        "https://www.ibm.com/products/aspera/pricing",
+        "https://en.wikipedia.org/wiki/Aspera_(company)"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "iconik",
       "name": "Iconik",
       "vendor": "Backlight (iconik Media AB)",
@@ -543,6 +1468,120 @@
       "source_urls": [
         "https://www.iconik.io/pricing",
         "https://www.iconik.io/blog/cantemo-group-adds-iconik-media-ab"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "imagen",
+      "name": "Imagen",
+      "vendor": "Reuters Imagen (Thomson Reuters)",
+      "vendor_country": "United Kingdom",
+      "category": "Asset & media management",
+      "also_in": [
+        "Rights & distribution"
+      ],
+      "summary": "Cloud media asset management from London for large video libraries: live ingest and archive, AI metadata enrichment, clipping of highlights, access and rights controls, distribution and syndication through branded portals, and analytics. Part of Thomson Reuters since 2023.",
+      "for_whom": "Sports federations and leagues, broadcasters and production companies, and enterprises with large video archives",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Amazon Web Services, Microsoft Azure, Wasabi",
+      "founded": null,
+      "official_url": "https://imagen.io/",
+      "source_urls": [
+        "https://imagen.io/",
+        "https://imagen.io/about/",
+        "https://imagen.io/contact/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "kollaborate",
+      "name": "Kollaborate",
+      "vendor": "Digital Rebellion, LLC",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Cloud review and approval from California-based Digital Rebellion: upload files, share them with colleagues and clients and collect timecode-stamped comments that export as markers to editing software, with tasks, permissions, workflow automation and AI transcription. Also self-hosted as Kollaborate Server.",
+      "for_whom": "Freelancers, post-production houses and enterprise video teams",
+      "pricing_model": "Individual plans from USD 7 per month or USD 60 per year (Basic, 30 GB) to USD 40 per month (Freelance Plus, 500 GB); team plans from USD 25 per month (Small Business, 60 GB, 5 members) to USD 869 per month (Network Plus, 20 TB, unlimited members), lower on annual billing; Kollaborate Server price not listed (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web, macOS, iOS",
+      "integrations": "Adobe Premiere Pro, Avid, DaVinci Resolve, Final Cut Pro X, Final Cut Pro 7, Pro Tools",
+      "founded": null,
+      "official_url": "https://www.kollaborate.tv/",
+      "source_urls": [
+        "https://www.kollaborate.tv/",
+        "https://www.kollaborate.tv/pricing",
+        "https://www.kollaborate.tv/features",
+        "https://www.digitalrebellion.com/privacy"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "lucidlink",
+      "name": "LucidLink",
+      "vendor": "LucidLink Corp.",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Cloud filespace that streams shared files on demand instead of downloading or syncing them, so teams edit large media from a common cloud location with file locking and zero-knowledge encryption. Founded in 2016.",
+      "for_whom": "Media and entertainment teams (video, audio, VFX), agencies, architecture and engineering firms and enterprises working with large files",
+      "pricing_model": "Starter USD 7 per member per month with 100 GB per member included (extra storage USD 7 per 100 GB per month, up to 10 members and 1 TB); Business USD 27 per member per month (listed from USD 32) with 400 GB per member included (extra USD 8 per 100 GB per month, up to 25 members); Enterprise on request; 15% off with annual billing; 30-day free trial (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "macOS, Windows, web, mobile",
+      "integrations": "Adobe Creative Cloud, Frame.io, Final Cut, AutoCAD, Figma",
+      "founded": 2016,
+      "official_url": "https://www.lucidlink.com/",
+      "source_urls": [
+        "https://www.lucidlink.com/",
+        "https://www.lucidlink.com/pricing",
+        "https://www.lucidlink.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "masv",
+      "name": "MASV",
+      "vendor": "MASV",
+      "vendor_country": "Canada",
+      "category": "Asset & media management",
+      "summary": "Managed file transfer from Ottawa for large media files: drag-and-drop sending in the browser or desktop app with no file size limit, upload portals for recipients, automated delivery to multiple cloud and on-premise storage destinations, and an API. Independent company since 2019.",
+      "for_whom": "Post-production, broadcast, news and creative teams, from solo creators to enterprises",
+      "pricing_model": "Pay as you go USD 0.25 per GB with 15 GB free every month; annual subscriptions from USD 58 per month for 250 GB to USD 410 per month for 2 TB; pre-bought credits from USD 1,229 for 5 TB; files stored free for 5 days, then USD 0.07 per GB per month; enterprise Platform plan on request (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "Web, macOS, Windows, Linux",
+      "integrations": "Amazon S3, Microsoft, Google, Dropbox, Frame.io, Backblaze, Wasabi, Synology, QNAP",
+      "founded": 2019,
+      "official_url": "https://masv.io/",
+      "source_urls": [
+        "https://masv.io/",
+        "https://masv.io/pricing",
+        "https://masv.io/about-us"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "signiant-media-shuttle",
+      "name": "Media Shuttle",
+      "vendor": "Signiant",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "SaaS file transfer with accelerated transport and checkpoint restart: Share, Submit and Send portals for sending any size file, while the content itself stays on the customer's own on-premise storage or in AWS, Azure or Google Cloud. Enterprise tiers add file validation, metadata forms and automation APIs.",
+      "for_whom": "Studios, broadcasters, post-production houses, sports and media companies exchanging large files with staff, freelancers and clients",
+      "pricing_model": "Small Business starting at USD 13,000 a year (unlimited transfers and portals, no file size limits); Professional starting at USD 25,000 a year (adds 25 TB cloud payload, implementation and training); Enterprise on request (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS",
+      "integrations": "AWS, Microsoft Azure, Google Cloud Storage, SAML 2.0",
+      "founded": null,
+      "official_url": "https://www.signiant.com/products/media-shuttle/",
+      "source_urls": [
+        "https://www.signiant.com/products/media-shuttle/",
+        "https://www.signiant.com/products/media-shuttle/pricing-packaging/",
+        "https://www.signiant.com/company/"
       ],
       "logo": null,
       "photo": null
@@ -569,6 +1608,95 @@
       "photo": null
     },
     {
+      "id": "mimir",
+      "name": "Mimir",
+      "vendor": "Mimir Media Tech AS (Fonn Group)",
+      "vendor_country": "Norway",
+      "category": "Asset & media management",
+      "also_in": [
+        "Post-production & VFX"
+      ],
+      "summary": "Cloud media management from Norway's Fonn Group: live stream ingest with automatic transcripts and metadata, AI search across libraries, browser clipping and editing (Mimir Cutter), mobile capture, and assignments, comments and approvals for distributed teams.",
+      "for_whom": "Newsrooms, sports broadcasters, live event producers, communications teams and media archives",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS, Android",
+      "integrations": "TwelveLabs, Coactive, AWS AI services",
+      "founded": null,
+      "official_url": "https://mimir.app/",
+      "source_urls": [
+        "https://mimir.app/",
+        "https://fonngroup.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "offshoot",
+      "name": "OffShoot",
+      "vendor": "The Sync Factory B.V. (Hedge)",
+      "vendor_country": "Netherlands",
+      "category": "Asset & media management",
+      "summary": "Offload and ingest tool from Eindhoven-based Hedge: verified file transfers with checksums, cascading backups to several drives at once, duplicate detection and metadata presets, with ASC MHL verification and reports. OffShoot Pro adds S3 cloud destinations, scripting and integrations.",
+      "for_whom": "Video professionals, DITs and production teams, from solo shooters to high-end productions",
+      "pricing_model": "OffShoot USD 169 per activation and OffShoot Pro USD 249 per activation (perpetual licences for macOS and Windows with one year of updates); project rental USD 49 for 30 days; OffShoot Solo via the App Store; 10-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS, Windows, iPadOS (OffShoot Solo)",
+      "integrations": "Hedge Connect, iconik, EditReady, FoolCat, ParaShoot, Scratch, Amazon S3",
+      "founded": null,
+      "official_url": "https://hedge.co/offshoot",
+      "source_urls": [
+        "https://hedge.co/offshoot",
+        "https://docs.hedge.video/general/company-details"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "shotput-pro",
+      "name": "ShotPut Pro",
+      "vendor": "Imagine Products, Inc.",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "summary": "Offloading software that copies camera media with checksum verification (MHL, ASC MHL, xxHash, C4), cascaded copies to several drives, drive health monitoring, file renaming presets and PDF reports with thumbnails. Sister products cover proxies (ShotPut Studio) and LTO archiving (myLTO).",
+      "for_whom": "Media professionals and DITs offloading camera cards on set",
+      "pricing_model": "Perpetual licence USD 169 (macOS or Windows) with 12 months of updates, then USD 59 per year for extended update coverage (USD 70 per year pay as you go); 30-day rental USD 60 (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS, Windows",
+      "integrations": "RED, ARRI, Blackmagic, Sony, Canon, Codex and DJI camera formats; MHL and ASC MHL",
+      "founded": null,
+      "official_url": "https://www.imagineproducts.com/product/shotput-pro",
+      "source_urls": [
+        "https://www.imagineproducts.com/product/shotput-pro/mac",
+        "https://www.imagineproducts.com/product/shotput-pro/windows",
+        "https://www.imagineproducts.com/about/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "silverstack",
+      "name": "Silverstack XT",
+      "vendor": "Pomfort GmbH",
+      "vendor_country": "Germany",
+      "category": "Asset & media management",
+      "summary": "On-set data management from Munich: offloads camera media with checksum verification to several destinations at once, collects metadata in a library, plays back footage for quality control and produces PDF reports and metadata exports for editorial. Silverstack Lab is the edition with transcoding.",
+      "for_whom": "DITs, data managers and production teams on features, series, commercials and music videos",
+      "pricing_model": "Silverstack XT: yearly subscription EUR 299 per year; temporary licences EUR 79 for 10 days, EUR 129 for 1 month, EUR 199 for 2 months; 10-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS",
+      "integrations": "Avid Media Composer, Adobe Premiere Pro, Final Cut Pro, DaVinci Resolve, Pomfort ShotHub, Elgato Stream Deck",
+      "founded": null,
+      "official_url": "https://pomfort.com/silverstack/",
+      "source_urls": [
+        "https://pomfort.com/silverstack/",
+        "https://pomfort.com/store/silverstackxt/licenses/",
+        "https://pomfort.com/imprint/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "sohonet-clearview-flex",
       "name": "Sohonet ClearView Flex",
       "vendor": "Sohonet",
@@ -590,6 +1718,30 @@
       "photo": null
     },
     {
+      "id": "cast-and-crew-studio-plus",
+      "name": "Studio+",
+      "vendor": "Cast & Crew LLC",
+      "vendor_country": "United States",
+      "category": "Asset & media management",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Secure file transfer and document management for production paperwork from Cast & Crew: encrypted uploads, script distribution, automatic tagging with OCR, role-based access and upload alerts, accessed through the Cast & Crew platform with single sign-on. Accepts PDFs, Office files, video, audio and ZIP.",
+      "for_whom": "Production offices and accounting teams moving sensitive documents from pre-production through post on film, TV, streaming, sports, live entertainment, theatre and commercials",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Start+, Hours+, MyCast&Crew",
+      "founded": null,
+      "official_url": "https://castandcrew.com/platform/cast-crew-platform/secure-file-transfer/",
+      "source_urls": [
+        "https://castandcrew.com/platform/cast-crew-platform/secure-file-transfer/",
+        "https://www.castandcrew.com/platform/cast-crew-platform/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "telestream-vantage",
       "name": "Telestream Vantage",
       "vendor": "Telestream",
@@ -606,6 +1758,30 @@
       "source_urls": [
         "https://telestream.com/vantage/",
         "https://telestream.com/privacy-policy/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "vidispine",
+      "name": "Vidispine",
+      "vendor": "Vidispine GmbH",
+      "vendor_country": "Germany",
+      "category": "Asset & media management",
+      "also_in": [
+        "Rights & distribution"
+      ],
+      "summary": "Hamburg-based media management portfolio: VidiCore as asset management engine with MediaPortal (search and distribution), VidiEditor (browser editing), MediaLogger, VidiControl (ingest), VidiFlow (workflows) and VidiCoder (transcoding), as the VidiNet cloud service or on-premise. BMS covers rights and ad inventory.",
+      "for_whom": "Broadcasters, content owners and media organisations managing large media libraries and supply chains",
+      "pricing_model": "Not published",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.vidispine.com/",
+      "source_urls": [
+        "https://www.vidispine.com/",
+        "https://vidispine.com/legal-notice"
       ],
       "logo": null,
       "photo": null
@@ -653,6 +1829,77 @@
       "photo": null
     },
     {
+      "id": "yoyotta",
+      "name": "YoYotta",
+      "vendor": "YoYotta Ltd",
+      "vendor_country": "United Kingdom",
+      "category": "Asset & media management",
+      "also_in": [
+        "Post-production & VFX"
+      ],
+      "summary": "London-based media workflow software for offloading camera cards with metadata and thumbnails, verified copies, LTO tape archiving in LTFS (LTO-5 to LTO-10), transcoding to DPX, ProRes, H.264, H.265 and MXF, and conforming from AAF, ALE, EDL and FCPXML timelines.",
+      "for_whom": "Production and post-production companies in media and entertainment",
+      "pricing_model": "YoYotta v4 GBP 80 per year (12-month subscription, no automatic renewal); add-ons per year: Conform GBP 110, LTO Drive GBP 60 per drive, LTO Library GBP 80, Multi LTO Library GBP 240; demo licence for evaluation; EUR and USD price lists also published (published)",
+      "deployment": "Desktop",
+      "platforms": "macOS",
+      "integrations": "ARRI ARRICORE, Avid and Final Cut Pro timelines (AAF, ALE, EDL, FCPXML), LTFS, Netflix delivery specifications",
+      "founded": null,
+      "official_url": "https://yoyotta.com/",
+      "source_urls": [
+        "https://yoyotta.com/",
+        "https://yoyotta.com/yoyotta/pricing.html",
+        "https://yoyotta.com/contact.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "arc-studio",
+      "name": "Arc Studio",
+      "vendor": "Arc Studio Labs, Inc.",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Screenwriting application with screenplay formatting, visual outlining, real-time co-writing, draft history and revision management, synced across web, desktop and mobile. Imports and exports Final Draft files and exports PDF.",
+      "for_whom": "Screenwriters from beginners to writers' rooms and showrunners, plus film schools and classrooms",
+      "pricing_model": "Free plan (2 scripts, watermarked PDF export); Essentials USD 69 per year; Pro USD 99 per year, per person with unlimited devices; 7-day Pro trial; USD 70 off Pro with an .edu address; paid add-ons such as Table Read (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "Web, Mac, Windows, iOS, iPadOS",
+      "integrations": "Final Draft import and export, PDF export",
+      "founded": null,
+      "official_url": "https://www.arcstudiopro.com",
+      "source_urls": [
+        "https://www.arcstudiopro.com/pricing",
+        "https://www.arcstudiopro.com/terms"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "boords",
+      "name": "Boords",
+      "vendor": "Presentable Software Limited",
+      "vendor_country": "United Kingdom",
+      "category": "Script & pre-production",
+      "also_in": [
+        "Scheduling & call sheets"
+      ],
+      "summary": "London-based web platform for video pre-production: scripts, storyboards and animatics in one workspace, with frame-by-frame client comments (no login needed for reviewers), version history and approvals. Also generates shot lists and call sheets, and has an API, webhooks and a Slack integration.",
+      "for_whom": "Video agencies, brands, creative studios and production teams",
+      "pricing_model": "Solo USD 39 per month (1 user), Pro USD 75 (up to 5 users), Team USD 125 (up to 10), Agency USD 250 (up to 30); billed yearly USD 26, 50, 85 and 165 per month; Enterprise on request; free trial (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Public API, webhooks, Slack",
+      "founded": 2015,
+      "official_url": "https://boords.com",
+      "source_urls": [
+        "https://boords.com/pricing",
+        "https://boords.com/",
+        "https://boords.com/terms"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "celtx",
       "name": "Celtx",
       "vendor": "Celtx Inc. (a Backlight business)",
@@ -669,6 +1916,28 @@
       "source_urls": [
         "https://www.celtx.com/pricing/",
         "https://www.celtx.com"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "fade-in",
+      "name": "Fade In",
+      "vendor": "GCC Productions Inc.",
+      "vendor_country": "Canada",
+      "category": "Script & pre-production",
+      "summary": "Screenwriting software for film, television, video games, stage and radio scripts, with outlining, revision management and multi-language support. Opens and saves Final Draft files and imports Fountain, Word, Celtx and StudioBinder; the optional Fade In Access service adds cloud storage, syncing and collaboration.",
+      "for_whom": "Professional and amateur screenwriters",
+      "pricing_model": "One-time purchase USD 79.95 (regular price USD 99.95), updates free; free trial version; student pricing available (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, Mac, Linux; Fade In Access on iPhone, iPad and Android",
+      "integrations": "Final Draft (.fdx, .fdr), Fountain, Word (.docx), RTF, Scrivener, Celtx, StudioBinder, PDF, Open Screenplay Format XML, Fade In Access",
+      "founded": 2011,
+      "official_url": "https://www.fadeinpro.com",
+      "source_urls": [
+        "https://www.fadeinpro.com/page.pl?content=purchase",
+        "https://www.fadeinpro.com/page.pl?content=features",
+        "https://www.fadeinpro.com/page.pl?content=legal"
       ],
       "logo": null,
       "photo": null
@@ -716,6 +1985,74 @@
       "photo": null
     },
     {
+      "id": "frameforge-studio",
+      "name": "FrameForge Studio",
+      "vendor": "Innoventive Software",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Previsualization and storyboarding software from San Diego: an optically accurate virtual film studio with cameras matching real lenses, a location builder, objects and actors that interact, lighting with shadows, and boards exported with camera position, focal length and height. Pro adds camera gear and sun position.",
+      "for_whom": "Directors, cinematographers, VFX supervisors and educators",
+      "pricing_model": "Core Edition USD 498 one-time or USD 12.99 per month billed USD 155.88 yearly (education USD 8.99 per month); Pro Edition USD 799 one-time, USD 24.99 per month billed USD 299.88 yearly, or USD 34.99 per month billed quarterly; free trial, 30-day money-back guarantee; site licences on request (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, Mac",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.storyboardsmarter.com",
+      "source_urls": [
+        "https://www.storyboardsmarter.com/core-edition",
+        "https://www.storyboardsmarter.com/pro-edition",
+        "https://www.storyboardsmarter.com/about-us"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "highland-pro",
+      "name": "Highland Pro",
+      "vendor": "The Quote-Unquote Company",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Writing app from Los Angeles for screenplays, novels and other creative writing, made by screenwriter John August's team. Has a navigator for scenes and sections, title page builder, cast and location lists, revision tracking, writing sprints and a gender analysis; native on Mac, iPad and iPhone with iCloud syncing.",
+      "for_whom": "Screenwriters, novelists and creative writers",
+      "pricing_model": "Subscription USD 9.99 per month, or USD 4.99 per month billed USD 59.99 annually; 30-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Mac, iPad, iPhone",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://quoteunquoteapps.com/highland-pro/",
+      "source_urls": [
+        "https://quoteunquoteapps.com/highland-pro/",
+        "https://quoteunquoteapps.com/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "productionpro",
+      "name": "ProductionPro",
+      "vendor": "ProductionPro Technologies Inc.",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Brooklyn-based collaboration hub that keeps the latest script, breakdown and media together: a Production Binder with annotations, offline access and automatic note transfer between drafts, and an interactive scene breakdown that doubles as a reference hub for storyboards, previs and designs, filtered by scene and set.",
+      "for_whom": "Cast, crew and studios on film and TV productions, and theatre productions (120,000+ users)",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": null,
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://production.pro",
+      "source_urls": [
+        "https://production.pro/",
+        "https://production.pro/film-2",
+        "https://production.pro/terms"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "scriptation",
       "name": "Scriptation",
       "vendor": "Scriptation LLC",
@@ -737,6 +2074,157 @@
       "photo": null
     },
     {
+      "id": "shot-designer",
+      "name": "Shot Designer",
+      "vendor": "Hollywood Camera Work SRLS",
+      "vendor_country": "Italy",
+      "category": "Script & pre-production",
+      "summary": "Camera blocking app from Florence-based Hollywood Camera Work: block a scene and the camera diagram draws itself, with an integrated shot list, real-time animation of moves, storyboards and a director's viewfinder. The Pro version exports diagrams and shot lists to PDF, JPG and Excel.",
+      "for_whom": "Directors, cinematographers and film educators",
+      "pricing_model": "Free version (one scene at a time); Pro upgrade EUR 19.99 one-time as shown on the site, with PDF/JPG/Excel export (published)",
+      "deployment": "Desktop",
+      "platforms": "Mac, PC, iOS, Android",
+      "integrations": "PDF, JPG and Excel export",
+      "founded": null,
+      "official_url": "https://www.hollywoodcamerawork.com/shot-designer.html",
+      "source_urls": [
+        "https://www.hollywoodcamerawork.com/shot-designer.html",
+        "https://www.hollywoodcamerawork.com/legal.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "shot-lister",
+      "name": "Shot Lister",
+      "vendor": "Reel Apps Inc.",
+      "vendor_country": "Canada",
+      "category": "Script & pre-production",
+      "summary": "Shot list and shooting-day app from Vancouver: build shot lists, schedule them minute by minute, run the day in live mode and keep the crew in sync on their own devices. Imports scripts, holds storyboards and connects to Scriptation.",
+      "for_whom": "Directors, ADs and crews on film and television sets",
+      "pricing_model": "Free basic app; Pro USD 15.99 per month or USD 99.99 per year (crew sync up to 10 people); Studio from USD 24.99 per month for 10 users to USD 94.99 per month for 80 users (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "iOS, macOS, Apple Watch",
+      "integrations": "Scriptation",
+      "founded": null,
+      "official_url": "https://www.shotlister.com",
+      "source_urls": [
+        "https://www.shotlister.com/",
+        "https://www.shotlister.com/about",
+        "https://www.shotlister.com/privacy"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "shotdeck",
+      "name": "ShotDeck",
+      "vendor": "The Filmmaker's Research Lab, LLC (ShotDeck)",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Searchable library of high-definition film stills from Los Angeles, tagged by crew, genre, camera, lens, framing, lighting, colour, location and mood. Users build decks of reference images and share them with the team for pitching, prep and post.",
+      "for_whom": "Directors, cinematographers, production designers, ad agencies, film students and visual artists",
+      "pricing_model": "Subscription USD 12.95 per month or USD 99.95 billed yearly (USD 8.33 per month); 2-week free trial; educational discounts and enterprise or team pricing on request (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "ReelGood (streaming links)",
+      "founded": null,
+      "official_url": "https://shotdeck.com",
+      "source_urls": [
+        "https://shotdeck.com/welcome/pricing",
+        "https://shotdeck.com/welcome/terms",
+        "https://shotdeck.com/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "storyboarder",
+      "name": "Storyboarder",
+      "vendor": "Wonder Unit, Inc.",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Free, open-source storyboarding app from New York studio Wonder Unit: draw boards with a small set of tools, add dialogue and action notes, print worksheets to draw on paper and import them by phone, and turn boards into animatics. Round-trips with Photoshop and exports to Premiere, Final Cut, Avid, PDF and GIF.",
+      "for_whom": "Story artists, directors, writers and advertisers, including people who cannot draw",
+      "pricing_model": "Free and open source (published)",
+      "deployment": "Desktop",
+      "platforms": "Mac, Windows, Linux",
+      "integrations": "Photoshop, Premiere, Final Cut, Avid, PDF, animated GIF, Fountain scripts, Wacom tablets",
+      "founded": null,
+      "official_url": "https://wonderunit.com/storyboarder/",
+      "source_urls": [
+        "https://wonderunit.com/storyboarder/",
+        "https://wonderunit.com/about",
+        "https://github.com/wonderunit/storyboarder/releases"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "toon-boom-storyboard-pro",
+      "name": "Toon Boom Storyboard Pro",
+      "vendor": "Toon Boom Animation Inc.",
+      "vendor_country": "Canada",
+      "category": "Script & pre-production",
+      "summary": "Storyboarding software from Montreal-based Toon Boom for the pre-production workflow: thumbnailing a first pass, refining the boards, pitching them and timing camera moves in an animatic.",
+      "for_whom": "Independent storytellers, animation studios, agencies, videographers and video production teams",
+      "pricing_model": "Subscription, priced in the vendor's shop: EUR 95 per month or EUR 819 per year, three-year term EUR 2,335; student price EUR 12 per month or EUR 95 per year. 14-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows, macOS",
+      "integrations": "Toon Boom Harmony",
+      "founded": null,
+      "official_url": "https://www.toonboom.com/products/storyboard-pro",
+      "source_urls": [
+        "https://www.toonboom.com/products/storyboard-pro",
+        "https://shop.toonboom.com/en/subscriptions/storyboard-pro"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "writerduet",
+      "name": "WriterDuet",
+      "vendor": "WriterDuet Inc.",
+      "vendor_country": "United States",
+      "category": "Script & pre-production",
+      "summary": "Screenwriting software with real-time collaboration: several writers can work in the same script at once, with comments, text and video chat, revision tracking, colored revisions and production tools. Free plan for up to three projects; paid plans add a desktop app and offline writing with sync.",
+      "for_whom": "Screenwriters, writers' rooms, TV shows and students",
+      "pricing_model": "Free plan (3 projects); Plus USD 9.99, Pro USD 11.99 and Premium USD 13.99 per month, or USD 7.49, 8.99 and 10.49 per month billed annually; free trial on paid plans; 50% off for students and educators (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "Web, desktop application, mobile",
+      "integrations": "Google Drive and Dropbox backups",
+      "founded": 2013,
+      "official_url": "https://www.writerduet.com",
+      "source_urls": [
+        "https://www.writerduet.com/pricing",
+        "https://www.writerduet.com/terms"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "actors-access",
+      "name": "Actors Access",
+      "vendor": "Breakdown Services, Ltd.",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "Performer side of Breakdown Services in Los Angeles: actors keep a profile with headshots, resume and media and submit themselves to breakdowns, with Eco Cast for video auditions, Talent Link for finding representation and CastingAbout for tracking who is casting. Offices in LA, New York, Vancouver and Toronto.",
+      "for_whom": "Actors at every stage of their career; casting directors and agents use the connected Breakdown Express",
+      "pricing_model": "Free profile with 2 photos and 1 SlateShot, view and submit to breakdowns; Actors Access PLUS USD 68 per year or USD 9.99 per month for submissions to all projects; extra photos and media sold separately (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS app",
+      "integrations": "Breakdown Express, Eco Cast, CastingAbout",
+      "founded": null,
+      "official_url": "https://www.actorsaccess.com",
+      "source_urls": [
+        "https://www.actorsaccess.com/register/benefits.cfm",
+        "https://breakdownservices.com/index.cfm/main/about",
+        "https://breakdownservices.com/index.cfm/main/contact"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "backstage",
       "name": "Backstage",
       "vendor": "Backstage (Cast & Crew)",
@@ -753,6 +2241,28 @@
       "source_urls": [
         "https://www.backstage.com/pricing/",
         "https://www.backstage.com/about-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "casting-frontier",
+      "name": "Casting Frontier",
+      "vendor": "Casting Frontier, LLC",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "Los Angeles casting platform: talent create profiles and submit to roles, casting directors post projects for free, search talent (including by social media following), run self-tape auditions, and record and share audition sessions with the iSession software and CF Cloud archive.",
+      "for_whom": "Actors, models and influencers, casting directors, content creators, agents and managers",
+      "pricing_model": "Talent: Basic free (1 headshot); Premium USD 14.99 per month, 57.99 per 6 months or 99.99 per year; Premium Plus USD 19.99 per month, 75.99 per 6 months or 129.99 per year; casting directors post for free (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://castingfrontier.com",
+      "source_urls": [
+        "http://castingfrontier.com/",
+        "https://castingfrontier.com/casting-directors-content-creators/",
+        "https://castingfrontier.com/terms-of-use/"
       ],
       "logo": null,
       "photo": null
@@ -800,6 +2310,72 @@
       "photo": null
     },
     {
+      "id": "etalenta",
+      "name": "etalenta",
+      "vendor": "iMAGE iN MOTION GmbH",
+      "vendor_country": "Germany",
+      "category": "Location & crew sourcing",
+      "summary": "Munich-based European casting platform run on a non-profit basis, with over 90,000 actors, casting directors, agents, directors and producers. Casting members create projects and castings, search profiles and use a virtual casting studio for self-tapes; actors keep a profile with photos and showreels.",
+      "for_whom": "Actors, casting directors, producers, directors, agents and extras across Europe",
+      "pricing_model": "Actors: basic profile free, supporting membership EUR 57 per year; casting directors and producers: free, casting-PREMIUM EUR 190 per year with virtual casting studio and 100 GB cloud storage; free for film school students (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.etalenta.eu",
+      "source_urls": [
+        "https://www.etalenta.eu/casting-with-etalenta/",
+        "https://www.etalenta.eu/etalenta-for-actors/",
+        "https://www.etalenta.eu/legalnotice/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "filmmakers-europe",
+      "name": "Filmmakers Europe",
+      "vendor": "filmmakers.one GmbH",
+      "vendor_country": "Germany",
+      "category": "Location & crew sourcing",
+      "summary": "Casting platform from Cologne connecting actors, agencies and casting directors across Europe: casting directors post breakdowns and manage auditions, agents submit clients, actors keep a profile with photos, showreels and audioreels. Premium adds a mobile app and a linked Spotlight profile for the UK and Ireland.",
+      "for_whom": "Actors, talent agencies and casting directors in Europe",
+      "pricing_model": "Actors: free profile; Premium+ EUR 119 per year; Premium+ International (adds a Spotlight profile) EUR 159 per year extra; casting director and agency pricing not shown on the pricing page (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS and Android app",
+      "integrations": "Spotlight (UK and Ireland profile)",
+      "founded": null,
+      "official_url": "https://www.filmmakers.eu",
+      "source_urls": [
+        "https://www.filmmakers.eu/en/subscriptions/pricing",
+        "https://www.filmmakers.eu/imprint",
+        "https://www.filmmakers.eu/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "giggster",
+      "name": "Giggster",
+      "vendor": "Giggster, Inc.",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "Los Angeles location marketplace for filming, photo shoots and events: search listings with hourly rates, book online with liability and damage protection, and use the concierge service for scouting, permits and rate negotiation. Listings across North America and the UK; iOS and Android app.",
+      "for_whom": "Producers, photographers and creatives renting locations, and property owners listing them",
+      "pricing_model": "Marketplace: hosts set hourly rates; Giggster keeps 19% of the host payout as a service fee and charges renters a processing fee (amount not stated) (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS, Android",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://giggster.com",
+      "source_urls": [
+        "https://giggster.com/",
+        "https://giggster.com/terms",
+        "https://help.giggster.com/en/articles/757847-what-is-the-giggster-service-fee"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "locationshub",
       "name": "LocationsHub",
       "vendor": "Reel-Scout, Inc.",
@@ -842,6 +2418,27 @@
       "photo": null
     },
     {
+      "id": "productionbeast",
+      "name": "ProductionBeast",
+      "vendor": "StudioBinder Inc.",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "Job board for video production from StudioBinder in Santa Monica: employers post film, TV and video jobs and search crew, freelancers build a profile and apply, and vendors can buy featured placement. Posting and applying are free.",
+      "for_whom": "Video production freelancers and crew, and the companies hiring them",
+      "pricing_model": "Free to find and post jobs; a paid freelancer upgrade exists but its price is not shown on the site (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.productionbeast.com",
+      "source_urls": [
+        "https://www.productionbeast.com/",
+        "https://www.productionbeast.com/terms/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "productionhub",
       "name": "ProductionHUB",
       "vendor": "ProductionHUB, Inc.",
@@ -858,6 +2455,28 @@
       "source_urls": [
         "https://www.productionhub.com/get-listed",
         "https://www.productionhub.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "reel-scout",
+      "name": "Reel-Scout",
+      "vendor": "Reel-Scout, Inc.",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "Cloud software for film commissions and film offices from Charlotte, North Carolina: a searchable location gallery with an internal and a public view, project and contact management, branded location packages, an online production directory for local crew, reporting and an iPhone app. Public marketplace: LocationsHub.",
+      "for_whom": "Film offices and film commissions recruiting and servicing productions",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS (RS Mobile)",
+      "integrations": "LocationsHub",
+      "founded": null,
+      "official_url": "https://www.reel-scout.com",
+      "source_urls": [
+        "https://www.reel-scout.com/",
+        "https://www.reel-scout.com/software",
+        "https://www.reel-scout.com/about"
       ],
       "logo": null,
       "photo": null
@@ -884,6 +2503,119 @@
       "photo": null
     },
     {
+      "id": "spotlight",
+      "name": "Spotlight",
+      "vendor": "Talent Systems Europe Limited (trading as Spotlight)",
+      "vendor_country": "United Kingdom",
+      "category": "Location & crew sourcing",
+      "summary": "London casting network connecting performers with agents and casting professionals since 1927. Casting members search profiles, request submissions from agents and performers and manage self-tapes; performers keep a profile with headshots, credits and media.",
+      "for_whom": "Performers, young performers, drama school graduates, casting directors and agents",
+      "pricing_model": "Membership: performers GBP 175 per year plus VAT (GBP 210 incl.) or GBP 16 per month plus VAT by direct debit; casting professionals GBP 245 per year or GBP 70 per user per month, excluding VAT; USD and EUR prices also listed (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": 1927,
+      "official_url": "https://www.spotlight.com",
+      "source_urls": [
+        "https://www.spotlight.com/memberships/performers/",
+        "https://www.spotlight.com/memberships/casting-professionals/",
+        "https://www.spotlight.com/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "staff-me-up",
+      "name": "Staff Me Up",
+      "vendor": "Casting Networks, LLC (Talent Systems)",
+      "vendor_country": "United States",
+      "category": "Location & crew sourcing",
+      "summary": "US job board for media production crew: freelancers keep a profile with credits and skills, browse and apply to production jobs and track applications; employers post jobs and search crew. About 489,000 registered production staff and crew, jobs posted since 2003.",
+      "for_whom": "Production crew and freelancers, and the media companies hiring them",
+      "pricing_model": "Freelancers: Basic free (5 applications per period); Premium USD 19.99 per month or USD 149.99 per year; employer and job-poster pricing not shown on the site (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.staffmeup.com",
+      "source_urls": [
+        "https://staffmeup.com/pricing/",
+        "https://staffmeup.com/about-us/",
+        "https://staffmeup.com/terms-of-service/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "the-mandy-network",
+      "name": "The Mandy Network",
+      "vendor": "The Mandy Network Ltd (part of Backstage)",
+      "vendor_country": "United Kingdom",
+      "category": "Location & crew sourcing",
+      "summary": "UK jobs network for film, TV and theatre: casting calls and production jobs for actors, voiceover artists, dancers, singers, musicians and crew, with employer postings and a mobile app. Supporting talent since 1996; now part of the Backstage group.",
+      "for_whom": "Actors, performers and crew looking for work, and producers hiring them",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web, mobile app",
+      "integrations": null,
+      "founded": 1996,
+      "official_url": "https://www.mandy.com",
+      "source_urls": [
+        "https://www.mandy.com/",
+        "https://www.mandy.com/terms-of-service",
+        "https://www.mandy.com/subscribe/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "the-talent-manager",
+      "name": "The Talent Manager",
+      "vendor": "DV Talent Limited",
+      "vendor_country": "United Kingdom",
+      "category": "Location & crew sourcing",
+      "summary": "London-based platform where TV and creative companies find, track and develop freelancers: searchable CVs, credits and availability, job postings and talent management tools. More than 135,000 freelancers registered; also serves the US and Canada.",
+      "for_whom": "TV freelancers and the production companies and broadcasters that hire them",
+      "pricing_model": "Freelancers: free basic profile; Pro membership GBP 4.86 plus VAT per month billed annually, 30-day free trial; companies: Pro from GBP 55 plus VAT per month billed annually, 30-day free trial (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": 2010,
+      "official_url": "https://www.thetalentmanager.com",
+      "source_urls": [
+        "https://www.thetalentmanager.com/",
+        "https://www.thetalentmanager.com/terms",
+        "https://www.thetalentmanager.com/about"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cinando",
+      "name": "Cinando",
+      "vendor": "SOGOFIF (Marché du Film, Festival de Cannes)",
+      "vendor_country": "France",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Business & CRM"
+      ],
+      "summary": "Industry database and networking platform run by the Marché du Film of the Festival de Cannes: searchable profiles of companies and professionals, project and film listings, screener management and digital spaces for markets and festivals. Membership is reserved for film, TV and immersive content professionals.",
+      "for_whom": "Sales agents, distributors, producers, buyers, festival programmers and other film and audiovisual professionals",
+      "pricing_model": "Not published (subscription fee is shown during the registration process; applications are reviewed and refused ones refunded)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": 2003,
+      "official_url": "https://cinando.com",
+      "source_urls": [
+        "https://cinando.com/en/login",
+        "https://cinando.com/en/register",
+        "https://en.wikipedia.org/wiki/Cinando"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "cinelytic",
       "name": "Cinelytic",
       "vendor": "Cinelytic, Inc.",
@@ -900,6 +2632,125 @@
       "source_urls": [
         "https://www.cinelytic.com",
         "https://www.cinelytic.com/platform"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cinesend",
+      "name": "CineSend",
+      "vendor": "BitCine Technologies Inc.",
+      "vendor_country": "Canada",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Asset & media management"
+      ],
+      "summary": "Canadian cloud platform for high-value video: Files stores and shares content with secure screeners (DRM, visible and forensic watermarks, geo-blocking, view limits, analytics), OTT runs live and on-demand streaming for events and services, and Request collects large files from many contributors into one repository.",
+      "for_whom": "Media and entertainment companies, film festivals, awards and publicity teams, airlines and corporate communications",
+      "pricing_model": "Files: Teams $797 per month (5 users, 6 TB storage, 150 screener links per month), Enterprise on request; OTT: Pro $1,997 per month (3 TB storage, 250,000 streaming minutes per month), Enterprise on request; Request $0.50 per GB downloaded; currency not stated on the page (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": 2016,
+      "official_url": "https://www.cinesend.com/",
+      "source_urls": [
+        "https://www.cinesend.com/",
+        "https://www.cinesend.com/pricing",
+        "https://www.cinesend.com/about",
+        "https://www.cinesend.com/terms-and-conditions"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "eventival",
+      "name": "Eventival",
+      "vendor": "Eventival s.r.o.",
+      "vendor_country": "Czech Republic",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Business & CRM"
+      ],
+      "summary": "Prague-based festival management platform: a central database and CRM for film submissions, accreditation, hospitality, membership, scheduling, voting and awards, with a visitor page, online festival guide and meeting planner. Used by more than 100 festivals in nearly 50 countries, plus film institutes and schools.",
+      "for_whom": "Film festivals, film industry organisations, awards academies, film schools and other creative event organisers",
+      "pricing_model": "Annual subscription, excl. VAT: Pro EUR 10,000 per year (all Pro features, unlimited users and editions, annual onsite training), Custom from EUR 3,000 per year (Eventival Basic plus selected Pro features), Pro Plus on request; 10% discount on a 2-year commitment; demo versions on request (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": 2009,
+      "official_url": "https://www.eventival.com",
+      "source_urls": [
+        "https://www.eventival.com/",
+        "https://eventival.com/pricing/",
+        "https://eventival.com/company-and-team/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "festhome",
+      "name": "Festhome",
+      "vendor": "Festhome Ltd / Festhome, Inc.",
+      "vendor_country": "United Kingdom",
+      "category": "Rights & distribution",
+      "summary": "Festival submission platform connecting filmmakers with festivals worldwide, with a festival management portal for organisers and Festhome TV for online screenings. Filmmakers pay Festhome's own fee per submission (with discounted submission credits or an annual pass per film) on top of each festival's entry fee.",
+      "for_whom": "Filmmakers and distributors submitting to festivals, and festival organisers managing entries and online screenings",
+      "pricing_model": "Not published as fixed amounts: Festhome charges filmmakers a submission fee (payable per submission or via discounted submission credits and an annual pass per film), festival entry fees are set by each festival, and Festhome may charge festivals a default 10% fee on entry fees it collects (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "PayPal, Stripe",
+      "founded": 2012,
+      "official_url": "https://festhome.com",
+      "source_urls": [
+        "https://festhome.com/",
+        "https://festhome.com/faqs",
+        "https://festhome.com/terms-of-use"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "filmchief",
+      "name": "Filmchief",
+      "vendor": "Filmchief B.V.",
+      "vendor_country": "Netherlands",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Business & CRM"
+      ],
+      "summary": "Cloud festival management from Nijmegen, started in 2013 by the Go Short and Kaboom festivals: film submissions, the festival database, event organisation, team tasks and production in one system, with Filmchief Hub for online screenings with ticketing. Imports entries from FilmFreeway, Festhome and ShortFilmDepot.",
+      "for_whom": "Film festivals of all sizes",
+      "pricing_model": "Quote on request (Standard and Premium licences plus a Hub add-on, all with unlimited users, traffic and database size)",
+      "deployment": "Cloud",
+      "platforms": "Web (desktop, tablet, smartphone)",
+      "integrations": "FilmFreeway, Festhome, ShortFilmDepot, Vimeo, custom API for website synchronisation",
+      "founded": 2013,
+      "official_url": "https://www.filmchief.com",
+      "source_urls": [
+        "https://www.filmchief.com/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "filmfreeway",
+      "name": "FilmFreeway",
+      "vendor": "FilmFreeway (Backstage)",
+      "vendor_country": "United States",
+      "category": "Rights & distribution",
+      "summary": "Festival submission platform: filmmakers add a project once and submit it to more than 12,000 film festivals and screenplay contests, with HD online screeners, unlimited storage, digital press kits and a DCP tool. Festivals get a listing page, custom submission and judging forms, notifications and monthly payouts.",
+      "for_whom": "Filmmakers and screenwriters entering festivals and contests, and festival and contest organisers receiving entries",
+      "pricing_model": "Filmmakers: free account with unlimited storage (festivals set their own entry fees). Festivals: free for events without entry fees; events that charge entry fees pay a 12% commission plus payment processing of 3% + USD 0.30 per transaction, a one-time activation fee of USD 100 and USD 50 for subsequent calls for entries (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Vimeo, YouTube, PayPal, CineSend (DCP)",
+      "founded": 2014,
+      "official_url": "https://filmfreeway.com",
+      "source_urls": [
+        "https://filmfreeway.com/",
+        "https://filmfreeway.com/pages/how-it-works-for-festivals",
+        "https://filmfreeway.com/pages/how-it-works",
+        "https://filmfreeway.com/page/terms-of-service"
       ],
       "logo": null,
       "photo": null
@@ -947,6 +2798,57 @@
       "photo": null
     },
     {
+      "id": "origin-studio",
+      "name": "Origin Studio",
+      "vendor": "Fabric Data, Inc.",
+      "vendor_country": "United Kingdom",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Asset & media management"
+      ],
+      "summary": "Title and episode metadata management from Fabric (London and Chatsworth): one catalogue for movies, series, seasons and episodes, enriched with credits, imagery and localised synopses from Origin Nexus, with versions, territories, rights conditions and distribution states per title. EIDR-compatible, ISO 27001.",
+      "for_whom": "Studios, distributors, streamers and broadcasters managing large catalogues across languages and territories",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Origin Nexus, EIDR, REST API, MCP server",
+      "founded": null,
+      "official_url": "https://www.fabricdata.com/origin-studio",
+      "source_urls": [
+        "https://www.fabricdata.com/origin-studio",
+        "https://fabricdata.com/",
+        "https://www.fabricdata.com/privacy-policy"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "provys-sphere",
+      "name": "PROVYS Sphere",
+      "vendor": "PROVYS Technologies s.r.o.",
+      "vendor_country": "Czech Republic",
+      "category": "Rights & distribution",
+      "also_in": [
+        "Business & CRM"
+      ],
+      "summary": "Prague-built broadcast management system covering content planning, rights management, linear and online scheduling, airtime sales, finance and resource management, in three tiers (Lite as ready-made SaaS, Pro, Enterprise). Sister products Stream Circle (cloud playout) and Tweenly (broadcast graphics).",
+      "for_whom": "Networks, national and regional TV stations, radio stations, ad sales agencies and production houses",
+      "pricing_model": "Quote on request (Sphere Lite as a ready-made SaaS option; Pro and Enterprise priced on project complexity, support level and integrations)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web",
+      "integrations": "API framework",
+      "founded": null,
+      "official_url": "https://provyssphere.tv",
+      "source_urls": [
+        "https://www.provys.com/",
+        "https://provyssphere.tv/",
+        "https://provyssphere.tv/pricing",
+        "https://www.provys.com/about-provys"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "rightsline",
       "name": "Rightsline",
       "vendor": "Rightsline",
@@ -968,6 +2870,49 @@
       "photo": null
     },
     {
+      "id": "slated",
+      "name": "Slated",
+      "vendor": "Slated, Inc.",
+      "vendor_country": "United States",
+      "category": "Rights & distribution",
+      "summary": "Online marketplace for packaging and financing independent films: producers list projects and match with talent, crew, accredited investors and sales agents, order script and financial analysis with machine-learning projections, and can add executive producer consulting. Around 75,000 members.",
+      "for_whom": "Independent producers, writers, directors, talent, crew, accredited investors, sales agents and distributors",
+      "pricing_model": "Free personal profile with opportunity matching; Active Project Listing USD 34.99 per month; Script/Financial Analysis USD 495 per analysis (includes 1 free month of marketplace access with first purchase); EP Consulting Services USD 595 per month (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.slated.com",
+      "source_urls": [
+        "https://get.slated.com/",
+        "https://get.slated.com/pricing/",
+        "https://get.slated.com/about/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "vimeo-ott",
+      "name": "Vimeo OTT",
+      "vendor": "Vimeo.com, Inc.",
+      "vendor_country": "United States",
+      "category": "Rights & distribution",
+      "summary": "Video-on-demand platform from Vimeo for launching a branded streaming service: subscriptions (SVOD), one-off purchases (TVOD), advertising and free registration models, web on Starter and apps for iOS, Android, Apple TV, Roku, Fire TV, Samsung, LG, Xbox and Vizio plus live events and linear channels on Enterprise.",
+      "for_whom": "Content owners, entertainment companies and creators selling video directly to audiences (9,300+ channels)",
+      "pricing_model": "Starter: USD 1 per subscriber per month plus 10% of one-time purchases, no upfront costs, web only; Enterprise: annual subscription agreement with custom pricing, volume discounts, upload and transaction fees, includes 60 TB bandwidth and 200 upload hours (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS, Android, Apple TV, Android TV, Roku, Amazon Fire TV, Samsung Tizen, LG, Xbox, Vizio",
+      "integrations": "Stripe Connect (payouts)",
+      "founded": null,
+      "official_url": "https://vimeo.com/ott",
+      "source_urls": [
+        "https://vimeo.com/ott",
+        "https://vimeo.com/ott/pricing"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "cinapse",
       "name": "Cinapse",
       "vendor": "Cinapse (part of Wrapbook since December 2025)",
@@ -984,6 +2929,31 @@
       "source_urls": [
         "https://www.cinapse.io/",
         "https://www.cinapse.io/pricing"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "fuzzlecheck",
+      "name": "Fuzzlecheck",
+      "vendor": "Milieufilm GbR Lichtenberger & Hirsch",
+      "vendor_country": "Germany",
+      "category": "Scheduling & call sheets",
+      "also_in": [
+        "Script & pre-production"
+      ],
+      "summary": "Berlin-made film pre-production software for shooting schedules, call sheets, day out of days and cast and crew availability, with screenplay import and printable reports. Runs as a desktop app on Mac and Windows; Online Projects let up to 20 users work on the same project.",
+      "for_whom": "Assistant directors, production managers and producers, from independent films to large features with several units",
+      "pricing_model": "Single-user licence, valid 5 years: Standard EUR 99, Pro EUR 299, Units EUR 559. Online Projects (multi-user): 4 users EUR 45 per 3 months or EUR 70 per 6 months, 8 users EUR 180 / EUR 320, 20 users EUR 360 / EUR 650. Free trial (no printing or saving, projects deleted after 24 hours); reduced prices for students and schools (published)",
+      "deployment": "Cloud + desktop",
+      "platforms": "macOS, Windows",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.fuzzlecheck.com",
+      "source_urls": [
+        "https://www.fuzzlecheck.com/",
+        "https://www.fuzzlecheck.com/shop/",
+        "https://www.fuzzlecheck.com/index/EN/contact.html"
       ],
       "logo": null,
       "photo": null
@@ -1094,6 +3064,49 @@
       "photo": null
     },
     {
+      "id": "cast-and-crew-hours-plus",
+      "name": "Hours+",
+      "vendor": "Cast & Crew LLC",
+      "vendor_country": "United States",
+      "category": "Production accounting & payroll",
+      "summary": "Digital timekeeping from Cast & Crew: crew submit timecards and expenses from any device, hours and gross pay are calculated to union rules and production agreements, and supervisors approve through customisable approval chains with bulk approval. Feeds Cast & Crew payroll and Reporting+.",
+      "for_whom": "Crew members, payroll accountants and supervisors on film, TV, streaming, sports, live entertainment, theatre, commercial and independent productions",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web (mobile-friendly)",
+      "integrations": "MyCast&Crew, Start+, Studio+, Reporting+, Cast & Crew production accounting",
+      "founded": null,
+      "official_url": "https://castandcrew.com/platform/cast-crew-platform/timekeeping/",
+      "source_urls": [
+        "https://castandcrew.com/platform/cast-crew-platform/timekeeping/",
+        "https://www.castandcrew.com/platform/cast-crew-platform/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "movinmotion",
+      "name": "Movinmotion",
+      "vendor": "SAS Movinmotion",
+      "vendor_country": "France",
+      "category": "Production accounting & payroll",
+      "summary": "French online platform for employers of intermittents du spectacle: payroll and contract management for intermittent and permanent staff (Social), invoicing and expense tracking (Accounting), a recruitment database (Talents) and an employee portal, with dedicated account managers.",
+      "for_whom": "Film, audiovisual, theatre and festival organisations in France employing intermittent entertainment workers and permanent staff",
+      "pricing_model": "Platform subscription: Basic from EUR 23 excl. VAT per month (max 2 administrators, unlimited employees), Premium from EUR 46 excl. VAT per month (unlimited administrators), Custom on request above 100 intermittent payslips per month. Operations are paid per action with prepaid credits: intermittent payslip from EUR 16.10, permanent payslip from EUR 23, electronic contract signature from EUR 2.30 (published)",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": null,
+      "founded": null,
+      "official_url": "https://www.movinmotion.com",
+      "source_urls": [
+        "https://www.movinmotion.com/",
+        "https://www.movinmotion.com/social/tarifs/",
+        "https://www.movinmotion.com/mentions-legales/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "cast-and-crew-psl-plus",
       "name": "PSL+",
       "vendor": "Cast & Crew",
@@ -1115,6 +3128,31 @@
       "photo": null
     },
     {
+      "id": "quickbooks-online",
+      "name": "QuickBooks Online",
+      "vendor": "Intuit Inc.",
+      "vendor_country": "United States",
+      "category": "Production accounting & payroll",
+      "also_in": [
+        "Business & CRM"
+      ],
+      "summary": "General cloud accounting from Mountain View-based Intuit, widely used by small production companies: automated bookkeeping, invoicing and payments, bill management and financial reporting, with optional QuickBooks Payroll and Time and a marketplace of more than 800 app integrations.",
+      "for_whom": "Small and mid-sized businesses from sole traders to teams of up to 25 users, and their accountants",
+      "pricing_model": "Subscription (US site): Simple Start USD 38 per month (1 user), Essentials USD 85 per month (3 users), Plus USD 140 per month (5 users), Advanced USD 340 per month (25 users); introductory offer 50% off for 3 months; 30-day free trial (published)",
+      "deployment": "Cloud",
+      "platforms": "Web, iOS, Android",
+      "integrations": "800+ apps, QuickBooks Payroll, QuickBooks Time",
+      "founded": null,
+      "official_url": "https://quickbooks.intuit.com/online/",
+      "source_urls": [
+        "https://quickbooks.intuit.com/online/",
+        "https://quickbooks.intuit.com/pricing/",
+        "https://en.wikipedia.org/wiki/QuickBooks"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "sargent-disc",
       "name": "Sargent-Disc",
       "vendor": "Sargent-Disc Ltd (a Cast & Crew company)",
@@ -1131,6 +3169,31 @@
       "source_urls": [
         "https://sargent-disc.com/",
         "https://www.castandcrew.com/company/about-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "cast-and-crew-start-plus",
+      "name": "Start+",
+      "vendor": "Cast & Crew LLC",
+      "vendor_country": "United States",
+      "category": "Production accounting & payroll",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Digital crew onboarding from Burbank-based payroll company Cast & Crew: start packets, I-9s, tax forms and releases are created, sent, signed and approved online, with union scale rate updates, role-based permissions and an audit log. Part of the Cast & Crew Platform with Hours+, Studio+ and PSL+.",
+      "for_whom": "Production coordinators and accountants onboarding crew on film, TV, streaming, sports, live entertainment, theatre and commercial productions",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web (mobile-ready)",
+      "integrations": "Hours+, Studio+, PSL+, Reporting+, MyCast&Crew",
+      "founded": null,
+      "official_url": "https://castandcrew.com/platform/cast-crew-platform/onboarding/",
+      "source_urls": [
+        "https://castandcrew.com/platform/cast-crew-platform/onboarding/",
+        "https://www.castandcrew.com/platform/cast-crew-platform/",
+        "https://www.castandcrew.com/"
       ],
       "logo": null,
       "photo": null
@@ -1199,6 +3262,56 @@
       "photo": null
     },
     {
+      "id": "ceta-software",
+      "name": "CETA Software",
+      "vendor": "CETA Software Limited",
+      "vendor_country": "United Kingdom",
+      "category": "Business & CRM",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Cloud production management for post-production and VFX studios from Witney, Oxfordshire: bidding with quote templates, scheduling of people, rooms, equipment and licences, purchase orders and budgets, timesheets (Artist Access), rate cards and multi-currency invoicing, a media library and Morpheus AI reporting chat.",
+      "for_whom": "Producers, finance teams, operations leads and technical departments at VFX, post-production and games studios",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "Xero, QuickBooks, iCal-compatible calendars, Spectrum API",
+      "founded": 1995,
+      "official_url": "https://www.cetasoft.net",
+      "source_urls": [
+        "https://www.cetasoft.net/",
+        "https://www.cetasoft.net/features/",
+        "https://www.cetasoft.net/about-us"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "farmerswife",
+      "name": "farmerswife",
+      "vendor": "farmers wife S.L.",
+      "vendor_country": "Spain",
+      "category": "Business & CRM",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Facility and project scheduling software from Palma de Mallorca for media companies: resource and personnel scheduling, equipment tracking, project management, budgeting, time reporting, quoting and invoicing, with the Cirkus collaboration tool and a REST API. Cloud-hosted or installed on your own servers.",
+      "for_whom": "Post-production studios, broadcasters, equipment rental companies, audio facilities, agencies and film schools",
+      "pricing_model": "Quote on request (monthly or annual subscription priced per user; standard features plus optional modules such as Budgeting, Media Management, Equipment Management and Tracking, Advanced Personnel Management and 3rd party financial integration; one-time purchase available for on-premise)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web, desktop installers",
+      "integrations": "Cirkus, REST API, 3rd party financial integration (module)",
+      "founded": 2000,
+      "official_url": "https://farmerswife.com",
+      "source_urls": [
+        "https://www.farmerswife.com/",
+        "https://farmerswife.com/pricing/",
+        "https://farmerswife.com/about-us/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "odoo",
       "name": "Odoo",
       "vendor": "Odoo S.A.",
@@ -1215,6 +3328,31 @@
       "source_urls": [
         "https://www.odoo.com/pricing",
         "https://en.wikipedia.org/wiki/Odoo"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "xytech-operations",
+      "name": "Xytech Operations",
+      "vendor": "Xytech Systems LLC (Fabric)",
+      "vendor_country": "United States",
+      "category": "Business & CRM",
+      "also_in": [
+        "Production management"
+      ],
+      "summary": "Facility and operations management from Chatsworth, California, now part of the Fabric platform: crew and equipment scheduling with conflict detection, personnel planning, timecards with labour rules, and quoting, purchase orders and invoicing tied to jobs. Sister modules Xytech Media and Xytech Transmission.",
+      "for_whom": "Broadcasters, sports and live event producers, post-production facilities and multi-client media operations",
+      "pricing_model": "Not published",
+      "deployment": "Cloud",
+      "platforms": "Web",
+      "integrations": "REST API, webhooks, MCP server (Xytech X2), ERP, financial and rights management systems, Xytech Media, Xytech Transmission",
+      "founded": null,
+      "official_url": "https://www.fabricdata.com/xytech-operations",
+      "source_urls": [
+        "https://www.fabricdata.com/xytech-operations",
+        "https://fabricdata.com/",
+        "https://www.fabricdata.com/contact-us"
       ],
       "logo": null,
       "photo": null
@@ -1342,6 +3480,33 @@
       "source_urls": [
         "https://www.onassemble.com/",
         "https://www.onassemble.com/pricing"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "ayon",
+      "name": "AYON",
+      "vendor": "Ynput s.r.o.",
+      "vendor_country": "Czech Republic",
+      "category": "Production management",
+      "also_in": [
+        "Asset & media management",
+        "Post-production & VFX"
+      ],
+      "summary": "Studio production platform from Prague-based Ynput that connects pipeline and production tracking for animation and VFX: planning, assets, versions, reviews and approvals, delivery and reporting, with addons for DCC applications, render farms and trackers. Fair Source and open source code, self-hosted or cloud.",
+      "for_whom": "Animation and VFX studios of all sizes: producers, supervisors, artists, pipeline TDs and clients on features, episodic and commercials",
+      "pricing_model": "AYON Pro EUR 19 per user per month or EUR 180 per user per year (5-user minimum, up to 200 users); AYON Studio EUR 38 per user per month or EUR 360 per user per year (unlimited users, planning and scheduling, client reviews); Enterprise on request; cloud hosting charged separately. Community Edition free to self-host from GitHub; free trial (published)",
+      "deployment": "On-premise + cloud",
+      "platforms": "Web; desktop launcher with addons for DCC applications",
+      "integrations": "Maya, 3ds Max, Houdini, Blender, Cinema 4D, Nuke, Hiero, Flame, Fusion, DaVinci Resolve, After Effects, Premiere, Photoshop, Substance Painter and Designer, Unreal Engine, Harmony, TVPaint, ZBrush, Mocha Pro, Silhouette, 3DEqualizer, OpenRV; Deadline and Royal Render; ftrack, Flow Production Tracking, Kitsu, Jira; SyncSketch, Slack, Perforce, Clockify",
+      "founded": null,
+      "official_url": "https://ayon.app",
+      "source_urls": [
+        "https://ayon.app/",
+        "https://ayon.app/pricing-eur",
+        "https://ayon.app/about-us",
+        "https://ayon.app/integrations"
       ],
       "logo": null,
       "photo": null

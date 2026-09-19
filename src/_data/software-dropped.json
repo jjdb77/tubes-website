@@ -1,0 +1,4 @@
+[
+  { "id": "natron", "name": "Natron", "reason": "Open-source compositor without a vendor or country; last release 2.5.0 dates from November 2022, so not actively maintained (dropped 2026-09-19)." },
+  { "id": "slugline", "name": "Slugline", "reason": "The site names two makers but no company or country, so the vendor line on the card would be incomplete (dropped 2026-09-19)." }
+]

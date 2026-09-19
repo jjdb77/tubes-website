@@ -53,7 +53,7 @@ eleventyComputed:
         {%- if p.platforms %}<tr><th scope="row">Platforms</th><td>{{ p.platforms }}</td></tr>{% endif %}
         {%- if p.integrations %}<tr><th scope="row">Integrations</th><td>{{ p.integrations }}</td></tr>{% endif %}
         <tr><th scope="row">Vendor</th><td>{{ p.vendor }}{% if p.vendor_country %}, {{ p.vendor_country }}{% endif %}</td></tr>
-        {%- if p.founded %}<tr><th scope="row">Released</th><td>{{ p.founded }}</td></tr>{% endif %}
+        {%- if p.founded %}<tr><th scope="row">Since</th><td>{{ p.founded }}</td></tr>{% endif %}
         <tr><th scope="row">Website</th><td><a href="{{ p.official_url }}" target="_blank" rel="noopener nofollow">{{ p.official_url | replace("https://", "") | replace("http://", "") }}</a></td></tr>
       </tbody>
     </table>
