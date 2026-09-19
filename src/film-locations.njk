@@ -1,0 +1,81 @@
+---
+permalink: /film-locations/
+layout: layout.njk
+title: Film locations
+seo_title: "Film Locations in Europe: Browse by Country and Type | Tubes"
+description: "Browse 2,827 film and TV locations in 31 European countries by country, type of place or region: castles, factories, hospitals, stations, studios and coastline, with photos, practical details and links."
+---
+{#- De hub van de locatiegids. Vanaf hier is elke groep met gewone links
+    bereikbaar, zodat een bezoeker kan doorbladeren en Google de honderden
+    groepspagina's vindt. Het zoekscherm blijft /compare-film-tv-locations/;
+    deze kant is voor bladeren en voor zoekmachines.
+
+    De aantallen komen uit locationIndex.js en worden nergens met de hand
+    ingetypt: na een uitbreiding van de gids kloppen ze vanzelf. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Film locations</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker">Directory</p>
+      <h1>Film and TV locations in Europe</h1>
+      <p class="company-summary">
+        {{ locationIndex.total }} places to shoot in {{ locationIndex.countries | length }} countries: castles and factories, hospitals and stations, studios and coastline. {{ locationIndex.stats.photos }} have a freely licensed photo and {{ locationIndex.stats.practical }} carry practical details the location publishes itself. Browse by type, country or region below, or search and compare up to three in the
+        <a href="/compare-film-tv-locations/">locations search</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <h2>By type of place</h2>
+    <ul class="company-tiles">
+      {%- for t in locationIndex.types %}
+      <li>
+        <a href="{{ t.url }}"><strong>{{ t.plural }}</strong> <span>{{ t.count }}</span></a>
+        <p>{{ t.blurb }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By country</h2>
+    <ul class="company-chips">
+      {%- for c in locationIndex.countries %}
+      <li><a href="{{ c.url }}">{{ c.name }} <span>{{ c.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By region</h2>
+    <p>Regions with at least {{ locationIndex.minRegion }} locations.</p>
+    <ul class="company-chips">
+      {%- for r in locationIndex.regions %}
+      <li><a href="{{ r.url }}">{{ r.region }} <span>{{ r.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>By type and country</h2>
+    <p>Combinations with at least {{ locationIndex.minCombo }} locations.</p>
+    <ul class="company-chips">
+      {%- for tc in locationIndex.typeCountries %}
+      <li><a href="{{ tc.url }}">{{ tc.typePlural }} in {{ tc.country }} <span>{{ tc.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    <h2>How this guide works</h2>
+    <div class="rich-text">
+      <p>Every entry has a working link to the location itself or to the body that manages it, and meets at least one of three tests: the page publishes filming information, there is a documented shooting history, or the place appears in the public catalogue of a film commission. Practical details are copied as the location publishes them, or left empty. Nothing is estimated, because an invented capacity is something a producer will plan around.</p>
+      <p>Photos are freely licensed images from Wikimedia Commons, credited to the photographer on every card. Looking for a partner rather than a place? See the <a href="/companies/">company directory</a>. Choosing a country on cost? Compare what each one pays back in the <a href="/compare-film-incentives/">incentive comparison</a>. Missing a location? <a href="/compare-film-tv-locations/#request-location">Suggest it</a> and we add it with verified details.</p>
+    </div>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Shooting on location?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a location decision becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

@@ -100,6 +100,10 @@
       "url": "/compare-film-tv-locations/"
     },
     {
+      "label": "Locations by country and type",
+      "url": "/film-locations/"
+    },
+    {
       "label": "Compare film incentives",
       "url": "/compare-film-incentives/"
     },

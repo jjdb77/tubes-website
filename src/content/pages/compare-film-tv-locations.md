@@ -11,7 +11,7 @@ sections:
     text: |
       Places to shoot and studios to hire: factories and hospitals, hotels and houses, streets and villages, coastlines and mountains, sound stages and backlots. Search within a country or region, see everything on the map, open the official links, and put up to three locations side by side on practical facts.
 
-      Free and open to everyone, no sign-up. Every entry links to the venue's own page and to the film commission, and we list only what a venue publishes itself. Is your location missing? Suggest it below and we add it with verified details. Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
+      Free and open to everyone, no sign-up. Every entry links to the venue's own page and to the film commission, and we list only what a venue publishes itself. Is your location missing? Suggest it below and we add it with verified details. Rather browse than search? Go [by country and type of place](/film-locations/). Comparing countries on money instead? See the [incentive comparison](/compare-film-incentives/).
     tight: true
     buttons:
       - label: Browse locations

@@ -28,6 +28,10 @@
   {%- set pad = crumbs -%}
   {%- if bedrijf -%}{%- set pad = [{ name: "Companies", url: "/companies/" }, { name: bedrijf.country, url: bedrijf.countryUrl }] -%}{%- endif -%}
   {%- if product -%}{%- set pad = [{ name: "Software", url: "/software/" }, { name: product.category, url: product.categoryUrl }] -%}{%- endif -%}
+  {#- Locatiegids: kruimelpad per groepspagina, ook op URL. In de front matter
+      zou een genest lijstje in eleventyComputed maar een keer uitgerekend
+      worden en op alle 213 pagina's hetzelfde zijn. -#}
+  {%- if locationIndex.crumbsByUrl[page.url] -%}{%- set pad = locationIndex.crumbsByUrl[page.url] -%}{%- endif -%}
   <script type="application/ld+json">
 {{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: sections, schemaSoftware: schema_software, company: bedrijf, product: product, crumbs: pad, itemList: itemList } | jsonld | safe }}
   </script>

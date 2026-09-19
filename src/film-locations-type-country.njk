@@ -1,0 +1,84 @@
+---
+pagination:
+  data: locationIndex.typeCountries
+  size: 1
+  alias: combi
+  addAllPagesToCollections: true
+permalink: "{{ combi.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "{{ combi.typePlural }} in {{ combi.inCountry }}"
+  seo_title: "{{ combi.typePluralTitle }} in {{ combi.inCountry }}: {{ combi.count }} Filming Locations | Tubes"
+  description: "{{ combi.count }} {{ combi.typeLower }} to film in across {{ combi.inCountry }}, with photos, what each place publishes about capacity and access, and a link to the location itself."
+  # llms.txt is een samenvatting, geen sitemap: de 108 combinatiepagina's
+  # zouden hem overspoelen. In sitemap.xml staan ze wel.
+  excludeFromLlms: true
+---
+{#- De scherpste zoekvraag die deze data aankan: een soort plek in een land
+    ("castles in Portugal", "industrial locations in Poland"). Alle locaties
+    van de combinatie staan er voluit op; de drempel (MIN_COMBO) houdt dunne
+    pagina's tegen. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-locations/">Film locations</a> <span aria-hidden="true">/</span>
+      <a href="{{ combi.typeUrl }}">{{ combi.typePlural }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ combi.country }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="{{ combi.countryUrl }}">{{ combi.country }}</a></p>
+      <h1>{{ combi.typePlural }} to film in {{ combi.inCountry }}</h1>
+      <p class="company-summary">
+        {{ combi.count }} of them, {{ combi.stats.photos }} with a photo{% if combi.stats.practical %} and {{ combi.stats.practical }} with practical details the location publishes itself{% endif %}{% if combi.stats.credits %}. {{ combi.stats.credits }} have a documented shooting history{% endif %}. Every entry links to the location or to the body that manages it.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <div class="rich-text"><p>{{ combi.typeBlurb }}</p></div>
+
+    {%- if combi.incentive %}
+    <p class="company-summary">
+      Shooting in {{ combi.inCountry }} pays back through the {{ combi.incentive.scheme }}{% if combi.incentive.rate_label %} ({{ combi.incentive.rate_label }}){% endif %}: work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
+    </p>
+    {%- endif %}
+
+    {% set lijst = combi.locations %}{% set toonLand = false %}{% set meerUrl = null %}
+    {% include "partials/location-cards.njk" %}
+
+    {%- if combi.siblings.length %}
+    <h2>{{ combi.typePlural }} elsewhere in Europe</h2>
+    <ul class="company-chips">
+      {%- for s in combi.siblings %}
+      <li><a href="{{ s.url }}">{{ s.country }} <span>{{ s.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- if combi.otherTypes.length %}
+    <h2>Other kinds of location in {{ combi.inCountry }}</h2>
+    <ul class="company-chips">
+      {%- for o in combi.otherTypes %}
+      <li><a href="{{ o.url }}">{{ o.plural }} <span>{{ o.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <p class="company-back">
+      <a href="{{ combi.countryUrl }}">All locations in {{ combi.inCountry }}</a> &middot;
+      <a href="{{ combi.typeUrl }}">{{ combi.typePlural }} across Europe</a> &middot;
+      <a href="/compare-film-tv-locations/">Search all {{ locationIndex.total }} locations</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Shooting in {{ combi.inCountry }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a location decision becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

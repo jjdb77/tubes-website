@@ -1,0 +1,20 @@
+{#- Kaarten met locaties op de overzichtspagina's van /film-locations/.
+    Verwacht `lijst` (array locaties) en optioneel `toonLand` (regel met land
+    erbij) en `meerUrl`/`meerLabel` voor een link naar de volledige groep.
+
+    Dit is de stille variant van de kaart uit sections/locationguide.njk:
+    zonder hartje en zonder Compare-vinkje, want die horen bij het
+    zoekscherm en hebben JavaScript nodig dat hier niet draait. De opmaak
+    (.guide-grid, .guide-card) is dezelfde, die klassen staan niet onder een
+    ouder in style.css.
+
+    De fotobijschrift-regel blijft staan: een Wikimedia-thumbnail mag alleen
+    met maker en licentie in beeld gehotlinkt worden. -#}
+<div class="guide-grid">
+  {%- for loc in lijst %}
+<article class="guide-card">{% if loc.photo and loc.photo.thumb %}<figure class="guide-photo"><img src="{{ loc.photo.thumb }}" alt="{{ loc.name }}, {{ loc.region }}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: {{ loc.photo.author }} ({{ loc.photo.license }}), <a href="{{ loc.photo.file_page }}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>{% else %}<div class="guide-photo guide-photo-empty"><span>{{ loc.type }}</span></div>{% endif %}<div class="guide-card-body"><h3>{{ loc.name }}</h3><p class="guide-meta">{{ loc.region }}{% if toonLand %}, {{ loc.country }}{% endif %}</p><p><span class="loc-tag guide-type-tag">{{ loc.type }}</span></p><p class="guide-setting">{{ loc.setting }}</p>{% if loc.known_for %}<p class="guide-known"><strong>Seen in:</strong> {{ loc.known_for }}</p>{% endif %}{% if loc.capacity or loc.facilities %}<p class="guide-known">{% if loc.capacity %}<strong>Capacity:</strong> {{ loc.capacity }}{% if loc.facilities %} &middot; {% endif %}{% endif %}{% if loc.facilities %}{{ loc.facilities | truncate(150) }}{% endif %}</p>{% endif %}<p class="guide-links">{% if loc.official_url %}<a href="{{ loc.official_url }}" target="_blank" rel="noopener">Official site</a>{% endif %}{% if loc.commission_url %}<a href="{{ loc.commission_url }}" target="_blank" rel="noopener">Film commission</a>{% endif %}{% if loc.url %}<a href="{{ loc.url }}" target="_blank" rel="noopener">Commission listing</a>{% endif %}<a href="/compare-film-tv-locations/#loc-{{ loc.id }}">Compare this one</a></p></div></article>
+  {%- endfor %}
+</div>
+{%- if meerUrl %}
+<p class="company-links-more"><a href="{{ meerUrl }}">{{ meerLabel }}</a></p>
+{%- endif %}

@@ -1,0 +1,72 @@
+---
+pagination:
+  data: locationIndex.regions
+  size: 1
+  alias: streek
+  addAllPagesToCollections: true
+permalink: "{{ streek.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film locations in {{ streek.region }}"
+  seo_title: "Film Locations in {{ streek.region }}, {{ streek.country }}: {{ streek.count }} Places to Shoot | Tubes"
+  description: "{{ streek.count }} film and TV locations in {{ streek.region }}, {{ streek.inCountry }}: {{ streek.typesPhrase }}. Photos, practical details and a link to every location."
+  excludeFromLlms: true
+---
+{#- Streekpagina: wat er in een regio of hoofdstad te draaien valt. Vanaf
+    MIN_REGION locaties, anders is het een pagina met vier kaarten. De
+    regionamen zijn gelijkgetrokken met scripts/normalize-regions.mjs. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-locations/">Film locations</a> <span aria-hidden="true">/</span>
+      <a href="{{ streek.countryUrl }}">{{ streek.country }}</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ streek.region }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="{{ streek.countryUrl }}">{{ streek.country }}</a></p>
+      <h1>Film and TV locations in {{ streek.region }}</h1>
+      <p class="company-summary">
+        {{ streek.count }} places to shoot in {{ streek.region }}, {{ streek.inCountry }}: {{ streek.typesPhrase }}.
+        {{ streek.stats.photos }} have a photo and {{ streek.stats.practical }} carry practical details the location publishes itself.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    {%- if streek.byType.length > 1 %}
+    <h2>What is here</h2>
+    <ul class="company-chips">
+      {%- for t in streek.byType %}
+      <li><a href="{{ t.url }}">{{ t.plural }} <span>{{ t.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {% set lijst = streek.locations %}{% set toonLand = false %}{% set meerUrl = null %}
+    {% include "partials/location-cards.njk" %}
+
+    {%- if streek.incentive %}
+    <h2>What {{ streek.inCountry }} pays back</h2>
+    <p>
+      {{ streek.inCountry | capitalize_first }} runs the {{ streek.incentive.scheme }}{% if streek.incentive.rate_label %}, worth {{ streek.incentive.rate_label }}{% endif %}. Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>.
+    </p>
+    {%- endif %}
+
+    <p class="company-back">
+      <a href="{{ streek.countryUrl }}">All locations in {{ streek.inCountry }}</a> &middot;
+      <a href="/film-locations/">All regions</a> &middot;
+      <a href="/compare-film-tv-locations/">Search all {{ locationIndex.total }} locations</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Shooting in {{ streek.region }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a location decision becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

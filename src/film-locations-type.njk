@@ -1,0 +1,76 @@
+---
+pagination:
+  data: locationIndex.types
+  size: 1
+  alias: soort
+  addAllPagesToCollections: true
+permalink: "{{ soort.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "{{ soort.plural }}"
+  seo_title: "{{ soort.pluralTitle }} to Film In: {{ soort.count }} Locations Across Europe | Tubes"
+  description: "{{ soort.count }} {{ soort.lower }} to shoot in across {{ soort.byCountry | length }} European countries, with photos, practical details and a link to every location."
+---
+{#- Typepagina: een soort plek door heel Europa, gegroepeerd per land. Mikt op
+    "castles to film in", "abandoned hospital filming location" en dergelijke.
+    Landen met genoeg locaties krijgen hun eigen type-en-landpagina; die staat
+    hier als link boven de kaarten, zodat de bezoeker en Google verder komen.
+
+    Per land staan hier hoogstens acht kaarten (PREVIEW in locationIndex.js)
+    met een link naar de rest: anders zou "Theatres, arenas and venues" 427
+    kaarten op een pagina zetten. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-locations/">Film locations</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ soort.plural }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-locations/">Directory</a></p>
+      <h1>{{ soort.plural }} to film in</h1>
+      <p class="company-summary">
+        {{ soort.count }} of them in {{ soort.byCountry | length }} European countries, {{ soort.stats.photos }} with a photo and {{ soort.stats.practical }} with practical details the location publishes itself. Search and put three side by side in the
+        <a href="/compare-film-tv-locations/">locations search</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    <div class="rich-text"><p>{{ soort.blurb }}</p></div>
+
+    <h2>Where they are</h2>
+    <ul class="company-chips">
+      {%- for c in soort.byCountry %}
+      <li><a href="{{ c.url or c.countryUrl }}">{{ c.country }} <span>{{ c.count }}</span></a></li>
+      {%- endfor %}
+    </ul>
+
+    {%- for c in soort.byCountry %}
+    <h2 id="{{ c.slug }}">{{ soort.plural }} in {{ c.inCountry }} <span class="company-count">{{ c.count }}</span></h2>
+    {%- if c.url %}
+    <p><a href="{{ c.url }}">All {{ c.count }} {{ soort.lower }} in {{ c.inCountry }}</a>, or see <a href="{{ c.countryUrl }}">every kind of location in {{ c.inCountry }}</a>.</p>
+    {%- else %}
+    <p>See <a href="{{ c.countryUrl }}">every kind of location in {{ c.inCountry }}</a>.</p>
+    {%- endif %}
+    {% set lijst = c.preview %}{% set toonLand = false %}
+    {% set meerUrl = c.url or c.countryUrl if c.previewMore else null %}{% set meerLabel = "All " + c.count + " in " + c.inCountry %}
+    {% include "partials/location-cards.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/film-locations/">All types of location</a> &middot;
+      <a href="/compare-film-tv-locations/">Search all {{ locationIndex.total }} locations</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Turning a location into a budget?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so travel, permits and unit days land in the budget instead of in a side spreadsheet.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>

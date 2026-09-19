@@ -1,0 +1,78 @@
+---
+pagination:
+  data: locationIndex.countries
+  size: 1
+  alias: land
+  # Zonder dit komt alleen de EERSTE pagina van de reeks in collections.all,
+  # en dus maar een van de 31 in sitemap.xml.
+  addAllPagesToCollections: true
+permalink: "{{ land.url }}"
+layout: layout.njk
+eleventyComputed:
+  title: "Film locations in {{ land.inName }}"
+  seo_title: "Film Locations in {{ land.inName }}: {{ land.count }} Places to Shoot | Tubes"
+  description: "{{ land.count }} film and TV locations in {{ land.inName }}: {{ land.typesPhrase }}. Photos, practical details and a link to every location or the body that manages it."
+---
+{#- Landpagina: alles in een land, gegroepeerd per soort plek. Dit is wat
+    iemand zoekt met "filming locations in Portugal", en tegelijk de route
+    waarlangs Google de type-en-landpagina's van dat land bereikt. -#}
+<article class="section theme-light company-page">
+  <div class="container company-inner has-promo">
+    <div class="company-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/film-locations/">Film locations</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ land.name }}</span>
+    </nav>
+    <header class="company-head">
+      <p class="company-kicker"><a href="/film-locations/">Directory</a></p>
+      <h1>Film and TV locations in {{ land.inName }}</h1>
+      <p class="company-summary">
+        {{ land.count }} places to shoot in {{ land.inName }}: {{ land.typesPhrase }}.
+        {{ land.stats.photos }} have a photo and {{ land.stats.practical }} carry practical details the location publishes itself. Search and put three side by side in the
+        <a href="/compare-film-tv-locations/">locations search</a>.
+      </p>
+    </header>
+    {% set promoVariant = "inline" %}{% include "partials/company-promo.njk" %}
+
+    {%- if land.incentive %}
+    <h2>What {{ land.inName }} pays back</h2>
+    <p>
+      {{ land.inName | capitalize_first }} runs the {{ land.incentive.scheme }}{% if land.incentive.rate_label %}, worth {{ land.incentive.rate_label }}{% endif %}{% if land.incentive.mechanism %} as a {{ land.incentive.mechanism | lower }}{% endif %}.
+      Work out the net value on your own spend in the <a href="/compare-film-incentives/">incentive comparison</a>{% if land.companies %}, and find a studio, service company or post house in the <a href="/companies/country/{{ land.slug }}/">{{ land.companies }} companies we list in {{ land.inName }}</a>{% endif %}.
+    </p>
+    {%- endif %}
+
+    {%- if land.regionChips.length %}
+    <h2>Regions</h2>
+    <ul class="company-chips">
+      {%- for r in land.regionChips %}
+      <li>{% if r.url %}<a href="{{ r.url }}">{{ r.region }} <span>{{ r.count }}</span></a>{% else %}<span class="company-chip-flat">{{ r.region }} <span>{{ r.count }}</span></span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- if land.regionRest %}<p class="company-links-more">And single locations in {{ land.regionRest }} more regions, all of them in the list below.</p>{% endif %}
+    {%- endif %}
+
+    {%- for g in land.byType %}
+    <h2 id="{{ g.slug }}">{{ g.plural }} in {{ land.inName }} <span class="company-count">{{ g.count }}</span></h2>
+    <p>{{ g.blurb }}{% if g.url %} <a href="{{ g.url }}">All {{ g.count }} on their own page</a>.{% else %} <a href="{{ g.typeUrl }}">{{ g.plural }} across Europe</a>.{% endif %}</p>
+    {% set lijst = g.locations %}{% set toonLand = false %}{% set meerUrl = null %}
+    {% include "partials/location-cards.njk" %}
+    {%- endfor %}
+
+    <p class="company-back">
+      <a href="/film-locations/">All countries</a> &middot;
+      <a href="/compare-film-tv-locations/">Search all {{ locationIndex.total }} locations</a>
+    </p>
+    </div>
+    <div class="guide-side">{% set promoVariant = "aside" %}{% include "partials/company-promo.njk" %}</div>
+  </div>
+</article>
+
+<section class="section theme-teal">
+  <div class="container company-cta">
+    <h2>Shooting in {{ land.inName }}?</h2>
+    <p>Tubes brings budgeting, planning and cost control together in one platform, so a location decision becomes a working budget instead of a guess.</p>
+    <p><a class="button button-primary" href="/contact/">Request a Demo</a></p>
+  </div>
+</section>
