@@ -16,7 +16,7 @@ sections:
   - type: pricing
     theme: teal
     intro: |
-      **Software, plus the people to implement it.** Whichever plan you choose, we help you set up Tubes, connect your systems, bring in your existing budgets and train your team. And we stay available once you are up and running.
+      **Software, plus the services to implement it.** Whichever plan you choose, we offer implementation services and support: we set up Tubes with you, connect your systems, bring in your existing budgets and train your team. And we stay available once you are up and running.
     plans:
       - name: Producer Pro
         badge: Most popular
