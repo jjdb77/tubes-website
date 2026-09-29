@@ -13,14 +13,12 @@ sections:
     kicker: Production management platform
     title: Streamline production budgeting, planning, and cost control in *one platform*
     chips:
-      - label: Development
+      - label: Budget
         tone: blue
-      - label: Planning
+      - label: Plan
         tone: amber
-      - label: Production
+      - label: Produce
         tone: teal
-      - label: Wrap
-        tone: mint
     text: |
       Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
 
