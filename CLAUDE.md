@@ -167,6 +167,7 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 - **Alleen www.tubes.media mag geïndexeerd worden.** server.js stuurt voor elke andere host (o.a. het testadres tubes.appconnected.nl) een `X-Robots-Tag: noindex, nofollow` mee. robots.txt blijft daar bewust alles toestaan, want een crawler moet de pagina kunnen ophalen om die header te zien.
 - CSS en JS worden aangeroepen als `{{ assets.css }}` / `{{ assets.js }}`, met een `?v=<hash>` erachter. Daardoor mogen ze een jaar gecachet worden en zie je een wijziging tóch meteen. **Link nooit rechtstreeks naar /css/style.css in een template**, dan kan een bezoeker na een deploy oude opmaak krijgen.
 - Afbeeldingen krijgen dezelfde behandeling via het `imgSrc`-filter: **elke `<img src="...">` in een template moet `{{ pad | imgSrc }}` gebruiken**, niet het kale pad. Zo krijgt een vervangen screenshot (zelfde bestandsnaam, nieuwe inhoud) meteen een nieuwe URL in plaats van 30 dagen uit de browsercache van een bezoeker te komen.
+- Screenshot vervangen: zelfde bestandsnaam, breedte gelijk aan het origineel (`sips -Z <breedte>`). `tubes-costcontrol.png` (Forecast-scherm op de homepage) is op 29-9-2026 vervangen door het project "Fox and the Forest" met echte cijfers in alle kolommen (was Northern Lights, alleen budget ingevuld).
 
 ## Bezoekersstatistieken
 
