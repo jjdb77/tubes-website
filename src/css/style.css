@@ -164,7 +164,7 @@ a:hover { color: var(--action); }
 /* Levende pipeline: de "actieve" fase licht op (JS wisselt door) */
 .chip { transition: transform 0.35s ease, box-shadow 0.35s ease; }
 .chip.is-current {
-  transform: translateY(-3px);
+  transform: scale(1.12);
   box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.45), 0 0 0 1.5px currentColor inset;
 }
 

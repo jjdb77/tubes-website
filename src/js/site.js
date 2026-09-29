@@ -20,12 +20,12 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   for (const row of document.querySelectorAll(".chip-row")) {
     const chips = row.querySelectorAll(".chip");
     if (chips.length < 2) continue;
-    let i = 0;
+    // Chips worden een voor een groter en blijven groot; daarna begint het opnieuw
+    let i = 1;
     chips[0].classList.add("is-current");
     setInterval(() => {
-      chips[i].classList.remove("is-current");
-      i = (i + 1) % chips.length;
-      chips[i].classList.add("is-current");
+      i = (i + 1) % (chips.length + 1);
+      chips.forEach((chip, j) => chip.classList.toggle("is-current", j < i));
     }, 2200);
   }
 }
