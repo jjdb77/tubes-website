@@ -145,9 +145,9 @@ a:hover { color: var(--action); }
   background: var(--status-teal-bg); color: var(--status-teal-ink);
   white-space: nowrap;
 }
-.chip-row .chip { font-size: 0.858rem; padding: 8px 13px; gap: 8px; }
-.chip-row .chip::before { width: 8px; height: 8px; }
-.chip-row .chip-sep { font-size: 1rem; }
+.chip-row .chip { font-size: 0.94rem; padding: 9px 15px; gap: 9px; }
+.chip-row .chip::before { width: 9px; height: 9px; }
+.chip-row .chip-sep { font-size: 1.1rem; }
 .chip::before {
   content: ""; width: 7px; height: 7px; border-radius: 50%;
   background: currentColor;
@@ -1196,9 +1196,9 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .chip { font-size: 0.62rem; padding: 4px 7px; gap: 4px; }
   .chip::before { width: 5px; height: 5px; }
   .chip-sep { font-size: 0.7rem; }
-  .chip-row .chip { font-size: 0.68rem; padding: 5px 8px; gap: 4px; }
-  .chip-row .chip::before { width: 6px; height: 6px; }
-  .chip-row .chip-sep { font-size: 0.77rem; }
+  .chip-row .chip { font-size: 0.75rem; padding: 6px 9px; gap: 5px; }
+  .chip-row .chip::before { width: 7px; height: 7px; }
+  .chip-row .chip-sep { font-size: 0.85rem; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
