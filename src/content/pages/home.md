@@ -59,7 +59,7 @@ sections:
     heading: Produce
     lead: Costs, invoices and the forecast in real time
     text: |
-      Monitor expenses as they come in, handle and approve incoming production invoices, and allocate costs to co-producers. Budget, committed costs, cost to date and the forecast sit side by side, so you always know where the production stands.
+      Process production costs as they come in: invoices are reviewed, approved and passed on to your accounting system, such as Xero. Allocate costs to co-producers, and see budget, committed costs, cost to date and the forecast side by side, so you always know where the production stands.
     image: /assets/images/tubes-costcontrol.png
     image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
     media_large: true
