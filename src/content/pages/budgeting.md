@@ -29,39 +29,21 @@ sections:
       That is also why it is the easiest place to start. Everybody already makes a budget, so there is nothing new to introduce, only a better way of doing what the team does anyway. And a budget you can trust is the base for everything that comes after: the schedule, the costs, the forecast.
   - type: cards
     theme: white
-    heading: What it solves, and what you can do with it
+    heading: What it solves
     columns: 2
     cards:
-      - heading: No more guessing which version is the right one
+      - heading: One budget, every version
         text: |
-          **The problem:** versions live in file names and email attachments, and a week later nobody knows which one the client agreed to.
-
-          **In Tubes:** save a version with a name ("Client v2", "Post-recce"), restore any of them, and lock or publish the version that was agreed so it can't change by accident. **The result:** one budget with its whole history, instead of seven files.
-      - heading: See exactly what changed, and explain it
+          No more Budget_v7_final.xlsx. Save each version with a name, go back to any of them, and lock the one the client agreed to.
+      - heading: See what changed
         text: |
-          **The problem:** the total went up by € 40,000 and you have to explain why to a client or a financier. In a spreadsheet that means comparing two files by eye.
-
-          **In Tubes:** put up to three budgets side by side, such as the client budget and the budget after the recce, and see the difference per category and per line. **The result:** the answer to "what changed?" in a minute, not an afternoon.
-      - heading: A change in the schedule changes the budget
+          The total went up. Put two budgets side by side and see where, per category and per line, in a minute.
+      - heading: Change once, update everywhere
         text: |
-          **The problem:** one extra shoot day touches crew, equipment, catering and transport. You have to find and adjust every line by hand, and miss one.
-
-          **In Tubes:** values such as the number of shoot days are set once for the whole budget, and the lines that use them follow. **The result:** play through a scenario in seconds, and trust the total.
-      - heading: The same camera day costs the same everywhere
+          One extra shoot day? Set it once and every line that depends on it follows. No hunting through the sheet.
+      - heading: The same rates in every budget
         text: |
-          **The problem:** every producer builds a budget differently, with their own rates and layout, so budgets can't be compared and knowledge stays in people's heads.
-
-          **In Tubes:** start from your own templates, item library and price lists. **The result:** consistent budgets across the company, faster to build, and a new producer works the way the company works.
-      - heading: Learn from the last production
-        text: |
-          **The problem:** after a production nobody compares the estimate with what it actually took, so the next budget repeats the same assumptions.
-
-          **In Tubes:** find comparable productions by type, client, duration or amount and put their budgets next to the new one. **The result:** better estimates, and sharper quotes for work you win again and again.
-      - heading: Share the budget without losing control of it
-        text: |
-          **The problem:** a financier or co-producer gets an Excel file, edits it, and sends back a third version.
-
-          **In Tubes:** share the budget by email with a secure link, read-only or with editing rights, protected by a verification code and valid for a limited time. They comment on a line and you answer where the line is. **The result:** questions answered in one place, and one budget instead of a third version.
+          Start from your own templates and price lists, so every producer builds the same way and a camera day costs the same everywhere.
   - type: feature
     theme: light
     heading: Without starting over
