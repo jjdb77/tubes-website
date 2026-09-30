@@ -74,6 +74,47 @@ sections:
       2. **We look at how you build budgets now**: where the time goes, where the mistakes creep in, who needs to see what.
       3. **We show the same kind of budget in Tubes**, with your structure, not a generic demo.
       4. **You decide** whether it is worth trying on your next production. No obligation, and no plan to replace everything else.
+  - type: pricing
+    theme: white
+    heading: Start with budgeting, expand when you want
+    plans:
+      - name: Budgeting
+        badge: Start here
+        text: |
+          For producers who want better budgets first, without changing the rest of how they work.
+        price: "€ 29"
+        price_note: "per month, includes 2 users"
+        price_detail: |
+          € 19 per month for each additional user. Expand to Producer Pro at any time, in the same account.
+        features: |
+          - Budgets from your own templates and price lists
+          - Versions and side-by-side comparison
+          - Quotations and budget documents
+          - Stakeholders can view and comment
+          - Movie Magic import and Excel export
+          - AI first draft
+          - Cancel anytime
+        button:
+          label: Book a call
+          url: /book-a-call/budgeting/
+      - name: Producer Pro
+        text: |
+          The full platform: budgeting plus planning, cost control and forecasting, for when you want to take the next step.
+        price_prefix: "From"
+        price: "€ 49"
+        price_note: "per month, includes 2 users"
+        price_detail: |
+          Includes up to 3 active projects. € 25 per month for each additional user, up to 10 users.
+        features: |
+          - Everything in Budgeting
+          - Planning, cost control and forecasting
+          - Xero connection <img class="feature-logo" src="/assets/icons/xero-mark.png" alt="" width="20" height="20"> (optional)
+          - Cancel anytime
+        button:
+          label: Book a call
+          url: /book-a-call/producer-pro/
+    footnote: |
+      Larger team or several companies? See [all plans](/plans/), including Enterprise.
   - type: faq
     theme: light
     heading: Questions about starting with budgeting

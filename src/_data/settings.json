@@ -17,6 +17,11 @@
       "plan": ""
     },
     {
+      "path": "budgeting/",
+      "slug": "tubes-producer-pro",
+      "plan": "Budgeting"
+    },
+    {
       "path": "producer-pro/",
       "slug": "tubes-producer-pro",
       "plan": "Producer Pro"

@@ -1,8 +1,8 @@
 ---
 layout: layout.njk
 title: Plans
-seo_title: "Tubes Pricing & Plans | From € 49 per Month"
-description: "Tubes pricing: Producer Pro from € 49 per month including 2 users, and Enterprise for larger teams. No hidden costs, cancel anytime."
+seo_title: "Tubes Pricing & Plans | From € 29 per Month"
+description: "Tubes pricing: Budgeting from € 29 per month and Producer Pro from € 49 per month, both including 2 users, and Enterprise for larger teams. No hidden costs, cancel anytime."
 schema_software: true
 permalink: /plans/
 sections:
@@ -18,6 +18,24 @@ sections:
     intro: |
       **Software, plus the services to implement it.** Whichever plan you choose, we offer implementation services and support: we set up Tubes with you, connect your systems, bring in your existing budgets and train your team. And we stay available once you are up and running.
     plans:
+      - name: Budgeting
+        text: |
+          For producers who want better budgets first, without changing the rest of how they work.
+        price: "€ 29"
+        price_note: "per month, includes 2 users"
+        price_detail: |
+          € 19 per month for each additional user. Expand to Producer Pro at any time, in the same account.
+        features: |
+          - Budgets from your own templates and price lists
+          - Versions and side-by-side comparison
+          - Quotations and budget documents
+          - Stakeholders can view and comment
+          - Movie Magic import and Excel export
+          - AI first draft
+          - Cancel anytime
+        button:
+          label: Book a call
+          url: /book-a-call/budgeting/
       - name: Producer Pro
         badge: Most popular
         text: |
