@@ -406,34 +406,35 @@ a:hover { color: var(--action); }
 }
 .theme-dark .hero-sub { color: #fff; }
 
-/* Budget / Plan / Produce onder de hero-tekst (section.steps): vorm en kleur
-   per stap komen uit het proces-overzicht (css/budget-plan-produce.css). Op
-   het donkere thema lichtere tinten van dezelfde drie kleuren, anders valt
-   het bruin van Plan weg tegen de achtergrond. */
+/* Budget / Plan / Produce onder de hero-tekst (section.steps), met de iconen
+   uit het zijmenu van de Tubes-app: omlijnde vorm van 40px, lijndikte 1.5.
+   Kleuren uit de app (components/nav.css): op het donkere thema de lichte
+   tint (--phase-wash), op licht de inktkleur (--phase-ink). */
 .hero-steps {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(20px, 3vw, 40px);
   margin: 34px 0 0; padding: 0; list-style: none;
 }
-.hero-step-budget { --step: #2D6CC4; }
-.hero-step-plan { --step: #8A5A2B; }
-.hero-step-produce { --step: #1F8A4C; }
-.theme-dark .hero-step-budget { --step: #6BAAF0; }
-.theme-dark .hero-step-plan { --step: #DDA872; }
-.theme-dark .hero-step-produce { --step: #5FCB8B; }
-.hero-step { padding-top: 18px; border-top: 2px solid var(--step); }
+.hero-step-budget { --step: #155CBD; }
+.hero-step-plan { --step: #7C471A; }
+.hero-step-produce { --step: #00793A; }
+.theme-dark .hero-step-budget { --step: #A8CAFA; }
+.theme-dark .hero-step-plan { --step: #E6C3A3; }
+.theme-dark .hero-step-produce { --step: #9CDFB9; }
+.hero-step-icon {
+  width: 40px; height: 40px; margin-bottom: 10px;
+  fill: none; stroke: var(--step); stroke-width: 1.5; stroke-linejoin: round;
+}
+.hero-stacked .hero-step-icon { margin-left: auto; margin-right: auto; }
 .hero-step-name {
-  display: inline-flex; align-items: center; gap: 10px;
   margin: 0 0 6px;
   font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2;
   color: var(--ink);
 }
 .theme-dark .hero-step-name { color: #fff; }
-.hero-step-name svg { width: 20px; height: 20px; flex: none; fill: var(--step); }
 .hero-step-text { margin: 0; font-size: 0.98rem; line-height: 1.55; text-wrap: pretty; }
 @media (max-width: 700px) {
-  .hero-steps { grid-template-columns: 1fr; gap: 18px; }
-  .hero-step { padding-top: 14px; }
+  .hero-steps { grid-template-columns: 1fr; gap: 22px; }
 }
 
 /* Media altijd in een app-kaartlijst: wit vlak, radius 16, borderrand */

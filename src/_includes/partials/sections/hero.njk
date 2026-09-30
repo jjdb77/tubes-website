@@ -5,20 +5,22 @@
       <h1>{{ section.title | mdInline | safe }}</h1>
       {% if section.subtitle %}<p class="hero-sub">{{ section.subtitle }}</p>{% endif %}
       <div class="rich-text lead">{{ section.text | md | safe }}</div>
-      {#- Budget / Plan / Produce onder de tekst: dezelfde drie vormen en kleuren
-          als het proces-overzicht (partials/budget-plan-produce.njk). Hier als
-          losse SVG's, want die partial (met de <symbol>-definities) staat niet
-          op elke pagina met een hero. -#}
+      {#- Budget / Plan / Produce onder de tekst, met de drie iconen uit de
+          Tubes-app (de groepskoppen van het zijmenu, app/views/shared/
+          _nav_group_icon.html.erb): cirkel, zeshoek en driehoek als omlijning
+          in de kleur van de fase. Losse SVG's, geen bestand: zo volgen ze de
+          kleur van het thema. -#}
       {% if section.steps %}
       {%- set stepShapes = {
-        budget: '<circle cx="15" cy="15" r="13"></circle>',
-        plan: '<path d="M15 2.5 L26 9 L26 21 L15 27.5 L4 21 L4 9 Z"></path>',
-        produce: '<path d="M7 4 L27 15 L7 26 Z"></path>'
+        budget: '<circle cx="12" cy="12" r="10"></circle>',
+        plan: '<polygon points="12,1.75 20.9,6.9 20.9,17.1 12,22.25 3.1,17.1 3.1,6.9"></polygon>',
+        produce: '<polygon points="4,2.5 21.5,12 4,21.5"></polygon>'
       } %}
       <ul class="hero-steps">
         {%- for step in section.steps %}
         <li class="hero-step hero-step-{{ step.key }}">
-          <p class="hero-step-name"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">{{ stepShapes[step.key] | safe }}</svg>{{ step.name }}</p>
+          <svg class="hero-step-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{{ stepShapes[step.key] | safe }}</svg>
+          <p class="hero-step-name">{{ step.name }}</p>
           <p class="hero-step-text">{{ step.text }}</p>
         </li>
         {%- endfor %}
