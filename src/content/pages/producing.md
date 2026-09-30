@@ -22,11 +22,12 @@ sections:
   - type: textblock
     theme: light
     heading: Why cost control belongs next to the budget
-    lead: By the time the books are final, the money has been spent.
     text: |
-      Accounting tells you what was paid. A producer needs to know earlier what has been committed, what is still coming in, and where the production will end. That answer sits between the budget and the books, and on most productions it lives in a spreadsheet that one person keeps up to date by hand.
+      During a production the costs do not arrive neatly. A price is agreed over the phone, something is bought on set, an invoice lands in someone's inbox three weeks later. Meanwhile the producer gets the same question every week. Are we still on budget?
 
-      In Tubes it is the same data all the way through. The budget sets the cost types, commitments and invoices are booked against them, and the forecast adds it up per cost type while the production runs.
+      Accounting can answer that afterwards, once everything is booked. During the shoot the answer also depends on what has been agreed but not yet invoiced, and that usually lives in a spreadsheet one person keeps up to date by hand.
+
+      In Tubes it is the same data all the way through. The budget sets the cost types, commitments and invoices are booked against them, and the forecast adds it up while the production runs.
   - type: cards
     theme: white
     heading: What it solves

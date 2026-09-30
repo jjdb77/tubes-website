@@ -22,11 +22,12 @@ sections:
   - type: textblock
     theme: light
     heading: Why plan where the budget lives
-    lead: Who you hire, where you shoot and how you prepare and run the production all shape what it costs.
     text: |
-      An extra shoot day, a location that falls through, a crew member booked on two productions at once. These are planning decisions, and every one of them is also a money decision. When the schedule and the budget live in different tools, nobody sees the effect until the invoices arrive.
+      When you make a budget, you decide a lot at once. Who you want to hire, how many shoot days you can afford, which locations fit and how much time there is to prepare. Each of those choices has a number next to it.
 
-      In Tubes the activities of the budget carry over into planning in one step. Every planned day belongs to one or more of those activities, so the plan and the budget keep telling the same story.
+      Then the production takes shape. A location turns out to be free a week later. The DOP you wanted is only available for part of the shoot. Prep takes two days longer. None of that is unusual, it is what preparing a production looks like. But every change moves the numbers you started with, and when the schedule lives somewhere else you only notice once the costs come in.
+
+      In Tubes the plan is built on the budget. The activities you budgeted are the ones you schedule, so while the plan changes you can see how it compares with what you budgeted.
   - type: cards
     theme: white
     heading: What it solves
