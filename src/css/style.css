@@ -384,14 +384,16 @@ a:hover { color: var(--action); }
 .feature-grid.media-left { grid-template-columns: 0.95fr 1.05fr; }
 
 /* Featuresecties met section.media_large (de blokken Budget, Plan en Produce
-   op de homepage). Het beeld stak eerst 17 tot 20% buiten de container, en
-   links en rechts niet even ver, waardoor de beelden onder elkaar niet
-   uitlijnden met de tekst (Joachim 30-9-2026). Nu: twee gelijke kolommen en
-   het beeld precies zo breed als zijn kolom. De buitenrand van elk beeld valt
-   zo samen met de rand van de container, dus met de tekst van het blok
-   erboven en eronder. Moet na .feature-grid.media-left staan (even specifiek). */
+   op de homepage). Twee gelijke kolommen; het beeld is 6% breder dan zijn
+   kolom en steekt dat stukje naar buiten uit, links en rechts evenveel.
+   Geschiedenis (Joachim 30-9-2026): eerst stak het beeld 17 tot 20% uit en
+   links en rechts niet even ver ("staat niet lekker uitgelijnd"), daarna
+   precies op de kolomlijn ("tikje te perfect"). Dit is het midden: de rand
+   aan de tekstkant staat op de kolomlijn, de buitenrand net erbuiten. Moet na
+   .feature-grid.media-left staan (even specifiek). */
 .section-feature-large-media .feature-grid { grid-template-columns: 1fr 1fr; }
-.feature-media-large { width: 100%; margin-left: 0; }
+.feature-media-large { width: 106%; margin-left: 0; }
+.media-left .feature-media-large { margin-left: -6%; }
 
 .lead { font-size: 1.08rem; }
 
