@@ -17,8 +17,8 @@ sections:
         url: /contact/
       - label: Plans & pricing
         url: /plans/
-    image: /assets/images/tubes-agenda.png
-    image_alt: Weekly planning calendar in Tubes with cast, crew and locations
+    image: /assets/images/tubes-planning-board.png
+    image_alt: Plan board in Tubes with cast and crew on the days of the week
   - type: textblock
     theme: light
     heading: From a budget to a working schedule
