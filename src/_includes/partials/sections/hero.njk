@@ -3,7 +3,27 @@
     <div class="hero-text">
       {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
       <h1>{{ section.title | mdInline | safe }}</h1>
+      {% if section.subtitle %}<p class="hero-sub">{{ section.subtitle }}</p>{% endif %}
       <div class="rich-text lead">{{ section.text | md | safe }}</div>
+      {#- Budget / Plan / Produce onder de tekst: dezelfde drie vormen en kleuren
+          als het proces-overzicht (partials/budget-plan-produce.njk). Hier als
+          losse SVG's, want die partial (met de <symbol>-definities) staat niet
+          op elke pagina met een hero. -#}
+      {% if section.steps %}
+      {%- set stepShapes = {
+        budget: '<circle cx="15" cy="15" r="13"></circle>',
+        plan: '<path d="M15 2.5 L26 9 L26 21 L15 27.5 L4 21 L4 9 Z"></path>',
+        produce: '<path d="M7 4 L27 15 L7 26 Z"></path>'
+      } %}
+      <ul class="hero-steps">
+        {%- for step in section.steps %}
+        <li class="hero-step hero-step-{{ step.key }}">
+          <p class="hero-step-name"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">{{ stepShapes[step.key] | safe }}</svg>{{ step.name }}</p>
+          <p class="hero-step-text">{{ step.text }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+      {% endif %}
       {% if section.chips and not section.media_below %}
       <ul class="chip-row" aria-label="Production stages">
         {% for chip in section.chips %}

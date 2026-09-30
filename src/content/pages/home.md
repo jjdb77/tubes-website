@@ -11,18 +11,22 @@ sections:
   - type: hero
     theme: dark
     kicker: Production management platform
-    title: Streamline production budgeting, planning, and cost control in *one platform*
-    chips:
-      - label: Budget
-        tone: blue
-      - label: Plan
-        tone: amber
-      - label: Produce
-        tone: teal
+    title: Budget. Plan. Produce.
+    subtitle: One connected platform for the entire production lifecycle.
     text: |
-      Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
+      Professional media productions require clear financial and operational oversight, but information is often scattered across spreadsheets, tools and teams.
 
-      It connects budgets, actual costs, and forecasts in real time, helping teams maintain financial and operational control from development to wrap. AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs.
+      Tubes brings budgeting, planning and production together in one platform, connecting budgets, actual costs and forecasts in real time. From development to wrap, everyone has a shared view of what has been planned, what is happening and where the production stands.
+    steps:
+      - key: budget
+        name: Budget
+        text: Build, manage and refine your production budget with confidence.
+      - key: plan
+        name: Plan
+        text: Turn your budget into a connected plan for people, resources, schedules and costs.
+      - key: produce
+        name: Produce
+        text: Keep production moving with real-time visibility of costs, commitments and performance.
     image: /assets/images/example-tubes-05.png
     image_alt: Projects overview and pipeline in Tubes
     media_below: true

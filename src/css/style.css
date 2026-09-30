@@ -397,6 +397,45 @@ a:hover { color: var(--action); }
 
 .lead { font-size: 1.08rem; }
 
+/* Regel onder de hero-titel (section.subtitle). */
+.hero-sub {
+  margin: -0.35em 0 1.1em;
+  font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 700;
+  line-height: 1.3; letter-spacing: -0.015em;
+  color: var(--ink); text-wrap: balance;
+}
+.theme-dark .hero-sub { color: #fff; }
+
+/* Budget / Plan / Produce onder de hero-tekst (section.steps): vorm en kleur
+   per stap komen uit het proces-overzicht (css/budget-plan-produce.css). Op
+   het donkere thema lichtere tinten van dezelfde drie kleuren, anders valt
+   het bruin van Plan weg tegen de achtergrond. */
+.hero-steps {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  margin: 34px 0 0; padding: 0; list-style: none;
+}
+.hero-step-budget { --step: #2D6CC4; }
+.hero-step-plan { --step: #8A5A2B; }
+.hero-step-produce { --step: #1F8A4C; }
+.theme-dark .hero-step-budget { --step: #6BAAF0; }
+.theme-dark .hero-step-plan { --step: #DDA872; }
+.theme-dark .hero-step-produce { --step: #5FCB8B; }
+.hero-step { padding-top: 18px; border-top: 2px solid var(--step); }
+.hero-step-name {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2;
+  color: var(--ink);
+}
+.theme-dark .hero-step-name { color: #fff; }
+.hero-step-name svg { width: 20px; height: 20px; flex: none; fill: var(--step); }
+.hero-step-text { margin: 0; font-size: 0.98rem; line-height: 1.55; text-wrap: pretty; }
+@media (max-width: 700px) {
+  .hero-steps { grid-template-columns: 1fr; gap: 18px; }
+  .hero-step { padding-top: 14px; }
+}
+
 /* Media altijd in een app-kaartlijst: wit vlak, radius 16, borderrand */
 .hero-media img, .feature-media img,
 .hero-media video, .feature-media video {
@@ -909,7 +948,9 @@ a:hover { color: var(--action); }
 @media (prefers-reduced-motion: no-preference) {
   .section-hero .kicker,
   .section-hero h1,
+  .section-hero .hero-sub,
   .section-hero .rich-text,
+  .section-hero .hero-steps,
   .section-hero .button-row,
   .section-hero .chip-row,
   .section-hero .hero-media {
@@ -917,6 +958,8 @@ a:hover { color: var(--action); }
   }
   .section-hero h1 { animation-delay: 0.06s; }
   .section-hero .rich-text { animation-delay: 0.12s; }
+  .section-hero .hero-sub { animation-delay: 0.09s; }
+  .section-hero .hero-steps { animation-delay: 0.16s; }
   .section-hero .chip-row { animation-delay: 0.18s; }
   .section-hero .button-row { animation-delay: 0.24s; }
   .section-hero .hero-media { animation-delay: 0.2s; }

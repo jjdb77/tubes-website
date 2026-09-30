@@ -310,7 +310,18 @@ collections:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Licht, value: light}, {label: Donker, value: dark}], default: light }
               - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false }
               - { label: Titel, name: title, widget: string, hint: "Zet *sterretjes* om een woord voor de accentkleur, bijv: in *one platform*" }
+              - { label: "Regel onder de titel (optioneel)", name: subtitle, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
+              - label: "Budget / Plan / Produce onder de tekst (optioneel)"
+                name: steps
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                hint: "Drie blokjes met de vorm van de stap (cirkel, zeshoek, driehoek), een naam en een zin."
+                fields:
+                  - { label: Vorm, name: key, widget: select, options: [{label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}] }
+                  - { label: Naam, name: name, widget: string }
+                  - { label: Tekst, name: text, widget: string }
               - label: "Status-chips (pijplijn, optioneel)"
                 name: chips
                 widget: list
