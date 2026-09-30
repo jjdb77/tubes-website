@@ -11,7 +11,7 @@ sections:
     text: |
       You don't need a new system for your whole company to get better budgets. Tubes can start with just that: building production budgets from your own structure, keeping every version, and seeing what changed between them.
 
-      Your accounting, your scheduling and the way invoices are handled stay exactly as they are.
+      Your accounting, your scheduling and the way invoices are handled stay exactly as they are. Budgeting only: € 29 per month, including two users.
     buttons:
       - label: Show me budgeting in Tubes
         url: /contact/
@@ -80,7 +80,7 @@ sections:
     items:
       - question: Do we have to use the rest of Tubes?
         answer: |
-          No. You can use Tubes only for budgets and keep doing scheduling, invoices and accounting the way you do now. We set up the account so your team only sees the budgeting part of the menu. The rest stays in the same account, out of sight, until you want it.
+          No. You can use Tubes only for budgets and keep doing scheduling, invoices and accounting the way you do now. We set up the account so your team only sees the budgeting part of the menu. The rest stays in the same account, out of sight. When you are ready, you can expand to planning, cost control or forecasting at any time, and your budgets carry straight over.
       - question: Can we keep working with Excel?
         answer: |
           Yes. Every budget exports to Excel or CSV, with categories, lines, quantities, rates and totals, so a fund, a co-producer or your accountant can keep reading it in a spreadsheet.
@@ -89,7 +89,7 @@ sections:
           No. Tubes imports the Excel export of Movie Magic Budgeting, and we help you bring your current budgets in when you start.
       - question: What does it cost?
         answer: |
-          Producer Pro starts at € 49 per month, including two users and up to three productions running at the same time. Extra users are € 25 per month each. See [plans and pricing](/plans/). Using Tubes for a single production? [Get in touch](/contact/#contact-form) and we'll work something out.
+          Budgeting only costs € 29 per month, including two users. Extra users are € 15 per month each. Expand later to the full platform (Producer Pro, from € 49 per month) and you move on in the same account; see [plans and pricing](/plans/). Using Tubes for a single production? [Get in touch](/contact/#contact-form) and we'll work something out.
       - question: Which kinds of production does it work for?
         answer: |
           Film, TV series, documentaries, commercials and branded content, and live shows. The structure comes from your own templates, so a commercial and a feature don't have to look alike.
