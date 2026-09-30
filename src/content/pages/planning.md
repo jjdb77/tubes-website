@@ -23,11 +23,11 @@ sections:
     theme: light
     heading: From a budget to a working schedule
     text: |
-      The budget is approved. The production starts. Crew have to be booked, locations confirmed, props and equipment arranged, and all of it has to land on the right days.
+      The budget is approved. The production starts. Crew have to be booked, locations confirmed and props arranged, all on the right days.
 
-      In Tubes you do that on one plan. You put people, locations and props on the days of the production, each with their own times. When a location turns out to be free a week later, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you before you plan them twice.
+      In Tubes you do that on one plan. When a location moves a week, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you. The crew confirm through a personal link, so you know who is coming.
 
-      Once a day is ready, you publish it and send the call sheet. The crew confirm through a personal link, so you know who is coming. All along, Tubes gives you insight and a clear overview of both the planning and the budget.
+      All along, Tubes gives you insight and a clear overview of both the planning and the budget.
   - type: cards
     theme: white
     heading: What it solves
