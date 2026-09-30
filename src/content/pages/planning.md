@@ -25,9 +25,9 @@ sections:
     text: |
       The budget is approved. The production starts. Crew have to be booked, locations confirmed, props and equipment arranged, and all of it has to land on the right days.
 
-      On most productions that lives in a few places at once. A spreadsheet for the schedule, a chat group for the crew, an email thread per location. It works, until a location turns out to be free a week later or the DOP is only available for part of the shoot, and everything has to be moved by hand.
+      In Tubes you do that on one plan. You put people, locations and props on the days of the production, each with their own times. When a location turns out to be free a week later, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you before you plan them twice.
 
-      In Tubes you put people, locations and props on the days of the production, and everyone looks at the same plan. And while you plan, you also see where the budget stands.
+      Once a day is ready, you publish it and send the call sheet. The crew confirm through a personal link, so you know who is coming. And while you plan, you also see where the budget stands.
   - type: cards
     theme: white
     heading: What it solves
