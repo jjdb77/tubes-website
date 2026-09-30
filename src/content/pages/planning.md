@@ -53,6 +53,7 @@ sections:
       - **Drag to reschedule.** Move a day to another date, or stretch it over the days that follow.
       - **Everything a day needs.** Cast and crew with their own call times, locations, props and equipment, and files.
       - **Draft until you publish.** Change a published day and Tubes marks it as changed.
+      - **Call sheets from the plan.** Make a call sheet from a planned day and send it by email, with a PDF, a calendar file and a personal confirmation link.
       - **Weather on the day.** The forecast per day and location, on the plan and on the call sheet.
       - **Capacity and workload.** Planned days against available days, and one person's load across all productions.
       - **Locations you can compare.** Facilities, photos and a price guide per location, up to three side by side.
