@@ -54,8 +54,8 @@ sections:
       - **Series and episodes**: budget per episode and, where it matters, per minute.
       - **Sign-off before it goes out**: name who has to approve a budget, such as the producer or the managing director, and see who still has to.
       - **Excel stays available**: every budget exports to Excel or CSV, for the fund, the co-producer or the accountant who works in spreadsheets.
-    image: /assets/images/app-compare.jpg
-    image_alt: Comparing budget versions side by side in Tubes
+    image: /assets/images/example-tubes-05.png
+    image_alt: Create a budget from a template, a copy or an AI draft in Tubes
   - type: textblock
     theme: teal
     heading: One thing at a time
