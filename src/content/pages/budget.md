@@ -17,8 +17,8 @@ sections:
         url: /contact/
       - label: Plans & pricing
         url: /plans/
-    image: /assets/images/example-tubes-02.png
-    image_alt: Dashboard in Tubes with the option to create a budget from a template, a copy or an AI draft
+    image: /assets/images/tubes-budget-dashboard.png
+    image_alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
   - type: textblock
     theme: light
     heading: From a first draft to an approved budget
