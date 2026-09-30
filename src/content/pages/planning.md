@@ -33,18 +33,18 @@ sections:
     heading: What it solves
     columns: 2
     cards:
-      - heading: One plan for everyone
+      - heading: One plan for the production
         text: |
-          People, locations and props on the days of the production, in one place instead of a spreadsheet, a chat group and a pile of emails.
-      - heading: No double bookings
+          People, locations and props on the right days, in one place.
+      - heading: Changes without the puzzle
         text: |
-          Tubes will not book a person on overlapping times, across all your productions, and tells you which booking is in the way.
-      - heading: Know who is coming
+          When a location or a shoot day moves, you drag the day to its new date. Tubes tells you when someone is already booked on another production.
+      - heading: Cast and crew know where to be
         text: |
-          Each crew member gets a personal link to confirm or decline a day, without needing an account. You see who has seen it, who confirmed and who declined.
-      - heading: Call sheets without retyping
+          They see their own schedule and call sheets, and confirm whether they are coming.
+      - heading: Overview of planning and budget
         text: |
-          Make a call sheet from a planned day and send it by email per department. Everyone gets a PDF, a calendar file and their own confirmation link.
+          While you plan, you see what is planned and where the budget stands.
   - type: feature
     theme: light
     heading: What is in it
