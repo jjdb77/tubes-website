@@ -445,6 +445,25 @@ collections:
                   - { label: Omschrijving, name: text, widget: markdown, required: false }
                   - { label: "Vooringevuld WhatsApp-bericht", name: whatsapp_text, widget: string, required: false, hint: "Staat alvast in het berichtvak als iemand op de WhatsApp-knop klikt." }
                   - { label: "Vooringevuld e-mailbericht", name: email_text, widget: string, required: false, hint: "Staat alvast in het berichtvak van de popover achter de knop Email us." }
+              - label: "Los pakket onder de abonnementen (met prijs)"
+                name: extra_plan
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Een breed blok met prijs en een knop, onder het blok Per production. Op de homepage: alleen budgetteren, met een link naar /budgeting/. Leeg laten = geen blok."
+                fields:
+                  - { label: Naam, name: name, widget: string, required: false }
+                  - { label: Omschrijving, name: text, widget: markdown, required: false }
+                  - { label: Prijs, name: price, widget: string, required: false, hint: "Bijv. € 29" }
+                  - { label: Toelichting naast de prijs, name: price_note, widget: string, required: false }
+                  - { label: Detail onder de prijs, name: price_detail, widget: markdown, required: false }
+                  - label: Knop
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - { label: Tekst, name: label, widget: string }
+                      - { label: URL, name: url, widget: string }
               - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
           - name: cta
             label: "Donkerblauwe call-to-action"

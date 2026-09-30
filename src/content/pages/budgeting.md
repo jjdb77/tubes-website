@@ -44,8 +44,18 @@ sections:
       - heading: The same rates in every budget
         text: |
           Start from your own templates and price lists, so every producer builds the same way and a camera day costs the same everywhere.
-  - type: feature
+  - type: textblock
     theme: light
+    heading: "Globals: change one number, the budget follows"
+    lead: The numbers a budget depends on, defined once and used everywhere.
+    text: |
+      Episodes, shoot days, weeks of prep, a crew day rate: in a spreadsheet those numbers are typed into dozens of cells, and changing one means finding them all. In Tubes they are **globals**. You give each one a short code, such as `[EPS]` for the number of episodes, and the lines of the budget calculate with that code instead of a fixed number.
+
+      - **Global calculations**: a line can be a formula such as `[EPS] × 2` days per episode, or a rate times the number of shoot days. Change the global, and every line that uses it is recalculated.
+      - **Three levels**: account-wide globals that apply to every production, globals that come with a template (a series template brings its own episode count), and globals for this one budget, which override the rest.
+      - **Scenarios in seconds**: what if it is eight episodes instead of six, or 24 shoot days instead of 20? Change one value and see the new total straight away, then save it as a version to compare.
+  - type: feature
+    theme: white
     heading: Without starting over
     text: |
       - **Keep your existing budgets**: we set up your templates and bring in your existing budgets with you, as part of getting started.
@@ -67,7 +77,7 @@ sections:
 
       When the budget works, the next steps are there in the same account, if and when you want them: planning the shoot from the budget, tracking actual costs against it, and a forecast of where the production will end. That is a later conversation, not a condition: Tubes is [built to be adopted in steps](/platform/).
   - type: feature
-    theme: white
+    theme: light
     heading: How a first conversation goes
     text: |
       1. **Thirty minutes, online.** Bring a recent budget, in Excel or from Movie Magic.

@@ -104,6 +104,17 @@ sections:
         For independent producers who want to use Tubes for a single production. Get in touch on WhatsApp or by email and we'll set it up with you.
       whatsapp_text: "Hi Tubes, I would like to use Tubes for a single production."
       email_text: "I would like to use Tubes for a single production."
+    extra_plan:
+      name: Budgeting only
+      text: |
+        Start with just the budget. Build budgets from your own templates, manage and compare every version, turn them into quotations and let stakeholders take a look, while the rest of how you work stays the same. Expand to the full platform whenever you want.
+      price: "€ 29"
+      price_note: "per month, includes 2 users"
+      price_detail: |
+        € 19 per month for each additional user.
+      button:
+        label: More about budgeting
+        url: /budgeting/
     footnote: |
       Questions, or curious about **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
   - type: compare
