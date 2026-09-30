@@ -36,7 +36,7 @@ sections:
     heading: Budget
     lead: From a first draft to a budget everyone has signed off
     text: |
-      Build the budget from your own templates and rates, copy an earlier one, or let AI suggest a first draft that you check line by line. Work with globals such as the number of episodes or shoot days: change one value and every line that uses it follows. Save each version, put budgets side by side to see what changed, and name who has to approve it before it goes out.
+      Build the budget from your own templates and rates, copy an earlier one, or let AI suggest a first draft that you check line by line. Work with globals such as the number of episodes or shoot days. Change one value and every line that uses it follows. Save each version, put budgets side by side to see what changed, and name who has to approve it before it goes out.
 
       You can also start with budgeting only. [More about budgeting in Tubes](/budgeting/)
     image: /assets/images/example-tubes-02.png
@@ -61,7 +61,7 @@ sections:
     heading: Produce
     lead: Costs, invoices and the forecast in real time
     text: |
-      Process production costs as they come in: invoices are reviewed, approved and passed on to your accounting system, such as Xero. What you have agreed with suppliers counts before the invoice arrives, and budget, committed costs, cost to date and the forecast sit side by side, so you always know where the production stands.
+      Invoices are reviewed, approved and passed on to your accounting system, such as Xero. Commitments count before the invoice arrives, so you always know where the production stands.
 
       [More about cost control in Tubes](/producing/)
     image: /assets/images/tubes-costcontrol.png
