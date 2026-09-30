@@ -63,7 +63,7 @@ sections:
     text: |
       Invoices are reviewed, approved and passed on to your accounting system, such as Xero. Commitments count before the invoice arrives, so you always know where the production stands.
 
-      [More about cost control in Tubes](/producing/)
+      [More about cost control in Tubes](/produce/)
     image: /assets/images/tubes-costcontrol.png
     image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
     media_large: true

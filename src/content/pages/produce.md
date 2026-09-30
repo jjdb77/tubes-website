@@ -3,15 +3,15 @@ layout: layout.njk
 title: Cost control
 seo_title: "Production Cost Control, Invoice Approval & Forecast | Tubes"
 description: "Process production invoices, have them approved per production, see committed costs and cost to date against the budget, and pass approved costs on to Xero or Exact Online."
-permalink: /producing/
+permalink: /produce/
 sections:
   - type: hero
     kicker: Produce
     title: Know where the production stands, *while it runs*
     text: |
-      Once the shoot starts, the budget meets reality. Invoices come in, commitments add up and someone asks whether you are still on budget. In Tubes every cost lands against the budget as it happens, goes through approval, and ends up in your accounting system without retyping.
+      The production is running and the costs come in. Invoices have to be checked, approved and booked. Tubes keeps that in one place, and you see where the budget stands.
 
-      Costs, approvals and the forecast in one place. Cost control is part of the full Tubes platform, from Producer Pro upwards.
+      Cost control is part of the full Tubes platform, from Producer Pro upwards.
     buttons:
       - label: Show me cost control in Tubes
         url: /contact/
@@ -21,30 +21,30 @@ sections:
     image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
   - type: textblock
     theme: light
-    heading: Why cost control belongs next to the budget
+    heading: From an invoice to where the production stands
     text: |
-      During a production the costs do not arrive neatly. A price is agreed over the phone, something is bought on set, an invoice lands in someone's inbox three weeks later. Meanwhile the producer gets the same question every week. Are we still on budget?
+      The production is running. Invoices come in, things are bought on set, and suppliers have been promised work that is not invoiced yet.
 
-      Accounting can answer that afterwards, once everything is booked. During the shoot the answer also depends on what has been agreed but not yet invoiced, and that usually lives in a spreadsheet one person keeps up to date by hand.
+      In Tubes that all lands in one place. You upload an invoice and Tubes reads it for you. The right people on the production approve it, and finance passes it on to your accounting system, such as Xero. What you agreed with a supplier already counts before the invoice arrives.
 
-      In Tubes it is the same data all the way through. The budget sets the cost types, commitments and invoices are booked against them, and the forecast adds it up while the production runs.
+      All along, Tubes gives you insight and a clear overview of both the costs and the budget.
   - type: cards
     theme: white
     heading: What it solves
     columns: 2
     cards:
+      - heading: All costs in one place
+        text: |
+          Invoices, receipts and card payments land in Tubes, with the production they belong to.
       - heading: Invoices without retyping
         text: |
-          Upload invoices and receipts, one or many at a time. Tubes reads the supplier, invoice number, date, amounts, VAT and lines, so you check instead of type.
-      - heading: Approval that follows the production
+          Upload an invoice and Tubes reads the supplier, the amounts and the VAT. You check instead of type.
+      - heading: Approved by the right people
         text: |
-          Decide per production who has to review a cost. Reviewers approve in order, and finance releases the invoice for export.
-      - heading: Commitments count before the invoice arrives
+          The production approves first, then finance. After that the invoice goes to your accounting system, such as Xero.
+      - heading: Overview of costs and budget
         text: |
-          Record what you agreed with a supplier as a committed cost. It shows in the forecast straight away, and the invoice draws it down when it comes in.
-      - heading: Straight into the books
-        text: |
-          Approved invoices go to Xero as bills, with the supplier and the invoice document attached. Exact Online (Netherlands) is connected as well, and for any other system there is an Excel export.
+          Budget, committed costs and cost to date side by side, so you see where the production stands.
   - type: feature
     theme: light
     heading: What is in it
@@ -55,6 +55,8 @@ sections:
       - **Checked before anyone approves.** A missing supplier, totals that do not add up or an implausible date show up as issues.
       - **Your own approval rules.** For duplicates, a missing cost type or a high amount. Per rule you decide whether it is a note, a warning or a block.
       - **Approval per production, then finance.** Required reviewers approve in order. Finance can approve many invoices at once.
+      - **Commitments.** Record what you agreed with a supplier. It counts in the forecast straight away, and the invoice draws it down when it comes in.
+      - **Into your accounting system.** Approved invoices go to Xero with the supplier and the invoice document attached. Exact Online (Netherlands) is connected too, and there is an Excel export for everything else.
       - **Forecast per cost type.** Budget, committed, cost to date, EFC (estimated final cost) and variance, always current.
       - **Snapshots.** Freeze the forecast, compare two snapshots with today and print the comparison.
       - **AI analysis.** Once you have a few finished productions in Tubes, it points out which cost categories run ahead or behind.
@@ -65,7 +67,7 @@ sections:
     theme: teal
     heading: Part of the full platform
     text: |
-      Cost control is not available as a separate plan. It comes with Producer Pro and Enterprise, together with budgeting, planning and forecasting, because every cost is measured against the budget behind it.
+      Cost control is not available as a separate plan. It comes with Producer Pro and Enterprise, together with budgeting, planning and forecasting.
 
       Prefer to take one step at a time? [Start with budgeting only](/budgeting/) and move on to cost control when you are ready, in the same account, with the budgets you already made.
   - type: feature

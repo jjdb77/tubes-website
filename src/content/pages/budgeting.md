@@ -74,7 +74,7 @@ sections:
     text: |
       Starting with budgeting means your team learns one screen, not a whole platform. Nothing else in your company has to change on day one.
 
-      When the budget works, the next steps are there in the same account, if and when you want them. You can [plan the shoot from the budget](/planning/), [track actual costs against it](/producing/) and forecast where the production will end. That is a later conversation, not a condition. Tubes is [built to be adopted in steps](/platform/).
+      When the budget works, the next steps are there in the same account, if and when you want them. You can [plan the shoot from the budget](/planning/), [track actual costs against it](/produce/) and forecast where the production will end. That is a later conversation, not a condition. Tubes is [built to be adopted in steps](/platform/).
   - type: feature
     theme: light
     heading: How a first conversation goes

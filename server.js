@@ -61,6 +61,7 @@ const OLD_PATHS = new Map([
   ["/nieuws", "/news/"],
   ["/contact-us", "/contact/"],
   ["/intro", "/"],
+  ["/producing", "/produce/"],
 ]);
 
 app.use((req, res, next) => {
