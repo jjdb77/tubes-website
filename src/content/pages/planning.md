@@ -25,7 +25,7 @@ sections:
     text: |
       The budget is approved. The production starts. Crew have to be booked, locations confirmed and props arranged, all on the right days.
 
-      In Tubes you do that on one plan. When a location moves a week, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you. The crew confirm through a personal link, so you know who is coming.
+      In Tubes you do that on one plan. When a location moves a week, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you. Cast and crew see their own schedule and call sheets, and confirm whether they are coming.
 
       All along, Tubes gives you insight and a clear overview of both the planning and the budget.
   - type: cards
