@@ -1,17 +1,17 @@
 ---
 layout: layout.njk
 title: Planning
-seo_title: "Film & TV Production Planning, Tied to the Budget | Tubes"
-description: "Plan cast, crew, locations and shoot days from the budget you already made. See what is planned against what was budgeted, avoid double bookings and send call sheets with a confirmation link."
+seo_title: "Film & TV Production Planning and Scheduling | Tubes"
+description: "Organise and schedule cast, crew, locations and props for your production. Avoid double bookings, send call sheets by email and let crew confirm through a personal link."
 permalink: /planning/
 sections:
   - type: hero
     kicker: Planning
-    title: Plan from *the budget*
+    title: Organise and schedule *your production*
     text: |
-      A schedule in a separate tool knows nothing about the money. In Tubes the plan starts from the budget. Its activities become the things you schedule, and while you plan you see what that does to what was budgeted.
+      You have a budget. Now the people, locations and props have to be organised and put on the right days. Tubes keeps that in one place, and as the planner you also see where the budget stands.
 
-      Cast, crew, locations and shoot days in one place, across all your productions. Planning is part of the full Tubes platform, from Producer Pro upwards.
+      Planning is part of the full Tubes platform, from Producer Pro upwards.
     buttons:
       - label: Show me planning in Tubes
         url: /contact/
@@ -21,50 +21,49 @@ sections:
     image_alt: Weekly planning calendar in Tubes with cast, crew and locations
   - type: textblock
     theme: light
-    heading: Why plan where the budget lives
+    heading: From a budget to a working schedule
     text: |
-      When you make a budget, you decide a lot at once. Who you want to hire, how many shoot days you can afford, which locations fit and how much time there is to prepare. Each of those choices has a number next to it.
+      The budget is approved. Now the organising starts. Crew have to be booked, locations confirmed, props and equipment arranged, and all of it has to land on the right days.
 
-      Then the production takes shape. A location turns out to be free a week later. The DOP you wanted is only available for part of the shoot. Prep takes two days longer. None of that is unusual, it is what preparing a production looks like. But every change moves the numbers you started with, and when the schedule lives somewhere else you only notice once the costs come in.
+      On most productions that lives in a few places at once. A spreadsheet for the schedule, a chat group for the crew, an email thread per location. It works, until a location turns out to be free a week later or the DOP is only available for part of the shoot, and everything has to be moved by hand.
 
-      In Tubes the plan is built on the budget. The activities you budgeted are the ones you schedule, so while the plan changes you can see how it compares with what you budgeted.
+      In Tubes you put people, locations and props on the days of the production, and everyone looks at the same plan. And while you plan, you also see where the budget stands.
   - type: cards
     theme: white
     heading: What it solves
     columns: 2
     cards:
-      - heading: The plan starts from the budget
+      - heading: One plan for everyone
         text: |
-          Release a budget to planning and its activities are ready to schedule. No retyping, and no second structure to keep in step.
-      - heading: See what a day does to the budget
-        text: |
-          Put budgeted items on a day and Tubes shows budget, planned and what is left per activity, and flags an activity that goes over.
+          People, locations and props on the days of the production, in one place instead of a spreadsheet, a chat group and a pile of emails.
       - heading: No double bookings
         text: |
           Tubes will not book a person on overlapping times, across all your productions, and tells you which booking is in the way.
       - heading: Know who is coming
         text: |
           Each crew member gets a personal link to confirm or decline a day, without needing an account. You see who has seen it, who confirmed and who declined.
+      - heading: Call sheets without retyping
+        text: |
+          Make a call sheet from a planned day and send it by email per department. Everyone gets a PDF, a calendar file and their own confirmation link.
   - type: feature
     theme: light
     heading: What is in it
     text: |
-      - **Four ways to look at the plan.** A timeline of the production, a board where you drag people, locations and items onto days, and a calendar per week or per month.
+      - **Four ways to look at the plan.** A timeline of the production, a board where you drag people, locations and props onto days, and a calendar per week or per month.
       - **Drag to reschedule.** Move a day to another date, or stretch it over the days that follow.
-      - **Everything a day needs.** Cast and crew with their own call times, locations, items and files.
+      - **Everything a day needs.** Cast and crew with their own call times, locations, props and equipment, and files.
       - **Draft until you publish.** Change a published day and Tubes marks it as changed.
-      - **Call sheets from the plan.** Make a call sheet from a planned day and send it by email per department. Everyone gets a PDF, a calendar file and their own confirmation link.
       - **Weather on the day.** The forecast per day and location, on the plan and on the call sheet.
       - **Capacity and workload.** Planned days against available days, and one person's load across all productions.
-      - **Expected costs.** Budget, planned and spent, per week or per month.
       - **Locations you can compare.** Facilities, photos and a price guide per location, up to three side by side.
       - **From script to shooting days.** Paste or upload a script, let Tubes split it into scenes and group them into shooting days.
       - **On the phone.** Crew with a Tubes account see their published days and call sheets, and can confirm there.
+      - **See where the budget stands.** Budget, planned and what is left are in view while you plan.
   - type: textblock
     theme: teal
     heading: Part of the full platform
     text: |
-      Planning is not available as a separate plan. It comes with Producer Pro and Enterprise, together with budgeting, cost control and forecasting, because the plan works from the budget behind it.
+      Planning is not available as a separate plan. It comes with Producer Pro and Enterprise, together with budgeting, cost control and forecasting.
 
       Prefer to take one step at a time? [Start with budgeting only](/budgeting/) and move on to planning when you are ready, in the same account, with the budgets you already made.
   - type: feature
@@ -72,8 +71,8 @@ sections:
     heading: How a first conversation goes
     text: |
       1. **Thirty minutes, online.** Bring a production you are planning now, or one you just finished.
-      2. **We look at how you plan today.** Where the schedule lives, how call sheets go out, and when you find out that the plan no longer fits the budget.
-      3. **We show the same kind of production in Tubes**, from the budget to planned days and a call sheet.
+      2. **We look at how you plan today.** Where the schedule lives, how call sheets go out, and what happens when something moves.
+      3. **We show the same kind of production in Tubes**, from planned days to a call sheet.
       4. **You decide** whether it is worth trying on your next production. No obligation.
   - type: pricing
     theme: white
