@@ -415,16 +415,17 @@ a:hover { color: var(--action); }
   gap: clamp(20px, 3vw, 40px);
   margin: 34px 0 0; padding: 0; list-style: none;
 }
-.hero-step-budget { --step: #155CBD; }
-.hero-step-plan { --step: #7C471A; }
-.hero-step-produce { --step: #00793A; }
-.theme-dark .hero-step-budget { --step: #A8CAFA; }
-.theme-dark .hero-step-plan { --step: #E6C3A3; }
-.theme-dark .hero-step-produce { --step: #9CDFB9; }
-.hero-step-icon {
-  width: 40px; height: 40px; margin-bottom: 10px;
-  fill: none; stroke: var(--step); stroke-width: 1.5; stroke-linejoin: round;
-}
+.step-budget { --step: #155CBD; }
+.step-plan { --step: #7C471A; }
+.step-produce { --step: #00793A; }
+.theme-dark .step-budget { --step: #A8CAFA; }
+.theme-dark .step-plan { --step: #E6C3A3; }
+.theme-dark .step-produce { --step: #9CDFB9; }
+.step-icon { fill: none; stroke: var(--step); stroke-width: 1.5; stroke-linejoin: round; flex: none; }
+.hero-step-icon { width: 40px; height: 40px; margin-bottom: 10px; }
+/* Kop van een feature-sectie met het icoon van de stap ervoor (section.step). */
+.step-heading { display: flex; align-items: center; gap: 0.35em; }
+.step-heading .step-icon { width: 0.95em; height: 0.95em; }
 .hero-stacked .hero-step-icon { margin-left: auto; margin-right: auto; }
 .hero-step-name {
   margin: 0 0 6px;

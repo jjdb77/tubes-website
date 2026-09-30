@@ -368,6 +368,7 @@ collections:
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
+              - { label: "Icoon voor de kop (Budget / Plan / Produce)", name: step, widget: select, options: [{label: Geen, value: ""}, {label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}], required: false }
               - { label: "Vette introzin", name: lead, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Afbeelding, name: image, widget: image, required: false }

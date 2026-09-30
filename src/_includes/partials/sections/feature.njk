@@ -1,7 +1,10 @@
+{%- from "partials/step-icon.njk" import stepIcon -%}
 <section class="section theme-{{ section.theme or 'light' }}{% if section.media_large %} section-feature-large-media{% endif %}">
   <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.video %} feature-single{% endif %}">
     <div class="feature-text">
-      {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
+      {#- section.step (budget/plan/produce) zet het icoon van die stap uit de
+          Tubes-app voor de kop, in de kleur van de stap. -#}
+      {% if section.heading %}<h2{% if section.step %} class="step-heading step-{{ section.step }}"{% endif %}>{% if section.step %}{{ stepIcon(section.step) }}{% endif %}{{ section.heading }}</h2>{% endif %}
       {% if section.lead %}<p class="col-lead">{{ section.lead }}</p>{% endif %}
       <div class="rich-text">{{ section.text | md | safe }}</div>
       {% if section.button %}

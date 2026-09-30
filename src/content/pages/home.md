@@ -32,20 +32,36 @@ sections:
     media_below: true
   - type: feature
     theme: white
-    heading: Setting up and managing your productions
+    step: budget
+    heading: Budget
+    lead: From a first draft to a budget everyone has signed off
     text: |
-      Keep your productions on track with powerful dashboards and pipelines. Track every stage of the production process, from preparation to delivery and analysis, while setting up budgets, managing documents, and staying fully in control.
+      Build the budget from your own templates and rates, copy an earlier one, or let AI suggest a first draft that you check line by line. Save each version, put budgets side by side to see what changed, and name who has to approve it before it goes out.
+
+      [More about budgeting in Tubes](/budgeting/)
     image: /assets/images/example-tubes-02.png
-    image_alt: Project dashboards and pipelines in Tubes
+    image_alt: Dashboard in Tubes with the option to create a budget from a template, a copy or an AI draft
     media_large: true
   - type: feature
     theme: teal
-    heading: Control your production and planning in real time
+    step: plan
+    heading: Plan
+    lead: People, locations and schedules in one plan
     text: |
-      Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Real-time cost control in Tubes
+      Schedule cast, crew and locations on one calendar, per week or per month. Keep everyone aligned by sharing schedules and call sheets through the Tubes app.
+    image: /assets/images/tubes-agenda.png
+    image_alt: Weekly planning calendar in Tubes with cast, crew and locations
     media_position: left
+    media_large: true
+  - type: feature
+    theme: light
+    step: produce
+    heading: Produce
+    lead: Costs, invoices and the forecast in real time
+    text: |
+      Monitor expenses as they come in, handle and approve incoming production invoices, and allocate costs to co-producers. Budget, committed costs, cost to date and the forecast sit side by side, so you always know where the production stands.
+    image: /assets/images/tubes-costcontrol.png
+    image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
     media_large: true
   - type: textblock
     theme: white
