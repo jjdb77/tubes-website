@@ -27,7 +27,7 @@ sections:
 
       In Tubes you do that on one plan. You put people, locations and props on the days of the production, each with their own times. When a location turns out to be free a week later, you drag the day to its new date. When the DOP is already booked on another production, Tubes tells you before you plan them twice.
 
-      Once a day is ready, you publish it and send the call sheet. The crew confirm through a personal link, so you know who is coming. And while you plan, you also see where the budget stands.
+      Once a day is ready, you publish it and send the call sheet. The crew confirm through a personal link, so you know who is coming. All along, Tubes gives you insight and a clear overview of both the planning and the budget.
   - type: cards
     theme: white
     heading: What it solves
