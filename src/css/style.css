@@ -383,18 +383,15 @@ a:hover { color: var(--action); }
    de smallere, waardoor twee media_large-afbeeldingen niet even groot ogen. */
 .feature-grid.media-left { grid-template-columns: 0.95fr 1.05fr; }
 
-/* Featuresecties met een groter beeld (section.media_large): het beeld
-   bleedt vooral naar de buitenkant (weinig naar de kant van de tekstkolom,
-   om die niet te raken); de sectie zelf knipt de overloop af, want
-   .theme-white/.theme-teal hebben normaal geen overflow:hidden.
-   Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
-   de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
-.section-feature-large-media { overflow: hidden; }
-/* 108% in plaats van 120% (verzoek Joachim 30-9-2026: de beelden bij Budget,
-   Plan en Produce 10% kleiner). De rand aan de tekstkant blijft waar hij was,
-   de buitenrand schuift naar binnen. */
-.feature-media-large { width: 108%; margin-left: -3%; }
-.media-left .feature-media-large { margin-left: -5%; }
+/* Featuresecties met section.media_large (de blokken Budget, Plan en Produce
+   op de homepage). Het beeld stak eerst 17 tot 20% buiten de container, en
+   links en rechts niet even ver, waardoor de beelden onder elkaar niet
+   uitlijnden met de tekst (Joachim 30-9-2026). Nu: twee gelijke kolommen en
+   het beeld precies zo breed als zijn kolom. De buitenrand van elk beeld valt
+   zo samen met de rand van de container, dus met de tekst van het blok
+   erboven en eronder. Moet na .feature-grid.media-left staan (even specifiek). */
+.section-feature-large-media .feature-grid { grid-template-columns: 1fr 1fr; }
+.feature-media-large { width: 100%; margin-left: 0; }
 
 .lead { font-size: 1.08rem; }
 
