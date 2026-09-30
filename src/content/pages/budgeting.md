@@ -89,7 +89,7 @@ sections:
           No. Tubes imports the Excel export of Movie Magic Budgeting, and we help you bring your current budgets in when you start.
       - question: What does it cost?
         answer: |
-          Budgeting only costs € 29 per month, including two users. Extra users are € 15 per month each. Expand later to the full platform (Producer Pro, from € 49 per month) and you move on in the same account; see [plans and pricing](/plans/). Using Tubes for a single production? [Get in touch](/contact/#contact-form) and we'll work something out.
+          Budgeting only costs € 29 per month, including two users. Extra users are € 19 per month each. Expand later to the full platform (Producer Pro, from € 49 per month) and you move on in the same account; see [plans and pricing](/plans/). Using Tubes for a single production? [Get in touch](/contact/#contact-form) and we'll work something out.
       - question: Which kinds of production does it work for?
         answer: |
           Film, TV series, documentaries, commercials and branded content, and live shows. The structure comes from your own templates, so a commercial and a feature don't have to look alike.
