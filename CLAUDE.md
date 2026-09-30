@@ -46,7 +46,9 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - `MAIL_API_URL` bestaat om het te kunnen testen tegen een eigen endpoint; laat die in productie leeg.
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
-## Plan en Produce: /planning/ en /produce/
+## Budget, Plan en Produce: /budget/, /planning/ en /produce/
+
+- **/budget/ is de algemene pagina over budgetteren** (`src/content/pages/budget.md`, 30-9-2026), zelfde opzet als /planning/ en /produce/: kort verhaal, vier kaarten, lijst, prijs, vragen. **/budgeting/ blijft bestaan** en gaat over iets anders: waarom je niet meteen het hele systeem hoeft te nemen (de landingspagina voor de LinkedIn-benadering). Joachim: "als algemene pagina over Budgeting vind ik het niet de juiste teksten". Het Budget-blok op de homepage linkt naar /budget/ en noemt /budgeting/ als tweede link; in de footer heet /budget/ "Budgeting" en /budgeting/ "Start with Budgeting Only". De claims op /budget/ zijn dezelfde als op /budgeting/ (daar nagelopen in de app-code); geen nieuwe toevoegen zonder ze na te lopen.
 
 - Twee landingspagina's naar het voorbeeld van /budgeting/ (verzoek Joachim 30-9-2026): `src/content/pages/planning.md` ("Organise and schedule your production") en `produce.md` ("Cost control", URL `/produce/`; heette een paar uur `/producing/`, Joachim: "je bedoelt produce neem ik aan", en dat oude pad 301't via `OLD_PATHS` in server.js). Gewone sectiepagina's, in het CMS te wijzigen. In de Explore-footer (kolom Platform: Planning, Cost Control), `settings.footer_nav`, sitemap en llms.txt; de blokken Plan en Produce op de homepage linken ernaartoe.
 - ⚠️ **Plan en Produce zijn niet los af te nemen** (Joachim): alleen Budgeting heeft een eigen abonnement. Beide pagina's zeggen dat uitdrukkelijk (blok "Part of the full platform", FAQ) en tonen Producer Pro en Enterprise als prijsblok, met een verwijzing naar /budgeting/ voor wie klein wil beginnen. Let op: /platform/ zegt nog "Teams can begin with budgeting or planning"; dat schuurt hiermee.

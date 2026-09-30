@@ -11,7 +11,7 @@ sections:
     text: |
       You don't need a new system for your whole company to get better budgets. You can start with just the budget. Build production budgets from your own structure, keep every version and see what changed between them.
 
-      Your accounting, your scheduling and the way invoices are handled stay exactly as they are. Budgeting only costs € 29 per month, including two users.
+      Your accounting, your scheduling and the way invoices are handled stay exactly as they are. Budgeting only costs € 29 per month, including two users. Want to know what budgeting in Tubes can do? See [budgeting in Tubes](/budget/).
     buttons:
       - label: Show me budgeting in Tubes
         url: /contact/

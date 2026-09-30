@@ -64,7 +64,7 @@ sections:
     theme: teal
     heading: Part of the full platform
     text: |
-      Planning is not available as a separate plan. It comes with Producer Pro and Enterprise, together with budgeting, cost control and forecasting.
+      Planning is not available as a separate plan. It comes with Producer Pro and Enterprise, together with [budgeting](/budget/), [cost control](/produce/) and forecasting.
 
       Prefer to take one step at a time? [Start with budgeting only](/budgeting/) and move on to planning when you are ready, in the same account, with the budgets you already made.
   - type: feature
