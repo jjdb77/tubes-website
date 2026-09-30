@@ -23,7 +23,7 @@ sections:
     theme: light
     heading: From a budget to a working schedule
     text: |
-      The budget is approved. Now the organising starts. Crew have to be booked, locations confirmed, props and equipment arranged, and all of it has to land on the right days.
+      The budget is approved. The production starts. Crew have to be booked, locations confirmed, props and equipment arranged, and all of it has to land on the right days.
 
       On most productions that lives in a few places at once. A spreadsheet for the schedule, a chat group for the crew, an email thread per location. It works, until a location turns out to be free a week later or the DOP is only available for part of the shoot, and everything has to be moved by hand.
 
