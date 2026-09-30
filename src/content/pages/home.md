@@ -12,13 +12,6 @@ sections:
     theme: dark
     kicker: Production management platform
     title: Budget. Plan. Produce.
-    chips:
-      - label: Budget
-        tone: blue
-      - label: Plan
-        tone: amber
-      - label: Produce
-        tone: teal
     subtitle: One connected platform for the entire production lifecycle.
     text: |
       Professional media productions require clear financial and operational oversight, but information is often scattered across spreadsheets, tools and teams.
