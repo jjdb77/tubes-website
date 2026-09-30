@@ -55,6 +55,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
   - Produce: koppeling alleen met Xero en Exact Online (NL), verder een Excel-export; geen facturen per e-mail insturen; geen goedkeuren per mail of in de mobiele app; geen urenstaten of declaraties (wel een bonnetjeslink voor crew); EFC is committed plus cost to date en is niet met de hand in te vullen; geen Excel-export van de forecast; geen eligible-spend- of rebate-rapport; betaalkaartimport slaat de goedkeuring over; **kosten toewijzen aan coproducenten bestaat niet in de code** (stond op de homepage, daar weggehaald; staat nog op /compare-film-incentives/).
   - De afkorting: in de app is EFC "estimated final cost". Het blok op /solutions/ zegt "estimate for completion"; dat is eigenlijk ETC.
 - Veel van de helpartikelen over planning en kosten (`src/content/help/`) beweren meer dan de code doet (stripbook, WhatsApp, export van de planning, tracking categories in Xero, MSG/EML/TIFF-upload). Het helpcentrum staat op noindex; die artikelen nalopen voordat die schakelaar uitgaat.
+- Toon: geen stellige oneliners. "The budget says what a production may cost. The schedule decides what it will cost." vond Joachim te bold (30-9-2026): de kosten hangen ook af van wie je inhuurt, wat je begroot en waar en hoe je voorbereidt en draait.
 - Beelden: `tubes-agenda.png` (nog de oude planning met het oude zijmenu) en `tubes-costcontrol.png`. Nieuwe screenshots van de huidige planning (Board of Week) zijn de eerste verbetering.
 
 ## Health Check-landingspagina

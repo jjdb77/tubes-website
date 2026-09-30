@@ -22,7 +22,7 @@ sections:
   - type: textblock
     theme: light
     heading: Why plan where the budget lives
-    lead: The budget says what a production may cost. The schedule decides what it will cost.
+    lead: Who you hire, where you shoot and how you prepare and run the production all shape what it costs.
     text: |
       An extra shoot day, a location that falls through, a crew member booked on two productions at once. These are planning decisions, and every one of them is also a money decision. When the schedule and the budget live in different tools, nobody sees the effect until the invoices arrive.
 
