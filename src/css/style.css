@@ -390,8 +390,11 @@ a:hover { color: var(--action); }
    Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
    de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
 .section-feature-large-media { overflow: hidden; }
-.feature-media-large { width: 120%; margin-left: -3%; }
-.media-left .feature-media-large { margin-left: -17%; }
+/* 108% in plaats van 120% (verzoek Joachim 30-9-2026: de beelden bij Budget,
+   Plan en Produce 10% kleiner). De rand aan de tekstkant blijft waar hij was,
+   de buitenrand schuift naar binnen. */
+.feature-media-large { width: 108%; margin-left: -3%; }
+.media-left .feature-media-large { margin-left: -5%; }
 
 .lead { font-size: 1.08rem; }
 
