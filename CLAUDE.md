@@ -46,6 +46,17 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - `MAIL_API_URL` bestaat om het te kunnen testen tegen een eigen endpoint; laat die in productie leeg.
 - Time-out staat op 8 seconden. Getest met een nep-endpoint: goed pad, mislukt pad (500) en herstel via de knop.
 
+## Plan en Produce: /planning/ en /producing/
+
+- Twee landingspagina's naar het voorbeeld van /budgeting/ (verzoek Joachim 30-9-2026): `src/content/pages/planning.md` ("Plan from the budget") en `producing.md` ("Cost control", URL `/producing/` naast budgeting en planning). Gewone sectiepagina's, in het CMS te wijzigen. In de Explore-footer (kolom Platform: Planning, Cost Control), `settings.footer_nav`, sitemap en llms.txt; de blokken Plan en Produce op de homepage linken ernaartoe.
+- ⚠️ **Plan en Produce zijn niet los af te nemen** (Joachim): alleen Budgeting heeft een eigen abonnement. Beide pagina's zeggen dat uitdrukkelijk (blok "Part of the full platform", FAQ) en tonen Producer Pro en Enterprise als prijsblok, met een verwijzing naar /budgeting/ voor wie klein wil beginnen. Let op: /platform/ zegt nog "Teams can begin with budgeting or planning"; dat schuurt hiermee.
+- **Alle claims zijn op 30-9-2026 nagelopen in de app-code** (`~/Documents/CloudTubes/tubes`). Wat er NIET in mag, want het staat niet in de code:
+  - Planning: alleen mensen worden op dubbele boekingen geblokkeerd (locaties en items niet); alleen ingeplande *items* tellen tegen het budget, mensen en locaties niet; geen export, print of agenda-feed van de planning; geen stripboard; call sheets gaan per e-mail (pdf, agendabestand, bevestigingslink), WhatsApp en push worden alleen genoteerd; een dag publiceren mailt niemand; geen losse pdf-download van een call sheet; of de mobiele app in de stores staat is uit de code niet te zien.
+  - Produce: koppeling alleen met Xero en Exact Online (NL), verder een Excel-export; geen facturen per e-mail insturen; geen goedkeuren per mail of in de mobiele app; geen urenstaten of declaraties (wel een bonnetjeslink voor crew); EFC is committed plus cost to date en is niet met de hand in te vullen; geen Excel-export van de forecast; geen eligible-spend- of rebate-rapport; betaalkaartimport slaat de goedkeuring over; **kosten toewijzen aan coproducenten bestaat niet in de code** (stond op de homepage, daar weggehaald; staat nog op /compare-film-incentives/).
+  - De afkorting: in de app is EFC "estimated final cost". Het blok op /solutions/ zegt "estimate for completion"; dat is eigenlijk ETC.
+- Veel van de helpartikelen over planning en kosten (`src/content/help/`) beweren meer dan de code doet (stripbook, WhatsApp, export van de planning, tracking categories in Xero, MSG/EML/TIFF-upload). Het helpcentrum staat op noindex; die artikelen nalopen voordat die schakelaar uitgaat.
+- Beelden: `tubes-agenda.png` (nog de oude planning met het oude zijmenu) en `tubes-costcontrol.png`. Nieuwe screenshots van de huidige planning (Board of Week) zijn de eerste verbetering.
+
 ## Health Check-landingspagina
 
 - ⚠️ De sessie heet in alle teksten **Production Health Check**. Eerder stonden er drie namen door elkaar (Production Finance Health Check, Health Check, assessment); hou het bij die ene. De **URL blijft `/production-finance-health-check/`**, die is al gedeeld en staat in Google; alleen in de SEO-titel staat "production finance" nog als zoekwoord.

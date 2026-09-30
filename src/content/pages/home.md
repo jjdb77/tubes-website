@@ -49,6 +49,8 @@ sections:
     lead: People, locations and schedules in one plan
     text: |
       Schedule cast, crew and locations on one calendar, per week or per month. Keep everyone aligned by sharing schedules and call sheets through the Tubes app.
+
+      [More about planning in Tubes](/planning/)
     image: /assets/images/tubes-agenda.png
     image_alt: Weekly planning calendar in Tubes with cast, crew and locations
     media_position: left
@@ -59,7 +61,9 @@ sections:
     heading: Produce
     lead: Costs, invoices and the forecast in real time
     text: |
-      Process production costs as they come in: invoices are reviewed, approved and passed on to your accounting system, such as Xero. Allocate costs to co-producers, and see budget, committed costs, cost to date and the forecast side by side, so you always know where the production stands.
+      Process production costs as they come in: invoices are reviewed, approved and passed on to your accounting system, such as Xero. What you have agreed with suppliers counts before the invoice arrives, and budget, committed costs, cost to date and the forecast sit side by side, so you always know where the production stands.
+
+      [More about cost control in Tubes](/producing/)
     image: /assets/images/tubes-costcontrol.png
     image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
     media_large: true

@@ -81,6 +81,14 @@
       "url": "/budgeting/"
     },
     {
+      "label": "Planning",
+      "url": "/planning/"
+    },
+    {
+      "label": "Cost control",
+      "url": "/producing/"
+    },
+    {
       "label": "Plans & pricing",
       "url": "/plans/"
     },
