@@ -39,9 +39,9 @@ sections:
       - heading: Invoices without retyping
         text: |
           Upload an invoice and Tubes reads the supplier, the amounts and the VAT. You check instead of type.
-      - heading: Approved by the right people
+      - heading: Cost approval built in
         text: |
-          The production approves first, then finance. After that the invoice goes to your accounting system, such as Xero.
+          Every invoice is approved before it goes to your accounting system. The production approves first, then finance, and you set the rules for what needs a second look.
       - heading: Overview of costs and budget
         text: |
           Budget, committed costs and cost to date side by side, so you see where the production stands.
