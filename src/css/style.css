@@ -391,7 +391,12 @@ a:hover { color: var(--action); }
    precies op de kolomlijn ("tikje te perfect"). Dit is het midden: de rand
    aan de tekstkant staat op de kolomlijn, de buitenrand net erbuiten. Moet na
    .feature-grid.media-left staan (even specifiek). */
-.section-feature-large-media .feature-grid { grid-template-columns: 1fr 1fr; }
+/* Alleen op breed scherm: onder 981px valt .feature-grid terug op één kolom,
+   en deze regel is specifieker dan die terugval. Zonder de media query
+   bleven Budget en Produce op een telefoon in twee kolommen staan. */
+@media (min-width: 981px) {
+  .section-feature-large-media .feature-grid { grid-template-columns: 1fr 1fr; }
+}
 .feature-media-large { width: 106%; margin-left: 0; }
 .media-left .feature-media-large { margin-left: -6%; }
 
