@@ -346,9 +346,7 @@ a:hover { color: var(--action); }
    grootte i.p.v. een al gerenderde bitmap achteraf uitrekken, wat zichtbaar
    zachter oogt). .hero-media draagt wel de laad-animatie (@keyframes rise),
    maar die raakt alleen opacity/transform, niet width — dus geen conflict.
-   Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
-   automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
-   ouder — geen risico dat ze los van elkaar raken. */
+   De afbeelding (width:100%) volgt automatisch mee. */
 .section-hero .hero-media { position: relative; width: 150%; margin-left: -8%; margin-right: -5vw; }
 .section-hero .hero-media img,
 .section-hero .hero-media video { position: relative; z-index: 2; }
@@ -1313,22 +1311,6 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   transition: transform 0.2s ease;
 }
 .button.button-primary:hover::after { transform: translateX(3px); }
-
-/* ---------- Film-knipoog: zoeker-hoekjes op het hero-beeld ---------- */
-
-.viewfinder {
-  position: absolute; inset: 10px; z-index: 3;
-  pointer-events: none;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
-}
-.viewfinder::before,
-.viewfinder::after {
-  content: ""; position: absolute;
-  width: 20px; height: 20px;
-  border: 0 solid rgba(255, 255, 255, 0.85);
-}
-.viewfinder::before { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 5px; }
-.viewfinder::after { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 5px; }
 
 /* ---------- Gratis tools: Budget compare (/tools/budget-compare/) ----------
    Alle klassen beginnen met bc-. Staat achteraan omdat de responsieve regels
