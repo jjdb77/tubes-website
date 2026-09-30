@@ -137,7 +137,7 @@ sections:
       price_detail: |
         € 19 per month for each additional user.
       button:
-        label: More about budgeting
+        label: Start with budgeting only
         url: /budgeting/
     footnote: |
       Questions, or curious about **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
