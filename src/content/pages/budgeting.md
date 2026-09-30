@@ -50,7 +50,9 @@ sections:
     text: |
       - **Keep your existing budgets**: we set up your templates and bring in your existing budgets with you, as part of getting started. Budgets from Movie Magic Budgeting come in through its Excel export.
       - **A first draft in minutes**: describe the production and let AI suggest lines, quantities and prices in your own cost structure. A starting point, which you check line by line.
-      - **Cost and sales in one place**: for service productions and commercials, set a margin per line or per group and see the quote total next to your cost, then turn the budget into a quotation.
+      - **Cost and sales in one place**: for service productions and commercials, set a margin per line or per group and see the quote total next to your cost.
+      - **Quotations and budget documents**: turn the budget into a quotation or another document for your client, from your own templates, with your own text and the level of detail you choose. Send it as a PDF, or have it signed digitally (optional).
+      - **Let stakeholders take a look**: give a client, financier or co-producer a secure link to the budget, protected by a verification code and valid for a limited time. They can read along and comment on a line, without a Tubes account.
       - **Series and episodes**: budget per episode and, where it matters, per minute.
       - **Sign-off before it goes out**: name who has to approve a budget, such as the producer or the managing director, and see who still has to.
       - **Excel stays available**: every budget exports to Excel or CSV, for the fund, the co-producer or the accountant who works in spreadsheets.
