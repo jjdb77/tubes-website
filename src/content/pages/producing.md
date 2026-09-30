@@ -9,7 +9,7 @@ sections:
     kicker: Produce
     title: Know where the production stands, *while it runs*
     text: |
-      Once the shoot starts, the budget meets reality: invoices come in, commitments add up and someone asks whether you are still on budget. In Tubes every cost lands against the budget as it happens, goes through approval, and ends up in your accounting system without retyping.
+      Once the shoot starts, the budget meets reality. Invoices come in, commitments add up and someone asks whether you are still on budget. In Tubes every cost lands against the budget as it happens, goes through approval, and ends up in your accounting system without retyping.
 
       Costs, approvals and the forecast in one place. Cost control is part of the full Tubes platform, from Producer Pro upwards.
     buttons:
@@ -24,7 +24,7 @@ sections:
     heading: Why cost control belongs next to the budget
     lead: By the time the books are final, the money has been spent.
     text: |
-      Accounting tells you what was paid. A producer needs to know earlier: what has been committed, what is still coming in, and where the production will end. That answer sits between the budget and the books, and on most productions it lives in a spreadsheet that one person keeps up to date by hand.
+      Accounting tells you what was paid. A producer needs to know earlier what has been committed, what is still coming in, and where the production will end. That answer sits between the budget and the books, and on most productions it lives in a spreadsheet that one person keeps up to date by hand.
 
       In Tubes it is the same data all the way through. The budget sets the cost types, commitments and invoices are booked against them, and the forecast adds it up per cost type while the production runs.
   - type: cards
@@ -48,18 +48,18 @@ sections:
     theme: light
     heading: What is in it
     text: |
-      - **Three ways in**: upload invoices yourself, let suppliers submit them through a portal they sign in to with a link by email, or send crew a personal link for their receipts.
-      - **Read automatically**: PDF invoices and photos are read by AI, and e-invoices (UBL) are read exactly. Supplier, invoice number, date, currency, totals, VAT and lines are filled in for you to check.
-      - **Matched to what you agreed**: an invoice is matched to its supplier and to the open commitment with the same PO number, and takes over its cost type and production.
-      - **Checked before anyone approves**: a missing supplier, totals that do not add up, a VAT sum that is off, a missing reference or an implausible date show up as issues.
-      - **Your own approval rules**: a duplicate invoice, a missing cost type, an old invoice date, a line that exceeds its commitment, a high amount. Per rule you decide whether it is a note, a warning or a block.
-      - **Approval per production, then finance**: required reviewers approve in order of level. Rejecting asks for a reason and sends the invoice back. Finance can approve many invoices at once.
-      - **Forecast per cost type**: budget, work budget, committed, cost to date, EFC (estimated final cost) and variance, always current.
-      - **Snapshots**: freeze the forecast at a moment, compare two snapshots with today, and print the comparison as a PDF.
-      - **AI analysis**: once you have a few finished productions in Tubes, it compares how each cost category is being spent with those and points out what runs ahead or behind.
-      - **Financing and cashflow**: a financing plan with tranches, and a monthly view of money in against costs going out.
-      - **Payment cards**: import card statements from Excel or CSV, per production and per week.
-      - **A record of every change**: see who changed what on an invoice, and when.
+      - **Three ways in.** Upload invoices yourself, let suppliers submit them through a portal, or send crew a personal link for their receipts.
+      - **Read automatically.** Supplier, invoice number, date, amounts, VAT and lines are filled in for you to check.
+      - **Matched to what you agreed.** An invoice is matched to its supplier and to the open commitment with the same PO number.
+      - **Checked before anyone approves.** A missing supplier, totals that do not add up or an implausible date show up as issues.
+      - **Your own approval rules.** For duplicates, a missing cost type or a high amount. Per rule you decide whether it is a note, a warning or a block.
+      - **Approval per production, then finance.** Required reviewers approve in order. Finance can approve many invoices at once.
+      - **Forecast per cost type.** Budget, committed, cost to date, EFC (estimated final cost) and variance, always current.
+      - **Snapshots.** Freeze the forecast, compare two snapshots with today and print the comparison.
+      - **AI analysis.** Once you have a few finished productions in Tubes, it points out which cost categories run ahead or behind.
+      - **Financing and cashflow.** A financing plan with tranches, and a monthly view of money in against costs going out.
+      - **Payment cards.** Import card statements from Excel or CSV.
+      - **A record of every change.** See who changed what on an invoice, and when.
   - type: textblock
     theme: teal
     heading: Part of the full platform
@@ -72,7 +72,7 @@ sections:
     heading: How a first conversation goes
     text: |
       1. **Thirty minutes, online.** Bring a production that is running now, or the cost report of your last one.
-      2. **We look at how costs reach you today**: who receives the invoices, who approves them, and how you know what is still coming.
+      2. **We look at how costs reach you today.** Who receives the invoices, who approves them, and how you know what is still coming.
       3. **We show the same flow in Tubes**, from an uploaded invoice to approval, the forecast and the export to your accounting system.
       4. **You decide** whether it is worth trying on your next production. No obligation.
   - type: pricing
@@ -82,7 +82,7 @@ sections:
       - name: Producer Pro
         badge: Includes cost control
         text: |
-          The full platform: budgeting plus planning, cost control and forecasting.
+          The full platform, with budgeting, planning, cost control and forecasting.
         price_prefix: "From"
         price: "€ 49"
         price_note: "per month, includes 2 users"
@@ -118,10 +118,10 @@ sections:
           No. Cost control is part of the full platform (Producer Pro and Enterprise) and is not sold separately. What you can do is [start with budgeting only](/budgeting/) and expand to the full platform later, in the same account.
       - question: Does Tubes replace our accounting system?
         answer: |
-          No. Your bookkeeping stays where it is. Tubes is the production layer in front of it: costs are checked, approved and followed against the budget in Tubes, and the approved invoices are passed on to your accounting system.
+          No. Your bookkeeping stays where it is. Tubes is the production layer in front of it. Costs are checked, approved and followed against the budget in Tubes, and the approved invoices are passed on to your accounting system.
       - question: Which accounting systems does it connect to?
         answer: |
-          Xero and Exact Online (the Dutch edition) have a direct connection: approved purchase invoices are sent across with their supplier. For every other system, Tubes exports approved costs as an Excel batch. Using something else and want a connection? [Get in touch](/contact/#contact-form).
+          Xero and Exact Online (the Dutch edition) have a direct connection. Approved purchase invoices are sent across with their supplier. For every other system, Tubes exports approved costs as an Excel batch. Using something else and want a connection? [Get in touch](/contact/#contact-form).
       - question: Do suppliers and crew need an account?
         answer: |
           Suppliers sign in to the portal with a link they receive by email, without a password. Crew get a personal link for their receipts that works without logging in.
