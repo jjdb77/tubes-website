@@ -142,6 +142,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - Leestijd en woordentelling worden berekend (`readingTime`/`wordCount`), niet ingevuld.
 - Elk artikel krijgt automatisch Article-structured data, een kruimelpad en onderaan links naar de andere artikelen.
 - Let op bij schrijven: **geen em-dashes**, en de lijstopmaak in `.article-body` is bewust anders dan die van `.rich-text` (gewone bullets in plaats van het teal vinkje).
+- **"One Year in the Life of an Independent Producer"** (`/insights/challenges-facing-film-and-tv-production/`, 4-10-2026, verzoek Joachim): de uitdagingen van nu als verhaal van een verzonnen producent (Sara) door één jaar. Langere besluitvorming bij omroepen en streamers, rechten die bij de koper blijven, financiering in meer stukken, kosten die harder stijgen dan het geld, krapte aan crew, late uitbetaling van rebates, AI en rapportagedruk. Bewust zonder cijfers die niet te onderbouwen zijn.
 - **Van 6-8 tot 17-9-2026 stonden de vier artikelen en /insights/ op noindex** ("tijdelijk uitschakelen"). Sinds 17-9 zijn ze weer geïndexeerd, met "film" in de titels ("How to Build a Film Production Budget", "Above the Line vs Below the Line in a Film Budget"), want de kale term "production budget" is bij Google management accounting (zie SEO). De permalinks zijn niet veranderd. Insights staat in de Explore-footer (kolom Company), niet in het hoofdmenu.
 
 ## Nieuws (/news/)
