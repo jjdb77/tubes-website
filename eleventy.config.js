@@ -449,6 +449,24 @@ export default function (eleventyConfig) {
     }
 
     // Overzichtspagina met artikelen
+    // Woordenlijst (/film-production-glossary/): elk begrip als DefinedTerm
+    if (Array.isArray(data.definedTerms) && data.definedTerms.length) {
+      graph.push({
+        "@type": "DefinedTermSet",
+        "@id": abs(url) + "#terms",
+        name: title,
+        inLanguage: "en",
+        hasDefinedTerm: data.definedTerms.map((t) => ({
+          "@type": "DefinedTerm",
+          "@id": abs(url) + "#" + t.slug,
+          name: t.term,
+          description: toPlainText(t.definition),
+          url: abs(url) + "#" + t.slug,
+          inDefinedTermSet: { "@id": abs(url) + "#terms" },
+        })),
+      });
+    }
+
     if (Array.isArray(data.itemList) && data.itemList.length) {
       graph.push({
         "@type": "ItemList",

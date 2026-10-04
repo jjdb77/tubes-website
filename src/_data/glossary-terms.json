@@ -1,0 +1,2461 @@
+{
+  "terms": [
+    {
+      "term": "Abby Singer",
+      "slug": "abby-singer",
+      "aka": [
+        "Abby Singer shot"
+      ],
+      "category": "On set",
+      "definition": "The second-to-last shot of the day, named after an assistant director who was known for announcing it. It warns departments that the day is almost done.",
+      "see_also": [
+        "martini-shot",
+        "wrap"
+      ]
+    },
+    {
+      "term": "Above the line",
+      "slug": "above-the-line",
+      "aka": [
+        "ATL"
+      ],
+      "category": "Budget and accounting",
+      "definition": "The part of a budget for the key creative people whose fees are agreed before shooting starts. Think of the rights to the story, the writer, the [producers](/production-roles/producer/), the director and the lead cast. The name comes from the line that separates these costs from the rest on the [topsheet](/insights/above-the-line-vs-below-the-line/).",
+      "see_also": [
+        "below-the-line",
+        "topsheet"
+      ]
+    },
+    {
+      "term": "Actuals",
+      "slug": "actuals",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "The costs that have really been booked so far, from paid invoices, payroll and receipts. Actuals are compared with the budget to see where the money went. They lag behind reality, because an invoice often arrives weeks after the work was done.",
+      "see_also": [
+        "commitments",
+        "cost-report",
+        "efc"
+      ]
+    },
+    {
+      "term": "ADR (automated dialogue replacement)",
+      "slug": "adr",
+      "aka": [
+        "dubbing",
+        "looping",
+        "post-sync"
+      ],
+      "category": "Post-production",
+      "definition": "Re-recording an actor's lines in a studio after the shoot, in sync with the picture. It is used when the on-set sound is unusable, for example because of a plane overhead, or when a line needs to change. Actors are booked for ADR sessions, so it is a cost to plan for.",
+      "see_also": [
+        "foley",
+        "sound-mix"
+      ]
+    },
+    {
+      "term": "Apple box",
+      "slug": "apple-box",
+      "aka": [
+        "apple"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A sturdy wooden box in standard sizes used to raise an actor, a camera or a piece of equipment. A full apple, half apple, quarter apple and a thin pancake are the usual sizes. It is one of the most used items on any set.",
+      "see_also": [
+        "grips",
+        "c-stand"
+      ]
+    },
+    {
+      "term": "Aspect ratio",
+      "slug": "aspect-ratio",
+      "aka": [],
+      "category": "Camera, light and sound",
+      "definition": "The shape of the picture, written as width to height. 16:9 is the standard widescreen TV shape, while many cinema films use wider shapes like 2.39:1. Social media often asks for vertical 9:16. It is chosen early because it affects framing on set.",
+      "see_also": [
+        "frame-rate",
+        "delivery-specifications"
+      ]
+    },
+    {
+      "term": "Assembly",
+      "slug": "assembly",
+      "aka": [
+        "assembly edit",
+        "editor's assembly"
+      ],
+      "category": "Post-production",
+      "definition": "The first version of the edit, with every scene put together in script order and little trimming. The [editor](/production-roles/editor/) often builds it during the shoot, so the director can see what is missing. An assembly is usually much longer than the finished film.",
+      "see_also": [
+        "rough-cut",
+        "offline-edit",
+        "directors-cut"
+      ]
+    },
+    {
+      "term": "Attachment",
+      "slug": "attachment",
+      "aka": [
+        "attached talent"
+      ],
+      "category": "Development and rights",
+      "definition": "A director, actor or other key person who has formally agreed to be part of a project, usually through a signed letter of intent or a deal memo. Strong attachments make a project easier to finance because they help investors and buyers estimate its value.",
+      "see_also": [
+        "packaging",
+        "letter-of-intent",
+        "pre-sale"
+      ]
+    },
+    {
+      "term": "AVOD",
+      "slug": "avod",
+      "aka": [
+        "advertising video on demand"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Advertising video on demand, where viewers watch for free and the service earns money from ads. Free ad supported channels, known as FAST, are a related model. AVOD often comes later in the release windows.",
+      "see_also": [
+        "vod",
+        "svod",
+        "tvod"
+      ]
+    },
+    {
+      "term": "Award",
+      "slug": "award",
+      "aka": [
+        "job award"
+      ],
+      "category": "Commercials",
+      "definition": "The moment an agency or brand confirms which production company and director get the job, after the bidding. The award usually comes with a signed-off budget and the start of pre-production. Before the award, work on a bid is normally unpaid.",
+      "see_also": [
+        "bid",
+        "triple-bid",
+        "ppm"
+      ]
+    },
+    {
+      "term": "Backend",
+      "slug": "backend",
+      "aka": [
+        "back end"
+      ],
+      "category": "Financing and money",
+      "definition": "A share of a film's income or profits paid to producers, talent or investors after release, on top of any upfront fee. How valuable it is depends on how it is defined in the contract and where it sits in the waterfall.",
+      "see_also": [
+        "net-profits",
+        "points",
+        "waterfall"
+      ]
+    },
+    {
+      "term": "Background",
+      "slug": "background",
+      "aka": [
+        "extras",
+        "background artists",
+        "supporting artists"
+      ],
+      "category": "On set",
+      "definition": "The people who appear in a scene without lines, such as passers-by or diners in a restaurant. They are arranged through [extras casting](/production-roles/extras-casting/). The number needed per day is planned in the breakdown, because it affects costs and catering.",
+      "see_also": [
+        "script-breakdown"
+      ]
+    },
+    {
+      "term": "Below the line",
+      "slug": "below-the-line",
+      "aka": [
+        "BTL"
+      ],
+      "category": "Budget and accounting",
+      "definition": "Everything in a budget that is not above the line. That covers the crew, equipment, locations, sets, travel, catering, insurance and post-production. These costs grow and shrink with the number of shooting days, so this is where most budget pressure and most savings sit. More in [above the line vs below the line](/insights/above-the-line-vs-below-the-line/).",
+      "see_also": [
+        "above-the-line",
+        "topsheet",
+        "fringes"
+      ]
+    },
+    {
+      "term": "Bid",
+      "slug": "bid",
+      "aka": [
+        "quote",
+        "estimate"
+      ],
+      "category": "Commercials",
+      "definition": "The production company's detailed cost estimate for making a commercial, submitted together with the director's treatment. It follows the agency's brief and covers crew, cast, locations, equipment, post and the production company's mark-up. The [commercials producer](/production-roles/commercials-producer/) prepares it, often on a format the agency prescribes.",
+      "see_also": [
+        "triple-bid",
+        "award",
+        "brief"
+      ]
+    },
+    {
+      "term": "Blocking",
+      "slug": "blocking",
+      "aka": [],
+      "category": "On set",
+      "definition": "Working out where actors stand and move during a scene, and when. It happens on set before lighting starts, so camera and lighting know what to prepare. Marks are put on the floor so actors hit the same spots in each take.",
+      "see_also": [
+        "rehearsal",
+        "first-team",
+        "setup"
+      ]
+    },
+    {
+      "term": "Boom microphone",
+      "slug": "boom-microphone",
+      "aka": [
+        "boom",
+        "boom mic"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A microphone on a long pole held just out of frame above the actors. It records natural-sounding dialogue and is operated by the [boom operator](/production-roles/boom-operator/).",
+      "see_also": [
+        "lavalier-microphone",
+        "wild-track"
+      ]
+    },
+    {
+      "term": "Bridge loan",
+      "slug": "bridge-loan",
+      "aka": [
+        "bridge financing",
+        "interim financing"
+      ],
+      "category": "Financing and money",
+      "definition": "A short term loan that covers cash needs until promised money actually arrives, for example a tax credit that only pays out after the film is finished or a fund that pays in instalments. The lender takes the future payment as security.",
+      "see_also": [
+        "tax-credit",
+        "cash-rebate",
+        "cashflow"
+      ]
+    },
+    {
+      "term": "Brief",
+      "slug": "brief",
+      "aka": [
+        "creative brief"
+      ],
+      "category": "Commercials",
+      "definition": "The document in which a brand or its agency explains what a commercial must achieve, such as the message, audience, deliverables, budget and timing. The production company and director respond to it with a treatment and a bid. Read how the process works in [commercials](/how-a-film-is-made/#commercials).",
+      "see_also": [
+        "treatment",
+        "bid",
+        "brand-manager"
+      ]
+    },
+    {
+      "term": "Budget lock",
+      "slug": "budget-lock",
+      "aka": [
+        "locked budget"
+      ],
+      "category": "Budget and accounting",
+      "definition": "The moment the budget is agreed and frozen, usually before financing closes or shooting starts. From then on, changes go through a formal process and every cost is measured against this locked version. Productions often keep the locked budget next to the latest working version to see what changed.",
+      "see_also": [
+        "topsheet",
+        "cost-report",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "Buyout",
+      "slug": "buyout",
+      "aka": [
+        "talent buyout"
+      ],
+      "category": "Commercials",
+      "definition": "A one-off payment that covers an actor's or model's fee for an agreed usage period, instead of paying them each time the commercial runs. For example, a fee might cover online use in three countries for one year. In some markets, union contracts use repeat fees instead of buyouts.",
+      "see_also": [
+        "usage-rights",
+        "music-licence"
+      ]
+    },
+    {
+      "term": "C-stand",
+      "slug": "c-stand",
+      "aka": [
+        "century stand"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A metal stand with three legs and an adjustable arm, used to hold flags, small lights, reflectors and other gear. It belongs to the grip kit and is everywhere on set.",
+      "see_also": [
+        "grips",
+        "apple-box"
+      ]
+    },
+    {
+      "term": "Call sheet",
+      "slug": "call-sheet",
+      "aka": [],
+      "category": "On set",
+      "definition": "The daily plan for everyone on a shoot, sent the evening before. It lists the call time, locations, scenes, which cast are needed when, weather, parking, the nearest hospital and contact numbers. The [second assistant director](/production-roles/second-assistant-director/) usually writes it, based on the shooting schedule.",
+      "see_also": [
+        "call-time",
+        "shooting-schedule"
+      ]
+    },
+    {
+      "term": "Call time",
+      "slug": "call-time",
+      "aka": [
+        "call"
+      ],
+      "category": "On set",
+      "definition": "The time a person has to be at work, as listed on the call sheet. The general crew call is when the working day starts, and cast and departments often have their own earlier or later calls. Being late for call is one of the few things that really annoys a film crew.",
+      "see_also": [
+        "call-sheet",
+        "turnaround-rest"
+      ]
+    },
+    {
+      "term": "Cash flow schedule",
+      "slug": "cash-flow-schedule",
+      "aka": [
+        "cash flow",
+        "cashflow"
+      ],
+      "category": "Budget and accounting",
+      "definition": "A plan showing how much money the production needs each week or month, and when. It matters because financiers often pay in stages, while crew and suppliers want paying on time. A budget can be fine on paper and still run out of cash in week three.",
+      "see_also": [
+        "cost-report",
+        "budget-lock"
+      ]
+    },
+    {
+      "term": "Cash rebate",
+      "slug": "cash-rebate",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "A government incentive that pays back a percentage of the money a production spends locally, directly in cash after an audit of the costs. Unlike a tax credit it does not run through a tax return. Rates, caps and payment timing differ per country. Compare them on [film incentives](/compare-film-incentives/).",
+      "see_also": [
+        "tax-credit",
+        "soft-money",
+        "qualifying-spend"
+      ]
+    },
+    {
+      "term": "Chain of title",
+      "slug": "chain-of-title",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "The paper trail of contracts that proves a producer owns or controls all rights in a project, from the original book or idea through every writer's agreement and option. Financiers, sales agents and insurers check it before they commit money. A gap in the chain can stop a film from being sold. A [production lawyer](/production-roles/production-lawyer/) usually assembles it.",
+      "see_also": [
+        "option",
+        "e-and-o-insurance",
+        "clearances"
+      ]
+    },
+    {
+      "term": "Chart of accounts",
+      "slug": "chart-of-accounts",
+      "aka": [
+        "account codes"
+      ],
+      "category": "Budget and accounting",
+      "definition": "The fixed list of numbered cost codes a production uses to sort every cost. For example 2100 might be camera crew and 2110 camera equipment rental. Because the budget, purchase orders and invoices all use the same codes, the [production accountant](/production-roles/production-accountant/) can compare plan and reality line by line.",
+      "see_also": [
+        "topsheet",
+        "cost-report",
+        "purchase-order"
+      ]
+    },
+    {
+      "term": "Clearances",
+      "slug": "clearances",
+      "aka": [
+        "rights clearance"
+      ],
+      "category": "Development and rights",
+      "definition": "Getting permission to use anything in a film that someone else owns, such as music, artwork, logos, footage, location signage or a real name. Cleared items are logged in a clearance report that insurers and distributors ask for at delivery. A [rights and clearances manager](/production-roles/rights-and-clearances-manager/) often handles this.",
+      "see_also": [
+        "chain-of-title",
+        "e-and-o-insurance",
+        "deliverables"
+      ]
+    },
+    {
+      "term": "Client approval",
+      "slug": "client-approval",
+      "aka": [
+        "sign-off"
+      ],
+      "category": "Commercials",
+      "definition": "The formal sign-off by the brand at each step of a commercial, from script and casting to the offline edit and the final versions. On the shoot the client and agency often watch on a monitor and approve takes. Changes after approval normally count as extra costs.",
+      "see_also": [
+        "ppm",
+        "brief",
+        "offline-edit"
+      ]
+    },
+    {
+      "term": "Closed captions",
+      "slug": "closed-captions",
+      "aka": [
+        "captions",
+        "SDH",
+        "subtitles for the deaf and hard of hearing"
+      ],
+      "category": "Post-production",
+      "definition": "On-screen text for viewers who are deaf or hard of hearing, which the viewer can switch on or off. Besides dialogue they describe sounds and who is speaking, such as \"[door slams]\". Broadcasters and streamers usually require them as a delivery item.",
+      "see_also": [
+        "subtitles",
+        "delivery-schedule",
+        "qc"
+      ]
+    },
+    {
+      "term": "Co-production",
+      "slug": "co-production",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "A project made jointly by production companies from two or more countries or companies, each bringing money, crew or locations and each owning part of the rights. In Europe, co-productions are a common way to unlock public funds and incentives from several countries at once. Each partner is usually a [co-producer](/production-roles/co-producer/).",
+      "see_also": [
+        "co-production-treaty",
+        "soft-money",
+        "finance-plan"
+      ]
+    },
+    {
+      "term": "Co-production treaty",
+      "slug": "co-production-treaty",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "An agreement between countries that lets an official co-production count as a national film in each partner country. That gives it access to each country's public funds and incentives. Treaties set minimum shares of money and creative input per partner, and multilateral conventions cover many countries at once.",
+      "see_also": [
+        "co-production",
+        "soft-money",
+        "tax-credit"
+      ]
+    },
+    {
+      "term": "Collection account",
+      "slug": "collection-account",
+      "aka": [
+        "CAMA"
+      ],
+      "category": "Financing and money",
+      "definition": "An independent account that receives all income from a film and pays it out according to the waterfall. It is run by a collection account manager under a collection account management agreement, or CAMA, so investors can trust that payments are made correctly.",
+      "see_also": [
+        "waterfall",
+        "recoupment"
+      ]
+    },
+    {
+      "term": "Colour grading",
+      "slug": "colour-grading",
+      "aka": [
+        "grade",
+        "color grading",
+        "colour correction"
+      ],
+      "category": "Post-production",
+      "definition": "Adjusting the colour, brightness and contrast of every shot so the film looks consistent and has the intended mood. A [colourist](/production-roles/colourist/) does this with the director and director of photography after picture lock. A night scene shot in daylight, for example, can be made to look like dusk in the grade.",
+      "see_also": [
+        "conform",
+        "online-edit",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "Commission",
+      "slug": "commission",
+      "aka": [
+        "green light"
+      ],
+      "category": "TV and unscripted",
+      "definition": "A broadcaster or streamer's decision to order and pay for a programme from a production company. It is agreed by a [commissioning editor](/production-roles/commissioning-editor/) and sets the number of episodes, the budget and the delivery dates. Read more about the [TV commission](/how-a-film-is-made/#tv-commission) process.",
+      "see_also": [
+        "licence-fee",
+        "commissioning-editor",
+        "deficit-financing"
+      ]
+    },
+    {
+      "term": "Commissioning editor",
+      "slug": "commissioning-editor",
+      "aka": [
+        "commissioner"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The person at a broadcaster or streamer who decides which programme ideas get made for their genre or channel. Producers pitch to them, and after a commission they follow the production and give notes on cuts. See the full role description of the [commissioning editor](/production-roles/commissioning-editor/).",
+      "see_also": [
+        "commission",
+        "pitch",
+        "tariff"
+      ]
+    },
+    {
+      "term": "Commitments",
+      "slug": "commitments",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "Money the production has promised but not yet paid, for example a signed equipment rental or a purchase order for set materials. Counting commitments next to actuals gives a truer picture of spending than invoices alone.",
+      "see_also": [
+        "actuals",
+        "purchase-order",
+        "cost-report"
+      ]
+    },
+    {
+      "term": "Company move",
+      "slug": "company-move",
+      "aka": [
+        "unit move"
+      ],
+      "category": "On set",
+      "definition": "Moving the whole unit from one location to another during the same shooting day. It costs a lot of time, because everything has to be packed, driven and set up again. Schedulers try to avoid it, and it is marked clearly on the call sheet.",
+      "see_also": [
+        "unit-base",
+        "shooting-schedule"
+      ]
+    },
+    {
+      "term": "Completion bond",
+      "slug": "completion-bond",
+      "aka": [
+        "completion guarantee"
+      ],
+      "category": "Financing and money",
+      "definition": "A guarantee from a specialist company to the financiers that a film will be finished and delivered on time and on budget. If things go badly wrong, the [completion guarantor](/production-roles/completion-guarantor/) can step in, fund the overrun or even take over the production. Banks usually require one before lending.",
+      "see_also": [
+        "contingency",
+        "e-and-o-insurance",
+        "finance-plan"
+      ]
+    },
+    {
+      "term": "Compliance",
+      "slug": "compliance",
+      "aka": [],
+      "category": "TV and unscripted",
+      "definition": "Checking that a programme meets the broadcaster's rules and the law before transmission, for example on fairness to people shown, offensive language before a certain hour, product placement and consent. A [compliance manager](/production-roles/compliance-manager/) or the producer fills in a compliance form for each episode. The rules differ per country and broadcaster.",
+      "see_also": [
+        "release-form",
+        "contributor",
+        "slot"
+      ]
+    },
+    {
+      "term": "Conform",
+      "slug": "conform",
+      "aka": [
+        "conforming"
+      ],
+      "category": "Post-production",
+      "definition": "Rebuilding the locked edit with the original high-quality camera files, using a list of every shot and its timecode exported from the offline edit. The conformed timeline is what goes into the colour grade and the online edit.",
+      "see_also": [
+        "picture-lock",
+        "online-edit",
+        "colour-grading"
+      ]
+    },
+    {
+      "term": "Contingency",
+      "slug": "contingency",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "A reserve in the budget for things nobody can predict, like a lost shooting day to weather or a location that falls through. It is usually a percentage of the total, added at the bottom of the budget. Financiers and completion guarantors often require one. See [how much contingency a production needs](/insights/how-much-contingency-does-a-production-need/).",
+      "see_also": [
+        "overage",
+        "efc",
+        "topsheet"
+      ]
+    },
+    {
+      "term": "Continuity",
+      "slug": "continuity",
+      "aka": [
+        "script continuity"
+      ],
+      "category": "On set",
+      "definition": "Keeping details the same between shots of a scene filmed at different times, like which hand holds the glass or how full it is. The [script supervisor](/production-roles/script-supervisor/) keeps notes and photos so the shots cut together without mistakes.",
+      "see_also": [
+        "master-shot",
+        "coverage"
+      ]
+    },
+    {
+      "term": "Contributor",
+      "slug": "contributor",
+      "aka": [
+        "participant",
+        "talent"
+      ],
+      "category": "TV and unscripted",
+      "definition": "A real person who appears in an unscripted programme, such as an interviewee, a competitor or the family in a docusoap. Contributors are not actors and usually are not paid a fee, though expenses may be covered. Producers have a duty of care towards them, and every contributor signs a release form.",
+      "see_also": [
+        "release-form",
+        "compliance",
+        "reality"
+      ]
+    },
+    {
+      "term": "Cost report",
+      "slug": "cost-report",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "A regular report, often weekly during the shoot, that shows for each budget line what was budgeted, what has been spent, what is committed and what the line is now expected to cost in total. It is the main tool producers and financiers use to see a problem early. See [what a production cost report is](/insights/what-is-a-production-cost-report/).",
+      "see_also": [
+        "efc",
+        "actuals",
+        "commitments"
+      ]
+    },
+    {
+      "term": "Coverage",
+      "slug": "coverage",
+      "aka": [],
+      "category": "On set",
+      "definition": "All the different shots filmed for one scene, such as a wide shot, medium shots and close-ups of each actor. More coverage gives the editor more choice but takes more time on set.",
+      "see_also": [
+        "master-shot",
+        "setup"
+      ]
+    },
+    {
+      "term": "Credits",
+      "slug": "credits",
+      "aka": [
+        "end credits",
+        "titles"
+      ],
+      "category": "Post-production",
+      "definition": "The names of cast, crew, funders and suppliers shown at the start or end of a production. Many credits are fixed by contract, including their order, size and wording, so the credit list is checked carefully before the online edit. Opening titles and the main title are usually designed separately from the end roller.",
+      "see_also": [
+        "online-edit",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "Cue sheet",
+      "slug": "cue-sheet",
+      "aka": [
+        "music cue sheet"
+      ],
+      "category": "Post-production",
+      "definition": "A list of every piece of music in a finished production, with its title, composer, publisher, timing and how it is used. Broadcasters and collecting societies use it to pay royalties to the music owners. It is a standard item on a delivery list.",
+      "see_also": [
+        "music-licence",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "Cut-down",
+      "slug": "cut-down",
+      "aka": [
+        "edit-down",
+        "lift"
+      ],
+      "category": "Commercials",
+      "definition": "A shorter version made from the main commercial, such as a 15 or 6 second edit from a 30 second spot, often for social media or online ads. Cut-downs are usually agreed in the bid as deliverables, because each one adds edit, grade and sound time.",
+      "see_also": [
+        "usage-rights",
+        "bid",
+        "master"
+      ]
+    },
+    {
+      "term": "Dailies",
+      "slug": "dailies",
+      "aka": [
+        "rushes"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "The footage from a shooting day, prepared so the director, producers and editor can watch it, usually the next day. Watching dailies is how teams spot problems with focus, performance or coverage while it can still be fixed. In the UK and Europe they are often called rushes.",
+      "see_also": [
+        "take",
+        "digital-imaging-technician",
+        "lut"
+      ]
+    },
+    {
+      "term": "Day out of days",
+      "slug": "day-out-of-days",
+      "aka": [
+        "DOOD"
+      ],
+      "category": "Pre-production",
+      "definition": "A chart that shows for each actor on which days of the schedule they work, travel, rehearse or are on hold. It is used to plan cast deals and costs. An actor needed on day 2 and day 20 may have to be paid for the days in between.",
+      "see_also": [
+        "shooting-schedule",
+        "script-breakdown"
+      ]
+    },
+    {
+      "term": "Day-and-date",
+      "slug": "day-and-date",
+      "aka": [
+        "day and date release"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Releasing a film on the same day in more than one channel or territory, for example in cinemas and on a streaming service at once, or worldwide on one date. It reaches more viewers quickly but cuts out the exclusive cinema window.",
+      "see_also": [
+        "release-window",
+        "theatrical-release",
+        "vod"
+      ]
+    },
+    {
+      "term": "DCP (Digital Cinema Package)",
+      "slug": "dcp",
+      "aka": [
+        "DCP",
+        "Digital Cinema Package"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "The standard set of files used to show a film in cinemas, holding picture, sound and subtitles in encrypted or unencrypted form. Cinemas load the DCP onto their server. Encrypted DCPs need a key, called a KDM, for each screen and date.",
+      "see_also": [
+        "deliverables",
+        "theatrical-release"
+      ]
+    },
+    {
+      "term": "Deferment",
+      "slug": "deferment",
+      "aka": [
+        "deferred fee"
+      ],
+      "category": "Financing and money",
+      "definition": "An agreement in which cast or crew accept part of their fee later, out of the film's income, instead of upfront. It lowers the cash budget but the deferred money is only paid if the film earns enough. Low budget films use deferments most.",
+      "see_also": [
+        "recoupment",
+        "waterfall",
+        "backend"
+      ]
+    },
+    {
+      "term": "Deficit financing",
+      "slug": "deficit-financing",
+      "aka": [
+        "deficit"
+      ],
+      "category": "TV and unscripted",
+      "definition": "Covering the gap between what a broadcaster pays and what a programme actually costs. The producer fills it with money from distributors, co-producers, [tax incentives](/compare-film-incentives/) or its own funds, and hopes to earn it back through international sales. It is common for high-end drama and rare for cheaper factual shows.",
+      "see_also": [
+        "licence-fee",
+        "commission",
+        "gap-financing"
+      ]
+    },
+    {
+      "term": "Deliverables",
+      "slug": "deliverables",
+      "aka": [
+        "delivery materials"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "The actual files and documents handed over under the delivery schedule. Typical deliverables include the master files, a DCP, the M&E track, subtitle files, music cue sheets, the chain of title, E&O insurance certificate, stills and the trailer. A [post-production supervisor](/production-roles/post-production-supervisor/) usually manages them.",
+      "see_also": [
+        "delivery-schedule",
+        "dcp",
+        "m-and-e-track"
+      ]
+    },
+    {
+      "term": "Delivery schedule",
+      "slug": "delivery-schedule",
+      "aka": [],
+      "category": "Delivery and distribution",
+      "definition": "The list in a sales or distribution contract of every item the producer must hand over before payment, with technical specs and deadlines. It covers picture and sound files, subtitles, legal documents and marketing materials. Missing items can delay or block payment. See [delivery](/how-a-film-is-made/#delivery).",
+      "see_also": [
+        "deliverables",
+        "qc",
+        "chain-of-title"
+      ]
+    },
+    {
+      "term": "Development deal",
+      "slug": "development-deal",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "An agreement in which a studio, broadcaster or fund pays a producer or writer to develop a project, for example to write a script or a series bible, without yet committing to make it. The funder usually gets the first right to produce it and is repaid if someone else does.",
+      "see_also": [
+        "greenlight",
+        "turnaround-rest",
+        "development-hell"
+      ]
+    },
+    {
+      "term": "Director's cut",
+      "slug": "directors-cut",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "The version of the edit the [director](/production-roles/director/) delivers before the producers and financiers give their notes. Many contracts give the director a set number of weeks to make it. The term is also used for a later release that restores the director's preferred version.",
+      "see_also": [
+        "rough-cut",
+        "final-cut",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "Distributor",
+      "slug": "distributor",
+      "aka": [],
+      "category": "Delivery and distribution",
+      "definition": "A company that releases a film to audiences in one or more territories, deciding on the release date, marketing and channels such as cinemas, TV and streaming. The [distributor](/production-roles/distributor/) pays the producer a minimum guarantee or a share of income and keeps a distribution fee.",
+      "see_also": [
+        "territory",
+        "p-and-a",
+        "minimum-guarantee"
+      ]
+    },
+    {
+      "term": "Docusoap",
+      "slug": "docusoap",
+      "aka": [
+        "docuseries",
+        "fly-on-the-wall"
+      ],
+      "category": "TV and unscripted",
+      "definition": "An observational series that follows real people at work or at home over several episodes, edited with storylines like a soap. A series about the staff of an airport or a vet practice is a typical example. Most of the story is shaped in the edit from many hours of footage.",
+      "see_also": [
+        "factual",
+        "reality",
+        "contributor"
+      ]
+    },
+    {
+      "term": "Dolly",
+      "slug": "dolly",
+      "aka": [
+        "dolly shot",
+        "tracking shot"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A wheeled platform for the camera, often running on tracks, so the camera can move smoothly during a shot. A [dolly grip](/production-roles/dolly-grip/) pushes it and hits the marks on every take.",
+      "see_also": [
+        "grips"
+      ]
+    },
+    {
+      "term": "E&O insurance",
+      "slug": "e-and-o-insurance",
+      "aka": [
+        "errors and omissions insurance"
+      ],
+      "category": "Financing and money",
+      "definition": "Errors and omissions insurance covers a production against legal claims over its content, such as defamation, privacy, copyright or trademark infringement. Distributors and broadcasters almost always require it before they accept delivery, and insurers check the chain of title and clearances first.",
+      "see_also": [
+        "chain-of-title",
+        "clearances",
+        "deliverables"
+      ]
+    },
+    {
+      "term": "EFC (estimate for completion)",
+      "slug": "efc",
+      "aka": [
+        "estimated final cost",
+        "estimate at completion"
+      ],
+      "category": "Budget and accounting",
+      "definition": "The amount a budget line, or the whole production, is now expected to cost by the end. It adds what has been spent and committed to a fresh estimate of what is still to come. When the EFC is higher than the budget, the line is heading for an overage. It is the key column in a [cost report](/insights/what-is-a-production-cost-report/).",
+      "see_also": [
+        "cost-report",
+        "actuals",
+        "overage"
+      ]
+    },
+    {
+      "term": "Entertainment",
+      "slug": "entertainment",
+      "aka": [
+        "entertainment programming",
+        "shiny floor"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The TV genre for light shows made to entertain, such as game shows, talent competitions, talk shows and panel shows. Many are studio-based and multi-camera, with a presenter and an audience. Big studio entertainment shows are sometimes called shiny floor shows.",
+      "see_also": [
+        "format",
+        "multi-camera",
+        "unscripted"
+      ]
+    },
+    {
+      "term": "Equity",
+      "slug": "equity",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "Money invested in a film in return for ownership and a share of future profits. Equity is usually repaid last, after loans and other financiers, so it carries the highest risk and normally asks for the highest return. Private investors and some funds put in equity. See [film investors](/compare-film-investors/).",
+      "see_also": [
+        "recoupment",
+        "waterfall",
+        "net-profits"
+      ]
+    },
+    {
+      "term": "Factual",
+      "slug": "factual",
+      "aka": [
+        "factual programming",
+        "non-fiction"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The broad TV genre for programmes about real life, such as documentaries, history, science, nature and observational series. Broadcasters often split it into specialist factual and factual entertainment, which is lighter in tone. It is one of the main genres in [unscripted TV](/how-a-film-is-made/#kinds-of-production).",
+      "see_also": [
+        "unscripted",
+        "docusoap",
+        "reality"
+      ]
+    },
+    {
+      "term": "Festival premiere",
+      "slug": "festival-premiere",
+      "aka": [
+        "world premiere"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "The first public screening of a film at a festival. Major festivals often require a world, international or regional premiere, so where a film premieres is a strategic choice that affects which other festivals it can enter and how buyers see it. Browse [film festivals](/compare-film-festivals/).",
+      "see_also": [
+        "film-market",
+        "sales-agent",
+        "screener"
+      ]
+    },
+    {
+      "term": "Film market",
+      "slug": "film-market",
+      "aka": [],
+      "category": "Delivery and distribution",
+      "definition": "A trade event where sales agents sell distribution rights to buyers, often held alongside a major festival. Sales agents run screenings and meetings, and projects in development look for co-producers and financiers. Several markets run through the year. See [film festivals and markets](/compare-film-festivals/).",
+      "see_also": [
+        "sales-agent",
+        "festival-premiere",
+        "pre-sale"
+      ]
+    },
+    {
+      "term": "Finance plan",
+      "slug": "finance-plan",
+      "aka": [
+        "financing plan"
+      ],
+      "category": "Financing and money",
+      "definition": "An overview of where all the money for a production comes from, set against the total budget. A typical independent finance plan lists public funding, tax incentives, pre-sales, equity and gap financing, and shows what is confirmed and what is still open. See [financing](/how-a-film-is-made/#financing).",
+      "see_also": [
+        "equity",
+        "pre-sale",
+        "gap-financing"
+      ]
+    },
+    {
+      "term": "Fine cut",
+      "slug": "fine-cut",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "A near-final version of the edit where the structure is settled and the work is about trimming frames, pacing and small changes. After the last notes on the fine cut, the edit is locked.",
+      "see_also": [
+        "rough-cut",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "First team and second team",
+      "slug": "first-team",
+      "aka": [
+        "first team",
+        "second team"
+      ],
+      "category": "On set",
+      "definition": "First team are the actors in the scene. Second team are the stand-ins who take their places while the crew lights and sets up the shot. When the assistant director calls for first team, the actors are needed on set for the take.",
+      "see_also": [
+        "blocking"
+      ]
+    },
+    {
+      "term": "First unit and second unit",
+      "slug": "first-unit",
+      "aka": [
+        "main unit",
+        "second unit"
+      ],
+      "category": "On set",
+      "definition": "The first unit is the main crew with the director and principal cast. A second unit is a smaller crew that films shots without the main actors, such as landscapes, stunts, car chases or inserts of hands and objects. It has its own director and saves time for the first unit.",
+      "see_also": [
+        "unit"
+      ]
+    },
+    {
+      "term": "Foley",
+      "slug": "foley",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "Everyday sounds performed and recorded in a studio to match the picture, such as footsteps, rustling clothes or a cup being put down. Foley artists watch the scene and perform the sounds live. It makes a scene sound full and is also needed for foreign-language versions.",
+      "see_also": [
+        "adr",
+        "sound-mix",
+        "stems"
+      ]
+    },
+    {
+      "term": "Format",
+      "slug": "format",
+      "aka": [
+        "TV format"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The fixed recipe of a show (its rules, structure, look and recurring elements) that can be sold and remade in other countries. A quiz show made in one country can be licensed to a broadcaster elsewhere, which then produces its own local version. Format owners usually provide a production bible and a consultant with the licence.",
+      "see_also": [
+        "paper-format",
+        "licence-fee",
+        "unscripted"
+      ]
+    },
+    {
+      "term": "Frame rate",
+      "slug": "frame-rate",
+      "aka": [
+        "fps",
+        "frames per second"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "The number of images recorded per second. 24 frames per second is the classic film look, while TV in Europe often uses 25 and in the US around 30. Shooting at a higher rate and playing back at the normal rate gives slow motion.",
+      "see_also": [
+        "aspect-ratio",
+        "timecode"
+      ]
+    },
+    {
+      "term": "Fringes",
+      "slug": "fringes",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "The costs on top of a person's fee, such as employer taxes, pension, holiday pay and union or guild contributions. Budgets add them as a percentage per line rather than typing them in by hand. The rules differ a lot between the US, the UK and European countries, so the percentages are set per production.",
+      "see_also": [
+        "below-the-line",
+        "payroll",
+        "topsheet"
+      ]
+    },
+    {
+      "term": "Gaffer tape",
+      "slug": "gaffer-tape",
+      "aka": [
+        "gaff tape"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A strong cloth tape that holds well and comes off without leaving marks. Crews use it for almost everything, from taping down cables to marking actors' positions. It is different from duct tape, which leaves sticky residue.",
+      "see_also": [
+        "gaffer",
+        "sparks"
+      ]
+    },
+    {
+      "term": "Gallery",
+      "slug": "gallery",
+      "aka": [
+        "control room"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The control room next to a TV studio where the director, vision mixer, sound and graphics team run a multi-camera show. In the US it is usually called the control room. The gallery talks to the studio floor through the [floor manager](/production-roles/floor-manager/).",
+      "see_also": [
+        "multi-camera",
+        "outside-broadcast"
+      ]
+    },
+    {
+      "term": "Gap financing",
+      "slug": "gap-financing",
+      "aka": [
+        "gap loan"
+      ],
+      "category": "Financing and money",
+      "definition": "A loan that covers the last part of a budget not yet secured, lent against the expected value of the territories that have not been sold. Specialist lenders charge more for it than for loans against signed contracts because it is riskier. The gap is repaid from later sales.",
+      "see_also": [
+        "pre-sale",
+        "finance-plan",
+        "bridge-loan"
+      ]
+    },
+    {
+      "term": "Golden time",
+      "slug": "golden-time",
+      "aka": [
+        "golden hours"
+      ],
+      "category": "On set",
+      "definition": "A higher overtime rate that starts after a long day or late at night, for example double or more of the normal rate. The exact trigger depends on the union agreement and country. Avoiding golden time is a big reason why schedules are planned so tightly.",
+      "see_also": [
+        "overtime",
+        "turnaround-rest"
+      ]
+    },
+    {
+      "term": "Green screen",
+      "slug": "green-screen",
+      "aka": [
+        "blue screen",
+        "chroma key"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A bright green or blue background behind the actors that is replaced on a computer afterwards with another image. Green is used most because it is far from skin tones. It needs careful even lighting, and it is planned with the VFX team. A newer alternative is filming in front of large LED screens.",
+      "see_also": [
+        "vfx-vs-sfx",
+        "virtual-production"
+      ]
+    },
+    {
+      "term": "Greenlight",
+      "slug": "greenlight",
+      "aka": [
+        "green light"
+      ],
+      "category": "Development and rights",
+      "definition": "The decision to fund a project and move it into production. For a studio film, the studio greenlights it. For an independent film, the moment is reached when the finance plan is closed and the money is committed. In TV, a commission is the greenlight.",
+      "see_also": [
+        "development-deal",
+        "finance-plan",
+        "commission"
+      ]
+    },
+    {
+      "term": "Grips",
+      "slug": "grips",
+      "aka": [
+        "grip department"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "The crew members who move and support the camera and shape light. They build and push dollies, cranes and rigs, and set flags and frames to block or soften light. They are led by the [key grip](/production-roles/key-grip/). Exact tasks differ between the US and Europe.",
+      "see_also": [
+        "sparks",
+        "dolly",
+        "c-stand"
+      ]
+    },
+    {
+      "term": "Hot cost",
+      "slug": "hot-cost",
+      "aka": [
+        "hot costs"
+      ],
+      "category": "Budget and accounting",
+      "definition": "A quick daily cost report during the shoot. It compares the day as planned with the day as it happened, such as overtime hours, extra crew or meals, so the producer knows the same evening if a day cost more than budgeted. Not to be confused with the full weekly [cost report](/insights/what-is-a-production-cost-report/).",
+      "see_also": [
+        "cost-report",
+        "overtime",
+        "call-sheet"
+      ]
+    },
+    {
+      "term": "Indie film",
+      "slug": "indie-film",
+      "aka": [
+        "independent film"
+      ],
+      "category": "Development and rights",
+      "definition": "A film made outside the big studios, financed by the producer piecing together money from several sources such as public funds, pre-sales, tax incentives and private equity. The producer keeps more control and owns more of the rights, but carries more risk. Budgets range from tiny to large. See [kinds of production](/how-a-film-is-made/#kinds-of-production).",
+      "see_also": [
+        "studio-film",
+        "gap-financing",
+        "pre-sale"
+      ]
+    },
+    {
+      "term": "Intellectual property (IP)",
+      "slug": "intellectual-property",
+      "aka": [
+        "IP"
+      ],
+      "category": "Development and rights",
+      "definition": "The creative material a production is built on and the legal rights to it, such as a novel, a true story, a game, a format or an original script. Owning or controlling the IP is what lets a producer make and sell the project. In industry talk, existing IP means a story the audience already knows.",
+      "see_also": [
+        "option",
+        "chain-of-title",
+        "life-rights"
+      ]
+    },
+    {
+      "term": "Lavalier microphone",
+      "slug": "lavalier-microphone",
+      "aka": [
+        "lav",
+        "radio mic",
+        "lapel mic"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A small microphone clipped to or hidden in an actor's clothing, usually with a wireless transmitter. It is used next to the boom microphone when a boom cannot get close enough.",
+      "see_also": [
+        "boom-microphone",
+        "room-tone"
+      ]
+    },
+    {
+      "term": "Licence fee",
+      "slug": "licence-fee",
+      "aka": [
+        "license fee"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The amount a broadcaster pays a production company for the right to show a programme for a set period and territory. The production company often keeps other rights, such as international sales. If the licence fee is lower than the budget, the gap is called a deficit. Not to be confused with the household TV licence some countries have.",
+      "see_also": [
+        "deficit-financing",
+        "commission",
+        "tariff"
+      ]
+    },
+    {
+      "term": "Location release",
+      "slug": "location-release",
+      "aka": [
+        "location agreement"
+      ],
+      "category": "Pre-production",
+      "definition": "The signed agreement with the owner of a location that allows filming there, for set dates and a set fee. It usually also allows the production to use the footage. Public places often also need a permit from the local authority or film office.",
+      "see_also": [
+        "recce"
+      ]
+    },
+    {
+      "term": "Logline",
+      "slug": "logline",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A one or two sentence summary of a story that names the main character, what they want and what stands in the way. Producers, agents and financiers use it to decide in seconds whether to read further. For example, a retired lighthouse keeper must hide a stranded whale from a town that wants it gone.",
+      "see_also": [
+        "synopsis",
+        "treatment",
+        "pitch-deck"
+      ]
+    },
+    {
+      "term": "LUT",
+      "slug": "lut",
+      "aka": [
+        "look-up table"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "Short for look-up table. A small file that converts the flat, grey-looking footage from a digital camera into a more natural or stylised look. LUTs are used on set monitors and for dailies, so everyone sees roughly the intended look before the final grade.",
+      "see_also": [
+        "dailies",
+        "colour-grading"
+      ]
+    },
+    {
+      "term": "M&E track",
+      "slug": "m-and-e-track",
+      "aka": [
+        "music and effects track",
+        "M&E"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "A version of the soundtrack with music and effects but without dialogue, so a distributor in another country can dub the film into its own language. It is a standard deliverable for international sales. Background sounds recorded with the dialogue have to be rebuilt so nothing is missing.",
+      "see_also": [
+        "deliverables",
+        "dubbing"
+      ]
+    },
+    {
+      "term": "Martini shot",
+      "slug": "martini-shot",
+      "aka": [],
+      "category": "On set",
+      "definition": "The last shot of the shooting day. The joke is that the next shot is in a glass. The first assistant director usually announces it, so the crew knows to start packing what is not needed.",
+      "see_also": [
+        "abby-singer",
+        "wrap"
+      ]
+    },
+    {
+      "term": "Master",
+      "slug": "master",
+      "aka": [
+        "final master",
+        "delivery master"
+      ],
+      "category": "Post-production",
+      "definition": "The finished, approved version of a production in the highest quality, from which all other copies are made. It is delivered as files in the exact format a buyer specifies, often with separate versions such as textless or with different audio. Getting the master accepted is usually what triggers the final payment.",
+      "see_also": [
+        "qc",
+        "stems",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "Master shot",
+      "slug": "master-shot",
+      "aka": [
+        "master",
+        "wide"
+      ],
+      "category": "On set",
+      "definition": "A wide shot that captures a whole scene from start to finish in one take, with all the actors in view. It is often filmed first, and the closer shots are filmed afterwards to cut into it.",
+      "see_also": [
+        "coverage",
+        "setup",
+        "continuity"
+      ]
+    },
+    {
+      "term": "Minimum guarantee (MG)",
+      "slug": "minimum-guarantee",
+      "aka": [
+        "MG"
+      ],
+      "category": "Financing and money",
+      "definition": "The fixed amount a distributor promises to pay for the rights to a film in its territory, regardless of how the film performs. It is an advance on the producer's share of income, so the distributor keeps the film's revenue until it has earned the MG back plus its fees and costs.",
+      "see_also": [
+        "pre-sale",
+        "recoupment",
+        "distributor"
+      ]
+    },
+    {
+      "term": "Mood film",
+      "slug": "mood-film",
+      "aka": [
+        "moodfilm",
+        "ripomatic"
+      ],
+      "category": "Commercials",
+      "definition": "A short edit made from existing footage and music to show the tone and feel of a commercial before it is shot. Agencies use it to sell an idea to the client, and directors use it in their treatment. Because it uses other people's material, it is for internal use only.",
+      "see_also": [
+        "treatment",
+        "brief"
+      ]
+    },
+    {
+      "term": "Multi-camera",
+      "slug": "multi-camera",
+      "aka": [
+        "multicam"
+      ],
+      "category": "TV and unscripted",
+      "definition": "Filming with several cameras at once, usually cut live or almost live from a control room. It is the standard way to make studio shows, sitcoms, sport and live events. The [studio director](/production-roles/studio-director/) calls the shots and the [vision mixer](/production-roles/vision-mixer/) switches between cameras.",
+      "see_also": [
+        "gallery",
+        "outside-broadcast",
+        "single-camera"
+      ]
+    },
+    {
+      "term": "Music licence",
+      "slug": "music-licence",
+      "aka": [
+        "music clearance"
+      ],
+      "category": "Post-production",
+      "definition": "Permission to use an existing piece of music in a production. A commercial track usually needs two licences, one for the song itself (the sync licence) and one for the specific recording (the master use licence). A [music supervisor](/production-roles/music-supervisor/) usually negotiates them, and the price depends on territories, media and term.",
+      "see_also": [
+        "sync-licence",
+        "cue-sheet",
+        "temp-music"
+      ]
+    },
+    {
+      "term": "Net profits",
+      "slug": "net-profits",
+      "aka": [
+        "net receipts"
+      ],
+      "category": "Financing and money",
+      "definition": "What is left of a film's income after distribution fees, costs, loans, investments and deferments have been paid back. Many contracts define net profits so narrowly that participants receive little or nothing, so experienced negotiators look closely at the definition.",
+      "see_also": [
+        "backend",
+        "points",
+        "recoupment"
+      ]
+    },
+    {
+      "term": "Offline edit",
+      "slug": "offline-edit",
+      "aka": [
+        "offline"
+      ],
+      "category": "Post-production",
+      "definition": "The creative stage of editing, where the [editor](/production-roles/editor/) and director build the story from the footage. It is usually done on lightweight copies of the camera files (proxies), so picture quality does not matter yet. It ends with a locked edit that the online edit then rebuilds at full quality. See how editing fits into [post-production](/how-a-film-is-made/#post-production).",
+      "see_also": [
+        "online-edit",
+        "rough-cut",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "One-liner",
+      "slug": "one-liner",
+      "aka": [
+        "one-line schedule"
+      ],
+      "category": "Pre-production",
+      "definition": "A short version of the shooting schedule with one line per scene. It shows the scene number, a few words on what happens, day or night, the location and the page count. It is the quick reference most crew members keep at hand.",
+      "see_also": [
+        "shooting-schedule",
+        "stripboard"
+      ]
+    },
+    {
+      "term": "Online edit",
+      "slug": "online-edit",
+      "aka": [
+        "online"
+      ],
+      "category": "Post-production",
+      "definition": "The technical finishing stage after the offline edit. The locked edit is rebuilt from the original full-quality camera files, and graphics, titles, VFX shots and the final grade are added. In TV the term often covers the whole picture finishing session in one suite.",
+      "see_also": [
+        "offline-edit",
+        "conform",
+        "colour-grading"
+      ]
+    },
+    {
+      "term": "Option",
+      "slug": "option",
+      "aka": [
+        "option agreement"
+      ],
+      "category": "Development and rights",
+      "definition": "A paid, time limited, exclusive right to buy the film or TV rights to a book, script or story later. The producer pays a small option fee now and the much larger purchase price only if the project goes into production. If the option period runs out without being renewed, the rights go back to the owner.",
+      "see_also": [
+        "chain-of-title",
+        "intellectual-property",
+        "turnaround-rest"
+      ]
+    },
+    {
+      "term": "Outside broadcast (OB)",
+      "slug": "outside-broadcast",
+      "aka": [
+        "OB",
+        "remote"
+      ],
+      "category": "TV and unscripted",
+      "definition": "A multi-camera production made on location instead of in a studio, such as a concert, sports match or ceremony, often broadcast live. A truck or portable unit acts as the gallery on site. OBs need cabling, power, transmission links and permits planned well in advance.",
+      "see_also": [
+        "multi-camera",
+        "gallery"
+      ]
+    },
+    {
+      "term": "Overage",
+      "slug": "overage",
+      "aka": [
+        "overspend"
+      ],
+      "category": "Budget and accounting",
+      "definition": "Spending above what was budgeted, on one line or on the whole production. A small overage on one line can be covered by savings elsewhere or by the contingency. A big overall overage is what financiers and completion guarantors watch most closely.",
+      "see_also": [
+        "contingency",
+        "efc",
+        "cost-report"
+      ]
+    },
+    {
+      "term": "Overtime",
+      "slug": "overtime",
+      "aka": [
+        "OT"
+      ],
+      "category": "On set",
+      "definition": "Working hours beyond the agreed shooting day, paid at a higher rate. A shoot that runs one hour over can be costly because the whole crew goes into overtime at the same time. Producers watch it daily in the hot costs.",
+      "see_also": [
+        "golden-time",
+        "hot-cost",
+        "turnaround-rest"
+      ]
+    },
+    {
+      "term": "P&A (prints and advertising)",
+      "slug": "p-and-a",
+      "aka": [
+        "P&A",
+        "prints and advertising"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "The money a distributor spends to release a film, covering copies for cinemas and all marketing, from trailers to posters and online ads. Even though films are now delivered digitally, the term remains. P&A is recouped from the film's income before the producer shares in it.",
+      "see_also": [
+        "distributor",
+        "theatrical-release",
+        "recoupment"
+      ]
+    },
+    {
+      "term": "Packaging",
+      "slug": "packaging",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "Combining a script with a director, lead cast and sometimes a producer into one package that can be taken to financiers and buyers. Agencies often build packages from their own clients. A well packaged project gives a [sales agent](/production-roles/sales-agent/) something to pre-sell.",
+      "see_also": [
+        "attachment",
+        "pre-sale",
+        "sales-agent"
+      ]
+    },
+    {
+      "term": "Paper format",
+      "slug": "paper-format",
+      "aka": [],
+      "category": "TV and unscripted",
+      "definition": "A format idea that exists only on paper and has not yet been produced or broadcast anywhere. It is harder to sell than a proven format, because the buyer has no ratings to look at. A taster tape is often made to help sell it.",
+      "see_also": [
+        "format",
+        "taster-tape",
+        "pitch"
+      ]
+    },
+    {
+      "term": "Petty cash",
+      "slug": "petty-cash",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "A small cash float, or a prepaid card, given to crew members for quick purchases on the job, like batteries, parking or a last-minute prop. They hand in receipts with an envelope or expense form, and the [production accountant](/production-roles/production-accountant/) books each receipt against the right budget line.",
+      "see_also": [
+        "purchase-order",
+        "actuals"
+      ]
+    },
+    {
+      "term": "Pick-ups",
+      "slug": "pick-ups",
+      "aka": [
+        "pickup shots"
+      ],
+      "category": "On set",
+      "definition": "Short extra shots filmed after main shooting, or at the end of a day, to fill gaps the editor found. A few lines of dialogue or a shot of a hand opening a door are typical. Bigger sessions with cast are often called reshoots.",
+      "see_also": [
+        "wrap",
+        "coverage",
+        "reshoots"
+      ]
+    },
+    {
+      "term": "Picture lock",
+      "slug": "picture-lock",
+      "aka": [
+        "locked cut",
+        "locked picture"
+      ],
+      "category": "Post-production",
+      "definition": "The moment the edit is signed off and no more shots are added, removed or moved. Sound, music, VFX and the grade all depend on exact timings, so they can only be finished after lock. Changing the edit after lock is possible but costs time and money across all those teams.",
+      "see_also": [
+        "fine-cut",
+        "conform",
+        "sound-mix"
+      ]
+    },
+    {
+      "term": "Pitch",
+      "slug": "pitch",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A short presentation of a project to someone who could buy, fund or commission it, in person, on a call or in writing. A pitch covers the story, the tone, why now and who is involved. In TV the pitch usually goes to a [commissioning editor](/production-roles/commissioning-editor/).",
+      "see_also": [
+        "pitch-deck",
+        "logline",
+        "greenlight"
+      ]
+    },
+    {
+      "term": "Pitch deck",
+      "slug": "pitch-deck",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A slide presentation that sells a project to financiers, broadcasters or partners. It usually holds the logline, story summary, visual references, key cast and crew attached, comparable titles, the budget level and the finance plan so far.",
+      "see_also": [
+        "lookbook",
+        "logline",
+        "finance-plan"
+      ]
+    },
+    {
+      "term": "Points",
+      "slug": "points",
+      "aka": [
+        "profit points"
+      ],
+      "category": "Financing and money",
+      "definition": "Percentage shares in a film's profits or income given to producers, actors, directors or investors. One point is one percent. Whether points are calculated on gross or net receipts makes a large difference to what they are worth.",
+      "see_also": [
+        "backend",
+        "net-profits",
+        "waterfall"
+      ]
+    },
+    {
+      "term": "PPM (pre-production meeting)",
+      "slug": "ppm",
+      "aka": [
+        "pre-production meeting"
+      ],
+      "category": "Commercials",
+      "definition": "The main meeting before a commercial shoot where the client, agency, director and production company agree every detail, such as casting, locations, wardrobe, props, script and schedule. The production company presents a PPM book with all the choices. Anything not agreed at the PPM tends to come back as a problem on the shoot day.",
+      "see_also": [
+        "award",
+        "client-approval",
+        "brief"
+      ]
+    },
+    {
+      "term": "Pre-production",
+      "slug": "pre-production",
+      "aka": [
+        "pre-prod"
+      ],
+      "category": "Pre-production",
+      "definition": "The phase between the green light and the first shooting day. The team is hired, locations found, sets built, cast confirmed and the shooting schedule and budget finalised. Good prep saves money on set, where every hour is expensive. See [pre-production](/how-a-film-is-made/#pre-production).",
+      "see_also": [
+        "prep",
+        "script-breakdown",
+        "shooting-schedule"
+      ]
+    },
+    {
+      "term": "Pre-sale",
+      "slug": "pre-sale",
+      "aka": [
+        "presale"
+      ],
+      "category": "Financing and money",
+      "definition": "Selling the distribution rights for a territory before the film is made, often through a [sales agent](/production-roles/sales-agent/). The distributor signs a contract promising a minimum guarantee on delivery, and the producer can borrow against that contract from a bank to fund production.",
+      "see_also": [
+        "minimum-guarantee",
+        "territory",
+        "gap-financing"
+      ]
+    },
+    {
+      "term": "Prep",
+      "slug": "prep",
+      "aka": [],
+      "category": "Pre-production",
+      "definition": "The working time a crew member is paid for before the shoot starts, to get their department ready. A [director of photography](/production-roles/director-of-photography/) might have three weeks of prep to test cameras and visit locations. People also use prep as short for pre-production as a whole.",
+      "see_also": [
+        "pre-production",
+        "tech-scout",
+        "script-breakdown"
+      ]
+    },
+    {
+      "term": "Production fee",
+      "slug": "production-fee",
+      "aka": [
+        "producer's fee",
+        "overhead"
+      ],
+      "category": "Budget and accounting",
+      "definition": "A line in the budget that pays the production company for running the project, often a percentage of the costs. In some deals it is called overhead. Financiers usually cap it, and in commercials the comparable line is the markup.",
+      "see_also": [
+        "contingency",
+        "topsheet"
+      ]
+    },
+    {
+      "term": "Public funding",
+      "slug": "public-funding",
+      "aka": [
+        "film fund"
+      ],
+      "category": "Financing and money",
+      "definition": "Money from national or regional film funds, broadcasters with a public mission and cultural bodies that support production. It can come as a grant, a soft loan or a recoupable investment, usually with conditions such as local spend, a local producer or cultural content. Funds often decide in rounds with fixed deadlines.",
+      "see_also": [
+        "soft-money",
+        "co-production-treaty",
+        "finance-plan"
+      ]
+    },
+    {
+      "term": "Purchase order",
+      "slug": "purchase-order",
+      "aka": [
+        "PO"
+      ],
+      "category": "Budget and accounting",
+      "definition": "A numbered approval to spend money with a supplier before the cost is made. It records the amount, the supplier and the budget code. When the invoice arrives, the accounts team matches it to the purchase order, so nothing gets paid that nobody approved.",
+      "see_also": [
+        "commitments",
+        "chart-of-accounts",
+        "petty-cash"
+      ]
+    },
+    {
+      "term": "QC (quality control)",
+      "slug": "qc",
+      "aka": [
+        "quality control",
+        "tech review"
+      ],
+      "category": "Post-production",
+      "definition": "A technical check of the finished programme or film before it is accepted by a broadcaster, streamer or distributor. A QC house or the buyer looks at picture, sound, captions and file specs and reports faults such as dropouts or audio peaks. A failed QC means fixing and resubmitting, which costs time before delivery.",
+      "see_also": [
+        "master",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "Qualifying spend",
+      "slug": "qualifying-spend",
+      "aka": [
+        "eligible spend"
+      ],
+      "category": "Financing and money",
+      "definition": "The part of a budget that counts towards a tax credit or cash rebate, usually money spent on local crew, services and facilities in that country or region. Each scheme has its own rules, for example on foreign cast, financing costs or [above the line](/insights/above-the-line-vs-below-the-line/) fees.",
+      "see_also": [
+        "tax-credit",
+        "cash-rebate"
+      ]
+    },
+    {
+      "term": "Reality",
+      "slug": "reality",
+      "aka": [
+        "reality TV"
+      ],
+      "category": "TV and unscripted",
+      "definition": "Unscripted programmes in which real people are put in a situation created by the production, such as living in a house together or competing in challenges. Unlike a docusoap, the set-up is constructed, even though the reactions are real. Reality shows put extra weight on contributor care and compliance.",
+      "see_also": [
+        "docusoap",
+        "unscripted",
+        "contributor"
+      ]
+    },
+    {
+      "term": "Recce",
+      "slug": "recce",
+      "aka": [
+        "location scout",
+        "scout"
+      ],
+      "category": "Pre-production",
+      "definition": "A visit to a possible location to see if it works for the story and for the practical side of a shoot. The term is mostly used in the UK and Europe. In the US people more often say location scout. A [location scout](/production-roles/location-scout/) usually does the first recce and sends photos.",
+      "see_also": [
+        "tech-scout",
+        "location-release"
+      ]
+    },
+    {
+      "term": "Recoupment",
+      "slug": "recoupment",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "Getting back the money that was invested or spent on a film from its income. Financiers recoup in a fixed order agreed in the waterfall, and only after recoupment is there profit to share.",
+      "see_also": [
+        "waterfall",
+        "collection-account",
+        "net-profits"
+      ]
+    },
+    {
+      "term": "Rehearsal",
+      "slug": "rehearsal",
+      "aka": [
+        "rehearsals"
+      ],
+      "category": "Pre-production",
+      "definition": "Time for the director and cast to work through scenes before shooting. Some productions have weeks of it in prep, others only a quick run-through on the day. On set the word also means the run-throughs right before a take.",
+      "see_also": [
+        "table-read",
+        "blocking"
+      ]
+    },
+    {
+      "term": "Release form",
+      "slug": "release-form",
+      "aka": [
+        "contributor release",
+        "consent form",
+        "appearance release"
+      ],
+      "category": "TV and unscripted",
+      "definition": "A signed document in which a person gives permission to be filmed and for the footage to be used. Similar releases exist for locations and for artwork or logos that appear on screen. Without them a broadcaster or distributor will usually not accept the programme.",
+      "see_also": [
+        "contributor",
+        "compliance",
+        "clearances"
+      ]
+    },
+    {
+      "term": "Release window",
+      "slug": "release-window",
+      "aka": [
+        "rights window",
+        "windowing"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "The period during which a film is available in one channel before the next opens, for example cinemas first, then rental, then subscription streaming, then free TV. Windows protect the value of each type of release. Their length is set by contracts and sometimes by national rules, and has become shorter and more flexible.",
+      "see_also": [
+        "theatrical-release",
+        "svod",
+        "day-and-date"
+      ]
+    },
+    {
+      "term": "Residuals",
+      "slug": "residuals",
+      "aka": [
+        "reuse fees"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Payments to actors, writers, directors and sometimes crew when a film or programme is reused after its first release, for example on TV, streaming or home video. They are set by union or guild agreements, which are strongest in the US, and are paid by the producer or distributor. See [after release](/how-a-film-is-made/#after-release).",
+      "see_also": [
+        "royalties",
+        "backend"
+      ]
+    },
+    {
+      "term": "Room tone",
+      "slug": "room-tone",
+      "aka": [
+        "atmos",
+        "presence"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "Around a minute of silence recorded on a location, with everyone standing still. Every room has its own quiet hum. The sound editor uses it to fill gaps in dialogue so cuts are not heard.",
+      "see_also": [
+        "wild-track",
+        "production-sound-mixer"
+      ]
+    },
+    {
+      "term": "Rough cut",
+      "slug": "rough-cut",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "An early full version of the edit in which the story works from start to finish, but timing, music and sound are still rough. It is the version producers, financiers or a broadcaster usually see first and give notes on. There can be several rough cuts before the fine cut.",
+      "see_also": [
+        "assembly",
+        "fine-cut",
+        "picture-lock"
+      ]
+    },
+    {
+      "term": "Royalties",
+      "slug": "royalties",
+      "aka": [],
+      "category": "Delivery and distribution",
+      "definition": "Ongoing payments to the owner of a right each time their work is used, such as a composer when music is broadcast or a format owner when a show is remade abroad. Music royalties are usually collected through collecting societies based on the cue sheet the production delivers.",
+      "see_also": [
+        "residuals",
+        "music-cue-sheet",
+        "clearances"
+      ]
+    },
+    {
+      "term": "Sales agent",
+      "slug": "sales-agent",
+      "aka": [
+        "international sales agent",
+        "sales company"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "A company that sells the distribution rights of a film to buyers in different countries, mostly at film markets and festivals. The [sales agent](/production-roles/sales-agent/) takes a commission and recoups its marketing costs, and often helps finance the film by making pre-sales.",
+      "see_also": [
+        "territory",
+        "film-market",
+        "pre-sale"
+      ]
+    },
+    {
+      "term": "Script breakdown",
+      "slug": "script-breakdown",
+      "aka": [
+        "breakdown"
+      ],
+      "category": "Pre-production",
+      "definition": "Going through the script scene by scene and listing everything each scene needs. That means cast, extras, props, costumes, vehicles, animals, stunts and effects. The breakdown feeds both the shooting schedule and the budget, so it is one of the first jobs in prep, usually done by the [first assistant director](/production-roles/first-assistant-director/).",
+      "see_also": [
+        "stripboard",
+        "shooting-schedule",
+        "day-out-of-days"
+      ]
+    },
+    {
+      "term": "Script coverage",
+      "slug": "script-coverage",
+      "aka": [
+        "coverage"
+      ],
+      "category": "Development and rights",
+      "definition": "A short written report on a screenplay by a reader, with a summary, an assessment of strengths and weaknesses and a verdict such as pass, consider or recommend. Studios, agencies and funds use coverage to filter the many scripts they receive. A [script editor](/production-roles/script-editor/) or development assistant often writes it.",
+      "see_also": [
+        "development-deal",
+        "logline"
+      ]
+    },
+    {
+      "term": "Scripted",
+      "slug": "scripted",
+      "aka": [],
+      "category": "TV and unscripted",
+      "definition": "Programmes where everything is written and performed by actors, such as drama, comedy and soaps. Scripted shows are planned and budgeted much like a film, with [screenwriters](/production-roles/screenwriter/), casting and a shooting schedule. See also the overview of [kinds of production](/how-a-film-is-made/#kinds-of-production).",
+      "see_also": [
+        "unscripted",
+        "showrunner",
+        "commission"
+      ]
+    },
+    {
+      "term": "Setup",
+      "slug": "setup",
+      "aka": [],
+      "category": "On set",
+      "definition": "One camera position with its lighting, from which one or more takes are filmed. Moving the camera to a new angle means a new setup, which takes time to light. Schedules often count setups per day as a measure of how much can be shot.",
+      "see_also": [
+        "take",
+        "coverage",
+        "master-shot"
+      ]
+    },
+    {
+      "term": "Shooting schedule",
+      "slug": "shooting-schedule",
+      "aka": [],
+      "category": "Pre-production",
+      "definition": "The plan of which scenes are filmed on which day and where. Films are almost never shot in story order. All scenes in one location are usually filmed together, even if they are spread across the story. The schedule drives the budget, because shooting days are the biggest cost driver.",
+      "see_also": [
+        "stripboard",
+        "day-out-of-days",
+        "call-sheet"
+      ]
+    },
+    {
+      "term": "Shooting script",
+      "slug": "shooting-script",
+      "aka": [],
+      "category": "Pre-production",
+      "definition": "The version of the script used for production, with numbered scenes. After it is locked, changes are issued on coloured revision pages so scene numbers stay the same and everyone knows which version is current.",
+      "see_also": [
+        "script-breakdown",
+        "table-read"
+      ]
+    },
+    {
+      "term": "Slate",
+      "slug": "slate",
+      "aka": [
+        "clapperboard",
+        "clapper",
+        "sticks"
+      ],
+      "category": "On set",
+      "definition": "The board held in front of the camera at the start of a take, with the scene, shot and take number. Clapping its arm gives a picture and a sound for syncing sound with picture in the edit. Slate is also used for the shot number itself, as in slate 42 take 3.",
+      "see_also": [
+        "take",
+        "timecode",
+        "second-assistant-camera"
+      ]
+    },
+    {
+      "term": "Slot",
+      "slug": "slot",
+      "aka": [
+        "timeslot"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The fixed day and time on a channel's schedule where a programme will be shown, such as weekday daytime or Saturday primetime. The slot shapes the running time, the tone, the audience and the tariff. Commissioners often say they are looking for ideas for a particular slot.",
+      "see_also": [
+        "tariff",
+        "commission",
+        "compliance"
+      ]
+    },
+    {
+      "term": "Soft money",
+      "slug": "soft-money",
+      "aka": [],
+      "category": "Financing and money",
+      "definition": "Money that does not need to be fully repaid or that is repaid on easy terms, such as public film fund grants, tax credits, cash rebates and some regional funds. Soft money lowers the risk for other investors, so producers try to raise as much of it as possible. Compare schemes on [film incentives](/compare-film-incentives/).",
+      "see_also": [
+        "tax-credit",
+        "cash-rebate",
+        "public-funding"
+      ]
+    },
+    {
+      "term": "Sound mix",
+      "slug": "sound-mix",
+      "aka": [
+        "final mix",
+        "dub",
+        "re-recording"
+      ],
+      "category": "Post-production",
+      "definition": "The final stage of sound post, where dialogue, sound effects, foley and music are balanced into one finished soundtrack. A [re-recording mixer](/production-roles/re-recording-mixer/) does this in a mixing theatre or studio, often with the director present. In the UK this session is often called the dub.",
+      "see_also": [
+        "stems",
+        "foley",
+        "adr"
+      ]
+    },
+    {
+      "term": "Sparks",
+      "slug": "sparks",
+      "aka": [
+        "electricians",
+        "electrics",
+        "lighting crew"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "The crew members who handle lights and power on set, led by the [gaffer](/production-roles/gaffer/). The word is mostly used in the UK. In the US people usually say electricians or electrics.",
+      "see_also": [
+        "grips",
+        "gaffer-tape"
+      ]
+    },
+    {
+      "term": "Stems",
+      "slug": "stems",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "Separate audio tracks for each part of the final mix, usually dialogue, music and effects. Distributors ask for them so they can replace the dialogue for a dubbed version or swap music they cannot clear. A music and effects track (M&E) without dialogue is the most common stem request.",
+      "see_also": [
+        "sound-mix",
+        "m-and-e",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "Stripboard",
+      "slug": "stripboard",
+      "aka": [
+        "production board"
+      ],
+      "category": "Pre-production",
+      "definition": "A visual way to plan the shoot where each scene is a coloured strip, with colour showing day or night and interior or exterior. The strips are moved around to group scenes by location and cast, so the shoot needs fewer days. It used to be a physical board and now lives in scheduling software.",
+      "see_also": [
+        "script-breakdown",
+        "shooting-schedule",
+        "one-liner"
+      ]
+    },
+    {
+      "term": "Studio film",
+      "slug": "studio-film",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A film developed, financed and usually distributed by a major studio or streamer, which pays for it and owns it. The producer works more like a hired hand with a fee and possibly a share of profits. Because the studio carries the risk, it also makes the key decisions.",
+      "see_also": [
+        "indie-film",
+        "greenlight",
+        "backend"
+      ]
+    },
+    {
+      "term": "Subtitles",
+      "slug": "subtitles",
+      "aka": [],
+      "category": "Post-production",
+      "definition": "On-screen text that translates the dialogue for viewers who speak another language. They only contain the spoken words, unlike closed captions. Distributors usually deliver them as separate timed files per language, made from a dialogue list of the final cut.",
+      "see_also": [
+        "closed-captions",
+        "delivery-schedule"
+      ]
+    },
+    {
+      "term": "SVOD",
+      "slug": "svod",
+      "aka": [
+        "subscription video on demand"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Subscription video on demand, where viewers pay a monthly fee for access to a whole catalogue. Streamers buy SVOD rights for a territory and a period, or commission and own original content outright.",
+      "see_also": [
+        "vod",
+        "avod",
+        "release-window"
+      ]
+    },
+    {
+      "term": "Sync licence",
+      "slug": "sync-licence",
+      "aka": [
+        "synchronisation licence",
+        "sync license"
+      ],
+      "category": "Post-production",
+      "definition": "The licence from the music publisher that lets you put a song, meaning the composition and lyrics, against moving pictures. It does not cover a particular recording. To use the original artist's recording you also need a master use licence from the record label.",
+      "see_also": [
+        "music-licence",
+        "cue-sheet"
+      ]
+    },
+    {
+      "term": "Synopsis",
+      "slug": "synopsis",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A short prose summary of the whole story, usually one page, that tells the plot from beginning to end including the ending. It is longer than a logline and shorter than a treatment, and is often sent along with a script or a funding application.",
+      "see_also": [
+        "logline",
+        "treatment"
+      ]
+    },
+    {
+      "term": "Table read",
+      "slug": "table-read",
+      "aka": [
+        "read-through"
+      ],
+      "category": "Pre-production",
+      "definition": "A session where the cast reads the whole script aloud around a table, often with the director, writers and producers listening. It is the first time the story is heard with the real voices, and it often leads to script changes before the shoot.",
+      "see_also": [
+        "shooting-script",
+        "rehearsal"
+      ]
+    },
+    {
+      "term": "Take",
+      "slug": "take",
+      "aka": [],
+      "category": "On set",
+      "definition": "One recording of a shot, from action to cut. If the director wants it again, the next attempt is take two, and so on. The best takes are noted so the editor knows which ones to use.",
+      "see_also": [
+        "slate",
+        "setup",
+        "dailies"
+      ]
+    },
+    {
+      "term": "Tariff",
+      "slug": "tariff",
+      "aka": [
+        "cost per hour"
+      ],
+      "category": "TV and unscripted",
+      "definition": "The price a broadcaster typically pays per hour of programming in a given genre and slot. A daytime factual show has a much lower tariff than a primetime drama. Producers use it to judge early whether an idea can be made for the money available.",
+      "see_also": [
+        "licence-fee",
+        "slot",
+        "commission"
+      ]
+    },
+    {
+      "term": "Taster tape",
+      "slug": "taster-tape",
+      "aka": [
+        "sizzle reel",
+        "sizzle",
+        "taster"
+      ],
+      "category": "TV and unscripted",
+      "definition": "A short film, often a few minutes long, made to show a broadcaster what a proposed show would look and feel like. It might introduce a presenter or the real people who would take part. In the US it is usually called a sizzle reel.",
+      "see_also": [
+        "paper-format",
+        "pitch",
+        "commission"
+      ]
+    },
+    {
+      "term": "Tax credit",
+      "slug": "tax-credit",
+      "aka": [
+        "production incentive"
+      ],
+      "category": "Financing and money",
+      "definition": "A government incentive that returns a percentage of qualifying spend in a country or region, claimed through the production company's tax filing. Depending on the scheme it can be paid out in cash or used to reduce tax. Because the money comes after the spend, producers often borrow against it. See [film incentives](/compare-film-incentives/).",
+      "see_also": [
+        "cash-rebate",
+        "soft-money",
+        "bridge-loan"
+      ]
+    },
+    {
+      "term": "Tech scout",
+      "slug": "tech-scout",
+      "aka": [
+        "tech recce"
+      ],
+      "category": "Pre-production",
+      "definition": "A visit to chosen locations with the heads of department, close to the shoot. The director walks through the scenes while camera, lighting, sound, grip and art plan their work, like where to put power, trucks and lights. It catches problems before the crew is paying for them on the day.",
+      "see_also": [
+        "recce",
+        "prep",
+        "unit-base"
+      ]
+    },
+    {
+      "term": "Temp music",
+      "slug": "temp-music",
+      "aka": [
+        "temp track",
+        "temp score"
+      ],
+      "category": "Post-production",
+      "definition": "Existing music placed in the edit as a stand-in while the film is being cut. It helps the editor and director judge pace and mood, and shows the [composer](/production-roles/composer/) what is wanted. It must be replaced or properly licensed before release.",
+      "see_also": [
+        "music-licence",
+        "sync-licence",
+        "cue-sheet"
+      ]
+    },
+    {
+      "term": "Territory",
+      "slug": "territory",
+      "aka": [],
+      "category": "Delivery and distribution",
+      "definition": "A country or group of countries for which distribution rights are sold as one deal, such as Germany, Scandinavia or Latin America. Rights are usually sold territory by territory, and per type of release, so one film can have dozens of distributors around the world.",
+      "see_also": [
+        "sales-agent",
+        "distributor",
+        "pre-sale"
+      ]
+    },
+    {
+      "term": "Theatrical release",
+      "slug": "theatrical-release",
+      "aka": [
+        "theatrical"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Showing a film in cinemas, normally the first window of a release. The distributor books screens, pays for prints and advertising and shares ticket income with the cinemas. A theatrical release is also a requirement for some awards and funds. See [release](/how-a-film-is-made/#release).",
+      "see_also": [
+        "release-window",
+        "p-and-a",
+        "dcp"
+      ]
+    },
+    {
+      "term": "Timecode",
+      "slug": "timecode",
+      "aka": [
+        "TC"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "A running clock written into every frame of picture and sound, in hours, minutes, seconds and frames. When camera and sound share the same timecode, the edit can line them up automatically.",
+      "see_also": [
+        "slate",
+        "frame-rate"
+      ]
+    },
+    {
+      "term": "Topsheet",
+      "slug": "topsheet",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "The one-page summary at the front of a film budget. It lists each main category, such as cast, crew, locations and post-production, with its total, and ends with the grand total. Financiers and executives usually read the topsheet first and only open the detail pages when a number looks wrong.",
+      "see_also": [
+        "above-the-line",
+        "below-the-line",
+        "chart-of-accounts"
+      ]
+    },
+    {
+      "term": "Treatment",
+      "slug": "treatment",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "A prose description of a film or series written before or instead of a full script, typically a few pages to a few dozen. It tells the story scene by scene in present tense so producers and funders can judge it without reading a screenplay. Documentaries and unscripted formats are often sold on a treatment alone.",
+      "see_also": [
+        "synopsis",
+        "pitch-deck",
+        "development-deal"
+      ]
+    },
+    {
+      "term": "Treatment (commercials)",
+      "slug": "treatment-commercials",
+      "aka": [
+        "director's treatment",
+        "pitch deck"
+      ],
+      "category": "Commercials",
+      "definition": "A visual document in which a director explains how they would make the commercial, with reference images, tone, casting ideas and how each scene would look. It is used to win the job against other directors. In film and TV development a treatment means something else, a prose summary of the story.",
+      "see_also": [
+        "brief",
+        "bid",
+        "triple-bid"
+      ]
+    },
+    {
+      "term": "Triple bid",
+      "slug": "triple-bid",
+      "aka": [
+        "three-way bid"
+      ],
+      "category": "Commercials",
+      "definition": "The common practice of an agency asking three production companies to bid on the same job, each with a different director. The agency compares creative approach and price before choosing one. Some advertisers require it as a rule for cost control.",
+      "see_also": [
+        "bid",
+        "award",
+        "treatment"
+      ]
+    },
+    {
+      "term": "Turnaround (development)",
+      "slug": "turnaround-development",
+      "aka": [],
+      "category": "Development and rights",
+      "definition": "When a studio or financier that developed a project decides not to make it and lets the producer take it elsewhere. The new backer usually has to repay the development costs, often with interest or a share of profits, before the original owner lets go.",
+      "see_also": [
+        "development-deal",
+        "option"
+      ]
+    },
+    {
+      "term": "Turnaround (rest period)",
+      "slug": "turnaround-rest",
+      "aka": [
+        "rest period"
+      ],
+      "category": "On set",
+      "definition": "The minimum rest time between wrapping one day and the call time of the next. Crew and cast agreements set this, often somewhere around ten to twelve hours, and the exact rules differ per country and union. Breaking turnaround costs money in penalties and is a safety risk. In development, turnaround has a different meaning.",
+      "see_also": [
+        "overtime",
+        "call-time"
+      ]
+    },
+    {
+      "term": "TVOD",
+      "slug": "tvod",
+      "aka": [
+        "transactional video on demand",
+        "EST"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Transactional video on demand, where viewers pay per title to rent or buy a film digitally. TVOD usually follows the cinema release and comes before subscription streaming. Electronic sell-through, or EST, is the buy version.",
+      "see_also": [
+        "vod",
+        "svod",
+        "release-window"
+      ]
+    },
+    {
+      "term": "Unit",
+      "slug": "unit",
+      "aka": [],
+      "category": "On set",
+      "definition": "A complete crew that films on its own. A production can run more than one unit at the same time. In the UK unit is also used for the whole shooting crew and everything that comes with it, as in unit base or unit driver.",
+      "see_also": [
+        "first-unit",
+        "unit-base"
+      ]
+    },
+    {
+      "term": "Unit base",
+      "slug": "unit-base",
+      "aka": [
+        "base camp",
+        "crew base"
+      ],
+      "category": "On set",
+      "definition": "The parking area near the shooting location where the production's trucks, trailers, make-up and costume, catering and toilets are set up. Cast and crew report there before moving to set. In the US it is often called base camp, and some crews say crew base.",
+      "see_also": [
+        "tech-scout",
+        "company-move"
+      ]
+    },
+    {
+      "term": "Unscripted",
+      "slug": "unscripted",
+      "aka": [
+        "non-scripted"
+      ],
+      "category": "TV and unscripted",
+      "definition": "Programmes made with real people instead of actors, such as reality, documentary, game shows and lifestyle formats. There is a plan and a structure, but what happens on camera is not written as dialogue. Much of the story is found in the edit, so post-production often takes a bigger share of the schedule.",
+      "see_also": [
+        "scripted",
+        "factual",
+        "reality"
+      ]
+    },
+    {
+      "term": "Usage rights",
+      "slug": "usage-rights",
+      "aka": [
+        "usage"
+      ],
+      "category": "Commercials",
+      "definition": "The agreed scope of how a commercial and its talent may be used, which media (TV, online, cinema, print), which territories and for how long. Fees for actors, music and photography are often based on usage, so wider use costs more. Extending usage later means paying again.",
+      "see_also": [
+        "buyout",
+        "music-licence",
+        "cut-down"
+      ]
+    },
+    {
+      "term": "Variance",
+      "slug": "variance",
+      "aka": [],
+      "category": "Budget and accounting",
+      "definition": "The difference between the budget and the latest expected cost for a line. A positive or negative variance shows where money is being saved or lost. Cost reports usually list it per line and in total.",
+      "see_also": [
+        "cost-report",
+        "efc",
+        "overage"
+      ]
+    },
+    {
+      "term": "VFX (visual effects)",
+      "slug": "vfx",
+      "aka": [
+        "visual effects",
+        "CGI"
+      ],
+      "category": "Post-production",
+      "definition": "Images created or changed on a computer after the shoot, such as removing a modern sign from a period street, adding crowds or building a whole creature. It is led by a [VFX supervisor](/production-roles/vfx-supervisor/) and is different from special effects (SFX), which happen physically on set. VFX is often one of the hardest budget lines to estimate early.",
+      "see_also": [
+        "picture-lock",
+        "online-edit",
+        "special-effects"
+      ]
+    },
+    {
+      "term": "VFX vs SFX",
+      "slug": "vfx-vs-sfx",
+      "aka": [
+        "visual effects",
+        "special effects"
+      ],
+      "category": "On set",
+      "definition": "SFX (special effects) are done physically on set, such as rain, smoke, fire or controlled explosions, by the [SFX supervisor](/production-roles/special-effects-supervisor/). VFX (visual effects) are added on a computer after the shoot, such as digital crowds, set extensions or removing a modern road sign. Many scenes combine both.",
+      "see_also": [
+        "green-screen"
+      ]
+    },
+    {
+      "term": "VOD (video on demand)",
+      "slug": "vod",
+      "aka": [
+        "video on demand"
+      ],
+      "category": "Delivery and distribution",
+      "definition": "Any service that lets viewers choose and watch a film or series whenever they want over the internet or a TV box. VOD rights are usually split into subscription (SVOD), advertising supported (AVOD) and transactional (TVOD), each sold or licensed separately.",
+      "see_also": [
+        "svod",
+        "avod",
+        "tvod"
+      ]
+    },
+    {
+      "term": "Waterfall",
+      "slug": "waterfall",
+      "aka": [
+        "recoupment schedule"
+      ],
+      "category": "Financing and money",
+      "definition": "The agreed order in which income from a film is paid out to everyone with a claim on it. Typically sales agent fees and costs come first, then lenders, then equity investors with any premium, then deferments, and only then profit participants. Each party is paid in full before the money flows down to the next.",
+      "see_also": [
+        "recoupment",
+        "collection-account",
+        "net-profits"
+      ]
+    },
+    {
+      "term": "Wild track",
+      "slug": "wild-track",
+      "aka": [
+        "wild sound",
+        "wild line"
+      ],
+      "category": "Camera, light and sound",
+      "definition": "Sound recorded on set without the camera rolling, such as a line of dialogue, footsteps or a door, to use in the edit. The [production sound mixer](/production-roles/production-sound-mixer/) records it when a take had noise or when the editor will need clean sound.",
+      "see_also": [
+        "room-tone",
+        "adr"
+      ]
+    },
+    {
+      "term": "Wrap",
+      "slug": "wrap",
+      "aka": [
+        "that's a wrap"
+      ],
+      "category": "On set",
+      "definition": "The end of shooting. The end of a day is called a wrap, the actor's last day is their wrap, and the end of the whole shoot is the wrap. After the shoot there is also wrap time, when departments return equipment and close their accounts.",
+      "see_also": [
+        "martini-shot",
+        "abby-singer"
+      ]
+    }
+  ]
+}

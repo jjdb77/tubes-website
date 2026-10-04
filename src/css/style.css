@@ -3481,7 +3481,7 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   background: var(--divider); color: var(--muted); pointer-events: none;
 }
 .role-facts .role-phase.is-on { background: var(--status-teal-bg); color: var(--status-teal-ink); pointer-events: auto; }
-.role-facts-link { display: inline-block; margin-top: 18px; font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink); }
+.role-facts-link { display: block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink); }
 
 @media (max-width: 1080px) {
   .role-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -3490,3 +3490,32 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 @media (max-width: 800px) {
   .roles-departments, .role-list { grid-template-columns: 1fr; }
 }
+
+/* ---------- Woordenlijst (/film-production-glossary/) ---------- */
+
+.gloss-search { margin-top: 26px; max-width: 520px; }
+.gloss-search input {
+  width: 100%; font: inherit; font-size: 1rem; padding: 13px 16px;
+  border: 1px solid var(--border); border-radius: var(--radius-button); background: var(--surface);
+}
+.gloss-search input:focus { outline: 2px solid var(--action); outline-offset: 1px; }
+.gloss-letters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.gloss-letters a {
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 34px; border-radius: var(--radius-chip); background: var(--surface);
+  border: 1px solid var(--border); font-weight: 700; color: var(--ink); font-size: 0.92rem;
+}
+.gloss-letters a:hover { border-color: var(--action); }
+.gloss-inner { max-width: 860px; }
+.gloss-letter { scroll-margin-top: 96px; margin-bottom: 36px; }
+.gloss-letter h2 { font-size: 1.6rem; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); }
+.gloss-letter dl { margin: 0; }
+.gloss-term { scroll-margin-top: 96px; padding: 18px 0; border-bottom: 1px solid var(--divider); }
+.gloss-term:target { background: var(--action-soft); margin: 0 -16px; padding: 18px 16px; border-radius: var(--radius-wash); }
+.gloss-term dt { font-weight: 800; font-size: 1.12rem; color: var(--ink); }
+.gloss-aka { font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-left: 6px; }
+.gloss-term dd { margin: 6px 0 0; }
+.gloss-term dd .rich-text p { margin: 0; }
+.gloss-meta { margin: 8px 0 0; font-size: 0.86rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.gloss-cat { background: var(--status-blue-bg); color: var(--status-blue-ink); font-weight: 700; font-size: 0.78rem; padding: 2px 8px; border-radius: var(--radius-chip); }
+.gloss-empty { color: var(--ink-soft); }

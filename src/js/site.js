@@ -57,7 +57,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
   // zichtbaarheidsdrempel nooit en bleef dan onzichtbaar na een ankerklik).
   // Het helpcentrum ook niet: de zoekresultaten vervangen de kaarten of de
   // lijst in dezelfde container, en die moeten er meteen staan.
-  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section) .container");
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section):not(.gloss-section):not(.roles-sector) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {

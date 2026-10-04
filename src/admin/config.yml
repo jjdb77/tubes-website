@@ -154,6 +154,26 @@ collections:
               - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
               - { label: "Slotzin rechts", name: note, widget: text }
 
+      - name: glossary
+        label: "Woordenlijst (/film-production-glossary/)"
+        file: src/_data/glossary-terms.json
+        description: "Begrippen op de woordenlijst. De slug is het anker (#slug) waar andere pagina's naar linken: niet wijzigen. Volgorde maakt niet uit, de site sorteert zelf."
+        fields:
+          - label: Begrippen
+            name: terms
+            widget: list
+            summary: "{{fields.term}}"
+            fields:
+              - { label: Begrip, name: term, widget: string }
+              - { label: "Slug (anker)", name: slug, widget: string }
+              - { label: "Ook wel", name: aka, widget: list, required: false }
+              - label: Categorie
+                name: category
+                widget: select
+                options: ["Development and rights", "Financing and money", "Budget and accounting", "Pre-production", "On set", "Camera, light and sound", "Post-production", "Delivery and distribution", "TV and unscripted", "Commercials"]
+              - { label: Uitleg, name: definition, widget: markdown }
+              - { label: "Zie ook (slugs van andere begrippen)", name: see_also, widget: list, required: false }
+
       - name: helpcenter
         label: "Helpcentrum: categorieën en teksten"
         file: src/_data/helpcenter.json
