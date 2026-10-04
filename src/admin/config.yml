@@ -181,6 +181,32 @@ collections:
               - { label: Omschrijving (één zin), name: description, widget: string }
               - { label: Icoon, name: icon, widget: string, hint: "Pad in /assets/icons/, bijv. /assets/icons/calculator.svg" }
 
+  - name: rollen
+    label: "Rollen in mediaproductie (/production-roles/)"
+    icon: badge
+    folder: src/content/roles
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [title]
+    fields:
+      - { label: "Naam van de rol", name: title, widget: string }
+      - { label: "Ook wel genoemd", name: aka, widget: list, required: false, hint: "Alleen echte alternatieve titels" }
+      - { label: "Samenvatting (één zin, staat op het overzicht)", name: summary, widget: text }
+      - { label: "Plek op het overzicht", name: groups, widget: list, hint: "sector/afdeling, bijv. film/producers of commercials/agency. Eerste = hoofdplek. Sectoren en afdelingen: src/_data/productionRoles.json" }
+      - { label: "Rapporteert aan (bestandsnamen van rollen)", name: reports_to, widget: list, required: false }
+      - { label: "Werkt samen met (bestandsnamen van rollen)", name: works_with, widget: list, required: false }
+      - label: Fases
+        name: phases
+        widget: select
+        multiple: true
+        required: false
+        options: [development, financing, pre-production, production, post-production, delivery, release]
+      - { label: "SEO: titel", name: seo_title, widget: string, required: false }
+      - { label: "SEO: omschrijving", name: description, widget: string, required: false }
+      - { label: Tekst, name: body, widget: markdown }
+
   - name: helpartikelen
     label: "Helpcentrum (/help/)"
     icon: help

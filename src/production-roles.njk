@@ -1,0 +1,92 @@
+---
+permalink: /production-roles/
+title: Production Roles Explained
+seo_title: "Film, TV and Commercial Production Roles Explained: Who Does What | Tubes"
+description: "Every role in media production explained in plain language: film and TV crew, broadcaster, production company and commercials, each with its own page."
+---
+{#- Overzicht van alle rollen (/production-roles/). Sectoren en afdelingen uit
+    src/_data/productionRoles.json, de rollen zelf uit src/content/roles/*.md
+    (collectie `roles`, ingedeeld via `groups`). De tekstblokken en de FAQ
+    staan in hetzelfde json-bestand als `before`/`after` en gebruiken de
+    gewone sectiepartials, dus de FAQ komt vanzelf in de structured data. -#}
+{%- set extra = productionRoles.before.concat(productionRoles.after) -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, sections: extra, itemList: collections.roles } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section section-hero roles-hero">
+      <div class="container">
+        <span class="kicker">{{ productionRoles.kicker }}</span>
+        <h1>{{ productionRoles.title | mdInline | safe }}</h1>
+        <p class="lead">{{ productionRoles.lead }}</p>
+        <nav class="roles-jump" aria-label="Jump to">
+          {%- for sector in productionRoles.sectors %}
+          <a href="#{{ sector.slug }}">{{ sector.name }}</a>
+          {%- endfor %}
+          <a href="/how-a-film-is-made/" class="roles-jump-alt">How a film is made <span aria-hidden="true">&rarr;</span></a>
+        </nav>
+      </div>
+    </section>
+
+    {%- for section in productionRoles.before %}
+    {% include "partials/sections/" + section.type + ".njk" %}
+    {%- endfor %}
+
+    {%- for sector in productionRoles.sectors %}
+    <section id="{{ sector.slug }}" class="section {{ 'theme-light' if loop.index0 % 2 == 0 else 'theme-white' }} roles-sector">
+      <div class="container">
+        <h2 class="section-heading">{{ sector.name }}</h2>
+        <p class="roles-sector-intro">{{ sector.intro }}</p>
+        <div class="roles-departments">
+          {%- for dept in sector.departments %}
+          {%- set items = collections.roles | rolesIn(sector.slug + "/" + dept.slug) %}
+          {%- if items.length %}
+          <div class="roles-department" id="{{ sector.slug }}-{{ dept.slug }}">
+            <h3>{{ dept.name }}</h3>
+            <ul class="role-list role-list-compact">
+              {%- for item in items %}
+              <li><a href="{{ item.url }}"><span class="role-list-name">{{ item.data.title }}</span><span class="role-list-summary">{{ item.data.summary }}</span></a></li>
+              {%- endfor %}
+            </ul>
+          </div>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+    {%- endfor %}
+
+    {%- for section in productionRoles.after %}
+    {% include "partials/sections/" + section.type + ".njk" %}
+    {%- endfor %}
+
+    <section class="section section-cta">
+      <div class="container cta-inner">
+        <h2>One place for everyone who touches the budget</h2>
+        <div class="rich-text"><p>From the head of department who requests a purchase order to the producer who reports to financiers. Tubes gives each role their own view of the same budget, schedule and actual costs.</p></div>
+        <div class="button-row centered"><a class="button button-inverse" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a></div>
+      </div>
+    </section>
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

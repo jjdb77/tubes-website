@@ -102,6 +102,28 @@ export default function (eleventyConfig) {
     (cols || []).find((c) => c.slug === slug) || { slug, name: slug, description: "", icon: "" }
   );
 
+  // ---------- Rollen in mediaproductie (/production-roles/) ----------
+  //
+  // Eén bestand per rol in src/content/roles/*.md. `groups` zegt waar een rol op
+  // de overzichtspagina staat ("sector/afdeling", uit src/_data/productionRoles.json);
+  // een rol kan in meer sectoren staan, de eerste groep is de hoofdplek (kruimelpad).
+  eleventyConfig.addCollection("roles", (collectionApi) =>
+    collectionApi
+      .getFilteredByGlob("src/content/roles/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title)))
+  );
+  // Rollen in een groep "sector/afdeling"
+  eleventyConfig.addFilter("rolesIn", (items, group) => (items || []).filter((item) => (item.data.groups || []).includes(group)));
+  // Rol bij een slug (bestandsnaam), voor reports_to en works_with
+  eleventyConfig.addFilter("roleBySlug", (items, slug) => (items || []).find((item) => item.page.fileSlug === slug));
+  // Sector en afdeling bij "sector/afdeling"
+  eleventyConfig.addFilter("roleGroup", (data, group) => {
+    const [s, d] = String(group || "").split("/");
+    const sector = (data.sectors || []).find((x) => x.slug === s) || { slug: s, name: s };
+    const department = (sector.departments || []).find((x) => x.slug === d) || { slug: d, name: d };
+    return { sector, department, anchor: `${s}-${d}` };
+  });
+
   // Nieuwsberichten (/news/): korte items met datum, samenvatting en link,
   // zonder eigen pagina (permalink: false in het bericht). Nieuwste bovenaan.
   eleventyConfig.addCollection("news", (collectionApi) =>

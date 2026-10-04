@@ -1,0 +1,104 @@
+{#- Eén rol in mediaproductie (/production-roles/<slug>/). Kruimelpad
+    Production roles > sector, tekst uit de markdown, ernaast een feitenblok
+    (afdeling, rapporteert aan, werkt met, fases), daaronder de andere rollen
+    uit dezelfde afdeling. Indeling en namen: src/_data/productionRoles.json. -#}
+{%- set main = productionRoles | roleGroup(groups[0]) -%}
+{%- set crumbs = [{ name: "Production roles", url: "/production-roles/" }, { name: main.sector.name, url: "/production-roles/#" + main.sector.slug }] -%}
+{%- set siblings = collections.roles | rolesIn(groups[0]) -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, crumbs: crumbs, article: { headline: seo_title or title, date: date or page.date, updated: updated, words: content | wordCount } } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <article class="section article role-article">
+      <div class="container role-inner">
+        <div class="role-main">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/production-roles/">Production roles</a> <span aria-hidden="true">/</span>
+            <a href="/production-roles/#{{ main.anchor }}">{{ main.sector.name }}: {{ main.department.name }}</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">{{ title }}</span>
+          </nav>
+          <h1>{{ title }}</h1>
+          {% if aka and aka.length %}<p class="role-aka">Also called {% for a in aka %}{{ a }}{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+          {% if summary %}<p class="article-standfirst">{{ summary }}</p>{% endif %}
+          <div class="rich-text article-body role-body">
+            {{ content | safe }}
+          </div>
+        </div>
+
+        <aside class="role-facts" aria-label="Role at a glance">
+          <dl>
+            <dt>Where</dt>
+            {%- for g in groups %}
+            {%- set grp = productionRoles | roleGroup(g) %}
+            <dd><a href="/production-roles/#{{ grp.anchor }}">{{ grp.sector.name }}</a><span class="role-dept">{{ grp.department.name }}</span></dd>
+            {%- endfor %}
+            {%- if reports_to and reports_to.length %}
+            <dt>Reports to</dt>
+            {%- for slug in reports_to %}{% set r = collections.roles | roleBySlug(slug) %}{% if r %}
+            <dd><a href="{{ r.url }}">{{ r.data.title }}</a></dd>{% endif %}{% endfor %}
+            {%- endif %}
+            {%- if works_with and works_with.length %}
+            <dt>Works closely with</dt>
+            {%- for slug in works_with %}{% set r = collections.roles | roleBySlug(slug) %}{% if r %}
+            <dd><a href="{{ r.url }}">{{ r.data.title }}</a></dd>{% endif %}{% endfor %}
+            {%- endif %}
+            {%- if phases and phases.length %}
+            <dt>Active during</dt>
+            <dd class="role-phases">
+              {%- for ph in productionRoles.phases %}
+              <a class="role-phase{% if ph.slug in phases %} is-on{% endif %}" href="/how-a-film-is-made/#{{ ph.slug }}"{% if not (ph.slug in phases) %} aria-hidden="true" tabindex="-1"{% endif %}>{{ ph.name }}</a>
+              {%- endfor %}
+            </dd>
+            {%- endif %}
+          </dl>
+          <a class="role-facts-link" href="/how-a-film-is-made/">How a film is made, step by step <span aria-hidden="true">&rarr;</span></a>
+        </aside>
+      </div>
+    </article>
+
+    {%- if siblings.length > 1 %}
+    <section class="section theme-light">
+      <div class="container">
+        <h2 class="article-related-heading">More roles in {{ main.department.name | lower }}</h2>
+        <ul class="role-list">
+          {%- for item in siblings -%}
+          {%- if item.url != page.url %}
+          <li><a href="{{ item.url }}"><span class="role-list-name">{{ item.data.title }}</span><span class="role-list-summary">{{ item.data.summary }}</span></a></li>
+          {%- endif -%}
+          {%- endfor %}
+        </ul>
+        <p class="help-back"><a href="/production-roles/">&larr; All production roles</a></p>
+      </div>
+    </section>
+    {%- endif %}
+
+    <section class="section section-cta">
+      <div class="container cta-inner">
+        <h2>Every role, one set of numbers</h2>
+        <div class="rich-text"><p>Tubes keeps the budget, the schedule, purchase orders and actual costs of a production in one place, so everyone from head of department to producer works from the same figures.</p></div>
+        <div class="button-row centered"><a class="button button-inverse" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a></div>
+      </div>
+    </section>
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>
