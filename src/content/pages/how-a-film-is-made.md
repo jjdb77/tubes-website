@@ -11,7 +11,7 @@ sections:
     text: |
       Most people see a film at the very end of a long road. Before that, someone bought the rights to a story, raised money from half a dozen sources, hired a crew, shot for weeks, edited for months and delivered a pile of files and paperwork to the companies that sell it.
 
-      This guide walks through that road stage by stage, in plain language. Every industry term is explained the first time it appears. At the end you will also find how a TV commission and a commercial work, because both follow a different route.
+      This guide walks through that road stage by stage, in plain language. Every industry term is explained the first time it appears. It follows an independent feature film. [Not every production is a feature film](#kinds-of-production) explains how indie and studio films differ, and how scripted, unscripted, live and animation change the road. At the end you will also find how a TV commission and a commercial work.
     buttons:
       - label: See who does what
         url: /production-roles/
@@ -62,6 +62,33 @@ sections:
         link_label: Read more
         text: |
           Festivals, sales, cinemas and streaming, and then the long road of money flowing back to the investors.
+  - type: textblock
+    theme: teal
+    anchor: kinds-of-production
+    heading: "Not every production is a feature film"
+    lead: This guide follows an independent feature, but the road depends on what you make and who pays for it.
+    text: |
+      ### Studio films and indie films
+
+      A **studio film** is made and paid for by a big studio or streamer that owns the result. The studio decides, finances it from its own money and handles the release itself.
+
+      An **independent film**, or **indie film**, is made outside that system. A production company raises the money piece by piece from investors, film funds, broadcasters, distributors and tax incentives, and keeps more creative control in return. Budgets are usually smaller and the [financing](#financing) takes longer. Most European films are independent films, and this guide follows that route. "Indie" says nothing about the subject or the style. It is about who owns and finances the film.
+
+      ### Scripted
+
+      **Scripted** means everything that is written in advance and performed by actors, such as feature films, drama series, comedy and soaps. The story is fixed in the script before the shoot, so the [screenwriter](/production-roles/screenwriter/) and the [script editor](/production-roles/script-editor/) matter early, and most of the money goes to cast, crew and shooting days. The stages on this page apply almost one to one.
+
+      ### Unscripted
+
+      **Unscripted** covers productions with real people instead of actors, such as documentaries, factual series, reality, docusoaps, game shows and entertainment. There is no script. Development is a **format**, a short description of how the show works, sometimes with a **taster tape** to show the tone. Instead of actors, the team casts **contributors**, the real people on screen.
+
+      The biggest difference is that the story is found in the edit. A shoot can produce hundreds of hours of material, and [story producers](/production-roles/story-producer/) and editors shape it into episodes afterwards. That makes post-production a much bigger share of the budget than on a drama. A [series producer](/production-roles/series-producer/) runs the whole run, and [researchers](/production-roles/researcher/) find stories and contributors. A successful format can be sold abroad and remade in other countries.
+
+      A **documentary** sits in between. It follows real events, often over years, with a small crew, and is often financed like an indie film with film funds and broadcasters.
+
+      ### Live, animation and commercials
+
+      **Live** television, such as news, sport and live shows, is mostly made in-house by the broadcaster in a studio or with an outside broadcast unit, led by a [studio director](/production-roles/studio-director/). **Animation** has no shoot. The production stage is the long work of designing, animating and rendering, and can take years. **Commercials** and branded content are paid for by a brand and follow their own route, described in [how a commercial is made](#commercials).
   - type: textblock
     theme: light
     anchor: stakeholders
@@ -289,6 +316,12 @@ sections:
       - question: What is a minimum guarantee?
         answer: |
           An advance paid by a distributor or sales agent for the rights to a film. They pay a fixed amount up front, which the producer can use to finance the film, and then keep the film's income in their territory until they have earned that amount back plus their fees.
+      - question: What is an indie film?
+        answer: |
+          An independent film, made outside the big studios and streamers. The production company raises the money from several sources (investors, film funds, broadcasters, distributors and tax incentives) and keeps more control over the film. "Indie" is about who owns and finances the film, not about its style. See [studio films and indie films](#kinds-of-production).
+      - question: What is the difference between scripted and unscripted?
+        answer: |
+          Scripted productions are written in advance and performed by actors, like feature films and drama series. Unscripted productions follow real people without a script, like documentaries, reality and game shows. In unscripted the story is shaped in the edit, so post-production takes a bigger share of the time and the budget.
       - question: Is a TV series made the same way as a film?
         answer: |
           The crafts are the same, the money is different. A TV series is usually commissioned by a broadcaster or streamer that pays a licence fee for most of the cost. The production company then covers the rest with deficit financing. See [how a TV commission works](#tv-commission).
