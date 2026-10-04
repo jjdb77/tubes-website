@@ -29,7 +29,7 @@ The floor manager is also in charge of the floor itself. They make sure cables, 
 
 ## How the role touches the budget
 
-Very little. Floor managers are usually freelance or staff, booked by the day or by the series, and their fee is a line in the production budget. They do not manage money. Where they make a difference is time. A floor manager who keeps the audience and guests moving can save an hour of studio time, and on a booked studio day overtime is expensive.
+No budget responsibility, and little influence on cost. Floor managers are usually freelance or staff, booked by the day or by the series, and their fee is a line in the production budget. They do not manage money. Where they make a difference is time. A floor manager who keeps the audience and guests moving can save an hour of studio time, and on a booked studio day overtime is expensive.
 
 ## How people get into the role
 

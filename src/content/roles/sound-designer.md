@@ -29,7 +29,7 @@ The sound designer creates and selects effects, builds atmospheres (the backgrou
 
 ## How the role touches the budget
 
-Not much directly. Sound design is usually part of a post sound package, priced in weeks of work and studio time and booked by the [post-production supervisor](/production-roles/post-production-supervisor/). The sound designer's effect on costs comes from time. Late edit changes mean tracks must be reworked, and a film that leans heavily on sound needs more weeks. Licences for sound libraries or special recording sessions can appear as small extra lines.
+Little budget responsibility, but influence on the post sound cost. Sound design is usually part of a post sound package, priced in weeks of work and studio time and booked by the [post-production supervisor](/production-roles/post-production-supervisor/). The sound designer's effect on costs comes from time. Late edit changes mean tracks must be reworked, and a film that leans heavily on sound needs more weeks. Licences for sound libraries or special recording sessions can appear as small extra lines.
 
 ## How people become sound designers
 

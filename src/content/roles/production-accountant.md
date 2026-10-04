@@ -1,6 +1,6 @@
 ---
 title: Production accountant
-aka: ["Production auditor"]
+aka: []
 summary: "Keeps the books of a production, pays crew and suppliers, and reports each week how actual spending compares to the budget."
 groups: ["film/finance-legal", "company/business"]
 reports_to: ["line-producer", "producer"]

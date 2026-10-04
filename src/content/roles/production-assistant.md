@@ -29,7 +29,7 @@ The job starts in [pre-production](/how-a-film-is-made/#pre-production) for offi
 
 ## How the role touches the budget
 
-Barely. A production assistant is a line in the crew budget, with their own day rate and overtime. They may hold a small cash float for purchases and hand in receipts afterwards, and those receipts end up in the cost report. Keeping every receipt, however small, is the main budget task of this role.
+No budget responsibility, and little influence on cost. A production assistant is a line in the crew budget, with their own day rate and overtime. They may hold a small cash float for purchases and hand in receipts afterwards, and those receipts end up in the cost report. Keeping every receipt, however small, is the main budget task of this role.
 
 ## How people get into the role
 

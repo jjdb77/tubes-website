@@ -29,7 +29,7 @@ The pair present their ideas to the [creative director](/production-roles/creati
 
 ## How the role touches the budget
 
-Hardly at all directly. The copywriter does not manage money. But every line they write has a cost. A script set on a beach at sunset, with a crowd and a dog, costs much more than one with two people at a table. Good copywriters learn to write ideas that fit the budget, and the [agency producer](/production-roles/agency-producer/) will tell them early when an idea will not.
+No budget responsibility, but a lot of influence on cost. The copywriter does not manage money. But every line they write has a cost. A script set on a beach at sunset, with a crowd and a dog, costs much more than one with two people at a table. Good copywriters learn to write ideas that fit the budget, and the [agency producer](/production-roles/agency-producer/) will tell them early when an idea will not.
 
 ## How people become copywriters
 

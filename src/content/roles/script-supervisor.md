@@ -29,7 +29,7 @@ They also watch continuity. That covers props, costumes, hair, the position of a
 
 ## How the role touches the budget
 
-Barely, directly. The script supervisor is paid a daily or weekly rate and has no budget line of their own. Their effect on cost is indirect but real. A missed continuity error can mean a reshoot, and reshoots are expensive. Good notes also save time in the edit, because the editor and [assistant editor](/production-roles/assistant-editor/) can find the right take quickly.
+No budget responsibility, but an indirect influence on cost. The script supervisor is paid a daily or weekly rate and has no budget line of their own. Their effect on cost is indirect but real. A missed continuity error can mean a reshoot, and reshoots are expensive. Good notes also save time in the edit, because the editor and [assistant editor](/production-roles/assistant-editor/) can find the right take quickly.
 
 ## How people become script supervisors
 

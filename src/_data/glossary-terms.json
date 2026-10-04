@@ -29,12 +29,14 @@
     {
       "term": "Actuals",
       "slug": "actuals",
-      "aka": [],
+      "aka": [
+        "cost to date"
+      ],
       "category": "Budget and accounting",
-      "definition": "The costs that have really been booked so far, from paid invoices, payroll and receipts. Actuals are compared with the budget to see where the money went. They lag behind reality, because an invoice often arrives weeks after the work was done.",
+      "definition": "The costs that have been booked against the production up to the reporting date, such as approved invoices, payroll and petty cash receipts. An invoice counts as an actual once it is booked, even if it has not been paid yet. Actuals say what has been spent, not what has left the bank.",
       "see_also": [
         "commitments",
-        "cost-report",
+        "etc",
         "efc"
       ]
     },
@@ -318,7 +320,7 @@
         "cashflow"
       ],
       "category": "Budget and accounting",
-      "definition": "A plan showing how much money the production needs each week or month, and when. It matters because financiers often pay in stages, while crew and suppliers want paying on time. A budget can be fine on paper and still run out of cash in week three.",
+      "definition": "A plan of when money actually comes in and goes out, week by week or month by month. It is separate from the cost report, which tracks costs and commitments. A production can be on budget and still run short of cash, because financiers often pay in stages and rebates arrive months after the shoot, while crew and suppliers want paying on time.",
       "see_also": [
         "cost-report",
         "budget-lock"
@@ -433,11 +435,9 @@
     {
       "term": "Collection account",
       "slug": "collection-account",
-      "aka": [
-        "CAMA"
-      ],
+      "aka": [],
       "category": "Financing and money",
-      "definition": "An independent account that receives all income from a film and pays it out according to the waterfall. It is run by a collection account manager under a collection account management agreement, or CAMA, so investors can trust that payments are made correctly.",
+      "definition": "An independent bank account that receives all income from a film and pays it out according to the waterfall. It is run by a collection account manager under a separate agreement, the collection account management agreement (CAMA), which sets who gets paid what and in which order.",
       "see_also": [
         "waterfall",
         "recoupment"
@@ -488,15 +488,17 @@
       ]
     },
     {
-      "term": "Commitments",
+      "term": "Commitments (open commitments)",
       "slug": "commitments",
-      "aka": [],
+      "aka": [
+        "open commitments"
+      ],
       "category": "Budget and accounting",
-      "definition": "Money the production has promised but not yet paid, for example a signed equipment rental or a purchase order for set materials. Counting commitments next to actuals gives a truer picture of spending than invoices alone.",
+      "definition": "The part of signed orders and contracts that has not yet been booked as an actual. A purchase order of 10,000 for equipment is a commitment until the invoice comes in. When that invoice is booked, the actual goes up and the open commitment goes down by the same amount.",
       "see_also": [
         "actuals",
         "purchase-order",
-        "cost-report"
+        "efc"
       ]
     },
     {
@@ -585,7 +587,7 @@
         "talent"
       ],
       "category": "TV and unscripted",
-      "definition": "A real person who appears in an unscripted programme, such as an interviewee, a competitor or the family in a docusoap. Contributors are not actors and usually are not paid a fee, though expenses may be covered. Producers have a duty of care towards them, and every contributor signs a release form.",
+      "definition": "A real person who appears in an unscripted programme, such as an interviewee, a competitor or the family in a docusoap. Contributors are not actors and are often not paid a fee, though expenses may be covered. Producers have a duty of care towards them, and contributors usually sign a release form.",
       "see_also": [
         "release-form",
         "compliance",
@@ -664,7 +666,7 @@
         "rushes"
       ],
       "category": "Camera, light and sound",
-      "definition": "The footage from a shooting day, prepared so the director, producers and editor can watch it, usually the next day. Watching dailies is how teams spot problems with focus, performance or coverage while it can still be fixed. In the UK and Europe they are often called rushes.",
+      "definition": "The footage from a shooting day, prepared so the director, producers and editor can watch it, usually the next day. Watching dailies is how teams spot problems with focus, performance or coverage while it can still be fixed. Also called rushes.",
       "see_also": [
         "take",
         "digital-imaging-technician",
@@ -774,7 +776,7 @@
       "definition": "An agreement in which a studio, broadcaster or fund pays a producer or writer to develop a project, for example to write a script or a series bible, without yet committing to make it. The funder usually gets the first right to produce it and is repaid if someone else does.",
       "see_also": [
         "greenlight",
-        "turnaround-rest",
+        "turnaround-development",
         "development-hell"
       ]
     },
@@ -806,11 +808,10 @@
       "term": "Docusoap",
       "slug": "docusoap",
       "aka": [
-        "docuseries",
         "fly-on-the-wall"
       ],
       "category": "TV and unscripted",
-      "definition": "An observational series that follows real people at work or at home over several episodes, edited with storylines like a soap. A series about the staff of an airport or a vet practice is a typical example. Most of the story is shaped in the edit from many hours of footage.",
+      "definition": "A kind of documentary series that follows real people at work or at home over several episodes, edited with running storylines like a soap. A series about the staff of an airport or a vet practice is a typical example. Not every docuseries is a docusoap. A docuseries can also be an investigation or a historical story told over several episodes.",
       "see_also": [
         "factual",
         "reality",
@@ -852,11 +853,11 @@
         "estimate at completion"
       ],
       "category": "Budget and accounting",
-      "definition": "The amount a budget line, or the whole production, is now expected to cost by the end. It adds what has been spent and committed to a fresh estimate of what is still to come. When the EFC is higher than the budget, the line is heading for an overage. It is the key column in a [cost report](/insights/what-is-a-production-cost-report/).",
+      "definition": "The total a budget line, or the whole production, is now expected to cost by the end. EFC = actuals + open commitments + the estimated cost still to come that is not yet committed (the ETC). For example 40,000 actuals + 35,000 open commitments + 30,000 still to come gives an EFC of 105,000. It is the key column in a [cost report](/insights/what-is-a-production-cost-report/).",
       "see_also": [
-        "cost-report",
-        "actuals",
-        "overage"
+        "etc",
+        "variance",
+        "actuals"
       ]
     },
     {
@@ -887,6 +888,20 @@
       ]
     },
     {
+      "term": "ETC (estimate to complete)",
+      "slug": "etc",
+      "aka": [
+        "cost to complete"
+      ],
+      "category": "Budget and accounting",
+      "definition": "The estimated cost still to come on a line that is not yet booked or committed, such as shooting days not yet ordered or post work not yet contracted. Some productions include open commitments in the ETC, so a cost report should say which definition it uses. Actuals + open commitments + ETC gives the [EFC](/film-production-glossary/#efc).",
+      "see_also": [
+        "efc",
+        "commitments",
+        "cost-report"
+      ]
+    },
+    {
       "term": "Factual",
       "slug": "factual",
       "aka": [
@@ -904,11 +919,9 @@
     {
       "term": "Festival premiere",
       "slug": "festival-premiere",
-      "aka": [
-        "world premiere"
-      ],
+      "aka": [],
       "category": "Delivery and distribution",
-      "definition": "The first public screening of a film at a festival. Major festivals often require a world, international or regional premiere, so where a film premieres is a strategic choice that affects which other festivals it can enter and how buyers see it. Browse [film festivals](/compare-film-festivals/).",
+      "definition": "The first screening of a film at a festival. That can be a world premiere (first screening anywhere), an international premiere (first outside its home country) or a national or regional premiere. Major festivals often require a certain premiere status, so where a film premieres affects which other festivals it can enter. Browse [film festivals](/compare-film-festivals/).",
       "see_also": [
         "film-market",
         "sales-agent",
@@ -1347,11 +1360,9 @@
     {
       "term": "Net profits",
       "slug": "net-profits",
-      "aka": [
-        "net receipts"
-      ],
+      "aka": [],
       "category": "Financing and money",
-      "definition": "What is left of a film's income after distribution fees, costs, loans, investments and deferments have been paid back. Many contracts define net profits so narrowly that participants receive little or nothing, so experienced negotiators look closely at the definition.",
+      "definition": "What a contract says is left of a film's income after distribution fees, costs, loans, investments and deferments have been paid back, as that contract defines it. It is not the same as net receipts, which is simply the income that reaches a party after the fees and costs taken before it. Many contracts define net profits so narrowly that participants receive little or nothing.",
       "see_also": [
         "backend",
         "points",
@@ -1365,7 +1376,7 @@
         "offline"
       ],
       "category": "Post-production",
-      "definition": "The creative stage of editing, where the [editor](/production-roles/editor/) and director build the story from the footage. It is usually done on lightweight copies of the camera files (proxies), so picture quality does not matter yet. It ends with a locked edit that the online edit then rebuilds at full quality. See how editing fits into [post-production](/how-a-film-is-made/#post-production).",
+      "definition": "The creative stage of editing, where the [editor](/production-roles/editor/) and director build the story from the footage, from the first assembly up to the approved cut. It is usually done on lightweight copies of the camera files (proxies). It ends with a locked edit that the online edit then rebuilds and finishes at full quality.",
       "see_also": [
         "online-edit",
         "rough-cut",
@@ -1410,7 +1421,7 @@
       "see_also": [
         "chain-of-title",
         "intellectual-property",
-        "turnaround-rest"
+        "turnaround-development"
       ]
     },
     {
@@ -1629,12 +1640,9 @@
     {
       "term": "Production fee",
       "slug": "production-fee",
-      "aka": [
-        "producer's fee",
-        "overhead"
-      ],
+      "aka": [],
       "category": "Budget and accounting",
-      "definition": "A line in the budget that pays the production company for running the project, often a percentage of the costs. In some deals it is called overhead. Financiers usually cap it, and in commercials the comparable line is the markup.",
+      "definition": "A line in the budget that pays the production company for producing the project, often a percentage of the costs. It is not the same as the producer's fee (the personal fee of the producer) or overhead (the company's general running costs), which some budgets list as separate lines. Financiers usually cap the fee. In commercials the comparable line is the markup.",
       "see_also": [
         "contingency",
         "topsheet"
@@ -2035,7 +2043,7 @@
       "slug": "subtitles",
       "aka": [],
       "category": "Post-production",
-      "definition": "On-screen text that translates the dialogue for viewers who speak another language. They only contain the spoken words, unlike closed captions. Distributors usually deliver them as separate timed files per language, made from a dialogue list of the final cut.",
+      "definition": "On-screen text of the dialogue. Usually a translation for viewers who speak another language, but subtitles can also be in the same language, for example for strong accents or for viewers watching without sound. Unlike closed captions they show only the spoken words. Distributors usually want them as separate timed files per language.",
       "see_also": [
         "closed-captions",
         "delivery-schedule"
@@ -2298,11 +2306,10 @@
       "term": "TVOD",
       "slug": "tvod",
       "aka": [
-        "transactional video on demand",
-        "EST"
+        "transactional video on demand"
       ],
       "category": "Delivery and distribution",
-      "definition": "Transactional video on demand, where viewers pay per title to rent or buy a film digitally. TVOD usually follows the cinema release and comes before subscription streaming. Electronic sell-through, or EST, is the buy version.",
+      "definition": "Transactional video on demand, where viewers pay per title to rent or buy a film digitally. Buying to keep is also called electronic sell-through (EST), so EST is part of TVOD but TVOD also covers rental. TVOD often follows the cinema release and comes before subscription streaming.",
       "see_also": [
         "vod",
         "svod",
@@ -2341,7 +2348,7 @@
         "non-scripted"
       ],
       "category": "TV and unscripted",
-      "definition": "Programmes made with real people instead of actors, such as reality, documentary, game shows and lifestyle formats. There is a plan and a structure, but what happens on camera is not written as dialogue. Much of the story is found in the edit, so post-production often takes a bigger share of the schedule.",
+      "definition": "Programmes made with real people instead of actors, such as reality, documentary, game shows and lifestyle formats. Unscripted does not mean unwritten. There are formats, running orders and presenter scripts, but the people on screen do not perform written dialogue. In documentaries and observational series much of the story is found in the edit, so post-production takes a large share of the schedule.",
       "see_also": [
         "scripted",
         "factual",
@@ -2367,10 +2374,10 @@
       "slug": "variance",
       "aka": [],
       "category": "Budget and accounting",
-      "definition": "The difference between the budget and the latest expected cost for a line. A positive or negative variance shows where money is being saved or lost. Cost reports usually list it per line and in total.",
+      "definition": "The difference between the budget and the EFC, calculated as budget minus EFC. A positive variance means a line is expected to come in under budget, a negative one means it is heading over. With a budget of 100,000 and an EFC of 105,000 the variance is minus 5,000. Cost reports list it per line and in total.",
       "see_also": [
-        "cost-report",
         "efc",
+        "cost-report",
         "overage"
       ]
     },
@@ -2378,11 +2385,10 @@
       "term": "VFX (visual effects)",
       "slug": "vfx",
       "aka": [
-        "visual effects",
-        "CGI"
+        "visual effects"
       ],
       "category": "Post-production",
-      "definition": "Images created or changed on a computer after the shoot, such as removing a modern sign from a period street, adding crowds or building a whole creature. It is led by a [VFX supervisor](/production-roles/vfx-supervisor/) and is different from special effects (SFX), which happen physically on set. VFX is often one of the hardest budget lines to estimate early.",
+      "definition": "Images created or changed on a computer, such as removing a modern sign from a period street, adding crowds or building a whole creature. Most of the work happens in post, but VFX is planned in pre-production and supervised on set. CGI (computer-generated imagery) is one technique within VFX. It is led by a [VFX supervisor](/production-roles/vfx-supervisor/) and differs from special effects (SFX), which happen physically on set.",
       "see_also": [
         "picture-lock",
         "online-edit",
@@ -2397,7 +2403,7 @@
         "special effects"
       ],
       "category": "On set",
-      "definition": "SFX (special effects) are done physically on set, such as rain, smoke, fire or controlled explosions, by the [SFX supervisor](/production-roles/special-effects-supervisor/). VFX (visual effects) are added on a computer after the shoot, such as digital crowds, set extensions or removing a modern road sign. Many scenes combine both.",
+      "definition": "SFX (special effects) are done physically on set, such as rain, smoke, fire or controlled explosions, by the [SFX supervisor](/production-roles/special-effects-supervisor/). VFX (visual effects) are created or changed on a computer, mostly in post but planned and supervised from pre-production onwards. Many scenes combine both.",
       "see_also": [
         "green-screen"
       ]

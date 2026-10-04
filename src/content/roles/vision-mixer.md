@@ -28,7 +28,7 @@ Beyond cutting, the vision mixer builds the effects that mix pictures together, 
 
 ## How the role touches the budget
 
-Hardly at all. The vision mixer is usually a staff member at a broadcaster or facilities company, or a freelancer booked by the day. Their day rate and the hire of the gallery or outside broadcast truck appear in the production budget, but they do not manage money themselves. The one way they affect cost is time. A smooth rehearsal and few retakes keep the studio day short.
+No budget responsibility, and little influence on cost. The vision mixer is usually a staff member at a broadcaster or facilities company, or a freelancer booked by the day. Their day rate and the hire of the gallery or outside broadcast truck appear in the production budget, but they do not manage money themselves. The one way they affect cost is time. A smooth rehearsal and few retakes keep the studio day short.
 
 ## How people get into the role
 

@@ -29,7 +29,7 @@ From that they write or review risk assessments. A risk assessment lists what co
 
 ## How the role touches the budget
 
-Not much directly. The advisor is usually paid a fee or day rate from a small line in the production budget. Their advice does create costs elsewhere, such as safety boats for a water scene, extra crew to manage a road closure or a medic on a stunt day. Producers sometimes see that as extra spending, but an accident costs far more in delays, insurance claims and reputation, and insurers often expect a production to show that risks were assessed.
+No budget responsibility, but their advice shapes costs elsewhere. The advisor is usually paid a fee or day rate from a small line in the production budget. Their advice does create costs elsewhere, such as safety boats for a water scene, extra crew to manage a road closure or a medic on a stunt day. Producers sometimes see that as extra spending, but an accident costs far more in delays, insurance claims and reputation, and insurers often expect a production to show that risks were assessed.
 
 ## How people get into the role
 

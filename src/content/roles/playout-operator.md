@@ -29,7 +29,7 @@ They also handle the moments that cannot be fully automated, such as switching t
 
 ## How the role touches the budget
 
-Hardly at all. The playout operator does not handle money. They do see one cost effect of production, in the form of files that fail technical checks. A programme delivered in the wrong format or with faults goes back to the production company to fix, usually at its own cost. That is why [post-production supervisors](/production-roles/post-production-supervisor/) work to the broadcaster's delivery specification from the start of [delivery](/how-a-film-is-made/#delivery).
+No budget responsibility, and little influence on production cost. The playout operator does not handle money. They do see one cost effect of production, in the form of files that fail technical checks. A programme delivered in the wrong format or with faults goes back to the production company to fix, usually at its own cost. That is why [post-production supervisors](/production-roles/post-production-supervisor/) work to the broadcaster's delivery specification from the start of [delivery](/how-a-film-is-made/#delivery).
 
 ## How people get into the role
 

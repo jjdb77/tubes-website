@@ -29,7 +29,7 @@ The name comes from the days of film. The loader put the film stock into the mag
 
 ## How the role touches the budget
 
-Very little. The 2nd AC often keeps the camera inventory and expendables (consumables such as tape, batteries and cleaning supplies), so they may raise small orders or petty cash claims. Their own pay is a day or weekly rate with overtime on timesheets. Missing or damaged kit they report can become an insurance claim.
+No budget responsibility, and little influence on cost. The 2nd AC often keeps the camera inventory and expendables (consumables such as tape, batteries and cleaning supplies), so they may raise small orders or petty cash claims. Their own pay is a day or weekly rate with overtime on timesheets. Missing or damaged kit they report can become an insurance claim.
 
 ## How people get into the role
 

@@ -28,7 +28,7 @@ They mostly work during the shoot. For each shot they lay and level the track, s
 
 ## How the role touches the budget
 
-Barely. The dolly and track are part of the grip rental package. The dolly grip is paid a day or weekly rate with overtime on timesheets, and on smaller shoots one grip may do both dolly and general grip work.
+No budget responsibility, and little influence on cost. The dolly and track are part of the grip rental package. The dolly grip is paid a day or weekly rate with overtime on timesheets, and on smaller shoots one grip may do both dolly and general grip work.
 
 ## How people get into the role
 

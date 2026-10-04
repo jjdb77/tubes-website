@@ -29,7 +29,7 @@ They visit agencies, show directors' reels (short collections of their best work
 
 ## How the role touches the budget
 
-Very little. The rep does not write or manage production budgets. Their work affects how many jobs the company gets, not what each job costs. In many companies reps are paid partly on commission, a percentage of the jobs they help bring in. The bid itself is written by the [commercials producer](/production-roles/commercials-producer/).
+No budget responsibility, and little influence on what a job costs. The rep does not write or manage production budgets. Their work affects how many jobs the company gets, not what each job costs. In many companies reps are paid partly on commission, a percentage of the jobs they help bring in. The bid itself is written by the [commercials producer](/production-roles/commercials-producer/).
 
 ## How people become director's reps
 

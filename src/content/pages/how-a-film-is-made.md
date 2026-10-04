@@ -11,7 +11,7 @@ sections:
     text: |
       Most people see a film at the very end of a long road. Before that, someone bought the rights to a story, raised money from half a dozen sources, hired a crew, shot for weeks, edited for months and delivered a pile of files and paperwork to the companies that sell it.
 
-      This guide walks through that road stage by stage, in plain language. Every industry term is explained the first time it appears. It follows an independent feature film. [Not every production is a feature film](#kinds-of-production) explains how indie and studio films differ, and how scripted, unscripted, live and animation change the road. At the end you will also find how a TV commission and a commercial work.
+      This guide walks through that road stage by stage, in plain language. Every industry term is explained the first time it appears. It follows an independent feature film. [Not every production is a feature film](#kinds-of-production) explains what changes for series, unscripted, animation, live and commercials. At the end you will also find how a TV commission and a commercial work.
     buttons:
       - label: See who does what
         url: /production-roles/
@@ -68,29 +68,33 @@ sections:
     theme: teal
     anchor: kinds-of-production
     heading: "Not every production is a feature film"
-    lead: This guide follows an independent feature, but the road depends on what you make and who pays for it.
+    lead: This guide follows an independent feature film. Three separate questions decide how far another production differs from that road.
     text: |
-      ### Studio films and indie films
+      The three questions are independent of each other. An animated series can be scripted, made by an independent company and commissioned by a streamer, all at once.
 
-      A **studio film** is made and paid for by a big studio or streamer that owns the result. The studio decides, finances it from its own money and handles the release itself.
+      ### 1. What is being made?
 
-      An **independent film**, or **indie film**, is made outside that system. A production company raises the money piece by piece from investors, film funds, broadcasters, distributors and tax incentives, and keeps more creative control in return. Budgets are usually smaller and the [financing](#financing) takes longer. Most European films are independent films, and this guide follows that route. "Indie" says nothing about the subject or the style. It is about who owns and finances the film.
+      **Scripted** productions tell a story written in advance and performed by actors, such as feature films, drama series and comedy. The [screenwriter](/production-roles/screenwriter/) and [script editor](/production-roles/script-editor/) matter early, and most of the money goes to cast, crew and shooting days. The stages on this page apply almost one to one.
 
-      ### Scripted
+      **Unscripted** productions are built around real people instead of actors, such as documentaries, factual series, reality, game shows and entertainment. Unscripted does not mean unwritten. There are formats, running orders, presenter scripts and story outlines, but the people on screen do not perform written dialogue. Development often starts from a **format**, a description of how the show works, sometimes with a **taster tape**. Instead of actors the team casts **contributors**. In observational formats and documentaries much of the story is shaped in the edit by [story producers](/production-roles/story-producer/) and editors, which makes post-production a large part of the schedule and budget. A studio game show or live entertainment show works the other way round, with most of the effort in the studio days. A [series producer](/production-roles/series-producer/) runs the series, and [researchers](/production-roles/researcher/) find stories and contributors.
 
-      **Scripted** means everything that is written in advance and performed by actors, such as feature films, drama series, comedy and soaps. The story is fixed in the script before the shoot, so the [screenwriter](/production-roles/screenwriter/) and the [script editor](/production-roles/script-editor/) matter early, and most of the money goes to cast, crew and shooting days. The stages on this page apply almost one to one.
+      **Commercials** and branded content promote a brand and follow their own route, described in [how a commercial is made](#commercials).
 
-      ### Unscripted
+      ### 2. How is it made?
 
-      **Unscripted** covers productions with real people instead of actors, such as documentaries, factual series, reality, docusoaps, game shows and entertainment. There is no script. Development is a **format**, a short description of how the show works, sometimes with a **taster tape** to show the tone. Instead of actors, the team casts **contributors**, the real people on screen.
+      **Live action** is filmed with a camera, on location or in a studio. **Animation** is drawn or built frame by frame. In 2D and 3D animation there is no shoot, and the production stage is the long work of designing, animating and rendering. Stop-motion is the exception, because puppets and sets are photographed frame by frame on a stage. Many productions are **hybrid**, mixing the two.
 
-      The biggest difference is that the story is found in the edit. A shoot can produce hundreds of hours of material, and [story producers](/production-roles/story-producer/) and editors shape it into episodes afterwards. That makes post-production a much bigger share of the budget than on a drama. A [series producer](/production-roles/series-producer/) runs the whole run, and [researchers](/production-roles/researcher/) find stories and contributors. A successful format can be sold abroad and remade in other countries.
+      A production can also be **single-camera**, shot scene by scene like a film, or **multi-camera**, with several cameras cut live in a studio gallery. And it can be **recorded** for later or broadcast **live**. Live news, sport and shows are made by broadcasters in-house, but also by independent production companies and facilities companies that provide studios and outside broadcast units, often with a [studio director](/production-roles/studio-director/) in the gallery.
 
-      A **documentary** sits in between. It follows real events, often over years, with a small crew, and is often financed like an indie film with film funds and broadcasters.
+      ### 3. Who pays for it and who orders it?
 
-      ### Live, animation and commercials
+      An **independent film**, or **indie film**, is financed by its producer from several sources, such as investors, film funds, broadcasters, distributors and tax incentives. That is the route this guide follows, and most European films take it. A **studio film** is typically financed by a large studio or streamer that also handles distribution. In practice financing, ownership, distribution and creative control are separate agreements, and a film can mix both models. "Indie" says nothing about the style of a film. It is about how it is financed and who owns it.
 
-      **Live** television, such as news, sport and live shows, is mostly made in-house by the broadcaster in a studio or with an outside broadcast unit, led by a [studio director](/production-roles/studio-director/). **Animation** has no shoot. The production stage is the long work of designing, animating and rendering, and can take years. **Commercials** and branded content are paid for by a brand and follow their own route, described in [how a commercial is made](#commercials).
+      A **commission** is ordered and mostly paid for by a broadcaster or streamer, see [how a TV commission works](#tv-commission). A **commercial** is ordered by a brand through its advertising agency.
+
+      ### What changes compared to the feature film
+
+      Development is shorter and cheaper for a commission or a commercial, because the buyer is known from the start. A commissioned series or a commercial has more approvals by the buyer along the way. Unscripted schedules depend more on real events and contributors, and observational formats need more edit time. Live production is planned to the minute, with almost no post. The budget logic stays the same everywhere. What has been spent, what is committed and what is still to come.
   - type: textblock
     theme: light
     anchor: stakeholders
@@ -123,7 +127,7 @@ sections:
 
       Next comes a **treatment**, a short prose version of the story, and then the screenplay. A script goes through many **drafts**, with notes from the producer and often a [script editor](/production-roles/script-editor/). For *Low Tide* that could mean four or five versions before anyone outside the company reads it.
 
-      All this costs money before there is any budget. **Development money** comes from the production company itself, from film funds with development schemes, or from a broadcaster or distributor who wants first look at the project.
+      All this costs money, so development has a budget of its own, for writers, rights, research and travel. **Development money** comes from the production company itself, from film funds with development schemes, or from a broadcaster or distributor who wants first look at the project. Towards the end of development the producer also makes a first **estimate of the production budget**, because financiers want to know what the film will cost before they commit. That estimate is refined during financing and pre-production.
 
       The last step is **packaging**. The producer attaches a director and one or two well-known actors, because financiers invest in a package, not just a script. A good script with the right names attached is what opens the doors to the next stage.
 
@@ -138,7 +142,7 @@ sections:
 
       - **Equity.** Money from investors who get a share of the profits in return.
       - **Pre-sales.** A distributor in one country pays for the right to release the film there, before it is made.
-      - **Minimum guarantee (MG).** An advance from a distributor or sales agent. They pay a fixed sum now and keep the film's income until they have earned it back.
+      - **Minimum guarantee (MG).** A guaranteed amount from a distributor or sales agent for the rights. It is often paid in instalments, for example a part on signing and the rest on accepted delivery of the film. They keep the film's income until they have earned it back. A signed MG is a promise, not cash in the bank, which is why producers often borrow against it.
       - **Gap financing.** A loan against territories that have not been sold yet, at a higher risk and a higher price.
       - **Soft money.** Grants and loans from film funds that do not need to be paid back in full, or only from profits.
       - **Tax incentives and cash rebates.** Many countries give back a percentage of what is spent locally. You can compare them in our [incentive comparison](/compare-film-incentives/) and read each scheme in the [incentive guide](/film-incentives/).
@@ -158,7 +162,7 @@ sections:
     heading: Pre-production
     lead: The money is in place. Now every day of the shoot gets planned, because changing things later costs far more.
     text: |
-      The [line producer](/production-roles/line-producer/) turns the script into a detailed **budget** and a **shooting schedule**. Once the financiers approve them, the budget is **locked**, meaning it becomes the fixed plan the production is measured against. If you want to see what such a budget contains, look at our [film budget template](/film-budget-template/) or build one in the [Budget Builder](/tools/budget-builder/).
+      The [line producer](/production-roles/line-producer/) turns the estimate from development into a detailed **budget** and a **shooting schedule**. Once the financiers approve them, the budget is **locked**, meaning it becomes the fixed plan the production is measured against. If you want to see what such a budget contains, look at our [film budget template](/film-budget-template/) or build one in the [Budget Builder](/tools/budget-builder/).
 
       Then the team grows fast.
 
@@ -181,9 +185,9 @@ sections:
 
       Every evening the [second assistant director](/production-roles/second-assistant-director/) sends out the **call sheet**, the plan for the next day. It says who needs to be where and when, which scenes are shot and what is needed for them.
 
-      The footage of each day is checked by the director and producers as **dailies** (in the US also called rushes). They want to know early if a scene needs to be shot again.
+      The footage of each day is checked by the director and producers as **dailies**, also called rushes. They want to know early if a scene needs to be shot again.
 
-      The production office writes a **daily progress report**, a record of what was shot, how long it took and anything that went wrong. Each week the [production accountant](/production-roles/production-accountant/) puts the actual costs next to the budget in a **cost report**, which shows where the money is going and what the film is likely to cost in the end. Our article on the [production cost report](/insights/what-is-a-production-cost-report/) explains how it works.
+      The production office writes a **daily progress report**, a record of what was shot, how long it took and anything that went wrong. Each week the [production accountant](/production-roles/production-accountant/) makes a **cost report**. It puts the costs booked so far (actuals), the orders and contracts not yet booked (open commitments) and the estimate of what is still to come next to the budget. Together they give the **EFC**, what the film is now expected to cost in the end. Our article on the [production cost report](/insights/what-is-a-production-cost-report/) explains how it works.
 
       Things go over. A day runs long and the crew is paid **overtime**, or a location falls through. For that the budget holds a **contingency**, a reserve of a few percent that is only released with approval. Read more in [how much contingency a production needs](/insights/how-much-contingency-does-a-production-need/).
 
@@ -194,7 +198,7 @@ sections:
     heading: Post-production
     lead: The footage becomes a film. This stage often takes longer than the shoot.
     text: |
-      The [editor](/production-roles/editor/) has usually started during the shoot, assembling scenes as the footage comes in. After the shoot, editor and director shape the film over many weeks. When nobody will change the cut any more, the film reaches **picture lock**. From then on the length and order of every shot are fixed, so the other specialists can do their work.
+      The [editor](/production-roles/editor/) has usually started during the shoot, assembling scenes as the footage comes in. After the shoot, editor and director shape the film over many weeks. When nobody will change the cut any more, the film reaches **picture lock**. From then on the length and order of every shot are fixed, so the finishing can be done on a stable version. Much of the specialist work starts earlier, though. VFX is planned before the shoot, and music and sound often begin during the edit.
 
       - **VFX.** Visual effects, from removing a modern sign in the background to creating a storm at sea, supervised by a [VFX supervisor](/production-roles/vfx-supervisor/).
       - **Grade.** The [colourist](/production-roles/colourist/) sets the colour and mood of every shot so the film looks like one whole.
@@ -236,8 +240,8 @@ sections:
       A film usually moves through **release windows**, periods in which it is only available in one place.
 
       - **Cinema.** The first window, for films that get a theatrical release.
-      - **VOD.** Video on demand, where you rent or buy a single film online.
-      - **Streaming.** A subscription service that offers the film as part of its catalogue.
+      - **TVOD.** Transactional video on demand, where you rent or buy a single film online.
+      - **SVOD.** Subscription video on demand, a streaming service that offers the film as part of its catalogue.
       - **TV.** Pay TV first, free television later.
 
       The order and length of these windows differ per country and per deal, and they have become shorter over the years.
@@ -291,9 +295,9 @@ sections:
 
       In pre-production everything is agreed with the client at the **PPM** (pre-production meeting), from cast and locations to the look of each shot. Then comes the shoot, often in one or a few days.
 
-      In post, the **offline edit** is the rough version for approval and the **online edit** is the finished, graded version. The client approves at several points along the way. The final versions are delivered to the **media**, the TV channels, cinemas and online platforms where the ad will run.
+      In post, the **offline edit** is the creative edit, from the first cut up to the version the client approves. The **online edit** then conforms that version at full quality and finishes the picture, with grading and graphics. The client approves at several points along the way. The final versions are delivered to the **media**, the TV channels, cinemas and online platforms where the ad will run.
 
-      Last come **usage rights**. Actors and music are paid for a set use, such as a period, a set of countries and a set of media. A **buyout** is a payment that covers that use in one go.
+      Throughout, **usage rights** matter. Actors and music are paid for a set use, such as a period, a set of countries and a set of media. That use is agreed early, in the bid, at casting and when the music is chosen, because it can change the cost a lot. A **buyout** is a payment that covers that use in one go.
 
       At the production company, a commercial is led by the [commercials producer](/production-roles/commercials-producer/), with the [head of production](/production-roles/head-of-production/) watching costs across all jobs.
   - type: faq
@@ -317,20 +321,20 @@ sections:
           Earning back the money that was put into the film. Each financier agrees beforehand in what order they are repaid from the film's income. That order is called the recoupment order or waterfall, and only after everyone in it has been repaid does the film make a profit.
       - question: What is a minimum guarantee?
         answer: |
-          An advance paid by a distributor or sales agent for the rights to a film. They pay a fixed amount up front, which the producer can use to finance the film, and then keep the film's income in their territory until they have earned that amount back plus their fees.
+          A guaranteed amount a distributor or sales agent agrees to pay for the rights to a film, often in instalments such as a part on signing and the rest on accepted delivery. The producer can borrow against the signed contract to finance the film. The distributor or sales agent then keeps the film's income until they have earned that amount back plus their fees.
       - question: What is an indie film?
         answer: |
-          An independent film, made outside the big studios and streamers. The production company raises the money from several sources (investors, film funds, broadcasters, distributors and tax incentives) and keeps more control over the film. "Indie" is about who owns and finances the film, not about its style. See [studio films and indie films](#kinds-of-production).
+          A film financed by its producer from several sources, such as investors, film funds, broadcasters, distributors and tax incentives, rather than by one large studio or streamer. "Indie" is about how a film is financed and who owns it, not about its style. See [kinds of production](#kinds-of-production).
       - question: What is the difference between scripted and unscripted?
         answer: |
-          Scripted productions are written in advance and performed by actors, like feature films and drama series. Unscripted productions follow real people without a script, like documentaries, reality and game shows. In unscripted the story is shaped in the edit, so post-production takes a bigger share of the time and the budget.
+          Scripted productions tell a story written in advance and performed by actors, like feature films and drama series. Unscripted productions are built around real people who do not perform written dialogue, like documentaries, reality and game shows. They still use formats, running orders and presenter scripts. In documentaries and observational series much of the story is shaped in the edit.
       - question: Is a TV series made the same way as a film?
         answer: |
           The crafts are the same, the money is different. A TV series is usually commissioned by a broadcaster or streamer that pays a licence fee for most of the cost. The production company then covers the rest with deficit financing. See [how a TV commission works](#tv-commission).
   - type: cta
     title: One place for the money at every stage
     text: |
-      From the first budget in pre-production to the final cost statement at delivery, Tubes keeps the budget, the schedule, the purchase orders and the actual costs in one place, so producers always know where the money stands.
+      From the development budget to the final cost statement at delivery, Tubes keeps the budget, the schedule, the purchase orders and the actual costs in one place, so producers always know where the money stands.
     button:
       label: Request a Demo
       url: /contact/

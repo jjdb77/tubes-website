@@ -19,23 +19,27 @@ A cost report is a table with one row per budget line and a fixed set of columns
 | Column | What it means |
 |---|---|
 | Budget | The locked, approved figure for this line |
-| Actual to date | Money actually paid out and posted to the ledger |
-| Commitments | Purchase orders and contracts signed but not yet invoiced |
-| Estimate to complete | What is still to be spent from here to delivery |
+| Actual to date | Costs booked to the ledger up to the report date, such as approved invoices and payroll, whether paid yet or not |
+| Open commitments | The part of purchase orders and contracts that has not yet been booked as an actual |
+| Estimate to complete | The cost still to come from here to delivery that is not yet booked or committed |
 | Estimated final cost | Actual + committed + estimate to complete |
 | Variance | Budget minus estimated final cost |
+
+A worked example. A line has a budget of €100,000. So far €40,000 has been booked, €35,000 is on open purchase orders and contracts, and another €30,000 is expected that nobody has ordered yet. The EFC is €40,000 + €35,000 + €30,000 = €105,000, and the variance is €100,000 minus €105,000, so minus €5,000. A negative variance means the line is heading over budget.
+
+Note that this is about costs, not cash. An invoice is an actual once it is booked, even if it is paid next month. When it is booked against a purchase order, the actual goes up and the open commitment goes down by the same amount. When the money leaves the bank is a separate question, answered by the cash flow forecast. Some productions also fold open commitments into the estimate to complete. That is fine as long as the report says which definition it uses.
 
 The arithmetic is trivial. The judgement is not, and it lives almost entirely in one column.
 
 ## Actuals are the easy part
 
-Actual to date is the least interesting number in the report, though it takes the most administrative effort to get right. It is history. It tells you what has already left the account, and there is nothing to be done about it.
+Actual to date is the least interesting number in the report, though it takes the most administrative effort to get right. It is history. It tells you what has already been booked, and there is nothing to be done about it.
 
 Its only real difficulty is coding. An invoice that lands against the wrong budget line makes two lines wrong at once, and by the time anyone notices, the pattern has usually repeated for a month. This is why the [chart of accounts](/insights/how-to-build-a-production-budget/) has to be the same in the budget and in the ledger. Where it is not, somebody spends every week mapping one to the other by hand, and the report arrives on Thursday describing last Friday.
 
 ## Commitments are what most people miss
 
-A purchase order signed on Monday for equipment arriving in three weeks is not an actual. Nothing has been paid. But the money is gone in every sense that matters: you are contractually obliged, and you cannot spend it twice.
+A purchase order signed on Monday for equipment arriving in three weeks is not an actual. Nothing has been invoiced or booked yet. But the money is gone in every sense that matters: you are contractually obliged, and you cannot spend it twice.
 
 Productions that track only actuals against budget consistently believe they are in better shape than they are, right up until a wave of invoices lands. The commitment column exists precisely to close that gap, and it is the first thing that goes missing when cost reporting is done in a spreadsheet maintained separately from the purchase order process.
 

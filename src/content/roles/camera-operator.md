@@ -29,7 +29,7 @@ During rehearsals the operator watches the actors, agrees marks with the [first 
 
 ## How the role touches the budget
 
-Hardly at all. The operator is paid a day or weekly rate and may ask for specific kit, such as a stabiliser rig or a particular fluid head, which appears as a rental line in the camera budget. Overtime of the camera crew is recorded on timesheets and checked by the production office.
+No budget responsibility, and little influence on cost. The operator is paid a day or weekly rate and may ask for specific kit, such as a stabiliser rig or a particular fluid head, which appears as a rental line in the camera budget. Overtime of the camera crew is recorded on timesheets and checked by the production office.
 
 ## How people get into the role
 

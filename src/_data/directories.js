@@ -4,12 +4,17 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { withoutPastDates } from "../../lib/festival-dates.js";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const load = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"));
 
 export default {
-  filmfestivals: load("filmfestivals.json"),
+  // Voorbije edities verliezen hun "next_dates" (lib/festival-dates.js).
+  filmfestivals: (() => {
+    const d = load("filmfestivals.json");
+    return { ...d, items: d.items.map((f) => withoutPastDates(f)) };
+  })(),
   // Investeerders: formats, instruments en stages zijn lijsten (het filter op
   // "Kind of money" werkt op de lijst); de kaart krijgt ze als leesbare tekst,
   // want Nunjucks plakt een lijst zonder spatie aan elkaar.

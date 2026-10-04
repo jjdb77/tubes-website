@@ -28,7 +28,7 @@ The work is heaviest in [development](/how-a-film-is-made/#development). On a TV
 
 ## How the role touches the budget
 
-Hardly at all. A script editor is paid a fee or weekly rate from the development or script budget, and that is usually their only line. They can still save money indirectly. A script that is solid before the shoot needs fewer expensive rewrites on set, and a scene cut in development costs nothing to lose.
+No budget responsibility, but real influence on cost. A script editor is paid a fee or weekly rate from the development or script budget, and that is usually their only line. They can still save money indirectly. A script that is solid before the shoot needs fewer expensive rewrites on set, and a scene cut in development costs nothing to lose.
 
 ## How people get into the role
 

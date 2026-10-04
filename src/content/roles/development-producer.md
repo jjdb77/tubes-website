@@ -13,7 +13,7 @@ A broadcaster says it is looking for a new Saturday evening show about families 
 
 ## What a development producer does
 
-Development is everything that happens before anyone agrees to pay for a production (see [development](/how-a-film-is-made/#development)). The development producer works inside a production company, usually under the [head of development](/production-roles/head-of-development/). They come up with ideas, research them, and write them up as a treatment. A treatment is a short document that explains what the programme or film is, who it is for, what an episode looks like and why it will work.
+Development is everything that happens before a production gets the green light (see [development](/how-a-film-is-made/#development)). Sometimes that work is paid, for example through a development deal with a broadcaster or a fund, but the decision to make the production comes later. The development producer works inside a production company, usually under the [head of development](/production-roles/head-of-development/). They come up with ideas, research them, and write them up as a treatment. A treatment is a short document that explains what the programme or film is, who it is for, what an episode looks like and why it will work.
 
 In unscripted TV they often also make a taster tape, a few minutes of footage that show the idea on screen. In scripted work they find writers, give notes on outlines and scripts, and keep the project moving. They prepare the pitch material and often join the meeting with the broadcaster or financier.
 
