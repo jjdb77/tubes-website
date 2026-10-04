@@ -1062,6 +1062,7 @@ a:hover { color: var(--action); }
 /* Ankerknoppen in de hero. De header is plakkerig, dus zonder scroll-margin
    valt de sectiekop er precies achter. */
 #whats-new, #from-the-industry { scroll-margin-top: 96px; }
+section[id] { scroll-margin-top: 96px; }
 .jump-link span { font-weight: 700; margin-left: 4px; }
 
 .feed-week {
