@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Free tools
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
-description: "Free tools for production teams: film and TV locations, studios and production companies, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
+description: "Free tools for production teams: film and TV locations, studios and production companies, production incentives per country, film funds and investors, festivals and trade shows, software for media companies, and news from across the industry."
 permalink: /resources/
 sections:
   - type: hero
@@ -52,6 +52,14 @@ sections:
         link_label: Compare incentives
         text: |
           Production incentives of 32 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg/960px-Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg
+        image_alt: "The Palais de l'Europe in Strasbourg, seat of the Council of Europe and its film fund Eurimages"
+        image_credit: "Photo: Le Commissaire (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg)"
+        heading: Film funds and investors in Europe
+        url: /compare-film-investors/
+        link_label: Find funding
+        text: |
+          Public film funds, regional funds, private film financiers, lenders and tax shelter investors across Europe: what they fund, which kind of money and how to apply, on a map and side by side.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg/960px-Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg
         image_alt: "The open-air Piazza Grande screen and seats at the Locarno Film Festival"
         image_credit: "Photo: Kalai Ramu (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg)"
