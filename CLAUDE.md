@@ -294,15 +294,30 @@ Na een externe review (4-10-2026) staan deze begrippen overal hetzelfde (woorden
 - robots.txt heeft `Disallow: /mmg/`; de pagina's horen niet in menu, sitemap of zoekmachines.
 - Deze bestanden worden vanuit een Claude-sessie gegenereerd en hierheen gekopieerd; kleine tekstwijzigingen kunnen direct in deze bestanden, maar HTML en PDF moeten dan wel allebei aangepast worden (de PDF is een aparte render, geen automatische afgeleide).
 
-## Presentatiepagina's: /vfx-studios/
+## Presentatiepagina's: /vfx-studios/ en /responsible-ai/
 
-- `src/vfx-studios.njk` is een pitchdeck voor VFX-studio's als losse pagina op https://www.tubes.media/vfx-studios/. Gemaakt voor een pitch aan Trimaran VFX (Parijs, oktober 2026), omdat de presentator het deck via een gewone link in Zoom wil delen in plaats van als bestand. De pagina heette de eerste minuten `/trimaran/`; op verzoek van Joachim (5-10-2026) kreeg hij een algemene naam die naar de sector verwijst en is de naam Trimaran uit de tekst gehaald, zodat hij ook voor een volgende VFX-studio bruikbaar is. `/trimaran/` bestaat niet meer en stuurt niet door.
-- Tien dia's van 1920x1080 met inline opmaak, los van layout.njk en het CMS. Het script onderaan de pagina schaalt de dia naar het venster. Bladeren met de pijltjestoetsen, spatie, de knoppen of vegen; `F` is volledig scherm; `/vfx-studios/#4` opent dia 4. Op een smalle telefoon rechtop staan alle dia's onder elkaar. Afdrukken geeft een dia per pagina.
-- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. Er staat **geen wachtwoord** op (anders dan /mmg/), want er staan geen prijzen of afspraken in. De repo is publiek, dus de inhoud is ook op GitHub te lezen. Gaat hij ooit publiek, dan noindex weghalen en eerst de claims over VFX nalopen: de rest van de site noemt VFX nergens als doelgroep.
-- De dia's komen uit een Claude-artifact (https://claude.ai/artifact/Nj6s1YyAwSdhvFcaYZSWpM). Dat artifact is de versie voor Trimaran: daar staat de naam nog op de cover en op dia 8, en daar staan de sprekersnotities, die bewust **niet** op deze pagina staan. Kleine tekstwijzigingen kunnen direct in `vfx-studios.njk`; wijzig dan ook het artifact, anders lopen de twee verder uiteen.
-- Beelden zijn de bestaande marketingscreenshots via `imgSrc`. Alleen de cover gebruikt een eigen bestand, `example-tubes-05-clean.png`: dezelfde schermafbeelding als `example-tubes-05.png` zonder de "VMS"-badge in de zijbalk (verzoek Joachim).
+Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan worden (bijvoorbeeld in Zoom) in plaats van als bestand.
+
+- **Opmaak staat op één plek**: `src/_includes/deck.njk`. Een pagina levert alleen de dia's (1920x1080, inline opmaak) en zet `layout: deck.njk` in de front matter. De layout schaalt de dia naar het venster en regelt het bladeren: pijltjestoetsen, spatie, de knoppen of vegen; `F` is volledig scherm; `/<pagina>/#4` opent dia 4. Op een smalle telefoon rechtop staan alle dia's onder elkaar. Afdrukken geeft een dia per pagina. Los van layout.njk en het CMS.
+- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. Er staat **geen wachtwoord** op (anders dan /mmg/), want er staan geen prijzen of afspraken in. De repo is publiek, dus de inhoud is ook op GitHub te lezen.
+- De dia's komen uit Claude-artifacts. Daar staan ook de sprekersnotities, die bewust **niet** op de pagina's staan. Kleine tekstwijzigingen kunnen direct in het njk-bestand; wijzig dan ook het artifact, anders lopen de twee uiteen.
+- Beelden zijn de bestaande marketingscreenshots via `imgSrc`. De covers gebruiken `example-tubes-05-clean.png`: dezelfde schermafbeelding als `example-tubes-05.png` zonder de "VMS"-badge in de zijbalk (verzoek Joachim).
+- Een volgende presentatie krijgt een eigen bestand naar dit voorbeeld (`src/<naam>.njk`, eigen permalink, `layout: deck.njk`). Joachim wil **algemene namen** in de URL, geen naam van een prospect of fonds.
+
+### /vfx-studios/ (`src/vfx-studios.njk`)
+
+- Pitchdeck voor VFX-studio's, tien dia's. Gemaakt voor een pitch aan Trimaran VFX (Parijs, oktober 2026). De pagina heette de eerste minuten `/trimaran/`; die naam bestaat niet meer en stuurt niet door, en de naam Trimaran is uit de tekst gehaald zodat de pagina ook voor een volgende VFX-studio bruikbaar is.
+- Artifact: https://claude.ai/artifact/Nj6s1YyAwSdhvFcaYZSWpM. Dat is nog de versie voor Trimaran, met de naam op de cover en op dia 8.
+- Gaat hij ooit publiek, dan noindex weghalen en eerst de claims over VFX nalopen: de rest van de site noemt VFX nergens als doelgroep.
 - Timesheets staan in het overzicht op dia 2 als bestaand onderdeel; die functie is er nog niet en wordt gebouwd zodra een klant erom vraagt (besluit Joachim, 5-10-2026).
-- Een pagina voor een andere sector krijgt een eigen bestand naar dit voorbeeld (`src/<sector>.njk`, eigen permalink).
+
+### /responsible-ai/ (`src/responsible-ai.njk`)
+
+- Conceptdeck bij het voorstel voor **EIT Culture & Creativity, Innovation Projects 2026** (oproep 26-INN-MAI-011-X, deadline fase 1 op 30-10-2026 17.00 uur): verantwoorde AI voor budget, planning en kostenbewaking van Europese film- en tv-producenten. Twaalf dia's in de volgorde van het EIT-pitchsjabloon.
+- Artifact: https://claude.ai/artifact/PXDLe1hd2GDmsZyUKPptaW. Dat heeft twee dia's meer: het team (nog met invulvelden) en een interne lijst met open punten. Die twee staan bewust niet op de site.
+- **Zonder cijfers, op verzoek van Joachim** (5-10-2026): geen marktomvang, geen financiële tabel, geen aantallen. Het deck vertelt het concept en laat het product zien. De richtlijnen staan dat toe: fase 1 is een kort conceptvoorstel en het uitgewerkte businessplan hoort bij fase 2.
+- ⚠️ **De pagina claimt geen TRL 7.** De oproep eist bij instap een prototype dat in een operationele omgeving is gedemonstreerd, met bewijs (pilotresultaten, testgegevens). Er heeft nog geen echte productie op Tubes gedraaid, dus er staat "a working product, ready for its first pilots". Pas die zin pas aan als er een gedocumenteerde pilot is.
+- De cover zegt "Proposal for EIT Culture & Creativity": het is een voorstel van Tubes, geen samenwerking met of goedkeuring door EIT. Hou dat zo.
 
 ## Locatiegids, bedrijvengids en incentive-vergelijking
 
