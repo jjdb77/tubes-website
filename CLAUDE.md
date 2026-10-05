@@ -294,15 +294,15 @@ Na een externe review (4-10-2026) staan deze begrippen overal hetzelfde (woorden
 - robots.txt heeft `Disallow: /mmg/`; de pagina's horen niet in menu, sitemap of zoekmachines.
 - Deze bestanden worden vanuit een Claude-sessie gegenereerd en hierheen gekopieerd; kleine tekstwijzigingen kunnen direct in deze bestanden, maar HTML en PDF moeten dan wel allebei aangepast worden (de PDF is een aparte render, geen automatische afgeleide).
 
-## Presentatiepagina's: /trimaran/ (Trimaran VFX)
+## Presentatiepagina's: /vfx-studios/
 
-- `src/trimaran.njk` is het pitchdeck voor Trimaran VFX (VFX-studio in Parijs, pitch oktober 2026) als losse pagina op https://www.tubes.media/trimaran/. Gemaakt omdat de presentator het deck via een gewone link in Zoom wil delen in plaats van als bestand.
-- Tien dia's van 1920x1080 met inline opmaak, los van layout.njk en het CMS. Het script onderaan de pagina schaalt de dia naar het venster. Bladeren met de pijltjestoetsen, spatie, de knoppen of vegen; `F` is volledig scherm; `/trimaran/#4` opent dia 4. Op een smalle telefoon rechtop staan alle dia's onder elkaar. Afdrukken geeft een dia per pagina.
-- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. Er staat **geen wachtwoord** op (anders dan /mmg/), want er staan geen prijzen of afspraken in. De repo is publiek, dus de inhoud is ook op GitHub te lezen.
-- De dia's komen uit een Claude-artifact (https://claude.ai/artifact/Nj6s1YyAwSdhvFcaYZSWpM); daar staan ook de sprekersnotities, die bewust **niet** op deze pagina staan. Kleine tekstwijzigingen kunnen direct in `trimaran.njk`; wijzig dan ook het artifact, anders lopen de twee uiteen.
+- `src/vfx-studios.njk` is een pitchdeck voor VFX-studio's als losse pagina op https://www.tubes.media/vfx-studios/. Gemaakt voor een pitch aan Trimaran VFX (Parijs, oktober 2026), omdat de presentator het deck via een gewone link in Zoom wil delen in plaats van als bestand. De pagina heette de eerste minuten `/trimaran/`; op verzoek van Joachim (5-10-2026) kreeg hij een algemene naam die naar de sector verwijst en is de naam Trimaran uit de tekst gehaald, zodat hij ook voor een volgende VFX-studio bruikbaar is. `/trimaran/` bestaat niet meer en stuurt niet door.
+- Tien dia's van 1920x1080 met inline opmaak, los van layout.njk en het CMS. Het script onderaan de pagina schaalt de dia naar het venster. Bladeren met de pijltjestoetsen, spatie, de knoppen of vegen; `F` is volledig scherm; `/vfx-studios/#4` opent dia 4. Op een smalle telefoon rechtop staan alle dia's onder elkaar. Afdrukken geeft een dia per pagina.
+- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. Er staat **geen wachtwoord** op (anders dan /mmg/), want er staan geen prijzen of afspraken in. De repo is publiek, dus de inhoud is ook op GitHub te lezen. Gaat hij ooit publiek, dan noindex weghalen en eerst de claims over VFX nalopen: de rest van de site noemt VFX nergens als doelgroep.
+- De dia's komen uit een Claude-artifact (https://claude.ai/artifact/Nj6s1YyAwSdhvFcaYZSWpM). Dat artifact is de versie voor Trimaran: daar staat de naam nog op de cover en op dia 8, en daar staan de sprekersnotities, die bewust **niet** op deze pagina staan. Kleine tekstwijzigingen kunnen direct in `vfx-studios.njk`; wijzig dan ook het artifact, anders lopen de twee verder uiteen.
 - Beelden zijn de bestaande marketingscreenshots via `imgSrc`. Alleen de cover gebruikt een eigen bestand, `example-tubes-05-clean.png`: dezelfde schermafbeelding als `example-tubes-05.png` zonder de "VMS"-badge in de zijbalk (verzoek Joachim).
 - Timesheets staan in het overzicht op dia 2 als bestaand onderdeel; die functie is er nog niet en wordt gebouwd zodra een klant erom vraagt (besluit Joachim, 5-10-2026).
-- Een volgende prospect krijgt een eigen bestand naar dit voorbeeld (`src/<naam>.njk`, eigen permalink).
+- Een pagina voor een andere sector krijgt een eigen bestand naar dit voorbeeld (`src/<sector>.njk`, eigen permalink).
 
 ## Locatiegids, bedrijvengids en incentive-vergelijking
 
