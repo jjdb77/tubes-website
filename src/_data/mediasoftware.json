@@ -929,6 +929,28 @@
       "photo": null
     },
     {
+      "id": "scrollx",
+      "name": "ScrollX",
+      "vendor": "ScrollX Private Limited",
+      "vendor_country": "India",
+      "category": "Post-production & VFX",
+      "summary": "Browser-based tool from Bhopal, India, for making end credits. Credits come in from Google Sheets or Excel, you pick one of 50+ templates, adjust the styling with a live preview and render scrolling credits and end cards in 1080p or 4K for the edit.",
+      "for_whom": "Post-production teams, editors, producers and filmmakers delivering features, documentaries, shorts and episodic content",
+      "pricing_model": "Sprint USD 49 per week (one active title); Independent USD 89 per month (one active title); Studio USD 199 per month (unlimited active titles, priority rendering, project archival); 3-day free trial on every plan (published)",
+      "deployment": "Cloud",
+      "platforms": "Web browser",
+      "integrations": "Google Sheets, Excel (credits import); exports for Premiere Pro, DaVinci Resolve, Avid Media Composer and Final Cut Pro",
+      "founded": null,
+      "official_url": "https://scrollx.io",
+      "source_urls": [
+        "https://scrollx.io/",
+        "https://scrollx.io/plans/",
+        "https://scrollx.io/terms/"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "silhouette",
       "name": "Silhouette",
       "vendor": "Boris FX, Inc.",
