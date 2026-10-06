@@ -1,5 +1,6 @@
 [
   { "id": "natron", "name": "Natron", "reason": "Open-source compositor without a vendor or country; last release 2.5.0 dates from November 2022, so not actively maintained (dropped 2026-09-19)." },
   { "id": "slugline", "name": "Slugline", "reason": "The site names two makers but no company or country, so the vendor line on the card would be incomplete (dropped 2026-09-19)." },
-  { "id": "forsetifest", "name": "ForsetiFest", "reason": "Suggested by the maker via the form. Version 1.0.0 of a USD 9.99 local browser tool from a one-person brand (Perunlight Corp, Ukraine) that sells 71+ downloads; too new, no use in the sector shown yet. Review again in April 2027 (dropped 2026-10-06)." }
+  { "id": "forsetifest", "name": "ForsetiFest", "reason": "Suggested by the maker via the form. Version 1.0.0 of a USD 9.99 local browser tool from a one-person brand (Perunlight Corp, Ukraine) that sells 71+ downloads; too new, no use in the sector shown yet. Review again in April 2027 (dropped 2026-10-06)." },
+  { "id": "tklive", "name": "TKLive", "reason": "Suggested via the form by an AI agent (tkliveapp.pro). Desktop tool for running TikTok LIVE streams across multiple accounts and OBS instances: creator and live-commerce software, not film or TV production. No vendor name, country or pricing published (dropped 2026-10-06)." }
 ]
