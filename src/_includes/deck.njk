@@ -1,0 +1,183 @@
+{#- Gedeelde opmaak voor presentatiepagina's (dia's van 1920x1080 met inline
+    opmaak). De pagina zelf levert alleen de dia's; dit bestand schaalt ze
+    naar het venster en regelt het bladeren. Zie CLAUDE.md,
+    "Presentatiepagina's". -#}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#17191C">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+{% raw %}
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: #17191C;
+      color: #F6F7F9;
+      font-family: "Mulish", "Nunito", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    .tp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* Podium: de dia staat gecentreerd boven de bedieningsbalk. */
+    .tp-stage {
+      position: fixed; inset: 0 0 56px 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .tp-slide {
+      position: relative; flex: none; overflow: hidden;
+      width: calc(1920px * var(--s, 0.5)); height: calc(1080px * var(--s, 0.5));
+      background: #F6F7F9;
+      box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+    }
+    .tp-slide[hidden] { display: none; }
+
+    /* Een dia is een vast canvas van 1920x1080 dat als geheel wordt geschaald. */
+    .tp-slide > section {
+      position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+      box-sizing: border-box; overflow: hidden;
+      transform-origin: 0 0; transform: scale(var(--s, 0.5));
+    }
+    .tp-slide > section * { box-sizing: border-box; margin: 0; }
+    .tp-slide h1 { font-weight: 600; line-height: 1.1; }
+    .tp-slide h2 { font-weight: 600; line-height: 1.15; }
+    .tp-slide h3 { font-weight: 600; line-height: 1.2; }
+    .tp-slide p { line-height: 1.4; }
+    .tp-slide ul { padding-left: 1.1em; list-style: disc; }
+    .tp-slide img, .tp-slide svg { display: block; flex: none; max-width: none; }
+    .tp-slide table { border-collapse: collapse; width: 100%; }
+    .tp-slide th, .tp-slide td { padding: 0.35em 0.6em; border-bottom: 1px solid #E3E5E9; vertical-align: top; }
+    .tp-slide th { font-weight: 800; border-bottom-color: #1A1A1A; }
+
+    /* Bedieningsbalk */
+    .tp-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; height: 56px;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 0 16px; box-sizing: border-box;
+      background: #17191C; border-top: 1px solid #2A2D33;
+    }
+    .tp-btn {
+      appearance: none; border: 1px solid #3A3E45; background: #22252A; color: #F6F7F9;
+      height: 36px; min-width: 36px; padding: 0 12px; border-radius: 10px;
+      font: inherit; font-size: 14px; font-weight: 700; line-height: 1; cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .tp-btn:hover { background: #2C3036; }
+    .tp-btn:focus-visible { outline: 2px solid #E6C263; outline-offset: 2px; }
+    .tp-btn[disabled] { opacity: 0.35; cursor: default; }
+    .tp-btn svg { width: 16px; height: 16px; display: block; }
+    .tp-count { min-width: 64px; text-align: center; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: #C9C9C6; }
+    .tp-home { position: absolute; left: 16px; color: #C9C9C6; font-size: 14px; font-weight: 700; text-decoration: none; }
+    .tp-home:hover { color: #FFFFFF; }
+    .tp-full { position: absolute; right: 16px; }
+
+    /* Smal scherm rechtop: alle dia's onder elkaar, gewoon scrollen. */
+    body.tp-stack { overflow: auto; height: auto; }
+    body.tp-stack .tp-stage { position: static; display: block; padding: 12px 12px 76px; }
+    body.tp-stack .tp-slide { margin: 0 auto 12px; box-shadow: none; }
+    body.tp-stack .tp-slide[hidden] { display: block; }
+    body.tp-stack .tp-btn, body.tp-stack .tp-count { display: none; }
+
+    @media (max-width: 520px) { .tp-home { display: none; } }
+
+    @media print {
+      @page { size: 1920px 1080px; margin: 0; }
+      html, body { height: auto; overflow: visible; background: #FFFFFF; }
+      .tp-bar { display: none; }
+      .tp-stage { position: static; display: block; }
+      .tp-slide, .tp-slide[hidden] { display: block; width: 1920px; height: 1080px; box-shadow: none; break-after: page; }
+      .tp-slide > section { transform: none; }
+    }
+  </style>
+{% endraw %}
+</head>
+<body>
+<h1 class="tp-sr">{{ title }}</h1>
+<main class="tp-stage" id="tp-stage" aria-roledescription="carousel" aria-label="Presentation: {{ title }}">
+{{ content | safe }}
+</main>
+<nav class="tp-bar" aria-label="Slide controls">
+  <a class="tp-home" href="/">tubes.media</a>
+  <button class="tp-btn" id="tp-prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 L5 8 L10 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <span class="tp-count" id="tp-count" aria-live="polite"></span>
+  <button class="tp-btn" id="tp-next" type="button" aria-label="Next slide"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3 L11 8 L6 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button class="tp-btn tp-full" id="tp-full" type="button">Full screen</button>
+</nav>
+{% raw %}
+<script>
+(function () {
+  var stage = document.getElementById("tp-stage");
+  var slides = Array.prototype.slice.call(stage.querySelectorAll(".tp-slide"));
+  var prev = document.getElementById("tp-prev");
+  var next = document.getElementById("tp-next");
+  var count = document.getElementById("tp-count");
+  var full = document.getElementById("tp-full");
+  var stackQuery = window.matchMedia("(max-width: 760px) and (orientation: portrait)");
+  var cur = 0;
+
+  function fromHash() {
+    var n = parseInt(String(location.hash).replace("#", ""), 10);
+    return n >= 1 && n <= slides.length ? n - 1 : 0;
+  }
+  function fit() {
+    var stack = stackQuery.matches;
+    document.body.classList.toggle("tp-stack", stack);
+    var w = stack ? document.documentElement.clientWidth - 24 : stage.clientWidth;
+    var h = stack ? Infinity : stage.clientHeight;
+    var s = Math.min(w / 1920, h / 1080);
+    document.documentElement.style.setProperty("--s", String(s));
+  }
+  function show(i, keepHash) {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach(function (el, k) { el.hidden = k !== cur; });
+    count.textContent = (cur + 1) + " / " + slides.length;
+    prev.disabled = cur === 0;
+    next.disabled = cur === slides.length - 1;
+    if (!keepHash) history.replaceState(null, "", "#" + (cur + 1));
+  }
+  prev.addEventListener("click", function () { show(cur - 1); });
+  next.addEventListener("click", function () { show(cur + 1); });
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey || document.body.classList.contains("tp-stack")) return;
+    var k = e.key;
+    if (k === "ArrowRight" || k === "ArrowDown" || k === "PageDown" || k === " ") { e.preventDefault(); show(cur + 1); }
+    else if (k === "ArrowLeft" || k === "ArrowUp" || k === "PageUp") { e.preventDefault(); show(cur - 1); }
+    else if (k === "Home") { e.preventDefault(); show(0); }
+    else if (k === "End") { e.preventDefault(); show(slides.length - 1); }
+    else if (k === "f" || k === "F") { toggleFull(); }
+  });
+  var touchX = null;
+  stage.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener("touchend", function (e) {
+    if (touchX === null || document.body.classList.contains("tp-stack")) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+  function toggleFull() {
+    var el = document.documentElement;
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (el.requestFullscreen) el.requestFullscreen();
+  }
+  if (document.documentElement.requestFullscreen) full.addEventListener("click", toggleFull);
+  else full.hidden = true;
+  document.addEventListener("fullscreenchange", function () {
+    full.textContent = document.fullscreenElement ? "Exit full screen" : "Full screen";
+    fit();
+  });
+  window.addEventListener("resize", fit);
+  window.addEventListener("hashchange", function () { show(fromHash(), true); });
+  if (stackQuery.addEventListener) stackQuery.addEventListener("change", fit);
+  fit();
+  show(fromHash(), true);
+})();
+</script>
+{% endraw %}
+</body>
+</html>

@@ -20,12 +20,12 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   for (const row of document.querySelectorAll(".chip-row")) {
     const chips = row.querySelectorAll(".chip");
     if (chips.length < 2) continue;
-    let i = 0;
+    // Chips worden een voor een groter en blijven groot; daarna begint het opnieuw
+    let i = 1;
     chips[0].classList.add("is-current");
     setInterval(() => {
-      chips[i].classList.remove("is-current");
-      i = (i + 1) % chips.length;
-      chips[i].classList.add("is-current");
+      i = (i + 1) % (chips.length + 1);
+      chips.forEach((chip, j) => chip.classList.toggle("is-current", j < i));
     }, 2200);
   }
 }
@@ -57,7 +57,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
   // zichtbaarheidsdrempel nooit en bleef dan onzichtbaar na een ankerklik).
   // Het helpcentrum ook niet: de zoekresultaten vervangen de kaarten of de
   // lijst in dezelfde container, en die moeten er meteen staan.
-  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section) .container");
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section):not(.gloss-section):not(.roles-sector) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {

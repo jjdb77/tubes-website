@@ -154,6 +154,26 @@ collections:
               - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
               - { label: "Slotzin rechts", name: note, widget: text }
 
+      - name: glossary
+        label: "Woordenlijst (/film-production-glossary/)"
+        file: src/_data/glossary-terms.json
+        description: "Begrippen op de woordenlijst. De slug is het anker (#slug) waar andere pagina's naar linken: niet wijzigen. Volgorde maakt niet uit, de site sorteert zelf."
+        fields:
+          - label: Begrippen
+            name: terms
+            widget: list
+            summary: "{{fields.term}}"
+            fields:
+              - { label: Begrip, name: term, widget: string }
+              - { label: "Slug (anker)", name: slug, widget: string }
+              - { label: "Ook wel", name: aka, widget: list, required: false }
+              - label: Categorie
+                name: category
+                widget: select
+                options: ["Development and rights", "Financing and money", "Budget and accounting", "Pre-production", "On set", "Camera, light and sound", "Post-production", "Delivery and distribution", "TV and unscripted", "Commercials"]
+              - { label: Uitleg, name: definition, widget: markdown }
+              - { label: "Zie ook (slugs van andere begrippen)", name: see_also, widget: list, required: false }
+
       - name: helpcenter
         label: "Helpcentrum: categorieën en teksten"
         file: src/_data/helpcenter.json
@@ -180,6 +200,32 @@ collections:
               - { label: Naam, name: name, widget: string }
               - { label: Omschrijving (één zin), name: description, widget: string }
               - { label: Icoon, name: icon, widget: string, hint: "Pad in /assets/icons/, bijv. /assets/icons/calculator.svg" }
+
+  - name: rollen
+    label: "Rollen in mediaproductie (/production-roles/)"
+    icon: badge
+    folder: src/content/roles
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [title]
+    fields:
+      - { label: "Naam van de rol", name: title, widget: string }
+      - { label: "Ook wel genoemd", name: aka, widget: list, required: false, hint: "Alleen echte alternatieve titels" }
+      - { label: "Samenvatting (één zin, staat op het overzicht)", name: summary, widget: text }
+      - { label: "Plek op het overzicht", name: groups, widget: list, hint: "sector/afdeling, bijv. film/producers of commercials/agency. Eerste = hoofdplek. Sectoren en afdelingen: src/_data/productionRoles.json" }
+      - { label: "Rapporteert aan (bestandsnamen van rollen)", name: reports_to, widget: list, required: false }
+      - { label: "Werkt samen met (bestandsnamen van rollen)", name: works_with, widget: list, required: false }
+      - label: Fases
+        name: phases
+        widget: select
+        multiple: true
+        required: false
+        options: [development, financing, pre-production, production, post-production, delivery, release]
+      - { label: "SEO: titel", name: seo_title, widget: string, required: false }
+      - { label: "SEO: omschrijving", name: description, widget: string, required: false }
+      - { label: Tekst, name: body, widget: markdown }
 
   - name: helpartikelen
     label: "Helpcentrum (/help/)"
@@ -310,7 +356,18 @@ collections:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Licht, value: light}, {label: Donker, value: dark}], default: light }
               - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false }
               - { label: Titel, name: title, widget: string, hint: "Zet *sterretjes* om een woord voor de accentkleur, bijv: in *one platform*" }
+              - { label: "Regel onder de titel (optioneel)", name: subtitle, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
+              - label: "Budget / Plan / Produce onder de tekst (optioneel)"
+                name: steps
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                hint: "Drie blokjes met de vorm van de stap (cirkel, zeshoek, driehoek), een naam en een zin."
+                fields:
+                  - { label: Vorm, name: key, widget: select, options: [{label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}] }
+                  - { label: Naam, name: name, widget: string }
+                  - { label: Tekst, name: text, widget: string }
               - label: "Status-chips (pijplijn, optioneel)"
                 name: chips
                 widget: list
@@ -357,6 +414,7 @@ collections:
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
+              - { label: "Icoon voor de kop (Budget / Plan / Produce)", name: step, widget: select, options: [{label: Geen, value: ""}, {label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}], required: false }
               - { label: "Vette introzin", name: lead, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Afbeelding, name: image, widget: image, required: false }
@@ -400,6 +458,7 @@ collections:
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
               - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
+              - { label: "Anker (id voor links als #producers)", name: anchor, widget: string, required: false }
           - name: images
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"
@@ -445,6 +504,25 @@ collections:
                   - { label: Omschrijving, name: text, widget: markdown, required: false }
                   - { label: "Vooringevuld WhatsApp-bericht", name: whatsapp_text, widget: string, required: false, hint: "Staat alvast in het berichtvak als iemand op de WhatsApp-knop klikt." }
                   - { label: "Vooringevuld e-mailbericht", name: email_text, widget: string, required: false, hint: "Staat alvast in het berichtvak van de popover achter de knop Email us." }
+              - label: "Los pakket onder de abonnementen (met prijs)"
+                name: extra_plan
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Een breed blok met prijs en een knop, onder het blok Per production. Op de homepage: alleen budgetteren, met een link naar /budgeting/. Leeg laten = geen blok."
+                fields:
+                  - { label: Naam, name: name, widget: string, required: false }
+                  - { label: Omschrijving, name: text, widget: markdown, required: false }
+                  - { label: Prijs, name: price, widget: string, required: false, hint: "Bijv. € 29" }
+                  - { label: Toelichting naast de prijs, name: price_note, widget: string, required: false }
+                  - { label: Detail onder de prijs, name: price_detail, widget: markdown, required: false }
+                  - label: Knop
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - { label: Tekst, name: label, widget: string }
+                      - { label: URL, name: url, widget: string }
               - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
           - name: cta
             label: "Donkerblauwe call-to-action"

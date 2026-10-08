@@ -1,9 +1,24 @@
+{%- from "partials/step-icon.njk" import stepIcon -%}
 <section class="section section-hero theme-{{ section.theme or 'light' }}{% if section.tight %} hero-tight{% endif %}">
   <div class="container hero-grid{% if not section.image and not section.video and not section.promo and not (section.buttons and section.buttons_position == 'side') %} hero-single{% endif %}{% if section.media_below %} hero-stacked{% endif %}">
     <div class="hero-text">
       {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
       <h1>{{ section.title | mdInline | safe }}</h1>
+      {% if section.subtitle %}<p class="hero-sub">{{ section.subtitle }}</p>{% endif %}
       <div class="rich-text lead">{{ section.text | md | safe }}</div>
+      {#- Budget / Plan / Produce onder de tekst, met de drie iconen uit de
+          Tubes-app (partials/step-icon.njk). -#}
+      {% if section.steps %}
+      <ul class="hero-steps">
+        {%- for step in section.steps %}
+        <li class="hero-step step-{{ step.key }}">
+          {{ stepIcon(step.key, "hero-step-icon") }}
+          <p class="hero-step-name">{{ step.name }}</p>
+          <p class="hero-step-text">{{ step.text }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+      {% endif %}
       {% if section.chips and not section.media_below %}
       <ul class="chip-row" aria-label="Production stages">
         {% for chip in section.chips %}
@@ -23,12 +38,10 @@
     {% if section.video %}
     <div class="hero-media">
       <video controls playsinline preload="metadata" {% if section.poster %}poster="{{ section.poster | imgSrc }}"{% endif %} src="{{ section.video }}"></video>
-      <span class="viewfinder" aria-hidden="true"></span>
     </div>
     {% elif section.image %}
     <div class="hero-media">
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or (section.title | plain) }}" {{ section.image | imgSize | safe }} loading="eager" decoding="async" fetchpriority="high">
-      <span class="viewfinder" aria-hidden="true"></span>
     </div>
     {% elif section.promo %}
     {#- Reclameblok voor Tubes in de rechterkolom (zie partials/directory-promo.njk);

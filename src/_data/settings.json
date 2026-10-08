@@ -17,6 +17,11 @@
       "plan": ""
     },
     {
+      "path": "budgeting/",
+      "slug": "tubes-producer-pro",
+      "plan": "Budgeting"
+    },
+    {
       "path": "producer-pro/",
       "slug": "tubes-producer-pro",
       "plan": "Producer Pro"
@@ -70,6 +75,22 @@
     {
       "label": "Solutions",
       "url": "/solutions/"
+    },
+    {
+      "label": "Budgeting",
+      "url": "/budget/"
+    },
+    {
+      "label": "Start with budgeting only",
+      "url": "/budgeting/"
+    },
+    {
+      "label": "Planning",
+      "url": "/planning/"
+    },
+    {
+      "label": "Cost control",
+      "url": "/produce/"
     },
     {
       "label": "Plans & pricing",
@@ -138,6 +159,22 @@
     {
       "label": "Film budget template (Excel)",
       "url": "/film-budget-template/"
+    },
+    {
+      "label": "Film funds and investors in Europe",
+      "url": "/compare-film-investors/"
+    },
+    {
+      "label": "Production roles explained",
+      "url": "/production-roles/"
+    },
+    {
+      "label": "How a film is made",
+      "url": "/how-a-film-is-made/"
+    },
+    {
+      "label": "Film production glossary",
+      "url": "/film-production-glossary/"
     },
     {
       "label": "Contact",

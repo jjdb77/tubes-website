@@ -51,6 +51,7 @@ app.use((req, res, next) => {
 // Netlify/Cloudflare-formaat. Hier is de enige echte plek.
 const OLD_PATHS = new Map([
   ["/waarom-tubes", "/platform/"],
+  ["/film-crew-roles", "/production-roles/"],
   ["/grip", "/platform/"],
   ["/artificialintelligence", "/platform/"],
   ["/oplossing", "/solutions/"],
@@ -61,6 +62,7 @@ const OLD_PATHS = new Map([
   ["/nieuws", "/news/"],
   ["/contact-us", "/contact/"],
   ["/intro", "/"],
+  ["/producing", "/produce/"],
 ]);
 
 app.use((req, res, next) => {

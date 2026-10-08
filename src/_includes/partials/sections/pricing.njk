@@ -86,6 +86,23 @@
       <p class="demo-modal-direct">Or email us directly: <a href="mailto:{{ settings.contact.email }}?subject={{ 'Tubes for a single production' | urlencode }}">{{ settings.contact.email }}</a>{% if whatsapp %} &middot; <a href="https://wa.me/{{ whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>{% endif %}</p>
     </dialog>
     {% endif %}
+    {# Blok voor een los pakket onder de kaarten (op de homepage: alleen
+       budgetteren), met prijs en een knop naar de eigen pagina. De prijs
+       staat in .plan-price, dus de valutaomrekening in site.js telt mee. #}
+    {% if section.extra_plan and section.extra_plan.name %}
+    {% set xp = section.extra_plan %}
+    <div class="plan-extra plan-extra-priced">
+      <div class="plan-extra-text">
+        <h3>{{ xp.name }}</h3>
+        {% if xp.text %}<div class="rich-text">{{ xp.text | md | safe }}</div>{% endif %}
+      </div>
+      <div class="plan-extra-contact">
+        {% if xp.price %}<p class="plan-price">{{ xp.price }}{% if xp.price_note %} <span class="plan-price-note">{{ xp.price_note }}</span>{% endif %}</p>{% endif %}
+        {% if xp.price_detail %}<div class="rich-text plan-price-detail">{{ xp.price_detail | md | safe }}</div>{% endif %}
+        {% if xp.button and xp.button.url %}<div class="button-row"><a class="button button-secondary" href="{{ xp.button.url }}">{{ xp.button.label }}</a></div>{% endif %}
+      </div>
+    </div>
+    {% endif %}
     {% if section.footnote %}<div class="rich-text pricing-footnote centered">{{ section.footnote | md | safe }}</div>{% endif %}
   </div>
 </section>
