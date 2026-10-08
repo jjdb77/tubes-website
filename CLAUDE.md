@@ -147,10 +147,18 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Nieuws (/news/)
 
-De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`permalink: false`):
+De pagina `src/news.njk` draagt **drie stromen**, alle zonder eigen pagina (`permalink: false`):
 
 1. **Eigen nieuws** ("What's new at Tubes") uit `src/content/news/*.md`, collectie `news`. Velden: `title`, `date`, `summary`, `url`, `link_label`. CMS-collectie "Nieuws (/news/)".
-2. **Branchenieuws van LinkedIn** uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `source`, `role`, `title`, `date`, `topic`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+2. **Film- en tv-koppen uit De Vector** ("Film and television headlines", sinds 8-10-2026) uit `src/content/headlines/*.md`, collectie `headlines`. Velden: `title`, `date`, `topic` (Business, Streaming, Awards & festivals, Box office, Rights & AI), `link` (de Engelse versie, `https://www.devector.nl/en/edition/<datum>/<slug>.html`) en de samenvatting in de body. CMS-collectie "Film- en tv-nieuws (De Vector)".
+3. **Branchenieuws van LinkedIn** uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `source`, `role`, `title`, `date`, `topic`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+
+### De Vector-koppeling
+
+- De Vector (devector.nl) is een nieuwsdienst van Appsolutions, geschreven en gefactcheckt door AI. De sectie-intro zegt dat er eerlijk bij, inclusief dat het van hetzelfde bedrijf is.
+- **Ophalen**: `DEVECTOR_API_KEY=dv_... node scripts/fetch-devector.mjs [--since JJJJ-MM-DD] [--json]` vraagt `https://www.devector.nl/api/business/feed.json` (Bearer-sleutel) op en toont wat nog niet in `src/content/headlines` staat, met de Engelse link erbij. Zonder `--since` telt het vanaf het nieuwste bericht dat er al staat. De selectie in De Vector Zakelijk (account Appsolutions) heeft alleen de branche "Film, tv & mediaproductie".
+- ⚠️ **De sleutel staat niet in de repo** (die is publiek) en ook niet op Railway: het script draait lokaal. Aanmaken of intrekken op devector.nl/zakelijk.html > Feed & mail > API-sleutel.
+- Het script schrijft niets: de API geeft Nederlandse koppen, de site is Engels. **Kiezen en schrijven is handwerk**: alleen wat voor wie film of tv maakt ertoe doet (deals, streamers, prijzen en festivals, box office, rechten en AI), niet overlijdens, binnenlandse politiek of persvrijheid. Twee of drie zinnen in eigen woorden, geen em-dashes. De feed mist soms artikelen die de site wel onder Film of Media heeft; de voorpagina van devector.nl (`data-section="Film"`) is de aanvulling.
 
 ### Spelregels voor het branchenieuws
 

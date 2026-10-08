@@ -1062,7 +1062,7 @@ a:hover { color: var(--action); }
 
 /* Ankerknoppen in de hero. De header is plakkerig, dus zonder scroll-margin
    valt de sectiekop er precies achter. */
-#whats-new, #from-the-industry { scroll-margin-top: 96px; }
+#whats-new, #headlines, #from-the-industry { scroll-margin-top: 96px; }
 section[id] { scroll-margin-top: 96px; }
 .jump-link span { font-weight: 700; margin-left: 4px; }
 
@@ -1131,6 +1131,8 @@ section[id] { scroll-margin-top: 96px; }
 
 /* De hele kaart klikbaar, maar met één echte link voor schermlezers */
 a.feed-link::after { content: ""; position: absolute; inset: 0; }
+/* Koppen uit De Vector: geen auteur, dus de kop is hier het grootste element. */
+.headline-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.25; color: var(--ink); margin: 0 0 10px; }
 
 /* Geen directe post-URL: dan alleen de bron, en de kaart is niet klikbaar */
 .feed-link-none { color: var(--muted); font-weight: 600; text-decoration: none; }

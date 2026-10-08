@@ -326,6 +326,27 @@ collections:
       - { label: Samenvatting, name: body, widget: markdown, hint: "Een of twee zinnen in het Engels. Beschrijf waar de post over gaat ('Katya Alexander writes about ...'), niet wat de auteur vindt: geen 'argues', 'makes the case' of 'flags'. Zo blijft het standpunt van de auteur en blijft de post zelf de plek voor het volledige verhaal. Geen em-dashes (—)." }
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
+  - name: headlines
+    label: "Film- en tv-nieuws (De Vector)"
+    icon: newspaper
+    folder: src/content/headlines
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Kop, name: title, widget: string, hint: "In het Engels, in eigen woorden. Geen em-dashes (—)." }
+      - label: Onderwerp (het gekleurde labeltje)
+        name: topic
+        widget: select
+        default: Business
+        options: [Business, Streaming, "Awards & festivals", "Box office", "Rights & AI"]
+      - { label: "Link naar het artikel op De Vector", name: link, widget: string, hint: "De Engelse versie: https://www.devector.nl/en/edition/<datum>/<slug>.html" }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Datum van het artikel. Op de pagina staat alleen de week." }
+      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels, eigen woorden, wat het betekent voor wie produceert. Geen em-dashes (—)." }
+      - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
+
   - name: paginas
     label: Pagina's
     icon: article

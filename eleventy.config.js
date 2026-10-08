@@ -139,6 +139,12 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByGlob("src/content/linkedin/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // Derde stroom op /news/: film- en tv-nieuws uit De Vector (Appsolutions),
+  // opgehaald met scripts/fetch-devector.mjs en in eigen woorden samengevat.
+  eleventyConfig.addCollection("headlines", (collectionApi) =>
+    collectionApi.getFilteredByGlob("src/content/headlines/*.md").sort((a, b) => b.date - a.date)
+  );
+
   // "8 to 14 September 2026": de week (maandag t/m zondag) waarin de datum valt.
   // Over een maandgrens heen wordt het "31 August to 6 September 2026".
   eleventyConfig.addFilter("weekRange", (value) => {
