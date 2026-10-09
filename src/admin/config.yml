@@ -327,7 +327,7 @@ collections:
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
   - name: headlines
-    label: "Film- en tv-nieuws (/news/<slug>/)"
+    label: "The Daily Tubes: artikelen (/news/<slug>/)"
     icon: newspaper
     folder: src/content/headlines
     format: yaml-frontmatter
@@ -336,23 +336,74 @@ collections:
     summary: "{{title}}"
     sortable_fields: [date, title]
     fields:
-      - { label: Kop, name: title, widget: string, hint: "In het Engels, in eigen woorden. Geen em-dashes (—)." }
+      - { label: "Kop op /news/", name: title, widget: string, hint: "Onze eigen kop op de kaart, in het Engels. Geen em-dashes (—)." }
       - label: Onderwerp (het gekleurde labeltje)
         name: topic
         widget: select
         default: Business
         options: [Business, Streaming, "Awards & festivals", "Box office", "Rights & AI"]
       - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
-      - { label: "Korte samenvatting", name: summary, widget: text, hint: "Een of twee zinnen. Staat op de kaart op /news/, bovenaan de eigen pagina en als metabeschrijving." }
+      - { label: "Samenvatting op /news/", name: summary, widget: text, hint: "Een of twee zinnen in eigen woorden. Dit is de tekst die Google ziet (de artikelpagina zelf staat op noindex)." }
+      - { label: "Kop van het artikel", name: headline, widget: string, required: false, hint: "Ingelezen uit De Vector met scripts/import-devector.mjs." }
+      - { label: "Inleiding van het artikel", name: standfirst, widget: text, required: false }
+      - label: Foto
+        name: photo
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: "URL (upload.wikimedia.org)", name: src, widget: string }
+          - { label: Alt-tekst, name: alt, widget: string, required: false }
+          - { label: Onderschrift, name: caption, widget: string, required: false }
+          - { label: Maker, name: credit, widget: string, required: false }
+          - { label: "Link naar de foto op Commons", name: credit_url, widget: string, required: false }
+          - { label: Licentie, name: license, widget: string, required: false }
+          - { label: "Link naar de licentie", name: license_url, widget: string, required: false }
+      - label: Perspectieven
+        name: perspectives
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: "Wat vaststaat", name: facts, widget: list, required: false }
+          - label: Standpunten
+            name: views
+            widget: list
+            required: false
+            fields:
+              - { label: Naam, name: name, widget: string }
+              - { label: Argumenten, name: arguments, widget: text, required: false }
+              - { label: Waarden, name: values, widget: text, required: false }
+              - { label: Gevolgen, name: consequences, widget: text, required: false }
+          - { label: Disclaimer, name: disclaimer, widget: text, required: false }
+      - label: Fact check
+        name: factcheck
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Oordeel, name: verdict, widget: string, required: false }
+          - { label: Samenvatting, name: summary, widget: text, required: false }
+          - label: Beweringen
+            name: claims
+            widget: list
+            required: false
+            fields:
+              - { label: Status, name: status, widget: string }
+              - { label: Bewering, name: text, widget: text }
+              - { label: Toelichting, name: note, widget: text, required: false }
+              - { label: Bron, name: url, widget: string, required: false }
+      - { label: "Noot van de redactie", name: editor_note, widget: text, required: false }
       - label: Bronnen
         name: sources
         widget: list
-        hint: "De oorspronkelijke berichtgeving (persbericht, AP, vakblad), niet De Vector."
+        required: false
         fields:
-          - { label: Naam, name: name, widget: string }
+          - { label: Titel, name: name, widget: string }
+          - { label: Uitgever, name: publisher, widget: string, required: false }
           - { label: URL, name: url, widget: string }
-      - { label: "Via De Vector (link)", name: via, widget: string, required: false, hint: "Engelse versie: https://www.devector.nl/en/edition/<datum>/<slug>.html. Staat klein onderaan de pagina." }
-      - { label: Tekst, name: body, widget: markdown, hint: "150 tot 250 woorden in het Engels, eigen woorden, wat er gebeurde en wat het betekent voor wie film of tv maakt. Niets toevoegen wat niet in de bronnen staat. Geen em-dashes (—)." }
+      - { label: "Via De Vector (link)", name: via, widget: string, required: false, hint: "Staat klein onderaan de pagina." }
+      - { label: "Tekst van het artikel", name: body, widget: markdown }
 
   - name: paginas
     label: Pagina's

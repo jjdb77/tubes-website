@@ -87,11 +87,11 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/European_Film_Market_Berlinale_2017_01.jpg/960px-European_Film_Market_Berlinale_2017_01.jpg
         image_alt: "Stands and meeting tables in the hall of the European Film Market at the Berlinale"
         image_credit: "Photo: Maximilian Bühn (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:European_Film_Market_Berlinale_2017_01.jpg)"
-        heading: Industry news
+        heading: The Daily Tubes
         url: /news/
         link_label: Read the news
         text: |
-          Interesting public posts from across film and television that we come across on LinkedIn, briefly summarised: budgets and financing, AI in production, festivals and markets. The views belong to the original authors.
+          The film and television headlines of the past weeks, and interesting public posts from across the industry that we come across on LinkedIn. Budgets and financing, streaming, AI in production, festivals and markets.
   - type: cta
     title: Plan the production behind the decision
     text: |

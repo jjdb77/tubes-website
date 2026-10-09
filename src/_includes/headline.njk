@@ -1,6 +1,8 @@
 {#- Eigen pagina per film- en tv-kop (src/content/headlines, permalink via
-    headlines.11tydata.js). Bronnen zijn de oorspronkelijke berichtgeving; de
-    verwijzing naar De Vector staat bewust klein onderaan. -#}
+    headlines.11tydata.js): het volledige artikel van De Vector, ingelezen met
+    scripts/import-devector.mjs. Noindex, want de tekst staat ook op De Vector;
+    /news/ met onze eigen samenvattingen is wat Google ziet. De verwijzing naar
+    De Vector staat bewust klein onderaan. -#}
 {%- set topicChip = {
   "Business": "chip chip-amber",
   "Streaming": "chip chip-blue",
@@ -21,7 +23,7 @@
   <link rel="stylesheet" href="/assets/fonts/mulish.css">
   <link rel="stylesheet" href="{{ assets.css }}">
   <script type="application/ld+json">
-{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, article: { headline: title, date: page.date, words: content | wordCount, news: true }, crumbs: [{ name: "News", url: "/news/" }] } | jsonld | safe }}
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, article: { headline: title, date: page.date, words: content | wordCount, news: true }, crumbs: [{ name: "The Daily Tubes", url: "/news/" }] } | jsonld | safe }}
   </script>
 </head>
 <body>
@@ -32,24 +34,79 @@
       <div class="container article-inner">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a> <span aria-hidden="true">/</span>
-          <a href="/news/">News</a> <span aria-hidden="true">/</span>
+          <a href="/news/">The Daily Tubes</a> <span aria-hidden="true">/</span>
           <span aria-current="page">{{ title }}</span>
         </nav>
         <span class="{{ topicChip[topic] or 'chip' }} headline-page-chip">{{ topic }}</span>
-        <h1>{{ title }}</h1>
-        {% if summary %}<p class="article-standfirst">{{ summary }}</p>{% endif %}
+        <h1>{{ headline or title }}</h1>
+        {% if standfirst or summary %}<p class="article-standfirst">{{ standfirst or summary }}</p>{% endif %}
         <p class="article-meta">
           <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
         </p>
+        {%- if photo and photo.src %}
+        <figure class="headline-photo">
+          <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
+          <figcaption>
+            {%- if photo.caption %}{{ photo.caption }} · {% endif -%}
+            {%- if photo.credit %}Photo: {% if photo.credit_url %}<a href="{{ photo.credit_url }}" target="_blank" rel="noopener">{{ photo.credit }}</a>{% else %}{{ photo.credit }}{% endif %}, Wikimedia Commons{% endif -%}
+            {%- if photo.license %}, {% if photo.license_url %}<a href="{{ photo.license_url }}" target="_blank" rel="license noopener">{{ photo.license }}</a>{% else %}{{ photo.license }}{% endif %}{% endif %}
+          </figcaption>
+        </figure>
+        {%- endif %}
         <div class="rich-text article-body">
           {{ content | safe }}
         </div>
+
+        {%- if perspectives %}
+        <section class="headline-box headline-perspectives" aria-labelledby="persp-h">
+          <h2 id="persp-h">One story, several perspectives</h2>
+          {%- if perspectives.facts and perspectives.facts.length %}
+          <h3>What is established</h3>
+          <ul>{% for f in perspectives.facts %}<li>{{ f }}</li>{% endfor %}</ul>
+          {%- endif %}
+          <div class="headline-views">
+            {%- for v in perspectives.views %}
+            <div class="headline-view">
+              <h3>{{ v.name }}</h3>
+              {% if v.arguments %}<p><strong>Arguments</strong> {{ v.arguments }}</p>{% endif %}
+              {% if v.values %}<p><strong>Values</strong> {{ v.values }}</p>{% endif %}
+              {% if v.consequences %}<p><strong>Consequences</strong> {{ v.consequences }}</p>{% endif %}
+            </div>
+            {%- endfor %}
+          </div>
+          {% if perspectives.disclaimer %}<p class="headline-small">{{ perspectives.disclaimer }}</p>{% endif %}
+        </section>
+        {%- endif %}
+
+        {%- if factcheck %}
+        <section class="headline-box headline-factcheck" aria-labelledby="fc-h">
+          <h2 id="fc-h">Fact check{% if factcheck.verdict %} <span class="headline-verdict">{{ factcheck.verdict }}</span>{% endif %}</h2>
+          <p class="headline-small">Automated fact check: every claim below was checked against the sources.</p>
+          {% if factcheck.summary %}<p>{{ factcheck.summary }}</p>{% endif %}
+          <ul class="headline-claims">
+            {%- for c in factcheck.claims %}
+            <li>
+              <span class="headline-status headline-status-{{ c.status | slugify }}">{{ c.status }}</span>
+              <span>{{ c.text }}{% if c.note %} <span class="headline-note">{{ c.note }}</span>{% endif %}{% if c.url %} <a href="{{ c.url }}" target="_blank" rel="nofollow noopener">Source</a>{% endif %}</span>
+            </li>
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+
+        {%- if editor_note %}
+        <section class="headline-box" aria-labelledby="note-h">
+          <h2 id="note-h">Editor&rsquo;s note</h2>
+          <p>{{ editor_note }}</p>
+        </section>
+        {%- endif %}
+
         {%- if sources and sources.length %}
         <div class="headline-sources">
           <h2>Sources</h2>
           <ul>
             {%- for s in sources %}
-            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
+            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% if s.publisher %} <span>{{ s.publisher }}</span>{% endif %}</li>
             {%- endfor %}
           </ul>
         </div>

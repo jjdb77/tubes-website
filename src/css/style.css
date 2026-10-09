@@ -1136,10 +1136,32 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .headline-page-chip { display: inline-block; margin-bottom: 14px; }
 .headline-sources { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
 .headline-sources h2 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; }
-.headline-sources ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.headline-sources ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .headline-sources a { font-weight: 700; font-size: 0.95rem; color: var(--action-soft-ink); }
 /* Bewust klein: de bronnen hierboven zijn de verwijzing, dit is alleen de herkomst. */
 .headline-via { margin: 18px 0 0; font-size: 0.78rem; }
+.headline-photo { margin: 28px 0 8px; }
+.headline-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); background: var(--border); aspect-ratio: 3 / 2; object-fit: cover; }
+.headline-photo figcaption { font-size: 0.78rem; color: var(--muted); margin-top: 8px; }
+.headline-photo figcaption a { color: var(--muted); }
+.headline-box { margin-top: 32px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); }
+.headline-box h2 { font-size: 1.05rem; margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+.headline-box h3 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 16px 0 6px; }
+.headline-box p, .headline-box li { font-size: 0.95rem; color: var(--ink-soft); }
+.headline-box ul { margin: 0; padding-left: 1.2em; }
+.headline-views { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.headline-view p { margin: 0 0 8px; }
+.headline-small { font-size: 0.8rem !important; color: var(--muted) !important; margin: 10px 0 0; }
+.headline-factcheck .headline-small { margin: 0 0 10px; }
+.headline-verdict { font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.headline-claims { list-style: none; padding: 0 !important; margin-top: 12px !important; display: grid; gap: 10px; }
+.headline-claims li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; }
+.headline-status { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 999px; background: #E8EAEE; color: #55606E; white-space: nowrap; }
+.headline-status-confirmed { background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.headline-note { color: var(--muted); }
+.headline-claims a, .headline-box a { color: var(--action-soft-ink); font-weight: 700; }
+.headline-sources li span { color: var(--muted); font-size: 0.88rem; }
+@media (max-width: 700px) { .headline-views { grid-template-columns: 1fr; } }
 .headline-via a { color: var(--muted); text-decoration: none; }
 .headline-via a:hover { text-decoration: underline; }
 
