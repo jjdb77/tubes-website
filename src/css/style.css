@@ -374,6 +374,8 @@ a:hover { color: var(--action); }
 .hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
 .hero-stacked .hero-media { width: 85%; margin: 0 auto; }
+.hero-after { max-width: 760px; margin: 0 auto; text-align: center; }
+.hero-after .button-row { justify-content: center; margin-top: 20px; }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
@@ -1245,7 +1247,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
      kennelijk kapotte stretch-fit, en die geeft wél het juiste resultaat. */
   .hero-grid.hero-stacked .hero-media,
   .hero-grid.hero-stacked .hero-text,
-  .hero-grid.hero-stacked .chip-row-below { width: 100%; }
+  .hero-grid.hero-stacked .chip-row-below,
+  .hero-grid.hero-stacked .hero-after { width: 100%; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.
