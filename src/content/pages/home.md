@@ -96,6 +96,8 @@ sections:
         Send a Magic Link and give someone a secure, personalised way to respond, submit a team expense, upload an invoice or share documents without giving them access to your whole production.
 
         No account. No complicated setup. Just a secure connection to exactly what they need.
+    steps_heading: Connect works across Tubes
+    steps_intro: Connect is woven into Budget, Plan and Produce, keeping the people around each stage of your production connected to the work.
   - type: healthcheck
     theme: white
   - type: pricing

@@ -30,10 +30,11 @@
     {% endif %}
   </div>
   {#- Budget / Plan / Produce onder het blok, met dezelfde iconen als de hero. -#}
-  {% if section.steps %}
+  {% if section.steps or section.steps_heading %}
   <div class="container feature-steps-wrap">
     {% if section.steps_heading %}<h3 class="feature-steps-heading">{{ section.steps_heading }}</h3>{% endif %}
     {% if section.steps_intro %}<p class="feature-steps-intro">{{ section.steps_intro }}</p>{% endif %}
+    {% if section.steps %}
     <ul class="hero-steps feature-steps">
       {%- for step in section.steps %}
       <li class="hero-step step-{{ step.key }}">
@@ -43,6 +44,7 @@
       </li>
       {%- endfor %}
     </ul>
+    {% endif %}
     {% if section.closing %}<p class="feature-steps-closing">{{ section.closing }}</p>{% endif %}
   </div>
   {% endif %}
