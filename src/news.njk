@@ -2,10 +2,10 @@
 permalink: /news/
 title: News
 seo_title: "Film and TV industry news | Tubes"
-description: "New tools, guides and product updates from Tubes, the film and TV headlines of the past weeks, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
+description: "The film and TV headlines of the past weeks, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
-{#- Twee stromen op één pagina: collectie `news` (eigen aankondigingen uit
-    src/content/news), collectie `headlines` (film- en tv-nieuws uit De Vector,
+{#- Twee stromen op één pagina (de eigen aankondigingen, collectie `news`,
+    staan sinds 9-10-2026 op /whats-new/): collectie `headlines` (film- en tv-nieuws uit De Vector,
     src/content/headlines) en collectie `linkedin` (posts uit de branche die we op
     LinkedIn tegenkwamen, uit src/content/linkedin). Zie eleventy.config.js. -#}
 {%- set topicChip = {
@@ -52,12 +52,9 @@ description: "New tools, guides and product updates from Tubes, the film and TV 
           <span class="kicker">News</span>
           <h1>News for <em>production</em> teams</h1>
           <div class="rich-text lead">
-            <p>New tools, guides and product updates from Tubes, the film and television headlines of the past weeks, and the posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets.</p>
+            <p>The film and television headlines of the past weeks, and the posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets. Looking for updates from Tubes itself? See <a href="/whats-new/">what&rsquo;s new at Tubes</a>.</p>
           </div>
           <div class="button-row jump-row">
-            {%- if collections.news.length %}
-            <a class="button button-secondary jump-link" href="#whats-new">What&rsquo;s new at Tubes <span aria-hidden="true">&darr;</span></a>
-            {%- endif %}
             {%- if collections.headlines.length %}
             <a class="button button-secondary jump-link" href="#headlines">Headlines <span aria-hidden="true">&darr;</span></a>
             {%- endif %}
@@ -72,21 +69,6 @@ description: "New tools, guides and product updates from Tubes, the film and TV 
       </div>
     </section>
 
-    <section class="section theme-white" id="whats-new">
-      <div class="container">
-        <h2 class="section-heading">What&rsquo;s new at Tubes</h2>
-        <ul class="news-list">
-          {%- for item in collections.news %}
-          <li class="news-item">
-            <time datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time>
-            <h2>{{ item.data.title }}</h2>
-            <p>{{ item.data.summary }}</p>
-            {% if item.data.url %}<a class="news-link" href="{{ item.data.url }}">{{ item.data.link_label or "Read more" }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
-          </li>
-          {%- endfor %}
-        </ul>
-      </div>
-    </section>
 
     {%- if collections.headlines.length %}
     <section class="section" id="headlines">

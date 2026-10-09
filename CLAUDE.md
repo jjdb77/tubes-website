@@ -147,11 +147,12 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 
 ## Nieuws (/news/)
 
-De pagina `src/news.njk` draagt **drie stromen**, alle zonder eigen pagina (`permalink: false`):
+**Eigen nieuws** ("What's new at Tubes") staat sinds 9-10-2026 op een eigen pagina, **/whats-new/** (`src/whats-new.njk`, in de Explore-footer onder Company), uit `src/content/news/*.md`, collectie `news`. Velden: `title`, `date`, `summary`, `url`, `link_label`. CMS-collectie "Nieuws (/news/)" (de naam is gebleven). /news/ (in het menu "Industry news") verwijst ernaar in de hero.
 
-1. **Eigen nieuws** ("What's new at Tubes") uit `src/content/news/*.md`, collectie `news`. Velden: `title`, `date`, `summary`, `url`, `link_label`. CMS-collectie "Nieuws (/news/)".
-2. **Film- en tv-koppen uit De Vector** ("Film and television headlines", sinds 8-10-2026) uit `src/content/headlines/*.md`, collectie `headlines`. Velden: `title`, `date`, `topic` (Business, Streaming, Awards & festivals, Box office, Rights & AI), `link` (de Engelse versie, `https://www.devector.nl/en/edition/<datum>/<slug>.html`) en de samenvatting in de body. CMS-collectie "Film- en tv-nieuws (De Vector)".
-3. **Branchenieuws van LinkedIn** uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `source`, `role`, `title`, `date`, `topic`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
+De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`permalink: false`):
+
+1. **Film- en tv-koppen uit De Vector** ("Film and television headlines", sinds 8-10-2026) uit `src/content/headlines/*.md`, collectie `headlines`. Velden: `title`, `date`, `topic` (Business, Streaming, Awards & festivals, Box office, Rights & AI), `link` (de Engelse versie, `https://www.devector.nl/en/edition/<datum>/<slug>.html`) en de samenvatting in de body. CMS-collectie "Film- en tv-nieuws (De Vector)".
+2. **Branchenieuws van LinkedIn** uit `src/content/linkedin/*.md`, collectie `linkedin`. Velden: `source`, `role`, `title`, `date`, `topic`, `link`, en de samenvatting in de body. CMS-collectie "Branchenieuws van LinkedIn".
 
 ### De Vector-koppeling
 
@@ -196,7 +197,7 @@ Tubes is hier **curator, geen eigenaar**. De pagina bestaat om goede bijdragen u
 
 ## Bezoekersstatistieken
 
-- Eén plek: `src/_includes/partials/analytics.njk`, ingevoegd door `layout.njk`, `article.njk`, `insights.njk` en `news.njk`. `book-a-call.njk` en `home-2.njk` bewust niet, dat zijn doorstuurpagina's die niemand ziet.
+- Eén plek: `src/_includes/partials/analytics.njk`, ingevoegd door `layout.njk`, `article.njk`, `insights.njk`, `news.njk` en `whats-new.njk`. `book-a-call.njk` en `home-2.njk` bewust niet, dat zijn doorstuurpagina's die niemand ziet.
 - Twee velden in settings.json, allebei leeg = uit: `goatcounter` (cookieloos, geen toestemming nodig) en `google_analytics` (GA4 meet-ID, vorm `G-XXXXXXXXXX`).
 - **Google Analytics zet cookies**, dus dat gaat via toestemming. `partials/cookie-banner.njk` verschijnt alleen als `google_analytics` is ingevuld, en het script van Google wordt **hard geblokkeerd**: `site.js` haalt gtag.js pas op nadat de bezoeker op Accept klikt. Zolang dat niet gebeurt gaat er geen enkel gegeven naar Google. De keuze staat in `localStorage` (`tubes-analytics-consent`), niet in een cookie.
 - Accepteren en weigeren zijn allebei één klik op hetzelfde niveau, zoals de Autoriteit Persoonsgegevens eist. Herzien kan via "Cookie settings" in de footer, die link staat er ook alleen als GA is ingesteld.
