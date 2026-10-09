@@ -1,0 +1,14 @@
+{#- Inschrijven op The Daily Tubes (server.js: /api/daily/subscribe, dubbele
+    opt-in). Gebruikt op /news/ en onder elk artikel. -#}
+<form class="daily-form" method="POST" action="/api/daily/subscribe" data-endpoint="/api/daily/subscribe">
+  <p class="daily-form-title">Get The Daily Tubes by email</p>
+  <p class="daily-form-text">The film and television news of the day, in your inbox each morning when there is news.</p>
+  <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" data-1p-ignore data-lpignore="true" data-form-type="other">
+  <div class="daily-form-row">
+    <label class="visually-hidden" for="daily-email-{{ dailyId or 'main' }}">Email address</label>
+    <input id="daily-email-{{ dailyId or 'main' }}" type="email" name="email" required autocomplete="email" placeholder="you@company.com">
+    <button type="submit" class="button button-primary">Subscribe</button>
+  </div>
+  <p class="daily-form-note">We send a confirmation email first. Unsubscribe with one click in any email. See our <a href="/privacy/#the-daily-tubes">privacy notice</a>.</p>
+  <p class="form-status daily-status" role="status" aria-live="polite"></p>
+</form>

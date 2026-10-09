@@ -1140,6 +1140,16 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .headline-sources a { font-weight: 700; font-size: 0.95rem; color: var(--action-soft-ink); }
 /* Bewust klein: de bronnen hierboven zijn de verwijzing, dit is alleen de herkomst. */
 .headline-via { margin: 18px 0 0; font-size: 0.78rem; }
+/* Inschrijven op The Daily Tubes (/news/ en onder elk artikel) */
+.daily-form { margin-top: 28px; padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); max-width: 560px; }
+.daily-form-title { font-weight: 800; font-size: 1.05rem; color: var(--ink); margin: 0 0 4px; }
+.daily-form-text { font-size: 0.93rem; color: var(--ink-soft); margin: 0 0 12px; }
+.daily-form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.daily-form-row input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 11px 14px; border: 1px solid var(--border); border-radius: 10px; font: inherit; background: #fff; }
+.daily-form-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
+.daily-form-note a { color: var(--muted); }
+.daily-status:empty { display: none; }
+.daily-notice { margin-top: 18px; }
 .headline-photo { margin: 28px 0 8px; }
 .headline-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); background: var(--border); aspect-ratio: 3 / 2; object-fit: cover; }
 .headline-photo figcaption { font-size: 0.78rem; color: var(--muted); margin-top: 8px; }

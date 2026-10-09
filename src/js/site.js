@@ -78,7 +78,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
 // met "token" (ontbrekend of verlopen, bijvoorbeeld omdat de pagina openstond
 // tijdens een deploy), dan halen we een verse en proberen we nog één keer.
 const contactForms = document.querySelectorAll(".contact-form");
-const contactEndpoint = contactForms.length ? contactForms[0].dataset.endpoint : "";
+const dailyForms = document.querySelectorAll(".daily-form");
+const contactEndpoint = contactForms.length ? contactForms[0].dataset.endpoint : dailyForms.length ? "/api/contact" : "";
 let formToken = "";
 async function haalFormToken() {
   if (!contactEndpoint) return;
@@ -143,6 +144,59 @@ for (const form of contactForms) {
     }
   });
 }
+
+// The Daily Tubes: inschrijven per e-mail (server.js, /api/daily/subscribe).
+// Zelfde timing-token als de andere formulieren. Na de bevestigingslink of
+// het afmelden komt de bezoeker terug op /news/?daily=..., met een melding.
+for (const form of dailyForms) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const status = form.querySelector(".daily-status");
+    const data = new FormData(form);
+    data.set("page", location.pathname);
+    status.textContent = "Sending…";
+    status.className = "form-status daily-status";
+    const verstuur = () => {
+      data.set("form_token", formToken);
+      return fetch(form.dataset.endpoint, { method: "POST", body: new URLSearchParams(data), headers: { Accept: "application/json" } });
+    };
+    try {
+      let res = await verstuur();
+      let body = await res.json().catch(() => ({}));
+      if (res.status === 400 && body.error === "token") {
+        await haalFormToken();
+        await new Promise((klaar) => setTimeout(klaar, 3500));
+        res = await verstuur();
+        body = await res.json().catch(() => ({}));
+      }
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Almost done. Check your inbox and click the link to confirm.";
+        status.className = "form-status daily-status is-success";
+        track("daily-subscribe");
+      } else {
+        status.textContent = body.error === "email" ? "That email address does not look right." : "Something went wrong. Please try again later.";
+        status.className = "form-status daily-status is-error";
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong. Please try again later.";
+      status.className = "form-status daily-status is-error";
+    }
+  });
+}
+(function () {
+  const notice = document.querySelector("[data-daily-notice]");
+  const state = new URLSearchParams(location.search).get("daily");
+  const teksten = {
+    subscribed: ["You are subscribed to The Daily Tubes. The next email arrives in the morning when there is news.", "is-success"],
+    unsubscribed: ["You are unsubscribed. You will not receive The Daily Tubes any more.", "is-success"],
+    invalid: ["That link is no longer valid. Subscribe again below if you like.", "is-error"]
+  };
+  if (!notice || !teksten[state]) return;
+  notice.textContent = teksten[state][0];
+  notice.className = "form-status daily-notice " + teksten[state][1];
+  notice.hidden = false;
+})();
 
 // Prijzen in lokale valuta: land wordt via IP gedetecteerd (ipapi.co), koers
 // ligt vast (14-08-2026) i.p.v. live opgehaald. Bezoeker kan de detectie

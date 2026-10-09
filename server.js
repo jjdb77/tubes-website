@@ -535,7 +535,7 @@ async function verstuurWachtenden({ alles = false } = {}) {
   return wachtenden.length;
 }
 
-async function stuurMail(naar, onderwerp, html, antwoordNaar, cc) {
+async function stuurMail(naar, onderwerp, html, antwoordNaar, cc, extra) {
   const ontvangers = adressen(naar);
   const kopie = adressen(cc || "");
   if (!MAIL_KEY || !ontvangers.length) {
@@ -557,6 +557,8 @@ async function stuurMail(naar, onderwerp, html, antwoordNaar, cc) {
         html,
         // Antwoorden gaat zo rechtstreeks naar de afzender van het formulier.
         ...(antwoordNaar ? { reply_to: antwoordNaar } : {}),
+        // Bijv. eigen afzender en List-Unsubscribe-kop voor de Daily Tubes-mail.
+        ...(extra || {}),
       }),
     });
     if (!res.ok) {
@@ -1129,6 +1131,7 @@ app.get("/beheer", (req, res) => {
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a> &middot; <a href="/beheer/ai" style="color:#0E8C77">AI-zoeken</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
+${dailyTubesLine()}
 ${toolAccountsBlock()}
 ${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
@@ -1236,6 +1239,165 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// ---------- The Daily Tubes: abonneren per e-mail ----------
+//
+// Inschrijven op /news/ en onder elk artikel (partials/daily-subscribe.njk).
+// Dubbele opt-in: eerst een bevestigingsmail, pas na de klik op die link staat
+// iemand op de lijst. Elke ochtend vanaf DAILY_HOUR (Amsterdamse tijd) gaat er
+// een mail uit met de artikelen die sinds de vorige mail op /news/ zijn
+// gekomen; zijn er geen nieuwe, dan gaat er niets uit. De artikelen komen uit
+// _site/news/digest.json (src/news-digest.njk), dus een nieuw artikel zit in de
+// eerstvolgende mail zodra het gedeployd is.
+//
+// Opslag op de volume: daily-subscribers.json (e-mail → status, token, data)
+// en daily-state.json (welke artikelen al gemaild zijn, laatste verzenddag).
+// Bij de eerste start gelden alle bestaande artikelen als verstuurd, zodat een
+// nieuwe abonnee niet de hele achterstand krijgt. Afmelden kan met de link in
+// elke mail en met de afmeldknop van het mailprogramma (List-Unsubscribe).
+
+const DAILY_SUBS_FILE = path.join(DATA_DIR, "daily-subscribers.json");
+const DAILY_STATE_FILE = path.join(DATA_DIR, "daily-state.json");
+const DAILY_DIGEST = path.join(__dirname, "_site", "news", "digest.json");
+const DAILY_HOUR = Number(process.env.DAILY_HOUR || 7);
+const SITE_URL = (process.env.SITE_URL || `https://${CANONICAL_HOST}`).replace(/\/$/, "");
+const DAILY_FROM = process.env.DAILY_FROM || MAIL_FROM.replace(/^[^<]*</, "The Daily Tubes <");
+
+const readDailySubs = () => readJsonFile(DAILY_SUBS_FILE, {});
+const readDailyDigest = () => readJsonFile(DAILY_DIGEST, { items: [] }).items || [];
+const nieuwToken = () => crypto.randomBytes(24).toString("base64url");
+const amsterdamDag = (d = new Date()) => d.toLocaleDateString("sv-SE", { timeZone: "Europe/Amsterdam" });
+const amsterdamUur = (d = new Date()) => Number(d.toLocaleString("en-GB", { timeZone: "Europe/Amsterdam", hour: "2-digit", hour12: false }));
+const vindAbonnee = (subs, token) => Object.entries(subs).find(([, a]) => token && a.token === token);
+
+function dailyMailOpmaak(inhoud, afmeldUrl) {
+  return `<!doctype html><html><body style="margin:0;background:#F6F7F9;font-family:Mulish,Helvetica,Arial,sans-serif;color:#1A1A1A">
+<div style="max-width:600px;margin:0 auto;padding:28px 20px">
+<p style="font-size:22px;font-weight:800;margin:0 0 4px">The Daily <span style="color:#0E9C88">Tubes</span></p>
+<p style="font-size:13px;color:#8B8E94;margin:0 0 24px">Film and television news for production teams</p>
+${inhoud}
+<p style="font-size:12px;color:#8B8E94;margin:28px 0 0;line-height:1.5">You receive this because you subscribed at <a href="${SITE_URL}/news/" style="color:#8B8E94">tubes.media/news</a>.${afmeldUrl ? ` <a href="${afmeldUrl}" style="color:#8B8E94">Unsubscribe</a>.` : ""}<br>Tubes, Appsolutions, Daalwijkdreef 47, 1103 AD Amsterdam, the Netherlands</p>
+</div></body></html>`;
+}
+
+async function stuurDailyMail(naar, onderwerp, html, afmeldUrl) {
+  const extra = { from: DAILY_FROM };
+  if (afmeldUrl) {
+    extra.headers = { "List-Unsubscribe": `<${afmeldUrl}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" };
+  }
+  return stuurMail(naar, onderwerp, html, "contact@tubes.media", "", extra);
+}
+
+app.post("/api/daily/subscribe", async (req, res) => {
+  const email = String(req.body.email || "").trim().toLowerCase();
+  if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "rate" });
+  // Honeypot: een bot vult dit verborgen veld in. Wij doen alsof het lukte.
+  if (req.body.company_website) return res.json({ ok: true });
+  const leeftijd = tokenLeeftijd(req.body.form_token);
+  if (leeftijd === null || leeftijd > TOKEN_MAX_AGE) return res.status(400).json({ ok: false, error: "token" });
+  if (leeftijd < TOKEN_MIN_AGE) return res.json({ ok: true });
+  if (!EMAIL_RE.test(email) || email.length > 200) return res.status(400).json({ ok: false, error: "email" });
+
+  const subs = readDailySubs();
+  const bestaand = subs[email];
+  // Zelfde antwoord voor bestaand en nieuw: verklapt niet wie er al op staat.
+  if (bestaand?.status === "active") return res.json({ ok: true });
+  const token = bestaand?.token || nieuwToken();
+  subs[email] = { status: "pending", token, createdAt: bestaand?.createdAt || new Date().toISOString(), page: String(req.body.page || "").slice(0, 200) };
+  writeJsonFile(DAILY_SUBS_FILE, subs);
+
+  const link = `${SITE_URL}/api/daily/confirm?t=${token}`;
+  const html = dailyMailOpmaak(`<p style="font-size:16px;line-height:1.55">Please confirm that you want to receive The Daily Tubes: the film and television news of the day, in your inbox each morning when there is news.</p>
+<p style="margin:24px 0"><a href="${link}" style="display:inline-block;background:#0E9C88;color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:10px">Yes, subscribe me</a></p>
+<p style="font-size:13px;color:#8B8E94;line-height:1.5">Did not ask for this? Then you can ignore this email. Without the click you will not receive anything.</p>`);
+  stuurDailyMail(email, "Confirm your subscription to The Daily Tubes", html).catch(() => {});
+  res.json({ ok: true });
+});
+
+app.get("/api/daily/confirm", (req, res) => {
+  const subs = readDailySubs();
+  const hit = vindAbonnee(subs, String(req.query.t || ""));
+  if (!hit) return res.redirect(303, "/news/?daily=invalid");
+  const [email, abonnee] = hit;
+  if (abonnee.status !== "active") {
+    subs[email] = { ...abonnee, status: "active", confirmedAt: new Date().toISOString() };
+    writeJsonFile(DAILY_SUBS_FILE, subs);
+  }
+  res.redirect(303, "/news/?daily=subscribed");
+});
+
+// GET vanuit de link in de mail, POST vanuit de afmeldknop van het mailprogramma.
+function dailyAfmelden(req, res) {
+  const subs = readDailySubs();
+  const hit = vindAbonnee(subs, String(req.query.t || ""));
+  if (hit) {
+    delete subs[hit[0]];
+    writeJsonFile(DAILY_SUBS_FILE, subs);
+  }
+  if (req.method === "POST") return res.status(200).send("Unsubscribed");
+  res.redirect(303, "/news/?daily=unsubscribed");
+}
+app.get("/api/daily/unsubscribe", dailyAfmelden);
+app.post("/api/daily/unsubscribe", dailyAfmelden);
+
+function dailyItemHtml(item) {
+  const url = SITE_URL + item.url;
+  return `<div style="background:#fff;border:1px solid #E3E5E9;border-radius:14px;padding:20px 22px;margin:0 0 14px">
+${item.photo ? `<a href="${url}"><img src="${esc(item.photo)}" alt="" width="556" style="display:block;width:100%;height:auto;border-radius:10px;margin:0 0 14px"></a>` : ""}
+<p style="font-size:12px;font-weight:700;color:#0E8C77;text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px">${esc(item.topic || "")}</p>
+<p style="font-size:18px;font-weight:800;line-height:1.3;margin:0 0 8px"><a href="${url}" style="color:#1A1A1A;text-decoration:none">${esc(item.title)}</a></p>
+<p style="font-size:15px;line-height:1.55;color:#5C5750;margin:0 0 12px">${esc(item.summary || "")}</p>
+<a href="${url}" style="font-size:14px;font-weight:700;color:#0E8C77">Read more &rarr;</a>
+</div>`;
+}
+
+// Eén ronde: vanaf DAILY_HOUR, één keer per dag, alleen als er nieuwe artikelen zijn.
+async function dailyRonde({ forceer = false } = {}) {
+  const items = readDailyDigest();
+  if (!items.length) return { verstuurd: 0, reden: "geen digest" };
+  const state = readJsonFile(DAILY_STATE_FILE, null);
+  if (!state) {
+    // Eerste start: wat er nu staat geldt als verstuurd.
+    writeJsonFile(DAILY_STATE_FILE, { sent: items.map((i) => i.slug), lastDay: amsterdamDag() });
+    return { verstuurd: 0, reden: "beginstand vastgelegd" };
+  }
+  const vandaag = amsterdamDag();
+  if (!forceer && (state.lastDay === vandaag || amsterdamUur() < DAILY_HOUR)) return { verstuurd: 0, reden: "niet nu" };
+  const nieuw = items.filter((i) => !state.sent.includes(i.slug));
+  state.lastDay = vandaag;
+  if (!nieuw.length) {
+    writeJsonFile(DAILY_STATE_FILE, state);
+    return { verstuurd: 0, reden: "niets nieuws" };
+  }
+  const abonnees = Object.entries(readDailySubs()).filter(([, a]) => a.status === "active");
+  const onderwerp = `The Daily Tubes: ${nieuw[0].title}${nieuw.length > 1 ? ` (and ${nieuw.length - 1} more)` : ""}`;
+  const inhoud = nieuw.map(dailyItemHtml).join("\n");
+  let verstuurd = 0;
+  for (const [email, a] of abonnees) {
+    const afmeldUrl = `${SITE_URL}/api/daily/unsubscribe?t=${a.token}`;
+    if (await stuurDailyMail(email, onderwerp, dailyMailOpmaak(inhoud, afmeldUrl), afmeldUrl)) verstuurd++;
+    // Resend staat standaard twee verzoeken per seconde toe.
+    await new Promise((klaar) => setTimeout(klaar, 600));
+  }
+  // Ook zonder sleutel of abonnees als verstuurd markeren, anders komt een
+  // week achterstand in één keer zodra de eerste abonnee bevestigt.
+  state.sent = [...new Set([...state.sent, ...nieuw.map((i) => i.slug)])];
+  state.lastRun = { at: new Date().toISOString(), artikelen: nieuw.length, abonnees: abonnees.length, verstuurd };
+  writeJsonFile(DAILY_STATE_FILE, state);
+  console.log(`[daily] ${nieuw.length} artikel(en) naar ${verstuurd}/${abonnees.length} abonnee(s)`);
+  return { verstuurd, artikelen: nieuw.length, abonnees: abonnees.length };
+}
+setTimeout(() => dailyRonde().catch((err) => console.error("[daily]", err.message)), 30 * 1000).unref?.();
+setInterval(() => dailyRonde().catch((err) => console.error("[daily]", err.message)), 10 * 60 * 1000).unref?.();
+
+function dailyTubesLine() {
+  const subs = Object.values(readDailySubs());
+  const actief = subs.filter((a) => a.status === "active").length;
+  const wacht = subs.length - actief;
+  const state = readJsonFile(DAILY_STATE_FILE, {});
+  const laatste = state.lastRun ? `; laatste mail ${stamp(state.lastRun.at)} (${state.lastRun.artikelen} artikel${state.lastRun.artikelen === 1 ? "" : "en"}, ${state.lastRun.verstuurd} verstuurd)` : "";
+  return `<p class="count" style="margin-top:20px">The Daily Tubes: ${actief} abonnee${actief === 1 ? "" : "s"}${wacht ? `, ${wacht} wacht${wacht === 1 ? "" : "en"} op bevestiging` : ""}${laatste}</p>`;
+}
 
 const SITE = path.join(__dirname, "_site");
 

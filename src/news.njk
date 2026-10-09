@@ -63,6 +63,8 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
             {%- endif %}
             <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
           </div>
+          <p class="form-status daily-notice" data-daily-notice hidden></p>
+          {% include "partials/daily-subscribe.njk" %}
         </div>
         {#- Zelfde reclameblok als op de andere gratis tools; tekst uit tubesPromo.json. -#}
         {% set promoVariant = "hero" %}{% include "partials/company-promo.njk" %}

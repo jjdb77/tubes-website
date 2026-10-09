@@ -111,6 +111,7 @@
           </ul>
         </div>
         {%- endif %}
+        {% set dailyId = "article" %}{% include "partials/daily-subscribe.njk" %}
         {%- if via %}<p class="headline-via"><a href="{{ via }}" target="_blank" rel="noopener">via De Vector</a></p>{% endif %}
       </div>
     </article>
