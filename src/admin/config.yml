@@ -505,6 +505,26 @@ collections:
               - { label: "Beeld links (i.p.v. rechts)", name: media_position, widget: select, options: [{label: Rechts, value: right}, {label: Links, value: left}], default: right, required: false }
               - { label: "Onderschrift bij beeld", name: media_caption, widget: string, required: false }
               - { label: Knop, name: button, widget: object, required: false, collapsed: true, fields: *button_fields }
+              - label: "Kaart rechts (alleen zonder beeld)"
+                name: aside
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Kop, name: heading, widget: string, required: false }
+                  - { label: Tekst, name: text, widget: markdown }
+              - { label: "Kop boven Budget / Plan / Produce (optioneel)", name: steps_heading, widget: string, required: false }
+              - { label: "Zin onder die kop", name: steps_intro, widget: string, required: false }
+              - label: "Budget / Plan / Produce onder het blok (optioneel)"
+                name: steps
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Vorm, name: key, widget: select, options: [{label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}] }
+                  - { label: Naam, name: name, widget: string }
+                  - { label: Tekst, name: text, widget: string }
+              - { label: "Slotzin onder Budget / Plan / Produce", name: closing, widget: string, required: false }
           - name: cards
             label: "Kaarten (2 of 3 naast elkaar)"
             summary: "{{fields.heading}}"

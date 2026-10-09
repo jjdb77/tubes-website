@@ -1,6 +1,6 @@
 {%- from "partials/step-icon.njk" import stepIcon -%}
 <section class="section theme-{{ section.theme or 'light' }}{% if section.media_large %} section-feature-large-media{% endif %}">
-  <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.video %} feature-single{% endif %}">
+  <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.video and not section.aside %} feature-single{% endif %}">
     <div class="feature-text">
       {#- section.step (budget/plan/produce) zet het icoon van die stap uit de
           Tubes-app voor de kop, in de kleur van de stap. -#}
@@ -21,6 +21,29 @@
       <img src="{{ section.image | imgSrc }}" alt="{{ section.image_alt or section.heading }}" {{ section.image | imgSize | safe }} loading="lazy" decoding="async">
       {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
     </div>
+    {% elif section.aside %}
+    {#- Kaart rechts naast de tekst als er geen beeld is (homepage: Connect). -#}
+    <div class="feature-aside">
+      {% if section.aside.heading %}<h3>{{ section.aside.heading }}</h3>{% endif %}
+      <div class="rich-text">{{ section.aside.text | md | safe }}</div>
+    </div>
     {% endif %}
   </div>
+  {#- Budget / Plan / Produce onder het blok, met dezelfde iconen als de hero. -#}
+  {% if section.steps %}
+  <div class="container feature-steps-wrap">
+    {% if section.steps_heading %}<h3 class="feature-steps-heading">{{ section.steps_heading }}</h3>{% endif %}
+    {% if section.steps_intro %}<p class="feature-steps-intro">{{ section.steps_intro }}</p>{% endif %}
+    <ul class="hero-steps feature-steps">
+      {%- for step in section.steps %}
+      <li class="hero-step step-{{ step.key }}">
+        {{ stepIcon(step.key, "hero-step-icon") }}
+        <p class="hero-step-name">{{ step.name }}</p>
+        <p class="hero-step-text">{{ step.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+    {% if section.closing %}<p class="feature-steps-closing">{{ section.closing }}</p>{% endif %}
+  </div>
+  {% endif %}
 </section>

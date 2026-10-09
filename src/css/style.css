@@ -377,6 +377,22 @@ a:hover { color: var(--action); }
 .hero-after { max-width: 760px; margin: 0 auto; text-align: center; }
 .hero-after .button-row { justify-content: center; margin-top: 20px; }
 
+/* Kaart rechts naast de tekst in een feature zonder beeld (section.aside,
+   homepage: Connect), plus Budget / Plan / Produce eronder (section.steps,
+   zelfde opmaak als in de hero). */
+.feature-aside {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-raise);
+  padding: clamp(24px, 3vw, 36px);
+}
+.feature-aside h3 { margin: 0 0 12px; font-size: clamp(1.4rem, 2.2vw, 1.8rem); letter-spacing: -0.02em; }
+.feature-aside .rich-text p:last-child { margin-bottom: 0; }
+.feature-steps-wrap { margin-top: clamp(40px, 5vw, 64px); }
+.feature-steps-heading { margin: 0 0 6px; font-size: 1.35rem; letter-spacing: -0.015em; }
+.feature-steps-intro { margin: 0; max-width: 680px; }
+.feature-steps { margin-top: 28px; }
+.feature-steps-closing { margin: 32px 0 0; font-weight: 700; color: var(--ink); }
+
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
 /* .feature-grid is 1.05fr/0.95fr (tekst iets breder dan beeld); .media-left

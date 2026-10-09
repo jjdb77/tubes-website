@@ -72,6 +72,33 @@ sections:
     image: /assets/images/tubes-costcontrol.png
     image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
     media_large: true
+  - type: feature
+    theme: teal
+    heading: Connect
+    lead: Everyone around your production, connected.
+    text: |
+      Your team, contractors, suppliers, co-producers and production partners. Connect gives you one place to manage the people and organisations involved in your production.
+
+      When someone needs to provide something, Magic Links make it simple and secure.
+    aside:
+      heading: Send. Receive. Done.
+      text: |
+        Send a Magic Link and give someone a secure, personalised way to respond, submit a team expense, upload an invoice or share documents without giving them access to your whole production.
+
+        No account. No complicated setup. Just a secure connection to exactly what they need.
+    steps_heading: Connect works across Tubes
+    steps_intro: Connect is woven into Budget, Plan and Produce, keeping the people around each stage of your production connected to the work.
+    steps:
+      - key: budget
+        name: Budget
+        text: Connect clients, co-producers and financial partners.
+      - key: plan
+        name: Plan
+        text: Manage your team, contractors and production contacts.
+      - key: produce
+        name: Produce
+        text: Manage team expenses, work with suppliers and collect invoices, receipts and other documents securely.
+    closing: One place to manage the connections that keep your production moving.
   - type: textblock
     theme: white
     heading: Got Xero? Supercharge it.
