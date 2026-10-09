@@ -318,7 +318,7 @@ export default function (eleventyConfig) {
       webPage["@type"] = "WebPage";
       graph.push({
         // Helpartikelen zijn handleidingen: TechArticle, de Insights gewone Article
-        "@type": data.article.help ? "TechArticle" : "Article",
+        "@type": data.article.help ? "TechArticle" : data.article.news ? "NewsArticle" : "Article",
         "@id": abs(url) + "#article",
         headline: data.article.headline,
         description: toPlainText(pageDescription),

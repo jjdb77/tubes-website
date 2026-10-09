@@ -1,7 +1,8 @@
 // Haalt film- en tv-nieuws op uit De Vector Zakelijk (selectie met de branche
 // "Film, tv & mediaproductie") en toont wat nog niet op /news/ staat.
 // Het schrijft zelf niets: de kop en samenvatting op de site zijn Engels en in
-// eigen woorden, dus kiezen en schrijven blijft handwerk (src/content/headlines).
+// eigen woorden, dus kiezen en schrijven blijft handwerk (src/content/headlines,
+// met de oorspronkelijke bronnen onder `sources` en de De Vector-link als `via`).
 //
 //   DEVECTOR_API_KEY=dv_... node scripts/fetch-devector.mjs [--since 2026-09-24] [--json]
 //
@@ -27,7 +28,7 @@ const known = new Set();
 let newest = null;
 for (const f of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
   const text = readFileSync(new URL(f, DIR), "utf8");
-  const link = text.match(/^link:\s*(\S+)/m)?.[1] || "";
+  const link = text.match(/^(?:via|link):\s*(\S+)/m)?.[1] || "";
   const path = link.match(/\/(?:en\/edition|editie)\/(.+)\.html/)?.[1];
   if (path) known.add(path);
   const date = text.match(/^date:\s*(\S+)/m)?.[1];

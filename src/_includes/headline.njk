@@ -1,0 +1,91 @@
+{#- Eigen pagina per film- en tv-kop (src/content/headlines, permalink via
+    headlines.11tydata.js). Bronnen zijn de oorspronkelijke berichtgeving; de
+    verwijzing naar De Vector staat bewust klein onderaan. -#}
+{%- set topicChip = {
+  "Business": "chip chip-amber",
+  "Streaming": "chip chip-blue",
+  "Awards & festivals": "chip chip-lavender",
+  "Box office": "chip chip-mint",
+  "Rights & AI": "chip chip-slate"
+} -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, article: { headline: title, date: page.date, words: content | wordCount, news: true }, crumbs: [{ name: "News", url: "/news/" }] } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <article class="section article">
+      <div class="container article-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> <span aria-hidden="true">/</span>
+          <a href="/news/">News</a> <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ title }}</span>
+        </nav>
+        <span class="{{ topicChip[topic] or 'chip' }} headline-page-chip">{{ topic }}</span>
+        <h1>{{ title }}</h1>
+        {% if summary %}<p class="article-standfirst">{{ summary }}</p>{% endif %}
+        <p class="article-meta">
+          <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+        </p>
+        <div class="rich-text article-body">
+          {{ content | safe }}
+        </div>
+        {%- if sources and sources.length %}
+        <div class="headline-sources">
+          <h2>Sources</h2>
+          <ul>
+            {%- for s in sources %}
+            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
+        {%- if via %}<p class="headline-via"><a href="{{ via }}" target="_blank" rel="noopener">via De Vector</a></p>{% endif %}
+      </div>
+    </article>
+
+    <section class="section theme-teal">
+      <div class="container article-inner">
+        <h2 class="article-related-heading">More film and television headlines</h2>
+        <ul class="article-related">
+          {%- set shown = 0 -%}
+          {%- for item in collections.headlines -%}
+          {%- if item.url != page.url and shown < 6 %}
+          {%- set shown = shown + 1 %}
+          <li>
+            <a href="{{ item.url }}">{{ item.data.title }}</a>
+            <span>{{ item.data.summary }}</span>
+          </li>
+          {%- endif -%}
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    {% set section = {
+      title: "See Tubes in action",
+      text: "Budgeting, planning and cost control in one platform, for productions of every size.",
+      button: { label: "Request a Demo", url: "/contact/" }
+    } %}
+    {% include "partials/sections/cta.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

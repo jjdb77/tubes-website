@@ -5,8 +5,8 @@ seo_title: "Film and TV industry news | Tubes"
 description: "The film and TV headlines of the past weeks, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
 {#- Twee stromen op één pagina (de eigen aankondigingen, collectie `news`,
-    staan sinds 9-10-2026 op /whats-new/): collectie `headlines` (film- en tv-nieuws uit De Vector,
-    src/content/headlines) en collectie `linkedin` (posts uit de branche die we op
+    staan sinds 9-10-2026 op /whats-new/): collectie `headlines` (film- en tv-koppen met eigen pagina op
+    /news/<slug>/, src/content/headlines) en collectie `linkedin` (posts uit de branche die we op
     LinkedIn tegenkwamen, uit src/content/linkedin). Zie eleventy.config.js. -#}
 {%- set topicChip = {
   "Budgeting": "chip",
@@ -75,7 +75,7 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
       <div class="container">
         <h2 class="section-heading feed-heading">Film and television headlines</h2>
         <div class="rich-text section-intro">
-          <p>The stories from the past weeks that matter to people who make films and series, picked and summarised in our own words. They come from <a href="https://www.devector.nl/en/" target="_blank" rel="noopener">De Vector</a>, a news service written and fact-checked by AI, made by Appsolutions, the company behind Tubes. The full article is on De Vector.</p>
+          <p>The stories from the past weeks that matter to people who make films and series, summarised in our own words, with links to the original reporting.</p>
         </div>
         {%- for item in collections.headlines %}
         {%- set week = item.date | weekRange %}
@@ -87,8 +87,8 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
           <li class="feed-card headline-card">
             <span class="{{ headlineChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
             <h3 class="headline-title">{{ item.data.title }}</h3>
-            <div class="feed-summary">{{ item.templateContent | safe }}</div>
-            <a class="feed-link" href="{{ item.data.link }}" target="_blank" rel="noopener"><span>Read the full story on De Vector</span> <span aria-hidden="true">&rarr;</span></a>
+            <div class="feed-summary"><p>{{ item.data.summary }}</p></div>
+            <a class="feed-link" href="{{ item.url }}"><span>Read more</span> <span aria-hidden="true">&rarr;</span></a>
           </li>
         {%- if loop.last %}</ul>{% endif %}
         {%- endfor %}

@@ -327,7 +327,7 @@ collections:
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
   - name: headlines
-    label: "Film- en tv-nieuws (De Vector)"
+    label: "Film- en tv-nieuws (/news/<slug>/)"
     icon: newspaper
     folder: src/content/headlines
     format: yaml-frontmatter
@@ -342,10 +342,17 @@ collections:
         widget: select
         default: Business
         options: [Business, Streaming, "Awards & festivals", "Box office", "Rights & AI"]
-      - { label: "Link naar het artikel op De Vector", name: link, widget: string, hint: "De Engelse versie: https://www.devector.nl/en/edition/<datum>/<slug>.html" }
-      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, hint: "Datum van het artikel. Op de pagina staat alleen de week." }
-      - { label: Samenvatting, name: body, widget: markdown, hint: "Twee of drie zinnen in het Engels, eigen woorden, wat het betekent voor wie produceert. Geen em-dashes (—)." }
-      - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Korte samenvatting", name: summary, widget: text, hint: "Een of twee zinnen. Staat op de kaart op /news/, bovenaan de eigen pagina en als metabeschrijving." }
+      - label: Bronnen
+        name: sources
+        widget: list
+        hint: "De oorspronkelijke berichtgeving (persbericht, AP, vakblad), niet De Vector."
+        fields:
+          - { label: Naam, name: name, widget: string }
+          - { label: URL, name: url, widget: string }
+      - { label: "Via De Vector (link)", name: via, widget: string, required: false, hint: "Engelse versie: https://www.devector.nl/en/edition/<datum>/<slug>.html. Staat klein onderaan de pagina." }
+      - { label: Tekst, name: body, widget: markdown, hint: "150 tot 250 woorden in het Engels, eigen woorden, wat er gebeurde en wat het betekent voor wie film of tv maakt. Niets toevoegen wat niet in de bronnen staat. Geen em-dashes (—)." }
 
   - name: paginas
     label: Pagina's

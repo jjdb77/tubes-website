@@ -1133,6 +1133,15 @@ section[id] { scroll-margin-top: 96px; }
 a.feed-link::after { content: ""; position: absolute; inset: 0; }
 /* Koppen uit De Vector: geen auteur, dus de kop is hier het grootste element. */
 .headline-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.25; color: var(--ink); margin: 0 0 10px; }
+.headline-page-chip { display: inline-block; margin-bottom: 14px; }
+.headline-sources { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.headline-sources h2 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; }
+.headline-sources ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.headline-sources a { font-weight: 700; font-size: 0.95rem; color: var(--action-soft-ink); }
+/* Bewust klein: de bronnen hierboven zijn de verwijzing, dit is alleen de herkomst. */
+.headline-via { margin: 18px 0 0; font-size: 0.78rem; }
+.headline-via a { color: var(--muted); text-decoration: none; }
+.headline-via a:hover { text-decoration: underline; }
 
 /* Geen directe post-URL: dan alleen de bron, en de kaart is niet klikbaar */
 .feed-link-none { color: var(--muted); font-weight: 600; text-decoration: none; }
