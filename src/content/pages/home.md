@@ -87,6 +87,8 @@ sections:
     heading: Connect
     lead: Everyone around your production, connected.
     text: |
+      Connect is one of the main sections in Tubes, right next to Budget, Plan and Produce in the menu.
+
       Your team, contractors, suppliers, co-producers and production partners. Connect gives you one place to manage the people and organisations involved in your production.
 
       When someone needs to provide something, Magic Links make it simple and secure.
