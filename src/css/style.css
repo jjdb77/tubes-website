@@ -1084,15 +1084,6 @@ a:hover { color: var(--action); }
 section[id] { scroll-margin-top: 96px; }
 .jump-link span { font-weight: 700; margin-left: 4px; }
 
-.feed-week {
-  display: flex; align-items: center; gap: 16px;
-  font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
-  color: var(--muted);
-  margin: 44px 0 20px;
-}
-.feed-week:first-of-type { margin-top: 0; }
-.feed-week::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-
 .feed-list {
   list-style: none; margin: 0 0 4px; padding: 0;
   display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
@@ -1113,6 +1104,10 @@ section[id] { scroll-margin-top: 96px; }
 .feed-card-nolink:hover { border-color: var(--border); box-shadow: var(--shadow-card); transform: none; }
 
 .feed-chip { align-self: flex-start; margin-bottom: 20px; }
+/* Kop van een headline-kaart: onderwerp links, datum rechts. */
+.feed-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.feed-meta .feed-chip { margin-bottom: 0; }
+.feed-date { font-size: 0.82rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
 
 /* Naamblok: "From <naam> on LinkedIn", met de naam als grootste regel */
 .feed-from {

@@ -91,7 +91,7 @@ sections:
         url: /news/
         link_label: Read the news
         text: |
-          The film and television headlines of the past weeks, and interesting public posts from across the industry that we come across on LinkedIn. Budgets and financing, streaming, AI in production, festivals and markets.
+          The latest film and television headlines, and interesting public posts from across the industry that we come across on LinkedIn. Budgets and financing, streaming, AI in production, festivals and markets.
   - type: cta
     title: Plan the production behind the decision
     text: |

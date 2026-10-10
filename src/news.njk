@@ -2,7 +2,7 @@
 permalink: /news/
 title: The Daily Tubes
 seo_title: "The Daily Tubes: Film and TV Industry News | Tubes"
-description: "The film and TV headlines of the past weeks, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
+description: "The latest film and TV headlines, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
 {#- Twee stromen op één pagina (de eigen aankondigingen, collectie `news`,
     staan sinds 9-10-2026 op /whats-new/): collectie `headlines` (film- en tv-koppen met eigen pagina op
@@ -52,7 +52,7 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
           <span class="kicker">News for production teams</span>
           <h1>The Daily <em>Tubes</em></h1>
           <div class="rich-text lead">
-            <p>The film and television headlines of the past weeks, and the posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets. Looking for updates from Tubes itself? See <a href="/whats-new/">what&rsquo;s new at Tubes</a>.</p>
+            <p>The latest film and television headlines, and the posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets. Looking for updates from Tubes itself? See <a href="/whats-new/">what&rsquo;s new at Tubes</a>.</p>
           </div>
           <div class="button-row jump-row">
             {%- if collections.headlines.length %}
@@ -77,23 +77,20 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
       <div class="container">
         <h2 class="section-heading feed-heading">Film and television headlines</h2>
         <div class="rich-text section-intro">
-          <p>The stories from the past weeks that matter to people who make films and series, summarised in our own words, with links to the original reporting.</p>
+          <p>The stories of the day that matter to people who make films and series, summarised in our own words, with links to the original reporting.</p>
         </div>
-        {%- for item in collections.headlines %}
-        {%- set week = item.date | weekRange %}
-        {%- if loop.first or (collections.headlines[loop.index0 - 1].date | weekRange) != week %}
-        {%- if not loop.first %}</ul>{% endif %}
-        <h3 class="feed-week">{{ week }}</h3>
+        {#- Eén lijst, nieuwste bovenaan, met de datum per kop: een dagblad, dus
+            geen weekkoppen (Joachim 10-10-2026). -#}
         <ul class="feed-list">
-        {%- endif %}
+        {%- for item in collections.headlines %}
           <li class="feed-card headline-card">
-            <span class="{{ headlineChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
+            <div class="feed-meta"><span class="{{ headlineChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span><time class="feed-date" datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time></div>
             <h3 class="headline-title">{{ item.data.title }}</h3>
             <div class="feed-summary"><p>{{ item.data.summary }}</p></div>
             <a class="feed-link" href="{{ item.url }}"><span>Read more</span> <span aria-hidden="true">&rarr;</span></a>
           </li>
-        {%- if loop.last %}</ul>{% endif %}
         {%- endfor %}
+        </ul>
       </div>
     </section>
     {%- endif %}
@@ -105,13 +102,8 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
         <div class="rich-text section-intro">
           <p>Interesting public posts we come across on LinkedIn, briefly summarised in our own words. The views and ideas belong to the original authors. Read the original post on LinkedIn for the full picture.</p>
         </div>
-        {%- for item in collections.linkedin %}
-        {%- set week = item.date | weekRange %}
-        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | weekRange) != week %}
-        {%- if not loop.first %}</ul>{% endif %}
-        <h3 class="feed-week">{{ week }}</h3>
         <ul class="feed-list">
-        {%- endif %}
+        {%- for item in collections.linkedin %}
           <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">
             <span class="{{ topicChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
             <h3 class="feed-from">From <span class="feed-name">{{ item.data.source }}</span> on LinkedIn</h3>
@@ -133,8 +125,8 @@ description: "The film and TV headlines of the past weeks, and the posts we are 
             <p class="feed-link feed-link-none">Shared on LinkedIn by {{ item.data.source }}</p>
             {%- endif %}
           </li>
-        {%- if loop.last %}</ul>{% endif %}
         {%- endfor %}
+        </ul>
       </div>
     </section>
     {%- endif %}
