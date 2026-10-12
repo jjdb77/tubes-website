@@ -45,7 +45,7 @@ src/
 
 - **Plans-pagina**: de knop "Choose Producer Pro" linkt naar de Tubes-app (`demo.tubesmedia.online`). Zodra dat `app.tubesmedia.online` wordt: pas de link aan in het CMS (pagina *Plans* → sectie *Abonnementen* → knop) én in *Site-instellingen → Tubes app-URL*.
 - **Contactformulier**: werkt nu via het e-mailprogramma van de bezoeker (mailto). Beter: maak een gratis account op [formspree.io](https://formspree.io) of [web3forms.com](https://web3forms.com), en plak het endpoint/de URL in *Site-instellingen → Formulier-endpoint*. Berichten komen dan netjes per e-mail binnen op contact@tubes.media.
-- **Academy**: `/academy/` is sinds oktober 2026 de besloten Tubes Academy (aanmelden met e-mail + code, downloads van Oskar en trainingen na goedkeuring). Zie de sectie "Tubes Academy" in CLAUDE.md; env `ACADEMY_ADMIN_TOKEN` en `ACADEMY_NOTIFY_EMAIL`.
+- **Academy**: `/academy/` is sinds oktober 2026 de besloten Tubes Academy (aanmelden met e-mail + code, downloads van Studoo en trainingen na goedkeuring). Zie de sectie "Tubes Academy" in CLAUDE.md; env `ACADEMY_ADMIN_TOKEN` en `ACADEMY_NOTIFY_EMAIL`.
 - **Oude URL `/home-2`** (Company) wordt automatisch doorgestuurd naar `/company/`.
 
 ## Online zetten (eenmalig, ± 30 min)

@@ -1409,7 +1409,7 @@ const SITE = path.join(__dirname, "_site");
 // ---------- Tubes Academy (/academy/, /api/academy/*) ----------
 //
 // Aanmelden met e-mail + code, goedkeuring in Studoo Beheer (Bearer
-// ACADEMY_ADMIN_TOKEN), downloads van Oskar en de trainingen. Alle logica en
+// ACADEMY_ADMIN_TOKEN), downloads van Studoo en de trainingen. Alle logica en
 // opslag (academy/ op de volume) staat in lib/academy.js; zie CLAUDE.md.
 app.use(createAcademy({
   dataDir: DATA_DIR,

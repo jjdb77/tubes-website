@@ -137,7 +137,7 @@ const bookV2 = Buffer.from("book v2 longer");
 const audio = Buffer.from("audio zip");
 
 await t("upload: app, boek, audio, en catalogusregel", async () => {
-  let res = await upload({ name: "Oskar-0.1.0.dmg", kind: "app", version: "0.1.0" }, appBuf);
+  let res = await upload({ name: "Studoo-0.1.0.dmg", kind: "app", version: "0.1.0" }, appBuf);
   assert.equal(res.status, 200);
   const { file } = await res.json();
   assert.equal(file.sha256, sha(appBuf));
@@ -157,9 +157,9 @@ await t("upload: nieuwere boekversie vervangt de oude (regel en bestand)", async
   assert.deepEqual(books.map((f) => f.name), ["tubes-basics-1.1.zip"]);
   assert.ok(!fs.existsSync(path.join(dataDir, "academy", "files", "tubes-basics-1.0.zip")));
   // Zelfde naam opnieuw: vervangen, geen dubbele regel
-  await upload({ name: "Oskar-0.1.0.dmg", kind: "app", version: "0.1.0" }, appBuf);
+  await upload({ name: "Studoo-0.1.0.dmg", kind: "app", version: "0.1.0" }, appBuf);
   const again = await (await admin("/api/academy/admin/files")).json();
-  assert.equal(again.files.filter((f) => f.name === "Oskar-0.1.0.dmg").length, 1);
+  assert.equal(again.files.filter((f) => f.name === "Studoo-0.1.0.dmg").length, 1);
 });
 
 await t("upload: bestandsnamen en velden worden streng gecontroleerd", async () => {
@@ -187,15 +187,15 @@ await t("upload: bestandsnamen en velden worden streng gecontroleerd", async () 
 });
 
 await t("bestanden: pending krijgt 403, zonder sessie redirect, approved krijgt het bestand", async () => {
-  let res = await fetch(base + "/academy/files/Oskar-0.1.0.dmg", { headers: { Cookie: annaCookie }, redirect: "manual" });
+  let res = await fetch(base + "/academy/files/Studoo-0.1.0.dmg", { headers: { Cookie: annaCookie }, redirect: "manual" });
   assert.equal(res.status, 403);
-  res = await fetch(base + "/academy/files/Oskar-0.1.0.dmg", { redirect: "manual" });
+  res = await fetch(base + "/academy/files/Studoo-0.1.0.dmg", { redirect: "manual" });
   assert.equal(res.status, 302);
   res = await adminPost("/api/academy/admin/approve", { email: "anna@example.com", licenceKey: "LK1.abc_DEF-123.sigsig", licenceExpires: "2099-12-31" });
   assert.equal(res.status, 200);
   assert.equal((await res.json()).user.status, "approved");
   assert.ok(mails.some((m) => m.to === "anna@example.com" && /ready/.test(m.subject) && m.html.includes("LK1.abc_DEF-123.sigsig")));
-  res = await fetch(base + "/academy/files/Oskar-0.1.0.dmg", { headers: { Cookie: annaCookie } });
+  res = await fetch(base + "/academy/files/Studoo-0.1.0.dmg", { headers: { Cookie: annaCookie } });
   assert.equal(res.status, 200);
   assert.match(res.headers.get("content-disposition"), /attachment/);
   assert.deepEqual(Buffer.from(await res.arrayBuffer()), appBuf);
@@ -203,7 +203,7 @@ await t("bestanden: pending krijgt 403, zonder sessie redirect, approved krijgt 
   assert.equal(res.status, 404);
   const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
   assert.match(html, /Download for Mac/);
-  assert.match(html, /oskar:\/\/activate\?code=LK1.abc_DEF-123.sigsig/);
+  assert.match(html, /studoo:\/\/activate\?code=LK1.abc_DEF-123.sigsig/);
   assert.match(html, /Tubes: The Basics/);
 });
 
@@ -237,22 +237,22 @@ await t("catalogus: geldige key, onbekende key, verlopen key", async () => {
   assert.equal((await fetch(base + "/api/academy/catalog", key("LK1.expired.key12345"))).status, 401);
 });
 
-await t("Oskar per platform: Windows naast Mac, nieuwe versie vervangt alleen hetzelfde platform, catalogus meldt versies", async () => {
+await t("Studoo per platform: Windows naast Mac, nieuwe versie vervangt alleen hetzelfde platform, catalogus meldt versies", async () => {
   const winBuf = Buffer.from("MZ windows installer");
-  let res = await upload({ name: "Oskar-Setup-0.1.0.exe", kind: "app", version: "0.1.0" }, winBuf);
+  let res = await upload({ name: "Studoo-Setup-0.1.0.exe", kind: "app", version: "0.1.0" }, winBuf);
   assert.equal(res.status, 200);
-  res = await upload({ name: "Oskar-Setup-0.1.1.exe", kind: "app", version: "0.1.1" }, winBuf);
+  res = await upload({ name: "Studoo-Setup-0.1.1.exe", kind: "app", version: "0.1.1" }, winBuf);
   assert.equal(res.status, 200);
   const names = fs.readdirSync(path.join(dataDir, "academy", "files"));
-  assert.ok(names.includes("Oskar-0.1.0.dmg"), "Mac blijft staan");
-  assert.ok(names.includes("Oskar-Setup-0.1.1.exe") && !names.includes("Oskar-Setup-0.1.0.exe"), "oude Windows-versie weg");
+  assert.ok(names.includes("Studoo-0.1.0.dmg"), "Mac blijft staan");
+  assert.ok(names.includes("Studoo-Setup-0.1.1.exe") && !names.includes("Studoo-Setup-0.1.0.exe"), "oude Windows-versie weg");
   assert.equal((await upload({ name: "book.exe", kind: "book", bookId: "x" }, winBuf)).status, 400);
   const cat = await (await fetch(base + "/api/academy/catalog", key("LK1.abc_DEF-123.sigsig"))).json();
   assert.equal(cat.app.mac.version, "0.1.0");
   assert.equal(cat.app.win.version, "0.1.1");
   const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
   assert.match(html, /Download for Windows/);
-  res = await fetch(base + "/academy/files/Oskar-Setup-0.1.1.exe", { headers: { Cookie: annaCookie } });
+  res = await fetch(base + "/academy/files/Studoo-Setup-0.1.1.exe", { headers: { Cookie: annaCookie } });
   assert.equal(res.status, 200);
 });
 
@@ -260,7 +260,7 @@ await t("download met key: alleen boek/audio, niet de app", async () => {
   let res = await fetch(base + "/api/academy/download/tubes-basics-1.1.zip", key("LK1.abc_DEF-123.sigsig"));
   assert.equal(res.status, 200);
   assert.deepEqual(Buffer.from(await res.arrayBuffer()), bookV2);
-  res = await fetch(base + "/api/academy/download/Oskar-0.1.0.dmg", key("LK1.abc_DEF-123.sigsig"));
+  res = await fetch(base + "/api/academy/download/Studoo-0.1.0.dmg", key("LK1.abc_DEF-123.sigsig"));
   assert.equal(res.status, 404);
   res = await fetch(base + "/api/academy/download/tubes-basics-1.1.zip", key("LK1.unknown.key12345"));
   assert.equal(res.status, 401);
@@ -333,7 +333,7 @@ await t("revoke: key werkt niet meer en bestanden zijn dicht", async () => {
   assert.equal(res.status, 200);
   assert.equal((await res.json()).user.status, "rejected");
   assert.equal((await fetch(base + "/api/academy/catalog", key("LK1.abc_DEF-123.sigsig"))).status, 401);
-  assert.equal((await fetch(base + "/academy/files/Oskar-0.1.0.dmg", { headers: { Cookie: annaCookie } })).status, 403);
+  assert.equal((await fetch(base + "/academy/files/Studoo-0.1.0.dmg", { headers: { Cookie: annaCookie } })).status, 403);
   const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
   assert.match(html, /not active/);
   assert.equal((await adminPost("/api/academy/admin/reject", { email: "brute@example.com" })).status, 200);
