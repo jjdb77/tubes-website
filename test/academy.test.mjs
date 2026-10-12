@@ -7,6 +7,7 @@ import os from "node:os";
 import path from "node:path";
 import crypto from "node:crypto";
 import assert from "node:assert/strict";
+import http from "node:http";
 import express from "express";
 import { createAcademy } from "../lib/academy.js";
 
@@ -246,6 +247,53 @@ await t("download met key: alleen boek/audio, niet de app", async () => {
   assert.equal(res.status, 401);
 });
 
+// Nep-OpenAI voor de AI-route: bewaart wat er binnenkomt en geeft verbruik terug.
+const upSeen = [];
+const upstream = await new Promise((resolve) => {
+  const srv = http.createServer((req, res) => {
+    let raw = "";
+    req.on("data", (c) => { raw += c; });
+    req.on("end", () => {
+      const body = JSON.parse(raw);
+      upSeen.push({ auth: req.headers.authorization, body });
+      if (body.stream) {
+        res.writeHead(200, { "Content-Type": "text/event-stream" });
+        res.end('data: {"type":"response.completed","response":{"usage":{"input_tokens":10,"output_tokens":10}}}\n\n');
+      } else {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ output_text: "ok", usage: { input_tokens: 100000, output_tokens: 100000 } }));
+      }
+    });
+  });
+  srv.listen(0, "127.0.0.1", () => resolve({ srv, url: `http://127.0.0.1:${srv.address().port}` }));
+});
+const withAi = await start({ openaiKey: "sk-server-secret", aiUpstream: upstream.url, aiCapEur: 1 });
+
+await t("AI: licentiekey geeft toegang, serversleutel naar OpenAI, alleen onze velden, maandlimiet", async () => {
+  const ask = { model: "gpt-5.6-terra", input: "hi", tools: [{ type: "web_search" }] };
+  const post = (b, k) => fetch(withAi.base + "/api/academy/ai/v1/responses", { method: "POST", headers: { "Content-Type": "application/json", ...(k ? { Authorization: `Bearer ${k}` } : {}) }, body: JSON.stringify(b) });
+  assert.equal((await post(ask)).status, 401);
+  assert.equal((await post(ask, "LK1.unknown.key12345")).status, 401);
+  assert.equal((await post(ask, "LK1.expired.key12345")).status, 401, "verlopen");
+  assert.equal((await post({ ...ask, model: "gpt-9" }, "LK1.abc_DEF-123.sigsig")).status, 400);
+  const plain = await fetch(base + "/api/academy/ai/v1/responses", { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer LK1.abc_DEF-123.sigsig" }, body: JSON.stringify(ask) });
+  assert.equal(plain.status, 503, "zonder OPENAI_API_KEY staat AI uit");
+  let res = await post(ask, "LK1.abc_DEF-123.sigsig");
+  assert.equal(res.status, 200);
+  assert.equal((await res.json()).output_text, "ok");
+  assert.equal(upSeen.at(-1).auth, "Bearer sk-server-secret");
+  assert.equal(upSeen.at(-1).body.tools, undefined);
+  assert.equal(upSeen.at(-1).body.store, false);
+  res = await post({ ...ask, stream: true }, "LK1.abc_DEF-123.sigsig");
+  assert.equal(res.status, 402, "boven de limiet na het eerste antwoord");
+  res = await fetch(withAi.base + "/api/academy/admin/requests", { headers: { Authorization: `Bearer ${ADMIN}` } });
+  const anna = (await res.json()).users.find((u) => u.email === "anna@example.com");
+  assert.equal(anna.aiCalls, 1);
+  assert.ok(anna.aiEur > 1.6 && anna.aiEur < 1.62);
+  res = await fetch(withAi.base + "/api/academy/ai/v1/models", { headers: { Authorization: "Bearer LK1.abc_DEF-123.sigsig" } });
+  assert.equal(res.status, 200);
+});
+
 await t("revoke: key werkt niet meer en bestanden zijn dicht", async () => {
   const res = await adminPost("/api/academy/admin/revoke", { email: "anna@example.com" });
   assert.equal(res.status, 200);
@@ -255,6 +303,11 @@ await t("revoke: key werkt niet meer en bestanden zijn dicht", async () => {
   const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
   assert.match(html, /not active/);
   assert.equal((await adminPost("/api/academy/admin/reject", { email: "brute@example.com" })).status, 200);
+});
+
+await t("AI: na intrekken geen toegang meer", async () => {
+  const res = await fetch(withAi.base + "/api/academy/ai/v1/responses", { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer LK1.abc_DEF-123.sigsig" }, body: JSON.stringify({ model: "gpt-5.6-terra", input: "x" }) });
+  assert.equal(res.status, 401);
 });
 
 await t("delete: bestand en regel weg", async () => {
@@ -272,8 +325,11 @@ await t("logout wist de cookie", async () => {
 
 server.close();
 noToken.server.close();
+withAi.server.close();
+upstream.srv.close();
 router.stop();
 noToken.router.stop();
+withAi.router.stop();
 fs.rmSync(dataDir, { recursive: true, force: true });
 console.log(`\n${n - failed}/${n} academy-tests geslaagd`);
 if (failed) process.exitCode = 1;
