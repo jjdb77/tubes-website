@@ -267,7 +267,13 @@ const upstream = await new Promise((resolve) => {
   });
   srv.listen(0, "127.0.0.1", () => resolve({ srv, url: `http://127.0.0.1:${srv.address().port}` }));
 });
-const withAi = await start({ openaiKey: "sk-server-secret", aiUpstream: upstream.url, aiCapEur: 1 });
+const studooKeys = crypto.generateKeyPairSync("ed25519");
+const lk1 = (payload) => {
+  const signed = `LK1.${Buffer.from(JSON.stringify(payload)).toString("base64url")}`;
+  return `${signed}.${crypto.sign(null, Buffer.from(signed, "ascii"), studooKeys.privateKey).toString("base64url")}`;
+};
+const withAi = await start({ openaiKey: "sk-server-secret", aiUpstream: upstream.url, aiCapEur: 1,
+  studooPublicKeyPem: studooKeys.publicKey.export({ type: "spki", format: "pem" }), studooServer: "http://127.0.0.1:9" });
 
 await t("AI: licentiekey geeft toegang, serversleutel naar OpenAI, alleen onze velden, maandlimiet", async () => {
   const ask = { model: "gpt-5.6-terra", input: "hi", tools: [{ type: "web_search" }] };
@@ -292,6 +298,15 @@ await t("AI: licentiekey geeft toegang, serversleutel naar OpenAI, alleen onze v
   assert.ok(anna.aiEur > 1.6 && anna.aiEur < 1.62);
   res = await fetch(withAi.base + "/api/academy/ai/v1/models", { headers: { Authorization: "Bearer LK1.abc_DEF-123.sigsig" } });
   assert.equal(res.status, 200);
+});
+
+await t("AI: key uit Studoo Beheer (Licenties) zonder aanmelding: handtekening, product en vervaldatum", async () => {
+  const post = (k) => fetch(withAi.base + "/api/academy/ai/v1/responses", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${k}` }, body: JSON.stringify({ model: "gpt-5.6-luna", input: "x" }) });
+  const good = lk1({ v: 1, id: "chris123abcd", p: "media.tubes.thuisdocent", e: "c@example.com", s: 1, iat: "2026-10-12", exp: "2027-10-12", t: "licentie" });
+  assert.equal((await post(good)).status, 200);
+  assert.equal((await post(lk1({ v: 1, id: "other", p: "some.other.app", e: "c@example.com", exp: null }))).status, 401, "ander product");
+  assert.equal((await post(lk1({ v: 1, id: "old", p: "media.tubes.thuisdocent", e: "c@example.com", exp: "2020-01-01" }))).status, 401, "verlopen");
+  assert.equal((await post(good.slice(0, -4) + "AAAA")).status, 401, "vervalste handtekening");
 });
 
 await t("revoke: key werkt niet meer en bestanden zijn dicht", async () => {
