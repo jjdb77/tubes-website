@@ -503,8 +503,9 @@ a:hover { color: var(--action); }
   transform: translateX(32px);
   transition: opacity .9s ease, transform .9s ease;
 }
-.feature-media .feature-slides img.is-active { transform: none; }
-.feature-slides img.is-active { opacity: 1; }
+/* Even specifiek als de regel hierboven plus de klasse, anders blijft de
+   actieve slide op opacity 0 en is de kaart leeg. */
+.feature-media .feature-slides img[src].is-active { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .feature-media .feature-slides img[src] { transition: none; transform: none; }
 }
