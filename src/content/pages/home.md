@@ -51,7 +51,7 @@ sections:
         alt: The budget builder in Tubes, with cost groups, budget and sales columns
       - src: /assets/images/tubes-quotations-overview.jpg
         alt: The quotations overview in Tubes, with status counts and quotation cards per client
-    images_interval: 4000
+    images_interval: 5000
     media_large: true
   - type: feature
     theme: teal

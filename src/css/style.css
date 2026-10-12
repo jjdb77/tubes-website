@@ -499,11 +499,14 @@ a:hover { color: var(--action); }
   object-fit: cover;
   object-position: left top;
   opacity: 0;
-  transition: opacity .6s ease;
+  /* Nieuw scherm schuift van rechts in terwijl het vorige wegvaagt. */
+  transform: translateX(32px);
+  transition: opacity .9s ease, transform .9s ease;
 }
+.feature-media .feature-slides img.is-active { transform: none; }
 .feature-slides img.is-active { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
-  .feature-media .feature-slides img[src] { transition: none; }
+  .feature-media .feature-slides img[src] { transition: none; transform: none; }
 }
 
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
