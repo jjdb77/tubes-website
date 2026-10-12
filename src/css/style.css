@@ -489,16 +489,21 @@ a:hover { color: var(--action); }
    kaartrand als een los beeld. App-screenshots als jpg houden hier hun eigen
    verhouding: de 3:2-regel hierboven is voor foto's. */
 .feature-slides { display: grid; }
-.feature-slides img {
+/* Elke slide op 3:2, uitgesneden vanuit linksboven (de selector moet
+   specifieker zijn dan de jpg-regel hierboven, anders wint die met zijn
+   gecentreerde uitsnede en zie je een los middenstuk van het scherm). Zo
+   blijven menu en kop van elk scherm in beeld en springt de kaart niet. */
+.feature-media .feature-slides img[src] {
   grid-area: 1 / 1;
-  aspect-ratio: auto;
-  object-fit: fill;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: left top;
   opacity: 0;
   transition: opacity .6s ease;
 }
 .feature-slides img.is-active { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
-  .feature-slides img { transition: none; }
+  .feature-media .feature-slides img[src] { transition: none; }
 }
 
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
