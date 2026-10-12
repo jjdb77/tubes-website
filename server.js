@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { createAcademy } from "./lib/academy.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -72,7 +73,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.urlencoded({ extended: false, limit: "64kb" }));
+// Uploads voor de Tubes Academy zijn ruwe bestanden (tot 600 MB) die
+// lib/academy.js zelf streamt; die body hier dus niet laten inlezen, ook niet
+// als de client er een formulier-Content-Type op zet (curl --data-binary).
+const urlencoded = express.urlencoded({ extended: false, limit: "64kb" });
+app.use((req, res, next) => (req.path === "/api/academy/admin/upload" ? next() : urlencoded(req, res, next)));
 
 // ---------- Formulier ontvangen ----------
 
@@ -1401,6 +1406,19 @@ function dailyTubesLine() {
 
 const SITE = path.join(__dirname, "_site");
 
+// ---------- Tubes Academy (/academy/, /api/academy/*) ----------
+//
+// Aanmelden met e-mail + code, goedkeuring in Studoo Beheer (Bearer
+// ACADEMY_ADMIN_TOKEN), downloads van Oskar en de trainingen. Alle logica en
+// opslag (academy/ op de volume) staat in lib/academy.js; zie CLAUDE.md.
+app.use(createAcademy({
+  dataDir: DATA_DIR,
+  secret: FORM_SECRET,
+  sendMail: stuurMail,
+  siteUrl: SITE_URL,
+  pageFile: path.join(SITE, "academy", "index.html"),
+}));
+
 // ---------- Gratis tool: Budget Builder, accounts en versies ----------
 //
 // De Budget Builder (/tools/budget-builder/) werkt zonder account; alles staat
@@ -1742,5 +1760,6 @@ app.listen(PORT, "0.0.0.0", () => {
   } catch {
     console.log(`[start] nog geen berichtenbestand; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}`);
   }
+  console.log(`[start] academy: beheer-API ${process.env.ACADEMY_ADMIN_TOKEN ? "aan" : "geeft 503 (geen ACADEMY_ADMIN_TOKEN)"}`);
   stuurAchterstandNa().catch((err) => console.error("[start] inhaalslag mislukt:", err.message));
 });

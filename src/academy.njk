@@ -1,0 +1,85 @@
+---
+layout: layout.njk
+title: Tubes Academy
+seo_title: "Tubes Academy | Trainings for Tubes in Oskar"
+description: "The Tubes Academy: trainings that teach you to work with Tubes, in the learning app Oskar for Mac. Sign up with your email address."
+permalink: /academy/
+# Besloten deel: aanmelden met e-mail + code, toegang na goedkeuring. Niet in
+# Google, sitemap of llms.txt (zie "Tubes Academy" in CLAUDE.md).
+noindex: true
+sections:
+  - type: hero
+    kicker: Tubes Academy
+    title: Learn to work with *Tubes*
+    text: |
+      The Tubes Academy has trainings that show you how to budget, plan and produce in Tubes, step by step. The trainings run in Oskar, a learning app for Mac.
+
+      Sign up with your email address. We check every request and send you an email as soon as your access is ready.
+    buttons:
+      - label: Sign up
+        url: "#ac-signin"
+      - label: Sign in
+        url: "#ac-signin"
+---
+{#- Tubes Academy. server.js (lib/academy.js) serveert deze pagina zelf op
+    /academy/: zonder sessie zoals hij hier staat, met sessie zonder het
+    aanmeldblok (tussen de AC:SIGNED_OUT-markeringen) en met de status van de
+    deelnemer op de plek van AC:STATE. Hou die markeringen dus intact.
+    Opmaak: klassen ac-* in style.css. Gedrag: js/academy.js. -#}
+<section class="section theme-white ac-section" id="ac-signin">
+  <div class="container ac-narrow">
+    <!--AC:SIGNED_OUT-->
+    <div class="ac-card">
+      <form class="ac-form" data-ac-step="email" novalidate>
+        <h2>Sign up or sign in</h2>
+        <p>Enter your email address and we send you a 6 digit code. New here? Then the code also starts your request.</p>
+        <input type="text" name="company_website" class="ac-hp" tabindex="-1" autocomplete="off" aria-hidden="true" data-1p-ignore data-lpignore="true" data-form-type="other">
+        <label class="hc-field" for="ac-email">Email address
+          <input type="email" id="ac-email" name="email" inputmode="email" autocomplete="email" spellcheck="false" required>
+        </label>
+        <div class="button-row"><button class="button button-primary" type="submit">Send code</button></div>
+        <p class="form-status" role="status" data-ac-status></p>
+      </form>
+      <form class="ac-form" data-ac-step="code" hidden novalidate>
+        <h2>Check your inbox</h2>
+        <p>We sent a code to <b data-ac-sent-to></b>. It is valid for 15 minutes.</p>
+        <label class="hc-field" for="ac-code">Code
+          <input type="text" id="ac-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>
+        </label>
+        <fieldset class="ac-new">
+          <legend>First time here? Tell us who you are.</legend>
+          <div class="hc-field-row">
+            <label class="hc-field" for="ac-name">Name
+              <input type="text" id="ac-name" name="name" autocomplete="name" maxlength="120">
+            </label>
+            <label class="hc-field" for="ac-company">Company
+              <input type="text" id="ac-company" name="company" autocomplete="organization" maxlength="120">
+            </label>
+          </div>
+          <label class="hc-field" for="ac-role">Role
+            <input type="text" id="ac-role" name="role" autocomplete="organization-title" maxlength="120" placeholder="Line Producer, Production Manager">
+          </label>
+        </fieldset>
+        <div class="button-row">
+          <button class="button button-primary" type="submit">Sign in</button>
+          <button class="ac-link" type="button" data-ac-back>Use another email address</button>
+        </div>
+        <p class="form-status" role="status" data-ac-status></p>
+      </form>
+    </div>
+    <!--/AC:SIGNED_OUT-->
+    <!--AC:STATE-->
+  </div>
+</section>
+
+<section class="section theme-light">
+  <div class="container ac-narrow">
+    <h2>What you get</h2>
+    <ul class="ac-points">
+      <li><b>Oskar for Mac.</b> The learning app for the Tubes trainings, with your own licence key.</li>
+      <li><b>Trainings.</b> A book per topic that you follow at your own pace, with audio where available.</li>
+      <li><b>Updates.</b> Oskar fetches new and updated trainings by itself.</li>
+    </ul>
+  </div>
+</section>
+<script src="{{ assets.academy }}" defer></script>
