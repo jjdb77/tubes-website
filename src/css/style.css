@@ -484,6 +484,23 @@ a:hover { color: var(--action); }
   object-fit: cover;
 }
 
+/* Schermen na elkaar (feature met `images:`): alle beelden in één grid-cel,
+   het bovenste zichtbaar, een vloeiende overgang bij het wisselen. Dezelfde
+   kaartrand als een los beeld. App-screenshots als jpg houden hier hun eigen
+   verhouding: de 3:2-regel hierboven is voor foto's. */
+.feature-slides { display: grid; }
+.feature-slides img {
+  grid-area: 1 / 1;
+  aspect-ratio: auto;
+  object-fit: fill;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.feature-slides img.is-active { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .feature-slides img { transition: none; }
+}
+
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
 
 .col-lead {

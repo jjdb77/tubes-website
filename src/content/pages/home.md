@@ -44,8 +44,14 @@ sections:
       Build the budget from your own templates and rates, copy an earlier one, or let AI suggest a first draft that you check line by line. Work with globals such as the number of episodes or shoot days. Change one value and every line that uses it follows. Save each version, put budgets side by side to see what changed, and name who has to approve it before it goes out.
 
       [More about budgeting in Tubes](/budget/). You can also [start with budgeting only](/budgeting/).
-    image: /assets/images/tubes-budget-dashboard.png
-    image_alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
+    images:
+      - src: /assets/images/tubes-budget-dashboard.png
+        alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
+      - src: /assets/images/tubes-budget-builder.jpg
+        alt: The budget builder in Tubes, with cost groups, budget and sales columns
+      - src: /assets/images/tubes-quotations-overview.jpg
+        alt: The quotations overview in Tubes, with status counts and quotation cards per client
+    images_interval: 4000
     media_large: true
   - type: feature
     theme: teal

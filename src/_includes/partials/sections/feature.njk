@@ -1,6 +1,6 @@
 {%- from "partials/step-icon.njk" import stepIcon -%}
 <section class="section theme-{{ section.theme or 'light' }}{% if section.media_large %} section-feature-large-media{% endif %}">
-  <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.video and not section.aside %} feature-single{% endif %}">
+  <div class="container feature-grid{% if section.media_position == 'left' %} media-left{% endif %}{% if not section.image and not section.images and not section.video and not section.aside %} feature-single{% endif %}">
     <div class="feature-text">
       {#- section.step (budget/plan/produce) zet het icoon van die stap uit de
           Tubes-app voor de kop, in de kleur van de stap. -#}
@@ -14,6 +14,19 @@
     {% if section.video %}
     <div class="feature-media">
       <video controls playsinline preload="metadata" {% if section.ambient %}autoplay muted loop{% endif %} {% if section.poster %}poster="{{ section.poster | imgSrc }}"{% endif %} src="{{ section.video }}"></video>
+      {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
+    </div>
+    {% elif section.images %}
+    {#- Meerdere schermen na elkaar (homepage: Budget). Alle <img>'s staan in de
+        HTML, gestapeld in één grid-cel; js/site.js zet elke `interval` ms
+        (standaard 4000) `is-active` op de volgende en begint vooraan opnieuw.
+        Zonder JS, of bij "minder beweging", blijft het eerste scherm staan. -#}
+    <div class="feature-media{% if section.media_large %} feature-media-large{% endif %}">
+      <div class="feature-slides" data-slides data-interval="{{ section.images_interval or 4000 }}">
+        {%- for slide in section.images %}
+        <img src="{{ slide.src | imgSrc }}" alt="{{ slide.alt or section.heading }}" {{ slide.src | imgSize | safe }} loading="{{ 'eager' if loop.first else 'lazy' }}" decoding="async"{% if loop.first %} class="is-active"{% endif %}>
+        {%- endfor %}
+      </div>
       {% if section.media_caption %}<p class="media-caption">{{ section.media_caption }}</p>{% endif %}
     </div>
     {% elif section.image %}

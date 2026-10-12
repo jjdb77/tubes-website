@@ -880,3 +880,23 @@ if (helpSearch) {
     search();
   }
 }
+
+// Schermen na elkaar in een feature-blok (`images:` op de sectie, homepage:
+// Budget). Elke `data-interval` ms (standaard 4000) gaat `is-active` naar het
+// volgende beeld, na het laatste weer naar het eerste. Staat het tabblad op de
+// achtergrond of vraagt de bezoeker om minder beweging, dan blijft het staan.
+(function () {
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  for (const box of document.querySelectorAll("[data-slides]")) {
+    const slides = Array.from(box.querySelectorAll("img"));
+    if (slides.length < 2 || reduce) continue;
+    const interval = Math.max(1000, parseInt(box.dataset.interval, 10) || 4000);
+    let i = 0;
+    setInterval(() => {
+      if (document.hidden) return;
+      slides[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active");
+    }, interval);
+  }
+})();
