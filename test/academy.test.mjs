@@ -163,7 +163,7 @@ await t("upload: nieuwere boekversie vervangt de oude (regel en bestand)", async
 });
 
 await t("upload: bestandsnamen en velden worden streng gecontroleerd", async () => {
-  const bad = ["../evil.zip", ".hidden.zip", "a/b.zip", "evil.exe", "evil.zip.sh", "x".repeat(101) + ".zip", "space name.zip", "evil.ZIP"];
+  const bad = ["../evil.zip", ".hidden.zip", "a/b.zip", "evil.bat", "app.zip", "evil.zip.sh", "x".repeat(101) + ".zip", "space name.zip", "evil.ZIP"];
   for (const name of bad) assert.equal((await upload({ name, kind: "app" }, Buffer.from("x"))).status, 400, name);
   assert.equal((await upload({ name: "ok.zip", kind: "movie" }, Buffer.from("x"))).status, 400);
   assert.equal((await upload({ name: "ok.zip", kind: "book", bookId: "Bad_ID" }, Buffer.from("x"))).status, 400);
@@ -202,7 +202,7 @@ await t("bestanden: pending krijgt 403, zonder sessie redirect, approved krijgt 
   res = await fetch(base + "/academy/files/nothere.zip", { headers: { Cookie: annaCookie } });
   assert.equal(res.status, 404);
   const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
-  assert.match(html, /Download Oskar for Mac/);
+  assert.match(html, /Download for Mac/);
   assert.match(html, /oskar:\/\/activate\?code=LK1.abc_DEF-123.sigsig/);
   assert.match(html, /Tubes: The Basics/);
 });
@@ -235,6 +235,25 @@ await t("catalogus: geldige key, onbekende key, verlopen key", async () => {
   // Brute approven met een verlopen datum
   await adminPost("/api/academy/admin/approve", { email: "brute@example.com", licenceKey: "LK1.expired.key12345", licenceExpires: "2020-01-01" });
   assert.equal((await fetch(base + "/api/academy/catalog", key("LK1.expired.key12345"))).status, 401);
+});
+
+await t("Oskar per platform: Windows naast Mac, nieuwe versie vervangt alleen hetzelfde platform, catalogus meldt versies", async () => {
+  const winBuf = Buffer.from("MZ windows installer");
+  let res = await upload({ name: "Oskar-Setup-0.1.0.exe", kind: "app", version: "0.1.0" }, winBuf);
+  assert.equal(res.status, 200);
+  res = await upload({ name: "Oskar-Setup-0.1.1.exe", kind: "app", version: "0.1.1" }, winBuf);
+  assert.equal(res.status, 200);
+  const names = fs.readdirSync(path.join(dataDir, "academy", "files"));
+  assert.ok(names.includes("Oskar-0.1.0.dmg"), "Mac blijft staan");
+  assert.ok(names.includes("Oskar-Setup-0.1.1.exe") && !names.includes("Oskar-Setup-0.1.0.exe"), "oude Windows-versie weg");
+  assert.equal((await upload({ name: "book.exe", kind: "book", bookId: "x" }, winBuf)).status, 400);
+  const cat = await (await fetch(base + "/api/academy/catalog", key("LK1.abc_DEF-123.sigsig"))).json();
+  assert.equal(cat.app.mac.version, "0.1.0");
+  assert.equal(cat.app.win.version, "0.1.1");
+  const html = await (await fetch(base + "/academy/", { headers: { Cookie: annaCookie } })).text();
+  assert.match(html, /Download for Windows/);
+  res = await fetch(base + "/academy/files/Oskar-Setup-0.1.1.exe", { headers: { Cookie: annaCookie } });
+  assert.equal(res.status, 200);
 });
 
 await t("download met key: alleen boek/audio, niet de app", async () => {
