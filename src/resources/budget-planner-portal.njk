@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+title: Budget Planner portal
+seo_title: "Budget Planner Portal | Tubes"
+description: "Log in to the Budget Planner portal: submit productions, follow their status and download the budgets that come back."
+permalink: /resources/budget-planner/portal/
+page_css: budgetPlannerCss
+# Besloten pagina (achter inloggen): uit Google, sitemap en llms.txt.
+noindex: true
+sections:
+  - type: hero
+    tight: true
+    kicker: Budget Planner
+    title: Your *productions* and budgets
+    text: |
+      Submit a production, connect the Budget Planner app with your connection code, and download the budget when it is delivered. New here? [Read what the Budget Planner does](/resources/budget-planner/).
+---
+{#- Klantportaal van de Budget Planner. De pagina zelf is leeg; het script
+    js/budget-planner-portal.js tekent het inlog-/aanmeldscherm of het portaal
+    op basis van /api/portal/session. Opmaak css/budget-planner.css (bp-*),
+    server lib/portal.js, uitleg docs/budget-planner-portal.md. -#}
+<section class="section theme-light bp-portal">
+  <div class="container" data-bp-portal>
+    <noscript><div class="bp-empty">The portal needs JavaScript. Switch it on and reload the page.</div></noscript>
+  </div>
+</section>
+<script src="{{ assets.budgetPlannerDownloadsJs }}" defer></script>
+<script src="{{ assets.budgetPlannerPortalJs }}" defer></script>

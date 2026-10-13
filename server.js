@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { mountPortal } from "./lib/portal.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -1128,6 +1129,7 @@ app.get("/beheer", (req, res) => {
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a> &middot; <a href="/beheer/ai" style="color:#0E8C77">AI-zoeken</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
 ${toolAccountsBlock()}
+${portal.adminBlock()}
 ${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
 </div></body></html>`);
@@ -1529,6 +1531,14 @@ app.use("/tools", (req, res, next) => {
   res.setHeader("Content-Security-Policy", req.path.startsWith("/budget-builder") ? TOOLS_CSP_ACCOUNT : TOOLS_CSP);
   next();
 });
+
+// ---------- Budget Planner-portal (/resources/budget-planner/) ----------
+//
+// Accounts voor productiebedrijven, producties met documenten en de JSON-API
+// die de lokale Budget Planner-app gebruikt (/api/portal/v1, Bearer-sleutel).
+// Alles in lib/portal.js; opslag in DATA_DIR/portal/, mail via stuurMail().
+// Zie docs/budget-planner-portal.md.
+const portal = mountPortal(app, { dataDir: DATA_DIR, sendMail: stuurMail, siteUrl: `https://${CANONICAL_HOST}` });
 
 // Cachebeleid.
 //

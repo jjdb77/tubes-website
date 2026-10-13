@@ -68,3 +68,18 @@ Na livegang nog doen:
 3. Idem bij [Bing Webmaster Tools](https://www.bing.com/webmasters) (kan importeren vanuit Search Console).
 
 Omdat de URL's gelijk blijven aan de oude site (en `/home-2` wordt doorgestuurd), blijft de bestaande Google-ranking behouden.
+
+## Budget Planner-portal (/resources/budget-planner/)
+
+Klantportaal plus API voor de lokale Budget Planner-app: accounts, producties
+met documenten, resultaat terug in het portaal. Alles in `lib/portal.js`,
+uitleg en API-contract in `docs/budget-planner-portal.md`.
+
+Env-variabelen op de Railway-service: `PORTAL_ADMIN_KEY` (verplicht voor
+admin-toegang tot alle jobs en voor het uploaden van de installers),
+`PORTAL_DOWNLOAD_PASSWORD` (wachtwoord waarachter de app-downloads staan;
+ontbreekt hij, dan staan ze dicht), `PORTAL_SESSION_SECRET` (optioneel, anders op de
+volume aangemaakt), `PORTAL_NOTIFY_EMAIL` (meldingen, standaard
+joachim@tubes.media); mail loopt via de bestaande `RESEND_API_KEY`/`MAIL_FROM`.
+Opslag in `<volume>/portal/`. Test: `node test/budget-planner-portal.test.mjs`
+(zit in `npm test`).

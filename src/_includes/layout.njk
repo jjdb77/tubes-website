@@ -20,6 +20,11 @@
   {%- if sections | hasSection("processoverview") %}
   <link rel="stylesheet" href="{{ assets.budgetPlanProduceCss }}">
   {%- endif %}
+  {#- Een pagina met eigen opmaakbestand noemt de sleutel uit `assets` in de
+      front matter (`page_css: budgetPlannerCss`). -#}
+  {%- if page_css and assets[page_css] %}
+  <link rel="stylesheet" href="{{ assets[page_css] }}">
+  {%- endif %}
   {#- Bedrijvengids: het bedrijf van deze pagina komt uit de index op URL. Zo
       krijgt de jsonld-filter een echt object; via de front matter zou het een
       string zijn en bleef de Organization leeg. -#}

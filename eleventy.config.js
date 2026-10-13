@@ -36,6 +36,11 @@ export default function (eleventyConfig) {
     // Alleen op /budget-plan-produce/ (eigen pagina, los van layout.njk).
     budgetPlanProduceCss: "/css/budget-plan-produce.css?v=" + fileHash("src/css/budget-plan-produce.css"),
     budgetPlanProduceJs: "/js/budget-plan-produce.js?v=" + fileHash("src/js/budget-plan-produce.js"),
+    // Budget Planner (landingspagina en klantportaal onder /resources/budget-planner/);
+    // de pagina's vragen de CSS aan via `page_css: budgetPlannerCss` in de front matter.
+    budgetPlannerCss: "/css/budget-planner.css?v=" + fileHash("src/css/budget-planner.css"),
+    budgetPlannerPortalJs: "/js/budget-planner-portal.js?v=" + fileHash("src/js/budget-planner-portal.js"),
+    budgetPlannerDownloadsJs: "/js/budget-planner-downloads.js?v=" + fileHash("src/js/budget-planner-downloads.js"),
   });
   const md = markdownIt({ html: true, breaks: false, linkify: true });
 

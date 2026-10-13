@@ -169,7 +169,11 @@ sections:
 
       The Budget Builder can also be switched to saving versions in an account (email address and password). That option is currently switched off. If we switch it on, this notice will describe what such an account stores before it is used.
 
-      ### 15. Changes to this notice
+      ### 15. The Budget Planner portal
+
+      The [Budget Planner portal](/resources/budget-planner/) is different from the tools above: it is an account. When you sign up we store your company name, the name of the contact person, the email address and a password (as a hash, never readable). For every production you submit we store what you fill in (title, format, genre, length, budget level, dates, notes) and the documents you upload (scripts, treatments, synopses, briefs), plus the budget, the Tubes export, the summary and any remark that come back. We use this only to build your budget, to show it to you in the portal and to email you when it is ready. The Budget Planner app on your computer, or our own copy of it if you ask us to run a production for you, fetches these documents with the connection code from your portal. Deleting a production deletes its documents and results; email us to delete the account. Email about the portal (confirmation link, "your budget is ready") goes out through Resend, the same service as our other mail.
+
+      ### 16. Changes to this notice
 
       We may update this notice to reflect changes to our services, our suppliers, the law, or the way we handle personal information. The current version is always on this page, with the date of the most recent update at the top.
 ---

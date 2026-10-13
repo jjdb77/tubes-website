@@ -29,6 +29,13 @@ sections:
         link_label: Build a budget
         text: |
           Free film budgeting software in your browser: start with a template, import an existing budget or start from scratch. Add your costs and the totals stay up to date. Download as Excel, CSV or PDF. No account needed. Prefer a spreadsheet? Get the [free film budget template](/film-budget-template/).
+      - image: /assets/images/tubes-budgeting.png
+        image_alt: "A production budget with activities and cost lines in Tubes"
+        heading: Budget Planner
+        url: /resources/budget-planner/
+        link_label: Get the Budget Planner
+        text: |
+          Upload a script, treatment or brief and get back a complete production budget: activities, shooting days, crew and day plans, as a budget file and a Tubes export. A desktop app for Mac and Windows with a small customer portal; the AI runs on your own ChatGPT subscription.
       - image: /assets/images/locations-toledo.jpg
         image_alt: "Toledo, Spain: the old town with the cathedral and the Alcázar above the Tagus valley"
         heading: Film & TV locations in Europe

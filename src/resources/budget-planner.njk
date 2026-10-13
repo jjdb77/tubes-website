@@ -1,0 +1,128 @@
+---
+layout: layout.njk
+title: Budget Planner
+seo_title: "Budget Planner: From Script to Production Budget with AI | Tubes"
+description: "Upload a script, treatment, synopsis or brief and get back a complete production budget with activities, shooting days, crew and day plans. A desktop app for Mac and Windows, with a customer portal. The AI runs on your own ChatGPT subscription."
+permalink: /resources/budget-planner/
+page_css: budgetPlannerCss
+sections:
+  - type: hero
+    kicker: Free tool
+    title: From script to *production budget* in an afternoon
+    text: |
+      Give the Budget Planner your script, treatment, synopsis or brief and a few facts about the production. It reads the material, breaks it down into scenes, plans activities and shooting days, staffs the crew and builds the full budget, then checks its own work.
+
+      The result comes back in your portal: a budget file for the app, an export for Tubes and a summary you can send around.
+    buttons:
+      - label: Create an account
+        url: /resources/budget-planner/portal/#signup
+---
+{#- Landingspagina van de Budget Planner (de lokale Electron-app in de map
+    BudgetPlannerBuilder) met daaronder het klantportaal op
+    /resources/budget-planner/portal/. Alleen de hero komt uit `sections`; de
+    rest is eigen HTML, dus tekst wijzig je hier en niet in Sveltia. Opmaak in
+    css/budget-planner.css (klassen bp-*), server in lib/portal.js, uitleg in
+    docs/budget-planner-portal.md.
+
+    De downloadknoppen staan achter een wachtwoord (PORTAL_DOWNLOAD_PASSWORD)
+    en komen uit js/budget-planner-downloads.js; de installers zelf zet de
+    admin op de volume met PUT /api/portal/v1/admin/downloads/:id (zie
+    docs/budget-planner-portal.md). -#}
+
+<section class="section theme-white">
+  <div class="container">
+    <h2 class="section-heading">What goes in, what comes out</h2>
+    <div class="bp-io">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li><strong>Documents</strong>: script (.fdx, .pdf, .txt or .md), treatment, synopsis, brief, notes. One is enough; more is better.</li>
+          <li><strong>The production</strong>: format, genre, length, episodes, budget level and a target total if you have one.</li>
+          <li><strong>Time</strong>: where you start (development, pre-production, shoot or post), start date, deadline, shooting days if already known.</li>
+          <li><strong>Notes</strong>: locations you already have, crew you bring, things to leave out.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get back</h3>
+        <ul>
+          <li><strong>A complete budget</strong>: activities per phase with cost lines (crew, cast, equipment, locations, travel, catering, post, delivery), fees and contingency as percentages.</li>
+          <li><strong>A plan</strong>: scenes with their breakdown, shooting days clustered by location, a crew list per activity and a day plan per shooting day.</li>
+          <li><strong>A review</strong>: a second pass that looks for double counts, missing items, odd ratios and the distance to your target.</li>
+          <li><strong>Three files</strong>: the budget file for the Budget Planner app, a Tubes export that imports straight into Tubes, and a summary (optionally as PDF).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-light">
+  <div class="container">
+    <h2 class="section-heading">How it works</h2>
+    <ol class="bp-steps">
+      <li>
+        <h3>Create an account and connect the app</h3>
+        <p>Sign up with your company name and email address. The portal gives you a connection code; paste it in the Budget Planner app on your Mac or Windows computer.</p>
+      </li>
+      <li>
+        <h3>Submit a production</h3>
+        <p>In the portal, start a new production: upload your documents, fill in what you know, add notes. The app picks it up and runs the planner, step by step, on your own computer. Prefer not to run it yourself? We can run it for you.</p>
+      </li>
+      <li>
+        <h3>Receive the budget</h3>
+        <p>When the planner is done, the production shows as delivered in the portal with the totals, the number of activities, shooting days and lines, and the verdict of the review. Download the files, leave a remark for the next run.</p>
+      </li>
+    </ol>
+    <div class="button-row">
+      <a class="button button-primary" href="/resources/budget-planner/portal/#signup">Create an account</a>
+      <a class="button button-secondary" href="/resources/budget-planner/portal/#login">Log in</a>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-white" id="download">
+  <div class="container">
+    <h2 class="section-heading">The app</h2>
+    <p class="lead">The Budget Planner is a desktop app for macOS and Windows. It also works as a standalone budgeting tool: cost structures (Tubes Commercial Format, Filmfonds, Movie Magic, Netflix-style top sheet), formulas on shooting days and episodes, versions, forecast and Excel export, all stored as files on your own computer.</p>
+    <div class="bp-card bp-download-card" data-bp-downloads data-bp-gate="password">
+      <h3>Download the app</h3>
+      <p class="bp-card-intro">The installers are available to invited producers. Enter the password you received and the download buttons appear; your browser remembers it for a week.</p>
+      <div data-bp-downloads-slot><p class="bp-help">Loading...</p></div>
+    </div>
+    <p class="bp-note">The installers are not yet signed with an Apple or Microsoft certificate. On macOS, right-click the app and choose Open the first time; on Windows, choose More info and then Run anyway in the SmartScreen dialog.</p>
+    <div class="bp-ai">
+      <span class="icon-tile" aria-hidden="true"><i style="--icon: url('/assets/icons/light-bulb.svg')"></i></span>
+      <div>
+        <p><strong>The AI runs on your own ChatGPT subscription.</strong> The planner uses the OpenAI Codex command line on the computer where the app runs, signed in with your ChatGPT account. There is no Tubes AI service in between, no API key and no credits: install Codex (<code>npm i -g @openai/codex</code>, then <code>codex login</code>) and the app does the rest.</p>
+        <p>Your documents go to the portal only if you upload them there. If we run a production for you, our computer and our ChatGPT subscription do the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- set section = {
+  theme: "light",
+  heading: "Questions about the Budget Planner",
+  items: [
+    { question: "Is the Budget Planner free?",
+      answer: "Yes. The app, the portal and the planner are free to use. The AI runs on your own ChatGPT subscription through the OpenAI Codex command line, so that is the only cost, and it is yours already if you have a subscription." },
+    { question: "Do I need a script?",
+      answer: "No. A treatment, synopsis or brief works too, and so do notes alone. Without a script the planner skips the scene breakdown and the day plans and builds the activities and budget from what you give it, plus the number of shooting days you expect." },
+    { question: "What does the budget look like?",
+      answer: "Activities per phase (development, pre-production, shoot, post, delivery), each with cost lines on the cost types of the structure you chose: crew and cast, equipment, locations, travel, catering, insurance, post and delivery. Producer fee, overhead and contingency are percentages on top. Quantities use formulas on the number of shooting days, so change that number and everything follows." },
+    { question: "Can I open the result in Tubes?",
+      answer: "Yes. Every delivered production comes with a Tubes export. Import it in Tubes and you get the production, the activities with their windows and lines, the scenes, shooting days, day plans and crew." },
+    { question: "Where do my documents go?",
+      answer: "To the portal on tubes.media, stored under your company account, so the Budget Planner app can fetch them with your connection code. They are used only to build your budget. Delete a production and its documents are deleted with it. The privacy notice describes this in full." },
+    { question: "Can Tubes run the planner for me?",
+      answer: "Yes. Submit the production in the portal as usual; we pick it up with our own copy of the app and the result lands in your portal the same way. Mention it in the notes of the production." }
+  ]
+} -%}
+{% include "partials/sections/faq.njk" %}
+
+{%- set section = {
+  title: "From the first budget to the last invoice",
+  text: "Tubes takes the budget the planner made and follows it through purchase orders, invoices, actuals and forecast.",
+  button: { label: "Request a Demo", url: "/contact/" }
+} -%}
+{% include "partials/sections/cta.njk" %}
+<script src="{{ assets.budgetPlannerDownloadsJs }}" defer></script>
