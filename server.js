@@ -804,6 +804,103 @@ app.use("/mmg", (req, res, next) => {
   res.status(401).send("Password required.");
 });
 
+// ---------- Oprichtingsdocumenten Appsolutions (Basic Auth) ----------
+//
+// /oprichting/ toont de PDF's uit <volume>/oprichting; /oprichting/<naam>.pdf
+// opent er één. De bestanden staan bewust NIET in de repo (die is publiek),
+// alleen op de volume. Wachtwoord = env OPRICHTING_PASSWORD (gebruikersnaam
+// leeg); zonder die variabele geeft alles een 503. Eén document vervangen
+// zonder deploy: curl -u ":<wachtwoord>" -T "<naam>.pdf"
+// "https://www.tubes.media/oprichting/<naam>.pdf" (PUT overschrijft, DELETE
+// verwijdert).
+
+const OPRICHTING_DIR = path.join(DATA_DIR, "oprichting");
+const OPRICHTING_NAME = /^[\w ().,'&-]+\.pdf$/;
+
+app.use("/oprichting", (req, res, next) => {
+  const wanted = process.env.OPRICHTING_PASSWORD;
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  res.setHeader("Cache-Control", "private, no-store");
+  if (!wanted) return res.status(503).send("Stel eerst OPRICHTING_PASSWORD in op Railway.");
+  const header = req.headers.authorization || "";
+  const [scheme, encoded] = header.split(" ");
+  if (scheme === "Basic" && encoded) {
+    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
+    const a = Buffer.from(pass);
+    const b = Buffer.from(wanted);
+    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
+  }
+  res.set("WWW-Authenticate", 'Basic realm="Appsolutions BV oprichting"');
+  res.status(401).send("Password required.");
+});
+
+app.get("/oprichting", (req, res) => {
+  if (!req.originalUrl.split("?")[0].endsWith("/")) return res.redirect(301, "/oprichting/");
+  fs.mkdirSync(OPRICHTING_DIR, { recursive: true });
+  const files = fs.readdirSync(OPRICHTING_DIR).filter((f) => OPRICHTING_NAME.test(f)).sort();
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const rows = files.map((f) => {
+    const st = fs.statSync(path.join(OPRICHTING_DIR, f));
+    const date = st.mtime.toISOString().slice(0, 10);
+    const href = encodeURIComponent(f);
+    return `<li><a href="${href}" target="_blank" rel="noopener">${esc(f.replace(/\.pdf$/, ""))}</a><span>${date}<button type="button" data-print="${href}">Print</button></span></li>`;
+  }).join("");
+  res.type("html").send(`<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Appsolutions BV · Oprichtingsdocumenten</title>
+<style>body{font-family:Mulish,system-ui,sans-serif;color:#1A1A1A;background:#F6F7F9;margin:0;padding:48px 20px}
+main{max-width:720px;margin:0 auto;background:#fff;border-radius:16px;padding:32px 36px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.band{height:6px;border-radius:3px;background:linear-gradient(90deg,#D6A339,#7E7A6A 50%,#15284B);margin-bottom:24px}
+h1{color:#15284B;font-size:26px;margin:0 0 6px}p{color:#5C5750;margin:0 0 24px}
+ul{list-style:none;padding:0;margin:0}li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid #E3E5E9}
+a{color:#0E8C77;text-decoration:none;font-weight:600}a:hover{text-decoration:underline}span{color:#8B8E94;font-size:14px;white-space:nowrap;display:flex;align-items:center;gap:12px}
+button{font:inherit;font-size:13px;font-weight:700;color:#0E8C77;background:#DBF3EE;border:0;border-radius:8px;padding:5px 12px;cursor:pointer}button:hover{background:#c6ece4}</style>
+</head><body><main><div class="band"></div><h1>Oprichtingsdocumenten Appsolutions BV</h1>
+<p>Vertrouwelijk. Alleen bedoeld voor de oprichters en de notaris.</p>
+<ul>${rows || "<li>Nog geen documenten.</li>"}</ul></main>
+<script>
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-print]");
+  if (!b) return;
+  document.querySelectorAll("iframe.print-frame").forEach((f) => f.remove());
+  const f = document.createElement("iframe");
+  f.className = "print-frame";
+  f.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0";
+  f.src = b.dataset.print;
+  f.onload = () => setTimeout(() => { try { f.contentWindow.focus(); f.contentWindow.print(); } catch { window.open(b.dataset.print, "_blank"); } }, 300);
+  document.body.appendChild(f);
+});
+</script></body></html>`);
+});
+
+app.get("/oprichting/:name", (req, res) => {
+  const name = req.params.name;
+  const file = path.join(OPRICHTING_DIR, name);
+  if (!OPRICHTING_NAME.test(name) || !fs.existsSync(file)) return res.status(404).send("Not found.");
+  res.type("application/pdf");
+  res.setHeader("Content-Disposition", `inline; filename*=UTF-8''${encodeURIComponent(name)}`);
+  fs.createReadStream(file).pipe(res);
+});
+
+app.put("/oprichting/:name", express.raw({ type: () => true, limit: "30mb" }), (req, res) => {
+  const name = req.params.name;
+  if (!OPRICHTING_NAME.test(name)) return res.status(400).send("Alleen .pdf-namen met letters, cijfers en spaties.");
+  if (!Buffer.isBuffer(req.body) || req.body.subarray(0, 5).toString() !== "%PDF-") return res.status(400).send("Geen PDF.");
+  fs.mkdirSync(OPRICHTING_DIR, { recursive: true });
+  const tmp = path.join(OPRICHTING_DIR, `.${crypto.randomUUID()}.tmp`);
+  fs.writeFileSync(tmp, req.body);
+  fs.renameSync(tmp, path.join(OPRICHTING_DIR, name));
+  res.send(`Opgeslagen: ${name}\n`);
+});
+
+app.delete("/oprichting/:name", (req, res) => {
+  const name = req.params.name;
+  const file = path.join(OPRICHTING_DIR, name);
+  if (!OPRICHTING_NAME.test(name) || !fs.existsSync(file)) return res.status(404).send("Not found.");
+  fs.unlinkSync(file);
+  res.send(`Verwijderd: ${name}\n`);
+});
+
 // ---------- AI-zoeken op de locatiegids ----------
 //
 // De bezoeker typt een zoekvraag in gewone taal; OpenAI maakt er alleen
