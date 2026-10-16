@@ -807,14 +807,16 @@ app.use("/mmg", (req, res, next) => {
 // ---------- Partnerdeck /partnership/ (Basic Auth) ----------
 //
 // Presentatie voor een gesprek met Freeway Entertainment (src/partnership.njk).
-// Wachtwoord = env PARTNERSHIP_PASSWORD (gebruikersnaam leeg); geen fallback
-// in de code, want de repo is publiek. Zonder die variabele geeft de pagina 503.
+// Wachtwoord = env PARTNERSHIP_PASSWORD (gebruikersnaam leeg), met een fallback
+// in de code zoals bij /mmg/. De repo is publiek, dus die fallback is op GitHub
+// te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
+
+const PARTNERSHIP_PASSWORD = process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
 
 app.use("/partnership", (req, res, next) => {
-  const wanted = process.env.PARTNERSHIP_PASSWORD;
+  const wanted = PARTNERSHIP_PASSWORD;
   res.setHeader("X-Robots-Tag", "noindex, nofollow");
   res.setHeader("Cache-Control", "private, no-store");
-  if (!wanted) return res.status(503).send("Stel eerst PARTNERSHIP_PASSWORD in op Railway.");
   const header = req.headers.authorization || "";
   const [scheme, encoded] = header.split(" ");
   if (scheme === "Basic" && encoded) {

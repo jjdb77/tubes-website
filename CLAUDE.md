@@ -366,7 +366,7 @@ Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan wo
 ### /partnership/ (`src/partnership.njk`)
 
 - Deck voor een verkennend gesprek met Freeway Entertainment (16-10-2026): waar Tubes en Freeway op elkaar aansluiten, een pilot met Hongaarse klanten, volgende stappen. Dertien dia's. Algemene URL; de naam Freeway staat wel in de tekst.
-- **Basic Auth** in server.js: lege gebruikersnaam, wachtwoord = env `PARTNERSHIP_PASSWORD`. Geen fallback in de code (de repo is publiek); zonder variabele geeft de pagina 503. Het wachtwoord houdt toevallige bezoekers weg, maar de tekst staat in deze publieke repo en de screenshots (`deck-partnership-*.png`) zijn zonder wachtwoord op te vragen.
+- **Basic Auth** in server.js: lege gebruikersnaam, wachtwoord = env `PARTNERSHIP_PASSWORD`, met fallback `FreewayTubes26!` in de code (zoals /mmg/). Die fallback staat in deze publieke repo; Joachim vond dat goed genoeg, het is geen geheime informatie (16-10-2026). Het wachtwoord houdt toevallige bezoekers weg, maar de tekst staat in deze publieke repo en de screenshots (`deck-partnership-*.png`) zijn zonder wachtwoord op te vragen.
 - Artifact: https://claude.ai/artifact/9Ua2GzA5qBn9iPXPi1Q9Qw. De pagina is daaruit gegenereerd zonder sprekersnotities; blob-URL's vervangen door `imgSrc`-paden.
 - Screenshots komen uit de demo-omgeving (demo.tubesmedia.online, 16-10-2026): projectenlijst, forecast van The Morning Show (zonder variance-kolom), finance-overzicht.
 
@@ -572,7 +572,6 @@ Dataregio's, regel voor de organisatie-eenheid.
 - [ ] Spam: na 14-9-2026 in de gaten houden of de "products suggestion"-mails met willekeurige lettergrepen wegblijven. Komen ze toch door, kijk dan op /beheer?spam=1 (vereist ADMIN_PASSWORD) welke laag ze passeren; volgende stap zou de timing-check op de Health Check-formulieren zijn.
 - [ ] Railway: `ACADEMY_ADMIN_TOKEN` op tubes-website zetten (bijv. `${{ secret(40) }}`) en dezelfde waarde in Studoo Beheer; optioneel `ACADEMY_NOTIFY_EMAIL`. Zonder token geeft de beheer-API van de Academy 503.
 - [ ] Railway: `ADMIN_PASSWORD` op tubes-website zetten (het volume staat er sinds 20-8-2026); daarmee werkt /beheer. In Railway kun je Variables > New Variable gebruiken en als waarde `${{ secret(28) }}` invullen, dan genereert Railway er zelf een.
-- [ ] Railway: `PARTNERSHIP_PASSWORD` op tubes-website zetten, anders geeft /partnership/ een 503.
 - [x] **4Relations staat aan** (20-8-2026): de vier `CRM_*`-variabelen staan op de Railway-service tubes-website, `CRM_TOKEN` als verwijzing `${{authentic-nurturing.ASSESSMENT_TOKEN}}` zodat de sleutel maar op één plek staat. Getest met een echte aanvraag: die staat als assessment in 4RelationTubes, met relatie Appsolutions en contactpersoon eraan gekoppeld.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).
