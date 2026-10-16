@@ -337,12 +337,12 @@ Trainingen voor Tubes in **Studoo** (Mac en Windows; dezelfde app als overal, na
 - Env: `ACADEMY_ADMIN_TOKEN` (verplicht voor de beheer-API; ook in Studoo Beheer invullen), `OPENAI_API_KEY` (AI voor Studoo), `ACADEMY_AI_CAP_EUR`, `ACADEMY_NOTIFY_EMAIL` (standaard joachim@tubes.media). Mail loopt via `stuurMail()`, dus zonder `RESEND_API_KEY` komt er geen code aan en kan niemand inloggen.
 - Lokaal testen: `RAILWAY_VOLUME_MOUNT_PATH=<tmp> ACADEMY_ADMIN_TOKEN=test RESEND_API_KEY=x MAIL_API_URL=http://127.0.0.1:<poort>/ node server.js` met een nep-mailendpoint dat de body logt (daar staat de code in het onderwerp). Upload: `curl -H "Authorization: Bearer test" --data-binary @Studoo.dmg "http://localhost:3000/api/academy/admin/upload?name=Studoo.dmg&kind=app"`.
 
-## Presentatiepagina's: /vfx-studios/ en /responsible-ai/
+## Presentatiepagina's: /vfx-studios/, /responsible-ai/ en /partnership/
 
 Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan worden (bijvoorbeeld in Zoom) in plaats van als bestand.
 
 - **Opmaak staat op één plek**: `src/_includes/deck.njk`. Een pagina levert alleen de dia's (1920x1080, inline opmaak) en zet `layout: deck.njk` in de front matter. De layout schaalt de dia naar het venster en regelt het bladeren: pijltjestoetsen, spatie, de knoppen of vegen; `F` is volledig scherm; `/<pagina>/#4` opent dia 4. Op een smalle telefoon rechtop staan alle dia's onder elkaar. Afdrukken geeft een dia per pagina. Los van layout.njk en het CMS.
-- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. Er staat **geen wachtwoord** op (anders dan /mmg/), want er staan geen prijzen of afspraken in. De repo is publiek, dus de inhoud is ook op GitHub te lezen.
+- **Alleen met de link te bereiken**: `noindex: true` en `eleventyExcludeFromCollections: true`, dus niet in sitemap.xml of llms.txt, en niet in menu of footer. /vfx-studios/ en /responsible-ai/ hebben **geen wachtwoord** (anders dan /mmg/), want er staan geen prijzen of afspraken in; /partnership/ wel (zie daar). De repo is publiek, dus de inhoud is ook op GitHub te lezen.
 - De dia's komen uit Claude-artifacts. Daar staan ook de sprekersnotities, die bewust **niet** op de pagina's staan. Kleine tekstwijzigingen kunnen direct in het njk-bestand; wijzig dan ook het artifact, anders lopen de twee uiteen.
 - Beelden zijn de bestaande marketingscreenshots via `imgSrc`. De covers gebruiken `example-tubes-05-clean.png`: dezelfde schermafbeelding als `example-tubes-05.png` zonder de "VMS"-badge in de zijbalk (verzoek Joachim).
 - Een volgende presentatie krijgt een eigen bestand naar dit voorbeeld (`src/<naam>.njk`, eigen permalink, `layout: deck.njk`). Joachim wil **algemene namen** in de URL, geen naam van een prospect of fonds.
@@ -362,6 +362,13 @@ Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan wo
 - **Zonder cijfers, op verzoek van Joachim** (5-10-2026): geen marktomvang, geen financiële tabel, geen aantallen. Het deck vertelt het concept en laat het product zien. De richtlijnen staan dat toe: fase 1 is een kort conceptvoorstel en het uitgewerkte businessplan hoort bij fase 2.
 - ⚠️ **De pagina claimt geen TRL 7.** De oproep eist bij instap een prototype dat in een operationele omgeving is gedemonstreerd, met bewijs (pilotresultaten, testgegevens). Er heeft nog geen echte productie op Tubes gedraaid, dus er staat "a working product, ready for its first pilots". Pas die zin pas aan als er een gedocumenteerde pilot is.
 - De cover zegt "Proposal for EIT Culture & Creativity": het is een voorstel van Tubes, geen samenwerking met of goedkeuring door EIT. Hou dat zo.
+
+### /partnership/ (`src/partnership.njk`)
+
+- Deck voor een verkennend gesprek met Freeway Entertainment (16-10-2026): waar Tubes en Freeway op elkaar aansluiten, een pilot met Hongaarse klanten, volgende stappen. Dertien dia's. Algemene URL; de naam Freeway staat wel in de tekst.
+- **Basic Auth** in server.js: lege gebruikersnaam, wachtwoord = env `PARTNERSHIP_PASSWORD`. Geen fallback in de code (de repo is publiek); zonder variabele geeft de pagina 503. Het wachtwoord houdt toevallige bezoekers weg, maar de tekst staat in deze publieke repo en de screenshots (`deck-partnership-*.png`) zijn zonder wachtwoord op te vragen.
+- Artifact: https://claude.ai/artifact/9Ua2GzA5qBn9iPXPi1Q9Qw. De pagina is daaruit gegenereerd zonder sprekersnotities; blob-URL's vervangen door `imgSrc`-paden.
+- Screenshots komen uit de demo-omgeving (demo.tubesmedia.online, 16-10-2026): projectenlijst, forecast van The Morning Show (zonder variance-kolom), finance-overzicht.
 
 ## Locatiegids, bedrijvengids en incentive-vergelijking
 
@@ -565,6 +572,7 @@ Dataregio's, regel voor de organisatie-eenheid.
 - [ ] Spam: na 14-9-2026 in de gaten houden of de "products suggestion"-mails met willekeurige lettergrepen wegblijven. Komen ze toch door, kijk dan op /beheer?spam=1 (vereist ADMIN_PASSWORD) welke laag ze passeren; volgende stap zou de timing-check op de Health Check-formulieren zijn.
 - [ ] Railway: `ACADEMY_ADMIN_TOKEN` op tubes-website zetten (bijv. `${{ secret(40) }}`) en dezelfde waarde in Studoo Beheer; optioneel `ACADEMY_NOTIFY_EMAIL`. Zonder token geeft de beheer-API van de Academy 503.
 - [ ] Railway: `ADMIN_PASSWORD` op tubes-website zetten (het volume staat er sinds 20-8-2026); daarmee werkt /beheer. In Railway kun je Variables > New Variable gebruiken en als waarde `${{ secret(28) }}` invullen, dan genereert Railway er zelf een.
+- [ ] Railway: `PARTNERSHIP_PASSWORD` op tubes-website zetten, anders geeft /partnership/ een 503.
 - [x] **4Relations staat aan** (20-8-2026): de vier `CRM_*`-variabelen staan op de Railway-service tubes-website, `CRM_TOKEN` als verwijzing `${{authentic-nurturing.ASSESSMENT_TOKEN}}` zodat de sleutel maar op één plek staat. Getest met een echte aanvraag: die staat als assessment in 4RelationTubes, met relatie Appsolutions en contactpersoon eraan gekoppeld.
 - [ ] Health Check operationeel maken: een vaste vragenlijst voor de 45 minuten en een sjabloon voor de findings-samenvatting. De pagina belooft "geen standaard demo" en drie concrete verbeterkansen; zonder dat draaiboek maakt het gesprek die belofte niet waar.
 - [ ] Meten welke ingang beter werkt: "Request a Demo" versus "Free Health Check", en niet alleen de formulierconversie maar de hele keten (e-mail → aanvraag → gesprek gehouden → serieuze kans).

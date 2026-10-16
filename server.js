@@ -804,6 +804,29 @@ app.use("/mmg", (req, res, next) => {
   res.status(401).send("Password required.");
 });
 
+// ---------- Partnerdeck /partnership/ (Basic Auth) ----------
+//
+// Presentatie voor een gesprek met Freeway Entertainment (src/partnership.njk).
+// Wachtwoord = env PARTNERSHIP_PASSWORD (gebruikersnaam leeg); geen fallback
+// in de code, want de repo is publiek. Zonder die variabele geeft de pagina 503.
+
+app.use("/partnership", (req, res, next) => {
+  const wanted = process.env.PARTNERSHIP_PASSWORD;
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  res.setHeader("Cache-Control", "private, no-store");
+  if (!wanted) return res.status(503).send("Stel eerst PARTNERSHIP_PASSWORD in op Railway.");
+  const header = req.headers.authorization || "";
+  const [scheme, encoded] = header.split(" ");
+  if (scheme === "Basic" && encoded) {
+    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
+    const a = Buffer.from(pass);
+    const b = Buffer.from(wanted);
+    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
+  }
+  res.set("WWW-Authenticate", 'Basic realm="Tubes partnership"');
+  res.status(401).send("Password required.");
+});
+
 // ---------- Oprichtingsdocumenten Appsolutions (Basic Auth) ----------
 //
 // /oprichting/ toont de PDF's uit <volume>/oprichting; /oprichting/<naam>.pdf
