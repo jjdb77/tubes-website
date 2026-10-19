@@ -1,0 +1,26 @@
+---
+title: "Dutch formats look for buyers at MIPCOM"
+date: 2026-10-13
+topic: "Business"
+summary: "At the television market in Cannes, European producers pitch new programme ideas while AI and vertical drama dominate the agenda."
+headline: "Dutch formats seek audiences at MIPCOM"
+standfirst: "European programme ideas are presented in Cannes alongside new applications of artificial intelligence."
+photo: {"src":"","alt":"Cannes","caption":"Cannes","credit":"Spike","credit_url":"https://commons.wikimedia.org/wiki/File:Cannes_from_Suquet_Tower_03.jpg","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0"}
+factcheck: {"verdict":"Approved","summary":"The trade fair dates, the EBU presentation and the Dutch formats have been confirmed by event and trade sources. The text makes clear that concrete international sales results are absent.","claims":[{"status":"confirmed","text":"MIPCOM takes place in Cannes from 12 to 15 October 2026.","note":"The official MIPCOM website lists the trade fair dates and location.","url":"https://www.mipcom.com/?lang=en"},{"status":"confirmed","text":"The EBU is presenting seven formats during a new public-service showcase.","note":"The EBU names the seven formats and the presentation on 13 October.","url":"https://www.ebu.ch/events/2026/10/public-service-formats-showcase-at-mipcom"},{"status":"confirmed","text":"As it Comes is presented as a format from NPO and VPRO.","note":"It appears in the EBU’s list.","url":"https://www.ebu.ch/events/2026/10/public-service-formats-showcase-at-mipcom"},{"status":"confirmed","text":"AI has its own forum at MIPCOM, covering subjects such as training data and licences.","note":"The official programme lists the MIP AI Entertainment Forum and its subjects.","url":"https://www.mipcom.com/?lang=en"},{"status":"confirmed","text":"Lineup Industries is presenting formats commissioned by Dutch broadcasters.","note":"FormatBiz describes the Dutch commissioners and the MIPCOM slate.","url":"https://www.formatbiz.it/dettNews.aspx?id=15821"},{"status":"confirmed","text":"Format Forward describes a buyers’ market in which formats increasingly need to have been tested or broadcast already.","note":"This is Format Forward’s analysis and is attributed as such.","url":"https://www.formatforward.com/the-friday-format-sweep-mipcom-2026-special/"}]}
+editor_note: "The trade fair, the EBU presentation and the Dutch formats have been confirmed. No publicly available source was found confirming a major new international deal by Dutch makers on 13 October."
+sources: [{"name":"Public Service Formats Showcase at MIPCOM","publisher":"European Broadcasting Union","url":"https://www.ebu.ch/events/2026/10/public-service-formats-showcase-at-mipcom"},{"name":"MIPCOM Cannes 2026","publisher":"MIPCOM","url":"https://www.mipcom.com/?lang=en"},{"name":"The Friday Format Sweep: MIPCOM 2026 Special","publisher":"Format Forward","url":"https://www.formatforward.com/the-friday-format-sweep-mipcom-2026-special/"},{"name":"Lineup Industries sets MIPCOM slate","publisher":"FormatBiz","url":"https://www.formatbiz.it/dettNews.aspx?id=15821"}]
+via: "https://www.devector.nl/en/edition/2026-10-13/mipcom-ai-nederlandse-formats.html"
+---
+Dutch and other European programme-makers are trying to bring new formats to international attention at the MIPCOM television market in Cannes this week. At the same time, artificial intelligence is prominent on the market’s agenda.
+
+MIPCOM takes place in Cannes from 12 to 15 October. The trade fair brings together producers, broadcasters, streamers, distributors and buyers. The official programme lists AI, vertical drama formats, YouTube and new ways of selling television programmes internationally as key themes.
+
+On Tuesday, the European Broadcasting Union is organising a joint presentation by public-service broadcasters for the first time. Seven formats will be introduced there in short trailers and market pitches. They include As it Comes from NPO and VPRO, alongside programmes from ZDF, NRK, RTBF, WDR, RAI and RTÉ, among others.
+
+Dutch commercial representatives are also active at the market. Lineup Industries is presenting formats commissioned by Dutch broadcasters, including programmes from Omroep MAX and NPO. The organisation is trying to sell those titles to foreign broadcasters and platforms.
+
+AI has its own forum at MIPCOM. The subjects range from training data and licences to production, distribution and the use of AI within entertainment companies. The discussion is therefore no longer only about experimenting with technology, but also about rights, revenues and working processes.
+
+An independent analysis by Format Forward simultaneously describes a more cautious buyers’ market. According to the analysis, new programme ideas are more likely to succeed if they have already been broadcast, commissioned or tested somewhere. For Dutch makers, this means that a good idea alone is not enough: international buyers increasingly want proof that a format works.
+
+The sources consulted contain no announcement of a major new sale of a Dutch format. MIPCOM does provide a platform and business meetings, but the trade fair does not guarantee a global hit. A programme’s success only becomes visible later in concrete orders, viewing figures and international versions.

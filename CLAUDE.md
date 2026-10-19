@@ -170,6 +170,8 @@ De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`
 
 ### De Vector-koppeling
 
+- **Bijgewerkt op 19-10-2026**: tien berichten van 8 t/m 18 oktober erbij (na 7-10 was er niets meer toegevoegd, en dus ook geen ochtendmail verstuurd). Overgeslagen volgens de regels hieronder: overlijdens, persvrijheid en politiek (Turkije, DOJ, ON!), radio, dagbladen.
+
 - De Vector (devector.nl) is een nieuwsdienst van Appsolutions, geschreven en gefactcheckt door AI. ⚠️ **Op verzoek van Joachim (9-10-2026) staat dat niet op de voorgrond**, omdat "allemaal AI" gevoelig kan liggen: geen AI-namen of ChatGPT op de pagina, de bronnen zijn de **oorspronkelijke berichtgeving**, en "via De Vector" staat klein en grijs onderaan, wel zichtbaar. **Geen verborgen link** (display:none of iets dergelijks): verborgen links vallen onder het spambeleid van Google.
 - **Ophalen**: `DEVECTOR_API_KEY=dv_... node scripts/fetch-devector.mjs [--since JJJJ-MM-DD] [--json]` vraagt `https://www.devector.nl/api/business/feed.json` (Bearer-sleutel) op en toont wat nog niet in `src/content/headlines` staat, met de Engelse link erbij. Zonder `--since` telt het vanaf het nieuwste bericht dat er al staat. De selectie in De Vector Zakelijk (account Appsolutions) heeft alleen de branche "Film, tv & mediaproductie".
 - ⚠️ **De sleutel staat niet in de repo** (die is publiek) en ook niet op Railway: het script draait lokaal. Aanmaken of intrekken op devector.nl/zakelijk.html > Feed & mail > API-sleutel.
