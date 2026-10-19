@@ -170,6 +170,7 @@ De pagina `src/news.njk` draagt **twee stromen**, allebei zonder eigen pagina (`
 
 ### De Vector-koppeling
 
+- **Automatisch 3x per dag** (sinds 19-10-2026, verzoek Joachim): een geplande Claude-taak in de cloud volgt `docs/daily-tubes-routine.md`. `fetch-devector.mjs --site` leest daarvoor de openbare editiepagina's (rubrieken Film en Media), dus zonder API-sleutel. Afgewezen stukken staan met reden in `scripts/devector-skipped.txt`, anders komen ze elke run terug.
 - **Bijgewerkt op 19-10-2026**: tien berichten van 8 t/m 18 oktober erbij (na 7-10 was er niets meer toegevoegd, en dus ook geen ochtendmail verstuurd). Overgeslagen volgens de regels hieronder: overlijdens, persvrijheid en politiek (Turkije, DOJ, ON!), radio, dagbladen.
 
 - De Vector (devector.nl) is een nieuwsdienst van Appsolutions, geschreven en gefactcheckt door AI. ⚠️ **Op verzoek van Joachim (9-10-2026) staat dat niet op de voorgrond**, omdat "allemaal AI" gevoelig kan liggen: geen AI-namen of ChatGPT op de pagina, de bronnen zijn de **oorspronkelijke berichtgeving**, en "via De Vector" staat klein en grijs onderaan, wel zichtbaar. **Geen verborgen link** (display:none of iets dergelijks): verborgen links vallen onder het spambeleid van Google.
