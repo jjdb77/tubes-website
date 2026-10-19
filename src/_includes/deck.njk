@@ -84,6 +84,13 @@
     body.tp-stack .tp-slide[hidden] { display: block; }
     body.tp-stack .tp-btn, body.tp-stack .tp-count { display: none; }
 
+    /* Klikbare punten (data-shot): tonen het bijbehorende scherm in de afbeelding met data-shot-target. */
+    .tp-slide [data-shot] { cursor: pointer; transition: background-color .15s, box-shadow .15s; }
+    .tp-slide [data-shot]:hover { background: #FFFFFF; }
+    .tp-slide [data-shot]:focus-visible { outline: 3px solid #0E9C88; outline-offset: 2px; }
+    .tp-slide [data-shot].is-active { background: #FFFFFF; box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
+    .tp-slide [data-shot-target] { transition: opacity .15s; }
+
     @media (max-width: 520px) { .tp-home { display: none; } }
 
     @media print {
@@ -170,6 +177,46 @@
   document.addEventListener("fullscreenchange", function () {
     full.textContent = document.fullscreenElement ? "Exit full screen" : "Full screen";
     fit();
+  });
+  // Klikbare punten: een punt met data-shot toont zijn scherm (data-shot-src) in de
+  // afbeelding met data-shot-target van dezelfde dia; nog eens klikken zet het
+  // oorspronkelijke scherm terug. De accentkleur staat op de lijst (data-shots).
+  Array.prototype.forEach.call(stage.querySelectorAll("[data-shots]"), function (list) {
+    var slide = list.closest(".tp-slide");
+    var target = slide && slide.querySelector("[data-shot-target]");
+    if (!target) return;
+    var base = { src: target.getAttribute("src"), alt: target.getAttribute("alt") };
+    var accent = list.getAttribute("data-shots");
+    var items = Array.prototype.slice.call(list.querySelectorAll("[data-shot]"));
+    var rest = items.length ? items[0].style.borderLeftColor : "";
+    items.forEach(function (item) {
+      new Image().src = item.getAttribute("data-shot-src");
+      item.setAttribute("role", "button");
+      item.setAttribute("tabindex", "0");
+      item.setAttribute("aria-pressed", "false");
+      function pick() {
+        var on = item.getAttribute("aria-pressed") !== "true";
+        items.forEach(function (other) {
+          other.classList.remove("is-active");
+          other.setAttribute("aria-pressed", "false");
+          other.style.borderLeftColor = rest;
+        });
+        if (on) {
+          item.classList.add("is-active");
+          item.setAttribute("aria-pressed", "true");
+          item.style.borderLeftColor = accent;
+          target.src = item.getAttribute("data-shot-src");
+          target.alt = "Tubes: " + item.textContent;
+        } else {
+          target.src = base.src;
+          target.alt = base.alt;
+        }
+      }
+      item.addEventListener("click", pick);
+      item.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); pick(); }
+      });
+    });
   });
   window.addEventListener("resize", fit);
   window.addEventListener("hashchange", function () { show(fromHash(), true); });

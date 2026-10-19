@@ -804,17 +804,21 @@ app.use("/mmg", (req, res, next) => {
   res.status(401).send("Password required.");
 });
 
-// ---------- Partnerdeck /partnership/ (Basic Auth) ----------
+// ---------- Freeway-deck /freeway/ (Basic Auth) ----------
 //
-// Presentatie voor een gesprek met Freeway Entertainment (src/partnership.njk).
-// Wachtwoord = env PARTNERSHIP_PASSWORD (gebruikersnaam leeg), met een fallback
-// in de code zoals bij /mmg/. De repo is publiek, dus die fallback is op GitHub
-// te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
+// Presentatie voor een gesprek met Freeway Entertainment (src/freeway.njk).
+// Stond eerst op /partnership/; die oude link stuurt door naar /freeway/.
+// Wachtwoord = env FREEWAY_PASSWORD (of het oude PARTNERSHIP_PASSWORD),
+// gebruikersnaam leeg, met een fallback in de code zoals bij /mmg/. De repo is publiek,
+// dus die fallback is op GitHub te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
 
-const PARTNERSHIP_PASSWORD = process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
+const FREEWAY_PASSWORD =
+  process.env.FREEWAY_PASSWORD || process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
 
-app.use("/partnership", (req, res, next) => {
-  const wanted = PARTNERSHIP_PASSWORD;
+app.use("/partnership", (req, res) => res.redirect(302, "/freeway/"));
+
+app.use("/freeway", (req, res, next) => {
+  const wanted = FREEWAY_PASSWORD;
   res.setHeader("X-Robots-Tag", "noindex, nofollow");
   res.setHeader("Cache-Control", "private, no-store");
   const header = req.headers.authorization || "";
@@ -825,7 +829,7 @@ app.use("/partnership", (req, res, next) => {
     const b = Buffer.from(wanted);
     if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
   }
-  res.set("WWW-Authenticate", 'Basic realm="Tubes partnership"');
+  res.set("WWW-Authenticate", 'Basic realm="Tubes for Freeway"');
   res.status(401).send("Password required.");
 });
 
