@@ -369,6 +369,7 @@ Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan wo
 ### /partnership/ (`src/partnership.njk`)
 
 - Deck voor een verkennend gesprek met Freeway Entertainment (16-10-2026): waar Tubes en Freeway op elkaar aansluiten, een pilot met Hongaarse klanten, volgende stappen. Dertien dia's. Algemene URL; de naam Freeway staat wel in de tekst.
+- 19-10-2026 herzien naar een adviesmail aan Joachim: verkennend gesprek in plaats van pitch, cover "Connecting production and finance", agendadia weg (wens Joachim), nieuwe donkere introdia "Why now" over een sector die sneller verandert dan haar verdienmodellen. Geen ontslagcijfers op de dia: die zijn niet gecontroleerd.
 - **Basic Auth** in server.js: lege gebruikersnaam, wachtwoord = env `PARTNERSHIP_PASSWORD`, met fallback `FreewayTubes26!` in de code (zoals /mmg/). Die fallback staat in deze publieke repo; Joachim vond dat goed genoeg, het is geen geheime informatie (16-10-2026). Het wachtwoord houdt toevallige bezoekers weg, maar de tekst staat in deze publieke repo en de screenshots (`deck-partnership-*.png`) zijn zonder wachtwoord op te vragen.
 - Artifact: https://claude.ai/artifact/9Ua2GzA5qBn9iPXPi1Q9Qw. De pagina is daaruit gegenereerd zonder sprekersnotities; blob-URL's vervangen door `imgSrc`-paden.
 - Screenshots komen uit de demo-omgeving (demo.tubesmedia.online, 16-10-2026): de Produce-hoofdpagina op de cover (navigatiemenu open, Emmy zichtbaar, VMS-badge verborgen; wens Joachim), forecast van The Morning Show (zonder variance-kolom), finance-overzicht.
