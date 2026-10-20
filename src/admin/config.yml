@@ -963,6 +963,7 @@ collections:
               - { label: Breedtegraad, name: lat, widget: number, value_type: float, required: false }
               - { label: Lengtegraad, name: lng, widget: number, value_type: float, required: false }
               - { label: Type, name: type, widget: select, options: ["Film festival", "Documentary festival", "Animation festival", "Genre festival", "Market", "Series & TV event", "Industry conference", "Trade show"] }
+              - { label: "Bereik", name: scope, widget: select, options: ["International", "National", "Local"], hint: "International: programma, competitie of standhouders uit veel landen. National: draait om de films of de branche van één land. Local: voor het publiek van de eigen stad of streek." }
               - { label: "Maand (bijv. February)", name: month, widget: string }
               - { label: "Volgende editie (alleen als gepubliceerd)", name: next_dates, widget: string, required: false }
               - { label: "Focus (1 zin)", name: focus, widget: text }

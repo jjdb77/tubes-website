@@ -38,10 +38,11 @@ sections:
     theme: light
     heading: Search festivals, tradeshows and events
     intro: |
-      Type what you are after ("documentary", "co-production forum", "broadcast technology"), filter by type, country or month, and select up to three events to compare their dates, focus, industry side and submission route.
+      Type what you are after ("documentary", "co-production forum", "broadcast technology"), filter by type, reach, country or month, and select up to three events to compare their dates, focus, industry side and submission route.
     search_placeholder: "Documentary, co-production market, broadcast technology ..."
     filters:
       - { key: type, label: Type }
+      - { key: scope, label: Reach }
       - { key: country, label: Country }
       - { key: month, label: Month }
     map: true
@@ -51,6 +52,7 @@ sections:
       tag: type
       text: focus
       meta:
+        - { label: Reach, key: scope }
         - { label: When, key: month }
         - { label: Next edition, key: next_dates }
         - { label: Industry, key: industry }
@@ -58,6 +60,7 @@ sections:
         - { label: Official site, key: official_url }
     compare_rows:
       - { label: Type, key: type, tag: true }
+      - { label: Reach, key: scope }
       - { label: When, key: month }
       - { label: Next edition, key: next_dates }
       - { label: Focus, key: focus }
@@ -107,6 +110,9 @@ sections:
       - question: Where do the dates come from?
         answer: |
           From the event's own website. If an event has not published its next dates, the field stays empty rather than being guessed, and the "When" field shows the usual month.
+      - question: What do International, National and Local mean?
+        answer: |
+          It says who an event is for. International means the programme, competition or exhibitors come from many countries. National means it centres on one country's films or industry, such as the Netherlands Film Festival or the Edinburgh TV Festival. Local means a festival for the audience of its own city or region. Small and new festivals are welcome; the year it started is in the comparison.
       - question: Can I submit a film through this page?
         answer: |
           No. Each card links to the official site and, where published, names the submission platform. You deal with the event directly.
