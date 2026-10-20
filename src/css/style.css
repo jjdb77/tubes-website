@@ -375,6 +375,7 @@ a:hover { color: var(--action); }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
 .hero-stacked .hero-media { width: 85%; margin: 0 auto; }
 .hero-after { max-width: 760px; margin: 0 auto; text-align: center; }
+.hero-after .kicker { display: inline-block; margin-bottom: 10px; }
 .hero-after .button-row { justify-content: center; margin-top: 20px; }
 
 /* Kaart rechts naast de tekst in een feature zonder beeld (section.aside,

@@ -30,6 +30,7 @@ sections:
     image: /assets/images/example-tubes-05.png
     image_alt: Projects overview and pipeline in Tubes
     media_below: true
+    heading_below: AI workflow automation
     text_below: AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs, giving production teams more time to focus on making the production happen.
     buttons_position: below
     buttons:

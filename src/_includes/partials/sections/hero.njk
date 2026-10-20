@@ -55,8 +55,9 @@
     </div>
     {% endif %}
     {#- Tekst en knoppen onder het beeld (homepage: de AI-zin en Request a Demo). -#}
-    {% if section.text_below or (section.buttons and section.buttons_position == 'below') %}
+    {% if section.heading_below or section.text_below or (section.buttons and section.buttons_position == 'below') %}
     <div class="hero-after">
+      {% if section.heading_below %}<span class="kicker">{{ section.heading_below }}</span>{% endif %}
       {% if section.text_below %}<div class="rich-text lead">{{ section.text_below | md | safe }}</div>{% endif %}
       {% if section.buttons and section.buttons_position == 'below' %}
       <div class="button-row">

@@ -455,6 +455,7 @@ collections:
                 fields:
                   - { label: Tekst, name: label, widget: string }
                   - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
+              - { label: "Kopje onder het beeld (optioneel)", name: heading_below, widget: string, required: false }
               - { label: "Tekst onder het beeld (optioneel)", name: text_below, widget: markdown, required: false }
               - { label: "Plek van de knoppen", name: buttons_position, widget: select, options: [{label: "Onder de tekst", value: ""}, {label: "Rechts naast de tekst (alleen zonder beeld)", value: side}, {label: "Onder het beeld", value: below}], required: false }
               - { label: "Minder witruimte onder de hero", name: tight, widget: boolean, required: false, default: false }
