@@ -83,4 +83,22 @@ sections:
     <p class="ac-meta">Studoo is made and owned by J.J. de Blois. Tubes uses it under licence for the Tubes Academy.</p>
   </div>
 </section>
+
+{#- Emmy, uitgebreid (idee Chris, 20-10-2026): het doel van "Discover Emmy" op
+    de homepage. Zelfde partial als het compacte blok daar. -#}
+{% set section = {
+  type: "emmy", theme: "white", anchor: "emmy", detailed: true,
+  kicker: "Meet your AI assistant",
+  heading: "Meet Emmy. Your guide to Tubes.",
+  lead: "Help and training, whenever you need them.",
+  text: "From finding answers to understanding workflows, Emmy helps your team get more from Tubes, with practical guidance whenever questions come up. She is there on every page, and answers about the screen you are working on.",
+  link_label: "See Emmy in a demo", link_url: "/contact/",
+  points: [
+    { heading: "Answers when you need them", text: "Get help with features and everyday questions, on the page you are working on." },
+    { heading: "Guidance as you go", text: "Understand workflows with step-by-step support, in your own words." },
+    { heading: "Confident teams", text: "New team members get up to speed without waiting for a training session." },
+    { heading: "Less friction", text: "Routine questions stop landing on a colleague." }
+  ]
+} %}
+{% include "partials/sections/emmy.njk" %}
 <script src="{{ assets.academy }}" defer></script>

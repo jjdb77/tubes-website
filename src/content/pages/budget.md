@@ -17,8 +17,8 @@ sections:
         url: /contact/
       - label: Plans & pricing
         url: /plans/
-    image: /assets/images/tubes-budget-dashboard.png
-    image_alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
+    image: /assets/images/deck-partnership-budget.png
+    image_alt: The budget editor in Tubes, with cost groups, budget and sales columns and a locked version
   - type: textblock
     theme: light
     heading: From a first draft to an approved budget

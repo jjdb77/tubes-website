@@ -17,8 +17,8 @@ sections:
         url: /contact/
       - label: Plans & pricing
         url: /plans/
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
+    image: /assets/images/deck-partnership-forecast.png
+    image_alt: Forecast list in Tubes with budget, work budget, committed costs, cost to date, EFC and variance per cost type
   - type: textblock
     theme: light
     heading: From an invoice to where the production stands

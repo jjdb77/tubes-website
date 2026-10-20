@@ -646,6 +646,28 @@ collections:
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: Introtekst, name: lead, widget: text, required: false, hint: "Een lege regel ertussen zet zinnen onder elkaar." }
             hint: "De inhoud van het overzicht (productietypes, stappen, verhalen) staat in src/_data/budgetPlanProduce.json, niet hier."
+          - name: emmy
+            label: "Emmy (AI-assistent)"
+            summary: "Emmy: {{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false, default: "Meet Emmy" }
+              - { label: Kop, name: heading, widget: string }
+              - { label: "Vette introzin (alleen uitgebreid)", name: lead, widget: string, required: false }
+              - { label: Tekst, name: text, widget: markdown }
+              - { label: "Linktekst", name: link_label, widget: string, required: false, default: "Discover Emmy" }
+              - { label: "Link naar", name: link_url, widget: string, required: false, default: "/academy/#emmy" }
+              - { label: "Avatar (leeg = Emmy's standaardfoto)", name: avatar, widget: image, required: false }
+              - { label: "Uitgebreide vorm (avatar rechts, knop, punten eronder)", name: detailed, widget: boolean, required: false, default: false }
+              - label: "Punten (alleen uitgebreid)"
+                name: points
+                widget: list
+                required: false
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: Kop, name: heading, widget: string }
+                  - { label: Tekst, name: text, widget: string }
+            hint: "Compact op de homepage: avatar links, één alinea, één link. Uitgebreid op /academy/ (daar in de template)."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"

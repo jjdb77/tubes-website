@@ -1,0 +1,40 @@
+{#- Emmy, de AI-assistent in Tubes, als eigen blok. Twee vormen:
+    - compact (homepage): avatar links, kicker, kop, één alinea, één tekstlink.
+      Naar het idee van Chris (20-10-2026): "a useful extra within Tubes, not a
+      major new product", hoogstens een half scherm.
+    - uitgebreid (`detailed: true`, Academy): avatar rechts, knop, en daaronder
+      vier punten (`points`).
+    Teksten in de front matter (CMS: "Emmy (AI-assistent)"); op /academy/ staat
+    het blok in de template zelf. Ontwerpvarianten: Claude Design-canvas
+    https://claude.ai/artifact/2NRHyEKQNPFV7ToHUuKwja -#}
+{%- set avatar = section.avatar or "/assets/images/emmy-avatar.jpg" -%}
+<section{% if section.anchor %} id="{{ section.anchor }}"{% endif %} class="section theme-{{ section.theme or 'light' }} section-emmy">
+  <div class="container">
+    <div class="emmy-card{% if section.detailed %} emmy-detailed{% endif %}">
+      <div class="emmy-avatar">
+        <img src="{{ avatar | imgSrc }}" alt="{{ section.avatar_alt or 'Emmy, the AI assistant in Tubes' }}" {{ avatar | imgSize | safe }} loading="lazy" decoding="async">
+        {% if section.detailed %}<p class="emmy-avatar-name">Emmy</p><p class="emmy-avatar-role">{{ section.avatar_role or 'Your AI assistant and virtual trainer' }}</p>{% endif %}
+      </div>
+      <div class="emmy-body">
+        {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+        {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
+        {% if section.lead %}<p class="emmy-lead">{{ section.lead }}</p>{% endif %}
+        <div class="rich-text">{{ section.text | md | safe }}</div>
+        {% if section.link_url and section.link_label %}
+        {% if section.detailed %}
+        <div class="button-row"><a class="button button-primary" href="{{ section.link_url }}">{{ section.link_label }}</a></div>
+        {% else %}
+        <a class="emmy-link" href="{{ section.link_url }}">{{ section.link_label }} <span aria-hidden="true">&rarr;</span></a>
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
+    {% if section.points %}
+    <ul class="emmy-points">
+      {% for point in section.points %}
+      <li><b>{{ point.heading }}</b><span>{{ point.text }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>

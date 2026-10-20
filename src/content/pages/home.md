@@ -27,8 +27,8 @@ sections:
       - key: produce
         name: Produce
         text: Keep production moving with real-time visibility of costs, commitments and performance.
-    image: /assets/images/example-tubes-05.png
-    image_alt: Projects overview and pipeline in Tubes
+    image: /assets/images/deck-partnership-produce.png
+    image_alt: Projects in production in Tubes, with the Budget, Plan and Produce menu and the AI assistant Emmy
     media_below: true
     heading_below: AI workflow automation
     text_below: AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs, giving production teams more time to focus on making the production happen.
@@ -48,8 +48,10 @@ sections:
     images:
       - src: /assets/images/tubes-budget-dashboard.png
         alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
-      - src: /assets/images/tubes-budget-builder.jpg
-        alt: The budget builder in Tubes, with cost groups, budget and sales columns
+      - src: /assets/images/deck-partnership-budget.png
+        alt: The budget editor in Tubes, with cost groups, budget and sales columns and a locked version
+      - src: /assets/images/deck-freeway-budget-ai.png
+        alt: Generate an AI budget in Tubes by describing the production
       - src: /assets/images/tubes-quotations-overview.jpg
         alt: The quotations overview in Tubes, with status counts and quotation cards per client
     images_interval: 5000
@@ -76,8 +78,14 @@ sections:
       Invoices are reviewed, approved and passed on to your accounting system, such as Xero. Commitments count before the invoice arrives, so you always know where the production stands.
 
       [More about cost control in Tubes](/produce/)
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Forecast list in Tubes with budget, committed costs, cost to date and variance per cost type
+    images:
+      - src: /assets/images/deck-partnership-forecast.png
+        alt: Forecast list in Tubes with budget, work budget, committed costs, cost to date, EFC and variance per cost type
+      - src: /assets/images/deck-freeway-produce-workflow.png
+        alt: Finance overview in Tubes with the invoice pipeline from review to export
+      - src: /assets/images/deck-freeway-produce-approval.png
+        alt: Invoices ready for approval in Tubes, with approvers and issues per invoice
+    images_interval: 5000
     media_large: true
   - type: textblock
     theme: white
@@ -89,6 +97,14 @@ sections:
       Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
 
       Using another accounting system? [Contact us](/contact/) to discuss integration.
+  - type: emmy
+    theme: light
+    kicker: Meet Emmy
+    heading: A little help goes a long way.
+    text: |
+      Emmy is your AI assistant and virtual trainer in Tubes, helping your team find answers, understand workflows and get confident using the system.
+    link_label: Discover Emmy
+    link_url: /academy/#emmy
   - type: feature
     theme: teal
     heading: Connect

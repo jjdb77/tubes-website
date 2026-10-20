@@ -513,6 +513,56 @@ a:hover { color: var(--action); }
 
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
 
+/* ---------- Emmy (AI-assistent) als eigen blok ---------- */
+
+/* Compact: een kaart van hoogstens 920px, avatar links, tekst rechts. */
+.emmy-card {
+  display: grid; grid-template-columns: 128px minmax(0, 1fr);
+  gap: 36px; align-items: center;
+  max-width: 920px; margin: 0 auto;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 36px 44px;
+}
+.emmy-avatar { text-align: center; }
+.emmy-avatar img {
+  width: 128px; height: 128px; border-radius: 50%; object-fit: cover;
+  border: 3px solid #E6C263; display: block; margin: 0 auto;
+}
+.emmy-card h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 0.35em; }
+.emmy-card .kicker { margin-bottom: 10px; }
+.emmy-card .rich-text p { margin: 0 0 0.6em; }
+.emmy-card .rich-text p:last-child { margin-bottom: 0; }
+.emmy-lead { margin: 0 0 0.6em; font-weight: 700; color: var(--status-blue-ink); }
+.emmy-link { display: inline-block; margin-top: 14px; font-weight: 700; color: var(--action); text-decoration: none; }
+.emmy-link:hover { color: var(--action-hover); text-decoration: underline; }
+/* Uitgebreid (Academy): tekst links, avatar rechts in een blauw vlak, punten eronder. */
+.emmy-detailed { max-width: none; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; padding: 44px 48px; }
+.emmy-detailed .emmy-avatar { order: 2; background: #EAF1FC; border-radius: 12px; padding: 28px 24px; }
+.emmy-detailed .emmy-avatar img { width: 150px; height: 150px; border: 4px solid #fff; box-shadow: 0 8px 24px -12px rgba(26, 26, 26, 0.35); }
+.emmy-avatar-name { margin: 14px 0 0; font-weight: 800; font-size: 1.15rem; color: var(--ink); }
+.emmy-avatar-role { margin: 2px 0 0; font-size: 0.9rem; font-weight: 600; color: var(--status-blue-ink); }
+.emmy-detailed h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+.emmy-detailed .button-row { margin-top: 20px; }
+.emmy-points {
+  list-style: none; margin: 24px auto 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.emmy-points li {
+  display: flex; flex-direction: column; gap: 4px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 22px;
+}
+.emmy-points li b { color: var(--ink); }
+.emmy-points li span { font-size: 0.97rem; line-height: 1.55; }
+@media (max-width: 700px) {
+  .emmy-card, .emmy-detailed { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px; text-align: center; }
+  .emmy-card .kicker { justify-content: center; }
+  .emmy-detailed .emmy-avatar { order: 0; }
+  .emmy-detailed .button-row { justify-content: center; }
+  .emmy-points { grid-template-columns: 1fr; }
+}
+
 .col-lead {
   font-weight: 700; color: var(--ink); font-size: 1.05rem;
   margin-bottom: 0.9em;
