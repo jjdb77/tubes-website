@@ -804,33 +804,79 @@ app.use("/mmg", (req, res, next) => {
   res.status(401).send("Password required.");
 });
 
-// ---------- Freeway-deck /freeway/ (Basic Auth) ----------
+// ---------- Freeway-deck /freeway/ (wachtwoordpagina) ----------
 //
 // Presentatie voor een gesprek met Freeway Entertainment (src/freeway.njk).
 // Stond eerst op /partnership/; die oude link stuurt door naar /freeway/.
-// Wachtwoord = env FREEWAY_PASSWORD (of het oude PARTNERSHIP_PASSWORD),
-// gebruikersnaam leeg, met een fallback in de code zoals bij /mmg/. De repo is publiek,
-// dus die fallback is op GitHub te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
+// Wachtwoord = env FREEWAY_PASSWORD (of het oude PARTNERSHIP_PASSWORD), met een
+// fallback in de code zoals bij /mmg/. De repo is publiek, dus die fallback is op
+// GitHub te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
+// Geen Basic Auth-venster meer (dat vraagt ook om een gebruikersnaam, wat verwarde):
+// een eigen pagina met alleen een wachtwoordveld zet een cookie met een HMAC van het
+// wachtwoord, 30 dagen geldig. Basic Auth met lege gebruikersnaam werkt nog voor curl.
 
 const FREEWAY_PASSWORD =
   process.env.FREEWAY_PASSWORD || process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
+const FREEWAY_COOKIE = "tubes_freeway";
+const freewayToken = () => crypto.createHmac("sha256", FREEWAY_PASSWORD).update("freeway").digest("base64url");
+
+const sameSecret = (given, wanted) => {
+  const a = Buffer.from(String(given || ""));
+  const b = Buffer.from(wanted);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+};
+
+const freewayLoginPage = (error) => `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Tubes for Freeway</title>
+<link rel="icon" href="/assets/images/t-logo-small.png">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #F6F7F9; color: #1A1A1A; font-family: Mulish, Arial, sans-serif; }
+  form { width: 100%; max-width: 360px; margin: 16px; padding: 36px 32px; background: #FFFFFF; border: 1px solid #E3E5E9; border-radius: 16px; box-shadow: 0 10px 24px -8px rgba(26, 26, 26, .14); }
+  img { height: 40px; margin-bottom: 24px; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  p { margin: 0 0 22px; font-size: 15px; color: #5C5750; }
+  label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 700; }
+  input { box-sizing: border-box; width: 100%; padding: 12px 14px; font: inherit; font-size: 16px; border: 1px solid #D5D8DD; border-radius: 10px; }
+  input:focus { outline: 3px solid #BFE9E1; border-color: #0E9C88; }
+  button { width: 100%; margin-top: 16px; padding: 12px; font: inherit; font-size: 16px; font-weight: 700; color: #FFFFFF; background: #0E9C88; border: 0; border-radius: 10px; cursor: pointer; }
+  .error { margin: 10px 0 0; font-size: 14px; color: #B91C1C; }
+</style></head>
+<body><form method="post" action="/freeway/login">
+  <img src="/assets/images/logo-tubes.png" alt="Tubes">
+  <h1>Tubes for Freeway</h1>
+  <p>Enter the password to view the presentation.</p>
+  <label for="password">Password</label>
+  <input id="password" name="password" type="password" autocomplete="current-password" autofocus required>
+  ${error ? '<p class="error">That password is not correct.</p>' : ""}
+  <button type="submit">View presentation</button>
+</form></body></html>`;
 
 app.use("/partnership", (req, res) => res.redirect(302, "/freeway/"));
 
 app.use("/freeway", (req, res, next) => {
-  const wanted = FREEWAY_PASSWORD;
   res.setHeader("X-Robots-Tag", "noindex, nofollow");
   res.setHeader("Cache-Control", "private, no-store");
-  const header = req.headers.authorization || "";
-  const [scheme, encoded] = header.split(" ");
+  if (req.method === "POST" && req.path === "/login") {
+    if (!sameSecret(req.body?.password, FREEWAY_PASSWORD)) {
+      return res.status(401).type("html").send(freewayLoginPage(true));
+    }
+    res.cookie(FREEWAY_COOKIE, freewayToken(), {
+      httpOnly: true, secure: req.secure || req.headers["x-forwarded-proto"] === "https",
+      sameSite: "lax", path: "/freeway", maxAge: 30 * 24 * 60 * 60 * 1000,
+    });
+    return res.redirect(303, "/freeway/");
+  }
+  for (const part of String(req.headers.cookie || "").split(";")) {
+    const [name, ...rest] = part.trim().split("=");
+    if (name === FREEWAY_COOKIE && sameSecret(rest.join("="), freewayToken())) return next();
+  }
+  const [scheme, encoded] = (req.headers.authorization || "").split(" ");
   if (scheme === "Basic" && encoded) {
     const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
-    const a = Buffer.from(pass);
-    const b = Buffer.from(wanted);
-    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
+    if (sameSecret(pass, FREEWAY_PASSWORD)) return next();
   }
-  res.set("WWW-Authenticate", 'Basic realm="Tubes for Freeway"');
-  res.status(401).send("Password required.");
+  res.status(401).type("html").send(freewayLoginPage(false));
 });
 
 // ---------- Oprichtingsdocumenten Appsolutions (Basic Auth) ----------
