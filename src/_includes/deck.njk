@@ -85,13 +85,15 @@
     body.tp-stack .tp-btn, body.tp-stack .tp-count { display: none; }
 
     /* Klikbare punten (data-shot): tonen het bijbehorende scherm in de afbeelding met data-shot-target. */
-    .tp-slide [data-shot] { cursor: pointer; transition: background-color .15s, box-shadow .15s; }
-    .tp-slide [data-shot]:hover { background: #FFFFFF; }
+    .tp-slide [data-shot] { position: relative; cursor: pointer; padding-right: 64px !important; background: #FFFFFF; border-top: 1px solid #E3E5E9; border-right: 1px solid #E3E5E9; border-bottom: 1px solid #E3E5E9; box-shadow: 0 1px 2px rgba(0, 0, 0, .05); touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: background-color .15s, box-shadow .15s, transform .15s; }
+    @media (hover: hover) { .tp-slide [data-shot]:not(.is-active):hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .12); transform: translateX(4px); } }
     .tp-slide [data-shot]:focus-visible { outline: 3px solid #0E9C88; outline-offset: 2px; }
-    .tp-slide [data-shot].is-active { background: #FFFFFF; box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
+    .tp-slide [data-shot].is-active { box-shadow: 0 4px 12px rgba(0, 0, 0, .14); color: #1A1A1A !important; }
+    .tp-slide .tp-shot-go { position: absolute; right: 16px; top: 50%; width: 34px; height: 34px; margin-top: -17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color .15s, color .15s; }
+    .tp-slide .tp-shot-go svg { width: 20px; height: 20px; margin: 2px 0 0 2px; }
     .tp-slide [data-shot-target] { transition: opacity .15s; }
-    .tp-slide .tp-shot-hint { display: flex; align-items: center; gap: 8px; padding: 2px 16px 0; font-size: 18px; line-height: 1.3; color: #8A8F98; }
-    .tp-slide .tp-shot-hint svg { width: 20px; height: 20px; flex: none; }
+    .tp-slide .tp-shot-hint { display: flex; align-items: center; gap: 10px; padding: 4px 4px 0; font-size: 22px; font-weight: 700; line-height: 1.3; }
+    .tp-slide .tp-shot-hint svg { width: 24px; height: 24px; flex: none; }
 
     @media (max-width: 520px) { .tp-home { display: none; } }
 
@@ -190,13 +192,28 @@
     var base = { src: target.getAttribute("src"), alt: target.getAttribute("alt") };
     var accent = list.getAttribute("data-shots");
     var items = Array.prototype.slice.call(list.querySelectorAll("[data-shot]"));
+    var preloaded = [];
     var rest = items.length ? items[0].style.borderLeftColor : "";
+    function paint(el, on) {
+      el.style.borderLeftColor = on ? accent : rest;
+      var go = el.querySelector(".tp-shot-go");
+      if (go) { go.style.background = on ? accent : rest; go.style.color = on ? "#FFFFFF" : accent; }
+    }
     var hint = document.createElement("p");
     hint.className = "tp-shot-hint";
     hint.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3 L6 15 L9.2 12.2 L11.4 17 L13.4 16.1 L11.2 11.4 L15.2 11.2 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Click a point to see it in Tubes';
+    hint.style.color = accent;
     if (items.length) items[items.length - 1].insertAdjacentElement("afterend", hint);
     items.forEach(function (item) {
-      new Image().src = item.getAttribute("data-shot-src");
+      var pre = new Image();
+      pre.src = item.getAttribute("data-shot-src");
+      preloaded.push(pre);
+      var go = document.createElement("span");
+      go.className = "tp-shot-go";
+      go.setAttribute("aria-hidden", "true");
+      go.innerHTML = '<svg viewBox="0 0 20 20"><path d="M6 3 L6 15 L9.2 12.2 L11.4 17 L13.4 16.1 L11.2 11.4 L15.2 11.2 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+      item.appendChild(go);
+      paint(item, false);
       item.setAttribute("role", "button");
       item.setAttribute("tabindex", "0");
       item.setAttribute("aria-pressed", "false");
@@ -205,12 +222,12 @@
         items.forEach(function (other) {
           other.classList.remove("is-active");
           other.setAttribute("aria-pressed", "false");
-          other.style.borderLeftColor = rest;
+          paint(other, false);
         });
         if (on) {
           item.classList.add("is-active");
           item.setAttribute("aria-pressed", "true");
-          item.style.borderLeftColor = accent;
+          paint(item, true);
           target.src = item.getAttribute("data-shot-src");
           target.alt = "Tubes: " + item.textContent;
         } else {
