@@ -25,6 +25,7 @@ Er werken soms **meerdere Claude-sessies tegelijk** in deze repo. Doe daarom alt
 - **Railway**, workspace "jjdb77's Projects", project **innovative-healing** (production), service **tubes-website** — naast appsolutions-cloud (de Tubes-app), 4relations en appconnected.
 - Auto-deploy bij push naar `main` van **github.com/jjdb77/tubes-website**.
 - Domeinen op de service: www.tubes.media en tubes.appconnected.nl (testadres). Het kale tubes.media 301't via Squarespace naar www.
+- ⚠️ **Een push wordt niet altijd gebouwd.** Op 20-10-2026 pauzeerde Railway anderhalf uur alle builds (storing, status.railway.com), en een push in die periode wordt daarna **niet** alsnog opgepakt: de deploy moet opnieuw. Zie je na een push geen nieuwe deployment (`railway deployment list --json`, na `railway link --project innovative-healing --service tubes-website --environment production`), kijk dan eerst op status.railway.com. Opnieuw triggeren zonder lege commit: een schone export van main (`git archive origin/main | tar -x -C <map>`) en daar `railway up --detach --service tubes-website`.
 - Truc bij "Waiting for DNS update" in Railway: domein verwijderen en direct opnieuw toevoegen forceert een verse DNS-check.
 
 ## Formulier & beheerpagina
