@@ -62,7 +62,7 @@ const CITY = {
   "ee-tallinnfilm-studio-paljassaare": "Tallinn", "lt-kino-manufaktura": "Vilnius", "lt-ks-independent-film-studio": "Bareikiškės",
   "lt-lithuanian-film-studio": "Vilnius", "lt-vilnius-film-cluster-green-screen-studio": "Vilnius",
   "ro-creic-film-studio-cluj": "Cluj-Napoca", "sk-a4-studio": "Bratislava", "sk-koliba-studios": "Bratislava",
-  "sk-shining-studio": "Stupava", "uk-northern-studios-hartlepool": "Hartlepool",
+  "sk-shining-studio": "Stupava", "uk-northern-studios-hartlepool": "Hartlepool", "de-vg-studio-the-wall": "Laichingen",
 };
 const city = (l, prev) => {
   const key = Object.keys(CITY).find((k) => l.id.startsWith(k) || k.startsWith(l.id));

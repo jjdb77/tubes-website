@@ -16835,6 +16835,25 @@
       "commission_url": "https://film.mfg.de"
     },
     {
+      "id": "de-vg-studio-the-wall",
+      "name": "vg studio - the wall",
+      "country": "Germany",
+      "region": "Baden-Wurttemberg",
+      "lat": 48.4912,
+      "lng": 9.7077,
+      "type": "Studio & backlot",
+      "setting": "LED volume for virtual production in Laichingen, between Ulm and Stuttgart, with an 85 m2 wall extendable to 107 m2, camera tracking and real-time rendering.",
+      "facilities": "17 m by 5 m LED wall plus a movable Wild Wall (ceiling, corner or extension), 4 m by 9.5 m ceiling rig that lowers to the floor and carries up to 4 t, acoustically treated stage for dialogue recording, reinforced concrete floor with a 4 m by 4.5 m drive-in door, markerless motion capture for up to five performers, in-house workshop, production office for up to 40 people, and a hair and make-up room.",
+      "suitability": "Commercials, film and television shot in the LED volume, with the studio running the virtual production workflow alongside the production's own camera, lighting and art departments.",
+      "official_url": "https://vg.studio/",
+      "source_urls": [
+        "https://vg.studio/",
+        "https://vg.studio/studio",
+        "https://vg.studio/impressum"
+      ],
+      "commission_url": "https://film.mfg.de"
+    },
+    {
       "id": "de-leichtathletikhalle-erfurt",
       "name": "Leichtathletikhalle Erfurt (Hartwig-Gauder-Halle)",
       "country": "Germany",
