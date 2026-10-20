@@ -99,12 +99,23 @@ sections:
       Using another accounting system? [Contact us](/contact/) to discuss integration.
   - type: emmy
     theme: light
-    kicker: Meet Emmy
-    heading: A little help goes a long way.
+    detailed: true
+    kicker: Meet your AI assistant
+    heading: Meet Emmy. Your guide to Tubes.
+    lead: Help and training, whenever you need them.
     text: |
-      Emmy is your AI assistant and virtual trainer in Tubes, helping your team find answers, understand workflows and get confident using the system.
-    link_label: Discover Emmy
-    link_url: /academy/#emmy
+      From finding answers to understanding workflows, Emmy helps your team get more from Tubes, with practical guidance whenever questions come up. She is there on every page, and answers about the screen you are working on.
+    link_label: See Emmy in a demo
+    link_url: /contact/
+    points:
+      - heading: Answers when you need them
+        text: Get help with features and everyday questions, on the page you are working on.
+      - heading: Guidance as you go
+        text: Understand workflows with step-by-step support, in your own words.
+      - heading: Confident teams
+        text: New team members get up to speed without waiting for a training session.
+      - heading: Less friction
+        text: Routine questions stop landing on a colleague.
   - type: feature
     theme: teal
     heading: Connect
