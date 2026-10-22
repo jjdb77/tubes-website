@@ -395,6 +395,12 @@ Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan wo
 - **Klikbare punten** (wens Joachim): op de dia's Budget, Produce en Connect toont elk punt bij een klik het bijbehorende scherm (`deck-freeway-budget-*.png`, uit de demo 19-10-2026; "Change with confidence" toont het tabblad Saved versions van het panel Saved & Global; "Compare versions" de budgetvergelijking Morning Show 2025 8 vs 12 EPS, waarin de als ruwe HTML getoonde bedragen per aflevering voor de screenshot zijn rechtgezet); nog eens klikken zet de budgeteditor terug. Markup: lijst met `data-shots="<accentkleur>"`, punten met `data-shot="<dia>-<naam>"`, afbeelding met `data-shot-target` (de screenshot, niet het logo); het generatiescript voegt `data-shot-src` toe (`deck-freeway-<dia>-<naam>.png`) en de JS staat in `_includes/deck.njk`, die onder de punten ook de hint "Click a point to see it in Tubes" zet. Alleen op de website: het artifact toont het standaardscherm.
 - Vanaf dia 4, na de uitleg van de drie stappen, staat rechtsboven een balk "Part of: Budget · Plan · Produce" (wens Joachim). Het onderdeel waar de dia over gaat is in kleur, de rest gedimd; dia's over de samenwerking tonen alle drie.
 
+### /presentation/ (`src/presentation.njk`)
+
+- Algemene presentatie voor productiebedrijven (22-10-2026, wens Joachim): kopie van /freeway/ zonder Freeway, zonder wachtwoord. Niet in menu, footer, sitemap of llms.txt; noindex.
+- Verschillen met /freeway/: cover-ondertitel "Production management software for film, TV and entertainment.", label "Meet Tubes" in plaats van "What's new in Tubes", slotdia "Let's talk about your next production." met contact@tubes.media, telefoon en tubes.media (tekst Joachim). Zelfde screenshots en klikbare punten (`deck-freeway-*.png`).
+- Wijzigingen aan /freeway/ komen hier niet vanzelf in: twee losse bestanden.
+
 ## Locatiegids, bedrijvengids en incentive-vergelijking
 
 Vrij toegankelijke pagina's (geen login), volledig los van de Tubes-app; Tubes wordt alleen via tekst en CTA's gepromoot. **Primair** (wens Joachim): het zoeken en vergelijken van concrete locaties. Voor nu alleen Europa, zonder Rusland en Wit-Rusland.
