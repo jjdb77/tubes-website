@@ -399,6 +399,7 @@ Presentaties als losse pagina, zodat een deck met een gewone link gedeeld kan wo
 
 - Algemene presentatie voor productiebedrijven (22-10-2026, wens Joachim): kopie van /freeway/ zonder Freeway, zonder wachtwoord. Niet in menu, footer, sitemap of llms.txt; noindex.
 - Verschillen met /freeway/: cover-ondertitel "Production management software for film, TV and entertainment.", label "Meet Tubes" in plaats van "What's new in Tubes", slotdia "Let's talk about your next production." met contact@tubes.media, telefoon en tubes.media (tekst Joachim). Zelfde screenshots en klikbare punten (`deck-freeway-*.png`).
+- De cover toont de datum van vandaag (`data-today`, gezet door een inline script bij het openen; wens Joachim 22-10-2026), dus niet bijwerken.
 - Wijzigingen aan /freeway/ komen hier niet vanzelf in: twee losse bestanden.
 
 ## Locatiegids, bedrijvengids en incentive-vergelijking
