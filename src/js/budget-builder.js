@@ -8,7 +8,7 @@
  * - Opslaan van een versie vraagt om een account (e-mail + wachtwoord); de
  *   server (server.js, /api/tools/*) bewaart hoogstens tien versies van één
  *   budget met hoogstens 2000 regels. Inloggen kan vooraf, tussendoor of achteraf.
- * - Import: Movie Magic-export of elk budget als xlsx/CSV, via de lezer van de
+ * - Import: budgetexport als xlsx/CSV, via de lezer van de
  *   vergelijkingstool (window.BudgetCompare uit budget-compare.js).
  * - Formaten (rekeningschema's) komen uit budget-templates.js (window.BudgetTemplates).
  * - Export: Excel in de lay-out van de Tubes-export (eigen minimale xlsx-schrijver,
@@ -888,7 +888,7 @@
     }
   });
 
-  // ---------- Import (Movie Magic of elk budgetbestand) ----------
+  // ---------- Import van budgetbestanden ----------
 
   let importResult = null;
   const importStatus = $("[data-bb-import-status]");

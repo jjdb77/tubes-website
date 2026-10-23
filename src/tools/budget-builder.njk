@@ -31,9 +31,7 @@ sections:
 
     Teksten zijn geschreven vanuit de gebruiker (producent), niet vanuit de
     software: geen JSON, formules of datastructuren in de hoofdteksten; dat
-    soort details staat achter "details"-uitklappers of in de FAQ. Movie Magic
-    wordt alleen genoemd als naam van het sjabloon, in de importdetails en in
-    de FAQ, niet in intro- of begeleidende teksten (wens Joachim).
+    soort details staat achter "details"-uitklappers of in de FAQ.
 
     data-storage: "local" = versies in de browser (actief); "account" = versies
     op de server met e-mail en wachtwoord (code blijft aanwezig; bij
@@ -180,7 +178,7 @@ sections:
     <p class="bb-dialog-note">Have a Tubes budget file from an earlier download? <label class="bc-link-button bb-inline-file">Open it here<input class="visually-hidden" type="file" accept=".json,application/json" data-bb-file-open></label>.</p>
     <details class="bb-details">
       <summary>Import details</summary>
-      <p>Excel and CSV files need a description and an amount per cost; a code column and headings or a section column are used when present. Movie Magic Budgeting exports (.xlsx) are recognised, including the topsheet structure. Each imported cost keeps its amount, shown as quantity 1 at that rate, so your totals stay the same; adjust quantities and rates afterwards if you like.</p>
+      <p>Excel and CSV files need a description and an amount per cost; a code column and headings or a section column are used when present. Exports from other film budgeting tools are recognised, including files with a separate topsheet. Each imported cost keeps its amount, shown as quantity 1 at that rate, so your totals stay the same; adjust quantities and rates afterwards if you like.</p>
     </details>
   </dialog>
 
@@ -243,8 +241,8 @@ This gives you a clear view of what has been spent, what is still expected and h
       answer: "No. You can build, save, import and download budgets without an account. Everything happens in your browser." },
     { question: "Can I import an existing budget?",
       answer: "Yes. Import an Excel or CSV file with your costs, or an export from your budgeting software. You can replace your current budget or add the imported costs to it." },
-    { question: "Can I import a Movie Magic budget?",
-      answer: "Yes. Export your budget from Movie Magic Budgeting as an Excel file and import it here; the categories and accounts come through, including the topsheet structure. You can also start from the Movie Magic template without importing anything." },
+    { question: "Can I import a budget from another tool?",
+      answer: "Yes. Export your budget as an Excel or CSV file and import it here. Categories and account codes are retained when they are present, including files with a separate topsheet." },
     { question: "What can I download?",
       answer: "Excel (an editable spreadsheet in the layout Tubes uses, which also opens in Tubes), CSV, or a PDF via the print window. For a full backup of your work, download a Tubes budget file under Saved versions." },
     { question: "Where is my budget saved?",
