@@ -14,6 +14,22 @@ const BC = globalThis.BudgetCompare;
 let n = 0;
 const t = (name, fn) => { n++; try { fn(); console.log("ok  ", name); } catch (e) { console.log("FAIL", name, "\n     ", e.message); process.exitCode = 1; } };
 
+globalThis.window = globalThis;
+vm.runInThisContext(fs.readFileSync(path.join(here, "..", "src", "js", "budget-templates.js"), "utf8"));
+t("Tubes-template: eigen indeling met unieke groepen en kostensoorten", () => {
+  const template = globalThis.BudgetTemplates.find((candidate) => candidate.id === "tubes-production");
+  assert.ok(template);
+  assert.equal(template.name, "Tubes Production Budget");
+  assert.equal(template.sections.length, 35);
+  assert.equal(template.sections.reduce((total, section) => total + section.lines.length, 0), 330);
+  assert.equal(template.sections[0].number, "0100");
+  assert.equal(template.sections[0].name, "Development & Research");
+  assert.equal(template.sections.at(-1).number, "3500");
+  const codes = template.sections.flatMap((section) => section.lines.map((line) => line.code));
+  assert.equal(new Set(codes).size, codes.length);
+  assert.ok(!JSON.stringify(template).toLowerCase().includes("movie magic"));
+});
+
 t("parseNum: getypte getallen in beide notaties", () => {
   assert.equal(C.parseNum("1,5"), 1.5);
   assert.equal(C.parseNum("1.5"), 1.5);

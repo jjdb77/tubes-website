@@ -952,12 +952,12 @@
     id: "sample", name: "Example budget", description: "A small drama budget with figures filled in, to see how it works.",
     additionals: [{ name: "Contingency", percent: 10 }],
     sections: [
-      { number: "1100", name: "Development, story, rights", lines: [{ code: "1102", description: "Development", remarks: "Scouting, prep", qty: 1, unit: "allow", rate: 60000 }, { code: "1104", description: "Script & development", qty: 1, unit: "allow", rate: 85000 }] },
-      { number: "1200", name: "Producers", lines: [{ code: "1201", description: "Producers", qty: 2, unit: "flat", rate: 140000 }, { code: "1206", description: "Line producer", qty: 12, unit: "weeks", rate: 5362.17 }] },
-      { number: "1300", name: "Direction", lines: [{ code: "1301", description: "Director", qty: 1, unit: "flat", rate: 115946 }] },
-      { number: "1400", name: "Cast", lines: [{ code: "1401", description: "Principal cast", remarks: "2 leads", qty: 2, unit: "flat", rate: 179000 }, { code: "1402", description: "Supporting cast", qty: 8, unit: "weeks", rate: 25250 }, { code: "1404", description: "Stunt coordinator", qty: 6, unit: "weeks", rate: 6000 }, { code: "1420", description: "Casting director", qty: 1, unit: "flat", rate: 126025 }] },
-      { number: "1500", name: "ATL travel & living", lines: [{ code: "1520", description: "ATL hotel", qty: 60, unit: "nights", rate: 890 }, { code: "1535", description: "Per diems", qty: 1, unit: "allow", rate: 27072 }] },
-      { number: "2000", name: "Production staff", lines: [{ code: "2001", description: "Production manager", remarks: "incl. prep", qty: 10, unit: "weeks", rate: 11074.6 }, { code: "2002", description: "Production coordinator", qty: 10, unit: "weeks", rate: 9400 }] },
+      { number: "0100", name: "Development & Research", lines: [{ code: "0103", description: "Concept development", remarks: "Research and prep", qty: 1, unit: "allow", rate: 60000 }, { code: "0106", description: "Screenplay writing", qty: 1, unit: "allow", rate: 85000 }] },
+      { number: "0300", name: "Producing & Business Affairs", lines: [{ code: "0303", description: "Lead producer", qty: 2, unit: "flat", rate: 140000 }, { code: "0312", description: "Line producer", qty: 12, unit: "weeks", rate: 5362.17 }] },
+      { number: "0400", name: "Directing & Creative Leadership", lines: [{ code: "0403", description: "Director", qty: 1, unit: "flat", rate: 115946 }] },
+      { number: "0500", name: "Cast, Casting & Performance", lines: [{ code: "0503", description: "Principal cast", remarks: "2 leads", qty: 2, unit: "flat", rate: 179000 }, { code: "0506", description: "Supporting cast", qty: 8, unit: "weeks", rate: 25250 }, { code: "0518", description: "Casting director", qty: 1, unit: "flat", rate: 126025 }] },
+      { number: "0600", name: "Production Management & Accounts", lines: [{ code: "0603", description: "Production manager", remarks: "incl. prep", qty: 10, unit: "weeks", rate: 11074.6 }, { code: "0606", description: "Production coordinator", qty: 10, unit: "weeks", rate: 9400 }] },
+      { number: "0900", name: "Travel, Accommodation & Daily Allowances", lines: [{ code: "0909", description: "Hotels and accommodation", qty: 60, unit: "nights", rate: 890 }, { code: "0912", description: "Daily allowances", qty: 1, unit: "allow", rate: 27072 }] },
     ],
   };
 

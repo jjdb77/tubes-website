@@ -1,7 +1,7 @@
 // Maakt het gratis Excel-sjabloon voor /film-budget-template/:
-// src/downloads/tubes-film-budget-template.xlsx. Zelfde rekeningschema als
-// het Movie Magic-formaat van de Budget Builder (src/js/budget-templates.js)
-// en dezelfde Excel-schrijver (buildXlsxFor in src/js/budget-builder.js), dus
+// src/downloads/tubes-film-budget-template.xlsx. Zelfde eigen rekeningschema
+// als de Budget Builder (src/js/budget-templates.js) en dezelfde Excel-
+// schrijver (buildXlsxFor in src/js/budget-builder.js), dus
 // het bestand is precies wat de Budget Builder ook zou downloaden: alle
 // categorieën en kostensoorten, bedragen leeg, formules per regel, contingency
 // als invulbaar percentage en een tweede blad per categorie.
@@ -19,17 +19,12 @@ globalThis.window = globalThis;
 vm.runInThisContext(fs.readFileSync(path.join(root, "src/js/budget-templates.js"), "utf8"));
 vm.runInThisContext(fs.readFileSync(path.join(root, "src/js/budget-builder.js"), "utf8"));
 
-const format = globalThis.BudgetTemplates.find((t) => t.id === "movie-magic");
-// Twee categorieën blijven eruit: 7000 Contingency, want die staat onderaan
-// als percentage (dubbel zou verwarren), en 7100 SA Rebate, een korting die
-// bij één land hoort en geen kostensoort is.
-const SKIP = new Set(["7000", "7100"]);
+const format = globalThis.BudgetTemplates.find((template) => template.id === "tubes-production");
 const sections = format.sections
-  .filter((s) => !SKIP.has(s.number))
   .map((s) => ({ number: s.number, name: s.name, lines: s.lines.map((l) => ({ code: l.code, description: l.description, remarks: "", qty: 0, unit: "", rate: 0 })) }));
 
 const budget = {
-  name: "Film budget template",
+  name: "Tubes Production Budget",
   production: "",
   currency: "",
   vat: null, // geen btw-regels: die verschillen per land, en de meeste budgetten zijn exclusief
