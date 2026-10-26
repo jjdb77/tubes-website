@@ -67,3 +67,4 @@ film-tv/2026-10-15/yospace-court-tv  # reclametechniek
 2026-10-20/amazon-luna-prime-video  # gaming
 2026-10-20/cats-rijksmuseum-carre  # musical
 2026-10-15/vlaamse-ai-technologie-emmy  # technische prijs, techniek
+film-tv/2026-10-15/netflix-duizend-banen  # dubbel met netflix-cuts-thousand-jobs
