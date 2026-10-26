@@ -1,4 +1,4 @@
-<section class="section theme-{{ section.theme or 'white' }}">
+<section{% if section.anchor %} id="{{ section.anchor }}"{% endif %} class="section theme-{{ section.theme or 'white' }}">
   <div class="container textblock{% if section.narrow %} narrow{% endif %}">
     {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
     {% if section.lead %}<p class="col-lead">{{ section.lead }}</p>{% endif %}

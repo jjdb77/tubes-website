@@ -1,11 +1,12 @@
 ---
 permalink: /news/
-title: News
-seo_title: "Film and TV industry news | Tubes"
-description: "New tools, guides and product updates from Tubes, plus the film and TV posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
+title: The Daily Tubes
+seo_title: "The Daily Tubes: Film and TV Industry News | Tubes"
+description: "The latest film and TV headlines, and the posts we are reading on LinkedIn: budgets, financing, AI in production, festivals and markets."
 ---
-{#- Twee stromen op één pagina: collectie `news` (eigen aankondigingen uit
-    src/content/news) en collectie `linkedin` (posts uit de branche die we op
+{#- Twee stromen op één pagina (de eigen aankondigingen, collectie `news`,
+    staan sinds 9-10-2026 op /whats-new/): collectie `headlines` (film- en tv-koppen met eigen pagina op
+    /news/<slug>/, src/content/headlines) en collectie `linkedin` (posts uit de branche die we op
     LinkedIn tegenkwamen, uit src/content/linkedin). Zie eleventy.config.js. -#}
 {%- set topicChip = {
   "Budgeting": "chip",
@@ -14,6 +15,13 @@ description: "New tools, guides and product updates from Tubes, plus the film an
   "Festivals": "chip chip-blue",
   "Filmmaking": "chip chip-amber",
   "Television": "chip chip-slate"
+} -%}
+{%- set headlineChip = {
+  "Business": "chip chip-amber",
+  "Streaming": "chip chip-blue",
+  "Awards & festivals": "chip chip-lavender",
+  "Box office": "chip chip-mint",
+  "Rights & AI": "chip chip-slate"
 } -%}
 {%- macro linkedinIcon() -%}
 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
@@ -41,41 +49,51 @@ description: "New tools, guides and product updates from Tubes, plus the film an
     <section class="section section-hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="kicker">News</span>
-          <h1>News for <em>production</em> teams</h1>
+          <span class="kicker">News for production teams</span>
+          <h1>The Daily <em>Tubes</em></h1>
           <div class="rich-text lead">
-            <p>Two things in one place: new tools, guides and product updates from Tubes, and the film and television posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets.</p>
+            <p>The latest film and television headlines, and the posts worth your time from our LinkedIn feed. Budgets and financing, AI in production, festivals and markets. Looking for updates from Tubes itself? See <a href="/whats-new/">what&rsquo;s new at Tubes</a>.</p>
           </div>
           <div class="button-row jump-row">
-            {%- if collections.news.length %}
-            <a class="button button-secondary jump-link" href="#whats-new">What&rsquo;s new at Tubes <span aria-hidden="true">&darr;</span></a>
+            {%- if collections.headlines.length %}
+            <a class="button button-secondary jump-link" href="#headlines">Headlines <span aria-hidden="true">&darr;</span></a>
             {%- endif %}
             {%- if collections.linkedin.length %}
             <a class="button button-secondary jump-link" href="#from-the-industry">From the industry <span aria-hidden="true">&darr;</span></a>
             {%- endif %}
             <a class="button button-primary" href="{{ settings.socials.linkedin }}" target="_blank" rel="noopener">Follow Tubes on LinkedIn</a>
           </div>
+          <p class="form-status daily-notice" data-daily-notice hidden></p>
+          {% include "partials/daily-subscribe.njk" %}
         </div>
         {#- Zelfde reclameblok als op de andere gratis tools; tekst uit tubesPromo.json. -#}
         {% set promoVariant = "hero" %}{% include "partials/company-promo.njk" %}
       </div>
     </section>
 
-    <section class="section theme-white" id="whats-new">
+
+    {%- if collections.headlines.length %}
+    <section class="section" id="headlines">
       <div class="container">
-        <h2 class="section-heading">What&rsquo;s new at Tubes</h2>
-        <ul class="news-list">
-          {%- for item in collections.news %}
-          <li class="news-item">
-            <time datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time>
-            <h2>{{ item.data.title }}</h2>
-            <p>{{ item.data.summary }}</p>
-            {% if item.data.url %}<a class="news-link" href="{{ item.data.url }}">{{ item.data.link_label or "Read more" }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+        <h2 class="section-heading feed-heading">Film and television headlines</h2>
+        <div class="rich-text section-intro">
+          <p>The stories of the day that matter to people who make films and series, summarised in our own words, with links to the original reporting.</p>
+        </div>
+        {#- Eén lijst, nieuwste bovenaan, met de datum per kop: een dagblad, dus
+            geen weekkoppen (Joachim 10-10-2026). -#}
+        <ul class="feed-list">
+        {%- for item in collections.headlines %}
+          <li class="feed-card headline-card">
+            <div class="feed-meta"><span class="{{ headlineChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span><time class="feed-date" datetime="{{ item.date | isoDate }}">{{ item.date | readableDate }}</time></div>
+            <h3 class="headline-title">{{ item.data.title }}</h3>
+            <div class="feed-summary"><p>{{ item.data.summary }}</p></div>
+            <a class="feed-link" href="{{ item.url }}"><span>Read more</span> <span aria-hidden="true">&rarr;</span></a>
           </li>
-          {%- endfor %}
+        {%- endfor %}
         </ul>
       </div>
     </section>
+    {%- endif %}
 
     {%- if collections.linkedin.length %}
     <section class="section" id="from-the-industry">
@@ -84,13 +102,8 @@ description: "New tools, guides and product updates from Tubes, plus the film an
         <div class="rich-text section-intro">
           <p>Interesting public posts we come across on LinkedIn, briefly summarised in our own words. The views and ideas belong to the original authors. Read the original post on LinkedIn for the full picture.</p>
         </div>
-        {%- for item in collections.linkedin %}
-        {%- set week = item.date | weekRange %}
-        {%- if loop.first or (collections.linkedin[loop.index0 - 1].date | weekRange) != week %}
-        {%- if not loop.first %}</ul>{% endif %}
-        <h3 class="feed-week">{{ week }}</h3>
         <ul class="feed-list">
-        {%- endif %}
+        {%- for item in collections.linkedin %}
           <li class="feed-card{% if not item.data.link %} feed-card-nolink{% endif %}">
             <span class="{{ topicChip[item.data.topic] or 'chip' }} feed-chip">{{ item.data.topic }}</span>
             <h3 class="feed-from">From <span class="feed-name">{{ item.data.source }}</span> on LinkedIn</h3>
@@ -112,8 +125,8 @@ description: "New tools, guides and product updates from Tubes, plus the film an
             <p class="feed-link feed-link-none">Shared on LinkedIn by {{ item.data.source }}</p>
             {%- endif %}
           </li>
-        {%- if loop.last %}</ul>{% endif %}
         {%- endfor %}
+        </ul>
       </div>
     </section>
     {%- endif %}

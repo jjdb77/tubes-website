@@ -4824,6 +4824,31 @@
    "photo": null
   },
   {
+   "id": "de-vg-studio-the-wall",
+   "name": "vg studio - the wall",
+   "city": "Laichingen",
+   "country": "Germany",
+   "lat": 48.4912,
+   "lng": 9.7077,
+   "type": "Studio",
+   "specialism": "Virtual production stage",
+   "summary": "LED volume for virtual production in Laichingen, between Ulm and Stuttgart, with an 85 m2 wall extendable to 107 m2, camera tracking and real-time rendering.",
+   "services": "Commercials, film and television shot in the LED volume, with the studio running the virtual production workflow alongside the production's own camera, lighting and art departments.",
+   "credits": null,
+   "facilities": "17 m by 5 m LED wall plus a movable Wild Wall (ceiling, corner or extension), 4 m by 9.5 m ceiling rig that lowers to the floor and carries up to 4 t, acoustically treated stage for dialogue recording, reinforced concrete floor with a 4 m by 4.5 m drive-in door, markerless motion capture for up to five performers, in-house workshop, production office for up to 40 people, and a hair and make-up room.",
+   "group": null,
+   "founded": null,
+   "official_url": "https://vg.studio/",
+   "source_urls": [
+    "https://vg.studio/",
+    "https://vg.studio/studio",
+    "https://vg.studio/impressum"
+   ],
+   "photo": null,
+   "guide_id": "de-vg-studio-the-wall",
+   "guide_url": "/compare-film-tv-locations/#loc-de-vg-studio-the-wall"
+  },
+  {
    "id": "de-volucap-babelsberg",
    "name": "Volucap Max (Studio Babelsberg FX Center)",
    "city": "Berlin",
@@ -6473,7 +6498,7 @@
     "https://cinecitta.com/en/studios/services/virtual-production/"
    ],
    "photo": {
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ingressostorico_cinecitta.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ingressostorico_cinecitta.jpg/960px-Ingressostorico_cinecitta.jpg",
     "file_page": "https://commons.wikimedia.org/wiki/File:Ingressostorico_cinecitta.jpg",
     "author": "Andrea Martella",
     "license": "CC BY-SA 4.0"
@@ -12625,7 +12650,7 @@
     "https://www.ciudaddelaluz.com/production-buildings"
    ],
    "photo": {
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Platos_ciudadluz.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Platos_ciudadluz.jpg/960px-Platos_ciudadluz.jpg",
     "file_page": "https://commons.wikimedia.org/wiki/File:Platos_ciudadluz.jpg",
     "author": "Kasiber (assumed)",
     "license": "CC BY-SA 3.0"
@@ -12805,7 +12830,12 @@
     "https://fortbravo.org/entradas/",
     "https://fortbravo.org/"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG/960px-Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Grand_Central_Bank_Fort_Bravo_Texas_Hollywood.JPG",
+    "author": "REVUpminster",
+    "license": "CC BY-SA 3.0"
+   },
    "guide_id": "es-fort-bravo",
    "guide_url": "/compare-film-tv-locations/#loc-es-fort-bravo"
   },
@@ -13563,7 +13593,7 @@
     "https://filmivast.se/samproducera-med-oss/produktion/studio-fares-var-fullskaliga-filmstudio"
    ],
    "photo": {
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Film_I_V%C3%A4st_Entr%C3%A9.jpg/960px-Film_I_V%C3%A4st_Entr%C3%A9.jpg",
     "file_page": "https://commons.wikimedia.org/wiki/File:Film_I_V%C3%A4st_Entr%C3%A9.jpg",
     "author": "User Tubaist on sv.wikipedia",
     "license": "CC BY-SA 3.0"
@@ -14788,7 +14818,12 @@
     "https://www.braystudios.com/",
     "https://www.braystudios.com/stages"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg/960px-Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Bray_Film_Studios_-_geograph.org.uk_-_1591972.jpg",
+    "author": "Chris Allen",
+    "license": "CC BY-SA 2.0"
+   },
    "guide_id": "uk-bray-studios",
    "guide_url": "/compare-film-tv-locations/#loc-uk-bray-studios"
   },
@@ -15605,7 +15640,12 @@
     "https://www.lxss.co.uk/",
     "https://en.wikipedia.org/wiki/Longcross_Studios"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Longcross_Studios_Gate_2%2C_Burma_Road_-_geograph.org.uk_-_7530111.jpg/960px-Longcross_Studios_Gate_2%2C_Burma_Road_-_geograph.org.uk_-_7530111.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Longcross_Studios_Gate_2,_Burma_Road_-_geograph.org.uk_-_7530111.jpg",
+    "author": "David Kemp",
+    "license": "CC BY-SA 2.0"
+   },
    "guide_id": "uk-longcross-studios",
    "guide_url": "/compare-film-tv-locations/#loc-uk-longcross-studios"
   },
@@ -16214,7 +16254,12 @@
     "https://pinewoodgroup.com/shepperton-studios/stages-and-support-spaces/",
     "https://en.wikipedia.org/wiki/Shepperton_Studios"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shepperton_Studios.jpg/960px-Shepperton_Studios.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Shepperton_Studios.jpg",
+    "author": "alexander williams",
+    "license": "CC BY-SA 3.0"
+   },
    "guide_id": "uk-shepperton-studios",
    "guide_url": "/compare-film-tv-locations/#loc-uk-shepperton-studios"
   },
@@ -16237,7 +16282,12 @@
    "source_urls": [
     "https://shadowboxstudios.com/shinfield/"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shinfield_Studios_entrance%2C_day_time.jpg/960px-Shinfield_Studios_entrance%2C_day_time.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Shinfield_Studios_entrance,_day_time.jpg",
+    "author": "Coz4836",
+    "license": "CC BY-SA 4.0"
+   },
    "guide_id": "uk-shinfield-studios",
    "guide_url": "/compare-film-tv-locations/#loc-uk-shinfield-studios"
   },
@@ -16813,7 +16863,12 @@
     "https://www.wbsl.com/studios/",
     "https://en.wikipedia.org/wiki/Warner_Bros._Studios_Leavesden"
    ],
-   "photo": null,
+   "photo": {
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warner_Bros._Studios%2C_Leavesden%2C_September_2023.JPG/960px-Warner_Bros._Studios%2C_Leavesden%2C_September_2023.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Warner_Bros._Studios,_Leavesden,_September_2023.JPG",
+    "author": "Benoît Prieur",
+    "license": "CC0"
+   },
    "guide_id": "uk-warner-bros-studios-leavesden",
    "guide_url": "/compare-film-tv-locations/#loc-uk-warner-bros-studios-leavesden"
   },

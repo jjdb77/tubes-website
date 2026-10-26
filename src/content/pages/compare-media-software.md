@@ -70,7 +70,7 @@ sections:
       - { label: Full profile, key: page_url, link: true, link_label: Open }
     request_heading: Missing a product? Suggest it
     request_text: |
-      Vendor or user of a tool that belongs here? Tell us the product and the official link, and we add it with verified details. We publish only what the vendor publishes, including pricing; a "Not published" is better than a guess.
+      We list software used in film and TV production. Vendor or user of a tool that belongs here? Tell us the product and the official link. Vendor submissions are checked against the vendor's own site before we list anything, and we publish only what the vendor publishes, including pricing. A "Not published" is better than a guess.
     request_field_label: Product and vendor
     request_placeholder: "For example: Yamdu, by Yamdu GmbH"
     promo_inline: false

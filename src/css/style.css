@@ -145,6 +145,9 @@ a:hover { color: var(--action); }
   background: var(--status-teal-bg); color: var(--status-teal-ink);
   white-space: nowrap;
 }
+.chip-row .chip { font-size: 0.94rem; padding: 9px 15px; gap: 9px; }
+.chip-row .chip::before { width: 9px; height: 9px; }
+.chip-row .chip-sep { font-size: 1.1rem; }
 .chip::before {
   content: ""; width: 7px; height: 7px; border-radius: 50%;
   background: currentColor;
@@ -161,7 +164,7 @@ a:hover { color: var(--action); }
 /* Levende pipeline: de "actieve" fase licht op (JS wisselt door) */
 .chip { transition: transform 0.35s ease, box-shadow 0.35s ease; }
 .chip.is-current {
-  transform: translateY(-3px);
+  transform: scale(1.12);
   box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.45), 0 0 0 1.5px currentColor inset;
 }
 
@@ -343,9 +346,7 @@ a:hover { color: var(--action); }
    grootte i.p.v. een al gerenderde bitmap achteraf uitrekken, wat zichtbaar
    zachter oogt). .hero-media draagt wel de laad-animatie (@keyframes rise),
    maar die raakt alleen opacity/transform, niet width — dus geen conflict.
-   Afbeelding (width:100%) en de .viewfinder-hoekjes (inset:12px) volgen
-   automatisch mee omdat ze allebei relatief zijn aan diezelfde, nu bredere,
-   ouder — geen risico dat ze los van elkaar raken. */
+   De afbeelding (width:100%) volgt automatisch mee. */
 .section-hero .hero-media { position: relative; width: 150%; margin-left: -8%; margin-right: -5vw; }
 .section-hero .hero-media img,
 .section-hero .hero-media video { position: relative; z-index: 2; }
@@ -373,6 +374,25 @@ a:hover { color: var(--action); }
 .hero-stacked .hero-text { max-width: 1000px; margin: 0 auto; text-align: center; }
 .hero-stacked .chip-row, .hero-stacked .button-row { justify-content: center; }
 .hero-stacked .hero-media { width: 85%; margin: 0 auto; }
+.hero-after { max-width: 760px; margin: 0 auto; text-align: center; }
+.hero-after .kicker { display: inline-block; margin-bottom: 10px; }
+.hero-after .button-row { justify-content: center; margin-top: 20px; }
+
+/* Kaart rechts naast de tekst in een feature zonder beeld (section.aside,
+   homepage: Connect), plus Budget / Plan / Produce eronder (section.steps,
+   zelfde opmaak als in de hero). */
+.feature-aside {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-raise);
+  padding: clamp(24px, 3vw, 36px);
+}
+.feature-aside h3 { margin: 0 0 12px; font-size: clamp(1.4rem, 2.2vw, 1.8rem); letter-spacing: -0.02em; }
+.feature-aside .rich-text p:last-child { margin-bottom: 0; }
+.feature-steps-wrap { margin-top: clamp(40px, 5vw, 64px); }
+.feature-steps-heading { margin: 0 0 6px; font-size: 1.35rem; letter-spacing: -0.015em; }
+.feature-steps-intro { margin: 0; max-width: 680px; }
+.feature-steps { margin-top: 28px; }
+.feature-steps-closing { margin: 32px 0 0; font-weight: 700; color: var(--ink); }
 
 .media-left .feature-text { order: 2; }
 .media-left .feature-media { order: 1; }
@@ -382,17 +402,65 @@ a:hover { color: var(--action); }
    de smallere, waardoor twee media_large-afbeeldingen niet even groot ogen. */
 .feature-grid.media-left { grid-template-columns: 0.95fr 1.05fr; }
 
-/* Featuresecties met een groter beeld (section.media_large): het beeld
-   bleedt vooral naar de buitenkant (weinig naar de kant van de tekstkolom,
-   om die niet te raken); de sectie zelf knipt de overloop af, want
-   .theme-white/.theme-teal hebben normaal geen overflow:hidden.
-   Bij media_position: left staat de afbeelding in de linkerkolom, dus moet
-   de bleed gespiegeld worden (vooral naar links i.p.v. naar rechts). */
-.section-feature-large-media { overflow: hidden; }
-.feature-media-large { width: 120%; margin-left: -3%; }
-.media-left .feature-media-large { margin-left: -17%; }
+/* Featuresecties met section.media_large (de blokken Budget, Plan en Produce
+   op de homepage). Twee gelijke kolommen; het beeld is 6% breder dan zijn
+   kolom en steekt dat stukje naar buiten uit, links en rechts evenveel.
+   Geschiedenis (Joachim 30-9-2026): eerst stak het beeld 17 tot 20% uit en
+   links en rechts niet even ver ("staat niet lekker uitgelijnd"), daarna
+   precies op de kolomlijn ("tikje te perfect"). Dit is het midden: de rand
+   aan de tekstkant staat op de kolomlijn, de buitenrand net erbuiten. Moet na
+   .feature-grid.media-left staan (even specifiek). */
+/* Alleen op breed scherm: onder 981px valt .feature-grid terug op één kolom,
+   en deze regel is specifieker dan die terugval. Zonder de media query
+   bleven Budget en Produce op een telefoon in twee kolommen staan. */
+@media (min-width: 981px) {
+  .section-feature-large-media .feature-grid { grid-template-columns: 1fr 1fr; }
+}
+.feature-media-large { width: 106%; margin-left: 0; }
+.media-left .feature-media-large { margin-left: -6%; }
 
 .lead { font-size: 1.08rem; }
+
+/* Regel onder de hero-titel (section.subtitle). */
+.hero-sub {
+  margin: -0.35em 0 1.1em;
+  font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 700;
+  line-height: 1.3; letter-spacing: -0.015em;
+  color: var(--ink); text-wrap: balance;
+}
+.theme-dark .hero-sub { color: #fff; }
+
+/* Budget / Plan / Produce onder de hero-tekst (section.steps), met de iconen
+   uit het zijmenu van de Tubes-app: omlijnde vorm van 40px, lijndikte 1.5.
+   Kleuren uit de app (components/nav.css): op het donkere thema de lichte
+   tint (--phase-wash), op licht de inktkleur (--phase-ink). */
+.hero-steps {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  margin: 34px 0 0; padding: 0; list-style: none;
+}
+.step-budget { --step: #155CBD; }
+.step-plan { --step: #7C471A; }
+.step-produce { --step: #00793A; }
+.theme-dark .step-budget { --step: #A8CAFA; }
+.theme-dark .step-plan { --step: #E6C3A3; }
+.theme-dark .step-produce { --step: #9CDFB9; }
+.step-icon { fill: none; stroke: var(--step); stroke-width: 1.5; stroke-linejoin: round; flex: none; }
+.hero-step-icon { width: 40px; height: 40px; margin-bottom: 10px; }
+/* Kop van een feature-sectie met het icoon van de stap ervoor (section.step). */
+.step-heading { display: flex; align-items: center; gap: 0.35em; }
+.step-heading .step-icon { width: 0.95em; height: 0.95em; }
+.hero-stacked .hero-step-icon { margin-left: auto; margin-right: auto; }
+.hero-step-name {
+  margin: 0 0 6px;
+  font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2;
+  color: var(--ink);
+}
+.theme-dark .hero-step-name { color: #fff; }
+.hero-step-text { margin: 0; font-size: 0.98rem; line-height: 1.55; text-wrap: pretty; }
+@media (max-width: 700px) {
+  .hero-steps { grid-template-columns: 1fr; gap: 22px; }
+}
 
 /* Media altijd in een app-kaartlijst: wit vlak, radius 16, borderrand */
 .hero-media img, .feature-media img,
@@ -417,7 +485,83 @@ a:hover { color: var(--action); }
   object-fit: cover;
 }
 
+/* Schermen na elkaar (feature met `images:`): alle beelden in één grid-cel,
+   het bovenste zichtbaar, een vloeiende overgang bij het wisselen. Dezelfde
+   kaartrand als een los beeld. App-screenshots als jpg houden hier hun eigen
+   verhouding: de 3:2-regel hierboven is voor foto's. */
+.feature-slides { display: grid; }
+/* Elke slide op 3:2, uitgesneden vanuit linksboven (de selector moet
+   specifieker zijn dan de jpg-regel hierboven, anders wint die met zijn
+   gecentreerde uitsnede en zie je een los middenstuk van het scherm). Zo
+   blijven menu en kop van elk scherm in beeld en springt de kaart niet. */
+.feature-media .feature-slides img[src] {
+  grid-area: 1 / 1;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: left top;
+  opacity: 0;
+  /* Nieuw scherm schuift van rechts in terwijl het vorige wegvaagt. */
+  transform: translateX(32px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+/* Even specifiek als de regel hierboven plus de klasse, anders blijft de
+   actieve slide op opacity 0 en is de kaart leeg. */
+.feature-media .feature-slides img[src].is-active { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .feature-media .feature-slides img[src] { transition: none; transform: none; }
+}
+
 .media-caption { font-size: 0.88rem; margin-top: 12px; color: var(--muted); }
+
+/* ---------- Emmy (AI-assistent) als eigen blok ---------- */
+
+/* Compact: een kaart van hoogstens 920px, avatar links, tekst rechts. */
+.emmy-card {
+  display: grid; grid-template-columns: 128px minmax(0, 1fr);
+  gap: 36px; align-items: center;
+  max-width: 920px; margin: 0 auto;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 36px 44px;
+}
+.emmy-avatar { text-align: center; }
+.emmy-avatar img {
+  width: 128px; height: 128px; border-radius: 50%; object-fit: cover;
+  border: 3px solid #E6C263; display: block; margin: 0 auto;
+}
+.emmy-card h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 0.35em; }
+.emmy-card .kicker { margin-bottom: 10px; }
+.emmy-card .rich-text p { margin: 0 0 0.6em; }
+.emmy-card .rich-text p:last-child { margin-bottom: 0; }
+.emmy-lead { margin: 0 0 0.6em; font-weight: 700; color: var(--status-blue-ink); }
+.emmy-link { display: inline-block; margin-top: 14px; font-weight: 700; color: var(--action); text-decoration: none; }
+.emmy-link:hover { color: var(--action-hover); text-decoration: underline; }
+/* Uitgebreid (Academy): tekst links, avatar rechts in een blauw vlak, punten eronder. */
+.emmy-detailed { max-width: none; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; padding: 44px 48px; }
+.emmy-detailed .emmy-avatar { order: 2; background: #EAF1FC; border-radius: 12px; padding: 28px 24px; }
+.emmy-detailed .emmy-avatar img { width: 150px; height: 150px; border: 4px solid #fff; box-shadow: 0 8px 24px -12px rgba(26, 26, 26, 0.35); }
+.emmy-avatar-name { margin: 14px 0 0; font-weight: 800; font-size: 1.15rem; color: var(--ink); }
+.emmy-avatar-role { margin: 2px 0 0; font-size: 0.9rem; font-weight: 600; color: var(--status-blue-ink); }
+.emmy-detailed h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+.emmy-detailed .button-row { margin-top: 20px; }
+.emmy-points {
+  list-style: none; margin: 24px auto 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.emmy-points li {
+  display: flex; flex-direction: column; gap: 4px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 22px;
+}
+.emmy-points li b { color: var(--ink); }
+.emmy-points li span { font-size: 0.97rem; line-height: 1.55; }
+@media (max-width: 700px) {
+  .emmy-card, .emmy-detailed { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px; text-align: center; }
+  .emmy-card .kicker { justify-content: center; }
+  .emmy-detailed .emmy-avatar { order: 0; }
+  .emmy-detailed .button-row { justify-content: center; }
+  .emmy-points { grid-template-columns: 1fr; }
+}
 
 .col-lead {
   font-weight: 700; color: var(--ink); font-size: 1.05rem;
@@ -469,6 +613,7 @@ a:hover { color: var(--action); }
 /* ---------- Kaarten (radius 16, app-schaduw) ---------- */
 
 .cards-grid { display: grid; gap: 24px; }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
 .cards-3 { grid-template-columns: repeat(3, 1fr); }
 .cards-2 { grid-template-columns: repeat(2, 1fr); }
 
@@ -498,7 +643,7 @@ a:hover { color: var(--action); }
 
 .contact-aside .icon-line { display: flex; gap: 12px; align-items: baseline; }
 .contact-aside .icon-line i {
-  flex: none; display: inline-block; width: 15px; height: 15px;
+  flex: none; display: inline-block; width: 20px; height: 20px;
   background: var(--action-soft-ink);
   mask: var(--icon) center / contain no-repeat;
   -webkit-mask: var(--icon) center / contain no-repeat;
@@ -702,7 +847,9 @@ a:hover { color: var(--action); }
   padding: 32px 36px;
   box-shadow: var(--shadow-card);
 }
-.pricing-2 + .plan-extra { max-width: 984px; }
+.pricing-2 ~ .plan-extra { max-width: 984px; }
+.plan-extra-priced .plan-price { margin: 0 0 6px; }
+.plan-extra-priced .plan-price-detail { margin-bottom: 16px; }
 .plan-extra h3 { font-size: 1.45rem; margin-bottom: 8px; }
 .plan-extra .rich-text { font-size: 0.95rem; }
 .plan-extra .rich-text p:last-child { margin-bottom: 0; }
@@ -904,7 +1051,9 @@ a:hover { color: var(--action); }
 @media (prefers-reduced-motion: no-preference) {
   .section-hero .kicker,
   .section-hero h1,
+  .section-hero .hero-sub,
   .section-hero .rich-text,
+  .section-hero .hero-steps,
   .section-hero .button-row,
   .section-hero .chip-row,
   .section-hero .hero-media {
@@ -912,6 +1061,8 @@ a:hover { color: var(--action); }
   }
   .section-hero h1 { animation-delay: 0.06s; }
   .section-hero .rich-text { animation-delay: 0.12s; }
+  .section-hero .hero-sub { animation-delay: 0.09s; }
+  .section-hero .hero-steps { animation-delay: 0.16s; }
   .section-hero .chip-row { animation-delay: 0.18s; }
   .section-hero .button-row { animation-delay: 0.24s; }
   .section-hero .hero-media { animation-delay: 0.2s; }
@@ -1006,17 +1157,9 @@ a:hover { color: var(--action); }
 
 /* Ankerknoppen in de hero. De header is plakkerig, dus zonder scroll-margin
    valt de sectiekop er precies achter. */
-#whats-new, #from-the-industry { scroll-margin-top: 96px; }
+#whats-new, #headlines, #from-the-industry { scroll-margin-top: 96px; }
+section[id] { scroll-margin-top: 96px; }
 .jump-link span { font-weight: 700; margin-left: 4px; }
-
-.feed-week {
-  display: flex; align-items: center; gap: 16px;
-  font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
-  color: var(--muted);
-  margin: 44px 0 20px;
-}
-.feed-week:first-of-type { margin-top: 0; }
-.feed-week::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
 .feed-list {
   list-style: none; margin: 0 0 4px; padding: 0;
@@ -1038,6 +1181,10 @@ a:hover { color: var(--action); }
 .feed-card-nolink:hover { border-color: var(--border); box-shadow: var(--shadow-card); transform: none; }
 
 .feed-chip { align-self: flex-start; margin-bottom: 20px; }
+/* Kop van een headline-kaart: onderwerp links, datum rechts. */
+.feed-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.feed-meta .feed-chip { margin-bottom: 0; }
+.feed-date { font-size: 0.82rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
 
 /* Naamblok: "From <naam> on LinkedIn", met de naam als grootste regel */
 .feed-from {
@@ -1074,6 +1221,49 @@ a:hover { color: var(--action); }
 
 /* De hele kaart klikbaar, maar met één echte link voor schermlezers */
 a.feed-link::after { content: ""; position: absolute; inset: 0; }
+/* Koppen uit De Vector: geen auteur, dus de kop is hier het grootste element. */
+.headline-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.25; color: var(--ink); margin: 0 0 10px; }
+.headline-page-chip { display: inline-block; margin-bottom: 14px; }
+.headline-sources { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.headline-sources h2 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; }
+.headline-sources ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.headline-sources a { font-weight: 700; font-size: 0.95rem; color: var(--action-soft-ink); }
+/* Bewust klein: de bronnen hierboven zijn de verwijzing, dit is alleen de herkomst. */
+.headline-via { margin: 18px 0 0; font-size: 0.78rem; }
+/* Inschrijven op The Daily Tubes (/news/ en onder elk artikel) */
+.daily-form { margin-top: 28px; padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); max-width: 560px; }
+.daily-form-title { font-weight: 800; font-size: 1.05rem; color: var(--ink); margin: 0 0 4px; }
+.daily-form-text { font-size: 0.93rem; color: var(--ink-soft); margin: 0 0 12px; }
+.daily-form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.daily-form-row input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 11px 14px; border: 1px solid var(--border); border-radius: 10px; font: inherit; background: #fff; }
+.daily-form-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
+.daily-form-note a { color: var(--muted); }
+.daily-status:empty { display: none; }
+.daily-notice { margin-top: 18px; }
+.headline-photo { margin: 28px 0 8px; }
+.headline-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); background: var(--border); aspect-ratio: 3 / 2; object-fit: cover; }
+.headline-photo figcaption { font-size: 0.78rem; color: var(--muted); margin-top: 8px; }
+.headline-photo figcaption a { color: var(--muted); }
+.headline-box { margin-top: 32px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); }
+.headline-box h2 { font-size: 1.05rem; margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+.headline-box h3 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 16px 0 6px; }
+.headline-box p, .headline-box li { font-size: 0.95rem; color: var(--ink-soft); }
+.headline-box ul { margin: 0; padding-left: 1.2em; }
+.headline-views { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.headline-view p { margin: 0 0 8px; }
+.headline-small { font-size: 0.8rem !important; color: var(--muted) !important; margin: 10px 0 0; }
+.headline-factcheck .headline-small { margin: 0 0 10px; }
+.headline-verdict { font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.headline-claims { list-style: none; padding: 0 !important; margin-top: 12px !important; display: grid; gap: 10px; }
+.headline-claims li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; }
+.headline-status { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 999px; background: #E8EAEE; color: #55606E; white-space: nowrap; }
+.headline-status-confirmed { background: var(--status-mint-bg); color: var(--status-mint-ink); }
+.headline-note { color: var(--muted); }
+.headline-claims a, .headline-box a { color: var(--action-soft-ink); font-weight: 700; }
+.headline-sources li span { color: var(--muted); font-size: 0.88rem; }
+@media (max-width: 700px) { .headline-views { grid-template-columns: 1fr; } }
+.headline-via a { color: var(--muted); text-decoration: none; }
+.headline-via a:hover { text-decoration: underline; }
 
 /* Geen directe post-URL: dan alleen de bron, en de kaart is niet klikbaar */
 .feed-link-none { color: var(--muted); font-weight: 600; text-decoration: none; }
@@ -1145,7 +1335,8 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
      kennelijk kapotte stretch-fit, en die geeft wél het juiste resultaat. */
   .hero-grid.hero-stacked .hero-media,
   .hero-grid.hero-stacked .hero-text,
-  .hero-grid.hero-stacked .chip-row-below { width: 100%; }
+  .hero-grid.hero-stacked .chip-row-below,
+  .hero-grid.hero-stacked .hero-after { width: 100%; }
   /* Zelfde verhaal als hierboven bij .hero-media: op smal scherm is
      .feature-media net zo breed als de tekst, dus de 135%-breedte moet
      terug naar normaal, anders loopt de afbeelding tot de randen door.
@@ -1155,14 +1346,14 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .media-left .feature-media-large { width: 100%; margin-left: 0; }
   .media-left .feature-text { order: 1; }
   .media-left .feature-media { order: 2; }
-  .cards-3 { grid-template-columns: 1fr 1fr; }
+  .cards-4, .cards-3 { grid-template-columns: 1fr 1fr; }
   .feed-list { grid-template-columns: 1fr; }
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr 1fr; }
   .rich-text.two-column { columns: 1; }
 }
 
 @media (max-width: 700px) {
-  .cards-3, .cards-2, .images-2, .images-3,
+  .cards-4, .cards-3, .cards-2, .images-2, .images-3,
   .pricing-4, .pricing-3, .pricing-2 { grid-template-columns: 1fr; }
   .plan-extra { grid-template-columns: 1fr; gap: 20px; padding: 28px 24px; }
   .explore-footer-grid, .footer-grid { grid-template-columns: 1fr; }
@@ -1193,6 +1384,9 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   .chip { font-size: 0.62rem; padding: 4px 7px; gap: 4px; }
   .chip::before { width: 5px; height: 5px; }
   .chip-sep { font-size: 0.7rem; }
+  .chip-row .chip { font-size: 0.75rem; padding: 6px 9px; gap: 5px; }
+  .chip-row .chip::before { width: 7px; height: 7px; }
+  .chip-row .chip-sep { font-size: 0.85rem; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .nav-toggle { display: block; }
@@ -1260,22 +1454,6 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
   transition: transform 0.2s ease;
 }
 .button.button-primary:hover::after { transform: translateX(3px); }
-
-/* ---------- Film-knipoog: zoeker-hoekjes op het hero-beeld ---------- */
-
-.viewfinder {
-  position: absolute; inset: 12px; z-index: 3;
-  pointer-events: none;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
-}
-.viewfinder::before,
-.viewfinder::after {
-  content: ""; position: absolute;
-  width: 26px; height: 26px;
-  border: 0 solid rgba(255, 255, 255, 0.85);
-}
-.viewfinder::before { top: 0; left: 0; border-top-width: 2.5px; border-left-width: 2.5px; border-top-left-radius: 6px; }
-.viewfinder::after { bottom: 0; right: 0; border-bottom-width: 2.5px; border-right-width: 2.5px; border-bottom-right-radius: 6px; }
 
 /* ---------- Gratis tools: Budget compare (/tools/budget-compare/) ----------
    Alle klassen beginnen met bc-. Staat achteraan omdat de responsieve regels
@@ -2929,9 +3107,10 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 /* Generieke lijsten: tot drie filters naast het zoekveld; compacte kop zonder foto */
 .guide-controls-4 { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); }
 .guide-controls-2 { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.guide-controls-5 { grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr)); }
 .guide-photo-compact { aspect-ratio: auto; min-height: 64px; padding: 18px 22px 12px; justify-content: flex-start; font-size: 0.82rem; }
-@media (max-width: 980px) { .guide-controls-4 { grid-template-columns: 1fr 1fr; } .guide-controls-2 { grid-template-columns: 1fr; } }
-@media (max-width: 700px) { .guide-controls-4 { grid-template-columns: 1fr; } }
+@media (max-width: 980px) { .guide-controls-5 { grid-template-columns: 1fr 1fr; } .guide-controls-5 > .guide-search-field { grid-column: 1 / -1; } .guide-controls-4 { grid-template-columns: 1fr 1fr; } .guide-controls-2 { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .guide-controls-4, .guide-controls-5 { grid-template-columns: 1fr; } }
 
 /* Hero: knoppen rechts naast de tekst (buttons_position: side) en compacte variant */
 .hero-actions-side { display: flex; flex-direction: column; gap: 14px; align-items: stretch; justify-self: end; min-width: 260px; }
@@ -3389,3 +3568,120 @@ a.feed-link::after { content: ""; position: absolute; inset: 0; }
 .inc-facts dt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
 .inc-facts dd { margin: 6px 0 0; font-size: 0.98rem; color: var(--ink); }
 .inc-facts dd small { display: block; margin-top: 4px; font-size: 0.84rem; color: var(--ink-soft); font-weight: 400; }
+
+/* ---------- Rollen in mediaproductie (/production-roles/) ---------- */
+
+.roles-hero .lead { max-width: 62ch; }
+.roles-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.roles-jump a {
+  text-decoration: none; padding: 8px 14px; border-radius: 999px; background: var(--surface);
+  border: 1px solid var(--border); font-weight: 700; font-size: 0.92rem; color: var(--ink);
+}
+.roles-jump a:hover { border-color: var(--action); text-decoration: none; }
+.roles-jump a.roles-jump-alt { background: var(--action-soft); border-color: transparent; color: var(--action-soft-ink); }
+.roles-sector, .roles-department { scroll-margin-top: 96px; }
+.roles-sector-intro { max-width: 70ch; color: var(--ink-soft); font-size: 1.08rem; margin: 0 0 36px; }
+.roles-departments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 56px; }
+.roles-department h3 { font-size: 1.1rem; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); }
+
+.role-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 32px; }
+.role-list-compact { grid-template-columns: 1fr; }
+.role-list li { margin: 0; }
+.role-list a { text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid var(--divider); color: var(--ink); }
+.role-list a:hover { text-decoration: none; }
+.role-list a:hover .role-list-name { color: var(--action-soft-ink); }
+.role-list-name { display: block; font-weight: 700; }
+.role-list-summary { display: block; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; margin-top: 2px; }
+
+.role-inner { display: grid; grid-template-columns: minmax(0, 760px) 300px; gap: 56px; align-items: start; }
+.rich-text.role-body ul > li { padding-left: 0; }
+.rich-text.role-body ul > li::before { content: none; }
+.role-aka { color: var(--muted); font-size: 0.95rem; margin-top: 0.5em; }
+.role-facts {
+  position: sticky; top: 96px; margin-top: 52px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card);
+  padding: 22px 22px 18px; font-size: 0.93rem;
+}
+.role-facts dl { margin: 0; }
+.role-facts dt { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; margin: 16px 0 4px; }
+.role-facts dt:first-child { margin-top: 0; }
+.role-facts dd { margin: 0 0 4px; }
+.role-facts a { text-decoration: none; }
+.role-facts dd a { color: var(--ink); font-weight: 600; }
+.role-facts dd a:hover { color: var(--action-soft-ink); }
+.role-dept { display: block; color: var(--ink-soft); font-size: 0.86rem; }
+.role-phases { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.role-facts .role-phase {
+  font-size: 0.8rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-chip);
+  background: var(--divider); color: var(--muted); pointer-events: none;
+}
+.role-facts .role-phase.is-on { background: var(--status-teal-bg); color: var(--status-teal-ink); pointer-events: auto; }
+.role-facts-link { display: block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; color: var(--action-soft-ink); }
+
+@media (max-width: 1080px) {
+  .role-inner { grid-template-columns: 1fr; gap: 24px; }
+  .role-facts { position: static; margin-top: 0; max-width: 760px; }
+}
+@media (max-width: 800px) {
+  .roles-departments, .role-list { grid-template-columns: 1fr; }
+}
+
+/* ---------- Woordenlijst (/film-production-glossary/) ---------- */
+
+.gloss-search { margin-top: 26px; max-width: 520px; }
+.gloss-search input {
+  width: 100%; font: inherit; font-size: 1rem; padding: 13px 16px;
+  border: 1px solid var(--border); border-radius: var(--radius-button); background: var(--surface);
+}
+.gloss-search input:focus { outline: 2px solid var(--action); outline-offset: 1px; }
+.gloss-letters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.gloss-letters a {
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 34px; border-radius: var(--radius-chip); background: var(--surface);
+  border: 1px solid var(--border); font-weight: 700; color: var(--ink); font-size: 0.92rem;
+}
+.gloss-letters a:hover { border-color: var(--action); }
+.gloss-inner { max-width: 860px; }
+.gloss-letter { scroll-margin-top: 96px; margin-bottom: 36px; }
+.gloss-letter h2 { font-size: 1.6rem; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); }
+.gloss-letter dl { margin: 0; }
+.gloss-term { scroll-margin-top: 96px; padding: 18px 0; border-bottom: 1px solid var(--divider); }
+.gloss-term:target { background: var(--action-soft); margin: 0 -16px; padding: 18px 16px; border-radius: var(--radius-wash); }
+.gloss-term dt { font-weight: 800; font-size: 1.12rem; color: var(--ink); }
+.gloss-aka { font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-left: 6px; }
+.gloss-term dd { margin: 6px 0 0; }
+.gloss-term dd .rich-text p { margin: 0; }
+.gloss-meta { margin: 8px 0 0; font-size: 0.86rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.gloss-cat { background: var(--status-blue-bg); color: var(--status-blue-ink); font-weight: 700; font-size: 0.78rem; padding: 2px 8px; border-radius: var(--radius-chip); }
+.gloss-empty { color: var(--ink-soft); }
+
+/* ---------- Tubes Academy (/academy/, src/academy.njk + lib/academy.js) ---------- */
+.ac-narrow { max-width: 780px; }
+.ac-hp { display: none; }
+.ac-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: clamp(22px, 4vw, 36px); margin-bottom: 20px; }
+.ac-card h2 { font-size: 1.4rem; margin-bottom: 0.5em; }
+.ac-card-wait { border-color: var(--status-amber-bg); }
+.ac-form[hidden] { display: none; }
+.ac-form .button-row { margin-top: 8px; align-items: center; }
+.ac-new { border: 0; padding: 0; margin: 8px 0 0; }
+.ac-new legend { font-weight: 700; color: var(--ink-soft); margin-bottom: 12px; padding: 0; }
+.ac-link { background: none; border: 0; padding: 0; font: inherit; color: var(--action-soft-ink); text-decoration: underline; cursor: pointer; }
+.ac-link:hover { color: var(--action-hover); }
+.ac-who { color: var(--muted); font-size: 0.92rem; margin: 18px 0 4px; }
+.ac-logout { margin: 0; }
+.ac-meta { color: var(--ink-soft); font-size: 0.92rem; margin-top: 10px; }
+.ac-steps { list-style: none; padding: 0; margin: 0; }
+.ac-steps .ac-card { padding-left: clamp(64px, 9vw, 84px); }
+.ac-step-no { position: absolute; left: clamp(20px, 3vw, 30px); top: clamp(22px, 4vw, 36px); width: 32px; height: 32px; border-radius: 50%; background: var(--action-soft); color: var(--action-soft-ink); font-weight: 800; display: grid; place-items: center; }
+.ac-key { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 6px 0 4px; }
+.ac-key-value { flex: 1 1 260px; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem; background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-chip); padding: 10px 12px; word-break: break-all; }
+.ac-key .button-row { margin-top: 0; }
+.ac-trainings { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; }
+.ac-training { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; background: var(--bg); border: 1px solid var(--divider); border-radius: var(--radius-wash); padding: 14px 16px; }
+.ac-training h3 { font-size: 1.05rem; margin: 0; }
+.ac-training .ac-meta { margin-top: 2px; }
+.ac-files { display: flex; flex-wrap: wrap; gap: 8px; }
+.ac-file { display: inline-flex; gap: 8px; align-items: center; padding: 8px 14px; border-radius: var(--radius-button); border: 1px solid var(--border); background: var(--surface); color: var(--action-soft-ink); font-weight: 700; text-decoration: none; }
+.ac-file:hover { border-color: var(--action); }
+.ac-file span { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+.ac-points { padding-left: 1.2em; display: grid; gap: 10px; }

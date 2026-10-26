@@ -4,12 +4,28 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { withoutPastDates } from "../../lib/festival-dates.js";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const load = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"));
 
 export default {
-  filmfestivals: load("filmfestivals.json"),
+  // Voorbije edities verliezen hun "next_dates" (lib/festival-dates.js).
+  filmfestivals: (() => {
+    const d = load("filmfestivals.json");
+    return { ...d, items: d.items.map((f) => withoutPastDates(f)) };
+  })(),
+  // Investeerders: formats, instruments en stages zijn lijsten (het filter op
+  // "Kind of money" werkt op de lijst); de kaart krijgt ze als leesbare tekst,
+  // want Nunjucks plakt een lijst zonder spatie aan elkaar.
+  filminvestors: (() => {
+    const d = load("filminvestors.json");
+    const label = (v) => (Array.isArray(v) ? v.join(", ") : v);
+    return {
+      ...d,
+      items: d.items.map((i) => ({ ...i, formats_label: label(i.formats), instruments_label: label(i.instruments), stages_label: label(i.stages) })),
+    };
+  })(),
   // Elk product heeft ook een eigen pagina (/software/<id>/); die link komt hier
   // als `page_url` bij, zodat de kaarten in de zoekpagina ernaartoe wijzen.
   // Software: een product kan naast zijn hoofdcategorie in andere categorieën

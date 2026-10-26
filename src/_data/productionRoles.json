@@ -1,0 +1,223 @@
+{
+  "kicker": "Guide",
+  "title": "Who does what in *film, TV and commercials*",
+  "lead": "A plain-language guide to the people behind a production. Every role at a production company, on a film or TV set, at a broadcaster and in commercials, with a short description and a page of its own.",
+  "phases": [
+    {
+      "slug": "development",
+      "name": "Development"
+    },
+    {
+      "slug": "financing",
+      "name": "Financing"
+    },
+    {
+      "slug": "pre-production",
+      "name": "Pre-production"
+    },
+    {
+      "slug": "production",
+      "name": "Production"
+    },
+    {
+      "slug": "post-production",
+      "name": "Post-production"
+    },
+    {
+      "slug": "delivery",
+      "name": "Delivery"
+    },
+    {
+      "slug": "release",
+      "name": "Sales and release"
+    }
+  ],
+  "sectors": [
+    {
+      "slug": "film",
+      "name": "Film and TV production",
+      "intro": "The people who make a film or a series, from the producers who start it to the crew on set and the team that finishes it in post. Most of them are hired per production, many as freelancers.",
+      "departments": [
+        {
+          "slug": "producers",
+          "name": "Producers"
+        },
+        {
+          "slug": "writing-directing",
+          "name": "Writing and direction"
+        },
+        {
+          "slug": "production-office",
+          "name": "Production office"
+        },
+        {
+          "slug": "finance-legal",
+          "name": "Finance and legal"
+        },
+        {
+          "slug": "cast",
+          "name": "Casting"
+        },
+        {
+          "slug": "locations",
+          "name": "Locations and transport"
+        },
+        {
+          "slug": "camera",
+          "name": "Camera"
+        },
+        {
+          "slug": "lighting-grip",
+          "name": "Lighting and grip"
+        },
+        {
+          "slug": "art",
+          "name": "Art department"
+        },
+        {
+          "slug": "costume-makeup",
+          "name": "Costume, hair and make-up"
+        },
+        {
+          "slug": "sound",
+          "name": "Sound"
+        },
+        {
+          "slug": "stunts-safety",
+          "name": "Stunts, effects and safety"
+        },
+        {
+          "slug": "post",
+          "name": "Post-production"
+        },
+        {
+          "slug": "sales-distribution",
+          "name": "Sales, distribution and publicity"
+        }
+      ]
+    },
+    {
+      "slug": "broadcaster",
+      "name": "TV broadcaster",
+      "intro": "A broadcaster or streamer decides what gets made and when it is shown. Most programmes are commissioned from independent production companies. News, sport and live shows are often made in-house.",
+      "departments": [
+        {
+          "slug": "leadership",
+          "name": "Channel leadership and commissioning"
+        },
+        {
+          "slug": "programme-making",
+          "name": "In-house programme making"
+        },
+        {
+          "slug": "studio-live",
+          "name": "Studio and live production"
+        },
+        {
+          "slug": "rights-compliance",
+          "name": "Rights, legal and compliance"
+        },
+        {
+          "slug": "operations",
+          "name": "Scheduling and playout"
+        }
+      ]
+    },
+    {
+      "slug": "company",
+      "name": "Production company",
+      "intro": "The permanent team of a production company, the people who are there between productions. They find ideas, pitch them, close the deals and keep several productions running at once.",
+      "departments": [
+        {
+          "slug": "leadership",
+          "name": "Leadership"
+        },
+        {
+          "slug": "development",
+          "name": "Development"
+        },
+        {
+          "slug": "production-management",
+          "name": "Production management"
+        },
+        {
+          "slug": "business",
+          "name": "Business affairs and finance"
+        },
+        {
+          "slug": "distribution",
+          "name": "Sales and distribution"
+        }
+      ]
+    },
+    {
+      "slug": "commercials",
+      "name": "Commercial production",
+      "intro": "A commercial has three parties. The brand pays, the advertising agency comes up with the idea, and the production company makes it. The shoot crew is the same as on a film.",
+      "departments": [
+        {
+          "slug": "client",
+          "name": "Brand side"
+        },
+        {
+          "slug": "agency",
+          "name": "Advertising agency"
+        },
+        {
+          "slug": "production-company",
+          "name": "Commercial production company"
+        }
+      ]
+    }
+  ],
+  "before": [
+    {
+      "type": "textblock",
+      "theme": "white",
+      "heading": "How a production is organised",
+      "lead": "Titles differ per country, per union and per format, but the structure is roughly the same everywhere.",
+      "text": "A production splits into **above the line** and **below the line**. Above the line are the people who shape the project creatively and are usually hired first, often on a fixed fee. Think of the producers, the director, the writer and the principal cast. Below the line is everyone else who makes the film physically happen, mostly paid by the day or the week. The split comes from the old budget topsheet, where a literal line separated the two. Our article on [above the line vs below the line](/insights/above-the-line-vs-below-the-line/) goes deeper.\n\nBelow the line, the crew is grouped in **departments**. Each has a head (director of photography, production designer, costume designer and so on) who hires their own team and manages that part of the budget. The production office ties the departments together, and the production accountant keeps track of what they spend.\n\nAround the production sit the **production company**, which exists between productions and develops the next one, the **broadcaster or streamer** that commissions or buys the programme, and in commercials the **brand** and its **advertising agency**. Want to see how all of them come together over time? Read [how a film is made](/how-a-film-is-made/), from the first idea to the release."
+    }
+  ],
+  "after": [
+    {
+      "type": "textblock",
+      "theme": "light",
+      "anchor": "money",
+      "heading": "Who signs off on the money",
+      "text": "Almost every role on this page spends money. A production stays on budget when it is clear who may spend what, and who sees it afterwards.\n\n- **Heads of department** manage their own budget line. They request purchase orders, collect quotes and approve their team's timesheets.\n- **The [line producer](/production-roles/line-producer/) or [production manager](/production-roles/production-manager/)** approves purchase orders above a set amount and decides where money moves when one department needs more.\n- **The [production accountant](/production-roles/production-accountant/)** records every commitment and invoice, and once a week reports actual and expected costs against the budget in the [cost report](/insights/what-is-a-production-cost-report/). That gives the estimate for completion (EFC).\n- **The [producer](/production-roles/producer/)** answers to financiers and the [completion guarantor](/production-roles/completion-guarantor/), and approves the use of [contingency](/insights/how-much-contingency-does-a-production-need/).\n\nOn many productions this runs through email, spreadsheets and a shared folder, and the cost report is days behind the set. Tubes keeps budget, schedule, purchase orders and actual costs in one place, with approvals per role, so every person in this chain works from the same numbers.",
+      "plain_list": true
+    },
+    {
+      "type": "faq",
+      "theme": "white",
+      "heading": "Questions about production roles",
+      "items": [
+        {
+          "question": "What is the difference between a producer and a line producer?",
+          "answer": "The [producer](/production-roles/producer/) owns the project, from rights and financing to key creatives and delivery to financiers. The [line producer](/production-roles/line-producer/) runs the production physically, building the budget and schedule from the script and managing crew and costs against them. On small productions one person does both."
+        },
+        {
+          "question": "What is the difference between a production company and a broadcaster?",
+          "answer": "A production company makes programmes and films. A broadcaster or streamer decides what goes on its channel or platform, and usually pays a production company to make it through a commission. The [commissioning editor](/production-roles/commissioning-editor/) is the person at the broadcaster who makes that call."
+        },
+        {
+          "question": "Who does what on a commercial?",
+          "answer": "The brand pays and approves, the advertising agency writes the idea, and the commercial production company makes the film. The [agency producer](/production-roles/agency-producer/) is the link between agency and production company, and the [commercials producer](/production-roles/commercials-producer/) prepares the bid and runs the production."
+        },
+        {
+          "question": "Which roles are above the line?",
+          "answer": "Producers, the director, the writer and the principal cast, plus their travel and assistants. Everyone else is below the line. See [above the line vs below the line](/insights/above-the-line-vs-below-the-line/) for how that split works in the budget."
+        },
+        {
+          "question": "What do the gaffer and best boy do?",
+          "answer": "The [gaffer](/production-roles/gaffer/) is the head of the electrical department and turns the lighting plan of the [director of photography](/production-roles/director-of-photography/) into lights, cables and power. The [best boy](/production-roles/best-boy/) is the gaffer's second in command and handles crew, equipment orders and paperwork."
+        },
+        {
+          "question": "How many people work on a film?",
+          "answer": "It depends on the format. A small documentary can work with a handful of people, an independent feature has dozens of crew on the shoot, and a large studio film can have several hundred across all units. Most of them are freelancers hired for that one production."
+        }
+      ]
+    }
+  ]
+}

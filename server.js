@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { createAcademy } from "./lib/academy.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -51,6 +52,7 @@ app.use((req, res, next) => {
 // Netlify/Cloudflare-formaat. Hier is de enige echte plek.
 const OLD_PATHS = new Map([
   ["/waarom-tubes", "/platform/"],
+  ["/film-crew-roles", "/production-roles/"],
   ["/grip", "/platform/"],
   ["/artificialintelligence", "/platform/"],
   ["/oplossing", "/solutions/"],
@@ -61,6 +63,7 @@ const OLD_PATHS = new Map([
   ["/nieuws", "/news/"],
   ["/contact-us", "/contact/"],
   ["/intro", "/"],
+  ["/producing", "/produce/"],
 ]);
 
 app.use((req, res, next) => {
@@ -70,7 +73,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.urlencoded({ extended: false, limit: "64kb" }));
+// Uploads voor de Tubes Academy zijn ruwe bestanden (tot 600 MB) die
+// lib/academy.js zelf streamt; die body hier dus niet laten inlezen, ook niet
+// als de client er een formulier-Content-Type op zet (curl --data-binary).
+const urlencoded = express.urlencoded({ extended: false, limit: "64kb" });
+app.use((req, res, next) => (req.path === "/api/academy/admin/upload" ? next() : urlencoded(req, res, next)));
 
 // ---------- Formulier ontvangen ----------
 
@@ -533,7 +540,7 @@ async function verstuurWachtenden({ alles = false } = {}) {
   return wachtenden.length;
 }
 
-async function stuurMail(naar, onderwerp, html, antwoordNaar, cc) {
+async function stuurMail(naar, onderwerp, html, antwoordNaar, cc, extra) {
   const ontvangers = adressen(naar);
   const kopie = adressen(cc || "");
   if (!MAIL_KEY || !ontvangers.length) {
@@ -555,6 +562,8 @@ async function stuurMail(naar, onderwerp, html, antwoordNaar, cc) {
         html,
         // Antwoorden gaat zo rechtstreeks naar de afzender van het formulier.
         ...(antwoordNaar ? { reply_to: antwoordNaar } : {}),
+        // Bijv. eigen afzender en List-Unsubscribe-kop voor de Daily Tubes-mail.
+        ...(extra || {}),
       }),
     });
     if (!res.ok) {
@@ -793,6 +802,178 @@ app.use("/mmg", (req, res, next) => {
   }
   res.set("WWW-Authenticate", 'Basic realm="Tubes for Motion Media Group"');
   res.status(401).send("Password required.");
+});
+
+// ---------- Freeway-deck /freeway/ (wachtwoordpagina) ----------
+//
+// Presentatie voor een gesprek met Freeway Entertainment (src/freeway.njk).
+// Stond eerst op /partnership/; die oude link stuurt door naar /freeway/.
+// Wachtwoord = env FREEWAY_PASSWORD (of het oude PARTNERSHIP_PASSWORD), met een
+// fallback in de code zoals bij /mmg/. De repo is publiek, dus die fallback is op
+// GitHub te lezen; voor deze pagina vond Joachim dat goed genoeg (16-10-2026).
+// Geen Basic Auth-venster meer (dat vraagt ook om een gebruikersnaam, wat verwarde):
+// een eigen pagina met alleen een wachtwoordveld zet een cookie met een HMAC van het
+// wachtwoord, 30 dagen geldig. Basic Auth met lege gebruikersnaam werkt nog voor curl.
+
+const FREEWAY_PASSWORD =
+  process.env.FREEWAY_PASSWORD || process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
+const FREEWAY_COOKIE = "tubes_freeway";
+const freewayToken = () => crypto.createHmac("sha256", FREEWAY_PASSWORD).update("freeway").digest("base64url");
+
+const sameSecret = (given, wanted) => {
+  const a = Buffer.from(String(given || ""));
+  const b = Buffer.from(wanted);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+};
+
+const freewayLoginPage = (error) => `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Tubes for Freeway</title>
+<link rel="icon" href="/assets/images/t-logo-small.png">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #F6F7F9; color: #1A1A1A; font-family: Mulish, Arial, sans-serif; }
+  form { width: 100%; max-width: 360px; margin: 16px; padding: 36px 32px; background: #FFFFFF; border: 1px solid #E3E5E9; border-radius: 16px; box-shadow: 0 10px 24px -8px rgba(26, 26, 26, .14); }
+  img { height: 40px; margin-bottom: 24px; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  p { margin: 0 0 22px; font-size: 15px; color: #5C5750; }
+  label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 700; }
+  input { box-sizing: border-box; width: 100%; padding: 12px 14px; font: inherit; font-size: 16px; border: 1px solid #D5D8DD; border-radius: 10px; }
+  input:focus { outline: 3px solid #BFE9E1; border-color: #0E9C88; }
+  button { width: 100%; margin-top: 16px; padding: 12px; font: inherit; font-size: 16px; font-weight: 700; color: #FFFFFF; background: #0E9C88; border: 0; border-radius: 10px; cursor: pointer; }
+  .error { margin: 10px 0 0; font-size: 14px; color: #B91C1C; }
+</style></head>
+<body><form method="post" action="/freeway/login">
+  <img src="/assets/images/logo-tubes.png" alt="Tubes">
+  <h1>Tubes for Freeway</h1>
+  <p>Enter the password to view the presentation.</p>
+  <label for="password">Password</label>
+  <input id="password" name="password" type="password" autocomplete="current-password" autofocus required>
+  ${error ? '<p class="error">That password is not correct.</p>' : ""}
+  <button type="submit">View presentation</button>
+</form></body></html>`;
+
+app.use("/partnership", (req, res) => res.redirect(302, "/freeway/"));
+
+app.use("/freeway", (req, res, next) => {
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  res.setHeader("Cache-Control", "private, no-store");
+  if (req.method === "POST" && req.path === "/login") {
+    if (!sameSecret(req.body?.password, FREEWAY_PASSWORD)) {
+      return res.status(401).type("html").send(freewayLoginPage(true));
+    }
+    res.cookie(FREEWAY_COOKIE, freewayToken(), {
+      httpOnly: true, secure: req.secure || req.headers["x-forwarded-proto"] === "https",
+      sameSite: "lax", path: "/freeway", maxAge: 30 * 24 * 60 * 60 * 1000,
+    });
+    return res.redirect(303, "/freeway/");
+  }
+  for (const part of String(req.headers.cookie || "").split(";")) {
+    const [name, ...rest] = part.trim().split("=");
+    if (name === FREEWAY_COOKIE && sameSecret(rest.join("="), freewayToken())) return next();
+  }
+  const [scheme, encoded] = (req.headers.authorization || "").split(" ");
+  if (scheme === "Basic" && encoded) {
+    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
+    if (sameSecret(pass, FREEWAY_PASSWORD)) return next();
+  }
+  res.status(401).type("html").send(freewayLoginPage(false));
+});
+
+// ---------- Oprichtingsdocumenten Appsolutions (Basic Auth) ----------
+//
+// /oprichting/ toont de PDF's uit <volume>/oprichting; /oprichting/<naam>.pdf
+// opent er één. De bestanden staan bewust NIET in de repo (die is publiek),
+// alleen op de volume. Wachtwoord = env OPRICHTING_PASSWORD (gebruikersnaam
+// leeg); zonder die variabele geeft alles een 503. Eén document vervangen
+// zonder deploy: curl -u ":<wachtwoord>" -T "<naam>.pdf"
+// "https://www.tubes.media/oprichting/<naam>.pdf" (PUT overschrijft, DELETE
+// verwijdert).
+
+const OPRICHTING_DIR = path.join(DATA_DIR, "oprichting");
+const OPRICHTING_NAME = /^[\w ().,'&-]+\.pdf$/;
+
+app.use("/oprichting", (req, res, next) => {
+  const wanted = process.env.OPRICHTING_PASSWORD;
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  res.setHeader("Cache-Control", "private, no-store");
+  if (!wanted) return res.status(503).send("Stel eerst OPRICHTING_PASSWORD in op Railway.");
+  const header = req.headers.authorization || "";
+  const [scheme, encoded] = header.split(" ");
+  if (scheme === "Basic" && encoded) {
+    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
+    const a = Buffer.from(pass);
+    const b = Buffer.from(wanted);
+    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
+  }
+  res.set("WWW-Authenticate", 'Basic realm="Appsolutions BV oprichting"');
+  res.status(401).send("Password required.");
+});
+
+app.get("/oprichting", (req, res) => {
+  if (!req.originalUrl.split("?")[0].endsWith("/")) return res.redirect(301, "/oprichting/");
+  fs.mkdirSync(OPRICHTING_DIR, { recursive: true });
+  const files = fs.readdirSync(OPRICHTING_DIR).filter((f) => OPRICHTING_NAME.test(f)).sort();
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const rows = files.map((f) => {
+    const st = fs.statSync(path.join(OPRICHTING_DIR, f));
+    const date = st.mtime.toISOString().slice(0, 10);
+    const href = encodeURIComponent(f);
+    return `<li><a href="${href}" target="_blank" rel="noopener">${esc(f.replace(/\.pdf$/, ""))}</a><span>${date}<button type="button" data-print="${href}">Print</button></span></li>`;
+  }).join("");
+  res.type("html").send(`<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Appsolutions BV · Oprichtingsdocumenten</title>
+<style>body{font-family:Mulish,system-ui,sans-serif;color:#1A1A1A;background:#F6F7F9;margin:0;padding:48px 20px}
+main{max-width:720px;margin:0 auto;background:#fff;border-radius:16px;padding:32px 36px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.band{height:6px;border-radius:3px;background:linear-gradient(90deg,#D6A339,#7E7A6A 50%,#15284B);margin-bottom:24px}
+h1{color:#15284B;font-size:26px;margin:0 0 6px}p{color:#5C5750;margin:0 0 24px}
+ul{list-style:none;padding:0;margin:0}li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid #E3E5E9}
+a{color:#0E8C77;text-decoration:none;font-weight:600}a:hover{text-decoration:underline}span{color:#8B8E94;font-size:14px;white-space:nowrap;display:flex;align-items:center;gap:12px}
+button{font:inherit;font-size:13px;font-weight:700;color:#0E8C77;background:#DBF3EE;border:0;border-radius:8px;padding:5px 12px;cursor:pointer}button:hover{background:#c6ece4}</style>
+</head><body><main><div class="band"></div><h1>Oprichtingsdocumenten Appsolutions BV</h1>
+<p>Vertrouwelijk. Alleen bedoeld voor de oprichters en de notaris.</p>
+<ul>${rows || "<li>Nog geen documenten.</li>"}</ul></main>
+<script>
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-print]");
+  if (!b) return;
+  document.querySelectorAll("iframe.print-frame").forEach((f) => f.remove());
+  const f = document.createElement("iframe");
+  f.className = "print-frame";
+  f.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0";
+  f.src = b.dataset.print;
+  f.onload = () => setTimeout(() => { try { f.contentWindow.focus(); f.contentWindow.print(); } catch { window.open(b.dataset.print, "_blank"); } }, 300);
+  document.body.appendChild(f);
+});
+</script></body></html>`);
+});
+
+app.get("/oprichting/:name", (req, res) => {
+  const name = req.params.name;
+  const file = path.join(OPRICHTING_DIR, name);
+  if (!OPRICHTING_NAME.test(name) || !fs.existsSync(file)) return res.status(404).send("Not found.");
+  res.type("application/pdf");
+  res.setHeader("Content-Disposition", `inline; filename*=UTF-8''${encodeURIComponent(name)}`);
+  fs.createReadStream(file).pipe(res);
+});
+
+app.put("/oprichting/:name", express.raw({ type: () => true, limit: "30mb" }), (req, res) => {
+  const name = req.params.name;
+  if (!OPRICHTING_NAME.test(name)) return res.status(400).send("Alleen .pdf-namen met letters, cijfers en spaties.");
+  if (!Buffer.isBuffer(req.body) || req.body.subarray(0, 5).toString() !== "%PDF-") return res.status(400).send("Geen PDF.");
+  fs.mkdirSync(OPRICHTING_DIR, { recursive: true });
+  const tmp = path.join(OPRICHTING_DIR, `.${crypto.randomUUID()}.tmp`);
+  fs.writeFileSync(tmp, req.body);
+  fs.renameSync(tmp, path.join(OPRICHTING_DIR, name));
+  res.send(`Opgeslagen: ${name}\n`);
+});
+
+app.delete("/oprichting/:name", (req, res) => {
+  const name = req.params.name;
+  const file = path.join(OPRICHTING_DIR, name);
+  if (!OPRICHTING_NAME.test(name) || !fs.existsSync(file)) return res.status(404).send("Not found.");
+  fs.unlinkSync(file);
+  res.send(`Verwijderd: ${name}\n`);
 });
 
 // ---------- AI-zoeken op de locatiegids ----------
@@ -1127,6 +1308,7 @@ app.get("/beheer", (req, res) => {
 <h1>Berichten</h1>
 <p class="count">${items.length} bericht${items.length === 1 ? "" : "en"}${healthChecks ? `, waarvan ${healthChecks} Health Check-aanvra${healthChecks === 1 ? "ag" : "gen"}` : ""} &middot; <a href="/beheer/export.csv" style="color:#0E8C77">download als CSV</a> &middot; <a href="/beheer/ai" style="color:#0E8C77">AI-zoeken</a></p>
 ${rows || '<div class="empty">Nog geen berichten. Zodra iemand het formulier verstuurt, verschijnt het hier.</div>'}
+${dailyTubesLine()}
 ${toolAccountsBlock()}
 ${crmLine(items)}
 ${spamCount ? `<p class="count" style="margin-top:20px">${spamCount} bericht${spamCount === 1 ? "" : "en"} als spam gemarkeerd &middot; <a href="/beheer?spam=${showSpam ? "0" : "1"}" style="color:#0E8C77">${showSpam ? "verbergen" : "toch tonen"}</a></p>` : ""}
@@ -1235,7 +1417,179 @@ app.use((req, res, next) => {
   next();
 });
 
+// ---------- The Daily Tubes: abonneren per e-mail ----------
+//
+// Inschrijven op /news/ en onder elk artikel (partials/daily-subscribe.njk).
+// Dubbele opt-in: eerst een bevestigingsmail, pas na de klik op die link staat
+// iemand op de lijst. Elke ochtend vanaf DAILY_HOUR (Amsterdamse tijd) gaat er
+// een mail uit met de artikelen die sinds de vorige mail op /news/ zijn
+// gekomen; zijn er geen nieuwe, dan gaat er niets uit. De artikelen komen uit
+// _site/news/digest.json (src/news-digest.njk), dus een nieuw artikel zit in de
+// eerstvolgende mail zodra het gedeployd is.
+//
+// Opslag op de volume: daily-subscribers.json (e-mail → status, token, data)
+// en daily-state.json (welke artikelen al gemaild zijn, laatste verzenddag).
+// Bij de eerste start gelden alle bestaande artikelen als verstuurd, zodat een
+// nieuwe abonnee niet de hele achterstand krijgt. Afmelden kan met de link in
+// elke mail en met de afmeldknop van het mailprogramma (List-Unsubscribe).
+
+const DAILY_SUBS_FILE = path.join(DATA_DIR, "daily-subscribers.json");
+const DAILY_STATE_FILE = path.join(DATA_DIR, "daily-state.json");
+const DAILY_DIGEST = path.join(__dirname, "_site", "news", "digest.json");
+const DAILY_HOUR = Number(process.env.DAILY_HOUR || 7);
+const SITE_URL = (process.env.SITE_URL || `https://${CANONICAL_HOST}`).replace(/\/$/, "");
+const DAILY_FROM = process.env.DAILY_FROM || MAIL_FROM.replace(/^[^<]*</, "The Daily Tubes <");
+
+const readDailySubs = () => readJsonFile(DAILY_SUBS_FILE, {});
+const readDailyDigest = () => readJsonFile(DAILY_DIGEST, { items: [] }).items || [];
+const nieuwToken = () => crypto.randomBytes(24).toString("base64url");
+const amsterdamDag = (d = new Date()) => d.toLocaleDateString("sv-SE", { timeZone: "Europe/Amsterdam" });
+const amsterdamUur = (d = new Date()) => Number(d.toLocaleString("en-GB", { timeZone: "Europe/Amsterdam", hour: "2-digit", hour12: false }));
+const vindAbonnee = (subs, token) => Object.entries(subs).find(([, a]) => token && a.token === token);
+
+function dailyMailOpmaak(inhoud, afmeldUrl) {
+  return `<!doctype html><html><body style="margin:0;background:#F6F7F9;font-family:Mulish,Helvetica,Arial,sans-serif;color:#1A1A1A">
+<div style="max-width:600px;margin:0 auto;padding:28px 20px">
+<p style="font-size:22px;font-weight:800;margin:0 0 4px">The Daily <span style="color:#0E9C88">Tubes</span></p>
+<p style="font-size:13px;color:#8B8E94;margin:0 0 24px">Film and television news for production teams</p>
+${inhoud}
+<p style="font-size:12px;color:#8B8E94;margin:28px 0 0;line-height:1.5">You receive this because you subscribed at <a href="${SITE_URL}/news/" style="color:#8B8E94">tubes.media/news</a>.${afmeldUrl ? ` <a href="${afmeldUrl}" style="color:#8B8E94">Unsubscribe</a>.` : ""}<br>Tubes, Appsolutions, Daalwijkdreef 47, 1103 AD Amsterdam, the Netherlands</p>
+</div></body></html>`;
+}
+
+async function stuurDailyMail(naar, onderwerp, html, afmeldUrl) {
+  const extra = { from: DAILY_FROM };
+  if (afmeldUrl) {
+    extra.headers = { "List-Unsubscribe": `<${afmeldUrl}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" };
+  }
+  return stuurMail(naar, onderwerp, html, "contact@tubes.media", "", extra);
+}
+
+app.post("/api/daily/subscribe", async (req, res) => {
+  const email = String(req.body.email || "").trim().toLowerCase();
+  if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "rate" });
+  // Honeypot: een bot vult dit verborgen veld in. Wij doen alsof het lukte.
+  if (req.body.company_website) return res.json({ ok: true });
+  const leeftijd = tokenLeeftijd(req.body.form_token);
+  if (leeftijd === null || leeftijd > TOKEN_MAX_AGE) return res.status(400).json({ ok: false, error: "token" });
+  if (leeftijd < TOKEN_MIN_AGE) return res.json({ ok: true });
+  if (!EMAIL_RE.test(email) || email.length > 200) return res.status(400).json({ ok: false, error: "email" });
+
+  const subs = readDailySubs();
+  const bestaand = subs[email];
+  // Zelfde antwoord voor bestaand en nieuw: verklapt niet wie er al op staat.
+  if (bestaand?.status === "active") return res.json({ ok: true });
+  const token = bestaand?.token || nieuwToken();
+  subs[email] = { status: "pending", token, createdAt: bestaand?.createdAt || new Date().toISOString(), page: String(req.body.page || "").slice(0, 200) };
+  writeJsonFile(DAILY_SUBS_FILE, subs);
+
+  const link = `${SITE_URL}/api/daily/confirm?t=${token}`;
+  const html = dailyMailOpmaak(`<p style="font-size:16px;line-height:1.55">Please confirm that you want to receive The Daily Tubes: the film and television news of the day, in your inbox each morning when there is news.</p>
+<p style="margin:24px 0"><a href="${link}" style="display:inline-block;background:#0E9C88;color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:10px">Yes, subscribe me</a></p>
+<p style="font-size:13px;color:#8B8E94;line-height:1.5">Did not ask for this? Then you can ignore this email. Without the click you will not receive anything.</p>`);
+  stuurDailyMail(email, "Confirm your subscription to The Daily Tubes", html).catch(() => {});
+  res.json({ ok: true });
+});
+
+app.get("/api/daily/confirm", (req, res) => {
+  const subs = readDailySubs();
+  const hit = vindAbonnee(subs, String(req.query.t || ""));
+  if (!hit) return res.redirect(303, "/news/?daily=invalid");
+  const [email, abonnee] = hit;
+  if (abonnee.status !== "active") {
+    subs[email] = { ...abonnee, status: "active", confirmedAt: new Date().toISOString() };
+    writeJsonFile(DAILY_SUBS_FILE, subs);
+  }
+  res.redirect(303, "/news/?daily=subscribed");
+});
+
+// GET vanuit de link in de mail, POST vanuit de afmeldknop van het mailprogramma.
+function dailyAfmelden(req, res) {
+  const subs = readDailySubs();
+  const hit = vindAbonnee(subs, String(req.query.t || ""));
+  if (hit) {
+    delete subs[hit[0]];
+    writeJsonFile(DAILY_SUBS_FILE, subs);
+  }
+  if (req.method === "POST") return res.status(200).send("Unsubscribed");
+  res.redirect(303, "/news/?daily=unsubscribed");
+}
+app.get("/api/daily/unsubscribe", dailyAfmelden);
+app.post("/api/daily/unsubscribe", dailyAfmelden);
+
+function dailyItemHtml(item) {
+  const url = SITE_URL + item.url;
+  return `<div style="background:#fff;border:1px solid #E3E5E9;border-radius:14px;padding:20px 22px;margin:0 0 14px">
+${item.photo ? `<a href="${url}"><img src="${esc(item.photo)}" alt="" width="556" style="display:block;width:100%;height:auto;border-radius:10px;margin:0 0 14px"></a>` : ""}
+<p style="font-size:12px;font-weight:700;color:#0E8C77;text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px">${esc(item.topic || "")}</p>
+<p style="font-size:18px;font-weight:800;line-height:1.3;margin:0 0 8px"><a href="${url}" style="color:#1A1A1A;text-decoration:none">${esc(item.title)}</a></p>
+<p style="font-size:15px;line-height:1.55;color:#5C5750;margin:0 0 12px">${esc(item.summary || "")}</p>
+<a href="${url}" style="font-size:14px;font-weight:700;color:#0E8C77">Read more &rarr;</a>
+</div>`;
+}
+
+// Eén ronde: vanaf DAILY_HOUR, één keer per dag, alleen als er nieuwe artikelen zijn.
+async function dailyRonde({ forceer = false } = {}) {
+  const items = readDailyDigest();
+  if (!items.length) return { verstuurd: 0, reden: "geen digest" };
+  const state = readJsonFile(DAILY_STATE_FILE, null);
+  if (!state) {
+    // Eerste start: wat er nu staat geldt als verstuurd.
+    writeJsonFile(DAILY_STATE_FILE, { sent: items.map((i) => i.slug), lastDay: amsterdamDag() });
+    return { verstuurd: 0, reden: "beginstand vastgelegd" };
+  }
+  const vandaag = amsterdamDag();
+  if (!forceer && (state.lastDay === vandaag || amsterdamUur() < DAILY_HOUR)) return { verstuurd: 0, reden: "niet nu" };
+  const nieuw = items.filter((i) => !state.sent.includes(i.slug));
+  state.lastDay = vandaag;
+  if (!nieuw.length) {
+    writeJsonFile(DAILY_STATE_FILE, state);
+    return { verstuurd: 0, reden: "niets nieuws" };
+  }
+  const abonnees = Object.entries(readDailySubs()).filter(([, a]) => a.status === "active");
+  const onderwerp = `The Daily Tubes: ${nieuw[0].title}${nieuw.length > 1 ? ` (and ${nieuw.length - 1} more)` : ""}`;
+  const inhoud = nieuw.map(dailyItemHtml).join("\n");
+  let verstuurd = 0;
+  for (const [email, a] of abonnees) {
+    const afmeldUrl = `${SITE_URL}/api/daily/unsubscribe?t=${a.token}`;
+    if (await stuurDailyMail(email, onderwerp, dailyMailOpmaak(inhoud, afmeldUrl), afmeldUrl)) verstuurd++;
+    // Resend staat standaard twee verzoeken per seconde toe.
+    await new Promise((klaar) => setTimeout(klaar, 600));
+  }
+  // Ook zonder sleutel of abonnees als verstuurd markeren, anders komt een
+  // week achterstand in één keer zodra de eerste abonnee bevestigt.
+  state.sent = [...new Set([...state.sent, ...nieuw.map((i) => i.slug)])];
+  state.lastRun = { at: new Date().toISOString(), artikelen: nieuw.length, abonnees: abonnees.length, verstuurd };
+  writeJsonFile(DAILY_STATE_FILE, state);
+  console.log(`[daily] ${nieuw.length} artikel(en) naar ${verstuurd}/${abonnees.length} abonnee(s)`);
+  return { verstuurd, artikelen: nieuw.length, abonnees: abonnees.length };
+}
+setTimeout(() => dailyRonde().catch((err) => console.error("[daily]", err.message)), 30 * 1000).unref?.();
+setInterval(() => dailyRonde().catch((err) => console.error("[daily]", err.message)), 10 * 60 * 1000).unref?.();
+
+function dailyTubesLine() {
+  const subs = Object.values(readDailySubs());
+  const actief = subs.filter((a) => a.status === "active").length;
+  const wacht = subs.length - actief;
+  const state = readJsonFile(DAILY_STATE_FILE, {});
+  const laatste = state.lastRun ? `; laatste mail ${stamp(state.lastRun.at)} (${state.lastRun.artikelen} artikel${state.lastRun.artikelen === 1 ? "" : "en"}, ${state.lastRun.verstuurd} verstuurd)` : "";
+  return `<p class="count" style="margin-top:20px">The Daily Tubes: ${actief} abonnee${actief === 1 ? "" : "s"}${wacht ? `, ${wacht} wacht${wacht === 1 ? "" : "en"} op bevestiging` : ""}${laatste}</p>`;
+}
+
 const SITE = path.join(__dirname, "_site");
+
+// ---------- Tubes Academy (/academy/, /api/academy/*) ----------
+//
+// Aanmelden met e-mail + code, goedkeuring in Studoo Beheer (Bearer
+// ACADEMY_ADMIN_TOKEN), downloads van Studoo en de trainingen. Alle logica en
+// opslag (academy/ op de volume) staat in lib/academy.js; zie CLAUDE.md.
+app.use(createAcademy({
+  dataDir: DATA_DIR,
+  secret: FORM_SECRET,
+  sendMail: stuurMail,
+  siteUrl: SITE_URL,
+  pageFile: path.join(SITE, "academy", "index.html"),
+}));
 
 // ---------- Gratis tool: Budget Builder, accounts en versies ----------
 //
@@ -1578,5 +1932,6 @@ app.listen(PORT, "0.0.0.0", () => {
   } catch {
     console.log(`[start] nog geen berichtenbestand; mail ${MAIL_KEY ? "aan, naar " + CONTACT_EMAIL : "UIT (geen RESEND_API_KEY)"}`);
   }
+  console.log(`[start] academy: beheer-API ${process.env.ACADEMY_ADMIN_TOKEN ? "aan" : "geeft 503 (geen ACADEMY_ADMIN_TOKEN)"}`);
   stuurAchterstandNa().catch((err) => console.error("[start] inhaalslag mislukt:", err.message));
 });

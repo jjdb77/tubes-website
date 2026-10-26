@@ -11,39 +11,81 @@ sections:
   - type: hero
     theme: dark
     kicker: Production management platform
-    title: Streamline production budgeting, planning, and cost control in *one platform*
-    chips:
-      - label: Development
-        tone: blue
-      - label: Planning
-        tone: amber
-      - label: Production
-        tone: teal
-      - label: Wrap
-        tone: mint
+    title: Budget. Plan. Produce.
+    subtitle: One connected platform for the entire production lifecycle.
     text: |
-      Professional media productions require clear financial and operational oversight. Yet information is often scattered across tools, spreadsheets, and teams. Tubes brings budgeting, planning, and cost control together in one platform, giving production teams real-time insight throughout the production lifecycle.
+      Professional media productions require clear financial and operational oversight, but information is often scattered across spreadsheets, tools and teams.
 
-      It connects budgets, actual costs, and forecasts in real time, helping teams maintain financial and operational control from development to wrap. AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs.
-    image: /assets/images/example-tubes-05.png
-    image_alt: Projects overview and pipeline in Tubes
+      Tubes brings budgeting, planning and production together in one platform, connecting budgets, actual costs and forecasts in real time. From development to wrap, everyone has a shared view of what has been planned, what is happening and where the production stands.
+    steps:
+      - key: budget
+        name: Budget
+        text: Build, manage and refine your production budget with confidence.
+      - key: plan
+        name: Plan
+        text: Turn your budget into a connected plan for people, resources, schedules and costs.
+      - key: produce
+        name: Produce
+        text: Keep production moving with real-time visibility of costs, commitments and performance.
+    image: /assets/images/deck-partnership-produce.png
+    image_alt: Projects in production in Tubes, with the Budget, Plan and Produce menu and the AI assistant Emmy
     media_below: true
+    heading_below: AI workflow automation
+    text_below: AI assistants help draft budgets and proposals, spot spending patterns and flag unusual costs, giving production teams more time to focus on making the production happen.
+    buttons_position: below
+    buttons:
+      - label: Request a Demo
+        url: /contact/
   - type: feature
     theme: white
-    heading: Setting up and managing your productions
+    step: budget
+    heading: Budget
+    lead: From a first draft to a budget everyone has signed off
     text: |
-      Keep your productions on track with powerful dashboards and pipelines. Track every stage of the production process, from preparation to delivery and analysis, while setting up budgets, managing documents, and staying fully in control.
-    image: /assets/images/example-tubes-02.png
-    image_alt: Project dashboards and pipelines in Tubes
+      Build the budget from your own templates and rates, copy an earlier one, or let AI suggest a first draft that you check line by line. Work with globals such as the number of episodes or shoot days. Change one value and every line that uses it follows. Save each version, put budgets side by side to see what changed, and name who has to approve it before it goes out.
+
+      [More about budgeting in Tubes](/budget/). You can also [start with budgeting only](/budgeting/).
+    images:
+      - src: /assets/images/tubes-budget-dashboard.png
+        alt: Projects in budgeting in Tubes, with budget drafts and quotations per production
+      - src: /assets/images/deck-partnership-budget.png
+        alt: The budget editor in Tubes, with cost groups, budget and sales columns and a locked version
+      - src: /assets/images/deck-freeway-budget-ai.png
+        alt: Generate an AI budget in Tubes by describing the production
+      - src: /assets/images/tubes-quotations-overview.jpg
+        alt: The quotations overview in Tubes, with status counts and quotation cards per client
+    images_interval: 5000
     media_large: true
   - type: feature
     theme: teal
-    heading: Control your production and planning in real time
+    step: plan
+    heading: Plan
+    lead: People, locations and schedules in one plan
     text: |
-      Allocate costs to co-producers, monitor expenses in real time, and handle and approve incoming production invoices with ease. Schedule cast, crew, and locations, and keep everyone aligned by sharing schedules and call sheets through the Tubes app.
-    image: /assets/images/tubes-costcontrol.png
-    image_alt: Real-time cost control in Tubes
+      Schedule cast, crew and locations on one calendar, per week or per month. Keep everyone aligned by sharing schedules and call sheets through the Tubes app.
+
+      [More about planning in Tubes](/planning/)
+    image: /assets/images/tubes-planning-board.png
+    image_alt: Plan board in Tubes with cast and crew on the days of the week
     media_position: left
+    media_large: true
+  - type: feature
+    theme: light
+    step: produce
+    heading: Produce
+    lead: Costs, invoices and the forecast in real time
+    text: |
+      Invoices are reviewed, approved and passed on to your accounting system, such as Xero. Commitments count before the invoice arrives, so you always know where the production stands.
+
+      [More about cost control in Tubes](/produce/)
+    images:
+      - src: /assets/images/deck-partnership-forecast.png
+        alt: Forecast list in Tubes with budget, work budget, committed costs, cost to date, EFC and variance per cost type
+      - src: /assets/images/deck-freeway-produce-workflow.png
+        alt: Finance overview in Tubes with the invoice pipeline from review to export
+      - src: /assets/images/deck-freeway-produce-approval.png
+        alt: Invoices ready for approval in Tubes, with approvers and issues per invoice
+    images_interval: 5000
     media_large: true
   - type: textblock
     theme: white
@@ -55,6 +97,41 @@ sections:
       Manage budgets, costs, commitments and forecasts in Tubes, while financial information flows seamlessly into Xero. Production gets greater visibility and control, while finance keeps working in the system it already knows.
 
       Using another accounting system? [Contact us](/contact/) to discuss integration.
+  - type: emmy
+    theme: light
+    detailed: true
+    kicker: Meet your AI assistant
+    heading: Meet Emmy. Your guide to Tubes.
+    lead: Help and training, whenever you need them.
+    text: |
+      From finding answers to understanding workflows, Emmy helps your team get more from Tubes, with practical guidance whenever questions come up. She is there on every page, and answers about the screen you are working on.
+    link_label: See Emmy in a demo
+    link_url: /contact/
+    points:
+      - heading: Answers when you need them
+        text: Get help with features and everyday questions, on the page you are working on.
+      - heading: Guidance as you go
+        text: Understand workflows with step-by-step support, in your own words.
+      - heading: Confident teams
+        text: New team members get up to speed without waiting for a training session.
+      - heading: Less friction
+        text: Routine questions stop landing on a colleague.
+  - type: feature
+    theme: teal
+    heading: Connect
+    lead: Everyone around your production, connected.
+    text: |
+      Connect is one of the main sections in Tubes, right next to Budget, Plan and Produce in the menu.
+
+      Your team, contractors, suppliers, co-producers and production partners. Connect gives you one place to manage the people and organisations involved in your production.
+
+      When someone needs to provide something, Magic Links make it simple and secure.
+    aside:
+      heading: Send. Receive. Done.
+      text: |
+        Send a Magic Link and give someone a secure, personalised way to respond, submit a team expense, upload an invoice or share documents without giving them access to your whole production.
+
+        No account. No complicated setup. Just a secure connection to exactly what they need.
   - type: healthcheck
     theme: white
   - type: pricing
@@ -106,6 +183,17 @@ sections:
         For independent producers who want to use Tubes for a single production. Get in touch on WhatsApp or by email and we'll set it up with you.
       whatsapp_text: "Hi Tubes, I would like to use Tubes for a single production."
       email_text: "I would like to use Tubes for a single production."
+    extra_plan:
+      name: Budgeting only
+      text: |
+        Start with just the budget. Build budgets from your own templates, manage and compare every version, turn them into quotations and let stakeholders take a look, while the rest of how you work stays the same. Expand to the full platform whenever you want.
+      price: "€ 29"
+      price_note: "per month, includes 2 users"
+      price_detail: |
+        € 19 per month for each additional user.
+      button:
+        label: Start with budgeting only
+        url: /budgeting/
     footnote: |
       Questions, or curious about **Tubes for Companies**? See [all plans](/plans/) or [get in touch](/contact/).
   - type: compare

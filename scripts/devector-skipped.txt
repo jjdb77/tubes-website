@@ -1,0 +1,28 @@
+# Stukken uit De Vector (rubrieken Film en Media) die bewust NIET op /news/ komen.
+# Eén per regel: <datum>/<slug>  # reden. fetch-devector.mjs slaat ze over.
+2026-10-09/dagbladuitgevers-omzet  # dagbladen, geen film of tv
+2026-10-10/on-sanctie-hitler-uitzending  # omroeppolitiek
+2026-10-11/love-is-blind-boston  # te klein
+2026-10-11/doj-onderzoek-tv-zenders-trump  # politiek
+2026-10-11/justitie-onderzoekt-tv-zenders-trump  # politiek
+2026-10-12/rj-mitte-overleden  # overlijden
+2026-10-12/nieuwe-fabeltjeskrant-teaser  # teaser, te klein
+2026-10-12/nieuwe-fabeltjeskrant-teaser-2  # teaser, te klein
+2026-10-12/zeit-opnamen-beslag  # persvrijheid
+2026-10-12/israel-weigert-taz-journalist-toegang  # persvrijheid
+2026-10-12/on-nieuwe-sanctie  # omroeppolitiek
+2026-10-13/npo-songfestival-brandbrief  # omroeppolitiek
+2026-10-13/turkije-online-censuur  # persvrijheid
+2026-10-14/halk-tv-kayyum  # persvrijheid
+2026-10-14/halk-tv-arrestaties  # persvrijheid
+2026-10-14/halk-tv-politie-inval  # persvrijheid
+2026-10-14/npo-songfestival-gesprek  # omroeppolitiek
+2026-10-14/michael-jackson-super-bowl-documentaire  # te klein
+2026-10-14/rechter-witte-huis-media  # politiek
+2026-10-15/rambaldi-hollywood-eerbetoon  # eerbetoon, te klein
+2026-10-15/rusland-zet-raam-op-lijst  # politiek
+2026-10-16/radio-twee-weekend-2027  # radio
+2026-10-17/busfield-aanklacht-procedurefouten  # rechtszaak tegen een acteur
+2026-10-17/maarten-spanjer-overleden  # overlijden
+2026-10-18/cinekid-awards-2026  # dubbel met cinekid-awards-2026-2
+2026-10-18/dwdd-angstcultuur-opnieuw-besproken  # werksfeer bij een omroep, gevoelig

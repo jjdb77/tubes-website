@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Free tools
 seo_title: "Resources for Film & TV Producers: Locations & Incentives | Tubes"
-description: "Free tools for production teams: film and TV locations, studios and production companies, production incentives per country, festivals and trade shows, software for media companies, and news from across the industry."
+description: "Free tools for production teams: film and TV locations, studios and production companies, production incentives per country, film funds and investors, festivals and trade shows, software for media companies, and news from across the industry."
 permalink: /resources/
 sections:
   - type: hero
@@ -52,6 +52,14 @@ sections:
         link_label: Compare incentives
         text: |
           Production incentives of 32 European countries and regions side by side: headline and net value on your own spend, minimum spend, caps, funding risk and when the money arrives.
+      - image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg/960px-Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg
+        image_alt: "The Palais de l'Europe in Strasbourg, seat of the Council of Europe and its film fund Eurimages"
+        image_credit: "Photo: Le Commissaire (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Le_Palais_de_l%27Europe_%C3%A0_Strasbourg.jpg)"
+        heading: Film funds and investors in Europe
+        url: /compare-film-investors/
+        link_label: Find funding
+        text: |
+          Public film funds, regional funds, private film financiers, lenders and tax shelter investors across Europe: what they fund, which kind of money and how to apply, on a map and side by side.
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg/960px-Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg
         image_alt: "The open-air Piazza Grande screen and seats at the Locarno Film Festival"
         image_credit: "Photo: Kalai Ramu (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Grande_at_the_2026_Locarno_Film_Festival.jpg)"
@@ -79,11 +87,11 @@ sections:
       - image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/European_Film_Market_Berlinale_2017_01.jpg/960px-European_Film_Market_Berlinale_2017_01.jpg
         image_alt: "Stands and meeting tables in the hall of the European Film Market at the Berlinale"
         image_credit: "Photo: Maximilian Bühn (CC BY-SA 4.0), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:European_Film_Market_Berlinale_2017_01.jpg)"
-        heading: Industry news
+        heading: The Daily Tubes
         url: /news/
         link_label: Read the news
         text: |
-          Interesting public posts from across film and television that we come across on LinkedIn, briefly summarised: budgets and financing, AI in production, festivals and markets. The views belong to the original authors.
+          The latest film and television headlines, and interesting public posts from across the industry that we come across on LinkedIn. Budgets and financing, streaming, AI in production, festivals and markets.
   - type: cta
     title: Plan the production behind the decision
     text: |

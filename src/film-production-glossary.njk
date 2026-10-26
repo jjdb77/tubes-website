@@ -1,0 +1,109 @@
+---
+permalink: /film-production-glossary/
+title: Film Production Glossary
+seo_title: "Film and TV Production Glossary: Terms Explained A to Z | Tubes"
+description: "Film and TV production terms explained in plain English, from above the line and call sheet to picture lock, recoupment and usage rights. A to Z, with links to the roles and stages behind them."
+---
+{#- Woordenlijst (/film-production-glossary/). Begrippen in
+    src/_data/glossary.json (term, slug, aka, category, definition, see_also),
+    alfabetisch gegroepeerd per letter. Elk begrip heeft een anker (#slug),
+    dus andere pagina's kunnen ernaar linken. Zoeken gebeurt in de browser
+    (script onderaan), zonder iets te versturen. -#}
+{%- set terms = glossary.terms -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "partials/head-seo.njk" %}
+  <link rel="icon" type="image/png" href="/assets/images/t-logo-small.png">
+  <link rel="apple-touch-icon" href="/assets/images/t-logo-small.png">
+  <meta name="theme-color" content="#0E9C88">
+  <link rel="preload" href="/assets/fonts/mulish-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/mulish.css">
+  <link rel="stylesheet" href="{{ assets.css }}">
+  <script type="application/ld+json">
+{{ { settings: settings, url: page.url, title: title, seoTitle: seo_title, description: description, definedTerms: terms } | jsonld | safe }}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    <section class="section section-hero roles-hero">
+      <div class="container">
+        <span class="kicker">Guide</span>
+        <h1>Film and TV production <em>glossary</em></h1>
+        <p class="lead">{{ terms.length }} terms you run into in film, TV and commercials, explained in plain English. Each one links to the roles and stages behind it. For the bigger picture, read <a href="/how-a-film-is-made/">how a film is made</a> or <a href="/production-roles/">who does what</a>.</p>
+        <div class="gloss-search">
+          <label class="visually-hidden" for="gloss-q">Search the glossary</label>
+          <input id="gloss-q" type="search" placeholder="Search a term, like call sheet or recoupment" autocomplete="off" data-gloss-q>
+        </div>
+        <nav class="gloss-letters" aria-label="Jump to letter">
+          {%- for letter in glossary.letters %}
+          <a href="#letter-{{ letter | lower }}">{{ letter }}</a>
+          {%- endfor %}
+        </nav>
+      </div>
+    </section>
+
+    <section class="section theme-white gloss-section">
+      <div class="container gloss-inner">
+        <p class="gloss-empty" data-gloss-empty hidden>No term matches that search. Try a shorter word.</p>
+        {%- for letter in glossary.letters %}
+        <div class="gloss-letter" id="letter-{{ letter | lower }}" data-gloss-letter>
+          <h2>{{ letter }}</h2>
+          <dl>
+            {%- for t in terms %}{% if t.letter == letter %}
+            <div class="gloss-term" id="{{ t.slug }}" data-gloss-term data-search="{{ t.search }}">
+              <dt>{{ t.term }}{% if t.aka and t.aka.length %} <span class="gloss-aka">also {{ t.aka | join(', ') }}</span>{% endif %}</dt>
+              <dd>
+                <div class="rich-text">{{ t.definition | md | safe }}</div>
+                <p class="gloss-meta"><span class="gloss-cat">{{ t.category }}</span>{% if t.see_also and t.see_also.length %} <span class="gloss-see">See also {% for s in t.see_also %}<a href="#{{ s.slug }}">{{ s.term }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}</p>
+              </dd>
+            </div>
+            {%- endif %}{% endfor %}
+          </dl>
+        </div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-inner">
+        <h2>The terms are the easy part</h2>
+        <div class="rich-text"><p>Topsheets, commitments, EFC and cost reports. Tubes keeps the budget, schedule, purchase orders and actual costs of a production in one place, so everyone works from the same numbers.</p></div>
+        <div class="button-row centered"><a class="button button-inverse" href="{{ settings.cta_url }}">{{ settings.cta_label }}</a></div>
+      </div>
+    </section>
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/demo-modal.njk" %}
+  <script src="{{ assets.js }}" defer></script>
+  <script>
+  (() => {
+    const q = document.querySelector("[data-gloss-q]");
+    if (!q) return;
+    const terms = [...document.querySelectorAll("[data-gloss-term]")];
+    const letters = [...document.querySelectorAll("[data-gloss-letter]")];
+    const empty = document.querySelector("[data-gloss-empty]");
+    let t;
+    q.addEventListener("input", () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+        let shown = 0;
+        for (const el of terms) {
+          const hit = words.every((w) => el.dataset.search.includes(w));
+          if (el.hidden === hit) el.hidden = !hit;
+          if (hit) shown++;
+        }
+        for (const l of letters) l.hidden = !l.querySelector("[data-gloss-term]:not([hidden])");
+        empty.hidden = shown > 0;
+      }, 120);
+    });
+  })();
+  </script>
+  {% include "partials/analytics.njk" %}
+</body>
+</html>

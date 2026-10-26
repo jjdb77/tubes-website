@@ -31,7 +31,7 @@ No. Call sheets go out by email with a PDF, a calendar file and a personal confi
 
 ## Can I import my Movie Magic budgets?
 
-Yes, as JSON (complete) or Excel (totals per category). See [Import a Movie Magic budget](/help/imports-exports/import-a-movie-magic-budget/).
+Yes, from the Excel export of Movie Magic Budgeting: every detail line comes in, with fringes as separate lines. A JSON export is not supported yet. See [Import a Movie Magic budget](/help/imports-exports/import-a-movie-magic-budget/).
 
 ## Does Tubes connect to my accounting system?
 

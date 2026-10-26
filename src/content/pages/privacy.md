@@ -12,7 +12,7 @@ sections:
     text: |
       How we collect, use and store your personal information when you request a Production Health Check.
 
-      Last updated: 2 September 2026
+      Last updated: 9 October 2026
   - type: textblock
     theme: white
     narrow: true
@@ -85,7 +85,7 @@ sections:
       Your information is handled by the Tubes team. We also use service providers who process it on our behalf:
 
       - **Railway** (servers in Amsterdam, the Netherlands): hosting for our website, for the storage of your request, and for the customer relationship system in which your request is recorded
-      - **Resend** (United States): sending the confirmation and notification emails
+      - **Resend** (United States): sending the confirmation and notification emails, and The Daily Tubes (section 15)
       - **Google Workspace**: the mailboxes we use to correspond with you
       - **4Relations**: our own customer relationship system, which we run ourselves on the hosting described above
 
@@ -169,7 +169,17 @@ sections:
 
       The Budget Builder can also be switched to saving versions in an account (email address and password). That option is currently switched off. If we switch it on, this notice will describe what such an account stores before it is used.
 
-      ### 15. Changes to this notice
+      <a id="the-daily-tubes"></a>
+
+      ### 15. The Daily Tubes email
+
+      On our [news page](/news/) and under each article you can subscribe to The Daily Tubes, an email with the film and television news of the day. We send it each morning when there are new articles, and not when there are none.
+
+      To subscribe we ask only for your email address. We store it on our servers in Amsterdam together with the date you subscribed, the page you subscribed on, and a random code that makes the confirm and unsubscribe links work. Nothing is sent until you click the link in the confirmation email; if you do not click it, you never receive the newsletter. The emails are sent through Resend (United States), as described in section 6. The images in the email load from Wikimedia Commons.
+
+      We use your address only to send The Daily Tubes. It is not added to our customer relationship system and not shared with anyone else. The basis is your consent, which you can withdraw at any time with the unsubscribe link in every email or the unsubscribe button of your email program. Unsubscribing deletes your address from the list straight away.
+
+      ### 16. Changes to this notice
 
       We may update this notice to reflect changes to our services, our suppliers, the law, or the way we handle personal information. The current version is always on this page, with the date of the most recent update at the top.
 ---

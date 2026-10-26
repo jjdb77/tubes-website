@@ -14,9 +14,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { withoutPastDates } from "../../lib/festival-dates.js";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const data = JSON.parse(fs.readFileSync(path.join(dir, "filmfestivals.json"), "utf8"));
+const raw = JSON.parse(fs.readFileSync(path.join(dir, "filmfestivals.json"), "utf8"));
+// Voorbije edities verliezen hun "next_dates" (lib/festival-dates.js).
+const data = { ...raw, items: raw.items.map((f) => withoutPastDates(f)) };
 
 const MIN_TYPE = 3;
 const MIN_COUNTRY = 4;

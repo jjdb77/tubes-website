@@ -20,12 +20,12 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   for (const row of document.querySelectorAll(".chip-row")) {
     const chips = row.querySelectorAll(".chip");
     if (chips.length < 2) continue;
-    let i = 0;
+    // Chips worden een voor een groter en blijven groot; daarna begint het opnieuw
+    let i = 1;
     chips[0].classList.add("is-current");
     setInterval(() => {
-      chips[i].classList.remove("is-current");
-      i = (i + 1) % chips.length;
-      chips[i].classList.add("is-current");
+      i = (i + 1) % (chips.length + 1);
+      chips.forEach((chip, j) => chip.classList.toggle("is-current", j < i));
     }, 2200);
   }
 }
@@ -57,7 +57,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
   // zichtbaarheidsdrempel nooit en bleef dan onzichtbaar na een ankerklik).
   // Het helpcentrum ook niet: de zoekresultaten vervangen de kaarten of de
   // lijst in dezelfde container, en die moeten er meteen staan.
-  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section) .container");
+  const targets = document.querySelectorAll(".section:not(.section-hero):not(.article):not(.section-locationguide):not(.section-locations):not(.help-collections-section):not(.help-collection-head):not(.help-list-section):not(.gloss-section):not(.roles-sector) .container");
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -78,7 +78,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObse
 // met "token" (ontbrekend of verlopen, bijvoorbeeld omdat de pagina openstond
 // tijdens een deploy), dan halen we een verse en proberen we nog één keer.
 const contactForms = document.querySelectorAll(".contact-form");
-const contactEndpoint = contactForms.length ? contactForms[0].dataset.endpoint : "";
+const dailyForms = document.querySelectorAll(".daily-form");
+const contactEndpoint = contactForms.length ? contactForms[0].dataset.endpoint : dailyForms.length ? "/api/contact" : "";
 let formToken = "";
 async function haalFormToken() {
   if (!contactEndpoint) return;
@@ -143,6 +144,59 @@ for (const form of contactForms) {
     }
   });
 }
+
+// The Daily Tubes: inschrijven per e-mail (server.js, /api/daily/subscribe).
+// Zelfde timing-token als de andere formulieren. Na de bevestigingslink of
+// het afmelden komt de bezoeker terug op /news/?daily=..., met een melding.
+for (const form of dailyForms) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const status = form.querySelector(".daily-status");
+    const data = new FormData(form);
+    data.set("page", location.pathname);
+    status.textContent = "Sending…";
+    status.className = "form-status daily-status";
+    const verstuur = () => {
+      data.set("form_token", formToken);
+      return fetch(form.dataset.endpoint, { method: "POST", body: new URLSearchParams(data), headers: { Accept: "application/json" } });
+    };
+    try {
+      let res = await verstuur();
+      let body = await res.json().catch(() => ({}));
+      if (res.status === 400 && body.error === "token") {
+        await haalFormToken();
+        await new Promise((klaar) => setTimeout(klaar, 3500));
+        res = await verstuur();
+        body = await res.json().catch(() => ({}));
+      }
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Almost done. Check your inbox and click the link to confirm.";
+        status.className = "form-status daily-status is-success";
+        track("daily-subscribe");
+      } else {
+        status.textContent = body.error === "email" ? "That email address does not look right." : "Something went wrong. Please try again later.";
+        status.className = "form-status daily-status is-error";
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong. Please try again later.";
+      status.className = "form-status daily-status is-error";
+    }
+  });
+}
+(function () {
+  const notice = document.querySelector("[data-daily-notice]");
+  const state = new URLSearchParams(location.search).get("daily");
+  const teksten = {
+    subscribed: ["You are subscribed to The Daily Tubes. The next email arrives in the morning when there is news.", "is-success"],
+    unsubscribed: ["You are unsubscribed. You will not receive The Daily Tubes any more.", "is-success"],
+    invalid: ["That link is no longer valid. Subscribe again below if you like.", "is-error"]
+  };
+  if (!notice || !teksten[state]) return;
+  notice.textContent = teksten[state][0];
+  notice.className = "form-status daily-notice " + teksten[state][1];
+  notice.hidden = false;
+})();
 
 // Prijzen in lokale valuta: land wordt via IP gedetecteerd (ipapi.co), koers
 // ligt vast (14-08-2026) i.p.v. live opgehaald. Bezoeker kan de detectie
@@ -826,3 +880,23 @@ if (helpSearch) {
     search();
   }
 }
+
+// Schermen na elkaar in een feature-blok (`images:` op de sectie, homepage:
+// Budget). Elke `data-interval` ms (standaard 4000) gaat `is-active` naar het
+// volgende beeld, na het laatste weer naar het eerste. Staat het tabblad op de
+// achtergrond of vraagt de bezoeker om minder beweging, dan blijft het staan.
+(function () {
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  for (const box of document.querySelectorAll("[data-slides]")) {
+    const slides = Array.from(box.querySelectorAll("img"));
+    if (slides.length < 2 || reduce) continue;
+    const interval = Math.max(1000, parseInt(box.dataset.interval, 10) || 4000);
+    let i = 0;
+    setInterval(() => {
+      if (document.hidden) return;
+      slides[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active");
+    }, interval);
+  }
+})();

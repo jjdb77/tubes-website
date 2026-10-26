@@ -154,6 +154,26 @@ collections:
               - { label: "Stappen in de rechterkolom", name: next, widget: list, field: { label: Regel, name: line, widget: string } }
               - { label: "Slotzin rechts", name: note, widget: text }
 
+      - name: glossary
+        label: "Woordenlijst (/film-production-glossary/)"
+        file: src/_data/glossary-terms.json
+        description: "Begrippen op de woordenlijst. De slug is het anker (#slug) waar andere pagina's naar linken: niet wijzigen. Volgorde maakt niet uit, de site sorteert zelf."
+        fields:
+          - label: Begrippen
+            name: terms
+            widget: list
+            summary: "{{fields.term}}"
+            fields:
+              - { label: Begrip, name: term, widget: string }
+              - { label: "Slug (anker)", name: slug, widget: string }
+              - { label: "Ook wel", name: aka, widget: list, required: false }
+              - label: Categorie
+                name: category
+                widget: select
+                options: ["Development and rights", "Financing and money", "Budget and accounting", "Pre-production", "On set", "Camera, light and sound", "Post-production", "Delivery and distribution", "TV and unscripted", "Commercials"]
+              - { label: Uitleg, name: definition, widget: markdown }
+              - { label: "Zie ook (slugs van andere begrippen)", name: see_also, widget: list, required: false }
+
       - name: helpcenter
         label: "Helpcentrum: categorieën en teksten"
         file: src/_data/helpcenter.json
@@ -180,6 +200,32 @@ collections:
               - { label: Naam, name: name, widget: string }
               - { label: Omschrijving (één zin), name: description, widget: string }
               - { label: Icoon, name: icon, widget: string, hint: "Pad in /assets/icons/, bijv. /assets/icons/calculator.svg" }
+
+  - name: rollen
+    label: "Rollen in mediaproductie (/production-roles/)"
+    icon: badge
+    folder: src/content/roles
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [title]
+    fields:
+      - { label: "Naam van de rol", name: title, widget: string }
+      - { label: "Ook wel genoemd", name: aka, widget: list, required: false, hint: "Alleen echte alternatieve titels" }
+      - { label: "Samenvatting (één zin, staat op het overzicht)", name: summary, widget: text }
+      - { label: "Plek op het overzicht", name: groups, widget: list, hint: "sector/afdeling, bijv. film/producers of commercials/agency. Eerste = hoofdplek. Sectoren en afdelingen: src/_data/productionRoles.json" }
+      - { label: "Rapporteert aan (bestandsnamen van rollen)", name: reports_to, widget: list, required: false }
+      - { label: "Werkt samen met (bestandsnamen van rollen)", name: works_with, widget: list, required: false }
+      - label: Fases
+        name: phases
+        widget: select
+        multiple: true
+        required: false
+        options: [development, financing, pre-production, production, post-production, delivery, release]
+      - { label: "SEO: titel", name: seo_title, widget: string, required: false }
+      - { label: "SEO: omschrijving", name: description, widget: string, required: false }
+      - { label: Tekst, name: body, widget: markdown }
 
   - name: helpartikelen
     label: "Helpcentrum (/help/)"
@@ -280,6 +326,85 @@ collections:
       - { label: Samenvatting, name: body, widget: markdown, hint: "Een of twee zinnen in het Engels. Beschrijf waar de post over gaat ('Katya Alexander writes about ...'), niet wat de auteur vindt: geen 'argues', 'makes the case' of 'flags'. Zo blijft het standpunt van de auteur en blijft de post zelf de plek voor het volledige verhaal. Geen em-dashes (—)." }
       - { label: "Geen eigen pagina (laat op uit)", name: permalink, widget: hidden, default: false }
 
+  - name: headlines
+    label: "The Daily Tubes: artikelen (/news/<slug>/)"
+    icon: newspaper
+    folder: src/content/headlines
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: "Kop op /news/", name: title, widget: string, hint: "Onze eigen kop op de kaart, in het Engels. Geen em-dashes (—)." }
+      - label: Onderwerp (het gekleurde labeltje)
+        name: topic
+        widget: select
+        default: Business
+        options: [Business, Streaming, "Awards & festivals", "Box office", "Rights & AI"]
+      - { label: Datum, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Samenvatting op /news/", name: summary, widget: text, hint: "Een of twee zinnen in eigen woorden. Dit is de tekst die Google ziet (de artikelpagina zelf staat op noindex)." }
+      - { label: "Kop van het artikel", name: headline, widget: string, required: false, hint: "Ingelezen uit De Vector met scripts/import-devector.mjs." }
+      - { label: "Inleiding van het artikel", name: standfirst, widget: text, required: false }
+      - label: Foto
+        name: photo
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: "URL (upload.wikimedia.org)", name: src, widget: string }
+          - { label: Alt-tekst, name: alt, widget: string, required: false }
+          - { label: Onderschrift, name: caption, widget: string, required: false }
+          - { label: Maker, name: credit, widget: string, required: false }
+          - { label: "Link naar de foto op Commons", name: credit_url, widget: string, required: false }
+          - { label: Licentie, name: license, widget: string, required: false }
+          - { label: "Link naar de licentie", name: license_url, widget: string, required: false }
+      - label: Perspectieven
+        name: perspectives
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: "Wat vaststaat", name: facts, widget: list, required: false }
+          - label: Standpunten
+            name: views
+            widget: list
+            required: false
+            fields:
+              - { label: Naam, name: name, widget: string }
+              - { label: Argumenten, name: arguments, widget: text, required: false }
+              - { label: Waarden, name: values, widget: text, required: false }
+              - { label: Gevolgen, name: consequences, widget: text, required: false }
+          - { label: Disclaimer, name: disclaimer, widget: text, required: false }
+      - label: Fact check
+        name: factcheck
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Oordeel, name: verdict, widget: string, required: false }
+          - { label: Samenvatting, name: summary, widget: text, required: false }
+          - label: Beweringen
+            name: claims
+            widget: list
+            required: false
+            fields:
+              - { label: Status, name: status, widget: string }
+              - { label: Bewering, name: text, widget: text }
+              - { label: Toelichting, name: note, widget: text, required: false }
+              - { label: Bron, name: url, widget: string, required: false }
+      - { label: "Noot van de redactie", name: editor_note, widget: text, required: false }
+      - label: Bronnen
+        name: sources
+        widget: list
+        required: false
+        fields:
+          - { label: Titel, name: name, widget: string }
+          - { label: Uitgever, name: publisher, widget: string, required: false }
+          - { label: URL, name: url, widget: string }
+      - { label: "Via De Vector (link)", name: via, widget: string, required: false, hint: "Staat klein onderaan de pagina." }
+      - { label: "Tekst van het artikel", name: body, widget: markdown }
+
   - name: paginas
     label: Pagina's
     icon: article
@@ -310,7 +435,18 @@ collections:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Licht, value: light}, {label: Donker, value: dark}], default: light }
               - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false }
               - { label: Titel, name: title, widget: string, hint: "Zet *sterretjes* om een woord voor de accentkleur, bijv: in *one platform*" }
+              - { label: "Regel onder de titel (optioneel)", name: subtitle, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
+              - label: "Budget / Plan / Produce onder de tekst (optioneel)"
+                name: steps
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                hint: "Drie blokjes met de vorm van de stap (cirkel, zeshoek, driehoek), een naam en een zin."
+                fields:
+                  - { label: Vorm, name: key, widget: select, options: [{label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}] }
+                  - { label: Naam, name: name, widget: string }
+                  - { label: Tekst, name: text, widget: string }
               - label: "Status-chips (pijplijn, optioneel)"
                 name: chips
                 widget: list
@@ -319,7 +455,9 @@ collections:
                 fields:
                   - { label: Tekst, name: label, widget: string }
                   - { label: Kleur, name: tone, widget: select, options: [teal, blue, amber, mint, lavender], default: teal }
-              - { label: "Knoppen rechts naast de tekst (alleen zonder beeld)", name: buttons_position, widget: select, options: [{label: "Onder de tekst", value: ""}, {label: "Rechts naast de tekst", value: side}], required: false }
+              - { label: "Kopje onder het beeld (optioneel)", name: heading_below, widget: string, required: false }
+              - { label: "Tekst onder het beeld (optioneel)", name: text_below, widget: markdown, required: false }
+              - { label: "Plek van de knoppen", name: buttons_position, widget: select, options: [{label: "Onder de tekst", value: ""}, {label: "Rechts naast de tekst (alleen zonder beeld)", value: side}, {label: "Onder het beeld", value: below}], required: false }
               - { label: "Minder witruimte onder de hero", name: tight, widget: boolean, required: false, default: false }
               - label: Knoppen
                 name: buttons
@@ -357,6 +495,7 @@ collections:
             fields:
               - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
               - { label: Kop, name: heading, widget: string, required: false }
+              - { label: "Icoon voor de kop (Budget / Plan / Produce)", name: step, widget: select, options: [{label: Geen, value: ""}, {label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}], required: false }
               - { label: "Vette introzin", name: lead, widget: string, required: false }
               - { label: Tekst, name: text, widget: markdown }
               - { label: Afbeelding, name: image, widget: image, required: false }
@@ -367,6 +506,26 @@ collections:
               - { label: "Beeld links (i.p.v. rechts)", name: media_position, widget: select, options: [{label: Rechts, value: right}, {label: Links, value: left}], default: right, required: false }
               - { label: "Onderschrift bij beeld", name: media_caption, widget: string, required: false }
               - { label: Knop, name: button, widget: object, required: false, collapsed: true, fields: *button_fields }
+              - label: "Kaart rechts (alleen zonder beeld)"
+                name: aside
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Kop, name: heading, widget: string, required: false }
+                  - { label: Tekst, name: text, widget: markdown }
+              - { label: "Kop boven Budget / Plan / Produce (optioneel)", name: steps_heading, widget: string, required: false }
+              - { label: "Zin onder die kop", name: steps_intro, widget: string, required: false }
+              - label: "Budget / Plan / Produce onder het blok (optioneel)"
+                name: steps
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Vorm, name: key, widget: select, options: [{label: "Budget (cirkel)", value: budget}, {label: "Plan (zeshoek)", value: plan}, {label: "Produce (driehoek)", value: produce}] }
+                  - { label: Naam, name: name, widget: string }
+                  - { label: Tekst, name: text, widget: string }
+              - { label: "Slotzin onder Budget / Plan / Produce", name: closing, widget: string, required: false }
           - name: cards
             label: "Kaarten (2 of 3 naast elkaar)"
             summary: "{{fields.heading}}"
@@ -400,6 +559,7 @@ collections:
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
               - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
+              - { label: "Anker (id voor links als #producers)", name: anchor, widget: string, required: false }
           - name: images
             label: Afbeeldingenrij
             summary: "Afbeeldingenrij"
@@ -445,6 +605,25 @@ collections:
                   - { label: Omschrijving, name: text, widget: markdown, required: false }
                   - { label: "Vooringevuld WhatsApp-bericht", name: whatsapp_text, widget: string, required: false, hint: "Staat alvast in het berichtvak als iemand op de WhatsApp-knop klikt." }
                   - { label: "Vooringevuld e-mailbericht", name: email_text, widget: string, required: false, hint: "Staat alvast in het berichtvak van de popover achter de knop Email us." }
+              - label: "Los pakket onder de abonnementen (met prijs)"
+                name: extra_plan
+                widget: object
+                required: false
+                collapsed: true
+                hint: "Een breed blok met prijs en een knop, onder het blok Per production. Op de homepage: alleen budgetteren, met een link naar /budgeting/. Leeg laten = geen blok."
+                fields:
+                  - { label: Naam, name: name, widget: string, required: false }
+                  - { label: Omschrijving, name: text, widget: markdown, required: false }
+                  - { label: Prijs, name: price, widget: string, required: false, hint: "Bijv. € 29" }
+                  - { label: Toelichting naast de prijs, name: price_note, widget: string, required: false }
+                  - { label: Detail onder de prijs, name: price_detail, widget: markdown, required: false }
+                  - label: Knop
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - { label: Tekst, name: label, widget: string }
+                      - { label: URL, name: url, widget: string }
               - { label: Voetnoot onder de abonnementen, name: footnote, widget: markdown, required: false }
           - name: cta
             label: "Donkerblauwe call-to-action"
@@ -467,6 +646,28 @@ collections:
               - { label: Kop, name: heading, widget: string, required: false }
               - { label: Introtekst, name: lead, widget: text, required: false, hint: "Een lege regel ertussen zet zinnen onder elkaar." }
             hint: "De inhoud van het overzicht (productietypes, stappen, verhalen) staat in src/_data/budgetPlanProduce.json, niet hier."
+          - name: emmy
+            label: "Emmy (AI-assistent)"
+            summary: "Emmy: {{fields.heading}}"
+            fields:
+              - { label: Achtergrond, name: theme, widget: select, options: [{label: Wit, value: white}, {label: Lichtgrijs, value: light}, {label: Lichtblauw, value: teal}], default: light }
+              - { label: "Bovenregel (klein, in hoofdletters)", name: kicker, widget: string, required: false, default: "Meet Emmy" }
+              - { label: Kop, name: heading, widget: string }
+              - { label: "Vette introzin (alleen uitgebreid)", name: lead, widget: string, required: false }
+              - { label: Tekst, name: text, widget: markdown }
+              - { label: "Linktekst", name: link_label, widget: string, required: false, default: "Discover Emmy" }
+              - { label: "Link naar", name: link_url, widget: string, required: false, default: "/academy/#emmy" }
+              - { label: "Avatar (leeg = Emmy's standaardfoto)", name: avatar, widget: image, required: false }
+              - { label: "Uitgebreide vorm (avatar rechts, knop, punten eronder)", name: detailed, widget: boolean, required: false, default: false }
+              - label: "Punten (alleen uitgebreid)"
+                name: points
+                widget: list
+                required: false
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: Kop, name: heading, widget: string }
+                  - { label: Tekst, name: text, widget: string }
+            hint: "Compact op de homepage: avatar links, één alinea, één link. Uitgebreid op /academy/ (daar in de template)."
           - name: contactform
             label: Contactformulier
             summary: "Contactformulier"
@@ -785,6 +986,7 @@ collections:
               - { label: Breedtegraad, name: lat, widget: number, value_type: float, required: false }
               - { label: Lengtegraad, name: lng, widget: number, value_type: float, required: false }
               - { label: Type, name: type, widget: select, options: ["Film festival", "Documentary festival", "Animation festival", "Genre festival", "Market", "Series & TV event", "Industry conference", "Trade show"] }
+              - { label: "Bereik", name: scope, widget: select, options: ["International", "National", "Local"], hint: "International: programma, competitie of standhouders uit veel landen. National: draait om de films of de branche van één land. Local: voor het publiek van de eigen stad of streek." }
               - { label: "Maand (bijv. February)", name: month, widget: string }
               - { label: "Volgende editie (alleen als gepubliceerd)", name: next_dates, widget: string, required: false }
               - { label: "Focus (1 zin)", name: focus, widget: text }

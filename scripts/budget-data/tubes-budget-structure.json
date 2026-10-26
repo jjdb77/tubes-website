@@ -1,0 +1,547 @@
+{
+  "id": "tubes-production",
+  "name": "Tubes Production Budget",
+  "description": "A practical film and TV budget structure organised around the production workflow. Start with the areas you need and add costs from the built-in catalogue.",
+  "sections": [
+    {
+      "number": "0100",
+      "name": "Development & Research",
+      "lines": [
+        "Concept development",
+        "Screenplay writing",
+        "Script editing",
+        "Research and fact checking",
+        "Development producer",
+        "Development travel",
+        "Pitch and presentation materials"
+      ]
+    },
+    {
+      "number": "0200",
+      "name": "Rights, Clearances & Archive",
+      "lines": [
+        "Underlying rights",
+        "Writer options and agreements",
+        "Music research clearance",
+        "Archive research",
+        "Archive footage licences",
+        "Artwork and brand clearances",
+        "Script legal review",
+        "Chain of title documentation"
+      ]
+    },
+    {
+      "number": "0300",
+      "name": "Producing & Business Affairs",
+      "lines": [
+        "Lead producer",
+        "Executive producer",
+        "Co-producer",
+        "Line producer",
+        "Associate producer",
+        "Business affairs producer",
+        "Producer assistant",
+        "Producer office and supplies"
+      ]
+    },
+    {
+      "number": "0400",
+      "name": "Directing & Creative Leadership",
+      "lines": [
+        "Director",
+        "Director assistant",
+        "Creative consultant",
+        "Technical adviser",
+        "Dialogue and dialect coaching",
+        "Storyboarding",
+        "Creative reference materials"
+      ]
+    },
+    {
+      "number": "0500",
+      "name": "Cast, Casting & Performance",
+      "lines": [
+        "Principal cast",
+        "Supporting cast",
+        "Day performers",
+        "Voice performers",
+        "Presenters and contributors",
+        "Casting director",
+        "Casting associate",
+        "Auditions and self-tape platform",
+        "Rehearsals and read-throughs",
+        "Cast coaching",
+        "Cast fittings and tests",
+        "Child performer support"
+      ]
+    },
+    {
+      "number": "0600",
+      "name": "Production Management & Accounts",
+      "lines": [
+        "Production manager",
+        "Production coordinator",
+        "Production secretary",
+        "Production assistants",
+        "Production accountant",
+        "Assistant production accountant",
+        "Payroll accountant",
+        "Cashier and petty cash support",
+        "Cost reporting support",
+        "Production office supplies"
+      ]
+    },
+    {
+      "number": "0700",
+      "name": "Assistant Direction, Continuity & Background",
+      "lines": [
+        "First assistant director",
+        "Second assistant director",
+        "Third assistant director",
+        "Floor runners",
+        "Script supervisor",
+        "Background casting",
+        "Background performers",
+        "Stand-ins and doubles",
+        "Crowd coordination",
+        "Chaperones and tutors"
+      ]
+    },
+    {
+      "number": "0800",
+      "name": "Locations, Permits & Site Services",
+      "lines": [
+        "Location manager",
+        "Assistant location manager",
+        "Location scouting",
+        "Location hire",
+        "Filming permits",
+        "Resident and business liaison",
+        "Location security",
+        "Police and traffic control",
+        "Technical parking and base camp",
+        "Location restoration"
+      ]
+    },
+    {
+      "number": "0900",
+      "name": "Travel, Accommodation & Daily Allowances",
+      "lines": [
+        "Air travel",
+        "Rail and ferry travel",
+        "Hotels and accommodation",
+        "Daily allowances",
+        "Local taxis and transfers",
+        "Travel booking fees",
+        "Visas and travel documents",
+        "Baggage and freight excess"
+      ]
+    },
+    {
+      "number": "1000",
+      "name": "Studios, Offices & Workshops",
+      "lines": [
+        "Studio hire",
+        "Production office hire",
+        "Workshop hire",
+        "Storage hire",
+        "Utilities and cleaning",
+        "Office furniture and equipment",
+        "Temporary internet and phones"
+      ]
+    },
+    {
+      "number": "1100",
+      "name": "Art Direction & Design",
+      "lines": [
+        "Production designer",
+        "Supervising art director",
+        "Art director",
+        "Art department coordinator",
+        "Set designer and draughting",
+        "Concept artist",
+        "Graphic designer",
+        "Art department assistants",
+        "Art research and reference"
+      ]
+    },
+    {
+      "number": "1200",
+      "name": "Construction, Scenic & Greens",
+      "lines": [
+        "Construction manager",
+        "Construction crew",
+        "Carpentry and fabrication",
+        "Metalwork and rigging labour",
+        "Scenic artists",
+        "Paint and scenic materials",
+        "Greens crew and materials",
+        "Construction plant and tools",
+        "Scaffolding and access equipment",
+        "Strike and waste removal"
+      ]
+    },
+    {
+      "number": "1300",
+      "name": "Set Decoration, Props & Graphics",
+      "lines": [
+        "Set decorator",
+        "Set decoration crew",
+        "Set dressing purchases",
+        "Set dressing rentals",
+        "Property master",
+        "Standby props",
+        "Props manufacture",
+        "Props purchases and rentals",
+        "On-set graphics",
+        "Weapons and armoury",
+        "Loss and damage allowance"
+      ]
+    },
+    {
+      "number": "1400",
+      "name": "Costume & Wardrobe",
+      "lines": [
+        "Costume designer",
+        "Costume supervisor",
+        "Costume buyers",
+        "Wardrobe assistants",
+        "Standby wardrobe",
+        "Costume making and alterations",
+        "Costume purchases",
+        "Costume rentals",
+        "Laundry and dry cleaning",
+        "Wardrobe workspace and supplies"
+      ]
+    },
+    {
+      "number": "1500",
+      "name": "Hair, Makeup & Prosthetics",
+      "lines": [
+        "Hair and makeup designer",
+        "Hair artists",
+        "Makeup artists",
+        "Additional daily crew",
+        "Prosthetic design and application",
+        "Wigs and hairpieces",
+        "Makeup consumables",
+        "Hair and makeup facilities"
+      ]
+    },
+    {
+      "number": "1600",
+      "name": "Camera & Imaging",
+      "lines": [
+        "Director of photography",
+        "Camera operators",
+        "First camera assistants",
+        "Second camera assistants",
+        "Camera trainees",
+        "Digital imaging technician",
+        "Camera equipment package",
+        "Lenses and specialist optics",
+        "Remote heads and stabilisers",
+        "Aerial and drone camera",
+        "Underwater camera",
+        "Unit stills photography",
+        "Camera consumables",
+        "Camera loss and damage allowance"
+      ]
+    },
+    {
+      "number": "1700",
+      "name": "Lighting & Electrical",
+      "lines": [
+        "Gaffer",
+        "Lighting console operator",
+        "Lighting technicians",
+        "Rigging electricians",
+        "Generator operator",
+        "Lighting equipment package",
+        "Generators and power distribution",
+        "Practical lighting",
+        "Lighting consumables",
+        "Electrical loss and damage allowance"
+      ]
+    },
+    {
+      "number": "1800",
+      "name": "Grip, Rigging & Camera Movement",
+      "lines": [
+        "Key grip",
+        "Grip team",
+        "Rigging grips",
+        "Dolly grip",
+        "Grip equipment package",
+        "Dollies and track",
+        "Cranes and jibs",
+        "Vehicle mounts",
+        "Access and lifting equipment",
+        "Rigging consumables",
+        "Grip loss and damage allowance"
+      ]
+    },
+    {
+      "number": "1900",
+      "name": "Production Sound & Communications",
+      "lines": [
+        "Production sound mixer",
+        "Boom operator",
+        "Sound assistant",
+        "Production sound package",
+        "Radio microphones",
+        "Playback operator",
+        "Video assist and monitors",
+        "Two-way radios",
+        "Communication licences",
+        "Sound consumables"
+      ]
+    },
+    {
+      "number": "2000",
+      "name": "Data, Dailies & Media",
+      "lines": [
+        "Data manager",
+        "Data wrangler",
+        "Dailies colourist",
+        "On-set storage",
+        "Shuttle drives",
+        "Cloud transfer and review",
+        "Dailies processing",
+        "Long-term production backup"
+      ]
+    },
+    {
+      "number": "2100",
+      "name": "Transport & Logistics",
+      "lines": [
+        "Transport coordinator",
+        "Drivers",
+        "Crew buses and vans",
+        "Equipment trucks",
+        "Unit and facilities vehicles",
+        "Self-drive vehicles",
+        "Fuel and charging",
+        "Mileage and parking",
+        "Vehicle permits and tolls",
+        "Vehicle repairs and cleaning",
+        "Freight and couriers",
+        "Transport loss and damage allowance"
+      ]
+    },
+    {
+      "number": "2200",
+      "name": "Catering, Welfare & Unit Services",
+      "lines": [
+        "Crew catering",
+        "Craft service",
+        "Drinking water",
+        "Dining tents and furniture",
+        "Mobile toilets and washrooms",
+        "Waste and recycling service",
+        "Unit cleaning",
+        "Crew welfare supplies",
+        "On-set medical cover"
+      ]
+    },
+    {
+      "number": "2300",
+      "name": "Stunts, Animals & Physical Effects",
+      "lines": [
+        "Stunt coordinator",
+        "Stunt performers",
+        "Stunt rehearsal and training",
+        "Stunt equipment",
+        "Animal coordinator and handlers",
+        "Animals and animal transport",
+        "Animal welfare support",
+        "Physical effects supervisor",
+        "Physical effects crew",
+        "Physical effects materials and rentals"
+      ]
+    },
+    {
+      "number": "2400",
+      "name": "Specialist Units & Remote Capture",
+      "lines": [
+        "Second unit crew",
+        "Splinter unit crew",
+        "Documentary field unit",
+        "Remote production kit",
+        "Marine unit",
+        "Aerial unit",
+        "Motion control unit",
+        "Specialist unit travel and logistics"
+      ]
+    },
+    {
+      "number": "2500",
+      "name": "Editorial & Post Management",
+      "lines": [
+        "Post-production producer",
+        "Post-production supervisor",
+        "Post-production coordinator",
+        "Editor",
+        "Assistant editors",
+        "Editorial rooms",
+        "Editing systems and storage",
+        "Offline edit",
+        "Online edit and conform",
+        "Post-production project management",
+        "Post couriers and transfers"
+      ]
+    },
+    {
+      "number": "2600",
+      "name": "Post Sound & Voice Recording",
+      "lines": [
+        "Supervising sound editor",
+        "Dialogue editing",
+        "Sound effects editing",
+        "ADR recording",
+        "Foley recording",
+        "Voice-over recording",
+        "Premix",
+        "Final mix",
+        "Audio layback and quality control"
+      ]
+    },
+    {
+      "number": "2700",
+      "name": "Music & Music Rights",
+      "lines": [
+        "Composer",
+        "Music supervisor",
+        "Music editor",
+        "Musicians and vocalists",
+        "Recording studio",
+        "Orchestration and copying",
+        "Original score mixing",
+        "Music licences"
+      ]
+    },
+    {
+      "number": "2800",
+      "name": "VFX, Animation & Motion Graphics",
+      "lines": [
+        "Visual effects supervisor",
+        "On-set visual effects support",
+        "Visual effects production",
+        "Compositing and cleanup",
+        "3D and animation",
+        "Motion graphics",
+        "Screen replacements",
+        "Visual effects storage and transfer",
+        "Visual effects review and quality control"
+      ]
+    },
+    {
+      "number": "2900",
+      "name": "Colour, Finishing & Mastering",
+      "lines": [
+        "Picture conform",
+        "Colour grading",
+        "Online finishing",
+        "Restoration and cleanup",
+        "Mastering",
+        "Picture quality control",
+        "Cinema master",
+        "Broadcast and streaming masters"
+      ]
+    },
+    {
+      "number": "3000",
+      "name": "Deliverables, Access & Localisation",
+      "lines": [
+        "Delivery management",
+        "Technical specifications and packaging",
+        "Captions and subtitles",
+        "Audio description",
+        "Sign-language version",
+        "Dubbing and foreign-language versions",
+        "Dialogue and music-effects masters",
+        "Metadata and cue sheets",
+        "Compliance edits",
+        "Long-term archive masters"
+      ]
+    },
+    {
+      "number": "3100",
+      "name": "Publicity, Stills & Audience Materials",
+      "lines": [
+        "Unit publicist",
+        "Behind-the-scenes crew",
+        "Publicity stills",
+        "Electronic press kit",
+        "Trailer and teaser",
+        "Poster and key art",
+        "Preview screenings",
+        "Festival and market materials"
+      ]
+    },
+    {
+      "number": "3200",
+      "name": "Insurance, Safety & Risk",
+      "lines": [
+        "Production insurance",
+        "Equipment insurance",
+        "Errors and omissions insurance",
+        "Travel and medical insurance",
+        "Risk assessments",
+        "Health and safety adviser",
+        "Intimacy coordinator",
+        "Safeguarding support",
+        "Security assessment",
+        "Emergency planning and drills"
+      ]
+    },
+    {
+      "number": "3300",
+      "name": "Payroll, Employment & Fringes",
+      "lines": [
+        "Employer payroll charges",
+        "Pension contributions",
+        "Holiday pay",
+        "Overtime premium allowance",
+        "Meal penalties and turnaround costs",
+        "Union and guild costs",
+        "Payroll service fees",
+        "Work permits",
+        "Training and apprenticeship levies"
+      ]
+    },
+    {
+      "number": "3400",
+      "name": "Audit, Finance & Corporate Costs",
+      "lines": [
+        "Production legal fees",
+        "Accounting and audit fees",
+        "Bank charges",
+        "Foreign exchange costs",
+        "Financing fees and interest",
+        "Completion security",
+        "Company administration",
+        "Tax and incentive consultancy",
+        "Production service fee"
+      ]
+    },
+    {
+      "number": "3500",
+      "name": "Production Technology, Security & Sustainability",
+      "lines": [
+        "Production software",
+        "Digital collaboration tools",
+        "Cybersecurity review",
+        "Secure file transfer",
+        "Identity and access management",
+        "Data protection support",
+        "Carbon measurement",
+        "Sustainability coordinator",
+        "Low-emission power and transport premium",
+        "Reusable materials and waste reduction",
+        "Community engagement",
+        "Environmental reporting"
+      ]
+    }
+  ]
+}
