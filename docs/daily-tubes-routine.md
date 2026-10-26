@@ -1,9 +1,10 @@
 # The Daily Tubes bijwerken (geplande taak, 1x per dag)
 
 Werkinstructie voor de geplande Claude-taak die /news/ bijwerkt uit De Vector.
-Draait één keer per dag om 06.30 (Amsterdam, wintertijd; cron `30 5 * * *` UTC,
-dus in de zomer 07.30). De ochtendmail gaat om 07.00 uit en neemt mee wat er
-sinds de vorige mail bij kwam.
+Draait één keer per dag om 08.30 (Amsterdam, wintertijd; cron `30 7 * * *` UTC,
+dus in de zomer 09.30). De ochtendmail gaat vanaf 09.00 uit en neemt mee wat er
+sinds de vorige mail bij kwam. Let op: in de zomertijd draait de routine pas na
+de mail, dan komt het nieuws van die ochtend een dag later in de mail.
 
 ## Stappen
 

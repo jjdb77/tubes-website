@@ -1436,7 +1436,7 @@ app.use((req, res, next) => {
 const DAILY_SUBS_FILE = path.join(DATA_DIR, "daily-subscribers.json");
 const DAILY_STATE_FILE = path.join(DATA_DIR, "daily-state.json");
 const DAILY_DIGEST = path.join(__dirname, "_site", "news", "digest.json");
-const DAILY_HOUR = Number(process.env.DAILY_HOUR || 7);
+const DAILY_HOUR = Number(process.env.DAILY_HOUR || 9);
 const SITE_URL = (process.env.SITE_URL || `https://${CANONICAL_HOST}`).replace(/\/$/, "");
 const DAILY_FROM = process.env.DAILY_FROM || MAIL_FROM.replace(/^[^<]*</, "The Daily Tubes <");
 
