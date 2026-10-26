@@ -1617,8 +1617,20 @@ function dailyTubesLine() {
   const wacht = subs.length - actief;
   const state = readJsonFile(DAILY_STATE_FILE, {});
   const laatste = state.lastRun ? `; laatste mail ${stamp(state.lastRun.at)} (${state.lastRun.artikelen} artikel${state.lastRun.artikelen === 1 ? "" : "en"}, ${state.lastRun.verstuurd} verstuurd)` : "";
-  return `<p class="count" style="margin-top:20px">The Daily Tubes: ${actief} abonnee${actief === 1 ? "" : "s"}${wacht ? `, ${wacht} wacht${wacht === 1 ? "" : "en"} op bevestiging` : ""}${laatste}</p>`;
+  // Knop om de mail meteen te sturen in plaats van op het vaste uur; gaat alleen
+  // over artikelen die nog niet gemaild zijn, dus de volgende ochtendmail dubbelt niet.
+  const open = state.sent ? readDailyDigest().filter((i) => !state.sent.includes(i.slug)).length : 0;
+  const knop = open && actief
+    ? ` &middot; ${open} artikel${open === 1 ? "" : "en"} nog niet gemaild <button type="submit" style="font:inherit;color:#0E8C77;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline">nu versturen</button>`
+    : "";
+  return `<form method="POST" action="/beheer/daily-send" style="margin-top:20px"><p class="count">The Daily Tubes: ${actief} abonnee${actief === 1 ? "" : "s"}${wacht ? `, ${wacht} wacht${wacht === 1 ? "" : "en"} op bevestiging` : ""}${laatste}${knop}</p></form>`;
 }
+
+app.post("/beheer/daily-send", async (req, res) => {
+  if (!checkAuth(req, res)) return;
+  await dailyRonde({ forceer: true });
+  res.redirect(303, "/beheer");
+});
 
 const SITE = path.join(__dirname, "_site");
 
