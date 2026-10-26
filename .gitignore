@@ -8,3 +8,6 @@ _backup-navy-includes/
 
 # Lokale testdata van het formulier (op Railway staat dit op de volume)
 data/
+
+# De Vector API-sleutel (lokaal, nooit committen)
+.devector-key

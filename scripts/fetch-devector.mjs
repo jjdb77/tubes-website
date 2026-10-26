@@ -5,6 +5,7 @@
 // met de oorspronkelijke bronnen onder `sources` en de De Vector-link als `via`).
 //
 //   DEVECTOR_API_KEY=dv_... node scripts/fetch-devector.mjs [--since 2026-09-24] [--json]
+//   (of zet de sleutel in .devector-key in de hoofdmap)
 //   node scripts/fetch-devector.mjs --site [--since 2026-10-08] [--json]
 //
 // De sleutel hoort nooit in de repo (die is publiek). Zonder --since geldt de
@@ -18,19 +19,37 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 const API = "https://www.devector.nl/api/business/feed.json";
 const DIR = new URL("../src/content/headlines/", import.meta.url);
 
-const key = process.env.DEVECTOR_API_KEY;
+// Sleutel uit de omgeving, anders uit .devector-key in de hoofdmap (staat in
+// .gitignore, dus nooit in de publieke repo).
+const keyFile = new URL("../.devector-key", import.meta.url);
+const key = process.env.DEVECTOR_API_KEY || (existsSync(keyFile) ? readFileSync(keyFile, "utf8").trim() : "");
 const args = process.argv.slice(2);
 const fromSite = args.includes("--site") || !key;
 const asJson = args.includes("--json");
 const sinceArg = args[args.indexOf("--since") + 1];
 
-// Wat er al staat: datums en de artikelpaden achter /edition/.
+// Sleutel van een artikel: "<datum>/<slug>" voor de dagelijkse editie,
+// "film-tv/<datum>/<slug>" voor het vakblad (/bladen/film-tv/, in de feed
+// "Screen & Broadcast"), in welke taal de link ook staat.
+function pathOf(link) {
+  const blad = link.match(/\/bladen\/([^/]+)\/(?:[a-z]{2}\/)?(\d{4}-\d{2}-\d{2}\/[^/]+)\.html/);
+  if (blad) return `${blad[1]}/${blad[2]}`;
+  return link.match(/\/(?:en\/edition|editie)\/(.+)\.html/)?.[1];
+}
+// Engelse versie: /en/edition/... of /bladen/<blad>/en/...
+function enOf(link, path) {
+  const blad = link.match(/\/bladen\/([^/]+)\//);
+  if (blad) return `https://www.devector.nl/bladen/${blad[1]}/en/${path.slice(blad[1].length + 1)}.html`;
+  return path ? `https://www.devector.nl/en/edition/${path}.html` : link;
+}
+
+// Wat er al staat: datums en de artikelpaden.
 const known = new Set();
 let newest = null;
 for (const f of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
   const text = readFileSync(new URL(f, DIR), "utf8");
   const link = text.match(/^(?:via|link):\s*(\S+)/m)?.[1] || "";
-  const path = link.match(/\/(?:en\/edition|editie)\/(.+)\.html/)?.[1];
+  const path = pathOf(link);
   if (path) known.add(path);
   const date = text.match(/^date:\s*(\S+)/m)?.[1];
   if (date && (!newest || date > newest)) newest = date;
@@ -70,14 +89,28 @@ async function fromEditions(since) {
       out.push({ when: day, section: m[1], headline: heads[0] || href, lead: "", path, en: `https://www.devector.nl/en/edition/${path}.html` });
     }
   }
-  return out;
+  // Het vakblad Screen & Broadcast heeft geen dagpagina's; de index toont de
+  // laatste weken, per stuk een rubriek en een link "<datum>/<slug>.html".
+  const res = await fetch("https://www.devector.nl/bladen/film-tv/", { headers: { "User-Agent": "Mozilla/5.0 (Tubes news)" } });
+  if (res.ok) {
+    const html = await res.text();
+    const seen = new Set();
+    for (const m of html.matchAll(/(?:<span class="bl-kicker">([^<]*)<\/span>\s*)?<a href="(?:[^"]*\/)?(\d{4}-\d{2}-\d{2})\/([^"/]+)\.html"[^>]*>([\s\S]*?)<\/a>/g)) {
+      const [, kicker, day, slug, text] = m;
+      const path = `film-tv/${day}/${slug}`;
+      if (day < since || seen.has(path) || !decode(text)) continue;
+      seen.add(path);
+      out.push({ when: day, section: `Screen & Broadcast${kicker ? " · " + decode(kicker) : ""}`, headline: decode(text), lead: "", path, en: `https://www.devector.nl/bladen/film-tv/en/${day}/${slug}.html` });
+    }
+  }
+  return out.sort((a, b) => (a.when < b.when ? 1 : -1));
 }
 
 if (fromSite) {
   const fresh = (await fromEditions(since)).filter((a) => !known.has(a.path));
   if (asJson) console.log(JSON.stringify(fresh, null, 2));
   else {
-    console.log(`${fresh.length} nieuw in Film/Media sinds ${since} (editiepagina's)\n`);
+    console.log(`${fresh.length} nieuw in Film/Media en Screen & Broadcast sinds ${since} (openbare pagina's)\n`);
     for (const a of fresh) console.log(`${a.when}  [${a.section}]  ${a.headline}\n  ${a.en}\n`);
   }
   process.exit(0);
@@ -93,8 +126,8 @@ const data = await res.json();
 
 const fresh = (data.articles || [])
   .map((a) => {
-    const path = a.url.match(/\/editie\/(.+)\.html/)?.[1];
-    return { ...a, path, en: path ? `https://www.devector.nl/en/edition/${path}.html` : a.url };
+    const path = pathOf(a.url);
+    return { ...a, path, en: enOf(a.url, path) };
   })
   .filter((a) => !known.has(a.path));
 

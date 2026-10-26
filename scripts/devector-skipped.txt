@@ -26,3 +26,44 @@
 2026-10-17/maarten-spanjer-overleden  # overlijden
 2026-10-18/cinekid-awards-2026  # dubbel met cinekid-awards-2026-2
 2026-10-18/dwdd-angstcultuur-opnieuw-besproken  # werksfeer bij een omroep, gevoelig
+2026-10-20/apu-krijgt-nieuwe-stem  # roddel, stemcasting
+2026-10-20/wikipedia-ai-zoekmachines  # geen film of tv
+2026-10-20/amanpour-verlaat-cnn  # journalistiek, personeel
+2026-10-21/emma-stopt-na-vijftig-jaar  # tijdschrift
+2026-10-22/tom-skerritt-overleden  # overlijden
+2026-10-22/trump-depositie-bbc  # rechtszaak, politiek
+2026-10-23/tsjechie-publieke-omroepen  # dubbel met tsjechie-publieke-omroep-financiering
+2026-10-23/songfestival-npo-gesprekken  # politiek rond het Songfestival
+2026-10-24/turkije-protesten-persvrijheid  # persvrijheid
+2026-10-25/sven-kockelmann-sonja-barend-award  # journalistieke prijs
+2026-10-25/tsjechen-verdedigen-publieke-omroep  # dubbel, protest
+2026-10-26/tsjechische-mediahervorming  # dubbel, protest
+film-tv/2026-10-26/tsjechie-omroepfinanciering-protest  # dubbel, Tsjechische omroep staat er al
+film-tv/2026-10-25/tsjechie-financiering-publieke-media  # dubbel, Tsjechische omroep
+film-tv/2026-10-24/tsjechie-financiering-publieke-media  # dubbel, Tsjechische omroep
+film-tv/2026-10-25/mia-2026-recorddeelname  # MIA staat er al (investment hub)
+film-tv/2026-10-25/bbc-sofie-automation-rts  # nieuwsredactietechniek
+film-tv/2026-10-24/viaplay-verlies-overname-videoland  # dubbel met ACM-goedkeuring Viaplay
+film-tv/2026-10-24/php2shell-belgische-websites  # IT-beveiliging, geen film of tv
+film-tv/2026-10-23/barrandov-nieuwe-licenties  # zenderlicenties, klein
+film-tv/2026-10-22/ceska-televize-accessibility  # ondertiteling bij een zender
+film-tv/2026-10-21/bbc-lineaire-diensten  # dubbel met bbc-schrapt-zenders-en-banen
+film-tv/2026-10-21/videoland-viaplay-acm  # dubbel met de editieversie
+film-tv/2026-10-20/ebru-rechten-2032  # sportrechten
+film-tv/2026-10-20/ebu-multiplatform-productie  # werkgroep, klein
+film-tv/2026-10-19/ofcom-parlementaire-hoorzitting  # politiek
+film-tv/2026-10-19/nlziet-dolby-digital  # consumententechniek
+film-tv/2026-10-18/bbc-diy-sos-rustjaar  # één programma
+film-tv/2026-10-18/rte-30-acres-prix-europa  # audioserie, radio
+film-tv/2026-10-17/swr-spuren-tweede-seizoen  # één seizoen, klein
+film-tv/2026-10-16/franse-filmmakers-begroting-2027  # dubbel met franse-mediabegroting-2027
+film-tv/2026-10-16/cerberus-livelink-studio  # broadcasttechniek, product
+film-tv/2026-10-16/nep-waarschuwt-investeringszekerheid  # omroeptechniek, lobby
+film-tv/2026-10-15/freenet-waipu-tv  # tv-distributie, aandelen
+film-tv/2026-10-15/sony-ltn-cloud-playout  # playout-techniek
+film-tv/2026-10-15/yospace-court-tv  # reclametechniek
+2026-10-24/arkane-lyon-zoektocht-koper  # games
+2026-10-23/sony-uhd-bluray-stop  # consumententechniek
+2026-10-20/amazon-luna-prime-video  # gaming
+2026-10-20/cats-rijksmuseum-carre  # musical
+2026-10-15/vlaamse-ai-technologie-emmy  # technische prijs, techniek

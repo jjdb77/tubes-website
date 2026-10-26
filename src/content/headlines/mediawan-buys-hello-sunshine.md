@@ -1,0 +1,25 @@
+---
+title: "Mediawan and Reese Witherspoon buy Hello Sunshine"
+date: 2026-10-15
+topic: "Business"
+summary: "The producer of Big Little Lies and The Morning Show leaves Candle Media and joins Mediawan's group of independent production companies."
+headline: "Mediawan and Witherspoon acquire Hello Sunshine"
+standfirst: "The French production group is buying the US label from Candle Media and expanding its international network."
+photo: {"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Reese_Witherspoon_at_Nashville_Film_Festival_2026_%28cropped_head_room%29.jpg/960px-Reese_Witherspoon_at_Nashville_Film_Festival_2026_%28cropped_head_room%29.jpg","alt":"Reese Witherspoon","caption":"Reese Witherspoon","credit":"CaseyJNewell","credit_url":"https://commons.wikimedia.org/wiki/File:Reese_Witherspoon_at_Nashville_Film_Festival_2026_(cropped_head_room).jpg","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0"}
+factcheck: {"verdict":"Approved","summary":"The acquisition, parties involved and key business context have been confirmed by multiple public sources. Unconfirmed financial details have been explicitly presented as reports from sources, not as established fact.","claims":[{"status":"Confirmed","text":"Mediawan is buying Hello Sunshine from Candle Media together with Reese Witherspoon.","note":"Axios, Screen Daily and Señal News report the same transaction.","url":""},{"status":"Confirmed","text":"Hello Sunshine was founded by Reese Witherspoon in 2016.","note":"The company’s background is confirmed by Hello Sunshine and AFP.","url":""},{"status":"Confirmed","text":"Candle Media acquired a majority stake at a valuation of approximately $900 million in 2021.","note":"Axios and Screen Daily cite this earlier valuation.","url":""},{"status":"Confirmed","text":"The new financial terms have not been disclosed.","note":"Multiple sources report that the price was not disclosed; the low to mid tens of millions is source information only.","url":""}]}
+sources: [{"name":"Candle Media sells Hello Sunshine back to Reese Witherspoon","publisher":"Axios","url":"https://www.axios.com/2026/10/13/candle-media-hello-sunshine-reese-witherspoon"},{"name":"Mediawan acquires Reese Witherspoon’s Hello Sunshine from Candle Media","publisher":"Screen Daily","url":"https://www.screendaily.com/news/mediawan-acquires-reese-witherspoons-hello-sunshine-from-candle-media/5221425.article"},{"name":"Mediawan acquires Hello Sunshine in partnership with Reese Witherspoon","publisher":"Señal News","url":"https://senalnews.com/en/content/mediawan-acquires-hello-sunshine-in-partnership-with-reese-witherspoon/amp"}]
+via: "https://www.devector.nl/bladen/film-tv/en/2026-10-15/mediawan-hello-sunshine.html"
+---
+Mediawan is buying production company Hello Sunshine from Candle Media together with Reese Witherspoon. The financial terms and exact ownership split have not been disclosed, but the deal fits Mediawan’s strategy of bringing independent production companies together internationally.
+
+Hello Sunshine was founded by Reese Witherspoon in 2016 and is known for productions including Big Little Lies, The Morning Show and Little Fires Everywhere. The company also operates Reese’s Book Club, a book platform whose selected titles regularly serve as the basis for film and television projects.
+
+Candle Media acquired a majority stake in Hello Sunshine in 2021. The company was then valued at approximately $900 million. No official purchase price has been published for the new transaction. Axios reported, citing sources, that the amount could be in the low to mid tens of millions of dollars; that figure has not been confirmed by the parties involved.
+
+Mediawan is an international production and distribution group based in Paris. According to the companies involved, the network comprises almost 100 labels in the United States, the United Kingdom, Europe and other markets. Previous expansions brought Plan B Entertainment, See-Saw Films and North Road into the group.
+
+For Hello Sunshine, the deal means access to a larger international network, financing opportunities and distribution relationships. Mediawan says it also intends to preserve the creative independence and distinct identity of the labels. The model is intended to combine economies of scale with the recognisable relationships between producers, talent and rights holders.
+
+For Mediawan, the acquisition also represents a further shift towards English-language premium production. The company gains a label with experience in film, scripted series, unscripted formats, podcasts and direct audience relationships. The value of the acquisition therefore lies not only in existing titles, but also in developed rights, talent contracts and access to new book adaptations.
+
+The deal also highlights how significantly valuations in the production sector have changed since the streaming boom of 2021. Candle Media is selling a major brand from its original portfolio, while Mediawan is continuing to consolidate. No specific consequences for ongoing projects, employees or distribution contracts have yet been announced.

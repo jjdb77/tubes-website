@@ -7,9 +7,11 @@ dus het nieuws van de nacht zit erin.
 ## Stappen
 
 1. `git pull` op `main`.
-2. `node scripts/fetch-devector.mjs --site` toont de nieuwe stukken in de
-   rubrieken Film en Media sinds het nieuwste bericht op de site. Niets nieuw:
-   stoppen, niets committen.
+2. `node scripts/fetch-devector.mjs --site` toont de nieuwe stukken sinds het
+   nieuwste bericht op de site: de rubrieken Film en Media van de dagelijkse
+   editie én het vakblad Screen & Broadcast (`/bladen/film-tv/`). Dat vakblad
+   levert verreweg het meeste op (fondsen, coproducties, markten, overnames).
+   Niets nieuw: stoppen, niets committen.
 3. Kies per stuk: wel of niet. **Wel**: wat ertoe doet voor wie film of tv
    maakt: deals en overnames, streamers en zenders (bestellingen, rechten,
    ontslagen, stopzettingen), prijzen en festivals, box office, markten
@@ -24,7 +26,7 @@ dus het nieuws van de nacht zit erin.
    ---
    date: <datum>
    topic: "<Business | Streaming | Awards & festivals | Box office | Rights & AI>"
-   via: "<de en-URL uit stap 2>"
+   via: "<de Engelse URL uit stap 2: /en/edition/... of /bladen/film-tv/en/...>"
    ---
    ```
    en dan `node scripts/import-devector.mjs <engelse-slug>`.
@@ -36,5 +38,7 @@ dus het nieuws van de nacht zit erin.
 8. Commit (bericht "The Daily Tubes: <n> berichten van <datum>") en push naar
    `main`. Railway deployt; de ochtendmail neemt nieuwe berichten vanzelf mee.
 
-Faalt een import (opmaak van De Vector veranderd), sla dat stuk over, zet het
-niet in de skiplijst, en meld het in de samenvatting van de run.
+Faalt een import (opmaak van De Vector veranderd, of nog geen Engelse versie:
+404), sla dat stuk over, zet het niet in de skiplijst, en meld het in de
+samenvatting van de run. Een stuk zonder Engelse versie komt dan vanzelf terug
+zodra die er is.
