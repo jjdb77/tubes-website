@@ -567,7 +567,7 @@ async function stuurMail(naar, onderwerp, html, antwoordNaar, cc, extra) {
       }),
     });
     if (!res.ok) {
-      console.error("[mail] verzenden mislukt:", res.status, await res.text().catch(() => ""));
+      console.error(`[mail] verzenden mislukt (${onderwerp}):`, res.status, await res.text().catch(() => ""));
       return false;
     }
     return true;
@@ -1465,30 +1465,74 @@ async function stuurDailyMail(naar, onderwerp, html, afmeldUrl) {
   return stuurMail(naar, onderwerp, html, "contact@tubes.media", "", extra);
 }
 
+// Bots vullen hier adressen van echte mensen in (dezelfde adressen komen
+// tegelijk als spam binnen via het contactformulier), vaak twee keer kort na
+// elkaar en vaak als Gmail-adres met puntjes ertussen. Elke bevestigingsmail
+// daarnaar is ongevraagde mail vanaf appsolutions.nl, en dat domein deelt
+// 4Relations. Daarom: de bevestiging gaat pas na twee minuten weg en alleen als
+// het adres in die tijd niet als spam is gemeld, hoogstens één per adres per
+// dag, en hoogstens DAILY_CONFIRM_MAX per dag in totaal. De bezoeker krijgt
+// altijd hetzelfde antwoord.
+const DAILY_CONFIRM_DELAY = 2 * 60 * 1000;
+const DAILY_CONFIRM_MAX = Number(process.env.DAILY_CONFIRM_MAX || 25);
+const dailyBevestigdPerDag = new Map();
+const maskeer = (email) => email.replace(/^(.)[^@]*@/, "$1***@");
+// Strenger dan EMAIL_RE: Resend weigert ook ".." en een punt aan begin of eind.
+const geldigAdres = (email) => EMAIL_RE.test(email) && email.length <= 200 && !/\.\.|^\.|\.@|@\./.test(email);
+function verdachtAdres(email) {
+  const [lokaal, domein] = email.split("@");
+  if (/^(gmail|googlemail)\.com$/.test(domein) && (lokaal.match(/\./g) || []).length >= 3) return "gmail met veel puntjes";
+  const week = Date.now() - 7 * 864e5;
+  const spam = readSubmissions().some((s) => s.spam && String(s.email || "").trim().toLowerCase() === email && Date.parse(s.at) > week);
+  return spam ? "zelfde adres als spam in het contactformulier" : "";
+}
+
 app.post("/api/daily/subscribe", async (req, res) => {
   const email = String(req.body.email || "").trim().toLowerCase();
   if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "rate" });
   // Honeypot: een bot vult dit verborgen veld in. Wij doen alsof het lukte.
-  if (req.body.company_website) return res.json({ ok: true });
+  if (req.body.company_website) {
+    console.log(`[daily] inschrijving genegeerd (verborgen veld ingevuld): ${maskeer(email)}`);
+    return res.json({ ok: true });
+  }
   const leeftijd = tokenLeeftijd(req.body.form_token);
   if (leeftijd === null || leeftijd > TOKEN_MAX_AGE) return res.status(400).json({ ok: false, error: "token" });
-  if (leeftijd < TOKEN_MIN_AGE) return res.json({ ok: true });
-  if (!EMAIL_RE.test(email) || email.length > 200) return res.status(400).json({ ok: false, error: "email" });
+  if (leeftijd < TOKEN_MIN_AGE) {
+    console.log(`[daily] inschrijving genegeerd (binnen 3 seconden): ${maskeer(email)}`);
+    return res.json({ ok: true });
+  }
+  if (!geldigAdres(email)) return res.status(400).json({ ok: false, error: "email" });
 
   const subs = readDailySubs();
   const bestaand = subs[email];
   // Zelfde antwoord voor bestaand en nieuw: verklapt niet wie er al op staat.
   if (bestaand?.status === "active") return res.json({ ok: true });
+  // Al een bevestiging gestuurd (of ingepland) in de afgelopen 24 uur: niet nog een.
+  if (bestaand?.confirmSentAt && Date.now() - Date.parse(bestaand.confirmSentAt) < 864e5) {
+    console.log(`[daily] inschrijving: bevestiging al verstuurd vandaag: ${maskeer(email)}`);
+    return res.json({ ok: true });
+  }
   const token = bestaand?.token || nieuwToken();
-  subs[email] = { status: "pending", token, createdAt: bestaand?.createdAt || new Date().toISOString(), page: String(req.body.page || "").slice(0, 200) };
+  subs[email] = { status: "pending", token, createdAt: bestaand?.createdAt || new Date().toISOString(), confirmSentAt: new Date().toISOString(), page: String(req.body.page || "").slice(0, 200) };
   writeJsonFile(DAILY_SUBS_FILE, subs);
+  res.json({ ok: true });
 
-  const link = `${SITE_URL}/api/daily/confirm?t=${token}`;
-  const html = dailyMailOpmaak(`<p style="font-size:16px;line-height:1.55">Please confirm that you want to receive The Daily Tubes: the film and television news of the day, in your inbox each morning when there is news.</p>
+  setTimeout(() => {
+    const reden = verdachtAdres(email);
+    if (reden) return console.log(`[daily] geen bevestiging gestuurd (${reden}): ${maskeer(email)}`);
+    const dag = amsterdamDag();
+    const aantal = dailyBevestigdPerDag.get(dag) || 0;
+    if (aantal >= DAILY_CONFIRM_MAX) return console.log(`[daily] geen bevestiging gestuurd (dagplafond ${DAILY_CONFIRM_MAX} bereikt): ${maskeer(email)}`);
+    dailyBevestigdPerDag.clear();
+    dailyBevestigdPerDag.set(dag, aantal + 1);
+    const link = `${SITE_URL}/api/daily/confirm?t=${token}`;
+    const html = dailyMailOpmaak(`<p style="font-size:16px;line-height:1.55">Please confirm that you want to receive The Daily Tubes: the film and television news of the day, in your inbox each morning when there is news.</p>
 <p style="margin:24px 0"><a href="${link}" style="display:inline-block;background:#0E9C88;color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:10px">Yes, subscribe me</a></p>
 <p style="font-size:13px;color:#8B8E94;line-height:1.5">Did not ask for this? Then you can ignore this email. Without the click you will not receive anything.</p>`);
-  stuurDailyMail(email, "Confirm your subscription to The Daily Tubes", html).catch(() => {});
-  res.json({ ok: true });
+    stuurDailyMail(email, "Confirm your subscription to The Daily Tubes", html)
+      .then((ok) => console.log(`[daily] bevestiging ${ok ? "verstuurd" : "mislukt"}: ${maskeer(email)}`))
+      .catch(() => {});
+  }, Number(process.env.DAILY_CONFIRM_DELAY_MS || DAILY_CONFIRM_DELAY)).unref?.();
 });
 
 app.get("/api/daily/confirm", (req, res) => {
