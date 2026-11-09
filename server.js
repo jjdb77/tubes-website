@@ -10,6 +10,7 @@ import compression from "compression";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import zlib from "node:zlib";
 import { fileURLToPath } from "node:url";
 import { createAcademy } from "./lib/academy.js";
 
@@ -887,7 +888,7 @@ app.use("/freeway", (req, res, next) => {
 // leeg); zonder die variabele geeft alles een 503. Eén document vervangen
 // zonder deploy: curl -u ":<wachtwoord>" -T "<naam>.pdf"
 // "https://www.tubes.media/oprichting/<naam>.pdf" (PUT overschrijft, DELETE
-// verwijdert).
+// verwijdert). /oprichting/alles.zip geeft alle PDF's in één zip.
 
 const OPRICHTING_DIR = path.join(DATA_DIR, "oprichting");
 const OPRICHTING_NAME = /^[\w ().,'&-]+\.pdf$/;
@@ -929,9 +930,11 @@ main{max-width:720px;margin:0 auto;background:#fff;border-radius:16px;padding:32
 h1{color:#15284B;font-size:26px;margin:0 0 6px}p{color:#5C5750;margin:0 0 24px}
 ul{list-style:none;padding:0;margin:0}li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid #E3E5E9}
 a{color:#0E8C77;text-decoration:none;font-weight:600}a:hover{text-decoration:underline}span{color:#8B8E94;font-size:14px;white-space:nowrap;display:flex;align-items:center;gap:12px}
-button{font:inherit;font-size:13px;font-weight:700;color:#0E8C77;background:#DBF3EE;border:0;border-radius:8px;padding:5px 12px;cursor:pointer}button:hover{background:#c6ece4}</style>
+button{font:inherit;font-size:13px;font-weight:700;color:#0E8C77;background:#DBF3EE;border:0;border-radius:8px;padding:5px 12px;cursor:pointer}button:hover{background:#c6ece4}
+.zip{display:inline-block;margin:0 0 20px;padding:9px 16px;color:#fff;background:#0E8C77;border-radius:10px}.zip:hover{background:#0b7462;text-decoration:none}</style>
 </head><body><main><div class="band"></div><h1>Oprichtingsdocumenten Appsolutions BV</h1>
 <p>Vertrouwelijk. Alleen bedoeld voor de oprichters en de notaris.</p>
+${files.length ? '<a class="zip" href="alles.zip" download>Alles downloaden (zip)</a>' : ""}
 <ul>${rows || "<li>Nog geen documenten.</li>"}</ul></main>
 <script>
 document.addEventListener("click", (e) => {
@@ -946,6 +949,62 @@ document.addEventListener("click", (e) => {
   document.body.appendChild(f);
 });
 </script></body></html>`);
+});
+
+// Alle PDF's in één zip. Kleine eigen zip-schrijver (deflate via zlib), zodat er
+// geen extra dependency nodig is.
+const CRC_TABLE = Array.from({ length: 256 }, (_, n) => {
+  let c = n;
+  for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+  return c >>> 0;
+});
+const crc32 = (buf) => {
+  let c = 0xffffffff;
+  for (const byte of buf) c = CRC_TABLE[(c ^ byte) & 0xff] ^ (c >>> 8);
+  return (c ^ 0xffffffff) >>> 0;
+};
+
+function makeZip(entries) {
+  const parts = [];
+  const central = [];
+  let offset = 0;
+  for (const { name, data, mtime } of entries) {
+    const nameBuf = Buffer.from(name, "utf8");
+    const packed = zlib.deflateRawSync(data);
+    const crc = crc32(data);
+    const time = (mtime.getHours() << 11) | (mtime.getMinutes() << 5) | (mtime.getSeconds() >> 1);
+    const date = ((mtime.getFullYear() - 1980) << 9) | ((mtime.getMonth() + 1) << 5) | mtime.getDate();
+    const local = Buffer.alloc(30);
+    local.writeUInt32LE(0x04034b50, 0); local.writeUInt16LE(20, 4); local.writeUInt16LE(0x0800, 6);
+    local.writeUInt16LE(8, 8); local.writeUInt16LE(time, 10); local.writeUInt16LE(date, 12);
+    local.writeUInt32LE(crc, 14); local.writeUInt32LE(packed.length, 18); local.writeUInt32LE(data.length, 22);
+    local.writeUInt16LE(nameBuf.length, 26);
+    const dir = Buffer.alloc(46);
+    dir.writeUInt32LE(0x02014b50, 0); dir.writeUInt16LE(20, 4); dir.writeUInt16LE(20, 6); dir.writeUInt16LE(0x0800, 8);
+    dir.writeUInt16LE(8, 10); dir.writeUInt16LE(time, 12); dir.writeUInt16LE(date, 14);
+    dir.writeUInt32LE(crc, 16); dir.writeUInt32LE(packed.length, 20); dir.writeUInt32LE(data.length, 24);
+    dir.writeUInt16LE(nameBuf.length, 28); dir.writeUInt32LE(offset, 42);
+    parts.push(local, nameBuf, packed);
+    central.push(dir, nameBuf);
+    offset += local.length + nameBuf.length + packed.length;
+  }
+  const dirBuf = Buffer.concat(central);
+  const end = Buffer.alloc(22);
+  end.writeUInt32LE(0x06054b50, 0); end.writeUInt16LE(entries.length, 8); end.writeUInt16LE(entries.length, 10);
+  end.writeUInt32LE(dirBuf.length, 12); end.writeUInt32LE(offset, 16);
+  return Buffer.concat([...parts, dirBuf, end]);
+}
+
+app.get("/oprichting/alles.zip", (req, res) => {
+  fs.mkdirSync(OPRICHTING_DIR, { recursive: true });
+  const entries = fs.readdirSync(OPRICHTING_DIR).filter((f) => OPRICHTING_NAME.test(f)).sort().map((f) => {
+    const file = path.join(OPRICHTING_DIR, f);
+    return { name: f, data: fs.readFileSync(file), mtime: fs.statSync(file).mtime };
+  });
+  if (!entries.length) return res.status(404).send("Nog geen documenten.");
+  res.type("application/zip");
+  res.setHeader("Content-Disposition", 'attachment; filename="Oprichtingsdocumenten Appsolutions BV.zip"');
+  res.send(makeZip(entries));
 });
 
 app.get("/oprichting/:name", (req, res) => {
