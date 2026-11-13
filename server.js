@@ -27,6 +27,23 @@ app.disable("x-powered-by");
 // en laadsnelheid telt mee in de Google-ranking.
 app.use(compression());
 
+// Beveiligingsheaders op elke response. HSTS: browsers gaan voortaan meteen
+// naar https (alleen meesturen over https, anders negeert de browser het).
+// X-Frame-Options: geen andere site mag pagina's van ons in een iframe laden
+// (clickjacking op /beheer en /oprichting); onze eigen popups met iframe
+// (/demo/embed/) blijven werken. Een volledige CSP voor de hele site staat er
+// bewust niet: inline scripts, Leaflet en GoatCounter maken die breekbaar.
+// Op /tools/* staat er wel een, verderop.
+app.use((req, res, next) => {
+  if (req.secure || String(req.headers["x-forwarded-proto"] || "").includes("https")) {
+    res.setHeader("Strict-Transport-Security", "max-age=31536000");
+  }
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  next();
+});
+
 // Oude adressen doorsturen naar www.tubes.media met een 301.
 // en.tubes.media was de Weglot-vertaalproxy; Product Hunt, LinkedIn en
 // AlternativeTo linken daar nog naartoe en die links lopen nu dood. Een 301
@@ -82,17 +99,91 @@ app.use((req, res, next) => (req.path === "/api/academy/admin/upload" ? next() :
 
 // ---------- Formulier ontvangen ----------
 
-const recent = new Map(); // simpele rate-limit per IP
+const recent = new Map(); // simpele rate-limit per IP en per soort verzoek
+const RATE_WINDOW = 10 * 60 * 1000;
 
-// Max <max> inzendingen per 10 minuten per IP. De Health Check stuurt twee
-// keer (stap 1 en stap 2) en krijgt daarom een ruimere marge.
-function rateLimited(req, max) {
-  const ip = req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.ip;
+// Railway zet X-Forwarded-For zelf (een meegestuurde waarde wordt
+// overschreven), dus de eerste waarde is het echte adres van de bezoeker.
+const clientIp = (req) => req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.ip;
+
+// Max <max> verzoeken per 10 minuten per IP, per bucket. Elk formulier heeft
+// een eigen teller: wie vijf keer AI-zoeken gebruikt, mag daarna gewoon nog
+// het contactformulier versturen. De Health Check stuurt twee keer (stap 1 en
+// stap 2) en krijgt daarom een ruimere marge.
+function rateLimited(req, max, bucket = "form") {
+  const key = `${bucket}|${clientIp(req)}`;
   const now = Date.now();
-  const hits = (recent.get(ip) || []).filter((t) => now - t < 10 * 60 * 1000);
+  const hits = (recent.get(key) || []).filter((t) => now - t < RATE_WINDOW);
   if (hits.length >= max) return true;
   hits.push(now);
-  recent.set(ip, hits);
+  recent.set(key, hits);
+  return false;
+}
+
+// Oude tellers opruimen, anders groeit de Map met elk nieuw IP-adres.
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, hits] of recent) if (!hits.some((t) => now - t < RATE_WINDOW)) recent.delete(key);
+}, RATE_WINDOW).unref?.();
+
+// ---------- Wachtwoordpagina's: blokkade na te veel foute pogingen ----------
+//
+// /beheer, /oprichting, /mmg en /freeway hebben alleen een wachtwoord. Zonder
+// rem kan iemand onbeperkt raden. Na AUTH_MAX_FAILS foute pogingen binnen
+// 15 minuten krijgt dat IP-adres een kwartier lang een 429, ook met het goede
+// wachtwoord. Een goede poging telt niet mee.
+const AUTH_MAX_FAILS = 10;
+const AUTH_WINDOW = 15 * 60 * 1000;
+const authFails = new Map();
+
+function authBlocked(req, res) {
+  const now = Date.now();
+  const hits = (authFails.get(clientIp(req)) || []).filter((t) => now - t < AUTH_WINDOW);
+  if (hits.length < AUTH_MAX_FAILS) return false;
+  res.set("Retry-After", String(Math.ceil(AUTH_WINDOW / 1000)));
+  res.status(429).type("text").send("Te veel foute pogingen. Probeer het over een kwartier opnieuw.");
+  return true;
+}
+
+function authFailed(req) {
+  // Zonder Authorization-header is het geen poging maar de eerste keer openen.
+  if (!req.headers.authorization && !(req.method === "POST" && req.body?.password)) return;
+  const now = Date.now();
+  const hits = (authFails.get(clientIp(req)) || []).filter((t) => now - t < AUTH_WINDOW);
+  hits.push(now);
+  authFails.set(clientIp(req), hits);
+}
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, hits] of authFails) if (!hits.some((t) => now - t < AUTH_WINDOW)) authFails.delete(ip);
+}, AUTH_WINDOW).unref?.();
+
+// Wachtwoord uit een Basic Auth-header (gebruikersnaam leeg of willekeurig).
+// Alles na de eerste dubbele punt, zodat een wachtwoord met ":" ook werkt.
+function basicPassword(req) {
+  const [scheme, encoded] = String(req.headers.authorization || "").split(" ");
+  if (scheme !== "Basic" || !encoded) return null;
+  return Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
+}
+
+const sameSecret = (given, wanted) => {
+  const a = Buffer.from(String(given ?? ""));
+  const b = Buffer.from(String(wanted));
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+};
+
+// Tegen CSRF op de beheerknoppen: de browser stuurt het Basic Auth-wachtwoord
+// automatisch mee, ook bij een formulier op een andere site. Een browser zet
+// bij een POST altijd Origin (of in elk geval Referer); komt die niet van deze
+// host, dan weigeren we. curl stuurt geen van beide en blijft dus werken.
+function sameOriginPost(req, res) {
+  const from = req.headers.origin || req.headers.referer;
+  if (!from) return true;
+  let host = "";
+  try { host = new URL(from).host; } catch { /* ongeldig = vreemd */ }
+  if (host && host === req.headers.host) return true;
+  res.status(403).type("text").send("Verzoek van een andere site geweigerd.");
   return false;
 }
 
@@ -167,7 +258,7 @@ const SPAM_REDENEN = {
 };
 
 app.post("/api/contact", (req, res) => {
-  if (rateLimited(req, 5)) {
+  if (rateLimited(req, 5, "contact")) {
     return res.status(429).json({ ok: false, error: "Too many requests" });
   }
 
@@ -307,7 +398,7 @@ function emailForEntry(id) {
 }
 
 app.post("/api/health-check", (req, res) => {
-  if (rateLimited(req, 12)) {
+  if (rateLimited(req, 12, "health-check")) {
     return res.status(429).json({ ok: false, error: "Too many requests" });
   }
 
@@ -793,14 +884,9 @@ if (CRM_URL) {
 const MMG_PASSWORD = process.env.MMG_PASSWORD || "MMGTubes01!";
 
 app.use("/mmg", (req, res, next) => {
-  const header = req.headers.authorization || "";
-  const [scheme, encoded] = header.split(" ");
-  if (scheme === "Basic" && encoded) {
-    const [, pass] = Buffer.from(encoded, "base64").toString().split(":");
-    const a = Buffer.from(String(pass || ""));
-    const b = Buffer.from(MMG_PASSWORD);
-    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
-  }
+  if (authBlocked(req, res)) return;
+  if (sameSecret(basicPassword(req), MMG_PASSWORD)) return next();
+  authFailed(req);
   res.set("WWW-Authenticate", 'Basic realm="Tubes for Motion Media Group"');
   res.status(401).send("Password required.");
 });
@@ -820,12 +906,6 @@ const FREEWAY_PASSWORD =
   process.env.FREEWAY_PASSWORD || process.env.PARTNERSHIP_PASSWORD || "FreewayTubes26!";
 const FREEWAY_COOKIE = "tubes_freeway";
 const freewayToken = () => crypto.createHmac("sha256", FREEWAY_PASSWORD).update("freeway").digest("base64url");
-
-const sameSecret = (given, wanted) => {
-  const a = Buffer.from(String(given || ""));
-  const b = Buffer.from(wanted);
-  return a.length === b.length && crypto.timingSafeEqual(a, b);
-};
 
 const freewayLoginPage = (error) => `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -859,7 +939,9 @@ app.use("/freeway", (req, res, next) => {
   res.setHeader("X-Robots-Tag", "noindex, nofollow");
   res.setHeader("Cache-Control", "private, no-store");
   if (req.method === "POST" && req.path === "/login") {
+    if (authBlocked(req, res)) return;
     if (!sameSecret(req.body?.password, FREEWAY_PASSWORD)) {
+      authFailed(req);
       return res.status(401).type("html").send(freewayLoginPage(true));
     }
     res.cookie(FREEWAY_COOKIE, freewayToken(), {
@@ -872,10 +954,10 @@ app.use("/freeway", (req, res, next) => {
     const [name, ...rest] = part.trim().split("=");
     if (name === FREEWAY_COOKIE && sameSecret(rest.join("="), freewayToken())) return next();
   }
-  const [scheme, encoded] = (req.headers.authorization || "").split(" ");
-  if (scheme === "Basic" && encoded) {
-    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
-    if (sameSecret(pass, FREEWAY_PASSWORD)) return next();
+  if (req.headers.authorization) {
+    if (authBlocked(req, res)) return;
+    if (sameSecret(basicPassword(req), FREEWAY_PASSWORD)) return next();
+    authFailed(req);
   }
   res.status(401).type("html").send(freewayLoginPage(false));
 });
@@ -898,14 +980,9 @@ app.use("/oprichting", (req, res, next) => {
   res.setHeader("X-Robots-Tag", "noindex, nofollow");
   res.setHeader("Cache-Control", "private, no-store");
   if (!wanted) return res.status(503).send("Stel eerst OPRICHTING_PASSWORD in op Railway.");
-  const header = req.headers.authorization || "";
-  const [scheme, encoded] = header.split(" ");
-  if (scheme === "Basic" && encoded) {
-    const pass = Buffer.from(encoded, "base64").toString().split(":").slice(1).join(":");
-    const a = Buffer.from(pass);
-    const b = Buffer.from(wanted);
-    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return next();
-  }
+  if (authBlocked(req, res)) return;
+  if (sameSecret(basicPassword(req), wanted)) return next();
+  authFailed(req);
   res.set("WWW-Authenticate", 'Basic realm="Appsolutions BV oprichting"');
   res.status(401).send("Password required.");
 });
@@ -1091,37 +1168,13 @@ function addAiUsage(tokIn, tokOut) {
 
 // Alleen of het AI-zoeken aanstaat (sleutel gezet): de pagina toont de knop
 // pas als dit true is, dus zonder sleutel is er geen dode knop te zien.
-// Kleine statusmelding voor het formulier: staat de mail aan, is de achterstand
-// verstuurd, hoeveel berichten liggen er. Alleen ja/nee en aantallen, geen
-// adressen, inhoud of sleutels, net als de status van AI-zoeken hierboven.
-// Bedoeld om op afstand te kunnen zien waarom een mail niet aankomt zolang
-// /beheer nog een 503 geeft; kan weg zodra ADMIN_PASSWORD is gezet.
-app.get("/api/contact/status", (req, res) => {
-  res.set("Cache-Control", "no-store");
-  // Het aantal berichten stond hier eerder ook in; dat is uit de openbare
-  // melding gehaald omdat het niets zegt over een storing en wel iets prijsgeeft
-  // over hoeveel aanvragen er binnenkomen. Het aantal staat in de opstartlog.
-  let backlog = "pending";
-  try {
-    const flag = JSON.parse(fs.readFileSync(BACKLOG_FLAG, "utf8"));
-    backlog = `sent ${flag.sent} at ${flag.at}`;
-  } catch {}
-  res.json({
-    mail_key: Boolean(MAIL_KEY),
-    mail_from_set: Boolean(process.env.MAIL_FROM),
-    admin_password: Boolean(process.env.ADMIN_PASSWORD),
-    volume: Boolean(process.env.RAILWAY_VOLUME_MOUNT_PATH),
-    backlog,
-  });
-});
-
 app.get("/api/location-search/status", (req, res) => {
   res.set("Cache-Control", "no-store");
   res.json({ enabled: Boolean(AI_KEY) });
 });
 
 app.post("/api/location-search", async (req, res) => {
-  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, fallback: true, reason: "rate" });
+  if (rateLimited(req, 10, "ai-search")) return res.status(429).json({ ok: false, fallback: true, reason: "rate" });
   const q = String((req.body || {}).q || "").trim().slice(0, 300);
   if (!q) return res.status(400).json({ ok: false, fallback: true, reason: "empty" });
   if (!AI_KEY) return res.status(503).json({ ok: false, fallback: true, reason: "off" });
@@ -1181,14 +1234,12 @@ function checkAuth(req, res) {
     res.status(503).send("Stel eerst de env-variabele ADMIN_PASSWORD in op Railway.");
     return false;
   }
-  const header = req.headers.authorization || "";
-  const [scheme, encoded] = header.split(" ");
-  if (scheme === "Basic" && encoded) {
-    const [, pass] = Buffer.from(encoded, "base64").toString().split(":");
-    const a = Buffer.from(String(pass || ""));
-    const b = Buffer.from(wanted);
-    if (a.length === b.length && crypto.timingSafeEqual(a, b)) return true;
+  if (authBlocked(req, res)) return false;
+  if (sameSecret(basicPassword(req), wanted)) {
+    // Knoppen op /beheer zijn POST-formulieren: alleen vanaf deze site zelf.
+    return req.method !== "POST" || sameOriginPost(req, res);
   }
+  authFailed(req);
   res.set("WWW-Authenticate", 'Basic realm="Tubes beheer"');
   res.status(401).send("Inloggen vereist.");
   return false;
@@ -1386,7 +1437,14 @@ app.post("/beheer/crm-retry", async (req, res) => {
 app.get("/beheer/export.csv", (req, res) => {
   if (!checkAuth(req, res)) return;
   const items = readSubmissions();
-  const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
+  // Een waarde die begint met = + - @ (of tab/CR) maakt Excel tot formule; een
+  // bezoeker kan zo via het formulier een formule in de export zetten. Een
+  // apostrof ervoor houdt het tekst.
+  const q = (s) => {
+    let v = String(s ?? "");
+    if (/^[=+\-@\t\r]/.test(v)) v = "'" + v;
+    return '"' + v.replace(/"/g, '""') + '"';
+  };
   const csv = ["datum,soort,naam,email,telefoon,bedrijf,rol,antwoorden,bericht,pagina"]
     .concat(
       items.map((s) => {
@@ -1548,7 +1606,7 @@ function verdachtAdres(email) {
 
 app.post("/api/daily/subscribe", async (req, res) => {
   const email = String(req.body.email || "").trim().toLowerCase();
-  if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "rate" });
+  if (rateLimited(req, 5, "daily")) return res.status(429).json({ ok: false, error: "rate" });
   // Honeypot: een bot vult dit verborgen veld in. Wij doen alsof het lukte.
   if (req.body.company_website) {
     console.log(`[daily] inschrijving genegeerd (verborgen veld ingevuld): ${maskeer(email)}`);
@@ -1726,6 +1784,14 @@ const TOOL_MAX_VERSIONS = 10;
 const TOOL_MAX_LINES = 2000;
 const TOOL_SESSION_DAYS = 30;
 const TOOL_COOKIE = "tubes_tools";
+// Nieuwe accounts alleen als de tool op de variant "account" staat
+// (data-storage in budget-builder.njk). Nu staat hij op "local" en praat de
+// pagina niet met de server; open registratie zou dan alleen een manier zijn om
+// de volume (waar ook de aanvragen staan) vol te schrijven. Terugschakelen:
+// TOOLS_ACCOUNTS=1 op Railway. Bestaande accounts kunnen altijd inloggen.
+const TOOL_REGISTRATION = process.env.TOOLS_ACCOUNTS === "1";
+// Een echte versie van 2000 regels is zo'n 300 kB; meer is geen budget.
+const TOOL_MAX_VERSION_BYTES = 512 * 1024;
 
 function toolSessionSecret() {
   if (process.env.TOOLS_SESSION_SECRET) return process.env.TOOLS_SESSION_SECRET;
@@ -1779,7 +1845,9 @@ function parseCookies(req) {
   const out = {};
   for (const part of String(req.headers.cookie || "").split(";")) {
     const i = part.indexOf("=");
-    if (i > 0) out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+    if (i <= 0) continue;
+    // Een kapotte cookie (losse %) mag geen 500 opleveren.
+    try { out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim()); } catch { /* overslaan */ }
   }
   return out;
 }
@@ -1835,7 +1903,8 @@ app.use("/api/tools", (req, res, next) => {
 });
 
 app.post("/api/tools/register", (req, res) => {
-  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
+  if (!TOOL_REGISTRATION) return res.status(403).json({ ok: false, error: "New accounts are closed. The Budget Builder saves in your browser." });
+  if (rateLimited(req, 10, "tool-account")) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
   const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
   const password = String(req.body?.password || "");
   if (!EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "Enter a valid email address." });
@@ -1852,7 +1921,7 @@ app.post("/api/tools/register", (req, res) => {
 });
 
 app.post("/api/tools/login", (req, res) => {
-  if (rateLimited(req, 10)) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
+  if (rateLimited(req, 10, "tool-account")) return res.status(429).json({ ok: false, error: "Too many attempts. Try again in a few minutes." });
   const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
   const password = String(req.body?.password || "");
   const user = readToolUsers()[email];
@@ -1893,6 +1962,7 @@ app.put("/api/tools/versions/:id", (req, res) => {
   const budget = req.body?.budget;
   const info = inspectToolBudget(budget);
   if (!info) return res.status(400).json({ ok: false, error: "This does not look like a budget." });
+  if (Buffer.byteLength(JSON.stringify(budget)) > TOOL_MAX_VERSION_BYTES) return res.status(413).json({ ok: false, error: "This version is too large to save." });
   if (info.lines > TOOL_MAX_LINES) return res.status(400).json({ ok: false, error: `A version can hold up to ${TOOL_MAX_LINES} lines; this one has ${info.lines}.` });
   const budgets = readToolBudgets(user.id);
   if (!budgets[id] && Object.keys(budgets).length >= TOOL_MAX_VERSIONS) {
@@ -1925,7 +1995,7 @@ app.delete("/api/tools/versions/:id", (req, res) => {
 // het contactformulier) en gaat per mail door zodra RESEND_API_KEY staat.
 const TOOL_FEEDBACK_EMAIL = process.env.TOOL_FEEDBACK_EMAIL || LOCATION_EMAIL;
 app.post("/api/tools/feedback", (req, res) => {
-  if (rateLimited(req, 5)) return res.status(429).json({ ok: false, error: "Too many messages. Try again in a few minutes." });
+  if (rateLimited(req, 5, "tool-feedback")) return res.status(429).json({ ok: false, error: "Too many messages. Try again in a few minutes." });
   const message = String(req.body?.message || "").trim().slice(0, 5000);
   const email = String(req.body?.email || "").trim().toLowerCase().slice(0, 200);
   if (message.length < 3) return res.status(400).json({ ok: false, error: "Write a few words first." });
