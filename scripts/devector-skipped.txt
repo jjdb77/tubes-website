@@ -68,3 +68,50 @@ film-tv/2026-10-15/yospace-court-tv  # reclametechniek
 2026-10-20/cats-rijksmuseum-carre  # musical
 2026-10-15/vlaamse-ai-technologie-emmy  # technische prijs, techniek
 film-tv/2026-10-15/netflix-duizend-banen  # dubbel met netflix-cuts-thousand-jobs
+2026-11-13/eana-tass-uitgesloten  # persbureaus, politiek
+2026-11-13/stand-up-film-release  # losse filmrelease
+2026-11-13/depardieu-geen-beroep  # rechtszaak tegen persoon
+2026-11-11/kyiv-independent-vijf-jaar  # journalistiek
+2026-11-11/bbc-verwijdert-programmas-david-walliams  # roddel/persoon
+2026-11-11/lubach-rtl-contract-2029  # contract presentator, binnenlands
+film-tv/2026-11-10/ebu-meta-ai-scraping  # dubbel met ebu-wants-real-opt-out-from-meta-ai
+2026-11-10/cnews-petitie-franse-assemblee  # politiek
+2026-11-10/rbb-proces-schlesinger  # rechtszaak tegen persoon
+film-tv/2026-11-09/barrandov-nieuwe-website  # website omroep, niet relevant
+2026-11-09/novaya-gazeta-sluit  # persvrijheid
+2026-11-09/journalistiek-vitale-sector  # journalistiek, politiek
+film-tv/2026-11-08/junior-eurovision-2026-bereik  # songfestival
+film-tv/2026-11-08/liechtenstein-ai-radio  # radio
+film-tv/2026-11-07/eu-tiktok-rabbit-hole  # platformregulering
+2026-11-05/channel4-stopt-married-at-first-sight  # dubbel met channel-4-ends-married-at-first-sight-uk
+film-tv/2026-11-04/tsjechische-publieke-media-protesteren-tegen-financieringsplan  # binnenlandse politiek
+2026-11-04/ster-online-tarieven-2027  # reclametarieven
+film-tv/2026-11-03/tsjechische-publieke-media-staken  # binnenlandse politiek
+2026-11-03/staking-ct-cro  # binnenlandse politiek
+2026-11-03/ai-chatbots-pers-auteursrecht  # nieuwsmedia
+2026-11-03/nieuwsmedia-ai-zoekmachines  # nieuwsmedia
+2026-11-03/kamer-femicide-mediacode  # binnenlandse politiek
+2026-11-03/tsjechen-protesteren-publieke-omroep  # binnenlandse politiek
+2026-11-03/godzilla-minus-zero  # dubbel met godzilla-north-american-opening
+2026-11-02/rsf-trump-persvrijheid-lijst  # persvrijheid
+film-tv/2026-11-01/tsjechie-vrijwillige-mediabijdrage  # binnenlandse politiek
+film-tv/2026-11-01/viaplay-overname-opzeggen  # dubbel met dpg-completes-viaplay-netherlands-deal
+2026-11-01/rechter-verwerpt-trump-wsj  # kranten, rechtszaak
+2026-11-01/regina-ziegler-overleden  # overlijden
+film-tv/2026-10-30/barrandov-licenties-cra  # omroepvergunningen
+2026-10-30/novaya-gazeta-stopt  # persvrijheid
+2026-10-30/videoland-neemt-viaplay-nederland-over  # dubbel met dpg-completes-viaplay-netherlands-deal
+film-tv/2026-10-29/eurovision-2027-36-broadcasters  # songfestival
+2026-10-29/india-privacywet-media  # binnenlandse politiek
+2026-10-29/stalker-npo-tbs  # rechtszaak tegen persoon
+2026-10-29/payne-aangeklaagd-holdovers  # rechtszaak tegen persoon
+2026-10-29/choi-bool-am-overleden  # overlijden
+2026-10-29/patrick-stewart-overleden  # overlijden
+film-tv/2026-10-28/npo-eurovisie-2027  # songfestival
+2026-10-28/lokale-omroepen-streekomroepen-2028  # binnenlandse politiek
+2026-10-28/dornan-aragorn-jacht-op-gollum  # roddel
+2026-10-27/umg-overnamegesprekken  # muziek
+2026-10-27/nederland-songfestival-terugtrekking  # songfestival
+2026-10-27/egypte-mada-masr  # persvrijheid
+2026-10-27/attalah-vrij-na-boete  # persvrijheid
+2026-10-27/walter-koenig-overleden  # overlijden

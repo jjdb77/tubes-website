@@ -1,0 +1,25 @@
+---
+title: "Channel 4 joins Disney+ in the UK and Ireland"
+date: 2026-10-27
+topic: "Streaming"
+summary: "From early 2027 Disney+ will carry Channel 4's catalogue and new programmes."
+headline: "Disney+ brings Channel 4 to its UK platform"
+standfirst: "The agreement will bring the broadcaster, hundreds of hours of catalogue content and new Channel 4 programmes to Disney+ in the UK and Ireland from early 2027."
+photo: {"src":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Multi_coloured_4%2C_124_Horseferry_Road%2C_London.jpg","alt":"Channel 4","caption":"Channel 4","credit":"Matt Brown","credit_url":"https://commons.wikimedia.org/wiki/File:Multi_coloured_4,_124_Horseferry_Road,_London.jpg","license":"CC BY 2.0","license_url":"https://creativecommons.org/licenses/by/2.0"}
+factcheck: {"verdict":"Approved","summary":"The article’s central points are confirmed by multiple public sources. Non-public contractual terms are explicitly presented as unknown.","claims":[{"status":"Confirmed","text":"Channel 4 will appear as a section on Disney+ in the UK and Ireland from early 2027.","note":"Reported by TheWrap, The Hollywood Reporter and Variety.","url":""},{"status":"Confirmed","text":"The offering includes the linear HD channel and hundreds of hours of on-demand content.","note":"Description in reporting on the agreement.","url":""},{"status":"Confirmed","text":"New titles may appear on Disney+ simultaneously with Channel 4.","note":"Mentioned in public reporting on the deal.","url":""},{"status":"Confirmed","text":"Subscribers will not pay a separate charge for the Channel 4 section.","note":"The reporting states that it will be included within the existing Disney+ subscription.","url":""},{"status":"Confirmed","text":"The financial terms and exclusivity have not been disclosed.","note":"None of the consulted public reports publishes these contractual details.","url":""}]}
+sources: [{"name":"Disney+ to Add Channel 4 Network and On-Demand Content in U.K. and Ireland","publisher":"The Hollywood Reporter","url":"https://www.hollywoodreporter.com/business/business-news/disney-plus-channel-4-main-network-on-demand-content-deal-uk-1236739843/"},{"name":"Disney+ to Add Channel 4 Content in the UK, Ireland in Early 2027","publisher":"TheWrap","url":"https://www.thewrap.com/media-platforms/streaming/disney-plus-channel-4-content-partnership-uk-ireland-2027/"},{"name":"Disney+ Strikes Landmark Content Deal With U.K.'s Channel 4","publisher":"Variety","url":"https://variety.com/2026/tv/global/disney-landmark-content-deal-uk-channel-4-1236931195/"}]
+via: "https://www.devector.nl/bladen/film-tv/en/2026-10-27/disney-channel4-deal.html"
+---
+Disney+ and Channel 4 have struck a distribution deal that brings the UK public-service commercial broadcaster directly onto the streaming platform. Subscribers in the UK and Ireland will have access to a Channel 4 section from early 2027 at no additional charge.
+
+The agreement covers Channel 4’s linear HD channel and hundreds of hours of on-demand programming, spanning fiction, entertainment and other genres. The precise launch date and full catalogue have not yet been announced. The offering will appear within a separate Channel 4 section on Disney+.
+
+A key element is that several new Channel 4 titles will be available on Disney+ at the same time as their premiere on the broadcaster. It is not yet clear whether the drama series Maya starring Bella Ramsey, the comedy Stepping Up and the reality programme Celebrity SAS: Who Dares Wins will also be available simultaneously. The deal therefore covers not only archive or catalogue rights, but also the possibility of new productions being available at the same time.
+
+For Channel 4, the deal expands its reach beyond its own app and distribution channels. The broadcaster retains ownership of its brand and programming, but uses Disney+ as an additional gateway to households that already pay for the service. That could improve the discoverability of British productions, while also making Channel 4 more dependent on the commercial and technical terms of a global platform.
+
+For Disney+, the agreement fits into a broader strategy of offering local content directly within its own subscription. The service gains a recognisable British and Irish offering that already has an audience and a brand. According to reporting on the agreement, Disney has investigated or concluded several similar arrangements with international broadcasters, but the precise scale of that portfolio has not been fully disclosed.
+
+The agreement covers the carriage of Channel 4’s linear channel in the UK and Ireland. The financial terms and arrangements concerning exclusivity have not been disclosed.
+
+The agreement underlines a shift in the European market: public-service or public-oriented broadcasters are seeking additional reach through global platforms, while streamers are strengthening their catalogues with local brands. The business outcome will depend on terms that have not been published, including the duration, exclusivity and the way viewers are directed between Channel 4 and Disney+.

@@ -1,0 +1,28 @@
+---
+title: "RTÉ asks for funding to continue after 2027"
+date: 2026-11-05
+topic: "Business"
+summary: "Kevin Bakhurst wants the yearly state support to carry on as licence fee income keeps falling."
+headline: "RTÉ seeks hundreds of millions in funding again from 2028"
+standfirst: "Director-general Kevin Bakhurst wants to continue the current annual funding after 2027, while licence revenue is expected to fall further."
+photo: {"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Leinster_House_in_Dublin%2C_seat_of_the_Oireachtas.jpg/960px-Leinster_House_in_Dublin%2C_seat_of_the_Oireachtas.jpg","alt":"Leinster House","caption":"Leinster House","credit":"David Kernan","credit_url":"https://commons.wikimedia.org/wiki/File:Leinster_House_in_Dublin,_seat_of_the_Oireachtas.jpg","license":"CC BY 4.0","license_url":"https://creativecommons.org/licenses/by/4.0"}
+perspectives: {"facts":["RTÉ is requesting around €260 million a year for 2028-2030.","TV licence revenue is expected to fall.","No new funding arrangement has yet been granted."],"views":[{"name":"Left","arguments:":"A strong public broadcaster requires stable public funding so that news, culture and regional services are not dependent on falling licence or advertising revenue.","values:":"Public services, journalistic independence and universal access.","consequences:":"More state funding could protect continuity, but would require transparent conditions and oversight."},{"name":"Centre","arguments:":"Funding should be tied to demonstrable reforms, efficiency and a sustainable system that absorbs falling licence revenue.","values:":"Responsible governance, continuity and institutional independence.","consequences:":"A multi-year arrangement could provide stability if accompanied by clear performance requirements and oversight."},{"name":"Right","arguments:":"RTÉ must first demonstrate that its organisation and cost structure have been sufficiently adapted before additional taxpayers’ money is granted.","values:":"Budgetary discipline, responsibility and limiting state spending.","consequences:":"Stricter conditions or a smaller budget could lead to less output, but would limit pressure on the public finances."}],"disclaimer":""}
+factcheck: {"verdict":"Approved","summary":"The financial figures, date and context can be checked against reporting on the Oireachtas hearing. The article clearly distinguishes between a funding request and an approved budget.","claims":[{"status":"Confirmed","text":"RTÉ wants to receive around €260 million a year after 2027.","note":"Mentioned in reporting on the committee hearing.","url":""},{"status":"Confirmed","text":"Licence revenue could fall by €11 million next year.","note":"The Irish Times reports this as a projection mentioned during the hearing.","url":""},{"status":"Confirmed","text":"RTÉ is funded by licence revenue and commercial income, supplemented by public funds.","note":"RTÉ describes its dual funding model on its own website.","url":""}]}
+sources: [{"name":"RTÉ to seek further Government funding as licence fee revenue to continue decline","publisher":"The Irish Times","url":"https://www.irishtimes.com/politics/oireachtas/2026/11/04/rte-to-seek-further-government-funding-as-licence-fee-revenue-to-continue-decline/"},{"name":"How RTÉ is funded","publisher":"RTÉ","url":"https://about.rte.ie/how-rte-is-funded-2/"},{"name":"Bakhurst rejects reports that RTÉ is seeking bailout","publisher":"RTÉ News","url":"https://www.rte.ie/news/ireland/2026/0708/1582393-rte-funding/"}]
+via: "https://www.devector.nl/bladen/film-tv/en/2026-11-05/rte-funding-2028.html"
+---
+RTÉ wants to receive around €260 million a year again after the current funding arrangement ends. Director-general Kevin Bakhurst said this on 4 November during a hearing of the Irish Oireachtas media committee.
+
+Bakhurst linked the request to the public broadcaster’s funding needs for 2028-2030. According to reports, this amounts to at least €780 million over three years, adjusted for inflation. The sum includes both TV licence revenue and direct state funding.
+
+The current arrangement ends after 2027. Under it, RTÉ received a guaranteed annual amount of around €260 million. According to Bakhurst, the broadcaster wants to retain that level as its starting point because TV licence revenue is expected to decline further.
+
+According to The Irish Times, it was reported during the committee meeting that licence revenue could fall by €11 million next year. Officials at Ireland’s Department of Communications expected the decline to continue thereafter. This would mean the state having to cover a larger gap between licence income and the desired level of funding.
+
+Bakhurst also said that an unexpected €20 million reduction announced on budget day had not been discussed with RTÉ in advance. According to RTÉ, the amount concerns funding for 2027. It is therefore separate from the new request for the subsequent period, but could increase pressure on the broadcaster’s planning.
+
+The funding issue affects Ireland’s entire public media sector. RTÉ must reform and work more efficiently while continuing to provide public services, news, sport, culture and regional programmes. The committee is therefore discussing not only money, but also reforms and changes.
+
+No decision has yet been made on a new funding arrangement from 2028. Nor has it been established how the TV licence will be reformed or replaced in the longer term. The €260 million is RTÉ’s request, not an approved budget.
+
+The €260 million is an RTÉ request, not an approved budget. The figures also do not show what savings or reforms the broadcaster would need to make in return for the funding request.
