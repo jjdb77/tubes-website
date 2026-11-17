@@ -819,6 +819,31 @@
       "photo": null
     },
     {
+      "id": "outlookmovie",
+      "name": "OutlookMovie",
+      "vendor": "OutlookMovie s.r.o.",
+      "vendor_country": "Czech Republic",
+      "category": "Production management",
+      "also_in": [
+        "Scheduling & call sheets",
+        "Budgeting & cost control"
+      ],
+      "summary": "Online production platform from Prague for features, TV shows and commercials. The AD team works on one live breakdown and schedule, call sheets and progress reports are made in the same place, and accounts handles purchase orders, cost reports and budgets. Documents such as storyboards, scouting photos and casting are stored without a space limit.",
+      "for_whom": "Producers, line producers, unit production managers, assistant directors, coordinators and production accountants",
+      "pricing_model": "EUR 800 per project licence, unlimited users, no time limit; film schools EUR 350; free demo (published)",
+      "deployment": "Cloud",
+      "platforms": "Web browser, iOS and Android app",
+      "integrations": null,
+      "founded": 2006,
+      "official_url": "https://www.outlookmovie.com",
+      "source_urls": [
+        "https://www.outlookmovie.com/",
+        "https://play.google.com/store/apps/details?id=cz.ackee.outlookmovie"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "pixotope",
       "name": "Pixotope",
       "vendor": "Pixotope Technologies AS",

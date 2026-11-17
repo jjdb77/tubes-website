@@ -1507,6 +1507,23 @@
       "commission_url": "https://viennafilmcommission.at"
     },
     {
+      "id": "it-villa-loredan-valier-perocco",
+      "name": "Villa Loredan Valier Perocco di Meduna",
+      "country": "Italy",
+      "region": "Treviso, Veneto",
+      "lat": 45.7238,
+      "lng": 12.2983,
+      "type": "Castle & estate",
+      "setting": "Venetian country villa near Treviso, shaped in the late 17th and early 18th century, with a frescoed great hall of about 220 m², two porticoed barchesse, a historic garden and a six-hectare park with spring waters.",
+      "facilities": "Frescoed great hall about 220 m², two barchesse about 180 m² each, garden about 4,000 m², park about 6 ha. Private residence, not open to the public; film and photo shoots by selection and on request",
+      "source_urls": [
+        "https://villaloredanvalierperocco.it/en/eventi",
+        "https://villaloredanvalierperocco.it/en"
+      ],
+      "official_url": "https://villaloredanvalierperocco.it/en/eventi",
+      "commission_url": "https://www.venetofilmcommission.com/"
+    },
+    {
       "id": "at-volksoper-wien",
       "name": "Volksoper Wien",
       "country": "Austria",
