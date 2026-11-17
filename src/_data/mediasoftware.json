@@ -218,6 +218,27 @@
       "photo": null
     },
     {
+      "id": "captions-gen",
+      "name": "Captions Gen",
+      "vendor": "Kris Heeren",
+      "vendor_country": "Not published",
+      "category": "Post-production & VFX",
+      "summary": "New software from one video editor, version 1.1 since October 2026, so there is no track record yet. A plugin for Premiere Pro and After Effects on Windows that transcribes audio on your own computer and places animated, word-by-word captions as editable Motion Graphics clips or caption layers, with 18 style presets.",
+      "for_whom": "Editors adding animated captions to social and online video",
+      "pricing_model": "Free in the current release, no watermark or transcription limit; paid features planned (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows (Premiere Pro, After Effects)",
+      "integrations": "Adobe Premiere Pro, Adobe After Effects",
+      "founded": 2026,
+      "official_url": "https://captionsgen.com",
+      "source_urls": [
+        "https://captionsgen.com/",
+        "https://captionsgen.com/news/captions-gen-1-1-0.html"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
       "id": "cinegy-air",
       "name": "Cinegy Air",
       "vendor": "Cinegy GmbH / Cinegy LLC",
@@ -1173,6 +1194,30 @@
         "https://www.wirecast.io/",
         "https://www.wirecast.io/pricing",
         "https://en.wikipedia.org/wiki/Telestream"
+      ],
+      "logo": null,
+      "photo": null
+    },
+    {
+      "id": "work-with-script",
+      "name": "Work With Script",
+      "vendor": "Alexander Androsov",
+      "vendor_country": "Germany",
+      "category": "Script & pre-production",
+      "also_in": [
+        "Scheduling & call sheets"
+      ],
+      "summary": "New software, released on Steam in November 2026 by a single developer and director near Munich, so there is no track record yet. A desktop workspace built around the screenplay, with writing and revisions, notes and breakdowns, storyboards and floor plans, music sketches and spreadsheet templates for budgeting, production planning and call sheets. It also targets theatre and game projects.",
+      "for_whom": "Writers, directors and small film, theatre and game teams who want planning tied to the script",
+      "pricing_model": "Studio Edition EUR 149 one-time licence; 7-day free trial (published)",
+      "deployment": "Desktop",
+      "platforms": "Windows and macOS (via Steam)",
+      "integrations": "Imports PDF, TXT and RTF scripts; VST3 instruments and MIDI hardware",
+      "founded": 2026,
+      "official_url": "https://alexanderandrosov.com/work-with-script/",
+      "source_urls": [
+        "https://alexanderandrosov.com/work-with-script/",
+        "https://store.steampowered.com/app/5029580/Work_With_Script/"
       ],
       "logo": null,
       "photo": null
