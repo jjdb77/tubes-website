@@ -2,14 +2,14 @@
 layout: layout.njk
 title: Compliance
 seo_title: "Security & Compliance | GDPR and EU Hosting | Tubes"
-description: "Where Tubes keeps your production data. Servers in Germany, files in Frankfurt, AI in the EU, a data processing agreement, and the few services outside the EU named one by one."
+description: "Where Tubes keeps your production data. Servers in Germany, files in Frankfurt, AI in the EU, and a data processing agreement in our terms."
 permalink: /compliance/
 sections:
   - type: hero
     kicker: Trust & security
     title: Security & Compliance
     text: |
-      Your production data stays in Europe. Tubes runs on servers in Germany, and we name every service that handles your data, including the few outside the EU.
+      Your production data stays in Europe. Tubes runs on servers in Germany, under a data processing agreement.
     buttons:
       - label: Book your free Production Health Check
         url: /production-finance-health-check/
@@ -27,19 +27,6 @@ sections:
       - This website and our CRM run in Amsterdam
       - Daily backups
   - type: textblock
-    theme: light
-    heading: Outside the EU, and why
-    text: |
-      A few services sit outside the EU. Each one runs under the EU-U.S. Data Privacy Framework or the EU Standard Contractual Clauses.
-
-      - Payments and subscription billing (Stripe)
-      - Optional sign-in with Google or Apple
-      - OpenAI, only for a workspace that has agreed this with us. Otherwise no AI request goes to OpenAI.
-      - Our own mailboxes (Google Workspace) and the forms on this website (Resend)
-      - Error alerts to our team (Slack), and the AI tools our developers use for support (Anthropic)
-
-      The full list of providers, with what each one does, is in our [privacy policy](https://app.tubesmedia.online/privacy).
-  - type: textblock
     theme: white
     heading: Your data stays yours
     two_column: true
@@ -50,6 +37,7 @@ sections:
       - Role-based access and permissions per production
       - Full audit trails and data traceability
       - Clear data ownership and isolation per production environment
+      - Every provider we use, and where it runs, is listed in our [privacy policy](https://app.tubesmedia.online/privacy)
   - type: cta
     title: Talk it through with us
     text: |
