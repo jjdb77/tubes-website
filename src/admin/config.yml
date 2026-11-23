@@ -659,6 +659,7 @@ collections:
               - { label: "Link naar", name: link_url, widget: string, required: false, default: "/academy/#emmy" }
               - { label: "Avatar (leeg = Emmy's standaardfoto)", name: avatar, widget: image, required: false }
               - { label: "Uitgebreide vorm (avatar rechts, knop, punten eronder)", name: detailed, widget: boolean, required: false, default: false }
+              - { label: "Regel 'Runs on Mistral in the EU' met logo", name: mistral, widget: boolean, required: false, default: true }
               - label: "Punten (alleen uitgebreid)"
                 name: points
                 widget: list

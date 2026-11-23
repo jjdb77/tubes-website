@@ -536,6 +536,8 @@ a:hover { color: var(--action); }
 .emmy-lead { margin: 0 0 0.6em; font-weight: 700; color: var(--status-blue-ink); }
 .emmy-link { display: inline-block; margin-top: 14px; font-weight: 700; color: var(--action); text-decoration: none; }
 .emmy-link:hover { color: var(--action-hover); text-decoration: underline; }
+.emmy-ai { display: flex; align-items: center; gap: 4px; margin: 18px 0 0; font-size: 0.85rem; font-weight: 600; color: var(--ink-soft, #5b6472); }
+.emmy-ai img { width: 112px; min-width: 112px; height: auto; display: block; }
 /* Uitgebreid (Academy): tekst links, avatar rechts in een blauw vlak, punten eronder. */
 .emmy-detailed { max-width: none; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; padding: 44px 48px; }
 .emmy-detailed .emmy-avatar { order: 2; background: #EAF1FC; border-radius: 12px; padding: 28px 24px; }
