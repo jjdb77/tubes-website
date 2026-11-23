@@ -27,12 +27,7 @@
         <a class="emmy-link" href="{{ section.link_url }}">{{ section.link_label }} <span aria-hidden="true">&rarr;</span></a>
         {% endif %}
         {% endif %}
-        {#- Mistral-logo: officieel bestand uit het Mistral Brandkit 2026 (Lockup/Gradient/RGB), ongewijzigd.
-            Hun richtlijnen: minimaal 100 px breed (het bestand is 112 px incl. eigen marge), vrije ruimte rondom,
-            niet herkleuren of vervormen, kleurversie niet op een gekleurde achtergrond. Uit met `mistral: false`. -#}
-        {% if section.mistral !== false %}
-        <p class="emmy-ai">Runs on <img src="{{ '/assets/images/logo-mistral.svg' | imgSrc }}" alt="Mistral AI" width="112" height="25" loading="lazy" decoding="async"> in the EU</p>
-        {% endif %}
+        {% if section.mistral !== false %}{% include "partials/mistral-line.njk" %}{% endif %}
       </div>
     </div>
     {% if section.points %}

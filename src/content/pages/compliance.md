@@ -16,6 +16,22 @@ sections:
     image: /assets/images/compliance-hero.jpeg
     image_alt: Security and compliance
   - type: textblock
+    theme: white
+    narrow: true
+    heading: European AI & Infrastructure
+    text: |
+      Tubes uses Mistral AI, a European AI provider headquartered in France, to power Emmy and selected AI-powered features within the platform.
+
+      We have chosen Mistral as part of our commitment to a European technology ecosystem, with data protection, transparency and digital sovereignty in mind.
+
+      Alongside this, Tubes uses EU-based cloud services for its platform infrastructure, supporting our approach to data protection and secure production environments.
+    mistral: true
+    chips:
+      - label: European AI
+        tone: blue
+      - label: EU-based cloud services
+        tone: mint
+  - type: textblock
     theme: teal
     heading: Where your data lives
     two_column: true

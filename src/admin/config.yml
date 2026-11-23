@@ -559,6 +559,15 @@ collections:
               - { label: "Tekst in 2 kolommen", name: two_column, widget: boolean, default: false, required: false }
               - { label: "Smalle breedte", name: narrow, widget: boolean, default: false, required: false }
               - { label: "Gewone opsommingstekens (geen vinkjes)", name: plain_list, widget: boolean, default: false, required: false }
+              - { label: "Regel 'Runs on Mistral in the EU' met logo", name: mistral, widget: boolean, required: false, default: false }
+              - label: "Labels onder de tekst (chips)"
+                name: chips
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Tekst, name: label, widget: string }
+                  - { label: Kleur, name: tone, widget: select, options: [teal, blue, mint, amber, lavender, slate], default: teal, required: false }
               - { label: "Anker (id voor links als #producers)", name: anchor, widget: string, required: false }
           - name: images
             label: Afbeeldingenrij

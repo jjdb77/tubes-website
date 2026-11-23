@@ -3,5 +3,12 @@
     {% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
     {% if section.lead %}<p class="col-lead">{{ section.lead }}</p>{% endif %}
     <div class="rich-text{% if section.two_column %} two-column{% endif %}{% if section.plain_list %} plain-list{% endif %}">{{ section.text | md | safe }}</div>
+    {% if section.mistral %}{% include "partials/mistral-line.njk" %}{% endif %}
+    {#- Losse labels onder de tekst (zelfde chips als in de hero, maar zonder pijltjes ertussen). -#}
+    {% if section.chips %}
+    <ul class="chip-row textblock-chips">
+      {% for chip in section.chips %}<li class="chip chip-{{ chip.tone or 'teal' }}">{{ chip.label }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </div>
 </section>
