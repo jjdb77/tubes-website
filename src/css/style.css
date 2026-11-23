@@ -168,6 +168,22 @@ a:hover { color: var(--action); }
   box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.45), 0 0 0 1.5px currentColor inset;
 }
 
+/* Losse labels onder een tekstblok: geen wissel, maar een zacht pulserend stipje (als een
+   statuslampje), de chips iets na elkaar; bij hover komt de chip een fractie omhoog. */
+.textblock-chips .chip { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.textblock-chips .chip:hover { transform: translateY(-2px); box-shadow: 0 6px 14px -10px rgba(0, 0, 0, 0.35); }
+.textblock-chips .chip::before { animation: chip-live 2.4s ease-out infinite; }
+.textblock-chips .chip:nth-child(2)::before { animation-delay: 0.8s; }
+.textblock-chips .chip:nth-child(3)::before { animation-delay: 1.6s; }
+@keyframes chip-live {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 45%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 7px color-mix(in srgb, currentColor 0%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .textblock-chips .chip::before { animation: none; }
+  .textblock-chips .chip:hover { transform: none; }
+}
+
 /* ---------- Knoppen (radius 10, teal) ---------- */
 
 .button {

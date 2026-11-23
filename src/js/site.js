@@ -17,7 +17,8 @@ for (const section of document.querySelectorAll(".section.theme-dark, .section.t
 
 // Levende pipeline: chips lichten om de beurt op
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  for (const row of document.querySelectorAll(".chip-row")) {
+  // Alleen echte stappenrijen; losse labels (.textblock-chips) hebben een eigen, rustige puls in de CSS
+  for (const row of document.querySelectorAll(".chip-row:not(.textblock-chips)")) {
     const chips = row.querySelectorAll(".chip");
     if (chips.length < 2) continue;
     // Chips worden een voor een groter en blijven groot; daarna begint het opnieuw
