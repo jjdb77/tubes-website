@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Compliance
 seo_title: "Security & Compliance | GDPR and EU Hosting | Tubes"
-description: "Where Tubes keeps your production data. Servers in Germany, files in Frankfurt, AI in the EU, and a data processing agreement in our terms."
+description: "How Tubes protects your production data. Secure EU infrastructure, your data stays yours, and European AI from Mistral to power Emmy."
 permalink: /compliance/
 sections:
   - type: hero
@@ -16,43 +16,41 @@ sections:
     image: /assets/images/compliance-hero.jpeg
     image_alt: Security and compliance
   - type: textblock
+    theme: teal
+    heading: Security & Platform
+    two_column: true
+    text: |
+      - Access permissions can be managed by role and production
+      - Audit trails provide traceability of activity within the platform
+      - Production data is kept separate through clear data ownership and isolation
+      - Daily backups
+      - Our servers run in Germany, and your files are stored in Frankfurt
+  - type: textblock
+    theme: light
+    heading: Your data stays yours
+    lead: Your production data belongs to you.
+    text: |
+      Tubes provides a secure environment for managing your information, with clear ownership, access controls and transparent data handling.
+
+      - A Data Processing Agreement forms part of our contractual terms (Chapter 4 of the NLdigital Terms 2025)
+      - When your contract ends, we keep your data for at least 90 days, so you have time to export it
+      - After that, we delete or anonymise it within a further 90 days, unless the law requires us to keep it longer
+      - Our [Privacy Policy](https://app.tubesmedia.online/privacy) lists the providers we use and where their services operate
+  - type: textblock
     theme: white
     heading: European AI & Infrastructure
     text: |
-      Tubes uses Mistral AI, a European AI provider headquartered in France, to power Emmy and selected AI-powered features within the platform.
+      Tubes uses Mistral AI, a European AI provider, to power Emmy and selected AI-powered features within the platform.
 
-      We have chosen Mistral as part of our commitment to a European technology ecosystem, with data protection, transparency and digital sovereignty in mind.
+      Our choice of European AI technology reflects our commitment to data protection, transparency and the growing importance of digital sovereignty.
 
-      Alongside this, Tubes uses EU-based cloud services for its platform infrastructure, supporting our approach to data protection and secure production environments.
+      Alongside this, Tubes uses EU-based cloud services for its platform infrastructure.
     mistral: true
     chips:
       - label: European AI
         tone: blue
       - label: EU-based cloud services
         tone: mint
-  - type: textblock
-    theme: teal
-    heading: Where your data lives
-    two_column: true
-    text: |
-      - The application and its database run on servers in Germany (Hetzner, Falkenstein)
-      - Files and documents are stored in Frankfurt (AWS, eu-central-1)
-      - Email from Tubes is sent from Germany (Euromailing)
-      - AI features run on Mistral through its EU endpoint, checked with every call
-      - This website and our CRM run in Amsterdam
-      - Daily backups
-  - type: textblock
-    theme: white
-    heading: Your data stays yours
-    two_column: true
-    text: |
-      - A data processing agreement is part of our terms (chapter 4 of the NLdigital Terms 2025)
-      - At least 90 days after your contract ends to export your data
-      - Deleted or anonymised within 90 days after that
-      - Role-based access and permissions per production
-      - Full audit trails and data traceability
-      - Clear data ownership and isolation per production environment
-      - Every provider we use, and where it runs, is listed in our [privacy policy](https://app.tubesmedia.online/privacy)
   - type: cta
     title: Talk it through with us
     text: |
