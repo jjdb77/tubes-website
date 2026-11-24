@@ -30,12 +30,12 @@ sections:
     heading: Your data stays yours
     lead: Your production data belongs to you.
     text: |
-      Tubes provides a secure environment for managing your information, with clear ownership, access controls and transparent data handling.
+      Tubes gives you control over your information, with clear ownership, access permissions and transparent data handling.
 
-      - A Data Processing Agreement forms part of our contractual terms (Chapter 4 of the NLdigital Terms 2025)
-      - When your contract ends, we keep your data for at least 90 days, so you have time to export it
-      - After that, we delete or anonymise it within a further 90 days, unless the law requires us to keep it longer
-      - Our [Privacy Policy](https://app.tubesmedia.online/privacy) lists the providers we use and where their services operate
+      - A Data Processing Agreement forms part of our terms (Chapter 4 of the NLdigital Terms 2025)
+      - You can export your budgets and cost overviews at any time, and you have at least 90 days to export your data after a subscription ends
+      - After that period, we delete or anonymise your data within 90 days, unless the law requires us to keep it longer
+      - Every provider we use, and where its services operate, is listed in our [Privacy Policy](https://app.tubesmedia.online/privacy)
   - type: textblock
     theme: white
     heading: European AI & Infrastructure
