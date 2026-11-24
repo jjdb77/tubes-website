@@ -1,0 +1,63 @@
+---
+layout: layout.njk
+title: NLdigital Terms 2025
+seo_title: "NLdigital Terms 2025 | Tubes"
+description: "The NLdigital Terms 2025 that apply to Tubes, in Dutch, English and Spanish. Chapter 4 forms our Data Processing Agreement."
+permalink: /nldigital-terms/
+---
+{#- De NLdigital Voorwaarden 2025 in drie talen, met een taalkeuze.
+    Offertes linken hierheen met ?lang=nl|en|es, zodat de klant meteen de juiste
+    taal ziet (zonder of met een onbekende taal: Engels). De PDF's staan in
+    src/downloads/. Zonder JavaScript blijven de drie links gewoon werken. -#}
+<section class="section">
+  <div class="container nlt">
+    <h1>NLdigital Terms 2025</h1>
+    <p class="nlt-intro">The <a href="https://app.tubesmedia.online/terms">Tubes Terms of Service</a> declare the NLdigital Terms 2025 applicable to all offers and agreements. Chapter 4 (Processing of personal data) forms our Data Processing Agreement. The Dutch text has been deposited by NLdigital with the District Court Midden-Nederland and prevails in case of any difference with a translation.</p>
+
+    <div class="nlt-tabs" role="tablist" aria-label="Language">
+      <a role="tab" data-lang="en" href="/downloads/nldigital-terms-2025-en.pdf">English</a>
+      <a role="tab" data-lang="nl" href="/downloads/nldigital-voorwaarden-2025-nl.pdf">Nederlands</a>
+      <a role="tab" data-lang="es" href="/downloads/nldigital-condiciones-2025-es.pdf">Español</a>
+    </div>
+
+    <p class="nlt-note" data-for="en">English translation by NLdigital. The Dutch text prevails.</p>
+    <p class="nlt-note" data-for="nl">De gedeponeerde Nederlandse tekst. Deze gaat voor bij verschil met een vertaling.</p>
+    <p class="nlt-note" data-for="es">Traducción informativa no oficial. En caso de discrepancia, prevalece el texto original en neerlandés.</p>
+
+    <p><a class="button button-primary nlt-download" href="/downloads/nldigital-terms-2025-en.pdf" download>Download PDF</a></p>
+    <iframe class="nlt-frame" title="NLdigital Terms 2025" src="/downloads/nldigital-terms-2025-en.pdf"></iframe>
+  </div>
+</section>
+
+<style>
+  .nlt h1 { margin-bottom: 0.6em; }
+  .nlt-intro { max-width: 760px; margin-bottom: 1.6em; }
+  .nlt-tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 10px; background: #EEF0F3; margin-bottom: 1em; }
+  .nlt-tabs a { padding: 8px 18px; border-radius: 8px; font-weight: 600; color: var(--ink-soft); text-decoration: none; }
+  .nlt-tabs a[aria-selected="true"] { background: #fff; color: var(--ink, #1A1A1A); box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+  .nlt-note { color: var(--muted); font-size: 0.92rem; }
+  .nlt-frame { width: 100%; height: 80vh; border: 1px solid #E3E5E9; border-radius: 12px; margin-top: 1em; background: #fff; }
+  @media (max-width: 700px) { .nlt-frame { display: none; } }
+</style>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.nlt-tabs a');
+    var notes = document.querySelectorAll('.nlt-note');
+    var frame = document.querySelector('.nlt-frame');
+    var dl = document.querySelector('.nlt-download');
+    function pick(lang, push) {
+      var tab = document.querySelector('.nlt-tabs a[data-lang="' + lang + '"]') || tabs[0];
+      lang = tab.dataset.lang;
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+      notes.forEach(function (n) { n.hidden = n.dataset.for !== lang; });
+      frame.src = tab.href;
+      dl.href = tab.href;
+      if (push) history.replaceState(null, '', '?lang=' + lang);
+    }
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function (e) { e.preventDefault(); pick(t.dataset.lang, true); });
+    });
+    pick((new URLSearchParams(location.search).get('lang') || 'en').toLowerCase(), false);
+  })();
+</script>
