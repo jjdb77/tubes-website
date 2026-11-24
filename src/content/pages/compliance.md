@@ -32,7 +32,7 @@ sections:
     text: |
       Tubes gives you control over your information, with clear ownership, access permissions and transparent data handling.
 
-      - A Data Processing Agreement forms part of our terms (Chapter 4 of the NLdigital Terms 2025)
+      - A Data Processing Agreement forms part of our terms (Chapter 4 of the [NLdigital Terms 2025](/downloads/nldigital-terms-2025-en.pdf))
       - You can export your budgets and cost overviews at any time, and you have at least 90 days to export your data after a subscription ends
       - After that period, we delete or anonymise your data within 90 days, unless the law requires us to keep it longer
       - Every provider we use, and where its services operate, is listed in our [Privacy Policy](https://app.tubesmedia.online/privacy)
