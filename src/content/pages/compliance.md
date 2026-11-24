@@ -20,11 +20,11 @@ sections:
     heading: Security & Platform
     two_column: true
     text: |
-      - Access permissions can be managed by role and production
-      - Audit trails provide traceability of activity within the platform
-      - Production data is kept separate through clear data ownership and isolation
-      - Daily backups
-      - Our servers run in Germany, and your files are stored in Frankfurt
+      - Access permissions can be managed by role and production.
+      - Audit trails provide traceability of activity within the platform.
+      - Production data is kept separate through clear data ownership and isolation.
+      - Daily backups.
+      - Servers and file storage are hosted in Germany, within the EU and subject to European data protection law, including the GDPR.
   - type: textblock
     theme: light
     heading: Your data stays yours
