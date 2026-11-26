@@ -14536,6 +14536,28 @@
    "photo": null
   },
   {
+   "id": "uk-ats",
+   "name": "ATS",
+   "city": "London",
+   "country": "United Kingdom",
+   "lat": 51.5098,
+   "lng": -0.2265,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Entertainment production company with offices in London, Manchester, Los Angeles and Lisbon that develops TV formats, runs line productions and designs and builds obstacle courses and sets for competition shows.",
+   "services": "Original TV formats, line production, production services, obstacle course and set design and build, reality and competition shows, live events",
+   "credits": "Ninja Warrior (80+ seasons worldwide), Celebrity Bear Hunt (Netflix), The Bridge (Channel 4, HBO), Ultimate Beastmaster (Netflix), Top Dog Germany",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.theatsteam.com/",
+   "source_urls": [
+    "https://www.theatsteam.com/",
+    "https://www.theatsteam.com/our-proyects/"
+   ],
+   "photo": null
+  },
+  {
    "id": "uk-back2back-productions",
    "name": "back2back productions",
    "city": "Brighton",
@@ -15553,6 +15575,28 @@
    "photo": null,
    "guide_id": "uk-kelvin-hall-studios",
    "guide_url": "/compare-film-tv-locations/#loc-uk-kelvin-hall-studios"
+  },
+  {
+   "id": "uk-king-banana",
+   "name": "King Banana",
+   "city": "Maidstone",
+   "country": "United Kingdom",
+   "lat": 51.2704,
+   "lng": 0.5227,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Children's production company making preschool and kids' entertainment for broadcasters such as CBeebies and Channel 5's Milkshake!, registered in Maidstone, Kent.",
+   "services": "Preschool and children's series, live-action and animated co-productions, YouTube content",
+   "credits": "Yakka Dee! (CBeebies, seven series), Meet the Experts (Milkshake!), Nikhil & Jay (CBeebies, with Paper Owl Films and CAKE)",
+   "facilities": null,
+   "group": null,
+   "founded": null,
+   "official_url": "https://www.kingbananatv.com/",
+   "source_urls": [
+    "https://www.kingbananatv.com/our-work",
+    "https://www.kingbananatv.com/privacy-policy-3"
+   ],
+   "photo": null
   },
   {
    "id": "uk-kudos",
@@ -16591,6 +16635,27 @@
    "photo": null,
    "guide_id": "uk-sharp-project",
    "guide_url": "/compare-film-tv-locations/#loc-uk-sharp-project"
+  },
+  {
+   "id": "uk-three-arrows-media",
+   "name": "Three Arrows Media",
+   "city": "Salford",
+   "country": "United Kingdom",
+   "lat": 53.4727,
+   "lng": -2.2977,
+   "type": "Production company",
+   "specialism": "Entertainment & unscripted",
+   "summary": "Producer of kids and family, factual and education content based at MediaCityUK in Salford, part of Wonderborn Media Group and founded in 2015.",
+   "services": "Kids and family series, factual and audio, educational content, presentation links for CBBC and CBeebies, podcasts",
+   "credits": "The Baby Club, The Toddler Club, CBeebies House: Time to Play, Hacker's Ruff Guide to the World Cup (CBBC), Awesome Animals & Mini Me (Sky Kids), BBC Bitesize",
+   "facilities": null,
+   "group": "Wonderborn Media Group",
+   "founded": 2015,
+   "official_url": "https://www.threearrowsmedia.com/",
+   "source_urls": [
+    "https://www.threearrowsmedia.com/"
+   ],
+   "photo": null
   },
   {
    "id": "uk-3-mills-studios",
